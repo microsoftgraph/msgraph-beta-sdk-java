@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhoneXAP;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Phone XAPRequest.
  */
-public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhoneXAPRequest {
+public class WindowsPhoneXAPRequest extends BaseRequest<WindowsPhoneXAP> {
 	
     /**
      * The request for the WindowsPhoneXAP
@@ -29,7 +31,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhoneXAPRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhoneXAPRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsPhoneXAP.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsPhoneXAP> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @return the WindowsPhoneXAP from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsPhoneXAP get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsPhoneXAP> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param sourceWindowsPhoneXAP the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhoneXAP sourceWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback) {
+    public void patch(@Nonnull final WindowsPhoneXAP sourceWindowsPhoneXAP, @Nonnull final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhoneXAP);
     }
 
@@ -87,7 +90,8 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @return the updated WindowsPhoneXAP
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhoneXAP patch(final WindowsPhoneXAP sourceWindowsPhoneXAP) throws ClientException {
+    @Nullable
+    public WindowsPhoneXAP patch(@Nonnull final WindowsPhoneXAP sourceWindowsPhoneXAP) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsPhoneXAP);
     }
 
@@ -97,7 +101,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param newWindowsPhoneXAP the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback) {
+    public void post(@Nonnull final WindowsPhoneXAP newWindowsPhoneXAP, @Nonnull final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.POST, callback, newWindowsPhoneXAP);
     }
 
@@ -108,7 +112,8 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @return the created WindowsPhoneXAP
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhoneXAP post(final WindowsPhoneXAP newWindowsPhoneXAP) throws ClientException {
+    @Nullable
+    public WindowsPhoneXAP post(@Nonnull final WindowsPhoneXAP newWindowsPhoneXAP) throws ClientException {
         return send(HttpMethod.POST, newWindowsPhoneXAP);
     }
 
@@ -118,7 +123,7 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param newWindowsPhoneXAP the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhoneXAP newWindowsPhoneXAP, final ICallback<? super WindowsPhoneXAP> callback) {
+    public void put(@Nonnull final WindowsPhoneXAP newWindowsPhoneXAP, @Nonnull final ICallback<? super WindowsPhoneXAP> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhoneXAP);
     }
 
@@ -129,7 +134,8 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @return the created WindowsPhoneXAP
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhoneXAP put(final WindowsPhoneXAP newWindowsPhoneXAP) throws ClientException {
+    @Nullable
+    public WindowsPhoneXAP put(@Nonnull final WindowsPhoneXAP newWindowsPhoneXAP) throws ClientException {
         return send(HttpMethod.PUT, newWindowsPhoneXAP);
     }
 
@@ -139,9 +145,10 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsPhoneXAPRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsPhoneXAPRequest)this;
+     @Nonnull
+     public WindowsPhoneXAPRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsPhoneXAPRequest extends BaseRequest implements IWindowsPhone
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsPhoneXAPRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhoneXAPRequest)this;
+     @Nonnull
+     public WindowsPhoneXAPRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

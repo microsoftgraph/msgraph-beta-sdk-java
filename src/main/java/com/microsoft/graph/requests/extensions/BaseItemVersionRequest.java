@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BaseItemVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Base Item Version Request.
  */
-public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVersionRequest {
+public class BaseItemVersionRequest extends BaseRequest<BaseItemVersion> {
 	
     /**
      * The request for the BaseItemVersion
@@ -30,10 +32,10 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public BaseItemVersionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends BaseItemVersion> responseClass) {
+    public BaseItemVersionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends BaseItemVersion> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BaseItemVersionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BaseItemVersionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, BaseItemVersion.class);
     }
 
@@ -53,7 +55,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super BaseItemVersion> callback) {
+    public void get(@Nonnull final ICallback<? super BaseItemVersion> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @return the BaseItemVersion from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public BaseItemVersion get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super BaseItemVersion> callback) {
+    public void delete(@Nonnull final ICallback<? super BaseItemVersion> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param sourceBaseItemVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BaseItemVersion sourceBaseItemVersion, final ICallback<? super BaseItemVersion> callback) {
+    public void patch(@Nonnull final BaseItemVersion sourceBaseItemVersion, @Nonnull final ICallback<? super BaseItemVersion> callback) {
         send(HttpMethod.PATCH, callback, sourceBaseItemVersion);
     }
 
@@ -102,7 +105,8 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @return the updated BaseItemVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BaseItemVersion patch(final BaseItemVersion sourceBaseItemVersion) throws ClientException {
+    @Nullable
+    public BaseItemVersion patch(@Nonnull final BaseItemVersion sourceBaseItemVersion) throws ClientException {
         return send(HttpMethod.PATCH, sourceBaseItemVersion);
     }
 
@@ -112,7 +116,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param newBaseItemVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BaseItemVersion newBaseItemVersion, final ICallback<? super BaseItemVersion> callback) {
+    public void post(@Nonnull final BaseItemVersion newBaseItemVersion, @Nonnull final ICallback<? super BaseItemVersion> callback) {
         send(HttpMethod.POST, callback, newBaseItemVersion);
     }
 
@@ -123,7 +127,8 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @return the created BaseItemVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BaseItemVersion post(final BaseItemVersion newBaseItemVersion) throws ClientException {
+    @Nullable
+    public BaseItemVersion post(@Nonnull final BaseItemVersion newBaseItemVersion) throws ClientException {
         return send(HttpMethod.POST, newBaseItemVersion);
     }
 
@@ -133,7 +138,7 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param newBaseItemVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BaseItemVersion newBaseItemVersion, final ICallback<? super BaseItemVersion> callback) {
+    public void put(@Nonnull final BaseItemVersion newBaseItemVersion, @Nonnull final ICallback<? super BaseItemVersion> callback) {
         send(HttpMethod.PUT, callback, newBaseItemVersion);
     }
 
@@ -144,7 +149,8 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @return the created BaseItemVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BaseItemVersion put(final BaseItemVersion newBaseItemVersion) throws ClientException {
+    @Nullable
+    public BaseItemVersion put(@Nonnull final BaseItemVersion newBaseItemVersion) throws ClientException {
         return send(HttpMethod.PUT, newBaseItemVersion);
     }
 
@@ -154,9 +160,10 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param value the select clause
      * @return the updated request
      */
-     public IBaseItemVersionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (BaseItemVersionRequest)this;
+     @Nonnull
+     public BaseItemVersionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class BaseItemVersionRequest extends BaseRequest implements IBaseItemVers
      * @param value the expand clause
      * @return the updated request
      */
-     public IBaseItemVersionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BaseItemVersionRequest)this;
+     @Nonnull
+     public BaseItemVersionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

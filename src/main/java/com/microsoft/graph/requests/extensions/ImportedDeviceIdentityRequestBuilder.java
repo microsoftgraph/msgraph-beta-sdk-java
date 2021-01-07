@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Imported Device Identity Request Builder.
  */
-public class ImportedDeviceIdentityRequestBuilder extends BaseRequestBuilder implements IImportedDeviceIdentityRequestBuilder {
+public class ImportedDeviceIdentityRequestBuilder extends BaseRequestBuilder<ImportedDeviceIdentity> {
 
     /**
      * The request builder for the ImportedDeviceIdentity
@@ -29,7 +31,7 @@ public class ImportedDeviceIdentityRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedDeviceIdentityRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ImportedDeviceIdentityRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,9 +39,10 @@ public class ImportedDeviceIdentityRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IImportedDeviceIdentityRequest instance
+     * @return the ImportedDeviceIdentityRequest instance
      */
-    public IImportedDeviceIdentityRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ImportedDeviceIdentityRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +50,10 @@ public class ImportedDeviceIdentityRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IImportedDeviceIdentityRequest instance
+     * @return the ImportedDeviceIdentityRequest instance
      */
-    public IImportedDeviceIdentityRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ImportedDeviceIdentityRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ImportedDeviceIdentityRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

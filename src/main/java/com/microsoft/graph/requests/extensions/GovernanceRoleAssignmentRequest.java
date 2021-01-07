@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Governance Role Assignment Request.
  */
-public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGovernanceRoleAssignmentRequest {
+public class GovernanceRoleAssignmentRequest extends BaseRequest<GovernanceRoleAssignment> {
 	
     /**
      * The request for the GovernanceRoleAssignment
@@ -37,7 +35,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GovernanceRoleAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GovernanceRoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GovernanceRoleAssignment.class);
     }
 
@@ -46,7 +44,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GovernanceRoleAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @return the GovernanceRoleAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GovernanceRoleAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GovernanceRoleAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param sourceGovernanceRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
+    public void patch(@Nonnull final GovernanceRoleAssignment sourceGovernanceRoleAssignment, @Nonnull final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceGovernanceRoleAssignment);
     }
 
@@ -95,7 +94,8 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @return the updated GovernanceRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceRoleAssignment patch(final GovernanceRoleAssignment sourceGovernanceRoleAssignment) throws ClientException {
+    @Nullable
+    public GovernanceRoleAssignment patch(@Nonnull final GovernanceRoleAssignment sourceGovernanceRoleAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceGovernanceRoleAssignment);
     }
 
@@ -105,7 +105,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param newGovernanceRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
+    public void post(@Nonnull final GovernanceRoleAssignment newGovernanceRoleAssignment, @Nonnull final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newGovernanceRoleAssignment);
     }
 
@@ -116,7 +116,8 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @return the created GovernanceRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceRoleAssignment post(final GovernanceRoleAssignment newGovernanceRoleAssignment) throws ClientException {
+    @Nullable
+    public GovernanceRoleAssignment post(@Nonnull final GovernanceRoleAssignment newGovernanceRoleAssignment) throws ClientException {
         return send(HttpMethod.POST, newGovernanceRoleAssignment);
     }
 
@@ -126,7 +127,7 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param newGovernanceRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GovernanceRoleAssignment newGovernanceRoleAssignment, final ICallback<? super GovernanceRoleAssignment> callback) {
+    public void put(@Nonnull final GovernanceRoleAssignment newGovernanceRoleAssignment, @Nonnull final ICallback<? super GovernanceRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newGovernanceRoleAssignment);
     }
 
@@ -137,7 +138,8 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @return the created GovernanceRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceRoleAssignment put(final GovernanceRoleAssignment newGovernanceRoleAssignment) throws ClientException {
+    @Nullable
+    public GovernanceRoleAssignment put(@Nonnull final GovernanceRoleAssignment newGovernanceRoleAssignment) throws ClientException {
         return send(HttpMethod.PUT, newGovernanceRoleAssignment);
     }
 
@@ -147,9 +149,10 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param value the select clause
      * @return the updated request
      */
-     public IGovernanceRoleAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GovernanceRoleAssignmentRequest)this;
+     @Nonnull
+     public GovernanceRoleAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class GovernanceRoleAssignmentRequest extends BaseRequest implements IGov
      * @param value the expand clause
      * @return the updated request
      */
-     public IGovernanceRoleAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GovernanceRoleAssignmentRequest)this;
+     @Nonnull
+     public GovernanceRoleAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

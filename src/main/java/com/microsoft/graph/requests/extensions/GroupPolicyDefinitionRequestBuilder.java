@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
-import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Policy Definition Request Builder.
  */
-public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder implements IGroupPolicyDefinitionRequestBuilder {
+public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder<GroupPolicyDefinition> {
 
     /**
      * The request builder for the GroupPolicyDefinition
@@ -36,7 +34,7 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyDefinitionRequest instance
+     * @return the GroupPolicyDefinitionRequest instance
      */
-    public IGroupPolicyDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupPolicyDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,9 +53,10 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyDefinitionRequest instance
+     * @return the GroupPolicyDefinitionRequest instance
      */
-    public IGroupPolicyDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupPolicyDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -65,25 +65,40 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder impl
     /**
      * Gets the request builder for GroupPolicyCategory
      *
-     * @return the IGroupPolicyCategoryWithReferenceRequestBuilder instance
+     * @return the GroupPolicyCategoryWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyCategoryWithReferenceRequestBuilder category() {
+    @Nonnull
+    public GroupPolicyCategoryWithReferenceRequestBuilder category() {
         return new GroupPolicyCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("category"), getClient(), null);
     }
 
     /**
      * Gets the request builder for GroupPolicyDefinitionFile
      *
-     * @return the IGroupPolicyDefinitionFileWithReferenceRequestBuilder instance
+     * @return the GroupPolicyDefinitionFileWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
+    @Nonnull
+    public GroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
         return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
     }
-    public IGroupPolicyPresentationCollectionRequestBuilder presentations() {
+    /**
+     *  Gets a request builder for the GroupPolicyPresentation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupPolicyPresentationCollectionRequestBuilder presentations() {
         return new GroupPolicyPresentationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("presentations"), getClient(), null);
     }
 
-    public IGroupPolicyPresentationRequestBuilder presentations(final String id) {
+    /**
+     * Gets a request builder for the GroupPolicyPresentation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupPolicyPresentationRequestBuilder presentations(@Nonnull final String id) {
         return new GroupPolicyPresentationRequestBuilder(getRequestUrlWithAdditionalSegment("presentations") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Policy Set Item Request.
  */
-public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobileAppPolicySetItemRequest {
+public class MobileAppPolicySetItemRequest extends BaseRequest<MobileAppPolicySetItem> {
 	
     /**
      * The request for the MobileAppPolicySetItem
@@ -29,7 +31,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @return the MobileAppPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param sourceMobileAppPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppPolicySetItem sourceMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback) {
+    public void patch(@Nonnull final MobileAppPolicySetItem sourceMobileAppPolicySetItem, @Nonnull final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @return the updated MobileAppPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppPolicySetItem patch(final MobileAppPolicySetItem sourceMobileAppPolicySetItem) throws ClientException {
+    @Nullable
+    public MobileAppPolicySetItem patch(@Nonnull final MobileAppPolicySetItem sourceMobileAppPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param newMobileAppPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback) {
+    public void post(@Nonnull final MobileAppPolicySetItem newMobileAppPolicySetItem, @Nonnull final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newMobileAppPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @return the created MobileAppPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppPolicySetItem post(final MobileAppPolicySetItem newMobileAppPolicySetItem) throws ClientException {
+    @Nullable
+    public MobileAppPolicySetItem post(@Nonnull final MobileAppPolicySetItem newMobileAppPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newMobileAppPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param newMobileAppPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppPolicySetItem newMobileAppPolicySetItem, final ICallback<? super MobileAppPolicySetItem> callback) {
+    public void put(@Nonnull final MobileAppPolicySetItem newMobileAppPolicySetItem, @Nonnull final ICallback<? super MobileAppPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newMobileAppPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @return the created MobileAppPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppPolicySetItem put(final MobileAppPolicySetItem newMobileAppPolicySetItem) throws ClientException {
+    @Nullable
+    public MobileAppPolicySetItem put(@Nonnull final MobileAppPolicySetItem newMobileAppPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppPolicySetItemRequest)this;
+     @Nonnull
+     public MobileAppPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MobileAppPolicySetItemRequest extends BaseRequest implements IMobil
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppPolicySetItemRequest)this;
+     @Nonnull
+     public MobileAppPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

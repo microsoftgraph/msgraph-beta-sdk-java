@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityAction;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Action Request Builder.
  */
-public class SecurityActionRequestBuilder extends BaseRequestBuilder implements ISecurityActionRequestBuilder {
+public class SecurityActionRequestBuilder extends BaseRequestBuilder<SecurityAction> {
 
     /**
      * The request builder for the SecurityAction
@@ -28,7 +30,7 @@ public class SecurityActionRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityActionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityActionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class SecurityActionRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityActionRequest instance
+     * @return the SecurityActionRequest instance
      */
-    public ISecurityActionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SecurityActionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +49,21 @@ public class SecurityActionRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityActionRequest instance
+     * @return the SecurityActionRequest instance
      */
-    public ISecurityActionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SecurityActionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecurityActionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public ISecurityActionCancelSecurityActionRequestBuilder cancelSecurityAction() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SecurityActionCancelSecurityActionRequestBuilder cancelSecurityAction() {
         return new SecurityActionCancelSecurityActionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelSecurityAction"), getClient(), null);
     }
 }

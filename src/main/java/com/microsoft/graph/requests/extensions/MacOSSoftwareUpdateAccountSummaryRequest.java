@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSSoftwareUpdateAccountSummary;
-import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateCategorySummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateCategorySummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateCategorySummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateCategorySummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSSoftware Update Account Summary Request.
  */
-public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implements IMacOSSoftwareUpdateAccountSummaryRequest {
+public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest<MacOSSoftwareUpdateAccountSummary> {
 	
     /**
      * The request for the MacOSSoftwareUpdateAccountSummary
@@ -33,7 +33,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSSoftwareUpdateAccountSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSSoftwareUpdateAccountSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSSoftwareUpdateAccountSummary.class);
     }
 
@@ -42,7 +42,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @return the MacOSSoftwareUpdateAccountSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSSoftwareUpdateAccountSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @param sourceMacOSSoftwareUpdateAccountSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSSoftwareUpdateAccountSummary sourceMacOSSoftwareUpdateAccountSummary, final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
+    public void patch(@Nonnull final MacOSSoftwareUpdateAccountSummary sourceMacOSSoftwareUpdateAccountSummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSSoftwareUpdateAccountSummary);
     }
 
@@ -91,7 +92,8 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @return the updated MacOSSoftwareUpdateAccountSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateAccountSummary patch(final MacOSSoftwareUpdateAccountSummary sourceMacOSSoftwareUpdateAccountSummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateAccountSummary patch(@Nonnull final MacOSSoftwareUpdateAccountSummary sourceMacOSSoftwareUpdateAccountSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSSoftwareUpdateAccountSummary);
     }
 
@@ -101,7 +103,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @param newMacOSSoftwareUpdateAccountSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary, final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
+    public void post(@Nonnull final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
         send(HttpMethod.POST, callback, newMacOSSoftwareUpdateAccountSummary);
     }
 
@@ -112,7 +114,8 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @return the created MacOSSoftwareUpdateAccountSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateAccountSummary post(final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateAccountSummary post(@Nonnull final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary) throws ClientException {
         return send(HttpMethod.POST, newMacOSSoftwareUpdateAccountSummary);
     }
 
@@ -122,7 +125,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @param newMacOSSoftwareUpdateAccountSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary, final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
+    public void put(@Nonnull final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateAccountSummary> callback) {
         send(HttpMethod.PUT, callback, newMacOSSoftwareUpdateAccountSummary);
     }
 
@@ -133,7 +136,8 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @return the created MacOSSoftwareUpdateAccountSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateAccountSummary put(final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateAccountSummary put(@Nonnull final MacOSSoftwareUpdateAccountSummary newMacOSSoftwareUpdateAccountSummary) throws ClientException {
         return send(HttpMethod.PUT, newMacOSSoftwareUpdateAccountSummary);
     }
 
@@ -143,9 +147,10 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSSoftwareUpdateAccountSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSSoftwareUpdateAccountSummaryRequest)this;
+     @Nonnull
+     public MacOSSoftwareUpdateAccountSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class MacOSSoftwareUpdateAccountSummaryRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSSoftwareUpdateAccountSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSSoftwareUpdateAccountSummaryRequest)this;
+     @Nonnull
+     public MacOSSoftwareUpdateAccountSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

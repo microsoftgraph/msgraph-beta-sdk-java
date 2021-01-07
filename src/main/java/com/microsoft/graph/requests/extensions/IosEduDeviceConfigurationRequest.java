@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosEduDeviceConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Edu Device Configuration Request.
  */
-public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIosEduDeviceConfigurationRequest {
+public class IosEduDeviceConfigurationRequest extends BaseRequest<IosEduDeviceConfiguration> {
 	
     /**
      * The request for the IosEduDeviceConfiguration
@@ -29,7 +31,7 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosEduDeviceConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosEduDeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosEduDeviceConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosEduDeviceConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosEduDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @return the IosEduDeviceConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosEduDeviceConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosEduDeviceConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosEduDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @param sourceIosEduDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosEduDeviceConfiguration sourceIosEduDeviceConfiguration, final ICallback<? super IosEduDeviceConfiguration> callback) {
+    public void patch(@Nonnull final IosEduDeviceConfiguration sourceIosEduDeviceConfiguration, @Nonnull final ICallback<? super IosEduDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosEduDeviceConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @return the updated IosEduDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosEduDeviceConfiguration patch(final IosEduDeviceConfiguration sourceIosEduDeviceConfiguration) throws ClientException {
+    @Nullable
+    public IosEduDeviceConfiguration patch(@Nonnull final IosEduDeviceConfiguration sourceIosEduDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosEduDeviceConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @param newIosEduDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosEduDeviceConfiguration newIosEduDeviceConfiguration, final ICallback<? super IosEduDeviceConfiguration> callback) {
+    public void post(@Nonnull final IosEduDeviceConfiguration newIosEduDeviceConfiguration, @Nonnull final ICallback<? super IosEduDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosEduDeviceConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @return the created IosEduDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosEduDeviceConfiguration post(final IosEduDeviceConfiguration newIosEduDeviceConfiguration) throws ClientException {
+    @Nullable
+    public IosEduDeviceConfiguration post(@Nonnull final IosEduDeviceConfiguration newIosEduDeviceConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosEduDeviceConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @param newIosEduDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosEduDeviceConfiguration newIosEduDeviceConfiguration, final ICallback<? super IosEduDeviceConfiguration> callback) {
+    public void put(@Nonnull final IosEduDeviceConfiguration newIosEduDeviceConfiguration, @Nonnull final ICallback<? super IosEduDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosEduDeviceConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @return the created IosEduDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosEduDeviceConfiguration put(final IosEduDeviceConfiguration newIosEduDeviceConfiguration) throws ClientException {
+    @Nullable
+    public IosEduDeviceConfiguration put(@Nonnull final IosEduDeviceConfiguration newIosEduDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosEduDeviceConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @param value the select clause
      * @return the updated request
      */
-     public IIosEduDeviceConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosEduDeviceConfigurationRequest)this;
+     @Nonnull
+     public IosEduDeviceConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IosEduDeviceConfigurationRequest extends BaseRequest implements IIo
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosEduDeviceConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosEduDeviceConfigurationRequest)this;
+     @Nonnull
+     public IosEduDeviceConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

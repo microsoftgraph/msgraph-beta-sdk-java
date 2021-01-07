@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationSettings;
-import com.microsoft.graph.requests.extensions.IProfileCardPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfileCardPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemInsightsSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemInsightsSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Organization Settings Request Builder.
  */
-public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder implements IOrganizationSettingsRequestBuilder {
+public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<OrganizationSettings> {
 
     /**
      * The request builder for the OrganizationSettings
@@ -34,7 +33,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationSettingsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOrganizationSettingsRequest instance
+     * @return the OrganizationSettingsRequest instance
      */
-    public IOrganizationSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OrganizationSettingsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +52,10 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOrganizationSettingsRequest instance
+     * @return the OrganizationSettingsRequest instance
      */
-    public IOrganizationSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OrganizationSettingsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OrganizationSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,16 +64,30 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder imple
     /**
      * Gets the request builder for ItemInsightsSettings
      *
-     * @return the IItemInsightsSettingsRequestBuilder instance
+     * @return the ItemInsightsSettingsRequestBuilder instance
      */
-    public IItemInsightsSettingsRequestBuilder itemInsights() {
+    @Nonnull
+    public ItemInsightsSettingsRequestBuilder itemInsights() {
         return new ItemInsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
     }
-    public IProfileCardPropertyCollectionRequestBuilder profileCardProperties() {
+    /**
+     *  Gets a request builder for the ProfileCardProperty collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ProfileCardPropertyCollectionRequestBuilder profileCardProperties() {
         return new ProfileCardPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties"), getClient(), null);
     }
 
-    public IProfileCardPropertyRequestBuilder profileCardProperties(final String id) {
+    /**
+     * Gets a request builder for the ProfileCardProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ProfileCardPropertyRequestBuilder profileCardProperties(@Nonnull final String id) {
         return new ProfileCardPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("profileCardProperties") + "/" + id, getClient(), null);
     }
 }

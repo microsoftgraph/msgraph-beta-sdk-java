@@ -17,36 +17,24 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.IChannelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChannelRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChannelRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -56,7 +44,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Team Request.
  */
-public class TeamRequest extends BaseRequest implements ITeamRequest {
+public class TeamRequest extends BaseRequest<Team> {
 	
     /**
      * The request for the Team
@@ -65,7 +53,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Team.class);
     }
 
@@ -74,7 +62,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Team> callback) {
+    public void get(@Nonnull final ICallback<? super Team> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -84,6 +72,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @return the Team from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Team get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -93,7 +82,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Team> callback) {
+    public void delete(@Nonnull final ICallback<? super Team> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -112,7 +101,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param sourceTeam the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Team sourceTeam, final ICallback<? super Team> callback) {
+    public void patch(@Nonnull final Team sourceTeam, @Nonnull final ICallback<? super Team> callback) {
         send(HttpMethod.PATCH, callback, sourceTeam);
     }
 
@@ -123,7 +112,8 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @return the updated Team
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Team patch(final Team sourceTeam) throws ClientException {
+    @Nullable
+    public Team patch(@Nonnull final Team sourceTeam) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeam);
     }
 
@@ -133,7 +123,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param newTeam the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Team newTeam, final ICallback<? super Team> callback) {
+    public void post(@Nonnull final Team newTeam, @Nonnull final ICallback<? super Team> callback) {
         send(HttpMethod.POST, callback, newTeam);
     }
 
@@ -144,7 +134,8 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @return the created Team
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Team post(final Team newTeam) throws ClientException {
+    @Nullable
+    public Team post(@Nonnull final Team newTeam) throws ClientException {
         return send(HttpMethod.POST, newTeam);
     }
 
@@ -154,7 +145,7 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param newTeam the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Team newTeam, final ICallback<? super Team> callback) {
+    public void put(@Nonnull final Team newTeam, @Nonnull final ICallback<? super Team> callback) {
         send(HttpMethod.PUT, callback, newTeam);
     }
 
@@ -165,7 +156,8 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @return the created Team
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Team put(final Team newTeam) throws ClientException {
+    @Nullable
+    public Team put(@Nonnull final Team newTeam) throws ClientException {
         return send(HttpMethod.PUT, newTeam);
     }
 
@@ -175,9 +167,10 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamRequest)this;
+     @Nonnull
+     public TeamRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -186,9 +179,10 @@ public class TeamRequest extends BaseRequest implements ITeamRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamRequest)this;
+     @Nonnull
+     public TeamRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

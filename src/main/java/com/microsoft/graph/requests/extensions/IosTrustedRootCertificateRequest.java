@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosTrustedRootCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Trusted Root Certificate Request.
  */
-public class IosTrustedRootCertificateRequest extends BaseRequest implements IIosTrustedRootCertificateRequest {
+public class IosTrustedRootCertificateRequest extends BaseRequest<IosTrustedRootCertificate> {
 	
     /**
      * The request for the IosTrustedRootCertificate
@@ -29,7 +31,7 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosTrustedRootCertificateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosTrustedRootCertificateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosTrustedRootCertificate.class);
     }
 
@@ -38,7 +40,7 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosTrustedRootCertificate> callback) {
+    public void get(@Nonnull final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @return the IosTrustedRootCertificate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosTrustedRootCertificate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosTrustedRootCertificate> callback) {
+    public void delete(@Nonnull final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @param sourceIosTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback) {
+    public void patch(@Nonnull final IosTrustedRootCertificate sourceIosTrustedRootCertificate, @Nonnull final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceIosTrustedRootCertificate);
     }
 
@@ -87,7 +90,8 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @return the updated IosTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosTrustedRootCertificate patch(final IosTrustedRootCertificate sourceIosTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public IosTrustedRootCertificate patch(@Nonnull final IosTrustedRootCertificate sourceIosTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosTrustedRootCertificate);
     }
 
@@ -97,7 +101,7 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @param newIosTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback) {
+    public void post(@Nonnull final IosTrustedRootCertificate newIosTrustedRootCertificate, @Nonnull final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newIosTrustedRootCertificate);
     }
 
@@ -108,7 +112,8 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @return the created IosTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosTrustedRootCertificate post(final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public IosTrustedRootCertificate post(@Nonnull final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.POST, newIosTrustedRootCertificate);
     }
 
@@ -118,7 +123,7 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @param newIosTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosTrustedRootCertificate newIosTrustedRootCertificate, final ICallback<? super IosTrustedRootCertificate> callback) {
+    public void put(@Nonnull final IosTrustedRootCertificate newIosTrustedRootCertificate, @Nonnull final ICallback<? super IosTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newIosTrustedRootCertificate);
     }
 
@@ -129,7 +134,8 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @return the created IosTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosTrustedRootCertificate put(final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public IosTrustedRootCertificate put(@Nonnull final IosTrustedRootCertificate newIosTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PUT, newIosTrustedRootCertificate);
     }
 
@@ -139,9 +145,10 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @param value the select clause
      * @return the updated request
      */
-     public IIosTrustedRootCertificateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosTrustedRootCertificateRequest)this;
+     @Nonnull
+     public IosTrustedRootCertificateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IosTrustedRootCertificateRequest extends BaseRequest implements IIo
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosTrustedRootCertificateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosTrustedRootCertificateRequest)this;
+     @Nonnull
+     public IosTrustedRootCertificateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

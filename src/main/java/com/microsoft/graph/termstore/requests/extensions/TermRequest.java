@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Term;
-import com.microsoft.graph.termstore.requests.extensions.ITermCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Term Request.
  */
-public class TermRequest extends BaseRequest implements ITermRequest {
+public class TermRequest extends BaseRequest<Term> {
 	
     /**
      * The request for the Term
@@ -39,7 +36,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Term.class);
     }
 
@@ -48,7 +45,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Term> callback) {
+    public void get(@Nonnull final ICallback<? super Term> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +55,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @return the Term from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Term get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +65,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Term> callback) {
+    public void delete(@Nonnull final ICallback<? super Term> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +84,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param sourceTerm the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Term sourceTerm, final ICallback<? super Term> callback) {
+    public void patch(@Nonnull final Term sourceTerm, @Nonnull final ICallback<? super Term> callback) {
         send(HttpMethod.PATCH, callback, sourceTerm);
     }
 
@@ -97,7 +95,8 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @return the updated Term
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Term patch(final Term sourceTerm) throws ClientException {
+    @Nullable
+    public Term patch(@Nonnull final Term sourceTerm) throws ClientException {
         return send(HttpMethod.PATCH, sourceTerm);
     }
 
@@ -107,7 +106,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param newTerm the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Term newTerm, final ICallback<? super Term> callback) {
+    public void post(@Nonnull final Term newTerm, @Nonnull final ICallback<? super Term> callback) {
         send(HttpMethod.POST, callback, newTerm);
     }
 
@@ -118,7 +117,8 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @return the created Term
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Term post(final Term newTerm) throws ClientException {
+    @Nullable
+    public Term post(@Nonnull final Term newTerm) throws ClientException {
         return send(HttpMethod.POST, newTerm);
     }
 
@@ -128,7 +128,7 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param newTerm the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Term newTerm, final ICallback<? super Term> callback) {
+    public void put(@Nonnull final Term newTerm, @Nonnull final ICallback<? super Term> callback) {
         send(HttpMethod.PUT, callback, newTerm);
     }
 
@@ -139,7 +139,8 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @return the created Term
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Term put(final Term newTerm) throws ClientException {
+    @Nullable
+    public Term put(@Nonnull final Term newTerm) throws ClientException {
         return send(HttpMethod.PUT, newTerm);
     }
 
@@ -149,9 +150,10 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITermRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TermRequest)this;
+     @Nonnull
+     public TermRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +162,10 @@ public class TermRequest extends BaseRequest implements ITermRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITermRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermRequest)this;
+     @Nonnull
+     public TermRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

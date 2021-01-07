@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonAnniversary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Anniversary Request.
  */
-public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnniversaryRequest {
+public class PersonAnniversaryRequest extends BaseRequest<PersonAnniversary> {
 	
     /**
      * The request for the PersonAnniversary
@@ -29,7 +31,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonAnniversaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonAnniversaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonAnniversary.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonAnniversary> callback) {
+    public void get(@Nonnull final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @return the PersonAnniversary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonAnniversary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonAnniversary> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param sourcePersonAnniversary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonAnniversary sourcePersonAnniversary, final ICallback<? super PersonAnniversary> callback) {
+    public void patch(@Nonnull final PersonAnniversary sourcePersonAnniversary, @Nonnull final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonAnniversary);
     }
 
@@ -87,7 +90,8 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @return the updated PersonAnniversary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonAnniversary patch(final PersonAnniversary sourcePersonAnniversary) throws ClientException {
+    @Nullable
+    public PersonAnniversary patch(@Nonnull final PersonAnniversary sourcePersonAnniversary) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonAnniversary);
     }
 
@@ -97,7 +101,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param newPersonAnniversary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback) {
+    public void post(@Nonnull final PersonAnniversary newPersonAnniversary, @Nonnull final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.POST, callback, newPersonAnniversary);
     }
 
@@ -108,7 +112,8 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @return the created PersonAnniversary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonAnniversary post(final PersonAnniversary newPersonAnniversary) throws ClientException {
+    @Nullable
+    public PersonAnniversary post(@Nonnull final PersonAnniversary newPersonAnniversary) throws ClientException {
         return send(HttpMethod.POST, newPersonAnniversary);
     }
 
@@ -118,7 +123,7 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param newPersonAnniversary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonAnniversary newPersonAnniversary, final ICallback<? super PersonAnniversary> callback) {
+    public void put(@Nonnull final PersonAnniversary newPersonAnniversary, @Nonnull final ICallback<? super PersonAnniversary> callback) {
         send(HttpMethod.PUT, callback, newPersonAnniversary);
     }
 
@@ -129,7 +134,8 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @return the created PersonAnniversary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonAnniversary put(final PersonAnniversary newPersonAnniversary) throws ClientException {
+    @Nullable
+    public PersonAnniversary put(@Nonnull final PersonAnniversary newPersonAnniversary) throws ClientException {
         return send(HttpMethod.PUT, newPersonAnniversary);
     }
 
@@ -139,9 +145,10 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonAnniversaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonAnniversaryRequest)this;
+     @Nonnull
+     public PersonAnniversaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonAnniversaryRequest extends BaseRequest implements IPersonAnni
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonAnniversaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonAnniversaryRequest)this;
+     @Nonnull
+     public PersonAnniversaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

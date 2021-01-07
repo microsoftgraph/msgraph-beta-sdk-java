@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10XCertificateProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10XCertificate Profile Request.
  */
-public class Windows10XCertificateProfileRequest extends BaseRequest implements IWindows10XCertificateProfileRequest {
+public class Windows10XCertificateProfileRequest extends BaseRequest<Windows10XCertificateProfile> {
 	
     /**
      * The request for the Windows10XCertificateProfile
@@ -30,10 +32,10 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public Windows10XCertificateProfileRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Windows10XCertificateProfile> responseClass) {
+    public Windows10XCertificateProfileRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Windows10XCertificateProfile> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10XCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10XCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10XCertificateProfile.class);
     }
 
@@ -53,7 +55,7 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10XCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10XCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @return the Windows10XCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10XCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10XCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10XCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @param sourceWindows10XCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10XCertificateProfile sourceWindows10XCertificateProfile, final ICallback<? super Windows10XCertificateProfile> callback) {
+    public void patch(@Nonnull final Windows10XCertificateProfile sourceWindows10XCertificateProfile, @Nonnull final ICallback<? super Windows10XCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10XCertificateProfile);
     }
 
@@ -102,7 +105,8 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @return the updated Windows10XCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XCertificateProfile patch(final Windows10XCertificateProfile sourceWindows10XCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10XCertificateProfile patch(@Nonnull final Windows10XCertificateProfile sourceWindows10XCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10XCertificateProfile);
     }
 
@@ -112,7 +116,7 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @param newWindows10XCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10XCertificateProfile newWindows10XCertificateProfile, final ICallback<? super Windows10XCertificateProfile> callback) {
+    public void post(@Nonnull final Windows10XCertificateProfile newWindows10XCertificateProfile, @Nonnull final ICallback<? super Windows10XCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newWindows10XCertificateProfile);
     }
 
@@ -123,7 +127,8 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @return the created Windows10XCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XCertificateProfile post(final Windows10XCertificateProfile newWindows10XCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10XCertificateProfile post(@Nonnull final Windows10XCertificateProfile newWindows10XCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newWindows10XCertificateProfile);
     }
 
@@ -133,7 +138,7 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @param newWindows10XCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10XCertificateProfile newWindows10XCertificateProfile, final ICallback<? super Windows10XCertificateProfile> callback) {
+    public void put(@Nonnull final Windows10XCertificateProfile newWindows10XCertificateProfile, @Nonnull final ICallback<? super Windows10XCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newWindows10XCertificateProfile);
     }
 
@@ -144,7 +149,8 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @return the created Windows10XCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XCertificateProfile put(final Windows10XCertificateProfile newWindows10XCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10XCertificateProfile put(@Nonnull final Windows10XCertificateProfile newWindows10XCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newWindows10XCertificateProfile);
     }
 
@@ -154,9 +160,10 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10XCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10XCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10XCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class Windows10XCertificateProfileRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10XCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10XCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10XCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -10,10 +10,11 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookTableColumn;
 import com.microsoft.graph.models.extensions.WorkbookRange;
-import com.microsoft.graph.requests.extensions.IWorkbookFilterRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFilterRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -23,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Table Column Request.
  */
-public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbookTableColumnRequest {
+public class WorkbookTableColumnRequest extends BaseRequest<WorkbookTableColumn> {
 	
     /**
      * The request for the WorkbookTableColumn
@@ -32,7 +33,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookTableColumnRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookTableColumnRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookTableColumn.class);
     }
 
@@ -41,7 +42,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookTableColumn> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -51,6 +52,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @return the WorkbookTableColumn from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookTableColumn get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -60,7 +62,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookTableColumn> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +81,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param sourceWorkbookTableColumn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookTableColumn sourceWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void patch(@Nonnull final WorkbookTableColumn sourceWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookTableColumn);
     }
 
@@ -90,7 +92,8 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @return the updated WorkbookTableColumn
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTableColumn patch(final WorkbookTableColumn sourceWorkbookTableColumn) throws ClientException {
+    @Nullable
+    public WorkbookTableColumn patch(@Nonnull final WorkbookTableColumn sourceWorkbookTableColumn) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookTableColumn);
     }
 
@@ -100,7 +103,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookTableColumn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void post(@Nonnull final WorkbookTableColumn newWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.POST, callback, newWorkbookTableColumn);
     }
 
@@ -111,7 +114,8 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @return the created WorkbookTableColumn
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTableColumn post(final WorkbookTableColumn newWorkbookTableColumn) throws ClientException {
+    @Nullable
+    public WorkbookTableColumn post(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) throws ClientException {
         return send(HttpMethod.POST, newWorkbookTableColumn);
     }
 
@@ -121,7 +125,7 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookTableColumn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookTableColumn newWorkbookTableColumn, final ICallback<? super WorkbookTableColumn> callback) {
+    public void put(@Nonnull final WorkbookTableColumn newWorkbookTableColumn, @Nonnull final ICallback<? super WorkbookTableColumn> callback) {
         send(HttpMethod.PUT, callback, newWorkbookTableColumn);
     }
 
@@ -132,7 +136,8 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @return the created WorkbookTableColumn
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookTableColumn put(final WorkbookTableColumn newWorkbookTableColumn) throws ClientException {
+    @Nullable
+    public WorkbookTableColumn put(@Nonnull final WorkbookTableColumn newWorkbookTableColumn) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookTableColumn);
     }
 
@@ -142,9 +147,10 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookTableColumnRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookTableColumnRequest)this;
+     @Nonnull
+     public WorkbookTableColumnRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -153,9 +159,10 @@ public class WorkbookTableColumnRequest extends BaseRequest implements IWorkbook
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookTableColumnRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookTableColumnRequest)this;
+     @Nonnull
+     public WorkbookTableColumnRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

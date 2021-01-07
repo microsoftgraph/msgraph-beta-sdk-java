@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CalendarPermission;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Calendar Permission Request.
  */
-public class CalendarPermissionRequest extends BaseRequest implements ICalendarPermissionRequest {
+public class CalendarPermissionRequest extends BaseRequest<CalendarPermission> {
 	
     /**
      * The request for the CalendarPermission
@@ -29,7 +31,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CalendarPermissionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CalendarPermissionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CalendarPermission.class);
     }
 
@@ -38,7 +40,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CalendarPermission> callback) {
+    public void get(@Nonnull final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @return the CalendarPermission from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CalendarPermission get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CalendarPermission> callback) {
+    public void delete(@Nonnull final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param sourceCalendarPermission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CalendarPermission sourceCalendarPermission, final ICallback<? super CalendarPermission> callback) {
+    public void patch(@Nonnull final CalendarPermission sourceCalendarPermission, @Nonnull final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.PATCH, callback, sourceCalendarPermission);
     }
 
@@ -87,7 +90,8 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @return the updated CalendarPermission
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CalendarPermission patch(final CalendarPermission sourceCalendarPermission) throws ClientException {
+    @Nullable
+    public CalendarPermission patch(@Nonnull final CalendarPermission sourceCalendarPermission) throws ClientException {
         return send(HttpMethod.PATCH, sourceCalendarPermission);
     }
 
@@ -97,7 +101,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param newCalendarPermission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback) {
+    public void post(@Nonnull final CalendarPermission newCalendarPermission, @Nonnull final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.POST, callback, newCalendarPermission);
     }
 
@@ -108,7 +112,8 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @return the created CalendarPermission
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CalendarPermission post(final CalendarPermission newCalendarPermission) throws ClientException {
+    @Nullable
+    public CalendarPermission post(@Nonnull final CalendarPermission newCalendarPermission) throws ClientException {
         return send(HttpMethod.POST, newCalendarPermission);
     }
 
@@ -118,7 +123,7 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param newCalendarPermission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CalendarPermission newCalendarPermission, final ICallback<? super CalendarPermission> callback) {
+    public void put(@Nonnull final CalendarPermission newCalendarPermission, @Nonnull final ICallback<? super CalendarPermission> callback) {
         send(HttpMethod.PUT, callback, newCalendarPermission);
     }
 
@@ -129,7 +134,8 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @return the created CalendarPermission
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CalendarPermission put(final CalendarPermission newCalendarPermission) throws ClientException {
+    @Nullable
+    public CalendarPermission put(@Nonnull final CalendarPermission newCalendarPermission) throws ClientException {
         return send(HttpMethod.PUT, newCalendarPermission);
     }
 
@@ -139,9 +145,10 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param value the select clause
      * @return the updated request
      */
-     public ICalendarPermissionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CalendarPermissionRequest)this;
+     @Nonnull
+     public CalendarPermissionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CalendarPermissionRequest extends BaseRequest implements ICalendarP
      * @param value the expand clause
      * @return the updated request
      */
-     public ICalendarPermissionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CalendarPermissionRequest)this;
+     @Nonnull
+     public CalendarPermissionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

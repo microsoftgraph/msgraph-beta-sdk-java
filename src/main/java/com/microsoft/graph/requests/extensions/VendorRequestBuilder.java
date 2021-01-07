@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Vendor;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Vendor Request Builder.
  */
-public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorRequestBuilder {
+public class VendorRequestBuilder extends BaseRequestBuilder<Vendor> {
 
     /**
      * The request builder for the Vendor
@@ -38,7 +35,7 @@ public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VendorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VendorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IVendorRequest instance
+     * @return the VendorRequest instance
      */
-    public IVendorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public VendorRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,9 +54,10 @@ public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IVendorRequest instance
+     * @return the VendorRequest instance
      */
-    public IVendorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public VendorRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.VendorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -67,34 +66,50 @@ public class VendorRequestBuilder extends BaseRequestBuilder implements IVendorR
     /**
      * Gets the request builder for Currency
      *
-     * @return the ICurrencyRequestBuilder instance
+     * @return the CurrencyRequestBuilder instance
      */
-    public ICurrencyRequestBuilder currency() {
+    @Nonnull
+    public CurrencyRequestBuilder currency() {
         return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PaymentMethod
      *
-     * @return the IPaymentMethodRequestBuilder instance
+     * @return the PaymentMethodRequestBuilder instance
      */
-    public IPaymentMethodRequestBuilder paymentMethod() {
+    @Nonnull
+    public PaymentMethodRequestBuilder paymentMethod() {
         return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethod"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PaymentTerm
      *
-     * @return the IPaymentTermRequestBuilder instance
+     * @return the PaymentTermRequestBuilder instance
      */
-    public IPaymentTermRequestBuilder paymentTerm() {
+    @Nonnull
+    public PaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
-    public IPictureCollectionRequestBuilder picture() {
+    /**
+     *  Gets a request builder for the Picture collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PictureCollectionRequestBuilder picture() {
         return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
-    public IPictureRequestBuilder picture(final String id) {
+    /**
+     * Gets a request builder for the Picture item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PictureRequestBuilder picture(@Nonnull final String id) {
         return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }

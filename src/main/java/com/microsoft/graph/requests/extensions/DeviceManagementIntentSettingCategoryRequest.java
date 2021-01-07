@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentSettingCategory;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Intent Setting Category Request.
  */
-public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest implements IDeviceManagementIntentSettingCategoryRequest {
+public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest<DeviceManagementIntentSettingCategory> {
 	
     /**
      * The request for the DeviceManagementIntentSettingCategory
@@ -33,7 +33,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntentSettingCategoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementIntentSettingCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementIntentSettingCategory.class);
     }
 
@@ -42,7 +42,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @return the DeviceManagementIntentSettingCategory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementIntentSettingCategory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param sourceDeviceManagementIntentSettingCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
+    public void patch(@Nonnull final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory, @Nonnull final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntentSettingCategory);
     }
 
@@ -91,7 +92,8 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @return the updated DeviceManagementIntentSettingCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentSettingCategory patch(final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentSettingCategory patch(@Nonnull final DeviceManagementIntentSettingCategory sourceDeviceManagementIntentSettingCategory) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementIntentSettingCategory);
     }
 
@@ -101,7 +103,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param newDeviceManagementIntentSettingCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
+    public void post(@Nonnull final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, @Nonnull final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntentSettingCategory);
     }
 
@@ -112,7 +114,8 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @return the created DeviceManagementIntentSettingCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentSettingCategory post(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentSettingCategory post(@Nonnull final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementIntentSettingCategory);
     }
 
@@ -122,7 +125,7 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param newDeviceManagementIntentSettingCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
+    public void put(@Nonnull final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory, @Nonnull final ICallback<? super DeviceManagementIntentSettingCategory> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntentSettingCategory);
     }
 
@@ -133,7 +136,8 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @return the created DeviceManagementIntentSettingCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentSettingCategory put(final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentSettingCategory put(@Nonnull final DeviceManagementIntentSettingCategory newDeviceManagementIntentSettingCategory) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementIntentSettingCategory);
     }
 
@@ -143,9 +147,10 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementIntentSettingCategoryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementIntentSettingCategoryRequest)this;
+     @Nonnull
+     public DeviceManagementIntentSettingCategoryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class DeviceManagementIntentSettingCategoryRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementIntentSettingCategoryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntentSettingCategoryRequest)this;
+     @Nonnull
+     public DeviceManagementIntentSettingCategoryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

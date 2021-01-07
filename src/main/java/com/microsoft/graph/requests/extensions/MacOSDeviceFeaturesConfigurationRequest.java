@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSDeviceFeaturesConfiguration;
-import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSDevice Features Configuration Request.
  */
-public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest implements IMacOSDeviceFeaturesConfigurationRequest {
+public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest<MacOSDeviceFeaturesConfiguration> {
 	
     /**
      * The request for the MacOSDeviceFeaturesConfiguration
@@ -31,7 +32,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSDeviceFeaturesConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSDeviceFeaturesConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSDeviceFeaturesConfiguration.class);
     }
 
@@ -40,7 +41,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @return the MacOSDeviceFeaturesConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSDeviceFeaturesConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param sourceMacOSDeviceFeaturesConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void patch(@Nonnull final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration, @Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSDeviceFeaturesConfiguration);
     }
 
@@ -89,7 +91,8 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @return the updated MacOSDeviceFeaturesConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSDeviceFeaturesConfiguration patch(final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration) throws ClientException {
+    @Nullable
+    public MacOSDeviceFeaturesConfiguration patch(@Nonnull final MacOSDeviceFeaturesConfiguration sourceMacOSDeviceFeaturesConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSDeviceFeaturesConfiguration);
     }
 
@@ -99,7 +102,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param newMacOSDeviceFeaturesConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void post(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, @Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSDeviceFeaturesConfiguration);
     }
 
@@ -110,7 +113,8 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @return the created MacOSDeviceFeaturesConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSDeviceFeaturesConfiguration post(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) throws ClientException {
+    @Nullable
+    public MacOSDeviceFeaturesConfiguration post(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) throws ClientException {
         return send(HttpMethod.POST, newMacOSDeviceFeaturesConfiguration);
     }
 
@@ -120,7 +124,7 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param newMacOSDeviceFeaturesConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
+    public void put(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration, @Nonnull final ICallback<? super MacOSDeviceFeaturesConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSDeviceFeaturesConfiguration);
     }
 
@@ -131,7 +135,8 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @return the created MacOSDeviceFeaturesConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSDeviceFeaturesConfiguration put(final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) throws ClientException {
+    @Nullable
+    public MacOSDeviceFeaturesConfiguration put(@Nonnull final MacOSDeviceFeaturesConfiguration newMacOSDeviceFeaturesConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newMacOSDeviceFeaturesConfiguration);
     }
 
@@ -141,9 +146,10 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSDeviceFeaturesConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSDeviceFeaturesConfigurationRequest)this;
+     @Nonnull
+     public MacOSDeviceFeaturesConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class MacOSDeviceFeaturesConfigurationRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSDeviceFeaturesConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSDeviceFeaturesConfigurationRequest)this;
+     @Nonnull
+     public MacOSDeviceFeaturesConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

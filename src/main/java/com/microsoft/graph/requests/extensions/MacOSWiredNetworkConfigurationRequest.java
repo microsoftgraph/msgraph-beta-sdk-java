@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSWiredNetworkConfiguration;
-import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSWired Network Configuration Request.
  */
-public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implements IMacOSWiredNetworkConfigurationRequest {
+public class MacOSWiredNetworkConfigurationRequest extends BaseRequest<MacOSWiredNetworkConfiguration> {
 	
     /**
      * The request for the MacOSWiredNetworkConfiguration
@@ -33,7 +33,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSWiredNetworkConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSWiredNetworkConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSWiredNetworkConfiguration.class);
     }
 
@@ -42,7 +42,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @return the MacOSWiredNetworkConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSWiredNetworkConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param sourceMacOSWiredNetworkConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
+    public void patch(@Nonnull final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration, @Nonnull final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSWiredNetworkConfiguration);
     }
 
@@ -91,7 +92,8 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @return the updated MacOSWiredNetworkConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSWiredNetworkConfiguration patch(final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration) throws ClientException {
+    @Nullable
+    public MacOSWiredNetworkConfiguration patch(@Nonnull final MacOSWiredNetworkConfiguration sourceMacOSWiredNetworkConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSWiredNetworkConfiguration);
     }
 
@@ -101,7 +103,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param newMacOSWiredNetworkConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
+    public void post(@Nonnull final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, @Nonnull final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSWiredNetworkConfiguration);
     }
 
@@ -112,7 +114,8 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @return the created MacOSWiredNetworkConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSWiredNetworkConfiguration post(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration) throws ClientException {
+    @Nullable
+    public MacOSWiredNetworkConfiguration post(@Nonnull final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration) throws ClientException {
         return send(HttpMethod.POST, newMacOSWiredNetworkConfiguration);
     }
 
@@ -122,7 +125,7 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param newMacOSWiredNetworkConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
+    public void put(@Nonnull final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration, @Nonnull final ICallback<? super MacOSWiredNetworkConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSWiredNetworkConfiguration);
     }
 
@@ -133,7 +136,8 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @return the created MacOSWiredNetworkConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSWiredNetworkConfiguration put(final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration) throws ClientException {
+    @Nullable
+    public MacOSWiredNetworkConfiguration put(@Nonnull final MacOSWiredNetworkConfiguration newMacOSWiredNetworkConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newMacOSWiredNetworkConfiguration);
     }
 
@@ -143,9 +147,10 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSWiredNetworkConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSWiredNetworkConfigurationRequest)this;
+     @Nonnull
+     public MacOSWiredNetworkConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class MacOSWiredNetworkConfigurationRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSWiredNetworkConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSWiredNetworkConfigurationRequest)this;
+     @Nonnull
+     public MacOSWiredNetworkConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

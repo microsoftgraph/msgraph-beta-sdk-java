@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.VirtualEndpoint;
-import com.microsoft.graph.requests.extensions.ICloudPCCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPCRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPCCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPCRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcDeviceImageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcDeviceImageRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcDeviceImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcDeviceImageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcOnPremisesConnectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcOnPremisesConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcOnPremisesConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcOnPremisesConnectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcProvisioningPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcProvisioningPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcProvisioningPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -36,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Virtual Endpoint Request.
  */
-public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpointRequest {
+public class VirtualEndpointRequest extends BaseRequest<VirtualEndpoint> {
 	
     /**
      * The request for the VirtualEndpoint
@@ -45,7 +39,7 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VirtualEndpointRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VirtualEndpointRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, VirtualEndpoint.class);
     }
 
@@ -54,7 +48,7 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super VirtualEndpoint> callback) {
+    public void get(@Nonnull final ICallback<? super VirtualEndpoint> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +58,7 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @return the VirtualEndpoint from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public VirtualEndpoint get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +68,7 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super VirtualEndpoint> callback) {
+    public void delete(@Nonnull final ICallback<? super VirtualEndpoint> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +87,7 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @param sourceVirtualEndpoint the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final VirtualEndpoint sourceVirtualEndpoint, final ICallback<? super VirtualEndpoint> callback) {
+    public void patch(@Nonnull final VirtualEndpoint sourceVirtualEndpoint, @Nonnull final ICallback<? super VirtualEndpoint> callback) {
         send(HttpMethod.PATCH, callback, sourceVirtualEndpoint);
     }
 
@@ -103,7 +98,8 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @return the updated VirtualEndpoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VirtualEndpoint patch(final VirtualEndpoint sourceVirtualEndpoint) throws ClientException {
+    @Nullable
+    public VirtualEndpoint patch(@Nonnull final VirtualEndpoint sourceVirtualEndpoint) throws ClientException {
         return send(HttpMethod.PATCH, sourceVirtualEndpoint);
     }
 
@@ -113,7 +109,7 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @param newVirtualEndpoint the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final VirtualEndpoint newVirtualEndpoint, final ICallback<? super VirtualEndpoint> callback) {
+    public void post(@Nonnull final VirtualEndpoint newVirtualEndpoint, @Nonnull final ICallback<? super VirtualEndpoint> callback) {
         send(HttpMethod.POST, callback, newVirtualEndpoint);
     }
 
@@ -124,7 +120,8 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @return the created VirtualEndpoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VirtualEndpoint post(final VirtualEndpoint newVirtualEndpoint) throws ClientException {
+    @Nullable
+    public VirtualEndpoint post(@Nonnull final VirtualEndpoint newVirtualEndpoint) throws ClientException {
         return send(HttpMethod.POST, newVirtualEndpoint);
     }
 
@@ -134,7 +131,7 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @param newVirtualEndpoint the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final VirtualEndpoint newVirtualEndpoint, final ICallback<? super VirtualEndpoint> callback) {
+    public void put(@Nonnull final VirtualEndpoint newVirtualEndpoint, @Nonnull final ICallback<? super VirtualEndpoint> callback) {
         send(HttpMethod.PUT, callback, newVirtualEndpoint);
     }
 
@@ -145,7 +142,8 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @return the created VirtualEndpoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VirtualEndpoint put(final VirtualEndpoint newVirtualEndpoint) throws ClientException {
+    @Nullable
+    public VirtualEndpoint put(@Nonnull final VirtualEndpoint newVirtualEndpoint) throws ClientException {
         return send(HttpMethod.PUT, newVirtualEndpoint);
     }
 
@@ -155,9 +153,10 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @param value the select clause
      * @return the updated request
      */
-     public IVirtualEndpointRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (VirtualEndpointRequest)this;
+     @Nonnull
+     public VirtualEndpointRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +165,10 @@ public class VirtualEndpointRequest extends BaseRequest implements IVirtualEndpo
      * @param value the expand clause
      * @return the updated request
      */
-     public IVirtualEndpointRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (VirtualEndpointRequest)this;
+     @Nonnull
+     public VirtualEndpointRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

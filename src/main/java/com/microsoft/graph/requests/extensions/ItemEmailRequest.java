@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemEmail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Email Request.
  */
-public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
+public class ItemEmailRequest extends BaseRequest<ItemEmail> {
 	
     /**
      * The request for the ItemEmail
@@ -29,7 +31,7 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemEmailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemEmailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemEmail.class);
     }
 
@@ -38,7 +40,7 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemEmail> callback) {
+    public void get(@Nonnull final ICallback<? super ItemEmail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @return the ItemEmail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemEmail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemEmail> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemEmail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @param sourceItemEmail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemEmail sourceItemEmail, final ICallback<? super ItemEmail> callback) {
+    public void patch(@Nonnull final ItemEmail sourceItemEmail, @Nonnull final ICallback<? super ItemEmail> callback) {
         send(HttpMethod.PATCH, callback, sourceItemEmail);
     }
 
@@ -87,7 +90,8 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @return the updated ItemEmail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemEmail patch(final ItemEmail sourceItemEmail) throws ClientException {
+    @Nullable
+    public ItemEmail patch(@Nonnull final ItemEmail sourceItemEmail) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemEmail);
     }
 
@@ -97,7 +101,7 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @param newItemEmail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemEmail newItemEmail, final ICallback<? super ItemEmail> callback) {
+    public void post(@Nonnull final ItemEmail newItemEmail, @Nonnull final ICallback<? super ItemEmail> callback) {
         send(HttpMethod.POST, callback, newItemEmail);
     }
 
@@ -108,7 +112,8 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @return the created ItemEmail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemEmail post(final ItemEmail newItemEmail) throws ClientException {
+    @Nullable
+    public ItemEmail post(@Nonnull final ItemEmail newItemEmail) throws ClientException {
         return send(HttpMethod.POST, newItemEmail);
     }
 
@@ -118,7 +123,7 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @param newItemEmail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemEmail newItemEmail, final ICallback<? super ItemEmail> callback) {
+    public void put(@Nonnull final ItemEmail newItemEmail, @Nonnull final ICallback<? super ItemEmail> callback) {
         send(HttpMethod.PUT, callback, newItemEmail);
     }
 
@@ -129,7 +134,8 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @return the created ItemEmail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemEmail put(final ItemEmail newItemEmail) throws ClientException {
+    @Nullable
+    public ItemEmail put(@Nonnull final ItemEmail newItemEmail) throws ClientException {
         return send(HttpMethod.PUT, newItemEmail);
     }
 
@@ -139,9 +145,10 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IItemEmailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemEmailRequest)this;
+     @Nonnull
+     public ItemEmailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ItemEmailRequest extends BaseRequest implements IItemEmailRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemEmailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemEmailRequest)this;
+     @Nonnull
+     public ItemEmailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

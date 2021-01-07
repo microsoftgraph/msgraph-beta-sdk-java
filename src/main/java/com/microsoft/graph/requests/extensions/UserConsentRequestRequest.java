@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserConsentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Consent Request Request.
  */
-public class UserConsentRequestRequest extends BaseRequest implements IUserConsentRequestRequest {
+public class UserConsentRequestRequest extends BaseRequest<UserConsentRequest> {
 	
     /**
      * The request for the UserConsentRequest
@@ -29,7 +31,7 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserConsentRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserConsentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserConsentRequest.class);
     }
 
@@ -38,7 +40,7 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserConsentRequest> callback) {
+    public void get(@Nonnull final ICallback<? super UserConsentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @return the UserConsentRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserConsentRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserConsentRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super UserConsentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @param sourceUserConsentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserConsentRequest sourceUserConsentRequest, final ICallback<? super UserConsentRequest> callback) {
+    public void patch(@Nonnull final UserConsentRequest sourceUserConsentRequest, @Nonnull final ICallback<? super UserConsentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceUserConsentRequest);
     }
 
@@ -87,7 +90,8 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @return the updated UserConsentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserConsentRequest patch(final UserConsentRequest sourceUserConsentRequest) throws ClientException {
+    @Nullable
+    public UserConsentRequest patch(@Nonnull final UserConsentRequest sourceUserConsentRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserConsentRequest);
     }
 
@@ -97,7 +101,7 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @param newUserConsentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserConsentRequest newUserConsentRequest, final ICallback<? super UserConsentRequest> callback) {
+    public void post(@Nonnull final UserConsentRequest newUserConsentRequest, @Nonnull final ICallback<? super UserConsentRequest> callback) {
         send(HttpMethod.POST, callback, newUserConsentRequest);
     }
 
@@ -108,7 +112,8 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @return the created UserConsentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserConsentRequest post(final UserConsentRequest newUserConsentRequest) throws ClientException {
+    @Nullable
+    public UserConsentRequest post(@Nonnull final UserConsentRequest newUserConsentRequest) throws ClientException {
         return send(HttpMethod.POST, newUserConsentRequest);
     }
 
@@ -118,7 +123,7 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @param newUserConsentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserConsentRequest newUserConsentRequest, final ICallback<? super UserConsentRequest> callback) {
+    public void put(@Nonnull final UserConsentRequest newUserConsentRequest, @Nonnull final ICallback<? super UserConsentRequest> callback) {
         send(HttpMethod.PUT, callback, newUserConsentRequest);
     }
 
@@ -129,7 +134,8 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @return the created UserConsentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserConsentRequest put(final UserConsentRequest newUserConsentRequest) throws ClientException {
+    @Nullable
+    public UserConsentRequest put(@Nonnull final UserConsentRequest newUserConsentRequest) throws ClientException {
         return send(HttpMethod.PUT, newUserConsentRequest);
     }
 
@@ -139,9 +145,10 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @param value the select clause
      * @return the updated request
      */
-     public IUserConsentRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserConsentRequestRequest)this;
+     @Nonnull
+     public UserConsentRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserConsentRequestRequest extends BaseRequest implements IUserConse
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserConsentRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserConsentRequestRequest)this;
+     @Nonnull
+     public UserConsentRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyGroupAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Policy Group Assignment Request Builder.
  */
-public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseRequestBuilder implements IDeviceCompliancePolicyGroupAssignmentRequestBuilder {
+public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseRequestBuilder<DeviceCompliancePolicyGroupAssignment> {
 
     /**
      * The request builder for the DeviceCompliancePolicyGroupAssignment
@@ -30,7 +31,7 @@ public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyGroupAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyGroupAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicyGroupAssignmentRequest instance
+     * @return the DeviceCompliancePolicyGroupAssignmentRequest instance
      */
-    public IDeviceCompliancePolicyGroupAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceCompliancePolicyGroupAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceCompliancePolicyGroupAssignmentRequest instance
+     * @return the DeviceCompliancePolicyGroupAssignmentRequest instance
      */
-    public IDeviceCompliancePolicyGroupAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceCompliancePolicyGroupAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceCompliancePolicyGroupAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class DeviceCompliancePolicyGroupAssignmentRequestBuilder extends BaseReq
     /**
      * Gets the request builder for DeviceCompliancePolicy
      *
-     * @return the IDeviceCompliancePolicyWithReferenceRequestBuilder instance
+     * @return the DeviceCompliancePolicyWithReferenceRequestBuilder instance
      */
-    public IDeviceCompliancePolicyWithReferenceRequestBuilder deviceCompliancePolicy() {
+    @Nonnull
+    public DeviceCompliancePolicyWithReferenceRequestBuilder deviceCompliancePolicy() {
         return new DeviceCompliancePolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicy"), getClient(), null);
     }
 }

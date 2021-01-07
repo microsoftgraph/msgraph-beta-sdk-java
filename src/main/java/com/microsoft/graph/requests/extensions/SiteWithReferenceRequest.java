@@ -10,43 +10,29 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContentTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISitePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISitePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.SitePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SitePageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -56,7 +42,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Site With Reference Request.
  */
-public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithReferenceRequest {
+public class SiteWithReferenceRequest extends BaseWithReferenceRequest<Site> {
 
     /**
      * The request for the Site
@@ -65,46 +51,9 @@ public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Site.class);
     }
-
-    public void post(final Site newSite, final IJsonBackedObject payload, final ICallback<? super Site> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public Site post(final Site newSite, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newSite;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super Site> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public Site get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super Site> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final Site sourceSite, final ICallback<? super Site> callback) {
-		send(HttpMethod.PATCH, callback, sourceSite);
-	}
-
-	public Site patch(final Site sourceSite) throws ClientException {
-		return send(HttpMethod.PATCH, sourceSite);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -112,9 +61,10 @@ public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithRe
      * @param value the select clause
      * @return the updated request
      */
-    public ISiteWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ISiteWithReferenceRequest)this;
+    @Nonnull
+    public SiteWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -123,8 +73,9 @@ public class SiteWithReferenceRequest extends BaseRequest implements ISiteWithRe
      * @param value the expand clause
      * @return the updated request
      */
-    public ISiteWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (SiteWithReferenceRequest)this;
+    @Nonnull
+    public SiteWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

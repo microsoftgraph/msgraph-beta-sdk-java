@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedEmailDomainInvitation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared Email Domain Invitation Request.
  */
-public class SharedEmailDomainInvitationRequest extends BaseRequest implements ISharedEmailDomainInvitationRequest {
+public class SharedEmailDomainInvitationRequest extends BaseRequest<SharedEmailDomainInvitation> {
 	
     /**
      * The request for the SharedEmailDomainInvitation
@@ -29,7 +31,7 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedEmailDomainInvitationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedEmailDomainInvitationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedEmailDomainInvitation.class);
     }
 
@@ -38,7 +40,7 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SharedEmailDomainInvitation> callback) {
+    public void get(@Nonnull final ICallback<? super SharedEmailDomainInvitation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @return the SharedEmailDomainInvitation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SharedEmailDomainInvitation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SharedEmailDomainInvitation> callback) {
+    public void delete(@Nonnull final ICallback<? super SharedEmailDomainInvitation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @param sourceSharedEmailDomainInvitation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharedEmailDomainInvitation sourceSharedEmailDomainInvitation, final ICallback<? super SharedEmailDomainInvitation> callback) {
+    public void patch(@Nonnull final SharedEmailDomainInvitation sourceSharedEmailDomainInvitation, @Nonnull final ICallback<? super SharedEmailDomainInvitation> callback) {
         send(HttpMethod.PATCH, callback, sourceSharedEmailDomainInvitation);
     }
 
@@ -87,7 +90,8 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @return the updated SharedEmailDomainInvitation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedEmailDomainInvitation patch(final SharedEmailDomainInvitation sourceSharedEmailDomainInvitation) throws ClientException {
+    @Nullable
+    public SharedEmailDomainInvitation patch(@Nonnull final SharedEmailDomainInvitation sourceSharedEmailDomainInvitation) throws ClientException {
         return send(HttpMethod.PATCH, sourceSharedEmailDomainInvitation);
     }
 
@@ -97,7 +101,7 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @param newSharedEmailDomainInvitation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharedEmailDomainInvitation newSharedEmailDomainInvitation, final ICallback<? super SharedEmailDomainInvitation> callback) {
+    public void post(@Nonnull final SharedEmailDomainInvitation newSharedEmailDomainInvitation, @Nonnull final ICallback<? super SharedEmailDomainInvitation> callback) {
         send(HttpMethod.POST, callback, newSharedEmailDomainInvitation);
     }
 
@@ -108,7 +112,8 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @return the created SharedEmailDomainInvitation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedEmailDomainInvitation post(final SharedEmailDomainInvitation newSharedEmailDomainInvitation) throws ClientException {
+    @Nullable
+    public SharedEmailDomainInvitation post(@Nonnull final SharedEmailDomainInvitation newSharedEmailDomainInvitation) throws ClientException {
         return send(HttpMethod.POST, newSharedEmailDomainInvitation);
     }
 
@@ -118,7 +123,7 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @param newSharedEmailDomainInvitation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharedEmailDomainInvitation newSharedEmailDomainInvitation, final ICallback<? super SharedEmailDomainInvitation> callback) {
+    public void put(@Nonnull final SharedEmailDomainInvitation newSharedEmailDomainInvitation, @Nonnull final ICallback<? super SharedEmailDomainInvitation> callback) {
         send(HttpMethod.PUT, callback, newSharedEmailDomainInvitation);
     }
 
@@ -129,7 +134,8 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @return the created SharedEmailDomainInvitation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedEmailDomainInvitation put(final SharedEmailDomainInvitation newSharedEmailDomainInvitation) throws ClientException {
+    @Nullable
+    public SharedEmailDomainInvitation put(@Nonnull final SharedEmailDomainInvitation newSharedEmailDomainInvitation) throws ClientException {
         return send(HttpMethod.PUT, newSharedEmailDomainInvitation);
     }
 
@@ -139,9 +145,10 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public ISharedEmailDomainInvitationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharedEmailDomainInvitationRequest)this;
+     @Nonnull
+     public SharedEmailDomainInvitationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SharedEmailDomainInvitationRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharedEmailDomainInvitationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharedEmailDomainInvitationRequest)this;
+     @Nonnull
+     public SharedEmailDomainInvitationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

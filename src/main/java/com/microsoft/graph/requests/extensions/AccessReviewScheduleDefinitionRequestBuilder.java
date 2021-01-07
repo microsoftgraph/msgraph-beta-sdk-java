@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewScheduleDefinition;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Review Schedule Definition Request Builder.
  */
-public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBuilder implements IAccessReviewScheduleDefinitionRequestBuilder {
+public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBuilder<AccessReviewScheduleDefinition> {
 
     /**
      * The request builder for the AccessReviewScheduleDefinition
@@ -32,7 +32,7 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewScheduleDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessReviewScheduleDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessReviewScheduleDefinitionRequest instance
+     * @return the AccessReviewScheduleDefinitionRequest instance
      */
-    public IAccessReviewScheduleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessReviewScheduleDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,22 +51,41 @@ public class AccessReviewScheduleDefinitionRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessReviewScheduleDefinitionRequest instance
+     * @return the AccessReviewScheduleDefinitionRequest instance
      */
-    public IAccessReviewScheduleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessReviewScheduleDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAccessReviewInstanceCollectionRequestBuilder instances() {
+    /**
+     *  Gets a request builder for the AccessReviewInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceCollectionRequestBuilder instances() {
         return new AccessReviewInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("instances"), getClient(), null);
     }
 
-    public IAccessReviewInstanceRequestBuilder instances(final String id) {
+    /**
+     * Gets a request builder for the AccessReviewInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewInstanceRequestBuilder instances(@Nonnull final String id) {
         return new AccessReviewInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("instances") + "/" + id, getClient(), null);
     }
 
-    public IAccessReviewScheduleDefinitionStopRequestBuilder stop() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewScheduleDefinitionStopRequestBuilder stop() {
         return new AccessReviewScheduleDefinitionStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 }

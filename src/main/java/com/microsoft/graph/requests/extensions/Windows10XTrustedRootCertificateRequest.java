@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10XTrustedRootCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10XTrusted Root Certificate Request.
  */
-public class Windows10XTrustedRootCertificateRequest extends BaseRequest implements IWindows10XTrustedRootCertificateRequest {
+public class Windows10XTrustedRootCertificateRequest extends BaseRequest<Windows10XTrustedRootCertificate> {
 	
     /**
      * The request for the Windows10XTrustedRootCertificate
@@ -29,7 +31,7 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10XTrustedRootCertificateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10XTrustedRootCertificateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10XTrustedRootCertificate.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10XTrustedRootCertificate> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10XTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @return the Windows10XTrustedRootCertificate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10XTrustedRootCertificate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10XTrustedRootCertificate> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10XTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @param sourceWindows10XTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10XTrustedRootCertificate sourceWindows10XTrustedRootCertificate, final ICallback<? super Windows10XTrustedRootCertificate> callback) {
+    public void patch(@Nonnull final Windows10XTrustedRootCertificate sourceWindows10XTrustedRootCertificate, @Nonnull final ICallback<? super Windows10XTrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10XTrustedRootCertificate);
     }
 
@@ -87,7 +90,8 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @return the updated Windows10XTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XTrustedRootCertificate patch(final Windows10XTrustedRootCertificate sourceWindows10XTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public Windows10XTrustedRootCertificate patch(@Nonnull final Windows10XTrustedRootCertificate sourceWindows10XTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10XTrustedRootCertificate);
     }
 
@@ -97,7 +101,7 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @param newWindows10XTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate, final ICallback<? super Windows10XTrustedRootCertificate> callback) {
+    public void post(@Nonnull final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate, @Nonnull final ICallback<? super Windows10XTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newWindows10XTrustedRootCertificate);
     }
 
@@ -108,7 +112,8 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @return the created Windows10XTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XTrustedRootCertificate post(final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public Windows10XTrustedRootCertificate post(@Nonnull final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.POST, newWindows10XTrustedRootCertificate);
     }
 
@@ -118,7 +123,7 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @param newWindows10XTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate, final ICallback<? super Windows10XTrustedRootCertificate> callback) {
+    public void put(@Nonnull final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate, @Nonnull final ICallback<? super Windows10XTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newWindows10XTrustedRootCertificate);
     }
 
@@ -129,7 +134,8 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @return the created Windows10XTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XTrustedRootCertificate put(final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public Windows10XTrustedRootCertificate put(@Nonnull final Windows10XTrustedRootCertificate newWindows10XTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PUT, newWindows10XTrustedRootCertificate);
     }
 
@@ -139,9 +145,10 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10XTrustedRootCertificateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10XTrustedRootCertificateRequest)this;
+     @Nonnull
+     public Windows10XTrustedRootCertificateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10XTrustedRootCertificateRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10XTrustedRootCertificateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10XTrustedRootCertificateRequest)this;
+     @Nonnull
+     public Windows10XTrustedRootCertificateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

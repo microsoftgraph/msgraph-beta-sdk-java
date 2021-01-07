@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LongRunningOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Long Running Operation Request.
  */
-public class LongRunningOperationRequest extends BaseRequest implements ILongRunningOperationRequest {
+public class LongRunningOperationRequest extends BaseRequest<LongRunningOperation> {
 	
     /**
      * The request for the LongRunningOperation
@@ -29,7 +31,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LongRunningOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LongRunningOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LongRunningOperation.class);
     }
 
@@ -38,7 +40,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LongRunningOperation> callback) {
+    public void get(@Nonnull final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @return the LongRunningOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public LongRunningOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LongRunningOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param sourceLongRunningOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LongRunningOperation sourceLongRunningOperation, final ICallback<? super LongRunningOperation> callback) {
+    public void patch(@Nonnull final LongRunningOperation sourceLongRunningOperation, @Nonnull final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceLongRunningOperation);
     }
 
@@ -87,7 +90,8 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @return the updated LongRunningOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LongRunningOperation patch(final LongRunningOperation sourceLongRunningOperation) throws ClientException {
+    @Nullable
+    public LongRunningOperation patch(@Nonnull final LongRunningOperation sourceLongRunningOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceLongRunningOperation);
     }
 
@@ -97,7 +101,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param newLongRunningOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback) {
+    public void post(@Nonnull final LongRunningOperation newLongRunningOperation, @Nonnull final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.POST, callback, newLongRunningOperation);
     }
 
@@ -108,7 +112,8 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @return the created LongRunningOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LongRunningOperation post(final LongRunningOperation newLongRunningOperation) throws ClientException {
+    @Nullable
+    public LongRunningOperation post(@Nonnull final LongRunningOperation newLongRunningOperation) throws ClientException {
         return send(HttpMethod.POST, newLongRunningOperation);
     }
 
@@ -118,7 +123,7 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param newLongRunningOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LongRunningOperation newLongRunningOperation, final ICallback<? super LongRunningOperation> callback) {
+    public void put(@Nonnull final LongRunningOperation newLongRunningOperation, @Nonnull final ICallback<? super LongRunningOperation> callback) {
         send(HttpMethod.PUT, callback, newLongRunningOperation);
     }
 
@@ -129,7 +134,8 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @return the created LongRunningOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LongRunningOperation put(final LongRunningOperation newLongRunningOperation) throws ClientException {
+    @Nullable
+    public LongRunningOperation put(@Nonnull final LongRunningOperation newLongRunningOperation) throws ClientException {
         return send(HttpMethod.PUT, newLongRunningOperation);
     }
 
@@ -139,9 +145,10 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param value the select clause
      * @return the updated request
      */
-     public ILongRunningOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LongRunningOperationRequest)this;
+     @Nonnull
+     public LongRunningOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class LongRunningOperationRequest extends BaseRequest implements ILongRun
      * @param value the expand clause
      * @return the updated request
      */
-     public ILongRunningOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LongRunningOperationRequest)this;
+     @Nonnull
+     public LongRunningOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

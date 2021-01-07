@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FilterOperatorSchema;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Filter Operator Schema Request.
  */
-public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterOperatorSchemaRequest {
+public class FilterOperatorSchemaRequest extends BaseRequest<FilterOperatorSchema> {
 	
     /**
      * The request for the FilterOperatorSchema
@@ -29,7 +31,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FilterOperatorSchemaRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FilterOperatorSchemaRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, FilterOperatorSchema.class);
     }
 
@@ -38,7 +40,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super FilterOperatorSchema> callback) {
+    public void get(@Nonnull final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @return the FilterOperatorSchema from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public FilterOperatorSchema get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super FilterOperatorSchema> callback) {
+    public void delete(@Nonnull final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param sourceFilterOperatorSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FilterOperatorSchema sourceFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback) {
+    public void patch(@Nonnull final FilterOperatorSchema sourceFilterOperatorSchema, @Nonnull final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.PATCH, callback, sourceFilterOperatorSchema);
     }
 
@@ -87,7 +90,8 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @return the updated FilterOperatorSchema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FilterOperatorSchema patch(final FilterOperatorSchema sourceFilterOperatorSchema) throws ClientException {
+    @Nullable
+    public FilterOperatorSchema patch(@Nonnull final FilterOperatorSchema sourceFilterOperatorSchema) throws ClientException {
         return send(HttpMethod.PATCH, sourceFilterOperatorSchema);
     }
 
@@ -97,7 +101,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param newFilterOperatorSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback) {
+    public void post(@Nonnull final FilterOperatorSchema newFilterOperatorSchema, @Nonnull final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.POST, callback, newFilterOperatorSchema);
     }
 
@@ -108,7 +112,8 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @return the created FilterOperatorSchema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FilterOperatorSchema post(final FilterOperatorSchema newFilterOperatorSchema) throws ClientException {
+    @Nullable
+    public FilterOperatorSchema post(@Nonnull final FilterOperatorSchema newFilterOperatorSchema) throws ClientException {
         return send(HttpMethod.POST, newFilterOperatorSchema);
     }
 
@@ -118,7 +123,7 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param newFilterOperatorSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FilterOperatorSchema newFilterOperatorSchema, final ICallback<? super FilterOperatorSchema> callback) {
+    public void put(@Nonnull final FilterOperatorSchema newFilterOperatorSchema, @Nonnull final ICallback<? super FilterOperatorSchema> callback) {
         send(HttpMethod.PUT, callback, newFilterOperatorSchema);
     }
 
@@ -129,7 +134,8 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @return the created FilterOperatorSchema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FilterOperatorSchema put(final FilterOperatorSchema newFilterOperatorSchema) throws ClientException {
+    @Nullable
+    public FilterOperatorSchema put(@Nonnull final FilterOperatorSchema newFilterOperatorSchema) throws ClientException {
         return send(HttpMethod.PUT, newFilterOperatorSchema);
     }
 
@@ -139,9 +145,10 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param value the select clause
      * @return the updated request
      */
-     public IFilterOperatorSchemaRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (FilterOperatorSchemaRequest)this;
+     @Nonnull
+     public FilterOperatorSchemaRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class FilterOperatorSchemaRequest extends BaseRequest implements IFilterO
      * @param value the expand clause
      * @return the updated request
      */
-     public IFilterOperatorSchemaRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FilterOperatorSchemaRequest)this;
+     @Nonnull
+     public FilterOperatorSchemaRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

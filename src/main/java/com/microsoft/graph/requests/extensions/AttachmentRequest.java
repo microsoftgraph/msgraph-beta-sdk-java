@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Attachment Request.
  */
-public class AttachmentRequest extends BaseRequest implements IAttachmentRequest {
+public class AttachmentRequest extends BaseRequest<Attachment> {
 	
     /**
      * The request for the Attachment
@@ -32,10 +34,10 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AttachmentRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Attachment> responseClass) {
+    public AttachmentRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Attachment> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -46,7 +48,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AttachmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttachmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Attachment.class);
     }
 
@@ -55,7 +57,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Attachment> callback) {
+    public void get(@Nonnull final ICallback<? super Attachment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,6 +67,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @return the Attachment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Attachment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -74,7 +77,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Attachment> callback) {
+    public void delete(@Nonnull final ICallback<? super Attachment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +96,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param sourceAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Attachment sourceAttachment, final ICallback<? super Attachment> callback) {
+    public void patch(@Nonnull final Attachment sourceAttachment, @Nonnull final ICallback<? super Attachment> callback) {
         send(HttpMethod.PATCH, callback, sourceAttachment);
     }
 
@@ -104,7 +107,8 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @return the updated Attachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Attachment patch(final Attachment sourceAttachment) throws ClientException {
+    @Nullable
+    public Attachment patch(@Nonnull final Attachment sourceAttachment) throws ClientException {
         return send(HttpMethod.PATCH, sourceAttachment);
     }
 
@@ -114,7 +118,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param newAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
+    public void post(@Nonnull final Attachment newAttachment, @Nonnull final ICallback<? super Attachment> callback) {
         send(HttpMethod.POST, callback, newAttachment);
     }
 
@@ -125,7 +129,8 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @return the created Attachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Attachment post(final Attachment newAttachment) throws ClientException {
+    @Nullable
+    public Attachment post(@Nonnull final Attachment newAttachment) throws ClientException {
         return send(HttpMethod.POST, newAttachment);
     }
 
@@ -135,7 +140,7 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param newAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Attachment newAttachment, final ICallback<? super Attachment> callback) {
+    public void put(@Nonnull final Attachment newAttachment, @Nonnull final ICallback<? super Attachment> callback) {
         send(HttpMethod.PUT, callback, newAttachment);
     }
 
@@ -146,7 +151,8 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @return the created Attachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Attachment put(final Attachment newAttachment) throws ClientException {
+    @Nullable
+    public Attachment put(@Nonnull final Attachment newAttachment) throws ClientException {
         return send(HttpMethod.PUT, newAttachment);
     }
 
@@ -156,9 +162,10 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IAttachmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AttachmentRequest)this;
+     @Nonnull
+     public AttachmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -167,9 +174,10 @@ public class AttachmentRequest extends BaseRequest implements IAttachmentRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IAttachmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AttachmentRequest)this;
+     @Nonnull
+     public AttachmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

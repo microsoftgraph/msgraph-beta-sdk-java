@@ -10,30 +10,21 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Post;
 import com.microsoft.graph.models.extensions.Recipient;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMentionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMentionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MentionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MentionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -43,7 +34,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Post Request.
  */
-public class PostRequest extends BaseRequest implements IPostRequest {
+public class PostRequest extends BaseRequest<Post> {
 	
     /**
      * The request for the Post
@@ -52,7 +43,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PostRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PostRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Post.class);
     }
 
@@ -61,7 +52,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Post> callback) {
+    public void get(@Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,6 +62,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @return the Post from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Post get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -80,7 +72,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Post> callback) {
+    public void delete(@Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -99,7 +91,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param sourcePost the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Post sourcePost, final ICallback<? super Post> callback) {
+    public void patch(@Nonnull final Post sourcePost, @Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.PATCH, callback, sourcePost);
     }
 
@@ -110,7 +102,8 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @return the updated Post
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Post patch(final Post sourcePost) throws ClientException {
+    @Nullable
+    public Post patch(@Nonnull final Post sourcePost) throws ClientException {
         return send(HttpMethod.PATCH, sourcePost);
     }
 
@@ -120,7 +113,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param newPost the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Post newPost, final ICallback<? super Post> callback) {
+    public void post(@Nonnull final Post newPost, @Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.POST, callback, newPost);
     }
 
@@ -131,7 +124,8 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @return the created Post
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Post post(final Post newPost) throws ClientException {
+    @Nullable
+    public Post post(@Nonnull final Post newPost) throws ClientException {
         return send(HttpMethod.POST, newPost);
     }
 
@@ -141,7 +135,7 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param newPost the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Post newPost, final ICallback<? super Post> callback) {
+    public void put(@Nonnull final Post newPost, @Nonnull final ICallback<? super Post> callback) {
         send(HttpMethod.PUT, callback, newPost);
     }
 
@@ -152,7 +146,8 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @return the created Post
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Post put(final Post newPost) throws ClientException {
+    @Nullable
+    public Post put(@Nonnull final Post newPost) throws ClientException {
         return send(HttpMethod.PUT, newPost);
     }
 
@@ -162,9 +157,10 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPostRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PostRequest)this;
+     @Nonnull
+     public PostRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -173,9 +169,10 @@ public class PostRequest extends BaseRequest implements IPostRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPostRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PostRequest)this;
+     @Nonnull
+     public PostRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

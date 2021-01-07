@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FocusActivityStatistics;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Focus Activity Statistics Request.
  */
-public class FocusActivityStatisticsRequest extends BaseRequest implements IFocusActivityStatisticsRequest {
+public class FocusActivityStatisticsRequest extends BaseRequest<FocusActivityStatistics> {
 	
     /**
      * The request for the FocusActivityStatistics
@@ -29,7 +31,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FocusActivityStatisticsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FocusActivityStatisticsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, FocusActivityStatistics.class);
     }
 
@@ -38,7 +40,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super FocusActivityStatistics> callback) {
+    public void get(@Nonnull final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @return the FocusActivityStatistics from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public FocusActivityStatistics get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super FocusActivityStatistics> callback) {
+    public void delete(@Nonnull final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param sourceFocusActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FocusActivityStatistics sourceFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback) {
+    public void patch(@Nonnull final FocusActivityStatistics sourceFocusActivityStatistics, @Nonnull final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.PATCH, callback, sourceFocusActivityStatistics);
     }
 
@@ -87,7 +90,8 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @return the updated FocusActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FocusActivityStatistics patch(final FocusActivityStatistics sourceFocusActivityStatistics) throws ClientException {
+    @Nullable
+    public FocusActivityStatistics patch(@Nonnull final FocusActivityStatistics sourceFocusActivityStatistics) throws ClientException {
         return send(HttpMethod.PATCH, sourceFocusActivityStatistics);
     }
 
@@ -97,7 +101,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param newFocusActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback) {
+    public void post(@Nonnull final FocusActivityStatistics newFocusActivityStatistics, @Nonnull final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.POST, callback, newFocusActivityStatistics);
     }
 
@@ -108,7 +112,8 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @return the created FocusActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FocusActivityStatistics post(final FocusActivityStatistics newFocusActivityStatistics) throws ClientException {
+    @Nullable
+    public FocusActivityStatistics post(@Nonnull final FocusActivityStatistics newFocusActivityStatistics) throws ClientException {
         return send(HttpMethod.POST, newFocusActivityStatistics);
     }
 
@@ -118,7 +123,7 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param newFocusActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FocusActivityStatistics newFocusActivityStatistics, final ICallback<? super FocusActivityStatistics> callback) {
+    public void put(@Nonnull final FocusActivityStatistics newFocusActivityStatistics, @Nonnull final ICallback<? super FocusActivityStatistics> callback) {
         send(HttpMethod.PUT, callback, newFocusActivityStatistics);
     }
 
@@ -129,7 +134,8 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @return the created FocusActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FocusActivityStatistics put(final FocusActivityStatistics newFocusActivityStatistics) throws ClientException {
+    @Nullable
+    public FocusActivityStatistics put(@Nonnull final FocusActivityStatistics newFocusActivityStatistics) throws ClientException {
         return send(HttpMethod.PUT, newFocusActivityStatistics);
     }
 
@@ -139,9 +145,10 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param value the select clause
      * @return the updated request
      */
-     public IFocusActivityStatisticsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (FocusActivityStatisticsRequest)this;
+     @Nonnull
+     public FocusActivityStatisticsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class FocusActivityStatisticsRequest extends BaseRequest implements IFocu
      * @param value the expand clause
      * @return the updated request
      */
-     public IFocusActivityStatisticsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FocusActivityStatisticsRequest)this;
+     @Nonnull
+     public FocusActivityStatisticsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

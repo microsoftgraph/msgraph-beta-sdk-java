@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GeneralLedgerEntry;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the General Ledger Entry Request.
  */
-public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLedgerEntryRequest {
+public class GeneralLedgerEntryRequest extends BaseRequest<GeneralLedgerEntry> {
 	
     /**
      * The request for the GeneralLedgerEntry
@@ -31,7 +32,7 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GeneralLedgerEntryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GeneralLedgerEntryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GeneralLedgerEntry.class);
     }
 
@@ -40,7 +41,7 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GeneralLedgerEntry> callback) {
+    public void get(@Nonnull final ICallback<? super GeneralLedgerEntry> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @return the GeneralLedgerEntry from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GeneralLedgerEntry get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GeneralLedgerEntry> callback) {
+    public void delete(@Nonnull final ICallback<? super GeneralLedgerEntry> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @param sourceGeneralLedgerEntry the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GeneralLedgerEntry sourceGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback) {
+    public void patch(@Nonnull final GeneralLedgerEntry sourceGeneralLedgerEntry, @Nonnull final ICallback<? super GeneralLedgerEntry> callback) {
         send(HttpMethod.PATCH, callback, sourceGeneralLedgerEntry);
     }
 
@@ -89,7 +91,8 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @return the updated GeneralLedgerEntry
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GeneralLedgerEntry patch(final GeneralLedgerEntry sourceGeneralLedgerEntry) throws ClientException {
+    @Nullable
+    public GeneralLedgerEntry patch(@Nonnull final GeneralLedgerEntry sourceGeneralLedgerEntry) throws ClientException {
         return send(HttpMethod.PATCH, sourceGeneralLedgerEntry);
     }
 
@@ -99,7 +102,7 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @param newGeneralLedgerEntry the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback) {
+    public void post(@Nonnull final GeneralLedgerEntry newGeneralLedgerEntry, @Nonnull final ICallback<? super GeneralLedgerEntry> callback) {
         send(HttpMethod.POST, callback, newGeneralLedgerEntry);
     }
 
@@ -110,7 +113,8 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @return the created GeneralLedgerEntry
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GeneralLedgerEntry post(final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException {
+    @Nullable
+    public GeneralLedgerEntry post(@Nonnull final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException {
         return send(HttpMethod.POST, newGeneralLedgerEntry);
     }
 
@@ -120,7 +124,7 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @param newGeneralLedgerEntry the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GeneralLedgerEntry newGeneralLedgerEntry, final ICallback<? super GeneralLedgerEntry> callback) {
+    public void put(@Nonnull final GeneralLedgerEntry newGeneralLedgerEntry, @Nonnull final ICallback<? super GeneralLedgerEntry> callback) {
         send(HttpMethod.PUT, callback, newGeneralLedgerEntry);
     }
 
@@ -131,7 +135,8 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @return the created GeneralLedgerEntry
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GeneralLedgerEntry put(final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException {
+    @Nullable
+    public GeneralLedgerEntry put(@Nonnull final GeneralLedgerEntry newGeneralLedgerEntry) throws ClientException {
         return send(HttpMethod.PUT, newGeneralLedgerEntry);
     }
 
@@ -141,9 +146,10 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @param value the select clause
      * @return the updated request
      */
-     public IGeneralLedgerEntryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GeneralLedgerEntryRequest)this;
+     @Nonnull
+     public GeneralLedgerEntryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class GeneralLedgerEntryRequest extends BaseRequest implements IGeneralLe
      * @param value the expand clause
      * @return the updated request
      */
-     public IGeneralLedgerEntryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GeneralLedgerEntryRequest)this;
+     @Nonnull
+     public GeneralLedgerEntryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

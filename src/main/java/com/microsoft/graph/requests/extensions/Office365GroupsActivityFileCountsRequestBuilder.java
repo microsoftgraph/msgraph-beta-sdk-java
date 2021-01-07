@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Office365GroupsActivityFileCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Office365Groups Activity File Counts Request Builder.
  */
-public class Office365GroupsActivityFileCountsRequestBuilder extends BaseRequestBuilder implements IOffice365GroupsActivityFileCountsRequestBuilder {
+public class Office365GroupsActivityFileCountsRequestBuilder extends BaseRequestBuilder<Office365GroupsActivityFileCounts> {
 
     /**
      * The request builder for the Office365GroupsActivityFileCounts
@@ -28,7 +30,7 @@ public class Office365GroupsActivityFileCountsRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Office365GroupsActivityFileCountsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Office365GroupsActivityFileCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class Office365GroupsActivityFileCountsRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOffice365GroupsActivityFileCountsRequest instance
+     * @return the Office365GroupsActivityFileCountsRequest instance
      */
-    public IOffice365GroupsActivityFileCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public Office365GroupsActivityFileCountsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class Office365GroupsActivityFileCountsRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOffice365GroupsActivityFileCountsRequest instance
+     * @return the Office365GroupsActivityFileCountsRequest instance
      */
-    public IOffice365GroupsActivityFileCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public Office365GroupsActivityFileCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.Office365GroupsActivityFileCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

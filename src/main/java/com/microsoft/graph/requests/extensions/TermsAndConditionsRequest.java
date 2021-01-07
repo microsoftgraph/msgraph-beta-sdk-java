@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditions;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAcceptanceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAcceptanceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Terms And Conditions Request.
  */
-public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndConditionsRequest {
+public class TermsAndConditionsRequest extends BaseRequest<TermsAndConditions> {
 	
     /**
      * The request for the TermsAndConditions
@@ -41,7 +37,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditions.class);
     }
 
@@ -50,7 +46,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TermsAndConditions> callback) {
+    public void get(@Nonnull final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @return the TermsAndConditions from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TermsAndConditions get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TermsAndConditions> callback) {
+    public void delete(@Nonnull final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param sourceTermsAndConditions the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TermsAndConditions sourceTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
+    public void patch(@Nonnull final TermsAndConditions sourceTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.PATCH, callback, sourceTermsAndConditions);
     }
 
@@ -99,7 +96,8 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @return the updated TermsAndConditions
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditions patch(final TermsAndConditions sourceTermsAndConditions) throws ClientException {
+    @Nullable
+    public TermsAndConditions patch(@Nonnull final TermsAndConditions sourceTermsAndConditions) throws ClientException {
         return send(HttpMethod.PATCH, sourceTermsAndConditions);
     }
 
@@ -109,7 +107,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param newTermsAndConditions the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
+    public void post(@Nonnull final TermsAndConditions newTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.POST, callback, newTermsAndConditions);
     }
 
@@ -120,7 +118,8 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @return the created TermsAndConditions
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditions post(final TermsAndConditions newTermsAndConditions) throws ClientException {
+    @Nullable
+    public TermsAndConditions post(@Nonnull final TermsAndConditions newTermsAndConditions) throws ClientException {
         return send(HttpMethod.POST, newTermsAndConditions);
     }
 
@@ -130,7 +129,7 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param newTermsAndConditions the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TermsAndConditions newTermsAndConditions, final ICallback<? super TermsAndConditions> callback) {
+    public void put(@Nonnull final TermsAndConditions newTermsAndConditions, @Nonnull final ICallback<? super TermsAndConditions> callback) {
         send(HttpMethod.PUT, callback, newTermsAndConditions);
     }
 
@@ -141,7 +140,8 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @return the created TermsAndConditions
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditions put(final TermsAndConditions newTermsAndConditions) throws ClientException {
+    @Nullable
+    public TermsAndConditions put(@Nonnull final TermsAndConditions newTermsAndConditions) throws ClientException {
         return send(HttpMethod.PUT, newTermsAndConditions);
     }
 
@@ -151,9 +151,10 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param value the select clause
      * @return the updated request
      */
-     public ITermsAndConditionsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TermsAndConditionsRequest)this;
+     @Nonnull
+     public TermsAndConditionsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class TermsAndConditionsRequest extends BaseRequest implements ITermsAndC
      * @param value the expand clause
      * @return the updated request
      */
-     public ITermsAndConditionsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermsAndConditionsRequest)this;
+     @Nonnull
+     public TermsAndConditionsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

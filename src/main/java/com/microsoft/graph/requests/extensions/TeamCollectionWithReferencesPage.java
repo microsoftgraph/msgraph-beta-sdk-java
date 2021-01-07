@@ -20,9 +20,11 @@ import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.extensions.ChatMessage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.ITeamCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.TeamCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.TeamCollectionResponse;
 import com.microsoft.graph.models.extensions.Team;
 import com.google.gson.JsonObject;
@@ -35,7 +37,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Team Collection With References Page.
  */
-public class TeamCollectionWithReferencesPage extends BaseCollectionPage<Team, ITeamCollectionWithReferencesRequestBuilder> implements ITeamCollectionWithReferencesPage {
+public class TeamCollectionWithReferencesPage extends BaseCollectionPage<Team, TeamCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for Team
@@ -43,7 +45,17 @@ public class TeamCollectionWithReferencesPage extends BaseCollectionPage<Team, I
      * @param response the serialized TeamCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public TeamCollectionWithReferencesPage(final TeamCollectionResponse response, final ITeamCollectionWithReferencesRequestBuilder builder) {
+    public TeamCollectionWithReferencesPage(@Nonnull final TeamCollectionResponse response, @Nullable final TeamCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for Team
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public TeamCollectionWithReferencesPage(@Nonnull final java.util.List<Team> pageContents, @Nullable final TeamCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

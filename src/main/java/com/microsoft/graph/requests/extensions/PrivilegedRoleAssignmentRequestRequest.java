@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Privileged Role Assignment Request Request.
  */
-public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implements IPrivilegedRoleAssignmentRequestRequest {
+public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest<PrivilegedRoleAssignmentRequest> {
 	
     /**
      * The request for the PrivilegedRoleAssignmentRequest
@@ -31,7 +32,7 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleAssignmentRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleAssignmentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignmentRequest.class);
     }
 
@@ -40,7 +41,7 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
+    public void get(@Nonnull final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @return the PrivilegedRoleAssignmentRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrivilegedRoleAssignmentRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param sourcePrivilegedRoleAssignmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedRoleAssignmentRequest sourcePrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
+    public void patch(@Nonnull final PrivilegedRoleAssignmentRequest sourcePrivilegedRoleAssignmentRequest, @Nonnull final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedRoleAssignmentRequest);
     }
 
@@ -89,7 +91,8 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @return the updated PrivilegedRoleAssignmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleAssignmentRequest patch(final PrivilegedRoleAssignmentRequest sourcePrivilegedRoleAssignmentRequest) throws ClientException {
+    @Nullable
+    public PrivilegedRoleAssignmentRequest patch(@Nonnull final PrivilegedRoleAssignmentRequest sourcePrivilegedRoleAssignmentRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrivilegedRoleAssignmentRequest);
     }
 
@@ -99,7 +102,7 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param newPrivilegedRoleAssignmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
+    public void post(@Nonnull final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, @Nonnull final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.POST, callback, newPrivilegedRoleAssignmentRequest);
     }
 
@@ -110,7 +113,8 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @return the created PrivilegedRoleAssignmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleAssignmentRequest post(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest) throws ClientException {
+    @Nullable
+    public PrivilegedRoleAssignmentRequest post(@Nonnull final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest) throws ClientException {
         return send(HttpMethod.POST, newPrivilegedRoleAssignmentRequest);
     }
 
@@ -120,7 +124,7 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param newPrivilegedRoleAssignmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
+    public void put(@Nonnull final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest, @Nonnull final ICallback<? super PrivilegedRoleAssignmentRequest> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedRoleAssignmentRequest);
     }
 
@@ -131,7 +135,8 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @return the created PrivilegedRoleAssignmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleAssignmentRequest put(final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest) throws ClientException {
+    @Nullable
+    public PrivilegedRoleAssignmentRequest put(@Nonnull final PrivilegedRoleAssignmentRequest newPrivilegedRoleAssignmentRequest) throws ClientException {
         return send(HttpMethod.PUT, newPrivilegedRoleAssignmentRequest);
     }
 
@@ -141,9 +146,10 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IPrivilegedRoleAssignmentRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrivilegedRoleAssignmentRequestRequest)this;
+     @Nonnull
+     public PrivilegedRoleAssignmentRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class PrivilegedRoleAssignmentRequestRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrivilegedRoleAssignmentRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedRoleAssignmentRequestRequest)this;
+     @Nonnull
+     public PrivilegedRoleAssignmentRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SynchronizationTemplate;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationSchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Synchronization Template Request Builder.
  */
-public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder implements ISynchronizationTemplateRequestBuilder {
+public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder<SynchronizationTemplate> {
 
     /**
      * The request builder for the SynchronizationTemplate
@@ -30,7 +31,7 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SynchronizationTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SynchronizationTemplateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISynchronizationTemplateRequest instance
+     * @return the SynchronizationTemplateRequest instance
      */
-    public ISynchronizationTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SynchronizationTemplateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISynchronizationTemplateRequest instance
+     * @return the SynchronizationTemplateRequest instance
      */
-    public ISynchronizationTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SynchronizationTemplateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SynchronizationTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class SynchronizationTemplateRequestBuilder extends BaseRequestBuilder im
     /**
      * Gets the request builder for SynchronizationSchema
      *
-     * @return the ISynchronizationSchemaRequestBuilder instance
+     * @return the SynchronizationSchemaRequestBuilder instance
      */
-    public ISynchronizationSchemaRequestBuilder schema() {
+    @Nonnull
+    public SynchronizationSchemaRequestBuilder schema() {
         return new SynchronizationSchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
     }
 }

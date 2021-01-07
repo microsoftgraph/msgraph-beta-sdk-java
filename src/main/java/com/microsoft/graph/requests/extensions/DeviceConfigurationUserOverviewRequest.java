@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration User Overview Request.
  */
-public class DeviceConfigurationUserOverviewRequest extends BaseRequest implements IDeviceConfigurationUserOverviewRequest {
+public class DeviceConfigurationUserOverviewRequest extends BaseRequest<DeviceConfigurationUserOverview> {
 	
     /**
      * The request for the DeviceConfigurationUserOverview
@@ -29,7 +31,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationUserOverviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationUserOverviewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationUserOverview.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfigurationUserOverview> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @return the DeviceConfigurationUserOverview from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfigurationUserOverview get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfigurationUserOverview> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @param sourceDeviceConfigurationUserOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview, final ICallback<? super DeviceConfigurationUserOverview> callback) {
+    public void patch(@Nonnull final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview, @Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationUserOverview);
     }
 
@@ -87,7 +90,8 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @return the updated DeviceConfigurationUserOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationUserOverview patch(final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview) throws ClientException {
+    @Nullable
+    public DeviceConfigurationUserOverview patch(@Nonnull final DeviceConfigurationUserOverview sourceDeviceConfigurationUserOverview) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfigurationUserOverview);
     }
 
@@ -97,7 +101,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @param newDeviceConfigurationUserOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, final ICallback<? super DeviceConfigurationUserOverview> callback) {
+    public void post(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, @Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationUserOverview);
     }
 
@@ -108,7 +112,8 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @return the created DeviceConfigurationUserOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationUserOverview post(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview) throws ClientException {
+    @Nullable
+    public DeviceConfigurationUserOverview post(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfigurationUserOverview);
     }
 
@@ -118,7 +123,7 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @param newDeviceConfigurationUserOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, final ICallback<? super DeviceConfigurationUserOverview> callback) {
+    public void put(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview, @Nonnull final ICallback<? super DeviceConfigurationUserOverview> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationUserOverview);
     }
 
@@ -129,7 +134,8 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @return the created DeviceConfigurationUserOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationUserOverview put(final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview) throws ClientException {
+    @Nullable
+    public DeviceConfigurationUserOverview put(@Nonnull final DeviceConfigurationUserOverview newDeviceConfigurationUserOverview) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfigurationUserOverview);
     }
 
@@ -139,9 +145,10 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceConfigurationUserOverviewRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceConfigurationUserOverviewRequest)this;
+     @Nonnull
+     public DeviceConfigurationUserOverviewRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceConfigurationUserOverviewRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceConfigurationUserOverviewRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationUserOverviewRequest)this;
+     @Nonnull
+     public DeviceConfigurationUserOverviewRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

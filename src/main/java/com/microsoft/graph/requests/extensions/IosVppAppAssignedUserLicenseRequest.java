@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosVppAppAssignedUserLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Vpp App Assigned User License Request.
  */
-public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements IIosVppAppAssignedUserLicenseRequest {
+public class IosVppAppAssignedUserLicenseRequest extends BaseRequest<IosVppAppAssignedUserLicense> {
 	
     /**
      * The request for the IosVppAppAssignedUserLicense
@@ -29,7 +31,7 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosVppAppAssignedUserLicenseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosVppAppAssignedUserLicenseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosVppAppAssignedUserLicense.class);
     }
 
@@ -38,7 +40,7 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosVppAppAssignedUserLicense> callback) {
+    public void get(@Nonnull final ICallback<? super IosVppAppAssignedUserLicense> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @return the IosVppAppAssignedUserLicense from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosVppAppAssignedUserLicense get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosVppAppAssignedUserLicense> callback) {
+    public void delete(@Nonnull final ICallback<? super IosVppAppAssignedUserLicense> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @param sourceIosVppAppAssignedUserLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVppAppAssignedUserLicense sourceIosVppAppAssignedUserLicense, final ICallback<? super IosVppAppAssignedUserLicense> callback) {
+    public void patch(@Nonnull final IosVppAppAssignedUserLicense sourceIosVppAppAssignedUserLicense, @Nonnull final ICallback<? super IosVppAppAssignedUserLicense> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVppAppAssignedUserLicense);
     }
 
@@ -87,7 +90,8 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @return the updated IosVppAppAssignedUserLicense
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVppAppAssignedUserLicense patch(final IosVppAppAssignedUserLicense sourceIosVppAppAssignedUserLicense) throws ClientException {
+    @Nullable
+    public IosVppAppAssignedUserLicense patch(@Nonnull final IosVppAppAssignedUserLicense sourceIosVppAppAssignedUserLicense) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosVppAppAssignedUserLicense);
     }
 
@@ -97,7 +101,7 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @param newIosVppAppAssignedUserLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, final ICallback<? super IosVppAppAssignedUserLicense> callback) {
+    public void post(@Nonnull final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, @Nonnull final ICallback<? super IosVppAppAssignedUserLicense> callback) {
         send(HttpMethod.POST, callback, newIosVppAppAssignedUserLicense);
     }
 
@@ -108,7 +112,8 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @return the created IosVppAppAssignedUserLicense
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVppAppAssignedUserLicense post(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense) throws ClientException {
+    @Nullable
+    public IosVppAppAssignedUserLicense post(@Nonnull final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense) throws ClientException {
         return send(HttpMethod.POST, newIosVppAppAssignedUserLicense);
     }
 
@@ -118,7 +123,7 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @param newIosVppAppAssignedUserLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, final ICallback<? super IosVppAppAssignedUserLicense> callback) {
+    public void put(@Nonnull final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense, @Nonnull final ICallback<? super IosVppAppAssignedUserLicense> callback) {
         send(HttpMethod.PUT, callback, newIosVppAppAssignedUserLicense);
     }
 
@@ -129,7 +134,8 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @return the created IosVppAppAssignedUserLicense
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVppAppAssignedUserLicense put(final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense) throws ClientException {
+    @Nullable
+    public IosVppAppAssignedUserLicense put(@Nonnull final IosVppAppAssignedUserLicense newIosVppAppAssignedUserLicense) throws ClientException {
         return send(HttpMethod.PUT, newIosVppAppAssignedUserLicense);
     }
 
@@ -139,9 +145,10 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IIosVppAppAssignedUserLicenseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosVppAppAssignedUserLicenseRequest)this;
+     @Nonnull
+     public IosVppAppAssignedUserLicenseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IosVppAppAssignedUserLicenseRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosVppAppAssignedUserLicenseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosVppAppAssignedUserLicenseRequest)this;
+     @Nonnull
+     public IosVppAppAssignedUserLicenseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

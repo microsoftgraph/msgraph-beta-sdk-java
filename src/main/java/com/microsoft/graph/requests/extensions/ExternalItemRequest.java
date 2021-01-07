@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the External Item Request.
  */
-public class ExternalItemRequest extends BaseRequest implements IExternalItemRequest {
+public class ExternalItemRequest extends BaseRequest<ExternalItem> {
 	
     /**
      * The request for the ExternalItem
@@ -29,7 +31,7 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExternalItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExternalItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExternalItem.class);
     }
 
@@ -38,7 +40,7 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExternalItem> callback) {
+    public void get(@Nonnull final ICallback<? super ExternalItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @return the ExternalItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExternalItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExternalItem> callback) {
+    public void delete(@Nonnull final ICallback<? super ExternalItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @param sourceExternalItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExternalItem sourceExternalItem, final ICallback<? super ExternalItem> callback) {
+    public void patch(@Nonnull final ExternalItem sourceExternalItem, @Nonnull final ICallback<? super ExternalItem> callback) {
         send(HttpMethod.PATCH, callback, sourceExternalItem);
     }
 
@@ -87,7 +90,8 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @return the updated ExternalItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalItem patch(final ExternalItem sourceExternalItem) throws ClientException {
+    @Nullable
+    public ExternalItem patch(@Nonnull final ExternalItem sourceExternalItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceExternalItem);
     }
 
@@ -97,7 +101,7 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @param newExternalItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExternalItem newExternalItem, final ICallback<? super ExternalItem> callback) {
+    public void post(@Nonnull final ExternalItem newExternalItem, @Nonnull final ICallback<? super ExternalItem> callback) {
         send(HttpMethod.POST, callback, newExternalItem);
     }
 
@@ -108,7 +112,8 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @return the created ExternalItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalItem post(final ExternalItem newExternalItem) throws ClientException {
+    @Nullable
+    public ExternalItem post(@Nonnull final ExternalItem newExternalItem) throws ClientException {
         return send(HttpMethod.POST, newExternalItem);
     }
 
@@ -118,7 +123,7 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @param newExternalItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExternalItem newExternalItem, final ICallback<? super ExternalItem> callback) {
+    public void put(@Nonnull final ExternalItem newExternalItem, @Nonnull final ICallback<? super ExternalItem> callback) {
         send(HttpMethod.PUT, callback, newExternalItem);
     }
 
@@ -129,7 +134,8 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @return the created ExternalItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalItem put(final ExternalItem newExternalItem) throws ClientException {
+    @Nullable
+    public ExternalItem put(@Nonnull final ExternalItem newExternalItem) throws ClientException {
         return send(HttpMethod.PUT, newExternalItem);
     }
 
@@ -139,9 +145,10 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @param value the select clause
      * @return the updated request
      */
-     public IExternalItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExternalItemRequest)this;
+     @Nonnull
+     public ExternalItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ExternalItemRequest extends BaseRequest implements IExternalItemReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IExternalItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExternalItemRequest)this;
+     @Nonnull
+     public ExternalItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

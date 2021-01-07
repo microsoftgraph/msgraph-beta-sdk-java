@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmbeddedSIMDeviceState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Embedded SIMDevice State Request.
  */
-public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbeddedSIMDeviceStateRequest {
+public class EmbeddedSIMDeviceStateRequest extends BaseRequest<EmbeddedSIMDeviceState> {
 	
     /**
      * The request for the EmbeddedSIMDeviceState
@@ -29,7 +31,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmbeddedSIMDeviceStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmbeddedSIMDeviceStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmbeddedSIMDeviceState.class);
     }
 
@@ -38,7 +40,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmbeddedSIMDeviceState> callback) {
+    public void get(@Nonnull final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @return the EmbeddedSIMDeviceState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EmbeddedSIMDeviceState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmbeddedSIMDeviceState> callback) {
+    public void delete(@Nonnull final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param sourceEmbeddedSIMDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback) {
+    public void patch(@Nonnull final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState, @Nonnull final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.PATCH, callback, sourceEmbeddedSIMDeviceState);
     }
 
@@ -87,7 +90,8 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @return the updated EmbeddedSIMDeviceState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmbeddedSIMDeviceState patch(final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState) throws ClientException {
+    @Nullable
+    public EmbeddedSIMDeviceState patch(@Nonnull final EmbeddedSIMDeviceState sourceEmbeddedSIMDeviceState) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmbeddedSIMDeviceState);
     }
 
@@ -97,7 +101,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param newEmbeddedSIMDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback) {
+    public void post(@Nonnull final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, @Nonnull final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.POST, callback, newEmbeddedSIMDeviceState);
     }
 
@@ -108,7 +112,8 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @return the created EmbeddedSIMDeviceState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmbeddedSIMDeviceState post(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException {
+    @Nullable
+    public EmbeddedSIMDeviceState post(@Nonnull final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException {
         return send(HttpMethod.POST, newEmbeddedSIMDeviceState);
     }
 
@@ -118,7 +123,7 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param newEmbeddedSIMDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, final ICallback<? super EmbeddedSIMDeviceState> callback) {
+    public void put(@Nonnull final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState, @Nonnull final ICallback<? super EmbeddedSIMDeviceState> callback) {
         send(HttpMethod.PUT, callback, newEmbeddedSIMDeviceState);
     }
 
@@ -129,7 +134,8 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @return the created EmbeddedSIMDeviceState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmbeddedSIMDeviceState put(final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException {
+    @Nullable
+    public EmbeddedSIMDeviceState put(@Nonnull final EmbeddedSIMDeviceState newEmbeddedSIMDeviceState) throws ClientException {
         return send(HttpMethod.PUT, newEmbeddedSIMDeviceState);
     }
 
@@ -139,9 +145,10 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param value the select clause
      * @return the updated request
      */
-     public IEmbeddedSIMDeviceStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmbeddedSIMDeviceStateRequest)this;
+     @Nonnull
+     public EmbeddedSIMDeviceStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EmbeddedSIMDeviceStateRequest extends BaseRequest implements IEmbed
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmbeddedSIMDeviceStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmbeddedSIMDeviceStateRequest)this;
+     @Nonnull
+     public EmbeddedSIMDeviceStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CartToClassAssociation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Cart To Class Association Request.
  */
-public class CartToClassAssociationRequest extends BaseRequest implements ICartToClassAssociationRequest {
+public class CartToClassAssociationRequest extends BaseRequest<CartToClassAssociation> {
 	
     /**
      * The request for the CartToClassAssociation
@@ -29,7 +31,7 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CartToClassAssociationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CartToClassAssociationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CartToClassAssociation.class);
     }
 
@@ -38,7 +40,7 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CartToClassAssociation> callback) {
+    public void get(@Nonnull final ICallback<? super CartToClassAssociation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @return the CartToClassAssociation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CartToClassAssociation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CartToClassAssociation> callback) {
+    public void delete(@Nonnull final ICallback<? super CartToClassAssociation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @param sourceCartToClassAssociation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CartToClassAssociation sourceCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback) {
+    public void patch(@Nonnull final CartToClassAssociation sourceCartToClassAssociation, @Nonnull final ICallback<? super CartToClassAssociation> callback) {
         send(HttpMethod.PATCH, callback, sourceCartToClassAssociation);
     }
 
@@ -87,7 +90,8 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @return the updated CartToClassAssociation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CartToClassAssociation patch(final CartToClassAssociation sourceCartToClassAssociation) throws ClientException {
+    @Nullable
+    public CartToClassAssociation patch(@Nonnull final CartToClassAssociation sourceCartToClassAssociation) throws ClientException {
         return send(HttpMethod.PATCH, sourceCartToClassAssociation);
     }
 
@@ -97,7 +101,7 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @param newCartToClassAssociation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CartToClassAssociation newCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback) {
+    public void post(@Nonnull final CartToClassAssociation newCartToClassAssociation, @Nonnull final ICallback<? super CartToClassAssociation> callback) {
         send(HttpMethod.POST, callback, newCartToClassAssociation);
     }
 
@@ -108,7 +112,8 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @return the created CartToClassAssociation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CartToClassAssociation post(final CartToClassAssociation newCartToClassAssociation) throws ClientException {
+    @Nullable
+    public CartToClassAssociation post(@Nonnull final CartToClassAssociation newCartToClassAssociation) throws ClientException {
         return send(HttpMethod.POST, newCartToClassAssociation);
     }
 
@@ -118,7 +123,7 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @param newCartToClassAssociation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CartToClassAssociation newCartToClassAssociation, final ICallback<? super CartToClassAssociation> callback) {
+    public void put(@Nonnull final CartToClassAssociation newCartToClassAssociation, @Nonnull final ICallback<? super CartToClassAssociation> callback) {
         send(HttpMethod.PUT, callback, newCartToClassAssociation);
     }
 
@@ -129,7 +134,8 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @return the created CartToClassAssociation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CartToClassAssociation put(final CartToClassAssociation newCartToClassAssociation) throws ClientException {
+    @Nullable
+    public CartToClassAssociation put(@Nonnull final CartToClassAssociation newCartToClassAssociation) throws ClientException {
         return send(HttpMethod.PUT, newCartToClassAssociation);
     }
 
@@ -139,9 +145,10 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @param value the select clause
      * @return the updated request
      */
-     public ICartToClassAssociationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CartToClassAssociationRequest)this;
+     @Nonnull
+     public CartToClassAssociationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CartToClassAssociationRequest extends BaseRequest implements ICartT
      * @param value the expand clause
      * @return the updated request
      */
-     public ICartToClassAssociationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CartToClassAssociationRequest)this;
+     @Nonnull
+     public CartToClassAssociationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

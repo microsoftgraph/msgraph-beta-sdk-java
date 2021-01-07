@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsWifiEnterpriseEAPConfiguration;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Wifi Enterprise EAPConfiguration Request.
  */
-public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest implements IWindowsWifiEnterpriseEAPConfigurationRequest {
+public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest<WindowsWifiEnterpriseEAPConfiguration> {
 	
     /**
      * The request for the WindowsWifiEnterpriseEAPConfiguration
@@ -35,7 +34,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsWifiEnterpriseEAPConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsWifiEnterpriseEAPConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsWifiEnterpriseEAPConfiguration.class);
     }
 
@@ -44,7 +43,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @return the WindowsWifiEnterpriseEAPConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsWifiEnterpriseEAPConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @param sourceWindowsWifiEnterpriseEAPConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsWifiEnterpriseEAPConfiguration sourceWindowsWifiEnterpriseEAPConfiguration, final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
+    public void patch(@Nonnull final WindowsWifiEnterpriseEAPConfiguration sourceWindowsWifiEnterpriseEAPConfiguration, @Nonnull final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsWifiEnterpriseEAPConfiguration);
     }
 
@@ -93,7 +93,8 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @return the updated WindowsWifiEnterpriseEAPConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsWifiEnterpriseEAPConfiguration patch(final WindowsWifiEnterpriseEAPConfiguration sourceWindowsWifiEnterpriseEAPConfiguration) throws ClientException {
+    @Nullable
+    public WindowsWifiEnterpriseEAPConfiguration patch(@Nonnull final WindowsWifiEnterpriseEAPConfiguration sourceWindowsWifiEnterpriseEAPConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsWifiEnterpriseEAPConfiguration);
     }
 
@@ -103,7 +104,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @param newWindowsWifiEnterpriseEAPConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
+    public void post(@Nonnull final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, @Nonnull final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsWifiEnterpriseEAPConfiguration);
     }
 
@@ -114,7 +115,8 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @return the created WindowsWifiEnterpriseEAPConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsWifiEnterpriseEAPConfiguration post(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration) throws ClientException {
+    @Nullable
+    public WindowsWifiEnterpriseEAPConfiguration post(@Nonnull final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindowsWifiEnterpriseEAPConfiguration);
     }
 
@@ -124,7 +126,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @param newWindowsWifiEnterpriseEAPConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
+    public void put(@Nonnull final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration, @Nonnull final ICallback<? super WindowsWifiEnterpriseEAPConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsWifiEnterpriseEAPConfiguration);
     }
 
@@ -135,7 +137,8 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @return the created WindowsWifiEnterpriseEAPConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsWifiEnterpriseEAPConfiguration put(final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration) throws ClientException {
+    @Nullable
+    public WindowsWifiEnterpriseEAPConfiguration put(@Nonnull final WindowsWifiEnterpriseEAPConfiguration newWindowsWifiEnterpriseEAPConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsWifiEnterpriseEAPConfiguration);
     }
 
@@ -145,9 +148,10 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsWifiEnterpriseEAPConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsWifiEnterpriseEAPConfigurationRequest)this;
+     @Nonnull
+     public WindowsWifiEnterpriseEAPConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class WindowsWifiEnterpriseEAPConfigurationRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsWifiEnterpriseEAPConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsWifiEnterpriseEAPConfigurationRequest)this;
+     @Nonnull
+     public WindowsWifiEnterpriseEAPConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

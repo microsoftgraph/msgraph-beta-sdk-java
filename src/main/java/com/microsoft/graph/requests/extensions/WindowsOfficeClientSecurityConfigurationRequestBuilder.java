@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsOfficeClientSecurityConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Office Client Security Configuration Request Builder.
  */
-public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends BaseRequestBuilder implements IWindowsOfficeClientSecurityConfigurationRequestBuilder {
+public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends BaseRequestBuilder<WindowsOfficeClientSecurityConfiguration> {
 
     /**
      * The request builder for the WindowsOfficeClientSecurityConfiguration
@@ -28,7 +30,7 @@ public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsOfficeClientSecurityConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsOfficeClientSecurityConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends Base
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsOfficeClientSecurityConfigurationRequest instance
+     * @return the WindowsOfficeClientSecurityConfigurationRequest instance
      */
-    public IWindowsOfficeClientSecurityConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsOfficeClientSecurityConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class WindowsOfficeClientSecurityConfigurationRequestBuilder extends Base
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsOfficeClientSecurityConfigurationRequest instance
+     * @return the WindowsOfficeClientSecurityConfigurationRequest instance
      */
-    public IWindowsOfficeClientSecurityConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsOfficeClientSecurityConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsOfficeClientSecurityConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IOfficeClientConfigurationAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the OfficeClientConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OfficeClientConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new OfficeClientConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IOfficeClientConfigurationAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the OfficeClientConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OfficeClientConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new OfficeClientConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

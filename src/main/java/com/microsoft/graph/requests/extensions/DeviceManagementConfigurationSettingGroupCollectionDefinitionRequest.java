@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingGroupCollectionDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Configuration Setting Group Collection Definition Request.
  */
-public class DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest extends BaseRequest implements IDeviceManagementConfigurationSettingGroupCollectionDefinitionRequest {
+public class DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest extends BaseRequest<DeviceManagementConfigurationSettingGroupCollectionDefinition> {
 	
     /**
      * The request for the DeviceManagementConfigurationSettingGroupCollectionDefinition
@@ -29,7 +31,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationSettingGroupCollectionDefinition.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @return the DeviceManagementConfigurationSettingGroupCollectionDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementConfigurationSettingGroupCollectionDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @param sourceDeviceManagementConfigurationSettingGroupCollectionDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementConfigurationSettingGroupCollectionDefinition sourceDeviceManagementConfigurationSettingGroupCollectionDefinition, final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
+    public void patch(@Nonnull final DeviceManagementConfigurationSettingGroupCollectionDefinition sourceDeviceManagementConfigurationSettingGroupCollectionDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationSettingGroupCollectionDefinition);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @return the updated DeviceManagementConfigurationSettingGroupCollectionDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSettingGroupCollectionDefinition patch(final DeviceManagementConfigurationSettingGroupCollectionDefinition sourceDeviceManagementConfigurationSettingGroupCollectionDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSettingGroupCollectionDefinition patch(@Nonnull final DeviceManagementConfigurationSettingGroupCollectionDefinition sourceDeviceManagementConfigurationSettingGroupCollectionDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationSettingGroupCollectionDefinition);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @param newDeviceManagementConfigurationSettingGroupCollectionDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition, final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
+    public void post(@Nonnull final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementConfigurationSettingGroupCollectionDefinition);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @return the created DeviceManagementConfigurationSettingGroupCollectionDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSettingGroupCollectionDefinition post(final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSettingGroupCollectionDefinition post(@Nonnull final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementConfigurationSettingGroupCollectionDefinition);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @param newDeviceManagementConfigurationSettingGroupCollectionDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition, final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
+    public void put(@Nonnull final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSettingGroupCollectionDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementConfigurationSettingGroupCollectionDefinition);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @return the created DeviceManagementConfigurationSettingGroupCollectionDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSettingGroupCollectionDefinition put(final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSettingGroupCollectionDefinition put(@Nonnull final DeviceManagementConfigurationSettingGroupCollectionDefinition newDeviceManagementConfigurationSettingGroupCollectionDefinition) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementConfigurationSettingGroupCollectionDefinition);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationSettingGroupCollectionDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinitionReques
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationSettingGroupCollectionDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationSettingGroupCollectionDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

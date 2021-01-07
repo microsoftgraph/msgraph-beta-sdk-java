@@ -9,28 +9,20 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
-import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContinuousAccessEvaluationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContinuousAccessEvaluationPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -39,7 +31,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Container Request Builder.
  */
-public class IdentityContainerRequestBuilder extends BaseRequestBuilder implements IIdentityContainerRequestBuilder {
+public class IdentityContainerRequestBuilder extends BaseRequestBuilder<IdentityContainer> {
 
     /**
      * The request builder for the IdentityContainer
@@ -48,7 +40,7 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityContainerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityContainerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -56,9 +48,10 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityContainerRequest instance
+     * @return the IdentityContainerRequest instance
      */
-    public IIdentityContainerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public IdentityContainerRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -66,9 +59,10 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityContainerRequest instance
+     * @return the IdentityContainerRequest instance
      */
-    public IIdentityContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public IdentityContainerRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IdentityContainerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -77,46 +71,100 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Gets the request builder for ConditionalAccessRoot
      *
-     * @return the IConditionalAccessRootRequestBuilder instance
+     * @return the ConditionalAccessRootRequestBuilder instance
      */
-    public IConditionalAccessRootRequestBuilder conditionalAccess() {
+    @Nonnull
+    public ConditionalAccessRootRequestBuilder conditionalAccess() {
         return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
     }
-    public IB2cIdentityUserFlowCollectionRequestBuilder b2cUserFlows() {
+    /**
+     *  Gets a request builder for the B2cIdentityUserFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public B2cIdentityUserFlowCollectionRequestBuilder b2cUserFlows() {
         return new B2cIdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("b2cUserFlows"), getClient(), null);
     }
 
-    public IB2cIdentityUserFlowRequestBuilder b2cUserFlows(final String id) {
+    /**
+     * Gets a request builder for the B2cIdentityUserFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public B2cIdentityUserFlowRequestBuilder b2cUserFlows(@Nonnull final String id) {
         return new B2cIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2cUserFlows") + "/" + id, getClient(), null);
     }
-    public IB2xIdentityUserFlowCollectionRequestBuilder b2xUserFlows() {
+    /**
+     *  Gets a request builder for the B2xIdentityUserFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public B2xIdentityUserFlowCollectionRequestBuilder b2xUserFlows() {
         return new B2xIdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows"), getClient(), null);
     }
 
-    public IB2xIdentityUserFlowRequestBuilder b2xUserFlows(final String id) {
+    /**
+     * Gets a request builder for the B2xIdentityUserFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public B2xIdentityUserFlowRequestBuilder b2xUserFlows(@Nonnull final String id) {
         return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
     }
-    public IIdentityUserFlowAttributeCollectionRequestBuilder userFlowAttributes() {
+    /**
+     *  Gets a request builder for the IdentityUserFlowAttribute collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IdentityUserFlowAttributeCollectionRequestBuilder userFlowAttributes() {
         return new IdentityUserFlowAttributeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes"), getClient(), null);
     }
 
-    public IIdentityUserFlowAttributeRequestBuilder userFlowAttributes(final String id) {
+    /**
+     * Gets a request builder for the IdentityUserFlowAttribute item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IdentityUserFlowAttributeRequestBuilder userFlowAttributes(@Nonnull final String id) {
         return new IdentityUserFlowAttributeRequestBuilder(getRequestUrlWithAdditionalSegment("userFlowAttributes") + "/" + id, getClient(), null);
     }
-    public IIdentityUserFlowCollectionRequestBuilder userFlows() {
+    /**
+     *  Gets a request builder for the IdentityUserFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IdentityUserFlowCollectionRequestBuilder userFlows() {
         return new IdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows"), getClient(), null);
     }
 
-    public IIdentityUserFlowRequestBuilder userFlows(final String id) {
+    /**
+     * Gets a request builder for the IdentityUserFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IdentityUserFlowRequestBuilder userFlows(@Nonnull final String id) {
         return new IdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("userFlows") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ContinuousAccessEvaluationPolicy
      *
-     * @return the IContinuousAccessEvaluationPolicyRequestBuilder instance
+     * @return the ContinuousAccessEvaluationPolicyRequestBuilder instance
      */
-    public IContinuousAccessEvaluationPolicyRequestBuilder continuousAccessEvaluationPolicy() {
+    @Nonnull
+    public ContinuousAccessEvaluationPolicyRequestBuilder continuousAccessEvaluationPolicy() {
         return new ContinuousAccessEvaluationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("continuousAccessEvaluationPolicy"), getClient(), null);
     }
 }

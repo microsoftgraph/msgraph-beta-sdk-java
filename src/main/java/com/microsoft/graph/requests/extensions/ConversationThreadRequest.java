@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Post;
-import com.microsoft.graph.requests.extensions.IPostCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conversation Thread Request.
  */
-public class ConversationThreadRequest extends BaseRequest implements IConversationThreadRequest {
+public class ConversationThreadRequest extends BaseRequest<ConversationThread> {
 	
     /**
      * The request for the ConversationThread
@@ -34,7 +34,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConversationThreadRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConversationThreadRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConversationThread.class);
     }
 
@@ -43,7 +43,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConversationThread> callback) {
+    public void get(@Nonnull final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +53,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @return the ConversationThread from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ConversationThread get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +63,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConversationThread> callback) {
+    public void delete(@Nonnull final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +82,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param sourceConversationThread the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConversationThread sourceConversationThread, final ICallback<? super ConversationThread> callback) {
+    public void patch(@Nonnull final ConversationThread sourceConversationThread, @Nonnull final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.PATCH, callback, sourceConversationThread);
     }
 
@@ -92,7 +93,8 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @return the updated ConversationThread
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConversationThread patch(final ConversationThread sourceConversationThread) throws ClientException {
+    @Nullable
+    public ConversationThread patch(@Nonnull final ConversationThread sourceConversationThread) throws ClientException {
         return send(HttpMethod.PATCH, sourceConversationThread);
     }
 
@@ -102,7 +104,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param newConversationThread the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback) {
+    public void post(@Nonnull final ConversationThread newConversationThread, @Nonnull final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.POST, callback, newConversationThread);
     }
 
@@ -113,7 +115,8 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @return the created ConversationThread
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConversationThread post(final ConversationThread newConversationThread) throws ClientException {
+    @Nullable
+    public ConversationThread post(@Nonnull final ConversationThread newConversationThread) throws ClientException {
         return send(HttpMethod.POST, newConversationThread);
     }
 
@@ -123,7 +126,7 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param newConversationThread the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConversationThread newConversationThread, final ICallback<? super ConversationThread> callback) {
+    public void put(@Nonnull final ConversationThread newConversationThread, @Nonnull final ICallback<? super ConversationThread> callback) {
         send(HttpMethod.PUT, callback, newConversationThread);
     }
 
@@ -134,7 +137,8 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @return the created ConversationThread
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConversationThread put(final ConversationThread newConversationThread) throws ClientException {
+    @Nullable
+    public ConversationThread put(@Nonnull final ConversationThread newConversationThread) throws ClientException {
         return send(HttpMethod.PUT, newConversationThread);
     }
 
@@ -144,9 +148,10 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param value the select clause
      * @return the updated request
      */
-     public IConversationThreadRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConversationThreadRequest)this;
+     @Nonnull
+     public ConversationThreadRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -155,9 +160,10 @@ public class ConversationThreadRequest extends BaseRequest implements IConversat
      * @param value the expand clause
      * @return the updated request
      */
-     public IConversationThreadRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConversationThreadRequest)this;
+     @Nonnull
+     public ConversationThreadRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

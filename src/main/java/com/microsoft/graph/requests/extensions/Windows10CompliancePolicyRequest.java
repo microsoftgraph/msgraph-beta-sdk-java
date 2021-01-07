@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10CompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Compliance Policy Request.
  */
-public class Windows10CompliancePolicyRequest extends BaseRequest implements IWindows10CompliancePolicyRequest {
+public class Windows10CompliancePolicyRequest extends BaseRequest<Windows10CompliancePolicy> {
 	
     /**
      * The request for the Windows10CompliancePolicy
@@ -29,7 +31,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10CompliancePolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10CompliancePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10CompliancePolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10CompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @return the Windows10CompliancePolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10CompliancePolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10CompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param sourceWindows10CompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10CompliancePolicy sourceWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void patch(@Nonnull final Windows10CompliancePolicy sourceWindows10CompliancePolicy, @Nonnull final ICallback<? super Windows10CompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10CompliancePolicy);
     }
 
@@ -87,7 +90,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @return the updated Windows10CompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10CompliancePolicy patch(final Windows10CompliancePolicy sourceWindows10CompliancePolicy) throws ClientException {
+    @Nullable
+    public Windows10CompliancePolicy patch(@Nonnull final Windows10CompliancePolicy sourceWindows10CompliancePolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10CompliancePolicy);
     }
 
@@ -97,7 +101,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param newWindows10CompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void post(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy, @Nonnull final ICallback<? super Windows10CompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newWindows10CompliancePolicy);
     }
 
@@ -108,7 +112,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @return the created Windows10CompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10CompliancePolicy post(final Windows10CompliancePolicy newWindows10CompliancePolicy) throws ClientException {
+    @Nullable
+    public Windows10CompliancePolicy post(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy) throws ClientException {
         return send(HttpMethod.POST, newWindows10CompliancePolicy);
     }
 
@@ -118,7 +123,7 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param newWindows10CompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10CompliancePolicy newWindows10CompliancePolicy, final ICallback<? super Windows10CompliancePolicy> callback) {
+    public void put(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy, @Nonnull final ICallback<? super Windows10CompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newWindows10CompliancePolicy);
     }
 
@@ -129,7 +134,8 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @return the created Windows10CompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10CompliancePolicy put(final Windows10CompliancePolicy newWindows10CompliancePolicy) throws ClientException {
+    @Nullable
+    public Windows10CompliancePolicy put(@Nonnull final Windows10CompliancePolicy newWindows10CompliancePolicy) throws ClientException {
         return send(HttpMethod.PUT, newWindows10CompliancePolicy);
     }
 
@@ -139,9 +145,10 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10CompliancePolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10CompliancePolicyRequest)this;
+     @Nonnull
+     public Windows10CompliancePolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10CompliancePolicyRequest extends BaseRequest implements IWi
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10CompliancePolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10CompliancePolicyRequest)this;
+     @Nonnull
+     public Windows10CompliancePolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RemoteAssistancePartner;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Remote Assistance Partner Request Builder.
  */
-public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder implements IRemoteAssistancePartnerRequestBuilder {
+public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder<RemoteAssistancePartner> {
 
     /**
      * The request builder for the RemoteAssistancePartner
@@ -28,7 +30,7 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RemoteAssistancePartnerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RemoteAssistancePartnerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRemoteAssistancePartnerRequest instance
+     * @return the RemoteAssistancePartnerRequest instance
      */
-    public IRemoteAssistancePartnerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RemoteAssistancePartnerRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,19 +49,30 @@ public class RemoteAssistancePartnerRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRemoteAssistancePartnerRequest instance
+     * @return the RemoteAssistancePartnerRequest instance
      */
-    public IRemoteAssistancePartnerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RemoteAssistancePartnerRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RemoteAssistancePartnerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IRemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public RemoteAssistancePartnerBeginOnboardingRequestBuilder beginOnboarding() {
         return new RemoteAssistancePartnerBeginOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.beginOnboarding"), getClient(), null);
     }
 
-    public IRemoteAssistancePartnerDisconnectRequestBuilder disconnect() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public RemoteAssistancePartnerDisconnectRequestBuilder disconnect() {
         return new RemoteAssistancePartnerDisconnectRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disconnect"), getClient(), null);
     }
 }

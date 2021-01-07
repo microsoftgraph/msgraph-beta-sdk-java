@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionDeviceRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionResponse;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionDeviceRegistration;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Windows Information Protection Device Registration Collection With References Page.
  */
-public class WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage extends BaseCollectionPage<WindowsInformationProtectionDeviceRegistration, IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder> implements IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage {
+public class WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage extends BaseCollectionPage<WindowsInformationProtectionDeviceRegistration, WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for WindowsInformationProtectionDeviceRegistration
@@ -35,7 +37,17 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionWithReferen
      * @param response the serialized WindowsInformationProtectionDeviceRegistrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage(final WindowsInformationProtectionDeviceRegistrationCollectionResponse response, final IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder builder) {
+    public WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage(@Nonnull final WindowsInformationProtectionDeviceRegistrationCollectionResponse response, @Nullable final WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for WindowsInformationProtectionDeviceRegistration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage(@Nonnull final java.util.List<WindowsInformationProtectionDeviceRegistration> pageContents, @Nullable final WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

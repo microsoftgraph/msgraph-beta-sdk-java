@@ -8,350 +8,181 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.requests.extensions.IInvitationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInvitationRequestBuilder;
 import com.microsoft.graph.requests.extensions.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InvitationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityStatisticsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityStatisticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingBusinessCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingBusinessRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingBusinessCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingBusinessRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingCurrencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingCurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCurrencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAllowedDataLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAllowedDataLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AllowedDataLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AllowedDataLocationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrgContactRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrgContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContractRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainDnsRecordRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainDnsRecordRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscribedSkuCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscribedSkuRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscribedSkuCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscribedSkuRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlaceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlaceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlaceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchemaExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchemaExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesPublishingProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesPublishingProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesPublishingProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFilterOperatorSchemaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFilterOperatorSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.FilterOperatorSchemaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.FilterOperatorSchemaRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttributeMappingFunctionSchemaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttributeMappingFunctionSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttributeMappingFunctionSchemaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttributeMappingFunctionSchemaRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewDecisionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewDecisionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewDecisionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApprovalWorkflowProviderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApprovalWorkflowProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalWorkflowProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalWorkflowProviderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramControlCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramControlRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramControlTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramControlTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskDetectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskDetectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskDetectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskDetectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskyUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskyUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceSubjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceSubjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceSubjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedAccessCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedAccessRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedAccessCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedAccessRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedApprovalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedApprovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedApprovalRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedOperationEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedOperationEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedOperationEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedSignupStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedSignupStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedSignupStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommandCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommandRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommandCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommandRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPayloadResponseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPayloadResponseRequestBuilder;
 import com.microsoft.graph.requests.extensions.PayloadResponseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PayloadResponseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDataPolicyOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDataPolicyOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataPolicyOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalConnectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalConnectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuditLogRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementRequestBuilder;
-import com.microsoft.graph.requests.extensions.IComplianceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ComplianceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityContainerRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDataClassificationServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataClassificationServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPolicyRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicyRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleManagementRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRootRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IStoreRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.StoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudCommunicationsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProtectionRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityGovernanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISearchEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.SearchEntityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFinancialsRequestBuilder;
 import com.microsoft.graph.requests.extensions.FinancialsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICommsApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CommsApplicationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppCatalogsRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamworkRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.models.extensions.IBaseGraphServiceClient;
 import com.microsoft.graph.core.BaseClient;
 
@@ -373,6 +204,7 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     private String endpoint;
 
     @Override
+    @Nonnull
     public String getServiceRoot() {
         if (endpoint == null) {
             endpoint = DEFAULT_GRAPH_ENDPOINT;
@@ -381,7 +213,7 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     @Override
-    public void setServiceRoot(String value) {
+    public void setServiceRoot(@Nonnull final String value) {
         endpoint = value;
     }
 
@@ -390,7 +222,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Invitations objects
      */
-    public IInvitationCollectionRequestBuilder invitations() {
+    @Nonnull
+    public InvitationCollectionRequestBuilder invitations() {
         return new InvitationCollectionRequestBuilder(getServiceRoot() + "/invitations", this, null);
     }
 
@@ -400,7 +233,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Invitations to retrieve
      * @return the request builder for the Invitations object
      */
-    public IInvitationRequestBuilder invitations(final String id) {
+    @Nonnull
+    public InvitationRequestBuilder invitations(@Nonnull final String id) {
         return new InvitationRequestBuilder(getServiceRoot() + "/invitations/" + id, this, null);
     }
 
@@ -409,7 +243,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Users objects
      */
-    public IUserCollectionRequestBuilder users() {
+    @Nonnull
+    public UserCollectionRequestBuilder users() {
         return new UserCollectionRequestBuilder(getServiceRoot() + "/users", this, null);
     }
 
@@ -419,7 +254,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Users to retrieve
      * @return the request builder for the Users object
      */
-    public IUserRequestBuilder users(final String id) {
+    @Nonnull
+    public UserRequestBuilder users(@Nonnull final String id) {
         return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
     }
 
@@ -428,7 +264,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Activitystatistics objects
      */
-    public IActivityStatisticsCollectionRequestBuilder activitystatistics() {
+    @Nonnull
+    public ActivityStatisticsCollectionRequestBuilder activitystatistics() {
         return new ActivityStatisticsCollectionRequestBuilder(getServiceRoot() + "/activitystatistics", this, null);
     }
 
@@ -438,7 +275,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Activitystatistics to retrieve
      * @return the request builder for the Activitystatistics object
      */
-    public IActivityStatisticsRequestBuilder activitystatistics(final String id) {
+    @Nonnull
+    public ActivityStatisticsRequestBuilder activitystatistics(@Nonnull final String id) {
         return new ActivityStatisticsRequestBuilder(getServiceRoot() + "/activitystatistics/" + id, this, null);
     }
 
@@ -447,7 +285,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of ApplicationTemplates objects
      */
-    public IApplicationTemplateCollectionRequestBuilder applicationTemplates() {
+    @Nonnull
+    public ApplicationTemplateCollectionRequestBuilder applicationTemplates() {
         return new ApplicationTemplateCollectionRequestBuilder(getServiceRoot() + "/applicationTemplates", this, null);
     }
 
@@ -457,7 +296,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the ApplicationTemplates to retrieve
      * @return the request builder for the ApplicationTemplates object
      */
-    public IApplicationTemplateRequestBuilder applicationTemplates(final String id) {
+    @Nonnull
+    public ApplicationTemplateRequestBuilder applicationTemplates(@Nonnull final String id) {
         return new ApplicationTemplateRequestBuilder(getServiceRoot() + "/applicationTemplates/" + id, this, null);
     }
 
@@ -466,7 +306,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of ServicePrincipals objects
      */
-    public IServicePrincipalCollectionRequestBuilder servicePrincipals() {
+    @Nonnull
+    public ServicePrincipalCollectionRequestBuilder servicePrincipals() {
         return new ServicePrincipalCollectionRequestBuilder(getServiceRoot() + "/servicePrincipals", this, null);
     }
 
@@ -476,7 +317,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the ServicePrincipals to retrieve
      * @return the request builder for the ServicePrincipals object
      */
-    public IServicePrincipalRequestBuilder servicePrincipals(final String id) {
+    @Nonnull
+    public ServicePrincipalRequestBuilder servicePrincipals(@Nonnull final String id) {
         return new ServicePrincipalRequestBuilder(getServiceRoot() + "/servicePrincipals/" + id, this, null);
     }
 
@@ -485,7 +327,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of BookingBusinesses objects
      */
-    public IBookingBusinessCollectionRequestBuilder bookingBusinesses() {
+    @Nonnull
+    public BookingBusinessCollectionRequestBuilder bookingBusinesses() {
         return new BookingBusinessCollectionRequestBuilder(getServiceRoot() + "/bookingBusinesses", this, null);
     }
 
@@ -495,7 +338,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the BookingBusinesses to retrieve
      * @return the request builder for the BookingBusinesses object
      */
-    public IBookingBusinessRequestBuilder bookingBusinesses(final String id) {
+    @Nonnull
+    public BookingBusinessRequestBuilder bookingBusinesses(@Nonnull final String id) {
         return new BookingBusinessRequestBuilder(getServiceRoot() + "/bookingBusinesses/" + id, this, null);
     }
 
@@ -504,7 +348,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of BookingCurrencies objects
      */
-    public IBookingCurrencyCollectionRequestBuilder bookingCurrencies() {
+    @Nonnull
+    public BookingCurrencyCollectionRequestBuilder bookingCurrencies() {
         return new BookingCurrencyCollectionRequestBuilder(getServiceRoot() + "/bookingCurrencies", this, null);
     }
 
@@ -514,7 +359,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the BookingCurrencies to retrieve
      * @return the request builder for the BookingCurrencies object
      */
-    public IBookingCurrencyRequestBuilder bookingCurrencies(final String id) {
+    @Nonnull
+    public BookingCurrencyRequestBuilder bookingCurrencies(@Nonnull final String id) {
         return new BookingCurrencyRequestBuilder(getServiceRoot() + "/bookingCurrencies/" + id, this, null);
     }
 
@@ -523,7 +369,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of IdentityProviders objects
      */
-    public IIdentityProviderCollectionRequestBuilder identityProviders() {
+    @Nonnull
+    public IdentityProviderCollectionRequestBuilder identityProviders() {
         return new IdentityProviderCollectionRequestBuilder(getServiceRoot() + "/identityProviders", this, null);
     }
 
@@ -533,7 +380,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the IdentityProviders to retrieve
      * @return the request builder for the IdentityProviders object
      */
-    public IIdentityProviderRequestBuilder identityProviders(final String id) {
+    @Nonnull
+    public IdentityProviderRequestBuilder identityProviders(@Nonnull final String id) {
         return new IdentityProviderRequestBuilder(getServiceRoot() + "/identityProviders/" + id, this, null);
     }
 
@@ -542,7 +390,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of AdministrativeUnits objects
      */
-    public IAdministrativeUnitCollectionRequestBuilder administrativeUnits() {
+    @Nonnull
+    public AdministrativeUnitCollectionRequestBuilder administrativeUnits() {
         return new AdministrativeUnitCollectionRequestBuilder(getServiceRoot() + "/administrativeUnits", this, null);
     }
 
@@ -552,7 +401,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the AdministrativeUnits to retrieve
      * @return the request builder for the AdministrativeUnits object
      */
-    public IAdministrativeUnitRequestBuilder administrativeUnits(final String id) {
+    @Nonnull
+    public AdministrativeUnitRequestBuilder administrativeUnits(@Nonnull final String id) {
         return new AdministrativeUnitRequestBuilder(getServiceRoot() + "/administrativeUnits/" + id, this, null);
     }
 
@@ -561,7 +411,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of AllowedDataLocations objects
      */
-    public IAllowedDataLocationCollectionRequestBuilder allowedDataLocations() {
+    @Nonnull
+    public AllowedDataLocationCollectionRequestBuilder allowedDataLocations() {
         return new AllowedDataLocationCollectionRequestBuilder(getServiceRoot() + "/allowedDataLocations", this, null);
     }
 
@@ -571,7 +422,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the AllowedDataLocations to retrieve
      * @return the request builder for the AllowedDataLocations object
      */
-    public IAllowedDataLocationRequestBuilder allowedDataLocations(final String id) {
+    @Nonnull
+    public AllowedDataLocationRequestBuilder allowedDataLocations(@Nonnull final String id) {
         return new AllowedDataLocationRequestBuilder(getServiceRoot() + "/allowedDataLocations/" + id, this, null);
     }
 
@@ -580,7 +432,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Applications objects
      */
-    public IApplicationCollectionRequestBuilder applications() {
+    @Nonnull
+    public ApplicationCollectionRequestBuilder applications() {
         return new ApplicationCollectionRequestBuilder(getServiceRoot() + "/applications", this, null);
     }
 
@@ -590,7 +443,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Applications to retrieve
      * @return the request builder for the Applications object
      */
-    public IApplicationRequestBuilder applications(final String id) {
+    @Nonnull
+    public ApplicationRequestBuilder applications(@Nonnull final String id) {
         return new ApplicationRequestBuilder(getServiceRoot() + "/applications/" + id, this, null);
     }
 
@@ -599,7 +453,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of AppRoleAssignments objects
      */
-    public IAppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
+    @Nonnull
+    public AppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
         return new AppRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/appRoleAssignments", this, null);
     }
 
@@ -609,7 +464,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the AppRoleAssignments to retrieve
      * @return the request builder for the AppRoleAssignments object
      */
-    public IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id) {
+    @Nonnull
+    public AppRoleAssignmentRequestBuilder appRoleAssignments(@Nonnull final String id) {
         return new AppRoleAssignmentRequestBuilder(getServiceRoot() + "/appRoleAssignments/" + id, this, null);
     }
 
@@ -618,7 +474,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of CertificateBasedAuthConfiguration objects
      */
-    public ICertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration() {
+    @Nonnull
+    public CertificateBasedAuthConfigurationCollectionRequestBuilder certificateBasedAuthConfiguration() {
         return new CertificateBasedAuthConfigurationCollectionRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration", this, null);
     }
 
@@ -628,7 +485,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the CertificateBasedAuthConfiguration to retrieve
      * @return the request builder for the CertificateBasedAuthConfiguration object
      */
-    public ICertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(final String id) {
+    @Nonnull
+    public CertificateBasedAuthConfigurationRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
         return new CertificateBasedAuthConfigurationRequestBuilder(getServiceRoot() + "/certificateBasedAuthConfiguration/" + id, this, null);
     }
 
@@ -637,7 +495,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Contacts objects
      */
-    public IOrgContactCollectionRequestBuilder contacts() {
+    @Nonnull
+    public OrgContactCollectionRequestBuilder contacts() {
         return new OrgContactCollectionRequestBuilder(getServiceRoot() + "/contacts", this, null);
     }
 
@@ -647,7 +506,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Contacts to retrieve
      * @return the request builder for the Contacts object
      */
-    public IOrgContactRequestBuilder contacts(final String id) {
+    @Nonnull
+    public OrgContactRequestBuilder contacts(@Nonnull final String id) {
         return new OrgContactRequestBuilder(getServiceRoot() + "/contacts/" + id, this, null);
     }
 
@@ -656,7 +516,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Contracts objects
      */
-    public IContractCollectionRequestBuilder contracts() {
+    @Nonnull
+    public ContractCollectionRequestBuilder contracts() {
         return new ContractCollectionRequestBuilder(getServiceRoot() + "/contracts", this, null);
     }
 
@@ -666,7 +527,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Contracts to retrieve
      * @return the request builder for the Contracts object
      */
-    public IContractRequestBuilder contracts(final String id) {
+    @Nonnull
+    public ContractRequestBuilder contracts(@Nonnull final String id) {
         return new ContractRequestBuilder(getServiceRoot() + "/contracts/" + id, this, null);
     }
 
@@ -675,7 +537,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Devices objects
      */
-    public IDeviceCollectionRequestBuilder devices() {
+    @Nonnull
+    public DeviceCollectionRequestBuilder devices() {
         return new DeviceCollectionRequestBuilder(getServiceRoot() + "/devices", this, null);
     }
 
@@ -685,7 +548,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Devices to retrieve
      * @return the request builder for the Devices object
      */
-    public IDeviceRequestBuilder devices(final String id) {
+    @Nonnull
+    public DeviceRequestBuilder devices(@Nonnull final String id) {
         return new DeviceRequestBuilder(getServiceRoot() + "/devices/" + id, this, null);
     }
 
@@ -694,7 +558,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of DirectoryObjects objects
      */
-    public IDirectoryObjectCollectionRequestBuilder directoryObjects() {
+    @Nonnull
+    public DirectoryObjectCollectionRequestBuilder directoryObjects() {
         return new DirectoryObjectCollectionRequestBuilder(getServiceRoot() + "/directoryObjects", this, null);
     }
 
@@ -704,7 +569,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the DirectoryObjects to retrieve
      * @return the request builder for the DirectoryObjects object
      */
-    public IDirectoryObjectRequestBuilder directoryObjects(final String id) {
+    @Nonnull
+    public DirectoryObjectRequestBuilder directoryObjects(@Nonnull final String id) {
         return new DirectoryObjectRequestBuilder(getServiceRoot() + "/directoryObjects/" + id, this, null);
     }
 
@@ -713,7 +579,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of DirectoryRoles objects
      */
-    public IDirectoryRoleCollectionRequestBuilder directoryRoles() {
+    @Nonnull
+    public DirectoryRoleCollectionRequestBuilder directoryRoles() {
         return new DirectoryRoleCollectionRequestBuilder(getServiceRoot() + "/directoryRoles", this, null);
     }
 
@@ -723,7 +590,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the DirectoryRoles to retrieve
      * @return the request builder for the DirectoryRoles object
      */
-    public IDirectoryRoleRequestBuilder directoryRoles(final String id) {
+    @Nonnull
+    public DirectoryRoleRequestBuilder directoryRoles(@Nonnull final String id) {
         return new DirectoryRoleRequestBuilder(getServiceRoot() + "/directoryRoles/" + id, this, null);
     }
 
@@ -732,7 +600,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of DirectoryRoleTemplates objects
      */
-    public IDirectoryRoleTemplateCollectionRequestBuilder directoryRoleTemplates() {
+    @Nonnull
+    public DirectoryRoleTemplateCollectionRequestBuilder directoryRoleTemplates() {
         return new DirectoryRoleTemplateCollectionRequestBuilder(getServiceRoot() + "/directoryRoleTemplates", this, null);
     }
 
@@ -742,7 +611,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the DirectoryRoleTemplates to retrieve
      * @return the request builder for the DirectoryRoleTemplates object
      */
-    public IDirectoryRoleTemplateRequestBuilder directoryRoleTemplates(final String id) {
+    @Nonnull
+    public DirectoryRoleTemplateRequestBuilder directoryRoleTemplates(@Nonnull final String id) {
         return new DirectoryRoleTemplateRequestBuilder(getServiceRoot() + "/directoryRoleTemplates/" + id, this, null);
     }
 
@@ -751,7 +621,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of DirectorySettingTemplates objects
      */
-    public IDirectorySettingTemplateCollectionRequestBuilder directorySettingTemplates() {
+    @Nonnull
+    public DirectorySettingTemplateCollectionRequestBuilder directorySettingTemplates() {
         return new DirectorySettingTemplateCollectionRequestBuilder(getServiceRoot() + "/directorySettingTemplates", this, null);
     }
 
@@ -761,7 +632,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the DirectorySettingTemplates to retrieve
      * @return the request builder for the DirectorySettingTemplates object
      */
-    public IDirectorySettingTemplateRequestBuilder directorySettingTemplates(final String id) {
+    @Nonnull
+    public DirectorySettingTemplateRequestBuilder directorySettingTemplates(@Nonnull final String id) {
         return new DirectorySettingTemplateRequestBuilder(getServiceRoot() + "/directorySettingTemplates/" + id, this, null);
     }
 
@@ -770,7 +642,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of DomainDnsRecords objects
      */
-    public IDomainDnsRecordCollectionRequestBuilder domainDnsRecords() {
+    @Nonnull
+    public DomainDnsRecordCollectionRequestBuilder domainDnsRecords() {
         return new DomainDnsRecordCollectionRequestBuilder(getServiceRoot() + "/domainDnsRecords", this, null);
     }
 
@@ -780,7 +653,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the DomainDnsRecords to retrieve
      * @return the request builder for the DomainDnsRecords object
      */
-    public IDomainDnsRecordRequestBuilder domainDnsRecords(final String id) {
+    @Nonnull
+    public DomainDnsRecordRequestBuilder domainDnsRecords(@Nonnull final String id) {
         return new DomainDnsRecordRequestBuilder(getServiceRoot() + "/domainDnsRecords/" + id, this, null);
     }
 
@@ -789,7 +663,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Domains objects
      */
-    public IDomainCollectionRequestBuilder domains() {
+    @Nonnull
+    public DomainCollectionRequestBuilder domains() {
         return new DomainCollectionRequestBuilder(getServiceRoot() + "/domains", this, null);
     }
 
@@ -799,7 +674,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Domains to retrieve
      * @return the request builder for the Domains object
      */
-    public IDomainRequestBuilder domains(final String id) {
+    @Nonnull
+    public DomainRequestBuilder domains(@Nonnull final String id) {
         return new DomainRequestBuilder(getServiceRoot() + "/domains/" + id, this, null);
     }
 
@@ -808,7 +684,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Groups objects
      */
-    public IGroupCollectionRequestBuilder groups() {
+    @Nonnull
+    public GroupCollectionRequestBuilder groups() {
         return new GroupCollectionRequestBuilder(getServiceRoot() + "/groups", this, null);
     }
 
@@ -818,7 +695,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Groups to retrieve
      * @return the request builder for the Groups object
      */
-    public IGroupRequestBuilder groups(final String id) {
+    @Nonnull
+    public GroupRequestBuilder groups(@Nonnull final String id) {
         return new GroupRequestBuilder(getServiceRoot() + "/groups/" + id, this, null);
     }
 
@@ -827,7 +705,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Oauth2PermissionGrants objects
      */
-    public IOAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants() {
+    @Nonnull
+    public OAuth2PermissionGrantCollectionRequestBuilder oauth2PermissionGrants() {
         return new OAuth2PermissionGrantCollectionRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants", this, null);
     }
 
@@ -837,7 +716,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Oauth2PermissionGrants to retrieve
      * @return the request builder for the Oauth2PermissionGrants object
      */
-    public IOAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(final String id) {
+    @Nonnull
+    public OAuth2PermissionGrantRequestBuilder oauth2PermissionGrants(@Nonnull final String id) {
         return new OAuth2PermissionGrantRequestBuilder(getServiceRoot() + "/oauth2PermissionGrants/" + id, this, null);
     }
 
@@ -846,7 +726,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Organization objects
      */
-    public IOrganizationCollectionRequestBuilder organization() {
+    @Nonnull
+    public OrganizationCollectionRequestBuilder organization() {
         return new OrganizationCollectionRequestBuilder(getServiceRoot() + "/organization", this, null);
     }
 
@@ -856,7 +737,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Organization to retrieve
      * @return the request builder for the Organization object
      */
-    public IOrganizationRequestBuilder organization(final String id) {
+    @Nonnull
+    public OrganizationRequestBuilder organization(@Nonnull final String id) {
         return new OrganizationRequestBuilder(getServiceRoot() + "/organization/" + id, this, null);
     }
 
@@ -865,7 +747,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PermissionGrants objects
      */
-    public IResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+    @Nonnull
+    public ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
         return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getServiceRoot() + "/permissionGrants", this, null);
     }
 
@@ -875,7 +758,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PermissionGrants to retrieve
      * @return the request builder for the PermissionGrants object
      */
-    public IResourceSpecificPermissionGrantRequestBuilder permissionGrants(final String id) {
+    @Nonnull
+    public ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
         return new ResourceSpecificPermissionGrantRequestBuilder(getServiceRoot() + "/permissionGrants/" + id, this, null);
     }
 
@@ -884,7 +768,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of ScopedRoleMemberships objects
      */
-    public IScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberships() {
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberships() {
         return new ScopedRoleMembershipCollectionRequestBuilder(getServiceRoot() + "/scopedRoleMemberships", this, null);
     }
 
@@ -894,7 +779,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the ScopedRoleMemberships to retrieve
      * @return the request builder for the ScopedRoleMemberships object
      */
-    public IScopedRoleMembershipRequestBuilder scopedRoleMemberships(final String id) {
+    @Nonnull
+    public ScopedRoleMembershipRequestBuilder scopedRoleMemberships(@Nonnull final String id) {
         return new ScopedRoleMembershipRequestBuilder(getServiceRoot() + "/scopedRoleMemberships/" + id, this, null);
     }
 
@@ -903,7 +789,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Settings objects
      */
-    public IDirectorySettingCollectionRequestBuilder settings() {
+    @Nonnull
+    public DirectorySettingCollectionRequestBuilder settings() {
         return new DirectorySettingCollectionRequestBuilder(getServiceRoot() + "/settings", this, null);
     }
 
@@ -913,7 +800,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Settings to retrieve
      * @return the request builder for the Settings object
      */
-    public IDirectorySettingRequestBuilder settings(final String id) {
+    @Nonnull
+    public DirectorySettingRequestBuilder settings(@Nonnull final String id) {
         return new DirectorySettingRequestBuilder(getServiceRoot() + "/settings/" + id, this, null);
     }
 
@@ -922,7 +810,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of SubscribedSkus objects
      */
-    public ISubscribedSkuCollectionRequestBuilder subscribedSkus() {
+    @Nonnull
+    public SubscribedSkuCollectionRequestBuilder subscribedSkus() {
         return new SubscribedSkuCollectionRequestBuilder(getServiceRoot() + "/subscribedSkus", this, null);
     }
 
@@ -932,7 +821,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the SubscribedSkus to retrieve
      * @return the request builder for the SubscribedSkus object
      */
-    public ISubscribedSkuRequestBuilder subscribedSkus(final String id) {
+    @Nonnull
+    public SubscribedSkuRequestBuilder subscribedSkus(@Nonnull final String id) {
         return new SubscribedSkuRequestBuilder(getServiceRoot() + "/subscribedSkus/" + id, this, null);
     }
 
@@ -941,7 +831,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Workbooks objects
      */
-    public IDriveItemCollectionRequestBuilder workbooks() {
+    @Nonnull
+    public DriveItemCollectionRequestBuilder workbooks() {
         return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
     }
 
@@ -951,7 +842,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Workbooks to retrieve
      * @return the request builder for the Workbooks object
      */
-    public IDriveItemRequestBuilder workbooks(final String id) {
+    @Nonnull
+    public DriveItemRequestBuilder workbooks(@Nonnull final String id) {
         return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
     }
 
@@ -960,7 +852,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Places objects
      */
-    public IPlaceCollectionRequestBuilder places() {
+    @Nonnull
+    public PlaceCollectionRequestBuilder places() {
         return new PlaceCollectionRequestBuilder(getServiceRoot() + "/places", this, null);
     }
 
@@ -970,7 +863,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Places to retrieve
      * @return the request builder for the Places object
      */
-    public IPlaceRequestBuilder places(final String id) {
+    @Nonnull
+    public PlaceRequestBuilder places(@Nonnull final String id) {
         return new PlaceRequestBuilder(getServiceRoot() + "/places/" + id, this, null);
     }
 
@@ -979,7 +873,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Drives objects
      */
-    public IDriveCollectionRequestBuilder drives() {
+    @Nonnull
+    public DriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getServiceRoot() + "/drives", this, null);
     }
 
@@ -989,7 +884,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Drives to retrieve
      * @return the request builder for the Drives object
      */
-    public IDriveRequestBuilder drives(final String id) {
+    @Nonnull
+    public DriveRequestBuilder drives(@Nonnull final String id) {
         return new DriveRequestBuilder(getServiceRoot() + "/drives/" + id, this, null);
     }
 
@@ -998,7 +894,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Shares objects
      */
-    public ISharedDriveItemCollectionRequestBuilder shares() {
+    @Nonnull
+    public SharedDriveItemCollectionRequestBuilder shares() {
         return new SharedDriveItemCollectionRequestBuilder(getServiceRoot() + "/shares", this, null);
     }
 
@@ -1008,7 +905,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Shares to retrieve
      * @return the request builder for the Shares object
      */
-    public ISharedDriveItemRequestBuilder shares(final String id) {
+    @Nonnull
+    public SharedDriveItemRequestBuilder shares(@Nonnull final String id) {
         return new SharedDriveItemRequestBuilder(getServiceRoot() + "/shares/" + id, this, null);
     }
 
@@ -1017,7 +915,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Sites objects
      */
-    public ISiteCollectionRequestBuilder sites() {
+    @Nonnull
+    public SiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getServiceRoot() + "/sites", this, null);
     }
 
@@ -1027,7 +926,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Sites to retrieve
      * @return the request builder for the Sites object
      */
-    public ISiteRequestBuilder sites(final String id) {
+    @Nonnull
+    public SiteRequestBuilder sites(@Nonnull final String id) {
         return new SiteRequestBuilder(getServiceRoot() + "/sites/" + id, this, null);
     }
 
@@ -1036,7 +936,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of SchemaExtensions objects
      */
-    public ISchemaExtensionCollectionRequestBuilder schemaExtensions() {
+    @Nonnull
+    public SchemaExtensionCollectionRequestBuilder schemaExtensions() {
         return new SchemaExtensionCollectionRequestBuilder(getServiceRoot() + "/schemaExtensions", this, null);
     }
 
@@ -1046,7 +947,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the SchemaExtensions to retrieve
      * @return the request builder for the SchemaExtensions object
      */
-    public ISchemaExtensionRequestBuilder schemaExtensions(final String id) {
+    @Nonnull
+    public SchemaExtensionRequestBuilder schemaExtensions(@Nonnull final String id) {
         return new SchemaExtensionRequestBuilder(getServiceRoot() + "/schemaExtensions/" + id, this, null);
     }
 
@@ -1055,7 +957,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of OnPremisesPublishingProfiles objects
      */
-    public IOnPremisesPublishingProfileCollectionRequestBuilder onPremisesPublishingProfiles() {
+    @Nonnull
+    public OnPremisesPublishingProfileCollectionRequestBuilder onPremisesPublishingProfiles() {
         return new OnPremisesPublishingProfileCollectionRequestBuilder(getServiceRoot() + "/onPremisesPublishingProfiles", this, null);
     }
 
@@ -1065,7 +968,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the OnPremisesPublishingProfiles to retrieve
      * @return the request builder for the OnPremisesPublishingProfiles object
      */
-    public IOnPremisesPublishingProfileRequestBuilder onPremisesPublishingProfiles(final String id) {
+    @Nonnull
+    public OnPremisesPublishingProfileRequestBuilder onPremisesPublishingProfiles(@Nonnull final String id) {
         return new OnPremisesPublishingProfileRequestBuilder(getServiceRoot() + "/onPremisesPublishingProfiles/" + id, this, null);
     }
 
@@ -1074,7 +978,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of GroupLifecyclePolicies objects
      */
-    public IGroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
+    @Nonnull
+    public GroupLifecyclePolicyCollectionRequestBuilder groupLifecyclePolicies() {
         return new GroupLifecyclePolicyCollectionRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies", this, null);
     }
 
@@ -1084,7 +989,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the GroupLifecyclePolicies to retrieve
      * @return the request builder for the GroupLifecyclePolicies object
      */
-    public IGroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(final String id) {
+    @Nonnull
+    public GroupLifecyclePolicyRequestBuilder groupLifecyclePolicies(@Nonnull final String id) {
         return new GroupLifecyclePolicyRequestBuilder(getServiceRoot() + "/groupLifecyclePolicies/" + id, this, null);
     }
 
@@ -1093,7 +999,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of FilterOperators objects
      */
-    public IFilterOperatorSchemaCollectionRequestBuilder filterOperators() {
+    @Nonnull
+    public FilterOperatorSchemaCollectionRequestBuilder filterOperators() {
         return new FilterOperatorSchemaCollectionRequestBuilder(getServiceRoot() + "/filterOperators", this, null);
     }
 
@@ -1103,7 +1010,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the FilterOperators to retrieve
      * @return the request builder for the FilterOperators object
      */
-    public IFilterOperatorSchemaRequestBuilder filterOperators(final String id) {
+    @Nonnull
+    public FilterOperatorSchemaRequestBuilder filterOperators(@Nonnull final String id) {
         return new FilterOperatorSchemaRequestBuilder(getServiceRoot() + "/filterOperators/" + id, this, null);
     }
 
@@ -1112,7 +1020,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Functions objects
      */
-    public IAttributeMappingFunctionSchemaCollectionRequestBuilder functions() {
+    @Nonnull
+    public AttributeMappingFunctionSchemaCollectionRequestBuilder functions() {
         return new AttributeMappingFunctionSchemaCollectionRequestBuilder(getServiceRoot() + "/functions", this, null);
     }
 
@@ -1122,7 +1031,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Functions to retrieve
      * @return the request builder for the Functions object
      */
-    public IAttributeMappingFunctionSchemaRequestBuilder functions(final String id) {
+    @Nonnull
+    public AttributeMappingFunctionSchemaRequestBuilder functions(@Nonnull final String id) {
         return new AttributeMappingFunctionSchemaRequestBuilder(getServiceRoot() + "/functions/" + id, this, null);
     }
 
@@ -1131,7 +1041,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of AccessReviewDecisions objects
      */
-    public IAccessReviewDecisionCollectionRequestBuilder accessReviewDecisions() {
+    @Nonnull
+    public AccessReviewDecisionCollectionRequestBuilder accessReviewDecisions() {
         return new AccessReviewDecisionCollectionRequestBuilder(getServiceRoot() + "/accessReviewDecisions", this, null);
     }
 
@@ -1141,7 +1052,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the AccessReviewDecisions to retrieve
      * @return the request builder for the AccessReviewDecisions object
      */
-    public IAccessReviewDecisionRequestBuilder accessReviewDecisions(final String id) {
+    @Nonnull
+    public AccessReviewDecisionRequestBuilder accessReviewDecisions(@Nonnull final String id) {
         return new AccessReviewDecisionRequestBuilder(getServiceRoot() + "/accessReviewDecisions/" + id, this, null);
     }
 
@@ -1150,7 +1062,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of AccessReviews objects
      */
-    public IAccessReviewCollectionRequestBuilder accessReviews() {
+    @Nonnull
+    public AccessReviewCollectionRequestBuilder accessReviews() {
         return new AccessReviewCollectionRequestBuilder(getServiceRoot() + "/accessReviews", this, null);
     }
 
@@ -1160,7 +1073,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the AccessReviews to retrieve
      * @return the request builder for the AccessReviews object
      */
-    public IAccessReviewRequestBuilder accessReviews(final String id) {
+    @Nonnull
+    public AccessReviewRequestBuilder accessReviews(@Nonnull final String id) {
         return new AccessReviewRequestBuilder(getServiceRoot() + "/accessReviews/" + id, this, null);
     }
 
@@ -1169,7 +1083,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of ApprovalWorkflowProviders objects
      */
-    public IApprovalWorkflowProviderCollectionRequestBuilder approvalWorkflowProviders() {
+    @Nonnull
+    public ApprovalWorkflowProviderCollectionRequestBuilder approvalWorkflowProviders() {
         return new ApprovalWorkflowProviderCollectionRequestBuilder(getServiceRoot() + "/approvalWorkflowProviders", this, null);
     }
 
@@ -1179,7 +1094,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the ApprovalWorkflowProviders to retrieve
      * @return the request builder for the ApprovalWorkflowProviders object
      */
-    public IApprovalWorkflowProviderRequestBuilder approvalWorkflowProviders(final String id) {
+    @Nonnull
+    public ApprovalWorkflowProviderRequestBuilder approvalWorkflowProviders(@Nonnull final String id) {
         return new ApprovalWorkflowProviderRequestBuilder(getServiceRoot() + "/approvalWorkflowProviders/" + id, this, null);
     }
 
@@ -1188,7 +1104,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of BusinessFlowTemplates objects
      */
-    public IBusinessFlowTemplateCollectionRequestBuilder businessFlowTemplates() {
+    @Nonnull
+    public BusinessFlowTemplateCollectionRequestBuilder businessFlowTemplates() {
         return new BusinessFlowTemplateCollectionRequestBuilder(getServiceRoot() + "/businessFlowTemplates", this, null);
     }
 
@@ -1198,7 +1115,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the BusinessFlowTemplates to retrieve
      * @return the request builder for the BusinessFlowTemplates object
      */
-    public IBusinessFlowTemplateRequestBuilder businessFlowTemplates(final String id) {
+    @Nonnull
+    public BusinessFlowTemplateRequestBuilder businessFlowTemplates(@Nonnull final String id) {
         return new BusinessFlowTemplateRequestBuilder(getServiceRoot() + "/businessFlowTemplates/" + id, this, null);
     }
 
@@ -1207,7 +1125,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of ProgramControls objects
      */
-    public IProgramControlCollectionRequestBuilder programControls() {
+    @Nonnull
+    public ProgramControlCollectionRequestBuilder programControls() {
         return new ProgramControlCollectionRequestBuilder(getServiceRoot() + "/programControls", this, null);
     }
 
@@ -1217,7 +1136,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the ProgramControls to retrieve
      * @return the request builder for the ProgramControls object
      */
-    public IProgramControlRequestBuilder programControls(final String id) {
+    @Nonnull
+    public ProgramControlRequestBuilder programControls(@Nonnull final String id) {
         return new ProgramControlRequestBuilder(getServiceRoot() + "/programControls/" + id, this, null);
     }
 
@@ -1226,7 +1146,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of ProgramControlTypes objects
      */
-    public IProgramControlTypeCollectionRequestBuilder programControlTypes() {
+    @Nonnull
+    public ProgramControlTypeCollectionRequestBuilder programControlTypes() {
         return new ProgramControlTypeCollectionRequestBuilder(getServiceRoot() + "/programControlTypes", this, null);
     }
 
@@ -1236,7 +1157,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the ProgramControlTypes to retrieve
      * @return the request builder for the ProgramControlTypes object
      */
-    public IProgramControlTypeRequestBuilder programControlTypes(final String id) {
+    @Nonnull
+    public ProgramControlTypeRequestBuilder programControlTypes(@Nonnull final String id) {
         return new ProgramControlTypeRequestBuilder(getServiceRoot() + "/programControlTypes/" + id, this, null);
     }
 
@@ -1245,7 +1167,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Programs objects
      */
-    public IProgramCollectionRequestBuilder programs() {
+    @Nonnull
+    public ProgramCollectionRequestBuilder programs() {
         return new ProgramCollectionRequestBuilder(getServiceRoot() + "/programs", this, null);
     }
 
@@ -1255,7 +1178,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Programs to retrieve
      * @return the request builder for the Programs object
      */
-    public IProgramRequestBuilder programs(final String id) {
+    @Nonnull
+    public ProgramRequestBuilder programs(@Nonnull final String id) {
         return new ProgramRequestBuilder(getServiceRoot() + "/programs/" + id, this, null);
     }
 
@@ -1264,7 +1188,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of AgreementAcceptances objects
      */
-    public IAgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
+    @Nonnull
+    public AgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
         return new AgreementAcceptanceCollectionRequestBuilder(getServiceRoot() + "/agreementAcceptances", this, null);
     }
 
@@ -1274,7 +1199,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the AgreementAcceptances to retrieve
      * @return the request builder for the AgreementAcceptances object
      */
-    public IAgreementAcceptanceRequestBuilder agreementAcceptances(final String id) {
+    @Nonnull
+    public AgreementAcceptanceRequestBuilder agreementAcceptances(@Nonnull final String id) {
         return new AgreementAcceptanceRequestBuilder(getServiceRoot() + "/agreementAcceptances/" + id, this, null);
     }
 
@@ -1283,7 +1209,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Agreements objects
      */
-    public IAgreementCollectionRequestBuilder agreements() {
+    @Nonnull
+    public AgreementCollectionRequestBuilder agreements() {
         return new AgreementCollectionRequestBuilder(getServiceRoot() + "/agreements", this, null);
     }
 
@@ -1293,7 +1220,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Agreements to retrieve
      * @return the request builder for the Agreements object
      */
-    public IAgreementRequestBuilder agreements(final String id) {
+    @Nonnull
+    public AgreementRequestBuilder agreements(@Nonnull final String id) {
         return new AgreementRequestBuilder(getServiceRoot() + "/agreements/" + id, this, null);
     }
 
@@ -1302,7 +1230,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of RiskDetections objects
      */
-    public IRiskDetectionCollectionRequestBuilder riskDetections() {
+    @Nonnull
+    public RiskDetectionCollectionRequestBuilder riskDetections() {
         return new RiskDetectionCollectionRequestBuilder(getServiceRoot() + "/riskDetections", this, null);
     }
 
@@ -1312,7 +1241,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the RiskDetections to retrieve
      * @return the request builder for the RiskDetections object
      */
-    public IRiskDetectionRequestBuilder riskDetections(final String id) {
+    @Nonnull
+    public RiskDetectionRequestBuilder riskDetections(@Nonnull final String id) {
         return new RiskDetectionRequestBuilder(getServiceRoot() + "/riskDetections/" + id, this, null);
     }
 
@@ -1321,7 +1251,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of RiskyUsers objects
      */
-    public IRiskyUserCollectionRequestBuilder riskyUsers() {
+    @Nonnull
+    public RiskyUserCollectionRequestBuilder riskyUsers() {
         return new RiskyUserCollectionRequestBuilder(getServiceRoot() + "/riskyUsers", this, null);
     }
 
@@ -1331,7 +1262,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the RiskyUsers to retrieve
      * @return the request builder for the RiskyUsers object
      */
-    public IRiskyUserRequestBuilder riskyUsers(final String id) {
+    @Nonnull
+    public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
         return new RiskyUserRequestBuilder(getServiceRoot() + "/riskyUsers/" + id, this, null);
     }
 
@@ -1340,7 +1272,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of GovernanceResources objects
      */
-    public IGovernanceResourceCollectionRequestBuilder governanceResources() {
+    @Nonnull
+    public GovernanceResourceCollectionRequestBuilder governanceResources() {
         return new GovernanceResourceCollectionRequestBuilder(getServiceRoot() + "/governanceResources", this, null);
     }
 
@@ -1350,7 +1283,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the GovernanceResources to retrieve
      * @return the request builder for the GovernanceResources object
      */
-    public IGovernanceResourceRequestBuilder governanceResources(final String id) {
+    @Nonnull
+    public GovernanceResourceRequestBuilder governanceResources(@Nonnull final String id) {
         return new GovernanceResourceRequestBuilder(getServiceRoot() + "/governanceResources/" + id, this, null);
     }
 
@@ -1359,7 +1293,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of GovernanceRoleAssignmentRequests objects
      */
-    public IGovernanceRoleAssignmentRequestCollectionRequestBuilder governanceRoleAssignmentRequests() {
+    @Nonnull
+    public GovernanceRoleAssignmentRequestCollectionRequestBuilder governanceRoleAssignmentRequests() {
         return new GovernanceRoleAssignmentRequestCollectionRequestBuilder(getServiceRoot() + "/governanceRoleAssignmentRequests", this, null);
     }
 
@@ -1369,7 +1304,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the GovernanceRoleAssignmentRequests to retrieve
      * @return the request builder for the GovernanceRoleAssignmentRequests object
      */
-    public IGovernanceRoleAssignmentRequestRequestBuilder governanceRoleAssignmentRequests(final String id) {
+    @Nonnull
+    public GovernanceRoleAssignmentRequestRequestBuilder governanceRoleAssignmentRequests(@Nonnull final String id) {
         return new GovernanceRoleAssignmentRequestRequestBuilder(getServiceRoot() + "/governanceRoleAssignmentRequests/" + id, this, null);
     }
 
@@ -1378,7 +1314,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of GovernanceRoleAssignments objects
      */
-    public IGovernanceRoleAssignmentCollectionRequestBuilder governanceRoleAssignments() {
+    @Nonnull
+    public GovernanceRoleAssignmentCollectionRequestBuilder governanceRoleAssignments() {
         return new GovernanceRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/governanceRoleAssignments", this, null);
     }
 
@@ -1388,7 +1325,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the GovernanceRoleAssignments to retrieve
      * @return the request builder for the GovernanceRoleAssignments object
      */
-    public IGovernanceRoleAssignmentRequestBuilder governanceRoleAssignments(final String id) {
+    @Nonnull
+    public GovernanceRoleAssignmentRequestBuilder governanceRoleAssignments(@Nonnull final String id) {
         return new GovernanceRoleAssignmentRequestBuilder(getServiceRoot() + "/governanceRoleAssignments/" + id, this, null);
     }
 
@@ -1397,7 +1335,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of GovernanceRoleDefinitions objects
      */
-    public IGovernanceRoleDefinitionCollectionRequestBuilder governanceRoleDefinitions() {
+    @Nonnull
+    public GovernanceRoleDefinitionCollectionRequestBuilder governanceRoleDefinitions() {
         return new GovernanceRoleDefinitionCollectionRequestBuilder(getServiceRoot() + "/governanceRoleDefinitions", this, null);
     }
 
@@ -1407,7 +1346,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the GovernanceRoleDefinitions to retrieve
      * @return the request builder for the GovernanceRoleDefinitions object
      */
-    public IGovernanceRoleDefinitionRequestBuilder governanceRoleDefinitions(final String id) {
+    @Nonnull
+    public GovernanceRoleDefinitionRequestBuilder governanceRoleDefinitions(@Nonnull final String id) {
         return new GovernanceRoleDefinitionRequestBuilder(getServiceRoot() + "/governanceRoleDefinitions/" + id, this, null);
     }
 
@@ -1416,7 +1356,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of GovernanceRoleSettings objects
      */
-    public IGovernanceRoleSettingCollectionRequestBuilder governanceRoleSettings() {
+    @Nonnull
+    public GovernanceRoleSettingCollectionRequestBuilder governanceRoleSettings() {
         return new GovernanceRoleSettingCollectionRequestBuilder(getServiceRoot() + "/governanceRoleSettings", this, null);
     }
 
@@ -1426,7 +1367,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the GovernanceRoleSettings to retrieve
      * @return the request builder for the GovernanceRoleSettings object
      */
-    public IGovernanceRoleSettingRequestBuilder governanceRoleSettings(final String id) {
+    @Nonnull
+    public GovernanceRoleSettingRequestBuilder governanceRoleSettings(@Nonnull final String id) {
         return new GovernanceRoleSettingRequestBuilder(getServiceRoot() + "/governanceRoleSettings/" + id, this, null);
     }
 
@@ -1435,7 +1377,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of GovernanceSubjects objects
      */
-    public IGovernanceSubjectCollectionRequestBuilder governanceSubjects() {
+    @Nonnull
+    public GovernanceSubjectCollectionRequestBuilder governanceSubjects() {
         return new GovernanceSubjectCollectionRequestBuilder(getServiceRoot() + "/governanceSubjects", this, null);
     }
 
@@ -1445,7 +1388,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the GovernanceSubjects to retrieve
      * @return the request builder for the GovernanceSubjects object
      */
-    public IGovernanceSubjectRequestBuilder governanceSubjects(final String id) {
+    @Nonnull
+    public GovernanceSubjectRequestBuilder governanceSubjects(@Nonnull final String id) {
         return new GovernanceSubjectRequestBuilder(getServiceRoot() + "/governanceSubjects/" + id, this, null);
     }
 
@@ -1454,7 +1398,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PrivilegedAccess objects
      */
-    public IPrivilegedAccessCollectionRequestBuilder privilegedAccess() {
+    @Nonnull
+    public PrivilegedAccessCollectionRequestBuilder privilegedAccess() {
         return new PrivilegedAccessCollectionRequestBuilder(getServiceRoot() + "/privilegedAccess", this, null);
     }
 
@@ -1464,7 +1409,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PrivilegedAccess to retrieve
      * @return the request builder for the PrivilegedAccess object
      */
-    public IPrivilegedAccessRequestBuilder privilegedAccess(final String id) {
+    @Nonnull
+    public PrivilegedAccessRequestBuilder privilegedAccess(@Nonnull final String id) {
         return new PrivilegedAccessRequestBuilder(getServiceRoot() + "/privilegedAccess/" + id, this, null);
     }
 
@@ -1473,7 +1419,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PrivilegedApproval objects
      */
-    public IPrivilegedApprovalCollectionRequestBuilder privilegedApproval() {
+    @Nonnull
+    public PrivilegedApprovalCollectionRequestBuilder privilegedApproval() {
         return new PrivilegedApprovalCollectionRequestBuilder(getServiceRoot() + "/privilegedApproval", this, null);
     }
 
@@ -1483,7 +1430,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PrivilegedApproval to retrieve
      * @return the request builder for the PrivilegedApproval object
      */
-    public IPrivilegedApprovalRequestBuilder privilegedApproval(final String id) {
+    @Nonnull
+    public PrivilegedApprovalRequestBuilder privilegedApproval(@Nonnull final String id) {
         return new PrivilegedApprovalRequestBuilder(getServiceRoot() + "/privilegedApproval/" + id, this, null);
     }
 
@@ -1492,7 +1440,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PrivilegedOperationEvents objects
      */
-    public IPrivilegedOperationEventCollectionRequestBuilder privilegedOperationEvents() {
+    @Nonnull
+    public PrivilegedOperationEventCollectionRequestBuilder privilegedOperationEvents() {
         return new PrivilegedOperationEventCollectionRequestBuilder(getServiceRoot() + "/privilegedOperationEvents", this, null);
     }
 
@@ -1502,7 +1451,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PrivilegedOperationEvents to retrieve
      * @return the request builder for the PrivilegedOperationEvents object
      */
-    public IPrivilegedOperationEventRequestBuilder privilegedOperationEvents(final String id) {
+    @Nonnull
+    public PrivilegedOperationEventRequestBuilder privilegedOperationEvents(@Nonnull final String id) {
         return new PrivilegedOperationEventRequestBuilder(getServiceRoot() + "/privilegedOperationEvents/" + id, this, null);
     }
 
@@ -1511,7 +1461,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PrivilegedRoleAssignmentRequests objects
      */
-    public IPrivilegedRoleAssignmentRequestCollectionRequestBuilder privilegedRoleAssignmentRequests() {
+    @Nonnull
+    public PrivilegedRoleAssignmentRequestCollectionRequestBuilder privilegedRoleAssignmentRequests() {
         return new PrivilegedRoleAssignmentRequestCollectionRequestBuilder(getServiceRoot() + "/privilegedRoleAssignmentRequests", this, null);
     }
 
@@ -1521,7 +1472,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PrivilegedRoleAssignmentRequests to retrieve
      * @return the request builder for the PrivilegedRoleAssignmentRequests object
      */
-    public IPrivilegedRoleAssignmentRequestRequestBuilder privilegedRoleAssignmentRequests(final String id) {
+    @Nonnull
+    public PrivilegedRoleAssignmentRequestRequestBuilder privilegedRoleAssignmentRequests(@Nonnull final String id) {
         return new PrivilegedRoleAssignmentRequestRequestBuilder(getServiceRoot() + "/privilegedRoleAssignmentRequests/" + id, this, null);
     }
 
@@ -1530,7 +1482,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PrivilegedRoleAssignments objects
      */
-    public IPrivilegedRoleAssignmentCollectionRequestBuilder privilegedRoleAssignments() {
+    @Nonnull
+    public PrivilegedRoleAssignmentCollectionRequestBuilder privilegedRoleAssignments() {
         return new PrivilegedRoleAssignmentCollectionRequestBuilder(getServiceRoot() + "/privilegedRoleAssignments", this, null);
     }
 
@@ -1540,7 +1493,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PrivilegedRoleAssignments to retrieve
      * @return the request builder for the PrivilegedRoleAssignments object
      */
-    public IPrivilegedRoleAssignmentRequestBuilder privilegedRoleAssignments(final String id) {
+    @Nonnull
+    public PrivilegedRoleAssignmentRequestBuilder privilegedRoleAssignments(@Nonnull final String id) {
         return new PrivilegedRoleAssignmentRequestBuilder(getServiceRoot() + "/privilegedRoleAssignments/" + id, this, null);
     }
 
@@ -1549,7 +1503,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PrivilegedRoles objects
      */
-    public IPrivilegedRoleCollectionRequestBuilder privilegedRoles() {
+    @Nonnull
+    public PrivilegedRoleCollectionRequestBuilder privilegedRoles() {
         return new PrivilegedRoleCollectionRequestBuilder(getServiceRoot() + "/privilegedRoles", this, null);
     }
 
@@ -1559,7 +1514,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PrivilegedRoles to retrieve
      * @return the request builder for the PrivilegedRoles object
      */
-    public IPrivilegedRoleRequestBuilder privilegedRoles(final String id) {
+    @Nonnull
+    public PrivilegedRoleRequestBuilder privilegedRoles(@Nonnull final String id) {
         return new PrivilegedRoleRequestBuilder(getServiceRoot() + "/privilegedRoles/" + id, this, null);
     }
 
@@ -1568,7 +1524,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PrivilegedSignupStatus objects
      */
-    public IPrivilegedSignupStatusCollectionRequestBuilder privilegedSignupStatus() {
+    @Nonnull
+    public PrivilegedSignupStatusCollectionRequestBuilder privilegedSignupStatus() {
         return new PrivilegedSignupStatusCollectionRequestBuilder(getServiceRoot() + "/privilegedSignupStatus", this, null);
     }
 
@@ -1578,7 +1535,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PrivilegedSignupStatus to retrieve
      * @return the request builder for the PrivilegedSignupStatus object
      */
-    public IPrivilegedSignupStatusRequestBuilder privilegedSignupStatus(final String id) {
+    @Nonnull
+    public PrivilegedSignupStatusRequestBuilder privilegedSignupStatus(@Nonnull final String id) {
         return new PrivilegedSignupStatusRequestBuilder(getServiceRoot() + "/privilegedSignupStatus/" + id, this, null);
     }
 
@@ -1587,7 +1545,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Commands objects
      */
-    public ICommandCollectionRequestBuilder commands() {
+    @Nonnull
+    public CommandCollectionRequestBuilder commands() {
         return new CommandCollectionRequestBuilder(getServiceRoot() + "/commands", this, null);
     }
 
@@ -1597,7 +1556,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Commands to retrieve
      * @return the request builder for the Commands object
      */
-    public ICommandRequestBuilder commands(final String id) {
+    @Nonnull
+    public CommandRequestBuilder commands(@Nonnull final String id) {
         return new CommandRequestBuilder(getServiceRoot() + "/commands/" + id, this, null);
     }
 
@@ -1606,7 +1566,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of PayloadResponse objects
      */
-    public IPayloadResponseCollectionRequestBuilder payloadResponse() {
+    @Nonnull
+    public PayloadResponseCollectionRequestBuilder payloadResponse() {
         return new PayloadResponseCollectionRequestBuilder(getServiceRoot() + "/payloadResponse", this, null);
     }
 
@@ -1616,7 +1577,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the PayloadResponse to retrieve
      * @return the request builder for the PayloadResponse object
      */
-    public IPayloadResponseRequestBuilder payloadResponse(final String id) {
+    @Nonnull
+    public PayloadResponseRequestBuilder payloadResponse(@Nonnull final String id) {
         return new PayloadResponseRequestBuilder(getServiceRoot() + "/payloadResponse/" + id, this, null);
     }
 
@@ -1625,7 +1587,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of DataPolicyOperations objects
      */
-    public IDataPolicyOperationCollectionRequestBuilder dataPolicyOperations() {
+    @Nonnull
+    public DataPolicyOperationCollectionRequestBuilder dataPolicyOperations() {
         return new DataPolicyOperationCollectionRequestBuilder(getServiceRoot() + "/dataPolicyOperations", this, null);
     }
 
@@ -1635,7 +1598,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the DataPolicyOperations to retrieve
      * @return the request builder for the DataPolicyOperations object
      */
-    public IDataPolicyOperationRequestBuilder dataPolicyOperations(final String id) {
+    @Nonnull
+    public DataPolicyOperationRequestBuilder dataPolicyOperations(@Nonnull final String id) {
         return new DataPolicyOperationRequestBuilder(getServiceRoot() + "/dataPolicyOperations/" + id, this, null);
     }
 
@@ -1644,7 +1608,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Subscriptions objects
      */
-    public ISubscriptionCollectionRequestBuilder subscriptions() {
+    @Nonnull
+    public SubscriptionCollectionRequestBuilder subscriptions() {
         return new SubscriptionCollectionRequestBuilder(getServiceRoot() + "/subscriptions", this, null);
     }
 
@@ -1654,7 +1619,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Subscriptions to retrieve
      * @return the request builder for the Subscriptions object
      */
-    public ISubscriptionRequestBuilder subscriptions(final String id) {
+    @Nonnull
+    public SubscriptionRequestBuilder subscriptions(@Nonnull final String id) {
         return new SubscriptionRequestBuilder(getServiceRoot() + "/subscriptions/" + id, this, null);
     }
 
@@ -1663,7 +1629,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Connections objects
      */
-    public IExternalConnectionCollectionRequestBuilder connections() {
+    @Nonnull
+    public ExternalConnectionCollectionRequestBuilder connections() {
         return new ExternalConnectionCollectionRequestBuilder(getServiceRoot() + "/connections", this, null);
     }
 
@@ -1673,7 +1640,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Connections to retrieve
      * @return the request builder for the Connections object
      */
-    public IExternalConnectionRequestBuilder connections(final String id) {
+    @Nonnull
+    public ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
         return new ExternalConnectionRequestBuilder(getServiceRoot() + "/connections/" + id, this, null);
     }
 
@@ -1682,7 +1650,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Chats objects
      */
-    public IChatCollectionRequestBuilder chats() {
+    @Nonnull
+    public ChatCollectionRequestBuilder chats() {
         return new ChatCollectionRequestBuilder(getServiceRoot() + "/chats", this, null);
     }
 
@@ -1692,7 +1661,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Chats to retrieve
      * @return the request builder for the Chats object
      */
-    public IChatRequestBuilder chats(final String id) {
+    @Nonnull
+    public ChatRequestBuilder chats(@Nonnull final String id) {
         return new ChatRequestBuilder(getServiceRoot() + "/chats/" + id, this, null);
     }
 
@@ -1701,7 +1671,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of Teams objects
      */
-    public ITeamCollectionRequestBuilder teams() {
+    @Nonnull
+    public TeamCollectionRequestBuilder teams() {
         return new TeamCollectionRequestBuilder(getServiceRoot() + "/teams", this, null);
     }
 
@@ -1711,7 +1682,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the Teams to retrieve
      * @return the request builder for the Teams object
      */
-    public ITeamRequestBuilder teams(final String id) {
+    @Nonnull
+    public TeamRequestBuilder teams(@Nonnull final String id) {
         return new TeamRequestBuilder(getServiceRoot() + "/teams/" + id, this, null);
     }
 
@@ -1720,7 +1692,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the request builder for the collection of TeamsTemplates objects
      */
-    public ITeamsTemplateCollectionRequestBuilder teamsTemplates() {
+    @Nonnull
+    public TeamsTemplateCollectionRequestBuilder teamsTemplates() {
         return new TeamsTemplateCollectionRequestBuilder(getServiceRoot() + "/teamsTemplates", this, null);
     }
 
@@ -1730,7 +1703,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      * @param id the id of the TeamsTemplates to retrieve
      * @return the request builder for the TeamsTemplates object
      */
-    public ITeamsTemplateRequestBuilder teamsTemplates(final String id) {
+    @Nonnull
+    public TeamsTemplateRequestBuilder teamsTemplates(@Nonnull final String id) {
         return new TeamsTemplateRequestBuilder(getServiceRoot() + "/teamsTemplates/" + id, this, null);
     }
 
@@ -1739,7 +1713,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the AuditLogRoot
      */
-    public IAuditLogRootRequestBuilder auditLogs() {
+    @Nonnull
+    public AuditLogRootRequestBuilder auditLogs() {
         return new AuditLogRootRequestBuilder(getServiceRoot() + "/auditLogs", this, null);
     }
 
@@ -1748,7 +1723,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the ReportRoot
      */
-    public IReportRootRequestBuilder reports() {
+    @Nonnull
+    public ReportRootRequestBuilder reports() {
         return new ReportRootRequestBuilder(getServiceRoot() + "/reports", this, null);
     }
 
@@ -1757,7 +1733,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Bitlocker
      */
-    public IBitlockerRequestBuilder bitlocker() {
+    @Nonnull
+    public BitlockerRequestBuilder bitlocker() {
         return new BitlockerRequestBuilder(getServiceRoot() + "/bitlocker", this, null);
     }
 
@@ -1766,7 +1743,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the DeviceManagement
      */
-    public IDeviceManagementRequestBuilder deviceManagement() {
+    @Nonnull
+    public DeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(getServiceRoot() + "/deviceManagement", this, null);
     }
 
@@ -1775,7 +1753,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Compliance
      */
-    public IComplianceRequestBuilder compliance() {
+    @Nonnull
+    public ComplianceRequestBuilder compliance() {
         return new ComplianceRequestBuilder(getServiceRoot() + "/compliance", this, null);
     }
 
@@ -1784,7 +1763,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the IdentityContainer
      */
-    public IIdentityContainerRequestBuilder identity() {
+    @Nonnull
+    public IdentityContainerRequestBuilder identity() {
         return new IdentityContainerRequestBuilder(getServiceRoot() + "/identity", this, null);
     }
 
@@ -1793,7 +1773,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the TrustFramework
      */
-    public ITrustFrameworkRequestBuilder trustFramework() {
+    @Nonnull
+    public TrustFrameworkRequestBuilder trustFramework() {
         return new TrustFrameworkRequestBuilder(getServiceRoot() + "/trustFramework", this, null);
     }
 
@@ -1802,7 +1783,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the DataClassificationService
      */
-    public IDataClassificationServiceRequestBuilder dataClassification() {
+    @Nonnull
+    public DataClassificationServiceRequestBuilder dataClassification() {
         return new DataClassificationServiceRequestBuilder(getServiceRoot() + "/dataClassification", this, null);
     }
 
@@ -1811,7 +1793,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the InformationProtection
      */
-    public IInformationProtectionRequestBuilder informationProtection() {
+    @Nonnull
+    public InformationProtectionRequestBuilder informationProtection() {
         return new InformationProtectionRequestBuilder(getServiceRoot() + "/informationProtection", this, null);
     }
 
@@ -1820,7 +1803,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the OrganizationalBranding
      */
-    public IOrganizationalBrandingRequestBuilder branding() {
+    @Nonnull
+    public OrganizationalBrandingRequestBuilder branding() {
         return new OrganizationalBrandingRequestBuilder(getServiceRoot() + "/branding", this, null);
     }
 
@@ -1829,7 +1813,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Directory
      */
-    public IDirectoryRequestBuilder directory() {
+    @Nonnull
+    public DirectoryRequestBuilder directory() {
         return new DirectoryRequestBuilder(getServiceRoot() + "/directory", this, null);
     }
 
@@ -1838,7 +1823,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the User
      */
-    public IUserRequestBuilder me() {
+    @Nonnull
+    public UserRequestBuilder me() {
         return new UserRequestBuilder(getServiceRoot() + "/me", this, null);
     }
 
@@ -1847,7 +1833,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the PolicyRoot
      */
-    public IPolicyRootRequestBuilder policies() {
+    @Nonnull
+    public PolicyRootRequestBuilder policies() {
         return new PolicyRootRequestBuilder(getServiceRoot() + "/policies", this, null);
     }
 
@@ -1856,7 +1843,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the RoleManagement
      */
-    public IRoleManagementRequestBuilder roleManagement() {
+    @Nonnull
+    public RoleManagementRequestBuilder roleManagement() {
         return new RoleManagementRequestBuilder(getServiceRoot() + "/roleManagement", this, null);
     }
 
@@ -1865,7 +1853,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the EducationRoot
      */
-    public IEducationRootRequestBuilder education() {
+    @Nonnull
+    public EducationRootRequestBuilder education() {
         return new EducationRootRequestBuilder(getServiceRoot() + "/education", this, null);
     }
 
@@ -1874,7 +1863,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Drive
      */
-    public IDriveRequestBuilder drive() {
+    @Nonnull
+    public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getServiceRoot() + "/drive", this, null);
     }
 
@@ -1883,7 +1873,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Store
      */
-    public IStoreRequestBuilder termStore() {
+    @Nonnull
+    public StoreRequestBuilder termStore() {
         return new StoreRequestBuilder(getServiceRoot() + "/termStore", this, null);
     }
 
@@ -1892,7 +1883,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the CloudCommunications
      */
-    public ICloudCommunicationsRequestBuilder communications() {
+    @Nonnull
+    public CloudCommunicationsRequestBuilder communications() {
         return new CloudCommunicationsRequestBuilder(getServiceRoot() + "/communications", this, null);
     }
 
@@ -1901,7 +1893,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the IdentityProtectionRoot
      */
-    public IIdentityProtectionRootRequestBuilder identityProtection() {
+    @Nonnull
+    public IdentityProtectionRootRequestBuilder identityProtection() {
         return new IdentityProtectionRootRequestBuilder(getServiceRoot() + "/identityProtection", this, null);
     }
 
@@ -1910,7 +1903,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the IdentityGovernance
      */
-    public IIdentityGovernanceRequestBuilder identityGovernance() {
+    @Nonnull
+    public IdentityGovernanceRequestBuilder identityGovernance() {
         return new IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
     }
 
@@ -1919,7 +1913,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the DeviceAppManagement
      */
-    public IDeviceAppManagementRequestBuilder deviceAppManagement() {
+    @Nonnull
+    public DeviceAppManagementRequestBuilder deviceAppManagement() {
         return new DeviceAppManagementRequestBuilder(getServiceRoot() + "/deviceAppManagement", this, null);
     }
 
@@ -1928,7 +1923,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the OfficeConfiguration
      */
-    public IOfficeConfigurationRequestBuilder officeConfiguration() {
+    @Nonnull
+    public OfficeConfigurationRequestBuilder officeConfiguration() {
         return new OfficeConfigurationRequestBuilder(getServiceRoot() + "/officeConfiguration", this, null);
     }
 
@@ -1937,7 +1933,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the SearchEntity
      */
-    public ISearchEntityRequestBuilder search() {
+    @Nonnull
+    public SearchEntityRequestBuilder search() {
         return new SearchEntityRequestBuilder(getServiceRoot() + "/search", this, null);
     }
 
@@ -1946,7 +1943,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Financials
      */
-    public IFinancialsRequestBuilder financials() {
+    @Nonnull
+    public FinancialsRequestBuilder financials() {
         return new FinancialsRequestBuilder(getServiceRoot() + "/financials", this, null);
     }
 
@@ -1955,7 +1953,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Planner
      */
-    public IPlannerRequestBuilder planner() {
+    @Nonnull
+    public PlannerRequestBuilder planner() {
         return new PlannerRequestBuilder(getServiceRoot() + "/planner", this, null);
     }
 
@@ -1964,7 +1963,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Print
      */
-    public IPrintRequestBuilder print() {
+    @Nonnull
+    public PrintRequestBuilder print() {
         return new PrintRequestBuilder(getServiceRoot() + "/print", this, null);
     }
 
@@ -1973,7 +1973,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Security
      */
-    public ISecurityRequestBuilder security() {
+    @Nonnull
+    public SecurityRequestBuilder security() {
         return new SecurityRequestBuilder(getServiceRoot() + "/security", this, null);
     }
 
@@ -1982,7 +1983,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the CommsApplication
      */
-    public ICommsApplicationRequestBuilder app() {
+    @Nonnull
+    public CommsApplicationRequestBuilder app() {
         return new CommsApplicationRequestBuilder(getServiceRoot() + "/app", this, null);
     }
 
@@ -1991,7 +1993,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the External
      */
-    public IExternalRequestBuilder external() {
+    @Nonnull
+    public ExternalRequestBuilder external() {
         return new ExternalRequestBuilder(getServiceRoot() + "/external", this, null);
     }
 
@@ -2000,7 +2003,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the AppCatalogs
      */
-    public IAppCatalogsRequestBuilder appCatalogs() {
+    @Nonnull
+    public AppCatalogsRequestBuilder appCatalogs() {
         return new AppCatalogsRequestBuilder(getServiceRoot() + "/appCatalogs", this, null);
     }
 
@@ -2009,7 +2013,8 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      *
      * @return the Teamwork
      */
-    public ITeamworkRequestBuilder teamwork() {
+    @Nonnull
+    public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", this, null);
     }
 }

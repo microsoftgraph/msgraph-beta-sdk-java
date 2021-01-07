@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Presence;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Presence Request Builder.
  */
-public class PresenceRequestBuilder extends BaseRequestBuilder implements IPresenceRequestBuilder {
+public class PresenceRequestBuilder extends BaseRequestBuilder<Presence> {
 
     /**
      * The request builder for the Presence
@@ -28,7 +30,7 @@ public class PresenceRequestBuilder extends BaseRequestBuilder implements IPrese
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PresenceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PresenceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder implements IPrese
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPresenceRequest instance
+     * @return the PresenceRequest instance
      */
-    public IPresenceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PresenceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder implements IPrese
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPresenceRequest instance
+     * @return the PresenceRequest instance
      */
-    public IPresenceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PresenceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PresenceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

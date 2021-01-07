@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ConfigManagerCollection;
 import com.microsoft.graph.models.extensions.ConfigManagerPolicySummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Config Manager Collection Request.
  */
-public class ConfigManagerCollectionRequest extends BaseRequest implements IConfigManagerCollectionRequest {
+public class ConfigManagerCollectionRequest extends BaseRequest<ConfigManagerCollection> {
 	
     /**
      * The request for the ConfigManagerCollection
@@ -30,7 +32,7 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConfigManagerCollectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConfigManagerCollectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConfigManagerCollection.class);
     }
 
@@ -39,7 +41,7 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConfigManagerCollection> callback) {
+    public void get(@Nonnull final ICallback<? super ConfigManagerCollection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @return the ConfigManagerCollection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ConfigManagerCollection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConfigManagerCollection> callback) {
+    public void delete(@Nonnull final ICallback<? super ConfigManagerCollection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @param sourceConfigManagerCollection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConfigManagerCollection sourceConfigManagerCollection, final ICallback<? super ConfigManagerCollection> callback) {
+    public void patch(@Nonnull final ConfigManagerCollection sourceConfigManagerCollection, @Nonnull final ICallback<? super ConfigManagerCollection> callback) {
         send(HttpMethod.PATCH, callback, sourceConfigManagerCollection);
     }
 
@@ -88,7 +91,8 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @return the updated ConfigManagerCollection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConfigManagerCollection patch(final ConfigManagerCollection sourceConfigManagerCollection) throws ClientException {
+    @Nullable
+    public ConfigManagerCollection patch(@Nonnull final ConfigManagerCollection sourceConfigManagerCollection) throws ClientException {
         return send(HttpMethod.PATCH, sourceConfigManagerCollection);
     }
 
@@ -98,7 +102,7 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @param newConfigManagerCollection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConfigManagerCollection newConfigManagerCollection, final ICallback<? super ConfigManagerCollection> callback) {
+    public void post(@Nonnull final ConfigManagerCollection newConfigManagerCollection, @Nonnull final ICallback<? super ConfigManagerCollection> callback) {
         send(HttpMethod.POST, callback, newConfigManagerCollection);
     }
 
@@ -109,7 +113,8 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @return the created ConfigManagerCollection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConfigManagerCollection post(final ConfigManagerCollection newConfigManagerCollection) throws ClientException {
+    @Nullable
+    public ConfigManagerCollection post(@Nonnull final ConfigManagerCollection newConfigManagerCollection) throws ClientException {
         return send(HttpMethod.POST, newConfigManagerCollection);
     }
 
@@ -119,7 +124,7 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @param newConfigManagerCollection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConfigManagerCollection newConfigManagerCollection, final ICallback<? super ConfigManagerCollection> callback) {
+    public void put(@Nonnull final ConfigManagerCollection newConfigManagerCollection, @Nonnull final ICallback<? super ConfigManagerCollection> callback) {
         send(HttpMethod.PUT, callback, newConfigManagerCollection);
     }
 
@@ -130,7 +135,8 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @return the created ConfigManagerCollection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConfigManagerCollection put(final ConfigManagerCollection newConfigManagerCollection) throws ClientException {
+    @Nullable
+    public ConfigManagerCollection put(@Nonnull final ConfigManagerCollection newConfigManagerCollection) throws ClientException {
         return send(HttpMethod.PUT, newConfigManagerCollection);
     }
 
@@ -140,9 +146,10 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @param value the select clause
      * @return the updated request
      */
-     public IConfigManagerCollectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConfigManagerCollectionRequest)this;
+     @Nonnull
+     public ConfigManagerCollectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class ConfigManagerCollectionRequest extends BaseRequest implements IConf
      * @param value the expand clause
      * @return the updated request
      */
-     public IConfigManagerCollectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConfigManagerCollectionRequest)this;
+     @Nonnull
+     public ConfigManagerCollectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

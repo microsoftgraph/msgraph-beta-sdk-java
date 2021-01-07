@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationValueMultiText;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Value Multi Text Request.
  */
-public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest implements IGroupPolicyPresentationValueMultiTextRequest {
+public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest<GroupPolicyPresentationValueMultiText> {
 	
     /**
      * The request for the GroupPolicyPresentationValueMultiText
@@ -29,7 +31,7 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationValueMultiTextRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationValueMultiTextRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationValueMultiText.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @return the GroupPolicyPresentationValueMultiText from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationValueMultiText get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @param sourceGroupPolicyPresentationValueMultiText the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationValueMultiText sourceGroupPolicyPresentationValueMultiText, final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationValueMultiText sourceGroupPolicyPresentationValueMultiText, @Nonnull final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationValueMultiText);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @return the updated GroupPolicyPresentationValueMultiText
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValueMultiText patch(final GroupPolicyPresentationValueMultiText sourceGroupPolicyPresentationValueMultiText) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValueMultiText patch(@Nonnull final GroupPolicyPresentationValueMultiText sourceGroupPolicyPresentationValueMultiText) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationValueMultiText);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @param newGroupPolicyPresentationValueMultiText the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, @Nonnull final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationValueMultiText);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @return the created GroupPolicyPresentationValueMultiText
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValueMultiText post(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValueMultiText post(@Nonnull final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationValueMultiText);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @param newGroupPolicyPresentationValueMultiText the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText, @Nonnull final ICallback<? super GroupPolicyPresentationValueMultiText> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationValueMultiText);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @return the created GroupPolicyPresentationValueMultiText
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValueMultiText put(final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValueMultiText put(@Nonnull final GroupPolicyPresentationValueMultiText newGroupPolicyPresentationValueMultiText) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationValueMultiText);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationValueMultiTextRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationValueMultiTextRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationValueMultiTextRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyPresentationValueMultiTextRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationValueMultiTextRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationValueMultiTextRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationValueMultiTextRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

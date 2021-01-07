@@ -9,21 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackage;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -33,7 +30,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Access Package With Reference Request.
  */
-public class AccessPackageWithReferenceRequest extends BaseRequest implements IAccessPackageWithReferenceRequest {
+public class AccessPackageWithReferenceRequest extends BaseWithReferenceRequest<AccessPackage> {
 
     /**
      * The request for the AccessPackage
@@ -42,46 +39,9 @@ public class AccessPackageWithReferenceRequest extends BaseRequest implements IA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackage.class);
     }
-
-    public void post(final AccessPackage newAccessPackage, final IJsonBackedObject payload, final ICallback<? super AccessPackage> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public AccessPackage post(final AccessPackage newAccessPackage, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newAccessPackage;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super AccessPackage> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public AccessPackage get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super AccessPackage> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final AccessPackage sourceAccessPackage, final ICallback<? super AccessPackage> callback) {
-		send(HttpMethod.PATCH, callback, sourceAccessPackage);
-	}
-
-	public AccessPackage patch(final AccessPackage sourceAccessPackage) throws ClientException {
-		return send(HttpMethod.PATCH, sourceAccessPackage);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -89,9 +49,10 @@ public class AccessPackageWithReferenceRequest extends BaseRequest implements IA
      * @param value the select clause
      * @return the updated request
      */
-    public IAccessPackageWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IAccessPackageWithReferenceRequest)this;
+    @Nonnull
+    public AccessPackageWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -100,8 +61,9 @@ public class AccessPackageWithReferenceRequest extends BaseRequest implements IA
      * @param value the expand clause
      * @return the updated request
      */
-    public IAccessPackageWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AccessPackageWithReferenceRequest)this;
+    @Nonnull
+    public AccessPackageWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

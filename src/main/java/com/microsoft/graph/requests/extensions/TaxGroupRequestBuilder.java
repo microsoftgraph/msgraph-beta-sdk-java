@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TaxGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Tax Group Request Builder.
  */
-public class TaxGroupRequestBuilder extends BaseRequestBuilder implements ITaxGroupRequestBuilder {
+public class TaxGroupRequestBuilder extends BaseRequestBuilder<TaxGroup> {
 
     /**
      * The request builder for the TaxGroup
@@ -28,7 +30,7 @@ public class TaxGroupRequestBuilder extends BaseRequestBuilder implements ITaxGr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TaxGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TaxGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class TaxGroupRequestBuilder extends BaseRequestBuilder implements ITaxGr
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITaxGroupRequest instance
+     * @return the TaxGroupRequest instance
      */
-    public ITaxGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TaxGroupRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class TaxGroupRequestBuilder extends BaseRequestBuilder implements ITaxGr
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITaxGroupRequest instance
+     * @return the TaxGroupRequest instance
      */
-    public ITaxGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TaxGroupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TaxGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

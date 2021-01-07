@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration Device Status Request.
  */
-public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implements IDeviceConfigurationDeviceStatusRequest {
+public class DeviceConfigurationDeviceStatusRequest extends BaseRequest<DeviceConfigurationDeviceStatus> {
 	
     /**
      * The request for the DeviceConfigurationDeviceStatus
@@ -29,7 +31,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationDeviceStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationDeviceStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationDeviceStatus.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @return the DeviceConfigurationDeviceStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfigurationDeviceStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param sourceDeviceConfigurationDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus, final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
+    public void patch(@Nonnull final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus, @Nonnull final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationDeviceStatus);
     }
 
@@ -87,7 +90,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @return the updated DeviceConfigurationDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationDeviceStatus patch(final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus) throws ClientException {
+    @Nullable
+    public DeviceConfigurationDeviceStatus patch(@Nonnull final DeviceConfigurationDeviceStatus sourceDeviceConfigurationDeviceStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfigurationDeviceStatus);
     }
 
@@ -97,7 +101,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param newDeviceConfigurationDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
+    public void post(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, @Nonnull final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationDeviceStatus);
     }
 
@@ -108,7 +112,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @return the created DeviceConfigurationDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationDeviceStatus post(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) throws ClientException {
+    @Nullable
+    public DeviceConfigurationDeviceStatus post(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfigurationDeviceStatus);
     }
 
@@ -118,7 +123,7 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param newDeviceConfigurationDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
+    public void put(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus, @Nonnull final ICallback<? super DeviceConfigurationDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationDeviceStatus);
     }
 
@@ -129,7 +134,8 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @return the created DeviceConfigurationDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationDeviceStatus put(final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) throws ClientException {
+    @Nullable
+    public DeviceConfigurationDeviceStatus put(@Nonnull final DeviceConfigurationDeviceStatus newDeviceConfigurationDeviceStatus) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfigurationDeviceStatus);
     }
 
@@ -139,9 +145,10 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceConfigurationDeviceStatusRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceConfigurationDeviceStatusRequest)this;
+     @Nonnull
+     public DeviceConfigurationDeviceStatusRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceConfigurationDeviceStatusRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceConfigurationDeviceStatusRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationDeviceStatusRequest)this;
+     @Nonnull
+     public DeviceConfigurationDeviceStatusRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

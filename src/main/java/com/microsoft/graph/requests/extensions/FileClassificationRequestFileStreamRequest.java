@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FileClassificationRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseStreamRequest;
 
@@ -21,7 +23,7 @@ import java.io.InputStream;
 /**
  * The class for the File Classification Request File Stream Request.
  */
-public class FileClassificationRequestFileStreamRequest extends BaseStreamRequest<FileClassificationRequest> implements IFileClassificationRequestFileStreamRequest {
+public class FileClassificationRequestFileStreamRequest extends BaseStreamRequest<FileClassificationRequest> {
 
     /**
      * The request for the FileClassificationRequestFileStream
@@ -30,7 +32,7 @@ public class FileClassificationRequestFileStreamRequest extends BaseStreamReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FileClassificationRequestFileStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FileClassificationRequestFileStreamRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, FileClassificationRequest.class);
     }
 
@@ -39,7 +41,7 @@ public class FileClassificationRequestFileStreamRequest extends BaseStreamReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<InputStream> callback) {
+    public void get(@Nonnull final ICallback<InputStream> callback) {
         send(callback);
     }
 
@@ -49,6 +51,7 @@ public class FileClassificationRequestFileStreamRequest extends BaseStreamReques
      * @return the stream that the caller needs to close
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public InputStream get() throws ClientException {
        return send();
     }
@@ -59,7 +62,7 @@ public class FileClassificationRequestFileStreamRequest extends BaseStreamReques
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<? super FileClassificationRequest> callback) {
+    public void put(@Nonnull final byte[] fileContents, @Nonnull final ICallback<? super FileClassificationRequest> callback) {
         send(fileContents, callback);
     }
 
@@ -70,7 +73,8 @@ public class FileClassificationRequestFileStreamRequest extends BaseStreamReques
      * @return the result of the upload
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public FileClassificationRequest put(final byte[] fileContents) throws ClientException {
+    @Nullable
+    public FileClassificationRequest put(@Nonnull final byte[] fileContents) throws ClientException {
         return send(fileContents);
     }
 }

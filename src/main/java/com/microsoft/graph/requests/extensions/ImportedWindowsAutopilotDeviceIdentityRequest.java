@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ImportedWindowsAutopilotDeviceIdentity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Imported Windows Autopilot Device Identity Request.
  */
-public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest implements IImportedWindowsAutopilotDeviceIdentityRequest {
+public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest<ImportedWindowsAutopilotDeviceIdentity> {
 	
     /**
      * The request for the ImportedWindowsAutopilotDeviceIdentity
@@ -29,7 +31,7 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedWindowsAutopilotDeviceIdentityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ImportedWindowsAutopilotDeviceIdentityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ImportedWindowsAutopilotDeviceIdentity.class);
     }
 
@@ -38,7 +40,7 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
+    public void get(@Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @return the ImportedWindowsAutopilotDeviceIdentity from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ImportedWindowsAutopilotDeviceIdentity get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
+    public void delete(@Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @param sourceImportedWindowsAutopilotDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ImportedWindowsAutopilotDeviceIdentity sourceImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
+    public void patch(@Nonnull final ImportedWindowsAutopilotDeviceIdentity sourceImportedWindowsAutopilotDeviceIdentity, @Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.PATCH, callback, sourceImportedWindowsAutopilotDeviceIdentity);
     }
 
@@ -87,7 +90,8 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @return the updated ImportedWindowsAutopilotDeviceIdentity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedWindowsAutopilotDeviceIdentity patch(final ImportedWindowsAutopilotDeviceIdentity sourceImportedWindowsAutopilotDeviceIdentity) throws ClientException {
+    @Nullable
+    public ImportedWindowsAutopilotDeviceIdentity patch(@Nonnull final ImportedWindowsAutopilotDeviceIdentity sourceImportedWindowsAutopilotDeviceIdentity) throws ClientException {
         return send(HttpMethod.PATCH, sourceImportedWindowsAutopilotDeviceIdentity);
     }
 
@@ -97,7 +101,7 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @param newImportedWindowsAutopilotDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
+    public void post(@Nonnull final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, @Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.POST, callback, newImportedWindowsAutopilotDeviceIdentity);
     }
 
@@ -108,7 +112,8 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @return the created ImportedWindowsAutopilotDeviceIdentity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedWindowsAutopilotDeviceIdentity post(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity) throws ClientException {
+    @Nullable
+    public ImportedWindowsAutopilotDeviceIdentity post(@Nonnull final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity) throws ClientException {
         return send(HttpMethod.POST, newImportedWindowsAutopilotDeviceIdentity);
     }
 
@@ -118,7 +123,7 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @param newImportedWindowsAutopilotDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
+    public void put(@Nonnull final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity, @Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentity> callback) {
         send(HttpMethod.PUT, callback, newImportedWindowsAutopilotDeviceIdentity);
     }
 
@@ -129,7 +134,8 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @return the created ImportedWindowsAutopilotDeviceIdentity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedWindowsAutopilotDeviceIdentity put(final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity) throws ClientException {
+    @Nullable
+    public ImportedWindowsAutopilotDeviceIdentity put(@Nonnull final ImportedWindowsAutopilotDeviceIdentity newImportedWindowsAutopilotDeviceIdentity) throws ClientException {
         return send(HttpMethod.PUT, newImportedWindowsAutopilotDeviceIdentity);
     }
 
@@ -139,9 +145,10 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IImportedWindowsAutopilotDeviceIdentityRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ImportedWindowsAutopilotDeviceIdentityRequest)this;
+     @Nonnull
+     public ImportedWindowsAutopilotDeviceIdentityRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ImportedWindowsAutopilotDeviceIdentityRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IImportedWindowsAutopilotDeviceIdentityRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ImportedWindowsAutopilotDeviceIdentityRequest)this;
+     @Nonnull
+     public ImportedWindowsAutopilotDeviceIdentityRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

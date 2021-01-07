@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EnrollmentTroubleshootingEvent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Enrollment Troubleshooting Event Request.
  */
-public class EnrollmentTroubleshootingEventRequest extends BaseRequest implements IEnrollmentTroubleshootingEventRequest {
+public class EnrollmentTroubleshootingEventRequest extends BaseRequest<EnrollmentTroubleshootingEvent> {
 	
     /**
      * The request for the EnrollmentTroubleshootingEvent
@@ -29,7 +31,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentTroubleshootingEventRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentTroubleshootingEventRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnrollmentTroubleshootingEvent.class);
     }
 
@@ -38,7 +40,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
+    public void get(@Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @return the EnrollmentTroubleshootingEvent from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EnrollmentTroubleshootingEvent get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
+    public void delete(@Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param sourceEnrollmentTroubleshootingEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
+    public void patch(@Nonnull final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent, @Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceEnrollmentTroubleshootingEvent);
     }
 
@@ -87,7 +90,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @return the updated EnrollmentTroubleshootingEvent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentTroubleshootingEvent patch(final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent) throws ClientException {
+    @Nullable
+    public EnrollmentTroubleshootingEvent patch(@Nonnull final EnrollmentTroubleshootingEvent sourceEnrollmentTroubleshootingEvent) throws ClientException {
         return send(HttpMethod.PATCH, sourceEnrollmentTroubleshootingEvent);
     }
 
@@ -97,7 +101,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param newEnrollmentTroubleshootingEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
+    public void post(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, @Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.POST, callback, newEnrollmentTroubleshootingEvent);
     }
 
@@ -108,7 +112,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @return the created EnrollmentTroubleshootingEvent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentTroubleshootingEvent post(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) throws ClientException {
+    @Nullable
+    public EnrollmentTroubleshootingEvent post(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) throws ClientException {
         return send(HttpMethod.POST, newEnrollmentTroubleshootingEvent);
     }
 
@@ -118,7 +123,7 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param newEnrollmentTroubleshootingEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
+    public void put(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent, @Nonnull final ICallback<? super EnrollmentTroubleshootingEvent> callback) {
         send(HttpMethod.PUT, callback, newEnrollmentTroubleshootingEvent);
     }
 
@@ -129,7 +134,8 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @return the created EnrollmentTroubleshootingEvent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentTroubleshootingEvent put(final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) throws ClientException {
+    @Nullable
+    public EnrollmentTroubleshootingEvent put(@Nonnull final EnrollmentTroubleshootingEvent newEnrollmentTroubleshootingEvent) throws ClientException {
         return send(HttpMethod.PUT, newEnrollmentTroubleshootingEvent);
     }
 
@@ -139,9 +145,10 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IEnrollmentTroubleshootingEventRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EnrollmentTroubleshootingEventRequest)this;
+     @Nonnull
+     public EnrollmentTroubleshootingEventRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EnrollmentTroubleshootingEventRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IEnrollmentTroubleshootingEventRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EnrollmentTroubleshootingEventRequest)this;
+     @Nonnull
+     public EnrollmentTroubleshootingEventRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

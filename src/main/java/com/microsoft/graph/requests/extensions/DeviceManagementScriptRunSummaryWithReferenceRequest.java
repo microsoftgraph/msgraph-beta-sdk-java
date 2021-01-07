@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptRunSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Device Management Script Run Summary With Reference Request.
  */
-public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRequest implements IDeviceManagementScriptRunSummaryWithReferenceRequest {
+public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseWithReferenceRequest<DeviceManagementScriptRunSummary> {
 
     /**
      * The request for the DeviceManagementScriptRunSummary
@@ -32,46 +34,9 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementScriptRunSummaryWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementScriptRunSummaryWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementScriptRunSummary.class);
     }
-
-    public void post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final IJsonBackedObject payload, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public DeviceManagementScriptRunSummary post(final DeviceManagementScriptRunSummary newDeviceManagementScriptRunSummary, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newDeviceManagementScriptRunSummary;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super DeviceManagementScriptRunSummary> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public DeviceManagementScriptRunSummary get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super DeviceManagementScriptRunSummary> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary, final ICallback<? super DeviceManagementScriptRunSummary> callback) {
-		send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptRunSummary);
-	}
-
-	public DeviceManagementScriptRunSummary patch(final DeviceManagementScriptRunSummary sourceDeviceManagementScriptRunSummary) throws ClientException {
-		return send(HttpMethod.PATCH, sourceDeviceManagementScriptRunSummary);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
      * @param value the select clause
      * @return the updated request
      */
-    public IDeviceManagementScriptRunSummaryWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDeviceManagementScriptRunSummaryWithReferenceRequest)this;
+    @Nonnull
+    public DeviceManagementScriptRunSummaryWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class DeviceManagementScriptRunSummaryWithReferenceRequest extends BaseRe
      * @param value the expand clause
      * @return the updated request
      */
-    public IDeviceManagementScriptRunSummaryWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementScriptRunSummaryWithReferenceRequest)this;
+    @Nonnull
+    public DeviceManagementScriptRunSummaryWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

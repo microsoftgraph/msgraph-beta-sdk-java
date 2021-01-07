@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrinterShare;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IPrinterShareCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.PrinterShareCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrinterShareCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionResponse;
 import com.microsoft.graph.models.extensions.PrinterShare;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Printer Share Collection With References Page.
  */
-public class PrinterShareCollectionWithReferencesPage extends BaseCollectionPage<PrinterShare, IPrinterShareCollectionWithReferencesRequestBuilder> implements IPrinterShareCollectionWithReferencesPage {
+public class PrinterShareCollectionWithReferencesPage extends BaseCollectionPage<PrinterShare, PrinterShareCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for PrinterShare
@@ -35,7 +37,17 @@ public class PrinterShareCollectionWithReferencesPage extends BaseCollectionPage
      * @param response the serialized PrinterShareCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PrinterShareCollectionWithReferencesPage(final PrinterShareCollectionResponse response, final IPrinterShareCollectionWithReferencesRequestBuilder builder) {
+    public PrinterShareCollectionWithReferencesPage(@Nonnull final PrinterShareCollectionResponse response, @Nullable final PrinterShareCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for PrinterShare
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PrinterShareCollectionWithReferencesPage(@Nonnull final java.util.List<PrinterShare> pageContents, @Nullable final PrinterShareCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

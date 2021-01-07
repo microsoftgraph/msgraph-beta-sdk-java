@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Package Assignment Policy Request.
  */
-public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements IAccessPackageAssignmentPolicyRequest {
+public class AccessPackageAssignmentPolicyRequest extends BaseRequest<AccessPackageAssignmentPolicy> {
 	
     /**
      * The request for the AccessPackageAssignmentPolicy
@@ -33,7 +33,7 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageAssignmentPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageAssignmentPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageAssignmentPolicy.class);
     }
 
@@ -42,7 +42,7 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessPackageAssignmentPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super AccessPackageAssignmentPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @return the AccessPackageAssignmentPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessPackageAssignmentPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessPackageAssignmentPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessPackageAssignmentPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @param sourceAccessPackageAssignmentPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageAssignmentPolicy sourceAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback) {
+    public void patch(@Nonnull final AccessPackageAssignmentPolicy sourceAccessPackageAssignmentPolicy, @Nonnull final ICallback<? super AccessPackageAssignmentPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageAssignmentPolicy);
     }
 
@@ -91,7 +92,8 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @return the updated AccessPackageAssignmentPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageAssignmentPolicy patch(final AccessPackageAssignmentPolicy sourceAccessPackageAssignmentPolicy) throws ClientException {
+    @Nullable
+    public AccessPackageAssignmentPolicy patch(@Nonnull final AccessPackageAssignmentPolicy sourceAccessPackageAssignmentPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessPackageAssignmentPolicy);
     }
 
@@ -101,7 +103,7 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @param newAccessPackageAssignmentPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback) {
+    public void post(@Nonnull final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, @Nonnull final ICallback<? super AccessPackageAssignmentPolicy> callback) {
         send(HttpMethod.POST, callback, newAccessPackageAssignmentPolicy);
     }
 
@@ -112,7 +114,8 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @return the created AccessPackageAssignmentPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageAssignmentPolicy post(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException {
+    @Nullable
+    public AccessPackageAssignmentPolicy post(@Nonnull final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException {
         return send(HttpMethod.POST, newAccessPackageAssignmentPolicy);
     }
 
@@ -122,7 +125,7 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @param newAccessPackageAssignmentPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, final ICallback<? super AccessPackageAssignmentPolicy> callback) {
+    public void put(@Nonnull final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy, @Nonnull final ICallback<? super AccessPackageAssignmentPolicy> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageAssignmentPolicy);
     }
 
@@ -133,7 +136,8 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @return the created AccessPackageAssignmentPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageAssignmentPolicy put(final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException {
+    @Nullable
+    public AccessPackageAssignmentPolicy put(@Nonnull final AccessPackageAssignmentPolicy newAccessPackageAssignmentPolicy) throws ClientException {
         return send(HttpMethod.PUT, newAccessPackageAssignmentPolicy);
     }
 
@@ -143,9 +147,10 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessPackageAssignmentPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessPackageAssignmentPolicyRequest)this;
+     @Nonnull
+     public AccessPackageAssignmentPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AccessPackageAssignmentPolicyRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessPackageAssignmentPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageAssignmentPolicyRequest)this;
+     @Nonnull
+     public AccessPackageAssignmentPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

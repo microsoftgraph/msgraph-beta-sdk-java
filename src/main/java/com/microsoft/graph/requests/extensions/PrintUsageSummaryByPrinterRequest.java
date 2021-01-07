@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintUsageSummaryByPrinter;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Print Usage Summary By Printer Request.
  */
-public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IPrintUsageSummaryByPrinterRequest {
+public class PrintUsageSummaryByPrinterRequest extends BaseRequest<PrintUsageSummaryByPrinter> {
 	
     /**
      * The request for the PrintUsageSummaryByPrinter
@@ -29,7 +31,7 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintUsageSummaryByPrinterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintUsageSummaryByPrinterRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrintUsageSummaryByPrinter.class);
     }
 
@@ -38,7 +40,7 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrintUsageSummaryByPrinter> callback) {
+    public void get(@Nonnull final ICallback<? super PrintUsageSummaryByPrinter> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @return the PrintUsageSummaryByPrinter from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrintUsageSummaryByPrinter get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrintUsageSummaryByPrinter> callback) {
+    public void delete(@Nonnull final ICallback<? super PrintUsageSummaryByPrinter> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @param sourcePrintUsageSummaryByPrinter the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintUsageSummaryByPrinter sourcePrintUsageSummaryByPrinter, final ICallback<? super PrintUsageSummaryByPrinter> callback) {
+    public void patch(@Nonnull final PrintUsageSummaryByPrinter sourcePrintUsageSummaryByPrinter, @Nonnull final ICallback<? super PrintUsageSummaryByPrinter> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintUsageSummaryByPrinter);
     }
 
@@ -87,7 +90,8 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @return the updated PrintUsageSummaryByPrinter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintUsageSummaryByPrinter patch(final PrintUsageSummaryByPrinter sourcePrintUsageSummaryByPrinter) throws ClientException {
+    @Nullable
+    public PrintUsageSummaryByPrinter patch(@Nonnull final PrintUsageSummaryByPrinter sourcePrintUsageSummaryByPrinter) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrintUsageSummaryByPrinter);
     }
 
@@ -97,7 +101,7 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @param newPrintUsageSummaryByPrinter the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter, final ICallback<? super PrintUsageSummaryByPrinter> callback) {
+    public void post(@Nonnull final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter, @Nonnull final ICallback<? super PrintUsageSummaryByPrinter> callback) {
         send(HttpMethod.POST, callback, newPrintUsageSummaryByPrinter);
     }
 
@@ -108,7 +112,8 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @return the created PrintUsageSummaryByPrinter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintUsageSummaryByPrinter post(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter) throws ClientException {
+    @Nullable
+    public PrintUsageSummaryByPrinter post(@Nonnull final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter) throws ClientException {
         return send(HttpMethod.POST, newPrintUsageSummaryByPrinter);
     }
 
@@ -118,7 +123,7 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @param newPrintUsageSummaryByPrinter the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter, final ICallback<? super PrintUsageSummaryByPrinter> callback) {
+    public void put(@Nonnull final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter, @Nonnull final ICallback<? super PrintUsageSummaryByPrinter> callback) {
         send(HttpMethod.PUT, callback, newPrintUsageSummaryByPrinter);
     }
 
@@ -129,7 +134,8 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @return the created PrintUsageSummaryByPrinter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintUsageSummaryByPrinter put(final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter) throws ClientException {
+    @Nullable
+    public PrintUsageSummaryByPrinter put(@Nonnull final PrintUsageSummaryByPrinter newPrintUsageSummaryByPrinter) throws ClientException {
         return send(HttpMethod.PUT, newPrintUsageSummaryByPrinter);
     }
 
@@ -139,9 +145,10 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @param value the select clause
      * @return the updated request
      */
-     public IPrintUsageSummaryByPrinterRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrintUsageSummaryByPrinterRequest)this;
+     @Nonnull
+     public PrintUsageSummaryByPrinterRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PrintUsageSummaryByPrinterRequest extends BaseRequest implements IP
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrintUsageSummaryByPrinterRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintUsageSummaryByPrinterRequest)this;
+     @Nonnull
+     public PrintUsageSummaryByPrinterRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

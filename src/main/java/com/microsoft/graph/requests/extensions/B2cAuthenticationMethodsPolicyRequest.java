@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.B2cAuthenticationMethodsPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the B2c Authentication Methods Policy Request.
  */
-public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implements IB2cAuthenticationMethodsPolicyRequest {
+public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest<B2cAuthenticationMethodsPolicy> {
 	
     /**
      * The request for the B2cAuthenticationMethodsPolicy
@@ -29,7 +31,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public B2cAuthenticationMethodsPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public B2cAuthenticationMethodsPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, B2cAuthenticationMethodsPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @return the B2cAuthenticationMethodsPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public B2cAuthenticationMethodsPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param sourceB2cAuthenticationMethodsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
+    public void patch(@Nonnull final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy, @Nonnull final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceB2cAuthenticationMethodsPolicy);
     }
 
@@ -87,7 +90,8 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @return the updated B2cAuthenticationMethodsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public B2cAuthenticationMethodsPolicy patch(final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy) throws ClientException {
+    @Nullable
+    public B2cAuthenticationMethodsPolicy patch(@Nonnull final B2cAuthenticationMethodsPolicy sourceB2cAuthenticationMethodsPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceB2cAuthenticationMethodsPolicy);
     }
 
@@ -97,7 +101,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param newB2cAuthenticationMethodsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
+    public void post(@Nonnull final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, @Nonnull final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.POST, callback, newB2cAuthenticationMethodsPolicy);
     }
 
@@ -108,7 +112,8 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @return the created B2cAuthenticationMethodsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public B2cAuthenticationMethodsPolicy post(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy) throws ClientException {
+    @Nullable
+    public B2cAuthenticationMethodsPolicy post(@Nonnull final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy) throws ClientException {
         return send(HttpMethod.POST, newB2cAuthenticationMethodsPolicy);
     }
 
@@ -118,7 +123,7 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param newB2cAuthenticationMethodsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
+    public void put(@Nonnull final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy, @Nonnull final ICallback<? super B2cAuthenticationMethodsPolicy> callback) {
         send(HttpMethod.PUT, callback, newB2cAuthenticationMethodsPolicy);
     }
 
@@ -129,7 +134,8 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @return the created B2cAuthenticationMethodsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public B2cAuthenticationMethodsPolicy put(final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy) throws ClientException {
+    @Nullable
+    public B2cAuthenticationMethodsPolicy put(@Nonnull final B2cAuthenticationMethodsPolicy newB2cAuthenticationMethodsPolicy) throws ClientException {
         return send(HttpMethod.PUT, newB2cAuthenticationMethodsPolicy);
     }
 
@@ -139,9 +145,10 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IB2cAuthenticationMethodsPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (B2cAuthenticationMethodsPolicyRequest)this;
+     @Nonnull
+     public B2cAuthenticationMethodsPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class B2cAuthenticationMethodsPolicyRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IB2cAuthenticationMethodsPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (B2cAuthenticationMethodsPolicyRequest)this;
+     @Nonnull
+     public B2cAuthenticationMethodsPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

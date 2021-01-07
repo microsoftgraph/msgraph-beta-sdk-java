@@ -9,22 +9,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalConnection;
-import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectionOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +28,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the External Connection Request Builder.
  */
-public class ExternalConnectionRequestBuilder extends BaseRequestBuilder implements IExternalConnectionRequestBuilder {
+public class ExternalConnectionRequestBuilder extends BaseRequestBuilder<ExternalConnection> {
 
     /**
      * The request builder for the ExternalConnection
@@ -42,7 +37,7 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExternalConnectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExternalConnectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,9 +45,10 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IExternalConnectionRequest instance
+     * @return the ExternalConnectionRequest instance
      */
-    public IExternalConnectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ExternalConnectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -60,41 +56,82 @@ public class ExternalConnectionRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IExternalConnectionRequest instance
+     * @return the ExternalConnectionRequest instance
      */
-    public IExternalConnectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ExternalConnectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ExternalConnectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IExternalGroupCollectionRequestBuilder groups() {
+    /**
+     *  Gets a request builder for the ExternalGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ExternalGroupCollectionRequestBuilder groups() {
         return new ExternalGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groups"), getClient(), null);
     }
 
-    public IExternalGroupRequestBuilder groups(final String id) {
+    /**
+     * Gets a request builder for the ExternalGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ExternalGroupRequestBuilder groups(@Nonnull final String id) {
         return new ExternalGroupRequestBuilder(getRequestUrlWithAdditionalSegment("groups") + "/" + id, getClient(), null);
     }
-    public IExternalItemCollectionRequestBuilder items() {
+    /**
+     *  Gets a request builder for the ExternalItem collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ExternalItemCollectionRequestBuilder items() {
         return new ExternalItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IExternalItemRequestBuilder items(final String id) {
+    /**
+     * Gets a request builder for the ExternalItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ExternalItemRequestBuilder items(@Nonnull final String id) {
         return new ExternalItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
-    public IConnectionOperationCollectionRequestBuilder operations() {
+    /**
+     *  Gets a request builder for the ConnectionOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConnectionOperationCollectionRequestBuilder operations() {
         return new ConnectionOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public IConnectionOperationRequestBuilder operations(final String id) {
+    /**
+     * Gets a request builder for the ConnectionOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConnectionOperationRequestBuilder operations(@Nonnull final String id) {
         return new ConnectionOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Schema
      *
-     * @return the ISchemaRequestBuilder instance
+     * @return the SchemaRequestBuilder instance
      */
-    public ISchemaRequestBuilder schema() {
+    @Nonnull
+    public SchemaRequestBuilder schema() {
         return new SchemaRequestBuilder(getRequestUrlWithAdditionalSegment("schema"), getClient(), null);
     }
 }

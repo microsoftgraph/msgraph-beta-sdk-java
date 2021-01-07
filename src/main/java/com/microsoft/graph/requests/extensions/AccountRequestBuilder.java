@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Account;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Account Request Builder.
  */
-public class AccountRequestBuilder extends BaseRequestBuilder implements IAccountRequestBuilder {
+public class AccountRequestBuilder extends BaseRequestBuilder<Account> {
 
     /**
      * The request builder for the Account
@@ -28,7 +30,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder implements IAccoun
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccountRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AccountRequestBuilder extends BaseRequestBuilder implements IAccoun
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccountRequest instance
+     * @return the AccountRequest instance
      */
-    public IAccountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccountRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class AccountRequestBuilder extends BaseRequestBuilder implements IAccoun
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccountRequest instance
+     * @return the AccountRequest instance
      */
-    public IAccountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccountRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

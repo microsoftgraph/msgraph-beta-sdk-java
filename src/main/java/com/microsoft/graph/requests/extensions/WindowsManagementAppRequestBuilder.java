@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsManagementApp;
-import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Management App Request Builder.
  */
-public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder implements IWindowsManagementAppRequestBuilder {
+public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder<WindowsManagementApp> {
 
     /**
      * The request builder for the WindowsManagementApp
@@ -32,7 +32,7 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsManagementAppRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsManagementAppRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsManagementAppRequest instance
+     * @return the WindowsManagementAppRequest instance
      */
-    public IWindowsManagementAppRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsManagementAppRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsManagementAppRequest instance
+     * @return the WindowsManagementAppRequest instance
      */
-    public IWindowsManagementAppRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsManagementAppRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsManagementAppRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IWindowsManagementAppHealthStateCollectionRequestBuilder healthStates() {
+    /**
+     *  Gets a request builder for the WindowsManagementAppHealthState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsManagementAppHealthStateCollectionRequestBuilder healthStates() {
         return new WindowsManagementAppHealthStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates"), getClient(), null);
     }
 
-    public IWindowsManagementAppHealthStateRequestBuilder healthStates(final String id) {
+    /**
+     * Gets a request builder for the WindowsManagementAppHealthState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsManagementAppHealthStateRequestBuilder healthStates(@Nonnull final String id) {
         return new WindowsManagementAppHealthStateRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates") + "/" + id, getClient(), null);
     }
 }

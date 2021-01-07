@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeOnPremisesPolicy;
-import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesConditionalAccessSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Exchange On Premises Policy Request Builder.
  */
-public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends BaseRequestBuilder implements IDeviceManagementExchangeOnPremisesPolicyRequestBuilder {
+public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends BaseRequestBuilder<DeviceManagementExchangeOnPremisesPolicy> {
 
     /**
      * The request builder for the DeviceManagementExchangeOnPremisesPolicy
@@ -30,7 +31,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementExchangeOnPremisesPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementExchangeOnPremisesPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementExchangeOnPremisesPolicyRequest instance
+     * @return the DeviceManagementExchangeOnPremisesPolicyRequest instance
      */
-    public IDeviceManagementExchangeOnPremisesPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementExchangeOnPremisesPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementExchangeOnPremisesPolicyRequest instance
+     * @return the DeviceManagementExchangeOnPremisesPolicyRequest instance
      */
-    public IDeviceManagementExchangeOnPremisesPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementExchangeOnPremisesPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementExchangeOnPremisesPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class DeviceManagementExchangeOnPremisesPolicyRequestBuilder extends Base
     /**
      * Gets the request builder for OnPremisesConditionalAccessSettings
      *
-     * @return the IOnPremisesConditionalAccessSettingsRequestBuilder instance
+     * @return the OnPremisesConditionalAccessSettingsRequestBuilder instance
      */
-    public IOnPremisesConditionalAccessSettingsRequestBuilder conditionalAccessSettings() {
+    @Nonnull
+    public OnPremisesConditionalAccessSettingsRequestBuilder conditionalAccessSettings() {
         return new OnPremisesConditionalAccessSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessSettings"), getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Setting State Device Summary Request Builder.
  */
-public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder implements ISettingStateDeviceSummaryRequestBuilder {
+public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder<SettingStateDeviceSummary> {
 
     /**
      * The request builder for the SettingStateDeviceSummary
@@ -28,7 +30,7 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SettingStateDeviceSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SettingStateDeviceSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISettingStateDeviceSummaryRequest instance
+     * @return the SettingStateDeviceSummaryRequest instance
      */
-    public ISettingStateDeviceSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SettingStateDeviceSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class SettingStateDeviceSummaryRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISettingStateDeviceSummaryRequest instance
+     * @return the SettingStateDeviceSummaryRequest instance
      */
-    public ISettingStateDeviceSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SettingStateDeviceSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SettingStateDeviceSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

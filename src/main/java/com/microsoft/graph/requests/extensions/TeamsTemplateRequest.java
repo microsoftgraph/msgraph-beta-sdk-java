@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams Template Request.
  */
-public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateRequest {
+public class TeamsTemplateRequest extends BaseRequest<TeamsTemplate> {
 	
     /**
      * The request for the TeamsTemplate
@@ -29,7 +31,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTemplateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
 
@@ -38,7 +40,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsTemplate> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @return the TeamsTemplate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsTemplate> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param sourceTeamsTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void patch(@Nonnull final TeamsTemplate sourceTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsTemplate);
     }
 
@@ -87,7 +90,8 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @return the updated TeamsTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsTemplate patch(final TeamsTemplate sourceTeamsTemplate) throws ClientException {
+    @Nullable
+    public TeamsTemplate patch(@Nonnull final TeamsTemplate sourceTeamsTemplate) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsTemplate);
     }
 
@@ -97,7 +101,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param newTeamsTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void post(@Nonnull final TeamsTemplate newTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.POST, callback, newTeamsTemplate);
     }
 
@@ -108,7 +112,8 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @return the created TeamsTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsTemplate post(final TeamsTemplate newTeamsTemplate) throws ClientException {
+    @Nullable
+    public TeamsTemplate post(@Nonnull final TeamsTemplate newTeamsTemplate) throws ClientException {
         return send(HttpMethod.POST, newTeamsTemplate);
     }
 
@@ -118,7 +123,7 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param newTeamsTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsTemplate newTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
+    public void put(@Nonnull final TeamsTemplate newTeamsTemplate, @Nonnull final ICallback<? super TeamsTemplate> callback) {
         send(HttpMethod.PUT, callback, newTeamsTemplate);
     }
 
@@ -129,7 +134,8 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @return the created TeamsTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsTemplate put(final TeamsTemplate newTeamsTemplate) throws ClientException {
+    @Nullable
+    public TeamsTemplate put(@Nonnull final TeamsTemplate newTeamsTemplate) throws ClientException {
         return send(HttpMethod.PUT, newTeamsTemplate);
     }
 
@@ -139,9 +145,10 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsTemplateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsTemplateRequest)this;
+     @Nonnull
+     public TeamsTemplateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TeamsTemplateRequest extends BaseRequest implements ITeamsTemplateR
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsTemplateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsTemplateRequest)this;
+     @Nonnull
+     public TeamsTemplateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

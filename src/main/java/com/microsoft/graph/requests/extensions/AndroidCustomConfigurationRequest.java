@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidCustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Custom Configuration Request.
  */
-public class AndroidCustomConfigurationRequest extends BaseRequest implements IAndroidCustomConfigurationRequest {
+public class AndroidCustomConfigurationRequest extends BaseRequest<AndroidCustomConfiguration> {
 	
     /**
      * The request for the AndroidCustomConfiguration
@@ -29,7 +31,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidCustomConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidCustomConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidCustomConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidCustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @return the AndroidCustomConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidCustomConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidCustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param sourceAndroidCustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidCustomConfiguration sourceAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void patch(@Nonnull final AndroidCustomConfiguration sourceAndroidCustomConfiguration, @Nonnull final ICallback<? super AndroidCustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidCustomConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @return the updated AndroidCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidCustomConfiguration patch(final AndroidCustomConfiguration sourceAndroidCustomConfiguration) throws ClientException {
+    @Nullable
+    public AndroidCustomConfiguration patch(@Nonnull final AndroidCustomConfiguration sourceAndroidCustomConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidCustomConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param newAndroidCustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void post(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration, @Nonnull final ICallback<? super AndroidCustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidCustomConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @return the created AndroidCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidCustomConfiguration post(final AndroidCustomConfiguration newAndroidCustomConfiguration) throws ClientException {
+    @Nullable
+    public AndroidCustomConfiguration post(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidCustomConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param newAndroidCustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidCustomConfiguration newAndroidCustomConfiguration, final ICallback<? super AndroidCustomConfiguration> callback) {
+    public void put(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration, @Nonnull final ICallback<? super AndroidCustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidCustomConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @return the created AndroidCustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidCustomConfiguration put(final AndroidCustomConfiguration newAndroidCustomConfiguration) throws ClientException {
+    @Nullable
+    public AndroidCustomConfiguration put(@Nonnull final AndroidCustomConfiguration newAndroidCustomConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidCustomConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidCustomConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidCustomConfigurationRequest)this;
+     @Nonnull
+     public AndroidCustomConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidCustomConfigurationRequest extends BaseRequest implements IA
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidCustomConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidCustomConfigurationRequest)this;
+     @Nonnull
+     public AndroidCustomConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

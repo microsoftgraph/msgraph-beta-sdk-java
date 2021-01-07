@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Alert;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Alert Request Builder.
  */
-public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertRequestBuilder {
+public class AlertRequestBuilder extends BaseRequestBuilder<Alert> {
 
     /**
      * The request builder for the Alert
@@ -28,7 +30,7 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AlertRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AlertRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAlertRequest instance
+     * @return the AlertRequest instance
      */
-    public IAlertRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AlertRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class AlertRequestBuilder extends BaseRequestBuilder implements IAlertReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAlertRequest instance
+     * @return the AlertRequest instance
      */
-    public IAlertRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AlertRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AlertRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schema;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Schema Request.
  */
-public class SchemaRequest extends BaseRequest implements ISchemaRequest {
+public class SchemaRequest extends BaseRequest<Schema> {
 	
     /**
      * The request for the Schema
@@ -29,7 +31,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SchemaRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SchemaRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Schema.class);
     }
 
@@ -38,7 +40,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Schema> callback) {
+    public void get(@Nonnull final ICallback<? super Schema> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @return the Schema from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Schema get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Schema> callback) {
+    public void delete(@Nonnull final ICallback<? super Schema> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param sourceSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Schema sourceSchema, final ICallback<? super Schema> callback) {
+    public void patch(@Nonnull final Schema sourceSchema, @Nonnull final ICallback<? super Schema> callback) {
         send(HttpMethod.PATCH, callback, sourceSchema);
     }
 
@@ -87,7 +90,8 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @return the updated Schema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schema patch(final Schema sourceSchema) throws ClientException {
+    @Nullable
+    public Schema patch(@Nonnull final Schema sourceSchema) throws ClientException {
         return send(HttpMethod.PATCH, sourceSchema);
     }
 
@@ -97,7 +101,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param newSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Schema newSchema, final ICallback<? super Schema> callback) {
+    public void post(@Nonnull final Schema newSchema, @Nonnull final ICallback<? super Schema> callback) {
         send(HttpMethod.POST, callback, newSchema);
     }
 
@@ -108,7 +112,8 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @return the created Schema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schema post(final Schema newSchema) throws ClientException {
+    @Nullable
+    public Schema post(@Nonnull final Schema newSchema) throws ClientException {
         return send(HttpMethod.POST, newSchema);
     }
 
@@ -118,7 +123,7 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param newSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Schema newSchema, final ICallback<? super Schema> callback) {
+    public void put(@Nonnull final Schema newSchema, @Nonnull final ICallback<? super Schema> callback) {
         send(HttpMethod.PUT, callback, newSchema);
     }
 
@@ -129,7 +134,8 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @return the created Schema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schema put(final Schema newSchema) throws ClientException {
+    @Nullable
+    public Schema put(@Nonnull final Schema newSchema) throws ClientException {
         return send(HttpMethod.PUT, newSchema);
     }
 
@@ -139,9 +145,10 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISchemaRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SchemaRequest)this;
+     @Nonnull
+     public SchemaRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SchemaRequest extends BaseRequest implements ISchemaRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISchemaRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SchemaRequest)this;
+     @Nonnull
+     public SchemaRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

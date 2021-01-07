@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailSearchFolder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mail Search Folder Request Builder.
  */
-public class MailSearchFolderRequestBuilder extends BaseRequestBuilder implements IMailSearchFolderRequestBuilder {
+public class MailSearchFolderRequestBuilder extends BaseRequestBuilder<MailSearchFolder> {
 
     /**
      * The request builder for the MailSearchFolder
@@ -28,7 +30,7 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailSearchFolderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailSearchFolderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMailSearchFolderRequest instance
+     * @return the MailSearchFolderRequest instance
      */
-    public IMailSearchFolderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MailSearchFolderRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,53 +49,132 @@ public class MailSearchFolderRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMailSearchFolderRequest instance
+     * @return the MailSearchFolderRequest instance
      */
-    public IMailSearchFolderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MailSearchFolderRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MailSearchFolderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMailFolderCollectionRequestBuilder childFolders() {
+    /**
+     *  Gets a request builder for the MailFolder collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MailFolderCollectionRequestBuilder childFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders"), getClient(), null);
     }
 
-    public IMailFolderRequestBuilder childFolders(final String id) {
+    /**
+     * Gets a request builder for the MailFolder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MailFolderRequestBuilder childFolders(@Nonnull final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("childFolders") + "/" + id, getClient(), null);
     }
-    public IMessageRuleCollectionRequestBuilder messageRules() {
+    /**
+     *  Gets a request builder for the MessageRule collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MessageRuleCollectionRequestBuilder messageRules() {
         return new MessageRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules"), getClient(), null);
     }
 
-    public IMessageRuleRequestBuilder messageRules(final String id) {
+    /**
+     * Gets a request builder for the MessageRule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MessageRuleRequestBuilder messageRules(@Nonnull final String id) {
         return new MessageRuleRequestBuilder(getRequestUrlWithAdditionalSegment("messageRules") + "/" + id, getClient(), null);
     }
-    public IMessageCollectionRequestBuilder messages() {
+    /**
+     *  Gets a request builder for the Message collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
-    public IMessageRequestBuilder messages(final String id) {
+    /**
+     * Gets a request builder for the Message item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MessageRequestBuilder messages(@Nonnull final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
-    public IMultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
+    /**
+     *  Gets a request builder for the MultiValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MultiValueLegacyExtendedPropertyCollectionRequestBuilder multiValueExtendedProperties() {
         return new MultiValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties"), getClient(), null);
     }
 
-    public IMultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(final String id) {
+    /**
+     * Gets a request builder for the MultiValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MultiValueLegacyExtendedPropertyRequestBuilder multiValueExtendedProperties(@Nonnull final String id) {
         return new MultiValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("multiValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public ISingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
+    /**
+     *  Gets a request builder for the SingleValueLegacyExtendedProperty collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyCollectionRequestBuilder singleValueExtendedProperties() {
         return new SingleValueLegacyExtendedPropertyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties"), getClient(), null);
     }
 
-    public ISingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(final String id) {
+    /**
+     * Gets a request builder for the SingleValueLegacyExtendedProperty item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyRequestBuilder singleValueExtendedProperties(@Nonnull final String id) {
         return new SingleValueLegacyExtendedPropertyRequestBuilder(getRequestUrlWithAdditionalSegment("singleValueExtendedProperties") + "/" + id, getClient(), null);
     }
-    public IUserConfigurationCollectionRequestBuilder userConfigurations() {
+    /**
+     *  Gets a request builder for the UserConfiguration collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserConfigurationCollectionRequestBuilder userConfigurations() {
         return new UserConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userConfigurations"), getClient(), null);
     }
 
-    public IUserConfigurationRequestBuilder userConfigurations(final String id) {
+    /**
+     * Gets a request builder for the UserConfiguration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserConfigurationRequestBuilder userConfigurations(@Nonnull final String id) {
         return new UserConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("userConfigurations") + "/" + id, getClient(), null);
     }
 }

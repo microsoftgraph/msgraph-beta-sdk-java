@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AzureADUserFeatureUsage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Azure ADUser Feature Usage Request.
  */
-public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzureADUserFeatureUsageRequest {
+public class AzureADUserFeatureUsageRequest extends BaseRequest<AzureADUserFeatureUsage> {
 	
     /**
      * The request for the AzureADUserFeatureUsage
@@ -29,7 +31,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AzureADUserFeatureUsageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AzureADUserFeatureUsageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AzureADUserFeatureUsage.class);
     }
 
@@ -38,7 +40,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AzureADUserFeatureUsage> callback) {
+    public void get(@Nonnull final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @return the AzureADUserFeatureUsage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AzureADUserFeatureUsage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AzureADUserFeatureUsage> callback) {
+    public void delete(@Nonnull final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param sourceAzureADUserFeatureUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback) {
+    public void patch(@Nonnull final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage, @Nonnull final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.PATCH, callback, sourceAzureADUserFeatureUsage);
     }
 
@@ -87,7 +90,8 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @return the updated AzureADUserFeatureUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADUserFeatureUsage patch(final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage) throws ClientException {
+    @Nullable
+    public AzureADUserFeatureUsage patch(@Nonnull final AzureADUserFeatureUsage sourceAzureADUserFeatureUsage) throws ClientException {
         return send(HttpMethod.PATCH, sourceAzureADUserFeatureUsage);
     }
 
@@ -97,7 +101,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param newAzureADUserFeatureUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback) {
+    public void post(@Nonnull final AzureADUserFeatureUsage newAzureADUserFeatureUsage, @Nonnull final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.POST, callback, newAzureADUserFeatureUsage);
     }
 
@@ -108,7 +112,8 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @return the created AzureADUserFeatureUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADUserFeatureUsage post(final AzureADUserFeatureUsage newAzureADUserFeatureUsage) throws ClientException {
+    @Nullable
+    public AzureADUserFeatureUsage post(@Nonnull final AzureADUserFeatureUsage newAzureADUserFeatureUsage) throws ClientException {
         return send(HttpMethod.POST, newAzureADUserFeatureUsage);
     }
 
@@ -118,7 +123,7 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param newAzureADUserFeatureUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage, final ICallback<? super AzureADUserFeatureUsage> callback) {
+    public void put(@Nonnull final AzureADUserFeatureUsage newAzureADUserFeatureUsage, @Nonnull final ICallback<? super AzureADUserFeatureUsage> callback) {
         send(HttpMethod.PUT, callback, newAzureADUserFeatureUsage);
     }
 
@@ -129,7 +134,8 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @return the created AzureADUserFeatureUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADUserFeatureUsage put(final AzureADUserFeatureUsage newAzureADUserFeatureUsage) throws ClientException {
+    @Nullable
+    public AzureADUserFeatureUsage put(@Nonnull final AzureADUserFeatureUsage newAzureADUserFeatureUsage) throws ClientException {
         return send(HttpMethod.PUT, newAzureADUserFeatureUsage);
     }
 
@@ -139,9 +145,10 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param value the select clause
      * @return the updated request
      */
-     public IAzureADUserFeatureUsageRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AzureADUserFeatureUsageRequest)this;
+     @Nonnull
+     public AzureADUserFeatureUsageRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AzureADUserFeatureUsageRequest extends BaseRequest implements IAzur
      * @param value the expand clause
      * @return the updated request
      */
-     public IAzureADUserFeatureUsageRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AzureADUserFeatureUsageRequest)this;
+     @Nonnull
+     public AzureADUserFeatureUsageRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

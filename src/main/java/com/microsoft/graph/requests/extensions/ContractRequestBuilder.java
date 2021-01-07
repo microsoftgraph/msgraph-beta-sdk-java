@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contract;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Contract Request Builder.
  */
-public class ContractRequestBuilder extends BaseRequestBuilder implements IContractRequestBuilder {
+public class ContractRequestBuilder extends BaseRequestBuilder<Contract> {
 
     /**
      * The request builder for the Contract
@@ -28,7 +30,7 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContractRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContractRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IContractRequest instance
+     * @return the ContractRequest instance
      */
-    public IContractRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ContractRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class ContractRequestBuilder extends BaseRequestBuilder implements IContr
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IContractRequest instance
+     * @return the ContractRequest instance
      */
-    public IContractRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ContractRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ContractRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

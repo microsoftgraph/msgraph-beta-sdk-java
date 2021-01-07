@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Lifecycle Policy Request.
  */
-public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLifecyclePolicyRequest {
+public class GroupLifecyclePolicyRequest extends BaseRequest<GroupLifecyclePolicy> {
 	
     /**
      * The request for the GroupLifecyclePolicy
@@ -29,7 +31,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupLifecyclePolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupLifecyclePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupLifecyclePolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void get(@Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @return the GroupLifecyclePolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupLifecyclePolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param sourceGroupLifecyclePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupLifecyclePolicy sourceGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void patch(@Nonnull final GroupLifecyclePolicy sourceGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupLifecyclePolicy);
     }
 
@@ -87,7 +90,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @return the updated GroupLifecyclePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupLifecyclePolicy patch(final GroupLifecyclePolicy sourceGroupLifecyclePolicy) throws ClientException {
+    @Nullable
+    public GroupLifecyclePolicy patch(@Nonnull final GroupLifecyclePolicy sourceGroupLifecyclePolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupLifecyclePolicy);
     }
 
@@ -97,7 +101,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param newGroupLifecyclePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.POST, callback, newGroupLifecyclePolicy);
     }
 
@@ -108,7 +112,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @return the created GroupLifecyclePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupLifecyclePolicy post(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
+    @Nullable
+    public GroupLifecyclePolicy post(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
         return send(HttpMethod.POST, newGroupLifecyclePolicy);
     }
 
@@ -118,7 +123,7 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param newGroupLifecyclePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupLifecyclePolicy newGroupLifecyclePolicy, final ICallback<? super GroupLifecyclePolicy> callback) {
+    public void put(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy, @Nonnull final ICallback<? super GroupLifecyclePolicy> callback) {
         send(HttpMethod.PUT, callback, newGroupLifecyclePolicy);
     }
 
@@ -129,7 +134,8 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @return the created GroupLifecyclePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupLifecyclePolicy put(final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
+    @Nullable
+    public GroupLifecyclePolicy put(@Nonnull final GroupLifecyclePolicy newGroupLifecyclePolicy) throws ClientException {
         return send(HttpMethod.PUT, newGroupLifecyclePolicy);
     }
 
@@ -139,9 +145,10 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupLifecyclePolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupLifecyclePolicyRequest)this;
+     @Nonnull
+     public GroupLifecyclePolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupLifecyclePolicyRequest extends BaseRequest implements IGroupLi
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupLifecyclePolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupLifecyclePolicyRequest)this;
+     @Nonnull
+     public GroupLifecyclePolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Vpn Configuration Request.
  */
-public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnConfigurationRequest {
+public class IosVpnConfigurationRequest extends BaseRequest<IosVpnConfiguration> {
 	
     /**
      * The request for the IosVpnConfiguration
@@ -34,10 +34,10 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public IosVpnConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends IosVpnConfiguration> responseClass) {
+    public IosVpnConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends IosVpnConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -48,7 +48,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosVpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosVpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosVpnConfiguration.class);
     }
 
@@ -57,7 +57,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosVpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +67,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @return the IosVpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosVpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +77,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosVpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +96,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param sourceIosVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosVpnConfiguration sourceIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback) {
+    public void patch(@Nonnull final IosVpnConfiguration sourceIosVpnConfiguration, @Nonnull final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosVpnConfiguration);
     }
 
@@ -106,7 +107,8 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @return the updated IosVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVpnConfiguration patch(final IosVpnConfiguration sourceIosVpnConfiguration) throws ClientException {
+    @Nullable
+    public IosVpnConfiguration patch(@Nonnull final IosVpnConfiguration sourceIosVpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosVpnConfiguration);
     }
 
@@ -116,7 +118,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param newIosVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback) {
+    public void post(@Nonnull final IosVpnConfiguration newIosVpnConfiguration, @Nonnull final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosVpnConfiguration);
     }
 
@@ -127,7 +129,8 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @return the created IosVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVpnConfiguration post(final IosVpnConfiguration newIosVpnConfiguration) throws ClientException {
+    @Nullable
+    public IosVpnConfiguration post(@Nonnull final IosVpnConfiguration newIosVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosVpnConfiguration);
     }
 
@@ -137,7 +140,7 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param newIosVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosVpnConfiguration newIosVpnConfiguration, final ICallback<? super IosVpnConfiguration> callback) {
+    public void put(@Nonnull final IosVpnConfiguration newIosVpnConfiguration, @Nonnull final ICallback<? super IosVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosVpnConfiguration);
     }
 
@@ -148,7 +151,8 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @return the created IosVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosVpnConfiguration put(final IosVpnConfiguration newIosVpnConfiguration) throws ClientException {
+    @Nullable
+    public IosVpnConfiguration put(@Nonnull final IosVpnConfiguration newIosVpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosVpnConfiguration);
     }
 
@@ -158,9 +162,10 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param value the select clause
      * @return the updated request
      */
-     public IIosVpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosVpnConfigurationRequest)this;
+     @Nonnull
+     public IosVpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +174,10 @@ public class IosVpnConfigurationRequest extends BaseRequest implements IIosVpnCo
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosVpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosVpnConfigurationRequest)this;
+     @Nonnull
+     public IosVpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

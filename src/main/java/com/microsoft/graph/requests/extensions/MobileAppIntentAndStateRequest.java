@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppIntentAndState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Intent And State Request.
  */
-public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobileAppIntentAndStateRequest {
+public class MobileAppIntentAndStateRequest extends BaseRequest<MobileAppIntentAndState> {
 	
     /**
      * The request for the MobileAppIntentAndState
@@ -29,7 +31,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppIntentAndStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppIntentAndStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppIntentAndState.class);
     }
 
@@ -38,7 +40,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppIntentAndState> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @return the MobileAppIntentAndState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppIntentAndState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppIntentAndState> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param sourceMobileAppIntentAndState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppIntentAndState sourceMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback) {
+    public void patch(@Nonnull final MobileAppIntentAndState sourceMobileAppIntentAndState, @Nonnull final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppIntentAndState);
     }
 
@@ -87,7 +90,8 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @return the updated MobileAppIntentAndState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppIntentAndState patch(final MobileAppIntentAndState sourceMobileAppIntentAndState) throws ClientException {
+    @Nullable
+    public MobileAppIntentAndState patch(@Nonnull final MobileAppIntentAndState sourceMobileAppIntentAndState) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppIntentAndState);
     }
 
@@ -97,7 +101,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param newMobileAppIntentAndState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback) {
+    public void post(@Nonnull final MobileAppIntentAndState newMobileAppIntentAndState, @Nonnull final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.POST, callback, newMobileAppIntentAndState);
     }
 
@@ -108,7 +112,8 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @return the created MobileAppIntentAndState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppIntentAndState post(final MobileAppIntentAndState newMobileAppIntentAndState) throws ClientException {
+    @Nullable
+    public MobileAppIntentAndState post(@Nonnull final MobileAppIntentAndState newMobileAppIntentAndState) throws ClientException {
         return send(HttpMethod.POST, newMobileAppIntentAndState);
     }
 
@@ -118,7 +123,7 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param newMobileAppIntentAndState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppIntentAndState newMobileAppIntentAndState, final ICallback<? super MobileAppIntentAndState> callback) {
+    public void put(@Nonnull final MobileAppIntentAndState newMobileAppIntentAndState, @Nonnull final ICallback<? super MobileAppIntentAndState> callback) {
         send(HttpMethod.PUT, callback, newMobileAppIntentAndState);
     }
 
@@ -129,7 +134,8 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @return the created MobileAppIntentAndState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppIntentAndState put(final MobileAppIntentAndState newMobileAppIntentAndState) throws ClientException {
+    @Nullable
+    public MobileAppIntentAndState put(@Nonnull final MobileAppIntentAndState newMobileAppIntentAndState) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppIntentAndState);
     }
 
@@ -139,9 +145,10 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppIntentAndStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppIntentAndStateRequest)this;
+     @Nonnull
+     public MobileAppIntentAndStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MobileAppIntentAndStateRequest extends BaseRequest implements IMobi
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppIntentAndStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppIntentAndStateRequest)this;
+     @Nonnull
+     public MobileAppIntentAndStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

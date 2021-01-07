@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10XSCEPCertificateProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10XSCEPCertificate Profile Request.
  */
-public class Windows10XSCEPCertificateProfileRequest extends BaseRequest implements IWindows10XSCEPCertificateProfileRequest {
+public class Windows10XSCEPCertificateProfileRequest extends BaseRequest<Windows10XSCEPCertificateProfile> {
 	
     /**
      * The request for the Windows10XSCEPCertificateProfile
@@ -29,7 +31,7 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10XSCEPCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10XSCEPCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10XSCEPCertificateProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @return the Windows10XSCEPCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10XSCEPCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @param sourceWindows10XSCEPCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10XSCEPCertificateProfile sourceWindows10XSCEPCertificateProfile, final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
+    public void patch(@Nonnull final Windows10XSCEPCertificateProfile sourceWindows10XSCEPCertificateProfile, @Nonnull final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10XSCEPCertificateProfile);
     }
 
@@ -87,7 +90,8 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @return the updated Windows10XSCEPCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XSCEPCertificateProfile patch(final Windows10XSCEPCertificateProfile sourceWindows10XSCEPCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10XSCEPCertificateProfile patch(@Nonnull final Windows10XSCEPCertificateProfile sourceWindows10XSCEPCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10XSCEPCertificateProfile);
     }
 
@@ -97,7 +101,7 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @param newWindows10XSCEPCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile, final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
+    public void post(@Nonnull final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile, @Nonnull final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newWindows10XSCEPCertificateProfile);
     }
 
@@ -108,7 +112,8 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @return the created Windows10XSCEPCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XSCEPCertificateProfile post(final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10XSCEPCertificateProfile post(@Nonnull final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newWindows10XSCEPCertificateProfile);
     }
 
@@ -118,7 +123,7 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @param newWindows10XSCEPCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile, final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
+    public void put(@Nonnull final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile, @Nonnull final ICallback<? super Windows10XSCEPCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newWindows10XSCEPCertificateProfile);
     }
 
@@ -129,7 +134,8 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @return the created Windows10XSCEPCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10XSCEPCertificateProfile put(final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10XSCEPCertificateProfile put(@Nonnull final Windows10XSCEPCertificateProfile newWindows10XSCEPCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newWindows10XSCEPCertificateProfile);
     }
 
@@ -139,9 +145,10 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10XSCEPCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10XSCEPCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10XSCEPCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10XSCEPCertificateProfileRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10XSCEPCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10XSCEPCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10XSCEPCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

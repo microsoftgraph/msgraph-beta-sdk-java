@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileEasEmailProfileBase;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidWorkProfileCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Eas Email Profile Base Request.
  */
-public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest implements IAndroidWorkProfileEasEmailProfileBaseRequest {
+public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest<AndroidWorkProfileEasEmailProfileBase> {
 	
     /**
      * The request for the AndroidWorkProfileEasEmailProfileBase
@@ -32,10 +33,10 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AndroidWorkProfileEasEmailProfileBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AndroidWorkProfileEasEmailProfileBase> responseClass) {
+    public AndroidWorkProfileEasEmailProfileBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AndroidWorkProfileEasEmailProfileBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -46,7 +47,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileEasEmailProfileBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfileEasEmailProfileBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWorkProfileEasEmailProfileBase.class);
     }
 
@@ -55,7 +56,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,6 +66,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @return the AndroidWorkProfileEasEmailProfileBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidWorkProfileEasEmailProfileBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -74,7 +76,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +95,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param sourceAndroidWorkProfileEasEmailProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void patch(@Nonnull final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase, @Nonnull final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -104,7 +106,8 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @return the updated AndroidWorkProfileEasEmailProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileEasEmailProfileBase patch(final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileEasEmailProfileBase patch(@Nonnull final AndroidWorkProfileEasEmailProfileBase sourceAndroidWorkProfileEasEmailProfileBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -114,7 +117,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param newAndroidWorkProfileEasEmailProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void post(@Nonnull final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, @Nonnull final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -125,7 +128,8 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @return the created AndroidWorkProfileEasEmailProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileEasEmailProfileBase post(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileEasEmailProfileBase post(@Nonnull final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase) throws ClientException {
         return send(HttpMethod.POST, newAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -135,7 +139,7 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param newAndroidWorkProfileEasEmailProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
+    public void put(@Nonnull final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase, @Nonnull final ICallback<? super AndroidWorkProfileEasEmailProfileBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -146,7 +150,8 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @return the created AndroidWorkProfileEasEmailProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileEasEmailProfileBase put(final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileEasEmailProfileBase put(@Nonnull final AndroidWorkProfileEasEmailProfileBase newAndroidWorkProfileEasEmailProfileBase) throws ClientException {
         return send(HttpMethod.PUT, newAndroidWorkProfileEasEmailProfileBase);
     }
 
@@ -156,9 +161,10 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidWorkProfileEasEmailProfileBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileEasEmailProfileBaseRequest)this;
+     @Nonnull
+     public AndroidWorkProfileEasEmailProfileBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -167,9 +173,10 @@ public class AndroidWorkProfileEasEmailProfileBaseRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidWorkProfileEasEmailProfileBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileEasEmailProfileBaseRequest)this;
+     @Nonnull
+     public AndroidWorkProfileEasEmailProfileBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

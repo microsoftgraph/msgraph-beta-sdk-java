@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10EndpointProtectionConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Endpoint Protection Configuration Request.
  */
-public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest implements IWindows10EndpointProtectionConfigurationRequest {
+public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest<Windows10EndpointProtectionConfiguration> {
 	
     /**
      * The request for the Windows10EndpointProtectionConfiguration
@@ -29,7 +31,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EndpointProtectionConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10EndpointProtectionConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10EndpointProtectionConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return the Windows10EndpointProtectionConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10EndpointProtectionConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param sourceWindows10EndpointProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration, final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
+    public void patch(@Nonnull final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration, @Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10EndpointProtectionConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return the updated Windows10EndpointProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EndpointProtectionConfiguration patch(final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EndpointProtectionConfiguration patch(@Nonnull final Windows10EndpointProtectionConfiguration sourceWindows10EndpointProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10EndpointProtectionConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param newWindows10EndpointProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
+    public void post(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, @Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10EndpointProtectionConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return the created Windows10EndpointProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EndpointProtectionConfiguration post(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EndpointProtectionConfiguration post(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindows10EndpointProtectionConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param newWindows10EndpointProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
+    public void put(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration, @Nonnull final ICallback<? super Windows10EndpointProtectionConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10EndpointProtectionConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @return the created Windows10EndpointProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EndpointProtectionConfiguration put(final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EndpointProtectionConfiguration put(@Nonnull final Windows10EndpointProtectionConfiguration newWindows10EndpointProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindows10EndpointProtectionConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10EndpointProtectionConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10EndpointProtectionConfigurationRequest)this;
+     @Nonnull
+     public Windows10EndpointProtectionConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10EndpointProtectionConfigurationRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10EndpointProtectionConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10EndpointProtectionConfigurationRequest)this;
+     @Nonnull
+     public Windows10EndpointProtectionConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

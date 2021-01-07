@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileWiFiConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Wi Fi Configuration Request.
  */
-public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest implements IAndroidWorkProfileWiFiConfigurationRequest {
+public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest<AndroidWorkProfileWiFiConfiguration> {
 	
     /**
      * The request for the AndroidWorkProfileWiFiConfiguration
@@ -30,10 +32,10 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AndroidWorkProfileWiFiConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AndroidWorkProfileWiFiConfiguration> responseClass) {
+    public AndroidWorkProfileWiFiConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AndroidWorkProfileWiFiConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileWiFiConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfileWiFiConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWorkProfileWiFiConfiguration.class);
     }
 
@@ -53,7 +55,7 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @return the AndroidWorkProfileWiFiConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidWorkProfileWiFiConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @param sourceAndroidWorkProfileWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileWiFiConfiguration sourceAndroidWorkProfileWiFiConfiguration, final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
+    public void patch(@Nonnull final AndroidWorkProfileWiFiConfiguration sourceAndroidWorkProfileWiFiConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileWiFiConfiguration);
     }
 
@@ -102,7 +105,8 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @return the updated AndroidWorkProfileWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileWiFiConfiguration patch(final AndroidWorkProfileWiFiConfiguration sourceAndroidWorkProfileWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileWiFiConfiguration patch(@Nonnull final AndroidWorkProfileWiFiConfiguration sourceAndroidWorkProfileWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidWorkProfileWiFiConfiguration);
     }
 
@@ -112,7 +116,7 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @param newAndroidWorkProfileWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration, final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
+    public void post(@Nonnull final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileWiFiConfiguration);
     }
 
@@ -123,7 +127,8 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @return the created AndroidWorkProfileWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileWiFiConfiguration post(final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileWiFiConfiguration post(@Nonnull final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidWorkProfileWiFiConfiguration);
     }
 
@@ -133,7 +138,7 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @param newAndroidWorkProfileWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration, final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
+    public void put(@Nonnull final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileWiFiConfiguration);
     }
 
@@ -144,7 +149,8 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @return the created AndroidWorkProfileWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileWiFiConfiguration put(final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileWiFiConfiguration put(@Nonnull final AndroidWorkProfileWiFiConfiguration newAndroidWorkProfileWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidWorkProfileWiFiConfiguration);
     }
 
@@ -154,9 +160,10 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidWorkProfileWiFiConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileWiFiConfigurationRequest)this;
+     @Nonnull
+     public AndroidWorkProfileWiFiConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class AndroidWorkProfileWiFiConfigurationRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidWorkProfileWiFiConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileWiFiConfigurationRequest)this;
+     @Nonnull
+     public AndroidWorkProfileWiFiConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

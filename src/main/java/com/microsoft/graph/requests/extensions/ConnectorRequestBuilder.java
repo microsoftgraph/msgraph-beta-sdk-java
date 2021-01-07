@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Connector;
-import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Connector Request Builder.
  */
-public class ConnectorRequestBuilder extends BaseRequestBuilder implements IConnectorRequestBuilder {
+public class ConnectorRequestBuilder extends BaseRequestBuilder<Connector> {
 
     /**
      * The request builder for the Connector
@@ -32,7 +32,7 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder implements IConn
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConnectorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder implements IConn
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IConnectorRequest instance
+     * @return the ConnectorRequest instance
      */
-    public IConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ConnectorRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class ConnectorRequestBuilder extends BaseRequestBuilder implements IConn
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IConnectorRequest instance
+     * @return the ConnectorRequest instance
      */
-    public IConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ConnectorRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IConnectorGroupCollectionRequestBuilder memberOf() {
+    /**
+     *  Gets a request builder for the ConnectorGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConnectorGroupCollectionRequestBuilder memberOf() {
         return new ConnectorGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
-    public IConnectorGroupRequestBuilder memberOf(final String id) {
+    /**
+     * Gets a request builder for the ConnectorGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConnectorGroupRequestBuilder memberOf(@Nonnull final String id) {
         return new ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
 }

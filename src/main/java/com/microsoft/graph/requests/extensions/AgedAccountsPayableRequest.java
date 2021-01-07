@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgedAccountsPayable;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Aged Accounts Payable Request.
  */
-public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAccountsPayableRequest {
+public class AgedAccountsPayableRequest extends BaseRequest<AgedAccountsPayable> {
 	
     /**
      * The request for the AgedAccountsPayable
@@ -29,7 +31,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgedAccountsPayableRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgedAccountsPayableRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AgedAccountsPayable.class);
     }
 
@@ -38,7 +40,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AgedAccountsPayable> callback) {
+    public void get(@Nonnull final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @return the AgedAccountsPayable from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AgedAccountsPayable get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AgedAccountsPayable> callback) {
+    public void delete(@Nonnull final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param sourceAgedAccountsPayable the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgedAccountsPayable sourceAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback) {
+    public void patch(@Nonnull final AgedAccountsPayable sourceAgedAccountsPayable, @Nonnull final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.PATCH, callback, sourceAgedAccountsPayable);
     }
 
@@ -87,7 +90,8 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @return the updated AgedAccountsPayable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgedAccountsPayable patch(final AgedAccountsPayable sourceAgedAccountsPayable) throws ClientException {
+    @Nullable
+    public AgedAccountsPayable patch(@Nonnull final AgedAccountsPayable sourceAgedAccountsPayable) throws ClientException {
         return send(HttpMethod.PATCH, sourceAgedAccountsPayable);
     }
 
@@ -97,7 +101,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param newAgedAccountsPayable the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback) {
+    public void post(@Nonnull final AgedAccountsPayable newAgedAccountsPayable, @Nonnull final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.POST, callback, newAgedAccountsPayable);
     }
 
@@ -108,7 +112,8 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @return the created AgedAccountsPayable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgedAccountsPayable post(final AgedAccountsPayable newAgedAccountsPayable) throws ClientException {
+    @Nullable
+    public AgedAccountsPayable post(@Nonnull final AgedAccountsPayable newAgedAccountsPayable) throws ClientException {
         return send(HttpMethod.POST, newAgedAccountsPayable);
     }
 
@@ -118,7 +123,7 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param newAgedAccountsPayable the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgedAccountsPayable newAgedAccountsPayable, final ICallback<? super AgedAccountsPayable> callback) {
+    public void put(@Nonnull final AgedAccountsPayable newAgedAccountsPayable, @Nonnull final ICallback<? super AgedAccountsPayable> callback) {
         send(HttpMethod.PUT, callback, newAgedAccountsPayable);
     }
 
@@ -129,7 +134,8 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @return the created AgedAccountsPayable
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgedAccountsPayable put(final AgedAccountsPayable newAgedAccountsPayable) throws ClientException {
+    @Nullable
+    public AgedAccountsPayable put(@Nonnull final AgedAccountsPayable newAgedAccountsPayable) throws ClientException {
         return send(HttpMethod.PUT, newAgedAccountsPayable);
     }
 
@@ -139,9 +145,10 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param value the select clause
      * @return the updated request
      */
-     public IAgedAccountsPayableRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AgedAccountsPayableRequest)this;
+     @Nonnull
+     public AgedAccountsPayableRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AgedAccountsPayableRequest extends BaseRequest implements IAgedAcco
      * @param value the expand clause
      * @return the updated request
      */
-     public IAgedAccountsPayableRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgedAccountsPayableRequest)this;
+     @Nonnull
+     public AgedAccountsPayableRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

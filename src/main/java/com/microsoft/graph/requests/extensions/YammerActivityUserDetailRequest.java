@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.YammerActivityUserDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Yammer Activity User Detail Request.
  */
-public class YammerActivityUserDetailRequest extends BaseRequest implements IYammerActivityUserDetailRequest {
+public class YammerActivityUserDetailRequest extends BaseRequest<YammerActivityUserDetail> {
 	
     /**
      * The request for the YammerActivityUserDetail
@@ -29,7 +31,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public YammerActivityUserDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public YammerActivityUserDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, YammerActivityUserDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super YammerActivityUserDetail> callback) {
+    public void get(@Nonnull final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @return the YammerActivityUserDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public YammerActivityUserDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super YammerActivityUserDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param sourceYammerActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final YammerActivityUserDetail sourceYammerActivityUserDetail, final ICallback<? super YammerActivityUserDetail> callback) {
+    public void patch(@Nonnull final YammerActivityUserDetail sourceYammerActivityUserDetail, @Nonnull final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceYammerActivityUserDetail);
     }
 
@@ -87,7 +90,8 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @return the updated YammerActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerActivityUserDetail patch(final YammerActivityUserDetail sourceYammerActivityUserDetail) throws ClientException {
+    @Nullable
+    public YammerActivityUserDetail patch(@Nonnull final YammerActivityUserDetail sourceYammerActivityUserDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceYammerActivityUserDetail);
     }
 
@@ -97,7 +101,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param newYammerActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final YammerActivityUserDetail newYammerActivityUserDetail, final ICallback<? super YammerActivityUserDetail> callback) {
+    public void post(@Nonnull final YammerActivityUserDetail newYammerActivityUserDetail, @Nonnull final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newYammerActivityUserDetail);
     }
 
@@ -108,7 +112,8 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @return the created YammerActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerActivityUserDetail post(final YammerActivityUserDetail newYammerActivityUserDetail) throws ClientException {
+    @Nullable
+    public YammerActivityUserDetail post(@Nonnull final YammerActivityUserDetail newYammerActivityUserDetail) throws ClientException {
         return send(HttpMethod.POST, newYammerActivityUserDetail);
     }
 
@@ -118,7 +123,7 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param newYammerActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final YammerActivityUserDetail newYammerActivityUserDetail, final ICallback<? super YammerActivityUserDetail> callback) {
+    public void put(@Nonnull final YammerActivityUserDetail newYammerActivityUserDetail, @Nonnull final ICallback<? super YammerActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newYammerActivityUserDetail);
     }
 
@@ -129,7 +134,8 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @return the created YammerActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerActivityUserDetail put(final YammerActivityUserDetail newYammerActivityUserDetail) throws ClientException {
+    @Nullable
+    public YammerActivityUserDetail put(@Nonnull final YammerActivityUserDetail newYammerActivityUserDetail) throws ClientException {
         return send(HttpMethod.PUT, newYammerActivityUserDetail);
     }
 
@@ -139,9 +145,10 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param value the select clause
      * @return the updated request
      */
-     public IYammerActivityUserDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (YammerActivityUserDetailRequest)this;
+     @Nonnull
+     public YammerActivityUserDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class YammerActivityUserDetailRequest extends BaseRequest implements IYam
      * @param value the expand clause
      * @return the updated request
      */
-     public IYammerActivityUserDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (YammerActivityUserDetailRequest)this;
+     @Nonnull
+     public YammerActivityUserDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TextClassificationRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Text Classification Request Request.
  */
-public class TextClassificationRequestRequest extends BaseRequest implements ITextClassificationRequestRequest {
+public class TextClassificationRequestRequest extends BaseRequest<TextClassificationRequest> {
 	
     /**
      * The request for the TextClassificationRequest
@@ -29,7 +31,7 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TextClassificationRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TextClassificationRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TextClassificationRequest.class);
     }
 
@@ -38,7 +40,7 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TextClassificationRequest> callback) {
+    public void get(@Nonnull final ICallback<? super TextClassificationRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @return the TextClassificationRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TextClassificationRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TextClassificationRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super TextClassificationRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @param sourceTextClassificationRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TextClassificationRequest sourceTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback) {
+    public void patch(@Nonnull final TextClassificationRequest sourceTextClassificationRequest, @Nonnull final ICallback<? super TextClassificationRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceTextClassificationRequest);
     }
 
@@ -87,7 +90,8 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @return the updated TextClassificationRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TextClassificationRequest patch(final TextClassificationRequest sourceTextClassificationRequest) throws ClientException {
+    @Nullable
+    public TextClassificationRequest patch(@Nonnull final TextClassificationRequest sourceTextClassificationRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceTextClassificationRequest);
     }
 
@@ -97,7 +101,7 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @param newTextClassificationRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TextClassificationRequest newTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback) {
+    public void post(@Nonnull final TextClassificationRequest newTextClassificationRequest, @Nonnull final ICallback<? super TextClassificationRequest> callback) {
         send(HttpMethod.POST, callback, newTextClassificationRequest);
     }
 
@@ -108,7 +112,8 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @return the created TextClassificationRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TextClassificationRequest post(final TextClassificationRequest newTextClassificationRequest) throws ClientException {
+    @Nullable
+    public TextClassificationRequest post(@Nonnull final TextClassificationRequest newTextClassificationRequest) throws ClientException {
         return send(HttpMethod.POST, newTextClassificationRequest);
     }
 
@@ -118,7 +123,7 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @param newTextClassificationRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TextClassificationRequest newTextClassificationRequest, final ICallback<? super TextClassificationRequest> callback) {
+    public void put(@Nonnull final TextClassificationRequest newTextClassificationRequest, @Nonnull final ICallback<? super TextClassificationRequest> callback) {
         send(HttpMethod.PUT, callback, newTextClassificationRequest);
     }
 
@@ -129,7 +134,8 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @return the created TextClassificationRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TextClassificationRequest put(final TextClassificationRequest newTextClassificationRequest) throws ClientException {
+    @Nullable
+    public TextClassificationRequest put(@Nonnull final TextClassificationRequest newTextClassificationRequest) throws ClientException {
         return send(HttpMethod.PUT, newTextClassificationRequest);
     }
 
@@ -139,9 +145,10 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @param value the select clause
      * @return the updated request
      */
-     public ITextClassificationRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TextClassificationRequestRequest)this;
+     @Nonnull
+     public TextClassificationRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TextClassificationRequestRequest extends BaseRequest implements ITe
      * @param value the expand clause
      * @return the updated request
      */
-     public ITextClassificationRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TextClassificationRequestRequest)this;
+     @Nonnull
+     public TextClassificationRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Setting Definition Request Builder.
  */
-public class DeviceManagementSettingDefinitionRequestBuilder extends BaseRequestBuilder implements IDeviceManagementSettingDefinitionRequestBuilder {
+public class DeviceManagementSettingDefinitionRequestBuilder extends BaseRequestBuilder<DeviceManagementSettingDefinition> {
 
     /**
      * The request builder for the DeviceManagementSettingDefinition
@@ -28,7 +30,7 @@ public class DeviceManagementSettingDefinitionRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementSettingDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementSettingDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceManagementSettingDefinitionRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementSettingDefinitionRequest instance
+     * @return the DeviceManagementSettingDefinitionRequest instance
      */
-    public IDeviceManagementSettingDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementSettingDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceManagementSettingDefinitionRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementSettingDefinitionRequest instance
+     * @return the DeviceManagementSettingDefinitionRequest instance
      */
-    public IDeviceManagementSettingDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementSettingDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementSettingDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartGridlinesFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Gridlines Format Request.
  */
-public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements IWorkbookChartGridlinesFormatRequest {
+public class WorkbookChartGridlinesFormatRequest extends BaseRequest<WorkbookChartGridlinesFormat> {
 	
     /**
      * The request for the WorkbookChartGridlinesFormat
@@ -31,7 +32,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartGridlinesFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartGridlinesFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartGridlinesFormat.class);
     }
 
@@ -40,7 +41,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartGridlinesFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @return the WorkbookChartGridlinesFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartGridlinesFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartGridlinesFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @param sourceWorkbookChartGridlinesFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat, final ICallback<? super WorkbookChartGridlinesFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat, @Nonnull final ICallback<? super WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartGridlinesFormat);
     }
 
@@ -89,7 +91,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @return the updated WorkbookChartGridlinesFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartGridlinesFormat patch(final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartGridlinesFormat patch(@Nonnull final WorkbookChartGridlinesFormat sourceWorkbookChartGridlinesFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartGridlinesFormat);
     }
 
@@ -99,7 +102,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @param newWorkbookChartGridlinesFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<? super WorkbookChartGridlinesFormat> callback) {
+    public void post(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, @Nonnull final ICallback<? super WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartGridlinesFormat);
     }
 
@@ -110,7 +113,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @return the created WorkbookChartGridlinesFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartGridlinesFormat post(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartGridlinesFormat post(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartGridlinesFormat);
     }
 
@@ -120,7 +124,7 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @param newWorkbookChartGridlinesFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, final ICallback<? super WorkbookChartGridlinesFormat> callback) {
+    public void put(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat, @Nonnull final ICallback<? super WorkbookChartGridlinesFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartGridlinesFormat);
     }
 
@@ -131,7 +135,8 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @return the created WorkbookChartGridlinesFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartGridlinesFormat put(final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartGridlinesFormat put(@Nonnull final WorkbookChartGridlinesFormat newWorkbookChartGridlinesFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartGridlinesFormat);
     }
 
@@ -141,9 +146,10 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartGridlinesFormatRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartGridlinesFormatRequest)this;
+     @Nonnull
+     public WorkbookChartGridlinesFormatRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class WorkbookChartGridlinesFormatRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartGridlinesFormatRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartGridlinesFormatRequest)this;
+     @Nonnull
+     public WorkbookChartGridlinesFormatRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

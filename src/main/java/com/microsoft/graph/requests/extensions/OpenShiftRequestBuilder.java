@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OpenShift;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Open Shift Request Builder.
  */
-public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpenShiftRequestBuilder {
+public class OpenShiftRequestBuilder extends BaseRequestBuilder<OpenShift> {
 
     /**
      * The request builder for the OpenShift
@@ -28,7 +30,7 @@ public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OpenShiftRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OpenShiftRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOpenShiftRequest instance
+     * @return the OpenShiftRequest instance
      */
-    public IOpenShiftRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OpenShiftRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class OpenShiftRequestBuilder extends BaseRequestBuilder implements IOpen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOpenShiftRequest instance
+     * @return the OpenShiftRequest instance
      */
-    public IOpenShiftRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OpenShiftRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OpenShiftRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

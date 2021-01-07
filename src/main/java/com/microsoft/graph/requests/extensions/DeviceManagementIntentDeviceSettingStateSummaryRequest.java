@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentDeviceSettingStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Intent Device Setting State Summary Request.
  */
-public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends BaseRequest implements IDeviceManagementIntentDeviceSettingStateSummaryRequest {
+public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends BaseRequest<DeviceManagementIntentDeviceSettingStateSummary> {
 	
     /**
      * The request for the DeviceManagementIntentDeviceSettingStateSummary
@@ -29,7 +31,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntentDeviceSettingStateSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementIntentDeviceSettingStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementIntentDeviceSettingStateSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @return the DeviceManagementIntentDeviceSettingStateSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementIntentDeviceSettingStateSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param sourceDeviceManagementIntentDeviceSettingStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void patch(@Nonnull final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary, @Nonnull final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @return the updated DeviceManagementIntentDeviceSettingStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentDeviceSettingStateSummary patch(final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentDeviceSettingStateSummary patch(@Nonnull final DeviceManagementIntentDeviceSettingStateSummary sourceDeviceManagementIntentDeviceSettingStateSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param newDeviceManagementIntentDeviceSettingStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void post(@Nonnull final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, @Nonnull final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @return the created DeviceManagementIntentDeviceSettingStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentDeviceSettingStateSummary post(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentDeviceSettingStateSummary post(@Nonnull final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param newDeviceManagementIntentDeviceSettingStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
+    public void put(@Nonnull final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary, @Nonnull final ICallback<? super DeviceManagementIntentDeviceSettingStateSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @return the created DeviceManagementIntentDeviceSettingStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentDeviceSettingStateSummary put(final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentDeviceSettingStateSummary put(@Nonnull final DeviceManagementIntentDeviceSettingStateSummary newDeviceManagementIntentDeviceSettingStateSummary) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementIntentDeviceSettingStateSummary);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementIntentDeviceSettingStateSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementIntentDeviceSettingStateSummaryRequest)this;
+     @Nonnull
+     public DeviceManagementIntentDeviceSettingStateSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequest extends Base
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementIntentDeviceSettingStateSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntentDeviceSettingStateSummaryRequest)this;
+     @Nonnull
+     public DeviceManagementIntentDeviceSettingStateSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

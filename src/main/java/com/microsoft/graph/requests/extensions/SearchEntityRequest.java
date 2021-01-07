@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.SearchRequest;
 import com.microsoft.graph.models.extensions.SearchResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Search Entity Request.
  */
-public class SearchEntityRequest extends BaseRequest implements ISearchEntityRequest {
+public class SearchEntityRequest extends BaseRequest<SearchEntity> {
 	
     /**
      * The request for the SearchEntity
@@ -31,7 +33,7 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SearchEntityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SearchEntityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SearchEntity.class);
     }
 
@@ -40,7 +42,7 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SearchEntity> callback) {
+    public void get(@Nonnull final ICallback<? super SearchEntity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +52,7 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @return the SearchEntity from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SearchEntity get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +62,7 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SearchEntity> callback) {
+    public void delete(@Nonnull final ICallback<? super SearchEntity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +81,7 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @param sourceSearchEntity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SearchEntity sourceSearchEntity, final ICallback<? super SearchEntity> callback) {
+    public void patch(@Nonnull final SearchEntity sourceSearchEntity, @Nonnull final ICallback<? super SearchEntity> callback) {
         send(HttpMethod.PATCH, callback, sourceSearchEntity);
     }
 
@@ -89,7 +92,8 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @return the updated SearchEntity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SearchEntity patch(final SearchEntity sourceSearchEntity) throws ClientException {
+    @Nullable
+    public SearchEntity patch(@Nonnull final SearchEntity sourceSearchEntity) throws ClientException {
         return send(HttpMethod.PATCH, sourceSearchEntity);
     }
 
@@ -99,7 +103,7 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @param newSearchEntity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SearchEntity newSearchEntity, final ICallback<? super SearchEntity> callback) {
+    public void post(@Nonnull final SearchEntity newSearchEntity, @Nonnull final ICallback<? super SearchEntity> callback) {
         send(HttpMethod.POST, callback, newSearchEntity);
     }
 
@@ -110,7 +114,8 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @return the created SearchEntity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SearchEntity post(final SearchEntity newSearchEntity) throws ClientException {
+    @Nullable
+    public SearchEntity post(@Nonnull final SearchEntity newSearchEntity) throws ClientException {
         return send(HttpMethod.POST, newSearchEntity);
     }
 
@@ -120,7 +125,7 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @param newSearchEntity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SearchEntity newSearchEntity, final ICallback<? super SearchEntity> callback) {
+    public void put(@Nonnull final SearchEntity newSearchEntity, @Nonnull final ICallback<? super SearchEntity> callback) {
         send(HttpMethod.PUT, callback, newSearchEntity);
     }
 
@@ -131,7 +136,8 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @return the created SearchEntity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SearchEntity put(final SearchEntity newSearchEntity) throws ClientException {
+    @Nullable
+    public SearchEntity put(@Nonnull final SearchEntity newSearchEntity) throws ClientException {
         return send(HttpMethod.PUT, newSearchEntity);
     }
 
@@ -141,9 +147,10 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @param value the select clause
      * @return the updated request
      */
-     public ISearchEntityRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SearchEntityRequest)this;
+     @Nonnull
+     public SearchEntityRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +159,10 @@ public class SearchEntityRequest extends BaseRequest implements ISearchEntityReq
      * @param value the expand clause
      * @return the updated request
      */
-     public ISearchEntityRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SearchEntityRequest)this;
+     @Nonnull
+     public SearchEntityRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

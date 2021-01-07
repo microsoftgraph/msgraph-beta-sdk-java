@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagAutoAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleScopeTagAutoAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Role Scope Tag Request.
  */
-public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagRequest {
+public class RoleScopeTagRequest extends BaseRequest<RoleScopeTag> {
 	
     /**
      * The request for the RoleScopeTag
@@ -34,7 +34,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleScopeTagRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleScopeTagRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleScopeTag.class);
     }
 
@@ -43,7 +43,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RoleScopeTag> callback) {
+    public void get(@Nonnull final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +53,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @return the RoleScopeTag from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RoleScopeTag get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +63,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RoleScopeTag> callback) {
+    public void delete(@Nonnull final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +82,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param sourceRoleScopeTag the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoleScopeTag sourceRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
+    public void patch(@Nonnull final RoleScopeTag sourceRoleScopeTag, @Nonnull final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.PATCH, callback, sourceRoleScopeTag);
     }
 
@@ -92,7 +93,8 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @return the updated RoleScopeTag
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleScopeTag patch(final RoleScopeTag sourceRoleScopeTag) throws ClientException {
+    @Nullable
+    public RoleScopeTag patch(@Nonnull final RoleScopeTag sourceRoleScopeTag) throws ClientException {
         return send(HttpMethod.PATCH, sourceRoleScopeTag);
     }
 
@@ -102,7 +104,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param newRoleScopeTag the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
+    public void post(@Nonnull final RoleScopeTag newRoleScopeTag, @Nonnull final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.POST, callback, newRoleScopeTag);
     }
 
@@ -113,7 +115,8 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @return the created RoleScopeTag
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleScopeTag post(final RoleScopeTag newRoleScopeTag) throws ClientException {
+    @Nullable
+    public RoleScopeTag post(@Nonnull final RoleScopeTag newRoleScopeTag) throws ClientException {
         return send(HttpMethod.POST, newRoleScopeTag);
     }
 
@@ -123,7 +126,7 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param newRoleScopeTag the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoleScopeTag newRoleScopeTag, final ICallback<? super RoleScopeTag> callback) {
+    public void put(@Nonnull final RoleScopeTag newRoleScopeTag, @Nonnull final ICallback<? super RoleScopeTag> callback) {
         send(HttpMethod.PUT, callback, newRoleScopeTag);
     }
 
@@ -134,7 +137,8 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @return the created RoleScopeTag
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleScopeTag put(final RoleScopeTag newRoleScopeTag) throws ClientException {
+    @Nullable
+    public RoleScopeTag put(@Nonnull final RoleScopeTag newRoleScopeTag) throws ClientException {
         return send(HttpMethod.PUT, newRoleScopeTag);
     }
 
@@ -144,9 +148,10 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param value the select clause
      * @return the updated request
      */
-     public IRoleScopeTagRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoleScopeTagRequest)this;
+     @Nonnull
+     public RoleScopeTagRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -155,9 +160,10 @@ public class RoleScopeTagRequest extends BaseRequest implements IRoleScopeTagReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IRoleScopeTagRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoleScopeTagRequest)this;
+     @Nonnull
+     public RoleScopeTagRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

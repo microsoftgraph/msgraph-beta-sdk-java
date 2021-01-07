@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudPcOnPremisesConnection;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Cloud Pc On Premises Connection Request.
  */
-public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements ICloudPcOnPremisesConnectionRequest {
+public class CloudPcOnPremisesConnectionRequest extends BaseRequest<CloudPcOnPremisesConnection> {
 	
     /**
      * The request for the CloudPcOnPremisesConnection
@@ -29,7 +31,7 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudPcOnPremisesConnectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudPcOnPremisesConnectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CloudPcOnPremisesConnection.class);
     }
 
@@ -38,7 +40,7 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CloudPcOnPremisesConnection> callback) {
+    public void get(@Nonnull final ICallback<? super CloudPcOnPremisesConnection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @return the CloudPcOnPremisesConnection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CloudPcOnPremisesConnection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CloudPcOnPremisesConnection> callback) {
+    public void delete(@Nonnull final ICallback<? super CloudPcOnPremisesConnection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @param sourceCloudPcOnPremisesConnection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CloudPcOnPremisesConnection sourceCloudPcOnPremisesConnection, final ICallback<? super CloudPcOnPremisesConnection> callback) {
+    public void patch(@Nonnull final CloudPcOnPremisesConnection sourceCloudPcOnPremisesConnection, @Nonnull final ICallback<? super CloudPcOnPremisesConnection> callback) {
         send(HttpMethod.PATCH, callback, sourceCloudPcOnPremisesConnection);
     }
 
@@ -87,7 +90,8 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @return the updated CloudPcOnPremisesConnection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPcOnPremisesConnection patch(final CloudPcOnPremisesConnection sourceCloudPcOnPremisesConnection) throws ClientException {
+    @Nullable
+    public CloudPcOnPremisesConnection patch(@Nonnull final CloudPcOnPremisesConnection sourceCloudPcOnPremisesConnection) throws ClientException {
         return send(HttpMethod.PATCH, sourceCloudPcOnPremisesConnection);
     }
 
@@ -97,7 +101,7 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @param newCloudPcOnPremisesConnection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection, final ICallback<? super CloudPcOnPremisesConnection> callback) {
+    public void post(@Nonnull final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection, @Nonnull final ICallback<? super CloudPcOnPremisesConnection> callback) {
         send(HttpMethod.POST, callback, newCloudPcOnPremisesConnection);
     }
 
@@ -108,7 +112,8 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @return the created CloudPcOnPremisesConnection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPcOnPremisesConnection post(final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection) throws ClientException {
+    @Nullable
+    public CloudPcOnPremisesConnection post(@Nonnull final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection) throws ClientException {
         return send(HttpMethod.POST, newCloudPcOnPremisesConnection);
     }
 
@@ -118,7 +123,7 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @param newCloudPcOnPremisesConnection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection, final ICallback<? super CloudPcOnPremisesConnection> callback) {
+    public void put(@Nonnull final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection, @Nonnull final ICallback<? super CloudPcOnPremisesConnection> callback) {
         send(HttpMethod.PUT, callback, newCloudPcOnPremisesConnection);
     }
 
@@ -129,7 +134,8 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @return the created CloudPcOnPremisesConnection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPcOnPremisesConnection put(final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection) throws ClientException {
+    @Nullable
+    public CloudPcOnPremisesConnection put(@Nonnull final CloudPcOnPremisesConnection newCloudPcOnPremisesConnection) throws ClientException {
         return send(HttpMethod.PUT, newCloudPcOnPremisesConnection);
     }
 
@@ -139,9 +145,10 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public ICloudPcOnPremisesConnectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CloudPcOnPremisesConnectionRequest)this;
+     @Nonnull
+     public CloudPcOnPremisesConnectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CloudPcOnPremisesConnectionRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public ICloudPcOnPremisesConnectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CloudPcOnPremisesConnectionRequest)this;
+     @Nonnull
+     public CloudPcOnPremisesConnectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

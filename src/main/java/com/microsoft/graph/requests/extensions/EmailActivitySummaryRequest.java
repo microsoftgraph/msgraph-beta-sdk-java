@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailActivitySummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Email Activity Summary Request.
  */
-public class EmailActivitySummaryRequest extends BaseRequest implements IEmailActivitySummaryRequest {
+public class EmailActivitySummaryRequest extends BaseRequest<EmailActivitySummary> {
 	
     /**
      * The request for the EmailActivitySummary
@@ -29,7 +31,7 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmailActivitySummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmailActivitySummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmailActivitySummary.class);
     }
 
@@ -38,7 +40,7 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmailActivitySummary> callback) {
+    public void get(@Nonnull final ICallback<? super EmailActivitySummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @return the EmailActivitySummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EmailActivitySummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmailActivitySummary> callback) {
+    public void delete(@Nonnull final ICallback<? super EmailActivitySummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @param sourceEmailActivitySummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailActivitySummary sourceEmailActivitySummary, final ICallback<? super EmailActivitySummary> callback) {
+    public void patch(@Nonnull final EmailActivitySummary sourceEmailActivitySummary, @Nonnull final ICallback<? super EmailActivitySummary> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailActivitySummary);
     }
 
@@ -87,7 +90,8 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @return the updated EmailActivitySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailActivitySummary patch(final EmailActivitySummary sourceEmailActivitySummary) throws ClientException {
+    @Nullable
+    public EmailActivitySummary patch(@Nonnull final EmailActivitySummary sourceEmailActivitySummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmailActivitySummary);
     }
 
@@ -97,7 +101,7 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @param newEmailActivitySummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailActivitySummary newEmailActivitySummary, final ICallback<? super EmailActivitySummary> callback) {
+    public void post(@Nonnull final EmailActivitySummary newEmailActivitySummary, @Nonnull final ICallback<? super EmailActivitySummary> callback) {
         send(HttpMethod.POST, callback, newEmailActivitySummary);
     }
 
@@ -108,7 +112,8 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @return the created EmailActivitySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailActivitySummary post(final EmailActivitySummary newEmailActivitySummary) throws ClientException {
+    @Nullable
+    public EmailActivitySummary post(@Nonnull final EmailActivitySummary newEmailActivitySummary) throws ClientException {
         return send(HttpMethod.POST, newEmailActivitySummary);
     }
 
@@ -118,7 +123,7 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @param newEmailActivitySummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailActivitySummary newEmailActivitySummary, final ICallback<? super EmailActivitySummary> callback) {
+    public void put(@Nonnull final EmailActivitySummary newEmailActivitySummary, @Nonnull final ICallback<? super EmailActivitySummary> callback) {
         send(HttpMethod.PUT, callback, newEmailActivitySummary);
     }
 
@@ -129,7 +134,8 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @return the created EmailActivitySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailActivitySummary put(final EmailActivitySummary newEmailActivitySummary) throws ClientException {
+    @Nullable
+    public EmailActivitySummary put(@Nonnull final EmailActivitySummary newEmailActivitySummary) throws ClientException {
         return send(HttpMethod.PUT, newEmailActivitySummary);
     }
 
@@ -139,9 +145,10 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @param value the select clause
      * @return the updated request
      */
-     public IEmailActivitySummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmailActivitySummaryRequest)this;
+     @Nonnull
+     public EmailActivitySummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EmailActivitySummaryRequest extends BaseRequest implements IEmailAc
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmailActivitySummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailActivitySummaryRequest)this;
+     @Nonnull
+     public EmailActivitySummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

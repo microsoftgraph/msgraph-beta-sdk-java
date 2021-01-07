@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsBaseline;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Experience Analytics Baseline Request Builder.
  */
-public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBuilder implements IUserExperienceAnalyticsBaselineRequestBuilder {
+public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBuilder<UserExperienceAnalyticsBaseline> {
 
     /**
      * The request builder for the UserExperienceAnalyticsBaseline
@@ -30,7 +31,7 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsBaselineRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsBaselineRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsBaselineRequest instance
+     * @return the UserExperienceAnalyticsBaselineRequest instance
      */
-    public IUserExperienceAnalyticsBaselineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsBaselineRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsBaselineRequest instance
+     * @return the UserExperienceAnalyticsBaselineRequest instance
      */
-    public IUserExperienceAnalyticsBaselineRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsBaselineRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,27 +62,30 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
     /**
      * Gets the request builder for UserExperienceAnalyticsCategory
      *
-     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
+    @Nonnull
+    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
     }
 
     /**
      * Gets the request builder for UserExperienceAnalyticsCategory
      *
-     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics() {
+    @Nonnull
+    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder deviceBootPerformanceMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceBootPerformanceMetrics"), getClient(), null);
     }
 
     /**
      * Gets the request builder for UserExperienceAnalyticsCategory
      *
-     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics() {
+    @Nonnull
+    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rebootAnalyticsMetrics"), getClient(), null);
     }
 }

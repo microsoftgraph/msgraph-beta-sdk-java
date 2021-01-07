@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectorySetting;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Setting Request.
  */
-public class DirectorySettingRequest extends BaseRequest implements IDirectorySettingRequest {
+public class DirectorySettingRequest extends BaseRequest<DirectorySetting> {
 	
     /**
      * The request for the DirectorySetting
@@ -29,7 +31,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectorySettingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectorySettingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectorySetting.class);
     }
 
@@ -38,7 +40,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DirectorySetting> callback) {
+    public void get(@Nonnull final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @return the DirectorySetting from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DirectorySetting get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DirectorySetting> callback) {
+    public void delete(@Nonnull final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param sourceDirectorySetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectorySetting sourceDirectorySetting, final ICallback<? super DirectorySetting> callback) {
+    public void patch(@Nonnull final DirectorySetting sourceDirectorySetting, @Nonnull final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectorySetting);
     }
 
@@ -87,7 +90,8 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @return the updated DirectorySetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectorySetting patch(final DirectorySetting sourceDirectorySetting) throws ClientException {
+    @Nullable
+    public DirectorySetting patch(@Nonnull final DirectorySetting sourceDirectorySetting) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectorySetting);
     }
 
@@ -97,7 +101,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param newDirectorySetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectorySetting newDirectorySetting, final ICallback<? super DirectorySetting> callback) {
+    public void post(@Nonnull final DirectorySetting newDirectorySetting, @Nonnull final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.POST, callback, newDirectorySetting);
     }
 
@@ -108,7 +112,8 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @return the created DirectorySetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectorySetting post(final DirectorySetting newDirectorySetting) throws ClientException {
+    @Nullable
+    public DirectorySetting post(@Nonnull final DirectorySetting newDirectorySetting) throws ClientException {
         return send(HttpMethod.POST, newDirectorySetting);
     }
 
@@ -118,7 +123,7 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param newDirectorySetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectorySetting newDirectorySetting, final ICallback<? super DirectorySetting> callback) {
+    public void put(@Nonnull final DirectorySetting newDirectorySetting, @Nonnull final ICallback<? super DirectorySetting> callback) {
         send(HttpMethod.PUT, callback, newDirectorySetting);
     }
 
@@ -129,7 +134,8 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @return the created DirectorySetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectorySetting put(final DirectorySetting newDirectorySetting) throws ClientException {
+    @Nullable
+    public DirectorySetting put(@Nonnull final DirectorySetting newDirectorySetting) throws ClientException {
         return send(HttpMethod.PUT, newDirectorySetting);
     }
 
@@ -139,9 +145,10 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param value the select clause
      * @return the updated request
      */
-     public IDirectorySettingRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DirectorySettingRequest)this;
+     @Nonnull
+     public DirectorySettingRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DirectorySettingRequest extends BaseRequest implements IDirectorySe
      * @param value the expand clause
      * @return the updated request
      */
-     public IDirectorySettingRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectorySettingRequest)this;
+     @Nonnull
+     public DirectorySettingRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

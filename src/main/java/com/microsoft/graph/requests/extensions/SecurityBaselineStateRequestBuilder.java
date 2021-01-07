@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineState;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineSettingStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineSettingStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Baseline State Request Builder.
  */
-public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder implements ISecurityBaselineStateRequestBuilder {
+public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder<SecurityBaselineState> {
 
     /**
      * The request builder for the SecurityBaselineState
@@ -32,7 +32,7 @@ public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityBaselineStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityBaselineStateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityBaselineStateRequest instance
+     * @return the SecurityBaselineStateRequest instance
      */
-    public ISecurityBaselineStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SecurityBaselineStateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class SecurityBaselineStateRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityBaselineStateRequest instance
+     * @return the SecurityBaselineStateRequest instance
      */
-    public ISecurityBaselineStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SecurityBaselineStateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecurityBaselineStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ISecurityBaselineSettingStateCollectionRequestBuilder settingStates() {
+    /**
+     *  Gets a request builder for the SecurityBaselineSettingState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SecurityBaselineSettingStateCollectionRequestBuilder settingStates() {
         return new SecurityBaselineSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingStates"), getClient(), null);
     }
 
-    public ISecurityBaselineSettingStateRequestBuilder settingStates(final String id) {
+    /**
+     * Gets a request builder for the SecurityBaselineSettingState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SecurityBaselineSettingStateRequestBuilder settingStates(@Nonnull final String id) {
         return new SecurityBaselineSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("settingStates") + "/" + id, getClient(), null);
     }
 }

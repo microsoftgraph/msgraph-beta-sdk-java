@@ -12,22 +12,17 @@ import com.microsoft.graph.models.extensions.ListItem;
 import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.FieldValueSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -37,7 +32,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the List Item Request.
  */
-public class ListItemRequest extends BaseRequest implements IListItemRequest {
+public class ListItemRequest extends BaseRequest<ListItem> {
 	
     /**
      * The request for the ListItem
@@ -46,7 +41,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ListItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ListItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ListItem.class);
     }
 
@@ -55,7 +50,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ListItem> callback) {
+    public void get(@Nonnull final ICallback<? super ListItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,6 +60,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @return the ListItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ListItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -74,7 +70,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ListItem> callback) {
+    public void delete(@Nonnull final ICallback<? super ListItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +89,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param sourceListItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ListItem sourceListItem, final ICallback<? super ListItem> callback) {
+    public void patch(@Nonnull final ListItem sourceListItem, @Nonnull final ICallback<? super ListItem> callback) {
         send(HttpMethod.PATCH, callback, sourceListItem);
     }
 
@@ -104,7 +100,8 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @return the updated ListItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ListItem patch(final ListItem sourceListItem) throws ClientException {
+    @Nullable
+    public ListItem patch(@Nonnull final ListItem sourceListItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceListItem);
     }
 
@@ -114,7 +111,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param newListItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ListItem newListItem, final ICallback<? super ListItem> callback) {
+    public void post(@Nonnull final ListItem newListItem, @Nonnull final ICallback<? super ListItem> callback) {
         send(HttpMethod.POST, callback, newListItem);
     }
 
@@ -125,7 +122,8 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @return the created ListItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ListItem post(final ListItem newListItem) throws ClientException {
+    @Nullable
+    public ListItem post(@Nonnull final ListItem newListItem) throws ClientException {
         return send(HttpMethod.POST, newListItem);
     }
 
@@ -135,7 +133,7 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param newListItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ListItem newListItem, final ICallback<? super ListItem> callback) {
+    public void put(@Nonnull final ListItem newListItem, @Nonnull final ICallback<? super ListItem> callback) {
         send(HttpMethod.PUT, callback, newListItem);
     }
 
@@ -146,7 +144,8 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @return the created ListItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ListItem put(final ListItem newListItem) throws ClientException {
+    @Nullable
+    public ListItem put(@Nonnull final ListItem newListItem) throws ClientException {
         return send(HttpMethod.PUT, newListItem);
     }
 
@@ -156,9 +155,10 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IListItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ListItemRequest)this;
+     @Nonnull
+     public ListItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -167,9 +167,10 @@ public class ListItemRequest extends BaseRequest implements IListItemRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IListItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ListItemRequest)this;
+     @Nonnull
+     public ListItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemInsights;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Insights Request Builder.
  */
-public class ItemInsightsRequestBuilder extends BaseRequestBuilder implements IItemInsightsRequestBuilder {
+public class ItemInsightsRequestBuilder extends BaseRequestBuilder<ItemInsights> {
 
     /**
      * The request builder for the ItemInsights
@@ -28,7 +30,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder implements II
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemInsightsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemInsightsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder implements II
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemInsightsRequest instance
+     * @return the ItemInsightsRequest instance
      */
-    public IItemInsightsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ItemInsightsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,32 +49,72 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder implements II
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemInsightsRequest instance
+     * @return the ItemInsightsRequest instance
      */
-    public IItemInsightsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ItemInsightsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemInsightsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ISharedInsightCollectionRequestBuilder shared() {
+    /**
+     *  Gets a request builder for the SharedInsight collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SharedInsightCollectionRequestBuilder shared() {
         return new SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
     }
 
-    public ISharedInsightRequestBuilder shared(final String id) {
+    /**
+     * Gets a request builder for the SharedInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SharedInsightRequestBuilder shared(@Nonnull final String id) {
         return new SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
     }
-    public ITrendingCollectionRequestBuilder trending() {
+    /**
+     *  Gets a request builder for the Trending collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TrendingCollectionRequestBuilder trending() {
         return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
     }
 
-    public ITrendingRequestBuilder trending(final String id) {
+    /**
+     * Gets a request builder for the Trending item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TrendingRequestBuilder trending(@Nonnull final String id) {
         return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
     }
-    public IUsedInsightCollectionRequestBuilder used() {
+    /**
+     *  Gets a request builder for the UsedInsight collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UsedInsightCollectionRequestBuilder used() {
         return new UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);
     }
 
-    public IUsedInsightRequestBuilder used(final String id) {
+    /**
+     * Gets a request builder for the UsedInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UsedInsightRequestBuilder used(@Nonnull final String id) {
         return new UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("used") + "/" + id, getClient(), null);
     }
 }

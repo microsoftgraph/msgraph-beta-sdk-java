@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkPosition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Work Position Request Builder.
  */
-public class WorkPositionRequestBuilder extends BaseRequestBuilder implements IWorkPositionRequestBuilder {
+public class WorkPositionRequestBuilder extends BaseRequestBuilder<WorkPosition> {
 
     /**
      * The request builder for the WorkPosition
@@ -28,7 +30,7 @@ public class WorkPositionRequestBuilder extends BaseRequestBuilder implements IW
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkPositionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkPositionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WorkPositionRequestBuilder extends BaseRequestBuilder implements IW
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkPositionRequest instance
+     * @return the WorkPositionRequest instance
      */
-    public IWorkPositionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkPositionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class WorkPositionRequestBuilder extends BaseRequestBuilder implements IW
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkPositionRequest instance
+     * @return the WorkPositionRequest instance
      */
-    public IWorkPositionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkPositionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkPositionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

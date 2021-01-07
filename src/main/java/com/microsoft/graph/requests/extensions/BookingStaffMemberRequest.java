@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BookingStaffMember;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Booking Staff Member Request.
  */
-public class BookingStaffMemberRequest extends BaseRequest implements IBookingStaffMemberRequest {
+public class BookingStaffMemberRequest extends BaseRequest<BookingStaffMember> {
 	
     /**
      * The request for the BookingStaffMember
@@ -29,7 +31,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BookingStaffMemberRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BookingStaffMemberRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, BookingStaffMember.class);
     }
 
@@ -38,7 +40,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super BookingStaffMember> callback) {
+    public void get(@Nonnull final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @return the BookingStaffMember from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public BookingStaffMember get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super BookingStaffMember> callback) {
+    public void delete(@Nonnull final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param sourceBookingStaffMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BookingStaffMember sourceBookingStaffMember, final ICallback<? super BookingStaffMember> callback) {
+    public void patch(@Nonnull final BookingStaffMember sourceBookingStaffMember, @Nonnull final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.PATCH, callback, sourceBookingStaffMember);
     }
 
@@ -87,7 +90,8 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @return the updated BookingStaffMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingStaffMember patch(final BookingStaffMember sourceBookingStaffMember) throws ClientException {
+    @Nullable
+    public BookingStaffMember patch(@Nonnull final BookingStaffMember sourceBookingStaffMember) throws ClientException {
         return send(HttpMethod.PATCH, sourceBookingStaffMember);
     }
 
@@ -97,7 +101,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param newBookingStaffMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BookingStaffMember newBookingStaffMember, final ICallback<? super BookingStaffMember> callback) {
+    public void post(@Nonnull final BookingStaffMember newBookingStaffMember, @Nonnull final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.POST, callback, newBookingStaffMember);
     }
 
@@ -108,7 +112,8 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @return the created BookingStaffMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingStaffMember post(final BookingStaffMember newBookingStaffMember) throws ClientException {
+    @Nullable
+    public BookingStaffMember post(@Nonnull final BookingStaffMember newBookingStaffMember) throws ClientException {
         return send(HttpMethod.POST, newBookingStaffMember);
     }
 
@@ -118,7 +123,7 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param newBookingStaffMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BookingStaffMember newBookingStaffMember, final ICallback<? super BookingStaffMember> callback) {
+    public void put(@Nonnull final BookingStaffMember newBookingStaffMember, @Nonnull final ICallback<? super BookingStaffMember> callback) {
         send(HttpMethod.PUT, callback, newBookingStaffMember);
     }
 
@@ -129,7 +134,8 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @return the created BookingStaffMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingStaffMember put(final BookingStaffMember newBookingStaffMember) throws ClientException {
+    @Nullable
+    public BookingStaffMember put(@Nonnull final BookingStaffMember newBookingStaffMember) throws ClientException {
         return send(HttpMethod.PUT, newBookingStaffMember);
     }
 
@@ -139,9 +145,10 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param value the select clause
      * @return the updated request
      */
-     public IBookingStaffMemberRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (BookingStaffMemberRequest)this;
+     @Nonnull
+     public BookingStaffMemberRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class BookingStaffMemberRequest extends BaseRequest implements IBookingSt
      * @param value the expand clause
      * @return the updated request
      */
-     public IBookingStaffMemberRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BookingStaffMemberRequest)this;
+     @Nonnull
+     public BookingStaffMemberRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

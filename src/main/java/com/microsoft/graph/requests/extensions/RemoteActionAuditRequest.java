@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RemoteActionAudit;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Remote Action Audit Request.
  */
-public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActionAuditRequest {
+public class RemoteActionAuditRequest extends BaseRequest<RemoteActionAudit> {
 	
     /**
      * The request for the RemoteActionAudit
@@ -29,7 +31,7 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RemoteActionAuditRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RemoteActionAuditRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RemoteActionAudit.class);
     }
 
@@ -38,7 +40,7 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RemoteActionAudit> callback) {
+    public void get(@Nonnull final ICallback<? super RemoteActionAudit> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @return the RemoteActionAudit from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RemoteActionAudit get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RemoteActionAudit> callback) {
+    public void delete(@Nonnull final ICallback<? super RemoteActionAudit> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @param sourceRemoteActionAudit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RemoteActionAudit sourceRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback) {
+    public void patch(@Nonnull final RemoteActionAudit sourceRemoteActionAudit, @Nonnull final ICallback<? super RemoteActionAudit> callback) {
         send(HttpMethod.PATCH, callback, sourceRemoteActionAudit);
     }
 
@@ -87,7 +90,8 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @return the updated RemoteActionAudit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RemoteActionAudit patch(final RemoteActionAudit sourceRemoteActionAudit) throws ClientException {
+    @Nullable
+    public RemoteActionAudit patch(@Nonnull final RemoteActionAudit sourceRemoteActionAudit) throws ClientException {
         return send(HttpMethod.PATCH, sourceRemoteActionAudit);
     }
 
@@ -97,7 +101,7 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @param newRemoteActionAudit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RemoteActionAudit newRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback) {
+    public void post(@Nonnull final RemoteActionAudit newRemoteActionAudit, @Nonnull final ICallback<? super RemoteActionAudit> callback) {
         send(HttpMethod.POST, callback, newRemoteActionAudit);
     }
 
@@ -108,7 +112,8 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @return the created RemoteActionAudit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RemoteActionAudit post(final RemoteActionAudit newRemoteActionAudit) throws ClientException {
+    @Nullable
+    public RemoteActionAudit post(@Nonnull final RemoteActionAudit newRemoteActionAudit) throws ClientException {
         return send(HttpMethod.POST, newRemoteActionAudit);
     }
 
@@ -118,7 +123,7 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @param newRemoteActionAudit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RemoteActionAudit newRemoteActionAudit, final ICallback<? super RemoteActionAudit> callback) {
+    public void put(@Nonnull final RemoteActionAudit newRemoteActionAudit, @Nonnull final ICallback<? super RemoteActionAudit> callback) {
         send(HttpMethod.PUT, callback, newRemoteActionAudit);
     }
 
@@ -129,7 +134,8 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @return the created RemoteActionAudit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RemoteActionAudit put(final RemoteActionAudit newRemoteActionAudit) throws ClientException {
+    @Nullable
+    public RemoteActionAudit put(@Nonnull final RemoteActionAudit newRemoteActionAudit) throws ClientException {
         return send(HttpMethod.PUT, newRemoteActionAudit);
     }
 
@@ -139,9 +145,10 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @param value the select clause
      * @return the updated request
      */
-     public IRemoteActionAuditRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RemoteActionAuditRequest)this;
+     @Nonnull
+     public RemoteActionAuditRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class RemoteActionAuditRequest extends BaseRequest implements IRemoteActi
      * @param value the expand clause
      * @return the updated request
      */
-     public IRemoteActionAuditRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RemoteActionAuditRequest)this;
+     @Nonnull
+     public RemoteActionAuditRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

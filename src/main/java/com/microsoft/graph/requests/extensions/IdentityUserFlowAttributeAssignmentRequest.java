@@ -10,10 +10,11 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityUserFlowAttributeAssignment;
 import com.microsoft.graph.models.extensions.AssignmentOrder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -23,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity User Flow Attribute Assignment Request.
  */
-public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest implements IIdentityUserFlowAttributeAssignmentRequest {
+public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest<IdentityUserFlowAttributeAssignment> {
 	
     /**
      * The request for the IdentityUserFlowAttributeAssignment
@@ -32,7 +33,7 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityUserFlowAttributeAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityUserFlowAttributeAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityUserFlowAttributeAssignment.class);
     }
 
@@ -41,7 +42,7 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -51,6 +52,7 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @return the IdentityUserFlowAttributeAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IdentityUserFlowAttributeAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -60,7 +62,7 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +81,7 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @param sourceIdentityUserFlowAttributeAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityUserFlowAttributeAssignment sourceIdentityUserFlowAttributeAssignment, final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
+    public void patch(@Nonnull final IdentityUserFlowAttributeAssignment sourceIdentityUserFlowAttributeAssignment, @Nonnull final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityUserFlowAttributeAssignment);
     }
 
@@ -90,7 +92,8 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @return the updated IdentityUserFlowAttributeAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityUserFlowAttributeAssignment patch(final IdentityUserFlowAttributeAssignment sourceIdentityUserFlowAttributeAssignment) throws ClientException {
+    @Nullable
+    public IdentityUserFlowAttributeAssignment patch(@Nonnull final IdentityUserFlowAttributeAssignment sourceIdentityUserFlowAttributeAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceIdentityUserFlowAttributeAssignment);
     }
 
@@ -100,7 +103,7 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @param newIdentityUserFlowAttributeAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment, final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
+    public void post(@Nonnull final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment, @Nonnull final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
         send(HttpMethod.POST, callback, newIdentityUserFlowAttributeAssignment);
     }
 
@@ -111,7 +114,8 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @return the created IdentityUserFlowAttributeAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityUserFlowAttributeAssignment post(final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment) throws ClientException {
+    @Nullable
+    public IdentityUserFlowAttributeAssignment post(@Nonnull final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment) throws ClientException {
         return send(HttpMethod.POST, newIdentityUserFlowAttributeAssignment);
     }
 
@@ -121,7 +125,7 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @param newIdentityUserFlowAttributeAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment, final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
+    public void put(@Nonnull final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment, @Nonnull final ICallback<? super IdentityUserFlowAttributeAssignment> callback) {
         send(HttpMethod.PUT, callback, newIdentityUserFlowAttributeAssignment);
     }
 
@@ -132,7 +136,8 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @return the created IdentityUserFlowAttributeAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityUserFlowAttributeAssignment put(final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment) throws ClientException {
+    @Nullable
+    public IdentityUserFlowAttributeAssignment put(@Nonnull final IdentityUserFlowAttributeAssignment newIdentityUserFlowAttributeAssignment) throws ClientException {
         return send(HttpMethod.PUT, newIdentityUserFlowAttributeAssignment);
     }
 
@@ -142,9 +147,10 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentityUserFlowAttributeAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityUserFlowAttributeAssignmentRequest)this;
+     @Nonnull
+     public IdentityUserFlowAttributeAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -153,9 +159,10 @@ public class IdentityUserFlowAttributeAssignmentRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentityUserFlowAttributeAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityUserFlowAttributeAssignmentRequest)this;
+     @Nonnull
+     public IdentityUserFlowAttributeAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

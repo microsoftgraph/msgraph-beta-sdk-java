@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailAppUsageAppsUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Email App Usage Apps User Counts Request.
  */
-public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements IEmailAppUsageAppsUserCountsRequest {
+public class EmailAppUsageAppsUserCountsRequest extends BaseRequest<EmailAppUsageAppsUserCounts> {
 	
     /**
      * The request for the EmailAppUsageAppsUserCounts
@@ -29,7 +31,7 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmailAppUsageAppsUserCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmailAppUsageAppsUserCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmailAppUsageAppsUserCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
+    public void get(@Nonnull final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @return the EmailAppUsageAppsUserCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EmailAppUsageAppsUserCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @param sourceEmailAppUsageAppsUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailAppUsageAppsUserCounts sourceEmailAppUsageAppsUserCounts, final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
+    public void patch(@Nonnull final EmailAppUsageAppsUserCounts sourceEmailAppUsageAppsUserCounts, @Nonnull final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailAppUsageAppsUserCounts);
     }
 
@@ -87,7 +90,8 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @return the updated EmailAppUsageAppsUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAppUsageAppsUserCounts patch(final EmailAppUsageAppsUserCounts sourceEmailAppUsageAppsUserCounts) throws ClientException {
+    @Nullable
+    public EmailAppUsageAppsUserCounts patch(@Nonnull final EmailAppUsageAppsUserCounts sourceEmailAppUsageAppsUserCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmailAppUsageAppsUserCounts);
     }
 
@@ -97,7 +101,7 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @param newEmailAppUsageAppsUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
+    public void post(@Nonnull final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, @Nonnull final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
         send(HttpMethod.POST, callback, newEmailAppUsageAppsUserCounts);
     }
 
@@ -108,7 +112,8 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @return the created EmailAppUsageAppsUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAppUsageAppsUserCounts post(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts) throws ClientException {
+    @Nullable
+    public EmailAppUsageAppsUserCounts post(@Nonnull final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts) throws ClientException {
         return send(HttpMethod.POST, newEmailAppUsageAppsUserCounts);
     }
 
@@ -118,7 +123,7 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @param newEmailAppUsageAppsUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
+    public void put(@Nonnull final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts, @Nonnull final ICallback<? super EmailAppUsageAppsUserCounts> callback) {
         send(HttpMethod.PUT, callback, newEmailAppUsageAppsUserCounts);
     }
 
@@ -129,7 +134,8 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @return the created EmailAppUsageAppsUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAppUsageAppsUserCounts put(final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts) throws ClientException {
+    @Nullable
+    public EmailAppUsageAppsUserCounts put(@Nonnull final EmailAppUsageAppsUserCounts newEmailAppUsageAppsUserCounts) throws ClientException {
         return send(HttpMethod.PUT, newEmailAppUsageAppsUserCounts);
     }
 
@@ -139,9 +145,10 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IEmailAppUsageAppsUserCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmailAppUsageAppsUserCountsRequest)this;
+     @Nonnull
+     public EmailAppUsageAppsUserCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EmailAppUsageAppsUserCountsRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmailAppUsageAppsUserCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailAppUsageAppsUserCountsRequest)this;
+     @Nonnull
+     public EmailAppUsageAppsUserCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Evaluate Labels And Policies Job Response Request.
  */
-public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest implements IEvaluateLabelsAndPoliciesJobResponseRequest {
+public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest<EvaluateLabelsAndPoliciesJobResponse> {
 	
     /**
      * The request for the EvaluateLabelsAndPoliciesJobResponse
@@ -29,7 +31,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EvaluateLabelsAndPoliciesJobResponseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EvaluateLabelsAndPoliciesJobResponseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EvaluateLabelsAndPoliciesJobResponse.class);
     }
 
@@ -38,7 +40,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void get(@Nonnull final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @return the EvaluateLabelsAndPoliciesJobResponse from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EvaluateLabelsAndPoliciesJobResponse get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void delete(@Nonnull final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param sourceEvaluateLabelsAndPoliciesJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void patch(@Nonnull final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse, @Nonnull final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.PATCH, callback, sourceEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -87,7 +90,8 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @return the updated EvaluateLabelsAndPoliciesJobResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EvaluateLabelsAndPoliciesJobResponse patch(final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse) throws ClientException {
+    @Nullable
+    public EvaluateLabelsAndPoliciesJobResponse patch(@Nonnull final EvaluateLabelsAndPoliciesJobResponse sourceEvaluateLabelsAndPoliciesJobResponse) throws ClientException {
         return send(HttpMethod.PATCH, sourceEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -97,7 +101,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param newEvaluateLabelsAndPoliciesJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void post(@Nonnull final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, @Nonnull final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.POST, callback, newEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -108,7 +112,8 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @return the created EvaluateLabelsAndPoliciesJobResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EvaluateLabelsAndPoliciesJobResponse post(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse) throws ClientException {
+    @Nullable
+    public EvaluateLabelsAndPoliciesJobResponse post(@Nonnull final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse) throws ClientException {
         return send(HttpMethod.POST, newEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -118,7 +123,7 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param newEvaluateLabelsAndPoliciesJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
+    public void put(@Nonnull final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse, @Nonnull final ICallback<? super EvaluateLabelsAndPoliciesJobResponse> callback) {
         send(HttpMethod.PUT, callback, newEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -129,7 +134,8 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @return the created EvaluateLabelsAndPoliciesJobResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EvaluateLabelsAndPoliciesJobResponse put(final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse) throws ClientException {
+    @Nullable
+    public EvaluateLabelsAndPoliciesJobResponse put(@Nonnull final EvaluateLabelsAndPoliciesJobResponse newEvaluateLabelsAndPoliciesJobResponse) throws ClientException {
         return send(HttpMethod.PUT, newEvaluateLabelsAndPoliciesJobResponse);
     }
 
@@ -139,9 +145,10 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-     public IEvaluateLabelsAndPoliciesJobResponseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EvaluateLabelsAndPoliciesJobResponseRequest)this;
+     @Nonnull
+     public EvaluateLabelsAndPoliciesJobResponseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EvaluateLabelsAndPoliciesJobResponseRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-     public IEvaluateLabelsAndPoliciesJobResponseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EvaluateLabelsAndPoliciesJobResponseRequest)this;
+     @Nonnull
+     public EvaluateLabelsAndPoliciesJobResponseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

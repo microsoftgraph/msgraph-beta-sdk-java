@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionResponse;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed App Registration Collection With References Page.
  */
-public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseCollectionPage<ManagedAppRegistration, IManagedAppRegistrationCollectionWithReferencesRequestBuilder> implements IManagedAppRegistrationCollectionWithReferencesPage {
+public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseCollectionPage<ManagedAppRegistration, ManagedAppRegistrationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ManagedAppRegistration
@@ -35,7 +37,17 @@ public class ManagedAppRegistrationCollectionWithReferencesPage extends BaseColl
      * @param response the serialized ManagedAppRegistrationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedAppRegistrationCollectionWithReferencesPage(final ManagedAppRegistrationCollectionResponse response, final IManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
+    public ManagedAppRegistrationCollectionWithReferencesPage(@Nonnull final ManagedAppRegistrationCollectionResponse response, @Nullable final ManagedAppRegistrationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for ManagedAppRegistration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedAppRegistrationCollectionWithReferencesPage(@Nonnull final java.util.List<ManagedAppRegistration> pageContents, @Nullable final ManagedAppRegistrationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

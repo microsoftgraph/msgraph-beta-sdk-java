@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppInstallSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Install Summary Request.
  */
-public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobileAppInstallSummaryRequest {
+public class MobileAppInstallSummaryRequest extends BaseRequest<MobileAppInstallSummary> {
 	
     /**
      * The request for the MobileAppInstallSummary
@@ -29,7 +31,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppInstallSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppInstallSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppInstallSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppInstallSummary> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @return the MobileAppInstallSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppInstallSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppInstallSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param sourceMobileAppInstallSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppInstallSummary sourceMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback) {
+    public void patch(@Nonnull final MobileAppInstallSummary sourceMobileAppInstallSummary, @Nonnull final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppInstallSummary);
     }
 
@@ -87,7 +90,8 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @return the updated MobileAppInstallSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppInstallSummary patch(final MobileAppInstallSummary sourceMobileAppInstallSummary) throws ClientException {
+    @Nullable
+    public MobileAppInstallSummary patch(@Nonnull final MobileAppInstallSummary sourceMobileAppInstallSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppInstallSummary);
     }
 
@@ -97,7 +101,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param newMobileAppInstallSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback) {
+    public void post(@Nonnull final MobileAppInstallSummary newMobileAppInstallSummary, @Nonnull final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.POST, callback, newMobileAppInstallSummary);
     }
 
@@ -108,7 +112,8 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @return the created MobileAppInstallSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppInstallSummary post(final MobileAppInstallSummary newMobileAppInstallSummary) throws ClientException {
+    @Nullable
+    public MobileAppInstallSummary post(@Nonnull final MobileAppInstallSummary newMobileAppInstallSummary) throws ClientException {
         return send(HttpMethod.POST, newMobileAppInstallSummary);
     }
 
@@ -118,7 +123,7 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param newMobileAppInstallSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppInstallSummary newMobileAppInstallSummary, final ICallback<? super MobileAppInstallSummary> callback) {
+    public void put(@Nonnull final MobileAppInstallSummary newMobileAppInstallSummary, @Nonnull final ICallback<? super MobileAppInstallSummary> callback) {
         send(HttpMethod.PUT, callback, newMobileAppInstallSummary);
     }
 
@@ -129,7 +134,8 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @return the created MobileAppInstallSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppInstallSummary put(final MobileAppInstallSummary newMobileAppInstallSummary) throws ClientException {
+    @Nullable
+    public MobileAppInstallSummary put(@Nonnull final MobileAppInstallSummary newMobileAppInstallSummary) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppInstallSummary);
     }
 
@@ -139,9 +145,10 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppInstallSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppInstallSummaryRequest)this;
+     @Nonnull
+     public MobileAppInstallSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MobileAppInstallSummaryRequest extends BaseRequest implements IMobi
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppInstallSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppInstallSummaryRequest)this;
+     @Nonnull
+     public MobileAppInstallSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

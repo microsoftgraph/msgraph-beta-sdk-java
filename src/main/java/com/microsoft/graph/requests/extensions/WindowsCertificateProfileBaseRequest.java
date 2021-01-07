@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsCertificateProfileBase;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Certificate Profile Base Request.
  */
-public class WindowsCertificateProfileBaseRequest extends BaseRequest implements IWindowsCertificateProfileBaseRequest {
+public class WindowsCertificateProfileBaseRequest extends BaseRequest<WindowsCertificateProfileBase> {
 	
     /**
      * The request for the WindowsCertificateProfileBase
@@ -30,10 +32,10 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public WindowsCertificateProfileBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends WindowsCertificateProfileBase> responseClass) {
+    public WindowsCertificateProfileBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends WindowsCertificateProfileBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsCertificateProfileBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsCertificateProfileBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsCertificateProfileBase.class);
     }
 
@@ -53,7 +55,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsCertificateProfileBase> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @return the WindowsCertificateProfileBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsCertificateProfileBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsCertificateProfileBase> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param sourceWindowsCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
+    public void patch(@Nonnull final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase, @Nonnull final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsCertificateProfileBase);
     }
 
@@ -102,7 +105,8 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @return the updated WindowsCertificateProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsCertificateProfileBase patch(final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase) throws ClientException {
+    @Nullable
+    public WindowsCertificateProfileBase patch(@Nonnull final WindowsCertificateProfileBase sourceWindowsCertificateProfileBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsCertificateProfileBase);
     }
 
@@ -112,7 +116,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param newWindowsCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
+    public void post(@Nonnull final WindowsCertificateProfileBase newWindowsCertificateProfileBase, @Nonnull final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, newWindowsCertificateProfileBase);
     }
 
@@ -123,7 +127,8 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @return the created WindowsCertificateProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsCertificateProfileBase post(final WindowsCertificateProfileBase newWindowsCertificateProfileBase) throws ClientException {
+    @Nullable
+    public WindowsCertificateProfileBase post(@Nonnull final WindowsCertificateProfileBase newWindowsCertificateProfileBase) throws ClientException {
         return send(HttpMethod.POST, newWindowsCertificateProfileBase);
     }
 
@@ -133,7 +138,7 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param newWindowsCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase, final ICallback<? super WindowsCertificateProfileBase> callback) {
+    public void put(@Nonnull final WindowsCertificateProfileBase newWindowsCertificateProfileBase, @Nonnull final ICallback<? super WindowsCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, newWindowsCertificateProfileBase);
     }
 
@@ -144,7 +149,8 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @return the created WindowsCertificateProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsCertificateProfileBase put(final WindowsCertificateProfileBase newWindowsCertificateProfileBase) throws ClientException {
+    @Nullable
+    public WindowsCertificateProfileBase put(@Nonnull final WindowsCertificateProfileBase newWindowsCertificateProfileBase) throws ClientException {
         return send(HttpMethod.PUT, newWindowsCertificateProfileBase);
     }
 
@@ -154,9 +160,10 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsCertificateProfileBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsCertificateProfileBaseRequest)this;
+     @Nonnull
+     public WindowsCertificateProfileBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class WindowsCertificateProfileBaseRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsCertificateProfileBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsCertificateProfileBaseRequest)this;
+     @Nonnull
+     public WindowsCertificateProfileBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintService;
-import com.microsoft.graph.requests.extensions.IPrintServiceEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintServiceEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintServiceEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintServiceEndpointRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Print Service Request Builder.
  */
-public class PrintServiceRequestBuilder extends BaseRequestBuilder implements IPrintServiceRequestBuilder {
+public class PrintServiceRequestBuilder extends BaseRequestBuilder<PrintService> {
 
     /**
      * The request builder for the PrintService
@@ -32,7 +32,7 @@ public class PrintServiceRequestBuilder extends BaseRequestBuilder implements IP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintServiceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintServiceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class PrintServiceRequestBuilder extends BaseRequestBuilder implements IP
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrintServiceRequest instance
+     * @return the PrintServiceRequest instance
      */
-    public IPrintServiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrintServiceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class PrintServiceRequestBuilder extends BaseRequestBuilder implements IP
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrintServiceRequest instance
+     * @return the PrintServiceRequest instance
      */
-    public IPrintServiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrintServiceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrintServiceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPrintServiceEndpointCollectionRequestBuilder endpoints() {
+    /**
+     *  Gets a request builder for the PrintServiceEndpoint collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrintServiceEndpointCollectionRequestBuilder endpoints() {
         return new PrintServiceEndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints"), getClient(), null);
     }
 
-    public IPrintServiceEndpointRequestBuilder endpoints(final String id) {
+    /**
+     * Gets a request builder for the PrintServiceEndpoint item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrintServiceEndpointRequestBuilder endpoints(@Nonnull final String id) {
         return new PrintServiceEndpointRequestBuilder(getRequestUrlWithAdditionalSegment("endpoints") + "/" + id, getClient(), null);
     }
 }

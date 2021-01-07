@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10EnterpriseModernAppManagementConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Enterprise Modern App Management Configuration Request.
  */
-public class Windows10EnterpriseModernAppManagementConfigurationRequest extends BaseRequest implements IWindows10EnterpriseModernAppManagementConfigurationRequest {
+public class Windows10EnterpriseModernAppManagementConfigurationRequest extends BaseRequest<Windows10EnterpriseModernAppManagementConfiguration> {
 	
     /**
      * The request for the Windows10EnterpriseModernAppManagementConfiguration
@@ -29,7 +31,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EnterpriseModernAppManagementConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10EnterpriseModernAppManagementConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10EnterpriseModernAppManagementConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return the Windows10EnterpriseModernAppManagementConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10EnterpriseModernAppManagementConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param sourceWindows10EnterpriseModernAppManagementConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void patch(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration, @Nonnull final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return the updated Windows10EnterpriseModernAppManagementConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EnterpriseModernAppManagementConfiguration patch(final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EnterpriseModernAppManagementConfiguration patch(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration sourceWindows10EnterpriseModernAppManagementConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param newWindows10EnterpriseModernAppManagementConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void post(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, @Nonnull final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return the created Windows10EnterpriseModernAppManagementConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EnterpriseModernAppManagementConfiguration post(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EnterpriseModernAppManagementConfiguration post(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param newWindows10EnterpriseModernAppManagementConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
+    public void put(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration, @Nonnull final ICallback<? super Windows10EnterpriseModernAppManagementConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @return the created Windows10EnterpriseModernAppManagementConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EnterpriseModernAppManagementConfiguration put(final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EnterpriseModernAppManagementConfiguration put(@Nonnull final Windows10EnterpriseModernAppManagementConfiguration newWindows10EnterpriseModernAppManagementConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindows10EnterpriseModernAppManagementConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10EnterpriseModernAppManagementConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10EnterpriseModernAppManagementConfigurationRequest)this;
+     @Nonnull
+     public Windows10EnterpriseModernAppManagementConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10EnterpriseModernAppManagementConfigurationRequest extends 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10EnterpriseModernAppManagementConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10EnterpriseModernAppManagementConfigurationRequest)this;
+     @Nonnull
+     public Windows10EnterpriseModernAppManagementConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

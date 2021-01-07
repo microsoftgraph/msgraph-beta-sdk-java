@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Log Collection Response Request.
  */
-public class DeviceLogCollectionResponseRequest extends BaseRequest implements IDeviceLogCollectionResponseRequest {
+public class DeviceLogCollectionResponseRequest extends BaseRequest<DeviceLogCollectionResponse> {
 	
     /**
      * The request for the DeviceLogCollectionResponse
@@ -29,7 +31,7 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceLogCollectionResponseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceLogCollectionResponseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceLogCollectionResponse.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceLogCollectionResponse> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceLogCollectionResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @return the DeviceLogCollectionResponse from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceLogCollectionResponse get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceLogCollectionResponse> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceLogCollectionResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @param sourceDeviceLogCollectionResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceLogCollectionResponse sourceDeviceLogCollectionResponse, final ICallback<? super DeviceLogCollectionResponse> callback) {
+    public void patch(@Nonnull final DeviceLogCollectionResponse sourceDeviceLogCollectionResponse, @Nonnull final ICallback<? super DeviceLogCollectionResponse> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceLogCollectionResponse);
     }
 
@@ -87,7 +90,8 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @return the updated DeviceLogCollectionResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceLogCollectionResponse patch(final DeviceLogCollectionResponse sourceDeviceLogCollectionResponse) throws ClientException {
+    @Nullable
+    public DeviceLogCollectionResponse patch(@Nonnull final DeviceLogCollectionResponse sourceDeviceLogCollectionResponse) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceLogCollectionResponse);
     }
 
@@ -97,7 +101,7 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @param newDeviceLogCollectionResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<? super DeviceLogCollectionResponse> callback) {
+    public void post(@Nonnull final DeviceLogCollectionResponse newDeviceLogCollectionResponse, @Nonnull final ICallback<? super DeviceLogCollectionResponse> callback) {
         send(HttpMethod.POST, callback, newDeviceLogCollectionResponse);
     }
 
@@ -108,7 +112,8 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @return the created DeviceLogCollectionResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceLogCollectionResponse post(final DeviceLogCollectionResponse newDeviceLogCollectionResponse) throws ClientException {
+    @Nullable
+    public DeviceLogCollectionResponse post(@Nonnull final DeviceLogCollectionResponse newDeviceLogCollectionResponse) throws ClientException {
         return send(HttpMethod.POST, newDeviceLogCollectionResponse);
     }
 
@@ -118,7 +123,7 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @param newDeviceLogCollectionResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceLogCollectionResponse newDeviceLogCollectionResponse, final ICallback<? super DeviceLogCollectionResponse> callback) {
+    public void put(@Nonnull final DeviceLogCollectionResponse newDeviceLogCollectionResponse, @Nonnull final ICallback<? super DeviceLogCollectionResponse> callback) {
         send(HttpMethod.PUT, callback, newDeviceLogCollectionResponse);
     }
 
@@ -129,7 +134,8 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @return the created DeviceLogCollectionResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceLogCollectionResponse put(final DeviceLogCollectionResponse newDeviceLogCollectionResponse) throws ClientException {
+    @Nullable
+    public DeviceLogCollectionResponse put(@Nonnull final DeviceLogCollectionResponse newDeviceLogCollectionResponse) throws ClientException {
         return send(HttpMethod.PUT, newDeviceLogCollectionResponse);
     }
 
@@ -139,9 +145,10 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceLogCollectionResponseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceLogCollectionResponseRequest)this;
+     @Nonnull
+     public DeviceLogCollectionResponseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceLogCollectionResponseRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceLogCollectionResponseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceLogCollectionResponseRequest)this;
+     @Nonnull
+     public DeviceLogCollectionResponseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

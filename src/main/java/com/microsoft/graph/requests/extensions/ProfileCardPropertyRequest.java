@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ProfileCardProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Profile Card Property Request.
  */
-public class ProfileCardPropertyRequest extends BaseRequest implements IProfileCardPropertyRequest {
+public class ProfileCardPropertyRequest extends BaseRequest<ProfileCardProperty> {
 	
     /**
      * The request for the ProfileCardProperty
@@ -29,7 +31,7 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProfileCardPropertyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProfileCardPropertyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProfileCardProperty.class);
     }
 
@@ -38,7 +40,7 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ProfileCardProperty> callback) {
+    public void get(@Nonnull final ICallback<? super ProfileCardProperty> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @return the ProfileCardProperty from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ProfileCardProperty get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ProfileCardProperty> callback) {
+    public void delete(@Nonnull final ICallback<? super ProfileCardProperty> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @param sourceProfileCardProperty the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProfileCardProperty sourceProfileCardProperty, final ICallback<? super ProfileCardProperty> callback) {
+    public void patch(@Nonnull final ProfileCardProperty sourceProfileCardProperty, @Nonnull final ICallback<? super ProfileCardProperty> callback) {
         send(HttpMethod.PATCH, callback, sourceProfileCardProperty);
     }
 
@@ -87,7 +90,8 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @return the updated ProfileCardProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProfileCardProperty patch(final ProfileCardProperty sourceProfileCardProperty) throws ClientException {
+    @Nullable
+    public ProfileCardProperty patch(@Nonnull final ProfileCardProperty sourceProfileCardProperty) throws ClientException {
         return send(HttpMethod.PATCH, sourceProfileCardProperty);
     }
 
@@ -97,7 +101,7 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @param newProfileCardProperty the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProfileCardProperty newProfileCardProperty, final ICallback<? super ProfileCardProperty> callback) {
+    public void post(@Nonnull final ProfileCardProperty newProfileCardProperty, @Nonnull final ICallback<? super ProfileCardProperty> callback) {
         send(HttpMethod.POST, callback, newProfileCardProperty);
     }
 
@@ -108,7 +112,8 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @return the created ProfileCardProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProfileCardProperty post(final ProfileCardProperty newProfileCardProperty) throws ClientException {
+    @Nullable
+    public ProfileCardProperty post(@Nonnull final ProfileCardProperty newProfileCardProperty) throws ClientException {
         return send(HttpMethod.POST, newProfileCardProperty);
     }
 
@@ -118,7 +123,7 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @param newProfileCardProperty the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProfileCardProperty newProfileCardProperty, final ICallback<? super ProfileCardProperty> callback) {
+    public void put(@Nonnull final ProfileCardProperty newProfileCardProperty, @Nonnull final ICallback<? super ProfileCardProperty> callback) {
         send(HttpMethod.PUT, callback, newProfileCardProperty);
     }
 
@@ -129,7 +134,8 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @return the created ProfileCardProperty
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProfileCardProperty put(final ProfileCardProperty newProfileCardProperty) throws ClientException {
+    @Nullable
+    public ProfileCardProperty put(@Nonnull final ProfileCardProperty newProfileCardProperty) throws ClientException {
         return send(HttpMethod.PUT, newProfileCardProperty);
     }
 
@@ -139,9 +145,10 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @param value the select clause
      * @return the updated request
      */
-     public IProfileCardPropertyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ProfileCardPropertyRequest)this;
+     @Nonnull
+     public ProfileCardPropertyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ProfileCardPropertyRequest extends BaseRequest implements IProfileC
      * @param value the expand clause
      * @return the updated request
      */
-     public IProfileCardPropertyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProfileCardPropertyRequest)this;
+     @Nonnull
+     public ProfileCardPropertyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

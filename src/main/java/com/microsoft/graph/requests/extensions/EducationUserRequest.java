@@ -9,26 +9,19 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationUser;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationRubricCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -38,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education User Request.
  */
-public class EducationUserRequest extends BaseRequest implements IEducationUserRequest {
+public class EducationUserRequest extends BaseRequest<EducationUser> {
 	
     /**
      * The request for the EducationUser
@@ -47,7 +40,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationUserRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationUserRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationUser.class);
     }
 
@@ -56,7 +49,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationUser> callback) {
+    public void get(@Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -66,6 +59,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @return the EducationUser from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationUser get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -75,7 +69,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationUser> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -94,7 +88,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param sourceEducationUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationUser sourceEducationUser, final ICallback<? super EducationUser> callback) {
+    public void patch(@Nonnull final EducationUser sourceEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationUser);
     }
 
@@ -105,7 +99,8 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @return the updated EducationUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationUser patch(final EducationUser sourceEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser patch(@Nonnull final EducationUser sourceEducationUser) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationUser);
     }
 
@@ -115,7 +110,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param newEducationUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
+    public void post(@Nonnull final EducationUser newEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.POST, callback, newEducationUser);
     }
 
@@ -126,7 +121,8 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @return the created EducationUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationUser post(final EducationUser newEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser post(@Nonnull final EducationUser newEducationUser) throws ClientException {
         return send(HttpMethod.POST, newEducationUser);
     }
 
@@ -136,7 +132,7 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param newEducationUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationUser newEducationUser, final ICallback<? super EducationUser> callback) {
+    public void put(@Nonnull final EducationUser newEducationUser, @Nonnull final ICallback<? super EducationUser> callback) {
         send(HttpMethod.PUT, callback, newEducationUser);
     }
 
@@ -147,7 +143,8 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @return the created EducationUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationUser put(final EducationUser newEducationUser) throws ClientException {
+    @Nullable
+    public EducationUser put(@Nonnull final EducationUser newEducationUser) throws ClientException {
         return send(HttpMethod.PUT, newEducationUser);
     }
 
@@ -157,9 +154,10 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationUserRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationUserRequest)this;
+     @Nonnull
+     public EducationUserRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -168,9 +166,10 @@ public class EducationUserRequest extends BaseRequest implements IEducationUserR
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationUserRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationUserRequest)this;
+     @Nonnull
+     public EducationUserRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

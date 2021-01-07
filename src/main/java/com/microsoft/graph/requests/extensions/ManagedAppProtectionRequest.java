@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ManagedAppProtection;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Protection Request.
  */
-public class ManagedAppProtectionRequest extends BaseRequest implements IManagedAppProtectionRequest {
+public class ManagedAppProtectionRequest extends BaseRequest<ManagedAppProtection> {
 	
     /**
      * The request for the ManagedAppProtection
@@ -31,10 +33,10 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ManagedAppProtectionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ManagedAppProtection> responseClass) {
+    public ManagedAppProtectionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ManagedAppProtection> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -45,7 +47,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppProtection.class);
     }
 
@@ -54,7 +56,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppProtection> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +66,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @return the ManagedAppProtection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppProtection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +76,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppProtection> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +95,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param sourceManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppProtection sourceManagedAppProtection, final ICallback<? super ManagedAppProtection> callback) {
+    public void patch(@Nonnull final ManagedAppProtection sourceManagedAppProtection, @Nonnull final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppProtection);
     }
 
@@ -103,7 +106,8 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @return the updated ManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppProtection patch(final ManagedAppProtection sourceManagedAppProtection) throws ClientException {
+    @Nullable
+    public ManagedAppProtection patch(@Nonnull final ManagedAppProtection sourceManagedAppProtection) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppProtection);
     }
 
@@ -113,7 +117,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param newManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppProtection newManagedAppProtection, final ICallback<? super ManagedAppProtection> callback) {
+    public void post(@Nonnull final ManagedAppProtection newManagedAppProtection, @Nonnull final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newManagedAppProtection);
     }
 
@@ -124,7 +128,8 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @return the created ManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppProtection post(final ManagedAppProtection newManagedAppProtection) throws ClientException {
+    @Nullable
+    public ManagedAppProtection post(@Nonnull final ManagedAppProtection newManagedAppProtection) throws ClientException {
         return send(HttpMethod.POST, newManagedAppProtection);
     }
 
@@ -134,7 +139,7 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param newManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppProtection newManagedAppProtection, final ICallback<? super ManagedAppProtection> callback) {
+    public void put(@Nonnull final ManagedAppProtection newManagedAppProtection, @Nonnull final ICallback<? super ManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newManagedAppProtection);
     }
 
@@ -145,7 +150,8 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @return the created ManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppProtection put(final ManagedAppProtection newManagedAppProtection) throws ClientException {
+    @Nullable
+    public ManagedAppProtection put(@Nonnull final ManagedAppProtection newManagedAppProtection) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppProtection);
     }
 
@@ -155,9 +161,10 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppProtectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppProtectionRequest)this;
+     @Nonnull
+     public ManagedAppProtectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +173,10 @@ public class ManagedAppProtectionRequest extends BaseRequest implements IManaged
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppProtectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppProtectionRequest)this;
+     @Nonnull
+     public ManagedAppProtectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

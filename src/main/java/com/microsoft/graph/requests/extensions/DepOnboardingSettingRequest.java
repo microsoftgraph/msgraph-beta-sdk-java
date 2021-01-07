@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DepOnboardingSetting;
-import com.microsoft.graph.requests.extensions.IEnrollmentProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedAppleDeviceIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.DepIOSEnrollmentProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.DepMacOSEnrollmentProfileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Dep Onboarding Setting Request.
  */
-public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnboardingSettingRequest {
+public class DepOnboardingSettingRequest extends BaseRequest<DepOnboardingSetting> {
 	
     /**
      * The request for the DepOnboardingSetting
@@ -41,7 +37,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DepOnboardingSettingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DepOnboardingSettingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DepOnboardingSetting.class);
     }
 
@@ -50,7 +46,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DepOnboardingSetting> callback) {
+    public void get(@Nonnull final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @return the DepOnboardingSetting from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DepOnboardingSetting get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DepOnboardingSetting> callback) {
+    public void delete(@Nonnull final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param sourceDepOnboardingSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DepOnboardingSetting sourceDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback) {
+    public void patch(@Nonnull final DepOnboardingSetting sourceDepOnboardingSetting, @Nonnull final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.PATCH, callback, sourceDepOnboardingSetting);
     }
 
@@ -99,7 +96,8 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @return the updated DepOnboardingSetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepOnboardingSetting patch(final DepOnboardingSetting sourceDepOnboardingSetting) throws ClientException {
+    @Nullable
+    public DepOnboardingSetting patch(@Nonnull final DepOnboardingSetting sourceDepOnboardingSetting) throws ClientException {
         return send(HttpMethod.PATCH, sourceDepOnboardingSetting);
     }
 
@@ -109,7 +107,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param newDepOnboardingSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback) {
+    public void post(@Nonnull final DepOnboardingSetting newDepOnboardingSetting, @Nonnull final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.POST, callback, newDepOnboardingSetting);
     }
 
@@ -120,7 +118,8 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @return the created DepOnboardingSetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepOnboardingSetting post(final DepOnboardingSetting newDepOnboardingSetting) throws ClientException {
+    @Nullable
+    public DepOnboardingSetting post(@Nonnull final DepOnboardingSetting newDepOnboardingSetting) throws ClientException {
         return send(HttpMethod.POST, newDepOnboardingSetting);
     }
 
@@ -130,7 +129,7 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param newDepOnboardingSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DepOnboardingSetting newDepOnboardingSetting, final ICallback<? super DepOnboardingSetting> callback) {
+    public void put(@Nonnull final DepOnboardingSetting newDepOnboardingSetting, @Nonnull final ICallback<? super DepOnboardingSetting> callback) {
         send(HttpMethod.PUT, callback, newDepOnboardingSetting);
     }
 
@@ -141,7 +140,8 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @return the created DepOnboardingSetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepOnboardingSetting put(final DepOnboardingSetting newDepOnboardingSetting) throws ClientException {
+    @Nullable
+    public DepOnboardingSetting put(@Nonnull final DepOnboardingSetting newDepOnboardingSetting) throws ClientException {
         return send(HttpMethod.PUT, newDepOnboardingSetting);
     }
 
@@ -151,9 +151,10 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param value the select clause
      * @return the updated request
      */
-     public IDepOnboardingSettingRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DepOnboardingSettingRequest)this;
+     @Nonnull
+     public DepOnboardingSettingRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class DepOnboardingSettingRequest extends BaseRequest implements IDepOnbo
      * @param value the expand clause
      * @return the updated request
      */
-     public IDepOnboardingSettingRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DepOnboardingSettingRequest)this;
+     @Nonnull
+     public DepOnboardingSettingRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

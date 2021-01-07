@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetricHistory;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Experience Analytics Metric History Request Builder.
  */
-public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequestBuilder implements IUserExperienceAnalyticsMetricHistoryRequestBuilder {
+public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequestBuilder<UserExperienceAnalyticsMetricHistory> {
 
     /**
      * The request builder for the UserExperienceAnalyticsMetricHistory
@@ -30,7 +31,7 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsMetricHistoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsMetricHistoryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsMetricHistoryRequest instance
+     * @return the UserExperienceAnalyticsMetricHistoryRequest instance
      */
-    public IUserExperienceAnalyticsMetricHistoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsMetricHistoryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsMetricHistoryRequest instance
+     * @return the UserExperienceAnalyticsMetricHistoryRequest instance
      */
-    public IUserExperienceAnalyticsMetricHistoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsMetricHistoryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class UserExperienceAnalyticsMetricHistoryRequestBuilder extends BaseRequ
     /**
      * Gets the request builder for UserExperienceAnalyticsMetric
      *
-     * @return the IUserExperienceAnalyticsMetricWithReferenceRequestBuilder instance
+     * @return the UserExperienceAnalyticsMetricWithReferenceRequestBuilder instance
      */
-    public IUserExperienceAnalyticsMetricWithReferenceRequestBuilder userExperienceAnalyticsMetric() {
+    @Nonnull
+    public UserExperienceAnalyticsMetricWithReferenceRequestBuilder userExperienceAnalyticsMetric() {
         return new UserExperienceAnalyticsMetricWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetric"), getClient(), null);
     }
 }

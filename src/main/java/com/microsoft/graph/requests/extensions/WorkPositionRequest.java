@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkPosition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Work Position Request.
  */
-public class WorkPositionRequest extends BaseRequest implements IWorkPositionRequest {
+public class WorkPositionRequest extends BaseRequest<WorkPosition> {
 	
     /**
      * The request for the WorkPosition
@@ -29,7 +31,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkPositionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkPositionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkPosition.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkPosition> callback) {
+    public void get(@Nonnull final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @return the WorkPosition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkPosition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkPosition> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param sourceWorkPosition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkPosition sourceWorkPosition, final ICallback<? super WorkPosition> callback) {
+    public void patch(@Nonnull final WorkPosition sourceWorkPosition, @Nonnull final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkPosition);
     }
 
@@ -87,7 +90,8 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @return the updated WorkPosition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkPosition patch(final WorkPosition sourceWorkPosition) throws ClientException {
+    @Nullable
+    public WorkPosition patch(@Nonnull final WorkPosition sourceWorkPosition) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkPosition);
     }
 
@@ -97,7 +101,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param newWorkPosition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkPosition newWorkPosition, final ICallback<? super WorkPosition> callback) {
+    public void post(@Nonnull final WorkPosition newWorkPosition, @Nonnull final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.POST, callback, newWorkPosition);
     }
 
@@ -108,7 +112,8 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @return the created WorkPosition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkPosition post(final WorkPosition newWorkPosition) throws ClientException {
+    @Nullable
+    public WorkPosition post(@Nonnull final WorkPosition newWorkPosition) throws ClientException {
         return send(HttpMethod.POST, newWorkPosition);
     }
 
@@ -118,7 +123,7 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param newWorkPosition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkPosition newWorkPosition, final ICallback<? super WorkPosition> callback) {
+    public void put(@Nonnull final WorkPosition newWorkPosition, @Nonnull final ICallback<? super WorkPosition> callback) {
         send(HttpMethod.PUT, callback, newWorkPosition);
     }
 
@@ -129,7 +134,8 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @return the created WorkPosition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkPosition put(final WorkPosition newWorkPosition) throws ClientException {
+    @Nullable
+    public WorkPosition put(@Nonnull final WorkPosition newWorkPosition) throws ClientException {
         return send(HttpMethod.PUT, newWorkPosition);
     }
 
@@ -139,9 +145,10 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkPositionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkPositionRequest)this;
+     @Nonnull
+     public WorkPositionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WorkPositionRequest extends BaseRequest implements IWorkPositionReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkPositionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkPositionRequest)this;
+     @Nonnull
+     public WorkPositionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

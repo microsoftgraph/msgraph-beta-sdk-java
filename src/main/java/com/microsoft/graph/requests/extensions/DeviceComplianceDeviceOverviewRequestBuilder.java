@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceDeviceOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Compliance Device Overview Request Builder.
  */
-public class DeviceComplianceDeviceOverviewRequestBuilder extends BaseRequestBuilder implements IDeviceComplianceDeviceOverviewRequestBuilder {
+public class DeviceComplianceDeviceOverviewRequestBuilder extends BaseRequestBuilder<DeviceComplianceDeviceOverview> {
 
     /**
      * The request builder for the DeviceComplianceDeviceOverview
@@ -28,7 +30,7 @@ public class DeviceComplianceDeviceOverviewRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceDeviceOverviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceDeviceOverviewRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceComplianceDeviceOverviewRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceDeviceOverviewRequest instance
+     * @return the DeviceComplianceDeviceOverviewRequest instance
      */
-    public IDeviceComplianceDeviceOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceComplianceDeviceOverviewRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceComplianceDeviceOverviewRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComplianceDeviceOverviewRequest instance
+     * @return the DeviceComplianceDeviceOverviewRequest instance
      */
-    public IDeviceComplianceDeviceOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceComplianceDeviceOverviewRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceComplianceDeviceOverviewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

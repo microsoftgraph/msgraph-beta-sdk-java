@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ActiveDirectoryWindowsAutopilotDeploymentProfile;
-import com.microsoft.graph.requests.extensions.IWindowsDomainJoinConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDomainJoinConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Active Directory Windows Autopilot Deployment Profile Request.
  */
-public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends BaseRequest implements IActiveDirectoryWindowsAutopilotDeploymentProfileRequest {
+public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends BaseRequest<ActiveDirectoryWindowsAutopilotDeploymentProfile> {
 	
     /**
      * The request for the ActiveDirectoryWindowsAutopilotDeploymentProfile
@@ -31,7 +32,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActiveDirectoryWindowsAutopilotDeploymentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActiveDirectoryWindowsAutopilotDeploymentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActiveDirectoryWindowsAutopilotDeploymentProfile.class);
     }
 
@@ -40,7 +41,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @return the ActiveDirectoryWindowsAutopilotDeploymentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ActiveDirectoryWindowsAutopilotDeploymentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param sourceActiveDirectoryWindowsAutopilotDeploymentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void patch(@Nonnull final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile, @Nonnull final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -89,7 +91,8 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @return the updated ActiveDirectoryWindowsAutopilotDeploymentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActiveDirectoryWindowsAutopilotDeploymentProfile patch(final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException {
+    @Nullable
+    public ActiveDirectoryWindowsAutopilotDeploymentProfile patch(@Nonnull final ActiveDirectoryWindowsAutopilotDeploymentProfile sourceActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -99,7 +102,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void post(@Nonnull final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, @Nonnull final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.POST, callback, newActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -110,7 +113,8 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @return the created ActiveDirectoryWindowsAutopilotDeploymentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActiveDirectoryWindowsAutopilotDeploymentProfile post(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException {
+    @Nullable
+    public ActiveDirectoryWindowsAutopilotDeploymentProfile post(@Nonnull final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException {
         return send(HttpMethod.POST, newActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -120,7 +124,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param newActiveDirectoryWindowsAutopilotDeploymentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
+    public void put(@Nonnull final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile, @Nonnull final ICallback<? super ActiveDirectoryWindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PUT, callback, newActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -131,7 +135,8 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @return the created ActiveDirectoryWindowsAutopilotDeploymentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActiveDirectoryWindowsAutopilotDeploymentProfile put(final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException {
+    @Nullable
+    public ActiveDirectoryWindowsAutopilotDeploymentProfile put(@Nonnull final ActiveDirectoryWindowsAutopilotDeploymentProfile newActiveDirectoryWindowsAutopilotDeploymentProfile) throws ClientException {
         return send(HttpMethod.PUT, newActiveDirectoryWindowsAutopilotDeploymentProfile);
     }
 
@@ -141,9 +146,10 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param value the select clause
      * @return the updated request
      */
-     public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ActiveDirectoryWindowsAutopilotDeploymentProfileRequest)this;
+     @Nonnull
+     public ActiveDirectoryWindowsAutopilotDeploymentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequest extends Bas
      * @param value the expand clause
      * @return the updated request
      */
-     public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ActiveDirectoryWindowsAutopilotDeploymentProfileRequest)this;
+     @Nonnull
+     public ActiveDirectoryWindowsAutopilotDeploymentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

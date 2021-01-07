@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailAppUsageUserDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Email App Usage User Detail Request Builder.
  */
-public class EmailAppUsageUserDetailRequestBuilder extends BaseRequestBuilder implements IEmailAppUsageUserDetailRequestBuilder {
+public class EmailAppUsageUserDetailRequestBuilder extends BaseRequestBuilder<EmailAppUsageUserDetail> {
 
     /**
      * The request builder for the EmailAppUsageUserDetail
@@ -28,7 +30,7 @@ public class EmailAppUsageUserDetailRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmailAppUsageUserDetailRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmailAppUsageUserDetailRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class EmailAppUsageUserDetailRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEmailAppUsageUserDetailRequest instance
+     * @return the EmailAppUsageUserDetailRequest instance
      */
-    public IEmailAppUsageUserDetailRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EmailAppUsageUserDetailRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class EmailAppUsageUserDetailRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEmailAppUsageUserDetailRequest instance
+     * @return the EmailAppUsageUserDetailRequest instance
      */
-    public IEmailAppUsageUserDetailRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EmailAppUsageUserDetailRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EmailAppUsageUserDetailRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

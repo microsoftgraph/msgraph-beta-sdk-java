@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PurchaseInvoice;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.VendorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Purchase Invoice Request Builder.
  */
-public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements IPurchaseInvoiceRequestBuilder {
+public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder<PurchaseInvoice> {
 
     /**
      * The request builder for the PurchaseInvoice
@@ -36,7 +34,7 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PurchaseInvoiceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PurchaseInvoiceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPurchaseInvoiceRequest instance
+     * @return the PurchaseInvoiceRequest instance
      */
-    public IPurchaseInvoiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PurchaseInvoiceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,9 +53,10 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPurchaseInvoiceRequest instance
+     * @return the PurchaseInvoiceRequest instance
      */
-    public IPurchaseInvoiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PurchaseInvoiceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PurchaseInvoiceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -65,29 +65,49 @@ public class PurchaseInvoiceRequestBuilder extends BaseRequestBuilder implements
     /**
      * Gets the request builder for Currency
      *
-     * @return the ICurrencyRequestBuilder instance
+     * @return the CurrencyRequestBuilder instance
      */
-    public ICurrencyRequestBuilder currency() {
+    @Nonnull
+    public CurrencyRequestBuilder currency() {
         return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
-    public IPurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
+    /**
+     *  Gets a request builder for the PurchaseInvoiceLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
         return new PurchaseInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines"), getClient(), null);
     }
 
-    public IPurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(final String id) {
+    /**
+     * Gets a request builder for the PurchaseInvoiceLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(@Nonnull final String id) {
         return new PurchaseInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Vendor
      *
-     * @return the IVendorRequestBuilder instance
+     * @return the VendorRequestBuilder instance
      */
-    public IVendorRequestBuilder vendor() {
+    @Nonnull
+    public VendorRequestBuilder vendor() {
         return new VendorRequestBuilder(getRequestUrlWithAdditionalSegment("vendor"), getClient(), null);
     }
 
-    public IPurchaseInvoicePostRequestBuilder post() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public PurchaseInvoicePostRequestBuilder post() {
         return new PurchaseInvoicePostRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.post"), getClient(), null);
     }
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsUniversalAppX;
-import com.microsoft.graph.requests.extensions.IMobileContainedAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileContainedAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Universal App XRequest Builder.
  */
-public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder implements IWindowsUniversalAppXRequestBuilder {
+public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder<WindowsUniversalAppX> {
 
     /**
      * The request builder for the WindowsUniversalAppX
@@ -32,7 +32,7 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsUniversalAppXRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsUniversalAppXRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsUniversalAppXRequest instance
+     * @return the WindowsUniversalAppXRequest instance
      */
-    public IWindowsUniversalAppXRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsUniversalAppXRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,69 +51,162 @@ public class WindowsUniversalAppXRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsUniversalAppXRequest instance
+     * @return the WindowsUniversalAppXRequest instance
      */
-    public IWindowsUniversalAppXRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsUniversalAppXRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsUniversalAppXRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileAppAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the MobileAppAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppAssignmentCollectionRequestBuilder assignments() {
         return new MobileAppAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IMobileAppAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the MobileAppAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new MobileAppAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IMobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
+    /**
+     *  Gets a request builder for the MobileAppCategory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppCategoryCollectionWithReferencesRequestBuilder categories() {
         return new MobileAppCategoryCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IMobileAppCategoryWithReferenceRequestBuilder categories(final String id) {
+    /**
+     * Gets a request builder for the MobileAppCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppCategoryWithReferenceRequestBuilder categories(@Nonnull final String id) {
         return new MobileAppCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
-    public IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
+    /**
+     *  Gets a request builder for the MobileAppInstallStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
         return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id) {
+    /**
+     * Gets a request builder for the MobileAppInstallStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppInstallStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for MobileAppInstallSummary
      *
-     * @return the IMobileAppInstallSummaryRequestBuilder instance
+     * @return the MobileAppInstallSummaryRequestBuilder instance
      */
-    public IMobileAppInstallSummaryRequestBuilder installSummary() {
+    @Nonnull
+    public MobileAppInstallSummaryRequestBuilder installSummary() {
         return new MobileAppInstallSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("installSummary"), getClient(), null);
     }
-    public IMobileAppRelationshipCollectionRequestBuilder relationships() {
+    /**
+     *  Gets a request builder for the MobileAppRelationship collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppRelationshipCollectionRequestBuilder relationships() {
         return new MobileAppRelationshipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relationships"), getClient(), null);
     }
 
-    public IMobileAppRelationshipRequestBuilder relationships(final String id) {
+    /**
+     * Gets a request builder for the MobileAppRelationship item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppRelationshipRequestBuilder relationships(@Nonnull final String id) {
         return new MobileAppRelationshipRequestBuilder(getRequestUrlWithAdditionalSegment("relationships") + "/" + id, getClient(), null);
     }
-    public IUserAppInstallStatusCollectionRequestBuilder userStatuses() {
+    /**
+     *  Gets a request builder for the UserAppInstallStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserAppInstallStatusCollectionRequestBuilder userStatuses() {
         return new UserAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IUserAppInstallStatusRequestBuilder userStatuses(final String id) {
+    /**
+     * Gets a request builder for the UserAppInstallStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserAppInstallStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new UserAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
-    public IMobileAppContentCollectionRequestBuilder contentVersions() {
+    /**
+     *  Gets a request builder for the MobileAppContent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppContentCollectionRequestBuilder contentVersions() {
         return new MobileAppContentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions"), getClient(), null);
     }
 
-    public IMobileAppContentRequestBuilder contentVersions(final String id) {
+    /**
+     * Gets a request builder for the MobileAppContent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppContentRequestBuilder contentVersions(@Nonnull final String id) {
         return new MobileAppContentRequestBuilder(getRequestUrlWithAdditionalSegment("contentVersions") + "/" + id, getClient(), null);
     }
-    public IMobileContainedAppCollectionRequestBuilder committedContainedApps() {
+    /**
+     *  Gets a request builder for the MobileContainedApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileContainedAppCollectionRequestBuilder committedContainedApps() {
         return new MobileContainedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("committedContainedApps"), getClient(), null);
     }
 
-    public IMobileContainedAppRequestBuilder committedContainedApps(final String id) {
+    /**
+     * Gets a request builder for the MobileContainedApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileContainedAppRequestBuilder committedContainedApps(@Nonnull final String id) {
         return new MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("committedContainedApps") + "/" + id, getClient(), null);
     }
 }

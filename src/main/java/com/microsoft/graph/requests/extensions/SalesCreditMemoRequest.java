@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesCreditMemo;
-import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sales Credit Memo Request.
  */
-public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditMemoRequest {
+public class SalesCreditMemoRequest extends BaseRequest<SalesCreditMemo> {
 	
     /**
      * The request for the SalesCreditMemo
@@ -39,7 +36,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesCreditMemoRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesCreditMemoRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SalesCreditMemo.class);
     }
 
@@ -48,7 +45,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SalesCreditMemo> callback) {
+    public void get(@Nonnull final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +55,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @return the SalesCreditMemo from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SalesCreditMemo get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +65,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SalesCreditMemo> callback) {
+    public void delete(@Nonnull final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +84,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param sourceSalesCreditMemo the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesCreditMemo sourceSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback) {
+    public void patch(@Nonnull final SalesCreditMemo sourceSalesCreditMemo, @Nonnull final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesCreditMemo);
     }
 
@@ -97,7 +95,8 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @return the updated SalesCreditMemo
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesCreditMemo patch(final SalesCreditMemo sourceSalesCreditMemo) throws ClientException {
+    @Nullable
+    public SalesCreditMemo patch(@Nonnull final SalesCreditMemo sourceSalesCreditMemo) throws ClientException {
         return send(HttpMethod.PATCH, sourceSalesCreditMemo);
     }
 
@@ -107,7 +106,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param newSalesCreditMemo the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback) {
+    public void post(@Nonnull final SalesCreditMemo newSalesCreditMemo, @Nonnull final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.POST, callback, newSalesCreditMemo);
     }
 
@@ -118,7 +117,8 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @return the created SalesCreditMemo
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesCreditMemo post(final SalesCreditMemo newSalesCreditMemo) throws ClientException {
+    @Nullable
+    public SalesCreditMemo post(@Nonnull final SalesCreditMemo newSalesCreditMemo) throws ClientException {
         return send(HttpMethod.POST, newSalesCreditMemo);
     }
 
@@ -128,7 +128,7 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param newSalesCreditMemo the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesCreditMemo newSalesCreditMemo, final ICallback<? super SalesCreditMemo> callback) {
+    public void put(@Nonnull final SalesCreditMemo newSalesCreditMemo, @Nonnull final ICallback<? super SalesCreditMemo> callback) {
         send(HttpMethod.PUT, callback, newSalesCreditMemo);
     }
 
@@ -139,7 +139,8 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @return the created SalesCreditMemo
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesCreditMemo put(final SalesCreditMemo newSalesCreditMemo) throws ClientException {
+    @Nullable
+    public SalesCreditMemo put(@Nonnull final SalesCreditMemo newSalesCreditMemo) throws ClientException {
         return send(HttpMethod.PUT, newSalesCreditMemo);
     }
 
@@ -149,9 +150,10 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param value the select clause
      * @return the updated request
      */
-     public ISalesCreditMemoRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SalesCreditMemoRequest)this;
+     @Nonnull
+     public SalesCreditMemoRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +162,10 @@ public class SalesCreditMemoRequest extends BaseRequest implements ISalesCreditM
      * @param value the expand clause
      * @return the updated request
      */
-     public ISalesCreditMemoRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesCreditMemoRequest)this;
+     @Nonnull
+     public SalesCreditMemoRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

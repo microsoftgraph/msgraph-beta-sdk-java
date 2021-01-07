@@ -17,6 +17,8 @@ import com.microsoft.graph.models.extensions.DowngradeJustification;
 import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Information Protection Label Request.
  */
-public class InformationProtectionLabelRequest extends BaseRequest implements IInformationProtectionLabelRequest {
+public class InformationProtectionLabelRequest extends BaseRequest<InformationProtectionLabel> {
 	
     /**
      * The request for the InformationProtectionLabel
@@ -35,7 +37,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionLabelRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InformationProtectionLabelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, InformationProtectionLabel.class);
     }
 
@@ -44,7 +46,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super InformationProtectionLabel> callback) {
+    public void get(@Nonnull final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +56,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @return the InformationProtectionLabel from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public InformationProtectionLabel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +66,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super InformationProtectionLabel> callback) {
+    public void delete(@Nonnull final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +85,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param sourceInformationProtectionLabel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InformationProtectionLabel sourceInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback) {
+    public void patch(@Nonnull final InformationProtectionLabel sourceInformationProtectionLabel, @Nonnull final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.PATCH, callback, sourceInformationProtectionLabel);
     }
 
@@ -93,7 +96,8 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @return the updated InformationProtectionLabel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InformationProtectionLabel patch(final InformationProtectionLabel sourceInformationProtectionLabel) throws ClientException {
+    @Nullable
+    public InformationProtectionLabel patch(@Nonnull final InformationProtectionLabel sourceInformationProtectionLabel) throws ClientException {
         return send(HttpMethod.PATCH, sourceInformationProtectionLabel);
     }
 
@@ -103,7 +107,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param newInformationProtectionLabel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback) {
+    public void post(@Nonnull final InformationProtectionLabel newInformationProtectionLabel, @Nonnull final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.POST, callback, newInformationProtectionLabel);
     }
 
@@ -114,7 +118,8 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @return the created InformationProtectionLabel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InformationProtectionLabel post(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException {
+    @Nullable
+    public InformationProtectionLabel post(@Nonnull final InformationProtectionLabel newInformationProtectionLabel) throws ClientException {
         return send(HttpMethod.POST, newInformationProtectionLabel);
     }
 
@@ -124,7 +129,7 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param newInformationProtectionLabel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InformationProtectionLabel newInformationProtectionLabel, final ICallback<? super InformationProtectionLabel> callback) {
+    public void put(@Nonnull final InformationProtectionLabel newInformationProtectionLabel, @Nonnull final ICallback<? super InformationProtectionLabel> callback) {
         send(HttpMethod.PUT, callback, newInformationProtectionLabel);
     }
 
@@ -135,7 +140,8 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @return the created InformationProtectionLabel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InformationProtectionLabel put(final InformationProtectionLabel newInformationProtectionLabel) throws ClientException {
+    @Nullable
+    public InformationProtectionLabel put(@Nonnull final InformationProtectionLabel newInformationProtectionLabel) throws ClientException {
         return send(HttpMethod.PUT, newInformationProtectionLabel);
     }
 
@@ -145,9 +151,10 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param value the select clause
      * @return the updated request
      */
-     public IInformationProtectionLabelRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InformationProtectionLabelRequest)this;
+     @Nonnull
+     public InformationProtectionLabelRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +163,10 @@ public class InformationProtectionLabelRequest extends BaseRequest implements II
      * @param value the expand clause
      * @return the updated request
      */
-     public IInformationProtectionLabelRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InformationProtectionLabelRequest)this;
+     @Nonnull
+     public InformationProtectionLabelRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

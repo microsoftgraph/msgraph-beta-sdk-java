@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftAuthenticatorAuthenticationMethodTarget;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Microsoft Authenticator Authentication Method Target Request.
  */
-public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends BaseRequest implements IMicrosoftAuthenticatorAuthenticationMethodTargetRequest {
+public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends BaseRequest<MicrosoftAuthenticatorAuthenticationMethodTarget> {
 	
     /**
      * The request for the MicrosoftAuthenticatorAuthenticationMethodTarget
@@ -29,7 +31,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MicrosoftAuthenticatorAuthenticationMethodTargetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MicrosoftAuthenticatorAuthenticationMethodTargetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MicrosoftAuthenticatorAuthenticationMethodTarget.class);
     }
 
@@ -38,7 +40,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
+    public void get(@Nonnull final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @return the MicrosoftAuthenticatorAuthenticationMethodTarget from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MicrosoftAuthenticatorAuthenticationMethodTarget get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
+    public void delete(@Nonnull final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @param sourceMicrosoftAuthenticatorAuthenticationMethodTarget the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MicrosoftAuthenticatorAuthenticationMethodTarget sourceMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
+    public void patch(@Nonnull final MicrosoftAuthenticatorAuthenticationMethodTarget sourceMicrosoftAuthenticatorAuthenticationMethodTarget, @Nonnull final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
         send(HttpMethod.PATCH, callback, sourceMicrosoftAuthenticatorAuthenticationMethodTarget);
     }
 
@@ -87,7 +90,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @return the updated MicrosoftAuthenticatorAuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftAuthenticatorAuthenticationMethodTarget patch(final MicrosoftAuthenticatorAuthenticationMethodTarget sourceMicrosoftAuthenticatorAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public MicrosoftAuthenticatorAuthenticationMethodTarget patch(@Nonnull final MicrosoftAuthenticatorAuthenticationMethodTarget sourceMicrosoftAuthenticatorAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.PATCH, sourceMicrosoftAuthenticatorAuthenticationMethodTarget);
     }
 
@@ -97,7 +101,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @param newMicrosoftAuthenticatorAuthenticationMethodTarget the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
+    public void post(@Nonnull final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, @Nonnull final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
         send(HttpMethod.POST, callback, newMicrosoftAuthenticatorAuthenticationMethodTarget);
     }
 
@@ -108,7 +112,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @return the created MicrosoftAuthenticatorAuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftAuthenticatorAuthenticationMethodTarget post(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public MicrosoftAuthenticatorAuthenticationMethodTarget post(@Nonnull final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.POST, newMicrosoftAuthenticatorAuthenticationMethodTarget);
     }
 
@@ -118,7 +123,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @param newMicrosoftAuthenticatorAuthenticationMethodTarget the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
+    public void put(@Nonnull final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget, @Nonnull final ICallback<? super MicrosoftAuthenticatorAuthenticationMethodTarget> callback) {
         send(HttpMethod.PUT, callback, newMicrosoftAuthenticatorAuthenticationMethodTarget);
     }
 
@@ -129,7 +134,8 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @return the created MicrosoftAuthenticatorAuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftAuthenticatorAuthenticationMethodTarget put(final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public MicrosoftAuthenticatorAuthenticationMethodTarget put(@Nonnull final MicrosoftAuthenticatorAuthenticationMethodTarget newMicrosoftAuthenticatorAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.PUT, newMicrosoftAuthenticatorAuthenticationMethodTarget);
     }
 
@@ -139,9 +145,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @param value the select clause
      * @return the updated request
      */
-     public IMicrosoftAuthenticatorAuthenticationMethodTargetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MicrosoftAuthenticatorAuthenticationMethodTargetRequest)this;
+     @Nonnull
+     public MicrosoftAuthenticatorAuthenticationMethodTargetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequest extends Bas
      * @param value the expand clause
      * @return the updated request
      */
-     public IMicrosoftAuthenticatorAuthenticationMethodTargetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MicrosoftAuthenticatorAuthenticationMethodTargetRequest)this;
+     @Nonnull
+     public MicrosoftAuthenticatorAuthenticationMethodTargetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

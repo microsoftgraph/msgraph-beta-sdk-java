@@ -13,9 +13,11 @@ import com.microsoft.graph.models.extensions.ManagementCondition;
 import com.microsoft.graph.models.generated.DevicePlatformType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IManagementConditionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagementConditionCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ManagementConditionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagementConditionCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ManagementConditionCollectionResponse;
 import com.microsoft.graph.models.extensions.ManagementCondition;
 import com.google.gson.JsonObject;
@@ -28,7 +30,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Management Condition Collection With References Page.
  */
-public class ManagementConditionCollectionWithReferencesPage extends BaseCollectionPage<ManagementCondition, IManagementConditionCollectionWithReferencesRequestBuilder> implements IManagementConditionCollectionWithReferencesPage {
+public class ManagementConditionCollectionWithReferencesPage extends BaseCollectionPage<ManagementCondition, ManagementConditionCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ManagementCondition
@@ -36,7 +38,17 @@ public class ManagementConditionCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized ManagementConditionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagementConditionCollectionWithReferencesPage(final ManagementConditionCollectionResponse response, final IManagementConditionCollectionWithReferencesRequestBuilder builder) {
+    public ManagementConditionCollectionWithReferencesPage(@Nonnull final ManagementConditionCollectionResponse response, @Nullable final ManagementConditionCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for ManagementCondition
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagementConditionCollectionWithReferencesPage(@Nonnull final java.util.List<ManagementCondition> pageContents, @Nullable final ManagementConditionCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

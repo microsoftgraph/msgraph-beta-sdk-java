@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComanagementAuthorityConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Comanagement Authority Configuration Request Builder.
  */
-public class DeviceComanagementAuthorityConfigurationRequestBuilder extends BaseRequestBuilder implements IDeviceComanagementAuthorityConfigurationRequestBuilder {
+public class DeviceComanagementAuthorityConfigurationRequestBuilder extends BaseRequestBuilder<DeviceComanagementAuthorityConfiguration> {
 
     /**
      * The request builder for the DeviceComanagementAuthorityConfiguration
@@ -28,7 +30,7 @@ public class DeviceComanagementAuthorityConfigurationRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComanagementAuthorityConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComanagementAuthorityConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceComanagementAuthorityConfigurationRequestBuilder extends Base
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComanagementAuthorityConfigurationRequest instance
+     * @return the DeviceComanagementAuthorityConfigurationRequest instance
      */
-    public IDeviceComanagementAuthorityConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceComanagementAuthorityConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class DeviceComanagementAuthorityConfigurationRequestBuilder extends Base
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceComanagementAuthorityConfigurationRequest instance
+     * @return the DeviceComanagementAuthorityConfigurationRequest instance
      */
-    public IDeviceComanagementAuthorityConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceComanagementAuthorityConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceComanagementAuthorityConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the EnrollmentConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the EnrollmentConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

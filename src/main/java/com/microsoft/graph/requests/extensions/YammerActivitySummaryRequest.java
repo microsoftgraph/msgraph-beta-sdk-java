@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.YammerActivitySummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Yammer Activity Summary Request.
  */
-public class YammerActivitySummaryRequest extends BaseRequest implements IYammerActivitySummaryRequest {
+public class YammerActivitySummaryRequest extends BaseRequest<YammerActivitySummary> {
 	
     /**
      * The request for the YammerActivitySummary
@@ -29,7 +31,7 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public YammerActivitySummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public YammerActivitySummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, YammerActivitySummary.class);
     }
 
@@ -38,7 +40,7 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super YammerActivitySummary> callback) {
+    public void get(@Nonnull final ICallback<? super YammerActivitySummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @return the YammerActivitySummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public YammerActivitySummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super YammerActivitySummary> callback) {
+    public void delete(@Nonnull final ICallback<? super YammerActivitySummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @param sourceYammerActivitySummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final YammerActivitySummary sourceYammerActivitySummary, final ICallback<? super YammerActivitySummary> callback) {
+    public void patch(@Nonnull final YammerActivitySummary sourceYammerActivitySummary, @Nonnull final ICallback<? super YammerActivitySummary> callback) {
         send(HttpMethod.PATCH, callback, sourceYammerActivitySummary);
     }
 
@@ -87,7 +90,8 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @return the updated YammerActivitySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerActivitySummary patch(final YammerActivitySummary sourceYammerActivitySummary) throws ClientException {
+    @Nullable
+    public YammerActivitySummary patch(@Nonnull final YammerActivitySummary sourceYammerActivitySummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceYammerActivitySummary);
     }
 
@@ -97,7 +101,7 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @param newYammerActivitySummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final YammerActivitySummary newYammerActivitySummary, final ICallback<? super YammerActivitySummary> callback) {
+    public void post(@Nonnull final YammerActivitySummary newYammerActivitySummary, @Nonnull final ICallback<? super YammerActivitySummary> callback) {
         send(HttpMethod.POST, callback, newYammerActivitySummary);
     }
 
@@ -108,7 +112,8 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @return the created YammerActivitySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerActivitySummary post(final YammerActivitySummary newYammerActivitySummary) throws ClientException {
+    @Nullable
+    public YammerActivitySummary post(@Nonnull final YammerActivitySummary newYammerActivitySummary) throws ClientException {
         return send(HttpMethod.POST, newYammerActivitySummary);
     }
 
@@ -118,7 +123,7 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @param newYammerActivitySummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final YammerActivitySummary newYammerActivitySummary, final ICallback<? super YammerActivitySummary> callback) {
+    public void put(@Nonnull final YammerActivitySummary newYammerActivitySummary, @Nonnull final ICallback<? super YammerActivitySummary> callback) {
         send(HttpMethod.PUT, callback, newYammerActivitySummary);
     }
 
@@ -129,7 +134,8 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @return the created YammerActivitySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerActivitySummary put(final YammerActivitySummary newYammerActivitySummary) throws ClientException {
+    @Nullable
+    public YammerActivitySummary put(@Nonnull final YammerActivitySummary newYammerActivitySummary) throws ClientException {
         return send(HttpMethod.PUT, newYammerActivitySummary);
     }
 
@@ -139,9 +145,10 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @param value the select clause
      * @return the updated request
      */
-     public IYammerActivitySummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (YammerActivitySummaryRequest)this;
+     @Nonnull
+     public YammerActivitySummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class YammerActivitySummaryRequest extends BaseRequest implements IYammer
      * @param value the expand clause
      * @return the updated request
      */
-     public IYammerActivitySummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (YammerActivitySummaryRequest)this;
+     @Nonnull
+     public YammerActivitySummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

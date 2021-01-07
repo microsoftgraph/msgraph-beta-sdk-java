@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Imported Device Identity Result Request.
  */
-public class ImportedDeviceIdentityResultRequest extends BaseRequest implements IImportedDeviceIdentityResultRequest {
+public class ImportedDeviceIdentityResultRequest extends BaseRequest<ImportedDeviceIdentityResult> {
 	
     /**
      * The request for the ImportedDeviceIdentityResult
@@ -29,7 +31,7 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedDeviceIdentityResultRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ImportedDeviceIdentityResultRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ImportedDeviceIdentityResult.class);
     }
 
@@ -38,7 +40,7 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ImportedDeviceIdentityResult> callback) {
+    public void get(@Nonnull final ICallback<? super ImportedDeviceIdentityResult> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @return the ImportedDeviceIdentityResult from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ImportedDeviceIdentityResult get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ImportedDeviceIdentityResult> callback) {
+    public void delete(@Nonnull final ICallback<? super ImportedDeviceIdentityResult> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @param sourceImportedDeviceIdentityResult the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ImportedDeviceIdentityResult sourceImportedDeviceIdentityResult, final ICallback<? super ImportedDeviceIdentityResult> callback) {
+    public void patch(@Nonnull final ImportedDeviceIdentityResult sourceImportedDeviceIdentityResult, @Nonnull final ICallback<? super ImportedDeviceIdentityResult> callback) {
         send(HttpMethod.PATCH, callback, sourceImportedDeviceIdentityResult);
     }
 
@@ -87,7 +90,8 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @return the updated ImportedDeviceIdentityResult
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedDeviceIdentityResult patch(final ImportedDeviceIdentityResult sourceImportedDeviceIdentityResult) throws ClientException {
+    @Nullable
+    public ImportedDeviceIdentityResult patch(@Nonnull final ImportedDeviceIdentityResult sourceImportedDeviceIdentityResult) throws ClientException {
         return send(HttpMethod.PATCH, sourceImportedDeviceIdentityResult);
     }
 
@@ -97,7 +101,7 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @param newImportedDeviceIdentityResult the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, final ICallback<? super ImportedDeviceIdentityResult> callback) {
+    public void post(@Nonnull final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, @Nonnull final ICallback<? super ImportedDeviceIdentityResult> callback) {
         send(HttpMethod.POST, callback, newImportedDeviceIdentityResult);
     }
 
@@ -108,7 +112,8 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @return the created ImportedDeviceIdentityResult
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedDeviceIdentityResult post(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult) throws ClientException {
+    @Nullable
+    public ImportedDeviceIdentityResult post(@Nonnull final ImportedDeviceIdentityResult newImportedDeviceIdentityResult) throws ClientException {
         return send(HttpMethod.POST, newImportedDeviceIdentityResult);
     }
 
@@ -118,7 +123,7 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @param newImportedDeviceIdentityResult the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, final ICallback<? super ImportedDeviceIdentityResult> callback) {
+    public void put(@Nonnull final ImportedDeviceIdentityResult newImportedDeviceIdentityResult, @Nonnull final ICallback<? super ImportedDeviceIdentityResult> callback) {
         send(HttpMethod.PUT, callback, newImportedDeviceIdentityResult);
     }
 
@@ -129,7 +134,8 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @return the created ImportedDeviceIdentityResult
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedDeviceIdentityResult put(final ImportedDeviceIdentityResult newImportedDeviceIdentityResult) throws ClientException {
+    @Nullable
+    public ImportedDeviceIdentityResult put(@Nonnull final ImportedDeviceIdentityResult newImportedDeviceIdentityResult) throws ClientException {
         return send(HttpMethod.PUT, newImportedDeviceIdentityResult);
     }
 
@@ -139,9 +145,10 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IImportedDeviceIdentityResultRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ImportedDeviceIdentityResultRequest)this;
+     @Nonnull
+     public ImportedDeviceIdentityResultRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ImportedDeviceIdentityResultRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IImportedDeviceIdentityResultRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ImportedDeviceIdentityResultRequest)this;
+     @Nonnull
+     public ImportedDeviceIdentityResultRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

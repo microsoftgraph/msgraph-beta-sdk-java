@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerfor
 import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Experience Analytics Device Performance Request Builder.
  */
-public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends BaseRequestBuilder implements IUserExperienceAnalyticsDevicePerformanceRequestBuilder {
+public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends BaseRequestBuilder<UserExperienceAnalyticsDevicePerformance> {
 
     /**
      * The request builder for the UserExperienceAnalyticsDevicePerformance
@@ -29,7 +31,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsDevicePerformanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsDevicePerformanceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,9 +39,10 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsDevicePerformanceRequest instance
+     * @return the UserExperienceAnalyticsDevicePerformanceRequest instance
      */
-    public IUserExperienceAnalyticsDevicePerformanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsDevicePerformanceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +50,10 @@ public class UserExperienceAnalyticsDevicePerformanceRequestBuilder extends Base
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsDevicePerformanceRequest instance
+     * @return the UserExperienceAnalyticsDevicePerformanceRequest instance
      */
-    public IUserExperienceAnalyticsDevicePerformanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsDevicePerformanceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDevicePerformanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

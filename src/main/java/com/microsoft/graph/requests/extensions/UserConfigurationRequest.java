@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Configuration Request.
  */
-public class UserConfigurationRequest extends BaseRequest implements IUserConfigurationRequest {
+public class UserConfigurationRequest extends BaseRequest<UserConfiguration> {
 	
     /**
      * The request for the UserConfiguration
@@ -29,7 +31,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @return the UserConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param sourceUserConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserConfiguration sourceUserConfiguration, final ICallback<? super UserConfiguration> callback) {
+    public void patch(@Nonnull final UserConfiguration sourceUserConfiguration, @Nonnull final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceUserConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @return the updated UserConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserConfiguration patch(final UserConfiguration sourceUserConfiguration) throws ClientException {
+    @Nullable
+    public UserConfiguration patch(@Nonnull final UserConfiguration sourceUserConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param newUserConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserConfiguration newUserConfiguration, final ICallback<? super UserConfiguration> callback) {
+    public void post(@Nonnull final UserConfiguration newUserConfiguration, @Nonnull final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.POST, callback, newUserConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @return the created UserConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserConfiguration post(final UserConfiguration newUserConfiguration) throws ClientException {
+    @Nullable
+    public UserConfiguration post(@Nonnull final UserConfiguration newUserConfiguration) throws ClientException {
         return send(HttpMethod.POST, newUserConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param newUserConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserConfiguration newUserConfiguration, final ICallback<? super UserConfiguration> callback) {
+    public void put(@Nonnull final UserConfiguration newUserConfiguration, @Nonnull final ICallback<? super UserConfiguration> callback) {
         send(HttpMethod.PUT, callback, newUserConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @return the created UserConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserConfiguration put(final UserConfiguration newUserConfiguration) throws ClientException {
+    @Nullable
+    public UserConfiguration put(@Nonnull final UserConfiguration newUserConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newUserConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param value the select clause
      * @return the updated request
      */
-     public IUserConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserConfigurationRequest)this;
+     @Nonnull
+     public UserConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserConfigurationRequest extends BaseRequest implements IUserConfig
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserConfigurationRequest)this;
+     @Nonnull
+     public UserConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

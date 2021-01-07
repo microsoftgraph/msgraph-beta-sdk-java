@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ApprovalWorkflowProvider;
-import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Approval Workflow Provider Request.
  */
-public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApprovalWorkflowProviderRequest {
+public class ApprovalWorkflowProviderRequest extends BaseRequest<ApprovalWorkflowProvider> {
 	
     /**
      * The request for the ApprovalWorkflowProvider
@@ -37,7 +35,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApprovalWorkflowProviderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApprovalWorkflowProviderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApprovalWorkflowProvider.class);
     }
 
@@ -46,7 +44,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ApprovalWorkflowProvider> callback) {
+    public void get(@Nonnull final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @return the ApprovalWorkflowProvider from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ApprovalWorkflowProvider get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ApprovalWorkflowProvider> callback) {
+    public void delete(@Nonnull final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param sourceApprovalWorkflowProvider the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApprovalWorkflowProvider sourceApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback) {
+    public void patch(@Nonnull final ApprovalWorkflowProvider sourceApprovalWorkflowProvider, @Nonnull final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.PATCH, callback, sourceApprovalWorkflowProvider);
     }
 
@@ -95,7 +94,8 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @return the updated ApprovalWorkflowProvider
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApprovalWorkflowProvider patch(final ApprovalWorkflowProvider sourceApprovalWorkflowProvider) throws ClientException {
+    @Nullable
+    public ApprovalWorkflowProvider patch(@Nonnull final ApprovalWorkflowProvider sourceApprovalWorkflowProvider) throws ClientException {
         return send(HttpMethod.PATCH, sourceApprovalWorkflowProvider);
     }
 
@@ -105,7 +105,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param newApprovalWorkflowProvider the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback) {
+    public void post(@Nonnull final ApprovalWorkflowProvider newApprovalWorkflowProvider, @Nonnull final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.POST, callback, newApprovalWorkflowProvider);
     }
 
@@ -116,7 +116,8 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @return the created ApprovalWorkflowProvider
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApprovalWorkflowProvider post(final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException {
+    @Nullable
+    public ApprovalWorkflowProvider post(@Nonnull final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException {
         return send(HttpMethod.POST, newApprovalWorkflowProvider);
     }
 
@@ -126,7 +127,7 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param newApprovalWorkflowProvider the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApprovalWorkflowProvider newApprovalWorkflowProvider, final ICallback<? super ApprovalWorkflowProvider> callback) {
+    public void put(@Nonnull final ApprovalWorkflowProvider newApprovalWorkflowProvider, @Nonnull final ICallback<? super ApprovalWorkflowProvider> callback) {
         send(HttpMethod.PUT, callback, newApprovalWorkflowProvider);
     }
 
@@ -137,7 +138,8 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @return the created ApprovalWorkflowProvider
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApprovalWorkflowProvider put(final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException {
+    @Nullable
+    public ApprovalWorkflowProvider put(@Nonnull final ApprovalWorkflowProvider newApprovalWorkflowProvider) throws ClientException {
         return send(HttpMethod.PUT, newApprovalWorkflowProvider);
     }
 
@@ -147,9 +149,10 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param value the select clause
      * @return the updated request
      */
-     public IApprovalWorkflowProviderRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ApprovalWorkflowProviderRequest)this;
+     @Nonnull
+     public ApprovalWorkflowProviderRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class ApprovalWorkflowProviderRequest extends BaseRequest implements IApp
      * @param value the expand clause
      * @return the updated request
      */
-     public IApprovalWorkflowProviderRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApprovalWorkflowProviderRequest)this;
+     @Nonnull
+     public ApprovalWorkflowProviderRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

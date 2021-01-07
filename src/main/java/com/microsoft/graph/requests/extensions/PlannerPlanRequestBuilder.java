@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerPlan;
-import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanDetailsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Plan Request Builder.
  */
-public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPlannerPlanRequestBuilder {
+public class PlannerPlanRequestBuilder extends BaseRequestBuilder<PlannerPlan> {
 
     /**
      * The request builder for the PlannerPlan
@@ -38,7 +35,7 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerPlanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerPlanRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerPlanRequest instance
+     * @return the PlannerPlanRequest instance
      */
-    public IPlannerPlanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlannerPlanRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,34 +54,62 @@ public class PlannerPlanRequestBuilder extends BaseRequestBuilder implements IPl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerPlanRequest instance
+     * @return the PlannerPlanRequest instance
      */
-    public IPlannerPlanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlannerPlanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerPlanRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPlannerBucketCollectionRequestBuilder buckets() {
+    /**
+     *  Gets a request builder for the PlannerBucket collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PlannerBucketCollectionRequestBuilder buckets() {
         return new PlannerBucketCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("buckets"), getClient(), null);
     }
 
-    public IPlannerBucketRequestBuilder buckets(final String id) {
+    /**
+     * Gets a request builder for the PlannerBucket item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PlannerBucketRequestBuilder buckets(@Nonnull final String id) {
         return new PlannerBucketRequestBuilder(getRequestUrlWithAdditionalSegment("buckets") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerPlanDetails
      *
-     * @return the IPlannerPlanDetailsRequestBuilder instance
+     * @return the PlannerPlanDetailsRequestBuilder instance
      */
-    public IPlannerPlanDetailsRequestBuilder details() {
+    @Nonnull
+    public PlannerPlanDetailsRequestBuilder details() {
         return new PlannerPlanDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("details"), getClient(), null);
     }
-    public IPlannerTaskCollectionRequestBuilder tasks() {
+    /**
+     *  Gets a request builder for the PlannerTask collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPlannerTaskRequestBuilder tasks(final String id) {
+    /**
+     * Gets a request builder for the PlannerTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

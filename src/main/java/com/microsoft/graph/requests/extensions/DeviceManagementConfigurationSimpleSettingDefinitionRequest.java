@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSimpleSettingDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Configuration Simple Setting Definition Request.
  */
-public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends BaseRequest implements IDeviceManagementConfigurationSimpleSettingDefinitionRequest {
+public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends BaseRequest<DeviceManagementConfigurationSimpleSettingDefinition> {
 	
     /**
      * The request for the DeviceManagementConfigurationSimpleSettingDefinition
@@ -30,10 +32,10 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceManagementConfigurationSimpleSettingDefinitionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceManagementConfigurationSimpleSettingDefinition> responseClass) {
+    public DeviceManagementConfigurationSimpleSettingDefinitionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceManagementConfigurationSimpleSettingDefinition> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationSimpleSettingDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationSimpleSettingDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationSimpleSettingDefinition.class);
     }
 
@@ -53,7 +55,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @return the DeviceManagementConfigurationSimpleSettingDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementConfigurationSimpleSettingDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @param sourceDeviceManagementConfigurationSimpleSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementConfigurationSimpleSettingDefinition sourceDeviceManagementConfigurationSimpleSettingDefinition, final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
+    public void patch(@Nonnull final DeviceManagementConfigurationSimpleSettingDefinition sourceDeviceManagementConfigurationSimpleSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationSimpleSettingDefinition);
     }
 
@@ -102,7 +105,8 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @return the updated DeviceManagementConfigurationSimpleSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSimpleSettingDefinition patch(final DeviceManagementConfigurationSimpleSettingDefinition sourceDeviceManagementConfigurationSimpleSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSimpleSettingDefinition patch(@Nonnull final DeviceManagementConfigurationSimpleSettingDefinition sourceDeviceManagementConfigurationSimpleSettingDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationSimpleSettingDefinition);
     }
 
@@ -112,7 +116,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @param newDeviceManagementConfigurationSimpleSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition, final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
+    public void post(@Nonnull final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementConfigurationSimpleSettingDefinition);
     }
 
@@ -123,7 +127,8 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @return the created DeviceManagementConfigurationSimpleSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSimpleSettingDefinition post(final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSimpleSettingDefinition post(@Nonnull final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementConfigurationSimpleSettingDefinition);
     }
 
@@ -133,7 +138,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @param newDeviceManagementConfigurationSimpleSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition, final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
+    public void put(@Nonnull final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSimpleSettingDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementConfigurationSimpleSettingDefinition);
     }
 
@@ -144,7 +149,8 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @return the created DeviceManagementConfigurationSimpleSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSimpleSettingDefinition put(final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSimpleSettingDefinition put(@Nonnull final DeviceManagementConfigurationSimpleSettingDefinition newDeviceManagementConfigurationSimpleSettingDefinition) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementConfigurationSimpleSettingDefinition);
     }
 
@@ -154,9 +160,10 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationSimpleSettingDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementConfigurationSimpleSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationSimpleSettingDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class DeviceManagementConfigurationSimpleSettingDefinitionRequest extends
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationSimpleSettingDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementConfigurationSimpleSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationSimpleSettingDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionResponse;
 import com.microsoft.graph.models.extensions.HomeRealmDiscoveryPolicy;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Home Realm Discovery Policy Collection With References Page.
  */
-public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy, IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder> implements IHomeRealmDiscoveryPolicyCollectionWithReferencesPage {
+public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCollectionPage<HomeRealmDiscoveryPolicy, HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for HomeRealmDiscoveryPolicy
@@ -35,7 +37,17 @@ public class HomeRealmDiscoveryPolicyCollectionWithReferencesPage extends BaseCo
      * @param response the serialized HomeRealmDiscoveryPolicyCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(final HomeRealmDiscoveryPolicyCollectionResponse response, final IHomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder) {
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(@Nonnull final HomeRealmDiscoveryPolicyCollectionResponse response, @Nullable final HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for HomeRealmDiscoveryPolicy
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public HomeRealmDiscoveryPolicyCollectionWithReferencesPage(@Nonnull final java.util.List<HomeRealmDiscoveryPolicy> pageContents, @Nullable final HomeRealmDiscoveryPolicyCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

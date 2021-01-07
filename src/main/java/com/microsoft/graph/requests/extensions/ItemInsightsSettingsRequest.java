@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemInsightsSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Insights Settings Request.
  */
-public class ItemInsightsSettingsRequest extends BaseRequest implements IItemInsightsSettingsRequest {
+public class ItemInsightsSettingsRequest extends BaseRequest<ItemInsightsSettings> {
 	
     /**
      * The request for the ItemInsightsSettings
@@ -29,7 +31,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemInsightsSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemInsightsSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemInsightsSettings.class);
     }
 
@@ -38,7 +40,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemInsightsSettings> callback) {
+    public void get(@Nonnull final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @return the ItemInsightsSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemInsightsSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemInsightsSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param sourceItemInsightsSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemInsightsSettings sourceItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback) {
+    public void patch(@Nonnull final ItemInsightsSettings sourceItemInsightsSettings, @Nonnull final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceItemInsightsSettings);
     }
 
@@ -87,7 +90,8 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @return the updated ItemInsightsSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemInsightsSettings patch(final ItemInsightsSettings sourceItemInsightsSettings) throws ClientException {
+    @Nullable
+    public ItemInsightsSettings patch(@Nonnull final ItemInsightsSettings sourceItemInsightsSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemInsightsSettings);
     }
 
@@ -97,7 +101,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param newItemInsightsSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemInsightsSettings newItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback) {
+    public void post(@Nonnull final ItemInsightsSettings newItemInsightsSettings, @Nonnull final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.POST, callback, newItemInsightsSettings);
     }
 
@@ -108,7 +112,8 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @return the created ItemInsightsSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemInsightsSettings post(final ItemInsightsSettings newItemInsightsSettings) throws ClientException {
+    @Nullable
+    public ItemInsightsSettings post(@Nonnull final ItemInsightsSettings newItemInsightsSettings) throws ClientException {
         return send(HttpMethod.POST, newItemInsightsSettings);
     }
 
@@ -118,7 +123,7 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param newItemInsightsSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemInsightsSettings newItemInsightsSettings, final ICallback<? super ItemInsightsSettings> callback) {
+    public void put(@Nonnull final ItemInsightsSettings newItemInsightsSettings, @Nonnull final ICallback<? super ItemInsightsSettings> callback) {
         send(HttpMethod.PUT, callback, newItemInsightsSettings);
     }
 
@@ -129,7 +134,8 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @return the created ItemInsightsSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemInsightsSettings put(final ItemInsightsSettings newItemInsightsSettings) throws ClientException {
+    @Nullable
+    public ItemInsightsSettings put(@Nonnull final ItemInsightsSettings newItemInsightsSettings) throws ClientException {
         return send(HttpMethod.PUT, newItemInsightsSettings);
     }
 
@@ -139,9 +145,10 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param value the select clause
      * @return the updated request
      */
-     public IItemInsightsSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemInsightsSettingsRequest)this;
+     @Nonnull
+     public ItemInsightsSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ItemInsightsSettingsRequest extends BaseRequest implements IItemIns
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemInsightsSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemInsightsSettingsRequest)this;
+     @Nonnull
+     public ItemInsightsSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

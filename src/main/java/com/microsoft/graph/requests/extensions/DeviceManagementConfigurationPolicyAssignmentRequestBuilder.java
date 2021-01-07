@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Configuration Policy Assignment Request Builder.
  */
-public class DeviceManagementConfigurationPolicyAssignmentRequestBuilder extends BaseRequestBuilder implements IDeviceManagementConfigurationPolicyAssignmentRequestBuilder {
+public class DeviceManagementConfigurationPolicyAssignmentRequestBuilder extends BaseRequestBuilder<DeviceManagementConfigurationPolicyAssignment> {
 
     /**
      * The request builder for the DeviceManagementConfigurationPolicyAssignment
@@ -28,7 +30,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationPolicyAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationPolicyAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceManagementConfigurationPolicyAssignmentRequestBuilder extends
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementConfigurationPolicyAssignmentRequest instance
+     * @return the DeviceManagementConfigurationPolicyAssignmentRequest instance
      */
-    public IDeviceManagementConfigurationPolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementConfigurationPolicyAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceManagementConfigurationPolicyAssignmentRequestBuilder extends
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementConfigurationPolicyAssignmentRequest instance
+     * @return the DeviceManagementConfigurationPolicyAssignmentRequest instance
      */
-    public IDeviceManagementConfigurationPolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementConfigurationPolicyAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementConfigurationPolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

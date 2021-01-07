@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserAnalytics;
-import com.microsoft.graph.requests.extensions.IActivityStatisticsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityStatisticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Analytics Request Builder.
  */
-public class UserAnalyticsRequestBuilder extends BaseRequestBuilder implements IUserAnalyticsRequestBuilder {
+public class UserAnalyticsRequestBuilder extends BaseRequestBuilder<UserAnalytics> {
 
     /**
      * The request builder for the UserAnalytics
@@ -32,7 +32,7 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserAnalyticsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserAnalyticsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserAnalyticsRequest instance
+     * @return the UserAnalyticsRequest instance
      */
-    public IUserAnalyticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserAnalyticsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class UserAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserAnalyticsRequest instance
+     * @return the UserAnalyticsRequest instance
      */
-    public IUserAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserAnalyticsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IActivityStatisticsCollectionRequestBuilder activityStatistics() {
+    /**
+     *  Gets a request builder for the ActivityStatistics collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ActivityStatisticsCollectionRequestBuilder activityStatistics() {
         return new ActivityStatisticsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityStatistics"), getClient(), null);
     }
 
-    public IActivityStatisticsRequestBuilder activityStatistics(final String id) {
+    /**
+     * Gets a request builder for the ActivityStatistics item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ActivityStatisticsRequestBuilder activityStatistics(@Nonnull final String id) {
         return new ActivityStatisticsRequestBuilder(getRequestUrlWithAdditionalSegment("activityStatistics") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentPlatformRestrictionsConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Platform Restrictions Configuration Request.
  */
-public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends BaseRequest implements IDeviceEnrollmentPlatformRestrictionsConfigurationRequest {
+public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends BaseRequest<DeviceEnrollmentPlatformRestrictionsConfiguration> {
 	
     /**
      * The request for the DeviceEnrollmentPlatformRestrictionsConfiguration
@@ -29,7 +31,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentPlatformRestrictionsConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentPlatformRestrictionsConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceEnrollmentPlatformRestrictionsConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return the DeviceEnrollmentPlatformRestrictionsConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceEnrollmentPlatformRestrictionsConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param sourceDeviceEnrollmentPlatformRestrictionsConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void patch(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return the updated DeviceEnrollmentPlatformRestrictionsConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentPlatformRestrictionsConfiguration patch(final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentPlatformRestrictionsConfiguration patch(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration sourceDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void post(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return the created DeviceEnrollmentPlatformRestrictionsConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentPlatformRestrictionsConfiguration post(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentPlatformRestrictionsConfiguration post(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException {
         return send(HttpMethod.POST, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param newDeviceEnrollmentPlatformRestrictionsConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
+    public void put(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentPlatformRestrictionsConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @return the created DeviceEnrollmentPlatformRestrictionsConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentPlatformRestrictionsConfiguration put(final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentPlatformRestrictionsConfiguration put(@Nonnull final DeviceEnrollmentPlatformRestrictionsConfiguration newDeviceEnrollmentPlatformRestrictionsConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newDeviceEnrollmentPlatformRestrictionsConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceEnrollmentPlatformRestrictionsConfigurationRequest)this;
+     @Nonnull
+     public DeviceEnrollmentPlatformRestrictionsConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceEnrollmentPlatformRestrictionsConfigurationRequest extends Ba
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceEnrollmentPlatformRestrictionsConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceEnrollmentPlatformRestrictionsConfigurationRequest)this;
+     @Nonnull
+     public DeviceEnrollmentPlatformRestrictionsConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

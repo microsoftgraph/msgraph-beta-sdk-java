@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the B2x Identity User Flow Request.
  */
-public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdentityUserFlowRequest {
+public class B2xIdentityUserFlowRequest extends BaseRequest<B2xIdentityUserFlow> {
 	
     /**
      * The request for the B2xIdentityUserFlow
@@ -37,7 +35,7 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public B2xIdentityUserFlowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public B2xIdentityUserFlowRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, B2xIdentityUserFlow.class);
     }
 
@@ -46,7 +44,7 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super B2xIdentityUserFlow> callback) {
+    public void get(@Nonnull final ICallback<? super B2xIdentityUserFlow> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @return the B2xIdentityUserFlow from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public B2xIdentityUserFlow get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super B2xIdentityUserFlow> callback) {
+    public void delete(@Nonnull final ICallback<? super B2xIdentityUserFlow> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @param sourceB2xIdentityUserFlow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final B2xIdentityUserFlow sourceB2xIdentityUserFlow, final ICallback<? super B2xIdentityUserFlow> callback) {
+    public void patch(@Nonnull final B2xIdentityUserFlow sourceB2xIdentityUserFlow, @Nonnull final ICallback<? super B2xIdentityUserFlow> callback) {
         send(HttpMethod.PATCH, callback, sourceB2xIdentityUserFlow);
     }
 
@@ -95,7 +94,8 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @return the updated B2xIdentityUserFlow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public B2xIdentityUserFlow patch(final B2xIdentityUserFlow sourceB2xIdentityUserFlow) throws ClientException {
+    @Nullable
+    public B2xIdentityUserFlow patch(@Nonnull final B2xIdentityUserFlow sourceB2xIdentityUserFlow) throws ClientException {
         return send(HttpMethod.PATCH, sourceB2xIdentityUserFlow);
     }
 
@@ -105,7 +105,7 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @param newB2xIdentityUserFlow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<? super B2xIdentityUserFlow> callback) {
+    public void post(@Nonnull final B2xIdentityUserFlow newB2xIdentityUserFlow, @Nonnull final ICallback<? super B2xIdentityUserFlow> callback) {
         send(HttpMethod.POST, callback, newB2xIdentityUserFlow);
     }
 
@@ -116,7 +116,8 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @return the created B2xIdentityUserFlow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public B2xIdentityUserFlow post(final B2xIdentityUserFlow newB2xIdentityUserFlow) throws ClientException {
+    @Nullable
+    public B2xIdentityUserFlow post(@Nonnull final B2xIdentityUserFlow newB2xIdentityUserFlow) throws ClientException {
         return send(HttpMethod.POST, newB2xIdentityUserFlow);
     }
 
@@ -126,7 +127,7 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @param newB2xIdentityUserFlow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final B2xIdentityUserFlow newB2xIdentityUserFlow, final ICallback<? super B2xIdentityUserFlow> callback) {
+    public void put(@Nonnull final B2xIdentityUserFlow newB2xIdentityUserFlow, @Nonnull final ICallback<? super B2xIdentityUserFlow> callback) {
         send(HttpMethod.PUT, callback, newB2xIdentityUserFlow);
     }
 
@@ -137,7 +138,8 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @return the created B2xIdentityUserFlow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public B2xIdentityUserFlow put(final B2xIdentityUserFlow newB2xIdentityUserFlow) throws ClientException {
+    @Nullable
+    public B2xIdentityUserFlow put(@Nonnull final B2xIdentityUserFlow newB2xIdentityUserFlow) throws ClientException {
         return send(HttpMethod.PUT, newB2xIdentityUserFlow);
     }
 
@@ -147,9 +149,10 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @param value the select clause
      * @return the updated request
      */
-     public IB2xIdentityUserFlowRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (B2xIdentityUserFlowRequest)this;
+     @Nonnull
+     public B2xIdentityUserFlowRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class B2xIdentityUserFlowRequest extends BaseRequest implements IB2xIdent
      * @param value the expand clause
      * @return the updated request
      */
-     public IB2xIdentityUserFlowRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (B2xIdentityUserFlowRequest)this;
+     @Nonnull
+     public B2xIdentityUserFlowRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

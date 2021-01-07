@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Operation Request.
  */
-public class ManagedAppOperationRequest extends BaseRequest implements IManagedAppOperationRequest {
+public class ManagedAppOperationRequest extends BaseRequest<ManagedAppOperation> {
 	
     /**
      * The request for the ManagedAppOperation
@@ -29,7 +31,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppOperation.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppOperation> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @return the ManagedAppOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param sourceManagedAppOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppOperation sourceManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
+    public void patch(@Nonnull final ManagedAppOperation sourceManagedAppOperation, @Nonnull final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppOperation);
     }
 
@@ -87,7 +90,8 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @return the updated ManagedAppOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppOperation patch(final ManagedAppOperation sourceManagedAppOperation) throws ClientException {
+    @Nullable
+    public ManagedAppOperation patch(@Nonnull final ManagedAppOperation sourceManagedAppOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppOperation);
     }
 
@@ -97,7 +101,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param newManagedAppOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
+    public void post(@Nonnull final ManagedAppOperation newManagedAppOperation, @Nonnull final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.POST, callback, newManagedAppOperation);
     }
 
@@ -108,7 +112,8 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @return the created ManagedAppOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppOperation post(final ManagedAppOperation newManagedAppOperation) throws ClientException {
+    @Nullable
+    public ManagedAppOperation post(@Nonnull final ManagedAppOperation newManagedAppOperation) throws ClientException {
         return send(HttpMethod.POST, newManagedAppOperation);
     }
 
@@ -118,7 +123,7 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param newManagedAppOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppOperation newManagedAppOperation, final ICallback<? super ManagedAppOperation> callback) {
+    public void put(@Nonnull final ManagedAppOperation newManagedAppOperation, @Nonnull final ICallback<? super ManagedAppOperation> callback) {
         send(HttpMethod.PUT, callback, newManagedAppOperation);
     }
 
@@ -129,7 +134,8 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @return the created ManagedAppOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppOperation put(final ManagedAppOperation newManagedAppOperation) throws ClientException {
+    @Nullable
+    public ManagedAppOperation put(@Nonnull final ManagedAppOperation newManagedAppOperation) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppOperation);
     }
 
@@ -139,9 +145,10 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppOperationRequest)this;
+     @Nonnull
+     public ManagedAppOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedAppOperationRequest extends BaseRequest implements IManagedA
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppOperationRequest)this;
+     @Nonnull
+     public ManagedAppOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

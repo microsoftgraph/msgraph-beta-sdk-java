@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Configuration Policy Assignment Request.
  */
-public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRequest implements IDeviceManagementConfigurationPolicyAssignmentRequest {
+public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRequest<DeviceManagementConfigurationPolicyAssignment> {
 	
     /**
      * The request for the DeviceManagementConfigurationPolicyAssignment
@@ -29,7 +31,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationPolicyAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationPolicyAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationPolicyAssignment.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @return the DeviceManagementConfigurationPolicyAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementConfigurationPolicyAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @param sourceDeviceManagementConfigurationPolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementConfigurationPolicyAssignment sourceDeviceManagementConfigurationPolicyAssignment, final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
+    public void patch(@Nonnull final DeviceManagementConfigurationPolicyAssignment sourceDeviceManagementConfigurationPolicyAssignment, @Nonnull final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationPolicyAssignment);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @return the updated DeviceManagementConfigurationPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationPolicyAssignment patch(final DeviceManagementConfigurationPolicyAssignment sourceDeviceManagementConfigurationPolicyAssignment) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationPolicyAssignment patch(@Nonnull final DeviceManagementConfigurationPolicyAssignment sourceDeviceManagementConfigurationPolicyAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationPolicyAssignment);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @param newDeviceManagementConfigurationPolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment, final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
+    public void post(@Nonnull final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment, @Nonnull final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementConfigurationPolicyAssignment);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @return the created DeviceManagementConfigurationPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationPolicyAssignment post(final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationPolicyAssignment post(@Nonnull final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementConfigurationPolicyAssignment);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @param newDeviceManagementConfigurationPolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment, final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
+    public void put(@Nonnull final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment, @Nonnull final ICallback<? super DeviceManagementConfigurationPolicyAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementConfigurationPolicyAssignment);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @return the created DeviceManagementConfigurationPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationPolicyAssignment put(final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationPolicyAssignment put(@Nonnull final DeviceManagementConfigurationPolicyAssignment newDeviceManagementConfigurationPolicyAssignment) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementConfigurationPolicyAssignment);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationPolicyAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementConfigurationPolicyAssignmentRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationPolicyAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementConfigurationPolicyAssignmentRequest extends BaseRe
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationPolicyAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementConfigurationPolicyAssignmentRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationPolicyAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

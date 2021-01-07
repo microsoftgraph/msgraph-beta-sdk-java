@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppProtectionPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Protection Policy Set Item Request.
  */
-public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implements IManagedAppProtectionPolicySetItemRequest {
+public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest<ManagedAppProtectionPolicySetItem> {
 	
     /**
      * The request for the ManagedAppProtectionPolicySetItem
@@ -29,7 +31,7 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppProtectionPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppProtectionPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppProtectionPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @return the ManagedAppProtectionPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppProtectionPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @param sourceManagedAppProtectionPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppProtectionPolicySetItem sourceManagedAppProtectionPolicySetItem, final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
+    public void patch(@Nonnull final ManagedAppProtectionPolicySetItem sourceManagedAppProtectionPolicySetItem, @Nonnull final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppProtectionPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @return the updated ManagedAppProtectionPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppProtectionPolicySetItem patch(final ManagedAppProtectionPolicySetItem sourceManagedAppProtectionPolicySetItem) throws ClientException {
+    @Nullable
+    public ManagedAppProtectionPolicySetItem patch(@Nonnull final ManagedAppProtectionPolicySetItem sourceManagedAppProtectionPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppProtectionPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @param newManagedAppProtectionPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
+    public void post(@Nonnull final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, @Nonnull final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newManagedAppProtectionPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @return the created ManagedAppProtectionPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppProtectionPolicySetItem post(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem) throws ClientException {
+    @Nullable
+    public ManagedAppProtectionPolicySetItem post(@Nonnull final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newManagedAppProtectionPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @param newManagedAppProtectionPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
+    public void put(@Nonnull final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem, @Nonnull final ICallback<? super ManagedAppProtectionPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newManagedAppProtectionPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @return the created ManagedAppProtectionPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppProtectionPolicySetItem put(final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem) throws ClientException {
+    @Nullable
+    public ManagedAppProtectionPolicySetItem put(@Nonnull final ManagedAppProtectionPolicySetItem newManagedAppProtectionPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppProtectionPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppProtectionPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppProtectionPolicySetItemRequest)this;
+     @Nonnull
+     public ManagedAppProtectionPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedAppProtectionPolicySetItemRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppProtectionPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppProtectionPolicySetItemRequest)this;
+     @Nonnull
+     public ManagedAppProtectionPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

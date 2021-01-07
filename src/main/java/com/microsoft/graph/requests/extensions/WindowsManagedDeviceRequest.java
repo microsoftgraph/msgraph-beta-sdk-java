@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsManagedDevice;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Managed Device Request.
  */
-public class WindowsManagedDeviceRequest extends BaseRequest implements IWindowsManagedDeviceRequest {
+public class WindowsManagedDeviceRequest extends BaseRequest<WindowsManagedDevice> {
 	
     /**
      * The request for the WindowsManagedDevice
@@ -29,7 +31,7 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsManagedDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsManagedDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsManagedDevice.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsManagedDevice> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsManagedDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @return the WindowsManagedDevice from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsManagedDevice get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsManagedDevice> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsManagedDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @param sourceWindowsManagedDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsManagedDevice sourceWindowsManagedDevice, final ICallback<? super WindowsManagedDevice> callback) {
+    public void patch(@Nonnull final WindowsManagedDevice sourceWindowsManagedDevice, @Nonnull final ICallback<? super WindowsManagedDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsManagedDevice);
     }
 
@@ -87,7 +90,8 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @return the updated WindowsManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagedDevice patch(final WindowsManagedDevice sourceWindowsManagedDevice) throws ClientException {
+    @Nullable
+    public WindowsManagedDevice patch(@Nonnull final WindowsManagedDevice sourceWindowsManagedDevice) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsManagedDevice);
     }
 
@@ -97,7 +101,7 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @param newWindowsManagedDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<? super WindowsManagedDevice> callback) {
+    public void post(@Nonnull final WindowsManagedDevice newWindowsManagedDevice, @Nonnull final ICallback<? super WindowsManagedDevice> callback) {
         send(HttpMethod.POST, callback, newWindowsManagedDevice);
     }
 
@@ -108,7 +112,8 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @return the created WindowsManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagedDevice post(final WindowsManagedDevice newWindowsManagedDevice) throws ClientException {
+    @Nullable
+    public WindowsManagedDevice post(@Nonnull final WindowsManagedDevice newWindowsManagedDevice) throws ClientException {
         return send(HttpMethod.POST, newWindowsManagedDevice);
     }
 
@@ -118,7 +123,7 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @param newWindowsManagedDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsManagedDevice newWindowsManagedDevice, final ICallback<? super WindowsManagedDevice> callback) {
+    public void put(@Nonnull final WindowsManagedDevice newWindowsManagedDevice, @Nonnull final ICallback<? super WindowsManagedDevice> callback) {
         send(HttpMethod.PUT, callback, newWindowsManagedDevice);
     }
 
@@ -129,7 +134,8 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @return the created WindowsManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagedDevice put(final WindowsManagedDevice newWindowsManagedDevice) throws ClientException {
+    @Nullable
+    public WindowsManagedDevice put(@Nonnull final WindowsManagedDevice newWindowsManagedDevice) throws ClientException {
         return send(HttpMethod.PUT, newWindowsManagedDevice);
     }
 
@@ -139,9 +145,10 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsManagedDeviceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsManagedDeviceRequest)this;
+     @Nonnull
+     public WindowsManagedDeviceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsManagedDeviceRequest extends BaseRequest implements IWindows
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsManagedDeviceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsManagedDeviceRequest)this;
+     @Nonnull
+     public WindowsManagedDeviceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

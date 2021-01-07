@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BookingBusiness;
-import com.microsoft.graph.requests.extensions.IBookingAppointmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingAppointmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingAppointmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingAppointmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingCustomerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingCustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCustomerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingServiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingServiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingServiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingStaffMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBookingStaffMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingStaffMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingStaffMemberRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Booking Business Request Builder.
  */
-public class BookingBusinessRequestBuilder extends BaseRequestBuilder implements IBookingBusinessRequestBuilder {
+public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBusiness> {
 
     /**
      * The request builder for the BookingBusiness
@@ -44,7 +38,7 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BookingBusinessRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BookingBusinessRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,9 +46,10 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IBookingBusinessRequest instance
+     * @return the BookingBusinessRequest instance
      */
-    public IBookingBusinessRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public BookingBusinessRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,54 +57,130 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IBookingBusinessRequest instance
+     * @return the BookingBusinessRequest instance
      */
-    public IBookingBusinessRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public BookingBusinessRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.BookingBusinessRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IBookingAppointmentCollectionRequestBuilder appointments() {
+    /**
+     *  Gets a request builder for the BookingAppointment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BookingAppointmentCollectionRequestBuilder appointments() {
         return new BookingAppointmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appointments"), getClient(), null);
     }
 
-    public IBookingAppointmentRequestBuilder appointments(final String id) {
+    /**
+     * Gets a request builder for the BookingAppointment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BookingAppointmentRequestBuilder appointments(@Nonnull final String id) {
         return new BookingAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("appointments") + "/" + id, getClient(), null);
     }
-    public IBookingAppointmentCollectionRequestBuilder calendarView() {
+    /**
+     *  Gets a request builder for the BookingAppointment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BookingAppointmentCollectionRequestBuilder calendarView() {
         return new BookingAppointmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
-    public IBookingAppointmentRequestBuilder calendarView(final String id) {
+    /**
+     * Gets a request builder for the BookingAppointment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BookingAppointmentRequestBuilder calendarView(@Nonnull final String id) {
         return new BookingAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
-    public IBookingCustomerCollectionRequestBuilder customers() {
+    /**
+     *  Gets a request builder for the BookingCustomer collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BookingCustomerCollectionRequestBuilder customers() {
         return new BookingCustomerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customers"), getClient(), null);
     }
 
-    public IBookingCustomerRequestBuilder customers(final String id) {
+    /**
+     * Gets a request builder for the BookingCustomer item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BookingCustomerRequestBuilder customers(@Nonnull final String id) {
         return new BookingCustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customers") + "/" + id, getClient(), null);
     }
-    public IBookingServiceCollectionRequestBuilder services() {
+    /**
+     *  Gets a request builder for the BookingService collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BookingServiceCollectionRequestBuilder services() {
         return new BookingServiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("services"), getClient(), null);
     }
 
-    public IBookingServiceRequestBuilder services(final String id) {
+    /**
+     * Gets a request builder for the BookingService item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BookingServiceRequestBuilder services(@Nonnull final String id) {
         return new BookingServiceRequestBuilder(getRequestUrlWithAdditionalSegment("services") + "/" + id, getClient(), null);
     }
-    public IBookingStaffMemberCollectionRequestBuilder staffMembers() {
+    /**
+     *  Gets a request builder for the BookingStaffMember collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BookingStaffMemberCollectionRequestBuilder staffMembers() {
         return new BookingStaffMemberCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("staffMembers"), getClient(), null);
     }
 
-    public IBookingStaffMemberRequestBuilder staffMembers(final String id) {
+    /**
+     * Gets a request builder for the BookingStaffMember item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BookingStaffMemberRequestBuilder staffMembers(@Nonnull final String id) {
         return new BookingStaffMemberRequestBuilder(getRequestUrlWithAdditionalSegment("staffMembers") + "/" + id, getClient(), null);
     }
 
-    public IBookingBusinessPublishRequestBuilder publish() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public BookingBusinessPublishRequestBuilder publish() {
         return new BookingBusinessPublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.publish"), getClient(), null);
     }
 
-    public IBookingBusinessUnpublishRequestBuilder unpublish() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public BookingBusinessUnpublishRequestBuilder unpublish() {
         return new BookingBusinessUnpublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unpublish"), getClient(), null);
     }
 }

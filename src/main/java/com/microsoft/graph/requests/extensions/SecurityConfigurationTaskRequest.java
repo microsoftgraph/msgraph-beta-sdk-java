@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityConfigurationTask;
-import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Configuration Task Request.
  */
-public class SecurityConfigurationTaskRequest extends BaseRequest implements ISecurityConfigurationTaskRequest {
+public class SecurityConfigurationTaskRequest extends BaseRequest<SecurityConfigurationTask> {
 	
     /**
      * The request for the SecurityConfigurationTask
@@ -33,7 +33,7 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityConfigurationTaskRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityConfigurationTaskRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecurityConfigurationTask.class);
     }
 
@@ -42,7 +42,7 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SecurityConfigurationTask> callback) {
+    public void get(@Nonnull final ICallback<? super SecurityConfigurationTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @return the SecurityConfigurationTask from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SecurityConfigurationTask get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SecurityConfigurationTask> callback) {
+    public void delete(@Nonnull final ICallback<? super SecurityConfigurationTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @param sourceSecurityConfigurationTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecurityConfigurationTask sourceSecurityConfigurationTask, final ICallback<? super SecurityConfigurationTask> callback) {
+    public void patch(@Nonnull final SecurityConfigurationTask sourceSecurityConfigurationTask, @Nonnull final ICallback<? super SecurityConfigurationTask> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurityConfigurationTask);
     }
 
@@ -91,7 +92,8 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @return the updated SecurityConfigurationTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityConfigurationTask patch(final SecurityConfigurationTask sourceSecurityConfigurationTask) throws ClientException {
+    @Nullable
+    public SecurityConfigurationTask patch(@Nonnull final SecurityConfigurationTask sourceSecurityConfigurationTask) throws ClientException {
         return send(HttpMethod.PATCH, sourceSecurityConfigurationTask);
     }
 
@@ -101,7 +103,7 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @param newSecurityConfigurationTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecurityConfigurationTask newSecurityConfigurationTask, final ICallback<? super SecurityConfigurationTask> callback) {
+    public void post(@Nonnull final SecurityConfigurationTask newSecurityConfigurationTask, @Nonnull final ICallback<? super SecurityConfigurationTask> callback) {
         send(HttpMethod.POST, callback, newSecurityConfigurationTask);
     }
 
@@ -112,7 +114,8 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @return the created SecurityConfigurationTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityConfigurationTask post(final SecurityConfigurationTask newSecurityConfigurationTask) throws ClientException {
+    @Nullable
+    public SecurityConfigurationTask post(@Nonnull final SecurityConfigurationTask newSecurityConfigurationTask) throws ClientException {
         return send(HttpMethod.POST, newSecurityConfigurationTask);
     }
 
@@ -122,7 +125,7 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @param newSecurityConfigurationTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecurityConfigurationTask newSecurityConfigurationTask, final ICallback<? super SecurityConfigurationTask> callback) {
+    public void put(@Nonnull final SecurityConfigurationTask newSecurityConfigurationTask, @Nonnull final ICallback<? super SecurityConfigurationTask> callback) {
         send(HttpMethod.PUT, callback, newSecurityConfigurationTask);
     }
 
@@ -133,7 +136,8 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @return the created SecurityConfigurationTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityConfigurationTask put(final SecurityConfigurationTask newSecurityConfigurationTask) throws ClientException {
+    @Nullable
+    public SecurityConfigurationTask put(@Nonnull final SecurityConfigurationTask newSecurityConfigurationTask) throws ClientException {
         return send(HttpMethod.PUT, newSecurityConfigurationTask);
     }
 
@@ -143,9 +147,10 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @param value the select clause
      * @return the updated request
      */
-     public ISecurityConfigurationTaskRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecurityConfigurationTaskRequest)this;
+     @Nonnull
+     public SecurityConfigurationTaskRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class SecurityConfigurationTaskRequest extends BaseRequest implements ISe
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecurityConfigurationTaskRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityConfigurationTaskRequest)this;
+     @Nonnull
+     public SecurityConfigurationTaskRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

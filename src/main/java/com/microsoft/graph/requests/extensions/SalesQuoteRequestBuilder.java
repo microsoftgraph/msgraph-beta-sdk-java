@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesQuote;
-import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sales Quote Request Builder.
  */
-public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISalesQuoteRequestBuilder {
+public class SalesQuoteRequestBuilder extends BaseRequestBuilder<SalesQuote> {
 
     /**
      * The request builder for the SalesQuote
@@ -40,7 +36,7 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesQuoteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesQuoteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,9 +44,10 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISalesQuoteRequest instance
+     * @return the SalesQuoteRequest instance
      */
-    public ISalesQuoteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SalesQuoteRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,9 +55,10 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISalesQuoteRequest instance
+     * @return the SalesQuoteRequest instance
      */
-    public ISalesQuoteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SalesQuoteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SalesQuoteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -69,51 +67,78 @@ public class SalesQuoteRequestBuilder extends BaseRequestBuilder implements ISal
     /**
      * Gets the request builder for Currency
      *
-     * @return the ICurrencyRequestBuilder instance
+     * @return the CurrencyRequestBuilder instance
      */
-    public ICurrencyRequestBuilder currency() {
+    @Nonnull
+    public CurrencyRequestBuilder currency() {
         return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Customer
      *
-     * @return the ICustomerRequestBuilder instance
+     * @return the CustomerRequestBuilder instance
      */
-    public ICustomerRequestBuilder customer() {
+    @Nonnull
+    public CustomerRequestBuilder customer() {
         return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PaymentTerm
      *
-     * @return the IPaymentTermRequestBuilder instance
+     * @return the PaymentTermRequestBuilder instance
      */
-    public IPaymentTermRequestBuilder paymentTerm() {
+    @Nonnull
+    public PaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
-    public ISalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
+    /**
+     *  Gets a request builder for the SalesQuoteLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
         return new SalesQuoteLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines"), getClient(), null);
     }
 
-    public ISalesQuoteLineRequestBuilder salesQuoteLines(final String id) {
+    /**
+     * Gets a request builder for the SalesQuoteLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesQuoteLineRequestBuilder salesQuoteLines(@Nonnull final String id) {
         return new SalesQuoteLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ShipmentMethod
      *
-     * @return the IShipmentMethodRequestBuilder instance
+     * @return the ShipmentMethodRequestBuilder instance
      */
-    public IShipmentMethodRequestBuilder shipmentMethod() {
+    @Nonnull
+    public ShipmentMethodRequestBuilder shipmentMethod() {
         return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethod"), getClient(), null);
     }
 
-    public ISalesQuoteSendRequestBuilder send() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SalesQuoteSendRequestBuilder send() {
         return new SalesQuoteSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
 
-    public ISalesQuoteMakeInvoiceRequestBuilder makeInvoice() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SalesQuoteMakeInvoiceRequestBuilder makeInvoice() {
         return new SalesQuoteMakeInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.makeInvoice"), getClient(), null);
     }
 }

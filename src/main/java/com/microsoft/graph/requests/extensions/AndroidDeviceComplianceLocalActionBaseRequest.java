@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceComplianceLocalActionBase;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Device Compliance Local Action Base Request.
  */
-public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest implements IAndroidDeviceComplianceLocalActionBaseRequest {
+public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest<AndroidDeviceComplianceLocalActionBase> {
 	
     /**
      * The request for the AndroidDeviceComplianceLocalActionBase
@@ -30,10 +32,10 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AndroidDeviceComplianceLocalActionBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AndroidDeviceComplianceLocalActionBase> responseClass) {
+    public AndroidDeviceComplianceLocalActionBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AndroidDeviceComplianceLocalActionBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceComplianceLocalActionBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidDeviceComplianceLocalActionBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidDeviceComplianceLocalActionBase.class);
     }
 
@@ -53,7 +55,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @return the AndroidDeviceComplianceLocalActionBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidDeviceComplianceLocalActionBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param sourceAndroidDeviceComplianceLocalActionBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
+    public void patch(@Nonnull final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -102,7 +105,8 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @return the updated AndroidDeviceComplianceLocalActionBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionBase patch(final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionBase patch(@Nonnull final AndroidDeviceComplianceLocalActionBase sourceAndroidDeviceComplianceLocalActionBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -112,7 +116,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param newAndroidDeviceComplianceLocalActionBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
+    public void post(@Nonnull final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -123,7 +127,8 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @return the created AndroidDeviceComplianceLocalActionBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionBase post(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionBase post(@Nonnull final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase) throws ClientException {
         return send(HttpMethod.POST, newAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -133,7 +138,7 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param newAndroidDeviceComplianceLocalActionBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
+    public void put(@Nonnull final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -144,7 +149,8 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @return the created AndroidDeviceComplianceLocalActionBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionBase put(final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionBase put(@Nonnull final AndroidDeviceComplianceLocalActionBase newAndroidDeviceComplianceLocalActionBase) throws ClientException {
         return send(HttpMethod.PUT, newAndroidDeviceComplianceLocalActionBase);
     }
 
@@ -154,9 +160,10 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidDeviceComplianceLocalActionBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidDeviceComplianceLocalActionBaseRequest)this;
+     @Nonnull
+     public AndroidDeviceComplianceLocalActionBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class AndroidDeviceComplianceLocalActionBaseRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidDeviceComplianceLocalActionBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceComplianceLocalActionBaseRequest)this;
+     @Nonnull
+     public AndroidDeviceComplianceLocalActionBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

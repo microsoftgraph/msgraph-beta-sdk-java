@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionWipeAction;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection Wipe Action Request.
  */
-public class WindowsInformationProtectionWipeActionRequest extends BaseRequest implements IWindowsInformationProtectionWipeActionRequest {
+public class WindowsInformationProtectionWipeActionRequest extends BaseRequest<WindowsInformationProtectionWipeAction> {
 	
     /**
      * The request for the WindowsInformationProtectionWipeAction
@@ -29,7 +31,7 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionWipeActionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionWipeActionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtectionWipeAction.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @return the WindowsInformationProtectionWipeAction from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsInformationProtectionWipeAction get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @param sourceWindowsInformationProtectionWipeAction the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtectionWipeAction sourceWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
+    public void patch(@Nonnull final WindowsInformationProtectionWipeAction sourceWindowsInformationProtectionWipeAction, @Nonnull final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionWipeAction);
     }
 
@@ -87,7 +90,8 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @return the updated WindowsInformationProtectionWipeAction
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionWipeAction patch(final WindowsInformationProtectionWipeAction sourceWindowsInformationProtectionWipeAction) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionWipeAction patch(@Nonnull final WindowsInformationProtectionWipeAction sourceWindowsInformationProtectionWipeAction) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsInformationProtectionWipeAction);
     }
 
@@ -97,7 +101,7 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @param newWindowsInformationProtectionWipeAction the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
+    public void post(@Nonnull final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, @Nonnull final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtectionWipeAction);
     }
 
@@ -108,7 +112,8 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @return the created WindowsInformationProtectionWipeAction
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionWipeAction post(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionWipeAction post(@Nonnull final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException {
         return send(HttpMethod.POST, newWindowsInformationProtectionWipeAction);
     }
 
@@ -118,7 +123,7 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @param newWindowsInformationProtectionWipeAction the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
+    public void put(@Nonnull final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction, @Nonnull final ICallback<? super WindowsInformationProtectionWipeAction> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtectionWipeAction);
     }
 
@@ -129,7 +134,8 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @return the created WindowsInformationProtectionWipeAction
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionWipeAction put(final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionWipeAction put(@Nonnull final WindowsInformationProtectionWipeAction newWindowsInformationProtectionWipeAction) throws ClientException {
         return send(HttpMethod.PUT, newWindowsInformationProtectionWipeAction);
     }
 
@@ -139,9 +145,10 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionWipeActionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsInformationProtectionWipeActionRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionWipeActionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsInformationProtectionWipeActionRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionWipeActionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsInformationProtectionWipeActionRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionWipeActionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

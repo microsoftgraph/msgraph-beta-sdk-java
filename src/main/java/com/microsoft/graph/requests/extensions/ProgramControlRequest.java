@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ProgramControl;
-import com.microsoft.graph.requests.extensions.IProgramRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Program Control Request.
  */
-public class ProgramControlRequest extends BaseRequest implements IProgramControlRequest {
+public class ProgramControlRequest extends BaseRequest<ProgramControl> {
 	
     /**
      * The request for the ProgramControl
@@ -31,7 +32,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProgramControlRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProgramControlRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProgramControl.class);
     }
 
@@ -40,7 +41,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ProgramControl> callback) {
+    public void get(@Nonnull final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @return the ProgramControl from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ProgramControl get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ProgramControl> callback) {
+    public void delete(@Nonnull final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param sourceProgramControl the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProgramControl sourceProgramControl, final ICallback<? super ProgramControl> callback) {
+    public void patch(@Nonnull final ProgramControl sourceProgramControl, @Nonnull final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.PATCH, callback, sourceProgramControl);
     }
 
@@ -89,7 +91,8 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @return the updated ProgramControl
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProgramControl patch(final ProgramControl sourceProgramControl) throws ClientException {
+    @Nullable
+    public ProgramControl patch(@Nonnull final ProgramControl sourceProgramControl) throws ClientException {
         return send(HttpMethod.PATCH, sourceProgramControl);
     }
 
@@ -99,7 +102,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param newProgramControl the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProgramControl newProgramControl, final ICallback<? super ProgramControl> callback) {
+    public void post(@Nonnull final ProgramControl newProgramControl, @Nonnull final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.POST, callback, newProgramControl);
     }
 
@@ -110,7 +113,8 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @return the created ProgramControl
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProgramControl post(final ProgramControl newProgramControl) throws ClientException {
+    @Nullable
+    public ProgramControl post(@Nonnull final ProgramControl newProgramControl) throws ClientException {
         return send(HttpMethod.POST, newProgramControl);
     }
 
@@ -120,7 +124,7 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param newProgramControl the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProgramControl newProgramControl, final ICallback<? super ProgramControl> callback) {
+    public void put(@Nonnull final ProgramControl newProgramControl, @Nonnull final ICallback<? super ProgramControl> callback) {
         send(HttpMethod.PUT, callback, newProgramControl);
     }
 
@@ -131,7 +135,8 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @return the created ProgramControl
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProgramControl put(final ProgramControl newProgramControl) throws ClientException {
+    @Nullable
+    public ProgramControl put(@Nonnull final ProgramControl newProgramControl) throws ClientException {
         return send(HttpMethod.PUT, newProgramControl);
     }
 
@@ -141,9 +146,10 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param value the select clause
      * @return the updated request
      */
-     public IProgramControlRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ProgramControlRequest)this;
+     @Nonnull
+     public ProgramControlRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class ProgramControlRequest extends BaseRequest implements IProgramContro
      * @param value the expand clause
      * @return the updated request
      */
-     public IProgramControlRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProgramControlRequest)this;
+     @Nonnull
+     public ProgramControlRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

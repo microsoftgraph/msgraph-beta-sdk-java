@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RiskyUserHistoryItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Risky User History Item Request.
  */
-public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUserHistoryItemRequest {
+public class RiskyUserHistoryItemRequest extends BaseRequest<RiskyUserHistoryItem> {
 	
     /**
      * The request for the RiskyUserHistoryItem
@@ -29,7 +31,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RiskyUserHistoryItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RiskyUserHistoryItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RiskyUserHistoryItem.class);
     }
 
@@ -38,7 +40,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RiskyUserHistoryItem> callback) {
+    public void get(@Nonnull final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @return the RiskyUserHistoryItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RiskyUserHistoryItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RiskyUserHistoryItem> callback) {
+    public void delete(@Nonnull final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param sourceRiskyUserHistoryItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RiskyUserHistoryItem sourceRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback) {
+    public void patch(@Nonnull final RiskyUserHistoryItem sourceRiskyUserHistoryItem, @Nonnull final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.PATCH, callback, sourceRiskyUserHistoryItem);
     }
 
@@ -87,7 +90,8 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @return the updated RiskyUserHistoryItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskyUserHistoryItem patch(final RiskyUserHistoryItem sourceRiskyUserHistoryItem) throws ClientException {
+    @Nullable
+    public RiskyUserHistoryItem patch(@Nonnull final RiskyUserHistoryItem sourceRiskyUserHistoryItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceRiskyUserHistoryItem);
     }
 
@@ -97,7 +101,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param newRiskyUserHistoryItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback) {
+    public void post(@Nonnull final RiskyUserHistoryItem newRiskyUserHistoryItem, @Nonnull final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.POST, callback, newRiskyUserHistoryItem);
     }
 
@@ -108,7 +112,8 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @return the created RiskyUserHistoryItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskyUserHistoryItem post(final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException {
+    @Nullable
+    public RiskyUserHistoryItem post(@Nonnull final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException {
         return send(HttpMethod.POST, newRiskyUserHistoryItem);
     }
 
@@ -118,7 +123,7 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param newRiskyUserHistoryItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RiskyUserHistoryItem newRiskyUserHistoryItem, final ICallback<? super RiskyUserHistoryItem> callback) {
+    public void put(@Nonnull final RiskyUserHistoryItem newRiskyUserHistoryItem, @Nonnull final ICallback<? super RiskyUserHistoryItem> callback) {
         send(HttpMethod.PUT, callback, newRiskyUserHistoryItem);
     }
 
@@ -129,7 +134,8 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @return the created RiskyUserHistoryItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskyUserHistoryItem put(final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException {
+    @Nullable
+    public RiskyUserHistoryItem put(@Nonnull final RiskyUserHistoryItem newRiskyUserHistoryItem) throws ClientException {
         return send(HttpMethod.PUT, newRiskyUserHistoryItem);
     }
 
@@ -139,9 +145,10 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param value the select clause
      * @return the updated request
      */
-     public IRiskyUserHistoryItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RiskyUserHistoryItemRequest)this;
+     @Nonnull
+     public RiskyUserHistoryItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class RiskyUserHistoryItemRequest extends BaseRequest implements IRiskyUs
      * @param value the expand clause
      * @return the updated request
      */
-     public IRiskyUserHistoryItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RiskyUserHistoryItemRequest)this;
+     @Nonnull
+     public RiskyUserHistoryItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

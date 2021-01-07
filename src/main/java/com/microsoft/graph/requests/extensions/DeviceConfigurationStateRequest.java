@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration State Request.
  */
-public class DeviceConfigurationStateRequest extends BaseRequest implements IDeviceConfigurationStateRequest {
+public class DeviceConfigurationStateRequest extends BaseRequest<DeviceConfigurationState> {
 	
     /**
      * The request for the DeviceConfigurationState
@@ -29,7 +31,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationState.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfigurationState> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @return the DeviceConfigurationState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfigurationState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfigurationState> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param sourceDeviceConfigurationState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationState sourceDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
+    public void patch(@Nonnull final DeviceConfigurationState sourceDeviceConfigurationState, @Nonnull final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationState);
     }
 
@@ -87,7 +90,8 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @return the updated DeviceConfigurationState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationState patch(final DeviceConfigurationState sourceDeviceConfigurationState) throws ClientException {
+    @Nullable
+    public DeviceConfigurationState patch(@Nonnull final DeviceConfigurationState sourceDeviceConfigurationState) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfigurationState);
     }
 
@@ -97,7 +101,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param newDeviceConfigurationState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
+    public void post(@Nonnull final DeviceConfigurationState newDeviceConfigurationState, @Nonnull final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationState);
     }
 
@@ -108,7 +112,8 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @return the created DeviceConfigurationState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationState post(final DeviceConfigurationState newDeviceConfigurationState) throws ClientException {
+    @Nullable
+    public DeviceConfigurationState post(@Nonnull final DeviceConfigurationState newDeviceConfigurationState) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfigurationState);
     }
 
@@ -118,7 +123,7 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param newDeviceConfigurationState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationState newDeviceConfigurationState, final ICallback<? super DeviceConfigurationState> callback) {
+    public void put(@Nonnull final DeviceConfigurationState newDeviceConfigurationState, @Nonnull final ICallback<? super DeviceConfigurationState> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationState);
     }
 
@@ -129,7 +134,8 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @return the created DeviceConfigurationState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationState put(final DeviceConfigurationState newDeviceConfigurationState) throws ClientException {
+    @Nullable
+    public DeviceConfigurationState put(@Nonnull final DeviceConfigurationState newDeviceConfigurationState) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfigurationState);
     }
 
@@ -139,9 +145,10 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceConfigurationStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceConfigurationStateRequest)this;
+     @Nonnull
+     public DeviceConfigurationStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceConfigurationStateRequest extends BaseRequest implements IDev
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceConfigurationStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationStateRequest)this;
+     @Nonnull
+     public DeviceConfigurationStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

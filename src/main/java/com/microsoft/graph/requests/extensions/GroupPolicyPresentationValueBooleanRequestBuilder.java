@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationValueBoolean;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Policy Presentation Value Boolean Request Builder.
  */
-public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseRequestBuilder implements IGroupPolicyPresentationValueBooleanRequestBuilder {
+public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseRequestBuilder<GroupPolicyPresentationValueBoolean> {
 
     /**
      * The request builder for the GroupPolicyPresentationValueBoolean
@@ -28,7 +30,7 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationValueBooleanRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationValueBooleanRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationValueBooleanRequest instance
+     * @return the GroupPolicyPresentationValueBooleanRequest instance
      */
-    public IGroupPolicyPresentationValueBooleanRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationValueBooleanRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationValueBooleanRequest instance
+     * @return the GroupPolicyPresentationValueBooleanRequest instance
      */
-    public IGroupPolicyPresentationValueBooleanRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationValueBooleanRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueBooleanRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,18 +61,20 @@ public class GroupPolicyPresentationValueBooleanRequestBuilder extends BaseReque
     /**
      * Gets the request builder for GroupPolicyDefinitionValue
      *
-     * @return the IGroupPolicyDefinitionValueWithReferenceRequestBuilder instance
+     * @return the GroupPolicyDefinitionValueWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue() {
+    @Nonnull
+    public GroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue() {
         return new GroupPolicyDefinitionValueWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValue"), getClient(), null);
     }
 
     /**
      * Gets the request builder for GroupPolicyPresentation
      *
-     * @return the IGroupPolicyPresentationWithReferenceRequestBuilder instance
+     * @return the GroupPolicyPresentationWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyPresentationWithReferenceRequestBuilder presentation() {
+    @Nonnull
+    public GroupPolicyPresentationWithReferenceRequestBuilder presentation() {
         return new GroupPolicyPresentationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("presentation"), getClient(), null);
     }
 }

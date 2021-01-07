@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentDeviceSettingStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Intent Device Setting State Summary Request Builder.
  */
-public class DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder extends BaseRequestBuilder implements IDeviceManagementIntentDeviceSettingStateSummaryRequestBuilder {
+public class DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder extends BaseRequestBuilder<DeviceManagementIntentDeviceSettingStateSummary> {
 
     /**
      * The request builder for the DeviceManagementIntentDeviceSettingStateSummary
@@ -28,7 +30,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder exten
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder exten
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementIntentDeviceSettingStateSummaryRequest instance
+     * @return the DeviceManagementIntentDeviceSettingStateSummaryRequest instance
      */
-    public IDeviceManagementIntentDeviceSettingStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementIntentDeviceSettingStateSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceManagementIntentDeviceSettingStateSummaryRequestBuilder exten
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementIntentDeviceSettingStateSummaryRequest instance
+     * @return the DeviceManagementIntentDeviceSettingStateSummaryRequest instance
      */
-    public IDeviceManagementIntentDeviceSettingStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementIntentDeviceSettingStateSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceSettingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

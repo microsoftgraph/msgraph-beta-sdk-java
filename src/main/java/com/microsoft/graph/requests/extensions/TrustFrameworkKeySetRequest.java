@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.TrustFrameworkKeySet;
 import com.microsoft.graph.models.extensions.TrustFrameworkKey;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Trust Framework Key Set Request.
  */
-public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFrameworkKeySetRequest {
+public class TrustFrameworkKeySetRequest extends BaseRequest<TrustFrameworkKeySet> {
 	
     /**
      * The request for the TrustFrameworkKeySet
@@ -30,7 +32,7 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrustFrameworkKeySetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrustFrameworkKeySetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TrustFrameworkKeySet.class);
     }
 
@@ -39,7 +41,7 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TrustFrameworkKeySet> callback) {
+    public void get(@Nonnull final ICallback<? super TrustFrameworkKeySet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @return the TrustFrameworkKeySet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TrustFrameworkKeySet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TrustFrameworkKeySet> callback) {
+    public void delete(@Nonnull final ICallback<? super TrustFrameworkKeySet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @param sourceTrustFrameworkKeySet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TrustFrameworkKeySet sourceTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback) {
+    public void patch(@Nonnull final TrustFrameworkKeySet sourceTrustFrameworkKeySet, @Nonnull final ICallback<? super TrustFrameworkKeySet> callback) {
         send(HttpMethod.PATCH, callback, sourceTrustFrameworkKeySet);
     }
 
@@ -88,7 +91,8 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @return the updated TrustFrameworkKeySet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFrameworkKeySet patch(final TrustFrameworkKeySet sourceTrustFrameworkKeySet) throws ClientException {
+    @Nullable
+    public TrustFrameworkKeySet patch(@Nonnull final TrustFrameworkKeySet sourceTrustFrameworkKeySet) throws ClientException {
         return send(HttpMethod.PATCH, sourceTrustFrameworkKeySet);
     }
 
@@ -98,7 +102,7 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @param newTrustFrameworkKeySet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback) {
+    public void post(@Nonnull final TrustFrameworkKeySet newTrustFrameworkKeySet, @Nonnull final ICallback<? super TrustFrameworkKeySet> callback) {
         send(HttpMethod.POST, callback, newTrustFrameworkKeySet);
     }
 
@@ -109,7 +113,8 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @return the created TrustFrameworkKeySet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFrameworkKeySet post(final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException {
+    @Nullable
+    public TrustFrameworkKeySet post(@Nonnull final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException {
         return send(HttpMethod.POST, newTrustFrameworkKeySet);
     }
 
@@ -119,7 +124,7 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @param newTrustFrameworkKeySet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TrustFrameworkKeySet newTrustFrameworkKeySet, final ICallback<? super TrustFrameworkKeySet> callback) {
+    public void put(@Nonnull final TrustFrameworkKeySet newTrustFrameworkKeySet, @Nonnull final ICallback<? super TrustFrameworkKeySet> callback) {
         send(HttpMethod.PUT, callback, newTrustFrameworkKeySet);
     }
 
@@ -130,7 +135,8 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @return the created TrustFrameworkKeySet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFrameworkKeySet put(final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException {
+    @Nullable
+    public TrustFrameworkKeySet put(@Nonnull final TrustFrameworkKeySet newTrustFrameworkKeySet) throws ClientException {
         return send(HttpMethod.PUT, newTrustFrameworkKeySet);
     }
 
@@ -140,9 +146,10 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @param value the select clause
      * @return the updated request
      */
-     public ITrustFrameworkKeySetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TrustFrameworkKeySetRequest)this;
+     @Nonnull
+     public TrustFrameworkKeySetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class TrustFrameworkKeySetRequest extends BaseRequest implements ITrustFr
      * @param value the expand clause
      * @return the updated request
      */
-     public ITrustFrameworkKeySetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TrustFrameworkKeySetRequest)this;
+     @Nonnull
+     public TrustFrameworkKeySetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

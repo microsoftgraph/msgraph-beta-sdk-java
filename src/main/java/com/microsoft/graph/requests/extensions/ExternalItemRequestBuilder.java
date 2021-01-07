@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the External Item Request Builder.
  */
-public class ExternalItemRequestBuilder extends BaseRequestBuilder implements IExternalItemRequestBuilder {
+public class ExternalItemRequestBuilder extends BaseRequestBuilder<ExternalItem> {
 
     /**
      * The request builder for the ExternalItem
@@ -28,7 +30,7 @@ public class ExternalItemRequestBuilder extends BaseRequestBuilder implements IE
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExternalItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExternalItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ExternalItemRequestBuilder extends BaseRequestBuilder implements IE
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IExternalItemRequest instance
+     * @return the ExternalItemRequest instance
      */
-    public IExternalItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ExternalItemRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class ExternalItemRequestBuilder extends BaseRequestBuilder implements IE
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IExternalItemRequest instance
+     * @return the ExternalItemRequest instance
      */
-    public IExternalItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ExternalItemRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ExternalItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

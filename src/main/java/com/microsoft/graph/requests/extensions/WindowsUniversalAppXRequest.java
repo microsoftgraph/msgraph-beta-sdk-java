@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsUniversalAppX;
-import com.microsoft.graph.requests.extensions.IMobileContainedAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileContainedAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Universal App XRequest.
  */
-public class WindowsUniversalAppXRequest extends BaseRequest implements IWindowsUniversalAppXRequest {
+public class WindowsUniversalAppXRequest extends BaseRequest<WindowsUniversalAppX> {
 	
     /**
      * The request for the WindowsUniversalAppX
@@ -33,7 +33,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsUniversalAppXRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsUniversalAppXRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsUniversalAppX.class);
     }
 
@@ -42,7 +42,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsUniversalAppX> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @return the WindowsUniversalAppX from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsUniversalAppX get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsUniversalAppX> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param sourceWindowsUniversalAppX the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsUniversalAppX sourceWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback) {
+    public void patch(@Nonnull final WindowsUniversalAppX sourceWindowsUniversalAppX, @Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsUniversalAppX);
     }
 
@@ -91,7 +92,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @return the updated WindowsUniversalAppX
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUniversalAppX patch(final WindowsUniversalAppX sourceWindowsUniversalAppX) throws ClientException {
+    @Nullable
+    public WindowsUniversalAppX patch(@Nonnull final WindowsUniversalAppX sourceWindowsUniversalAppX) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsUniversalAppX);
     }
 
@@ -101,7 +103,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param newWindowsUniversalAppX the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback) {
+    public void post(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX, @Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.POST, callback, newWindowsUniversalAppX);
     }
 
@@ -112,7 +114,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @return the created WindowsUniversalAppX
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUniversalAppX post(final WindowsUniversalAppX newWindowsUniversalAppX) throws ClientException {
+    @Nullable
+    public WindowsUniversalAppX post(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) throws ClientException {
         return send(HttpMethod.POST, newWindowsUniversalAppX);
     }
 
@@ -122,7 +125,7 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param newWindowsUniversalAppX the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsUniversalAppX newWindowsUniversalAppX, final ICallback<? super WindowsUniversalAppX> callback) {
+    public void put(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX, @Nonnull final ICallback<? super WindowsUniversalAppX> callback) {
         send(HttpMethod.PUT, callback, newWindowsUniversalAppX);
     }
 
@@ -133,7 +136,8 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @return the created WindowsUniversalAppX
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUniversalAppX put(final WindowsUniversalAppX newWindowsUniversalAppX) throws ClientException {
+    @Nullable
+    public WindowsUniversalAppX put(@Nonnull final WindowsUniversalAppX newWindowsUniversalAppX) throws ClientException {
         return send(HttpMethod.PUT, newWindowsUniversalAppX);
     }
 
@@ -143,9 +147,10 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsUniversalAppXRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsUniversalAppXRequest)this;
+     @Nonnull
+     public WindowsUniversalAppXRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class WindowsUniversalAppXRequest extends BaseRequest implements IWindows
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsUniversalAppXRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsUniversalAppXRequest)this;
+     @Nonnull
+     public WindowsUniversalAppXRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

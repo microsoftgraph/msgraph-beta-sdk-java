@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Ediscovery;
-import com.microsoft.graph.requests.extensions.ICaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ediscovery Request.
  */
-public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest {
+public class EdiscoveryRequest extends BaseRequest<Ediscovery> {
 	
     /**
      * The request for the Ediscovery
@@ -33,7 +33,7 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EdiscoveryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EdiscoveryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Ediscovery.class);
     }
 
@@ -42,7 +42,7 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Ediscovery> callback) {
+    public void get(@Nonnull final ICallback<? super Ediscovery> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @return the Ediscovery from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Ediscovery get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Ediscovery> callback) {
+    public void delete(@Nonnull final ICallback<? super Ediscovery> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @param sourceEdiscovery the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Ediscovery sourceEdiscovery, final ICallback<? super Ediscovery> callback) {
+    public void patch(@Nonnull final Ediscovery sourceEdiscovery, @Nonnull final ICallback<? super Ediscovery> callback) {
         send(HttpMethod.PATCH, callback, sourceEdiscovery);
     }
 
@@ -91,7 +92,8 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @return the updated Ediscovery
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Ediscovery patch(final Ediscovery sourceEdiscovery) throws ClientException {
+    @Nullable
+    public Ediscovery patch(@Nonnull final Ediscovery sourceEdiscovery) throws ClientException {
         return send(HttpMethod.PATCH, sourceEdiscovery);
     }
 
@@ -101,7 +103,7 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @param newEdiscovery the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Ediscovery newEdiscovery, final ICallback<? super Ediscovery> callback) {
+    public void post(@Nonnull final Ediscovery newEdiscovery, @Nonnull final ICallback<? super Ediscovery> callback) {
         send(HttpMethod.POST, callback, newEdiscovery);
     }
 
@@ -112,7 +114,8 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @return the created Ediscovery
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Ediscovery post(final Ediscovery newEdiscovery) throws ClientException {
+    @Nullable
+    public Ediscovery post(@Nonnull final Ediscovery newEdiscovery) throws ClientException {
         return send(HttpMethod.POST, newEdiscovery);
     }
 
@@ -122,7 +125,7 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @param newEdiscovery the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Ediscovery newEdiscovery, final ICallback<? super Ediscovery> callback) {
+    public void put(@Nonnull final Ediscovery newEdiscovery, @Nonnull final ICallback<? super Ediscovery> callback) {
         send(HttpMethod.PUT, callback, newEdiscovery);
     }
 
@@ -133,7 +136,8 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @return the created Ediscovery
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Ediscovery put(final Ediscovery newEdiscovery) throws ClientException {
+    @Nullable
+    public Ediscovery put(@Nonnull final Ediscovery newEdiscovery) throws ClientException {
         return send(HttpMethod.PUT, newEdiscovery);
     }
 
@@ -143,9 +147,10 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IEdiscoveryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EdiscoveryRequest)this;
+     @Nonnull
+     public EdiscoveryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class EdiscoveryRequest extends BaseRequest implements IEdiscoveryRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IEdiscoveryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EdiscoveryRequest)this;
+     @Nonnull
+     public EdiscoveryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

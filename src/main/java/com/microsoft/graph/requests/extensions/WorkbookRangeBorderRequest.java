@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeBorder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Border Request.
  */
-public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbookRangeBorderRequest {
+public class WorkbookRangeBorderRequest extends BaseRequest<WorkbookRangeBorder> {
 	
     /**
      * The request for the WorkbookRangeBorder
@@ -29,7 +31,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeBorderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeBorderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRangeBorder.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRangeBorder> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @return the WorkbookRangeBorder from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookRangeBorder get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRangeBorder> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param sourceWorkbookRangeBorder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRangeBorder sourceWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void patch(@Nonnull final WorkbookRangeBorder sourceWorkbookRangeBorder, @Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRangeBorder);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @return the updated WorkbookRangeBorder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeBorder patch(final WorkbookRangeBorder sourceWorkbookRangeBorder) throws ClientException {
+    @Nullable
+    public WorkbookRangeBorder patch(@Nonnull final WorkbookRangeBorder sourceWorkbookRangeBorder) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookRangeBorder);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookRangeBorder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void post(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder, @Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.POST, callback, newWorkbookRangeBorder);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @return the created WorkbookRangeBorder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeBorder post(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
+    @Nullable
+    public WorkbookRangeBorder post(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
         return send(HttpMethod.POST, newWorkbookRangeBorder);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param newWorkbookRangeBorder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRangeBorder newWorkbookRangeBorder, final ICallback<? super WorkbookRangeBorder> callback) {
+    public void put(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder, @Nonnull final ICallback<? super WorkbookRangeBorder> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRangeBorder);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @return the created WorkbookRangeBorder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRangeBorder put(final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
+    @Nullable
+    public WorkbookRangeBorder put(@Nonnull final WorkbookRangeBorder newWorkbookRangeBorder) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookRangeBorder);
     }
 
@@ -139,9 +145,10 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookRangeBorderRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookRangeBorderRequest)this;
+     @Nonnull
+     public WorkbookRangeBorderRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WorkbookRangeBorderRequest extends BaseRequest implements IWorkbook
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookRangeBorderRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookRangeBorderRequest)this;
+     @Nonnull
+     public WorkbookRangeBorderRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

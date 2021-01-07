@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SensitiveType;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sensitive Type Request.
  */
-public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeRequest {
+public class SensitiveTypeRequest extends BaseRequest<SensitiveType> {
 	
     /**
      * The request for the SensitiveType
@@ -29,7 +31,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SensitiveTypeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SensitiveTypeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SensitiveType.class);
     }
 
@@ -38,7 +40,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SensitiveType> callback) {
+    public void get(@Nonnull final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @return the SensitiveType from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SensitiveType get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SensitiveType> callback) {
+    public void delete(@Nonnull final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param sourceSensitiveType the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SensitiveType sourceSensitiveType, final ICallback<? super SensitiveType> callback) {
+    public void patch(@Nonnull final SensitiveType sourceSensitiveType, @Nonnull final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.PATCH, callback, sourceSensitiveType);
     }
 
@@ -87,7 +90,8 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @return the updated SensitiveType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitiveType patch(final SensitiveType sourceSensitiveType) throws ClientException {
+    @Nullable
+    public SensitiveType patch(@Nonnull final SensitiveType sourceSensitiveType) throws ClientException {
         return send(HttpMethod.PATCH, sourceSensitiveType);
     }
 
@@ -97,7 +101,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param newSensitiveType the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback) {
+    public void post(@Nonnull final SensitiveType newSensitiveType, @Nonnull final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.POST, callback, newSensitiveType);
     }
 
@@ -108,7 +112,8 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @return the created SensitiveType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitiveType post(final SensitiveType newSensitiveType) throws ClientException {
+    @Nullable
+    public SensitiveType post(@Nonnull final SensitiveType newSensitiveType) throws ClientException {
         return send(HttpMethod.POST, newSensitiveType);
     }
 
@@ -118,7 +123,7 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param newSensitiveType the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SensitiveType newSensitiveType, final ICallback<? super SensitiveType> callback) {
+    public void put(@Nonnull final SensitiveType newSensitiveType, @Nonnull final ICallback<? super SensitiveType> callback) {
         send(HttpMethod.PUT, callback, newSensitiveType);
     }
 
@@ -129,7 +134,8 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @return the created SensitiveType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitiveType put(final SensitiveType newSensitiveType) throws ClientException {
+    @Nullable
+    public SensitiveType put(@Nonnull final SensitiveType newSensitiveType) throws ClientException {
         return send(HttpMethod.PUT, newSensitiveType);
     }
 
@@ -139,9 +145,10 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param value the select clause
      * @return the updated request
      */
-     public ISensitiveTypeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SensitiveTypeRequest)this;
+     @Nonnull
+     public SensitiveTypeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SensitiveTypeRequest extends BaseRequest implements ISensitiveTypeR
      * @param value the expand clause
      * @return the updated request
      */
-     public ISensitiveTypeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SensitiveTypeRequest)this;
+     @Nonnull
+     public SensitiveTypeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

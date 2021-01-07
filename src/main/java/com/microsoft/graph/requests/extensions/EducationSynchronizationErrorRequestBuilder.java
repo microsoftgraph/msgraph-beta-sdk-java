@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSynchronizationError;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Synchronization Error Request Builder.
  */
-public class EducationSynchronizationErrorRequestBuilder extends BaseRequestBuilder implements IEducationSynchronizationErrorRequestBuilder {
+public class EducationSynchronizationErrorRequestBuilder extends BaseRequestBuilder<EducationSynchronizationError> {
 
     /**
      * The request builder for the EducationSynchronizationError
@@ -28,7 +30,7 @@ public class EducationSynchronizationErrorRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSynchronizationErrorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSynchronizationErrorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class EducationSynchronizationErrorRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEducationSynchronizationErrorRequest instance
+     * @return the EducationSynchronizationErrorRequest instance
      */
-    public IEducationSynchronizationErrorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationSynchronizationErrorRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class EducationSynchronizationErrorRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationSynchronizationErrorRequest instance
+     * @return the EducationSynchronizationErrorRequest instance
      */
-    public IEducationSynchronizationErrorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationSynchronizationErrorRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationSynchronizationErrorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

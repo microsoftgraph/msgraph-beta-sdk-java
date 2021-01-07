@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10PFXImportCertificateProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10PFXImport Certificate Profile Request.
  */
-public class Windows10PFXImportCertificateProfileRequest extends BaseRequest implements IWindows10PFXImportCertificateProfileRequest {
+public class Windows10PFXImportCertificateProfileRequest extends BaseRequest<Windows10PFXImportCertificateProfile> {
 	
     /**
      * The request for the Windows10PFXImportCertificateProfile
@@ -29,7 +31,7 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10PFXImportCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10PFXImportCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10PFXImportCertificateProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @return the Windows10PFXImportCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10PFXImportCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @param sourceWindows10PFXImportCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10PFXImportCertificateProfile sourceWindows10PFXImportCertificateProfile, final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
+    public void patch(@Nonnull final Windows10PFXImportCertificateProfile sourceWindows10PFXImportCertificateProfile, @Nonnull final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10PFXImportCertificateProfile);
     }
 
@@ -87,7 +90,8 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @return the updated Windows10PFXImportCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10PFXImportCertificateProfile patch(final Windows10PFXImportCertificateProfile sourceWindows10PFXImportCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10PFXImportCertificateProfile patch(@Nonnull final Windows10PFXImportCertificateProfile sourceWindows10PFXImportCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10PFXImportCertificateProfile);
     }
 
@@ -97,7 +101,7 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @param newWindows10PFXImportCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
+    public void post(@Nonnull final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, @Nonnull final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newWindows10PFXImportCertificateProfile);
     }
 
@@ -108,7 +112,8 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @return the created Windows10PFXImportCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10PFXImportCertificateProfile post(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10PFXImportCertificateProfile post(@Nonnull final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newWindows10PFXImportCertificateProfile);
     }
 
@@ -118,7 +123,7 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @param newWindows10PFXImportCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
+    public void put(@Nonnull final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile, @Nonnull final ICallback<? super Windows10PFXImportCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newWindows10PFXImportCertificateProfile);
     }
 
@@ -129,7 +134,8 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @return the created Windows10PFXImportCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10PFXImportCertificateProfile put(final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10PFXImportCertificateProfile put(@Nonnull final Windows10PFXImportCertificateProfile newWindows10PFXImportCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newWindows10PFXImportCertificateProfile);
     }
 
@@ -139,9 +145,10 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10PFXImportCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10PFXImportCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10PFXImportCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10PFXImportCertificateProfileRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10PFXImportCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10PFXImportCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10PFXImportCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

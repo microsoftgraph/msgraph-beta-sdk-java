@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityGovernance;
-import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppConsentApprovalRouteRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentApprovalRouteRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsOfUseContainerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntitlementManagementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Governance Request.
  */
-public class IdentityGovernanceRequest extends BaseRequest implements IIdentityGovernanceRequest {
+public class IdentityGovernanceRequest extends BaseRequest<IdentityGovernance> {
 	
     /**
      * The request for the IdentityGovernance
@@ -37,7 +35,7 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityGovernanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityGovernanceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityGovernance.class);
     }
 
@@ -46,7 +44,7 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityGovernance> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityGovernance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @return the IdentityGovernance from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IdentityGovernance get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityGovernance> callback) {
+    public void delete(@Nonnull final ICallback<? super IdentityGovernance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @param sourceIdentityGovernance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityGovernance sourceIdentityGovernance, final ICallback<? super IdentityGovernance> callback) {
+    public void patch(@Nonnull final IdentityGovernance sourceIdentityGovernance, @Nonnull final ICallback<? super IdentityGovernance> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityGovernance);
     }
 
@@ -95,7 +94,8 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @return the updated IdentityGovernance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityGovernance patch(final IdentityGovernance sourceIdentityGovernance) throws ClientException {
+    @Nullable
+    public IdentityGovernance patch(@Nonnull final IdentityGovernance sourceIdentityGovernance) throws ClientException {
         return send(HttpMethod.PATCH, sourceIdentityGovernance);
     }
 
@@ -105,7 +105,7 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @param newIdentityGovernance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityGovernance newIdentityGovernance, final ICallback<? super IdentityGovernance> callback) {
+    public void post(@Nonnull final IdentityGovernance newIdentityGovernance, @Nonnull final ICallback<? super IdentityGovernance> callback) {
         send(HttpMethod.POST, callback, newIdentityGovernance);
     }
 
@@ -116,7 +116,8 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @return the created IdentityGovernance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityGovernance post(final IdentityGovernance newIdentityGovernance) throws ClientException {
+    @Nullable
+    public IdentityGovernance post(@Nonnull final IdentityGovernance newIdentityGovernance) throws ClientException {
         return send(HttpMethod.POST, newIdentityGovernance);
     }
 
@@ -126,7 +127,7 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @param newIdentityGovernance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityGovernance newIdentityGovernance, final ICallback<? super IdentityGovernance> callback) {
+    public void put(@Nonnull final IdentityGovernance newIdentityGovernance, @Nonnull final ICallback<? super IdentityGovernance> callback) {
         send(HttpMethod.PUT, callback, newIdentityGovernance);
     }
 
@@ -137,7 +138,8 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @return the created IdentityGovernance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityGovernance put(final IdentityGovernance newIdentityGovernance) throws ClientException {
+    @Nullable
+    public IdentityGovernance put(@Nonnull final IdentityGovernance newIdentityGovernance) throws ClientException {
         return send(HttpMethod.PUT, newIdentityGovernance);
     }
 
@@ -147,9 +149,10 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentityGovernanceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityGovernanceRequest)this;
+     @Nonnull
+     public IdentityGovernanceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class IdentityGovernanceRequest extends BaseRequest implements IIdentityG
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentityGovernanceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityGovernanceRequest)this;
+     @Nonnull
+     public IdentityGovernanceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

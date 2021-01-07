@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsProtectionState;
-import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Protection State Request.
  */
-public class WindowsProtectionStateRequest extends BaseRequest implements IWindowsProtectionStateRequest {
+public class WindowsProtectionStateRequest extends BaseRequest<WindowsProtectionState> {
 	
     /**
      * The request for the WindowsProtectionState
@@ -33,7 +33,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsProtectionStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsProtectionStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsProtectionState.class);
     }
 
@@ -42,7 +42,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsProtectionState> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @return the WindowsProtectionState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsProtectionState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsProtectionState> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param sourceWindowsProtectionState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsProtectionState sourceWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback) {
+    public void patch(@Nonnull final WindowsProtectionState sourceWindowsProtectionState, @Nonnull final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsProtectionState);
     }
 
@@ -91,7 +92,8 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @return the updated WindowsProtectionState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsProtectionState patch(final WindowsProtectionState sourceWindowsProtectionState) throws ClientException {
+    @Nullable
+    public WindowsProtectionState patch(@Nonnull final WindowsProtectionState sourceWindowsProtectionState) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsProtectionState);
     }
 
@@ -101,7 +103,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param newWindowsProtectionState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsProtectionState newWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback) {
+    public void post(@Nonnull final WindowsProtectionState newWindowsProtectionState, @Nonnull final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.POST, callback, newWindowsProtectionState);
     }
 
@@ -112,7 +114,8 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @return the created WindowsProtectionState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsProtectionState post(final WindowsProtectionState newWindowsProtectionState) throws ClientException {
+    @Nullable
+    public WindowsProtectionState post(@Nonnull final WindowsProtectionState newWindowsProtectionState) throws ClientException {
         return send(HttpMethod.POST, newWindowsProtectionState);
     }
 
@@ -122,7 +125,7 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param newWindowsProtectionState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsProtectionState newWindowsProtectionState, final ICallback<? super WindowsProtectionState> callback) {
+    public void put(@Nonnull final WindowsProtectionState newWindowsProtectionState, @Nonnull final ICallback<? super WindowsProtectionState> callback) {
         send(HttpMethod.PUT, callback, newWindowsProtectionState);
     }
 
@@ -133,7 +136,8 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @return the created WindowsProtectionState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsProtectionState put(final WindowsProtectionState newWindowsProtectionState) throws ClientException {
+    @Nullable
+    public WindowsProtectionState put(@Nonnull final WindowsProtectionState newWindowsProtectionState) throws ClientException {
         return send(HttpMethod.PUT, newWindowsProtectionState);
     }
 
@@ -143,9 +147,10 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsProtectionStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsProtectionStateRequest)this;
+     @Nonnull
+     public WindowsProtectionStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class WindowsProtectionStateRequest extends BaseRequest implements IWindo
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsProtectionStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsProtectionStateRequest)this;
+     @Nonnull
+     public WindowsProtectionStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

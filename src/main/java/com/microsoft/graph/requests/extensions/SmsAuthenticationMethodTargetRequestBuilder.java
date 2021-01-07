@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SmsAuthenticationMethodTarget;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sms Authentication Method Target Request Builder.
  */
-public class SmsAuthenticationMethodTargetRequestBuilder extends BaseRequestBuilder implements ISmsAuthenticationMethodTargetRequestBuilder {
+public class SmsAuthenticationMethodTargetRequestBuilder extends BaseRequestBuilder<SmsAuthenticationMethodTarget> {
 
     /**
      * The request builder for the SmsAuthenticationMethodTarget
@@ -28,7 +30,7 @@ public class SmsAuthenticationMethodTargetRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SmsAuthenticationMethodTargetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SmsAuthenticationMethodTargetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class SmsAuthenticationMethodTargetRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISmsAuthenticationMethodTargetRequest instance
+     * @return the SmsAuthenticationMethodTargetRequest instance
      */
-    public ISmsAuthenticationMethodTargetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SmsAuthenticationMethodTargetRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class SmsAuthenticationMethodTargetRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISmsAuthenticationMethodTargetRequest instance
+     * @return the SmsAuthenticationMethodTargetRequest instance
      */
-    public ISmsAuthenticationMethodTargetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SmsAuthenticationMethodTargetRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SmsAuthenticationMethodTargetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

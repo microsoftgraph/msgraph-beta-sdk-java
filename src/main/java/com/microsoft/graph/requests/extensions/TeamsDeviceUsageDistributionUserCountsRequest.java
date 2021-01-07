@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsDeviceUsageDistributionUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams Device Usage Distribution User Counts Request.
  */
-public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest implements ITeamsDeviceUsageDistributionUserCountsRequest {
+public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest<TeamsDeviceUsageDistributionUserCounts> {
 	
     /**
      * The request for the TeamsDeviceUsageDistributionUserCounts
@@ -29,7 +31,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsDeviceUsageDistributionUserCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsDeviceUsageDistributionUserCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsDeviceUsageDistributionUserCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @return the TeamsDeviceUsageDistributionUserCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsDeviceUsageDistributionUserCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @param sourceTeamsDeviceUsageDistributionUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsDeviceUsageDistributionUserCounts sourceTeamsDeviceUsageDistributionUserCounts, final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
+    public void patch(@Nonnull final TeamsDeviceUsageDistributionUserCounts sourceTeamsDeviceUsageDistributionUserCounts, @Nonnull final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsDeviceUsageDistributionUserCounts);
     }
 
@@ -87,7 +90,8 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @return the updated TeamsDeviceUsageDistributionUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsDeviceUsageDistributionUserCounts patch(final TeamsDeviceUsageDistributionUserCounts sourceTeamsDeviceUsageDistributionUserCounts) throws ClientException {
+    @Nullable
+    public TeamsDeviceUsageDistributionUserCounts patch(@Nonnull final TeamsDeviceUsageDistributionUserCounts sourceTeamsDeviceUsageDistributionUserCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsDeviceUsageDistributionUserCounts);
     }
 
@@ -97,7 +101,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @param newTeamsDeviceUsageDistributionUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
+    public void post(@Nonnull final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, @Nonnull final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.POST, callback, newTeamsDeviceUsageDistributionUserCounts);
     }
 
@@ -108,7 +112,8 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @return the created TeamsDeviceUsageDistributionUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsDeviceUsageDistributionUserCounts post(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts) throws ClientException {
+    @Nullable
+    public TeamsDeviceUsageDistributionUserCounts post(@Nonnull final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts) throws ClientException {
         return send(HttpMethod.POST, newTeamsDeviceUsageDistributionUserCounts);
     }
 
@@ -118,7 +123,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @param newTeamsDeviceUsageDistributionUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
+    public void put(@Nonnull final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts, @Nonnull final ICallback<? super TeamsDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.PUT, callback, newTeamsDeviceUsageDistributionUserCounts);
     }
 
@@ -129,7 +134,8 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @return the created TeamsDeviceUsageDistributionUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsDeviceUsageDistributionUserCounts put(final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts) throws ClientException {
+    @Nullable
+    public TeamsDeviceUsageDistributionUserCounts put(@Nonnull final TeamsDeviceUsageDistributionUserCounts newTeamsDeviceUsageDistributionUserCounts) throws ClientException {
         return send(HttpMethod.PUT, newTeamsDeviceUsageDistributionUserCounts);
     }
 
@@ -139,9 +145,10 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsDeviceUsageDistributionUserCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsDeviceUsageDistributionUserCountsRequest)this;
+     @Nonnull
+     public TeamsDeviceUsageDistributionUserCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TeamsDeviceUsageDistributionUserCountsRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsDeviceUsageDistributionUserCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsDeviceUsageDistributionUserCountsRequest)this;
+     @Nonnull
+     public TeamsDeviceUsageDistributionUserCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

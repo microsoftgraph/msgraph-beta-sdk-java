@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppConsentRequest;
-import com.microsoft.graph.requests.extensions.IUserConsentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserConsentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserConsentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the App Consent Request Request Builder.
  */
-public class AppConsentRequestRequestBuilder extends BaseRequestBuilder implements IAppConsentRequestRequestBuilder {
+public class AppConsentRequestRequestBuilder extends BaseRequestBuilder<AppConsentRequest> {
 
     /**
      * The request builder for the AppConsentRequest
@@ -32,7 +32,7 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppConsentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppConsentRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAppConsentRequestRequest instance
+     * @return the AppConsentRequestRequest instance
      */
-    public IAppConsentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AppConsentRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class AppConsentRequestRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAppConsentRequestRequest instance
+     * @return the AppConsentRequestRequest instance
      */
-    public IAppConsentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AppConsentRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AppConsentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IUserConsentRequestCollectionRequestBuilder userConsentRequests() {
+    /**
+     *  Gets a request builder for the UserConsentRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserConsentRequestCollectionRequestBuilder userConsentRequests() {
         return new UserConsentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userConsentRequests"), getClient(), null);
     }
 
-    public IUserConsentRequestRequestBuilder userConsentRequests(final String id) {
+    /**
+     * Gets a request builder for the UserConsentRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserConsentRequestRequestBuilder userConsentRequests(@Nonnull final String id) {
         return new UserConsentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("userConsentRequests") + "/" + id, getClient(), null);
     }
 }

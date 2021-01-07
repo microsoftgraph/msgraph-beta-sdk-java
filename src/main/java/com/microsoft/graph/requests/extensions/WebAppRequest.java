@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WebApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Web App Request.
  */
-public class WebAppRequest extends BaseRequest implements IWebAppRequest {
+public class WebAppRequest extends BaseRequest<WebApp> {
 	
     /**
      * The request for the WebApp
@@ -29,7 +31,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WebAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WebAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WebApp.class);
     }
 
@@ -38,7 +40,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WebApp> callback) {
+    public void get(@Nonnull final ICallback<? super WebApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @return the WebApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WebApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WebApp> callback) {
+    public void delete(@Nonnull final ICallback<? super WebApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param sourceWebApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WebApp sourceWebApp, final ICallback<? super WebApp> callback) {
+    public void patch(@Nonnull final WebApp sourceWebApp, @Nonnull final ICallback<? super WebApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWebApp);
     }
 
@@ -87,7 +90,8 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @return the updated WebApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WebApp patch(final WebApp sourceWebApp) throws ClientException {
+    @Nullable
+    public WebApp patch(@Nonnull final WebApp sourceWebApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceWebApp);
     }
 
@@ -97,7 +101,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param newWebApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WebApp newWebApp, final ICallback<? super WebApp> callback) {
+    public void post(@Nonnull final WebApp newWebApp, @Nonnull final ICallback<? super WebApp> callback) {
         send(HttpMethod.POST, callback, newWebApp);
     }
 
@@ -108,7 +112,8 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @return the created WebApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WebApp post(final WebApp newWebApp) throws ClientException {
+    @Nullable
+    public WebApp post(@Nonnull final WebApp newWebApp) throws ClientException {
         return send(HttpMethod.POST, newWebApp);
     }
 
@@ -118,7 +123,7 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param newWebApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WebApp newWebApp, final ICallback<? super WebApp> callback) {
+    public void put(@Nonnull final WebApp newWebApp, @Nonnull final ICallback<? super WebApp> callback) {
         send(HttpMethod.PUT, callback, newWebApp);
     }
 
@@ -129,7 +134,8 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @return the created WebApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WebApp put(final WebApp newWebApp) throws ClientException {
+    @Nullable
+    public WebApp put(@Nonnull final WebApp newWebApp) throws ClientException {
         return send(HttpMethod.PUT, newWebApp);
     }
 
@@ -139,9 +145,10 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IWebAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WebAppRequest)this;
+     @Nonnull
+     public WebAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WebAppRequest extends BaseRequest implements IWebAppRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IWebAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WebAppRequest)this;
+     @Nonnull
+     public WebAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

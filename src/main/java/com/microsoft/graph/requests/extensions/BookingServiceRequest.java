@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BookingService;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Booking Service Request.
  */
-public class BookingServiceRequest extends BaseRequest implements IBookingServiceRequest {
+public class BookingServiceRequest extends BaseRequest<BookingService> {
 	
     /**
      * The request for the BookingService
@@ -29,7 +31,7 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BookingServiceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BookingServiceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, BookingService.class);
     }
 
@@ -38,7 +40,7 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super BookingService> callback) {
+    public void get(@Nonnull final ICallback<? super BookingService> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @return the BookingService from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public BookingService get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super BookingService> callback) {
+    public void delete(@Nonnull final ICallback<? super BookingService> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @param sourceBookingService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BookingService sourceBookingService, final ICallback<? super BookingService> callback) {
+    public void patch(@Nonnull final BookingService sourceBookingService, @Nonnull final ICallback<? super BookingService> callback) {
         send(HttpMethod.PATCH, callback, sourceBookingService);
     }
 
@@ -87,7 +90,8 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @return the updated BookingService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingService patch(final BookingService sourceBookingService) throws ClientException {
+    @Nullable
+    public BookingService patch(@Nonnull final BookingService sourceBookingService) throws ClientException {
         return send(HttpMethod.PATCH, sourceBookingService);
     }
 
@@ -97,7 +101,7 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @param newBookingService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BookingService newBookingService, final ICallback<? super BookingService> callback) {
+    public void post(@Nonnull final BookingService newBookingService, @Nonnull final ICallback<? super BookingService> callback) {
         send(HttpMethod.POST, callback, newBookingService);
     }
 
@@ -108,7 +112,8 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @return the created BookingService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingService post(final BookingService newBookingService) throws ClientException {
+    @Nullable
+    public BookingService post(@Nonnull final BookingService newBookingService) throws ClientException {
         return send(HttpMethod.POST, newBookingService);
     }
 
@@ -118,7 +123,7 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @param newBookingService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BookingService newBookingService, final ICallback<? super BookingService> callback) {
+    public void put(@Nonnull final BookingService newBookingService, @Nonnull final ICallback<? super BookingService> callback) {
         send(HttpMethod.PUT, callback, newBookingService);
     }
 
@@ -129,7 +134,8 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @return the created BookingService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingService put(final BookingService newBookingService) throws ClientException {
+    @Nullable
+    public BookingService put(@Nonnull final BookingService newBookingService) throws ClientException {
         return send(HttpMethod.PUT, newBookingService);
     }
 
@@ -139,9 +145,10 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @param value the select clause
      * @return the updated request
      */
-     public IBookingServiceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (BookingServiceRequest)this;
+     @Nonnull
+     public BookingServiceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class BookingServiceRequest extends BaseRequest implements IBookingServic
      * @param value the expand clause
      * @return the updated request
      */
-     public IBookingServiceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BookingServiceRequest)this;
+     @Nonnull
+     public BookingServiceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

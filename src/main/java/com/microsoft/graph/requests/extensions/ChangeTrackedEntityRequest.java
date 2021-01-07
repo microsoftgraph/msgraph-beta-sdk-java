@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ChangeTrackedEntity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Change Tracked Entity Request.
  */
-public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTrackedEntityRequest {
+public class ChangeTrackedEntityRequest extends BaseRequest<ChangeTrackedEntity> {
 	
     /**
      * The request for the ChangeTrackedEntity
@@ -30,10 +32,10 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ChangeTrackedEntityRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ChangeTrackedEntity> responseClass) {
+    public ChangeTrackedEntityRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ChangeTrackedEntity> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChangeTrackedEntityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChangeTrackedEntityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ChangeTrackedEntity.class);
     }
 
@@ -53,7 +55,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ChangeTrackedEntity> callback) {
+    public void get(@Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @return the ChangeTrackedEntity from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ChangeTrackedEntity get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ChangeTrackedEntity> callback) {
+    public void delete(@Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param sourceChangeTrackedEntity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ChangeTrackedEntity sourceChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback) {
+    public void patch(@Nonnull final ChangeTrackedEntity sourceChangeTrackedEntity, @Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
         send(HttpMethod.PATCH, callback, sourceChangeTrackedEntity);
     }
 
@@ -102,7 +105,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @return the updated ChangeTrackedEntity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChangeTrackedEntity patch(final ChangeTrackedEntity sourceChangeTrackedEntity) throws ClientException {
+    @Nullable
+    public ChangeTrackedEntity patch(@Nonnull final ChangeTrackedEntity sourceChangeTrackedEntity) throws ClientException {
         return send(HttpMethod.PATCH, sourceChangeTrackedEntity);
     }
 
@@ -112,7 +116,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param newChangeTrackedEntity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback) {
+    public void post(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity, @Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
         send(HttpMethod.POST, callback, newChangeTrackedEntity);
     }
 
@@ -123,7 +127,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @return the created ChangeTrackedEntity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChangeTrackedEntity post(final ChangeTrackedEntity newChangeTrackedEntity) throws ClientException {
+    @Nullable
+    public ChangeTrackedEntity post(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) throws ClientException {
         return send(HttpMethod.POST, newChangeTrackedEntity);
     }
 
@@ -133,7 +138,7 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param newChangeTrackedEntity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ChangeTrackedEntity newChangeTrackedEntity, final ICallback<? super ChangeTrackedEntity> callback) {
+    public void put(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity, @Nonnull final ICallback<? super ChangeTrackedEntity> callback) {
         send(HttpMethod.PUT, callback, newChangeTrackedEntity);
     }
 
@@ -144,7 +149,8 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @return the created ChangeTrackedEntity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ChangeTrackedEntity put(final ChangeTrackedEntity newChangeTrackedEntity) throws ClientException {
+    @Nullable
+    public ChangeTrackedEntity put(@Nonnull final ChangeTrackedEntity newChangeTrackedEntity) throws ClientException {
         return send(HttpMethod.PUT, newChangeTrackedEntity);
     }
 
@@ -154,9 +160,10 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param value the select clause
      * @return the updated request
      */
-     public IChangeTrackedEntityRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ChangeTrackedEntityRequest)this;
+     @Nonnull
+     public ChangeTrackedEntityRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class ChangeTrackedEntityRequest extends BaseRequest implements IChangeTr
      * @param value the expand clause
      * @return the updated request
      */
-     public IChangeTrackedEntityRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ChangeTrackedEntityRequest)this;
+     @Nonnull
+     public ChangeTrackedEntityRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

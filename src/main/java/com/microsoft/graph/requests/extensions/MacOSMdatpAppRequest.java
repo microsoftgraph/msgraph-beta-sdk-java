@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSMdatpApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSMdatp App Request.
  */
-public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppRequest {
+public class MacOSMdatpAppRequest extends BaseRequest<MacOSMdatpApp> {
 	
     /**
      * The request for the MacOSMdatpApp
@@ -29,7 +31,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSMdatpAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSMdatpAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSMdatpApp.class);
     }
 
@@ -38,7 +40,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSMdatpApp> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @return the MacOSMdatpApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSMdatpApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSMdatpApp> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param sourceMacOSMdatpApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSMdatpApp sourceMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback) {
+    public void patch(@Nonnull final MacOSMdatpApp sourceMacOSMdatpApp, @Nonnull final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSMdatpApp);
     }
 
@@ -87,7 +90,8 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @return the updated MacOSMdatpApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSMdatpApp patch(final MacOSMdatpApp sourceMacOSMdatpApp) throws ClientException {
+    @Nullable
+    public MacOSMdatpApp patch(@Nonnull final MacOSMdatpApp sourceMacOSMdatpApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSMdatpApp);
     }
 
@@ -97,7 +101,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param newMacOSMdatpApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback) {
+    public void post(@Nonnull final MacOSMdatpApp newMacOSMdatpApp, @Nonnull final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.POST, callback, newMacOSMdatpApp);
     }
 
@@ -108,7 +112,8 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @return the created MacOSMdatpApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSMdatpApp post(final MacOSMdatpApp newMacOSMdatpApp) throws ClientException {
+    @Nullable
+    public MacOSMdatpApp post(@Nonnull final MacOSMdatpApp newMacOSMdatpApp) throws ClientException {
         return send(HttpMethod.POST, newMacOSMdatpApp);
     }
 
@@ -118,7 +123,7 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param newMacOSMdatpApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSMdatpApp newMacOSMdatpApp, final ICallback<? super MacOSMdatpApp> callback) {
+    public void put(@Nonnull final MacOSMdatpApp newMacOSMdatpApp, @Nonnull final ICallback<? super MacOSMdatpApp> callback) {
         send(HttpMethod.PUT, callback, newMacOSMdatpApp);
     }
 
@@ -129,7 +134,8 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @return the created MacOSMdatpApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSMdatpApp put(final MacOSMdatpApp newMacOSMdatpApp) throws ClientException {
+    @Nullable
+    public MacOSMdatpApp put(@Nonnull final MacOSMdatpApp newMacOSMdatpApp) throws ClientException {
         return send(HttpMethod.PUT, newMacOSMdatpApp);
     }
 
@@ -139,9 +145,10 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSMdatpAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSMdatpAppRequest)this;
+     @Nonnull
+     public MacOSMdatpAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MacOSMdatpAppRequest extends BaseRequest implements IMacOSMdatpAppR
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSMdatpAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSMdatpAppRequest)this;
+     @Nonnull
+     public MacOSMdatpAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

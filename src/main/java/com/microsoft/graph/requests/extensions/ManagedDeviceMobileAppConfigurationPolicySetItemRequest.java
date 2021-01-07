@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Mobile App Configuration Policy Set Item Request.
  */
-public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends BaseRequest implements IManagedDeviceMobileAppConfigurationPolicySetItemRequest {
+public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends BaseRequest<ManagedDeviceMobileAppConfigurationPolicySetItem> {
 	
     /**
      * The request for the ManagedDeviceMobileAppConfigurationPolicySetItem
@@ -29,7 +31,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @return the ManagedDeviceMobileAppConfigurationPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedDeviceMobileAppConfigurationPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @param sourceManagedDeviceMobileAppConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceMobileAppConfigurationPolicySetItem sourceManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
+    public void patch(@Nonnull final ManagedDeviceMobileAppConfigurationPolicySetItem sourceManagedDeviceMobileAppConfigurationPolicySetItem, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfigurationPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @return the updated ManagedDeviceMobileAppConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceMobileAppConfigurationPolicySetItem patch(final ManagedDeviceMobileAppConfigurationPolicySetItem sourceManagedDeviceMobileAppConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public ManagedDeviceMobileAppConfigurationPolicySetItem patch(@Nonnull final ManagedDeviceMobileAppConfigurationPolicySetItem sourceManagedDeviceMobileAppConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfigurationPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @param newManagedDeviceMobileAppConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
+    public void post(@Nonnull final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfigurationPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @return the created ManagedDeviceMobileAppConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceMobileAppConfigurationPolicySetItem post(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public ManagedDeviceMobileAppConfigurationPolicySetItem post(@Nonnull final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newManagedDeviceMobileAppConfigurationPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @param newManagedDeviceMobileAppConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
+    public void put(@Nonnull final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @return the created ManagedDeviceMobileAppConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceMobileAppConfigurationPolicySetItem put(final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public ManagedDeviceMobileAppConfigurationPolicySetItem put(@Nonnull final ManagedDeviceMobileAppConfigurationPolicySetItem newManagedDeviceMobileAppConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedDeviceMobileAppConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public ManagedDeviceMobileAppConfigurationPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedDeviceMobileAppConfigurationPolicySetItemRequest extends Bas
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedDeviceMobileAppConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public ManagedDeviceMobileAppConfigurationPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

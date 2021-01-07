@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleManagement;
-import com.microsoft.graph.requests.extensions.IRbacApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.RbacApplicationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRbacApplicationMultipleRequestBuilder;
 import com.microsoft.graph.requests.extensions.RbacApplicationMultipleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Role Management Request Builder.
  */
-public class RoleManagementRequestBuilder extends BaseRequestBuilder implements IRoleManagementRequestBuilder {
+public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagement> {
 
     /**
      * The request builder for the RoleManagement
@@ -32,7 +32,7 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleManagementRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleManagementRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRoleManagementRequest instance
+     * @return the RoleManagementRequest instance
      */
-    public IRoleManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RoleManagementRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRoleManagementRequest instance
+     * @return the RoleManagementRequest instance
      */
-    public IRoleManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RoleManagementRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RoleManagementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
     /**
      * Gets the request builder for RbacApplication
      *
-     * @return the IRbacApplicationRequestBuilder instance
+     * @return the RbacApplicationRequestBuilder instance
      */
-    public IRbacApplicationRequestBuilder directory() {
+    @Nonnull
+    public RbacApplicationRequestBuilder directory() {
         return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("directory"), getClient(), null);
     }
 
     /**
      * Gets the request builder for RbacApplicationMultiple
      *
-     * @return the IRbacApplicationMultipleRequestBuilder instance
+     * @return the RbacApplicationMultipleRequestBuilder instance
      */
-    public IRbacApplicationMultipleRequestBuilder deviceManagement() {
+    @Nonnull
+    public RbacApplicationMultipleRequestBuilder deviceManagement() {
         return new RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagement"), getClient(), null);
     }
 }

@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Journal;
-import com.microsoft.graph.requests.extensions.IJournalLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Journal Request Builder.
  */
-public class JournalRequestBuilder extends BaseRequestBuilder implements IJournalRequestBuilder {
+public class JournalRequestBuilder extends BaseRequestBuilder<Journal> {
 
     /**
      * The request builder for the Journal
@@ -34,7 +33,7 @@ public class JournalRequestBuilder extends BaseRequestBuilder implements IJourna
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public JournalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public JournalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class JournalRequestBuilder extends BaseRequestBuilder implements IJourna
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IJournalRequest instance
+     * @return the JournalRequest instance
      */
-    public IJournalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public JournalRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +52,10 @@ public class JournalRequestBuilder extends BaseRequestBuilder implements IJourna
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IJournalRequest instance
+     * @return the JournalRequest instance
      */
-    public IJournalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public JournalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.JournalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,20 +64,39 @@ public class JournalRequestBuilder extends BaseRequestBuilder implements IJourna
     /**
      * Gets the request builder for Account
      *
-     * @return the IAccountRequestBuilder instance
+     * @return the AccountRequestBuilder instance
      */
-    public IAccountRequestBuilder account() {
+    @Nonnull
+    public AccountRequestBuilder account() {
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
-    public IJournalLineCollectionRequestBuilder journalLines() {
+    /**
+     *  Gets a request builder for the JournalLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public JournalLineCollectionRequestBuilder journalLines() {
         return new JournalLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines"), getClient(), null);
     }
 
-    public IJournalLineRequestBuilder journalLines(final String id) {
+    /**
+     * Gets a request builder for the JournalLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public JournalLineRequestBuilder journalLines(@Nonnull final String id) {
         return new JournalLineRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines") + "/" + id, getClient(), null);
     }
 
-    public IJournalPostRequestBuilder post() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public JournalPostRequestBuilder post() {
         return new JournalPostRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.post"), getClient(), null);
     }
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrinterCreateOperation;
-import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Printer Create Operation Request Builder.
  */
-public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder implements IPrinterCreateOperationRequestBuilder {
+public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder<PrinterCreateOperation> {
 
     /**
      * The request builder for the PrinterCreateOperation
@@ -30,7 +31,7 @@ public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrinterCreateOperationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrinterCreateOperationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrinterCreateOperationRequest instance
+     * @return the PrinterCreateOperationRequest instance
      */
-    public IPrinterCreateOperationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrinterCreateOperationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrinterCreateOperationRequest instance
+     * @return the PrinterCreateOperationRequest instance
      */
-    public IPrinterCreateOperationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrinterCreateOperationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrinterCreateOperationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class PrinterCreateOperationRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for Printer
      *
-     * @return the IPrinterWithReferenceRequestBuilder instance
+     * @return the PrinterWithReferenceRequestBuilder instance
      */
-    public IPrinterWithReferenceRequestBuilder printer() {
+    @Nonnull
+    public PrinterWithReferenceRequestBuilder printer() {
         return new PrinterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("printer"), getClient(), null);
     }
 }

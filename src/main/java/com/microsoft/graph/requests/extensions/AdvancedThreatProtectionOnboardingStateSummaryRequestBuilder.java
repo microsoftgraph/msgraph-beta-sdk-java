@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdvancedThreatProtectionOnboardingStateSummary;
-import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Advanced Threat Protection Onboarding State Summary Request Builder.
  */
-public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extends BaseRequestBuilder implements IAdvancedThreatProtectionOnboardingStateSummaryRequestBuilder {
+public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extends BaseRequestBuilder<AdvancedThreatProtectionOnboardingStateSummary> {
 
     /**
      * The request builder for the AdvancedThreatProtectionOnboardingStateSummary
@@ -32,7 +32,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAdvancedThreatProtectionOnboardingStateSummaryRequest instance
+     * @return the AdvancedThreatProtectionOnboardingStateSummaryRequest instance
      */
-    public IAdvancedThreatProtectionOnboardingStateSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AdvancedThreatProtectionOnboardingStateSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAdvancedThreatProtectionOnboardingStateSummaryRequest instance
+     * @return the AdvancedThreatProtectionOnboardingStateSummaryRequest instance
      */
-    public IAdvancedThreatProtectionOnboardingStateSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AdvancedThreatProtectionOnboardingStateSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingStateSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates() {
+    /**
+     *  Gets a request builder for the AdvancedThreatProtectionOnboardingDeviceSettingState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates() {
         return new AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("advancedThreatProtectionOnboardingDeviceSettingStates"), getClient(), null);
     }
 
-    public IAdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates(final String id) {
+    /**
+     * Gets a request builder for the AdvancedThreatProtectionOnboardingDeviceSettingState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates(@Nonnull final String id) {
         return new AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(getRequestUrlWithAdditionalSegment("advancedThreatProtectionOnboardingDeviceSettingStates") + "/" + id, getClient(), null);
     }
 }

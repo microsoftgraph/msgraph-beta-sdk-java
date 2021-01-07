@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OneDriveUsageAccountCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the One Drive Usage Account Counts Request.
  */
-public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IOneDriveUsageAccountCountsRequest {
+public class OneDriveUsageAccountCountsRequest extends BaseRequest<OneDriveUsageAccountCounts> {
 	
     /**
      * The request for the OneDriveUsageAccountCounts
@@ -29,7 +31,7 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OneDriveUsageAccountCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OneDriveUsageAccountCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OneDriveUsageAccountCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OneDriveUsageAccountCounts> callback) {
+    public void get(@Nonnull final ICallback<? super OneDriveUsageAccountCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @return the OneDriveUsageAccountCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OneDriveUsageAccountCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OneDriveUsageAccountCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super OneDriveUsageAccountCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @param sourceOneDriveUsageAccountCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OneDriveUsageAccountCounts sourceOneDriveUsageAccountCounts, final ICallback<? super OneDriveUsageAccountCounts> callback) {
+    public void patch(@Nonnull final OneDriveUsageAccountCounts sourceOneDriveUsageAccountCounts, @Nonnull final ICallback<? super OneDriveUsageAccountCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOneDriveUsageAccountCounts);
     }
 
@@ -87,7 +90,8 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @return the updated OneDriveUsageAccountCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OneDriveUsageAccountCounts patch(final OneDriveUsageAccountCounts sourceOneDriveUsageAccountCounts) throws ClientException {
+    @Nullable
+    public OneDriveUsageAccountCounts patch(@Nonnull final OneDriveUsageAccountCounts sourceOneDriveUsageAccountCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceOneDriveUsageAccountCounts);
     }
 
@@ -97,7 +101,7 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @param newOneDriveUsageAccountCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts, final ICallback<? super OneDriveUsageAccountCounts> callback) {
+    public void post(@Nonnull final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts, @Nonnull final ICallback<? super OneDriveUsageAccountCounts> callback) {
         send(HttpMethod.POST, callback, newOneDriveUsageAccountCounts);
     }
 
@@ -108,7 +112,8 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @return the created OneDriveUsageAccountCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OneDriveUsageAccountCounts post(final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts) throws ClientException {
+    @Nullable
+    public OneDriveUsageAccountCounts post(@Nonnull final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts) throws ClientException {
         return send(HttpMethod.POST, newOneDriveUsageAccountCounts);
     }
 
@@ -118,7 +123,7 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @param newOneDriveUsageAccountCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts, final ICallback<? super OneDriveUsageAccountCounts> callback) {
+    public void put(@Nonnull final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts, @Nonnull final ICallback<? super OneDriveUsageAccountCounts> callback) {
         send(HttpMethod.PUT, callback, newOneDriveUsageAccountCounts);
     }
 
@@ -129,7 +134,8 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @return the created OneDriveUsageAccountCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OneDriveUsageAccountCounts put(final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts) throws ClientException {
+    @Nullable
+    public OneDriveUsageAccountCounts put(@Nonnull final OneDriveUsageAccountCounts newOneDriveUsageAccountCounts) throws ClientException {
         return send(HttpMethod.PUT, newOneDriveUsageAccountCounts);
     }
 
@@ -139,9 +145,10 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @param value the select clause
      * @return the updated request
      */
-     public IOneDriveUsageAccountCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OneDriveUsageAccountCountsRequest)this;
+     @Nonnull
+     public OneDriveUsageAccountCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class OneDriveUsageAccountCountsRequest extends BaseRequest implements IO
      * @param value the expand clause
      * @return the updated request
      */
-     public IOneDriveUsageAccountCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OneDriveUsageAccountCountsRequest)this;
+     @Nonnull
+     public OneDriveUsageAccountCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

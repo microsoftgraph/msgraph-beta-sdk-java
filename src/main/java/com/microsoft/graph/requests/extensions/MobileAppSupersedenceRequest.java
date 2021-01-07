@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppSupersedence;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Supersedence Request.
  */
-public class MobileAppSupersedenceRequest extends BaseRequest implements IMobileAppSupersedenceRequest {
+public class MobileAppSupersedenceRequest extends BaseRequest<MobileAppSupersedence> {
 	
     /**
      * The request for the MobileAppSupersedence
@@ -29,7 +31,7 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppSupersedenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppSupersedenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppSupersedence.class);
     }
 
@@ -38,7 +40,7 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppSupersedence> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppSupersedence> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @return the MobileAppSupersedence from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppSupersedence get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppSupersedence> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppSupersedence> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @param sourceMobileAppSupersedence the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppSupersedence sourceMobileAppSupersedence, final ICallback<? super MobileAppSupersedence> callback) {
+    public void patch(@Nonnull final MobileAppSupersedence sourceMobileAppSupersedence, @Nonnull final ICallback<? super MobileAppSupersedence> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppSupersedence);
     }
 
@@ -87,7 +90,8 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @return the updated MobileAppSupersedence
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppSupersedence patch(final MobileAppSupersedence sourceMobileAppSupersedence) throws ClientException {
+    @Nullable
+    public MobileAppSupersedence patch(@Nonnull final MobileAppSupersedence sourceMobileAppSupersedence) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppSupersedence);
     }
 
@@ -97,7 +101,7 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @param newMobileAppSupersedence the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppSupersedence newMobileAppSupersedence, final ICallback<? super MobileAppSupersedence> callback) {
+    public void post(@Nonnull final MobileAppSupersedence newMobileAppSupersedence, @Nonnull final ICallback<? super MobileAppSupersedence> callback) {
         send(HttpMethod.POST, callback, newMobileAppSupersedence);
     }
 
@@ -108,7 +112,8 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @return the created MobileAppSupersedence
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppSupersedence post(final MobileAppSupersedence newMobileAppSupersedence) throws ClientException {
+    @Nullable
+    public MobileAppSupersedence post(@Nonnull final MobileAppSupersedence newMobileAppSupersedence) throws ClientException {
         return send(HttpMethod.POST, newMobileAppSupersedence);
     }
 
@@ -118,7 +123,7 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @param newMobileAppSupersedence the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppSupersedence newMobileAppSupersedence, final ICallback<? super MobileAppSupersedence> callback) {
+    public void put(@Nonnull final MobileAppSupersedence newMobileAppSupersedence, @Nonnull final ICallback<? super MobileAppSupersedence> callback) {
         send(HttpMethod.PUT, callback, newMobileAppSupersedence);
     }
 
@@ -129,7 +134,8 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @return the created MobileAppSupersedence
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppSupersedence put(final MobileAppSupersedence newMobileAppSupersedence) throws ClientException {
+    @Nullable
+    public MobileAppSupersedence put(@Nonnull final MobileAppSupersedence newMobileAppSupersedence) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppSupersedence);
     }
 
@@ -139,9 +145,10 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppSupersedenceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppSupersedenceRequest)this;
+     @Nonnull
+     public MobileAppSupersedenceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MobileAppSupersedenceRequest extends BaseRequest implements IMobile
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppSupersedenceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppSupersedenceRequest)this;
+     @Nonnull
+     public MobileAppSupersedenceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

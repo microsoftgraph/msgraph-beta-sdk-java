@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CredentialUserRegistrationDetails;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Credential User Registration Details Request.
  */
-public class CredentialUserRegistrationDetailsRequest extends BaseRequest implements ICredentialUserRegistrationDetailsRequest {
+public class CredentialUserRegistrationDetailsRequest extends BaseRequest<CredentialUserRegistrationDetails> {
 	
     /**
      * The request for the CredentialUserRegistrationDetails
@@ -29,7 +31,7 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CredentialUserRegistrationDetailsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CredentialUserRegistrationDetailsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CredentialUserRegistrationDetails.class);
     }
 
@@ -38,7 +40,7 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CredentialUserRegistrationDetails> callback) {
+    public void get(@Nonnull final ICallback<? super CredentialUserRegistrationDetails> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @return the CredentialUserRegistrationDetails from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CredentialUserRegistrationDetails get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CredentialUserRegistrationDetails> callback) {
+    public void delete(@Nonnull final ICallback<? super CredentialUserRegistrationDetails> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @param sourceCredentialUserRegistrationDetails the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CredentialUserRegistrationDetails sourceCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback) {
+    public void patch(@Nonnull final CredentialUserRegistrationDetails sourceCredentialUserRegistrationDetails, @Nonnull final ICallback<? super CredentialUserRegistrationDetails> callback) {
         send(HttpMethod.PATCH, callback, sourceCredentialUserRegistrationDetails);
     }
 
@@ -87,7 +90,8 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @return the updated CredentialUserRegistrationDetails
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CredentialUserRegistrationDetails patch(final CredentialUserRegistrationDetails sourceCredentialUserRegistrationDetails) throws ClientException {
+    @Nullable
+    public CredentialUserRegistrationDetails patch(@Nonnull final CredentialUserRegistrationDetails sourceCredentialUserRegistrationDetails) throws ClientException {
         return send(HttpMethod.PATCH, sourceCredentialUserRegistrationDetails);
     }
 
@@ -97,7 +101,7 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @param newCredentialUserRegistrationDetails the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback) {
+    public void post(@Nonnull final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, @Nonnull final ICallback<? super CredentialUserRegistrationDetails> callback) {
         send(HttpMethod.POST, callback, newCredentialUserRegistrationDetails);
     }
 
@@ -108,7 +112,8 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @return the created CredentialUserRegistrationDetails
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CredentialUserRegistrationDetails post(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException {
+    @Nullable
+    public CredentialUserRegistrationDetails post(@Nonnull final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException {
         return send(HttpMethod.POST, newCredentialUserRegistrationDetails);
     }
 
@@ -118,7 +123,7 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @param newCredentialUserRegistrationDetails the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, final ICallback<? super CredentialUserRegistrationDetails> callback) {
+    public void put(@Nonnull final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails, @Nonnull final ICallback<? super CredentialUserRegistrationDetails> callback) {
         send(HttpMethod.PUT, callback, newCredentialUserRegistrationDetails);
     }
 
@@ -129,7 +134,8 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @return the created CredentialUserRegistrationDetails
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CredentialUserRegistrationDetails put(final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException {
+    @Nullable
+    public CredentialUserRegistrationDetails put(@Nonnull final CredentialUserRegistrationDetails newCredentialUserRegistrationDetails) throws ClientException {
         return send(HttpMethod.PUT, newCredentialUserRegistrationDetails);
     }
 
@@ -139,9 +145,10 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public ICredentialUserRegistrationDetailsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CredentialUserRegistrationDetailsRequest)this;
+     @Nonnull
+     public CredentialUserRegistrationDetailsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CredentialUserRegistrationDetailsRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public ICredentialUserRegistrationDetailsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CredentialUserRegistrationDetailsRequest)this;
+     @Nonnull
+     public CredentialUserRegistrationDetailsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

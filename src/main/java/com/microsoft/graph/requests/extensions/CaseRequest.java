@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Case;
-import com.microsoft.graph.requests.extensions.ICustodianCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustodianRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustodianCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustodianRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILegalholdCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILegalholdRequestBuilder;
 import com.microsoft.graph.requests.extensions.LegalholdCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LegalholdRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReviewSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -36,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Case Request.
  */
-public class CaseRequest extends BaseRequest implements ICaseRequest {
+public class CaseRequest extends BaseRequest<Case> {
 	
     /**
      * The request for the Case
@@ -45,7 +39,7 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Case.class);
     }
 
@@ -54,7 +48,7 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Case> callback) {
+    public void get(@Nonnull final ICallback<? super Case> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +58,7 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @return the Case from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Case get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +68,7 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Case> callback) {
+    public void delete(@Nonnull final ICallback<? super Case> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +87,7 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @param sourceCase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Case sourceCase, final ICallback<? super Case> callback) {
+    public void patch(@Nonnull final Case sourceCase, @Nonnull final ICallback<? super Case> callback) {
         send(HttpMethod.PATCH, callback, sourceCase);
     }
 
@@ -103,7 +98,8 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @return the updated Case
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Case patch(final Case sourceCase) throws ClientException {
+    @Nullable
+    public Case patch(@Nonnull final Case sourceCase) throws ClientException {
         return send(HttpMethod.PATCH, sourceCase);
     }
 
@@ -113,7 +109,7 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @param newCase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Case newCase, final ICallback<? super Case> callback) {
+    public void post(@Nonnull final Case newCase, @Nonnull final ICallback<? super Case> callback) {
         send(HttpMethod.POST, callback, newCase);
     }
 
@@ -124,7 +120,8 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @return the created Case
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Case post(final Case newCase) throws ClientException {
+    @Nullable
+    public Case post(@Nonnull final Case newCase) throws ClientException {
         return send(HttpMethod.POST, newCase);
     }
 
@@ -134,7 +131,7 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @param newCase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Case newCase, final ICallback<? super Case> callback) {
+    public void put(@Nonnull final Case newCase, @Nonnull final ICallback<? super Case> callback) {
         send(HttpMethod.PUT, callback, newCase);
     }
 
@@ -145,7 +142,8 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @return the created Case
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Case put(final Case newCase) throws ClientException {
+    @Nullable
+    public Case put(@Nonnull final Case newCase) throws ClientException {
         return send(HttpMethod.PUT, newCase);
     }
 
@@ -155,9 +153,10 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ICaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CaseRequest)this;
+     @Nonnull
+     public CaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +165,10 @@ public class CaseRequest extends BaseRequest implements ICaseRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ICaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CaseRequest)this;
+     @Nonnull
+     public CaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

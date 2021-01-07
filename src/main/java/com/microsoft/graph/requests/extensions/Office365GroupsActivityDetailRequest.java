@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Office365GroupsActivityDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office365Groups Activity Detail Request.
  */
-public class Office365GroupsActivityDetailRequest extends BaseRequest implements IOffice365GroupsActivityDetailRequest {
+public class Office365GroupsActivityDetailRequest extends BaseRequest<Office365GroupsActivityDetail> {
 	
     /**
      * The request for the Office365GroupsActivityDetail
@@ -29,7 +31,7 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Office365GroupsActivityDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Office365GroupsActivityDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Office365GroupsActivityDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Office365GroupsActivityDetail> callback) {
+    public void get(@Nonnull final ICallback<? super Office365GroupsActivityDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @return the Office365GroupsActivityDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Office365GroupsActivityDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Office365GroupsActivityDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super Office365GroupsActivityDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @param sourceOffice365GroupsActivityDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365GroupsActivityDetail sourceOffice365GroupsActivityDetail, final ICallback<? super Office365GroupsActivityDetail> callback) {
+    public void patch(@Nonnull final Office365GroupsActivityDetail sourceOffice365GroupsActivityDetail, @Nonnull final ICallback<? super Office365GroupsActivityDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365GroupsActivityDetail);
     }
 
@@ -87,7 +90,8 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @return the updated Office365GroupsActivityDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365GroupsActivityDetail patch(final Office365GroupsActivityDetail sourceOffice365GroupsActivityDetail) throws ClientException {
+    @Nullable
+    public Office365GroupsActivityDetail patch(@Nonnull final Office365GroupsActivityDetail sourceOffice365GroupsActivityDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceOffice365GroupsActivityDetail);
     }
 
@@ -97,7 +101,7 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @param newOffice365GroupsActivityDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, final ICallback<? super Office365GroupsActivityDetail> callback) {
+    public void post(@Nonnull final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, @Nonnull final ICallback<? super Office365GroupsActivityDetail> callback) {
         send(HttpMethod.POST, callback, newOffice365GroupsActivityDetail);
     }
 
@@ -108,7 +112,8 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @return the created Office365GroupsActivityDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365GroupsActivityDetail post(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail) throws ClientException {
+    @Nullable
+    public Office365GroupsActivityDetail post(@Nonnull final Office365GroupsActivityDetail newOffice365GroupsActivityDetail) throws ClientException {
         return send(HttpMethod.POST, newOffice365GroupsActivityDetail);
     }
 
@@ -118,7 +123,7 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @param newOffice365GroupsActivityDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, final ICallback<? super Office365GroupsActivityDetail> callback) {
+    public void put(@Nonnull final Office365GroupsActivityDetail newOffice365GroupsActivityDetail, @Nonnull final ICallback<? super Office365GroupsActivityDetail> callback) {
         send(HttpMethod.PUT, callback, newOffice365GroupsActivityDetail);
     }
 
@@ -129,7 +134,8 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @return the created Office365GroupsActivityDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365GroupsActivityDetail put(final Office365GroupsActivityDetail newOffice365GroupsActivityDetail) throws ClientException {
+    @Nullable
+    public Office365GroupsActivityDetail put(@Nonnull final Office365GroupsActivityDetail newOffice365GroupsActivityDetail) throws ClientException {
         return send(HttpMethod.PUT, newOffice365GroupsActivityDetail);
     }
 
@@ -139,9 +145,10 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IOffice365GroupsActivityDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Office365GroupsActivityDetailRequest)this;
+     @Nonnull
+     public Office365GroupsActivityDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Office365GroupsActivityDetailRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IOffice365GroupsActivityDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365GroupsActivityDetailRequest)this;
+     @Nonnull
+     public Office365GroupsActivityDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

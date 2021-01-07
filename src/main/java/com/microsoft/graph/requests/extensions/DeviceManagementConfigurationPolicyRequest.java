@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationPolicyAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Configuration Policy Request.
  */
-public class DeviceManagementConfigurationPolicyRequest extends BaseRequest implements IDeviceManagementConfigurationPolicyRequest {
+public class DeviceManagementConfigurationPolicyRequest extends BaseRequest<DeviceManagementConfigurationPolicy> {
 	
     /**
      * The request for the DeviceManagementConfigurationPolicy
@@ -38,7 +36,7 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationPolicy.class);
     }
 
@@ -47,7 +45,7 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,6 +55,7 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @return the DeviceManagementConfigurationPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementConfigurationPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -66,7 +65,7 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +84,7 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @param sourceDeviceManagementConfigurationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementConfigurationPolicy sourceDeviceManagementConfigurationPolicy, final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
+    public void patch(@Nonnull final DeviceManagementConfigurationPolicy sourceDeviceManagementConfigurationPolicy, @Nonnull final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationPolicy);
     }
 
@@ -96,7 +95,8 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @return the updated DeviceManagementConfigurationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationPolicy patch(final DeviceManagementConfigurationPolicy sourceDeviceManagementConfigurationPolicy) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationPolicy patch(@Nonnull final DeviceManagementConfigurationPolicy sourceDeviceManagementConfigurationPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationPolicy);
     }
 
@@ -106,7 +106,7 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @param newDeviceManagementConfigurationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy, final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
+    public void post(@Nonnull final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy, @Nonnull final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementConfigurationPolicy);
     }
 
@@ -117,7 +117,8 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @return the created DeviceManagementConfigurationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationPolicy post(final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationPolicy post(@Nonnull final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementConfigurationPolicy);
     }
 
@@ -127,7 +128,7 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @param newDeviceManagementConfigurationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy, final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
+    public void put(@Nonnull final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy, @Nonnull final ICallback<? super DeviceManagementConfigurationPolicy> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementConfigurationPolicy);
     }
 
@@ -138,7 +139,8 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @return the created DeviceManagementConfigurationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationPolicy put(final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationPolicy put(@Nonnull final DeviceManagementConfigurationPolicy newDeviceManagementConfigurationPolicy) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementConfigurationPolicy);
     }
 
@@ -148,9 +150,10 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementConfigurationPolicyRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,9 +162,10 @@ public class DeviceManagementConfigurationPolicyRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementConfigurationPolicyRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

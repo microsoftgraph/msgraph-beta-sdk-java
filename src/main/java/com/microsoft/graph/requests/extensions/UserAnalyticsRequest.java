@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserAnalytics;
-import com.microsoft.graph.requests.extensions.IActivityStatisticsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityStatisticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityStatisticsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Analytics Request.
  */
-public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsRequest {
+public class UserAnalyticsRequest extends BaseRequest<UserAnalytics> {
 	
     /**
      * The request for the UserAnalytics
@@ -33,7 +33,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserAnalyticsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserAnalyticsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserAnalytics.class);
     }
 
@@ -42,7 +42,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserAnalytics> callback) {
+    public void get(@Nonnull final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @return the UserAnalytics from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserAnalytics get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserAnalytics> callback) {
+    public void delete(@Nonnull final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param sourceUserAnalytics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserAnalytics sourceUserAnalytics, final ICallback<? super UserAnalytics> callback) {
+    public void patch(@Nonnull final UserAnalytics sourceUserAnalytics, @Nonnull final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.PATCH, callback, sourceUserAnalytics);
     }
 
@@ -91,7 +92,8 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @return the updated UserAnalytics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAnalytics patch(final UserAnalytics sourceUserAnalytics) throws ClientException {
+    @Nullable
+    public UserAnalytics patch(@Nonnull final UserAnalytics sourceUserAnalytics) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserAnalytics);
     }
 
@@ -101,7 +103,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param newUserAnalytics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserAnalytics newUserAnalytics, final ICallback<? super UserAnalytics> callback) {
+    public void post(@Nonnull final UserAnalytics newUserAnalytics, @Nonnull final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.POST, callback, newUserAnalytics);
     }
 
@@ -112,7 +114,8 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @return the created UserAnalytics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAnalytics post(final UserAnalytics newUserAnalytics) throws ClientException {
+    @Nullable
+    public UserAnalytics post(@Nonnull final UserAnalytics newUserAnalytics) throws ClientException {
         return send(HttpMethod.POST, newUserAnalytics);
     }
 
@@ -122,7 +125,7 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param newUserAnalytics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserAnalytics newUserAnalytics, final ICallback<? super UserAnalytics> callback) {
+    public void put(@Nonnull final UserAnalytics newUserAnalytics, @Nonnull final ICallback<? super UserAnalytics> callback) {
         send(HttpMethod.PUT, callback, newUserAnalytics);
     }
 
@@ -133,7 +136,8 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @return the created UserAnalytics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAnalytics put(final UserAnalytics newUserAnalytics) throws ClientException {
+    @Nullable
+    public UserAnalytics put(@Nonnull final UserAnalytics newUserAnalytics) throws ClientException {
         return send(HttpMethod.PUT, newUserAnalytics);
     }
 
@@ -143,9 +147,10 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param value the select clause
      * @return the updated request
      */
-     public IUserAnalyticsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserAnalyticsRequest)this;
+     @Nonnull
+     public UserAnalyticsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class UserAnalyticsRequest extends BaseRequest implements IUserAnalyticsR
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserAnalyticsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserAnalyticsRequest)this;
+     @Nonnull
+     public UserAnalyticsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SitePage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Site Page Request Builder.
  */
-public class SitePageRequestBuilder extends BaseRequestBuilder implements ISitePageRequestBuilder {
+public class SitePageRequestBuilder extends BaseRequestBuilder<SitePage> {
 
     /**
      * The request builder for the SitePage
@@ -28,7 +30,7 @@ public class SitePageRequestBuilder extends BaseRequestBuilder implements ISiteP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SitePageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SitePageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class SitePageRequestBuilder extends BaseRequestBuilder implements ISiteP
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISitePageRequest instance
+     * @return the SitePageRequest instance
      */
-    public ISitePageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SitePageRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class SitePageRequestBuilder extends BaseRequestBuilder implements ISiteP
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISitePageRequest instance
+     * @return the SitePageRequest instance
      */
-    public ISitePageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SitePageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SitePageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,22 +61,29 @@ public class SitePageRequestBuilder extends BaseRequestBuilder implements ISiteP
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder createdByUser() {
+    @Nonnull
+    public UserWithReferenceRequestBuilder createdByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdByUser"), getClient(), null);
     }
 
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder lastModifiedByUser() {
+    @Nonnull
+    public UserWithReferenceRequestBuilder lastModifiedByUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedByUser"), getClient(), null);
     }
 
-    public ISitePagePublishRequestBuilder publish() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SitePagePublishRequestBuilder publish() {
         return new SitePagePublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.publish"), getClient(), null);
     }
 }

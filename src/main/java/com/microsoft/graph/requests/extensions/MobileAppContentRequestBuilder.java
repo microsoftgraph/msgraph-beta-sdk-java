@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppContent;
-import com.microsoft.graph.requests.extensions.IMobileContainedAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileContainedAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileContainedAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppContentFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppContentFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Content Request Builder.
  */
-public class MobileAppContentRequestBuilder extends BaseRequestBuilder implements IMobileAppContentRequestBuilder {
+public class MobileAppContentRequestBuilder extends BaseRequestBuilder<MobileAppContent> {
 
     /**
      * The request builder for the MobileAppContent
@@ -36,7 +34,7 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppContentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppContentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppContentRequest instance
+     * @return the MobileAppContentRequest instance
      */
-    public IMobileAppContentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MobileAppContentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class MobileAppContentRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppContentRequest instance
+     * @return the MobileAppContentRequest instance
      */
-    public IMobileAppContentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MobileAppContentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppContentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMobileContainedAppCollectionRequestBuilder containedApps() {
+    /**
+     *  Gets a request builder for the MobileContainedApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileContainedAppCollectionRequestBuilder containedApps() {
         return new MobileContainedAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps"), getClient(), null);
     }
 
-    public IMobileContainedAppRequestBuilder containedApps(final String id) {
+    /**
+     * Gets a request builder for the MobileContainedApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileContainedAppRequestBuilder containedApps(@Nonnull final String id) {
         return new MobileContainedAppRequestBuilder(getRequestUrlWithAdditionalSegment("containedApps") + "/" + id, getClient(), null);
     }
-    public IMobileAppContentFileCollectionRequestBuilder files() {
+    /**
+     *  Gets a request builder for the MobileAppContentFile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppContentFileCollectionRequestBuilder files() {
         return new MobileAppContentFileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
-    public IMobileAppContentFileRequestBuilder files(final String id) {
+    /**
+     * Gets a request builder for the MobileAppContentFile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppContentFileRequestBuilder files(@Nonnull final String id) {
         return new MobileAppContentFileRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }
 }

@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.CloudPcDeviceImage;
 import com.microsoft.graph.models.extensions.CloudPcSourceDeviceImage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Cloud Pc Device Image Request Builder.
  */
-public class CloudPcDeviceImageRequestBuilder extends BaseRequestBuilder implements ICloudPcDeviceImageRequestBuilder {
+public class CloudPcDeviceImageRequestBuilder extends BaseRequestBuilder<CloudPcDeviceImage> {
 
     /**
      * The request builder for the CloudPcDeviceImage
@@ -29,7 +31,7 @@ public class CloudPcDeviceImageRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudPcDeviceImageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudPcDeviceImageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,9 +39,10 @@ public class CloudPcDeviceImageRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICloudPcDeviceImageRequest instance
+     * @return the CloudPcDeviceImageRequest instance
      */
-    public ICloudPcDeviceImageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CloudPcDeviceImageRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,9 +50,10 @@ public class CloudPcDeviceImageRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICloudPcDeviceImageRequest instance
+     * @return the CloudPcDeviceImageRequest instance
      */
-    public ICloudPcDeviceImageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CloudPcDeviceImageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CloudPcDeviceImageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

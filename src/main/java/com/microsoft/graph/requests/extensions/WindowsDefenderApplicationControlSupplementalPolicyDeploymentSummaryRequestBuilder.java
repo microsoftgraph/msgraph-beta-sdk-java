@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Defender Application Control Supplemental Policy Deployment Summary Request Builder.
  */
-public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder extends BaseRequestBuilder implements IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder {
+public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder extends BaseRequestBuilder<WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary> {
 
     /**
      * The request builder for the WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary
@@ -28,7 +30,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest instance
+     * @return the WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest instance
      */
-    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest instance
+     * @return the WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest instance
      */
-    public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

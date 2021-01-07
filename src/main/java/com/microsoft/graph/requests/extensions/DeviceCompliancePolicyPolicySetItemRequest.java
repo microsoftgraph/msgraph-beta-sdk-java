@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Policy Policy Set Item Request.
  */
-public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest implements IDeviceCompliancePolicyPolicySetItemRequest {
+public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest<DeviceCompliancePolicyPolicySetItem> {
 	
     /**
      * The request for the DeviceCompliancePolicyPolicySetItem
@@ -29,7 +31,7 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @return the DeviceCompliancePolicyPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceCompliancePolicyPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @param sourceDeviceCompliancePolicyPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceCompliancePolicyPolicySetItem sourceDeviceCompliancePolicyPolicySetItem, final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
+    public void patch(@Nonnull final DeviceCompliancePolicyPolicySetItem sourceDeviceCompliancePolicyPolicySetItem, @Nonnull final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicyPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @return the updated DeviceCompliancePolicyPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyPolicySetItem patch(final DeviceCompliancePolicyPolicySetItem sourceDeviceCompliancePolicyPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyPolicySetItem patch(@Nonnull final DeviceCompliancePolicyPolicySetItem sourceDeviceCompliancePolicyPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceCompliancePolicyPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @param newDeviceCompliancePolicyPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
+    public void post(@Nonnull final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, @Nonnull final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newDeviceCompliancePolicyPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @return the created DeviceCompliancePolicyPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyPolicySetItem post(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyPolicySetItem post(@Nonnull final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newDeviceCompliancePolicyPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @param newDeviceCompliancePolicyPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
+    public void put(@Nonnull final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem, @Nonnull final ICallback<? super DeviceCompliancePolicyPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newDeviceCompliancePolicyPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @return the created DeviceCompliancePolicyPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyPolicySetItem put(final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyPolicySetItem put(@Nonnull final DeviceCompliancePolicyPolicySetItem newDeviceCompliancePolicyPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newDeviceCompliancePolicyPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceCompliancePolicyPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceCompliancePolicyPolicySetItemRequest)this;
+     @Nonnull
+     public DeviceCompliancePolicyPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceCompliancePolicyPolicySetItemRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceCompliancePolicyPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceCompliancePolicyPolicySetItemRequest)this;
+     @Nonnull
+     public DeviceCompliancePolicyPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

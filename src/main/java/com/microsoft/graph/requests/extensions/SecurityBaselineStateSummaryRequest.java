@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Baseline State Summary Request.
  */
-public class SecurityBaselineStateSummaryRequest extends BaseRequest implements ISecurityBaselineStateSummaryRequest {
+public class SecurityBaselineStateSummaryRequest extends BaseRequest<SecurityBaselineStateSummary> {
 	
     /**
      * The request for the SecurityBaselineStateSummary
@@ -30,10 +32,10 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public SecurityBaselineStateSummaryRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends SecurityBaselineStateSummary> responseClass) {
+    public SecurityBaselineStateSummaryRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends SecurityBaselineStateSummary> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityBaselineStateSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityBaselineStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecurityBaselineStateSummary.class);
     }
 
@@ -53,7 +55,7 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SecurityBaselineStateSummary> callback) {
+    public void get(@Nonnull final ICallback<? super SecurityBaselineStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @return the SecurityBaselineStateSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SecurityBaselineStateSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SecurityBaselineStateSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super SecurityBaselineStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @param sourceSecurityBaselineStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecurityBaselineStateSummary sourceSecurityBaselineStateSummary, final ICallback<? super SecurityBaselineStateSummary> callback) {
+    public void patch(@Nonnull final SecurityBaselineStateSummary sourceSecurityBaselineStateSummary, @Nonnull final ICallback<? super SecurityBaselineStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurityBaselineStateSummary);
     }
 
@@ -102,7 +105,8 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @return the updated SecurityBaselineStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineStateSummary patch(final SecurityBaselineStateSummary sourceSecurityBaselineStateSummary) throws ClientException {
+    @Nullable
+    public SecurityBaselineStateSummary patch(@Nonnull final SecurityBaselineStateSummary sourceSecurityBaselineStateSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceSecurityBaselineStateSummary);
     }
 
@@ -112,7 +116,7 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @param newSecurityBaselineStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecurityBaselineStateSummary newSecurityBaselineStateSummary, final ICallback<? super SecurityBaselineStateSummary> callback) {
+    public void post(@Nonnull final SecurityBaselineStateSummary newSecurityBaselineStateSummary, @Nonnull final ICallback<? super SecurityBaselineStateSummary> callback) {
         send(HttpMethod.POST, callback, newSecurityBaselineStateSummary);
     }
 
@@ -123,7 +127,8 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @return the created SecurityBaselineStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineStateSummary post(final SecurityBaselineStateSummary newSecurityBaselineStateSummary) throws ClientException {
+    @Nullable
+    public SecurityBaselineStateSummary post(@Nonnull final SecurityBaselineStateSummary newSecurityBaselineStateSummary) throws ClientException {
         return send(HttpMethod.POST, newSecurityBaselineStateSummary);
     }
 
@@ -133,7 +138,7 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @param newSecurityBaselineStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecurityBaselineStateSummary newSecurityBaselineStateSummary, final ICallback<? super SecurityBaselineStateSummary> callback) {
+    public void put(@Nonnull final SecurityBaselineStateSummary newSecurityBaselineStateSummary, @Nonnull final ICallback<? super SecurityBaselineStateSummary> callback) {
         send(HttpMethod.PUT, callback, newSecurityBaselineStateSummary);
     }
 
@@ -144,7 +149,8 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @return the created SecurityBaselineStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineStateSummary put(final SecurityBaselineStateSummary newSecurityBaselineStateSummary) throws ClientException {
+    @Nullable
+    public SecurityBaselineStateSummary put(@Nonnull final SecurityBaselineStateSummary newSecurityBaselineStateSummary) throws ClientException {
         return send(HttpMethod.PUT, newSecurityBaselineStateSummary);
     }
 
@@ -154,9 +160,10 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public ISecurityBaselineStateSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecurityBaselineStateSummaryRequest)this;
+     @Nonnull
+     public SecurityBaselineStateSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class SecurityBaselineStateSummaryRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecurityBaselineStateSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityBaselineStateSummaryRequest)this;
+     @Nonnull
+     public SecurityBaselineStateSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

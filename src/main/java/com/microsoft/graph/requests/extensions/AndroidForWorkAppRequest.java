@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android For Work App Request.
  */
-public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidForWorkAppRequest {
+public class AndroidForWorkAppRequest extends BaseRequest<AndroidForWorkApp> {
 	
     /**
      * The request for the AndroidForWorkApp
@@ -29,7 +31,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkApp.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidForWorkApp> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @return the AndroidForWorkApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidForWorkApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidForWorkApp> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param sourceAndroidForWorkApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkApp sourceAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback) {
+    public void patch(@Nonnull final AndroidForWorkApp sourceAndroidForWorkApp, @Nonnull final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkApp);
     }
 
@@ -87,7 +90,8 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @return the updated AndroidForWorkApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkApp patch(final AndroidForWorkApp sourceAndroidForWorkApp) throws ClientException {
+    @Nullable
+    public AndroidForWorkApp patch(@Nonnull final AndroidForWorkApp sourceAndroidForWorkApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidForWorkApp);
     }
 
@@ -97,7 +101,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param newAndroidForWorkApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback) {
+    public void post(@Nonnull final AndroidForWorkApp newAndroidForWorkApp, @Nonnull final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkApp);
     }
 
@@ -108,7 +112,8 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @return the created AndroidForWorkApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkApp post(final AndroidForWorkApp newAndroidForWorkApp) throws ClientException {
+    @Nullable
+    public AndroidForWorkApp post(@Nonnull final AndroidForWorkApp newAndroidForWorkApp) throws ClientException {
         return send(HttpMethod.POST, newAndroidForWorkApp);
     }
 
@@ -118,7 +123,7 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param newAndroidForWorkApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkApp newAndroidForWorkApp, final ICallback<? super AndroidForWorkApp> callback) {
+    public void put(@Nonnull final AndroidForWorkApp newAndroidForWorkApp, @Nonnull final ICallback<? super AndroidForWorkApp> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkApp);
     }
 
@@ -129,7 +134,8 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @return the created AndroidForWorkApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkApp put(final AndroidForWorkApp newAndroidForWorkApp) throws ClientException {
+    @Nullable
+    public AndroidForWorkApp put(@Nonnull final AndroidForWorkApp newAndroidForWorkApp) throws ClientException {
         return send(HttpMethod.PUT, newAndroidForWorkApp);
     }
 
@@ -139,9 +145,10 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidForWorkAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidForWorkAppRequest)this;
+     @Nonnull
+     public AndroidForWorkAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidForWorkAppRequest extends BaseRequest implements IAndroidFor
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidForWorkAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkAppRequest)this;
+     @Nonnull
+     public AndroidForWorkAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

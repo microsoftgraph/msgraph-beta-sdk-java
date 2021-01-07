@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CredentialUsageSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Credential Usage Summary Request Builder.
  */
-public class CredentialUsageSummaryRequestBuilder extends BaseRequestBuilder implements ICredentialUsageSummaryRequestBuilder {
+public class CredentialUsageSummaryRequestBuilder extends BaseRequestBuilder<CredentialUsageSummary> {
 
     /**
      * The request builder for the CredentialUsageSummary
@@ -28,7 +30,7 @@ public class CredentialUsageSummaryRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CredentialUsageSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CredentialUsageSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class CredentialUsageSummaryRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICredentialUsageSummaryRequest instance
+     * @return the CredentialUsageSummaryRequest instance
      */
-    public ICredentialUsageSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CredentialUsageSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class CredentialUsageSummaryRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICredentialUsageSummaryRequest instance
+     * @return the CredentialUsageSummaryRequest instance
      */
-    public ICredentialUsageSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CredentialUsageSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CredentialUsageSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

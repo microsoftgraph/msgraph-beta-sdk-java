@@ -9,28 +9,20 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesPublishingProfile;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -40,7 +32,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the On Premises Publishing Profile Request.
  */
-public class OnPremisesPublishingProfileRequest extends BaseRequest implements IOnPremisesPublishingProfileRequest {
+public class OnPremisesPublishingProfileRequest extends BaseRequest<OnPremisesPublishingProfile> {
 	
     /**
      * The request for the OnPremisesPublishingProfile
@@ -49,7 +41,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesPublishingProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnPremisesPublishingProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnPremisesPublishingProfile.class);
     }
 
@@ -58,7 +50,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnPremisesPublishingProfile> callback) {
+    public void get(@Nonnull final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,6 +60,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @return the OnPremisesPublishingProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnPremisesPublishingProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -77,7 +70,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnPremisesPublishingProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -96,7 +89,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param sourceOnPremisesPublishingProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback) {
+    public void patch(@Nonnull final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile, @Nonnull final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceOnPremisesPublishingProfile);
     }
 
@@ -107,7 +100,8 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @return the updated OnPremisesPublishingProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesPublishingProfile patch(final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile) throws ClientException {
+    @Nullable
+    public OnPremisesPublishingProfile patch(@Nonnull final OnPremisesPublishingProfile sourceOnPremisesPublishingProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnPremisesPublishingProfile);
     }
 
@@ -117,7 +111,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param newOnPremisesPublishingProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback) {
+    public void post(@Nonnull final OnPremisesPublishingProfile newOnPremisesPublishingProfile, @Nonnull final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.POST, callback, newOnPremisesPublishingProfile);
     }
 
@@ -128,7 +122,8 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @return the created OnPremisesPublishingProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesPublishingProfile post(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException {
+    @Nullable
+    public OnPremisesPublishingProfile post(@Nonnull final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException {
         return send(HttpMethod.POST, newOnPremisesPublishingProfile);
     }
 
@@ -138,7 +133,7 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param newOnPremisesPublishingProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile, final ICallback<? super OnPremisesPublishingProfile> callback) {
+    public void put(@Nonnull final OnPremisesPublishingProfile newOnPremisesPublishingProfile, @Nonnull final ICallback<? super OnPremisesPublishingProfile> callback) {
         send(HttpMethod.PUT, callback, newOnPremisesPublishingProfile);
     }
 
@@ -149,7 +144,8 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @return the created OnPremisesPublishingProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesPublishingProfile put(final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException {
+    @Nullable
+    public OnPremisesPublishingProfile put(@Nonnull final OnPremisesPublishingProfile newOnPremisesPublishingProfile) throws ClientException {
         return send(HttpMethod.PUT, newOnPremisesPublishingProfile);
     }
 
@@ -159,9 +155,10 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IOnPremisesPublishingProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnPremisesPublishingProfileRequest)this;
+     @Nonnull
+     public OnPremisesPublishingProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -170,9 +167,10 @@ public class OnPremisesPublishingProfileRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnPremisesPublishingProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnPremisesPublishingProfileRequest)this;
+     @Nonnull
+     public OnPremisesPublishingProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

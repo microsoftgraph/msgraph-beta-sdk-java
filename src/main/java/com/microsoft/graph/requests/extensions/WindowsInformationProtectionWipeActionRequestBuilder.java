@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionWipeAction;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection Wipe Action Request Builder.
  */
-public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRequestBuilder implements IWindowsInformationProtectionWipeActionRequestBuilder {
+public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRequestBuilder<WindowsInformationProtectionWipeAction> {
 
     /**
      * The request builder for the WindowsInformationProtectionWipeAction
@@ -28,7 +30,7 @@ public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionWipeActionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionWipeActionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRe
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionWipeActionRequest instance
+     * @return the WindowsInformationProtectionWipeActionRequest instance
      */
-    public IWindowsInformationProtectionWipeActionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionWipeActionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class WindowsInformationProtectionWipeActionRequestBuilder extends BaseRe
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionWipeActionRequest instance
+     * @return the WindowsInformationProtectionWipeActionRequest instance
      */
-    public IWindowsInformationProtectionWipeActionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionWipeActionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionWipeActionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

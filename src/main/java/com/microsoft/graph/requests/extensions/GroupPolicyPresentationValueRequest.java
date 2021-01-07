@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Value Request.
  */
-public class GroupPolicyPresentationValueRequest extends BaseRequest implements IGroupPolicyPresentationValueRequest {
+public class GroupPolicyPresentationValueRequest extends BaseRequest<GroupPolicyPresentationValue> {
 	
     /**
      * The request for the GroupPolicyPresentationValue
@@ -34,10 +34,10 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public GroupPolicyPresentationValueRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends GroupPolicyPresentationValue> responseClass) {
+    public GroupPolicyPresentationValueRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends GroupPolicyPresentationValue> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -48,7 +48,7 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationValueRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationValueRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationValue.class);
     }
 
@@ -57,7 +57,7 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationValue> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationValue> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +67,7 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @return the GroupPolicyPresentationValue from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationValue get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +77,7 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationValue> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationValue> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +96,7 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @param sourceGroupPolicyPresentationValue the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationValue sourceGroupPolicyPresentationValue, final ICallback<? super GroupPolicyPresentationValue> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationValue sourceGroupPolicyPresentationValue, @Nonnull final ICallback<? super GroupPolicyPresentationValue> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationValue);
     }
 
@@ -106,7 +107,8 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @return the updated GroupPolicyPresentationValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValue patch(final GroupPolicyPresentationValue sourceGroupPolicyPresentationValue) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValue patch(@Nonnull final GroupPolicyPresentationValue sourceGroupPolicyPresentationValue) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationValue);
     }
 
@@ -116,7 +118,7 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @param newGroupPolicyPresentationValue the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationValue newGroupPolicyPresentationValue, final ICallback<? super GroupPolicyPresentationValue> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationValue newGroupPolicyPresentationValue, @Nonnull final ICallback<? super GroupPolicyPresentationValue> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationValue);
     }
 
@@ -127,7 +129,8 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @return the created GroupPolicyPresentationValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValue post(final GroupPolicyPresentationValue newGroupPolicyPresentationValue) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValue post(@Nonnull final GroupPolicyPresentationValue newGroupPolicyPresentationValue) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationValue);
     }
 
@@ -137,7 +140,7 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @param newGroupPolicyPresentationValue the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationValue newGroupPolicyPresentationValue, final ICallback<? super GroupPolicyPresentationValue> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationValue newGroupPolicyPresentationValue, @Nonnull final ICallback<? super GroupPolicyPresentationValue> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationValue);
     }
 
@@ -148,7 +151,8 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @return the created GroupPolicyPresentationValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValue put(final GroupPolicyPresentationValue newGroupPolicyPresentationValue) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValue put(@Nonnull final GroupPolicyPresentationValue newGroupPolicyPresentationValue) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationValue);
     }
 
@@ -158,9 +162,10 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationValueRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationValueRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationValueRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +174,10 @@ public class GroupPolicyPresentationValueRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationValueRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationValueRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationValueRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

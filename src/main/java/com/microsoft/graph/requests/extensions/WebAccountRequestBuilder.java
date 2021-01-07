@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WebAccount;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Web Account Request Builder.
  */
-public class WebAccountRequestBuilder extends BaseRequestBuilder implements IWebAccountRequestBuilder {
+public class WebAccountRequestBuilder extends BaseRequestBuilder<WebAccount> {
 
     /**
      * The request builder for the WebAccount
@@ -28,7 +30,7 @@ public class WebAccountRequestBuilder extends BaseRequestBuilder implements IWeb
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WebAccountRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WebAccountRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WebAccountRequestBuilder extends BaseRequestBuilder implements IWeb
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWebAccountRequest instance
+     * @return the WebAccountRequest instance
      */
-    public IWebAccountRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WebAccountRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class WebAccountRequestBuilder extends BaseRequestBuilder implements IWeb
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWebAccountRequest instance
+     * @return the WebAccountRequest instance
      */
-    public IWebAccountRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WebAccountRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WebAccountRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

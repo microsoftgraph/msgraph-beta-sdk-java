@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityProtectionRoot;
-import com.microsoft.graph.requests.extensions.IRiskDetectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskDetectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskDetectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskDetectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskyUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskyUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Protection Root Request.
  */
-public class IdentityProtectionRootRequest extends BaseRequest implements IIdentityProtectionRootRequest {
+public class IdentityProtectionRootRequest extends BaseRequest<IdentityProtectionRoot> {
 	
     /**
      * The request for the IdentityProtectionRoot
@@ -37,7 +35,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityProtectionRootRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityProtectionRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityProtectionRoot.class);
     }
 
@@ -46,7 +44,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityProtectionRoot> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @return the IdentityProtectionRoot from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IdentityProtectionRoot get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityProtectionRoot> callback) {
+    public void delete(@Nonnull final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param sourceIdentityProtectionRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityProtectionRoot sourceIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback) {
+    public void patch(@Nonnull final IdentityProtectionRoot sourceIdentityProtectionRoot, @Nonnull final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityProtectionRoot);
     }
 
@@ -95,7 +94,8 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @return the updated IdentityProtectionRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityProtectionRoot patch(final IdentityProtectionRoot sourceIdentityProtectionRoot) throws ClientException {
+    @Nullable
+    public IdentityProtectionRoot patch(@Nonnull final IdentityProtectionRoot sourceIdentityProtectionRoot) throws ClientException {
         return send(HttpMethod.PATCH, sourceIdentityProtectionRoot);
     }
 
@@ -105,7 +105,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param newIdentityProtectionRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback) {
+    public void post(@Nonnull final IdentityProtectionRoot newIdentityProtectionRoot, @Nonnull final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.POST, callback, newIdentityProtectionRoot);
     }
 
@@ -116,7 +116,8 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @return the created IdentityProtectionRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityProtectionRoot post(final IdentityProtectionRoot newIdentityProtectionRoot) throws ClientException {
+    @Nullable
+    public IdentityProtectionRoot post(@Nonnull final IdentityProtectionRoot newIdentityProtectionRoot) throws ClientException {
         return send(HttpMethod.POST, newIdentityProtectionRoot);
     }
 
@@ -126,7 +127,7 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param newIdentityProtectionRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityProtectionRoot newIdentityProtectionRoot, final ICallback<? super IdentityProtectionRoot> callback) {
+    public void put(@Nonnull final IdentityProtectionRoot newIdentityProtectionRoot, @Nonnull final ICallback<? super IdentityProtectionRoot> callback) {
         send(HttpMethod.PUT, callback, newIdentityProtectionRoot);
     }
 
@@ -137,7 +138,8 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @return the created IdentityProtectionRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityProtectionRoot put(final IdentityProtectionRoot newIdentityProtectionRoot) throws ClientException {
+    @Nullable
+    public IdentityProtectionRoot put(@Nonnull final IdentityProtectionRoot newIdentityProtectionRoot) throws ClientException {
         return send(HttpMethod.PUT, newIdentityProtectionRoot);
     }
 
@@ -147,9 +149,10 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentityProtectionRootRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityProtectionRootRequest)this;
+     @Nonnull
+     public IdentityProtectionRootRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class IdentityProtectionRootRequest extends BaseRequest implements IIdent
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentityProtectionRootRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityProtectionRootRequest)this;
+     @Nonnull
+     public IdentityProtectionRootRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

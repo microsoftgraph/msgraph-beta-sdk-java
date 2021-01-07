@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.YammerGroupsActivityCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Yammer Groups Activity Counts Request Builder.
  */
-public class YammerGroupsActivityCountsRequestBuilder extends BaseRequestBuilder implements IYammerGroupsActivityCountsRequestBuilder {
+public class YammerGroupsActivityCountsRequestBuilder extends BaseRequestBuilder<YammerGroupsActivityCounts> {
 
     /**
      * The request builder for the YammerGroupsActivityCounts
@@ -28,7 +30,7 @@ public class YammerGroupsActivityCountsRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public YammerGroupsActivityCountsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public YammerGroupsActivityCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class YammerGroupsActivityCountsRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IYammerGroupsActivityCountsRequest instance
+     * @return the YammerGroupsActivityCountsRequest instance
      */
-    public IYammerGroupsActivityCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public YammerGroupsActivityCountsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class YammerGroupsActivityCountsRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IYammerGroupsActivityCountsRequest instance
+     * @return the YammerGroupsActivityCountsRequest instance
      */
-    public IYammerGroupsActivityCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public YammerGroupsActivityCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.YammerGroupsActivityCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

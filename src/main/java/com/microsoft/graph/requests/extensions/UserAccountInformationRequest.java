@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserAccountInformation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Account Information Request.
  */
-public class UserAccountInformationRequest extends BaseRequest implements IUserAccountInformationRequest {
+public class UserAccountInformationRequest extends BaseRequest<UserAccountInformation> {
 	
     /**
      * The request for the UserAccountInformation
@@ -29,7 +31,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserAccountInformationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserAccountInformationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserAccountInformation.class);
     }
 
@@ -38,7 +40,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserAccountInformation> callback) {
+    public void get(@Nonnull final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @return the UserAccountInformation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserAccountInformation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserAccountInformation> callback) {
+    public void delete(@Nonnull final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param sourceUserAccountInformation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserAccountInformation sourceUserAccountInformation, final ICallback<? super UserAccountInformation> callback) {
+    public void patch(@Nonnull final UserAccountInformation sourceUserAccountInformation, @Nonnull final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.PATCH, callback, sourceUserAccountInformation);
     }
 
@@ -87,7 +90,8 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @return the updated UserAccountInformation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAccountInformation patch(final UserAccountInformation sourceUserAccountInformation) throws ClientException {
+    @Nullable
+    public UserAccountInformation patch(@Nonnull final UserAccountInformation sourceUserAccountInformation) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserAccountInformation);
     }
 
@@ -97,7 +101,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param newUserAccountInformation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserAccountInformation newUserAccountInformation, final ICallback<? super UserAccountInformation> callback) {
+    public void post(@Nonnull final UserAccountInformation newUserAccountInformation, @Nonnull final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.POST, callback, newUserAccountInformation);
     }
 
@@ -108,7 +112,8 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @return the created UserAccountInformation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAccountInformation post(final UserAccountInformation newUserAccountInformation) throws ClientException {
+    @Nullable
+    public UserAccountInformation post(@Nonnull final UserAccountInformation newUserAccountInformation) throws ClientException {
         return send(HttpMethod.POST, newUserAccountInformation);
     }
 
@@ -118,7 +123,7 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param newUserAccountInformation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserAccountInformation newUserAccountInformation, final ICallback<? super UserAccountInformation> callback) {
+    public void put(@Nonnull final UserAccountInformation newUserAccountInformation, @Nonnull final ICallback<? super UserAccountInformation> callback) {
         send(HttpMethod.PUT, callback, newUserAccountInformation);
     }
 
@@ -129,7 +134,8 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @return the created UserAccountInformation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAccountInformation put(final UserAccountInformation newUserAccountInformation) throws ClientException {
+    @Nullable
+    public UserAccountInformation put(@Nonnull final UserAccountInformation newUserAccountInformation) throws ClientException {
         return send(HttpMethod.PUT, newUserAccountInformation);
     }
 
@@ -139,9 +145,10 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param value the select clause
      * @return the updated request
      */
-     public IUserAccountInformationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserAccountInformationRequest)this;
+     @Nonnull
+     public UserAccountInformationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserAccountInformationRequest extends BaseRequest implements IUserA
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserAccountInformationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserAccountInformationRequest)this;
+     @Nonnull
+     public UserAccountInformationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Teams Template With Reference Request.
  */
-public class TeamsTemplateWithReferenceRequest extends BaseRequest implements ITeamsTemplateWithReferenceRequest {
+public class TeamsTemplateWithReferenceRequest extends BaseWithReferenceRequest<TeamsTemplate> {
 
     /**
      * The request for the TeamsTemplate
@@ -32,46 +34,9 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest implements IT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsTemplateWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsTemplateWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsTemplate.class);
     }
-
-    public void post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload, final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public TeamsTemplate post(final TeamsTemplate newTeamsTemplate, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTeamsTemplate;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super TeamsTemplate> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public TeamsTemplate get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super TeamsTemplate> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final TeamsTemplate sourceTeamsTemplate, final ICallback<? super TeamsTemplate> callback) {
-		send(HttpMethod.PATCH, callback, sourceTeamsTemplate);
-	}
-
-	public TeamsTemplate patch(final TeamsTemplate sourceTeamsTemplate) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTeamsTemplate);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest implements IT
      * @param value the select clause
      * @return the updated request
      */
-    public ITeamsTemplateWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ITeamsTemplateWithReferenceRequest)this;
+    @Nonnull
+    public TeamsTemplateWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class TeamsTemplateWithReferenceRequest extends BaseRequest implements IT
      * @param value the expand clause
      * @return the updated request
      */
-    public ITeamsTemplateWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TeamsTemplateWithReferenceRequest)this;
+    @Nonnull
+    public TeamsTemplateWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

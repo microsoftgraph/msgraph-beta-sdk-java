@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.EducationSchool;
 import com.microsoft.graph.models.extensions.EducationUser;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.EducationUserCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationUserCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionResponse;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Education User Collection With References Page.
  */
-public class EducationUserCollectionWithReferencesPage extends BaseCollectionPage<EducationUser, IEducationUserCollectionWithReferencesRequestBuilder> implements IEducationUserCollectionWithReferencesPage {
+public class EducationUserCollectionWithReferencesPage extends BaseCollectionPage<EducationUser, EducationUserCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for EducationUser
@@ -35,7 +37,17 @@ public class EducationUserCollectionWithReferencesPage extends BaseCollectionPag
      * @param response the serialized EducationUserCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public EducationUserCollectionWithReferencesPage(final EducationUserCollectionResponse response, final IEducationUserCollectionWithReferencesRequestBuilder builder) {
+    public EducationUserCollectionWithReferencesPage(@Nonnull final EducationUserCollectionResponse response, @Nullable final EducationUserCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for EducationUser
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public EducationUserCollectionWithReferencesPage(@Nonnull final java.util.List<EducationUser> pageContents, @Nullable final EducationUserCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

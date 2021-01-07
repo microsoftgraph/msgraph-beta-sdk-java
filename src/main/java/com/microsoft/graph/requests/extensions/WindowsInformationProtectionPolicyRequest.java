@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection Policy Request.
  */
-public class WindowsInformationProtectionPolicyRequest extends BaseRequest implements IWindowsInformationProtectionPolicyRequest {
+public class WindowsInformationProtectionPolicyRequest extends BaseRequest<WindowsInformationProtectionPolicy> {
 	
     /**
      * The request for the WindowsInformationProtectionPolicy
@@ -29,7 +31,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtectionPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsInformationProtectionPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @return the WindowsInformationProtectionPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsInformationProtectionPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsInformationProtectionPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param sourceWindowsInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
+    public void patch(@Nonnull final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionPolicy);
     }
 
@@ -87,7 +90,8 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @return the updated WindowsInformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionPolicy patch(final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionPolicy patch(@Nonnull final WindowsInformationProtectionPolicy sourceWindowsInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsInformationProtectionPolicy);
     }
 
@@ -97,7 +101,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param newWindowsInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
+    public void post(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtectionPolicy);
     }
 
@@ -108,7 +112,8 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @return the created WindowsInformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionPolicy post(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionPolicy post(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.POST, newWindowsInformationProtectionPolicy);
     }
 
@@ -118,7 +123,7 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param newWindowsInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, final ICallback<? super WindowsInformationProtectionPolicy> callback) {
+    public void put(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super WindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtectionPolicy);
     }
 
@@ -129,7 +134,8 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @return the created WindowsInformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionPolicy put(final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionPolicy put(@Nonnull final WindowsInformationProtectionPolicy newWindowsInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.PUT, newWindowsInformationProtectionPolicy);
     }
 
@@ -139,9 +145,10 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsInformationProtectionPolicyRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsInformationProtectionPolicyRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsInformationProtectionPolicyRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

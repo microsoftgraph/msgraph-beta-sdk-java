@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Configuration Assignment Request.
  */
-public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest implements IGroupPolicyConfigurationAssignmentRequest {
+public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest<GroupPolicyConfigurationAssignment> {
 	
     /**
      * The request for the GroupPolicyConfigurationAssignment
@@ -29,7 +31,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyConfigurationAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyConfigurationAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyConfigurationAssignment.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @return the GroupPolicyConfigurationAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyConfigurationAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param sourceGroupPolicyConfigurationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
+    public void patch(@Nonnull final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment, @Nonnull final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyConfigurationAssignment);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @return the updated GroupPolicyConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyConfigurationAssignment patch(final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment) throws ClientException {
+    @Nullable
+    public GroupPolicyConfigurationAssignment patch(@Nonnull final GroupPolicyConfigurationAssignment sourceGroupPolicyConfigurationAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyConfigurationAssignment);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param newGroupPolicyConfigurationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
+    public void post(@Nonnull final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, @Nonnull final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyConfigurationAssignment);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @return the created GroupPolicyConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyConfigurationAssignment post(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException {
+    @Nullable
+    public GroupPolicyConfigurationAssignment post(@Nonnull final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyConfigurationAssignment);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param newGroupPolicyConfigurationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
+    public void put(@Nonnull final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment, @Nonnull final ICallback<? super GroupPolicyConfigurationAssignment> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyConfigurationAssignment);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @return the created GroupPolicyConfigurationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyConfigurationAssignment put(final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException {
+    @Nullable
+    public GroupPolicyConfigurationAssignment put(@Nonnull final GroupPolicyConfigurationAssignment newGroupPolicyConfigurationAssignment) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyConfigurationAssignment);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyConfigurationAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyConfigurationAssignmentRequest)this;
+     @Nonnull
+     public GroupPolicyConfigurationAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyConfigurationAssignmentRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyConfigurationAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyConfigurationAssignmentRequest)this;
+     @Nonnull
+     public GroupPolicyConfigurationAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

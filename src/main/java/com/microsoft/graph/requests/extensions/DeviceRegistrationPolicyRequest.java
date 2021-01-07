@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceRegistrationPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Registration Policy Request.
  */
-public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDeviceRegistrationPolicyRequest {
+public class DeviceRegistrationPolicyRequest extends BaseRequest<DeviceRegistrationPolicy> {
 	
     /**
      * The request for the DeviceRegistrationPolicy
@@ -29,7 +31,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceRegistrationPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceRegistrationPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceRegistrationPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceRegistrationPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @return the DeviceRegistrationPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceRegistrationPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceRegistrationPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param sourceDeviceRegistrationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback) {
+    public void patch(@Nonnull final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy, @Nonnull final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceRegistrationPolicy);
     }
 
@@ -87,7 +90,8 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @return the updated DeviceRegistrationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceRegistrationPolicy patch(final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy) throws ClientException {
+    @Nullable
+    public DeviceRegistrationPolicy patch(@Nonnull final DeviceRegistrationPolicy sourceDeviceRegistrationPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceRegistrationPolicy);
     }
 
@@ -97,7 +101,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param newDeviceRegistrationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback) {
+    public void post(@Nonnull final DeviceRegistrationPolicy newDeviceRegistrationPolicy, @Nonnull final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.POST, callback, newDeviceRegistrationPolicy);
     }
 
@@ -108,7 +112,8 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @return the created DeviceRegistrationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceRegistrationPolicy post(final DeviceRegistrationPolicy newDeviceRegistrationPolicy) throws ClientException {
+    @Nullable
+    public DeviceRegistrationPolicy post(@Nonnull final DeviceRegistrationPolicy newDeviceRegistrationPolicy) throws ClientException {
         return send(HttpMethod.POST, newDeviceRegistrationPolicy);
     }
 
@@ -118,7 +123,7 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param newDeviceRegistrationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy, final ICallback<? super DeviceRegistrationPolicy> callback) {
+    public void put(@Nonnull final DeviceRegistrationPolicy newDeviceRegistrationPolicy, @Nonnull final ICallback<? super DeviceRegistrationPolicy> callback) {
         send(HttpMethod.PUT, callback, newDeviceRegistrationPolicy);
     }
 
@@ -129,7 +134,8 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @return the created DeviceRegistrationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceRegistrationPolicy put(final DeviceRegistrationPolicy newDeviceRegistrationPolicy) throws ClientException {
+    @Nullable
+    public DeviceRegistrationPolicy put(@Nonnull final DeviceRegistrationPolicy newDeviceRegistrationPolicy) throws ClientException {
         return send(HttpMethod.PUT, newDeviceRegistrationPolicy);
     }
 
@@ -139,9 +145,10 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceRegistrationPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceRegistrationPolicyRequest)this;
+     @Nonnull
+     public DeviceRegistrationPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceRegistrationPolicyRequest extends BaseRequest implements IDev
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceRegistrationPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceRegistrationPolicyRequest)this;
+     @Nonnull
+     public DeviceRegistrationPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

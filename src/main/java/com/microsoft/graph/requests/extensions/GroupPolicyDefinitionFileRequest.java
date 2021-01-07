@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Definition File Request.
  */
-public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGroupPolicyDefinitionFileRequest {
+public class GroupPolicyDefinitionFileRequest extends BaseRequest<GroupPolicyDefinitionFile> {
 	
     /**
      * The request for the GroupPolicyDefinitionFile
@@ -34,10 +34,10 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public GroupPolicyDefinitionFileRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends GroupPolicyDefinitionFile> responseClass) {
+    public GroupPolicyDefinitionFileRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends GroupPolicyDefinitionFile> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -48,7 +48,7 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionFileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyDefinitionFileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyDefinitionFile.class);
     }
 
@@ -57,7 +57,7 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyDefinitionFile> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +67,7 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @return the GroupPolicyDefinitionFile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyDefinitionFile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +77,7 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyDefinitionFile> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +96,7 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @param sourceGroupPolicyDefinitionFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback) {
+    public void patch(@Nonnull final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile, @Nonnull final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyDefinitionFile);
     }
 
@@ -106,7 +107,8 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @return the updated GroupPolicyDefinitionFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyDefinitionFile patch(final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile) throws ClientException {
+    @Nullable
+    public GroupPolicyDefinitionFile patch(@Nonnull final GroupPolicyDefinitionFile sourceGroupPolicyDefinitionFile) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyDefinitionFile);
     }
 
@@ -116,7 +118,7 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @param newGroupPolicyDefinitionFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback) {
+    public void post(@Nonnull final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, @Nonnull final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyDefinitionFile);
     }
 
@@ -127,7 +129,8 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @return the created GroupPolicyDefinitionFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyDefinitionFile post(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile) throws ClientException {
+    @Nullable
+    public GroupPolicyDefinitionFile post(@Nonnull final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyDefinitionFile);
     }
 
@@ -137,7 +140,7 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @param newGroupPolicyDefinitionFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, final ICallback<? super GroupPolicyDefinitionFile> callback) {
+    public void put(@Nonnull final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile, @Nonnull final ICallback<? super GroupPolicyDefinitionFile> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyDefinitionFile);
     }
 
@@ -148,7 +151,8 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @return the created GroupPolicyDefinitionFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyDefinitionFile put(final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile) throws ClientException {
+    @Nullable
+    public GroupPolicyDefinitionFile put(@Nonnull final GroupPolicyDefinitionFile newGroupPolicyDefinitionFile) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyDefinitionFile);
     }
 
@@ -158,9 +162,10 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyDefinitionFileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyDefinitionFileRequest)this;
+     @Nonnull
+     public GroupPolicyDefinitionFileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +174,10 @@ public class GroupPolicyDefinitionFileRequest extends BaseRequest implements IGr
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyDefinitionFileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyDefinitionFileRequest)this;
+     @Nonnull
+     public GroupPolicyDefinitionFileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

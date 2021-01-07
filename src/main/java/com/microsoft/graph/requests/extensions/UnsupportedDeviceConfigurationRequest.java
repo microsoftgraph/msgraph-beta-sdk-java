@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnsupportedDeviceConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Unsupported Device Configuration Request.
  */
-public class UnsupportedDeviceConfigurationRequest extends BaseRequest implements IUnsupportedDeviceConfigurationRequest {
+public class UnsupportedDeviceConfigurationRequest extends BaseRequest<UnsupportedDeviceConfiguration> {
 	
     /**
      * The request for the UnsupportedDeviceConfiguration
@@ -29,7 +31,7 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnsupportedDeviceConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnsupportedDeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnsupportedDeviceConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UnsupportedDeviceConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super UnsupportedDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @return the UnsupportedDeviceConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UnsupportedDeviceConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UnsupportedDeviceConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super UnsupportedDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @param sourceUnsupportedDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnsupportedDeviceConfiguration sourceUnsupportedDeviceConfiguration, final ICallback<? super UnsupportedDeviceConfiguration> callback) {
+    public void patch(@Nonnull final UnsupportedDeviceConfiguration sourceUnsupportedDeviceConfiguration, @Nonnull final ICallback<? super UnsupportedDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceUnsupportedDeviceConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @return the updated UnsupportedDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnsupportedDeviceConfiguration patch(final UnsupportedDeviceConfiguration sourceUnsupportedDeviceConfiguration) throws ClientException {
+    @Nullable
+    public UnsupportedDeviceConfiguration patch(@Nonnull final UnsupportedDeviceConfiguration sourceUnsupportedDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceUnsupportedDeviceConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @param newUnsupportedDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, final ICallback<? super UnsupportedDeviceConfiguration> callback) {
+    public void post(@Nonnull final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, @Nonnull final ICallback<? super UnsupportedDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newUnsupportedDeviceConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @return the created UnsupportedDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnsupportedDeviceConfiguration post(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration) throws ClientException {
+    @Nullable
+    public UnsupportedDeviceConfiguration post(@Nonnull final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration) throws ClientException {
         return send(HttpMethod.POST, newUnsupportedDeviceConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @param newUnsupportedDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, final ICallback<? super UnsupportedDeviceConfiguration> callback) {
+    public void put(@Nonnull final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration, @Nonnull final ICallback<? super UnsupportedDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newUnsupportedDeviceConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @return the created UnsupportedDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnsupportedDeviceConfiguration put(final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration) throws ClientException {
+    @Nullable
+    public UnsupportedDeviceConfiguration put(@Nonnull final UnsupportedDeviceConfiguration newUnsupportedDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newUnsupportedDeviceConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IUnsupportedDeviceConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UnsupportedDeviceConfigurationRequest)this;
+     @Nonnull
+     public UnsupportedDeviceConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UnsupportedDeviceConfigurationRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IUnsupportedDeviceConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnsupportedDeviceConfigurationRequest)this;
+     @Nonnull
+     public UnsupportedDeviceConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

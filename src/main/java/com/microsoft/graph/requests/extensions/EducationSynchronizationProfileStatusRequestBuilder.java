@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSynchronizationProfileStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Synchronization Profile Status Request Builder.
  */
-public class EducationSynchronizationProfileStatusRequestBuilder extends BaseRequestBuilder implements IEducationSynchronizationProfileStatusRequestBuilder {
+public class EducationSynchronizationProfileStatusRequestBuilder extends BaseRequestBuilder<EducationSynchronizationProfileStatus> {
 
     /**
      * The request builder for the EducationSynchronizationProfileStatus
@@ -28,7 +30,7 @@ public class EducationSynchronizationProfileStatusRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSynchronizationProfileStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSynchronizationProfileStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class EducationSynchronizationProfileStatusRequestBuilder extends BaseReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEducationSynchronizationProfileStatusRequest instance
+     * @return the EducationSynchronizationProfileStatusRequest instance
      */
-    public IEducationSynchronizationProfileStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationSynchronizationProfileStatusRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class EducationSynchronizationProfileStatusRequestBuilder extends BaseReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationSynchronizationProfileStatusRequest instance
+     * @return the EducationSynchronizationProfileStatusRequest instance
      */
-    public IEducationSynchronizationProfileStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationSynchronizationProfileStatusRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationSynchronizationProfileStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

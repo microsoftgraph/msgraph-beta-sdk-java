@@ -9,22 +9,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationAssignment;
-import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Assignment Request.
  */
-public class EducationAssignmentRequest extends BaseRequest implements IEducationAssignmentRequest {
+public class EducationAssignmentRequest extends BaseRequest<EducationAssignment> {
 	
     /**
      * The request for the EducationAssignment
@@ -43,7 +38,7 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationAssignment.class);
     }
 
@@ -52,7 +47,7 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super EducationAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +57,7 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @return the EducationAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +67,7 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +86,7 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @param sourceEducationAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationAssignment sourceEducationAssignment, final ICallback<? super EducationAssignment> callback) {
+    public void patch(@Nonnull final EducationAssignment sourceEducationAssignment, @Nonnull final ICallback<? super EducationAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationAssignment);
     }
 
@@ -101,7 +97,8 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @return the updated EducationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationAssignment patch(final EducationAssignment sourceEducationAssignment) throws ClientException {
+    @Nullable
+    public EducationAssignment patch(@Nonnull final EducationAssignment sourceEducationAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationAssignment);
     }
 
@@ -111,7 +108,7 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @param newEducationAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationAssignment newEducationAssignment, final ICallback<? super EducationAssignment> callback) {
+    public void post(@Nonnull final EducationAssignment newEducationAssignment, @Nonnull final ICallback<? super EducationAssignment> callback) {
         send(HttpMethod.POST, callback, newEducationAssignment);
     }
 
@@ -122,7 +119,8 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @return the created EducationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationAssignment post(final EducationAssignment newEducationAssignment) throws ClientException {
+    @Nullable
+    public EducationAssignment post(@Nonnull final EducationAssignment newEducationAssignment) throws ClientException {
         return send(HttpMethod.POST, newEducationAssignment);
     }
 
@@ -132,7 +130,7 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @param newEducationAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationAssignment newEducationAssignment, final ICallback<? super EducationAssignment> callback) {
+    public void put(@Nonnull final EducationAssignment newEducationAssignment, @Nonnull final ICallback<? super EducationAssignment> callback) {
         send(HttpMethod.PUT, callback, newEducationAssignment);
     }
 
@@ -143,7 +141,8 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @return the created EducationAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationAssignment put(final EducationAssignment newEducationAssignment) throws ClientException {
+    @Nullable
+    public EducationAssignment put(@Nonnull final EducationAssignment newEducationAssignment) throws ClientException {
         return send(HttpMethod.PUT, newEducationAssignment);
     }
 
@@ -153,9 +152,10 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationAssignmentRequest)this;
+     @Nonnull
+     public EducationAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,9 +164,10 @@ public class EducationAssignmentRequest extends BaseRequest implements IEducatio
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationAssignmentRequest)this;
+     @Nonnull
+     public EducationAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

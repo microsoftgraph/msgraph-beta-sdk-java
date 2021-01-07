@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NetworkManagementCondition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Network Management Condition Request.
  */
-public class NetworkManagementConditionRequest extends BaseRequest implements INetworkManagementConditionRequest {
+public class NetworkManagementConditionRequest extends BaseRequest<NetworkManagementCondition> {
 	
     /**
      * The request for the NetworkManagementCondition
@@ -30,10 +32,10 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public NetworkManagementConditionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends NetworkManagementCondition> responseClass) {
+    public NetworkManagementConditionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends NetworkManagementCondition> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NetworkManagementConditionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NetworkManagementConditionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NetworkManagementCondition.class);
     }
 
@@ -53,7 +55,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super NetworkManagementCondition> callback) {
+    public void get(@Nonnull final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @return the NetworkManagementCondition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public NetworkManagementCondition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super NetworkManagementCondition> callback) {
+    public void delete(@Nonnull final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param sourceNetworkManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NetworkManagementCondition sourceNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback) {
+    public void patch(@Nonnull final NetworkManagementCondition sourceNetworkManagementCondition, @Nonnull final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceNetworkManagementCondition);
     }
 
@@ -102,7 +105,8 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @return the updated NetworkManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NetworkManagementCondition patch(final NetworkManagementCondition sourceNetworkManagementCondition) throws ClientException {
+    @Nullable
+    public NetworkManagementCondition patch(@Nonnull final NetworkManagementCondition sourceNetworkManagementCondition) throws ClientException {
         return send(HttpMethod.PATCH, sourceNetworkManagementCondition);
     }
 
@@ -112,7 +116,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param newNetworkManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback) {
+    public void post(@Nonnull final NetworkManagementCondition newNetworkManagementCondition, @Nonnull final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.POST, callback, newNetworkManagementCondition);
     }
 
@@ -123,7 +127,8 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @return the created NetworkManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NetworkManagementCondition post(final NetworkManagementCondition newNetworkManagementCondition) throws ClientException {
+    @Nullable
+    public NetworkManagementCondition post(@Nonnull final NetworkManagementCondition newNetworkManagementCondition) throws ClientException {
         return send(HttpMethod.POST, newNetworkManagementCondition);
     }
 
@@ -133,7 +138,7 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param newNetworkManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NetworkManagementCondition newNetworkManagementCondition, final ICallback<? super NetworkManagementCondition> callback) {
+    public void put(@Nonnull final NetworkManagementCondition newNetworkManagementCondition, @Nonnull final ICallback<? super NetworkManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newNetworkManagementCondition);
     }
 
@@ -144,7 +149,8 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @return the created NetworkManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NetworkManagementCondition put(final NetworkManagementCondition newNetworkManagementCondition) throws ClientException {
+    @Nullable
+    public NetworkManagementCondition put(@Nonnull final NetworkManagementCondition newNetworkManagementCondition) throws ClientException {
         return send(HttpMethod.PUT, newNetworkManagementCondition);
     }
 
@@ -154,9 +160,10 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param value the select clause
      * @return the updated request
      */
-     public INetworkManagementConditionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (NetworkManagementConditionRequest)this;
+     @Nonnull
+     public NetworkManagementConditionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class NetworkManagementConditionRequest extends BaseRequest implements IN
      * @param value the expand clause
      * @return the updated request
      */
-     public INetworkManagementConditionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NetworkManagementConditionRequest)this;
+     @Nonnull
+     public NetworkManagementConditionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

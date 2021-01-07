@@ -12,18 +12,15 @@ import com.microsoft.graph.models.extensions.TargetedManagedAppConfiguration;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.ManagedMobileApp;
-import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyDeploymentSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -33,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Targeted Managed App Configuration Request.
  */
-public class TargetedManagedAppConfigurationRequest extends BaseRequest implements ITargetedManagedAppConfigurationRequest {
+public class TargetedManagedAppConfigurationRequest extends BaseRequest<TargetedManagedAppConfiguration> {
 	
     /**
      * The request for the TargetedManagedAppConfiguration
@@ -42,7 +39,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppConfiguration.class);
     }
 
@@ -51,7 +48,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -61,6 +58,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @return the TargetedManagedAppConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TargetedManagedAppConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -70,7 +68,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -89,7 +87,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @param sourceTargetedManagedAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    public void patch(@Nonnull final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceTargetedManagedAppConfiguration);
     }
 
@@ -100,7 +98,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @return the updated TargetedManagedAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppConfiguration patch(final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration) throws ClientException {
+    @Nullable
+    public TargetedManagedAppConfiguration patch(@Nonnull final TargetedManagedAppConfiguration sourceTargetedManagedAppConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceTargetedManagedAppConfiguration);
     }
 
@@ -110,7 +109,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @param newTargetedManagedAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    public void post(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
         send(HttpMethod.POST, callback, newTargetedManagedAppConfiguration);
     }
 
@@ -121,7 +120,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @return the created TargetedManagedAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppConfiguration post(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
+    @Nullable
+    public TargetedManagedAppConfiguration post(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
         return send(HttpMethod.POST, newTargetedManagedAppConfiguration);
     }
 
@@ -131,7 +131,7 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @param newTargetedManagedAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, final ICallback<? super TargetedManagedAppConfiguration> callback) {
+    public void put(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration, @Nonnull final ICallback<? super TargetedManagedAppConfiguration> callback) {
         send(HttpMethod.PUT, callback, newTargetedManagedAppConfiguration);
     }
 
@@ -142,7 +142,8 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @return the created TargetedManagedAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppConfiguration put(final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
+    @Nullable
+    public TargetedManagedAppConfiguration put(@Nonnull final TargetedManagedAppConfiguration newTargetedManagedAppConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newTargetedManagedAppConfiguration);
     }
 
@@ -152,9 +153,10 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public ITargetedManagedAppConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TargetedManagedAppConfigurationRequest)this;
+     @Nonnull
+     public TargetedManagedAppConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -163,9 +165,10 @@ public class TargetedManagedAppConfigurationRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public ITargetedManagedAppConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TargetedManagedAppConfigurationRequest)this;
+     @Nonnull
+     public TargetedManagedAppConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

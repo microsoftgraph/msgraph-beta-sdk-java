@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ImportedDeviceIdentity;
 import com.microsoft.graph.models.extensions.ImportedDeviceIdentityResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Imported Device Identity Request.
  */
-public class ImportedDeviceIdentityRequest extends BaseRequest implements IImportedDeviceIdentityRequest {
+public class ImportedDeviceIdentityRequest extends BaseRequest<ImportedDeviceIdentity> {
 	
     /**
      * The request for the ImportedDeviceIdentity
@@ -31,10 +33,10 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ImportedDeviceIdentityRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ImportedDeviceIdentity> responseClass) {
+    public ImportedDeviceIdentityRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ImportedDeviceIdentity> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -45,7 +47,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedDeviceIdentityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ImportedDeviceIdentityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ImportedDeviceIdentity.class);
     }
 
@@ -54,7 +56,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ImportedDeviceIdentity> callback) {
+    public void get(@Nonnull final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +66,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @return the ImportedDeviceIdentity from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ImportedDeviceIdentity get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +76,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ImportedDeviceIdentity> callback) {
+    public void delete(@Nonnull final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +95,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param sourceImportedDeviceIdentity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ImportedDeviceIdentity sourceImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback) {
+    public void patch(@Nonnull final ImportedDeviceIdentity sourceImportedDeviceIdentity, @Nonnull final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.PATCH, callback, sourceImportedDeviceIdentity);
     }
 
@@ -103,7 +106,8 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @return the updated ImportedDeviceIdentity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedDeviceIdentity patch(final ImportedDeviceIdentity sourceImportedDeviceIdentity) throws ClientException {
+    @Nullable
+    public ImportedDeviceIdentity patch(@Nonnull final ImportedDeviceIdentity sourceImportedDeviceIdentity) throws ClientException {
         return send(HttpMethod.PATCH, sourceImportedDeviceIdentity);
     }
 
@@ -113,7 +117,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param newImportedDeviceIdentity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback) {
+    public void post(@Nonnull final ImportedDeviceIdentity newImportedDeviceIdentity, @Nonnull final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.POST, callback, newImportedDeviceIdentity);
     }
 
@@ -124,7 +128,8 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @return the created ImportedDeviceIdentity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedDeviceIdentity post(final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException {
+    @Nullable
+    public ImportedDeviceIdentity post(@Nonnull final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException {
         return send(HttpMethod.POST, newImportedDeviceIdentity);
     }
 
@@ -134,7 +139,7 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param newImportedDeviceIdentity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ImportedDeviceIdentity newImportedDeviceIdentity, final ICallback<? super ImportedDeviceIdentity> callback) {
+    public void put(@Nonnull final ImportedDeviceIdentity newImportedDeviceIdentity, @Nonnull final ICallback<? super ImportedDeviceIdentity> callback) {
         send(HttpMethod.PUT, callback, newImportedDeviceIdentity);
     }
 
@@ -145,7 +150,8 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @return the created ImportedDeviceIdentity
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedDeviceIdentity put(final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException {
+    @Nullable
+    public ImportedDeviceIdentity put(@Nonnull final ImportedDeviceIdentity newImportedDeviceIdentity) throws ClientException {
         return send(HttpMethod.PUT, newImportedDeviceIdentity);
     }
 
@@ -155,9 +161,10 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param value the select clause
      * @return the updated request
      */
-     public IImportedDeviceIdentityRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ImportedDeviceIdentityRequest)this;
+     @Nonnull
+     public ImportedDeviceIdentityRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +173,10 @@ public class ImportedDeviceIdentityRequest extends BaseRequest implements IImpor
      * @param value the expand clause
      * @return the updated request
      */
-     public IImportedDeviceIdentityRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ImportedDeviceIdentityRequest)this;
+     @Nonnull
+     public ImportedDeviceIdentityRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

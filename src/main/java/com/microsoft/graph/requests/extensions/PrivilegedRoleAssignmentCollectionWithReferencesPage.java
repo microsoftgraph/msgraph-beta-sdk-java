@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.PrivilegedRole;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentCollectionResponse;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Privileged Role Assignment Collection With References Page.
  */
-public class PrivilegedRoleAssignmentCollectionWithReferencesPage extends BaseCollectionPage<PrivilegedRoleAssignment, IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder> implements IPrivilegedRoleAssignmentCollectionWithReferencesPage {
+public class PrivilegedRoleAssignmentCollectionWithReferencesPage extends BaseCollectionPage<PrivilegedRoleAssignment, PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for PrivilegedRoleAssignment
@@ -35,7 +37,17 @@ public class PrivilegedRoleAssignmentCollectionWithReferencesPage extends BaseCo
      * @param response the serialized PrivilegedRoleAssignmentCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PrivilegedRoleAssignmentCollectionWithReferencesPage(final PrivilegedRoleAssignmentCollectionResponse response, final IPrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
+    public PrivilegedRoleAssignmentCollectionWithReferencesPage(@Nonnull final PrivilegedRoleAssignmentCollectionResponse response, @Nullable final PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for PrivilegedRoleAssignment
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PrivilegedRoleAssignmentCollectionWithReferencesPage(@Nonnull final java.util.List<PrivilegedRoleAssignment> pageContents, @Nullable final PrivilegedRoleAssignmentCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

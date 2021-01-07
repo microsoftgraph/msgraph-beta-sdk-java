@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidScepCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Scep Certificate Profile Request.
  */
-public class AndroidScepCertificateProfileRequest extends BaseRequest implements IAndroidScepCertificateProfileRequest {
+public class AndroidScepCertificateProfileRequest extends BaseRequest<AndroidScepCertificateProfile> {
 	
     /**
      * The request for the AndroidScepCertificateProfile
@@ -33,7 +33,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidScepCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidScepCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidScepCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidScepCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @return the AndroidScepCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidScepCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidScepCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param sourceAndroidScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback) {
+    public void patch(@Nonnull final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile, @Nonnull final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidScepCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @return the updated AndroidScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidScepCertificateProfile patch(final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidScepCertificateProfile patch(@Nonnull final AndroidScepCertificateProfile sourceAndroidScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidScepCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param newAndroidScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback) {
+    public void post(@Nonnull final AndroidScepCertificateProfile newAndroidScepCertificateProfile, @Nonnull final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidScepCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @return the created AndroidScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidScepCertificateProfile post(final AndroidScepCertificateProfile newAndroidScepCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidScepCertificateProfile post(@Nonnull final AndroidScepCertificateProfile newAndroidScepCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidScepCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param newAndroidScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile, final ICallback<? super AndroidScepCertificateProfile> callback) {
+    public void put(@Nonnull final AndroidScepCertificateProfile newAndroidScepCertificateProfile, @Nonnull final ICallback<? super AndroidScepCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidScepCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @return the created AndroidScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidScepCertificateProfile put(final AndroidScepCertificateProfile newAndroidScepCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidScepCertificateProfile put(@Nonnull final AndroidScepCertificateProfile newAndroidScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidScepCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidScepCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidScepCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidScepCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AndroidScepCertificateProfileRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidScepCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidScepCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidScepCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

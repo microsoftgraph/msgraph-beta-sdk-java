@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuthenticationFlowsPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Authentication Flows Policy Request.
  */
-public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAuthenticationFlowsPolicyRequest {
+public class AuthenticationFlowsPolicyRequest extends BaseRequest<AuthenticationFlowsPolicy> {
 	
     /**
      * The request for the AuthenticationFlowsPolicy
@@ -29,7 +31,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuthenticationFlowsPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuthenticationFlowsPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AuthenticationFlowsPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AuthenticationFlowsPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @return the AuthenticationFlowsPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AuthenticationFlowsPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AuthenticationFlowsPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param sourceAuthenticationFlowsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuthenticationFlowsPolicy sourceAuthenticationFlowsPolicy, final ICallback<? super AuthenticationFlowsPolicy> callback) {
+    public void patch(@Nonnull final AuthenticationFlowsPolicy sourceAuthenticationFlowsPolicy, @Nonnull final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthenticationFlowsPolicy);
     }
 
@@ -87,7 +90,8 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @return the updated AuthenticationFlowsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationFlowsPolicy patch(final AuthenticationFlowsPolicy sourceAuthenticationFlowsPolicy) throws ClientException {
+    @Nullable
+    public AuthenticationFlowsPolicy patch(@Nonnull final AuthenticationFlowsPolicy sourceAuthenticationFlowsPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceAuthenticationFlowsPolicy);
     }
 
@@ -97,7 +101,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param newAuthenticationFlowsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<? super AuthenticationFlowsPolicy> callback) {
+    public void post(@Nonnull final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, @Nonnull final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.POST, callback, newAuthenticationFlowsPolicy);
     }
 
@@ -108,7 +112,8 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @return the created AuthenticationFlowsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationFlowsPolicy post(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy) throws ClientException {
+    @Nullable
+    public AuthenticationFlowsPolicy post(@Nonnull final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy) throws ClientException {
         return send(HttpMethod.POST, newAuthenticationFlowsPolicy);
     }
 
@@ -118,7 +123,7 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param newAuthenticationFlowsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, final ICallback<? super AuthenticationFlowsPolicy> callback) {
+    public void put(@Nonnull final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy, @Nonnull final ICallback<? super AuthenticationFlowsPolicy> callback) {
         send(HttpMethod.PUT, callback, newAuthenticationFlowsPolicy);
     }
 
@@ -129,7 +134,8 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @return the created AuthenticationFlowsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationFlowsPolicy put(final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy) throws ClientException {
+    @Nullable
+    public AuthenticationFlowsPolicy put(@Nonnull final AuthenticationFlowsPolicy newAuthenticationFlowsPolicy) throws ClientException {
         return send(HttpMethod.PUT, newAuthenticationFlowsPolicy);
     }
 
@@ -139,9 +145,10 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param value the select clause
      * @return the updated request
      */
-     public IAuthenticationFlowsPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuthenticationFlowsPolicyRequest)this;
+     @Nonnull
+     public AuthenticationFlowsPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AuthenticationFlowsPolicyRequest extends BaseRequest implements IAu
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuthenticationFlowsPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationFlowsPolicyRequest)this;
+     @Nonnull
+     public AuthenticationFlowsPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

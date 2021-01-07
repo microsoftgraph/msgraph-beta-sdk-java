@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContentType;
-import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IColumnLinkRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Content Type Request.
  */
-public class ContentTypeRequest extends BaseRequest implements IContentTypeRequest {
+public class ContentTypeRequest extends BaseRequest<ContentType> {
 	
     /**
      * The request for the ContentType
@@ -33,7 +33,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContentTypeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContentTypeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContentType.class);
     }
 
@@ -42,7 +42,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ContentType> callback) {
+    public void get(@Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @return the ContentType from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ContentType get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ContentType> callback) {
+    public void delete(@Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param sourceContentType the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ContentType sourceContentType, final ICallback<? super ContentType> callback) {
+    public void patch(@Nonnull final ContentType sourceContentType, @Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.PATCH, callback, sourceContentType);
     }
 
@@ -91,7 +92,8 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @return the updated ContentType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContentType patch(final ContentType sourceContentType) throws ClientException {
+    @Nullable
+    public ContentType patch(@Nonnull final ContentType sourceContentType) throws ClientException {
         return send(HttpMethod.PATCH, sourceContentType);
     }
 
@@ -101,7 +103,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param newContentType the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ContentType newContentType, final ICallback<? super ContentType> callback) {
+    public void post(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.POST, callback, newContentType);
     }
 
@@ -112,7 +114,8 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @return the created ContentType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContentType post(final ContentType newContentType) throws ClientException {
+    @Nullable
+    public ContentType post(@Nonnull final ContentType newContentType) throws ClientException {
         return send(HttpMethod.POST, newContentType);
     }
 
@@ -122,7 +125,7 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param newContentType the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ContentType newContentType, final ICallback<? super ContentType> callback) {
+    public void put(@Nonnull final ContentType newContentType, @Nonnull final ICallback<? super ContentType> callback) {
         send(HttpMethod.PUT, callback, newContentType);
     }
 
@@ -133,7 +136,8 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @return the created ContentType
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContentType put(final ContentType newContentType) throws ClientException {
+    @Nullable
+    public ContentType put(@Nonnull final ContentType newContentType) throws ClientException {
         return send(HttpMethod.PUT, newContentType);
     }
 
@@ -143,9 +147,10 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param value the select clause
      * @return the updated request
      */
-     public IContentTypeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ContentTypeRequest)this;
+     @Nonnull
+     public ContentTypeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ContentTypeRequest extends BaseRequest implements IContentTypeReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IContentTypeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContentTypeRequest)this;
+     @Nonnull
+     public ContentTypeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

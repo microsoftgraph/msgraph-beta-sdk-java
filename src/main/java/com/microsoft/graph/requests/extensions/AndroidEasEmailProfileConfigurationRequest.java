@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidEasEmailProfileConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Eas Email Profile Configuration Request.
  */
-public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest implements IAndroidEasEmailProfileConfigurationRequest {
+public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest<AndroidEasEmailProfileConfiguration> {
 	
     /**
      * The request for the AndroidEasEmailProfileConfiguration
@@ -31,7 +32,7 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidEasEmailProfileConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidEasEmailProfileConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidEasEmailProfileConfiguration.class);
     }
 
@@ -40,7 +41,7 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @return the AndroidEasEmailProfileConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidEasEmailProfileConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @param sourceAndroidEasEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidEasEmailProfileConfiguration sourceAndroidEasEmailProfileConfiguration, final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
+    public void patch(@Nonnull final AndroidEasEmailProfileConfiguration sourceAndroidEasEmailProfileConfiguration, @Nonnull final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidEasEmailProfileConfiguration);
     }
 
@@ -89,7 +91,8 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @return the updated AndroidEasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidEasEmailProfileConfiguration patch(final AndroidEasEmailProfileConfiguration sourceAndroidEasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public AndroidEasEmailProfileConfiguration patch(@Nonnull final AndroidEasEmailProfileConfiguration sourceAndroidEasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidEasEmailProfileConfiguration);
     }
 
@@ -99,7 +102,7 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @param newAndroidEasEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
+    public void post(@Nonnull final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, @Nonnull final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidEasEmailProfileConfiguration);
     }
 
@@ -110,7 +113,8 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @return the created AndroidEasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidEasEmailProfileConfiguration post(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public AndroidEasEmailProfileConfiguration post(@Nonnull final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidEasEmailProfileConfiguration);
     }
 
@@ -120,7 +124,7 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @param newAndroidEasEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
+    public void put(@Nonnull final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration, @Nonnull final ICallback<? super AndroidEasEmailProfileConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidEasEmailProfileConfiguration);
     }
 
@@ -131,7 +135,8 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @return the created AndroidEasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidEasEmailProfileConfiguration put(final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public AndroidEasEmailProfileConfiguration put(@Nonnull final AndroidEasEmailProfileConfiguration newAndroidEasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidEasEmailProfileConfiguration);
     }
 
@@ -141,9 +146,10 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidEasEmailProfileConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidEasEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public AndroidEasEmailProfileConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class AndroidEasEmailProfileConfigurationRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidEasEmailProfileConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidEasEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public AndroidEasEmailProfileConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

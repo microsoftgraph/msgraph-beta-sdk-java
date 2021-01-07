@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSExtensionsConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSExtensions Configuration Request.
  */
-public class MacOSExtensionsConfigurationRequest extends BaseRequest implements IMacOSExtensionsConfigurationRequest {
+public class MacOSExtensionsConfigurationRequest extends BaseRequest<MacOSExtensionsConfiguration> {
 	
     /**
      * The request for the MacOSExtensionsConfiguration
@@ -29,7 +31,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSExtensionsConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSExtensionsConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSExtensionsConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSExtensionsConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @return the MacOSExtensionsConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSExtensionsConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSExtensionsConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param sourceMacOSExtensionsConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback) {
+    public void patch(@Nonnull final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration, @Nonnull final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSExtensionsConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @return the updated MacOSExtensionsConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSExtensionsConfiguration patch(final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration) throws ClientException {
+    @Nullable
+    public MacOSExtensionsConfiguration patch(@Nonnull final MacOSExtensionsConfiguration sourceMacOSExtensionsConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSExtensionsConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param newMacOSExtensionsConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback) {
+    public void post(@Nonnull final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, @Nonnull final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSExtensionsConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @return the created MacOSExtensionsConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSExtensionsConfiguration post(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration) throws ClientException {
+    @Nullable
+    public MacOSExtensionsConfiguration post(@Nonnull final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration) throws ClientException {
         return send(HttpMethod.POST, newMacOSExtensionsConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param newMacOSExtensionsConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, final ICallback<? super MacOSExtensionsConfiguration> callback) {
+    public void put(@Nonnull final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration, @Nonnull final ICallback<? super MacOSExtensionsConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSExtensionsConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @return the created MacOSExtensionsConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSExtensionsConfiguration put(final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration) throws ClientException {
+    @Nullable
+    public MacOSExtensionsConfiguration put(@Nonnull final MacOSExtensionsConfiguration newMacOSExtensionsConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newMacOSExtensionsConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSExtensionsConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSExtensionsConfigurationRequest)this;
+     @Nonnull
+     public MacOSExtensionsConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MacOSExtensionsConfigurationRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSExtensionsConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSExtensionsConfigurationRequest)this;
+     @Nonnull
+     public MacOSExtensionsConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityCustomUserFlowAttribute;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Custom User Flow Attribute Request.
  */
-public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implements IIdentityCustomUserFlowAttributeRequest {
+public class IdentityCustomUserFlowAttributeRequest extends BaseRequest<IdentityCustomUserFlowAttribute> {
 	
     /**
      * The request for the IdentityCustomUserFlowAttribute
@@ -29,7 +31,7 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityCustomUserFlowAttributeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityCustomUserFlowAttributeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityCustomUserFlowAttribute.class);
     }
 
@@ -38,7 +40,7 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @return the IdentityCustomUserFlowAttribute from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IdentityCustomUserFlowAttribute get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
+    public void delete(@Nonnull final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @param sourceIdentityCustomUserFlowAttribute the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityCustomUserFlowAttribute sourceIdentityCustomUserFlowAttribute, final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
+    public void patch(@Nonnull final IdentityCustomUserFlowAttribute sourceIdentityCustomUserFlowAttribute, @Nonnull final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityCustomUserFlowAttribute);
     }
 
@@ -87,7 +90,8 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @return the updated IdentityCustomUserFlowAttribute
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityCustomUserFlowAttribute patch(final IdentityCustomUserFlowAttribute sourceIdentityCustomUserFlowAttribute) throws ClientException {
+    @Nullable
+    public IdentityCustomUserFlowAttribute patch(@Nonnull final IdentityCustomUserFlowAttribute sourceIdentityCustomUserFlowAttribute) throws ClientException {
         return send(HttpMethod.PATCH, sourceIdentityCustomUserFlowAttribute);
     }
 
@@ -97,7 +101,7 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @param newIdentityCustomUserFlowAttribute the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute, final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
+    public void post(@Nonnull final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute, @Nonnull final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
         send(HttpMethod.POST, callback, newIdentityCustomUserFlowAttribute);
     }
 
@@ -108,7 +112,8 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @return the created IdentityCustomUserFlowAttribute
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityCustomUserFlowAttribute post(final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute) throws ClientException {
+    @Nullable
+    public IdentityCustomUserFlowAttribute post(@Nonnull final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute) throws ClientException {
         return send(HttpMethod.POST, newIdentityCustomUserFlowAttribute);
     }
 
@@ -118,7 +123,7 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @param newIdentityCustomUserFlowAttribute the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute, final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
+    public void put(@Nonnull final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute, @Nonnull final ICallback<? super IdentityCustomUserFlowAttribute> callback) {
         send(HttpMethod.PUT, callback, newIdentityCustomUserFlowAttribute);
     }
 
@@ -129,7 +134,8 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @return the created IdentityCustomUserFlowAttribute
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityCustomUserFlowAttribute put(final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute) throws ClientException {
+    @Nullable
+    public IdentityCustomUserFlowAttribute put(@Nonnull final IdentityCustomUserFlowAttribute newIdentityCustomUserFlowAttribute) throws ClientException {
         return send(HttpMethod.PUT, newIdentityCustomUserFlowAttribute);
     }
 
@@ -139,9 +145,10 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentityCustomUserFlowAttributeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityCustomUserFlowAttributeRequest)this;
+     @Nonnull
+     public IdentityCustomUserFlowAttributeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IdentityCustomUserFlowAttributeRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentityCustomUserFlowAttributeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityCustomUserFlowAttributeRequest)this;
+     @Nonnull
+     public IdentityCustomUserFlowAttributeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

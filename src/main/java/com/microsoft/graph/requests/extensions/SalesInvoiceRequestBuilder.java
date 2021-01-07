@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesInvoice;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sales Invoice Request Builder.
  */
-public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements ISalesInvoiceRequestBuilder {
+public class SalesInvoiceRequestBuilder extends BaseRequestBuilder<SalesInvoice> {
 
     /**
      * The request builder for the SalesInvoice
@@ -40,7 +36,7 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesInvoiceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesInvoiceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,9 +44,10 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISalesInvoiceRequest instance
+     * @return the SalesInvoiceRequest instance
      */
-    public ISalesInvoiceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SalesInvoiceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,9 +55,10 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISalesInvoiceRequest instance
+     * @return the SalesInvoiceRequest instance
      */
-    public ISalesInvoiceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SalesInvoiceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SalesInvoiceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -69,63 +67,105 @@ public class SalesInvoiceRequestBuilder extends BaseRequestBuilder implements IS
     /**
      * Gets the request builder for Currency
      *
-     * @return the ICurrencyRequestBuilder instance
+     * @return the CurrencyRequestBuilder instance
      */
-    public ICurrencyRequestBuilder currency() {
+    @Nonnull
+    public CurrencyRequestBuilder currency() {
         return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Customer
      *
-     * @return the ICustomerRequestBuilder instance
+     * @return the CustomerRequestBuilder instance
      */
-    public ICustomerRequestBuilder customer() {
+    @Nonnull
+    public CustomerRequestBuilder customer() {
         return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PaymentTerm
      *
-     * @return the IPaymentTermRequestBuilder instance
+     * @return the PaymentTermRequestBuilder instance
      */
-    public IPaymentTermRequestBuilder paymentTerm() {
+    @Nonnull
+    public PaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
-    public ISalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
+    /**
+     *  Gets a request builder for the SalesInvoiceLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
         return new SalesInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines"), getClient(), null);
     }
 
-    public ISalesInvoiceLineRequestBuilder salesInvoiceLines(final String id) {
+    /**
+     * Gets a request builder for the SalesInvoiceLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesInvoiceLineRequestBuilder salesInvoiceLines(@Nonnull final String id) {
         return new SalesInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ShipmentMethod
      *
-     * @return the IShipmentMethodRequestBuilder instance
+     * @return the ShipmentMethodRequestBuilder instance
      */
-    public IShipmentMethodRequestBuilder shipmentMethod() {
+    @Nonnull
+    public ShipmentMethodRequestBuilder shipmentMethod() {
         return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethod"), getClient(), null);
     }
 
-    public ISalesInvoiceCancelRequestBuilder cancel() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SalesInvoiceCancelRequestBuilder cancel() {
         return new SalesInvoiceCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
 
-    public ISalesInvoiceSendRequestBuilder send() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SalesInvoiceSendRequestBuilder send() {
         return new SalesInvoiceSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.send"), getClient(), null);
     }
 
-    public ISalesInvoiceCancelAndSendRequestBuilder cancelAndSend() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SalesInvoiceCancelAndSendRequestBuilder cancelAndSend() {
         return new SalesInvoiceCancelAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancelAndSend"), getClient(), null);
     }
 
-    public ISalesInvoicePostRequestBuilder post() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SalesInvoicePostRequestBuilder post() {
         return new SalesInvoicePostRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.post"), getClient(), null);
     }
 
-    public ISalesInvoicePostAndSendRequestBuilder postAndSend() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SalesInvoicePostAndSendRequestBuilder postAndSend() {
         return new SalesInvoicePostAndSendRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.postAndSend"), getClient(), null);
     }
 }

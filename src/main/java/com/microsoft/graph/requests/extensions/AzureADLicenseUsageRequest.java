@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AzureADLicenseUsage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Azure ADLicense Usage Request.
  */
-public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADLicenseUsageRequest {
+public class AzureADLicenseUsageRequest extends BaseRequest<AzureADLicenseUsage> {
 	
     /**
      * The request for the AzureADLicenseUsage
@@ -29,7 +31,7 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AzureADLicenseUsageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AzureADLicenseUsageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AzureADLicenseUsage.class);
     }
 
@@ -38,7 +40,7 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AzureADLicenseUsage> callback) {
+    public void get(@Nonnull final ICallback<? super AzureADLicenseUsage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @return the AzureADLicenseUsage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AzureADLicenseUsage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AzureADLicenseUsage> callback) {
+    public void delete(@Nonnull final ICallback<? super AzureADLicenseUsage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @param sourceAzureADLicenseUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AzureADLicenseUsage sourceAzureADLicenseUsage, final ICallback<? super AzureADLicenseUsage> callback) {
+    public void patch(@Nonnull final AzureADLicenseUsage sourceAzureADLicenseUsage, @Nonnull final ICallback<? super AzureADLicenseUsage> callback) {
         send(HttpMethod.PATCH, callback, sourceAzureADLicenseUsage);
     }
 
@@ -87,7 +90,8 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @return the updated AzureADLicenseUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADLicenseUsage patch(final AzureADLicenseUsage sourceAzureADLicenseUsage) throws ClientException {
+    @Nullable
+    public AzureADLicenseUsage patch(@Nonnull final AzureADLicenseUsage sourceAzureADLicenseUsage) throws ClientException {
         return send(HttpMethod.PATCH, sourceAzureADLicenseUsage);
     }
 
@@ -97,7 +101,7 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @param newAzureADLicenseUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<? super AzureADLicenseUsage> callback) {
+    public void post(@Nonnull final AzureADLicenseUsage newAzureADLicenseUsage, @Nonnull final ICallback<? super AzureADLicenseUsage> callback) {
         send(HttpMethod.POST, callback, newAzureADLicenseUsage);
     }
 
@@ -108,7 +112,8 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @return the created AzureADLicenseUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADLicenseUsage post(final AzureADLicenseUsage newAzureADLicenseUsage) throws ClientException {
+    @Nullable
+    public AzureADLicenseUsage post(@Nonnull final AzureADLicenseUsage newAzureADLicenseUsage) throws ClientException {
         return send(HttpMethod.POST, newAzureADLicenseUsage);
     }
 
@@ -118,7 +123,7 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @param newAzureADLicenseUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AzureADLicenseUsage newAzureADLicenseUsage, final ICallback<? super AzureADLicenseUsage> callback) {
+    public void put(@Nonnull final AzureADLicenseUsage newAzureADLicenseUsage, @Nonnull final ICallback<? super AzureADLicenseUsage> callback) {
         send(HttpMethod.PUT, callback, newAzureADLicenseUsage);
     }
 
@@ -129,7 +134,8 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @return the created AzureADLicenseUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADLicenseUsage put(final AzureADLicenseUsage newAzureADLicenseUsage) throws ClientException {
+    @Nullable
+    public AzureADLicenseUsage put(@Nonnull final AzureADLicenseUsage newAzureADLicenseUsage) throws ClientException {
         return send(HttpMethod.PUT, newAzureADLicenseUsage);
     }
 
@@ -139,9 +145,10 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @param value the select clause
      * @return the updated request
      */
-     public IAzureADLicenseUsageRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AzureADLicenseUsageRequest)this;
+     @Nonnull
+     public AzureADLicenseUsageRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AzureADLicenseUsageRequest extends BaseRequest implements IAzureADL
      * @param value the expand clause
      * @return the updated request
      */
-     public IAzureADLicenseUsageRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AzureADLicenseUsageRequest)this;
+     @Nonnull
+     public AzureADLicenseUsageRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

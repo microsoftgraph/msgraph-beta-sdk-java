@@ -12,12 +12,12 @@ import com.microsoft.graph.models.extensions.ReviewSet;
 import com.microsoft.graph.models.generated.ExportOptions;
 import com.microsoft.graph.models.generated.ExportFileStructure;
 import java.util.EnumSet;
-import com.microsoft.graph.requests.extensions.IReviewSetQueryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReviewSetQueryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetQueryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetQueryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -27,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Review Set Request.
  */
-public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
+public class ReviewSetRequest extends BaseRequest<ReviewSet> {
 	
     /**
      * The request for the ReviewSet
@@ -36,7 +36,7 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReviewSetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReviewSetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ReviewSet.class);
     }
 
@@ -45,7 +45,7 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ReviewSet> callback) {
+    public void get(@Nonnull final ICallback<? super ReviewSet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,6 +55,7 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @return the ReviewSet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ReviewSet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -64,7 +65,7 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ReviewSet> callback) {
+    public void delete(@Nonnull final ICallback<? super ReviewSet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +84,7 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @param sourceReviewSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ReviewSet sourceReviewSet, final ICallback<? super ReviewSet> callback) {
+    public void patch(@Nonnull final ReviewSet sourceReviewSet, @Nonnull final ICallback<? super ReviewSet> callback) {
         send(HttpMethod.PATCH, callback, sourceReviewSet);
     }
 
@@ -94,7 +95,8 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @return the updated ReviewSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReviewSet patch(final ReviewSet sourceReviewSet) throws ClientException {
+    @Nullable
+    public ReviewSet patch(@Nonnull final ReviewSet sourceReviewSet) throws ClientException {
         return send(HttpMethod.PATCH, sourceReviewSet);
     }
 
@@ -104,7 +106,7 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @param newReviewSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ReviewSet newReviewSet, final ICallback<? super ReviewSet> callback) {
+    public void post(@Nonnull final ReviewSet newReviewSet, @Nonnull final ICallback<? super ReviewSet> callback) {
         send(HttpMethod.POST, callback, newReviewSet);
     }
 
@@ -115,7 +117,8 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @return the created ReviewSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReviewSet post(final ReviewSet newReviewSet) throws ClientException {
+    @Nullable
+    public ReviewSet post(@Nonnull final ReviewSet newReviewSet) throws ClientException {
         return send(HttpMethod.POST, newReviewSet);
     }
 
@@ -125,7 +128,7 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @param newReviewSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ReviewSet newReviewSet, final ICallback<? super ReviewSet> callback) {
+    public void put(@Nonnull final ReviewSet newReviewSet, @Nonnull final ICallback<? super ReviewSet> callback) {
         send(HttpMethod.PUT, callback, newReviewSet);
     }
 
@@ -136,7 +139,8 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @return the created ReviewSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReviewSet put(final ReviewSet newReviewSet) throws ClientException {
+    @Nullable
+    public ReviewSet put(@Nonnull final ReviewSet newReviewSet) throws ClientException {
         return send(HttpMethod.PUT, newReviewSet);
     }
 
@@ -146,9 +150,10 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IReviewSetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ReviewSetRequest)this;
+     @Nonnull
+     public ReviewSetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -157,9 +162,10 @@ public class ReviewSetRequest extends BaseRequest implements IReviewSetRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IReviewSetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ReviewSetRequest)this;
+     @Nonnull
+     public ReviewSetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

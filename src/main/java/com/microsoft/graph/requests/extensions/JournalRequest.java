@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Journal;
-import com.microsoft.graph.requests.extensions.IJournalLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Journal Request.
  */
-public class JournalRequest extends BaseRequest implements IJournalRequest {
+public class JournalRequest extends BaseRequest<Journal> {
 	
     /**
      * The request for the Journal
@@ -35,7 +34,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public JournalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public JournalRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Journal.class);
     }
 
@@ -44,7 +43,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Journal> callback) {
+    public void get(@Nonnull final ICallback<? super Journal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @return the Journal from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Journal get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Journal> callback) {
+    public void delete(@Nonnull final ICallback<? super Journal> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param sourceJournal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Journal sourceJournal, final ICallback<? super Journal> callback) {
+    public void patch(@Nonnull final Journal sourceJournal, @Nonnull final ICallback<? super Journal> callback) {
         send(HttpMethod.PATCH, callback, sourceJournal);
     }
 
@@ -93,7 +93,8 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @return the updated Journal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Journal patch(final Journal sourceJournal) throws ClientException {
+    @Nullable
+    public Journal patch(@Nonnull final Journal sourceJournal) throws ClientException {
         return send(HttpMethod.PATCH, sourceJournal);
     }
 
@@ -103,7 +104,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param newJournal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Journal newJournal, final ICallback<? super Journal> callback) {
+    public void post(@Nonnull final Journal newJournal, @Nonnull final ICallback<? super Journal> callback) {
         send(HttpMethod.POST, callback, newJournal);
     }
 
@@ -114,7 +115,8 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @return the created Journal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Journal post(final Journal newJournal) throws ClientException {
+    @Nullable
+    public Journal post(@Nonnull final Journal newJournal) throws ClientException {
         return send(HttpMethod.POST, newJournal);
     }
 
@@ -124,7 +126,7 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param newJournal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Journal newJournal, final ICallback<? super Journal> callback) {
+    public void put(@Nonnull final Journal newJournal, @Nonnull final ICallback<? super Journal> callback) {
         send(HttpMethod.PUT, callback, newJournal);
     }
 
@@ -135,7 +137,8 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @return the created Journal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Journal put(final Journal newJournal) throws ClientException {
+    @Nullable
+    public Journal put(@Nonnull final Journal newJournal) throws ClientException {
         return send(HttpMethod.PUT, newJournal);
     }
 
@@ -145,9 +148,10 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IJournalRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (JournalRequest)this;
+     @Nonnull
+     public JournalRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class JournalRequest extends BaseRequest implements IJournalRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IJournalRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (JournalRequest)this;
+     @Nonnull
+     public JournalRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

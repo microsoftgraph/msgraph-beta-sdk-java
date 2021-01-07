@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppDependency;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Dependency Request.
  */
-public class MobileAppDependencyRequest extends BaseRequest implements IMobileAppDependencyRequest {
+public class MobileAppDependencyRequest extends BaseRequest<MobileAppDependency> {
 	
     /**
      * The request for the MobileAppDependency
@@ -29,7 +31,7 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppDependencyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppDependencyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppDependency.class);
     }
 
@@ -38,7 +40,7 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppDependency> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppDependency> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @return the MobileAppDependency from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppDependency get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppDependency> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppDependency> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @param sourceMobileAppDependency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppDependency sourceMobileAppDependency, final ICallback<? super MobileAppDependency> callback) {
+    public void patch(@Nonnull final MobileAppDependency sourceMobileAppDependency, @Nonnull final ICallback<? super MobileAppDependency> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppDependency);
     }
 
@@ -87,7 +90,8 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @return the updated MobileAppDependency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppDependency patch(final MobileAppDependency sourceMobileAppDependency) throws ClientException {
+    @Nullable
+    public MobileAppDependency patch(@Nonnull final MobileAppDependency sourceMobileAppDependency) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppDependency);
     }
 
@@ -97,7 +101,7 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @param newMobileAppDependency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppDependency newMobileAppDependency, final ICallback<? super MobileAppDependency> callback) {
+    public void post(@Nonnull final MobileAppDependency newMobileAppDependency, @Nonnull final ICallback<? super MobileAppDependency> callback) {
         send(HttpMethod.POST, callback, newMobileAppDependency);
     }
 
@@ -108,7 +112,8 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @return the created MobileAppDependency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppDependency post(final MobileAppDependency newMobileAppDependency) throws ClientException {
+    @Nullable
+    public MobileAppDependency post(@Nonnull final MobileAppDependency newMobileAppDependency) throws ClientException {
         return send(HttpMethod.POST, newMobileAppDependency);
     }
 
@@ -118,7 +123,7 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @param newMobileAppDependency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppDependency newMobileAppDependency, final ICallback<? super MobileAppDependency> callback) {
+    public void put(@Nonnull final MobileAppDependency newMobileAppDependency, @Nonnull final ICallback<? super MobileAppDependency> callback) {
         send(HttpMethod.PUT, callback, newMobileAppDependency);
     }
 
@@ -129,7 +134,8 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @return the created MobileAppDependency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppDependency put(final MobileAppDependency newMobileAppDependency) throws ClientException {
+    @Nullable
+    public MobileAppDependency put(@Nonnull final MobileAppDependency newMobileAppDependency) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppDependency);
     }
 
@@ -139,9 +145,10 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppDependencyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppDependencyRequest)this;
+     @Nonnull
+     public MobileAppDependencyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MobileAppDependencyRequest extends BaseRequest implements IMobileAp
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppDependencyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppDependencyRequest)this;
+     @Nonnull
+     public MobileAppDependencyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

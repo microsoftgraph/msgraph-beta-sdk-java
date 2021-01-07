@@ -11,26 +11,19 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceShellScript;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -40,7 +33,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Shell Script Request.
  */
-public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShellScriptRequest {
+public class DeviceShellScriptRequest extends BaseRequest<DeviceShellScript> {
 	
     /**
      * The request for the DeviceShellScript
@@ -49,7 +42,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceShellScriptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceShellScriptRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceShellScript.class);
     }
 
@@ -58,7 +51,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceShellScript> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,6 +61,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @return the DeviceShellScript from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceShellScript get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -77,7 +71,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceShellScript> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -96,7 +90,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param sourceDeviceShellScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceShellScript sourceDeviceShellScript, final ICallback<? super DeviceShellScript> callback) {
+    public void patch(@Nonnull final DeviceShellScript sourceDeviceShellScript, @Nonnull final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceShellScript);
     }
 
@@ -107,7 +101,8 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @return the updated DeviceShellScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceShellScript patch(final DeviceShellScript sourceDeviceShellScript) throws ClientException {
+    @Nullable
+    public DeviceShellScript patch(@Nonnull final DeviceShellScript sourceDeviceShellScript) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceShellScript);
     }
 
@@ -117,7 +112,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param newDeviceShellScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback) {
+    public void post(@Nonnull final DeviceShellScript newDeviceShellScript, @Nonnull final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.POST, callback, newDeviceShellScript);
     }
 
@@ -128,7 +123,8 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @return the created DeviceShellScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceShellScript post(final DeviceShellScript newDeviceShellScript) throws ClientException {
+    @Nullable
+    public DeviceShellScript post(@Nonnull final DeviceShellScript newDeviceShellScript) throws ClientException {
         return send(HttpMethod.POST, newDeviceShellScript);
     }
 
@@ -138,7 +134,7 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param newDeviceShellScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceShellScript newDeviceShellScript, final ICallback<? super DeviceShellScript> callback) {
+    public void put(@Nonnull final DeviceShellScript newDeviceShellScript, @Nonnull final ICallback<? super DeviceShellScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceShellScript);
     }
 
@@ -149,7 +145,8 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @return the created DeviceShellScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceShellScript put(final DeviceShellScript newDeviceShellScript) throws ClientException {
+    @Nullable
+    public DeviceShellScript put(@Nonnull final DeviceShellScript newDeviceShellScript) throws ClientException {
         return send(HttpMethod.PUT, newDeviceShellScript);
     }
 
@@ -159,9 +156,10 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceShellScriptRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceShellScriptRequest)this;
+     @Nonnull
+     public DeviceShellScriptRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -170,9 +168,10 @@ public class DeviceShellScriptRequest extends BaseRequest implements IDeviceShel
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceShellScriptRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceShellScriptRequest)this;
+     @Nonnull
+     public DeviceShellScriptRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

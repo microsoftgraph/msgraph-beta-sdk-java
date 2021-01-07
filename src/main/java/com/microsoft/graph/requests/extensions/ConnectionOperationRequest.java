@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectionOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Connection Operation Request.
  */
-public class ConnectionOperationRequest extends BaseRequest implements IConnectionOperationRequest {
+public class ConnectionOperationRequest extends BaseRequest<ConnectionOperation> {
 	
     /**
      * The request for the ConnectionOperation
@@ -29,7 +31,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectionOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConnectionOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConnectionOperation.class);
     }
 
@@ -38,7 +40,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConnectionOperation> callback) {
+    public void get(@Nonnull final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @return the ConnectionOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ConnectionOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConnectionOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param sourceConnectionOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConnectionOperation sourceConnectionOperation, final ICallback<? super ConnectionOperation> callback) {
+    public void patch(@Nonnull final ConnectionOperation sourceConnectionOperation, @Nonnull final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceConnectionOperation);
     }
 
@@ -87,7 +90,8 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @return the updated ConnectionOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConnectionOperation patch(final ConnectionOperation sourceConnectionOperation) throws ClientException {
+    @Nullable
+    public ConnectionOperation patch(@Nonnull final ConnectionOperation sourceConnectionOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceConnectionOperation);
     }
 
@@ -97,7 +101,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param newConnectionOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConnectionOperation newConnectionOperation, final ICallback<? super ConnectionOperation> callback) {
+    public void post(@Nonnull final ConnectionOperation newConnectionOperation, @Nonnull final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.POST, callback, newConnectionOperation);
     }
 
@@ -108,7 +112,8 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @return the created ConnectionOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConnectionOperation post(final ConnectionOperation newConnectionOperation) throws ClientException {
+    @Nullable
+    public ConnectionOperation post(@Nonnull final ConnectionOperation newConnectionOperation) throws ClientException {
         return send(HttpMethod.POST, newConnectionOperation);
     }
 
@@ -118,7 +123,7 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param newConnectionOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConnectionOperation newConnectionOperation, final ICallback<? super ConnectionOperation> callback) {
+    public void put(@Nonnull final ConnectionOperation newConnectionOperation, @Nonnull final ICallback<? super ConnectionOperation> callback) {
         send(HttpMethod.PUT, callback, newConnectionOperation);
     }
 
@@ -129,7 +134,8 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @return the created ConnectionOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConnectionOperation put(final ConnectionOperation newConnectionOperation) throws ClientException {
+    @Nullable
+    public ConnectionOperation put(@Nonnull final ConnectionOperation newConnectionOperation) throws ClientException {
         return send(HttpMethod.PUT, newConnectionOperation);
     }
 
@@ -139,9 +145,10 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param value the select clause
      * @return the updated request
      */
-     public IConnectionOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConnectionOperationRequest)this;
+     @Nonnull
+     public ConnectionOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ConnectionOperationRequest extends BaseRequest implements IConnecti
      * @param value the expand clause
      * @return the updated request
      */
-     public IConnectionOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConnectionOperationRequest)this;
+     @Nonnull
+     public ConnectionOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

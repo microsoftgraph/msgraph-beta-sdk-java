@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSPkcsCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSPkcs Certificate Profile Request.
  */
-public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements IMacOSPkcsCertificateProfileRequest {
+public class MacOSPkcsCertificateProfileRequest extends BaseRequest<MacOSPkcsCertificateProfile> {
 	
     /**
      * The request for the MacOSPkcsCertificateProfile
@@ -33,7 +33,7 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSPkcsCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSPkcsCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSPkcsCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSPkcsCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSPkcsCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @return the MacOSPkcsCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSPkcsCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSPkcsCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSPkcsCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @param sourceMacOSPkcsCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSPkcsCertificateProfile sourceMacOSPkcsCertificateProfile, final ICallback<? super MacOSPkcsCertificateProfile> callback) {
+    public void patch(@Nonnull final MacOSPkcsCertificateProfile sourceMacOSPkcsCertificateProfile, @Nonnull final ICallback<? super MacOSPkcsCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSPkcsCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @return the updated MacOSPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSPkcsCertificateProfile patch(final MacOSPkcsCertificateProfile sourceMacOSPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSPkcsCertificateProfile patch(@Nonnull final MacOSPkcsCertificateProfile sourceMacOSPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSPkcsCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @param newMacOSPkcsCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile, final ICallback<? super MacOSPkcsCertificateProfile> callback) {
+    public void post(@Nonnull final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile, @Nonnull final ICallback<? super MacOSPkcsCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newMacOSPkcsCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @return the created MacOSPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSPkcsCertificateProfile post(final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSPkcsCertificateProfile post(@Nonnull final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newMacOSPkcsCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @param newMacOSPkcsCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile, final ICallback<? super MacOSPkcsCertificateProfile> callback) {
+    public void put(@Nonnull final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile, @Nonnull final ICallback<? super MacOSPkcsCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newMacOSPkcsCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @return the created MacOSPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSPkcsCertificateProfile put(final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSPkcsCertificateProfile put(@Nonnull final MacOSPkcsCertificateProfile newMacOSPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newMacOSPkcsCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSPkcsCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSPkcsCertificateProfileRequest)this;
+     @Nonnull
+     public MacOSPkcsCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class MacOSPkcsCertificateProfileRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSPkcsCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSPkcsCertificateProfileRequest)this;
+     @Nonnull
+     public MacOSPkcsCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExactMatchDataStore;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchSessionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchSessionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchSessionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Exact Match Data Store Request.
  */
-public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMatchDataStoreRequest {
+public class ExactMatchDataStoreRequest extends BaseRequest<ExactMatchDataStore> {
 	
     /**
      * The request for the ExactMatchDataStore
@@ -33,7 +33,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchDataStoreRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExactMatchDataStoreRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExactMatchDataStore.class);
     }
 
@@ -42,7 +42,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExactMatchDataStore> callback) {
+    public void get(@Nonnull final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @return the ExactMatchDataStore from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExactMatchDataStore get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExactMatchDataStore> callback) {
+    public void delete(@Nonnull final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param sourceExactMatchDataStore the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExactMatchDataStore sourceExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback) {
+    public void patch(@Nonnull final ExactMatchDataStore sourceExactMatchDataStore, @Nonnull final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.PATCH, callback, sourceExactMatchDataStore);
     }
 
@@ -91,7 +92,8 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @return the updated ExactMatchDataStore
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchDataStore patch(final ExactMatchDataStore sourceExactMatchDataStore) throws ClientException {
+    @Nullable
+    public ExactMatchDataStore patch(@Nonnull final ExactMatchDataStore sourceExactMatchDataStore) throws ClientException {
         return send(HttpMethod.PATCH, sourceExactMatchDataStore);
     }
 
@@ -101,7 +103,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param newExactMatchDataStore the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback) {
+    public void post(@Nonnull final ExactMatchDataStore newExactMatchDataStore, @Nonnull final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.POST, callback, newExactMatchDataStore);
     }
 
@@ -112,7 +114,8 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @return the created ExactMatchDataStore
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchDataStore post(final ExactMatchDataStore newExactMatchDataStore) throws ClientException {
+    @Nullable
+    public ExactMatchDataStore post(@Nonnull final ExactMatchDataStore newExactMatchDataStore) throws ClientException {
         return send(HttpMethod.POST, newExactMatchDataStore);
     }
 
@@ -122,7 +125,7 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param newExactMatchDataStore the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExactMatchDataStore newExactMatchDataStore, final ICallback<? super ExactMatchDataStore> callback) {
+    public void put(@Nonnull final ExactMatchDataStore newExactMatchDataStore, @Nonnull final ICallback<? super ExactMatchDataStore> callback) {
         send(HttpMethod.PUT, callback, newExactMatchDataStore);
     }
 
@@ -133,7 +136,8 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @return the created ExactMatchDataStore
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchDataStore put(final ExactMatchDataStore newExactMatchDataStore) throws ClientException {
+    @Nullable
+    public ExactMatchDataStore put(@Nonnull final ExactMatchDataStore newExactMatchDataStore) throws ClientException {
         return send(HttpMethod.PUT, newExactMatchDataStore);
     }
 
@@ -143,9 +147,10 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param value the select clause
      * @return the updated request
      */
-     public IExactMatchDataStoreRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExactMatchDataStoreRequest)this;
+     @Nonnull
+     public ExactMatchDataStoreRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ExactMatchDataStoreRequest extends BaseRequest implements IExactMat
      * @param value the expand clause
      * @return the updated request
      */
-     public IExactMatchDataStoreRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExactMatchDataStoreRequest)this;
+     @Nonnull
+     public ExactMatchDataStoreRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

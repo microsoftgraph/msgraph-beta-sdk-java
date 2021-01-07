@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contract;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Contract Request.
  */
-public class ContractRequest extends BaseRequest implements IContractRequest {
+public class ContractRequest extends BaseRequest<Contract> {
 	
     /**
      * The request for the Contract
@@ -29,7 +31,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContractRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContractRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Contract.class);
     }
 
@@ -38,7 +40,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Contract> callback) {
+    public void get(@Nonnull final ICallback<? super Contract> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @return the Contract from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Contract get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Contract> callback) {
+    public void delete(@Nonnull final ICallback<? super Contract> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param sourceContract the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Contract sourceContract, final ICallback<? super Contract> callback) {
+    public void patch(@Nonnull final Contract sourceContract, @Nonnull final ICallback<? super Contract> callback) {
         send(HttpMethod.PATCH, callback, sourceContract);
     }
 
@@ -87,7 +90,8 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @return the updated Contract
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contract patch(final Contract sourceContract) throws ClientException {
+    @Nullable
+    public Contract patch(@Nonnull final Contract sourceContract) throws ClientException {
         return send(HttpMethod.PATCH, sourceContract);
     }
 
@@ -97,7 +101,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param newContract the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Contract newContract, final ICallback<? super Contract> callback) {
+    public void post(@Nonnull final Contract newContract, @Nonnull final ICallback<? super Contract> callback) {
         send(HttpMethod.POST, callback, newContract);
     }
 
@@ -108,7 +112,8 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @return the created Contract
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contract post(final Contract newContract) throws ClientException {
+    @Nullable
+    public Contract post(@Nonnull final Contract newContract) throws ClientException {
         return send(HttpMethod.POST, newContract);
     }
 
@@ -118,7 +123,7 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param newContract the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Contract newContract, final ICallback<? super Contract> callback) {
+    public void put(@Nonnull final Contract newContract, @Nonnull final ICallback<? super Contract> callback) {
         send(HttpMethod.PUT, callback, newContract);
     }
 
@@ -129,7 +134,8 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @return the created Contract
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contract put(final Contract newContract) throws ClientException {
+    @Nullable
+    public Contract put(@Nonnull final Contract newContract) throws ClientException {
         return send(HttpMethod.PUT, newContract);
     }
 
@@ -139,9 +145,10 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IContractRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ContractRequest)this;
+     @Nonnull
+     public ContractRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ContractRequest extends BaseRequest implements IContractRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IContractRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContractRequest)this;
+     @Nonnull
+     public ContractRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

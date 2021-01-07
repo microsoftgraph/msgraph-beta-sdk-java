@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Dimension;
-import com.microsoft.graph.requests.extensions.IDimensionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDimensionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.DimensionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DimensionValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Dimension Request Builder.
  */
-public class DimensionRequestBuilder extends BaseRequestBuilder implements IDimensionRequestBuilder {
+public class DimensionRequestBuilder extends BaseRequestBuilder<Dimension> {
 
     /**
      * The request builder for the Dimension
@@ -32,7 +32,7 @@ public class DimensionRequestBuilder extends BaseRequestBuilder implements IDime
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DimensionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DimensionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class DimensionRequestBuilder extends BaseRequestBuilder implements IDime
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDimensionRequest instance
+     * @return the DimensionRequest instance
      */
-    public IDimensionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DimensionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class DimensionRequestBuilder extends BaseRequestBuilder implements IDime
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDimensionRequest instance
+     * @return the DimensionRequest instance
      */
-    public IDimensionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DimensionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DimensionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDimensionValueCollectionRequestBuilder dimensionValues() {
+    /**
+     *  Gets a request builder for the DimensionValue collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DimensionValueCollectionRequestBuilder dimensionValues() {
         return new DimensionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues"), getClient(), null);
     }
 
-    public IDimensionValueRequestBuilder dimensionValues(final String id) {
+    /**
+     * Gets a request builder for the DimensionValue item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DimensionValueRequestBuilder dimensionValues(@Nonnull final String id) {
         return new DimensionValueRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComanagementAuthorityConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Comanagement Authority Configuration Request.
  */
-public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest implements IDeviceComanagementAuthorityConfigurationRequest {
+public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest<DeviceComanagementAuthorityConfiguration> {
 	
     /**
      * The request for the DeviceComanagementAuthorityConfiguration
@@ -29,7 +31,7 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComanagementAuthorityConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComanagementAuthorityConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComanagementAuthorityConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @return the DeviceComanagementAuthorityConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceComanagementAuthorityConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @param sourceDeviceComanagementAuthorityConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComanagementAuthorityConfiguration sourceDeviceComanagementAuthorityConfiguration, final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
+    public void patch(@Nonnull final DeviceComanagementAuthorityConfiguration sourceDeviceComanagementAuthorityConfiguration, @Nonnull final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComanagementAuthorityConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @return the updated DeviceComanagementAuthorityConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComanagementAuthorityConfiguration patch(final DeviceComanagementAuthorityConfiguration sourceDeviceComanagementAuthorityConfiguration) throws ClientException {
+    @Nullable
+    public DeviceComanagementAuthorityConfiguration patch(@Nonnull final DeviceComanagementAuthorityConfiguration sourceDeviceComanagementAuthorityConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceComanagementAuthorityConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @param newDeviceComanagementAuthorityConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration, final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
+    public void post(@Nonnull final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration, @Nonnull final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceComanagementAuthorityConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @return the created DeviceComanagementAuthorityConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComanagementAuthorityConfiguration post(final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration) throws ClientException {
+    @Nullable
+    public DeviceComanagementAuthorityConfiguration post(@Nonnull final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration) throws ClientException {
         return send(HttpMethod.POST, newDeviceComanagementAuthorityConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @param newDeviceComanagementAuthorityConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration, final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
+    public void put(@Nonnull final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration, @Nonnull final ICallback<? super DeviceComanagementAuthorityConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceComanagementAuthorityConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @return the created DeviceComanagementAuthorityConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComanagementAuthorityConfiguration put(final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration) throws ClientException {
+    @Nullable
+    public DeviceComanagementAuthorityConfiguration put(@Nonnull final DeviceComanagementAuthorityConfiguration newDeviceComanagementAuthorityConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newDeviceComanagementAuthorityConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceComanagementAuthorityConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceComanagementAuthorityConfigurationRequest)this;
+     @Nonnull
+     public DeviceComanagementAuthorityConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceComanagementAuthorityConfigurationRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceComanagementAuthorityConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComanagementAuthorityConfigurationRequest)this;
+     @Nonnull
+     public DeviceComanagementAuthorityConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

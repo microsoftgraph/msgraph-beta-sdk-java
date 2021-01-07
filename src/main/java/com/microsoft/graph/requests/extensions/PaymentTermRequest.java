@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PaymentTerm;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Payment Term Request.
  */
-public class PaymentTermRequest extends BaseRequest implements IPaymentTermRequest {
+public class PaymentTermRequest extends BaseRequest<PaymentTerm> {
 	
     /**
      * The request for the PaymentTerm
@@ -29,7 +31,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PaymentTermRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PaymentTermRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PaymentTerm.class);
     }
 
@@ -38,7 +40,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PaymentTerm> callback) {
+    public void get(@Nonnull final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @return the PaymentTerm from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PaymentTerm get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PaymentTerm> callback) {
+    public void delete(@Nonnull final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param sourcePaymentTerm the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PaymentTerm sourcePaymentTerm, final ICallback<? super PaymentTerm> callback) {
+    public void patch(@Nonnull final PaymentTerm sourcePaymentTerm, @Nonnull final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.PATCH, callback, sourcePaymentTerm);
     }
 
@@ -87,7 +90,8 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @return the updated PaymentTerm
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PaymentTerm patch(final PaymentTerm sourcePaymentTerm) throws ClientException {
+    @Nullable
+    public PaymentTerm patch(@Nonnull final PaymentTerm sourcePaymentTerm) throws ClientException {
         return send(HttpMethod.PATCH, sourcePaymentTerm);
     }
 
@@ -97,7 +101,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param newPaymentTerm the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback) {
+    public void post(@Nonnull final PaymentTerm newPaymentTerm, @Nonnull final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.POST, callback, newPaymentTerm);
     }
 
@@ -108,7 +112,8 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @return the created PaymentTerm
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PaymentTerm post(final PaymentTerm newPaymentTerm) throws ClientException {
+    @Nullable
+    public PaymentTerm post(@Nonnull final PaymentTerm newPaymentTerm) throws ClientException {
         return send(HttpMethod.POST, newPaymentTerm);
     }
 
@@ -118,7 +123,7 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param newPaymentTerm the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PaymentTerm newPaymentTerm, final ICallback<? super PaymentTerm> callback) {
+    public void put(@Nonnull final PaymentTerm newPaymentTerm, @Nonnull final ICallback<? super PaymentTerm> callback) {
         send(HttpMethod.PUT, callback, newPaymentTerm);
     }
 
@@ -129,7 +134,8 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @return the created PaymentTerm
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PaymentTerm put(final PaymentTerm newPaymentTerm) throws ClientException {
+    @Nullable
+    public PaymentTerm put(@Nonnull final PaymentTerm newPaymentTerm) throws ClientException {
         return send(HttpMethod.PUT, newPaymentTerm);
     }
 
@@ -139,9 +145,10 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param value the select clause
      * @return the updated request
      */
-     public IPaymentTermRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PaymentTermRequest)this;
+     @Nonnull
+     public PaymentTermRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PaymentTermRequest extends BaseRequest implements IPaymentTermReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IPaymentTermRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PaymentTermRequest)this;
+     @Nonnull
+     public PaymentTermRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectedOrganization;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Connected Organization Request.
  */
-public class ConnectedOrganizationRequest extends BaseRequest implements IConnectedOrganizationRequest {
+public class ConnectedOrganizationRequest extends BaseRequest<ConnectedOrganization> {
 	
     /**
      * The request for the ConnectedOrganization
@@ -33,7 +33,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectedOrganizationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConnectedOrganizationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConnectedOrganization.class);
     }
 
@@ -42,7 +42,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConnectedOrganization> callback) {
+    public void get(@Nonnull final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @return the ConnectedOrganization from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ConnectedOrganization get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConnectedOrganization> callback) {
+    public void delete(@Nonnull final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param sourceConnectedOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConnectedOrganization sourceConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
+    public void patch(@Nonnull final ConnectedOrganization sourceConnectedOrganization, @Nonnull final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.PATCH, callback, sourceConnectedOrganization);
     }
 
@@ -91,7 +92,8 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @return the updated ConnectedOrganization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConnectedOrganization patch(final ConnectedOrganization sourceConnectedOrganization) throws ClientException {
+    @Nullable
+    public ConnectedOrganization patch(@Nonnull final ConnectedOrganization sourceConnectedOrganization) throws ClientException {
         return send(HttpMethod.PATCH, sourceConnectedOrganization);
     }
 
@@ -101,7 +103,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param newConnectedOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
+    public void post(@Nonnull final ConnectedOrganization newConnectedOrganization, @Nonnull final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.POST, callback, newConnectedOrganization);
     }
 
@@ -112,7 +114,8 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @return the created ConnectedOrganization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConnectedOrganization post(final ConnectedOrganization newConnectedOrganization) throws ClientException {
+    @Nullable
+    public ConnectedOrganization post(@Nonnull final ConnectedOrganization newConnectedOrganization) throws ClientException {
         return send(HttpMethod.POST, newConnectedOrganization);
     }
 
@@ -122,7 +125,7 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param newConnectedOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConnectedOrganization newConnectedOrganization, final ICallback<? super ConnectedOrganization> callback) {
+    public void put(@Nonnull final ConnectedOrganization newConnectedOrganization, @Nonnull final ICallback<? super ConnectedOrganization> callback) {
         send(HttpMethod.PUT, callback, newConnectedOrganization);
     }
 
@@ -133,7 +136,8 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @return the created ConnectedOrganization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConnectedOrganization put(final ConnectedOrganization newConnectedOrganization) throws ClientException {
+    @Nullable
+    public ConnectedOrganization put(@Nonnull final ConnectedOrganization newConnectedOrganization) throws ClientException {
         return send(HttpMethod.PUT, newConnectedOrganization);
     }
 
@@ -143,9 +147,10 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param value the select clause
      * @return the updated request
      */
-     public IConnectedOrganizationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConnectedOrganizationRequest)this;
+     @Nonnull
+     public ConnectedOrganizationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ConnectedOrganizationRequest extends BaseRequest implements IConnec
      * @param value the expand clause
      * @return the updated request
      */
-     public IConnectedOrganizationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConnectedOrganizationRequest)this;
+     @Nonnull
+     public ConnectedOrganizationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

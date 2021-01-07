@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedLanguageFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicyOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Uploaded Definition File Request.
  */
-public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implements IGroupPolicyUploadedDefinitionFileRequest {
+public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest<GroupPolicyUploadedDefinitionFile> {
 	
     /**
      * The request for the GroupPolicyUploadedDefinitionFile
@@ -34,7 +34,7 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyUploadedDefinitionFileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyUploadedDefinitionFileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyUploadedDefinitionFile.class);
     }
 
@@ -43,7 +43,7 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +53,7 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @return the GroupPolicyUploadedDefinitionFile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyUploadedDefinitionFile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +63,7 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +82,7 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @param sourceGroupPolicyUploadedDefinitionFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyUploadedDefinitionFile sourceGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
+    public void patch(@Nonnull final GroupPolicyUploadedDefinitionFile sourceGroupPolicyUploadedDefinitionFile, @Nonnull final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyUploadedDefinitionFile);
     }
 
@@ -92,7 +93,8 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @return the updated GroupPolicyUploadedDefinitionFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyUploadedDefinitionFile patch(final GroupPolicyUploadedDefinitionFile sourceGroupPolicyUploadedDefinitionFile) throws ClientException {
+    @Nullable
+    public GroupPolicyUploadedDefinitionFile patch(@Nonnull final GroupPolicyUploadedDefinitionFile sourceGroupPolicyUploadedDefinitionFile) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyUploadedDefinitionFile);
     }
 
@@ -102,7 +104,7 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @param newGroupPolicyUploadedDefinitionFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
+    public void post(@Nonnull final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, @Nonnull final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyUploadedDefinitionFile);
     }
 
@@ -113,7 +115,8 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @return the created GroupPolicyUploadedDefinitionFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyUploadedDefinitionFile post(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile) throws ClientException {
+    @Nullable
+    public GroupPolicyUploadedDefinitionFile post(@Nonnull final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyUploadedDefinitionFile);
     }
 
@@ -123,7 +126,7 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @param newGroupPolicyUploadedDefinitionFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
+    public void put(@Nonnull final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile, @Nonnull final ICallback<? super GroupPolicyUploadedDefinitionFile> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyUploadedDefinitionFile);
     }
 
@@ -134,7 +137,8 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @return the created GroupPolicyUploadedDefinitionFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyUploadedDefinitionFile put(final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile) throws ClientException {
+    @Nullable
+    public GroupPolicyUploadedDefinitionFile put(@Nonnull final GroupPolicyUploadedDefinitionFile newGroupPolicyUploadedDefinitionFile) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyUploadedDefinitionFile);
     }
 
@@ -144,9 +148,10 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyUploadedDefinitionFileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyUploadedDefinitionFileRequest)this;
+     @Nonnull
+     public GroupPolicyUploadedDefinitionFileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -155,9 +160,10 @@ public class GroupPolicyUploadedDefinitionFileRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyUploadedDefinitionFileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyUploadedDefinitionFileRequest)this;
+     @Nonnull
+     public GroupPolicyUploadedDefinitionFileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

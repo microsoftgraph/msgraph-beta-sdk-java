@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityOLD;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Activity OLDRequest.
  */
-public class ItemActivityOLDRequest extends BaseRequest implements IItemActivityOLDRequest {
+public class ItemActivityOLDRequest extends BaseRequest<ItemActivityOLD> {
 	
     /**
      * The request for the ItemActivityOLD
@@ -33,7 +33,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityOLDRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityOLDRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityOLD.class);
     }
 
@@ -42,7 +42,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemActivityOLD> callback) {
+    public void get(@Nonnull final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @return the ItemActivityOLD from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemActivityOLD get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemActivityOLD> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param sourceItemActivityOLD the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemActivityOLD sourceItemActivityOLD, final ICallback<? super ItemActivityOLD> callback) {
+    public void patch(@Nonnull final ItemActivityOLD sourceItemActivityOLD, @Nonnull final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.PATCH, callback, sourceItemActivityOLD);
     }
 
@@ -91,7 +92,8 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @return the updated ItemActivityOLD
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemActivityOLD patch(final ItemActivityOLD sourceItemActivityOLD) throws ClientException {
+    @Nullable
+    public ItemActivityOLD patch(@Nonnull final ItemActivityOLD sourceItemActivityOLD) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemActivityOLD);
     }
 
@@ -101,7 +103,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param newItemActivityOLD the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemActivityOLD newItemActivityOLD, final ICallback<? super ItemActivityOLD> callback) {
+    public void post(@Nonnull final ItemActivityOLD newItemActivityOLD, @Nonnull final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.POST, callback, newItemActivityOLD);
     }
 
@@ -112,7 +114,8 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @return the created ItemActivityOLD
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemActivityOLD post(final ItemActivityOLD newItemActivityOLD) throws ClientException {
+    @Nullable
+    public ItemActivityOLD post(@Nonnull final ItemActivityOLD newItemActivityOLD) throws ClientException {
         return send(HttpMethod.POST, newItemActivityOLD);
     }
 
@@ -122,7 +125,7 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param newItemActivityOLD the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemActivityOLD newItemActivityOLD, final ICallback<? super ItemActivityOLD> callback) {
+    public void put(@Nonnull final ItemActivityOLD newItemActivityOLD, @Nonnull final ICallback<? super ItemActivityOLD> callback) {
         send(HttpMethod.PUT, callback, newItemActivityOLD);
     }
 
@@ -133,7 +136,8 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @return the created ItemActivityOLD
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemActivityOLD put(final ItemActivityOLD newItemActivityOLD) throws ClientException {
+    @Nullable
+    public ItemActivityOLD put(@Nonnull final ItemActivityOLD newItemActivityOLD) throws ClientException {
         return send(HttpMethod.PUT, newItemActivityOLD);
     }
 
@@ -143,9 +147,10 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param value the select clause
      * @return the updated request
      */
-     public IItemActivityOLDRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemActivityOLDRequest)this;
+     @Nonnull
+     public ItemActivityOLDRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ItemActivityOLDRequest extends BaseRequest implements IItemActivity
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemActivityOLDRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemActivityOLDRequest)this;
+     @Nonnull
+     public ItemActivityOLDRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

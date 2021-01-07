@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserPFXCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User PFXCertificate Request.
  */
-public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCertificateRequest {
+public class UserPFXCertificateRequest extends BaseRequest<UserPFXCertificate> {
 	
     /**
      * The request for the UserPFXCertificate
@@ -29,7 +31,7 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserPFXCertificateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserPFXCertificateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserPFXCertificate.class);
     }
 
@@ -38,7 +40,7 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserPFXCertificate> callback) {
+    public void get(@Nonnull final ICallback<? super UserPFXCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @return the UserPFXCertificate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserPFXCertificate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserPFXCertificate> callback) {
+    public void delete(@Nonnull final ICallback<? super UserPFXCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @param sourceUserPFXCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserPFXCertificate sourceUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback) {
+    public void patch(@Nonnull final UserPFXCertificate sourceUserPFXCertificate, @Nonnull final ICallback<? super UserPFXCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceUserPFXCertificate);
     }
 
@@ -87,7 +90,8 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @return the updated UserPFXCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserPFXCertificate patch(final UserPFXCertificate sourceUserPFXCertificate) throws ClientException {
+    @Nullable
+    public UserPFXCertificate patch(@Nonnull final UserPFXCertificate sourceUserPFXCertificate) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserPFXCertificate);
     }
 
@@ -97,7 +101,7 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @param newUserPFXCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserPFXCertificate newUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback) {
+    public void post(@Nonnull final UserPFXCertificate newUserPFXCertificate, @Nonnull final ICallback<? super UserPFXCertificate> callback) {
         send(HttpMethod.POST, callback, newUserPFXCertificate);
     }
 
@@ -108,7 +112,8 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @return the created UserPFXCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserPFXCertificate post(final UserPFXCertificate newUserPFXCertificate) throws ClientException {
+    @Nullable
+    public UserPFXCertificate post(@Nonnull final UserPFXCertificate newUserPFXCertificate) throws ClientException {
         return send(HttpMethod.POST, newUserPFXCertificate);
     }
 
@@ -118,7 +123,7 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @param newUserPFXCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserPFXCertificate newUserPFXCertificate, final ICallback<? super UserPFXCertificate> callback) {
+    public void put(@Nonnull final UserPFXCertificate newUserPFXCertificate, @Nonnull final ICallback<? super UserPFXCertificate> callback) {
         send(HttpMethod.PUT, callback, newUserPFXCertificate);
     }
 
@@ -129,7 +134,8 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @return the created UserPFXCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserPFXCertificate put(final UserPFXCertificate newUserPFXCertificate) throws ClientException {
+    @Nullable
+    public UserPFXCertificate put(@Nonnull final UserPFXCertificate newUserPFXCertificate) throws ClientException {
         return send(HttpMethod.PUT, newUserPFXCertificate);
     }
 
@@ -139,9 +145,10 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @param value the select clause
      * @return the updated request
      */
-     public IUserPFXCertificateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserPFXCertificateRequest)this;
+     @Nonnull
+     public UserPFXCertificateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserPFXCertificateRequest extends BaseRequest implements IUserPFXCe
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserPFXCertificateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserPFXCertificateRequest)this;
+     @Nonnull
+     public UserPFXCertificateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

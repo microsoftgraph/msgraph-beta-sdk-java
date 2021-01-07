@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceActionItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Action Item Request.
  */
-public class DeviceComplianceActionItemRequest extends BaseRequest implements IDeviceComplianceActionItemRequest {
+public class DeviceComplianceActionItemRequest extends BaseRequest<DeviceComplianceActionItem> {
 	
     /**
      * The request for the DeviceComplianceActionItem
@@ -29,7 +31,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceActionItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceActionItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceActionItem.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceComplianceActionItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @return the DeviceComplianceActionItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceComplianceActionItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceComplianceActionItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param sourceDeviceComplianceActionItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceActionItem sourceDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void patch(@Nonnull final DeviceComplianceActionItem sourceDeviceComplianceActionItem, @Nonnull final ICallback<? super DeviceComplianceActionItem> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceActionItem);
     }
 
@@ -87,7 +90,8 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @return the updated DeviceComplianceActionItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceActionItem patch(final DeviceComplianceActionItem sourceDeviceComplianceActionItem) throws ClientException {
+    @Nullable
+    public DeviceComplianceActionItem patch(@Nonnull final DeviceComplianceActionItem sourceDeviceComplianceActionItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceComplianceActionItem);
     }
 
@@ -97,7 +101,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param newDeviceComplianceActionItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void post(@Nonnull final DeviceComplianceActionItem newDeviceComplianceActionItem, @Nonnull final ICallback<? super DeviceComplianceActionItem> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceActionItem);
     }
 
@@ -108,7 +112,8 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @return the created DeviceComplianceActionItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceActionItem post(final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException {
+    @Nullable
+    public DeviceComplianceActionItem post(@Nonnull final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException {
         return send(HttpMethod.POST, newDeviceComplianceActionItem);
     }
 
@@ -118,7 +123,7 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param newDeviceComplianceActionItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceActionItem newDeviceComplianceActionItem, final ICallback<? super DeviceComplianceActionItem> callback) {
+    public void put(@Nonnull final DeviceComplianceActionItem newDeviceComplianceActionItem, @Nonnull final ICallback<? super DeviceComplianceActionItem> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceActionItem);
     }
 
@@ -129,7 +134,8 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @return the created DeviceComplianceActionItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceActionItem put(final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException {
+    @Nullable
+    public DeviceComplianceActionItem put(@Nonnull final DeviceComplianceActionItem newDeviceComplianceActionItem) throws ClientException {
         return send(HttpMethod.PUT, newDeviceComplianceActionItem);
     }
 
@@ -139,9 +145,10 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceComplianceActionItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceComplianceActionItemRequest)this;
+     @Nonnull
+     public DeviceComplianceActionItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceComplianceActionItemRequest extends BaseRequest implements ID
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceComplianceActionItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComplianceActionItemRequest)this;
+     @Nonnull
+     public DeviceComplianceActionItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftStoreForBusinessContainedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Microsoft Store For Business Contained App Request.
  */
-public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest implements IMicrosoftStoreForBusinessContainedAppRequest {
+public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest<MicrosoftStoreForBusinessContainedApp> {
 	
     /**
      * The request for the MicrosoftStoreForBusinessContainedApp
@@ -29,7 +31,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MicrosoftStoreForBusinessContainedAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MicrosoftStoreForBusinessContainedAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MicrosoftStoreForBusinessContainedApp.class);
     }
 
@@ -38,7 +40,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
+    public void get(@Nonnull final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @return the MicrosoftStoreForBusinessContainedApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MicrosoftStoreForBusinessContainedApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
+    public void delete(@Nonnull final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param sourceMicrosoftStoreForBusinessContainedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
+    public void patch(@Nonnull final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp, @Nonnull final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -87,7 +90,8 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @return the updated MicrosoftStoreForBusinessContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftStoreForBusinessContainedApp patch(final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp) throws ClientException {
+    @Nullable
+    public MicrosoftStoreForBusinessContainedApp patch(@Nonnull final MicrosoftStoreForBusinessContainedApp sourceMicrosoftStoreForBusinessContainedApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -97,7 +101,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param newMicrosoftStoreForBusinessContainedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
+    public void post(@Nonnull final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, @Nonnull final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.POST, callback, newMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -108,7 +112,8 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @return the created MicrosoftStoreForBusinessContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftStoreForBusinessContainedApp post(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp) throws ClientException {
+    @Nullable
+    public MicrosoftStoreForBusinessContainedApp post(@Nonnull final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp) throws ClientException {
         return send(HttpMethod.POST, newMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -118,7 +123,7 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param newMicrosoftStoreForBusinessContainedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
+    public void put(@Nonnull final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp, @Nonnull final ICallback<? super MicrosoftStoreForBusinessContainedApp> callback) {
         send(HttpMethod.PUT, callback, newMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -129,7 +134,8 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @return the created MicrosoftStoreForBusinessContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftStoreForBusinessContainedApp put(final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp) throws ClientException {
+    @Nullable
+    public MicrosoftStoreForBusinessContainedApp put(@Nonnull final MicrosoftStoreForBusinessContainedApp newMicrosoftStoreForBusinessContainedApp) throws ClientException {
         return send(HttpMethod.PUT, newMicrosoftStoreForBusinessContainedApp);
     }
 
@@ -139,9 +145,10 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IMicrosoftStoreForBusinessContainedAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MicrosoftStoreForBusinessContainedAppRequest)this;
+     @Nonnull
+     public MicrosoftStoreForBusinessContainedAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MicrosoftStoreForBusinessContainedAppRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IMicrosoftStoreForBusinessContainedAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MicrosoftStoreForBusinessContainedAppRequest)this;
+     @Nonnull
+     public MicrosoftStoreForBusinessContainedAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

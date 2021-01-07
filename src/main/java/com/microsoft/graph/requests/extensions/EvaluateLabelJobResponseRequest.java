@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EvaluateLabelJobResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Evaluate Label Job Response Request.
  */
-public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEvaluateLabelJobResponseRequest {
+public class EvaluateLabelJobResponseRequest extends BaseRequest<EvaluateLabelJobResponse> {
 	
     /**
      * The request for the EvaluateLabelJobResponse
@@ -29,7 +31,7 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EvaluateLabelJobResponseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EvaluateLabelJobResponseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EvaluateLabelJobResponse.class);
     }
 
@@ -38,7 +40,7 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EvaluateLabelJobResponse> callback) {
+    public void get(@Nonnull final ICallback<? super EvaluateLabelJobResponse> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @return the EvaluateLabelJobResponse from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EvaluateLabelJobResponse get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EvaluateLabelJobResponse> callback) {
+    public void delete(@Nonnull final ICallback<? super EvaluateLabelJobResponse> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @param sourceEvaluateLabelJobResponse the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EvaluateLabelJobResponse sourceEvaluateLabelJobResponse, final ICallback<? super EvaluateLabelJobResponse> callback) {
+    public void patch(@Nonnull final EvaluateLabelJobResponse sourceEvaluateLabelJobResponse, @Nonnull final ICallback<? super EvaluateLabelJobResponse> callback) {
         send(HttpMethod.PATCH, callback, sourceEvaluateLabelJobResponse);
     }
 
@@ -87,7 +90,8 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @return the updated EvaluateLabelJobResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EvaluateLabelJobResponse patch(final EvaluateLabelJobResponse sourceEvaluateLabelJobResponse) throws ClientException {
+    @Nullable
+    public EvaluateLabelJobResponse patch(@Nonnull final EvaluateLabelJobResponse sourceEvaluateLabelJobResponse) throws ClientException {
         return send(HttpMethod.PATCH, sourceEvaluateLabelJobResponse);
     }
 
@@ -97,7 +101,7 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @param newEvaluateLabelJobResponse the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<? super EvaluateLabelJobResponse> callback) {
+    public void post(@Nonnull final EvaluateLabelJobResponse newEvaluateLabelJobResponse, @Nonnull final ICallback<? super EvaluateLabelJobResponse> callback) {
         send(HttpMethod.POST, callback, newEvaluateLabelJobResponse);
     }
 
@@ -108,7 +112,8 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @return the created EvaluateLabelJobResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EvaluateLabelJobResponse post(final EvaluateLabelJobResponse newEvaluateLabelJobResponse) throws ClientException {
+    @Nullable
+    public EvaluateLabelJobResponse post(@Nonnull final EvaluateLabelJobResponse newEvaluateLabelJobResponse) throws ClientException {
         return send(HttpMethod.POST, newEvaluateLabelJobResponse);
     }
 
@@ -118,7 +123,7 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @param newEvaluateLabelJobResponse the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse, final ICallback<? super EvaluateLabelJobResponse> callback) {
+    public void put(@Nonnull final EvaluateLabelJobResponse newEvaluateLabelJobResponse, @Nonnull final ICallback<? super EvaluateLabelJobResponse> callback) {
         send(HttpMethod.PUT, callback, newEvaluateLabelJobResponse);
     }
 
@@ -129,7 +134,8 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @return the created EvaluateLabelJobResponse
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EvaluateLabelJobResponse put(final EvaluateLabelJobResponse newEvaluateLabelJobResponse) throws ClientException {
+    @Nullable
+    public EvaluateLabelJobResponse put(@Nonnull final EvaluateLabelJobResponse newEvaluateLabelJobResponse) throws ClientException {
         return send(HttpMethod.PUT, newEvaluateLabelJobResponse);
     }
 
@@ -139,9 +145,10 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @param value the select clause
      * @return the updated request
      */
-     public IEvaluateLabelJobResponseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EvaluateLabelJobResponseRequest)this;
+     @Nonnull
+     public EvaluateLabelJobResponseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EvaluateLabelJobResponseRequest extends BaseRequest implements IEva
      * @param value the expand clause
      * @return the updated request
      */
-     public IEvaluateLabelJobResponseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EvaluateLabelJobResponseRequest)this;
+     @Nonnull
+     public EvaluateLabelJobResponseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

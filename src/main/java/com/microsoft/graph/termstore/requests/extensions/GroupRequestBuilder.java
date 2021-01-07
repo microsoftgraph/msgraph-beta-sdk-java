@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Group;
-import com.microsoft.graph.termstore.requests.extensions.ISetCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Request Builder.
  */
-public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupRequestBuilder {
+public class GroupRequestBuilder extends BaseRequestBuilder<Group> {
 
     /**
      * The request builder for the Group
@@ -32,7 +32,7 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupRequest instance
+     * @return the GroupRequest instance
      */
-    public IGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupRequest instance
+     * @return the GroupRequest instance
      */
-    public IGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.termstore.requests.extensions.GroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ISetCollectionRequestBuilder sets() {
+    /**
+     *  Gets a request builder for the Set collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SetCollectionRequestBuilder sets() {
         return new SetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sets"), getClient(), null);
     }
 
-    public ISetRequestBuilder sets(final String id) {
+    /**
+     * Gets a request builder for the Set item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SetRequestBuilder sets(@Nonnull final String id) {
         return new SetRequestBuilder(getRequestUrlWithAdditionalSegment("sets") + "/" + id, getClient(), null);
     }
 }

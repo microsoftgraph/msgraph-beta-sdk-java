@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeviceIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Autopilot Deployment Profile Request.
  */
-public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implements IWindowsAutopilotDeploymentProfileRequest {
+public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest<WindowsAutopilotDeploymentProfile> {
 	
     /**
      * The request for the WindowsAutopilotDeploymentProfile
@@ -39,10 +37,10 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public WindowsAutopilotDeploymentProfileRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends WindowsAutopilotDeploymentProfile> responseClass) {
+    public WindowsAutopilotDeploymentProfileRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends WindowsAutopilotDeploymentProfile> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -53,7 +51,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAutopilotDeploymentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsAutopilotDeploymentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsAutopilotDeploymentProfile.class);
     }
 
@@ -62,7 +60,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,6 +70,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @return the WindowsAutopilotDeploymentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsAutopilotDeploymentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -81,7 +80,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -100,7 +99,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param sourceWindowsAutopilotDeploymentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
+    public void patch(@Nonnull final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile, @Nonnull final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAutopilotDeploymentProfile);
     }
 
@@ -111,7 +110,8 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @return the updated WindowsAutopilotDeploymentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotDeploymentProfile patch(final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile) throws ClientException {
+    @Nullable
+    public WindowsAutopilotDeploymentProfile patch(@Nonnull final WindowsAutopilotDeploymentProfile sourceWindowsAutopilotDeploymentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsAutopilotDeploymentProfile);
     }
 
@@ -121,7 +121,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param newWindowsAutopilotDeploymentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
+    public void post(@Nonnull final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, @Nonnull final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.POST, callback, newWindowsAutopilotDeploymentProfile);
     }
 
@@ -132,7 +132,8 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @return the created WindowsAutopilotDeploymentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotDeploymentProfile post(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile) throws ClientException {
+    @Nullable
+    public WindowsAutopilotDeploymentProfile post(@Nonnull final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile) throws ClientException {
         return send(HttpMethod.POST, newWindowsAutopilotDeploymentProfile);
     }
 
@@ -142,7 +143,7 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param newWindowsAutopilotDeploymentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
+    public void put(@Nonnull final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile, @Nonnull final ICallback<? super WindowsAutopilotDeploymentProfile> callback) {
         send(HttpMethod.PUT, callback, newWindowsAutopilotDeploymentProfile);
     }
 
@@ -153,7 +154,8 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @return the created WindowsAutopilotDeploymentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotDeploymentProfile put(final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile) throws ClientException {
+    @Nullable
+    public WindowsAutopilotDeploymentProfile put(@Nonnull final WindowsAutopilotDeploymentProfile newWindowsAutopilotDeploymentProfile) throws ClientException {
         return send(HttpMethod.PUT, newWindowsAutopilotDeploymentProfile);
     }
 
@@ -163,9 +165,10 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsAutopilotDeploymentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsAutopilotDeploymentProfileRequest)this;
+     @Nonnull
+     public WindowsAutopilotDeploymentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -174,9 +177,10 @@ public class WindowsAutopilotDeploymentProfileRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsAutopilotDeploymentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAutopilotDeploymentProfileRequest)this;
+     @Nonnull
+     public WindowsAutopilotDeploymentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

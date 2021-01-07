@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Notification;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Notification Request.
  */
-public class NotificationRequest extends BaseRequest implements INotificationRequest {
+public class NotificationRequest extends BaseRequest<Notification> {
 	
     /**
      * The request for the Notification
@@ -29,7 +31,7 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NotificationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NotificationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Notification.class);
     }
 
@@ -38,7 +40,7 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Notification> callback) {
+    public void get(@Nonnull final ICallback<? super Notification> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @return the Notification from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Notification get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Notification> callback) {
+    public void delete(@Nonnull final ICallback<? super Notification> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @param sourceNotification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Notification sourceNotification, final ICallback<? super Notification> callback) {
+    public void patch(@Nonnull final Notification sourceNotification, @Nonnull final ICallback<? super Notification> callback) {
         send(HttpMethod.PATCH, callback, sourceNotification);
     }
 
@@ -87,7 +90,8 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @return the updated Notification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Notification patch(final Notification sourceNotification) throws ClientException {
+    @Nullable
+    public Notification patch(@Nonnull final Notification sourceNotification) throws ClientException {
         return send(HttpMethod.PATCH, sourceNotification);
     }
 
@@ -97,7 +101,7 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @param newNotification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Notification newNotification, final ICallback<? super Notification> callback) {
+    public void post(@Nonnull final Notification newNotification, @Nonnull final ICallback<? super Notification> callback) {
         send(HttpMethod.POST, callback, newNotification);
     }
 
@@ -108,7 +112,8 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @return the created Notification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Notification post(final Notification newNotification) throws ClientException {
+    @Nullable
+    public Notification post(@Nonnull final Notification newNotification) throws ClientException {
         return send(HttpMethod.POST, newNotification);
     }
 
@@ -118,7 +123,7 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @param newNotification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Notification newNotification, final ICallback<? super Notification> callback) {
+    public void put(@Nonnull final Notification newNotification, @Nonnull final ICallback<? super Notification> callback) {
         send(HttpMethod.PUT, callback, newNotification);
     }
 
@@ -129,7 +134,8 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @return the created Notification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Notification put(final Notification newNotification) throws ClientException {
+    @Nullable
+    public Notification put(@Nonnull final Notification newNotification) throws ClientException {
         return send(HttpMethod.PUT, newNotification);
     }
 
@@ -139,9 +145,10 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @param value the select clause
      * @return the updated request
      */
-     public INotificationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (NotificationRequest)this;
+     @Nonnull
+     public NotificationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class NotificationRequest extends BaseRequest implements INotificationReq
      * @param value the expand clause
      * @return the updated request
      */
-     public INotificationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NotificationRequest)this;
+     @Nonnull
+     public NotificationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

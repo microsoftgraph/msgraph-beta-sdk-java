@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10XWifiConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10XWifi Configuration Request Builder.
  */
-public class Windows10XWifiConfigurationRequestBuilder extends BaseRequestBuilder implements IWindows10XWifiConfigurationRequestBuilder {
+public class Windows10XWifiConfigurationRequestBuilder extends BaseRequestBuilder<Windows10XWifiConfiguration> {
 
     /**
      * The request builder for the Windows10XWifiConfiguration
@@ -28,7 +30,7 @@ public class Windows10XWifiConfigurationRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10XWifiConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10XWifiConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class Windows10XWifiConfigurationRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10XWifiConfigurationRequest instance
+     * @return the Windows10XWifiConfigurationRequest instance
      */
-    public IWindows10XWifiConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public Windows10XWifiConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class Windows10XWifiConfigurationRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10XWifiConfigurationRequest instance
+     * @return the Windows10XWifiConfigurationRequest instance
      */
-    public IWindows10XWifiConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public Windows10XWifiConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.Windows10XWifiConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the DeviceManagementResourceAccessProfileAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
         return new DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementResourceAccessProfileAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceManagementResourceAccessProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

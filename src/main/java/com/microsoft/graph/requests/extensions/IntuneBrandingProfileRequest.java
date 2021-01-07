@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfile;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfileAssignment;
-import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Intune Branding Profile Request.
  */
-public class IntuneBrandingProfileRequest extends BaseRequest implements IIntuneBrandingProfileRequest {
+public class IntuneBrandingProfileRequest extends BaseRequest<IntuneBrandingProfile> {
 	
     /**
      * The request for the IntuneBrandingProfile
@@ -34,7 +34,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IntuneBrandingProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IntuneBrandingProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IntuneBrandingProfile.class);
     }
 
@@ -43,7 +43,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IntuneBrandingProfile> callback) {
+    public void get(@Nonnull final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +53,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @return the IntuneBrandingProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IntuneBrandingProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +63,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IntuneBrandingProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +82,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param sourceIntuneBrandingProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IntuneBrandingProfile sourceIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback) {
+    public void patch(@Nonnull final IntuneBrandingProfile sourceIntuneBrandingProfile, @Nonnull final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIntuneBrandingProfile);
     }
 
@@ -92,7 +93,8 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @return the updated IntuneBrandingProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IntuneBrandingProfile patch(final IntuneBrandingProfile sourceIntuneBrandingProfile) throws ClientException {
+    @Nullable
+    public IntuneBrandingProfile patch(@Nonnull final IntuneBrandingProfile sourceIntuneBrandingProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceIntuneBrandingProfile);
     }
 
@@ -102,7 +104,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param newIntuneBrandingProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback) {
+    public void post(@Nonnull final IntuneBrandingProfile newIntuneBrandingProfile, @Nonnull final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.POST, callback, newIntuneBrandingProfile);
     }
 
@@ -113,7 +115,8 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @return the created IntuneBrandingProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IntuneBrandingProfile post(final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException {
+    @Nullable
+    public IntuneBrandingProfile post(@Nonnull final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException {
         return send(HttpMethod.POST, newIntuneBrandingProfile);
     }
 
@@ -123,7 +126,7 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param newIntuneBrandingProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IntuneBrandingProfile newIntuneBrandingProfile, final ICallback<? super IntuneBrandingProfile> callback) {
+    public void put(@Nonnull final IntuneBrandingProfile newIntuneBrandingProfile, @Nonnull final ICallback<? super IntuneBrandingProfile> callback) {
         send(HttpMethod.PUT, callback, newIntuneBrandingProfile);
     }
 
@@ -134,7 +137,8 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @return the created IntuneBrandingProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IntuneBrandingProfile put(final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException {
+    @Nullable
+    public IntuneBrandingProfile put(@Nonnull final IntuneBrandingProfile newIntuneBrandingProfile) throws ClientException {
         return send(HttpMethod.PUT, newIntuneBrandingProfile);
     }
 
@@ -144,9 +148,10 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param value the select clause
      * @return the updated request
      */
-     public IIntuneBrandingProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IntuneBrandingProfileRequest)this;
+     @Nonnull
+     public IntuneBrandingProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -155,9 +160,10 @@ public class IntuneBrandingProfileRequest extends BaseRequest implements IIntune
      * @param value the expand clause
      * @return the updated request
      */
-     public IIntuneBrandingProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IntuneBrandingProfileRequest)this;
+     @Nonnull
+     public IntuneBrandingProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

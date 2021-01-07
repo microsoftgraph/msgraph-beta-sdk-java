@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuthenticationMethodTarget;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Authentication Method Target Request.
  */
-public class AuthenticationMethodTargetRequest extends BaseRequest implements IAuthenticationMethodTargetRequest {
+public class AuthenticationMethodTargetRequest extends BaseRequest<AuthenticationMethodTarget> {
 	
     /**
      * The request for the AuthenticationMethodTarget
@@ -30,10 +32,10 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AuthenticationMethodTargetRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AuthenticationMethodTarget> responseClass) {
+    public AuthenticationMethodTargetRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AuthenticationMethodTarget> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuthenticationMethodTargetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuthenticationMethodTargetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AuthenticationMethodTarget.class);
     }
 
@@ -53,7 +55,7 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AuthenticationMethodTarget> callback) {
+    public void get(@Nonnull final ICallback<? super AuthenticationMethodTarget> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @return the AuthenticationMethodTarget from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AuthenticationMethodTarget get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AuthenticationMethodTarget> callback) {
+    public void delete(@Nonnull final ICallback<? super AuthenticationMethodTarget> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @param sourceAuthenticationMethodTarget the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuthenticationMethodTarget sourceAuthenticationMethodTarget, final ICallback<? super AuthenticationMethodTarget> callback) {
+    public void patch(@Nonnull final AuthenticationMethodTarget sourceAuthenticationMethodTarget, @Nonnull final ICallback<? super AuthenticationMethodTarget> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthenticationMethodTarget);
     }
 
@@ -102,7 +105,8 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @return the updated AuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationMethodTarget patch(final AuthenticationMethodTarget sourceAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public AuthenticationMethodTarget patch(@Nonnull final AuthenticationMethodTarget sourceAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.PATCH, sourceAuthenticationMethodTarget);
     }
 
@@ -112,7 +116,7 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @param newAuthenticationMethodTarget the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<? super AuthenticationMethodTarget> callback) {
+    public void post(@Nonnull final AuthenticationMethodTarget newAuthenticationMethodTarget, @Nonnull final ICallback<? super AuthenticationMethodTarget> callback) {
         send(HttpMethod.POST, callback, newAuthenticationMethodTarget);
     }
 
@@ -123,7 +127,8 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @return the created AuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationMethodTarget post(final AuthenticationMethodTarget newAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public AuthenticationMethodTarget post(@Nonnull final AuthenticationMethodTarget newAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.POST, newAuthenticationMethodTarget);
     }
 
@@ -133,7 +138,7 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @param newAuthenticationMethodTarget the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuthenticationMethodTarget newAuthenticationMethodTarget, final ICallback<? super AuthenticationMethodTarget> callback) {
+    public void put(@Nonnull final AuthenticationMethodTarget newAuthenticationMethodTarget, @Nonnull final ICallback<? super AuthenticationMethodTarget> callback) {
         send(HttpMethod.PUT, callback, newAuthenticationMethodTarget);
     }
 
@@ -144,7 +149,8 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @return the created AuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationMethodTarget put(final AuthenticationMethodTarget newAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public AuthenticationMethodTarget put(@Nonnull final AuthenticationMethodTarget newAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.PUT, newAuthenticationMethodTarget);
     }
 
@@ -154,9 +160,10 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @param value the select clause
      * @return the updated request
      */
-     public IAuthenticationMethodTargetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuthenticationMethodTargetRequest)this;
+     @Nonnull
+     public AuthenticationMethodTargetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class AuthenticationMethodTargetRequest extends BaseRequest implements IA
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuthenticationMethodTargetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationMethodTargetRequest)this;
+     @Nonnull
+     public AuthenticationMethodTargetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAreaFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Area Format Request.
  */
-public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWorkbookChartAreaFormatRequest {
+public class WorkbookChartAreaFormatRequest extends BaseRequest<WorkbookChartAreaFormat> {
 	
     /**
      * The request for the WorkbookChartAreaFormat
@@ -33,7 +33,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAreaFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAreaFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartAreaFormat.class);
     }
 
@@ -42,7 +42,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartAreaFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @return the WorkbookChartAreaFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartAreaFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartAreaFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param sourceWorkbookChartAreaFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat, final ICallback<? super WorkbookChartAreaFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat, @Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAreaFormat);
     }
 
@@ -91,7 +92,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @return the updated WorkbookChartAreaFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAreaFormat patch(final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAreaFormat patch(@Nonnull final WorkbookChartAreaFormat sourceWorkbookChartAreaFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartAreaFormat);
     }
 
@@ -101,7 +103,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param newWorkbookChartAreaFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAreaFormat newWorkbookChartAreaFormat, final ICallback<? super WorkbookChartAreaFormat> callback) {
+    public void post(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat, @Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAreaFormat);
     }
 
@@ -112,7 +114,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @return the created WorkbookChartAreaFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAreaFormat post(final WorkbookChartAreaFormat newWorkbookChartAreaFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAreaFormat post(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartAreaFormat);
     }
 
@@ -122,7 +125,7 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param newWorkbookChartAreaFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAreaFormat newWorkbookChartAreaFormat, final ICallback<? super WorkbookChartAreaFormat> callback) {
+    public void put(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat, @Nonnull final ICallback<? super WorkbookChartAreaFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAreaFormat);
     }
 
@@ -133,7 +136,8 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @return the created WorkbookChartAreaFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAreaFormat put(final WorkbookChartAreaFormat newWorkbookChartAreaFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAreaFormat put(@Nonnull final WorkbookChartAreaFormat newWorkbookChartAreaFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartAreaFormat);
     }
 
@@ -143,9 +147,10 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartAreaFormatRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartAreaFormatRequest)this;
+     @Nonnull
+     public WorkbookChartAreaFormatRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class WorkbookChartAreaFormatRequest extends BaseRequest implements IWork
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartAreaFormatRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartAreaFormatRequest)this;
+     @Nonnull
+     public WorkbookChartAreaFormatRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

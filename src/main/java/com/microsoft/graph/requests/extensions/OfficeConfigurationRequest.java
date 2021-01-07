@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeConfiguration;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office Configuration Request.
  */
-public class OfficeConfigurationRequest extends BaseRequest implements IOfficeConfigurationRequest {
+public class OfficeConfigurationRequest extends BaseRequest<OfficeConfiguration> {
 	
     /**
      * The request for the OfficeConfiguration
@@ -33,7 +33,7 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfficeConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OfficeConfiguration.class);
     }
 
@@ -42,7 +42,7 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OfficeConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super OfficeConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @return the OfficeConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OfficeConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OfficeConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super OfficeConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @param sourceOfficeConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OfficeConfiguration sourceOfficeConfiguration, final ICallback<? super OfficeConfiguration> callback) {
+    public void patch(@Nonnull final OfficeConfiguration sourceOfficeConfiguration, @Nonnull final ICallback<? super OfficeConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceOfficeConfiguration);
     }
 
@@ -91,7 +92,8 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @return the updated OfficeConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfficeConfiguration patch(final OfficeConfiguration sourceOfficeConfiguration) throws ClientException {
+    @Nullable
+    public OfficeConfiguration patch(@Nonnull final OfficeConfiguration sourceOfficeConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceOfficeConfiguration);
     }
 
@@ -101,7 +103,7 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @param newOfficeConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OfficeConfiguration newOfficeConfiguration, final ICallback<? super OfficeConfiguration> callback) {
+    public void post(@Nonnull final OfficeConfiguration newOfficeConfiguration, @Nonnull final ICallback<? super OfficeConfiguration> callback) {
         send(HttpMethod.POST, callback, newOfficeConfiguration);
     }
 
@@ -112,7 +114,8 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @return the created OfficeConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfficeConfiguration post(final OfficeConfiguration newOfficeConfiguration) throws ClientException {
+    @Nullable
+    public OfficeConfiguration post(@Nonnull final OfficeConfiguration newOfficeConfiguration) throws ClientException {
         return send(HttpMethod.POST, newOfficeConfiguration);
     }
 
@@ -122,7 +125,7 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @param newOfficeConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OfficeConfiguration newOfficeConfiguration, final ICallback<? super OfficeConfiguration> callback) {
+    public void put(@Nonnull final OfficeConfiguration newOfficeConfiguration, @Nonnull final ICallback<? super OfficeConfiguration> callback) {
         send(HttpMethod.PUT, callback, newOfficeConfiguration);
     }
 
@@ -133,7 +136,8 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @return the created OfficeConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfficeConfiguration put(final OfficeConfiguration newOfficeConfiguration) throws ClientException {
+    @Nullable
+    public OfficeConfiguration put(@Nonnull final OfficeConfiguration newOfficeConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newOfficeConfiguration);
     }
 
@@ -143,9 +147,10 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @param value the select clause
      * @return the updated request
      */
-     public IOfficeConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OfficeConfigurationRequest)this;
+     @Nonnull
+     public OfficeConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class OfficeConfigurationRequest extends BaseRequest implements IOfficeCo
      * @param value the expand clause
      * @return the updated request
      */
-     public IOfficeConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OfficeConfigurationRequest)this;
+     @Nonnull
+     public OfficeConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

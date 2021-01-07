@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionResponse;
 import com.microsoft.graph.models.extensions.ManagedEBookCategory;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed EBook Category Collection With References Page.
  */
-public class ManagedEBookCategoryCollectionWithReferencesPage extends BaseCollectionPage<ManagedEBookCategory, IManagedEBookCategoryCollectionWithReferencesRequestBuilder> implements IManagedEBookCategoryCollectionWithReferencesPage {
+public class ManagedEBookCategoryCollectionWithReferencesPage extends BaseCollectionPage<ManagedEBookCategory, ManagedEBookCategoryCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ManagedEBookCategory
@@ -35,7 +37,17 @@ public class ManagedEBookCategoryCollectionWithReferencesPage extends BaseCollec
      * @param response the serialized ManagedEBookCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedEBookCategoryCollectionWithReferencesPage(final ManagedEBookCategoryCollectionResponse response, final IManagedEBookCategoryCollectionWithReferencesRequestBuilder builder) {
+    public ManagedEBookCategoryCollectionWithReferencesPage(@Nonnull final ManagedEBookCategoryCollectionResponse response, @Nullable final ManagedEBookCategoryCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for ManagedEBookCategory
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedEBookCategoryCollectionWithReferencesPage(@Nonnull final java.util.List<ManagedEBookCategory> pageContents, @Nullable final ManagedEBookCategoryCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

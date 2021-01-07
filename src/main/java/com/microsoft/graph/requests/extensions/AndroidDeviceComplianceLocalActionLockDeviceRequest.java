@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceComplianceLocalActionLockDevice;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Device Compliance Local Action Lock Device Request.
  */
-public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseRequest implements IAndroidDeviceComplianceLocalActionLockDeviceRequest {
+public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseRequest<AndroidDeviceComplianceLocalActionLockDevice> {
 	
     /**
      * The request for the AndroidDeviceComplianceLocalActionLockDevice
@@ -29,7 +31,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceComplianceLocalActionLockDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidDeviceComplianceLocalActionLockDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidDeviceComplianceLocalActionLockDevice.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @return the AndroidDeviceComplianceLocalActionLockDevice from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidDeviceComplianceLocalActionLockDevice get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param sourceAndroidDeviceComplianceLocalActionLockDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void patch(@Nonnull final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -87,7 +90,8 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @return the updated AndroidDeviceComplianceLocalActionLockDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionLockDevice patch(final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionLockDevice patch(@Nonnull final AndroidDeviceComplianceLocalActionLockDevice sourceAndroidDeviceComplianceLocalActionLockDevice) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -97,7 +101,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param newAndroidDeviceComplianceLocalActionLockDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void post(@Nonnull final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -108,7 +112,8 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @return the created AndroidDeviceComplianceLocalActionLockDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionLockDevice post(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionLockDevice post(@Nonnull final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice) throws ClientException {
         return send(HttpMethod.POST, newAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -118,7 +123,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param newAndroidDeviceComplianceLocalActionLockDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
+    public void put(@Nonnull final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDevice> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -129,7 +134,8 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @return the created AndroidDeviceComplianceLocalActionLockDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionLockDevice put(final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionLockDevice put(@Nonnull final AndroidDeviceComplianceLocalActionLockDevice newAndroidDeviceComplianceLocalActionLockDevice) throws ClientException {
         return send(HttpMethod.PUT, newAndroidDeviceComplianceLocalActionLockDevice);
     }
 
@@ -139,9 +145,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidDeviceComplianceLocalActionLockDeviceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidDeviceComplianceLocalActionLockDeviceRequest)this;
+     @Nonnull
+     public AndroidDeviceComplianceLocalActionLockDeviceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceRequest extends BaseReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidDeviceComplianceLocalActionLockDeviceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceComplianceLocalActionLockDeviceRequest)this;
+     @Nonnull
+     public AndroidDeviceComplianceLocalActionLockDeviceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SmsAuthenticationMethodTarget;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sms Authentication Method Target Request.
  */
-public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements ISmsAuthenticationMethodTargetRequest {
+public class SmsAuthenticationMethodTargetRequest extends BaseRequest<SmsAuthenticationMethodTarget> {
 	
     /**
      * The request for the SmsAuthenticationMethodTarget
@@ -29,7 +31,7 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SmsAuthenticationMethodTargetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SmsAuthenticationMethodTargetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SmsAuthenticationMethodTarget.class);
     }
 
@@ -38,7 +40,7 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SmsAuthenticationMethodTarget> callback) {
+    public void get(@Nonnull final ICallback<? super SmsAuthenticationMethodTarget> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @return the SmsAuthenticationMethodTarget from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SmsAuthenticationMethodTarget get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SmsAuthenticationMethodTarget> callback) {
+    public void delete(@Nonnull final ICallback<? super SmsAuthenticationMethodTarget> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @param sourceSmsAuthenticationMethodTarget the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SmsAuthenticationMethodTarget sourceSmsAuthenticationMethodTarget, final ICallback<? super SmsAuthenticationMethodTarget> callback) {
+    public void patch(@Nonnull final SmsAuthenticationMethodTarget sourceSmsAuthenticationMethodTarget, @Nonnull final ICallback<? super SmsAuthenticationMethodTarget> callback) {
         send(HttpMethod.PATCH, callback, sourceSmsAuthenticationMethodTarget);
     }
 
@@ -87,7 +90,8 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @return the updated SmsAuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SmsAuthenticationMethodTarget patch(final SmsAuthenticationMethodTarget sourceSmsAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public SmsAuthenticationMethodTarget patch(@Nonnull final SmsAuthenticationMethodTarget sourceSmsAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.PATCH, sourceSmsAuthenticationMethodTarget);
     }
 
@@ -97,7 +101,7 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @param newSmsAuthenticationMethodTarget the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget, final ICallback<? super SmsAuthenticationMethodTarget> callback) {
+    public void post(@Nonnull final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget, @Nonnull final ICallback<? super SmsAuthenticationMethodTarget> callback) {
         send(HttpMethod.POST, callback, newSmsAuthenticationMethodTarget);
     }
 
@@ -108,7 +112,8 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @return the created SmsAuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SmsAuthenticationMethodTarget post(final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public SmsAuthenticationMethodTarget post(@Nonnull final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.POST, newSmsAuthenticationMethodTarget);
     }
 
@@ -118,7 +123,7 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @param newSmsAuthenticationMethodTarget the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget, final ICallback<? super SmsAuthenticationMethodTarget> callback) {
+    public void put(@Nonnull final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget, @Nonnull final ICallback<? super SmsAuthenticationMethodTarget> callback) {
         send(HttpMethod.PUT, callback, newSmsAuthenticationMethodTarget);
     }
 
@@ -129,7 +134,8 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @return the created SmsAuthenticationMethodTarget
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SmsAuthenticationMethodTarget put(final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget) throws ClientException {
+    @Nullable
+    public SmsAuthenticationMethodTarget put(@Nonnull final SmsAuthenticationMethodTarget newSmsAuthenticationMethodTarget) throws ClientException {
         return send(HttpMethod.PUT, newSmsAuthenticationMethodTarget);
     }
 
@@ -139,9 +145,10 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public ISmsAuthenticationMethodTargetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SmsAuthenticationMethodTargetRequest)this;
+     @Nonnull
+     public SmsAuthenticationMethodTargetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SmsAuthenticationMethodTargetRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public ISmsAuthenticationMethodTargetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SmsAuthenticationMethodTargetRequest)this;
+     @Nonnull
+     public SmsAuthenticationMethodTargetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

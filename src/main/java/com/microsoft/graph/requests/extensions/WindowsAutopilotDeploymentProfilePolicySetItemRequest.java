@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfilePolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Autopilot Deployment Profile Policy Set Item Request.
  */
-public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseRequest implements IWindowsAutopilotDeploymentProfilePolicySetItemRequest {
+public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseRequest<WindowsAutopilotDeploymentProfilePolicySetItem> {
 	
     /**
      * The request for the WindowsAutopilotDeploymentProfilePolicySetItem
@@ -29,7 +31,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAutopilotDeploymentProfilePolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsAutopilotDeploymentProfilePolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsAutopilotDeploymentProfilePolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @return the WindowsAutopilotDeploymentProfilePolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsAutopilotDeploymentProfilePolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param sourceWindowsAutopilotDeploymentProfilePolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void patch(@Nonnull final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem, @Nonnull final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @return the updated WindowsAutopilotDeploymentProfilePolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotDeploymentProfilePolicySetItem patch(final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException {
+    @Nullable
+    public WindowsAutopilotDeploymentProfilePolicySetItem patch(@Nonnull final WindowsAutopilotDeploymentProfilePolicySetItem sourceWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param newWindowsAutopilotDeploymentProfilePolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void post(@Nonnull final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, @Nonnull final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.POST, callback, newWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @return the created WindowsAutopilotDeploymentProfilePolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotDeploymentProfilePolicySetItem post(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException {
+    @Nullable
+    public WindowsAutopilotDeploymentProfilePolicySetItem post(@Nonnull final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param newWindowsAutopilotDeploymentProfilePolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
+    public void put(@Nonnull final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem, @Nonnull final ICallback<? super WindowsAutopilotDeploymentProfilePolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @return the created WindowsAutopilotDeploymentProfilePolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotDeploymentProfilePolicySetItem put(final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException {
+    @Nullable
+    public WindowsAutopilotDeploymentProfilePolicySetItem put(@Nonnull final WindowsAutopilotDeploymentProfilePolicySetItem newWindowsAutopilotDeploymentProfilePolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newWindowsAutopilotDeploymentProfilePolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsAutopilotDeploymentProfilePolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsAutopilotDeploymentProfilePolicySetItemRequest)this;
+     @Nonnull
+     public WindowsAutopilotDeploymentProfilePolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequest extends BaseR
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsAutopilotDeploymentProfilePolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAutopilotDeploymentProfilePolicySetItemRequest)this;
+     @Nonnull
+     public WindowsAutopilotDeploymentProfilePolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

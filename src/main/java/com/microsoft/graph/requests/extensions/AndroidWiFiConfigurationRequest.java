@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWiFiConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Wi Fi Configuration Request.
  */
-public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAndroidWiFiConfigurationRequest {
+public class AndroidWiFiConfigurationRequest extends BaseRequest<AndroidWiFiConfiguration> {
 	
     /**
      * The request for the AndroidWiFiConfiguration
@@ -30,10 +32,10 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AndroidWiFiConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AndroidWiFiConfiguration> responseClass) {
+    public AndroidWiFiConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AndroidWiFiConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWiFiConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWiFiConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWiFiConfiguration.class);
     }
 
@@ -53,7 +55,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWiFiConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @return the AndroidWiFiConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidWiFiConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWiFiConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param sourceAndroidWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWiFiConfiguration sourceAndroidWiFiConfiguration, final ICallback<? super AndroidWiFiConfiguration> callback) {
+    public void patch(@Nonnull final AndroidWiFiConfiguration sourceAndroidWiFiConfiguration, @Nonnull final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWiFiConfiguration);
     }
 
@@ -102,7 +105,8 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @return the updated AndroidWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWiFiConfiguration patch(final AndroidWiFiConfiguration sourceAndroidWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWiFiConfiguration patch(@Nonnull final AndroidWiFiConfiguration sourceAndroidWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidWiFiConfiguration);
     }
 
@@ -112,7 +116,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param newAndroidWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWiFiConfiguration newAndroidWiFiConfiguration, final ICallback<? super AndroidWiFiConfiguration> callback) {
+    public void post(@Nonnull final AndroidWiFiConfiguration newAndroidWiFiConfiguration, @Nonnull final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidWiFiConfiguration);
     }
 
@@ -123,7 +127,8 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @return the created AndroidWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWiFiConfiguration post(final AndroidWiFiConfiguration newAndroidWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWiFiConfiguration post(@Nonnull final AndroidWiFiConfiguration newAndroidWiFiConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidWiFiConfiguration);
     }
 
@@ -133,7 +138,7 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param newAndroidWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWiFiConfiguration newAndroidWiFiConfiguration, final ICallback<? super AndroidWiFiConfiguration> callback) {
+    public void put(@Nonnull final AndroidWiFiConfiguration newAndroidWiFiConfiguration, @Nonnull final ICallback<? super AndroidWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidWiFiConfiguration);
     }
 
@@ -144,7 +149,8 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @return the created AndroidWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWiFiConfiguration put(final AndroidWiFiConfiguration newAndroidWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWiFiConfiguration put(@Nonnull final AndroidWiFiConfiguration newAndroidWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidWiFiConfiguration);
     }
 
@@ -154,9 +160,10 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidWiFiConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWiFiConfigurationRequest)this;
+     @Nonnull
+     public AndroidWiFiConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class AndroidWiFiConfigurationRequest extends BaseRequest implements IAnd
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidWiFiConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWiFiConfigurationRequest)this;
+     @Nonnull
+     public AndroidWiFiConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

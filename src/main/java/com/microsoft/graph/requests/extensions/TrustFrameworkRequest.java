@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TrustFramework;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Trust Framework Request.
  */
-public class TrustFrameworkRequest extends BaseRequest implements ITrustFrameworkRequest {
+public class TrustFrameworkRequest extends BaseRequest<TrustFramework> {
 	
     /**
      * The request for the TrustFramework
@@ -37,7 +35,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrustFrameworkRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrustFrameworkRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TrustFramework.class);
     }
 
@@ -46,7 +44,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TrustFramework> callback) {
+    public void get(@Nonnull final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @return the TrustFramework from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TrustFramework get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TrustFramework> callback) {
+    public void delete(@Nonnull final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param sourceTrustFramework the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TrustFramework sourceTrustFramework, final ICallback<? super TrustFramework> callback) {
+    public void patch(@Nonnull final TrustFramework sourceTrustFramework, @Nonnull final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.PATCH, callback, sourceTrustFramework);
     }
 
@@ -95,7 +94,8 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @return the updated TrustFramework
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFramework patch(final TrustFramework sourceTrustFramework) throws ClientException {
+    @Nullable
+    public TrustFramework patch(@Nonnull final TrustFramework sourceTrustFramework) throws ClientException {
         return send(HttpMethod.PATCH, sourceTrustFramework);
     }
 
@@ -105,7 +105,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param newTrustFramework the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TrustFramework newTrustFramework, final ICallback<? super TrustFramework> callback) {
+    public void post(@Nonnull final TrustFramework newTrustFramework, @Nonnull final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.POST, callback, newTrustFramework);
     }
 
@@ -116,7 +116,8 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @return the created TrustFramework
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFramework post(final TrustFramework newTrustFramework) throws ClientException {
+    @Nullable
+    public TrustFramework post(@Nonnull final TrustFramework newTrustFramework) throws ClientException {
         return send(HttpMethod.POST, newTrustFramework);
     }
 
@@ -126,7 +127,7 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param newTrustFramework the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TrustFramework newTrustFramework, final ICallback<? super TrustFramework> callback) {
+    public void put(@Nonnull final TrustFramework newTrustFramework, @Nonnull final ICallback<? super TrustFramework> callback) {
         send(HttpMethod.PUT, callback, newTrustFramework);
     }
 
@@ -137,7 +138,8 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @return the created TrustFramework
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFramework put(final TrustFramework newTrustFramework) throws ClientException {
+    @Nullable
+    public TrustFramework put(@Nonnull final TrustFramework newTrustFramework) throws ClientException {
         return send(HttpMethod.PUT, newTrustFramework);
     }
 
@@ -147,9 +149,10 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param value the select clause
      * @return the updated request
      */
-     public ITrustFrameworkRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TrustFrameworkRequest)this;
+     @Nonnull
+     public TrustFrameworkRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class TrustFrameworkRequest extends BaseRequest implements ITrustFramewor
      * @param value the expand clause
      * @return the updated request
      */
-     public ITrustFrameworkRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TrustFrameworkRequest)this;
+     @Nonnull
+     public TrustFrameworkRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

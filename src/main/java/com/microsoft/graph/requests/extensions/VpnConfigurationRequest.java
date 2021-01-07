@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.VpnConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Vpn Configuration Request.
  */
-public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigurationRequest {
+public class VpnConfigurationRequest extends BaseRequest<VpnConfiguration> {
 	
     /**
      * The request for the VpnConfiguration
@@ -30,10 +32,10 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public VpnConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends VpnConfiguration> responseClass) {
+    public VpnConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends VpnConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, VpnConfiguration.class);
     }
 
@@ -53,7 +55,7 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super VpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super VpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @return the VpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public VpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super VpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super VpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @param sourceVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final VpnConfiguration sourceVpnConfiguration, final ICallback<? super VpnConfiguration> callback) {
+    public void patch(@Nonnull final VpnConfiguration sourceVpnConfiguration, @Nonnull final ICallback<? super VpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceVpnConfiguration);
     }
 
@@ -102,7 +105,8 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @return the updated VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VpnConfiguration patch(final VpnConfiguration sourceVpnConfiguration) throws ClientException {
+    @Nullable
+    public VpnConfiguration patch(@Nonnull final VpnConfiguration sourceVpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceVpnConfiguration);
     }
 
@@ -112,7 +116,7 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @param newVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final VpnConfiguration newVpnConfiguration, final ICallback<? super VpnConfiguration> callback) {
+    public void post(@Nonnull final VpnConfiguration newVpnConfiguration, @Nonnull final ICallback<? super VpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newVpnConfiguration);
     }
 
@@ -123,7 +127,8 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @return the created VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VpnConfiguration post(final VpnConfiguration newVpnConfiguration) throws ClientException {
+    @Nullable
+    public VpnConfiguration post(@Nonnull final VpnConfiguration newVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newVpnConfiguration);
     }
 
@@ -133,7 +138,7 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @param newVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final VpnConfiguration newVpnConfiguration, final ICallback<? super VpnConfiguration> callback) {
+    public void put(@Nonnull final VpnConfiguration newVpnConfiguration, @Nonnull final ICallback<? super VpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newVpnConfiguration);
     }
 
@@ -144,7 +149,8 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @return the created VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VpnConfiguration put(final VpnConfiguration newVpnConfiguration) throws ClientException {
+    @Nullable
+    public VpnConfiguration put(@Nonnull final VpnConfiguration newVpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newVpnConfiguration);
     }
 
@@ -154,9 +160,10 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @param value the select clause
      * @return the updated request
      */
-     public IVpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (VpnConfigurationRequest)this;
+     @Nonnull
+     public VpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class VpnConfigurationRequest extends BaseRequest implements IVpnConfigur
      * @param value the expand clause
      * @return the updated request
      */
-     public IVpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (VpnConfigurationRequest)this;
+     @Nonnull
+     public VpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

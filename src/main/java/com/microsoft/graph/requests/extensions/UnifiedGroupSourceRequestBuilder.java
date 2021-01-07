@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedGroupSource;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Unified Group Source Request Builder.
  */
-public class UnifiedGroupSourceRequestBuilder extends BaseRequestBuilder implements IUnifiedGroupSourceRequestBuilder {
+public class UnifiedGroupSourceRequestBuilder extends BaseRequestBuilder<UnifiedGroupSource> {
 
     /**
      * The request builder for the UnifiedGroupSource
@@ -30,7 +31,7 @@ public class UnifiedGroupSourceRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedGroupSourceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnifiedGroupSourceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class UnifiedGroupSourceRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUnifiedGroupSourceRequest instance
+     * @return the UnifiedGroupSourceRequest instance
      */
-    public IUnifiedGroupSourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UnifiedGroupSourceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class UnifiedGroupSourceRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUnifiedGroupSourceRequest instance
+     * @return the UnifiedGroupSourceRequest instance
      */
-    public IUnifiedGroupSourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UnifiedGroupSourceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UnifiedGroupSourceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class UnifiedGroupSourceRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Gets the request builder for Group
      *
-     * @return the IGroupWithReferenceRequestBuilder instance
+     * @return the GroupWithReferenceRequestBuilder instance
      */
-    public IGroupWithReferenceRequestBuilder group() {
+    @Nonnull
+    public GroupWithReferenceRequestBuilder group() {
         return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("group"), getClient(), null);
     }
 }

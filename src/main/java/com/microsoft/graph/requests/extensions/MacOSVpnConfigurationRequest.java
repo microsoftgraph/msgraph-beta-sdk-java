@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSVpn Configuration Request.
  */
-public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSVpnConfigurationRequest {
+public class MacOSVpnConfigurationRequest extends BaseRequest<MacOSVpnConfiguration> {
 	
     /**
      * The request for the MacOSVpnConfiguration
@@ -31,7 +32,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSVpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSVpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSVpnConfiguration.class);
     }
 
@@ -40,7 +41,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSVpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @return the MacOSVpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSVpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSVpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param sourceMacOSVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSVpnConfiguration sourceMacOSVpnConfiguration, final ICallback<? super MacOSVpnConfiguration> callback) {
+    public void patch(@Nonnull final MacOSVpnConfiguration sourceMacOSVpnConfiguration, @Nonnull final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSVpnConfiguration);
     }
 
@@ -89,7 +91,8 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @return the updated MacOSVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSVpnConfiguration patch(final MacOSVpnConfiguration sourceMacOSVpnConfiguration) throws ClientException {
+    @Nullable
+    public MacOSVpnConfiguration patch(@Nonnull final MacOSVpnConfiguration sourceMacOSVpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSVpnConfiguration);
     }
 
@@ -99,7 +102,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param newMacOSVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<? super MacOSVpnConfiguration> callback) {
+    public void post(@Nonnull final MacOSVpnConfiguration newMacOSVpnConfiguration, @Nonnull final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSVpnConfiguration);
     }
 
@@ -110,7 +113,8 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @return the created MacOSVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSVpnConfiguration post(final MacOSVpnConfiguration newMacOSVpnConfiguration) throws ClientException {
+    @Nullable
+    public MacOSVpnConfiguration post(@Nonnull final MacOSVpnConfiguration newMacOSVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newMacOSVpnConfiguration);
     }
 
@@ -120,7 +124,7 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param newMacOSVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSVpnConfiguration newMacOSVpnConfiguration, final ICallback<? super MacOSVpnConfiguration> callback) {
+    public void put(@Nonnull final MacOSVpnConfiguration newMacOSVpnConfiguration, @Nonnull final ICallback<? super MacOSVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSVpnConfiguration);
     }
 
@@ -131,7 +135,8 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @return the created MacOSVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSVpnConfiguration put(final MacOSVpnConfiguration newMacOSVpnConfiguration) throws ClientException {
+    @Nullable
+    public MacOSVpnConfiguration put(@Nonnull final MacOSVpnConfiguration newMacOSVpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newMacOSVpnConfiguration);
     }
 
@@ -141,9 +146,10 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSVpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSVpnConfigurationRequest)this;
+     @Nonnull
+     public MacOSVpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class MacOSVpnConfigurationRequest extends BaseRequest implements IMacOSV
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSVpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSVpnConfigurationRequest)this;
+     @Nonnull
+     public MacOSVpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

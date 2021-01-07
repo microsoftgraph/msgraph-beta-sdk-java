@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintService;
-import com.microsoft.graph.requests.extensions.IPrintServiceEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintServiceEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintServiceEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintServiceEndpointRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Print Service Request.
  */
-public class PrintServiceRequest extends BaseRequest implements IPrintServiceRequest {
+public class PrintServiceRequest extends BaseRequest<PrintService> {
 	
     /**
      * The request for the PrintService
@@ -33,7 +33,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintServiceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintServiceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrintService.class);
     }
 
@@ -42,7 +42,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrintService> callback) {
+    public void get(@Nonnull final ICallback<? super PrintService> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @return the PrintService from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrintService get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrintService> callback) {
+    public void delete(@Nonnull final ICallback<? super PrintService> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param sourcePrintService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintService sourcePrintService, final ICallback<? super PrintService> callback) {
+    public void patch(@Nonnull final PrintService sourcePrintService, @Nonnull final ICallback<? super PrintService> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintService);
     }
 
@@ -91,7 +92,8 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @return the updated PrintService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintService patch(final PrintService sourcePrintService) throws ClientException {
+    @Nullable
+    public PrintService patch(@Nonnull final PrintService sourcePrintService) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrintService);
     }
 
@@ -101,7 +103,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param newPrintService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintService newPrintService, final ICallback<? super PrintService> callback) {
+    public void post(@Nonnull final PrintService newPrintService, @Nonnull final ICallback<? super PrintService> callback) {
         send(HttpMethod.POST, callback, newPrintService);
     }
 
@@ -112,7 +114,8 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @return the created PrintService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintService post(final PrintService newPrintService) throws ClientException {
+    @Nullable
+    public PrintService post(@Nonnull final PrintService newPrintService) throws ClientException {
         return send(HttpMethod.POST, newPrintService);
     }
 
@@ -122,7 +125,7 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param newPrintService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintService newPrintService, final ICallback<? super PrintService> callback) {
+    public void put(@Nonnull final PrintService newPrintService, @Nonnull final ICallback<? super PrintService> callback) {
         send(HttpMethod.PUT, callback, newPrintService);
     }
 
@@ -133,7 +136,8 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @return the created PrintService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintService put(final PrintService newPrintService) throws ClientException {
+    @Nullable
+    public PrintService put(@Nonnull final PrintService newPrintService) throws ClientException {
         return send(HttpMethod.PUT, newPrintService);
     }
 
@@ -143,9 +147,10 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param value the select clause
      * @return the updated request
      */
-     public IPrintServiceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrintServiceRequest)this;
+     @Nonnull
+     public PrintServiceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class PrintServiceRequest extends BaseRequest implements IPrintServiceReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrintServiceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintServiceRequest)this;
+     @Nonnull
+     public PrintServiceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

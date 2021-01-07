@@ -11,12 +11,12 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentConfiguration;
 import com.microsoft.graph.models.extensions.EnrollmentConfigurationAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEnrollmentConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EnrollmentConfigurationAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Configuration Request.
  */
-public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements IDeviceEnrollmentConfigurationRequest {
+public class DeviceEnrollmentConfigurationRequest extends BaseRequest<DeviceEnrollmentConfiguration> {
 	
     /**
      * The request for the DeviceEnrollmentConfiguration
@@ -36,10 +36,10 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceEnrollmentConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceEnrollmentConfiguration> responseClass) {
+    public DeviceEnrollmentConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceEnrollmentConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -50,7 +50,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceEnrollmentConfiguration.class);
     }
 
@@ -59,7 +59,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -69,6 +69,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @return the DeviceEnrollmentConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceEnrollmentConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -78,7 +79,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -97,7 +98,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param sourceDeviceEnrollmentConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void patch(@Nonnull final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentConfiguration);
     }
 
@@ -108,7 +109,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @return the updated DeviceEnrollmentConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentConfiguration patch(final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentConfiguration patch(@Nonnull final DeviceEnrollmentConfiguration sourceDeviceEnrollmentConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceEnrollmentConfiguration);
     }
 
@@ -118,7 +120,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param newDeviceEnrollmentConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void post(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceEnrollmentConfiguration);
     }
 
@@ -129,7 +131,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @return the created DeviceEnrollmentConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentConfiguration post(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentConfiguration post(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
         return send(HttpMethod.POST, newDeviceEnrollmentConfiguration);
     }
 
@@ -139,7 +142,7 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param newDeviceEnrollmentConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, final ICallback<? super DeviceEnrollmentConfiguration> callback) {
+    public void put(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceEnrollmentConfiguration);
     }
 
@@ -150,7 +153,8 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @return the created DeviceEnrollmentConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentConfiguration put(final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentConfiguration put(@Nonnull final DeviceEnrollmentConfiguration newDeviceEnrollmentConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newDeviceEnrollmentConfiguration);
     }
 
@@ -160,9 +164,10 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceEnrollmentConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceEnrollmentConfigurationRequest)this;
+     @Nonnull
+     public DeviceEnrollmentConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -171,9 +176,10 @@ public class DeviceEnrollmentConfigurationRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceEnrollmentConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceEnrollmentConfigurationRequest)this;
+     @Nonnull
+     public DeviceEnrollmentConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

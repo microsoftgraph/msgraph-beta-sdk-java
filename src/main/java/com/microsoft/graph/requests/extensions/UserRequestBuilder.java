@@ -28,179 +28,112 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedDeviceSummarizedAppState;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILicenseDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScopedRoleMembershipRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContactRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MailFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppConsentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppConsentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApprovalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceEnrollmentConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppRegistrationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppIntentAndStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppIntentAndStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppTroubleshootingEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppTroubleshootingEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppTroubleshootingEventRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotificationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotificationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotificationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserActivityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.InferenceClassificationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemInsightsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PresenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserTeamworkRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.extensions.UserAssignLicenseParameterSet;
+import com.microsoft.graph.models.extensions.UserChangePasswordParameterSet;
+import com.microsoft.graph.models.extensions.UserFindMeetingTimesParameterSet;
+import com.microsoft.graph.models.extensions.UserGetMailTipsParameterSet;
+import com.microsoft.graph.models.extensions.UserSendMailParameterSet;
+import com.microsoft.graph.models.extensions.UserTranslateExchangeIdsParameterSet;
+import com.microsoft.graph.models.extensions.UserWipeManagedAppRegistrationByDeviceTagParameterSet;
+import com.microsoft.graph.models.extensions.UserWipeManagedAppRegistrationsByDeviceTagParameterSet;
+import com.microsoft.graph.models.extensions.UserExportPersonalDataParameterSet;
+import com.microsoft.graph.models.extensions.UserFindRoomsParameterSet;
+import com.microsoft.graph.models.extensions.UserReminderViewParameterSet;
+import com.microsoft.graph.models.extensions.UserExportDeviceAndAppManagementDataParameterSet;
 
 // **NOTE** This file was generated by a tool and any changes will be overwritten.
 
 /**
  * The class for the User Request Builder.
  */
-public class UserRequestBuilder extends BaseRequestBuilder implements IUserRequestBuilder {
+public class UserRequestBuilder extends BaseRequestBuilder<User> {
 
     /**
      * The request builder for the User
@@ -209,7 +142,7 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -217,9 +150,10 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the UserRequest instance
      */
-    public IUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -227,9 +161,10 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserRequest instance
+     * @return the UserRequest instance
      */
-    public IUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -238,720 +173,1734 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     /**
      * Gets the request builder for UserAnalytics
      *
-     * @return the IUserAnalyticsRequestBuilder instance
+     * @return the UserAnalyticsRequestBuilder instance
      */
-    public IUserAnalyticsRequestBuilder analytics() {
+    @Nonnull
+    public UserAnalyticsRequestBuilder analytics() {
         return new UserAnalyticsRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
     }
 
     /**
      * Gets the request builder for InformationProtection
      *
-     * @return the IInformationProtectionRequestBuilder instance
+     * @return the InformationProtectionRequestBuilder instance
      */
-    public IInformationProtectionRequestBuilder informationProtection() {
+    @Nonnull
+    public InformationProtectionRequestBuilder informationProtection() {
         return new InformationProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("informationProtection"), getClient(), null);
     }
-    public IAppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
+    /**
+     *  Gets a request builder for the AppRoleAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppRoleAssignmentCollectionRequestBuilder appRoleAssignments() {
         return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignments"), getClient(), null);
     }
 
-    public IAppRoleAssignmentRequestBuilder appRoleAssignments(final String id) {
+    /**
+     * Gets a request builder for the AppRoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppRoleAssignmentRequestBuilder appRoleAssignments(@Nonnull final String id) {
         return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("appRoleAssignments") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder createdObjects() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder createdObjects() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder createdObjects(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder createdObjects(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id, getClient(), null);
     }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder createdObjectsAsServicePrincipal() {
-        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ServicePrincipalCollectionRequestBuilder createdObjectsAsServicePrincipal() {
+        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalWithReferenceRequestBuilder createdObjectsAsServicePrincipal(final String id) {
-        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ServicePrincipalRequestBuilder createdObjectsAsServicePrincipal(@Nonnull final String id) {
+        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("createdObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder directReports() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder directReports() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder directReports(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder directReports(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id, getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder directReportsAsUser() {
-        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.user", getClient(), null);
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserCollectionRequestBuilder directReportsAsUser() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder directReportsAsUser(final String id) {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserRequestBuilder directReportsAsUser(@Nonnull final String id) {
+        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IOrgContactCollectionWithReferencesRequestBuilder directReportsAsOrgContact() {
-        return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.orgContact", getClient(), null);
+    /**
+     *  Gets a request builder for the OrgContact collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OrgContactCollectionRequestBuilder directReportsAsOrgContact() {
+        return new OrgContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/microsoft.graph.orgContact", getClient(), null);
     }
 
-    public IOrgContactWithReferenceRequestBuilder directReportsAsOrgContact(final String id) {
-        return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
+    /**
+     * Gets a request builder for the OrgContact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OrgContactRequestBuilder directReportsAsOrgContact(@Nonnull final String id) {
+        return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("directReports") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
-    public ILicenseDetailsCollectionRequestBuilder licenseDetails() {
+    /**
+     *  Gets a request builder for the LicenseDetails collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public LicenseDetailsCollectionRequestBuilder licenseDetails() {
         return new LicenseDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails"), getClient(), null);
     }
 
-    public ILicenseDetailsRequestBuilder licenseDetails(final String id) {
+    /**
+     * Gets a request builder for the LicenseDetails item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public LicenseDetailsRequestBuilder licenseDetails(@Nonnull final String id) {
         return new LicenseDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("licenseDetails") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DirectoryObject
      *
-     * @return the IDirectoryObjectWithReferenceRequestBuilder instance
+     * @return the DirectoryObjectWithReferenceRequestBuilder instance
      */
-    public IDirectoryObjectWithReferenceRequestBuilder manager() {
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder manager() {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("manager"), getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder memberOf(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder memberOf(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id, getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder memberOfAsUser() {
-        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.user", getClient(), null);
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserCollectionRequestBuilder memberOfAsUser() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder memberOfAsUser(final String id) {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserRequestBuilder memberOfAsUser(@Nonnull final String id) {
+        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IGroupCollectionWithReferencesRequestBuilder memberOfAsGroup() {
-        return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.group", getClient(), null);
-    }
-
-    public IGroupWithReferenceRequestBuilder memberOfAsGroup(final String id) {
-        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
-    }
-    public IApplicationCollectionWithReferencesRequestBuilder memberOfAsApplication() {
-        return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.application", getClient(), null);
-    }
-
-    public IApplicationWithReferenceRequestBuilder memberOfAsApplication(final String id) {
-        return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
-    }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder memberOfAsServicePrincipal() {
-        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-
-    public IServicePrincipalWithReferenceRequestBuilder memberOfAsServicePrincipal(final String id) {
-        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-    public IDeviceCollectionWithReferencesRequestBuilder memberOfAsDevice() {
-        return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.device", getClient(), null);
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupCollectionRequestBuilder memberOfAsGroup() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IDeviceWithReferenceRequestBuilder memberOfAsDevice(final String id) {
-        return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupRequestBuilder memberOfAsGroup(@Nonnull final String id) {
+        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IOrgContactCollectionWithReferencesRequestBuilder memberOfAsOrgContact() {
-        return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.orgContact", getClient(), null);
+    /**
+     *  Gets a request builder for the Application collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApplicationCollectionRequestBuilder memberOfAsApplication() {
+        return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IOrgContactWithReferenceRequestBuilder memberOfAsOrgContact(final String id) {
-        return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
+    /**
+     * Gets a request builder for the Application item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApplicationRequestBuilder memberOfAsApplication(@Nonnull final String id) {
+        return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder ownedDevices() {
+    /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ServicePrincipalCollectionRequestBuilder memberOfAsServicePrincipal() {
+        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ServicePrincipalRequestBuilder memberOfAsServicePrincipal(@Nonnull final String id) {
+        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCollectionRequestBuilder memberOfAsDevice() {
+        return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.device", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceRequestBuilder memberOfAsDevice(@Nonnull final String id) {
+        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the OrgContact collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OrgContactCollectionRequestBuilder memberOfAsOrgContact() {
+        return new OrgContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/microsoft.graph.orgContact", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OrgContact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OrgContactRequestBuilder memberOfAsOrgContact(@Nonnull final String id) {
+        return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder ownedDevices() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder ownedDevices(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder ownedDevices(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id, getClient(), null);
     }
-    public IDeviceCollectionWithReferencesRequestBuilder ownedDevicesAsDevice() {
-        return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.device", getClient(), null);
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCollectionRequestBuilder ownedDevicesAsDevice() {
+        return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.device", getClient(), null);
     }
 
-    public IDeviceWithReferenceRequestBuilder ownedDevicesAsDevice(final String id) {
-        return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceRequestBuilder ownedDevicesAsDevice(@Nonnull final String id) {
+        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
-    public IAppRoleAssignmentCollectionWithReferencesRequestBuilder ownedDevicesAsAppRoleAssignment() {
-        return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    /**
+     *  Gets a request builder for the AppRoleAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppRoleAssignmentCollectionRequestBuilder ownedDevicesAsAppRoleAssignment() {
+        return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
 
-    public IAppRoleAssignmentWithReferenceRequestBuilder ownedDevicesAsAppRoleAssignment(final String id) {
-        return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    /**
+     * Gets a request builder for the AppRoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppRoleAssignmentRequestBuilder ownedDevicesAsAppRoleAssignment(@Nonnull final String id) {
+        return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
-    public IEndpointCollectionWithReferencesRequestBuilder ownedDevicesAsEndpoint() {
-        return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.endpoint", getClient(), null);
+    /**
+     *  Gets a request builder for the Endpoint collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EndpointCollectionRequestBuilder ownedDevicesAsEndpoint() {
+        return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/microsoft.graph.endpoint", getClient(), null);
     }
 
-    public IEndpointWithReferenceRequestBuilder ownedDevicesAsEndpoint(final String id) {
-        return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
+    /**
+     * Gets a request builder for the Endpoint item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EndpointRequestBuilder ownedDevicesAsEndpoint(@Nonnull final String id) {
+        return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("ownedDevices") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder ownedObjects() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder ownedObjects(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder ownedObjects(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id, getClient(), null);
     }
-    public IApplicationCollectionWithReferencesRequestBuilder ownedObjectsAsApplication() {
-        return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.application", getClient(), null);
+    /**
+     *  Gets a request builder for the Application collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApplicationCollectionRequestBuilder ownedObjectsAsApplication() {
+        return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IApplicationWithReferenceRequestBuilder ownedObjectsAsApplication(final String id) {
-        return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.application", getClient(), null);
+    /**
+     * Gets a request builder for the Application item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApplicationRequestBuilder ownedObjectsAsApplication(@Nonnull final String id) {
+        return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
-    public IGroupCollectionWithReferencesRequestBuilder ownedObjectsAsGroup() {
-        return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.group", getClient(), null);
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupCollectionRequestBuilder ownedObjectsAsGroup() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IGroupWithReferenceRequestBuilder ownedObjectsAsGroup(final String id) {
-        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.group", getClient(), null);
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupRequestBuilder ownedObjectsAsGroup(@Nonnull final String id) {
+        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder ownedObjectsAsServicePrincipal() {
-        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ServicePrincipalCollectionRequestBuilder ownedObjectsAsServicePrincipal() {
+        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
 
-    public IServicePrincipalWithReferenceRequestBuilder ownedObjectsAsServicePrincipal(final String id) {
-        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ServicePrincipalRequestBuilder ownedObjectsAsServicePrincipal(@Nonnull final String id) {
+        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("ownedObjects") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder registeredDevices() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder registeredDevices() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder registeredDevices(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder registeredDevices(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id, getClient(), null);
     }
-    public IDeviceCollectionWithReferencesRequestBuilder registeredDevicesAsDevice() {
-        return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.device", getClient(), null);
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCollectionRequestBuilder registeredDevicesAsDevice() {
+        return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.device", getClient(), null);
     }
 
-    public IDeviceWithReferenceRequestBuilder registeredDevicesAsDevice(final String id) {
-        return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceRequestBuilder registeredDevicesAsDevice(@Nonnull final String id) {
+        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.device", getClient(), null);
     }
-    public IAppRoleAssignmentCollectionWithReferencesRequestBuilder registeredDevicesAsAppRoleAssignment() {
-        return new AppRoleAssignmentCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    /**
+     *  Gets a request builder for the AppRoleAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppRoleAssignmentCollectionRequestBuilder registeredDevicesAsAppRoleAssignment() {
+        return new AppRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
 
-    public IAppRoleAssignmentWithReferenceRequestBuilder registeredDevicesAsAppRoleAssignment(final String id) {
-        return new AppRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
+    /**
+     * Gets a request builder for the AppRoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppRoleAssignmentRequestBuilder registeredDevicesAsAppRoleAssignment(@Nonnull final String id) {
+        return new AppRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.appRoleAssignment", getClient(), null);
     }
-    public IEndpointCollectionWithReferencesRequestBuilder registeredDevicesAsEndpoint() {
-        return new EndpointCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.endpoint", getClient(), null);
+    /**
+     *  Gets a request builder for the Endpoint collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EndpointCollectionRequestBuilder registeredDevicesAsEndpoint() {
+        return new EndpointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/microsoft.graph.endpoint", getClient(), null);
     }
 
-    public IEndpointWithReferenceRequestBuilder registeredDevicesAsEndpoint(final String id) {
-        return new EndpointWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
+    /**
+     * Gets a request builder for the Endpoint item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EndpointRequestBuilder registeredDevicesAsEndpoint(@Nonnull final String id) {
+        return new EndpointRequestBuilder(getRequestUrlWithAdditionalSegment("registeredDevices") + "/" + id + "/microsoft.graph.endpoint", getClient(), null);
     }
-    public IScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberOf() {
+    /**
+     *  Gets a request builder for the ScopedRoleMembership collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ScopedRoleMembershipCollectionRequestBuilder scopedRoleMemberOf() {
         return new ScopedRoleMembershipCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scopedRoleMemberOf"), getClient(), null);
     }
 
-    public IScopedRoleMembershipRequestBuilder scopedRoleMemberOf(final String id) {
+    /**
+     * Gets a request builder for the ScopedRoleMembership item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ScopedRoleMembershipRequestBuilder scopedRoleMemberOf(@Nonnull final String id) {
         return new ScopedRoleMembershipRequestBuilder(getRequestUrlWithAdditionalSegment("scopedRoleMemberOf") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder transitiveMemberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf"), getClient(), null);
     }
 
-    public IDirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder transitiveMemberOf(@Nonnull final String id) {
         return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id, getClient(), null);
     }
-    public IUserCollectionWithReferencesRequestBuilder transitiveMemberOfAsUser() {
-        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.user", getClient(), null);
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserCollectionRequestBuilder transitiveMemberOfAsUser() {
+        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserWithReferenceRequestBuilder transitiveMemberOfAsUser(final String id) {
-        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserRequestBuilder transitiveMemberOfAsUser(@Nonnull final String id) {
+        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IGroupCollectionWithReferencesRequestBuilder transitiveMemberOfAsGroup() {
-        return new GroupCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.group", getClient(), null);
-    }
-
-    public IGroupWithReferenceRequestBuilder transitiveMemberOfAsGroup(final String id) {
-        return new GroupWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
-    }
-    public IApplicationCollectionWithReferencesRequestBuilder transitiveMemberOfAsApplication() {
-        return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.application", getClient(), null);
-    }
-
-    public IApplicationWithReferenceRequestBuilder transitiveMemberOfAsApplication(final String id) {
-        return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
-    }
-    public IServicePrincipalCollectionWithReferencesRequestBuilder transitiveMemberOfAsServicePrincipal() {
-        return new ServicePrincipalCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-
-    public IServicePrincipalWithReferenceRequestBuilder transitiveMemberOfAsServicePrincipal(final String id) {
-        return new ServicePrincipalWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
-    }
-    public IDeviceCollectionWithReferencesRequestBuilder transitiveMemberOfAsDevice() {
-        return new DeviceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.device", getClient(), null);
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupCollectionRequestBuilder transitiveMemberOfAsGroup() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IDeviceWithReferenceRequestBuilder transitiveMemberOfAsDevice(final String id) {
-        return new DeviceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupRequestBuilder transitiveMemberOfAsGroup(@Nonnull final String id) {
+        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IOrgContactCollectionWithReferencesRequestBuilder transitiveMemberOfAsOrgContact() {
-        return new OrgContactCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.orgContact", getClient(), null);
+    /**
+     *  Gets a request builder for the Application collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApplicationCollectionRequestBuilder transitiveMemberOfAsApplication() {
+        return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IOrgContactWithReferenceRequestBuilder transitiveMemberOfAsOrgContact(final String id) {
-        return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
+    /**
+     * Gets a request builder for the Application item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApplicationRequestBuilder transitiveMemberOfAsApplication(@Nonnull final String id) {
+        return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.application", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ServicePrincipal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ServicePrincipalCollectionRequestBuilder transitiveMemberOfAsServicePrincipal() {
+        return new ServicePrincipalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServicePrincipal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ServicePrincipalRequestBuilder transitiveMemberOfAsServicePrincipal(@Nonnull final String id) {
+        return new ServicePrincipalRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.servicePrincipal", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCollectionRequestBuilder transitiveMemberOfAsDevice() {
+        return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.device", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceRequestBuilder transitiveMemberOfAsDevice(@Nonnull final String id) {
+        return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.device", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the OrgContact collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OrgContactCollectionRequestBuilder transitiveMemberOfAsOrgContact() {
+        return new OrgContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/microsoft.graph.orgContact", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OrgContact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OrgContactRequestBuilder transitiveMemberOfAsOrgContact(@Nonnull final String id) {
+        return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
 
     /**
      * Gets the request builder for Calendar
      *
-     * @return the ICalendarRequestBuilder instance
+     * @return the CalendarRequestBuilder instance
      */
-    public ICalendarRequestBuilder calendar() {
+    @Nonnull
+    public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendar"), getClient(), null);
     }
-    public ICalendarGroupCollectionRequestBuilder calendarGroups() {
+    /**
+     *  Gets a request builder for the CalendarGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CalendarGroupCollectionRequestBuilder calendarGroups() {
         return new CalendarGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups"), getClient(), null);
     }
 
-    public ICalendarGroupRequestBuilder calendarGroups(final String id) {
+    /**
+     * Gets a request builder for the CalendarGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CalendarGroupRequestBuilder calendarGroups(@Nonnull final String id) {
         return new CalendarGroupRequestBuilder(getRequestUrlWithAdditionalSegment("calendarGroups") + "/" + id, getClient(), null);
     }
-    public ICalendarCollectionRequestBuilder calendars() {
+    /**
+     *  Gets a request builder for the Calendar collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CalendarCollectionRequestBuilder calendars() {
         return new CalendarCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendars"), getClient(), null);
     }
 
-    public ICalendarRequestBuilder calendars(final String id) {
+    /**
+     * Gets a request builder for the Calendar item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CalendarRequestBuilder calendars(@Nonnull final String id) {
         return new CalendarRequestBuilder(getRequestUrlWithAdditionalSegment("calendars") + "/" + id, getClient(), null);
     }
-    public IEventCollectionRequestBuilder calendarView() {
+    /**
+     *  Gets a request builder for the Event collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EventCollectionRequestBuilder calendarView() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView"), getClient(), null);
     }
 
-    public IEventRequestBuilder calendarView(final String id) {
+    /**
+     * Gets a request builder for the Event item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EventRequestBuilder calendarView(@Nonnull final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("calendarView") + "/" + id, getClient(), null);
     }
-    public IContactFolderCollectionRequestBuilder contactFolders() {
+    /**
+     *  Gets a request builder for the ContactFolder collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ContactFolderCollectionRequestBuilder contactFolders() {
         return new ContactFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders"), getClient(), null);
     }
 
-    public IContactFolderRequestBuilder contactFolders(final String id) {
+    /**
+     * Gets a request builder for the ContactFolder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ContactFolderRequestBuilder contactFolders(@Nonnull final String id) {
         return new ContactFolderRequestBuilder(getRequestUrlWithAdditionalSegment("contactFolders") + "/" + id, getClient(), null);
     }
-    public IContactCollectionRequestBuilder contacts() {
+    /**
+     *  Gets a request builder for the Contact collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ContactCollectionRequestBuilder contacts() {
         return new ContactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("contacts"), getClient(), null);
     }
 
-    public IContactRequestBuilder contacts(final String id) {
+    /**
+     * Gets a request builder for the Contact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ContactRequestBuilder contacts(@Nonnull final String id) {
         return new ContactRequestBuilder(getRequestUrlWithAdditionalSegment("contacts") + "/" + id, getClient(), null);
     }
-    public IEventCollectionRequestBuilder events() {
+    /**
+     *  Gets a request builder for the Event collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EventCollectionRequestBuilder events() {
         return new EventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("events"), getClient(), null);
     }
 
-    public IEventRequestBuilder events(final String id) {
+    /**
+     * Gets a request builder for the Event item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EventRequestBuilder events(@Nonnull final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for InferenceClassification
      *
-     * @return the IInferenceClassificationRequestBuilder instance
+     * @return the InferenceClassificationRequestBuilder instance
      */
-    public IInferenceClassificationRequestBuilder inferenceClassification() {
+    @Nonnull
+    public InferenceClassificationRequestBuilder inferenceClassification() {
         return new InferenceClassificationRequestBuilder(getRequestUrlWithAdditionalSegment("inferenceClassification"), getClient(), null);
     }
-    public IGroupCollectionRequestBuilder joinedGroups() {
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupCollectionRequestBuilder joinedGroups() {
         return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("joinedGroups"), getClient(), null);
     }
 
-    public IGroupRequestBuilder joinedGroups(final String id) {
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupRequestBuilder joinedGroups(@Nonnull final String id) {
         return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("joinedGroups") + "/" + id, getClient(), null);
     }
-    public IMailFolderCollectionRequestBuilder mailFolders() {
+    /**
+     *  Gets a request builder for the MailFolder collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MailFolderCollectionRequestBuilder mailFolders() {
         return new MailFolderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mailFolders"), getClient(), null);
     }
 
-    public IMailFolderRequestBuilder mailFolders(final String id) {
+    /**
+     * Gets a request builder for the MailFolder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MailFolderRequestBuilder mailFolders(@Nonnull final String id) {
         return new MailFolderRequestBuilder(getRequestUrlWithAdditionalSegment("mailFolders") + "/" + id, getClient(), null);
     }
-    public IMessageCollectionRequestBuilder messages() {
+    /**
+     *  Gets a request builder for the Message collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MessageCollectionRequestBuilder messages() {
         return new MessageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("messages"), getClient(), null);
     }
 
-    public IMessageRequestBuilder messages(final String id) {
+    /**
+     * Gets a request builder for the Message item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MessageRequestBuilder messages(@Nonnull final String id) {
         return new MessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for OutlookUser
      *
-     * @return the IOutlookUserRequestBuilder instance
+     * @return the OutlookUserRequestBuilder instance
      */
-    public IOutlookUserRequestBuilder outlook() {
+    @Nonnull
+    public OutlookUserRequestBuilder outlook() {
         return new OutlookUserRequestBuilder(getRequestUrlWithAdditionalSegment("outlook"), getClient(), null);
     }
-    public IPersonCollectionRequestBuilder people() {
+    /**
+     *  Gets a request builder for the Person collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PersonCollectionRequestBuilder people() {
         return new PersonCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("people"), getClient(), null);
     }
 
-    public IPersonRequestBuilder people(final String id) {
+    /**
+     * Gets a request builder for the Person item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PersonRequestBuilder people(@Nonnull final String id) {
         return new PersonRequestBuilder(getRequestUrlWithAdditionalSegment("people") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ProfilePhoto
      *
-     * @return the IProfilePhotoRequestBuilder instance
+     * @return the ProfilePhotoRequestBuilder instance
      */
-    public IProfilePhotoRequestBuilder photo() {
+    @Nonnull
+    public ProfilePhotoRequestBuilder photo() {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
     }
-    public IProfilePhotoCollectionRequestBuilder photos() {
+    /**
+     *  Gets a request builder for the ProfilePhoto collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ProfilePhotoCollectionRequestBuilder photos() {
         return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
     }
 
-    public IProfilePhotoRequestBuilder photos(final String id) {
+    /**
+     * Gets a request builder for the ProfilePhoto item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ProfilePhotoRequestBuilder photos(@Nonnull final String id) {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Drive
      *
-     * @return the IDriveRequestBuilder instance
+     * @return the DriveRequestBuilder instance
      */
-    public IDriveRequestBuilder drive() {
+    @Nonnull
+    public DriveRequestBuilder drive() {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drive"), getClient(), null);
     }
-    public IDriveCollectionRequestBuilder drives() {
+    /**
+     *  Gets a request builder for the Drive collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DriveCollectionRequestBuilder drives() {
         return new DriveCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("drives"), getClient(), null);
     }
 
-    public IDriveRequestBuilder drives(final String id) {
+    /**
+     * Gets a request builder for the Drive item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DriveRequestBuilder drives(@Nonnull final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
-    public ISiteCollectionWithReferencesRequestBuilder followedSites() {
+    /**
+     *  Gets a request builder for the Site collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SiteCollectionWithReferencesRequestBuilder followedSites() {
         return new SiteCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("followedSites"), getClient(), null);
     }
 
-    public ISiteWithReferenceRequestBuilder followedSites(final String id) {
+    /**
+     * Gets a request builder for the Site item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SiteWithReferenceRequestBuilder followedSites(@Nonnull final String id) {
         return new SiteWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("followedSites") + "/" + id, getClient(), null);
     }
-    public IExtensionCollectionRequestBuilder extensions() {
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public IAppConsentRequestCollectionRequestBuilder appConsentRequestsForApproval() {
+    /**
+     *  Gets a request builder for the AppConsentRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppConsentRequestCollectionRequestBuilder appConsentRequestsForApproval() {
         return new AppConsentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appConsentRequestsForApproval"), getClient(), null);
     }
 
-    public IAppConsentRequestRequestBuilder appConsentRequestsForApproval(final String id) {
+    /**
+     * Gets a request builder for the AppConsentRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppConsentRequestRequestBuilder appConsentRequestsForApproval(@Nonnull final String id) {
         return new AppConsentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("appConsentRequestsForApproval") + "/" + id, getClient(), null);
     }
-    public IApprovalCollectionRequestBuilder approvals() {
+    /**
+     *  Gets a request builder for the Approval collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApprovalCollectionRequestBuilder approvals() {
         return new ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("approvals"), getClient(), null);
     }
 
-    public IApprovalRequestBuilder approvals(final String id) {
+    /**
+     * Gets a request builder for the Approval item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApprovalRequestBuilder approvals(@Nonnull final String id) {
         return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approvals") + "/" + id, getClient(), null);
     }
-    public IAccessReviewInstanceCollectionRequestBuilder pendingAccessReviewInstances() {
+    /**
+     *  Gets a request builder for the AccessReviewInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceCollectionRequestBuilder pendingAccessReviewInstances() {
         return new AccessReviewInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pendingAccessReviewInstances"), getClient(), null);
     }
 
-    public IAccessReviewInstanceRequestBuilder pendingAccessReviewInstances(final String id) {
+    /**
+     * Gets a request builder for the AccessReviewInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewInstanceRequestBuilder pendingAccessReviewInstances(@Nonnull final String id) {
         return new AccessReviewInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("pendingAccessReviewInstances") + "/" + id, getClient(), null);
     }
-    public IAgreementAcceptanceCollectionWithReferencesRequestBuilder agreementAcceptances() {
+    /**
+     *  Gets a request builder for the AgreementAcceptance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgreementAcceptanceCollectionWithReferencesRequestBuilder agreementAcceptances() {
         return new AgreementAcceptanceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances"), getClient(), null);
     }
 
-    public IAgreementAcceptanceWithReferenceRequestBuilder agreementAcceptances(final String id) {
+    /**
+     * Gets a request builder for the AgreementAcceptance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgreementAcceptanceWithReferenceRequestBuilder agreementAcceptances(@Nonnull final String id) {
         return new AgreementAcceptanceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
     }
-    public IDeviceEnrollmentConfigurationCollectionRequestBuilder deviceEnrollmentConfigurations() {
+    /**
+     *  Gets a request builder for the DeviceEnrollmentConfiguration collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceEnrollmentConfigurationCollectionRequestBuilder deviceEnrollmentConfigurations() {
         return new DeviceEnrollmentConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceEnrollmentConfigurations"), getClient(), null);
     }
 
-    public IDeviceEnrollmentConfigurationRequestBuilder deviceEnrollmentConfigurations(final String id) {
+    /**
+     * Gets a request builder for the DeviceEnrollmentConfiguration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceEnrollmentConfigurationRequestBuilder deviceEnrollmentConfigurations(@Nonnull final String id) {
         return new DeviceEnrollmentConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("deviceEnrollmentConfigurations") + "/" + id, getClient(), null);
     }
-    public IManagedDeviceCollectionRequestBuilder managedDevices() {
+    /**
+     *  Gets a request builder for the ManagedDevice collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedDeviceCollectionRequestBuilder managedDevices() {
         return new ManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
-    public IManagedDeviceRequestBuilder managedDevices(final String id) {
+    /**
+     * Gets a request builder for the ManagedDevice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedDeviceRequestBuilder managedDevices(@Nonnull final String id) {
         return new ManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
-    public IManagedAppRegistrationCollectionWithReferencesRequestBuilder managedAppRegistrations() {
+    /**
+     *  Gets a request builder for the ManagedAppRegistration collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedAppRegistrationCollectionWithReferencesRequestBuilder managedAppRegistrations() {
         return new ManagedAppRegistrationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations"), getClient(), null);
     }
 
-    public IManagedAppRegistrationWithReferenceRequestBuilder managedAppRegistrations(final String id) {
+    /**
+     * Gets a request builder for the ManagedAppRegistration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedAppRegistrationWithReferenceRequestBuilder managedAppRegistrations(@Nonnull final String id) {
         return new ManagedAppRegistrationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managedAppRegistrations") + "/" + id, getClient(), null);
     }
-    public IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder windowsInformationProtectionDeviceRegistrations() {
+    /**
+     *  Gets a request builder for the WindowsInformationProtectionDeviceRegistration collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder windowsInformationProtectionDeviceRegistrations() {
         return new WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionDeviceRegistrations"), getClient(), null);
     }
 
-    public IWindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder windowsInformationProtectionDeviceRegistrations(final String id) {
+    /**
+     * Gets a request builder for the WindowsInformationProtectionDeviceRegistration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder windowsInformationProtectionDeviceRegistrations(@Nonnull final String id) {
         return new WindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionDeviceRegistrations") + "/" + id, getClient(), null);
     }
-    public IDeviceManagementTroubleshootingEventCollectionRequestBuilder deviceManagementTroubleshootingEvents() {
+    /**
+     *  Gets a request builder for the DeviceManagementTroubleshootingEvent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementTroubleshootingEventCollectionRequestBuilder deviceManagementTroubleshootingEvents() {
         return new DeviceManagementTroubleshootingEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementTroubleshootingEvents"), getClient(), null);
     }
 
-    public IDeviceManagementTroubleshootingEventRequestBuilder deviceManagementTroubleshootingEvents(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementTroubleshootingEvent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementTroubleshootingEventRequestBuilder deviceManagementTroubleshootingEvents(@Nonnull final String id) {
         return new DeviceManagementTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("deviceManagementTroubleshootingEvents") + "/" + id, getClient(), null);
     }
-    public IMobileAppIntentAndStateCollectionRequestBuilder mobileAppIntentAndStates() {
+    /**
+     *  Gets a request builder for the MobileAppIntentAndState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppIntentAndStateCollectionRequestBuilder mobileAppIntentAndStates() {
         return new MobileAppIntentAndStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppIntentAndStates"), getClient(), null);
     }
 
-    public IMobileAppIntentAndStateRequestBuilder mobileAppIntentAndStates(final String id) {
+    /**
+     * Gets a request builder for the MobileAppIntentAndState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppIntentAndStateRequestBuilder mobileAppIntentAndStates(@Nonnull final String id) {
         return new MobileAppIntentAndStateRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppIntentAndStates") + "/" + id, getClient(), null);
     }
-    public IMobileAppTroubleshootingEventCollectionRequestBuilder mobileAppTroubleshootingEvents() {
+    /**
+     *  Gets a request builder for the MobileAppTroubleshootingEvent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppTroubleshootingEventCollectionRequestBuilder mobileAppTroubleshootingEvents() {
         return new MobileAppTroubleshootingEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppTroubleshootingEvents"), getClient(), null);
     }
 
-    public IMobileAppTroubleshootingEventRequestBuilder mobileAppTroubleshootingEvents(final String id) {
+    /**
+     * Gets a request builder for the MobileAppTroubleshootingEvent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppTroubleshootingEventRequestBuilder mobileAppTroubleshootingEvents(@Nonnull final String id) {
         return new MobileAppTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppTroubleshootingEvents") + "/" + id, getClient(), null);
     }
-    public INotificationCollectionRequestBuilder notifications() {
+    /**
+     *  Gets a request builder for the Notification collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public NotificationCollectionRequestBuilder notifications() {
         return new NotificationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("notifications"), getClient(), null);
     }
 
-    public INotificationRequestBuilder notifications(final String id) {
+    /**
+     * Gets a request builder for the Notification item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public NotificationRequestBuilder notifications(@Nonnull final String id) {
         return new NotificationRequestBuilder(getRequestUrlWithAdditionalSegment("notifications") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for PlannerUser
      *
-     * @return the IPlannerUserRequestBuilder instance
+     * @return the PlannerUserRequestBuilder instance
      */
-    public IPlannerUserRequestBuilder planner() {
+    @Nonnull
+    public PlannerUserRequestBuilder planner() {
         return new PlannerUserRequestBuilder(getRequestUrlWithAdditionalSegment("planner"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ItemInsights
      *
-     * @return the IItemInsightsRequestBuilder instance
+     * @return the ItemInsightsRequestBuilder instance
      */
-    public IItemInsightsRequestBuilder insights() {
+    @Nonnull
+    public ItemInsightsRequestBuilder insights() {
         return new ItemInsightsRequestBuilder(getRequestUrlWithAdditionalSegment("insights"), getClient(), null);
     }
 
     /**
      * Gets the request builder for UserSettings
      *
-     * @return the IUserSettingsRequestBuilder instance
+     * @return the UserSettingsRequestBuilder instance
      */
-    public IUserSettingsRequestBuilder settings() {
+    @Nonnull
+    public UserSettingsRequestBuilder settings() {
         return new UserSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Onenote
      *
-     * @return the IOnenoteRequestBuilder instance
+     * @return the OnenoteRequestBuilder instance
      */
-    public IOnenoteRequestBuilder onenote() {
+    @Nonnull
+    public OnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Profile
      *
-     * @return the IProfileRequestBuilder instance
+     * @return the ProfileRequestBuilder instance
      */
-    public IProfileRequestBuilder profile() {
+    @Nonnull
+    public ProfileRequestBuilder profile() {
         return new ProfileRequestBuilder(getRequestUrlWithAdditionalSegment("profile"), getClient(), null);
     }
-    public IUserActivityCollectionRequestBuilder activities() {
+    /**
+     *  Gets a request builder for the UserActivity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserActivityCollectionRequestBuilder activities() {
         return new UserActivityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activities"), getClient(), null);
     }
 
-    public IUserActivityRequestBuilder activities(final String id) {
+    /**
+     * Gets a request builder for the UserActivity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserActivityRequestBuilder activities(@Nonnull final String id) {
         return new UserActivityRequestBuilder(getRequestUrlWithAdditionalSegment("activities") + "/" + id, getClient(), null);
     }
-    public IDeviceCollectionRequestBuilder devices() {
+    /**
+     *  Gets a request builder for the Device collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCollectionRequestBuilder devices() {
         return new DeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("devices"), getClient(), null);
     }
 
-    public IDeviceRequestBuilder devices(final String id) {
+    /**
+     * Gets a request builder for the Device item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceRequestBuilder devices(@Nonnull final String id) {
         return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("devices") + "/" + id, getClient(), null);
     }
-    public IOnlineMeetingCollectionRequestBuilder onlineMeetings() {
+    /**
+     *  Gets a request builder for the OnlineMeeting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OnlineMeetingCollectionRequestBuilder onlineMeetings() {
         return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
     }
 
-    public IOnlineMeetingRequestBuilder onlineMeetings(final String id) {
+    /**
+     * Gets a request builder for the OnlineMeeting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Presence
      *
-     * @return the IPresenceRequestBuilder instance
+     * @return the PresenceRequestBuilder instance
      */
-    public IPresenceRequestBuilder presence() {
+    @Nonnull
+    public PresenceRequestBuilder presence() {
         return new PresenceRequestBuilder(getRequestUrlWithAdditionalSegment("presence"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Authentication
      *
-     * @return the IAuthenticationRequestBuilder instance
+     * @return the AuthenticationRequestBuilder instance
      */
-    public IAuthenticationRequestBuilder authentication() {
+    @Nonnull
+    public AuthenticationRequestBuilder authentication() {
         return new AuthenticationRequestBuilder(getRequestUrlWithAdditionalSegment("authentication"), getClient(), null);
     }
-    public IChatCollectionRequestBuilder chats() {
+    /**
+     *  Gets a request builder for the Chat collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ChatCollectionRequestBuilder chats() {
         return new ChatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("chats"), getClient(), null);
     }
 
-    public IChatRequestBuilder chats(final String id) {
+    /**
+     * Gets a request builder for the Chat item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ChatRequestBuilder chats(@Nonnull final String id) {
         return new ChatRequestBuilder(getRequestUrlWithAdditionalSegment("chats") + "/" + id, getClient(), null);
     }
-    public ITeamCollectionWithReferencesRequestBuilder joinedTeams() {
+    /**
+     *  Gets a request builder for the Team collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TeamCollectionWithReferencesRequestBuilder joinedTeams() {
         return new TeamCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams"), getClient(), null);
     }
 
-    public ITeamWithReferenceRequestBuilder joinedTeams(final String id) {
+    /**
+     * Gets a request builder for the Team item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TeamWithReferenceRequestBuilder joinedTeams(@Nonnull final String id) {
         return new TeamWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("joinedTeams") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for UserTeamwork
      *
-     * @return the IUserTeamworkRequestBuilder instance
+     * @return the UserTeamworkRequestBuilder instance
      */
-    public IUserTeamworkRequestBuilder teamwork() {
+    @Nonnull
+    public UserTeamworkRequestBuilder teamwork() {
         return new UserTeamworkRequestBuilder(getRequestUrlWithAdditionalSegment("teamwork"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Todo
      *
-     * @return the ITodoRequestBuilder instance
+     * @return the TodoRequestBuilder instance
      */
-    public ITodoRequestBuilder todo() {
+    @Nonnull
+    public TodoRequestBuilder todo() {
         return new TodoRequestBuilder(getRequestUrlWithAdditionalSegment("todo"), getClient(), null);
     }
 
-    public IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses) {
-        return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, addLicenses, removeLicenses);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserAssignLicenseRequestBuilder assignLicense(@Nonnull final UserAssignLicenseParameterSet parameters) {
+        return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, parameters);
     }
 
-    public IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword) {
-        return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changePassword"), getClient(), null, currentPassword, newPassword);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserChangePasswordRequestBuilder changePassword(@Nonnull final UserChangePasswordParameterSet parameters) {
+        return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changePassword"), getClient(), null, parameters);
     }
 
-    public IUserInvalidateAllRefreshTokensRequestBuilder invalidateAllRefreshTokens() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserInvalidateAllRefreshTokensRequestBuilder invalidateAllRefreshTokens() {
         return new UserInvalidateAllRefreshTokensRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invalidateAllRefreshTokens"), getClient(), null);
     }
 
-    public IUserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
         return new UserReprocessLicenseAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprocessLicenseAssignment"), getClient(), null);
     }
 
-    public IUserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
         return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
     }
 
-    public IUserFindMeetingTimesRequestBuilder findMeetingTimes(final java.util.List<AttendeeBase> attendees, final LocationConstraint locationConstraint, final TimeConstraint timeConstraint, final javax.xml.datatype.Duration meetingDuration, final Integer maxCandidates, final Boolean isOrganizerOptional, final Boolean returnSuggestionReasons, final Double minimumAttendeePercentage) {
-        return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, attendees, locationConstraint, timeConstraint, meetingDuration, maxCandidates, isOrganizerOptional, returnSuggestionReasons, minimumAttendeePercentage);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserFindMeetingTimesRequestBuilder findMeetingTimes(@Nonnull final UserFindMeetingTimesParameterSet parameters) {
+        return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, parameters);
     }
 
-    public IUserGetMailTipsCollectionRequestBuilder getMailTips(final java.util.List<String> emailAddresses, final EnumSet<MailTipsType> mailTipsOptions) {
-        return new UserGetMailTipsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailTips"), getClient(), null, emailAddresses, mailTipsOptions);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserGetMailTipsCollectionRequestBuilder getMailTips(@Nonnull final UserGetMailTipsParameterSet parameters) {
+        return new UserGetMailTipsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailTips"), getClient(), null, parameters);
     }
 
-    public IUserSendMailRequestBuilder sendMail(final Message message, final Boolean saveToSentItems) {
-        return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, message, saveToSentItems);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserSendMailRequestBuilder sendMail(@Nonnull final UserSendMailParameterSet parameters) {
+        return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, parameters);
     }
 
-    public IUserTranslateExchangeIdsCollectionRequestBuilder translateExchangeIds(final java.util.List<String> inputIds, final ExchangeIdFormat targetIdType, final ExchangeIdFormat sourceIdType) {
-        return new UserTranslateExchangeIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.translateExchangeIds"), getClient(), null, inputIds, targetIdType, sourceIdType);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserTranslateExchangeIdsCollectionRequestBuilder translateExchangeIds(@Nonnull final UserTranslateExchangeIdsParameterSet parameters) {
+        return new UserTranslateExchangeIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.translateExchangeIds"), getClient(), null, parameters);
     }
 
-    public IUserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {
         return new UserRemoveAllDevicesFromManagementRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeAllDevicesFromManagement"), getClient(), null);
     }
 
-    public IUserUnblockManagedAppsRequestBuilder unblockManagedApps() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserUnblockManagedAppsRequestBuilder unblockManagedApps() {
         return new UserUnblockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unblockManagedApps"), getClient(), null);
     }
 
-    public IUserWipeAndBlockManagedAppsRequestBuilder wipeAndBlockManagedApps() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserWipeAndBlockManagedAppsRequestBuilder wipeAndBlockManagedApps() {
         return new UserWipeAndBlockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeAndBlockManagedApps"), getClient(), null);
     }
 
-    public IUserWipeManagedAppRegistrationByDeviceTagRequestBuilder wipeManagedAppRegistrationByDeviceTag(final String deviceTag) {
-        return new UserWipeManagedAppRegistrationByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationByDeviceTag"), getClient(), null, deviceTag);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserWipeManagedAppRegistrationByDeviceTagRequestBuilder wipeManagedAppRegistrationByDeviceTag(@Nonnull final UserWipeManagedAppRegistrationByDeviceTagParameterSet parameters) {
+        return new UserWipeManagedAppRegistrationByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationByDeviceTag"), getClient(), null, parameters);
     }
 
-    public IUserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(final String deviceTag) {
-        return new UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationsByDeviceTag"), getClient(), null, deviceTag);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(@Nonnull final UserWipeManagedAppRegistrationsByDeviceTagParameterSet parameters) {
+        return new UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationsByDeviceTag"), getClient(), null, parameters);
     }
 
-    public IUserExportPersonalDataRequestBuilder exportPersonalData(final String storageLocation) {
-        return new UserExportPersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportPersonalData"), getClient(), null, storageLocation);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserExportPersonalDataRequestBuilder exportPersonalData(@Nonnull final UserExportPersonalDataParameterSet parameters) {
+        return new UserExportPersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportPersonalData"), getClient(), null, parameters);
     }
 
-    public IUserFindRoomListsCollectionRequestBuilder findRoomLists() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserFindRoomListsCollectionRequestBuilder findRoomLists() {
         return new UserFindRoomListsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRoomLists"), getClient(), null);
     }
 
-    public IUserFindRoomsCollectionRequestBuilder findRooms() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserFindRoomsCollectionRequestBuilder findRooms() {
         return new UserFindRoomsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRooms"), getClient(), null);
     }
 
-    public IUserFindRoomsCollectionRequestBuilder findRooms(final String roomList) {
-        return new UserFindRoomsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRooms"), getClient(), null, roomList);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserFindRoomsCollectionRequestBuilder findRooms(@Nonnull final UserFindRoomsParameterSet parameters) {
+        return new UserFindRoomsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRooms"), getClient(), null, parameters);
     }
 
-    public IUserReminderViewCollectionRequestBuilder reminderView(final String startDateTime, final String endDateTime) {
-        return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, startDateTime, endDateTime);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserReminderViewCollectionRequestBuilder reminderView(@Nonnull final UserReminderViewParameterSet parameters) {
+        return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, parameters);
     }
 
-    public IUserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData() {
         return new UserExportDeviceAndAppManagementDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportDeviceAndAppManagementData"), getClient(), null);
     }
 
-    public IUserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData(final Integer skip, final Integer top) {
-        return new UserExportDeviceAndAppManagementDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportDeviceAndAppManagementData"), getClient(), null, skip, top);
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData(@Nonnull final UserExportDeviceAndAppManagementDataParameterSet parameters) {
+        return new UserExportDeviceAndAppManagementDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportDeviceAndAppManagementData"), getClient(), null, parameters);
     }
 
-    public IUserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequestBuilder getEffectiveDeviceEnrollmentConfigurations() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequestBuilder getEffectiveDeviceEnrollmentConfigurations() {
         return new UserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectiveDeviceEnrollmentConfigurations"), getClient(), null);
     }
 
-    public IUserGetLoggedOnManagedDevicesCollectionRequestBuilder getLoggedOnManagedDevices() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetLoggedOnManagedDevicesCollectionRequestBuilder getLoggedOnManagedDevices() {
         return new UserGetLoggedOnManagedDevicesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getLoggedOnManagedDevices"), getClient(), null);
     }
 
-    public IUserGetManagedAppDiagnosticStatusesCollectionRequestBuilder getManagedAppDiagnosticStatuses() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder getManagedAppDiagnosticStatuses() {
         return new UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppDiagnosticStatuses"), getClient(), null);
     }
 
-    public IUserGetManagedAppPoliciesCollectionRequestBuilder getManagedAppPolicies() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetManagedAppPoliciesCollectionRequestBuilder getManagedAppPolicies() {
         return new UserGetManagedAppPoliciesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppPolicies"), getClient(), null);
     }
 
-    public IUserIsManagedAppUserBlockedRequestBuilder isManagedAppUserBlocked() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public UserIsManagedAppUserBlockedRequestBuilder isManagedAppUserBlocked() {
         return new UserIsManagedAppUserBlockedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isManagedAppUserBlocked"), getClient(), null);
     }
 
-    public IUserGetManagedDevicesWithAppFailuresCollectionRequestBuilder getManagedDevicesWithAppFailures() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetManagedDevicesWithAppFailuresCollectionRequestBuilder getManagedDevicesWithAppFailures() {
         return new UserGetManagedDevicesWithAppFailuresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedDevicesWithAppFailures"), getClient(), null);
     }
 
-    public IUserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder getManagedDevicesWithFailedOrPendingApps() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder getManagedDevicesWithFailedOrPendingApps() {
         return new UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedDevicesWithFailedOrPendingApps"), getClient(), null);
     }
 }

@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementResourceAccessProfileBase;
 import com.microsoft.graph.models.extensions.DeviceManagementResourceAccessProfileAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementResourceAccessProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementResourceAccessProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Resource Access Profile Base Request.
  */
-public class DeviceManagementResourceAccessProfileBaseRequest extends BaseRequest implements IDeviceManagementResourceAccessProfileBaseRequest {
+public class DeviceManagementResourceAccessProfileBaseRequest extends BaseRequest<DeviceManagementResourceAccessProfileBase> {
 	
     /**
      * The request for the DeviceManagementResourceAccessProfileBase
@@ -35,10 +35,10 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceManagementResourceAccessProfileBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceManagementResourceAccessProfileBase> responseClass) {
+    public DeviceManagementResourceAccessProfileBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceManagementResourceAccessProfileBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -49,7 +49,7 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementResourceAccessProfileBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementResourceAccessProfileBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementResourceAccessProfileBase.class);
     }
 
@@ -58,7 +58,7 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,6 +68,7 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @return the DeviceManagementResourceAccessProfileBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementResourceAccessProfileBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -77,7 +78,7 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -96,7 +97,7 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @param sourceDeviceManagementResourceAccessProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementResourceAccessProfileBase sourceDeviceManagementResourceAccessProfileBase, final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
+    public void patch(@Nonnull final DeviceManagementResourceAccessProfileBase sourceDeviceManagementResourceAccessProfileBase, @Nonnull final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementResourceAccessProfileBase);
     }
 
@@ -107,7 +108,8 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @return the updated DeviceManagementResourceAccessProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementResourceAccessProfileBase patch(final DeviceManagementResourceAccessProfileBase sourceDeviceManagementResourceAccessProfileBase) throws ClientException {
+    @Nullable
+    public DeviceManagementResourceAccessProfileBase patch(@Nonnull final DeviceManagementResourceAccessProfileBase sourceDeviceManagementResourceAccessProfileBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementResourceAccessProfileBase);
     }
 
@@ -117,7 +119,7 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @param newDeviceManagementResourceAccessProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase, final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
+    public void post(@Nonnull final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase, @Nonnull final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementResourceAccessProfileBase);
     }
 
@@ -128,7 +130,8 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @return the created DeviceManagementResourceAccessProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementResourceAccessProfileBase post(final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase) throws ClientException {
+    @Nullable
+    public DeviceManagementResourceAccessProfileBase post(@Nonnull final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementResourceAccessProfileBase);
     }
 
@@ -138,7 +141,7 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @param newDeviceManagementResourceAccessProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase, final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
+    public void put(@Nonnull final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase, @Nonnull final ICallback<? super DeviceManagementResourceAccessProfileBase> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementResourceAccessProfileBase);
     }
 
@@ -149,7 +152,8 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @return the created DeviceManagementResourceAccessProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementResourceAccessProfileBase put(final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase) throws ClientException {
+    @Nullable
+    public DeviceManagementResourceAccessProfileBase put(@Nonnull final DeviceManagementResourceAccessProfileBase newDeviceManagementResourceAccessProfileBase) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementResourceAccessProfileBase);
     }
 
@@ -159,9 +163,10 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementResourceAccessProfileBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementResourceAccessProfileBaseRequest)this;
+     @Nonnull
+     public DeviceManagementResourceAccessProfileBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -170,9 +175,10 @@ public class DeviceManagementResourceAccessProfileBaseRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementResourceAccessProfileBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementResourceAccessProfileBaseRequest)this;
+     @Nonnull
+     public DeviceManagementResourceAccessProfileBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CustomerPaymentJournal;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Customer Payment Journal Request Builder.
  */
-public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder implements ICustomerPaymentJournalRequestBuilder {
+public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder<CustomerPaymentJournal> {
 
     /**
      * The request builder for the CustomerPaymentJournal
@@ -34,7 +33,7 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CustomerPaymentJournalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CustomerPaymentJournalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICustomerPaymentJournalRequest instance
+     * @return the CustomerPaymentJournalRequest instance
      */
-    public ICustomerPaymentJournalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CustomerPaymentJournalRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +52,10 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICustomerPaymentJournalRequest instance
+     * @return the CustomerPaymentJournalRequest instance
      */
-    public ICustomerPaymentJournalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CustomerPaymentJournalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CustomerPaymentJournalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,16 +64,30 @@ public class CustomerPaymentJournalRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for Account
      *
-     * @return the IAccountRequestBuilder instance
+     * @return the AccountRequestBuilder instance
      */
-    public IAccountRequestBuilder account() {
+    @Nonnull
+    public AccountRequestBuilder account() {
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
-    public ICustomerPaymentCollectionRequestBuilder customerPayments() {
+    /**
+     *  Gets a request builder for the CustomerPayment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomerPaymentCollectionRequestBuilder customerPayments() {
         return new CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
     }
 
-    public ICustomerPaymentRequestBuilder customerPayments(final String id) {
+    /**
+     * Gets a request builder for the CustomerPayment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomerPaymentRequestBuilder customerPayments(@Nonnull final String id) {
         return new CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
     }
 }

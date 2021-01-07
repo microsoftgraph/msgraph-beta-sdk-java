@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Agreement Acceptance With Reference Request.
  */
-public class AgreementAcceptanceWithReferenceRequest extends BaseRequest implements IAgreementAcceptanceWithReferenceRequest {
+public class AgreementAcceptanceWithReferenceRequest extends BaseWithReferenceRequest<AgreementAcceptance> {
 
     /**
      * The request for the AgreementAcceptance
@@ -32,46 +34,9 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementAcceptanceWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementAcceptanceWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AgreementAcceptance.class);
     }
-
-    public void post(final AgreementAcceptance newAgreementAcceptance, final IJsonBackedObject payload, final ICallback<? super AgreementAcceptance> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public AgreementAcceptance post(final AgreementAcceptance newAgreementAcceptance, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newAgreementAcceptance;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super AgreementAcceptance> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public AgreementAcceptance get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super AgreementAcceptance> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final AgreementAcceptance sourceAgreementAcceptance, final ICallback<? super AgreementAcceptance> callback) {
-		send(HttpMethod.PATCH, callback, sourceAgreementAcceptance);
-	}
-
-	public AgreementAcceptance patch(final AgreementAcceptance sourceAgreementAcceptance) throws ClientException {
-		return send(HttpMethod.PATCH, sourceAgreementAcceptance);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-    public IAgreementAcceptanceWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IAgreementAcceptanceWithReferenceRequest)this;
+    @Nonnull
+    public AgreementAcceptanceWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class AgreementAcceptanceWithReferenceRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-    public IAgreementAcceptanceWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AgreementAcceptanceWithReferenceRequest)this;
+    @Nonnull
+    public AgreementAcceptanceWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

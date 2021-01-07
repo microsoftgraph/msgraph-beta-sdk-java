@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplication;
-import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Rbac Application Request Builder.
  */
-public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements IRbacApplicationRequestBuilder {
+public class RbacApplicationRequestBuilder extends BaseRequestBuilder<RbacApplication> {
 
     /**
      * The request builder for the RbacApplication
@@ -40,7 +36,7 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RbacApplicationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RbacApplicationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,9 +44,10 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRbacApplicationRequest instance
+     * @return the RbacApplicationRequest instance
      */
-    public IRbacApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RbacApplicationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,32 +55,72 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRbacApplicationRequest instance
+     * @return the RbacApplicationRequest instance
      */
-    public IRbacApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RbacApplicationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RbacApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IUnifiedRbacResourceNamespaceCollectionRequestBuilder resourceNamespaces() {
+    /**
+     *  Gets a request builder for the UnifiedRbacResourceNamespace collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRbacResourceNamespaceCollectionRequestBuilder resourceNamespaces() {
         return new UnifiedRbacResourceNamespaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces"), getClient(), null);
     }
 
-    public IUnifiedRbacResourceNamespaceRequestBuilder resourceNamespaces(final String id) {
+    /**
+     * Gets a request builder for the UnifiedRbacResourceNamespace item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRbacResourceNamespaceRequestBuilder resourceNamespaces(@Nonnull final String id) {
         return new UnifiedRbacResourceNamespaceRequestBuilder(getRequestUrlWithAdditionalSegment("resourceNamespaces") + "/" + id, getClient(), null);
     }
-    public IUnifiedRoleAssignmentCollectionRequestBuilder roleAssignments() {
+    /**
+     *  Gets a request builder for the UnifiedRoleAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new UnifiedRoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
-    public IUnifiedRoleAssignmentRequestBuilder roleAssignments(final String id) {
+    /**
+     * Gets a request builder for the UnifiedRoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
         return new UnifiedRoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
-    public IUnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions() {
+    /**
+     *  Gets a request builder for the UnifiedRoleDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleDefinitionCollectionRequestBuilder roleDefinitions() {
         return new UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions"), getClient(), null);
     }
 
-    public IUnifiedRoleDefinitionRequestBuilder roleDefinitions(final String id) {
+    /**
+     * Gets a request builder for the UnifiedRoleDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
         return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
     }
 }

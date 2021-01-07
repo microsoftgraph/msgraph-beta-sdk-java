@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookCommentReply;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Comment Reply Request.
  */
-public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkbookCommentReplyRequest {
+public class WorkbookCommentReplyRequest extends BaseRequest<WorkbookCommentReply> {
 	
     /**
      * The request for the WorkbookCommentReply
@@ -29,7 +31,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookCommentReplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookCommentReplyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookCommentReply.class);
     }
 
@@ -38,7 +40,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookCommentReply> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookCommentReply> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @return the WorkbookCommentReply from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookCommentReply get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookCommentReply> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookCommentReply> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param sourceWorkbookCommentReply the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookCommentReply sourceWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback) {
+    public void patch(@Nonnull final WorkbookCommentReply sourceWorkbookCommentReply, @Nonnull final ICallback<? super WorkbookCommentReply> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookCommentReply);
     }
 
@@ -87,7 +90,8 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @return the updated WorkbookCommentReply
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookCommentReply patch(final WorkbookCommentReply sourceWorkbookCommentReply) throws ClientException {
+    @Nullable
+    public WorkbookCommentReply patch(@Nonnull final WorkbookCommentReply sourceWorkbookCommentReply) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookCommentReply);
     }
 
@@ -97,7 +101,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param newWorkbookCommentReply the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback) {
+    public void post(@Nonnull final WorkbookCommentReply newWorkbookCommentReply, @Nonnull final ICallback<? super WorkbookCommentReply> callback) {
         send(HttpMethod.POST, callback, newWorkbookCommentReply);
     }
 
@@ -108,7 +112,8 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @return the created WorkbookCommentReply
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookCommentReply post(final WorkbookCommentReply newWorkbookCommentReply) throws ClientException {
+    @Nullable
+    public WorkbookCommentReply post(@Nonnull final WorkbookCommentReply newWorkbookCommentReply) throws ClientException {
         return send(HttpMethod.POST, newWorkbookCommentReply);
     }
 
@@ -118,7 +123,7 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param newWorkbookCommentReply the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookCommentReply newWorkbookCommentReply, final ICallback<? super WorkbookCommentReply> callback) {
+    public void put(@Nonnull final WorkbookCommentReply newWorkbookCommentReply, @Nonnull final ICallback<? super WorkbookCommentReply> callback) {
         send(HttpMethod.PUT, callback, newWorkbookCommentReply);
     }
 
@@ -129,7 +134,8 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @return the created WorkbookCommentReply
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookCommentReply put(final WorkbookCommentReply newWorkbookCommentReply) throws ClientException {
+    @Nullable
+    public WorkbookCommentReply put(@Nonnull final WorkbookCommentReply newWorkbookCommentReply) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookCommentReply);
     }
 
@@ -139,9 +145,10 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookCommentReplyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookCommentReplyRequest)this;
+     @Nonnull
+     public WorkbookCommentReplyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WorkbookCommentReplyRequest extends BaseRequest implements IWorkboo
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookCommentReplyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookCommentReplyRequest)this;
+     @Nonnull
+     public WorkbookCommentReplyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

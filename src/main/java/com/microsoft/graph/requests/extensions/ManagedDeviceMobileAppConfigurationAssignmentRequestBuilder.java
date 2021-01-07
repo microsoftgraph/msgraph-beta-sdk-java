@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Assignment Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends BaseRequestBuilder<ManagedDeviceMobileAppConfigurationAssignment> {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationAssignment
@@ -28,7 +30,7 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationAssignmentRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationAssignmentRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder extends
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationAssignmentRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationAssignmentRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

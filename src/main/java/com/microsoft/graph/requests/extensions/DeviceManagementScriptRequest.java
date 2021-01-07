@@ -12,26 +12,19 @@ import com.microsoft.graph.models.extensions.DeviceManagementScript;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -41,7 +34,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Script Request.
  */
-public class DeviceManagementScriptRequest extends BaseRequest implements IDeviceManagementScriptRequest {
+public class DeviceManagementScriptRequest extends BaseRequest<DeviceManagementScript> {
 	
     /**
      * The request for the DeviceManagementScript
@@ -50,7 +43,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementScriptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementScriptRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementScript.class);
     }
 
@@ -59,7 +52,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementScript> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -69,6 +62,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @return the DeviceManagementScript from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementScript get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -78,7 +72,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementScript> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -97,7 +91,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param sourceDeviceManagementScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScript sourceDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback) {
+    public void patch(@Nonnull final DeviceManagementScript sourceDeviceManagementScript, @Nonnull final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScript);
     }
 
@@ -108,7 +102,8 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @return the updated DeviceManagementScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScript patch(final DeviceManagementScript sourceDeviceManagementScript) throws ClientException {
+    @Nullable
+    public DeviceManagementScript patch(@Nonnull final DeviceManagementScript sourceDeviceManagementScript) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementScript);
     }
 
@@ -118,7 +113,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceManagementScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScript newDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback) {
+    public void post(@Nonnull final DeviceManagementScript newDeviceManagementScript, @Nonnull final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScript);
     }
 
@@ -129,7 +124,8 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @return the created DeviceManagementScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScript post(final DeviceManagementScript newDeviceManagementScript) throws ClientException {
+    @Nullable
+    public DeviceManagementScript post(@Nonnull final DeviceManagementScript newDeviceManagementScript) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementScript);
     }
 
@@ -139,7 +135,7 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceManagementScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScript newDeviceManagementScript, final ICallback<? super DeviceManagementScript> callback) {
+    public void put(@Nonnull final DeviceManagementScript newDeviceManagementScript, @Nonnull final ICallback<? super DeviceManagementScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScript);
     }
 
@@ -150,7 +146,8 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @return the created DeviceManagementScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScript put(final DeviceManagementScript newDeviceManagementScript) throws ClientException {
+    @Nullable
+    public DeviceManagementScript put(@Nonnull final DeviceManagementScript newDeviceManagementScript) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementScript);
     }
 
@@ -160,9 +157,10 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementScriptRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementScriptRequest)this;
+     @Nonnull
+     public DeviceManagementScriptRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -171,9 +169,10 @@ public class DeviceManagementScriptRequest extends BaseRequest implements IDevic
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementScriptRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptRequest)this;
+     @Nonnull
+     public DeviceManagementScriptRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

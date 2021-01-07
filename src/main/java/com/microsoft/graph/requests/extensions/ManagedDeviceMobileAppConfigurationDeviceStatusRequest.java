@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Mobile App Configuration Device Status Request.
  */
-public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends BaseRequest implements IManagedDeviceMobileAppConfigurationDeviceStatusRequest {
+public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends BaseRequest<ManagedDeviceMobileAppConfigurationDeviceStatus> {
 	
     /**
      * The request for the ManagedDeviceMobileAppConfigurationDeviceStatus
@@ -29,7 +31,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceMobileAppConfigurationDeviceStatus.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return the ManagedDeviceMobileAppConfigurationDeviceStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedDeviceMobileAppConfigurationDeviceStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param sourceManagedDeviceMobileAppConfigurationDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void patch(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -87,7 +90,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return the updated ManagedDeviceMobileAppConfigurationDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatus patch(final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
+    @Nullable
+    public ManagedDeviceMobileAppConfigurationDeviceStatus patch(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus sourceManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -97,7 +101,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param newManagedDeviceMobileAppConfigurationDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void post(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -108,7 +112,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return the created ManagedDeviceMobileAppConfigurationDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatus post(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
+    @Nullable
+    public ManagedDeviceMobileAppConfigurationDeviceStatus post(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
         return send(HttpMethod.POST, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -118,7 +123,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param newManagedDeviceMobileAppConfigurationDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
+    public void put(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus, @Nonnull final ICallback<? super ManagedDeviceMobileAppConfigurationDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -129,7 +134,8 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @return the created ManagedDeviceMobileAppConfigurationDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatus put(final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
+    @Nullable
+    public ManagedDeviceMobileAppConfigurationDeviceStatus put(@Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus newManagedDeviceMobileAppConfigurationDeviceStatus) throws ClientException {
         return send(HttpMethod.PUT, newManagedDeviceMobileAppConfigurationDeviceStatus);
     }
 
@@ -139,9 +145,10 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationDeviceStatusRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedDeviceMobileAppConfigurationDeviceStatusRequest)this;
+     @Nonnull
+     public ManagedDeviceMobileAppConfigurationDeviceStatusRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequest extends Base
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedDeviceMobileAppConfigurationDeviceStatusRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedDeviceMobileAppConfigurationDeviceStatusRequest)this;
+     @Nonnull
+     public ManagedDeviceMobileAppConfigurationDeviceStatusRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

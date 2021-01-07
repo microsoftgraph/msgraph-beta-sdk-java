@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartGridlines;
-import com.microsoft.graph.requests.extensions.IWorkbookChartGridlinesFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartGridlinesFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Gridlines Request Builder.
  */
-public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder implements IWorkbookChartGridlinesRequestBuilder {
+public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder<WorkbookChartGridlines> {
 
     /**
      * The request builder for the WorkbookChartGridlines
@@ -30,7 +31,7 @@ public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartGridlinesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartGridlinesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartGridlinesRequest instance
+     * @return the WorkbookChartGridlinesRequest instance
      */
-    public IWorkbookChartGridlinesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartGridlinesRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartGridlinesRequest instance
+     * @return the WorkbookChartGridlinesRequest instance
      */
-    public IWorkbookChartGridlinesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartGridlinesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartGridlinesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class WorkbookChartGridlinesRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for WorkbookChartGridlinesFormat
      *
-     * @return the IWorkbookChartGridlinesFormatRequestBuilder instance
+     * @return the WorkbookChartGridlinesFormatRequestBuilder instance
      */
-    public IWorkbookChartGridlinesFormatRequestBuilder format() {
+    @Nonnull
+    public WorkbookChartGridlinesFormatRequestBuilder format() {
         return new WorkbookChartGridlinesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

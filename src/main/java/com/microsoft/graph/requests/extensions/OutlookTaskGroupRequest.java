@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookTaskGroup;
-import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook Task Group Request.
  */
-public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTaskGroupRequest {
+public class OutlookTaskGroupRequest extends BaseRequest<OutlookTaskGroup> {
 	
     /**
      * The request for the OutlookTaskGroup
@@ -33,7 +33,7 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookTaskGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookTaskGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookTaskGroup.class);
     }
 
@@ -42,7 +42,7 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OutlookTaskGroup> callback) {
+    public void get(@Nonnull final ICallback<? super OutlookTaskGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @return the OutlookTaskGroup from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OutlookTaskGroup get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OutlookTaskGroup> callback) {
+    public void delete(@Nonnull final ICallback<? super OutlookTaskGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @param sourceOutlookTaskGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookTaskGroup sourceOutlookTaskGroup, final ICallback<? super OutlookTaskGroup> callback) {
+    public void patch(@Nonnull final OutlookTaskGroup sourceOutlookTaskGroup, @Nonnull final ICallback<? super OutlookTaskGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookTaskGroup);
     }
 
@@ -91,7 +92,8 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @return the updated OutlookTaskGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTaskGroup patch(final OutlookTaskGroup sourceOutlookTaskGroup) throws ClientException {
+    @Nullable
+    public OutlookTaskGroup patch(@Nonnull final OutlookTaskGroup sourceOutlookTaskGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourceOutlookTaskGroup);
     }
 
@@ -101,7 +103,7 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @param newOutlookTaskGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookTaskGroup newOutlookTaskGroup, final ICallback<? super OutlookTaskGroup> callback) {
+    public void post(@Nonnull final OutlookTaskGroup newOutlookTaskGroup, @Nonnull final ICallback<? super OutlookTaskGroup> callback) {
         send(HttpMethod.POST, callback, newOutlookTaskGroup);
     }
 
@@ -112,7 +114,8 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @return the created OutlookTaskGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTaskGroup post(final OutlookTaskGroup newOutlookTaskGroup) throws ClientException {
+    @Nullable
+    public OutlookTaskGroup post(@Nonnull final OutlookTaskGroup newOutlookTaskGroup) throws ClientException {
         return send(HttpMethod.POST, newOutlookTaskGroup);
     }
 
@@ -122,7 +125,7 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @param newOutlookTaskGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookTaskGroup newOutlookTaskGroup, final ICallback<? super OutlookTaskGroup> callback) {
+    public void put(@Nonnull final OutlookTaskGroup newOutlookTaskGroup, @Nonnull final ICallback<? super OutlookTaskGroup> callback) {
         send(HttpMethod.PUT, callback, newOutlookTaskGroup);
     }
 
@@ -133,7 +136,8 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @return the created OutlookTaskGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTaskGroup put(final OutlookTaskGroup newOutlookTaskGroup) throws ClientException {
+    @Nullable
+    public OutlookTaskGroup put(@Nonnull final OutlookTaskGroup newOutlookTaskGroup) throws ClientException {
         return send(HttpMethod.PUT, newOutlookTaskGroup);
     }
 
@@ -143,9 +147,10 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @param value the select clause
      * @return the updated request
      */
-     public IOutlookTaskGroupRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OutlookTaskGroupRequest)this;
+     @Nonnull
+     public OutlookTaskGroupRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class OutlookTaskGroupRequest extends BaseRequest implements IOutlookTask
      * @param value the expand clause
      * @return the updated request
      */
-     public IOutlookTaskGroupRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookTaskGroupRequest)this;
+     @Nonnull
+     public OutlookTaskGroupRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

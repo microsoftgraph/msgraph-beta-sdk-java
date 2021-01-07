@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsOfficeClientConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Office Client Configuration Request.
  */
-public class WindowsOfficeClientConfigurationRequest extends BaseRequest implements IWindowsOfficeClientConfigurationRequest {
+public class WindowsOfficeClientConfigurationRequest extends BaseRequest<WindowsOfficeClientConfiguration> {
 	
     /**
      * The request for the WindowsOfficeClientConfiguration
@@ -29,7 +31,7 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsOfficeClientConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsOfficeClientConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsOfficeClientConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsOfficeClientConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsOfficeClientConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @return the WindowsOfficeClientConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsOfficeClientConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsOfficeClientConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsOfficeClientConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @param sourceWindowsOfficeClientConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsOfficeClientConfiguration sourceWindowsOfficeClientConfiguration, final ICallback<? super WindowsOfficeClientConfiguration> callback) {
+    public void patch(@Nonnull final WindowsOfficeClientConfiguration sourceWindowsOfficeClientConfiguration, @Nonnull final ICallback<? super WindowsOfficeClientConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsOfficeClientConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @return the updated WindowsOfficeClientConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsOfficeClientConfiguration patch(final WindowsOfficeClientConfiguration sourceWindowsOfficeClientConfiguration) throws ClientException {
+    @Nullable
+    public WindowsOfficeClientConfiguration patch(@Nonnull final WindowsOfficeClientConfiguration sourceWindowsOfficeClientConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsOfficeClientConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @param newWindowsOfficeClientConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<? super WindowsOfficeClientConfiguration> callback) {
+    public void post(@Nonnull final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, @Nonnull final ICallback<? super WindowsOfficeClientConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsOfficeClientConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @return the created WindowsOfficeClientConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsOfficeClientConfiguration post(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration) throws ClientException {
+    @Nullable
+    public WindowsOfficeClientConfiguration post(@Nonnull final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindowsOfficeClientConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @param newWindowsOfficeClientConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, final ICallback<? super WindowsOfficeClientConfiguration> callback) {
+    public void put(@Nonnull final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration, @Nonnull final ICallback<? super WindowsOfficeClientConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsOfficeClientConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @return the created WindowsOfficeClientConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsOfficeClientConfiguration put(final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration) throws ClientException {
+    @Nullable
+    public WindowsOfficeClientConfiguration put(@Nonnull final WindowsOfficeClientConfiguration newWindowsOfficeClientConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsOfficeClientConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsOfficeClientConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsOfficeClientConfigurationRequest)this;
+     @Nonnull
+     public WindowsOfficeClientConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsOfficeClientConfigurationRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsOfficeClientConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsOfficeClientConfigurationRequest)this;
+     @Nonnull
+     public WindowsOfficeClientConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

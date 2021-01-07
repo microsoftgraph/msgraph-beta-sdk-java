@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Note;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -36,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Note Request.
  */
-public class NoteRequest extends BaseRequest implements INoteRequest {
+public class NoteRequest extends BaseRequest<Note> {
 	
     /**
      * The request for the Note
@@ -45,7 +39,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NoteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NoteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Note.class);
     }
 
@@ -54,7 +48,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Note> callback) {
+    public void get(@Nonnull final ICallback<? super Note> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +58,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @return the Note from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Note get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +68,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Note> callback) {
+    public void delete(@Nonnull final ICallback<? super Note> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +87,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param sourceNote the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Note sourceNote, final ICallback<? super Note> callback) {
+    public void patch(@Nonnull final Note sourceNote, @Nonnull final ICallback<? super Note> callback) {
         send(HttpMethod.PATCH, callback, sourceNote);
     }
 
@@ -103,7 +98,8 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @return the updated Note
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Note patch(final Note sourceNote) throws ClientException {
+    @Nullable
+    public Note patch(@Nonnull final Note sourceNote) throws ClientException {
         return send(HttpMethod.PATCH, sourceNote);
     }
 
@@ -113,7 +109,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param newNote the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Note newNote, final ICallback<? super Note> callback) {
+    public void post(@Nonnull final Note newNote, @Nonnull final ICallback<? super Note> callback) {
         send(HttpMethod.POST, callback, newNote);
     }
 
@@ -124,7 +120,8 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @return the created Note
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Note post(final Note newNote) throws ClientException {
+    @Nullable
+    public Note post(@Nonnull final Note newNote) throws ClientException {
         return send(HttpMethod.POST, newNote);
     }
 
@@ -134,7 +131,7 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param newNote the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Note newNote, final ICallback<? super Note> callback) {
+    public void put(@Nonnull final Note newNote, @Nonnull final ICallback<? super Note> callback) {
         send(HttpMethod.PUT, callback, newNote);
     }
 
@@ -145,7 +142,8 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @return the created Note
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Note put(final Note newNote) throws ClientException {
+    @Nullable
+    public Note put(@Nonnull final Note newNote) throws ClientException {
         return send(HttpMethod.PUT, newNote);
     }
 
@@ -155,9 +153,10 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public INoteRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (NoteRequest)this;
+     @Nonnull
+     public NoteRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +165,10 @@ public class NoteRequest extends BaseRequest implements INoteRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public INoteRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NoteRequest)this;
+     @Nonnull
+     public NoteRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CommsApplication;
-import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Comms Application Request Builder.
  */
-public class CommsApplicationRequestBuilder extends BaseRequestBuilder implements ICommsApplicationRequestBuilder {
+public class CommsApplicationRequestBuilder extends BaseRequestBuilder<CommsApplication> {
 
     /**
      * The request builder for the CommsApplication
@@ -36,7 +34,7 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommsApplicationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsApplicationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICommsApplicationRequest instance
+     * @return the CommsApplicationRequest instance
      */
-    public ICommsApplicationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CommsApplicationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class CommsApplicationRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICommsApplicationRequest instance
+     * @return the CommsApplicationRequest instance
      */
-    public ICommsApplicationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CommsApplicationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CommsApplicationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ICallCollectionRequestBuilder calls() {
+    /**
+     *  Gets a request builder for the Call collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CallCollectionRequestBuilder calls() {
         return new CallCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("calls"), getClient(), null);
     }
 
-    public ICallRequestBuilder calls(final String id) {
+    /**
+     * Gets a request builder for the Call item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CallRequestBuilder calls(@Nonnull final String id) {
         return new CallRequestBuilder(getRequestUrlWithAdditionalSegment("calls") + "/" + id, getClient(), null);
     }
-    public IOnlineMeetingCollectionRequestBuilder onlineMeetings() {
+    /**
+     *  Gets a request builder for the OnlineMeeting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OnlineMeetingCollectionRequestBuilder onlineMeetings() {
         return new OnlineMeetingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings"), getClient(), null);
     }
 
-    public IOnlineMeetingRequestBuilder onlineMeetings(final String id) {
+    /**
+     * Gets a request builder for the OnlineMeeting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OnlineMeetingRequestBuilder onlineMeetings(@Nonnull final String id) {
         return new OnlineMeetingRequestBuilder(getRequestUrlWithAdditionalSegment("onlineMeetings") + "/" + id, getClient(), null);
     }
 }

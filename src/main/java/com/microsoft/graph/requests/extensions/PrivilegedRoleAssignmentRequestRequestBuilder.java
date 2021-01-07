@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Privileged Role Assignment Request Request Builder.
  */
-public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBuilder implements IPrivilegedRoleAssignmentRequestRequestBuilder {
+public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBuilder<PrivilegedRoleAssignmentRequest> {
 
     /**
      * The request builder for the PrivilegedRoleAssignmentRequest
@@ -30,7 +31,7 @@ public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleAssignmentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleAssignmentRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedRoleAssignmentRequestRequest instance
+     * @return the PrivilegedRoleAssignmentRequestRequest instance
      */
-    public IPrivilegedRoleAssignmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrivilegedRoleAssignmentRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedRoleAssignmentRequestRequest instance
+     * @return the PrivilegedRoleAssignmentRequestRequest instance
      */
-    public IPrivilegedRoleAssignmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrivilegedRoleAssignmentRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,13 +62,19 @@ public class PrivilegedRoleAssignmentRequestRequestBuilder extends BaseRequestBu
     /**
      * Gets the request builder for PrivilegedRole
      *
-     * @return the IPrivilegedRoleRequestBuilder instance
+     * @return the PrivilegedRoleRequestBuilder instance
      */
-    public IPrivilegedRoleRequestBuilder roleInfo() {
+    @Nonnull
+    public PrivilegedRoleRequestBuilder roleInfo() {
         return new PrivilegedRoleRequestBuilder(getRequestUrlWithAdditionalSegment("roleInfo"), getClient(), null);
     }
 
-    public IPrivilegedRoleAssignmentRequestCancelRequestBuilder cancel() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public PrivilegedRoleAssignmentRequestCancelRequestBuilder cancel() {
         return new PrivilegedRoleAssignmentRequestCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LocationManagementCondition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Location Management Condition Request.
  */
-public class LocationManagementConditionRequest extends BaseRequest implements ILocationManagementConditionRequest {
+public class LocationManagementConditionRequest extends BaseRequest<LocationManagementCondition> {
 	
     /**
      * The request for the LocationManagementCondition
@@ -30,10 +32,10 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public LocationManagementConditionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends LocationManagementCondition> responseClass) {
+    public LocationManagementConditionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends LocationManagementCondition> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LocationManagementConditionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LocationManagementConditionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LocationManagementCondition.class);
     }
 
@@ -53,7 +55,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LocationManagementCondition> callback) {
+    public void get(@Nonnull final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @return the LocationManagementCondition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public LocationManagementCondition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LocationManagementCondition> callback) {
+    public void delete(@Nonnull final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param sourceLocationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LocationManagementCondition sourceLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback) {
+    public void patch(@Nonnull final LocationManagementCondition sourceLocationManagementCondition, @Nonnull final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceLocationManagementCondition);
     }
 
@@ -102,7 +105,8 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @return the updated LocationManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LocationManagementCondition patch(final LocationManagementCondition sourceLocationManagementCondition) throws ClientException {
+    @Nullable
+    public LocationManagementCondition patch(@Nonnull final LocationManagementCondition sourceLocationManagementCondition) throws ClientException {
         return send(HttpMethod.PATCH, sourceLocationManagementCondition);
     }
 
@@ -112,7 +116,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param newLocationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LocationManagementCondition newLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback) {
+    public void post(@Nonnull final LocationManagementCondition newLocationManagementCondition, @Nonnull final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.POST, callback, newLocationManagementCondition);
     }
 
@@ -123,7 +127,8 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @return the created LocationManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LocationManagementCondition post(final LocationManagementCondition newLocationManagementCondition) throws ClientException {
+    @Nullable
+    public LocationManagementCondition post(@Nonnull final LocationManagementCondition newLocationManagementCondition) throws ClientException {
         return send(HttpMethod.POST, newLocationManagementCondition);
     }
 
@@ -133,7 +138,7 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param newLocationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LocationManagementCondition newLocationManagementCondition, final ICallback<? super LocationManagementCondition> callback) {
+    public void put(@Nonnull final LocationManagementCondition newLocationManagementCondition, @Nonnull final ICallback<? super LocationManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newLocationManagementCondition);
     }
 
@@ -144,7 +149,8 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @return the created LocationManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LocationManagementCondition put(final LocationManagementCondition newLocationManagementCondition) throws ClientException {
+    @Nullable
+    public LocationManagementCondition put(@Nonnull final LocationManagementCondition newLocationManagementCondition) throws ClientException {
         return send(HttpMethod.PUT, newLocationManagementCondition);
     }
 
@@ -154,9 +160,10 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public ILocationManagementConditionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LocationManagementConditionRequest)this;
+     @Nonnull
+     public LocationManagementConditionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class LocationManagementConditionRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public ILocationManagementConditionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LocationManagementConditionRequest)this;
+     @Nonnull
+     public LocationManagementConditionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

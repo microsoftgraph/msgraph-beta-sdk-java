@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Setting Definition Request.
  */
-public class DeviceManagementSettingDefinitionRequest extends BaseRequest implements IDeviceManagementSettingDefinitionRequest {
+public class DeviceManagementSettingDefinitionRequest extends BaseRequest<DeviceManagementSettingDefinition> {
 	
     /**
      * The request for the DeviceManagementSettingDefinition
@@ -30,10 +32,10 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceManagementSettingDefinitionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceManagementSettingDefinition> responseClass) {
+    public DeviceManagementSettingDefinitionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceManagementSettingDefinition> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementSettingDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementSettingDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementSettingDefinition.class);
     }
 
@@ -53,7 +55,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementSettingDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @return the DeviceManagementSettingDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementSettingDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementSettingDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param sourceDeviceManagementSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback) {
+    public void patch(@Nonnull final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition, @Nonnull final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementSettingDefinition);
     }
 
@@ -102,7 +105,8 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @return the updated DeviceManagementSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementSettingDefinition patch(final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementSettingDefinition patch(@Nonnull final DeviceManagementSettingDefinition sourceDeviceManagementSettingDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementSettingDefinition);
     }
 
@@ -112,7 +116,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param newDeviceManagementSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback) {
+    public void post(@Nonnull final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, @Nonnull final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementSettingDefinition);
     }
 
@@ -123,7 +127,8 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @return the created DeviceManagementSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementSettingDefinition post(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementSettingDefinition post(@Nonnull final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementSettingDefinition);
     }
 
@@ -133,7 +138,7 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param newDeviceManagementSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, final ICallback<? super DeviceManagementSettingDefinition> callback) {
+    public void put(@Nonnull final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition, @Nonnull final ICallback<? super DeviceManagementSettingDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementSettingDefinition);
     }
 
@@ -144,7 +149,8 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @return the created DeviceManagementSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementSettingDefinition put(final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementSettingDefinition put(@Nonnull final DeviceManagementSettingDefinition newDeviceManagementSettingDefinition) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementSettingDefinition);
     }
 
@@ -154,9 +160,10 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementSettingDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementSettingDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class DeviceManagementSettingDefinitionRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementSettingDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementSettingDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Agreement Acceptance Request Builder.
  */
-public class AgreementAcceptanceRequestBuilder extends BaseRequestBuilder implements IAgreementAcceptanceRequestBuilder {
+public class AgreementAcceptanceRequestBuilder extends BaseRequestBuilder<AgreementAcceptance> {
 
     /**
      * The request builder for the AgreementAcceptance
@@ -28,7 +30,7 @@ public class AgreementAcceptanceRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementAcceptanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementAcceptanceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AgreementAcceptanceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAgreementAcceptanceRequest instance
+     * @return the AgreementAcceptanceRequest instance
      */
-    public IAgreementAcceptanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AgreementAcceptanceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class AgreementAcceptanceRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAgreementAcceptanceRequest instance
+     * @return the AgreementAcceptanceRequest instance
      */
-    public IAgreementAcceptanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AgreementAcceptanceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AgreementAcceptanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

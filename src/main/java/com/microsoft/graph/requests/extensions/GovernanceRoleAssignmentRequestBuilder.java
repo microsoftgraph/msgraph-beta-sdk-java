@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleAssignment;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Governance Role Assignment Request Builder.
  */
-public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder implements IGovernanceRoleAssignmentRequestBuilder {
+public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder<GovernanceRoleAssignment> {
 
     /**
      * The request builder for the GovernanceRoleAssignment
@@ -36,7 +34,7 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GovernanceRoleAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GovernanceRoleAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGovernanceRoleAssignmentRequest instance
+     * @return the GovernanceRoleAssignmentRequest instance
      */
-    public IGovernanceRoleAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GovernanceRoleAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,9 +53,10 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGovernanceRoleAssignmentRequest instance
+     * @return the GovernanceRoleAssignmentRequest instance
      */
-    public IGovernanceRoleAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GovernanceRoleAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -65,36 +65,40 @@ public class GovernanceRoleAssignmentRequestBuilder extends BaseRequestBuilder i
     /**
      * Gets the request builder for GovernanceRoleAssignment
      *
-     * @return the IGovernanceRoleAssignmentWithReferenceRequestBuilder instance
+     * @return the GovernanceRoleAssignmentWithReferenceRequestBuilder instance
      */
-    public IGovernanceRoleAssignmentWithReferenceRequestBuilder linkedEligibleRoleAssignment() {
+    @Nonnull
+    public GovernanceRoleAssignmentWithReferenceRequestBuilder linkedEligibleRoleAssignment() {
         return new GovernanceRoleAssignmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedEligibleRoleAssignment"), getClient(), null);
     }
 
     /**
      * Gets the request builder for GovernanceResource
      *
-     * @return the IGovernanceResourceRequestBuilder instance
+     * @return the GovernanceResourceRequestBuilder instance
      */
-    public IGovernanceResourceRequestBuilder resource() {
+    @Nonnull
+    public GovernanceResourceRequestBuilder resource() {
         return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 
     /**
      * Gets the request builder for GovernanceRoleDefinition
      *
-     * @return the IGovernanceRoleDefinitionRequestBuilder instance
+     * @return the GovernanceRoleDefinitionRequestBuilder instance
      */
-    public IGovernanceRoleDefinitionRequestBuilder roleDefinition() {
+    @Nonnull
+    public GovernanceRoleDefinitionRequestBuilder roleDefinition() {
         return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 
     /**
      * Gets the request builder for GovernanceSubject
      *
-     * @return the IGovernanceSubjectRequestBuilder instance
+     * @return the GovernanceSubjectRequestBuilder instance
      */
-    public IGovernanceSubjectRequestBuilder subject() {
+    @Nonnull
+    public GovernanceSubjectRequestBuilder subject() {
         return new GovernanceSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("subject"), getClient(), null);
     }
 }

@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Case;
-import com.microsoft.graph.requests.extensions.ICustodianCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustodianRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustodianCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustodianRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILegalholdCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILegalholdRequestBuilder;
 import com.microsoft.graph.requests.extensions.LegalholdCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LegalholdRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReviewSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Case Request Builder.
  */
-public class CaseRequestBuilder extends BaseRequestBuilder implements ICaseRequestBuilder {
+public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
 
     /**
      * The request builder for the Case
@@ -44,7 +38,7 @@ public class CaseRequestBuilder extends BaseRequestBuilder implements ICaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CaseRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CaseRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,9 +46,10 @@ public class CaseRequestBuilder extends BaseRequestBuilder implements ICaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICaseRequest instance
+     * @return the CaseRequest instance
      */
-    public ICaseRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CaseRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,47 +57,110 @@ public class CaseRequestBuilder extends BaseRequestBuilder implements ICaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICaseRequest instance
+     * @return the CaseRequest instance
      */
-    public ICaseRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CaseRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CaseRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ICustodianCollectionRequestBuilder custodians() {
+    /**
+     *  Gets a request builder for the Custodian collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustodianCollectionRequestBuilder custodians() {
         return new CustodianCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("custodians"), getClient(), null);
     }
 
-    public ICustodianRequestBuilder custodians(final String id) {
+    /**
+     * Gets a request builder for the Custodian item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustodianRequestBuilder custodians(@Nonnull final String id) {
         return new CustodianRequestBuilder(getRequestUrlWithAdditionalSegment("custodians") + "/" + id, getClient(), null);
     }
-    public ILegalholdCollectionRequestBuilder legalholds() {
+    /**
+     *  Gets a request builder for the Legalhold collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public LegalholdCollectionRequestBuilder legalholds() {
         return new LegalholdCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("legalholds"), getClient(), null);
     }
 
-    public ILegalholdRequestBuilder legalholds(final String id) {
+    /**
+     * Gets a request builder for the Legalhold item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public LegalholdRequestBuilder legalholds(@Nonnull final String id) {
         return new LegalholdRequestBuilder(getRequestUrlWithAdditionalSegment("legalholds") + "/" + id, getClient(), null);
     }
-    public ICaseOperationCollectionRequestBuilder operations() {
+    /**
+     *  Gets a request builder for the CaseOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CaseOperationCollectionRequestBuilder operations() {
         return new CaseOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public ICaseOperationRequestBuilder operations(final String id) {
+    /**
+     * Gets a request builder for the CaseOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CaseOperationRequestBuilder operations(@Nonnull final String id) {
         return new CaseOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
-    public IReviewSetCollectionRequestBuilder reviewSets() {
+    /**
+     *  Gets a request builder for the ReviewSet collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ReviewSetCollectionRequestBuilder reviewSets() {
         return new ReviewSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets"), getClient(), null);
     }
 
-    public IReviewSetRequestBuilder reviewSets(final String id) {
+    /**
+     * Gets a request builder for the ReviewSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ReviewSetRequestBuilder reviewSets(@Nonnull final String id) {
         return new ReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("reviewSets") + "/" + id, getClient(), null);
     }
 
-    public ICaseCloseRequestBuilder close() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CaseCloseRequestBuilder close() {
         return new CaseCloseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.close"), getClient(), null);
     }
 
-    public ICaseReopenRequestBuilder reopen() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CaseReopenRequestBuilder reopen() {
         return new CaseReopenRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reopen"), getClient(), null);
     }
 }

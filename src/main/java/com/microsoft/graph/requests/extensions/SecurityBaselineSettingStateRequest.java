@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineSettingState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Baseline Setting State Request.
  */
-public class SecurityBaselineSettingStateRequest extends BaseRequest implements ISecurityBaselineSettingStateRequest {
+public class SecurityBaselineSettingStateRequest extends BaseRequest<SecurityBaselineSettingState> {
 	
     /**
      * The request for the SecurityBaselineSettingState
@@ -29,7 +31,7 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityBaselineSettingStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityBaselineSettingStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecurityBaselineSettingState.class);
     }
 
@@ -38,7 +40,7 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SecurityBaselineSettingState> callback) {
+    public void get(@Nonnull final ICallback<? super SecurityBaselineSettingState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @return the SecurityBaselineSettingState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SecurityBaselineSettingState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SecurityBaselineSettingState> callback) {
+    public void delete(@Nonnull final ICallback<? super SecurityBaselineSettingState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @param sourceSecurityBaselineSettingState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecurityBaselineSettingState sourceSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback) {
+    public void patch(@Nonnull final SecurityBaselineSettingState sourceSecurityBaselineSettingState, @Nonnull final ICallback<? super SecurityBaselineSettingState> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurityBaselineSettingState);
     }
 
@@ -87,7 +90,8 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @return the updated SecurityBaselineSettingState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineSettingState patch(final SecurityBaselineSettingState sourceSecurityBaselineSettingState) throws ClientException {
+    @Nullable
+    public SecurityBaselineSettingState patch(@Nonnull final SecurityBaselineSettingState sourceSecurityBaselineSettingState) throws ClientException {
         return send(HttpMethod.PATCH, sourceSecurityBaselineSettingState);
     }
 
@@ -97,7 +101,7 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @param newSecurityBaselineSettingState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback) {
+    public void post(@Nonnull final SecurityBaselineSettingState newSecurityBaselineSettingState, @Nonnull final ICallback<? super SecurityBaselineSettingState> callback) {
         send(HttpMethod.POST, callback, newSecurityBaselineSettingState);
     }
 
@@ -108,7 +112,8 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @return the created SecurityBaselineSettingState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineSettingState post(final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException {
+    @Nullable
+    public SecurityBaselineSettingState post(@Nonnull final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException {
         return send(HttpMethod.POST, newSecurityBaselineSettingState);
     }
 
@@ -118,7 +123,7 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @param newSecurityBaselineSettingState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecurityBaselineSettingState newSecurityBaselineSettingState, final ICallback<? super SecurityBaselineSettingState> callback) {
+    public void put(@Nonnull final SecurityBaselineSettingState newSecurityBaselineSettingState, @Nonnull final ICallback<? super SecurityBaselineSettingState> callback) {
         send(HttpMethod.PUT, callback, newSecurityBaselineSettingState);
     }
 
@@ -129,7 +134,8 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @return the created SecurityBaselineSettingState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineSettingState put(final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException {
+    @Nullable
+    public SecurityBaselineSettingState put(@Nonnull final SecurityBaselineSettingState newSecurityBaselineSettingState) throws ClientException {
         return send(HttpMethod.PUT, newSecurityBaselineSettingState);
     }
 
@@ -139,9 +145,10 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public ISecurityBaselineSettingStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecurityBaselineSettingStateRequest)this;
+     @Nonnull
+     public SecurityBaselineSettingStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SecurityBaselineSettingStateRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecurityBaselineSettingStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityBaselineSettingStateRequest)this;
+     @Nonnull
+     public SecurityBaselineSettingStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

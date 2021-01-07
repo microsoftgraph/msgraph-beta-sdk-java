@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesAgentGroup;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the On Premises Agent Group Request.
  */
-public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremisesAgentGroupRequest {
+public class OnPremisesAgentGroupRequest extends BaseRequest<OnPremisesAgentGroup> {
 	
     /**
      * The request for the OnPremisesAgentGroup
@@ -37,7 +35,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesAgentGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnPremisesAgentGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnPremisesAgentGroup.class);
     }
 
@@ -46,7 +44,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnPremisesAgentGroup> callback) {
+    public void get(@Nonnull final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @return the OnPremisesAgentGroup from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnPremisesAgentGroup get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnPremisesAgentGroup> callback) {
+    public void delete(@Nonnull final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param sourceOnPremisesAgentGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnPremisesAgentGroup sourceOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback) {
+    public void patch(@Nonnull final OnPremisesAgentGroup sourceOnPremisesAgentGroup, @Nonnull final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceOnPremisesAgentGroup);
     }
 
@@ -95,7 +94,8 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @return the updated OnPremisesAgentGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesAgentGroup patch(final OnPremisesAgentGroup sourceOnPremisesAgentGroup) throws ClientException {
+    @Nullable
+    public OnPremisesAgentGroup patch(@Nonnull final OnPremisesAgentGroup sourceOnPremisesAgentGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnPremisesAgentGroup);
     }
 
@@ -105,7 +105,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param newOnPremisesAgentGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback) {
+    public void post(@Nonnull final OnPremisesAgentGroup newOnPremisesAgentGroup, @Nonnull final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.POST, callback, newOnPremisesAgentGroup);
     }
 
@@ -116,7 +116,8 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @return the created OnPremisesAgentGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesAgentGroup post(final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException {
+    @Nullable
+    public OnPremisesAgentGroup post(@Nonnull final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException {
         return send(HttpMethod.POST, newOnPremisesAgentGroup);
     }
 
@@ -126,7 +127,7 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param newOnPremisesAgentGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnPremisesAgentGroup newOnPremisesAgentGroup, final ICallback<? super OnPremisesAgentGroup> callback) {
+    public void put(@Nonnull final OnPremisesAgentGroup newOnPremisesAgentGroup, @Nonnull final ICallback<? super OnPremisesAgentGroup> callback) {
         send(HttpMethod.PUT, callback, newOnPremisesAgentGroup);
     }
 
@@ -137,7 +138,8 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @return the created OnPremisesAgentGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesAgentGroup put(final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException {
+    @Nullable
+    public OnPremisesAgentGroup put(@Nonnull final OnPremisesAgentGroup newOnPremisesAgentGroup) throws ClientException {
         return send(HttpMethod.PUT, newOnPremisesAgentGroup);
     }
 
@@ -147,9 +149,10 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param value the select clause
      * @return the updated request
      */
-     public IOnPremisesAgentGroupRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnPremisesAgentGroupRequest)this;
+     @Nonnull
+     public OnPremisesAgentGroupRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class OnPremisesAgentGroupRequest extends BaseRequest implements IOnPremi
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnPremisesAgentGroupRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnPremisesAgentGroupRequest)this;
+     @Nonnull
+     public OnPremisesAgentGroupRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

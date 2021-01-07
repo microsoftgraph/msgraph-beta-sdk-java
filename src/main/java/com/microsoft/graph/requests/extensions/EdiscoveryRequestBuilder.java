@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Ediscovery;
-import com.microsoft.graph.requests.extensions.ICaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ediscovery Request Builder.
  */
-public class EdiscoveryRequestBuilder extends BaseRequestBuilder implements IEdiscoveryRequestBuilder {
+public class EdiscoveryRequestBuilder extends BaseRequestBuilder<Ediscovery> {
 
     /**
      * The request builder for the Ediscovery
@@ -32,7 +32,7 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder implements IEdi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EdiscoveryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EdiscoveryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder implements IEdi
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEdiscoveryRequest instance
+     * @return the EdiscoveryRequest instance
      */
-    public IEdiscoveryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EdiscoveryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder implements IEdi
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEdiscoveryRequest instance
+     * @return the EdiscoveryRequest instance
      */
-    public IEdiscoveryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EdiscoveryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EdiscoveryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ICaseCollectionRequestBuilder cases() {
+    /**
+     *  Gets a request builder for the Case collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CaseCollectionRequestBuilder cases() {
         return new CaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cases"), getClient(), null);
     }
 
-    public ICaseRequestBuilder cases(final String id) {
+    /**
+     * Gets a request builder for the Case item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CaseRequestBuilder cases(@Nonnull final String id) {
         return new CaseRequestBuilder(getRequestUrlWithAdditionalSegment("cases") + "/" + id, getClient(), null);
     }
 }

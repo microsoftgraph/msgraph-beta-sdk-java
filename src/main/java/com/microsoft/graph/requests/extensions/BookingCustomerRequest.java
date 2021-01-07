@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BookingCustomer;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Booking Customer Request.
  */
-public class BookingCustomerRequest extends BaseRequest implements IBookingCustomerRequest {
+public class BookingCustomerRequest extends BaseRequest<BookingCustomer> {
 	
     /**
      * The request for the BookingCustomer
@@ -29,7 +31,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BookingCustomerRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BookingCustomerRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, BookingCustomer.class);
     }
 
@@ -38,7 +40,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super BookingCustomer> callback) {
+    public void get(@Nonnull final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @return the BookingCustomer from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public BookingCustomer get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super BookingCustomer> callback) {
+    public void delete(@Nonnull final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param sourceBookingCustomer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BookingCustomer sourceBookingCustomer, final ICallback<? super BookingCustomer> callback) {
+    public void patch(@Nonnull final BookingCustomer sourceBookingCustomer, @Nonnull final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.PATCH, callback, sourceBookingCustomer);
     }
 
@@ -87,7 +90,8 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @return the updated BookingCustomer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingCustomer patch(final BookingCustomer sourceBookingCustomer) throws ClientException {
+    @Nullable
+    public BookingCustomer patch(@Nonnull final BookingCustomer sourceBookingCustomer) throws ClientException {
         return send(HttpMethod.PATCH, sourceBookingCustomer);
     }
 
@@ -97,7 +101,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param newBookingCustomer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BookingCustomer newBookingCustomer, final ICallback<? super BookingCustomer> callback) {
+    public void post(@Nonnull final BookingCustomer newBookingCustomer, @Nonnull final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.POST, callback, newBookingCustomer);
     }
 
@@ -108,7 +112,8 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @return the created BookingCustomer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingCustomer post(final BookingCustomer newBookingCustomer) throws ClientException {
+    @Nullable
+    public BookingCustomer post(@Nonnull final BookingCustomer newBookingCustomer) throws ClientException {
         return send(HttpMethod.POST, newBookingCustomer);
     }
 
@@ -118,7 +123,7 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param newBookingCustomer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BookingCustomer newBookingCustomer, final ICallback<? super BookingCustomer> callback) {
+    public void put(@Nonnull final BookingCustomer newBookingCustomer, @Nonnull final ICallback<? super BookingCustomer> callback) {
         send(HttpMethod.PUT, callback, newBookingCustomer);
     }
 
@@ -129,7 +134,8 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @return the created BookingCustomer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingCustomer put(final BookingCustomer newBookingCustomer) throws ClientException {
+    @Nullable
+    public BookingCustomer put(@Nonnull final BookingCustomer newBookingCustomer) throws ClientException {
         return send(HttpMethod.PUT, newBookingCustomer);
     }
 
@@ -139,9 +145,10 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param value the select clause
      * @return the updated request
      */
-     public IBookingCustomerRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (BookingCustomerRequest)this;
+     @Nonnull
+     public BookingCustomerRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class BookingCustomerRequest extends BaseRequest implements IBookingCusto
      * @param value the expand clause
      * @return the updated request
      */
-     public IBookingCustomerRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BookingCustomerRequest)this;
+     @Nonnull
+     public BookingCustomerRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

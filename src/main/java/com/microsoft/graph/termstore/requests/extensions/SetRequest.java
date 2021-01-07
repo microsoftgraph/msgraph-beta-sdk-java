@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Set;
-import com.microsoft.graph.termstore.requests.extensions.ITermCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Set Request.
  */
-public class SetRequest extends BaseRequest implements ISetRequest {
+public class SetRequest extends BaseRequest<Set> {
 	
     /**
      * The request for the Set
@@ -39,7 +36,7 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Set.class);
     }
 
@@ -48,7 +45,7 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Set> callback) {
+    public void get(@Nonnull final ICallback<? super Set> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +55,7 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @return the Set from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Set get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +65,7 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Set> callback) {
+    public void delete(@Nonnull final ICallback<? super Set> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +84,7 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @param sourceSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Set sourceSet, final ICallback<? super Set> callback) {
+    public void patch(@Nonnull final Set sourceSet, @Nonnull final ICallback<? super Set> callback) {
         send(HttpMethod.PATCH, callback, sourceSet);
     }
 
@@ -97,7 +95,8 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @return the updated Set
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Set patch(final Set sourceSet) throws ClientException {
+    @Nullable
+    public Set patch(@Nonnull final Set sourceSet) throws ClientException {
         return send(HttpMethod.PATCH, sourceSet);
     }
 
@@ -107,7 +106,7 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @param newSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Set newSet, final ICallback<? super Set> callback) {
+    public void post(@Nonnull final Set newSet, @Nonnull final ICallback<? super Set> callback) {
         send(HttpMethod.POST, callback, newSet);
     }
 
@@ -118,7 +117,8 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @return the created Set
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Set post(final Set newSet) throws ClientException {
+    @Nullable
+    public Set post(@Nonnull final Set newSet) throws ClientException {
         return send(HttpMethod.POST, newSet);
     }
 
@@ -128,7 +128,7 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @param newSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Set newSet, final ICallback<? super Set> callback) {
+    public void put(@Nonnull final Set newSet, @Nonnull final ICallback<? super Set> callback) {
         send(HttpMethod.PUT, callback, newSet);
     }
 
@@ -139,7 +139,8 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @return the created Set
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Set put(final Set newSet) throws ClientException {
+    @Nullable
+    public Set put(@Nonnull final Set newSet) throws ClientException {
         return send(HttpMethod.PUT, newSet);
     }
 
@@ -149,9 +150,10 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SetRequest)this;
+     @Nonnull
+     public SetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +162,10 @@ public class SetRequest extends BaseRequest implements ISetRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SetRequest)this;
+     @Nonnull
+     public SetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

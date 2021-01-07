@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Picture;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseStreamRequest;
 
@@ -21,7 +23,7 @@ import java.io.InputStream;
 /**
  * The class for the Picture Content Stream Request.
  */
-public class PictureContentStreamRequest extends BaseStreamRequest<Picture> implements IPictureContentStreamRequest {
+public class PictureContentStreamRequest extends BaseStreamRequest<Picture> {
 
     /**
      * The request for the PictureContentStream
@@ -30,7 +32,7 @@ public class PictureContentStreamRequest extends BaseStreamRequest<Picture> impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PictureContentStreamRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PictureContentStreamRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Picture.class);
     }
 
@@ -39,7 +41,7 @@ public class PictureContentStreamRequest extends BaseStreamRequest<Picture> impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<InputStream> callback) {
+    public void get(@Nonnull final ICallback<InputStream> callback) {
         send(callback);
     }
 
@@ -49,6 +51,7 @@ public class PictureContentStreamRequest extends BaseStreamRequest<Picture> impl
      * @return the stream that the caller needs to close
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
+    @Nullable
     public InputStream get() throws ClientException {
        return send();
     }
@@ -59,7 +62,7 @@ public class PictureContentStreamRequest extends BaseStreamRequest<Picture> impl
      * @param fileContents the contents of the stream to upload
           * @param callback the callback to be called after success or failure
      */
-    public void put(final byte[] fileContents, final ICallback<? super Picture> callback) {
+    public void put(@Nonnull final byte[] fileContents, @Nonnull final ICallback<? super Picture> callback) {
         send(fileContents, callback);
     }
 
@@ -70,7 +73,8 @@ public class PictureContentStreamRequest extends BaseStreamRequest<Picture> impl
      * @return the result of the upload
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    public Picture put(final byte[] fileContents) throws ClientException {
+    @Nullable
+    public Picture put(@Nonnull final byte[] fileContents) throws ClientException {
         return send(fileContents);
     }
 }

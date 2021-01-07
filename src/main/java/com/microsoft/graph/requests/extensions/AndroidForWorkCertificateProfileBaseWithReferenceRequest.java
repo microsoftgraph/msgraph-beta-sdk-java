@@ -9,13 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkCertificateProfileBase;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidForWorkTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -25,7 +26,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Android For Work Certificate Profile Base With Reference Request.
  */
-public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends BaseRequest implements IAndroidForWorkCertificateProfileBaseWithReferenceRequest {
+public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends BaseWithReferenceRequest<AndroidForWorkCertificateProfileBase> {
 
     /**
      * The request for the AndroidForWorkCertificateProfileBase
@@ -34,46 +35,9 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkCertificateProfileBaseWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkCertificateProfileBaseWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkCertificateProfileBase.class);
     }
-
-    public void post(final AndroidForWorkCertificateProfileBase newAndroidForWorkCertificateProfileBase, final IJsonBackedObject payload, final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public AndroidForWorkCertificateProfileBase post(final AndroidForWorkCertificateProfileBase newAndroidForWorkCertificateProfileBase, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newAndroidForWorkCertificateProfileBase;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public AndroidForWorkCertificateProfileBase get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final AndroidForWorkCertificateProfileBase sourceAndroidForWorkCertificateProfileBase, final ICallback<? super AndroidForWorkCertificateProfileBase> callback) {
-		send(HttpMethod.PATCH, callback, sourceAndroidForWorkCertificateProfileBase);
-	}
-
-	public AndroidForWorkCertificateProfileBase patch(final AndroidForWorkCertificateProfileBase sourceAndroidForWorkCertificateProfileBase) throws ClientException {
-		return send(HttpMethod.PATCH, sourceAndroidForWorkCertificateProfileBase);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -81,9 +45,10 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
      * @param value the select clause
      * @return the updated request
      */
-    public IAndroidForWorkCertificateProfileBaseWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IAndroidForWorkCertificateProfileBaseWithReferenceRequest)this;
+    @Nonnull
+    public AndroidForWorkCertificateProfileBaseWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -92,8 +57,9 @@ public class AndroidForWorkCertificateProfileBaseWithReferenceRequest extends Ba
      * @param value the expand clause
      * @return the updated request
      */
-    public IAndroidForWorkCertificateProfileBaseWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidForWorkCertificateProfileBaseWithReferenceRequest)this;
+    @Nonnull
+    public AndroidForWorkCertificateProfileBaseWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Employee;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Employee Request Builder.
  */
-public class EmployeeRequestBuilder extends BaseRequestBuilder implements IEmployeeRequestBuilder {
+public class EmployeeRequestBuilder extends BaseRequestBuilder<Employee> {
 
     /**
      * The request builder for the Employee
@@ -32,7 +32,7 @@ public class EmployeeRequestBuilder extends BaseRequestBuilder implements IEmplo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmployeeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmployeeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class EmployeeRequestBuilder extends BaseRequestBuilder implements IEmplo
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEmployeeRequest instance
+     * @return the EmployeeRequest instance
      */
-    public IEmployeeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EmployeeRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class EmployeeRequestBuilder extends BaseRequestBuilder implements IEmplo
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEmployeeRequest instance
+     * @return the EmployeeRequest instance
      */
-    public IEmployeeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EmployeeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EmployeeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPictureCollectionRequestBuilder picture() {
+    /**
+     *  Gets a request builder for the Picture collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PictureCollectionRequestBuilder picture() {
         return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
-    public IPictureRequestBuilder picture(final String id) {
+    /**
+     * Gets a request builder for the Picture item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PictureRequestBuilder picture(@Nonnull final String id) {
         return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }

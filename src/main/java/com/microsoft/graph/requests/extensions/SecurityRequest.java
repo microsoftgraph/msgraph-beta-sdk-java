@@ -9,56 +9,34 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Security;
-import com.microsoft.graph.requests.extensions.IAlertCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAlertRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AlertRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudAppSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudAppSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDomainSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DomainSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHostSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHostSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.HostSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HostSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIpSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIpSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IpSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IpSecurityProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProviderTenantSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProviderTenantSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProviderTenantSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProviderTenantSettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreControlProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreControlProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecureScoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecureScoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityActionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITiIndicatorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITiIndicatorRequestBuilder;
 import com.microsoft.graph.requests.extensions.TiIndicatorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TiIndicatorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSecurityProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSecurityProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSecurityProfileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -68,7 +46,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Request.
  */
-public class SecurityRequest extends BaseRequest implements ISecurityRequest {
+public class SecurityRequest extends BaseRequest<Security> {
 	
     /**
      * The request for the Security
@@ -77,7 +55,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Security.class);
     }
 
@@ -86,7 +64,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Security> callback) {
+    public void get(@Nonnull final ICallback<? super Security> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -96,6 +74,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @return the Security from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Security get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -105,7 +84,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Security> callback) {
+    public void delete(@Nonnull final ICallback<? super Security> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -124,7 +103,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param sourceSecurity the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Security sourceSecurity, final ICallback<? super Security> callback) {
+    public void patch(@Nonnull final Security sourceSecurity, @Nonnull final ICallback<? super Security> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurity);
     }
 
@@ -135,7 +114,8 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @return the updated Security
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Security patch(final Security sourceSecurity) throws ClientException {
+    @Nullable
+    public Security patch(@Nonnull final Security sourceSecurity) throws ClientException {
         return send(HttpMethod.PATCH, sourceSecurity);
     }
 
@@ -145,7 +125,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param newSecurity the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Security newSecurity, final ICallback<? super Security> callback) {
+    public void post(@Nonnull final Security newSecurity, @Nonnull final ICallback<? super Security> callback) {
         send(HttpMethod.POST, callback, newSecurity);
     }
 
@@ -156,7 +136,8 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @return the created Security
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Security post(final Security newSecurity) throws ClientException {
+    @Nullable
+    public Security post(@Nonnull final Security newSecurity) throws ClientException {
         return send(HttpMethod.POST, newSecurity);
     }
 
@@ -166,7 +147,7 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param newSecurity the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Security newSecurity, final ICallback<? super Security> callback) {
+    public void put(@Nonnull final Security newSecurity, @Nonnull final ICallback<? super Security> callback) {
         send(HttpMethod.PUT, callback, newSecurity);
     }
 
@@ -177,7 +158,8 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @return the created Security
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Security put(final Security newSecurity) throws ClientException {
+    @Nullable
+    public Security put(@Nonnull final Security newSecurity) throws ClientException {
         return send(HttpMethod.PUT, newSecurity);
     }
 
@@ -187,9 +169,10 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISecurityRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecurityRequest)this;
+     @Nonnull
+     public SecurityRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -198,9 +181,10 @@ public class SecurityRequest extends BaseRequest implements ISecurityRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecurityRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityRequest)this;
+     @Nonnull
+     public SecurityRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

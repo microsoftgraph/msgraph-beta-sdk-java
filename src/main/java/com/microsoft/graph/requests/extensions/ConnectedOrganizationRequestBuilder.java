@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectedOrganization;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Connected Organization Request Builder.
  */
-public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder implements IConnectedOrganizationRequestBuilder {
+public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder<ConnectedOrganization> {
 
     /**
      * The request builder for the ConnectedOrganization
@@ -32,7 +32,7 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectedOrganizationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConnectedOrganizationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IConnectedOrganizationRequest instance
+     * @return the ConnectedOrganizationRequest instance
      */
-    public IConnectedOrganizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ConnectedOrganizationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,25 +51,52 @@ public class ConnectedOrganizationRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IConnectedOrganizationRequest instance
+     * @return the ConnectedOrganizationRequest instance
      */
-    public IConnectedOrganizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ConnectedOrganizationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ConnectedOrganizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDirectoryObjectCollectionRequestBuilder externalSponsors() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionRequestBuilder externalSponsors() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder externalSponsors(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectRequestBuilder externalSponsors(@Nonnull final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("externalSponsors") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder internalSponsors() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionRequestBuilder internalSponsors() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder internalSponsors(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectRequestBuilder internalSponsors(@Nonnull final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("internalSponsors") + "/" + id, getClient(), null);
     }
 }

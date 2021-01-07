@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisTitle;
-import com.microsoft.graph.requests.extensions.IWorkbookChartAxisTitleFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartAxisTitleFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Axis Title Request.
  */
-public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkbookChartAxisTitleRequest {
+public class WorkbookChartAxisTitleRequest extends BaseRequest<WorkbookChartAxisTitle> {
 	
     /**
      * The request for the WorkbookChartAxisTitle
@@ -31,7 +32,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisTitleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxisTitleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartAxisTitle.class);
     }
 
@@ -40,7 +41,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @return the WorkbookChartAxisTitle from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartAxisTitle get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param sourceWorkbookChartAxisTitle the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void patch(@Nonnull final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle, @Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisTitle);
     }
 
@@ -89,7 +91,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @return the updated WorkbookChartAxisTitle
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisTitle patch(final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisTitle patch(@Nonnull final WorkbookChartAxisTitle sourceWorkbookChartAxisTitle) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartAxisTitle);
     }
 
@@ -99,7 +102,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartAxisTitle the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void post(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle, @Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxisTitle);
     }
 
@@ -110,7 +113,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @return the created WorkbookChartAxisTitle
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisTitle post(final WorkbookChartAxisTitle newWorkbookChartAxisTitle) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisTitle post(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartAxisTitle);
     }
 
@@ -120,7 +124,7 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartAxisTitle the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle, final ICallback<? super WorkbookChartAxisTitle> callback) {
+    public void put(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle, @Nonnull final ICallback<? super WorkbookChartAxisTitle> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxisTitle);
     }
 
@@ -131,7 +135,8 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @return the created WorkbookChartAxisTitle
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisTitle put(final WorkbookChartAxisTitle newWorkbookChartAxisTitle) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisTitle put(@Nonnull final WorkbookChartAxisTitle newWorkbookChartAxisTitle) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartAxisTitle);
     }
 
@@ -141,9 +146,10 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartAxisTitleRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartAxisTitleRequest)this;
+     @Nonnull
+     public WorkbookChartAxisTitleRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class WorkbookChartAxisTitleRequest extends BaseRequest implements IWorkb
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartAxisTitleRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartAxisTitleRequest)this;
+     @Nonnull
+     public WorkbookChartAxisTitleRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

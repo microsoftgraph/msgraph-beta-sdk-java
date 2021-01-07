@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ProjectParticipation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Project Participation Request.
  */
-public class ProjectParticipationRequest extends BaseRequest implements IProjectParticipationRequest {
+public class ProjectParticipationRequest extends BaseRequest<ProjectParticipation> {
 	
     /**
      * The request for the ProjectParticipation
@@ -29,7 +31,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProjectParticipationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProjectParticipationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProjectParticipation.class);
     }
 
@@ -38,7 +40,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ProjectParticipation> callback) {
+    public void get(@Nonnull final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @return the ProjectParticipation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ProjectParticipation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ProjectParticipation> callback) {
+    public void delete(@Nonnull final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param sourceProjectParticipation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProjectParticipation sourceProjectParticipation, final ICallback<? super ProjectParticipation> callback) {
+    public void patch(@Nonnull final ProjectParticipation sourceProjectParticipation, @Nonnull final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.PATCH, callback, sourceProjectParticipation);
     }
 
@@ -87,7 +90,8 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @return the updated ProjectParticipation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProjectParticipation patch(final ProjectParticipation sourceProjectParticipation) throws ClientException {
+    @Nullable
+    public ProjectParticipation patch(@Nonnull final ProjectParticipation sourceProjectParticipation) throws ClientException {
         return send(HttpMethod.PATCH, sourceProjectParticipation);
     }
 
@@ -97,7 +101,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param newProjectParticipation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProjectParticipation newProjectParticipation, final ICallback<? super ProjectParticipation> callback) {
+    public void post(@Nonnull final ProjectParticipation newProjectParticipation, @Nonnull final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.POST, callback, newProjectParticipation);
     }
 
@@ -108,7 +112,8 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @return the created ProjectParticipation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProjectParticipation post(final ProjectParticipation newProjectParticipation) throws ClientException {
+    @Nullable
+    public ProjectParticipation post(@Nonnull final ProjectParticipation newProjectParticipation) throws ClientException {
         return send(HttpMethod.POST, newProjectParticipation);
     }
 
@@ -118,7 +123,7 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param newProjectParticipation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProjectParticipation newProjectParticipation, final ICallback<? super ProjectParticipation> callback) {
+    public void put(@Nonnull final ProjectParticipation newProjectParticipation, @Nonnull final ICallback<? super ProjectParticipation> callback) {
         send(HttpMethod.PUT, callback, newProjectParticipation);
     }
 
@@ -129,7 +134,8 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @return the created ProjectParticipation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProjectParticipation put(final ProjectParticipation newProjectParticipation) throws ClientException {
+    @Nullable
+    public ProjectParticipation put(@Nonnull final ProjectParticipation newProjectParticipation) throws ClientException {
         return send(HttpMethod.PUT, newProjectParticipation);
     }
 
@@ -139,9 +145,10 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param value the select clause
      * @return the updated request
      */
-     public IProjectParticipationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ProjectParticipationRequest)this;
+     @Nonnull
+     public ProjectParticipationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ProjectParticipationRequest extends BaseRequest implements IProject
      * @param value the expand clause
      * @return the updated request
      */
-     public IProjectParticipationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProjectParticipationRequest)this;
+     @Nonnull
+     public ProjectParticipationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

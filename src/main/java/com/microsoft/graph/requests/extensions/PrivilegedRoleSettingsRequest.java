@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Privileged Role Settings Request.
  */
-public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivilegedRoleSettingsRequest {
+public class PrivilegedRoleSettingsRequest extends BaseRequest<PrivilegedRoleSettings> {
 	
     /**
      * The request for the PrivilegedRoleSettings
@@ -29,7 +31,7 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedRoleSettings.class);
     }
 
@@ -38,7 +40,7 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrivilegedRoleSettings> callback) {
+    public void get(@Nonnull final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @return the PrivilegedRoleSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrivilegedRoleSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrivilegedRoleSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @param sourcePrivilegedRoleSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback) {
+    public void patch(@Nonnull final PrivilegedRoleSettings sourcePrivilegedRoleSettings, @Nonnull final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedRoleSettings);
     }
 
@@ -87,7 +90,8 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @return the updated PrivilegedRoleSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleSettings patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings) throws ClientException {
+    @Nullable
+    public PrivilegedRoleSettings patch(@Nonnull final PrivilegedRoleSettings sourcePrivilegedRoleSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrivilegedRoleSettings);
     }
 
@@ -97,7 +101,7 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @param newPrivilegedRoleSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedRoleSettings newPrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback) {
+    public void post(@Nonnull final PrivilegedRoleSettings newPrivilegedRoleSettings, @Nonnull final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.POST, callback, newPrivilegedRoleSettings);
     }
 
@@ -108,7 +112,8 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @return the created PrivilegedRoleSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleSettings post(final PrivilegedRoleSettings newPrivilegedRoleSettings) throws ClientException {
+    @Nullable
+    public PrivilegedRoleSettings post(@Nonnull final PrivilegedRoleSettings newPrivilegedRoleSettings) throws ClientException {
         return send(HttpMethod.POST, newPrivilegedRoleSettings);
     }
 
@@ -118,7 +123,7 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @param newPrivilegedRoleSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedRoleSettings newPrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback) {
+    public void put(@Nonnull final PrivilegedRoleSettings newPrivilegedRoleSettings, @Nonnull final ICallback<? super PrivilegedRoleSettings> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedRoleSettings);
     }
 
@@ -129,7 +134,8 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @return the created PrivilegedRoleSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleSettings put(final PrivilegedRoleSettings newPrivilegedRoleSettings) throws ClientException {
+    @Nullable
+    public PrivilegedRoleSettings put(@Nonnull final PrivilegedRoleSettings newPrivilegedRoleSettings) throws ClientException {
         return send(HttpMethod.PUT, newPrivilegedRoleSettings);
     }
 
@@ -139,9 +145,10 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @param value the select clause
      * @return the updated request
      */
-     public IPrivilegedRoleSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrivilegedRoleSettingsRequest)this;
+     @Nonnull
+     public PrivilegedRoleSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PrivilegedRoleSettingsRequest extends BaseRequest implements IPrivi
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrivilegedRoleSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedRoleSettingsRequest)this;
+     @Nonnull
+     public PrivilegedRoleSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

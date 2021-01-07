@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Unified Role Definition Request Builder.
  */
-public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder implements IUnifiedRoleDefinitionRequestBuilder {
+public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder<UnifiedRoleDefinition> {
 
     /**
      * The request builder for the UnifiedRoleDefinition
@@ -32,7 +32,7 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRoleDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnifiedRoleDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUnifiedRoleDefinitionRequest instance
+     * @return the UnifiedRoleDefinitionRequest instance
      */
-    public IUnifiedRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UnifiedRoleDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class UnifiedRoleDefinitionRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUnifiedRoleDefinitionRequest instance
+     * @return the UnifiedRoleDefinitionRequest instance
      */
-    public IUnifiedRoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UnifiedRoleDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IUnifiedRoleDefinitionCollectionRequestBuilder inheritsPermissionsFrom() {
+    /**
+     *  Gets a request builder for the UnifiedRoleDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedRoleDefinitionCollectionRequestBuilder inheritsPermissionsFrom() {
         return new UnifiedRoleDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("inheritsPermissionsFrom"), getClient(), null);
     }
 
-    public IUnifiedRoleDefinitionRequestBuilder inheritsPermissionsFrom(final String id) {
+    /**
+     * Gets a request builder for the UnifiedRoleDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedRoleDefinitionRequestBuilder inheritsPermissionsFrom(@Nonnull final String id) {
         return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("inheritsPermissionsFrom") + "/" + id, getClient(), null);
     }
 }

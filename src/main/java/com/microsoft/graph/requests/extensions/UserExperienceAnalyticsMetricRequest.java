@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetric;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Experience Analytics Metric Request.
  */
-public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements IUserExperienceAnalyticsMetricRequest {
+public class UserExperienceAnalyticsMetricRequest extends BaseRequest<UserExperienceAnalyticsMetric> {
 	
     /**
      * The request for the UserExperienceAnalyticsMetric
@@ -29,7 +31,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsMetricRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsMetricRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsMetric.class);
     }
 
@@ -38,7 +40,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserExperienceAnalyticsMetric> callback) {
+    public void get(@Nonnull final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @return the UserExperienceAnalyticsMetric from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserExperienceAnalyticsMetric get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserExperienceAnalyticsMetric> callback) {
+    public void delete(@Nonnull final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param sourceUserExperienceAnalyticsMetric the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
+    public void patch(@Nonnull final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric, @Nonnull final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsMetric);
     }
 
@@ -87,7 +90,8 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @return the updated UserExperienceAnalyticsMetric
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsMetric patch(final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsMetric patch(@Nonnull final UserExperienceAnalyticsMetric sourceUserExperienceAnalyticsMetric) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsMetric);
     }
 
@@ -97,7 +101,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param newUserExperienceAnalyticsMetric the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
+    public void post(@Nonnull final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, @Nonnull final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsMetric);
     }
 
@@ -108,7 +112,8 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @return the created UserExperienceAnalyticsMetric
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsMetric post(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsMetric post(@Nonnull final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric) throws ClientException {
         return send(HttpMethod.POST, newUserExperienceAnalyticsMetric);
     }
 
@@ -118,7 +123,7 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param newUserExperienceAnalyticsMetric the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, final ICallback<? super UserExperienceAnalyticsMetric> callback) {
+    public void put(@Nonnull final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric, @Nonnull final ICallback<? super UserExperienceAnalyticsMetric> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsMetric);
     }
 
@@ -129,7 +134,8 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @return the created UserExperienceAnalyticsMetric
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsMetric put(final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsMetric put(@Nonnull final UserExperienceAnalyticsMetric newUserExperienceAnalyticsMetric) throws ClientException {
         return send(HttpMethod.PUT, newUserExperienceAnalyticsMetric);
     }
 
@@ -139,9 +145,10 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsMetricRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserExperienceAnalyticsMetricRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsMetricRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserExperienceAnalyticsMetricRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsMetricRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsMetricRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsMetricRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

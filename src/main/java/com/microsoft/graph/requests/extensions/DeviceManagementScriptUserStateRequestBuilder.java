@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptUserState;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Script User State Request Builder.
  */
-public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBuilder implements IDeviceManagementScriptUserStateRequestBuilder {
+public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBuilder<DeviceManagementScriptUserState> {
 
     /**
      * The request builder for the DeviceManagementScriptUserState
@@ -32,7 +32,7 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementScriptUserStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementScriptUserStateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementScriptUserStateRequest instance
+     * @return the DeviceManagementScriptUserStateRequest instance
      */
-    public IDeviceManagementScriptUserStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementScriptUserStateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class DeviceManagementScriptUserStateRequestBuilder extends BaseRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementScriptUserStateRequest instance
+     * @return the DeviceManagementScriptUserStateRequest instance
      */
-    public IDeviceManagementScriptUserStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementScriptUserStateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
+    /**
+     *  Gets a request builder for the DeviceManagementScriptDeviceState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementScriptDeviceStateCollectionRequestBuilder deviceRunStates() {
         return new DeviceManagementScriptDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates"), getClient(), null);
     }
 
-    public IDeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementScriptDeviceState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementScriptDeviceStateRequestBuilder deviceRunStates(@Nonnull final String id) {
         return new DeviceManagementScriptDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRunStates") + "/" + id, getClient(), null);
     }
 }

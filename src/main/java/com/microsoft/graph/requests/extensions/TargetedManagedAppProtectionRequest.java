@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TargetedManagedAppProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Targeted Managed App Protection Request.
  */
-public class TargetedManagedAppProtectionRequest extends BaseRequest implements ITargetedManagedAppProtectionRequest {
+public class TargetedManagedAppProtectionRequest extends BaseRequest<TargetedManagedAppProtection> {
 	
     /**
      * The request for the TargetedManagedAppProtection
@@ -35,10 +35,10 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public TargetedManagedAppProtectionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends TargetedManagedAppProtection> responseClass) {
+    public TargetedManagedAppProtectionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends TargetedManagedAppProtection> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -49,7 +49,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TargetedManagedAppProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TargetedManagedAppProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TargetedManagedAppProtection.class);
     }
 
@@ -58,7 +58,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TargetedManagedAppProtection> callback) {
+    public void get(@Nonnull final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,6 +68,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @return the TargetedManagedAppProtection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TargetedManagedAppProtection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -77,7 +78,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TargetedManagedAppProtection> callback) {
+    public void delete(@Nonnull final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -96,7 +97,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param sourceTargetedManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TargetedManagedAppProtection sourceTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback) {
+    public void patch(@Nonnull final TargetedManagedAppProtection sourceTargetedManagedAppProtection, @Nonnull final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceTargetedManagedAppProtection);
     }
 
@@ -107,7 +108,8 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @return the updated TargetedManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppProtection patch(final TargetedManagedAppProtection sourceTargetedManagedAppProtection) throws ClientException {
+    @Nullable
+    public TargetedManagedAppProtection patch(@Nonnull final TargetedManagedAppProtection sourceTargetedManagedAppProtection) throws ClientException {
         return send(HttpMethod.PATCH, sourceTargetedManagedAppProtection);
     }
 
@@ -117,7 +119,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param newTargetedManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback) {
+    public void post(@Nonnull final TargetedManagedAppProtection newTargetedManagedAppProtection, @Nonnull final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newTargetedManagedAppProtection);
     }
 
@@ -128,7 +130,8 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @return the created TargetedManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppProtection post(final TargetedManagedAppProtection newTargetedManagedAppProtection) throws ClientException {
+    @Nullable
+    public TargetedManagedAppProtection post(@Nonnull final TargetedManagedAppProtection newTargetedManagedAppProtection) throws ClientException {
         return send(HttpMethod.POST, newTargetedManagedAppProtection);
     }
 
@@ -138,7 +141,7 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param newTargetedManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TargetedManagedAppProtection newTargetedManagedAppProtection, final ICallback<? super TargetedManagedAppProtection> callback) {
+    public void put(@Nonnull final TargetedManagedAppProtection newTargetedManagedAppProtection, @Nonnull final ICallback<? super TargetedManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newTargetedManagedAppProtection);
     }
 
@@ -149,7 +152,8 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @return the created TargetedManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TargetedManagedAppProtection put(final TargetedManagedAppProtection newTargetedManagedAppProtection) throws ClientException {
+    @Nullable
+    public TargetedManagedAppProtection put(@Nonnull final TargetedManagedAppProtection newTargetedManagedAppProtection) throws ClientException {
         return send(HttpMethod.PUT, newTargetedManagedAppProtection);
     }
 
@@ -159,9 +163,10 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public ITargetedManagedAppProtectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TargetedManagedAppProtectionRequest)this;
+     @Nonnull
+     public TargetedManagedAppProtectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -170,9 +175,10 @@ public class TargetedManagedAppProtectionRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public ITargetedManagedAppProtectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TargetedManagedAppProtectionRequest)this;
+     @Nonnull
+     public TargetedManagedAppProtectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

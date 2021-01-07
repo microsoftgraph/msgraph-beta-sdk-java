@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeConfiguration;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfficeClientConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfficeClientConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Office Configuration Request Builder.
  */
-public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder implements IOfficeConfigurationRequestBuilder {
+public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder<OfficeConfiguration> {
 
     /**
      * The request builder for the OfficeConfiguration
@@ -32,7 +32,7 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfficeConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOfficeConfigurationRequest instance
+     * @return the OfficeConfigurationRequest instance
      */
-    public IOfficeConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OfficeConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class OfficeConfigurationRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOfficeConfigurationRequest instance
+     * @return the OfficeConfigurationRequest instance
      */
-    public IOfficeConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OfficeConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OfficeConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IOfficeClientConfigurationCollectionRequestBuilder clientConfigurations() {
+    /**
+     *  Gets a request builder for the OfficeClientConfiguration collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OfficeClientConfigurationCollectionRequestBuilder clientConfigurations() {
         return new OfficeClientConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("clientConfigurations"), getClient(), null);
     }
 
-    public IOfficeClientConfigurationRequestBuilder clientConfigurations(final String id) {
+    /**
+     * Gets a request builder for the OfficeClientConfiguration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OfficeClientConfigurationRequestBuilder clientConfigurations(@Nonnull final String id) {
         return new OfficeClientConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("clientConfigurations") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileGmailEasConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Gmail Eas Configuration Request.
  */
-public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest implements IAndroidWorkProfileGmailEasConfigurationRequest {
+public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest<AndroidWorkProfileGmailEasConfiguration> {
 	
     /**
      * The request for the AndroidWorkProfileGmailEasConfiguration
@@ -29,7 +31,7 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileGmailEasConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfileGmailEasConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWorkProfileGmailEasConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @return the AndroidWorkProfileGmailEasConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidWorkProfileGmailEasConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @param sourceAndroidWorkProfileGmailEasConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileGmailEasConfiguration sourceAndroidWorkProfileGmailEasConfiguration, final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
+    public void patch(@Nonnull final AndroidWorkProfileGmailEasConfiguration sourceAndroidWorkProfileGmailEasConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileGmailEasConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @return the updated AndroidWorkProfileGmailEasConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileGmailEasConfiguration patch(final AndroidWorkProfileGmailEasConfiguration sourceAndroidWorkProfileGmailEasConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileGmailEasConfiguration patch(@Nonnull final AndroidWorkProfileGmailEasConfiguration sourceAndroidWorkProfileGmailEasConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidWorkProfileGmailEasConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @param newAndroidWorkProfileGmailEasConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration, final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
+    public void post(@Nonnull final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileGmailEasConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @return the created AndroidWorkProfileGmailEasConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileGmailEasConfiguration post(final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileGmailEasConfiguration post(@Nonnull final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidWorkProfileGmailEasConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @param newAndroidWorkProfileGmailEasConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration, final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
+    public void put(@Nonnull final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileGmailEasConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileGmailEasConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @return the created AndroidWorkProfileGmailEasConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileGmailEasConfiguration put(final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileGmailEasConfiguration put(@Nonnull final AndroidWorkProfileGmailEasConfiguration newAndroidWorkProfileGmailEasConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidWorkProfileGmailEasConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidWorkProfileGmailEasConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileGmailEasConfigurationRequest)this;
+     @Nonnull
+     public AndroidWorkProfileGmailEasConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidWorkProfileGmailEasConfigurationRequest extends BaseRequest 
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidWorkProfileGmailEasConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileGmailEasConfigurationRequest)this;
+     @Nonnull
+     public AndroidWorkProfileGmailEasConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

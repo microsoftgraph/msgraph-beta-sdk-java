@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesOrder;
-import com.microsoft.graph.requests.extensions.ISalesOrderLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesOrderLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Sales Order Request Builder.
  */
-public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISalesOrderRequestBuilder {
+public class SalesOrderRequestBuilder extends BaseRequestBuilder<SalesOrder> {
 
     /**
      * The request builder for the SalesOrder
@@ -38,7 +35,7 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesOrderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesOrderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISalesOrderRequest instance
+     * @return the SalesOrderRequest instance
      */
-    public ISalesOrderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SalesOrderRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,9 +54,10 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISalesOrderRequest instance
+     * @return the SalesOrderRequest instance
      */
-    public ISalesOrderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SalesOrderRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SalesOrderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -67,34 +66,50 @@ public class SalesOrderRequestBuilder extends BaseRequestBuilder implements ISal
     /**
      * Gets the request builder for Currency
      *
-     * @return the ICurrencyRequestBuilder instance
+     * @return the CurrencyRequestBuilder instance
      */
-    public ICurrencyRequestBuilder currency() {
+    @Nonnull
+    public CurrencyRequestBuilder currency() {
         return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currency"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Customer
      *
-     * @return the ICustomerRequestBuilder instance
+     * @return the CustomerRequestBuilder instance
      */
-    public ICustomerRequestBuilder customer() {
+    @Nonnull
+    public CustomerRequestBuilder customer() {
         return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customer"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PaymentTerm
      *
-     * @return the IPaymentTermRequestBuilder instance
+     * @return the PaymentTermRequestBuilder instance
      */
-    public IPaymentTermRequestBuilder paymentTerm() {
+    @Nonnull
+    public PaymentTermRequestBuilder paymentTerm() {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerm"), getClient(), null);
     }
-    public ISalesOrderLineCollectionRequestBuilder salesOrderLines() {
+    /**
+     *  Gets a request builder for the SalesOrderLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesOrderLineCollectionRequestBuilder salesOrderLines() {
         return new SalesOrderLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines"), getClient(), null);
     }
 
-    public ISalesOrderLineRequestBuilder salesOrderLines(final String id) {
+    /**
+     * Gets a request builder for the SalesOrderLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesOrderLineRequestBuilder salesOrderLines(@Nonnull final String id) {
         return new SalesOrderLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines") + "/" + id, getClient(), null);
     }
 }

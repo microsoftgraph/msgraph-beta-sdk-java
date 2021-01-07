@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TrustFrameworkPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Trust Framework Policy Request.
  */
-public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFrameworkPolicyRequest {
+public class TrustFrameworkPolicyRequest extends BaseRequest<TrustFrameworkPolicy> {
 	
     /**
      * The request for the TrustFrameworkPolicy
@@ -29,7 +31,7 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrustFrameworkPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrustFrameworkPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TrustFrameworkPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TrustFrameworkPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super TrustFrameworkPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @return the TrustFrameworkPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TrustFrameworkPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TrustFrameworkPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super TrustFrameworkPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @param sourceTrustFrameworkPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TrustFrameworkPolicy sourceTrustFrameworkPolicy, final ICallback<? super TrustFrameworkPolicy> callback) {
+    public void patch(@Nonnull final TrustFrameworkPolicy sourceTrustFrameworkPolicy, @Nonnull final ICallback<? super TrustFrameworkPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceTrustFrameworkPolicy);
     }
 
@@ -87,7 +90,8 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @return the updated TrustFrameworkPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFrameworkPolicy patch(final TrustFrameworkPolicy sourceTrustFrameworkPolicy) throws ClientException {
+    @Nullable
+    public TrustFrameworkPolicy patch(@Nonnull final TrustFrameworkPolicy sourceTrustFrameworkPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceTrustFrameworkPolicy);
     }
 
@@ -97,7 +101,7 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @param newTrustFrameworkPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<? super TrustFrameworkPolicy> callback) {
+    public void post(@Nonnull final TrustFrameworkPolicy newTrustFrameworkPolicy, @Nonnull final ICallback<? super TrustFrameworkPolicy> callback) {
         send(HttpMethod.POST, callback, newTrustFrameworkPolicy);
     }
 
@@ -108,7 +112,8 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @return the created TrustFrameworkPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFrameworkPolicy post(final TrustFrameworkPolicy newTrustFrameworkPolicy) throws ClientException {
+    @Nullable
+    public TrustFrameworkPolicy post(@Nonnull final TrustFrameworkPolicy newTrustFrameworkPolicy) throws ClientException {
         return send(HttpMethod.POST, newTrustFrameworkPolicy);
     }
 
@@ -118,7 +123,7 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @param newTrustFrameworkPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TrustFrameworkPolicy newTrustFrameworkPolicy, final ICallback<? super TrustFrameworkPolicy> callback) {
+    public void put(@Nonnull final TrustFrameworkPolicy newTrustFrameworkPolicy, @Nonnull final ICallback<? super TrustFrameworkPolicy> callback) {
         send(HttpMethod.PUT, callback, newTrustFrameworkPolicy);
     }
 
@@ -129,7 +134,8 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @return the created TrustFrameworkPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TrustFrameworkPolicy put(final TrustFrameworkPolicy newTrustFrameworkPolicy) throws ClientException {
+    @Nullable
+    public TrustFrameworkPolicy put(@Nonnull final TrustFrameworkPolicy newTrustFrameworkPolicy) throws ClientException {
         return send(HttpMethod.PUT, newTrustFrameworkPolicy);
     }
 
@@ -139,9 +145,10 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @param value the select clause
      * @return the updated request
      */
-     public ITrustFrameworkPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TrustFrameworkPolicyRequest)this;
+     @Nonnull
+     public TrustFrameworkPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TrustFrameworkPolicyRequest extends BaseRequest implements ITrustFr
      * @param value the expand clause
      * @return the updated request
      */
-     public ITrustFrameworkPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TrustFrameworkPolicyRequest)this;
+     @Nonnull
+     public TrustFrameworkPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

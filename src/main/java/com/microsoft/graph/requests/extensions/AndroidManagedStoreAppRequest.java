@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidManagedStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Managed Store App Request.
  */
-public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndroidManagedStoreAppRequest {
+public class AndroidManagedStoreAppRequest extends BaseRequest<AndroidManagedStoreApp> {
 	
     /**
      * The request for the AndroidManagedStoreApp
@@ -30,10 +32,10 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AndroidManagedStoreAppRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AndroidManagedStoreApp> responseClass) {
+    public AndroidManagedStoreAppRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AndroidManagedStoreApp> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedStoreAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedStoreAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidManagedStoreApp.class);
     }
 
@@ -53,7 +55,7 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidManagedStoreApp> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidManagedStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @return the AndroidManagedStoreApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidManagedStoreApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidManagedStoreApp> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidManagedStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @param sourceAndroidManagedStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedStoreApp sourceAndroidManagedStoreApp, final ICallback<? super AndroidManagedStoreApp> callback) {
+    public void patch(@Nonnull final AndroidManagedStoreApp sourceAndroidManagedStoreApp, @Nonnull final ICallback<? super AndroidManagedStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedStoreApp);
     }
 
@@ -102,7 +105,8 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @return the updated AndroidManagedStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreApp patch(final AndroidManagedStoreApp sourceAndroidManagedStoreApp) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreApp patch(@Nonnull final AndroidManagedStoreApp sourceAndroidManagedStoreApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidManagedStoreApp);
     }
 
@@ -112,7 +116,7 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @param newAndroidManagedStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedStoreApp newAndroidManagedStoreApp, final ICallback<? super AndroidManagedStoreApp> callback) {
+    public void post(@Nonnull final AndroidManagedStoreApp newAndroidManagedStoreApp, @Nonnull final ICallback<? super AndroidManagedStoreApp> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedStoreApp);
     }
 
@@ -123,7 +127,8 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @return the created AndroidManagedStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreApp post(final AndroidManagedStoreApp newAndroidManagedStoreApp) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreApp post(@Nonnull final AndroidManagedStoreApp newAndroidManagedStoreApp) throws ClientException {
         return send(HttpMethod.POST, newAndroidManagedStoreApp);
     }
 
@@ -133,7 +138,7 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @param newAndroidManagedStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedStoreApp newAndroidManagedStoreApp, final ICallback<? super AndroidManagedStoreApp> callback) {
+    public void put(@Nonnull final AndroidManagedStoreApp newAndroidManagedStoreApp, @Nonnull final ICallback<? super AndroidManagedStoreApp> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedStoreApp);
     }
 
@@ -144,7 +149,8 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @return the created AndroidManagedStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreApp put(final AndroidManagedStoreApp newAndroidManagedStoreApp) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreApp put(@Nonnull final AndroidManagedStoreApp newAndroidManagedStoreApp) throws ClientException {
         return send(HttpMethod.PUT, newAndroidManagedStoreApp);
     }
 
@@ -154,9 +160,10 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidManagedStoreAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidManagedStoreAppRequest)this;
+     @Nonnull
+     public AndroidManagedStoreAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class AndroidManagedStoreAppRequest extends BaseRequest implements IAndro
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidManagedStoreAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidManagedStoreAppRequest)this;
+     @Nonnull
+     public AndroidManagedStoreAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

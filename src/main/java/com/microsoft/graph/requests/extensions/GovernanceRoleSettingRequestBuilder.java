@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleSetting;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Governance Role Setting Request Builder.
  */
-public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder implements IGovernanceRoleSettingRequestBuilder {
+public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder<GovernanceRoleSetting> {
 
     /**
      * The request builder for the GovernanceRoleSetting
@@ -32,7 +32,7 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GovernanceRoleSettingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GovernanceRoleSettingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGovernanceRoleSettingRequest instance
+     * @return the GovernanceRoleSettingRequest instance
      */
-    public IGovernanceRoleSettingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GovernanceRoleSettingRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGovernanceRoleSettingRequest instance
+     * @return the GovernanceRoleSettingRequest instance
      */
-    public IGovernanceRoleSettingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GovernanceRoleSettingRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GovernanceRoleSettingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class GovernanceRoleSettingRequestBuilder extends BaseRequestBuilder impl
     /**
      * Gets the request builder for GovernanceResource
      *
-     * @return the IGovernanceResourceRequestBuilder instance
+     * @return the GovernanceResourceRequestBuilder instance
      */
-    public IGovernanceResourceRequestBuilder resource() {
+    @Nonnull
+    public GovernanceResourceRequestBuilder resource() {
         return new GovernanceResourceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 
     /**
      * Gets the request builder for GovernanceRoleDefinition
      *
-     * @return the IGovernanceRoleDefinitionRequestBuilder instance
+     * @return the GovernanceRoleDefinitionRequestBuilder instance
      */
-    public IGovernanceRoleDefinitionRequestBuilder roleDefinition() {
+    @Nonnull
+    public GovernanceRoleDefinitionRequestBuilder roleDefinition() {
         return new GovernanceRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinition"), getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceComplianceLocalActionLockDeviceWithPasscode;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Device Compliance Local Action Lock Device With Passcode Request.
  */
-public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest extends BaseRequest implements IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest {
+public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest extends BaseRequest<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> {
 	
     /**
      * The request for the AndroidDeviceComplianceLocalActionLockDeviceWithPasscode
@@ -29,7 +31,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidDeviceComplianceLocalActionLockDeviceWithPasscode.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @return the AndroidDeviceComplianceLocalActionLockDeviceWithPasscode from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @param sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
+    public void patch(@Nonnull final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
     }
 
@@ -87,7 +90,8 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @return the updated AndroidDeviceComplianceLocalActionLockDeviceWithPasscode
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode patch(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode patch(@Nonnull final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
     }
 
@@ -97,7 +101,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @param newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
+    public void post(@Nonnull final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
     }
 
@@ -108,7 +112,8 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @return the created AndroidDeviceComplianceLocalActionLockDeviceWithPasscode
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode post(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode post(@Nonnull final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode) throws ClientException {
         return send(HttpMethod.POST, newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
     }
 
@@ -118,7 +123,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @param newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
+    public void put(@Nonnull final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode, @Nonnull final ICallback<? super AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
     }
 
@@ -129,7 +134,8 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @return the created AndroidDeviceComplianceLocalActionLockDeviceWithPasscode
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode put(final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode) throws ClientException {
+    @Nullable
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode put(@Nonnull final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode) throws ClientException {
         return send(HttpMethod.PUT, newAndroidDeviceComplianceLocalActionLockDeviceWithPasscode);
     }
 
@@ -139,9 +145,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest)this;
+     @Nonnull
+     public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest ext
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest)this;
+     @Nonnull
+     public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

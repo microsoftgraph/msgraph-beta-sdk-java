@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewSet;
-import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Review Set Request.
  */
-public class AccessReviewSetRequest extends BaseRequest implements IAccessReviewSetRequest {
+public class AccessReviewSetRequest extends BaseRequest<AccessReviewSet> {
 	
     /**
      * The request for the AccessReviewSet
@@ -33,7 +33,7 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewSetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessReviewSetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessReviewSet.class);
     }
 
@@ -42,7 +42,7 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessReviewSet> callback) {
+    public void get(@Nonnull final ICallback<? super AccessReviewSet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @return the AccessReviewSet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessReviewSet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessReviewSet> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessReviewSet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @param sourceAccessReviewSet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessReviewSet sourceAccessReviewSet, final ICallback<? super AccessReviewSet> callback) {
+    public void patch(@Nonnull final AccessReviewSet sourceAccessReviewSet, @Nonnull final ICallback<? super AccessReviewSet> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessReviewSet);
     }
 
@@ -91,7 +92,8 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @return the updated AccessReviewSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewSet patch(final AccessReviewSet sourceAccessReviewSet) throws ClientException {
+    @Nullable
+    public AccessReviewSet patch(@Nonnull final AccessReviewSet sourceAccessReviewSet) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessReviewSet);
     }
 
@@ -101,7 +103,7 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @param newAccessReviewSet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessReviewSet newAccessReviewSet, final ICallback<? super AccessReviewSet> callback) {
+    public void post(@Nonnull final AccessReviewSet newAccessReviewSet, @Nonnull final ICallback<? super AccessReviewSet> callback) {
         send(HttpMethod.POST, callback, newAccessReviewSet);
     }
 
@@ -112,7 +114,8 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @return the created AccessReviewSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewSet post(final AccessReviewSet newAccessReviewSet) throws ClientException {
+    @Nullable
+    public AccessReviewSet post(@Nonnull final AccessReviewSet newAccessReviewSet) throws ClientException {
         return send(HttpMethod.POST, newAccessReviewSet);
     }
 
@@ -122,7 +125,7 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @param newAccessReviewSet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessReviewSet newAccessReviewSet, final ICallback<? super AccessReviewSet> callback) {
+    public void put(@Nonnull final AccessReviewSet newAccessReviewSet, @Nonnull final ICallback<? super AccessReviewSet> callback) {
         send(HttpMethod.PUT, callback, newAccessReviewSet);
     }
 
@@ -133,7 +136,8 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @return the created AccessReviewSet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewSet put(final AccessReviewSet newAccessReviewSet) throws ClientException {
+    @Nullable
+    public AccessReviewSet put(@Nonnull final AccessReviewSet newAccessReviewSet) throws ClientException {
         return send(HttpMethod.PUT, newAccessReviewSet);
     }
 
@@ -143,9 +147,10 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessReviewSetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessReviewSetRequest)this;
+     @Nonnull
+     public AccessReviewSetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AccessReviewSetRequest extends BaseRequest implements IAccessReview
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessReviewSetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessReviewSetRequest)this;
+     @Nonnull
+     public AccessReviewSetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

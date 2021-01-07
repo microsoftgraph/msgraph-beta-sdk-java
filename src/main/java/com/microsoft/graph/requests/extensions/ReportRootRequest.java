@@ -86,28 +86,20 @@ import com.microsoft.graph.models.extensions.OverallPrintUsageSummary;
 import com.microsoft.graph.models.extensions.PrinterUsageSummary;
 import com.microsoft.graph.models.extensions.PrintUsageSummary;
 import com.microsoft.graph.models.extensions.UserPrintUsageSummary;
-import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCredentialUsageDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCredentialUsageDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -117,7 +109,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Report Root Request.
  */
-public class ReportRootRequest extends BaseRequest implements IReportRootRequest {
+public class ReportRootRequest extends BaseRequest<ReportRoot> {
 	
     /**
      * The request for the ReportRoot
@@ -126,7 +118,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReportRootRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReportRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ReportRoot.class);
     }
 
@@ -135,7 +127,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ReportRoot> callback) {
+    public void get(@Nonnull final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -145,6 +137,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @return the ReportRoot from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ReportRoot get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -154,7 +147,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ReportRoot> callback) {
+    public void delete(@Nonnull final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -173,7 +166,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param sourceReportRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ReportRoot sourceReportRoot, final ICallback<? super ReportRoot> callback) {
+    public void patch(@Nonnull final ReportRoot sourceReportRoot, @Nonnull final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceReportRoot);
     }
 
@@ -184,7 +177,8 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @return the updated ReportRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReportRoot patch(final ReportRoot sourceReportRoot) throws ClientException {
+    @Nullable
+    public ReportRoot patch(@Nonnull final ReportRoot sourceReportRoot) throws ClientException {
         return send(HttpMethod.PATCH, sourceReportRoot);
     }
 
@@ -194,7 +188,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param newReportRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ReportRoot newReportRoot, final ICallback<? super ReportRoot> callback) {
+    public void post(@Nonnull final ReportRoot newReportRoot, @Nonnull final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.POST, callback, newReportRoot);
     }
 
@@ -205,7 +199,8 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @return the created ReportRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReportRoot post(final ReportRoot newReportRoot) throws ClientException {
+    @Nullable
+    public ReportRoot post(@Nonnull final ReportRoot newReportRoot) throws ClientException {
         return send(HttpMethod.POST, newReportRoot);
     }
 
@@ -215,7 +210,7 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param newReportRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ReportRoot newReportRoot, final ICallback<? super ReportRoot> callback) {
+    public void put(@Nonnull final ReportRoot newReportRoot, @Nonnull final ICallback<? super ReportRoot> callback) {
         send(HttpMethod.PUT, callback, newReportRoot);
     }
 
@@ -226,7 +221,8 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @return the created ReportRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReportRoot put(final ReportRoot newReportRoot) throws ClientException {
+    @Nullable
+    public ReportRoot put(@Nonnull final ReportRoot newReportRoot) throws ClientException {
         return send(HttpMethod.PUT, newReportRoot);
     }
 
@@ -236,9 +232,10 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IReportRootRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ReportRootRequest)this;
+     @Nonnull
+     public ReportRootRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -247,9 +244,10 @@ public class ReportRootRequest extends BaseRequest implements IReportRootRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IReportRootRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ReportRootRequest)this;
+     @Nonnull
+     public ReportRootRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

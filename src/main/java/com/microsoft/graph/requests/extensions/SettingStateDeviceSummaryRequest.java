@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SettingStateDeviceSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Setting State Device Summary Request.
  */
-public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISettingStateDeviceSummaryRequest {
+public class SettingStateDeviceSummaryRequest extends BaseRequest<SettingStateDeviceSummary> {
 	
     /**
      * The request for the SettingStateDeviceSummary
@@ -29,7 +31,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SettingStateDeviceSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SettingStateDeviceSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SettingStateDeviceSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SettingStateDeviceSummary> callback) {
+    public void get(@Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @return the SettingStateDeviceSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SettingStateDeviceSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SettingStateDeviceSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param sourceSettingStateDeviceSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SettingStateDeviceSummary sourceSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback) {
+    public void patch(@Nonnull final SettingStateDeviceSummary sourceSettingStateDeviceSummary, @Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceSettingStateDeviceSummary);
     }
 
@@ -87,7 +90,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @return the updated SettingStateDeviceSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SettingStateDeviceSummary patch(final SettingStateDeviceSummary sourceSettingStateDeviceSummary) throws ClientException {
+    @Nullable
+    public SettingStateDeviceSummary patch(@Nonnull final SettingStateDeviceSummary sourceSettingStateDeviceSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceSettingStateDeviceSummary);
     }
 
@@ -97,7 +101,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param newSettingStateDeviceSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback) {
+    public void post(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary, @Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
         send(HttpMethod.POST, callback, newSettingStateDeviceSummary);
     }
 
@@ -108,7 +112,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @return the created SettingStateDeviceSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SettingStateDeviceSummary post(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
+    @Nullable
+    public SettingStateDeviceSummary post(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
         return send(HttpMethod.POST, newSettingStateDeviceSummary);
     }
 
@@ -118,7 +123,7 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param newSettingStateDeviceSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SettingStateDeviceSummary newSettingStateDeviceSummary, final ICallback<? super SettingStateDeviceSummary> callback) {
+    public void put(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary, @Nonnull final ICallback<? super SettingStateDeviceSummary> callback) {
         send(HttpMethod.PUT, callback, newSettingStateDeviceSummary);
     }
 
@@ -129,7 +134,8 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @return the created SettingStateDeviceSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SettingStateDeviceSummary put(final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
+    @Nullable
+    public SettingStateDeviceSummary put(@Nonnull final SettingStateDeviceSummary newSettingStateDeviceSummary) throws ClientException {
         return send(HttpMethod.PUT, newSettingStateDeviceSummary);
     }
 
@@ -139,9 +145,10 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param value the select clause
      * @return the updated request
      */
-     public ISettingStateDeviceSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SettingStateDeviceSummaryRequest)this;
+     @Nonnull
+     public SettingStateDeviceSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SettingStateDeviceSummaryRequest extends BaseRequest implements ISe
      * @param value the expand clause
      * @return the updated request
      */
-     public ISettingStateDeviceSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SettingStateDeviceSummaryRequest)this;
+     @Nonnull
+     public SettingStateDeviceSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

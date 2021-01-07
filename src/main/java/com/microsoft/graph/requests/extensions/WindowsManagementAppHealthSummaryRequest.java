@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsManagementAppHealthSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Management App Health Summary Request.
  */
-public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implements IWindowsManagementAppHealthSummaryRequest {
+public class WindowsManagementAppHealthSummaryRequest extends BaseRequest<WindowsManagementAppHealthSummary> {
 	
     /**
      * The request for the WindowsManagementAppHealthSummary
@@ -29,7 +31,7 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsManagementAppHealthSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsManagementAppHealthSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsManagementAppHealthSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsManagementAppHealthSummary> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsManagementAppHealthSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @return the WindowsManagementAppHealthSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsManagementAppHealthSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsManagementAppHealthSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsManagementAppHealthSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @param sourceWindowsManagementAppHealthSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsManagementAppHealthSummary sourceWindowsManagementAppHealthSummary, final ICallback<? super WindowsManagementAppHealthSummary> callback) {
+    public void patch(@Nonnull final WindowsManagementAppHealthSummary sourceWindowsManagementAppHealthSummary, @Nonnull final ICallback<? super WindowsManagementAppHealthSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsManagementAppHealthSummary);
     }
 
@@ -87,7 +90,8 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @return the updated WindowsManagementAppHealthSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagementAppHealthSummary patch(final WindowsManagementAppHealthSummary sourceWindowsManagementAppHealthSummary) throws ClientException {
+    @Nullable
+    public WindowsManagementAppHealthSummary patch(@Nonnull final WindowsManagementAppHealthSummary sourceWindowsManagementAppHealthSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsManagementAppHealthSummary);
     }
 
@@ -97,7 +101,7 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @param newWindowsManagementAppHealthSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, final ICallback<? super WindowsManagementAppHealthSummary> callback) {
+    public void post(@Nonnull final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, @Nonnull final ICallback<? super WindowsManagementAppHealthSummary> callback) {
         send(HttpMethod.POST, callback, newWindowsManagementAppHealthSummary);
     }
 
@@ -108,7 +112,8 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @return the created WindowsManagementAppHealthSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagementAppHealthSummary post(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary) throws ClientException {
+    @Nullable
+    public WindowsManagementAppHealthSummary post(@Nonnull final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary) throws ClientException {
         return send(HttpMethod.POST, newWindowsManagementAppHealthSummary);
     }
 
@@ -118,7 +123,7 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @param newWindowsManagementAppHealthSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, final ICallback<? super WindowsManagementAppHealthSummary> callback) {
+    public void put(@Nonnull final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary, @Nonnull final ICallback<? super WindowsManagementAppHealthSummary> callback) {
         send(HttpMethod.PUT, callback, newWindowsManagementAppHealthSummary);
     }
 
@@ -129,7 +134,8 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @return the created WindowsManagementAppHealthSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagementAppHealthSummary put(final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary) throws ClientException {
+    @Nullable
+    public WindowsManagementAppHealthSummary put(@Nonnull final WindowsManagementAppHealthSummary newWindowsManagementAppHealthSummary) throws ClientException {
         return send(HttpMethod.PUT, newWindowsManagementAppHealthSummary);
     }
 
@@ -139,9 +145,10 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsManagementAppHealthSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsManagementAppHealthSummaryRequest)this;
+     @Nonnull
+     public WindowsManagementAppHealthSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsManagementAppHealthSummaryRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsManagementAppHealthSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsManagementAppHealthSummaryRequest)this;
+     @Nonnull
+     public WindowsManagementAppHealthSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

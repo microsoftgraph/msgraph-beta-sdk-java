@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSImportedPFXCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSImported PFXCertificate Profile Request.
  */
-public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest implements IMacOSImportedPFXCertificateProfileRequest {
+public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest<MacOSImportedPFXCertificateProfile> {
 	
     /**
      * The request for the MacOSImportedPFXCertificateProfile
@@ -33,7 +33,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSImportedPFXCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSImportedPFXCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSImportedPFXCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @return the MacOSImportedPFXCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSImportedPFXCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param sourceMacOSImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
+    public void patch(@Nonnull final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile, @Nonnull final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSImportedPFXCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @return the updated MacOSImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSImportedPFXCertificateProfile patch(final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSImportedPFXCertificateProfile patch(@Nonnull final MacOSImportedPFXCertificateProfile sourceMacOSImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSImportedPFXCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param newMacOSImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
+    public void post(@Nonnull final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, @Nonnull final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newMacOSImportedPFXCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @return the created MacOSImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSImportedPFXCertificateProfile post(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSImportedPFXCertificateProfile post(@Nonnull final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newMacOSImportedPFXCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param newMacOSImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
+    public void put(@Nonnull final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile, @Nonnull final ICallback<? super MacOSImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newMacOSImportedPFXCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @return the created MacOSImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSImportedPFXCertificateProfile put(final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSImportedPFXCertificateProfile put(@Nonnull final MacOSImportedPFXCertificateProfile newMacOSImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newMacOSImportedPFXCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSImportedPFXCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSImportedPFXCertificateProfileRequest)this;
+     @Nonnull
+     public MacOSImportedPFXCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class MacOSImportedPFXCertificateProfileRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSImportedPFXCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSImportedPFXCertificateProfileRequest)this;
+     @Nonnull
+     public MacOSImportedPFXCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

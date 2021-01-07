@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Assigned To Task Board Task Format Request Builder.
  */
-public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder implements IPlannerAssignedToTaskBoardTaskFormatRequestBuilder {
+public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequestBuilder<PlannerAssignedToTaskBoardTaskFormat> {
 
     /**
      * The request builder for the PlannerAssignedToTaskBoardTaskFormat
@@ -28,7 +30,7 @@ public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerAssignedToTaskBoardTaskFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerAssignedToTaskBoardTaskFormatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequ
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerAssignedToTaskBoardTaskFormatRequest instance
+     * @return the PlannerAssignedToTaskBoardTaskFormatRequest instance
      */
-    public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlannerAssignedToTaskBoardTaskFormatRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PlannerAssignedToTaskBoardTaskFormatRequestBuilder extends BaseRequ
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerAssignedToTaskBoardTaskFormatRequest instance
+     * @return the PlannerAssignedToTaskBoardTaskFormatRequest instance
      */
-    public IPlannerAssignedToTaskBoardTaskFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlannerAssignedToTaskBoardTaskFormatRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerAssignedToTaskBoardTaskFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

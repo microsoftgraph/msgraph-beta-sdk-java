@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Configuration Category Request.
  */
-public class DeviceManagementConfigurationCategoryRequest extends BaseRequest implements IDeviceManagementConfigurationCategoryRequest {
+public class DeviceManagementConfigurationCategoryRequest extends BaseRequest<DeviceManagementConfigurationCategory> {
 	
     /**
      * The request for the DeviceManagementConfigurationCategory
@@ -29,7 +31,7 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationCategoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationCategory.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementConfigurationCategory> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementConfigurationCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @return the DeviceManagementConfigurationCategory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementConfigurationCategory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementConfigurationCategory> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementConfigurationCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @param sourceDeviceManagementConfigurationCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementConfigurationCategory sourceDeviceManagementConfigurationCategory, final ICallback<? super DeviceManagementConfigurationCategory> callback) {
+    public void patch(@Nonnull final DeviceManagementConfigurationCategory sourceDeviceManagementConfigurationCategory, @Nonnull final ICallback<? super DeviceManagementConfigurationCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationCategory);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @return the updated DeviceManagementConfigurationCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationCategory patch(final DeviceManagementConfigurationCategory sourceDeviceManagementConfigurationCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationCategory patch(@Nonnull final DeviceManagementConfigurationCategory sourceDeviceManagementConfigurationCategory) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationCategory);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @param newDeviceManagementConfigurationCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory, final ICallback<? super DeviceManagementConfigurationCategory> callback) {
+    public void post(@Nonnull final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory, @Nonnull final ICallback<? super DeviceManagementConfigurationCategory> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementConfigurationCategory);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @return the created DeviceManagementConfigurationCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationCategory post(final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationCategory post(@Nonnull final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementConfigurationCategory);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @param newDeviceManagementConfigurationCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory, final ICallback<? super DeviceManagementConfigurationCategory> callback) {
+    public void put(@Nonnull final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory, @Nonnull final ICallback<? super DeviceManagementConfigurationCategory> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementConfigurationCategory);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @return the created DeviceManagementConfigurationCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationCategory put(final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationCategory put(@Nonnull final DeviceManagementConfigurationCategory newDeviceManagementConfigurationCategory) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementConfigurationCategory);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationCategoryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementConfigurationCategoryRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationCategoryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementConfigurationCategoryRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationCategoryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementConfigurationCategoryRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationCategoryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

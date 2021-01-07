@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CredentialUserRegistrationCount;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Credential User Registration Count Request.
  */
-public class CredentialUserRegistrationCountRequest extends BaseRequest implements ICredentialUserRegistrationCountRequest {
+public class CredentialUserRegistrationCountRequest extends BaseRequest<CredentialUserRegistrationCount> {
 	
     /**
      * The request for the CredentialUserRegistrationCount
@@ -29,7 +31,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CredentialUserRegistrationCountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CredentialUserRegistrationCountRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CredentialUserRegistrationCount.class);
     }
 
@@ -38,7 +40,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CredentialUserRegistrationCount> callback) {
+    public void get(@Nonnull final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @return the CredentialUserRegistrationCount from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CredentialUserRegistrationCount get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CredentialUserRegistrationCount> callback) {
+    public void delete(@Nonnull final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param sourceCredentialUserRegistrationCount the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback) {
+    public void patch(@Nonnull final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount, @Nonnull final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.PATCH, callback, sourceCredentialUserRegistrationCount);
     }
 
@@ -87,7 +90,8 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @return the updated CredentialUserRegistrationCount
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CredentialUserRegistrationCount patch(final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount) throws ClientException {
+    @Nullable
+    public CredentialUserRegistrationCount patch(@Nonnull final CredentialUserRegistrationCount sourceCredentialUserRegistrationCount) throws ClientException {
         return send(HttpMethod.PATCH, sourceCredentialUserRegistrationCount);
     }
 
@@ -97,7 +101,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param newCredentialUserRegistrationCount the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback) {
+    public void post(@Nonnull final CredentialUserRegistrationCount newCredentialUserRegistrationCount, @Nonnull final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.POST, callback, newCredentialUserRegistrationCount);
     }
 
@@ -108,7 +112,8 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @return the created CredentialUserRegistrationCount
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CredentialUserRegistrationCount post(final CredentialUserRegistrationCount newCredentialUserRegistrationCount) throws ClientException {
+    @Nullable
+    public CredentialUserRegistrationCount post(@Nonnull final CredentialUserRegistrationCount newCredentialUserRegistrationCount) throws ClientException {
         return send(HttpMethod.POST, newCredentialUserRegistrationCount);
     }
 
@@ -118,7 +123,7 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param newCredentialUserRegistrationCount the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount, final ICallback<? super CredentialUserRegistrationCount> callback) {
+    public void put(@Nonnull final CredentialUserRegistrationCount newCredentialUserRegistrationCount, @Nonnull final ICallback<? super CredentialUserRegistrationCount> callback) {
         send(HttpMethod.PUT, callback, newCredentialUserRegistrationCount);
     }
 
@@ -129,7 +134,8 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @return the created CredentialUserRegistrationCount
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CredentialUserRegistrationCount put(final CredentialUserRegistrationCount newCredentialUserRegistrationCount) throws ClientException {
+    @Nullable
+    public CredentialUserRegistrationCount put(@Nonnull final CredentialUserRegistrationCount newCredentialUserRegistrationCount) throws ClientException {
         return send(HttpMethod.PUT, newCredentialUserRegistrationCount);
     }
 
@@ -139,9 +145,10 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public ICredentialUserRegistrationCountRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CredentialUserRegistrationCountRequest)this;
+     @Nonnull
+     public CredentialUserRegistrationCountRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CredentialUserRegistrationCountRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public ICredentialUserRegistrationCountRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CredentialUserRegistrationCountRequest)this;
+     @Nonnull
+     public CredentialUserRegistrationCountRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

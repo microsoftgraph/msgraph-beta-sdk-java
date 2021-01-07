@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10PkcsCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Pkcs Certificate Profile Request.
  */
-public class Windows10PkcsCertificateProfileRequest extends BaseRequest implements IWindows10PkcsCertificateProfileRequest {
+public class Windows10PkcsCertificateProfileRequest extends BaseRequest<Windows10PkcsCertificateProfile> {
 	
     /**
      * The request for the Windows10PkcsCertificateProfile
@@ -33,7 +33,7 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10PkcsCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10PkcsCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10PkcsCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10PkcsCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10PkcsCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @return the Windows10PkcsCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10PkcsCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10PkcsCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10PkcsCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @param sourceWindows10PkcsCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10PkcsCertificateProfile sourceWindows10PkcsCertificateProfile, final ICallback<? super Windows10PkcsCertificateProfile> callback) {
+    public void patch(@Nonnull final Windows10PkcsCertificateProfile sourceWindows10PkcsCertificateProfile, @Nonnull final ICallback<? super Windows10PkcsCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10PkcsCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @return the updated Windows10PkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10PkcsCertificateProfile patch(final Windows10PkcsCertificateProfile sourceWindows10PkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10PkcsCertificateProfile patch(@Nonnull final Windows10PkcsCertificateProfile sourceWindows10PkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10PkcsCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @param newWindows10PkcsCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile, final ICallback<? super Windows10PkcsCertificateProfile> callback) {
+    public void post(@Nonnull final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile, @Nonnull final ICallback<? super Windows10PkcsCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newWindows10PkcsCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @return the created Windows10PkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10PkcsCertificateProfile post(final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10PkcsCertificateProfile post(@Nonnull final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newWindows10PkcsCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @param newWindows10PkcsCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile, final ICallback<? super Windows10PkcsCertificateProfile> callback) {
+    public void put(@Nonnull final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile, @Nonnull final ICallback<? super Windows10PkcsCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newWindows10PkcsCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @return the created Windows10PkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10PkcsCertificateProfile put(final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows10PkcsCertificateProfile put(@Nonnull final Windows10PkcsCertificateProfile newWindows10PkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newWindows10PkcsCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10PkcsCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10PkcsCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10PkcsCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class Windows10PkcsCertificateProfileRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10PkcsCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10PkcsCertificateProfileRequest)this;
+     @Nonnull
+     public Windows10PkcsCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TrustFramework;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkKeySetRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkKeySetRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrustFrameworkPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Trust Framework Request Builder.
  */
-public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements ITrustFrameworkRequestBuilder {
+public class TrustFrameworkRequestBuilder extends BaseRequestBuilder<TrustFramework> {
 
     /**
      * The request builder for the TrustFramework
@@ -36,7 +34,7 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrustFrameworkRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrustFrameworkRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITrustFrameworkRequest instance
+     * @return the TrustFrameworkRequest instance
      */
-    public ITrustFrameworkRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TrustFrameworkRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class TrustFrameworkRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITrustFrameworkRequest instance
+     * @return the TrustFrameworkRequest instance
      */
-    public ITrustFrameworkRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TrustFrameworkRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TrustFrameworkRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ITrustFrameworkKeySetCollectionRequestBuilder keySets() {
+    /**
+     *  Gets a request builder for the TrustFrameworkKeySet collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TrustFrameworkKeySetCollectionRequestBuilder keySets() {
         return new TrustFrameworkKeySetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("keySets"), getClient(), null);
     }
 
-    public ITrustFrameworkKeySetRequestBuilder keySets(final String id) {
+    /**
+     * Gets a request builder for the TrustFrameworkKeySet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TrustFrameworkKeySetRequestBuilder keySets(@Nonnull final String id) {
         return new TrustFrameworkKeySetRequestBuilder(getRequestUrlWithAdditionalSegment("keySets") + "/" + id, getClient(), null);
     }
-    public ITrustFrameworkPolicyCollectionRequestBuilder policies() {
+    /**
+     *  Gets a request builder for the TrustFrameworkPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TrustFrameworkPolicyCollectionRequestBuilder policies() {
         return new TrustFrameworkPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
     }
 
-    public ITrustFrameworkPolicyRequestBuilder policies(final String id) {
+    /**
+     * Gets a request builder for the TrustFrameworkPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TrustFrameworkPolicyRequestBuilder policies(@Nonnull final String id) {
         return new TrustFrameworkPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
 }

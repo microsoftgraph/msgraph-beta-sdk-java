@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DocumentCommentReply;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Document Comment Reply Request.
  */
-public class DocumentCommentReplyRequest extends BaseRequest implements IDocumentCommentReplyRequest {
+public class DocumentCommentReplyRequest extends BaseRequest<DocumentCommentReply> {
 	
     /**
      * The request for the DocumentCommentReply
@@ -29,7 +31,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DocumentCommentReplyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DocumentCommentReplyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DocumentCommentReply.class);
     }
 
@@ -38,7 +40,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DocumentCommentReply> callback) {
+    public void get(@Nonnull final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @return the DocumentCommentReply from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DocumentCommentReply get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DocumentCommentReply> callback) {
+    public void delete(@Nonnull final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param sourceDocumentCommentReply the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DocumentCommentReply sourceDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback) {
+    public void patch(@Nonnull final DocumentCommentReply sourceDocumentCommentReply, @Nonnull final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.PATCH, callback, sourceDocumentCommentReply);
     }
 
@@ -87,7 +90,8 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @return the updated DocumentCommentReply
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DocumentCommentReply patch(final DocumentCommentReply sourceDocumentCommentReply) throws ClientException {
+    @Nullable
+    public DocumentCommentReply patch(@Nonnull final DocumentCommentReply sourceDocumentCommentReply) throws ClientException {
         return send(HttpMethod.PATCH, sourceDocumentCommentReply);
     }
 
@@ -97,7 +101,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param newDocumentCommentReply the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DocumentCommentReply newDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback) {
+    public void post(@Nonnull final DocumentCommentReply newDocumentCommentReply, @Nonnull final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.POST, callback, newDocumentCommentReply);
     }
 
@@ -108,7 +112,8 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @return the created DocumentCommentReply
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DocumentCommentReply post(final DocumentCommentReply newDocumentCommentReply) throws ClientException {
+    @Nullable
+    public DocumentCommentReply post(@Nonnull final DocumentCommentReply newDocumentCommentReply) throws ClientException {
         return send(HttpMethod.POST, newDocumentCommentReply);
     }
 
@@ -118,7 +123,7 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param newDocumentCommentReply the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DocumentCommentReply newDocumentCommentReply, final ICallback<? super DocumentCommentReply> callback) {
+    public void put(@Nonnull final DocumentCommentReply newDocumentCommentReply, @Nonnull final ICallback<? super DocumentCommentReply> callback) {
         send(HttpMethod.PUT, callback, newDocumentCommentReply);
     }
 
@@ -129,7 +134,8 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @return the created DocumentCommentReply
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DocumentCommentReply put(final DocumentCommentReply newDocumentCommentReply) throws ClientException {
+    @Nullable
+    public DocumentCommentReply put(@Nonnull final DocumentCommentReply newDocumentCommentReply) throws ClientException {
         return send(HttpMethod.PUT, newDocumentCommentReply);
     }
 
@@ -139,9 +145,10 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param value the select clause
      * @return the updated request
      */
-     public IDocumentCommentReplyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DocumentCommentReplyRequest)this;
+     @Nonnull
+     public DocumentCommentReplyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DocumentCommentReplyRequest extends BaseRequest implements IDocumen
      * @param value the expand clause
      * @return the updated request
      */
-     public IDocumentCommentReplyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DocumentCommentReplyRequest)this;
+     @Nonnull
+     public DocumentCommentReplyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

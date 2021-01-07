@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyCategoryCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyCategoryCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.GroupPolicyCategoryCollectionResponse;
 import com.microsoft.graph.models.extensions.GroupPolicyCategory;
 import com.google.gson.JsonObject;
@@ -26,7 +28,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Group Policy Category Collection With References Page.
  */
-public class GroupPolicyCategoryCollectionWithReferencesPage extends BaseCollectionPage<GroupPolicyCategory, IGroupPolicyCategoryCollectionWithReferencesRequestBuilder> implements IGroupPolicyCategoryCollectionWithReferencesPage {
+public class GroupPolicyCategoryCollectionWithReferencesPage extends BaseCollectionPage<GroupPolicyCategory, GroupPolicyCategoryCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for GroupPolicyCategory
@@ -34,7 +36,17 @@ public class GroupPolicyCategoryCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized GroupPolicyCategoryCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupPolicyCategoryCollectionWithReferencesPage(final GroupPolicyCategoryCollectionResponse response, final IGroupPolicyCategoryCollectionWithReferencesRequestBuilder builder) {
+    public GroupPolicyCategoryCollectionWithReferencesPage(@Nonnull final GroupPolicyCategoryCollectionResponse response, @Nullable final GroupPolicyCategoryCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for GroupPolicyCategory
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupPolicyCategoryCollectionWithReferencesPage(@Nonnull final java.util.List<GroupPolicyCategory> pageContents, @Nullable final GroupPolicyCategoryCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

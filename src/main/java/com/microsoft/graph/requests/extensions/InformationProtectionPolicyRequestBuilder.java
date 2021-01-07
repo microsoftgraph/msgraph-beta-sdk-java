@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
-import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Information Protection Policy Request Builder.
  */
-public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilder implements IInformationProtectionPolicyRequestBuilder {
+public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilder<InformationProtectionPolicy> {
 
     /**
      * The request builder for the InformationProtectionPolicy
@@ -32,7 +32,7 @@ public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InformationProtectionPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IInformationProtectionPolicyRequest instance
+     * @return the InformationProtectionPolicyRequest instance
      */
-    public IInformationProtectionPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public InformationProtectionPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class InformationProtectionPolicyRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IInformationProtectionPolicyRequest instance
+     * @return the InformationProtectionPolicyRequest instance
      */
-    public IInformationProtectionPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public InformationProtectionPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IInformationProtectionLabelCollectionRequestBuilder labels() {
+    /**
+     *  Gets a request builder for the InformationProtectionLabel collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public InformationProtectionLabelCollectionRequestBuilder labels() {
         return new InformationProtectionLabelCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("labels"), getClient(), null);
     }
 
-    public IInformationProtectionLabelRequestBuilder labels(final String id) {
+    /**
+     * Gets a request builder for the InformationProtectionLabel item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public InformationProtectionLabelRequestBuilder labels(@Nonnull final String id) {
         return new InformationProtectionLabelRequestBuilder(getRequestUrlWithAdditionalSegment("labels") + "/" + id, getClient(), null);
     }
 }

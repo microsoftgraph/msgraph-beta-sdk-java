@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonCertification;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Certification Request.
  */
-public class PersonCertificationRequest extends BaseRequest implements IPersonCertificationRequest {
+public class PersonCertificationRequest extends BaseRequest<PersonCertification> {
 	
     /**
      * The request for the PersonCertification
@@ -29,7 +31,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonCertificationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonCertificationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonCertification.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonCertification> callback) {
+    public void get(@Nonnull final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @return the PersonCertification from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonCertification get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonCertification> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param sourcePersonCertification the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonCertification sourcePersonCertification, final ICallback<? super PersonCertification> callback) {
+    public void patch(@Nonnull final PersonCertification sourcePersonCertification, @Nonnull final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonCertification);
     }
 
@@ -87,7 +90,8 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @return the updated PersonCertification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonCertification patch(final PersonCertification sourcePersonCertification) throws ClientException {
+    @Nullable
+    public PersonCertification patch(@Nonnull final PersonCertification sourcePersonCertification) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonCertification);
     }
 
@@ -97,7 +101,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param newPersonCertification the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback) {
+    public void post(@Nonnull final PersonCertification newPersonCertification, @Nonnull final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.POST, callback, newPersonCertification);
     }
 
@@ -108,7 +112,8 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @return the created PersonCertification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonCertification post(final PersonCertification newPersonCertification) throws ClientException {
+    @Nullable
+    public PersonCertification post(@Nonnull final PersonCertification newPersonCertification) throws ClientException {
         return send(HttpMethod.POST, newPersonCertification);
     }
 
@@ -118,7 +123,7 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param newPersonCertification the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonCertification newPersonCertification, final ICallback<? super PersonCertification> callback) {
+    public void put(@Nonnull final PersonCertification newPersonCertification, @Nonnull final ICallback<? super PersonCertification> callback) {
         send(HttpMethod.PUT, callback, newPersonCertification);
     }
 
@@ -129,7 +134,8 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @return the created PersonCertification
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonCertification put(final PersonCertification newPersonCertification) throws ClientException {
+    @Nullable
+    public PersonCertification put(@Nonnull final PersonCertification newPersonCertification) throws ClientException {
         return send(HttpMethod.PUT, newPersonCertification);
     }
 
@@ -139,9 +145,10 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonCertificationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonCertificationRequest)this;
+     @Nonnull
+     public PersonCertificationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonCertificationRequest extends BaseRequest implements IPersonCe
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonCertificationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonCertificationRequest)this;
+     @Nonnull
+     public PersonCertificationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

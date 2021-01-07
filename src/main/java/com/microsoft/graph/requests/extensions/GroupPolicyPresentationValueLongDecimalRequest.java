@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationValueLongDecimal;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Value Long Decimal Request.
  */
-public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest implements IGroupPolicyPresentationValueLongDecimalRequest {
+public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest<GroupPolicyPresentationValueLongDecimal> {
 	
     /**
      * The request for the GroupPolicyPresentationValueLongDecimal
@@ -29,7 +31,7 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationValueLongDecimalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationValueLongDecimalRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationValueLongDecimal.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @return the GroupPolicyPresentationValueLongDecimal from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationValueLongDecimal get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @param sourceGroupPolicyPresentationValueLongDecimal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationValueLongDecimal sourceGroupPolicyPresentationValueLongDecimal, final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationValueLongDecimal sourceGroupPolicyPresentationValueLongDecimal, @Nonnull final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationValueLongDecimal);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @return the updated GroupPolicyPresentationValueLongDecimal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValueLongDecimal patch(final GroupPolicyPresentationValueLongDecimal sourceGroupPolicyPresentationValueLongDecimal) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValueLongDecimal patch(@Nonnull final GroupPolicyPresentationValueLongDecimal sourceGroupPolicyPresentationValueLongDecimal) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationValueLongDecimal);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @param newGroupPolicyPresentationValueLongDecimal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, @Nonnull final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationValueLongDecimal);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @return the created GroupPolicyPresentationValueLongDecimal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValueLongDecimal post(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValueLongDecimal post(@Nonnull final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationValueLongDecimal);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @param newGroupPolicyPresentationValueLongDecimal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal, @Nonnull final ICallback<? super GroupPolicyPresentationValueLongDecimal> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationValueLongDecimal);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @return the created GroupPolicyPresentationValueLongDecimal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationValueLongDecimal put(final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationValueLongDecimal put(@Nonnull final GroupPolicyPresentationValueLongDecimal newGroupPolicyPresentationValueLongDecimal) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationValueLongDecimal);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationValueLongDecimalRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationValueLongDecimalRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationValueLongDecimalRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyPresentationValueLongDecimalRequest extends BaseRequest 
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationValueLongDecimalRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationValueLongDecimalRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationValueLongDecimalRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

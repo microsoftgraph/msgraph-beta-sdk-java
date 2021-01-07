@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Office365ServicesUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office365Services User Counts Request.
  */
-public class Office365ServicesUserCountsRequest extends BaseRequest implements IOffice365ServicesUserCountsRequest {
+public class Office365ServicesUserCountsRequest extends BaseRequest<Office365ServicesUserCounts> {
 	
     /**
      * The request for the Office365ServicesUserCounts
@@ -29,7 +31,7 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Office365ServicesUserCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Office365ServicesUserCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Office365ServicesUserCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Office365ServicesUserCounts> callback) {
+    public void get(@Nonnull final ICallback<? super Office365ServicesUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @return the Office365ServicesUserCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Office365ServicesUserCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Office365ServicesUserCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super Office365ServicesUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @param sourceOffice365ServicesUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365ServicesUserCounts sourceOffice365ServicesUserCounts, final ICallback<? super Office365ServicesUserCounts> callback) {
+    public void patch(@Nonnull final Office365ServicesUserCounts sourceOffice365ServicesUserCounts, @Nonnull final ICallback<? super Office365ServicesUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365ServicesUserCounts);
     }
 
@@ -87,7 +90,8 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @return the updated Office365ServicesUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365ServicesUserCounts patch(final Office365ServicesUserCounts sourceOffice365ServicesUserCounts) throws ClientException {
+    @Nullable
+    public Office365ServicesUserCounts patch(@Nonnull final Office365ServicesUserCounts sourceOffice365ServicesUserCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceOffice365ServicesUserCounts);
     }
 
@@ -97,7 +101,7 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @param newOffice365ServicesUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365ServicesUserCounts newOffice365ServicesUserCounts, final ICallback<? super Office365ServicesUserCounts> callback) {
+    public void post(@Nonnull final Office365ServicesUserCounts newOffice365ServicesUserCounts, @Nonnull final ICallback<? super Office365ServicesUserCounts> callback) {
         send(HttpMethod.POST, callback, newOffice365ServicesUserCounts);
     }
 
@@ -108,7 +112,8 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @return the created Office365ServicesUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365ServicesUserCounts post(final Office365ServicesUserCounts newOffice365ServicesUserCounts) throws ClientException {
+    @Nullable
+    public Office365ServicesUserCounts post(@Nonnull final Office365ServicesUserCounts newOffice365ServicesUserCounts) throws ClientException {
         return send(HttpMethod.POST, newOffice365ServicesUserCounts);
     }
 
@@ -118,7 +123,7 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @param newOffice365ServicesUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365ServicesUserCounts newOffice365ServicesUserCounts, final ICallback<? super Office365ServicesUserCounts> callback) {
+    public void put(@Nonnull final Office365ServicesUserCounts newOffice365ServicesUserCounts, @Nonnull final ICallback<? super Office365ServicesUserCounts> callback) {
         send(HttpMethod.PUT, callback, newOffice365ServicesUserCounts);
     }
 
@@ -129,7 +134,8 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @return the created Office365ServicesUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365ServicesUserCounts put(final Office365ServicesUserCounts newOffice365ServicesUserCounts) throws ClientException {
+    @Nullable
+    public Office365ServicesUserCounts put(@Nonnull final Office365ServicesUserCounts newOffice365ServicesUserCounts) throws ClientException {
         return send(HttpMethod.PUT, newOffice365ServicesUserCounts);
     }
 
@@ -139,9 +145,10 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IOffice365ServicesUserCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Office365ServicesUserCountsRequest)this;
+     @Nonnull
+     public Office365ServicesUserCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Office365ServicesUserCountsRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IOffice365ServicesUserCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365ServicesUserCountsRequest)this;
+     @Nonnull
+     public Office365ServicesUserCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSScepCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSScep Certificate Profile Request.
  */
-public class MacOSScepCertificateProfileRequest extends BaseRequest implements IMacOSScepCertificateProfileRequest {
+public class MacOSScepCertificateProfileRequest extends BaseRequest<MacOSScepCertificateProfile> {
 	
     /**
      * The request for the MacOSScepCertificateProfile
@@ -35,7 +34,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSScepCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSScepCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSScepCertificateProfile.class);
     }
 
@@ -44,7 +43,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSScepCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @return the MacOSScepCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSScepCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSScepCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param sourceMacOSScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback) {
+    public void patch(@Nonnull final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile, @Nonnull final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSScepCertificateProfile);
     }
 
@@ -93,7 +93,8 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @return the updated MacOSScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSScepCertificateProfile patch(final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSScepCertificateProfile patch(@Nonnull final MacOSScepCertificateProfile sourceMacOSScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSScepCertificateProfile);
     }
 
@@ -103,7 +104,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param newMacOSScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback) {
+    public void post(@Nonnull final MacOSScepCertificateProfile newMacOSScepCertificateProfile, @Nonnull final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newMacOSScepCertificateProfile);
     }
 
@@ -114,7 +115,8 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @return the created MacOSScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSScepCertificateProfile post(final MacOSScepCertificateProfile newMacOSScepCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSScepCertificateProfile post(@Nonnull final MacOSScepCertificateProfile newMacOSScepCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newMacOSScepCertificateProfile);
     }
 
@@ -124,7 +126,7 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param newMacOSScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile, final ICallback<? super MacOSScepCertificateProfile> callback) {
+    public void put(@Nonnull final MacOSScepCertificateProfile newMacOSScepCertificateProfile, @Nonnull final ICallback<? super MacOSScepCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newMacOSScepCertificateProfile);
     }
 
@@ -135,7 +137,8 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @return the created MacOSScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSScepCertificateProfile put(final MacOSScepCertificateProfile newMacOSScepCertificateProfile) throws ClientException {
+    @Nullable
+    public MacOSScepCertificateProfile put(@Nonnull final MacOSScepCertificateProfile newMacOSScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newMacOSScepCertificateProfile);
     }
 
@@ -145,9 +148,10 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSScepCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSScepCertificateProfileRequest)this;
+     @Nonnull
+     public MacOSScepCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class MacOSScepCertificateProfileRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSScepCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSScepCertificateProfileRequest)this;
+     @Nonnull
+     public MacOSScepCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

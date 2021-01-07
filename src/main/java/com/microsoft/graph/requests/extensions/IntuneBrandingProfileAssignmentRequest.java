@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfileAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Intune Branding Profile Assignment Request.
  */
-public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implements IIntuneBrandingProfileAssignmentRequest {
+public class IntuneBrandingProfileAssignmentRequest extends BaseRequest<IntuneBrandingProfileAssignment> {
 	
     /**
      * The request for the IntuneBrandingProfileAssignment
@@ -29,7 +31,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IntuneBrandingProfileAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IntuneBrandingProfileAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IntuneBrandingProfileAssignment.class);
     }
 
@@ -38,7 +40,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IntuneBrandingProfileAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @return the IntuneBrandingProfileAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IntuneBrandingProfileAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IntuneBrandingProfileAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param sourceIntuneBrandingProfileAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback) {
+    public void patch(@Nonnull final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment, @Nonnull final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceIntuneBrandingProfileAssignment);
     }
 
@@ -87,7 +90,8 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @return the updated IntuneBrandingProfileAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IntuneBrandingProfileAssignment patch(final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment) throws ClientException {
+    @Nullable
+    public IntuneBrandingProfileAssignment patch(@Nonnull final IntuneBrandingProfileAssignment sourceIntuneBrandingProfileAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceIntuneBrandingProfileAssignment);
     }
 
@@ -97,7 +101,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param newIntuneBrandingProfileAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback) {
+    public void post(@Nonnull final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, @Nonnull final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.POST, callback, newIntuneBrandingProfileAssignment);
     }
 
@@ -108,7 +112,8 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @return the created IntuneBrandingProfileAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IntuneBrandingProfileAssignment post(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment) throws ClientException {
+    @Nullable
+    public IntuneBrandingProfileAssignment post(@Nonnull final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment) throws ClientException {
         return send(HttpMethod.POST, newIntuneBrandingProfileAssignment);
     }
 
@@ -118,7 +123,7 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param newIntuneBrandingProfileAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, final ICallback<? super IntuneBrandingProfileAssignment> callback) {
+    public void put(@Nonnull final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment, @Nonnull final ICallback<? super IntuneBrandingProfileAssignment> callback) {
         send(HttpMethod.PUT, callback, newIntuneBrandingProfileAssignment);
     }
 
@@ -129,7 +134,8 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @return the created IntuneBrandingProfileAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IntuneBrandingProfileAssignment put(final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment) throws ClientException {
+    @Nullable
+    public IntuneBrandingProfileAssignment put(@Nonnull final IntuneBrandingProfileAssignment newIntuneBrandingProfileAssignment) throws ClientException {
         return send(HttpMethod.PUT, newIntuneBrandingProfileAssignment);
     }
 
@@ -139,9 +145,10 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IIntuneBrandingProfileAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IntuneBrandingProfileAssignmentRequest)this;
+     @Nonnull
+     public IntuneBrandingProfileAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IntuneBrandingProfileAssignmentRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IIntuneBrandingProfileAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IntuneBrandingProfileAssignmentRequest)this;
+     @Nonnull
+     public IntuneBrandingProfileAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

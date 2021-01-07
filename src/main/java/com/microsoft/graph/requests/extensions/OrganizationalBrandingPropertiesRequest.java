@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationalBrandingProperties;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organizational Branding Properties Request.
  */
-public class OrganizationalBrandingPropertiesRequest extends BaseRequest implements IOrganizationalBrandingPropertiesRequest {
+public class OrganizationalBrandingPropertiesRequest extends BaseRequest<OrganizationalBrandingProperties> {
 	
     /**
      * The request for the OrganizationalBrandingProperties
@@ -30,10 +32,10 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public OrganizationalBrandingPropertiesRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends OrganizationalBrandingProperties> responseClass) {
+    public OrganizationalBrandingPropertiesRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends OrganizationalBrandingProperties> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationalBrandingPropertiesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationalBrandingPropertiesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrganizationalBrandingProperties.class);
     }
 
@@ -53,7 +55,7 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OrganizationalBrandingProperties> callback) {
+    public void get(@Nonnull final ICallback<? super OrganizationalBrandingProperties> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @return the OrganizationalBrandingProperties from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OrganizationalBrandingProperties get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OrganizationalBrandingProperties> callback) {
+    public void delete(@Nonnull final ICallback<? super OrganizationalBrandingProperties> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @param sourceOrganizationalBrandingProperties the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OrganizationalBrandingProperties sourceOrganizationalBrandingProperties, final ICallback<? super OrganizationalBrandingProperties> callback) {
+    public void patch(@Nonnull final OrganizationalBrandingProperties sourceOrganizationalBrandingProperties, @Nonnull final ICallback<? super OrganizationalBrandingProperties> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganizationalBrandingProperties);
     }
 
@@ -102,7 +105,8 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @return the updated OrganizationalBrandingProperties
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBrandingProperties patch(final OrganizationalBrandingProperties sourceOrganizationalBrandingProperties) throws ClientException {
+    @Nullable
+    public OrganizationalBrandingProperties patch(@Nonnull final OrganizationalBrandingProperties sourceOrganizationalBrandingProperties) throws ClientException {
         return send(HttpMethod.PATCH, sourceOrganizationalBrandingProperties);
     }
 
@@ -112,7 +116,7 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @param newOrganizationalBrandingProperties the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OrganizationalBrandingProperties newOrganizationalBrandingProperties, final ICallback<? super OrganizationalBrandingProperties> callback) {
+    public void post(@Nonnull final OrganizationalBrandingProperties newOrganizationalBrandingProperties, @Nonnull final ICallback<? super OrganizationalBrandingProperties> callback) {
         send(HttpMethod.POST, callback, newOrganizationalBrandingProperties);
     }
 
@@ -123,7 +127,8 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @return the created OrganizationalBrandingProperties
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBrandingProperties post(final OrganizationalBrandingProperties newOrganizationalBrandingProperties) throws ClientException {
+    @Nullable
+    public OrganizationalBrandingProperties post(@Nonnull final OrganizationalBrandingProperties newOrganizationalBrandingProperties) throws ClientException {
         return send(HttpMethod.POST, newOrganizationalBrandingProperties);
     }
 
@@ -133,7 +138,7 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @param newOrganizationalBrandingProperties the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OrganizationalBrandingProperties newOrganizationalBrandingProperties, final ICallback<? super OrganizationalBrandingProperties> callback) {
+    public void put(@Nonnull final OrganizationalBrandingProperties newOrganizationalBrandingProperties, @Nonnull final ICallback<? super OrganizationalBrandingProperties> callback) {
         send(HttpMethod.PUT, callback, newOrganizationalBrandingProperties);
     }
 
@@ -144,7 +149,8 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @return the created OrganizationalBrandingProperties
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBrandingProperties put(final OrganizationalBrandingProperties newOrganizationalBrandingProperties) throws ClientException {
+    @Nullable
+    public OrganizationalBrandingProperties put(@Nonnull final OrganizationalBrandingProperties newOrganizationalBrandingProperties) throws ClientException {
         return send(HttpMethod.PUT, newOrganizationalBrandingProperties);
     }
 
@@ -154,9 +160,10 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IOrganizationalBrandingPropertiesRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrganizationalBrandingPropertiesRequest)this;
+     @Nonnull
+     public OrganizationalBrandingPropertiesRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class OrganizationalBrandingPropertiesRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrganizationalBrandingPropertiesRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationalBrandingPropertiesRequest)this;
+     @Nonnull
+     public OrganizationalBrandingPropertiesRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

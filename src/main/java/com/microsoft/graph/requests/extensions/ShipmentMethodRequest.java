@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ShipmentMethod;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shipment Method Request.
  */
-public class ShipmentMethodRequest extends BaseRequest implements IShipmentMethodRequest {
+public class ShipmentMethodRequest extends BaseRequest<ShipmentMethod> {
 	
     /**
      * The request for the ShipmentMethod
@@ -29,7 +31,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ShipmentMethodRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ShipmentMethodRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ShipmentMethod.class);
     }
 
@@ -38,7 +40,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ShipmentMethod> callback) {
+    public void get(@Nonnull final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @return the ShipmentMethod from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ShipmentMethod get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ShipmentMethod> callback) {
+    public void delete(@Nonnull final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param sourceShipmentMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ShipmentMethod sourceShipmentMethod, final ICallback<? super ShipmentMethod> callback) {
+    public void patch(@Nonnull final ShipmentMethod sourceShipmentMethod, @Nonnull final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceShipmentMethod);
     }
 
@@ -87,7 +90,8 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @return the updated ShipmentMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ShipmentMethod patch(final ShipmentMethod sourceShipmentMethod) throws ClientException {
+    @Nullable
+    public ShipmentMethod patch(@Nonnull final ShipmentMethod sourceShipmentMethod) throws ClientException {
         return send(HttpMethod.PATCH, sourceShipmentMethod);
     }
 
@@ -97,7 +101,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param newShipmentMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ShipmentMethod newShipmentMethod, final ICallback<? super ShipmentMethod> callback) {
+    public void post(@Nonnull final ShipmentMethod newShipmentMethod, @Nonnull final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.POST, callback, newShipmentMethod);
     }
 
@@ -108,7 +112,8 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @return the created ShipmentMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ShipmentMethod post(final ShipmentMethod newShipmentMethod) throws ClientException {
+    @Nullable
+    public ShipmentMethod post(@Nonnull final ShipmentMethod newShipmentMethod) throws ClientException {
         return send(HttpMethod.POST, newShipmentMethod);
     }
 
@@ -118,7 +123,7 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param newShipmentMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ShipmentMethod newShipmentMethod, final ICallback<? super ShipmentMethod> callback) {
+    public void put(@Nonnull final ShipmentMethod newShipmentMethod, @Nonnull final ICallback<? super ShipmentMethod> callback) {
         send(HttpMethod.PUT, callback, newShipmentMethod);
     }
 
@@ -129,7 +134,8 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @return the created ShipmentMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ShipmentMethod put(final ShipmentMethod newShipmentMethod) throws ClientException {
+    @Nullable
+    public ShipmentMethod put(@Nonnull final ShipmentMethod newShipmentMethod) throws ClientException {
         return send(HttpMethod.PUT, newShipmentMethod);
     }
 
@@ -139,9 +145,10 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param value the select clause
      * @return the updated request
      */
-     public IShipmentMethodRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ShipmentMethodRequest)this;
+     @Nonnull
+     public ShipmentMethodRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ShipmentMethodRequest extends BaseRequest implements IShipmentMetho
      * @param value the expand clause
      * @return the updated request
      */
-     public IShipmentMethodRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ShipmentMethodRequest)this;
+     @Nonnull
+     public ShipmentMethodRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

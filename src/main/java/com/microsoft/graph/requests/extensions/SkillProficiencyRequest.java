@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SkillProficiency;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Skill Proficiency Request.
  */
-public class SkillProficiencyRequest extends BaseRequest implements ISkillProficiencyRequest {
+public class SkillProficiencyRequest extends BaseRequest<SkillProficiency> {
 	
     /**
      * The request for the SkillProficiency
@@ -29,7 +31,7 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SkillProficiencyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SkillProficiencyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SkillProficiency.class);
     }
 
@@ -38,7 +40,7 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SkillProficiency> callback) {
+    public void get(@Nonnull final ICallback<? super SkillProficiency> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @return the SkillProficiency from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SkillProficiency get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SkillProficiency> callback) {
+    public void delete(@Nonnull final ICallback<? super SkillProficiency> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @param sourceSkillProficiency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkillProficiency sourceSkillProficiency, final ICallback<? super SkillProficiency> callback) {
+    public void patch(@Nonnull final SkillProficiency sourceSkillProficiency, @Nonnull final ICallback<? super SkillProficiency> callback) {
         send(HttpMethod.PATCH, callback, sourceSkillProficiency);
     }
 
@@ -87,7 +90,8 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @return the updated SkillProficiency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkillProficiency patch(final SkillProficiency sourceSkillProficiency) throws ClientException {
+    @Nullable
+    public SkillProficiency patch(@Nonnull final SkillProficiency sourceSkillProficiency) throws ClientException {
         return send(HttpMethod.PATCH, sourceSkillProficiency);
     }
 
@@ -97,7 +101,7 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @param newSkillProficiency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkillProficiency newSkillProficiency, final ICallback<? super SkillProficiency> callback) {
+    public void post(@Nonnull final SkillProficiency newSkillProficiency, @Nonnull final ICallback<? super SkillProficiency> callback) {
         send(HttpMethod.POST, callback, newSkillProficiency);
     }
 
@@ -108,7 +112,8 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @return the created SkillProficiency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkillProficiency post(final SkillProficiency newSkillProficiency) throws ClientException {
+    @Nullable
+    public SkillProficiency post(@Nonnull final SkillProficiency newSkillProficiency) throws ClientException {
         return send(HttpMethod.POST, newSkillProficiency);
     }
 
@@ -118,7 +123,7 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @param newSkillProficiency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkillProficiency newSkillProficiency, final ICallback<? super SkillProficiency> callback) {
+    public void put(@Nonnull final SkillProficiency newSkillProficiency, @Nonnull final ICallback<? super SkillProficiency> callback) {
         send(HttpMethod.PUT, callback, newSkillProficiency);
     }
 
@@ -129,7 +134,8 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @return the created SkillProficiency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkillProficiency put(final SkillProficiency newSkillProficiency) throws ClientException {
+    @Nullable
+    public SkillProficiency put(@Nonnull final SkillProficiency newSkillProficiency) throws ClientException {
         return send(HttpMethod.PUT, newSkillProficiency);
     }
 
@@ -139,9 +145,10 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @param value the select clause
      * @return the updated request
      */
-     public ISkillProficiencyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SkillProficiencyRequest)this;
+     @Nonnull
+     public SkillProficiencyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SkillProficiencyRequest extends BaseRequest implements ISkillProfic
      * @param value the expand clause
      * @return the updated request
      */
-     public ISkillProficiencyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkillProficiencyRequest)this;
+     @Nonnull
+     public SkillProficiencyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

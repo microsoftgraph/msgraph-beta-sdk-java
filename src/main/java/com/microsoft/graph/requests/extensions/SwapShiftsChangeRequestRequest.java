@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SwapShiftsChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Swap Shifts Change Request Request.
  */
-public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwapShiftsChangeRequestRequest {
+public class SwapShiftsChangeRequestRequest extends BaseRequest<SwapShiftsChangeRequest> {
 	
     /**
      * The request for the SwapShiftsChangeRequest
@@ -29,7 +31,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SwapShiftsChangeRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SwapShiftsChangeRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SwapShiftsChangeRequest.class);
     }
 
@@ -38,7 +40,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SwapShiftsChangeRequest> callback) {
+    public void get(@Nonnull final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @return the SwapShiftsChangeRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SwapShiftsChangeRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SwapShiftsChangeRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param sourceSwapShiftsChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
+    public void patch(@Nonnull final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest, @Nonnull final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceSwapShiftsChangeRequest);
     }
 
@@ -87,7 +90,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @return the updated SwapShiftsChangeRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SwapShiftsChangeRequest patch(final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest) throws ClientException {
+    @Nullable
+    public SwapShiftsChangeRequest patch(@Nonnull final SwapShiftsChangeRequest sourceSwapShiftsChangeRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceSwapShiftsChangeRequest);
     }
 
@@ -97,7 +101,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param newSwapShiftsChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
+    public void post(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest, @Nonnull final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.POST, callback, newSwapShiftsChangeRequest);
     }
 
@@ -108,7 +112,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @return the created SwapShiftsChangeRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SwapShiftsChangeRequest post(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
+    @Nullable
+    public SwapShiftsChangeRequest post(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
         return send(HttpMethod.POST, newSwapShiftsChangeRequest);
     }
 
@@ -118,7 +123,7 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param newSwapShiftsChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest, final ICallback<? super SwapShiftsChangeRequest> callback) {
+    public void put(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest, @Nonnull final ICallback<? super SwapShiftsChangeRequest> callback) {
         send(HttpMethod.PUT, callback, newSwapShiftsChangeRequest);
     }
 
@@ -129,7 +134,8 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @return the created SwapShiftsChangeRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SwapShiftsChangeRequest put(final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
+    @Nullable
+    public SwapShiftsChangeRequest put(@Nonnull final SwapShiftsChangeRequest newSwapShiftsChangeRequest) throws ClientException {
         return send(HttpMethod.PUT, newSwapShiftsChangeRequest);
     }
 
@@ -139,9 +145,10 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param value the select clause
      * @return the updated request
      */
-     public ISwapShiftsChangeRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SwapShiftsChangeRequestRequest)this;
+     @Nonnull
+     public SwapShiftsChangeRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SwapShiftsChangeRequestRequest extends BaseRequest implements ISwap
      * @param value the expand clause
      * @return the updated request
      */
-     public ISwapShiftsChangeRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SwapShiftsChangeRequestRequest)this;
+     @Nonnull
+     public SwapShiftsChangeRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

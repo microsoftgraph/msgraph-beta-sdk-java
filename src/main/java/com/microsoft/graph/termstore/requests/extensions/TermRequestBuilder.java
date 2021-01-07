@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Term;
-import com.microsoft.graph.termstore.requests.extensions.ITermCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Term Request Builder.
  */
-public class TermRequestBuilder extends BaseRequestBuilder implements ITermRequestBuilder {
+public class TermRequestBuilder extends BaseRequestBuilder<Term> {
 
     /**
      * The request builder for the Term
@@ -38,7 +35,7 @@ public class TermRequestBuilder extends BaseRequestBuilder implements ITermReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class TermRequestBuilder extends BaseRequestBuilder implements ITermReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITermRequest instance
+     * @return the TermRequest instance
      */
-    public ITermRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TermRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,34 +54,62 @@ public class TermRequestBuilder extends BaseRequestBuilder implements ITermReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITermRequest instance
+     * @return the TermRequest instance
      */
-    public ITermRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TermRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.termstore.requests.extensions.TermRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ITermCollectionRequestBuilder children() {
+    /**
+     *  Gets a request builder for the Term collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TermCollectionRequestBuilder children() {
         return new TermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("children"), getClient(), null);
     }
 
-    public ITermRequestBuilder children(final String id) {
+    /**
+     * Gets a request builder for the Term item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TermRequestBuilder children(@Nonnull final String id) {
         return new TermRequestBuilder(getRequestUrlWithAdditionalSegment("children") + "/" + id, getClient(), null);
     }
-    public IRelationCollectionRequestBuilder relations() {
+    /**
+     *  Gets a request builder for the Relation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RelationCollectionRequestBuilder relations() {
         return new RelationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("relations"), getClient(), null);
     }
 
-    public IRelationRequestBuilder relations(final String id) {
+    /**
+     * Gets a request builder for the Relation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RelationRequestBuilder relations(@Nonnull final String id) {
         return new RelationRequestBuilder(getRequestUrlWithAdditionalSegment("relations") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for Set
      *
-     * @return the ISetWithReferenceRequestBuilder instance
+     * @return the SetWithReferenceRequestBuilder instance
      */
-    public ISetWithReferenceRequestBuilder set() {
+    @Nonnull
+    public SetWithReferenceRequestBuilder set() {
         return new SetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("set"), getClient(), null);
     }
 }

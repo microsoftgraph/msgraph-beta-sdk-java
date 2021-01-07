@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
-import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner User Request Builder.
  */
-public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPlannerUserRequestBuilder {
+public class PlannerUserRequestBuilder extends BaseRequestBuilder<PlannerUser> {
 
     /**
      * The request builder for the PlannerUser
@@ -40,7 +36,7 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerUserRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerUserRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,9 +44,10 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerUserRequest instance
+     * @return the PlannerUserRequest instance
      */
-    public IPlannerUserRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlannerUserRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,46 +55,112 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerUserRequest instance
+     * @return the PlannerUserRequest instance
      */
-    public IPlannerUserRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlannerUserRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerUserRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPlannerDeltaCollectionRequestBuilder all() {
+    /**
+     *  Gets a request builder for the PlannerDelta collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PlannerDeltaCollectionRequestBuilder all() {
         return new PlannerDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("all"), getClient(), null);
     }
 
-    public IPlannerDeltaRequestBuilder all(final String id) {
+    /**
+     * Gets a request builder for the PlannerDelta item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PlannerDeltaRequestBuilder all(@Nonnull final String id) {
         return new PlannerDeltaRequestBuilder(getRequestUrlWithAdditionalSegment("all") + "/" + id, getClient(), null);
     }
-    public IPlannerPlanCollectionWithReferencesRequestBuilder favoritePlans() {
+    /**
+     *  Gets a request builder for the PlannerPlan collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PlannerPlanCollectionWithReferencesRequestBuilder favoritePlans() {
         return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("favoritePlans"), getClient(), null);
     }
 
-    public IPlannerPlanWithReferenceRequestBuilder favoritePlans(final String id) {
+    /**
+     * Gets a request builder for the PlannerPlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PlannerPlanWithReferenceRequestBuilder favoritePlans(@Nonnull final String id) {
         return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("favoritePlans") + "/" + id, getClient(), null);
     }
-    public IPlannerPlanCollectionRequestBuilder plans() {
+    /**
+     *  Gets a request builder for the PlannerPlan collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PlannerPlanCollectionRequestBuilder plans() {
         return new PlannerPlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("plans"), getClient(), null);
     }
 
-    public IPlannerPlanRequestBuilder plans(final String id) {
+    /**
+     * Gets a request builder for the PlannerPlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PlannerPlanRequestBuilder plans(@Nonnull final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
     }
-    public IPlannerPlanCollectionWithReferencesRequestBuilder recentPlans() {
+    /**
+     *  Gets a request builder for the PlannerPlan collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PlannerPlanCollectionWithReferencesRequestBuilder recentPlans() {
         return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("recentPlans"), getClient(), null);
     }
 
-    public IPlannerPlanWithReferenceRequestBuilder recentPlans(final String id) {
+    /**
+     * Gets a request builder for the PlannerPlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PlannerPlanWithReferenceRequestBuilder recentPlans(@Nonnull final String id) {
         return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("recentPlans") + "/" + id, getClient(), null);
     }
-    public IPlannerTaskCollectionRequestBuilder tasks() {
+    /**
+     *  Gets a request builder for the PlannerTask collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPlannerTaskRequestBuilder tasks(final String id) {
+    /**
+     * Gets a request builder for the PlannerTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PlannerTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PlannerTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsMicrosoftEdgeApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Microsoft Edge App Request.
  */
-public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWindowsMicrosoftEdgeAppRequest {
+public class WindowsMicrosoftEdgeAppRequest extends BaseRequest<WindowsMicrosoftEdgeApp> {
 	
     /**
      * The request for the WindowsMicrosoftEdgeApp
@@ -29,7 +31,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsMicrosoftEdgeAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsMicrosoftEdgeAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsMicrosoftEdgeApp.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @return the WindowsMicrosoftEdgeApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsMicrosoftEdgeApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param sourceWindowsMicrosoftEdgeApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
+    public void patch(@Nonnull final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp, @Nonnull final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsMicrosoftEdgeApp);
     }
 
@@ -87,7 +90,8 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @return the updated WindowsMicrosoftEdgeApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsMicrosoftEdgeApp patch(final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp) throws ClientException {
+    @Nullable
+    public WindowsMicrosoftEdgeApp patch(@Nonnull final WindowsMicrosoftEdgeApp sourceWindowsMicrosoftEdgeApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsMicrosoftEdgeApp);
     }
 
@@ -97,7 +101,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param newWindowsMicrosoftEdgeApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
+    public void post(@Nonnull final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, @Nonnull final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.POST, callback, newWindowsMicrosoftEdgeApp);
     }
 
@@ -108,7 +112,8 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @return the created WindowsMicrosoftEdgeApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsMicrosoftEdgeApp post(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp) throws ClientException {
+    @Nullable
+    public WindowsMicrosoftEdgeApp post(@Nonnull final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp) throws ClientException {
         return send(HttpMethod.POST, newWindowsMicrosoftEdgeApp);
     }
 
@@ -118,7 +123,7 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param newWindowsMicrosoftEdgeApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
+    public void put(@Nonnull final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp, @Nonnull final ICallback<? super WindowsMicrosoftEdgeApp> callback) {
         send(HttpMethod.PUT, callback, newWindowsMicrosoftEdgeApp);
     }
 
@@ -129,7 +134,8 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @return the created WindowsMicrosoftEdgeApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsMicrosoftEdgeApp put(final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp) throws ClientException {
+    @Nullable
+    public WindowsMicrosoftEdgeApp put(@Nonnull final WindowsMicrosoftEdgeApp newWindowsMicrosoftEdgeApp) throws ClientException {
         return send(HttpMethod.PUT, newWindowsMicrosoftEdgeApp);
     }
 
@@ -139,9 +145,10 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsMicrosoftEdgeAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsMicrosoftEdgeAppRequest)this;
+     @Nonnull
+     public WindowsMicrosoftEdgeAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsMicrosoftEdgeAppRequest extends BaseRequest implements IWind
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsMicrosoftEdgeAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsMicrosoftEdgeAppRequest)this;
+     @Nonnull
+     public WindowsMicrosoftEdgeAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

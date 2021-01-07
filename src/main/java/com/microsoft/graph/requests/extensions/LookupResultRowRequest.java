@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LookupResultRow;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Lookup Result Row Request.
  */
-public class LookupResultRowRequest extends BaseRequest implements ILookupResultRowRequest {
+public class LookupResultRowRequest extends BaseRequest<LookupResultRow> {
 	
     /**
      * The request for the LookupResultRow
@@ -29,7 +31,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LookupResultRowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LookupResultRowRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LookupResultRow.class);
     }
 
@@ -38,7 +40,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LookupResultRow> callback) {
+    public void get(@Nonnull final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @return the LookupResultRow from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public LookupResultRow get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LookupResultRow> callback) {
+    public void delete(@Nonnull final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param sourceLookupResultRow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LookupResultRow sourceLookupResultRow, final ICallback<? super LookupResultRow> callback) {
+    public void patch(@Nonnull final LookupResultRow sourceLookupResultRow, @Nonnull final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.PATCH, callback, sourceLookupResultRow);
     }
 
@@ -87,7 +90,8 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @return the updated LookupResultRow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LookupResultRow patch(final LookupResultRow sourceLookupResultRow) throws ClientException {
+    @Nullable
+    public LookupResultRow patch(@Nonnull final LookupResultRow sourceLookupResultRow) throws ClientException {
         return send(HttpMethod.PATCH, sourceLookupResultRow);
     }
 
@@ -97,7 +101,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param newLookupResultRow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback) {
+    public void post(@Nonnull final LookupResultRow newLookupResultRow, @Nonnull final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.POST, callback, newLookupResultRow);
     }
 
@@ -108,7 +112,8 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @return the created LookupResultRow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LookupResultRow post(final LookupResultRow newLookupResultRow) throws ClientException {
+    @Nullable
+    public LookupResultRow post(@Nonnull final LookupResultRow newLookupResultRow) throws ClientException {
         return send(HttpMethod.POST, newLookupResultRow);
     }
 
@@ -118,7 +123,7 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param newLookupResultRow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LookupResultRow newLookupResultRow, final ICallback<? super LookupResultRow> callback) {
+    public void put(@Nonnull final LookupResultRow newLookupResultRow, @Nonnull final ICallback<? super LookupResultRow> callback) {
         send(HttpMethod.PUT, callback, newLookupResultRow);
     }
 
@@ -129,7 +134,8 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @return the created LookupResultRow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LookupResultRow put(final LookupResultRow newLookupResultRow) throws ClientException {
+    @Nullable
+    public LookupResultRow put(@Nonnull final LookupResultRow newLookupResultRow) throws ClientException {
         return send(HttpMethod.PUT, newLookupResultRow);
     }
 
@@ -139,9 +145,10 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param value the select clause
      * @return the updated request
      */
-     public ILookupResultRowRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LookupResultRowRequest)this;
+     @Nonnull
+     public LookupResultRowRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class LookupResultRowRequest extends BaseRequest implements ILookupResult
      * @param value the expand clause
      * @return the updated request
      */
-     public ILookupResultRowRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LookupResultRowRequest)this;
+     @Nonnull
+     public LookupResultRowRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

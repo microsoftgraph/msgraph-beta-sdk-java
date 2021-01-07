@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration Policy Set Item Request.
  */
-public class DeviceConfigurationPolicySetItemRequest extends BaseRequest implements IDeviceConfigurationPolicySetItemRequest {
+public class DeviceConfigurationPolicySetItemRequest extends BaseRequest<DeviceConfigurationPolicySetItem> {
 	
     /**
      * The request for the DeviceConfigurationPolicySetItem
@@ -29,7 +31,7 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @return the DeviceConfigurationPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfigurationPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @param sourceDeviceConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationPolicySetItem sourceDeviceConfigurationPolicySetItem, final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
+    public void patch(@Nonnull final DeviceConfigurationPolicySetItem sourceDeviceConfigurationPolicySetItem, @Nonnull final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @return the updated DeviceConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationPolicySetItem patch(final DeviceConfigurationPolicySetItem sourceDeviceConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceConfigurationPolicySetItem patch(@Nonnull final DeviceConfigurationPolicySetItem sourceDeviceConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfigurationPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @param newDeviceConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
+    public void post(@Nonnull final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, @Nonnull final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @return the created DeviceConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationPolicySetItem post(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceConfigurationPolicySetItem post(@Nonnull final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfigurationPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @param newDeviceConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
+    public void put(@Nonnull final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem, @Nonnull final ICallback<? super DeviceConfigurationPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @return the created DeviceConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationPolicySetItem put(final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceConfigurationPolicySetItem put(@Nonnull final DeviceConfigurationPolicySetItem newDeviceConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfigurationPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceConfigurationPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public DeviceConfigurationPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceConfigurationPolicySetItemRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceConfigurationPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public DeviceConfigurationPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

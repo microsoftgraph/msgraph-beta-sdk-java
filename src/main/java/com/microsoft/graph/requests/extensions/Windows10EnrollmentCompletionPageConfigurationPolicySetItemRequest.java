@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10EnrollmentCompletionPageConfigurationPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Enrollment Completion Page Configuration Policy Set Item Request.
  */
-public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest extends BaseRequest implements IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest {
+public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest extends BaseRequest<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> {
 	
     /**
      * The request for the Windows10EnrollmentCompletionPageConfigurationPolicySetItem
@@ -29,7 +31,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10EnrollmentCompletionPageConfigurationPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @return the Windows10EnrollmentCompletionPageConfigurationPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10EnrollmentCompletionPageConfigurationPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @param sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
+    public void patch(@Nonnull final Windows10EnrollmentCompletionPageConfigurationPolicySetItem sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem, @Nonnull final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @return the updated Windows10EnrollmentCompletionPageConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EnrollmentCompletionPageConfigurationPolicySetItem patch(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItem patch(@Nonnull final Windows10EnrollmentCompletionPageConfigurationPolicySetItem sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @param newWindows10EnrollmentCompletionPageConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
+    public void post(@Nonnull final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, @Nonnull final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @return the created Windows10EnrollmentCompletionPageConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EnrollmentCompletionPageConfigurationPolicySetItem post(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItem post(@Nonnull final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @param newWindows10EnrollmentCompletionPageConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
+    public void put(@Nonnull final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem, @Nonnull final ICallback<? super Windows10EnrollmentCompletionPageConfigurationPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @return the created Windows10EnrollmentCompletionPageConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EnrollmentCompletionPageConfigurationPolicySetItem put(final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItem put(@Nonnull final Windows10EnrollmentCompletionPageConfigurationPolicySetItem newWindows10EnrollmentCompletionPageConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newWindows10EnrollmentCompletionPageConfigurationPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

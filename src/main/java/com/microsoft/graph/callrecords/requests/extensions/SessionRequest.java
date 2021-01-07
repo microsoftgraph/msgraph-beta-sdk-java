@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.callrecords.models.extensions.Session;
-import com.microsoft.graph.callrecords.requests.extensions.ISegmentCollectionRequestBuilder;
-import com.microsoft.graph.callrecords.requests.extensions.ISegmentRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentCollectionRequestBuilder;
 import com.microsoft.graph.callrecords.requests.extensions.SegmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Session Request.
  */
-public class SessionRequest extends BaseRequest implements ISessionRequest {
+public class SessionRequest extends BaseRequest<Session> {
 	
     /**
      * The request for the Session
@@ -33,7 +33,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SessionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SessionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Session.class);
     }
 
@@ -42,7 +42,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Session> callback) {
+    public void get(@Nonnull final ICallback<? super Session> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @return the Session from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Session get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Session> callback) {
+    public void delete(@Nonnull final ICallback<? super Session> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param sourceSession the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Session sourceSession, final ICallback<? super Session> callback) {
+    public void patch(@Nonnull final Session sourceSession, @Nonnull final ICallback<? super Session> callback) {
         send(HttpMethod.PATCH, callback, sourceSession);
     }
 
@@ -91,7 +92,8 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @return the updated Session
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Session patch(final Session sourceSession) throws ClientException {
+    @Nullable
+    public Session patch(@Nonnull final Session sourceSession) throws ClientException {
         return send(HttpMethod.PATCH, sourceSession);
     }
 
@@ -101,7 +103,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param newSession the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Session newSession, final ICallback<? super Session> callback) {
+    public void post(@Nonnull final Session newSession, @Nonnull final ICallback<? super Session> callback) {
         send(HttpMethod.POST, callback, newSession);
     }
 
@@ -112,7 +114,8 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @return the created Session
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Session post(final Session newSession) throws ClientException {
+    @Nullable
+    public Session post(@Nonnull final Session newSession) throws ClientException {
         return send(HttpMethod.POST, newSession);
     }
 
@@ -122,7 +125,7 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param newSession the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Session newSession, final ICallback<? super Session> callback) {
+    public void put(@Nonnull final Session newSession, @Nonnull final ICallback<? super Session> callback) {
         send(HttpMethod.PUT, callback, newSession);
     }
 
@@ -133,7 +136,8 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @return the created Session
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Session put(final Session newSession) throws ClientException {
+    @Nullable
+    public Session put(@Nonnull final Session newSession) throws ClientException {
         return send(HttpMethod.PUT, newSession);
     }
 
@@ -143,9 +147,10 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISessionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SessionRequest)this;
+     @Nonnull
+     public SessionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class SessionRequest extends BaseRequest implements ISessionRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISessionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SessionRequest)this;
+     @Nonnull
+     public SessionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

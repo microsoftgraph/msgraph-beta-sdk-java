@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.AppLogCollectionRequest;
 import com.microsoft.graph.models.extensions.AppLogCollectionDownloadDetails;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the App Log Collection Request Request.
  */
-public class AppLogCollectionRequestRequest extends BaseRequest implements IAppLogCollectionRequestRequest {
+public class AppLogCollectionRequestRequest extends BaseRequest<AppLogCollectionRequest> {
 	
     /**
      * The request for the AppLogCollectionRequest
@@ -30,7 +32,7 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppLogCollectionRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppLogCollectionRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppLogCollectionRequest.class);
     }
 
@@ -39,7 +41,7 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AppLogCollectionRequest> callback) {
+    public void get(@Nonnull final ICallback<? super AppLogCollectionRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @return the AppLogCollectionRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AppLogCollectionRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AppLogCollectionRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super AppLogCollectionRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @param sourceAppLogCollectionRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppLogCollectionRequest sourceAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback) {
+    public void patch(@Nonnull final AppLogCollectionRequest sourceAppLogCollectionRequest, @Nonnull final ICallback<? super AppLogCollectionRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceAppLogCollectionRequest);
     }
 
@@ -88,7 +91,8 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @return the updated AppLogCollectionRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppLogCollectionRequest patch(final AppLogCollectionRequest sourceAppLogCollectionRequest) throws ClientException {
+    @Nullable
+    public AppLogCollectionRequest patch(@Nonnull final AppLogCollectionRequest sourceAppLogCollectionRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceAppLogCollectionRequest);
     }
 
@@ -98,7 +102,7 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @param newAppLogCollectionRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback) {
+    public void post(@Nonnull final AppLogCollectionRequest newAppLogCollectionRequest, @Nonnull final ICallback<? super AppLogCollectionRequest> callback) {
         send(HttpMethod.POST, callback, newAppLogCollectionRequest);
     }
 
@@ -109,7 +113,8 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @return the created AppLogCollectionRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppLogCollectionRequest post(final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException {
+    @Nullable
+    public AppLogCollectionRequest post(@Nonnull final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException {
         return send(HttpMethod.POST, newAppLogCollectionRequest);
     }
 
@@ -119,7 +124,7 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @param newAppLogCollectionRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppLogCollectionRequest newAppLogCollectionRequest, final ICallback<? super AppLogCollectionRequest> callback) {
+    public void put(@Nonnull final AppLogCollectionRequest newAppLogCollectionRequest, @Nonnull final ICallback<? super AppLogCollectionRequest> callback) {
         send(HttpMethod.PUT, callback, newAppLogCollectionRequest);
     }
 
@@ -130,7 +135,8 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @return the created AppLogCollectionRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppLogCollectionRequest put(final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException {
+    @Nullable
+    public AppLogCollectionRequest put(@Nonnull final AppLogCollectionRequest newAppLogCollectionRequest) throws ClientException {
         return send(HttpMethod.PUT, newAppLogCollectionRequest);
     }
 
@@ -140,9 +146,10 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @param value the select clause
      * @return the updated request
      */
-     public IAppLogCollectionRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AppLogCollectionRequestRequest)this;
+     @Nonnull
+     public AppLogCollectionRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class AppLogCollectionRequestRequest extends BaseRequest implements IAppL
      * @param value the expand clause
      * @return the updated request
      */
-     public IAppLogCollectionRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppLogCollectionRequestRequest)this;
+     @Nonnull
+     public AppLogCollectionRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Derived Credential Settings Request.
  */
-public class DeviceManagementDerivedCredentialSettingsRequest extends BaseRequest implements IDeviceManagementDerivedCredentialSettingsRequest {
+public class DeviceManagementDerivedCredentialSettingsRequest extends BaseRequest<DeviceManagementDerivedCredentialSettings> {
 	
     /**
      * The request for the DeviceManagementDerivedCredentialSettings
@@ -29,7 +31,7 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementDerivedCredentialSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementDerivedCredentialSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementDerivedCredentialSettings.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @return the DeviceManagementDerivedCredentialSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementDerivedCredentialSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @param sourceDeviceManagementDerivedCredentialSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
+    public void patch(@Nonnull final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings, @Nonnull final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementDerivedCredentialSettings);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @return the updated DeviceManagementDerivedCredentialSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementDerivedCredentialSettings patch(final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings) throws ClientException {
+    @Nullable
+    public DeviceManagementDerivedCredentialSettings patch(@Nonnull final DeviceManagementDerivedCredentialSettings sourceDeviceManagementDerivedCredentialSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementDerivedCredentialSettings);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @param newDeviceManagementDerivedCredentialSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
+    public void post(@Nonnull final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, @Nonnull final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementDerivedCredentialSettings);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @return the created DeviceManagementDerivedCredentialSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementDerivedCredentialSettings post(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings) throws ClientException {
+    @Nullable
+    public DeviceManagementDerivedCredentialSettings post(@Nonnull final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementDerivedCredentialSettings);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @param newDeviceManagementDerivedCredentialSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
+    public void put(@Nonnull final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings, @Nonnull final ICallback<? super DeviceManagementDerivedCredentialSettings> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementDerivedCredentialSettings);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @return the created DeviceManagementDerivedCredentialSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementDerivedCredentialSettings put(final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings) throws ClientException {
+    @Nullable
+    public DeviceManagementDerivedCredentialSettings put(@Nonnull final DeviceManagementDerivedCredentialSettings newDeviceManagementDerivedCredentialSettings) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementDerivedCredentialSettings);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementDerivedCredentialSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementDerivedCredentialSettingsRequest)this;
+     @Nonnull
+     public DeviceManagementDerivedCredentialSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementDerivedCredentialSettingsRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementDerivedCredentialSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementDerivedCredentialSettingsRequest)this;
+     @Nonnull
+     public DeviceManagementDerivedCredentialSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

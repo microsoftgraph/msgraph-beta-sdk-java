@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailAppUsageUserDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Email App Usage User Detail Request.
  */
-public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmailAppUsageUserDetailRequest {
+public class EmailAppUsageUserDetailRequest extends BaseRequest<EmailAppUsageUserDetail> {
 	
     /**
      * The request for the EmailAppUsageUserDetail
@@ -29,7 +31,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmailAppUsageUserDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmailAppUsageUserDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmailAppUsageUserDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmailAppUsageUserDetail> callback) {
+    public void get(@Nonnull final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @return the EmailAppUsageUserDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EmailAppUsageUserDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmailAppUsageUserDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param sourceEmailAppUsageUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailAppUsageUserDetail sourceEmailAppUsageUserDetail, final ICallback<? super EmailAppUsageUserDetail> callback) {
+    public void patch(@Nonnull final EmailAppUsageUserDetail sourceEmailAppUsageUserDetail, @Nonnull final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailAppUsageUserDetail);
     }
 
@@ -87,7 +90,8 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @return the updated EmailAppUsageUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAppUsageUserDetail patch(final EmailAppUsageUserDetail sourceEmailAppUsageUserDetail) throws ClientException {
+    @Nullable
+    public EmailAppUsageUserDetail patch(@Nonnull final EmailAppUsageUserDetail sourceEmailAppUsageUserDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmailAppUsageUserDetail);
     }
 
@@ -97,7 +101,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param newEmailAppUsageUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailAppUsageUserDetail newEmailAppUsageUserDetail, final ICallback<? super EmailAppUsageUserDetail> callback) {
+    public void post(@Nonnull final EmailAppUsageUserDetail newEmailAppUsageUserDetail, @Nonnull final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.POST, callback, newEmailAppUsageUserDetail);
     }
 
@@ -108,7 +112,8 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @return the created EmailAppUsageUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAppUsageUserDetail post(final EmailAppUsageUserDetail newEmailAppUsageUserDetail) throws ClientException {
+    @Nullable
+    public EmailAppUsageUserDetail post(@Nonnull final EmailAppUsageUserDetail newEmailAppUsageUserDetail) throws ClientException {
         return send(HttpMethod.POST, newEmailAppUsageUserDetail);
     }
 
@@ -118,7 +123,7 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param newEmailAppUsageUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailAppUsageUserDetail newEmailAppUsageUserDetail, final ICallback<? super EmailAppUsageUserDetail> callback) {
+    public void put(@Nonnull final EmailAppUsageUserDetail newEmailAppUsageUserDetail, @Nonnull final ICallback<? super EmailAppUsageUserDetail> callback) {
         send(HttpMethod.PUT, callback, newEmailAppUsageUserDetail);
     }
 
@@ -129,7 +134,8 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @return the created EmailAppUsageUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAppUsageUserDetail put(final EmailAppUsageUserDetail newEmailAppUsageUserDetail) throws ClientException {
+    @Nullable
+    public EmailAppUsageUserDetail put(@Nonnull final EmailAppUsageUserDetail newEmailAppUsageUserDetail) throws ClientException {
         return send(HttpMethod.PUT, newEmailAppUsageUserDetail);
     }
 
@@ -139,9 +145,10 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param value the select clause
      * @return the updated request
      */
-     public IEmailAppUsageUserDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmailAppUsageUserDetailRequest)this;
+     @Nonnull
+     public EmailAppUsageUserDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EmailAppUsageUserDetailRequest extends BaseRequest implements IEmai
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmailAppUsageUserDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailAppUsageUserDetailRequest)this;
+     @Nonnull
+     public EmailAppUsageUserDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

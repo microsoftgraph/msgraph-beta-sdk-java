@@ -10,15 +10,15 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagementCondition;
 import com.microsoft.graph.models.generated.DevicePlatformType;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagementConditionStatementRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagementConditionStatementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagementConditionStatementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -28,7 +28,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Management Condition With Reference Request.
  */
-public class ManagementConditionWithReferenceRequest extends BaseRequest implements IManagementConditionWithReferenceRequest {
+public class ManagementConditionWithReferenceRequest extends BaseWithReferenceRequest<ManagementCondition> {
 
     /**
      * The request for the ManagementCondition
@@ -37,46 +37,9 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagementConditionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagementConditionWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagementCondition.class);
     }
-
-    public void post(final ManagementCondition newManagementCondition, final IJsonBackedObject payload, final ICallback<? super ManagementCondition> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public ManagementCondition post(final ManagementCondition newManagementCondition, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newManagementCondition;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super ManagementCondition> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public ManagementCondition get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super ManagementCondition> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final ManagementCondition sourceManagementCondition, final ICallback<? super ManagementCondition> callback) {
-		send(HttpMethod.PATCH, callback, sourceManagementCondition);
-	}
-
-	public ManagementCondition patch(final ManagementCondition sourceManagementCondition) throws ClientException {
-		return send(HttpMethod.PATCH, sourceManagementCondition);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -84,9 +47,10 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-    public IManagementConditionWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IManagementConditionWithReferenceRequest)this;
+    @Nonnull
+    public ManagementConditionWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -95,8 +59,9 @@ public class ManagementConditionWithReferenceRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-    public IManagementConditionWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ManagementConditionWithReferenceRequest)this;
+    @Nonnull
+    public ManagementConditionWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

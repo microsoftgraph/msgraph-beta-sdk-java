@@ -10,26 +10,19 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceInstallStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserInstallStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EBookInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -39,7 +32,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed EBook Request.
  */
-public class ManagedEBookRequest extends BaseRequest implements IManagedEBookRequest {
+public class ManagedEBookRequest extends BaseRequest<ManagedEBook> {
 	
     /**
      * The request for the ManagedEBook
@@ -49,10 +42,10 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ManagedEBookRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ManagedEBook> responseClass) {
+    public ManagedEBookRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ManagedEBook> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -63,7 +56,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedEBook.class);
     }
 
@@ -72,7 +65,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedEBook> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedEBook> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -82,6 +75,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @return the ManagedEBook from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedEBook get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -91,7 +85,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedEBook> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedEBook> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -110,7 +104,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param sourceManagedEBook the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedEBook sourceManagedEBook, final ICallback<? super ManagedEBook> callback) {
+    public void patch(@Nonnull final ManagedEBook sourceManagedEBook, @Nonnull final ICallback<? super ManagedEBook> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedEBook);
     }
 
@@ -121,7 +115,8 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @return the updated ManagedEBook
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedEBook patch(final ManagedEBook sourceManagedEBook) throws ClientException {
+    @Nullable
+    public ManagedEBook patch(@Nonnull final ManagedEBook sourceManagedEBook) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedEBook);
     }
 
@@ -131,7 +126,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param newManagedEBook the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback) {
+    public void post(@Nonnull final ManagedEBook newManagedEBook, @Nonnull final ICallback<? super ManagedEBook> callback) {
         send(HttpMethod.POST, callback, newManagedEBook);
     }
 
@@ -142,7 +137,8 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @return the created ManagedEBook
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedEBook post(final ManagedEBook newManagedEBook) throws ClientException {
+    @Nullable
+    public ManagedEBook post(@Nonnull final ManagedEBook newManagedEBook) throws ClientException {
         return send(HttpMethod.POST, newManagedEBook);
     }
 
@@ -152,7 +148,7 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param newManagedEBook the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedEBook newManagedEBook, final ICallback<? super ManagedEBook> callback) {
+    public void put(@Nonnull final ManagedEBook newManagedEBook, @Nonnull final ICallback<? super ManagedEBook> callback) {
         send(HttpMethod.PUT, callback, newManagedEBook);
     }
 
@@ -163,7 +159,8 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @return the created ManagedEBook
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedEBook put(final ManagedEBook newManagedEBook) throws ClientException {
+    @Nullable
+    public ManagedEBook put(@Nonnull final ManagedEBook newManagedEBook) throws ClientException {
         return send(HttpMethod.PUT, newManagedEBook);
     }
 
@@ -173,9 +170,10 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedEBookRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedEBookRequest)this;
+     @Nonnull
+     public ManagedEBookRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -184,9 +182,10 @@ public class ManagedEBookRequest extends BaseRequest implements IManagedEBookReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedEBookRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedEBookRequest)this;
+     @Nonnull
+     public ManagedEBookRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

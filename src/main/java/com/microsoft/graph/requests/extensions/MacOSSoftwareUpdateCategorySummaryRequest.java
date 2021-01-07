@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSSoftwareUpdateCategorySummary;
-import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateStateSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSSoftware Update Category Summary Request.
  */
-public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest implements IMacOSSoftwareUpdateCategorySummaryRequest {
+public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest<MacOSSoftwareUpdateCategorySummary> {
 	
     /**
      * The request for the MacOSSoftwareUpdateCategorySummary
@@ -33,7 +33,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSSoftwareUpdateCategorySummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSSoftwareUpdateCategorySummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSSoftwareUpdateCategorySummary.class);
     }
 
@@ -42,7 +42,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @return the MacOSSoftwareUpdateCategorySummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSSoftwareUpdateCategorySummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @param sourceMacOSSoftwareUpdateCategorySummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSSoftwareUpdateCategorySummary sourceMacOSSoftwareUpdateCategorySummary, final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
+    public void patch(@Nonnull final MacOSSoftwareUpdateCategorySummary sourceMacOSSoftwareUpdateCategorySummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSSoftwareUpdateCategorySummary);
     }
 
@@ -91,7 +92,8 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @return the updated MacOSSoftwareUpdateCategorySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateCategorySummary patch(final MacOSSoftwareUpdateCategorySummary sourceMacOSSoftwareUpdateCategorySummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateCategorySummary patch(@Nonnull final MacOSSoftwareUpdateCategorySummary sourceMacOSSoftwareUpdateCategorySummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSSoftwareUpdateCategorySummary);
     }
 
@@ -101,7 +103,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @param newMacOSSoftwareUpdateCategorySummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary, final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
+    public void post(@Nonnull final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
         send(HttpMethod.POST, callback, newMacOSSoftwareUpdateCategorySummary);
     }
 
@@ -112,7 +114,8 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @return the created MacOSSoftwareUpdateCategorySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateCategorySummary post(final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateCategorySummary post(@Nonnull final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary) throws ClientException {
         return send(HttpMethod.POST, newMacOSSoftwareUpdateCategorySummary);
     }
 
@@ -122,7 +125,7 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @param newMacOSSoftwareUpdateCategorySummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary, final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
+    public void put(@Nonnull final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateCategorySummary> callback) {
         send(HttpMethod.PUT, callback, newMacOSSoftwareUpdateCategorySummary);
     }
 
@@ -133,7 +136,8 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @return the created MacOSSoftwareUpdateCategorySummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateCategorySummary put(final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateCategorySummary put(@Nonnull final MacOSSoftwareUpdateCategorySummary newMacOSSoftwareUpdateCategorySummary) throws ClientException {
         return send(HttpMethod.PUT, newMacOSSoftwareUpdateCategorySummary);
     }
 
@@ -143,9 +147,10 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSSoftwareUpdateCategorySummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSSoftwareUpdateCategorySummaryRequest)this;
+     @Nonnull
+     public MacOSSoftwareUpdateCategorySummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class MacOSSoftwareUpdateCategorySummaryRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSSoftwareUpdateCategorySummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSSoftwareUpdateCategorySummaryRequest)this;
+     @Nonnull
+     public MacOSSoftwareUpdateCategorySummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

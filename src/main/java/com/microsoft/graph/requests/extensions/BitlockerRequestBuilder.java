@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Bitlocker;
-import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Bitlocker Request Builder.
  */
-public class BitlockerRequestBuilder extends BaseRequestBuilder implements IBitlockerRequestBuilder {
+public class BitlockerRequestBuilder extends BaseRequestBuilder<Bitlocker> {
 
     /**
      * The request builder for the Bitlocker
@@ -32,7 +32,7 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder implements IBitl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BitlockerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BitlockerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder implements IBitl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IBitlockerRequest instance
+     * @return the BitlockerRequest instance
      */
-    public IBitlockerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public BitlockerRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class BitlockerRequestBuilder extends BaseRequestBuilder implements IBitl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IBitlockerRequest instance
+     * @return the BitlockerRequest instance
      */
-    public IBitlockerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public BitlockerRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.BitlockerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IBitlockerRecoveryKeyCollectionRequestBuilder recoveryKeys() {
+    /**
+     *  Gets a request builder for the BitlockerRecoveryKey collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BitlockerRecoveryKeyCollectionRequestBuilder recoveryKeys() {
         return new BitlockerRecoveryKeyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recoveryKeys"), getClient(), null);
     }
 
-    public IBitlockerRecoveryKeyRequestBuilder recoveryKeys(final String id) {
+    /**
+     * Gets a request builder for the BitlockerRecoveryKey item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BitlockerRecoveryKeyRequestBuilder recoveryKeys(@Nonnull final String id) {
         return new BitlockerRecoveryKeyRequestBuilder(getRequestUrlWithAdditionalSegment("recoveryKeys") + "/" + id, getClient(), null);
     }
 }

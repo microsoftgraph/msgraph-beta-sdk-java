@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LinkedResource;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Linked Resource Request.
  */
-public class LinkedResourceRequest extends BaseRequest implements ILinkedResourceRequest {
+public class LinkedResourceRequest extends BaseRequest<LinkedResource> {
 	
     /**
      * The request for the LinkedResource
@@ -29,7 +31,7 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LinkedResourceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LinkedResourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LinkedResource.class);
     }
 
@@ -38,7 +40,7 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LinkedResource> callback) {
+    public void get(@Nonnull final ICallback<? super LinkedResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @return the LinkedResource from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public LinkedResource get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LinkedResource> callback) {
+    public void delete(@Nonnull final ICallback<? super LinkedResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @param sourceLinkedResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LinkedResource sourceLinkedResource, final ICallback<? super LinkedResource> callback) {
+    public void patch(@Nonnull final LinkedResource sourceLinkedResource, @Nonnull final ICallback<? super LinkedResource> callback) {
         send(HttpMethod.PATCH, callback, sourceLinkedResource);
     }
 
@@ -87,7 +90,8 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @return the updated LinkedResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LinkedResource patch(final LinkedResource sourceLinkedResource) throws ClientException {
+    @Nullable
+    public LinkedResource patch(@Nonnull final LinkedResource sourceLinkedResource) throws ClientException {
         return send(HttpMethod.PATCH, sourceLinkedResource);
     }
 
@@ -97,7 +101,7 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @param newLinkedResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LinkedResource newLinkedResource, final ICallback<? super LinkedResource> callback) {
+    public void post(@Nonnull final LinkedResource newLinkedResource, @Nonnull final ICallback<? super LinkedResource> callback) {
         send(HttpMethod.POST, callback, newLinkedResource);
     }
 
@@ -108,7 +112,8 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @return the created LinkedResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LinkedResource post(final LinkedResource newLinkedResource) throws ClientException {
+    @Nullable
+    public LinkedResource post(@Nonnull final LinkedResource newLinkedResource) throws ClientException {
         return send(HttpMethod.POST, newLinkedResource);
     }
 
@@ -118,7 +123,7 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @param newLinkedResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LinkedResource newLinkedResource, final ICallback<? super LinkedResource> callback) {
+    public void put(@Nonnull final LinkedResource newLinkedResource, @Nonnull final ICallback<? super LinkedResource> callback) {
         send(HttpMethod.PUT, callback, newLinkedResource);
     }
 
@@ -129,7 +134,8 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @return the created LinkedResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LinkedResource put(final LinkedResource newLinkedResource) throws ClientException {
+    @Nullable
+    public LinkedResource put(@Nonnull final LinkedResource newLinkedResource) throws ClientException {
         return send(HttpMethod.PUT, newLinkedResource);
     }
 
@@ -139,9 +145,10 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @param value the select clause
      * @return the updated request
      */
-     public ILinkedResourceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LinkedResourceRequest)this;
+     @Nonnull
+     public LinkedResourceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class LinkedResourceRequest extends BaseRequest implements ILinkedResourc
      * @param value the expand clause
      * @return the updated request
      */
-     public ILinkedResourceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LinkedResourceRequest)this;
+     @Nonnull
+     public LinkedResourceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

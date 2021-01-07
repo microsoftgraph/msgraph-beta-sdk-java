@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerfor
 import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Experience Analytics Device Performance Request.
  */
-public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest implements IUserExperienceAnalyticsDevicePerformanceRequest {
+public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest<UserExperienceAnalyticsDevicePerformance> {
 	
     /**
      * The request for the UserExperienceAnalyticsDevicePerformance
@@ -30,7 +32,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsDevicePerformanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsDevicePerformanceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsDevicePerformance.class);
     }
 
@@ -39,7 +41,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
+    public void get(@Nonnull final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @return the UserExperienceAnalyticsDevicePerformance from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserExperienceAnalyticsDevicePerformance get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
+    public void delete(@Nonnull final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @param sourceUserExperienceAnalyticsDevicePerformance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsDevicePerformance sourceUserExperienceAnalyticsDevicePerformance, final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
+    public void patch(@Nonnull final UserExperienceAnalyticsDevicePerformance sourceUserExperienceAnalyticsDevicePerformance, @Nonnull final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsDevicePerformance);
     }
 
@@ -88,7 +91,8 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @return the updated UserExperienceAnalyticsDevicePerformance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsDevicePerformance patch(final UserExperienceAnalyticsDevicePerformance sourceUserExperienceAnalyticsDevicePerformance) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsDevicePerformance patch(@Nonnull final UserExperienceAnalyticsDevicePerformance sourceUserExperienceAnalyticsDevicePerformance) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsDevicePerformance);
     }
 
@@ -98,7 +102,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @param newUserExperienceAnalyticsDevicePerformance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
+    public void post(@Nonnull final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, @Nonnull final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsDevicePerformance);
     }
 
@@ -109,7 +113,8 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @return the created UserExperienceAnalyticsDevicePerformance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsDevicePerformance post(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsDevicePerformance post(@Nonnull final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException {
         return send(HttpMethod.POST, newUserExperienceAnalyticsDevicePerformance);
     }
 
@@ -119,7 +124,7 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @param newUserExperienceAnalyticsDevicePerformance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
+    public void put(@Nonnull final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance, @Nonnull final ICallback<? super UserExperienceAnalyticsDevicePerformance> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsDevicePerformance);
     }
 
@@ -130,7 +135,8 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @return the created UserExperienceAnalyticsDevicePerformance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsDevicePerformance put(final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsDevicePerformance put(@Nonnull final UserExperienceAnalyticsDevicePerformance newUserExperienceAnalyticsDevicePerformance) throws ClientException {
         return send(HttpMethod.PUT, newUserExperienceAnalyticsDevicePerformance);
     }
 
@@ -140,9 +146,10 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsDevicePerformanceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserExperienceAnalyticsDevicePerformanceRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsDevicePerformanceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class UserExperienceAnalyticsDevicePerformanceRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsDevicePerformanceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsDevicePerformanceRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsDevicePerformanceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

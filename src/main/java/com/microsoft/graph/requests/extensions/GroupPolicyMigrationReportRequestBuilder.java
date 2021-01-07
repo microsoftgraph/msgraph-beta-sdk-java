@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyMigrationReport;
 import com.microsoft.graph.models.extensions.GroupPolicyObjectFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Policy Migration Report Request Builder.
  */
-public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder implements IGroupPolicyMigrationReportRequestBuilder {
+public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder<GroupPolicyMigrationReport> {
 
     /**
      * The request builder for the GroupPolicyMigrationReport
@@ -37,7 +35,7 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyMigrationReportRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyMigrationReportRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -45,9 +43,10 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyMigrationReportRequest instance
+     * @return the GroupPolicyMigrationReportRequest instance
      */
-    public IGroupPolicyMigrationReportRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupPolicyMigrationReportRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -55,25 +54,52 @@ public class GroupPolicyMigrationReportRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyMigrationReportRequest instance
+     * @return the GroupPolicyMigrationReportRequest instance
      */
-    public IGroupPolicyMigrationReportRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupPolicyMigrationReportRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupPolicyMigrationReportRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IGroupPolicySettingMappingCollectionRequestBuilder groupPolicySettingMappings() {
+    /**
+     *  Gets a request builder for the GroupPolicySettingMapping collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupPolicySettingMappingCollectionRequestBuilder groupPolicySettingMappings() {
         return new GroupPolicySettingMappingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicySettingMappings"), getClient(), null);
     }
 
-    public IGroupPolicySettingMappingRequestBuilder groupPolicySettingMappings(final String id) {
+    /**
+     * Gets a request builder for the GroupPolicySettingMapping item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupPolicySettingMappingRequestBuilder groupPolicySettingMappings(@Nonnull final String id) {
         return new GroupPolicySettingMappingRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicySettingMappings") + "/" + id, getClient(), null);
     }
-    public IUnsupportedGroupPolicyExtensionCollectionRequestBuilder unsupportedGroupPolicyExtensions() {
+    /**
+     *  Gets a request builder for the UnsupportedGroupPolicyExtension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnsupportedGroupPolicyExtensionCollectionRequestBuilder unsupportedGroupPolicyExtensions() {
         return new UnsupportedGroupPolicyExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unsupportedGroupPolicyExtensions"), getClient(), null);
     }
 
-    public IUnsupportedGroupPolicyExtensionRequestBuilder unsupportedGroupPolicyExtensions(final String id) {
+    /**
+     * Gets a request builder for the UnsupportedGroupPolicyExtension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnsupportedGroupPolicyExtensionRequestBuilder unsupportedGroupPolicyExtensions(@Nonnull final String id) {
         return new UnsupportedGroupPolicyExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("unsupportedGroupPolicyExtensions") + "/" + id, getClient(), null);
     }
 }

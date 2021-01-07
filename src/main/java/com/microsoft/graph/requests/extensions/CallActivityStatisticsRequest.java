@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CallActivityStatistics;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Call Activity Statistics Request.
  */
-public class CallActivityStatisticsRequest extends BaseRequest implements ICallActivityStatisticsRequest {
+public class CallActivityStatisticsRequest extends BaseRequest<CallActivityStatistics> {
 	
     /**
      * The request for the CallActivityStatistics
@@ -29,7 +31,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CallActivityStatisticsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CallActivityStatisticsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CallActivityStatistics.class);
     }
 
@@ -38,7 +40,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CallActivityStatistics> callback) {
+    public void get(@Nonnull final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @return the CallActivityStatistics from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CallActivityStatistics get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CallActivityStatistics> callback) {
+    public void delete(@Nonnull final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param sourceCallActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CallActivityStatistics sourceCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback) {
+    public void patch(@Nonnull final CallActivityStatistics sourceCallActivityStatistics, @Nonnull final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.PATCH, callback, sourceCallActivityStatistics);
     }
 
@@ -87,7 +90,8 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @return the updated CallActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CallActivityStatistics patch(final CallActivityStatistics sourceCallActivityStatistics) throws ClientException {
+    @Nullable
+    public CallActivityStatistics patch(@Nonnull final CallActivityStatistics sourceCallActivityStatistics) throws ClientException {
         return send(HttpMethod.PATCH, sourceCallActivityStatistics);
     }
 
@@ -97,7 +101,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param newCallActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CallActivityStatistics newCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback) {
+    public void post(@Nonnull final CallActivityStatistics newCallActivityStatistics, @Nonnull final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.POST, callback, newCallActivityStatistics);
     }
 
@@ -108,7 +112,8 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @return the created CallActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CallActivityStatistics post(final CallActivityStatistics newCallActivityStatistics) throws ClientException {
+    @Nullable
+    public CallActivityStatistics post(@Nonnull final CallActivityStatistics newCallActivityStatistics) throws ClientException {
         return send(HttpMethod.POST, newCallActivityStatistics);
     }
 
@@ -118,7 +123,7 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param newCallActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CallActivityStatistics newCallActivityStatistics, final ICallback<? super CallActivityStatistics> callback) {
+    public void put(@Nonnull final CallActivityStatistics newCallActivityStatistics, @Nonnull final ICallback<? super CallActivityStatistics> callback) {
         send(HttpMethod.PUT, callback, newCallActivityStatistics);
     }
 
@@ -129,7 +134,8 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @return the created CallActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CallActivityStatistics put(final CallActivityStatistics newCallActivityStatistics) throws ClientException {
+    @Nullable
+    public CallActivityStatistics put(@Nonnull final CallActivityStatistics newCallActivityStatistics) throws ClientException {
         return send(HttpMethod.PUT, newCallActivityStatistics);
     }
 
@@ -139,9 +145,10 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param value the select clause
      * @return the updated request
      */
-     public ICallActivityStatisticsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CallActivityStatisticsRequest)this;
+     @Nonnull
+     public CallActivityStatisticsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CallActivityStatisticsRequest extends BaseRequest implements ICallA
      * @param value the expand clause
      * @return the updated request
      */
-     public ICallActivityStatisticsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CallActivityStatisticsRequest)this;
+     @Nonnull
+     public CallActivityStatisticsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

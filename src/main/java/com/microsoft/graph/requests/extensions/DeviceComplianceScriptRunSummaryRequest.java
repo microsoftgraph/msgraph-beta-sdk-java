@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceScriptRunSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Script Run Summary Request.
  */
-public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest implements IDeviceComplianceScriptRunSummaryRequest {
+public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest<DeviceComplianceScriptRunSummary> {
 	
     /**
      * The request for the DeviceComplianceScriptRunSummary
@@ -29,7 +31,7 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceScriptRunSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceScriptRunSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceScriptRunSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @return the DeviceComplianceScriptRunSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceComplianceScriptRunSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @param sourceDeviceComplianceScriptRunSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceScriptRunSummary sourceDeviceComplianceScriptRunSummary, final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
+    public void patch(@Nonnull final DeviceComplianceScriptRunSummary sourceDeviceComplianceScriptRunSummary, @Nonnull final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceScriptRunSummary);
     }
 
@@ -87,7 +90,8 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @return the updated DeviceComplianceScriptRunSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceScriptRunSummary patch(final DeviceComplianceScriptRunSummary sourceDeviceComplianceScriptRunSummary) throws ClientException {
+    @Nullable
+    public DeviceComplianceScriptRunSummary patch(@Nonnull final DeviceComplianceScriptRunSummary sourceDeviceComplianceScriptRunSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceComplianceScriptRunSummary);
     }
 
@@ -97,7 +101,7 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @param newDeviceComplianceScriptRunSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
+    public void post(@Nonnull final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, @Nonnull final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceScriptRunSummary);
     }
 
@@ -108,7 +112,8 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @return the created DeviceComplianceScriptRunSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceScriptRunSummary post(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary) throws ClientException {
+    @Nullable
+    public DeviceComplianceScriptRunSummary post(@Nonnull final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary) throws ClientException {
         return send(HttpMethod.POST, newDeviceComplianceScriptRunSummary);
     }
 
@@ -118,7 +123,7 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @param newDeviceComplianceScriptRunSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
+    public void put(@Nonnull final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary, @Nonnull final ICallback<? super DeviceComplianceScriptRunSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceScriptRunSummary);
     }
 
@@ -129,7 +134,8 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @return the created DeviceComplianceScriptRunSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceScriptRunSummary put(final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary) throws ClientException {
+    @Nullable
+    public DeviceComplianceScriptRunSummary put(@Nonnull final DeviceComplianceScriptRunSummary newDeviceComplianceScriptRunSummary) throws ClientException {
         return send(HttpMethod.PUT, newDeviceComplianceScriptRunSummary);
     }
 
@@ -139,9 +145,10 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceComplianceScriptRunSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceComplianceScriptRunSummaryRequest)this;
+     @Nonnull
+     public DeviceComplianceScriptRunSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceComplianceScriptRunSummaryRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceComplianceScriptRunSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComplianceScriptRunSummaryRequest)this;
+     @Nonnull
+     public DeviceComplianceScriptRunSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

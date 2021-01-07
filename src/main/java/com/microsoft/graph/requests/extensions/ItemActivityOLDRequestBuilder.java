@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityOLD;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Activity OLDRequest Builder.
  */
-public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder implements IItemActivityOLDRequestBuilder {
+public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder<ItemActivityOLD> {
 
     /**
      * The request builder for the ItemActivityOLD
@@ -32,7 +32,7 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityOLDRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityOLDRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemActivityOLDRequest instance
+     * @return the ItemActivityOLDRequest instance
      */
-    public IItemActivityOLDRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ItemActivityOLDRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemActivityOLDRequest instance
+     * @return the ItemActivityOLDRequest instance
      */
-    public IItemActivityOLDRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ItemActivityOLDRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemActivityOLDRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class ItemActivityOLDRequestBuilder extends BaseRequestBuilder implements
     /**
      * Gets the request builder for DriveItem
      *
-     * @return the IDriveItemRequestBuilder instance
+     * @return the DriveItemRequestBuilder instance
      */
-    public IDriveItemRequestBuilder driveItem() {
+    @Nonnull
+    public DriveItemRequestBuilder driveItem() {
         return new DriveItemRequestBuilder(getRequestUrlWithAdditionalSegment("driveItem"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ListItem
      *
-     * @return the IListItemRequestBuilder instance
+     * @return the ListItemRequestBuilder instance
      */
-    public IListItemRequestBuilder listItem() {
+    @Nonnull
+    public ListItemRequestBuilder listItem() {
         return new ListItemRequestBuilder(getRequestUrlWithAdditionalSegment("listItem"), getClient(), null);
     }
 }

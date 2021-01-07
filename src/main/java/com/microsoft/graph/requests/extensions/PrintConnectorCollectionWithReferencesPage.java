@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.PrintConnectorCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PrintConnectorCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionResponse;
 import com.microsoft.graph.models.extensions.PrintConnector;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Print Connector Collection With References Page.
  */
-public class PrintConnectorCollectionWithReferencesPage extends BaseCollectionPage<PrintConnector, IPrintConnectorCollectionWithReferencesRequestBuilder> implements IPrintConnectorCollectionWithReferencesPage {
+public class PrintConnectorCollectionWithReferencesPage extends BaseCollectionPage<PrintConnector, PrintConnectorCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for PrintConnector
@@ -35,7 +37,17 @@ public class PrintConnectorCollectionWithReferencesPage extends BaseCollectionPa
      * @param response the serialized PrintConnectorCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PrintConnectorCollectionWithReferencesPage(final PrintConnectorCollectionResponse response, final IPrintConnectorCollectionWithReferencesRequestBuilder builder) {
+    public PrintConnectorCollectionWithReferencesPage(@Nonnull final PrintConnectorCollectionResponse response, @Nullable final PrintConnectorCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for PrintConnector
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PrintConnectorCollectionWithReferencesPage(@Nonnull final java.util.List<PrintConnector> pageContents, @Nullable final PrintConnectorCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

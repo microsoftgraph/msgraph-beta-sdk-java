@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesInvoice;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sales Invoice Request.
  */
-public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceRequest {
+public class SalesInvoiceRequest extends BaseRequest<SalesInvoice> {
 	
     /**
      * The request for the SalesInvoice
@@ -41,7 +37,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesInvoiceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesInvoiceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SalesInvoice.class);
     }
 
@@ -50,7 +46,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SalesInvoice> callback) {
+    public void get(@Nonnull final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @return the SalesInvoice from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SalesInvoice get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SalesInvoice> callback) {
+    public void delete(@Nonnull final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param sourceSalesInvoice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesInvoice sourceSalesInvoice, final ICallback<? super SalesInvoice> callback) {
+    public void patch(@Nonnull final SalesInvoice sourceSalesInvoice, @Nonnull final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesInvoice);
     }
 
@@ -99,7 +96,8 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @return the updated SalesInvoice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesInvoice patch(final SalesInvoice sourceSalesInvoice) throws ClientException {
+    @Nullable
+    public SalesInvoice patch(@Nonnull final SalesInvoice sourceSalesInvoice) throws ClientException {
         return send(HttpMethod.PATCH, sourceSalesInvoice);
     }
 
@@ -109,7 +107,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param newSalesInvoice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesInvoice newSalesInvoice, final ICallback<? super SalesInvoice> callback) {
+    public void post(@Nonnull final SalesInvoice newSalesInvoice, @Nonnull final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.POST, callback, newSalesInvoice);
     }
 
@@ -120,7 +118,8 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @return the created SalesInvoice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesInvoice post(final SalesInvoice newSalesInvoice) throws ClientException {
+    @Nullable
+    public SalesInvoice post(@Nonnull final SalesInvoice newSalesInvoice) throws ClientException {
         return send(HttpMethod.POST, newSalesInvoice);
     }
 
@@ -130,7 +129,7 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param newSalesInvoice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesInvoice newSalesInvoice, final ICallback<? super SalesInvoice> callback) {
+    public void put(@Nonnull final SalesInvoice newSalesInvoice, @Nonnull final ICallback<? super SalesInvoice> callback) {
         send(HttpMethod.PUT, callback, newSalesInvoice);
     }
 
@@ -141,7 +140,8 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @return the created SalesInvoice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesInvoice put(final SalesInvoice newSalesInvoice) throws ClientException {
+    @Nullable
+    public SalesInvoice put(@Nonnull final SalesInvoice newSalesInvoice) throws ClientException {
         return send(HttpMethod.PUT, newSalesInvoice);
     }
 
@@ -151,9 +151,10 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param value the select clause
      * @return the updated request
      */
-     public ISalesInvoiceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SalesInvoiceRequest)this;
+     @Nonnull
+     public SalesInvoiceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class SalesInvoiceRequest extends BaseRequest implements ISalesInvoiceReq
      * @param value the expand clause
      * @return the updated request
      */
-     public ISalesInvoiceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesInvoiceRequest)this;
+     @Nonnull
+     public SalesInvoiceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

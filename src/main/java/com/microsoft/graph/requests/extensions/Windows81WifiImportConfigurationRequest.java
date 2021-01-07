@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows81WifiImportConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows81Wifi Import Configuration Request.
  */
-public class Windows81WifiImportConfigurationRequest extends BaseRequest implements IWindows81WifiImportConfigurationRequest {
+public class Windows81WifiImportConfigurationRequest extends BaseRequest<Windows81WifiImportConfiguration> {
 	
     /**
      * The request for the Windows81WifiImportConfiguration
@@ -29,7 +31,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows81WifiImportConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows81WifiImportConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows81WifiImportConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows81WifiImportConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @return the Windows81WifiImportConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows81WifiImportConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows81WifiImportConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param sourceWindows81WifiImportConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback) {
+    public void patch(@Nonnull final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration, @Nonnull final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81WifiImportConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @return the updated Windows81WifiImportConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81WifiImportConfiguration patch(final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration) throws ClientException {
+    @Nullable
+    public Windows81WifiImportConfiguration patch(@Nonnull final Windows81WifiImportConfiguration sourceWindows81WifiImportConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows81WifiImportConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param newWindows81WifiImportConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback) {
+    public void post(@Nonnull final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, @Nonnull final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows81WifiImportConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @return the created Windows81WifiImportConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81WifiImportConfiguration post(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration) throws ClientException {
+    @Nullable
+    public Windows81WifiImportConfiguration post(@Nonnull final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindows81WifiImportConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param newWindows81WifiImportConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, final ICallback<? super Windows81WifiImportConfiguration> callback) {
+    public void put(@Nonnull final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration, @Nonnull final ICallback<? super Windows81WifiImportConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows81WifiImportConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @return the created Windows81WifiImportConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81WifiImportConfiguration put(final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration) throws ClientException {
+    @Nullable
+    public Windows81WifiImportConfiguration put(@Nonnull final Windows81WifiImportConfiguration newWindows81WifiImportConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindows81WifiImportConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows81WifiImportConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows81WifiImportConfigurationRequest)this;
+     @Nonnull
+     public Windows81WifiImportConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows81WifiImportConfigurationRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows81WifiImportConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81WifiImportConfigurationRequest)this;
+     @Nonnull
+     public Windows81WifiImportConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

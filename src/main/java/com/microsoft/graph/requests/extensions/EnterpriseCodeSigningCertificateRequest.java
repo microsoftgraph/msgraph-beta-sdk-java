@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EnterpriseCodeSigningCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Enterprise Code Signing Certificate Request.
  */
-public class EnterpriseCodeSigningCertificateRequest extends BaseRequest implements IEnterpriseCodeSigningCertificateRequest {
+public class EnterpriseCodeSigningCertificateRequest extends BaseRequest<EnterpriseCodeSigningCertificate> {
 	
     /**
      * The request for the EnterpriseCodeSigningCertificate
@@ -29,7 +31,7 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnterpriseCodeSigningCertificateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnterpriseCodeSigningCertificateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnterpriseCodeSigningCertificate.class);
     }
 
@@ -38,7 +40,7 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
+    public void get(@Nonnull final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @return the EnterpriseCodeSigningCertificate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EnterpriseCodeSigningCertificate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
+    public void delete(@Nonnull final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @param sourceEnterpriseCodeSigningCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnterpriseCodeSigningCertificate sourceEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
+    public void patch(@Nonnull final EnterpriseCodeSigningCertificate sourceEnterpriseCodeSigningCertificate, @Nonnull final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceEnterpriseCodeSigningCertificate);
     }
 
@@ -87,7 +90,8 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @return the updated EnterpriseCodeSigningCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnterpriseCodeSigningCertificate patch(final EnterpriseCodeSigningCertificate sourceEnterpriseCodeSigningCertificate) throws ClientException {
+    @Nullable
+    public EnterpriseCodeSigningCertificate patch(@Nonnull final EnterpriseCodeSigningCertificate sourceEnterpriseCodeSigningCertificate) throws ClientException {
         return send(HttpMethod.PATCH, sourceEnterpriseCodeSigningCertificate);
     }
 
@@ -97,7 +101,7 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @param newEnterpriseCodeSigningCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
+    public void post(@Nonnull final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, @Nonnull final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
         send(HttpMethod.POST, callback, newEnterpriseCodeSigningCertificate);
     }
 
@@ -108,7 +112,8 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @return the created EnterpriseCodeSigningCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnterpriseCodeSigningCertificate post(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException {
+    @Nullable
+    public EnterpriseCodeSigningCertificate post(@Nonnull final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException {
         return send(HttpMethod.POST, newEnterpriseCodeSigningCertificate);
     }
 
@@ -118,7 +123,7 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @param newEnterpriseCodeSigningCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
+    public void put(@Nonnull final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate, @Nonnull final ICallback<? super EnterpriseCodeSigningCertificate> callback) {
         send(HttpMethod.PUT, callback, newEnterpriseCodeSigningCertificate);
     }
 
@@ -129,7 +134,8 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @return the created EnterpriseCodeSigningCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnterpriseCodeSigningCertificate put(final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException {
+    @Nullable
+    public EnterpriseCodeSigningCertificate put(@Nonnull final EnterpriseCodeSigningCertificate newEnterpriseCodeSigningCertificate) throws ClientException {
         return send(HttpMethod.PUT, newEnterpriseCodeSigningCertificate);
     }
 
@@ -139,9 +145,10 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IEnterpriseCodeSigningCertificateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EnterpriseCodeSigningCertificateRequest)this;
+     @Nonnull
+     public EnterpriseCodeSigningCertificateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EnterpriseCodeSigningCertificateRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IEnterpriseCodeSigningCertificateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EnterpriseCodeSigningCertificateRequest)this;
+     @Nonnull
+     public EnterpriseCodeSigningCertificateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

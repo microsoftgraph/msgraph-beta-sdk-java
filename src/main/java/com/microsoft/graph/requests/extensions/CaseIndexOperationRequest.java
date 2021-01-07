@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CaseIndexOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Case Index Operation Request.
  */
-public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndexOperationRequest {
+public class CaseIndexOperationRequest extends BaseRequest<CaseIndexOperation> {
 	
     /**
      * The request for the CaseIndexOperation
@@ -29,7 +31,7 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CaseIndexOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CaseIndexOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CaseIndexOperation.class);
     }
 
@@ -38,7 +40,7 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CaseIndexOperation> callback) {
+    public void get(@Nonnull final ICallback<? super CaseIndexOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @return the CaseIndexOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CaseIndexOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CaseIndexOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super CaseIndexOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @param sourceCaseIndexOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CaseIndexOperation sourceCaseIndexOperation, final ICallback<? super CaseIndexOperation> callback) {
+    public void patch(@Nonnull final CaseIndexOperation sourceCaseIndexOperation, @Nonnull final ICallback<? super CaseIndexOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceCaseIndexOperation);
     }
 
@@ -87,7 +90,8 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @return the updated CaseIndexOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseIndexOperation patch(final CaseIndexOperation sourceCaseIndexOperation) throws ClientException {
+    @Nullable
+    public CaseIndexOperation patch(@Nonnull final CaseIndexOperation sourceCaseIndexOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceCaseIndexOperation);
     }
 
@@ -97,7 +101,7 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @param newCaseIndexOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CaseIndexOperation newCaseIndexOperation, final ICallback<? super CaseIndexOperation> callback) {
+    public void post(@Nonnull final CaseIndexOperation newCaseIndexOperation, @Nonnull final ICallback<? super CaseIndexOperation> callback) {
         send(HttpMethod.POST, callback, newCaseIndexOperation);
     }
 
@@ -108,7 +112,8 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @return the created CaseIndexOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseIndexOperation post(final CaseIndexOperation newCaseIndexOperation) throws ClientException {
+    @Nullable
+    public CaseIndexOperation post(@Nonnull final CaseIndexOperation newCaseIndexOperation) throws ClientException {
         return send(HttpMethod.POST, newCaseIndexOperation);
     }
 
@@ -118,7 +123,7 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @param newCaseIndexOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CaseIndexOperation newCaseIndexOperation, final ICallback<? super CaseIndexOperation> callback) {
+    public void put(@Nonnull final CaseIndexOperation newCaseIndexOperation, @Nonnull final ICallback<? super CaseIndexOperation> callback) {
         send(HttpMethod.PUT, callback, newCaseIndexOperation);
     }
 
@@ -129,7 +134,8 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @return the created CaseIndexOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseIndexOperation put(final CaseIndexOperation newCaseIndexOperation) throws ClientException {
+    @Nullable
+    public CaseIndexOperation put(@Nonnull final CaseIndexOperation newCaseIndexOperation) throws ClientException {
         return send(HttpMethod.PUT, newCaseIndexOperation);
     }
 
@@ -139,9 +145,10 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @param value the select clause
      * @return the updated request
      */
-     public ICaseIndexOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CaseIndexOperationRequest)this;
+     @Nonnull
+     public CaseIndexOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CaseIndexOperationRequest extends BaseRequest implements ICaseIndex
      * @param value the expand clause
      * @return the updated request
      */
-     public ICaseIndexOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CaseIndexOperationRequest)this;
+     @Nonnull
+     public CaseIndexOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

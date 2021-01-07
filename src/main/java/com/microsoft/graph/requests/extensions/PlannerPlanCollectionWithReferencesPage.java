@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.PlannerUser;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionResponse;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Planner Plan Collection With References Page.
  */
-public class PlannerPlanCollectionWithReferencesPage extends BaseCollectionPage<PlannerPlan, IPlannerPlanCollectionWithReferencesRequestBuilder> implements IPlannerPlanCollectionWithReferencesPage {
+public class PlannerPlanCollectionWithReferencesPage extends BaseCollectionPage<PlannerPlan, PlannerPlanCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for PlannerPlan
@@ -35,7 +37,17 @@ public class PlannerPlanCollectionWithReferencesPage extends BaseCollectionPage<
      * @param response the serialized PlannerPlanCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public PlannerPlanCollectionWithReferencesPage(final PlannerPlanCollectionResponse response, final IPlannerPlanCollectionWithReferencesRequestBuilder builder) {
+    public PlannerPlanCollectionWithReferencesPage(@Nonnull final PlannerPlanCollectionResponse response, @Nullable final PlannerPlanCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for PlannerPlan
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public PlannerPlanCollectionWithReferencesPage(@Nonnull final java.util.List<PlannerPlan> pageContents, @Nullable final PlannerPlanCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

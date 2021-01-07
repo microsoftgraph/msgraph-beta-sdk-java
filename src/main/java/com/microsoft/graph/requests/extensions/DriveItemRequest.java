@@ -16,38 +16,25 @@ import com.microsoft.graph.models.extensions.DriveRecipient;
 import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.ItemPreviewInfo;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityOLDRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISubscriptionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SubscriptionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThumbnailSetCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThumbnailSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThumbnailSetCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ThumbnailSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ListItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -57,7 +44,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Drive Item Request.
  */
-public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
+public class DriveItemRequest extends BaseRequest<DriveItem> {
 	
     /**
      * The request for the DriveItem
@@ -66,7 +53,7 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DriveItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DriveItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DriveItem.class);
     }
 
@@ -75,7 +62,7 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DriveItem> callback) {
+    public void get(@Nonnull final ICallback<? super DriveItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -85,6 +72,7 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @return the DriveItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DriveItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -94,7 +82,7 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DriveItem> callback) {
+    public void delete(@Nonnull final ICallback<? super DriveItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -113,7 +101,7 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @param sourceDriveItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DriveItem sourceDriveItem, final ICallback<? super DriveItem> callback) {
+    public void patch(@Nonnull final DriveItem sourceDriveItem, @Nonnull final ICallback<? super DriveItem> callback) {
         send(HttpMethod.PATCH, callback, sourceDriveItem);
     }
 
@@ -124,7 +112,8 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @return the updated DriveItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DriveItem patch(final DriveItem sourceDriveItem) throws ClientException {
+    @Nullable
+    public DriveItem patch(@Nonnull final DriveItem sourceDriveItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceDriveItem);
     }
 
@@ -134,7 +123,7 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @param newDriveItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DriveItem newDriveItem, final ICallback<? super DriveItem> callback) {
+    public void post(@Nonnull final DriveItem newDriveItem, @Nonnull final ICallback<? super DriveItem> callback) {
         send(HttpMethod.POST, callback, newDriveItem);
     }
 
@@ -145,7 +134,8 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @return the created DriveItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DriveItem post(final DriveItem newDriveItem) throws ClientException {
+    @Nullable
+    public DriveItem post(@Nonnull final DriveItem newDriveItem) throws ClientException {
         return send(HttpMethod.POST, newDriveItem);
     }
 
@@ -155,7 +145,7 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @param newDriveItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DriveItem newDriveItem, final ICallback<? super DriveItem> callback) {
+    public void put(@Nonnull final DriveItem newDriveItem, @Nonnull final ICallback<? super DriveItem> callback) {
         send(HttpMethod.PUT, callback, newDriveItem);
     }
 
@@ -166,7 +156,8 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @return the created DriveItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DriveItem put(final DriveItem newDriveItem) throws ClientException {
+    @Nullable
+    public DriveItem put(@Nonnull final DriveItem newDriveItem) throws ClientException {
         return send(HttpMethod.PUT, newDriveItem);
     }
 
@@ -176,9 +167,10 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IDriveItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DriveItemRequest)this;
+     @Nonnull
+     public DriveItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -187,9 +179,10 @@ public class DriveItemRequest extends BaseRequest implements IDriveItemRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IDriveItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DriveItemRequest)this;
+     @Nonnull
+     public DriveItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

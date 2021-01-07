@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Picture;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Picture Request Builder.
  */
-public class PictureRequestBuilder extends BaseRequestBuilder implements IPictureRequestBuilder {
+public class PictureRequestBuilder extends BaseRequestBuilder<Picture> {
 
     /**
      * The request builder for the Picture
@@ -28,7 +30,7 @@ public class PictureRequestBuilder extends BaseRequestBuilder implements IPictur
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PictureRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PictureRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PictureRequestBuilder extends BaseRequestBuilder implements IPictur
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPictureRequest instance
+     * @return the PictureRequest instance
      */
-    public IPictureRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PictureRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +49,22 @@ public class PictureRequestBuilder extends BaseRequestBuilder implements IPictur
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPictureRequest instance
+     * @return the PictureRequest instance
      */
-    public IPictureRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PictureRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PictureRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IPictureContentStreamRequestBuilder content() {
+    /**
+     * Gets the request builder for content
+     *
+     * @return the PictureContentStreamRequestBuilder instance
+     */
+    @Nonnull
+    public PictureContentStreamRequestBuilder content() {
         return new PictureContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
 }

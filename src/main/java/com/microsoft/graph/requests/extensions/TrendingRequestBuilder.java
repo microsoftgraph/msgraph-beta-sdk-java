@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Trending;
-import com.microsoft.graph.requests.extensions.IEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Trending Request Builder.
  */
-public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrendingRequestBuilder {
+public class TrendingRequestBuilder extends BaseRequestBuilder<Trending> {
 
     /**
      * The request builder for the Trending
@@ -30,7 +31,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrendingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrendingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITrendingRequest instance
+     * @return the TrendingRequest instance
      */
-    public ITrendingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TrendingRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrend
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITrendingRequest instance
+     * @return the TrendingRequest instance
      */
-    public ITrendingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TrendingRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TrendingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class TrendingRequestBuilder extends BaseRequestBuilder implements ITrend
     /**
      * Gets the request builder for Entity
      *
-     * @return the IEntityWithReferenceRequestBuilder instance
+     * @return the EntityWithReferenceRequestBuilder instance
      */
-    public IEntityWithReferenceRequestBuilder resource() {
+    @Nonnull
+    public EntityWithReferenceRequestBuilder resource() {
         return new EntityWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resource"), getClient(), null);
     }
 }

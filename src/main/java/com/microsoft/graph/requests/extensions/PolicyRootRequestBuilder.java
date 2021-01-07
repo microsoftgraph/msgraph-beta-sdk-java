@@ -9,56 +9,34 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthorizationPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthorizationPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthorizationPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivateLinkResourcePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivateLinkResourcePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdminConsentRequestPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleAccessReviewPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -67,7 +45,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Policy Root Request Builder.
  */
-public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPolicyRootRequestBuilder {
+public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
 
     /**
      * The request builder for the PolicyRoot
@@ -76,7 +54,7 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicyRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PolicyRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -84,9 +62,10 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPolicyRootRequest instance
+     * @return the PolicyRootRequest instance
      */
-    public IPolicyRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PolicyRootRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -94,9 +73,10 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPolicyRootRequest instance
+     * @return the PolicyRootRequest instance
      */
-    public IPolicyRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PolicyRootRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PolicyRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -105,117 +85,240 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
     /**
      * Gets the request builder for AuthenticationFlowsPolicy
      *
-     * @return the IAuthenticationFlowsPolicyRequestBuilder instance
+     * @return the AuthenticationFlowsPolicyRequestBuilder instance
      */
-    public IAuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
+    @Nonnull
+    public AuthenticationFlowsPolicyRequestBuilder authenticationFlowsPolicy() {
         return new AuthenticationFlowsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationFlowsPolicy"), getClient(), null);
     }
 
     /**
      * Gets the request builder for B2cAuthenticationMethodsPolicy
      *
-     * @return the IB2cAuthenticationMethodsPolicyRequestBuilder instance
+     * @return the B2cAuthenticationMethodsPolicyRequestBuilder instance
      */
-    public IB2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy() {
+    @Nonnull
+    public B2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy() {
         return new B2cAuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("b2cAuthenticationMethodsPolicy"), getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceRegistrationPolicy
      *
-     * @return the IDeviceRegistrationPolicyRequestBuilder instance
+     * @return the DeviceRegistrationPolicyRequestBuilder instance
      */
-    public IDeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
+    @Nonnull
+    public DeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
         return new DeviceRegistrationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRegistrationPolicy"), getClient(), null);
     }
-    public IActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
+    /**
+     *  Gets a request builder for the ActivityBasedTimeoutPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
         return new ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies"), getClient(), null);
     }
 
-    public IActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(final String id) {
+    /**
+     * Gets a request builder for the ActivityBasedTimeoutPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ActivityBasedTimeoutPolicyRequestBuilder activityBasedTimeoutPolicies(@Nonnull final String id) {
         return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
     }
-    public IAuthorizationPolicyCollectionRequestBuilder authorizationPolicy() {
+    /**
+     *  Gets a request builder for the AuthorizationPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AuthorizationPolicyCollectionRequestBuilder authorizationPolicy() {
         return new AuthorizationPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationPolicy"), getClient(), null);
     }
 
-    public IAuthorizationPolicyRequestBuilder authorizationPolicy(final String id) {
+    /**
+     * Gets a request builder for the AuthorizationPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AuthorizationPolicyRequestBuilder authorizationPolicy(@Nonnull final String id) {
         return new AuthorizationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationPolicy") + "/" + id, getClient(), null);
     }
-    public IClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies() {
+    /**
+     *  Gets a request builder for the ClaimsMappingPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ClaimsMappingPolicyCollectionRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies"), getClient(), null);
     }
 
-    public IClaimsMappingPolicyRequestBuilder claimsMappingPolicies(final String id) {
+    /**
+     * Gets a request builder for the ClaimsMappingPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(@Nonnull final String id) {
         return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
     }
-    public IHomeRealmDiscoveryPolicyCollectionRequestBuilder homeRealmDiscoveryPolicies() {
+    /**
+     *  Gets a request builder for the HomeRealmDiscoveryPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public HomeRealmDiscoveryPolicyCollectionRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies"), getClient(), null);
     }
 
-    public IHomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(final String id) {
+    /**
+     * Gets a request builder for the HomeRealmDiscoveryPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public HomeRealmDiscoveryPolicyRequestBuilder homeRealmDiscoveryPolicies(@Nonnull final String id) {
         return new HomeRealmDiscoveryPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("homeRealmDiscoveryPolicies") + "/" + id, getClient(), null);
     }
-    public IPermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies() {
+    /**
+     *  Gets a request builder for the PermissionGrantPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PermissionGrantPolicyCollectionRequestBuilder permissionGrantPolicies() {
         return new PermissionGrantPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies"), getClient(), null);
     }
 
-    public IPermissionGrantPolicyRequestBuilder permissionGrantPolicies(final String id) {
+    /**
+     * Gets a request builder for the PermissionGrantPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PermissionGrantPolicyRequestBuilder permissionGrantPolicies(@Nonnull final String id) {
         return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
     }
-    public IPrivateLinkResourcePolicyCollectionRequestBuilder privateLinkResourcePolicies() {
+    /**
+     *  Gets a request builder for the PrivateLinkResourcePolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrivateLinkResourcePolicyCollectionRequestBuilder privateLinkResourcePolicies() {
         return new PrivateLinkResourcePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies"), getClient(), null);
     }
 
-    public IPrivateLinkResourcePolicyRequestBuilder privateLinkResourcePolicies(final String id) {
+    /**
+     * Gets a request builder for the PrivateLinkResourcePolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrivateLinkResourcePolicyRequestBuilder privateLinkResourcePolicies(@Nonnull final String id) {
         return new PrivateLinkResourcePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies") + "/" + id, getClient(), null);
     }
-    public ITokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
+    /**
+     *  Gets a request builder for the TokenIssuancePolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TokenIssuancePolicyCollectionRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies"), getClient(), null);
     }
 
-    public ITokenIssuancePolicyRequestBuilder tokenIssuancePolicies(final String id) {
+    /**
+     * Gets a request builder for the TokenIssuancePolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TokenIssuancePolicyRequestBuilder tokenIssuancePolicies(@Nonnull final String id) {
         return new TokenIssuancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenIssuancePolicies") + "/" + id, getClient(), null);
     }
-    public ITokenLifetimePolicyCollectionRequestBuilder tokenLifetimePolicies() {
+    /**
+     *  Gets a request builder for the TokenLifetimePolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TokenLifetimePolicyCollectionRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies"), getClient(), null);
     }
 
-    public ITokenLifetimePolicyRequestBuilder tokenLifetimePolicies(final String id) {
+    /**
+     * Gets a request builder for the TokenLifetimePolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TokenLifetimePolicyRequestBuilder tokenLifetimePolicies(@Nonnull final String id) {
         return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for AdminConsentRequestPolicy
      *
-     * @return the IAdminConsentRequestPolicyRequestBuilder instance
+     * @return the AdminConsentRequestPolicyRequestBuilder instance
      */
-    public IAdminConsentRequestPolicyRequestBuilder adminConsentRequestPolicy() {
+    @Nonnull
+    public AdminConsentRequestPolicyRequestBuilder adminConsentRequestPolicy() {
         return new AdminConsentRequestPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("adminConsentRequestPolicy"), getClient(), null);
     }
 
     /**
      * Gets the request builder for DirectoryRoleAccessReviewPolicy
      *
-     * @return the IDirectoryRoleAccessReviewPolicyRequestBuilder instance
+     * @return the DirectoryRoleAccessReviewPolicyRequestBuilder instance
      */
-    public IDirectoryRoleAccessReviewPolicyRequestBuilder directoryRoleAccessReviewPolicy() {
+    @Nonnull
+    public DirectoryRoleAccessReviewPolicyRequestBuilder directoryRoleAccessReviewPolicy() {
         return new DirectoryRoleAccessReviewPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("directoryRoleAccessReviewPolicy"), getClient(), null);
     }
-    public IConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
+    /**
+     *  Gets a request builder for the ConditionalAccessPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConditionalAccessPolicyCollectionRequestBuilder conditionalAccessPolicies() {
         return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies"), getClient(), null);
     }
 
-    public IConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(final String id) {
+    /**
+     * Gets a request builder for the ConditionalAccessPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConditionalAccessPolicyRequestBuilder conditionalAccessPolicies(@Nonnull final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccessPolicies") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for IdentitySecurityDefaultsEnforcementPolicy
      *
-     * @return the IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
+     * @return the IdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
      */
-    public IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
+    @Nonnull
+    public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
     }
 }

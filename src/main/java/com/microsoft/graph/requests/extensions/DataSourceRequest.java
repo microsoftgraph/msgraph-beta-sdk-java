@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataSource;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Data Source Request.
  */
-public class DataSourceRequest extends BaseRequest implements IDataSourceRequest {
+public class DataSourceRequest extends BaseRequest<DataSource> {
 	
     /**
      * The request for the DataSource
@@ -30,10 +32,10 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DataSourceRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DataSource> responseClass) {
+    public DataSourceRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DataSource> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataSourceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DataSourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DataSource.class);
     }
 
@@ -53,7 +55,7 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DataSource> callback) {
+    public void get(@Nonnull final ICallback<? super DataSource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @return the DataSource from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DataSource get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DataSource> callback) {
+    public void delete(@Nonnull final ICallback<? super DataSource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @param sourceDataSource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataSource sourceDataSource, final ICallback<? super DataSource> callback) {
+    public void patch(@Nonnull final DataSource sourceDataSource, @Nonnull final ICallback<? super DataSource> callback) {
         send(HttpMethod.PATCH, callback, sourceDataSource);
     }
 
@@ -102,7 +105,8 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @return the updated DataSource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataSource patch(final DataSource sourceDataSource) throws ClientException {
+    @Nullable
+    public DataSource patch(@Nonnull final DataSource sourceDataSource) throws ClientException {
         return send(HttpMethod.PATCH, sourceDataSource);
     }
 
@@ -112,7 +116,7 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @param newDataSource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataSource newDataSource, final ICallback<? super DataSource> callback) {
+    public void post(@Nonnull final DataSource newDataSource, @Nonnull final ICallback<? super DataSource> callback) {
         send(HttpMethod.POST, callback, newDataSource);
     }
 
@@ -123,7 +127,8 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @return the created DataSource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataSource post(final DataSource newDataSource) throws ClientException {
+    @Nullable
+    public DataSource post(@Nonnull final DataSource newDataSource) throws ClientException {
         return send(HttpMethod.POST, newDataSource);
     }
 
@@ -133,7 +138,7 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @param newDataSource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataSource newDataSource, final ICallback<? super DataSource> callback) {
+    public void put(@Nonnull final DataSource newDataSource, @Nonnull final ICallback<? super DataSource> callback) {
         send(HttpMethod.PUT, callback, newDataSource);
     }
 
@@ -144,7 +149,8 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @return the created DataSource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataSource put(final DataSource newDataSource) throws ClientException {
+    @Nullable
+    public DataSource put(@Nonnull final DataSource newDataSource) throws ClientException {
         return send(HttpMethod.PUT, newDataSource);
     }
 
@@ -154,9 +160,10 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IDataSourceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DataSourceRequest)this;
+     @Nonnull
+     public DataSourceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class DataSourceRequest extends BaseRequest implements IDataSourceRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IDataSourceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataSourceRequest)this;
+     @Nonnull
+     public DataSourceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

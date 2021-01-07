@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AzureADFeatureUsage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Azure ADFeature Usage Request.
  */
-public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADFeatureUsageRequest {
+public class AzureADFeatureUsageRequest extends BaseRequest<AzureADFeatureUsage> {
 	
     /**
      * The request for the AzureADFeatureUsage
@@ -29,7 +31,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AzureADFeatureUsageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AzureADFeatureUsageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AzureADFeatureUsage.class);
     }
 
@@ -38,7 +40,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AzureADFeatureUsage> callback) {
+    public void get(@Nonnull final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @return the AzureADFeatureUsage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AzureADFeatureUsage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AzureADFeatureUsage> callback) {
+    public void delete(@Nonnull final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param sourceAzureADFeatureUsage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AzureADFeatureUsage sourceAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback) {
+    public void patch(@Nonnull final AzureADFeatureUsage sourceAzureADFeatureUsage, @Nonnull final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.PATCH, callback, sourceAzureADFeatureUsage);
     }
 
@@ -87,7 +90,8 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @return the updated AzureADFeatureUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADFeatureUsage patch(final AzureADFeatureUsage sourceAzureADFeatureUsage) throws ClientException {
+    @Nullable
+    public AzureADFeatureUsage patch(@Nonnull final AzureADFeatureUsage sourceAzureADFeatureUsage) throws ClientException {
         return send(HttpMethod.PATCH, sourceAzureADFeatureUsage);
     }
 
@@ -97,7 +101,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param newAzureADFeatureUsage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback) {
+    public void post(@Nonnull final AzureADFeatureUsage newAzureADFeatureUsage, @Nonnull final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.POST, callback, newAzureADFeatureUsage);
     }
 
@@ -108,7 +112,8 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @return the created AzureADFeatureUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADFeatureUsage post(final AzureADFeatureUsage newAzureADFeatureUsage) throws ClientException {
+    @Nullable
+    public AzureADFeatureUsage post(@Nonnull final AzureADFeatureUsage newAzureADFeatureUsage) throws ClientException {
         return send(HttpMethod.POST, newAzureADFeatureUsage);
     }
 
@@ -118,7 +123,7 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param newAzureADFeatureUsage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AzureADFeatureUsage newAzureADFeatureUsage, final ICallback<? super AzureADFeatureUsage> callback) {
+    public void put(@Nonnull final AzureADFeatureUsage newAzureADFeatureUsage, @Nonnull final ICallback<? super AzureADFeatureUsage> callback) {
         send(HttpMethod.PUT, callback, newAzureADFeatureUsage);
     }
 
@@ -129,7 +134,8 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @return the created AzureADFeatureUsage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AzureADFeatureUsage put(final AzureADFeatureUsage newAzureADFeatureUsage) throws ClientException {
+    @Nullable
+    public AzureADFeatureUsage put(@Nonnull final AzureADFeatureUsage newAzureADFeatureUsage) throws ClientException {
         return send(HttpMethod.PUT, newAzureADFeatureUsage);
     }
 
@@ -139,9 +145,10 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param value the select clause
      * @return the updated request
      */
-     public IAzureADFeatureUsageRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AzureADFeatureUsageRequest)this;
+     @Nonnull
+     public AzureADFeatureUsageRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AzureADFeatureUsageRequest extends BaseRequest implements IAzureADF
      * @param value the expand clause
      * @return the updated request
      */
-     public IAzureADFeatureUsageRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AzureADFeatureUsageRequest)this;
+     @Nonnull
+     public AzureADFeatureUsageRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

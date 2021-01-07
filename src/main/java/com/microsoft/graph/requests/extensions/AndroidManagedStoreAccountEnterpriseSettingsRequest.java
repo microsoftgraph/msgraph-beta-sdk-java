@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidManagedStoreAccountEnterpriseSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Managed Store Account Enterprise Settings Request.
  */
-public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseRequest implements IAndroidManagedStoreAccountEnterpriseSettingsRequest {
+public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseRequest<AndroidManagedStoreAccountEnterpriseSettings> {
 	
     /**
      * The request for the AndroidManagedStoreAccountEnterpriseSettings
@@ -29,7 +31,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedStoreAccountEnterpriseSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedStoreAccountEnterpriseSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidManagedStoreAccountEnterpriseSettings.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @return the AndroidManagedStoreAccountEnterpriseSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidManagedStoreAccountEnterpriseSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param sourceAndroidManagedStoreAccountEnterpriseSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void patch(@Nonnull final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings, @Nonnull final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -87,7 +90,8 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @return the updated AndroidManagedStoreAccountEnterpriseSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreAccountEnterpriseSettings patch(final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreAccountEnterpriseSettings patch(@Nonnull final AndroidManagedStoreAccountEnterpriseSettings sourceAndroidManagedStoreAccountEnterpriseSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -97,7 +101,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param newAndroidManagedStoreAccountEnterpriseSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void post(@Nonnull final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, @Nonnull final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -108,7 +112,8 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @return the created AndroidManagedStoreAccountEnterpriseSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreAccountEnterpriseSettings post(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreAccountEnterpriseSettings post(@Nonnull final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings) throws ClientException {
         return send(HttpMethod.POST, newAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -118,7 +123,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param newAndroidManagedStoreAccountEnterpriseSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
+    public void put(@Nonnull final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings, @Nonnull final ICallback<? super AndroidManagedStoreAccountEnterpriseSettings> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -129,7 +134,8 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @return the created AndroidManagedStoreAccountEnterpriseSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreAccountEnterpriseSettings put(final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreAccountEnterpriseSettings put(@Nonnull final AndroidManagedStoreAccountEnterpriseSettings newAndroidManagedStoreAccountEnterpriseSettings) throws ClientException {
         return send(HttpMethod.PUT, newAndroidManagedStoreAccountEnterpriseSettings);
     }
 
@@ -139,9 +145,10 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidManagedStoreAccountEnterpriseSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidManagedStoreAccountEnterpriseSettingsRequest)this;
+     @Nonnull
+     public AndroidManagedStoreAccountEnterpriseSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequest extends BaseReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidManagedStoreAccountEnterpriseSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidManagedStoreAccountEnterpriseSettingsRequest)this;
+     @Nonnull
+     public AndroidManagedStoreAccountEnterpriseSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

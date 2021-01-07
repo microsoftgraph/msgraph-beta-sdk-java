@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SynchronizationTemplate;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationSchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Synchronization Template Request.
  */
-public class SynchronizationTemplateRequest extends BaseRequest implements ISynchronizationTemplateRequest {
+public class SynchronizationTemplateRequest extends BaseRequest<SynchronizationTemplate> {
 	
     /**
      * The request for the SynchronizationTemplate
@@ -31,7 +32,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SynchronizationTemplateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SynchronizationTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SynchronizationTemplate.class);
     }
 
@@ -40,7 +41,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SynchronizationTemplate> callback) {
+    public void get(@Nonnull final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @return the SynchronizationTemplate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SynchronizationTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SynchronizationTemplate> callback) {
+    public void delete(@Nonnull final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param sourceSynchronizationTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SynchronizationTemplate sourceSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback) {
+    public void patch(@Nonnull final SynchronizationTemplate sourceSynchronizationTemplate, @Nonnull final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceSynchronizationTemplate);
     }
 
@@ -89,7 +91,8 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @return the updated SynchronizationTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SynchronizationTemplate patch(final SynchronizationTemplate sourceSynchronizationTemplate) throws ClientException {
+    @Nullable
+    public SynchronizationTemplate patch(@Nonnull final SynchronizationTemplate sourceSynchronizationTemplate) throws ClientException {
         return send(HttpMethod.PATCH, sourceSynchronizationTemplate);
     }
 
@@ -99,7 +102,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param newSynchronizationTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback) {
+    public void post(@Nonnull final SynchronizationTemplate newSynchronizationTemplate, @Nonnull final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.POST, callback, newSynchronizationTemplate);
     }
 
@@ -110,7 +113,8 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @return the created SynchronizationTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SynchronizationTemplate post(final SynchronizationTemplate newSynchronizationTemplate) throws ClientException {
+    @Nullable
+    public SynchronizationTemplate post(@Nonnull final SynchronizationTemplate newSynchronizationTemplate) throws ClientException {
         return send(HttpMethod.POST, newSynchronizationTemplate);
     }
 
@@ -120,7 +124,7 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param newSynchronizationTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SynchronizationTemplate newSynchronizationTemplate, final ICallback<? super SynchronizationTemplate> callback) {
+    public void put(@Nonnull final SynchronizationTemplate newSynchronizationTemplate, @Nonnull final ICallback<? super SynchronizationTemplate> callback) {
         send(HttpMethod.PUT, callback, newSynchronizationTemplate);
     }
 
@@ -131,7 +135,8 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @return the created SynchronizationTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SynchronizationTemplate put(final SynchronizationTemplate newSynchronizationTemplate) throws ClientException {
+    @Nullable
+    public SynchronizationTemplate put(@Nonnull final SynchronizationTemplate newSynchronizationTemplate) throws ClientException {
         return send(HttpMethod.PUT, newSynchronizationTemplate);
     }
 
@@ -141,9 +146,10 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param value the select clause
      * @return the updated request
      */
-     public ISynchronizationTemplateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SynchronizationTemplateRequest)this;
+     @Nonnull
+     public SynchronizationTemplateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class SynchronizationTemplateRequest extends BaseRequest implements ISync
      * @param value the expand clause
      * @return the updated request
      */
-     public ISynchronizationTemplateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SynchronizationTemplateRequest)this;
+     @Nonnull
+     public SynchronizationTemplateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

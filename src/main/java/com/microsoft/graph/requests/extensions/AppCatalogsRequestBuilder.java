@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppCatalogs;
-import com.microsoft.graph.requests.extensions.ITeamsAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the App Catalogs Request Builder.
  */
-public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAppCatalogsRequestBuilder {
+public class AppCatalogsRequestBuilder extends BaseRequestBuilder<AppCatalogs> {
 
     /**
      * The request builder for the AppCatalogs
@@ -32,7 +32,7 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppCatalogsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppCatalogsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAppCatalogsRequest instance
+     * @return the AppCatalogsRequest instance
      */
-    public IAppCatalogsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AppCatalogsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class AppCatalogsRequestBuilder extends BaseRequestBuilder implements IAp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAppCatalogsRequest instance
+     * @return the AppCatalogsRequest instance
      */
-    public IAppCatalogsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AppCatalogsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AppCatalogsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ITeamsAppCollectionRequestBuilder teamsApps() {
+    /**
+     *  Gets a request builder for the TeamsApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TeamsAppCollectionRequestBuilder teamsApps() {
         return new TeamsAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps"), getClient(), null);
     }
 
-    public ITeamsAppRequestBuilder teamsApps(final String id) {
+    /**
+     * Gets a request builder for the TeamsApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TeamsAppRequestBuilder teamsApps(@Nonnull final String id) {
         return new TeamsAppRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApps") + "/" + id, getClient(), null);
     }
 }

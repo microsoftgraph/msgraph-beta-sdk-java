@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.requests.extensions.IAuthenticationContextClassReferenceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationContextClassReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationContextClassReferenceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationContextClassReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Conditional Access Root Request Builder.
  */
-public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder implements IConditionalAccessRootRequestBuilder {
+public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<ConditionalAccessRoot> {
 
     /**
      * The request builder for the ConditionalAccessRoot
@@ -40,7 +36,7 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,9 +44,10 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IConditionalAccessRootRequest instance
+     * @return the ConditionalAccessRootRequest instance
      */
-    public IConditionalAccessRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ConditionalAccessRootRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,32 +55,72 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IConditionalAccessRootRequest instance
+     * @return the ConditionalAccessRootRequest instance
      */
-    public IConditionalAccessRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ConditionalAccessRootRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ConditionalAccessRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAuthenticationContextClassReferenceCollectionRequestBuilder authenticationContextClassReferences() {
+    /**
+     *  Gets a request builder for the AuthenticationContextClassReference collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AuthenticationContextClassReferenceCollectionRequestBuilder authenticationContextClassReferences() {
         return new AuthenticationContextClassReferenceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences"), getClient(), null);
     }
 
-    public IAuthenticationContextClassReferenceRequestBuilder authenticationContextClassReferences(final String id) {
+    /**
+     * Gets a request builder for the AuthenticationContextClassReference item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AuthenticationContextClassReferenceRequestBuilder authenticationContextClassReferences(@Nonnull final String id) {
         return new AuthenticationContextClassReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationContextClassReferences") + "/" + id, getClient(), null);
     }
-    public INamedLocationCollectionRequestBuilder namedLocations() {
+    /**
+     *  Gets a request builder for the NamedLocation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public NamedLocationCollectionRequestBuilder namedLocations() {
         return new NamedLocationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations"), getClient(), null);
     }
 
-    public INamedLocationRequestBuilder namedLocations(final String id) {
+    /**
+     * Gets a request builder for the NamedLocation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public NamedLocationRequestBuilder namedLocations(@Nonnull final String id) {
         return new NamedLocationRequestBuilder(getRequestUrlWithAdditionalSegment("namedLocations") + "/" + id, getClient(), null);
     }
-    public IConditionalAccessPolicyCollectionRequestBuilder policies() {
+    /**
+     *  Gets a request builder for the ConditionalAccessPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConditionalAccessPolicyCollectionRequestBuilder policies() {
         return new ConditionalAccessPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policies"), getClient(), null);
     }
 
-    public IConditionalAccessPolicyRequestBuilder policies(final String id) {
+    /**
+     * Gets a request builder for the ConditionalAccessPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConditionalAccessPolicyRequestBuilder policies(@Nonnull final String id) {
         return new ConditionalAccessPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policies") + "/" + id, getClient(), null);
     }
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartGridlines;
-import com.microsoft.graph.requests.extensions.IWorkbookChartGridlinesFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartGridlinesFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Gridlines Request.
  */
-public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkbookChartGridlinesRequest {
+public class WorkbookChartGridlinesRequest extends BaseRequest<WorkbookChartGridlines> {
 	
     /**
      * The request for the WorkbookChartGridlines
@@ -31,7 +32,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartGridlinesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartGridlinesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartGridlines.class);
     }
 
@@ -40,7 +41,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartGridlines> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @return the WorkbookChartGridlines from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartGridlines get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartGridlines> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param sourceWorkbookChartGridlines the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartGridlines sourceWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback) {
+    public void patch(@Nonnull final WorkbookChartGridlines sourceWorkbookChartGridlines, @Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartGridlines);
     }
 
@@ -89,7 +91,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @return the updated WorkbookChartGridlines
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartGridlines patch(final WorkbookChartGridlines sourceWorkbookChartGridlines) throws ClientException {
+    @Nullable
+    public WorkbookChartGridlines patch(@Nonnull final WorkbookChartGridlines sourceWorkbookChartGridlines) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartGridlines);
     }
 
@@ -99,7 +102,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartGridlines the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback) {
+    public void post(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines, @Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartGridlines);
     }
 
@@ -110,7 +113,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @return the created WorkbookChartGridlines
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartGridlines post(final WorkbookChartGridlines newWorkbookChartGridlines) throws ClientException {
+    @Nullable
+    public WorkbookChartGridlines post(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartGridlines);
     }
 
@@ -120,7 +124,7 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param newWorkbookChartGridlines the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartGridlines newWorkbookChartGridlines, final ICallback<? super WorkbookChartGridlines> callback) {
+    public void put(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines, @Nonnull final ICallback<? super WorkbookChartGridlines> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartGridlines);
     }
 
@@ -131,7 +135,8 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @return the created WorkbookChartGridlines
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartGridlines put(final WorkbookChartGridlines newWorkbookChartGridlines) throws ClientException {
+    @Nullable
+    public WorkbookChartGridlines put(@Nonnull final WorkbookChartGridlines newWorkbookChartGridlines) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartGridlines);
     }
 
@@ -141,9 +146,10 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartGridlinesRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartGridlinesRequest)this;
+     @Nonnull
+     public WorkbookChartGridlinesRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class WorkbookChartGridlinesRequest extends BaseRequest implements IWorkb
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartGridlinesRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartGridlinesRequest)this;
+     @Nonnull
+     public WorkbookChartGridlinesRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

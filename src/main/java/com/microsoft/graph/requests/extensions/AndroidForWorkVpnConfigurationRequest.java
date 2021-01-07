@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidForWorkCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidForWorkCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android For Work Vpn Configuration Request.
  */
-public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implements IAndroidForWorkVpnConfigurationRequest {
+public class AndroidForWorkVpnConfigurationRequest extends BaseRequest<AndroidForWorkVpnConfiguration> {
 	
     /**
      * The request for the AndroidForWorkVpnConfiguration
@@ -31,7 +32,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkVpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkVpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkVpnConfiguration.class);
     }
 
@@ -40,7 +41,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @return the AndroidForWorkVpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidForWorkVpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param sourceAndroidForWorkVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkVpnConfiguration sourceAndroidForWorkVpnConfiguration, final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
+    public void patch(@Nonnull final AndroidForWorkVpnConfiguration sourceAndroidForWorkVpnConfiguration, @Nonnull final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkVpnConfiguration);
     }
 
@@ -89,7 +91,8 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @return the updated AndroidForWorkVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkVpnConfiguration patch(final AndroidForWorkVpnConfiguration sourceAndroidForWorkVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkVpnConfiguration patch(@Nonnull final AndroidForWorkVpnConfiguration sourceAndroidForWorkVpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidForWorkVpnConfiguration);
     }
 
@@ -99,7 +102,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param newAndroidForWorkVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
+    public void post(@Nonnull final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, @Nonnull final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkVpnConfiguration);
     }
 
@@ -110,7 +113,8 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @return the created AndroidForWorkVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkVpnConfiguration post(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkVpnConfiguration post(@Nonnull final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidForWorkVpnConfiguration);
     }
 
@@ -120,7 +124,7 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param newAndroidForWorkVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
+    public void put(@Nonnull final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration, @Nonnull final ICallback<? super AndroidForWorkVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkVpnConfiguration);
     }
 
@@ -131,7 +135,8 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @return the created AndroidForWorkVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkVpnConfiguration put(final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkVpnConfiguration put(@Nonnull final AndroidForWorkVpnConfiguration newAndroidForWorkVpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidForWorkVpnConfiguration);
     }
 
@@ -141,9 +146,10 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidForWorkVpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidForWorkVpnConfigurationRequest)this;
+     @Nonnull
+     public AndroidForWorkVpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class AndroidForWorkVpnConfigurationRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidForWorkVpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkVpnConfigurationRequest)this;
+     @Nonnull
+     public AndroidForWorkVpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

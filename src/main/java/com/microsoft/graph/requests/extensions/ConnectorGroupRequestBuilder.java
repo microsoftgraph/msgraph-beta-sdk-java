@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConnectorGroup;
-import com.microsoft.graph.requests.extensions.IApplicationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Connector Group Request Builder.
  */
-public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements IConnectorGroupRequestBuilder {
+public class ConnectorGroupRequestBuilder extends BaseRequestBuilder<ConnectorGroup> {
 
     /**
      * The request builder for the ConnectorGroup
@@ -36,7 +34,7 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConnectorGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IConnectorGroupRequest instance
+     * @return the ConnectorGroupRequest instance
      */
-    public IConnectorGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ConnectorGroupRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class ConnectorGroupRequestBuilder extends BaseRequestBuilder implements 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IConnectorGroupRequest instance
+     * @return the ConnectorGroupRequest instance
      */
-    public IConnectorGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ConnectorGroupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ConnectorGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IApplicationCollectionWithReferencesRequestBuilder applications() {
+    /**
+     *  Gets a request builder for the Application collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApplicationCollectionWithReferencesRequestBuilder applications() {
         return new ApplicationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("applications"), getClient(), null);
     }
 
-    public IApplicationWithReferenceRequestBuilder applications(final String id) {
+    /**
+     * Gets a request builder for the Application item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApplicationWithReferenceRequestBuilder applications(@Nonnull final String id) {
         return new ApplicationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("applications") + "/" + id, getClient(), null);
     }
-    public IConnectorCollectionRequestBuilder members() {
+    /**
+     *  Gets a request builder for the Connector collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConnectorCollectionRequestBuilder members() {
         return new ConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("members"), getClient(), null);
     }
 
-    public IConnectorRequestBuilder members(final String id) {
+    /**
+     * Gets a request builder for the Connector item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConnectorRequestBuilder members(@Nonnull final String id) {
         return new ConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("members") + "/" + id, getClient(), null);
     }
 }

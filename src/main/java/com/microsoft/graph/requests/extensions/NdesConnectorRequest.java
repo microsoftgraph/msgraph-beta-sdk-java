@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NdesConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ndes Connector Request.
  */
-public class NdesConnectorRequest extends BaseRequest implements INdesConnectorRequest {
+public class NdesConnectorRequest extends BaseRequest<NdesConnector> {
 	
     /**
      * The request for the NdesConnector
@@ -29,7 +31,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NdesConnectorRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NdesConnectorRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NdesConnector.class);
     }
 
@@ -38,7 +40,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super NdesConnector> callback) {
+    public void get(@Nonnull final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @return the NdesConnector from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public NdesConnector get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super NdesConnector> callback) {
+    public void delete(@Nonnull final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param sourceNdesConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NdesConnector sourceNdesConnector, final ICallback<? super NdesConnector> callback) {
+    public void patch(@Nonnull final NdesConnector sourceNdesConnector, @Nonnull final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.PATCH, callback, sourceNdesConnector);
     }
 
@@ -87,7 +90,8 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @return the updated NdesConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NdesConnector patch(final NdesConnector sourceNdesConnector) throws ClientException {
+    @Nullable
+    public NdesConnector patch(@Nonnull final NdesConnector sourceNdesConnector) throws ClientException {
         return send(HttpMethod.PATCH, sourceNdesConnector);
     }
 
@@ -97,7 +101,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param newNdesConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback) {
+    public void post(@Nonnull final NdesConnector newNdesConnector, @Nonnull final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.POST, callback, newNdesConnector);
     }
 
@@ -108,7 +112,8 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @return the created NdesConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NdesConnector post(final NdesConnector newNdesConnector) throws ClientException {
+    @Nullable
+    public NdesConnector post(@Nonnull final NdesConnector newNdesConnector) throws ClientException {
         return send(HttpMethod.POST, newNdesConnector);
     }
 
@@ -118,7 +123,7 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param newNdesConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NdesConnector newNdesConnector, final ICallback<? super NdesConnector> callback) {
+    public void put(@Nonnull final NdesConnector newNdesConnector, @Nonnull final ICallback<? super NdesConnector> callback) {
         send(HttpMethod.PUT, callback, newNdesConnector);
     }
 
@@ -129,7 +134,8 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @return the created NdesConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NdesConnector put(final NdesConnector newNdesConnector) throws ClientException {
+    @Nullable
+    public NdesConnector put(@Nonnull final NdesConnector newNdesConnector) throws ClientException {
         return send(HttpMethod.PUT, newNdesConnector);
     }
 
@@ -139,9 +145,10 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param value the select clause
      * @return the updated request
      */
-     public INdesConnectorRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (NdesConnectorRequest)this;
+     @Nonnull
+     public NdesConnectorRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class NdesConnectorRequest extends BaseRequest implements INdesConnectorR
      * @param value the expand clause
      * @return the updated request
      */
-     public INdesConnectorRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NdesConnectorRequest)this;
+     @Nonnull
+     public NdesConnectorRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserAppInstallStatus;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User App Install Status Request.
  */
-public class UserAppInstallStatusRequest extends BaseRequest implements IUserAppInstallStatusRequest {
+public class UserAppInstallStatusRequest extends BaseRequest<UserAppInstallStatus> {
 	
     /**
      * The request for the UserAppInstallStatus
@@ -35,7 +34,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserAppInstallStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserAppInstallStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserAppInstallStatus.class);
     }
 
@@ -44,7 +43,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserAppInstallStatus> callback) {
+    public void get(@Nonnull final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @return the UserAppInstallStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserAppInstallStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserAppInstallStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param sourceUserAppInstallStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserAppInstallStatus sourceUserAppInstallStatus, final ICallback<? super UserAppInstallStatus> callback) {
+    public void patch(@Nonnull final UserAppInstallStatus sourceUserAppInstallStatus, @Nonnull final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceUserAppInstallStatus);
     }
 
@@ -93,7 +93,8 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @return the updated UserAppInstallStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAppInstallStatus patch(final UserAppInstallStatus sourceUserAppInstallStatus) throws ClientException {
+    @Nullable
+    public UserAppInstallStatus patch(@Nonnull final UserAppInstallStatus sourceUserAppInstallStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserAppInstallStatus);
     }
 
@@ -103,7 +104,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param newUserAppInstallStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserAppInstallStatus newUserAppInstallStatus, final ICallback<? super UserAppInstallStatus> callback) {
+    public void post(@Nonnull final UserAppInstallStatus newUserAppInstallStatus, @Nonnull final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.POST, callback, newUserAppInstallStatus);
     }
 
@@ -114,7 +115,8 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @return the created UserAppInstallStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAppInstallStatus post(final UserAppInstallStatus newUserAppInstallStatus) throws ClientException {
+    @Nullable
+    public UserAppInstallStatus post(@Nonnull final UserAppInstallStatus newUserAppInstallStatus) throws ClientException {
         return send(HttpMethod.POST, newUserAppInstallStatus);
     }
 
@@ -124,7 +126,7 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param newUserAppInstallStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserAppInstallStatus newUserAppInstallStatus, final ICallback<? super UserAppInstallStatus> callback) {
+    public void put(@Nonnull final UserAppInstallStatus newUserAppInstallStatus, @Nonnull final ICallback<? super UserAppInstallStatus> callback) {
         send(HttpMethod.PUT, callback, newUserAppInstallStatus);
     }
 
@@ -135,7 +137,8 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @return the created UserAppInstallStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserAppInstallStatus put(final UserAppInstallStatus newUserAppInstallStatus) throws ClientException {
+    @Nullable
+    public UserAppInstallStatus put(@Nonnull final UserAppInstallStatus newUserAppInstallStatus) throws ClientException {
         return send(HttpMethod.PUT, newUserAppInstallStatus);
     }
 
@@ -145,9 +148,10 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param value the select clause
      * @return the updated request
      */
-     public IUserAppInstallStatusRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserAppInstallStatusRequest)this;
+     @Nonnull
+     public UserAppInstallStatusRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class UserAppInstallStatusRequest extends BaseRequest implements IUserApp
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserAppInstallStatusRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserAppInstallStatusRequest)this;
+     @Nonnull
+     public UserAppInstallStatusRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

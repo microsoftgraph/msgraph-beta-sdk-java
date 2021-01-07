@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EBookInstallSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the EBook Install Summary Request.
  */
-public class EBookInstallSummaryRequest extends BaseRequest implements IEBookInstallSummaryRequest {
+public class EBookInstallSummaryRequest extends BaseRequest<EBookInstallSummary> {
 	
     /**
      * The request for the EBookInstallSummary
@@ -29,7 +31,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EBookInstallSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EBookInstallSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EBookInstallSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EBookInstallSummary> callback) {
+    public void get(@Nonnull final ICallback<? super EBookInstallSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @return the EBookInstallSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EBookInstallSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EBookInstallSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super EBookInstallSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param sourceEBookInstallSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EBookInstallSummary sourceEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback) {
+    public void patch(@Nonnull final EBookInstallSummary sourceEBookInstallSummary, @Nonnull final ICallback<? super EBookInstallSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceEBookInstallSummary);
     }
 
@@ -87,7 +90,8 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @return the updated EBookInstallSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EBookInstallSummary patch(final EBookInstallSummary sourceEBookInstallSummary) throws ClientException {
+    @Nullable
+    public EBookInstallSummary patch(@Nonnull final EBookInstallSummary sourceEBookInstallSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceEBookInstallSummary);
     }
 
@@ -97,7 +101,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param newEBookInstallSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EBookInstallSummary newEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback) {
+    public void post(@Nonnull final EBookInstallSummary newEBookInstallSummary, @Nonnull final ICallback<? super EBookInstallSummary> callback) {
         send(HttpMethod.POST, callback, newEBookInstallSummary);
     }
 
@@ -108,7 +112,8 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @return the created EBookInstallSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EBookInstallSummary post(final EBookInstallSummary newEBookInstallSummary) throws ClientException {
+    @Nullable
+    public EBookInstallSummary post(@Nonnull final EBookInstallSummary newEBookInstallSummary) throws ClientException {
         return send(HttpMethod.POST, newEBookInstallSummary);
     }
 
@@ -118,7 +123,7 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param newEBookInstallSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EBookInstallSummary newEBookInstallSummary, final ICallback<? super EBookInstallSummary> callback) {
+    public void put(@Nonnull final EBookInstallSummary newEBookInstallSummary, @Nonnull final ICallback<? super EBookInstallSummary> callback) {
         send(HttpMethod.PUT, callback, newEBookInstallSummary);
     }
 
@@ -129,7 +134,8 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @return the created EBookInstallSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EBookInstallSummary put(final EBookInstallSummary newEBookInstallSummary) throws ClientException {
+    @Nullable
+    public EBookInstallSummary put(@Nonnull final EBookInstallSummary newEBookInstallSummary) throws ClientException {
         return send(HttpMethod.PUT, newEBookInstallSummary);
     }
 
@@ -139,9 +145,10 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param value the select clause
      * @return the updated request
      */
-     public IEBookInstallSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EBookInstallSummaryRequest)this;
+     @Nonnull
+     public EBookInstallSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EBookInstallSummaryRequest extends BaseRequest implements IEBookIns
      * @param value the expand clause
      * @return the updated request
      */
-     public IEBookInstallSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EBookInstallSummaryRequest)this;
+     @Nonnull
+     public EBookInstallSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

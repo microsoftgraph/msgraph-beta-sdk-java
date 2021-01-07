@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartPoint;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Point Request.
  */
-public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookChartPointRequest {
+public class WorkbookChartPointRequest extends BaseRequest<WorkbookChartPoint> {
 	
     /**
      * The request for the WorkbookChartPoint
@@ -31,7 +32,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartPointRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartPointRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartPoint.class);
     }
 
@@ -40,7 +41,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartPoint> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @return the WorkbookChartPoint from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartPoint get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartPoint> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param sourceWorkbookChartPoint the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartPoint sourceWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
+    public void patch(@Nonnull final WorkbookChartPoint sourceWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartPoint);
     }
 
@@ -89,7 +91,8 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @return the updated WorkbookChartPoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartPoint patch(final WorkbookChartPoint sourceWorkbookChartPoint) throws ClientException {
+    @Nullable
+    public WorkbookChartPoint patch(@Nonnull final WorkbookChartPoint sourceWorkbookChartPoint) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartPoint);
     }
 
@@ -99,7 +102,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param newWorkbookChartPoint the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
+    public void post(@Nonnull final WorkbookChartPoint newWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartPoint);
     }
 
@@ -110,7 +113,8 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @return the created WorkbookChartPoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartPoint post(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
+    @Nullable
+    public WorkbookChartPoint post(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartPoint);
     }
 
@@ -120,7 +124,7 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param newWorkbookChartPoint the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartPoint newWorkbookChartPoint, final ICallback<? super WorkbookChartPoint> callback) {
+    public void put(@Nonnull final WorkbookChartPoint newWorkbookChartPoint, @Nonnull final ICallback<? super WorkbookChartPoint> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartPoint);
     }
 
@@ -131,7 +135,8 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @return the created WorkbookChartPoint
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartPoint put(final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
+    @Nullable
+    public WorkbookChartPoint put(@Nonnull final WorkbookChartPoint newWorkbookChartPoint) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartPoint);
     }
 
@@ -141,9 +146,10 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartPointRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartPointRequest)this;
+     @Nonnull
+     public WorkbookChartPointRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class WorkbookChartPointRequest extends BaseRequest implements IWorkbookC
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartPointRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartPointRequest)this;
+     @Nonnull
+     public WorkbookChartPointRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Experience Analytics Overview Request.
  */
-public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implements IUserExperienceAnalyticsOverviewRequest {
+public class UserExperienceAnalyticsOverviewRequest extends BaseRequest<UserExperienceAnalyticsOverview> {
 	
     /**
      * The request for the UserExperienceAnalyticsOverview
@@ -29,7 +31,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsOverviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsOverviewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsOverview.class);
     }
 
@@ -38,7 +40,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserExperienceAnalyticsOverview> callback) {
+    public void get(@Nonnull final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @return the UserExperienceAnalyticsOverview from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserExperienceAnalyticsOverview get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserExperienceAnalyticsOverview> callback) {
+    public void delete(@Nonnull final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param sourceUserExperienceAnalyticsOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsOverview sourceUserExperienceAnalyticsOverview, final ICallback<? super UserExperienceAnalyticsOverview> callback) {
+    public void patch(@Nonnull final UserExperienceAnalyticsOverview sourceUserExperienceAnalyticsOverview, @Nonnull final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsOverview);
     }
 
@@ -87,7 +90,8 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @return the updated UserExperienceAnalyticsOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsOverview patch(final UserExperienceAnalyticsOverview sourceUserExperienceAnalyticsOverview) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsOverview patch(@Nonnull final UserExperienceAnalyticsOverview sourceUserExperienceAnalyticsOverview) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsOverview);
     }
 
@@ -97,7 +101,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param newUserExperienceAnalyticsOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, final ICallback<? super UserExperienceAnalyticsOverview> callback) {
+    public void post(@Nonnull final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, @Nonnull final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsOverview);
     }
 
@@ -108,7 +112,8 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @return the created UserExperienceAnalyticsOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsOverview post(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsOverview post(@Nonnull final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview) throws ClientException {
         return send(HttpMethod.POST, newUserExperienceAnalyticsOverview);
     }
 
@@ -118,7 +123,7 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param newUserExperienceAnalyticsOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, final ICallback<? super UserExperienceAnalyticsOverview> callback) {
+    public void put(@Nonnull final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview, @Nonnull final ICallback<? super UserExperienceAnalyticsOverview> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsOverview);
     }
 
@@ -129,7 +134,8 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @return the created UserExperienceAnalyticsOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsOverview put(final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsOverview put(@Nonnull final UserExperienceAnalyticsOverview newUserExperienceAnalyticsOverview) throws ClientException {
         return send(HttpMethod.PUT, newUserExperienceAnalyticsOverview);
     }
 
@@ -139,9 +145,10 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsOverviewRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserExperienceAnalyticsOverviewRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsOverviewRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserExperienceAnalyticsOverviewRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsOverviewRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsOverviewRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsOverviewRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

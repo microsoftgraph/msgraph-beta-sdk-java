@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Category Request.
  */
-public class EducationCategoryRequest extends BaseRequest implements IEducationCategoryRequest {
+public class EducationCategoryRequest extends BaseRequest<EducationCategory> {
 	
     /**
      * The request for the EducationCategory
@@ -29,7 +31,7 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationCategoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationCategory.class);
     }
 
@@ -38,7 +40,7 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationCategory> callback) {
+    public void get(@Nonnull final ICallback<? super EducationCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @return the EducationCategory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationCategory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationCategory> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @param sourceEducationCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationCategory sourceEducationCategory, final ICallback<? super EducationCategory> callback) {
+    public void patch(@Nonnull final EducationCategory sourceEducationCategory, @Nonnull final ICallback<? super EducationCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationCategory);
     }
 
@@ -87,7 +90,8 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @return the updated EducationCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationCategory patch(final EducationCategory sourceEducationCategory) throws ClientException {
+    @Nullable
+    public EducationCategory patch(@Nonnull final EducationCategory sourceEducationCategory) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationCategory);
     }
 
@@ -97,7 +101,7 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @param newEducationCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationCategory newEducationCategory, final ICallback<? super EducationCategory> callback) {
+    public void post(@Nonnull final EducationCategory newEducationCategory, @Nonnull final ICallback<? super EducationCategory> callback) {
         send(HttpMethod.POST, callback, newEducationCategory);
     }
 
@@ -108,7 +112,8 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @return the created EducationCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationCategory post(final EducationCategory newEducationCategory) throws ClientException {
+    @Nullable
+    public EducationCategory post(@Nonnull final EducationCategory newEducationCategory) throws ClientException {
         return send(HttpMethod.POST, newEducationCategory);
     }
 
@@ -118,7 +123,7 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @param newEducationCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationCategory newEducationCategory, final ICallback<? super EducationCategory> callback) {
+    public void put(@Nonnull final EducationCategory newEducationCategory, @Nonnull final ICallback<? super EducationCategory> callback) {
         send(HttpMethod.PUT, callback, newEducationCategory);
     }
 
@@ -129,7 +134,8 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @return the created EducationCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationCategory put(final EducationCategory newEducationCategory) throws ClientException {
+    @Nullable
+    public EducationCategory put(@Nonnull final EducationCategory newEducationCategory) throws ClientException {
         return send(HttpMethod.PUT, newEducationCategory);
     }
 
@@ -139,9 +145,10 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationCategoryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationCategoryRequest)this;
+     @Nonnull
+     public EducationCategoryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EducationCategoryRequest extends BaseRequest implements IEducationC
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationCategoryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationCategoryRequest)this;
+     @Nonnull
+     public EducationCategoryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -12,12 +12,12 @@ import com.microsoft.graph.models.extensions.SensitivityLabel;
 import com.microsoft.graph.models.extensions.DiscoveredSensitiveType;
 import com.microsoft.graph.models.extensions.CurrentLabel;
 import com.microsoft.graph.models.extensions.EvaluateLabelJobResponse;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -27,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sensitivity Label Request.
  */
-public class SensitivityLabelRequest extends BaseRequest implements ISensitivityLabelRequest {
+public class SensitivityLabelRequest extends BaseRequest<SensitivityLabel> {
 	
     /**
      * The request for the SensitivityLabel
@@ -36,7 +36,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SensitivityLabelRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SensitivityLabelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SensitivityLabel.class);
     }
 
@@ -45,7 +45,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SensitivityLabel> callback) {
+    public void get(@Nonnull final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,6 +55,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @return the SensitivityLabel from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SensitivityLabel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -64,7 +65,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SensitivityLabel> callback) {
+    public void delete(@Nonnull final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +84,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param sourceSensitivityLabel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SensitivityLabel sourceSensitivityLabel, final ICallback<? super SensitivityLabel> callback) {
+    public void patch(@Nonnull final SensitivityLabel sourceSensitivityLabel, @Nonnull final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.PATCH, callback, sourceSensitivityLabel);
     }
 
@@ -94,7 +95,8 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @return the updated SensitivityLabel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitivityLabel patch(final SensitivityLabel sourceSensitivityLabel) throws ClientException {
+    @Nullable
+    public SensitivityLabel patch(@Nonnull final SensitivityLabel sourceSensitivityLabel) throws ClientException {
         return send(HttpMethod.PATCH, sourceSensitivityLabel);
     }
 
@@ -104,7 +106,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param newSensitivityLabel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback) {
+    public void post(@Nonnull final SensitivityLabel newSensitivityLabel, @Nonnull final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.POST, callback, newSensitivityLabel);
     }
 
@@ -115,7 +117,8 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @return the created SensitivityLabel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitivityLabel post(final SensitivityLabel newSensitivityLabel) throws ClientException {
+    @Nullable
+    public SensitivityLabel post(@Nonnull final SensitivityLabel newSensitivityLabel) throws ClientException {
         return send(HttpMethod.POST, newSensitivityLabel);
     }
 
@@ -125,7 +128,7 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param newSensitivityLabel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SensitivityLabel newSensitivityLabel, final ICallback<? super SensitivityLabel> callback) {
+    public void put(@Nonnull final SensitivityLabel newSensitivityLabel, @Nonnull final ICallback<? super SensitivityLabel> callback) {
         send(HttpMethod.PUT, callback, newSensitivityLabel);
     }
 
@@ -136,7 +139,8 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @return the created SensitivityLabel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitivityLabel put(final SensitivityLabel newSensitivityLabel) throws ClientException {
+    @Nullable
+    public SensitivityLabel put(@Nonnull final SensitivityLabel newSensitivityLabel) throws ClientException {
         return send(HttpMethod.PUT, newSensitivityLabel);
     }
 
@@ -146,9 +150,10 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param value the select clause
      * @return the updated request
      */
-     public ISensitivityLabelRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SensitivityLabelRequest)this;
+     @Nonnull
+     public SensitivityLabelRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -157,9 +162,10 @@ public class SensitivityLabelRequest extends BaseRequest implements ISensitivity
      * @param value the expand clause
      * @return the updated request
      */
-     public ISensitivityLabelRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SensitivityLabelRequest)this;
+     @Nonnull
+     public SensitivityLabelRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

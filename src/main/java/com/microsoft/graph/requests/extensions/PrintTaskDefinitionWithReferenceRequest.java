@@ -9,15 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintTaskDefinition;
-import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Print Task Definition With Reference Request.
  */
-public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest implements IPrintTaskDefinitionWithReferenceRequest {
+public class PrintTaskDefinitionWithReferenceRequest extends BaseWithReferenceRequest<PrintTaskDefinition> {
 
     /**
      * The request for the PrintTaskDefinition
@@ -36,46 +36,9 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintTaskDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintTaskDefinitionWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrintTaskDefinition.class);
     }
-
-    public void post(final PrintTaskDefinition newPrintTaskDefinition, final IJsonBackedObject payload, final ICallback<? super PrintTaskDefinition> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public PrintTaskDefinition post(final PrintTaskDefinition newPrintTaskDefinition, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newPrintTaskDefinition;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super PrintTaskDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public PrintTaskDefinition get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super PrintTaskDefinition> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback) {
-		send(HttpMethod.PATCH, callback, sourcePrintTaskDefinition);
-	}
-
-	public PrintTaskDefinition patch(final PrintTaskDefinition sourcePrintTaskDefinition) throws ClientException {
-		return send(HttpMethod.PATCH, sourcePrintTaskDefinition);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -83,9 +46,10 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-    public IPrintTaskDefinitionWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IPrintTaskDefinitionWithReferenceRequest)this;
+    @Nonnull
+    public PrintTaskDefinitionWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -94,8 +58,9 @@ public class PrintTaskDefinitionWithReferenceRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-    public IPrintTaskDefinitionWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrintTaskDefinitionWithReferenceRequest)this;
+    @Nonnull
+    public PrintTaskDefinitionWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

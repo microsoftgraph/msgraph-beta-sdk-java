@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileTrustedRootCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Trusted Root Certificate Request.
  */
-public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest implements IAndroidWorkProfileTrustedRootCertificateRequest {
+public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest<AndroidWorkProfileTrustedRootCertificate> {
 	
     /**
      * The request for the AndroidWorkProfileTrustedRootCertificate
@@ -29,7 +31,7 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileTrustedRootCertificateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfileTrustedRootCertificateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWorkProfileTrustedRootCertificate.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @return the AndroidWorkProfileTrustedRootCertificate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidWorkProfileTrustedRootCertificate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @param sourceAndroidWorkProfileTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void patch(@Nonnull final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate, @Nonnull final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileTrustedRootCertificate);
     }
 
@@ -87,7 +90,8 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @return the updated AndroidWorkProfileTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileTrustedRootCertificate patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileTrustedRootCertificate patch(@Nonnull final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidWorkProfileTrustedRootCertificate);
     }
 
@@ -97,7 +101,7 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @param newAndroidWorkProfileTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void post(@Nonnull final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, @Nonnull final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileTrustedRootCertificate);
     }
 
@@ -108,7 +112,8 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @return the created AndroidWorkProfileTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileTrustedRootCertificate post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileTrustedRootCertificate post(@Nonnull final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.POST, newAndroidWorkProfileTrustedRootCertificate);
     }
 
@@ -118,7 +123,7 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @param newAndroidWorkProfileTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
+    public void put(@Nonnull final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, @Nonnull final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileTrustedRootCertificate);
     }
 
@@ -129,7 +134,8 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @return the created AndroidWorkProfileTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileTrustedRootCertificate put(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileTrustedRootCertificate put(@Nonnull final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PUT, newAndroidWorkProfileTrustedRootCertificate);
     }
 
@@ -139,9 +145,10 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidWorkProfileTrustedRootCertificateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileTrustedRootCertificateRequest)this;
+     @Nonnull
+     public AndroidWorkProfileTrustedRootCertificateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidWorkProfileTrustedRootCertificateRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidWorkProfileTrustedRootCertificateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileTrustedRootCertificateRequest)this;
+     @Nonnull
+     public AndroidWorkProfileTrustedRootCertificateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

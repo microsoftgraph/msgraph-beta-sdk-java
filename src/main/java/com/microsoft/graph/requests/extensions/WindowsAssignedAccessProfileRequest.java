@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsAssignedAccessProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Assigned Access Profile Request.
  */
-public class WindowsAssignedAccessProfileRequest extends BaseRequest implements IWindowsAssignedAccessProfileRequest {
+public class WindowsAssignedAccessProfileRequest extends BaseRequest<WindowsAssignedAccessProfile> {
 	
     /**
      * The request for the WindowsAssignedAccessProfile
@@ -29,7 +31,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAssignedAccessProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsAssignedAccessProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsAssignedAccessProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsAssignedAccessProfile> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @return the WindowsAssignedAccessProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsAssignedAccessProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsAssignedAccessProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param sourceWindowsAssignedAccessProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback) {
+    public void patch(@Nonnull final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile, @Nonnull final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAssignedAccessProfile);
     }
 
@@ -87,7 +90,8 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @return the updated WindowsAssignedAccessProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAssignedAccessProfile patch(final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile) throws ClientException {
+    @Nullable
+    public WindowsAssignedAccessProfile patch(@Nonnull final WindowsAssignedAccessProfile sourceWindowsAssignedAccessProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsAssignedAccessProfile);
     }
 
@@ -97,7 +101,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param newWindowsAssignedAccessProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback) {
+    public void post(@Nonnull final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, @Nonnull final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.POST, callback, newWindowsAssignedAccessProfile);
     }
 
@@ -108,7 +112,8 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @return the created WindowsAssignedAccessProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAssignedAccessProfile post(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile) throws ClientException {
+    @Nullable
+    public WindowsAssignedAccessProfile post(@Nonnull final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile) throws ClientException {
         return send(HttpMethod.POST, newWindowsAssignedAccessProfile);
     }
 
@@ -118,7 +123,7 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param newWindowsAssignedAccessProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, final ICallback<? super WindowsAssignedAccessProfile> callback) {
+    public void put(@Nonnull final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile, @Nonnull final ICallback<? super WindowsAssignedAccessProfile> callback) {
         send(HttpMethod.PUT, callback, newWindowsAssignedAccessProfile);
     }
 
@@ -129,7 +134,8 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @return the created WindowsAssignedAccessProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAssignedAccessProfile put(final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile) throws ClientException {
+    @Nullable
+    public WindowsAssignedAccessProfile put(@Nonnull final WindowsAssignedAccessProfile newWindowsAssignedAccessProfile) throws ClientException {
         return send(HttpMethod.PUT, newWindowsAssignedAccessProfile);
     }
 
@@ -139,9 +145,10 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsAssignedAccessProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsAssignedAccessProfileRequest)this;
+     @Nonnull
+     public WindowsAssignedAccessProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsAssignedAccessProfileRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsAssignedAccessProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAssignedAccessProfileRequest)this;
+     @Nonnull
+     public WindowsAssignedAccessProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

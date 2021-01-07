@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NetworkIPv4ConfigurationManagementCondition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Network IPv4Configuration Management Condition Request Builder.
  */
-public class NetworkIPv4ConfigurationManagementConditionRequestBuilder extends BaseRequestBuilder implements INetworkIPv4ConfigurationManagementConditionRequestBuilder {
+public class NetworkIPv4ConfigurationManagementConditionRequestBuilder extends BaseRequestBuilder<NetworkIPv4ConfigurationManagementCondition> {
 
     /**
      * The request builder for the NetworkIPv4ConfigurationManagementCondition
@@ -28,7 +30,7 @@ public class NetworkIPv4ConfigurationManagementConditionRequestBuilder extends B
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NetworkIPv4ConfigurationManagementConditionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NetworkIPv4ConfigurationManagementConditionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class NetworkIPv4ConfigurationManagementConditionRequestBuilder extends B
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the INetworkIPv4ConfigurationManagementConditionRequest instance
+     * @return the NetworkIPv4ConfigurationManagementConditionRequest instance
      */
-    public INetworkIPv4ConfigurationManagementConditionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public NetworkIPv4ConfigurationManagementConditionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class NetworkIPv4ConfigurationManagementConditionRequestBuilder extends B
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the INetworkIPv4ConfigurationManagementConditionRequest instance
+     * @return the NetworkIPv4ConfigurationManagementConditionRequest instance
      */
-    public INetworkIPv4ConfigurationManagementConditionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public NetworkIPv4ConfigurationManagementConditionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.NetworkIPv4ConfigurationManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements() {
+    /**
+     *  Gets a request builder for the ManagementConditionStatement collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements() {
         return new ManagementConditionStatementCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements"), getClient(), null);
     }
 
-    public IManagementConditionStatementWithReferenceRequestBuilder managementConditionStatements(final String id) {
+    /**
+     * Gets a request builder for the ManagementConditionStatement item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementConditionStatementWithReferenceRequestBuilder managementConditionStatements(@Nonnull final String id) {
         return new ManagementConditionStatementWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements") + "/" + id, getClient(), null);
     }
 }

@@ -13,10 +13,11 @@ import com.microsoft.graph.models.extensions.SynchronizationJobApplicationParame
 import com.microsoft.graph.models.extensions.StringKeyStringValuePair;
 import com.microsoft.graph.models.extensions.SynchronizationJobRestartCriteria;
 import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
-import com.microsoft.graph.requests.extensions.ISynchronizationSchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationSchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Synchronization Job Request.
  */
-public class SynchronizationJobRequest extends BaseRequest implements ISynchronizationJobRequest {
+public class SynchronizationJobRequest extends BaseRequest<SynchronizationJob> {
 	
     /**
      * The request for the SynchronizationJob
@@ -35,7 +36,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SynchronizationJobRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SynchronizationJobRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SynchronizationJob.class);
     }
 
@@ -44,7 +45,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SynchronizationJob> callback) {
+    public void get(@Nonnull final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +55,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @return the SynchronizationJob from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SynchronizationJob get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +65,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SynchronizationJob> callback) {
+    public void delete(@Nonnull final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +84,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param sourceSynchronizationJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SynchronizationJob sourceSynchronizationJob, final ICallback<? super SynchronizationJob> callback) {
+    public void patch(@Nonnull final SynchronizationJob sourceSynchronizationJob, @Nonnull final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.PATCH, callback, sourceSynchronizationJob);
     }
 
@@ -93,7 +95,8 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @return the updated SynchronizationJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SynchronizationJob patch(final SynchronizationJob sourceSynchronizationJob) throws ClientException {
+    @Nullable
+    public SynchronizationJob patch(@Nonnull final SynchronizationJob sourceSynchronizationJob) throws ClientException {
         return send(HttpMethod.PATCH, sourceSynchronizationJob);
     }
 
@@ -103,7 +106,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param newSynchronizationJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback) {
+    public void post(@Nonnull final SynchronizationJob newSynchronizationJob, @Nonnull final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.POST, callback, newSynchronizationJob);
     }
 
@@ -114,7 +117,8 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @return the created SynchronizationJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SynchronizationJob post(final SynchronizationJob newSynchronizationJob) throws ClientException {
+    @Nullable
+    public SynchronizationJob post(@Nonnull final SynchronizationJob newSynchronizationJob) throws ClientException {
         return send(HttpMethod.POST, newSynchronizationJob);
     }
 
@@ -124,7 +128,7 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param newSynchronizationJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SynchronizationJob newSynchronizationJob, final ICallback<? super SynchronizationJob> callback) {
+    public void put(@Nonnull final SynchronizationJob newSynchronizationJob, @Nonnull final ICallback<? super SynchronizationJob> callback) {
         send(HttpMethod.PUT, callback, newSynchronizationJob);
     }
 
@@ -135,7 +139,8 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @return the created SynchronizationJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SynchronizationJob put(final SynchronizationJob newSynchronizationJob) throws ClientException {
+    @Nullable
+    public SynchronizationJob put(@Nonnull final SynchronizationJob newSynchronizationJob) throws ClientException {
         return send(HttpMethod.PUT, newSynchronizationJob);
     }
 
@@ -145,9 +150,10 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param value the select clause
      * @return the updated request
      */
-     public ISynchronizationJobRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SynchronizationJobRequest)this;
+     @Nonnull
+     public SynchronizationJobRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +162,10 @@ public class SynchronizationJobRequest extends BaseRequest implements ISynchroni
      * @param value the expand clause
      * @return the updated request
      */
-     public ISynchronizationJobRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SynchronizationJobRequest)this;
+     @Nonnull
+     public SynchronizationJobRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

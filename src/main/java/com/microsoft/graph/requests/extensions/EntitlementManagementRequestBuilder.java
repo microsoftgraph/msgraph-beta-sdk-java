@@ -9,50 +9,31 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectedOrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntitlementManagementSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -61,7 +42,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Entitlement Management Request Builder.
  */
-public class EntitlementManagementRequestBuilder extends BaseRequestBuilder implements IEntitlementManagementRequestBuilder {
+public class EntitlementManagementRequestBuilder extends BaseRequestBuilder<EntitlementManagement> {
 
     /**
      * The request builder for the EntitlementManagement
@@ -70,7 +51,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntitlementManagementRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntitlementManagementRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -78,9 +59,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEntitlementManagementRequest instance
+     * @return the EntitlementManagementRequest instance
      */
-    public IEntitlementManagementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EntitlementManagementRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -88,90 +70,222 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEntitlementManagementRequest instance
+     * @return the EntitlementManagementRequest instance
      */
-    public IEntitlementManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EntitlementManagementRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EntitlementManagementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
+    /**
+     *  Gets a request builder for the AccessPackageAssignmentPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
         return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies"), getClient(), null);
     }
 
-    public IAccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageAssignmentPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(@Nonnull final String id) {
         return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies") + "/" + id, getClient(), null);
     }
-    public IAccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests() {
+    /**
+     *  Gets a request builder for the AccessPackageAssignmentRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestCollectionRequestBuilder accessPackageAssignmentRequests() {
         return new AccessPackageAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests"), getClient(), null);
     }
 
-    public IAccessPackageAssignmentRequestRequestBuilder accessPackageAssignmentRequests(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageAssignmentRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestRequestBuilder accessPackageAssignmentRequests(@Nonnull final String id) {
         return new AccessPackageAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentRequests") + "/" + id, getClient(), null);
     }
-    public IAccessPackageAssignmentResourceRoleCollectionRequestBuilder accessPackageAssignmentResourceRoles() {
+    /**
+     *  Gets a request builder for the AccessPackageAssignmentResourceRole collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentResourceRoleCollectionRequestBuilder accessPackageAssignmentResourceRoles() {
         return new AccessPackageAssignmentResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles"), getClient(), null);
     }
 
-    public IAccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageAssignmentResourceRole item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentResourceRoleRequestBuilder accessPackageAssignmentResourceRoles(@Nonnull final String id) {
         return new AccessPackageAssignmentResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentResourceRoles") + "/" + id, getClient(), null);
     }
-    public IAccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments() {
+    /**
+     *  Gets a request builder for the AccessPackageAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentCollectionRequestBuilder accessPackageAssignments() {
         return new AccessPackageAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments"), getClient(), null);
     }
 
-    public IAccessPackageAssignmentRequestBuilder accessPackageAssignments(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestBuilder accessPackageAssignments(@Nonnull final String id) {
         return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignments") + "/" + id, getClient(), null);
     }
-    public IAccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs() {
+    /**
+     *  Gets a request builder for the AccessPackageCatalog collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs() {
         return new AccessPackageCatalogCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalogs"), getClient(), null);
     }
 
-    public IAccessPackageCatalogRequestBuilder accessPackageCatalogs(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageCatalog item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageCatalogRequestBuilder accessPackageCatalogs(@Nonnull final String id) {
         return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalogs") + "/" + id, getClient(), null);
     }
-    public IAccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests() {
+    /**
+     *  Gets a request builder for the AccessPackageResourceRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests() {
         return new AccessPackageResourceRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRequests"), getClient(), null);
     }
 
-    public IAccessPackageResourceRequestRequestBuilder accessPackageResourceRequests(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageResourceRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageResourceRequestRequestBuilder accessPackageResourceRequests(@Nonnull final String id) {
         return new AccessPackageResourceRequestRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRequests") + "/" + id, getClient(), null);
     }
-    public IAccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes() {
+    /**
+     *  Gets a request builder for the AccessPackageResourceRoleScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes() {
         return new AccessPackageResourceRoleScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes"), getClient(), null);
     }
 
-    public IAccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageResourceRoleScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(@Nonnull final String id) {
         return new AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes") + "/" + id, getClient(), null);
     }
-    public IAccessPackageResourceCollectionRequestBuilder accessPackageResources() {
+    /**
+     *  Gets a request builder for the AccessPackageResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageResourceCollectionRequestBuilder accessPackageResources() {
         return new AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
     }
 
-    public IAccessPackageResourceRequestBuilder accessPackageResources(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageResourceRequestBuilder accessPackageResources(@Nonnull final String id) {
         return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
     }
-    public IAccessPackageCollectionRequestBuilder accessPackages() {
+    /**
+     *  Gets a request builder for the AccessPackage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageCollectionRequestBuilder accessPackages() {
         return new AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
     }
 
-    public IAccessPackageRequestBuilder accessPackages(final String id) {
+    /**
+     * Gets a request builder for the AccessPackage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
         return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
-    public IConnectedOrganizationCollectionRequestBuilder connectedOrganizations() {
+    /**
+     *  Gets a request builder for the ConnectedOrganization collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConnectedOrganizationCollectionRequestBuilder connectedOrganizations() {
         return new ConnectedOrganizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations"), getClient(), null);
     }
 
-    public IConnectedOrganizationRequestBuilder connectedOrganizations(final String id) {
+    /**
+     * Gets a request builder for the ConnectedOrganization item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConnectedOrganizationRequestBuilder connectedOrganizations(@Nonnull final String id) {
         return new ConnectedOrganizationRequestBuilder(getRequestUrlWithAdditionalSegment("connectedOrganizations") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for EntitlementManagementSettings
      *
-     * @return the IEntitlementManagementSettingsRequestBuilder instance
+     * @return the EntitlementManagementSettingsRequestBuilder instance
      */
-    public IEntitlementManagementSettingsRequestBuilder settings() {
+    @Nonnull
+    public EntitlementManagementSettingsRequestBuilder settings() {
         return new EntitlementManagementSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 }

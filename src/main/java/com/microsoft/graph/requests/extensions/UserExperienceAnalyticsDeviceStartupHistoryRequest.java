@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupHistory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Experience Analytics Device Startup History Request.
  */
-public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequest implements IUserExperienceAnalyticsDeviceStartupHistoryRequest {
+public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequest<UserExperienceAnalyticsDeviceStartupHistory> {
 	
     /**
      * The request for the UserExperienceAnalyticsDeviceStartupHistory
@@ -29,7 +31,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsDeviceStartupHistoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsDeviceStartupHistoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsDeviceStartupHistory.class);
     }
 
@@ -38,7 +40,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void get(@Nonnull final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @return the UserExperienceAnalyticsDeviceStartupHistory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserExperienceAnalyticsDeviceStartupHistory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void delete(@Nonnull final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param sourceUserExperienceAnalyticsDeviceStartupHistory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsDeviceStartupHistory sourceUserExperienceAnalyticsDeviceStartupHistory, final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void patch(@Nonnull final UserExperienceAnalyticsDeviceStartupHistory sourceUserExperienceAnalyticsDeviceStartupHistory, @Nonnull final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -87,7 +90,8 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @return the updated UserExperienceAnalyticsDeviceStartupHistory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsDeviceStartupHistory patch(final UserExperienceAnalyticsDeviceStartupHistory sourceUserExperienceAnalyticsDeviceStartupHistory) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsDeviceStartupHistory patch(@Nonnull final UserExperienceAnalyticsDeviceStartupHistory sourceUserExperienceAnalyticsDeviceStartupHistory) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -97,7 +101,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param newUserExperienceAnalyticsDeviceStartupHistory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void post(@Nonnull final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, @Nonnull final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -108,7 +112,8 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @return the created UserExperienceAnalyticsDeviceStartupHistory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsDeviceStartupHistory post(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsDeviceStartupHistory post(@Nonnull final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory) throws ClientException {
         return send(HttpMethod.POST, newUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -118,7 +123,7 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param newUserExperienceAnalyticsDeviceStartupHistory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
+    public void put(@Nonnull final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory, @Nonnull final ICallback<? super UserExperienceAnalyticsDeviceStartupHistory> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -129,7 +134,8 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @return the created UserExperienceAnalyticsDeviceStartupHistory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsDeviceStartupHistory put(final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsDeviceStartupHistory put(@Nonnull final UserExperienceAnalyticsDeviceStartupHistory newUserExperienceAnalyticsDeviceStartupHistory) throws ClientException {
         return send(HttpMethod.PUT, newUserExperienceAnalyticsDeviceStartupHistory);
     }
 
@@ -139,9 +145,10 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param value the select clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsDeviceStartupHistoryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserExperienceAnalyticsDeviceStartupHistoryRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsDeviceStartupHistoryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserExperienceAnalyticsDeviceStartupHistoryRequest extends BaseRequ
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsDeviceStartupHistoryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsDeviceStartupHistoryRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsDeviceStartupHistoryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

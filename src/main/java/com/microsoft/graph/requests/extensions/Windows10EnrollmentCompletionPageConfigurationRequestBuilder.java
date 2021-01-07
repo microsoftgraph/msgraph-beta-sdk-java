@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10EnrollmentCompletionPageConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Enrollment Completion Page Configuration Request Builder.
  */
-public class Windows10EnrollmentCompletionPageConfigurationRequestBuilder extends BaseRequestBuilder implements IWindows10EnrollmentCompletionPageConfigurationRequestBuilder {
+public class Windows10EnrollmentCompletionPageConfigurationRequestBuilder extends BaseRequestBuilder<Windows10EnrollmentCompletionPageConfiguration> {
 
     /**
      * The request builder for the Windows10EnrollmentCompletionPageConfiguration
@@ -28,7 +30,7 @@ public class Windows10EnrollmentCompletionPageConfigurationRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EnrollmentCompletionPageConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10EnrollmentCompletionPageConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class Windows10EnrollmentCompletionPageConfigurationRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10EnrollmentCompletionPageConfigurationRequest instance
+     * @return the Windows10EnrollmentCompletionPageConfigurationRequest instance
      */
-    public IWindows10EnrollmentCompletionPageConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public Windows10EnrollmentCompletionPageConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class Windows10EnrollmentCompletionPageConfigurationRequestBuilder extend
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10EnrollmentCompletionPageConfigurationRequest instance
+     * @return the Windows10EnrollmentCompletionPageConfigurationRequest instance
      */
-    public IWindows10EnrollmentCompletionPageConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public Windows10EnrollmentCompletionPageConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.Windows10EnrollmentCompletionPageConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IEnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the EnrollmentConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EnrollmentConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new EnrollmentConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IEnrollmentConfigurationAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the EnrollmentConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EnrollmentConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new EnrollmentConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

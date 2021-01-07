@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
-import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Room List Request.
  */
-public class RoomListRequest extends BaseRequest implements IRoomListRequest {
+public class RoomListRequest extends BaseRequest<RoomList> {
 	
     /**
      * The request for the RoomList
@@ -33,7 +33,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoomListRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoomListRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoomList.class);
     }
 
@@ -42,7 +42,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RoomList> callback) {
+    public void get(@Nonnull final ICallback<? super RoomList> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @return the RoomList from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RoomList get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RoomList> callback) {
+    public void delete(@Nonnull final ICallback<? super RoomList> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param sourceRoomList the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoomList sourceRoomList, final ICallback<? super RoomList> callback) {
+    public void patch(@Nonnull final RoomList sourceRoomList, @Nonnull final ICallback<? super RoomList> callback) {
         send(HttpMethod.PATCH, callback, sourceRoomList);
     }
 
@@ -91,7 +92,8 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @return the updated RoomList
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoomList patch(final RoomList sourceRoomList) throws ClientException {
+    @Nullable
+    public RoomList patch(@Nonnull final RoomList sourceRoomList) throws ClientException {
         return send(HttpMethod.PATCH, sourceRoomList);
     }
 
@@ -101,7 +103,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param newRoomList the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoomList newRoomList, final ICallback<? super RoomList> callback) {
+    public void post(@Nonnull final RoomList newRoomList, @Nonnull final ICallback<? super RoomList> callback) {
         send(HttpMethod.POST, callback, newRoomList);
     }
 
@@ -112,7 +114,8 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @return the created RoomList
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoomList post(final RoomList newRoomList) throws ClientException {
+    @Nullable
+    public RoomList post(@Nonnull final RoomList newRoomList) throws ClientException {
         return send(HttpMethod.POST, newRoomList);
     }
 
@@ -122,7 +125,7 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param newRoomList the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoomList newRoomList, final ICallback<? super RoomList> callback) {
+    public void put(@Nonnull final RoomList newRoomList, @Nonnull final ICallback<? super RoomList> callback) {
         send(HttpMethod.PUT, callback, newRoomList);
     }
 
@@ -133,7 +136,8 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @return the created RoomList
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoomList put(final RoomList newRoomList) throws ClientException {
+    @Nullable
+    public RoomList put(@Nonnull final RoomList newRoomList) throws ClientException {
         return send(HttpMethod.PUT, newRoomList);
     }
 
@@ -143,9 +147,10 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IRoomListRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoomListRequest)this;
+     @Nonnull
+     public RoomListRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class RoomListRequest extends BaseRequest implements IRoomListRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IRoomListRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoomListRequest)this;
+     @Nonnull
+     public RoomListRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

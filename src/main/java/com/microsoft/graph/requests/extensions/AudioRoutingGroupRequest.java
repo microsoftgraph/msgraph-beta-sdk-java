@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AudioRoutingGroup;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Audio Routing Group Request.
  */
-public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRoutingGroupRequest {
+public class AudioRoutingGroupRequest extends BaseRequest<AudioRoutingGroup> {
 	
     /**
      * The request for the AudioRoutingGroup
@@ -29,7 +31,7 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AudioRoutingGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AudioRoutingGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AudioRoutingGroup.class);
     }
 
@@ -38,7 +40,7 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AudioRoutingGroup> callback) {
+    public void get(@Nonnull final ICallback<? super AudioRoutingGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @return the AudioRoutingGroup from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AudioRoutingGroup get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AudioRoutingGroup> callback) {
+    public void delete(@Nonnull final ICallback<? super AudioRoutingGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @param sourceAudioRoutingGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AudioRoutingGroup sourceAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback) {
+    public void patch(@Nonnull final AudioRoutingGroup sourceAudioRoutingGroup, @Nonnull final ICallback<? super AudioRoutingGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceAudioRoutingGroup);
     }
 
@@ -87,7 +90,8 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @return the updated AudioRoutingGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AudioRoutingGroup patch(final AudioRoutingGroup sourceAudioRoutingGroup) throws ClientException {
+    @Nullable
+    public AudioRoutingGroup patch(@Nonnull final AudioRoutingGroup sourceAudioRoutingGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourceAudioRoutingGroup);
     }
 
@@ -97,7 +101,7 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @param newAudioRoutingGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback) {
+    public void post(@Nonnull final AudioRoutingGroup newAudioRoutingGroup, @Nonnull final ICallback<? super AudioRoutingGroup> callback) {
         send(HttpMethod.POST, callback, newAudioRoutingGroup);
     }
 
@@ -108,7 +112,8 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @return the created AudioRoutingGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AudioRoutingGroup post(final AudioRoutingGroup newAudioRoutingGroup) throws ClientException {
+    @Nullable
+    public AudioRoutingGroup post(@Nonnull final AudioRoutingGroup newAudioRoutingGroup) throws ClientException {
         return send(HttpMethod.POST, newAudioRoutingGroup);
     }
 
@@ -118,7 +123,7 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @param newAudioRoutingGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AudioRoutingGroup newAudioRoutingGroup, final ICallback<? super AudioRoutingGroup> callback) {
+    public void put(@Nonnull final AudioRoutingGroup newAudioRoutingGroup, @Nonnull final ICallback<? super AudioRoutingGroup> callback) {
         send(HttpMethod.PUT, callback, newAudioRoutingGroup);
     }
 
@@ -129,7 +134,8 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @return the created AudioRoutingGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AudioRoutingGroup put(final AudioRoutingGroup newAudioRoutingGroup) throws ClientException {
+    @Nullable
+    public AudioRoutingGroup put(@Nonnull final AudioRoutingGroup newAudioRoutingGroup) throws ClientException {
         return send(HttpMethod.PUT, newAudioRoutingGroup);
     }
 
@@ -139,9 +145,10 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @param value the select clause
      * @return the updated request
      */
-     public IAudioRoutingGroupRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AudioRoutingGroupRequest)this;
+     @Nonnull
+     public AudioRoutingGroupRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AudioRoutingGroupRequest extends BaseRequest implements IAudioRouti
      * @param value the expand clause
      * @return the updated request
      */
-     public IAudioRoutingGroupRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AudioRoutingGroupRequest)this;
+     @Nonnull
+     public AudioRoutingGroupRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

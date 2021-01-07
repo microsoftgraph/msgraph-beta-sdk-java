@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsUserActivityUserDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams User Activity User Detail Request.
  */
-public class TeamsUserActivityUserDetailRequest extends BaseRequest implements ITeamsUserActivityUserDetailRequest {
+public class TeamsUserActivityUserDetailRequest extends BaseRequest<TeamsUserActivityUserDetail> {
 	
     /**
      * The request for the TeamsUserActivityUserDetail
@@ -29,7 +31,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsUserActivityUserDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsUserActivityUserDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsUserActivityUserDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsUserActivityUserDetail> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @return the TeamsUserActivityUserDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsUserActivityUserDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsUserActivityUserDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param sourceTeamsUserActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback) {
+    public void patch(@Nonnull final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail, @Nonnull final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsUserActivityUserDetail);
     }
 
@@ -87,7 +90,8 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @return the updated TeamsUserActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsUserActivityUserDetail patch(final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail) throws ClientException {
+    @Nullable
+    public TeamsUserActivityUserDetail patch(@Nonnull final TeamsUserActivityUserDetail sourceTeamsUserActivityUserDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsUserActivityUserDetail);
     }
 
@@ -97,7 +101,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param newTeamsUserActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback) {
+    public void post(@Nonnull final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, @Nonnull final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newTeamsUserActivityUserDetail);
     }
 
@@ -108,7 +112,8 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @return the created TeamsUserActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsUserActivityUserDetail post(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail) throws ClientException {
+    @Nullable
+    public TeamsUserActivityUserDetail post(@Nonnull final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail) throws ClientException {
         return send(HttpMethod.POST, newTeamsUserActivityUserDetail);
     }
 
@@ -118,7 +123,7 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param newTeamsUserActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, final ICallback<? super TeamsUserActivityUserDetail> callback) {
+    public void put(@Nonnull final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail, @Nonnull final ICallback<? super TeamsUserActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newTeamsUserActivityUserDetail);
     }
 
@@ -129,7 +134,8 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @return the created TeamsUserActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsUserActivityUserDetail put(final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail) throws ClientException {
+    @Nullable
+    public TeamsUserActivityUserDetail put(@Nonnull final TeamsUserActivityUserDetail newTeamsUserActivityUserDetail) throws ClientException {
         return send(HttpMethod.PUT, newTeamsUserActivityUserDetail);
     }
 
@@ -139,9 +145,10 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsUserActivityUserDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsUserActivityUserDetailRequest)this;
+     @Nonnull
+     public TeamsUserActivityUserDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TeamsUserActivityUserDetailRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsUserActivityUserDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsUserActivityUserDetailRequest)this;
+     @Nonnull
+     public TeamsUserActivityUserDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

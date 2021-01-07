@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Experience Analytics App Health App Performance By App Version Request Builder.
  */
-public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder extends BaseRequestBuilder implements IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder {
+public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder extends BaseRequestBuilder<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> {
 
     /**
      * The request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion
@@ -28,7 +30,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest instance
+     * @return the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest instance
      */
-    public IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest instance
+     * @return the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest instance
      */
-    public IUserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

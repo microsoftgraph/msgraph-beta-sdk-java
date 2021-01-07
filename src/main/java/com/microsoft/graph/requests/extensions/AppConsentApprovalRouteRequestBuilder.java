@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppConsentApprovalRoute;
-import com.microsoft.graph.requests.extensions.IAppConsentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppConsentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the App Consent Approval Route Request Builder.
  */
-public class AppConsentApprovalRouteRequestBuilder extends BaseRequestBuilder implements IAppConsentApprovalRouteRequestBuilder {
+public class AppConsentApprovalRouteRequestBuilder extends BaseRequestBuilder<AppConsentApprovalRoute> {
 
     /**
      * The request builder for the AppConsentApprovalRoute
@@ -32,7 +32,7 @@ public class AppConsentApprovalRouteRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppConsentApprovalRouteRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppConsentApprovalRouteRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AppConsentApprovalRouteRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAppConsentApprovalRouteRequest instance
+     * @return the AppConsentApprovalRouteRequest instance
      */
-    public IAppConsentApprovalRouteRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AppConsentApprovalRouteRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class AppConsentApprovalRouteRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAppConsentApprovalRouteRequest instance
+     * @return the AppConsentApprovalRouteRequest instance
      */
-    public IAppConsentApprovalRouteRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AppConsentApprovalRouteRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AppConsentApprovalRouteRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAppConsentRequestCollectionRequestBuilder appConsentRequests() {
+    /**
+     *  Gets a request builder for the AppConsentRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppConsentRequestCollectionRequestBuilder appConsentRequests() {
         return new AppConsentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appConsentRequests"), getClient(), null);
     }
 
-    public IAppConsentRequestRequestBuilder appConsentRequests(final String id) {
+    /**
+     * Gets a request builder for the AppConsentRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppConsentRequestRequestBuilder appConsentRequests(@Nonnull final String id) {
         return new AppConsentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("appConsentRequests") + "/" + id, getClient(), null);
     }
 }

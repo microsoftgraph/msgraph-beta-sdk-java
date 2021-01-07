@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ParticipantJoiningNotification;
-import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Participant Joining Notification Request Builder.
  */
-public class ParticipantJoiningNotificationRequestBuilder extends BaseRequestBuilder implements IParticipantJoiningNotificationRequestBuilder {
+public class ParticipantJoiningNotificationRequestBuilder extends BaseRequestBuilder<ParticipantJoiningNotification> {
 
     /**
      * The request builder for the ParticipantJoiningNotification
@@ -30,7 +31,7 @@ public class ParticipantJoiningNotificationRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ParticipantJoiningNotificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ParticipantJoiningNotificationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class ParticipantJoiningNotificationRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IParticipantJoiningNotificationRequest instance
+     * @return the ParticipantJoiningNotificationRequest instance
      */
-    public IParticipantJoiningNotificationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ParticipantJoiningNotificationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class ParticipantJoiningNotificationRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IParticipantJoiningNotificationRequest instance
+     * @return the ParticipantJoiningNotificationRequest instance
      */
-    public IParticipantJoiningNotificationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ParticipantJoiningNotificationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ParticipantJoiningNotificationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class ParticipantJoiningNotificationRequestBuilder extends BaseRequestBui
     /**
      * Gets the request builder for Call
      *
-     * @return the ICallRequestBuilder instance
+     * @return the CallRequestBuilder instance
      */
-    public ICallRequestBuilder call() {
+    @Nonnull
+    public CallRequestBuilder call() {
         return new CallRequestBuilder(getRequestUrlWithAdditionalSegment("call"), getClient(), null);
     }
 }

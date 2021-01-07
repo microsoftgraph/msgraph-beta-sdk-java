@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CaseOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Case Operation Request.
  */
-public class CaseOperationRequest extends BaseRequest implements ICaseOperationRequest {
+public class CaseOperationRequest extends BaseRequest<CaseOperation> {
 	
     /**
      * The request for the CaseOperation
@@ -30,10 +32,10 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public CaseOperationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends CaseOperation> responseClass) {
+    public CaseOperationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends CaseOperation> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CaseOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CaseOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CaseOperation.class);
     }
 
@@ -53,7 +55,7 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CaseOperation> callback) {
+    public void get(@Nonnull final ICallback<? super CaseOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @return the CaseOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CaseOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CaseOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super CaseOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @param sourceCaseOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CaseOperation sourceCaseOperation, final ICallback<? super CaseOperation> callback) {
+    public void patch(@Nonnull final CaseOperation sourceCaseOperation, @Nonnull final ICallback<? super CaseOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceCaseOperation);
     }
 
@@ -102,7 +105,8 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @return the updated CaseOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseOperation patch(final CaseOperation sourceCaseOperation) throws ClientException {
+    @Nullable
+    public CaseOperation patch(@Nonnull final CaseOperation sourceCaseOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceCaseOperation);
     }
 
@@ -112,7 +116,7 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @param newCaseOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CaseOperation newCaseOperation, final ICallback<? super CaseOperation> callback) {
+    public void post(@Nonnull final CaseOperation newCaseOperation, @Nonnull final ICallback<? super CaseOperation> callback) {
         send(HttpMethod.POST, callback, newCaseOperation);
     }
 
@@ -123,7 +127,8 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @return the created CaseOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseOperation post(final CaseOperation newCaseOperation) throws ClientException {
+    @Nullable
+    public CaseOperation post(@Nonnull final CaseOperation newCaseOperation) throws ClientException {
         return send(HttpMethod.POST, newCaseOperation);
     }
 
@@ -133,7 +138,7 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @param newCaseOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CaseOperation newCaseOperation, final ICallback<? super CaseOperation> callback) {
+    public void put(@Nonnull final CaseOperation newCaseOperation, @Nonnull final ICallback<? super CaseOperation> callback) {
         send(HttpMethod.PUT, callback, newCaseOperation);
     }
 
@@ -144,7 +149,8 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @return the created CaseOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseOperation put(final CaseOperation newCaseOperation) throws ClientException {
+    @Nullable
+    public CaseOperation put(@Nonnull final CaseOperation newCaseOperation) throws ClientException {
         return send(HttpMethod.PUT, newCaseOperation);
     }
 
@@ -154,9 +160,10 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @param value the select clause
      * @return the updated request
      */
-     public ICaseOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CaseOperationRequest)this;
+     @Nonnull
+     public CaseOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class CaseOperationRequest extends BaseRequest implements ICaseOperationR
      * @param value the expand clause
      * @return the updated request
      */
-     public ICaseOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CaseOperationRequest)this;
+     @Nonnull
+     public CaseOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

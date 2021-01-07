@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationTextBox;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Policy Presentation Text Box Request Builder.
  */
-public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBuilder implements IGroupPolicyPresentationTextBoxRequestBuilder {
+public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBuilder<GroupPolicyPresentationTextBox> {
 
     /**
      * The request builder for the GroupPolicyPresentationTextBox
@@ -28,7 +30,7 @@ public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationTextBoxRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationTextBoxRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationTextBoxRequest instance
+     * @return the GroupPolicyPresentationTextBoxRequest instance
      */
-    public IGroupPolicyPresentationTextBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationTextBoxRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationTextBoxRequest instance
+     * @return the GroupPolicyPresentationTextBoxRequest instance
      */
-    public IGroupPolicyPresentationTextBoxRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationTextBoxRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,9 +61,10 @@ public class GroupPolicyPresentationTextBoxRequestBuilder extends BaseRequestBui
     /**
      * Gets the request builder for GroupPolicyDefinition
      *
-     * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
+     * @return the GroupPolicyDefinitionWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+    @Nonnull
+    public GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
         return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }

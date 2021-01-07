@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeGraphInsights;
-import com.microsoft.graph.requests.extensions.ISharedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedInsightRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITrendingRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrendingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TrendingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUsedInsightCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUsedInsightRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UsedInsightRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Office Graph Insights Request Builder.
  */
-public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implements IOfficeGraphInsightsRequestBuilder {
+public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder<OfficeGraphInsights> {
 
     /**
      * The request builder for the OfficeGraphInsights
@@ -40,7 +36,7 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeGraphInsightsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfficeGraphInsightsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,9 +44,10 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOfficeGraphInsightsRequest instance
+     * @return the OfficeGraphInsightsRequest instance
      */
-    public IOfficeGraphInsightsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OfficeGraphInsightsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,32 +55,72 @@ public class OfficeGraphInsightsRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOfficeGraphInsightsRequest instance
+     * @return the OfficeGraphInsightsRequest instance
      */
-    public IOfficeGraphInsightsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OfficeGraphInsightsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OfficeGraphInsightsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ISharedInsightCollectionRequestBuilder shared() {
+    /**
+     *  Gets a request builder for the SharedInsight collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SharedInsightCollectionRequestBuilder shared() {
         return new SharedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shared"), getClient(), null);
     }
 
-    public ISharedInsightRequestBuilder shared(final String id) {
+    /**
+     * Gets a request builder for the SharedInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SharedInsightRequestBuilder shared(@Nonnull final String id) {
         return new SharedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("shared") + "/" + id, getClient(), null);
     }
-    public ITrendingCollectionRequestBuilder trending() {
+    /**
+     *  Gets a request builder for the Trending collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TrendingCollectionRequestBuilder trending() {
         return new TrendingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("trending"), getClient(), null);
     }
 
-    public ITrendingRequestBuilder trending(final String id) {
+    /**
+     * Gets a request builder for the Trending item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TrendingRequestBuilder trending(@Nonnull final String id) {
         return new TrendingRequestBuilder(getRequestUrlWithAdditionalSegment("trending") + "/" + id, getClient(), null);
     }
-    public IUsedInsightCollectionRequestBuilder used() {
+    /**
+     *  Gets a request builder for the UsedInsight collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UsedInsightCollectionRequestBuilder used() {
         return new UsedInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("used"), getClient(), null);
     }
 
-    public IUsedInsightRequestBuilder used(final String id) {
+    /**
+     * Gets a request builder for the UsedInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UsedInsightRequestBuilder used(@Nonnull final String id) {
         return new UsedInsightRequestBuilder(getRequestUrlWithAdditionalSegment("used") + "/" + id, getClient(), null);
     }
 }

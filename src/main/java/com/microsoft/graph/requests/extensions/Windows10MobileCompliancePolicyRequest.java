@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10MobileCompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Mobile Compliance Policy Request.
  */
-public class Windows10MobileCompliancePolicyRequest extends BaseRequest implements IWindows10MobileCompliancePolicyRequest {
+public class Windows10MobileCompliancePolicyRequest extends BaseRequest<Windows10MobileCompliancePolicy> {
 	
     /**
      * The request for the Windows10MobileCompliancePolicy
@@ -29,7 +31,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10MobileCompliancePolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10MobileCompliancePolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10MobileCompliancePolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @return the Windows10MobileCompliancePolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10MobileCompliancePolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param sourceWindows10MobileCompliancePolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void patch(@Nonnull final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy, @Nonnull final ICallback<? super Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10MobileCompliancePolicy);
     }
 
@@ -87,7 +90,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @return the updated Windows10MobileCompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10MobileCompliancePolicy patch(final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy) throws ClientException {
+    @Nullable
+    public Windows10MobileCompliancePolicy patch(@Nonnull final Windows10MobileCompliancePolicy sourceWindows10MobileCompliancePolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10MobileCompliancePolicy);
     }
 
@@ -97,7 +101,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param newWindows10MobileCompliancePolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void post(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, @Nonnull final ICallback<? super Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.POST, callback, newWindows10MobileCompliancePolicy);
     }
 
@@ -108,7 +112,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @return the created Windows10MobileCompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10MobileCompliancePolicy post(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) throws ClientException {
+    @Nullable
+    public Windows10MobileCompliancePolicy post(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) throws ClientException {
         return send(HttpMethod.POST, newWindows10MobileCompliancePolicy);
     }
 
@@ -118,7 +123,7 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param newWindows10MobileCompliancePolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, final ICallback<? super Windows10MobileCompliancePolicy> callback) {
+    public void put(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy, @Nonnull final ICallback<? super Windows10MobileCompliancePolicy> callback) {
         send(HttpMethod.PUT, callback, newWindows10MobileCompliancePolicy);
     }
 
@@ -129,7 +134,8 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @return the created Windows10MobileCompliancePolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10MobileCompliancePolicy put(final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) throws ClientException {
+    @Nullable
+    public Windows10MobileCompliancePolicy put(@Nonnull final Windows10MobileCompliancePolicy newWindows10MobileCompliancePolicy) throws ClientException {
         return send(HttpMethod.PUT, newWindows10MobileCompliancePolicy);
     }
 
@@ -139,9 +145,10 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10MobileCompliancePolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10MobileCompliancePolicyRequest)this;
+     @Nonnull
+     public Windows10MobileCompliancePolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10MobileCompliancePolicyRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10MobileCompliancePolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10MobileCompliancePolicyRequest)this;
+     @Nonnull
+     public Windows10MobileCompliancePolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

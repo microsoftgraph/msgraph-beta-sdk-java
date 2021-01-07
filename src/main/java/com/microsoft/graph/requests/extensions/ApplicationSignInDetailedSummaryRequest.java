@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ApplicationSignInDetailedSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Application Sign In Detailed Summary Request.
  */
-public class ApplicationSignInDetailedSummaryRequest extends BaseRequest implements IApplicationSignInDetailedSummaryRequest {
+public class ApplicationSignInDetailedSummaryRequest extends BaseRequest<ApplicationSignInDetailedSummary> {
 	
     /**
      * The request for the ApplicationSignInDetailedSummary
@@ -29,7 +31,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationSignInDetailedSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationSignInDetailedSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationSignInDetailedSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ApplicationSignInDetailedSummary> callback) {
+    public void get(@Nonnull final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @return the ApplicationSignInDetailedSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ApplicationSignInDetailedSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ApplicationSignInDetailedSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param sourceApplicationSignInDetailedSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApplicationSignInDetailedSummary sourceApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback) {
+    public void patch(@Nonnull final ApplicationSignInDetailedSummary sourceApplicationSignInDetailedSummary, @Nonnull final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceApplicationSignInDetailedSummary);
     }
 
@@ -87,7 +90,8 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @return the updated ApplicationSignInDetailedSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationSignInDetailedSummary patch(final ApplicationSignInDetailedSummary sourceApplicationSignInDetailedSummary) throws ClientException {
+    @Nullable
+    public ApplicationSignInDetailedSummary patch(@Nonnull final ApplicationSignInDetailedSummary sourceApplicationSignInDetailedSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceApplicationSignInDetailedSummary);
     }
 
@@ -97,7 +101,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param newApplicationSignInDetailedSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback) {
+    public void post(@Nonnull final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, @Nonnull final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.POST, callback, newApplicationSignInDetailedSummary);
     }
 
@@ -108,7 +112,8 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @return the created ApplicationSignInDetailedSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationSignInDetailedSummary post(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException {
+    @Nullable
+    public ApplicationSignInDetailedSummary post(@Nonnull final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException {
         return send(HttpMethod.POST, newApplicationSignInDetailedSummary);
     }
 
@@ -118,7 +123,7 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param newApplicationSignInDetailedSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, final ICallback<? super ApplicationSignInDetailedSummary> callback) {
+    public void put(@Nonnull final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary, @Nonnull final ICallback<? super ApplicationSignInDetailedSummary> callback) {
         send(HttpMethod.PUT, callback, newApplicationSignInDetailedSummary);
     }
 
@@ -129,7 +134,8 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @return the created ApplicationSignInDetailedSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationSignInDetailedSummary put(final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException {
+    @Nullable
+    public ApplicationSignInDetailedSummary put(@Nonnull final ApplicationSignInDetailedSummary newApplicationSignInDetailedSummary) throws ClientException {
         return send(HttpMethod.PUT, newApplicationSignInDetailedSummary);
     }
 
@@ -139,9 +145,10 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IApplicationSignInDetailedSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ApplicationSignInDetailedSummaryRequest)this;
+     @Nonnull
+     public ApplicationSignInDetailedSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ApplicationSignInDetailedSummaryRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IApplicationSignInDetailedSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApplicationSignInDetailedSummaryRequest)this;
+     @Nonnull
+     public ApplicationSignInDetailedSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

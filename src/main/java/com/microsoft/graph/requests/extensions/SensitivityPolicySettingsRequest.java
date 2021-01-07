@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SensitivityPolicySettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sensitivity Policy Settings Request.
  */
-public class SensitivityPolicySettingsRequest extends BaseRequest implements ISensitivityPolicySettingsRequest {
+public class SensitivityPolicySettingsRequest extends BaseRequest<SensitivityPolicySettings> {
 	
     /**
      * The request for the SensitivityPolicySettings
@@ -29,7 +31,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SensitivityPolicySettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SensitivityPolicySettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SensitivityPolicySettings.class);
     }
 
@@ -38,7 +40,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SensitivityPolicySettings> callback) {
+    public void get(@Nonnull final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @return the SensitivityPolicySettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SensitivityPolicySettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SensitivityPolicySettings> callback) {
+    public void delete(@Nonnull final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param sourceSensitivityPolicySettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SensitivityPolicySettings sourceSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback) {
+    public void patch(@Nonnull final SensitivityPolicySettings sourceSensitivityPolicySettings, @Nonnull final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.PATCH, callback, sourceSensitivityPolicySettings);
     }
 
@@ -87,7 +90,8 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @return the updated SensitivityPolicySettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitivityPolicySettings patch(final SensitivityPolicySettings sourceSensitivityPolicySettings) throws ClientException {
+    @Nullable
+    public SensitivityPolicySettings patch(@Nonnull final SensitivityPolicySettings sourceSensitivityPolicySettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceSensitivityPolicySettings);
     }
 
@@ -97,7 +101,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param newSensitivityPolicySettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback) {
+    public void post(@Nonnull final SensitivityPolicySettings newSensitivityPolicySettings, @Nonnull final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.POST, callback, newSensitivityPolicySettings);
     }
 
@@ -108,7 +112,8 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @return the created SensitivityPolicySettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitivityPolicySettings post(final SensitivityPolicySettings newSensitivityPolicySettings) throws ClientException {
+    @Nullable
+    public SensitivityPolicySettings post(@Nonnull final SensitivityPolicySettings newSensitivityPolicySettings) throws ClientException {
         return send(HttpMethod.POST, newSensitivityPolicySettings);
     }
 
@@ -118,7 +123,7 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param newSensitivityPolicySettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SensitivityPolicySettings newSensitivityPolicySettings, final ICallback<? super SensitivityPolicySettings> callback) {
+    public void put(@Nonnull final SensitivityPolicySettings newSensitivityPolicySettings, @Nonnull final ICallback<? super SensitivityPolicySettings> callback) {
         send(HttpMethod.PUT, callback, newSensitivityPolicySettings);
     }
 
@@ -129,7 +134,8 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @return the created SensitivityPolicySettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SensitivityPolicySettings put(final SensitivityPolicySettings newSensitivityPolicySettings) throws ClientException {
+    @Nullable
+    public SensitivityPolicySettings put(@Nonnull final SensitivityPolicySettings newSensitivityPolicySettings) throws ClientException {
         return send(HttpMethod.PUT, newSensitivityPolicySettings);
     }
 
@@ -139,9 +145,10 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param value the select clause
      * @return the updated request
      */
-     public ISensitivityPolicySettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SensitivityPolicySettingsRequest)this;
+     @Nonnull
+     public SensitivityPolicySettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SensitivityPolicySettingsRequest extends BaseRequest implements ISe
      * @param value the expand clause
      * @return the updated request
      */
-     public ISensitivityPolicySettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SensitivityPolicySettingsRequest)this;
+     @Nonnull
+     public SensitivityPolicySettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

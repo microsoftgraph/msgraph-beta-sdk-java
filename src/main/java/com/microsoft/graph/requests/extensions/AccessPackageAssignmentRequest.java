@@ -9,22 +9,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageAssignment;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Package Assignment Request.
  */
-public class AccessPackageAssignmentRequest extends BaseRequest implements IAccessPackageAssignmentRequest {
+public class AccessPackageAssignmentRequest extends BaseRequest<AccessPackageAssignment> {
 	
     /**
      * The request for the AccessPackageAssignment
@@ -43,7 +38,7 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageAssignment.class);
     }
 
@@ -52,7 +47,7 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessPackageAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super AccessPackageAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +57,7 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @return the AccessPackageAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessPackageAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +67,7 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessPackageAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessPackageAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +86,7 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @param sourceAccessPackageAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageAssignment sourceAccessPackageAssignment, final ICallback<? super AccessPackageAssignment> callback) {
+    public void patch(@Nonnull final AccessPackageAssignment sourceAccessPackageAssignment, @Nonnull final ICallback<? super AccessPackageAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageAssignment);
     }
 
@@ -101,7 +97,8 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @return the updated AccessPackageAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageAssignment patch(final AccessPackageAssignment sourceAccessPackageAssignment) throws ClientException {
+    @Nullable
+    public AccessPackageAssignment patch(@Nonnull final AccessPackageAssignment sourceAccessPackageAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessPackageAssignment);
     }
 
@@ -111,7 +108,7 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @param newAccessPackageAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<? super AccessPackageAssignment> callback) {
+    public void post(@Nonnull final AccessPackageAssignment newAccessPackageAssignment, @Nonnull final ICallback<? super AccessPackageAssignment> callback) {
         send(HttpMethod.POST, callback, newAccessPackageAssignment);
     }
 
@@ -122,7 +119,8 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @return the created AccessPackageAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageAssignment post(final AccessPackageAssignment newAccessPackageAssignment) throws ClientException {
+    @Nullable
+    public AccessPackageAssignment post(@Nonnull final AccessPackageAssignment newAccessPackageAssignment) throws ClientException {
         return send(HttpMethod.POST, newAccessPackageAssignment);
     }
 
@@ -132,7 +130,7 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @param newAccessPackageAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageAssignment newAccessPackageAssignment, final ICallback<? super AccessPackageAssignment> callback) {
+    public void put(@Nonnull final AccessPackageAssignment newAccessPackageAssignment, @Nonnull final ICallback<? super AccessPackageAssignment> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageAssignment);
     }
 
@@ -143,7 +141,8 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @return the created AccessPackageAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageAssignment put(final AccessPackageAssignment newAccessPackageAssignment) throws ClientException {
+    @Nullable
+    public AccessPackageAssignment put(@Nonnull final AccessPackageAssignment newAccessPackageAssignment) throws ClientException {
         return send(HttpMethod.PUT, newAccessPackageAssignment);
     }
 
@@ -153,9 +152,10 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessPackageAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessPackageAssignmentRequest)this;
+     @Nonnull
+     public AccessPackageAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,9 +164,10 @@ public class AccessPackageAssignmentRequest extends BaseRequest implements IAcce
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessPackageAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageAssignmentRequest)this;
+     @Nonnull
+     public AccessPackageAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

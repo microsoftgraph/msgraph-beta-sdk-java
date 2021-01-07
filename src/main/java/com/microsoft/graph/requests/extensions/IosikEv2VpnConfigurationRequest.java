@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosikEv2VpnConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Iosik Ev2Vpn Configuration Request.
  */
-public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIosikEv2VpnConfigurationRequest {
+public class IosikEv2VpnConfigurationRequest extends BaseRequest<IosikEv2VpnConfiguration> {
 	
     /**
      * The request for the IosikEv2VpnConfiguration
@@ -29,7 +31,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosikEv2VpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosikEv2VpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosikEv2VpnConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosikEv2VpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @return the IosikEv2VpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosikEv2VpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosikEv2VpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param sourceIosikEv2VpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback) {
+    public void patch(@Nonnull final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration, @Nonnull final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosikEv2VpnConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @return the updated IosikEv2VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosikEv2VpnConfiguration patch(final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration) throws ClientException {
+    @Nullable
+    public IosikEv2VpnConfiguration patch(@Nonnull final IosikEv2VpnConfiguration sourceIosikEv2VpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosikEv2VpnConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param newIosikEv2VpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback) {
+    public void post(@Nonnull final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, @Nonnull final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosikEv2VpnConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @return the created IosikEv2VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosikEv2VpnConfiguration post(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration) throws ClientException {
+    @Nullable
+    public IosikEv2VpnConfiguration post(@Nonnull final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosikEv2VpnConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param newIosikEv2VpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, final ICallback<? super IosikEv2VpnConfiguration> callback) {
+    public void put(@Nonnull final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration, @Nonnull final ICallback<? super IosikEv2VpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosikEv2VpnConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @return the created IosikEv2VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosikEv2VpnConfiguration put(final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration) throws ClientException {
+    @Nullable
+    public IosikEv2VpnConfiguration put(@Nonnull final IosikEv2VpnConfiguration newIosikEv2VpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosikEv2VpnConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param value the select clause
      * @return the updated request
      */
-     public IIosikEv2VpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosikEv2VpnConfigurationRequest)this;
+     @Nonnull
+     public IosikEv2VpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IosikEv2VpnConfigurationRequest extends BaseRequest implements IIos
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosikEv2VpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosikEv2VpnConfigurationRequest)this;
+     @Nonnull
+     public IosikEv2VpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

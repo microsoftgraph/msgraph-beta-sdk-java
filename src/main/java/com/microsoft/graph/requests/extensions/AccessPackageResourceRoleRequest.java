@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Package Resource Role Request.
  */
-public class AccessPackageResourceRoleRequest extends BaseRequest implements IAccessPackageResourceRoleRequest {
+public class AccessPackageResourceRoleRequest extends BaseRequest<AccessPackageResourceRole> {
 	
     /**
      * The request for the AccessPackageResourceRole
@@ -31,7 +32,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceRoleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageResourceRoleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageResourceRole.class);
     }
 
@@ -40,7 +41,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessPackageResourceRole> callback) {
+    public void get(@Nonnull final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @return the AccessPackageResourceRole from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessPackageResourceRole get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessPackageResourceRole> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param sourceAccessPackageResourceRole the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageResourceRole sourceAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback) {
+    public void patch(@Nonnull final AccessPackageResourceRole sourceAccessPackageResourceRole, @Nonnull final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageResourceRole);
     }
 
@@ -89,7 +91,8 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @return the updated AccessPackageResourceRole
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRole patch(final AccessPackageResourceRole sourceAccessPackageResourceRole) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRole patch(@Nonnull final AccessPackageResourceRole sourceAccessPackageResourceRole) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessPackageResourceRole);
     }
 
@@ -99,7 +102,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param newAccessPackageResourceRole the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback) {
+    public void post(@Nonnull final AccessPackageResourceRole newAccessPackageResourceRole, @Nonnull final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.POST, callback, newAccessPackageResourceRole);
     }
 
@@ -110,7 +113,8 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @return the created AccessPackageResourceRole
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRole post(final AccessPackageResourceRole newAccessPackageResourceRole) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRole post(@Nonnull final AccessPackageResourceRole newAccessPackageResourceRole) throws ClientException {
         return send(HttpMethod.POST, newAccessPackageResourceRole);
     }
 
@@ -120,7 +124,7 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param newAccessPackageResourceRole the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageResourceRole newAccessPackageResourceRole, final ICallback<? super AccessPackageResourceRole> callback) {
+    public void put(@Nonnull final AccessPackageResourceRole newAccessPackageResourceRole, @Nonnull final ICallback<? super AccessPackageResourceRole> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageResourceRole);
     }
 
@@ -131,7 +135,8 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @return the created AccessPackageResourceRole
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRole put(final AccessPackageResourceRole newAccessPackageResourceRole) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRole put(@Nonnull final AccessPackageResourceRole newAccessPackageResourceRole) throws ClientException {
         return send(HttpMethod.PUT, newAccessPackageResourceRole);
     }
 
@@ -141,9 +146,10 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessPackageResourceRoleRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessPackageResourceRoleRequest)this;
+     @Nonnull
+     public AccessPackageResourceRoleRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class AccessPackageResourceRoleRequest extends BaseRequest implements IAc
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessPackageResourceRoleRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageResourceRoleRequest)this;
+     @Nonnull
+     public AccessPackageResourceRoleRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

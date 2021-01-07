@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnsupportedGroupPolicyExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Unsupported Group Policy Extension Request.
  */
-public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implements IUnsupportedGroupPolicyExtensionRequest {
+public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest<UnsupportedGroupPolicyExtension> {
 	
     /**
      * The request for the UnsupportedGroupPolicyExtension
@@ -29,7 +31,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnsupportedGroupPolicyExtensionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnsupportedGroupPolicyExtensionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnsupportedGroupPolicyExtension.class);
     }
 
@@ -38,7 +40,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
+    public void get(@Nonnull final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @return the UnsupportedGroupPolicyExtension from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UnsupportedGroupPolicyExtension get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
+    public void delete(@Nonnull final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param sourceUnsupportedGroupPolicyExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
+    public void patch(@Nonnull final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension, @Nonnull final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.PATCH, callback, sourceUnsupportedGroupPolicyExtension);
     }
 
@@ -87,7 +90,8 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @return the updated UnsupportedGroupPolicyExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnsupportedGroupPolicyExtension patch(final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension) throws ClientException {
+    @Nullable
+    public UnsupportedGroupPolicyExtension patch(@Nonnull final UnsupportedGroupPolicyExtension sourceUnsupportedGroupPolicyExtension) throws ClientException {
         return send(HttpMethod.PATCH, sourceUnsupportedGroupPolicyExtension);
     }
 
@@ -97,7 +101,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param newUnsupportedGroupPolicyExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
+    public void post(@Nonnull final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, @Nonnull final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.POST, callback, newUnsupportedGroupPolicyExtension);
     }
 
@@ -108,7 +112,8 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @return the created UnsupportedGroupPolicyExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnsupportedGroupPolicyExtension post(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException {
+    @Nullable
+    public UnsupportedGroupPolicyExtension post(@Nonnull final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException {
         return send(HttpMethod.POST, newUnsupportedGroupPolicyExtension);
     }
 
@@ -118,7 +123,7 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param newUnsupportedGroupPolicyExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
+    public void put(@Nonnull final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension, @Nonnull final ICallback<? super UnsupportedGroupPolicyExtension> callback) {
         send(HttpMethod.PUT, callback, newUnsupportedGroupPolicyExtension);
     }
 
@@ -129,7 +134,8 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @return the created UnsupportedGroupPolicyExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnsupportedGroupPolicyExtension put(final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException {
+    @Nullable
+    public UnsupportedGroupPolicyExtension put(@Nonnull final UnsupportedGroupPolicyExtension newUnsupportedGroupPolicyExtension) throws ClientException {
         return send(HttpMethod.PUT, newUnsupportedGroupPolicyExtension);
     }
 
@@ -139,9 +145,10 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IUnsupportedGroupPolicyExtensionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UnsupportedGroupPolicyExtensionRequest)this;
+     @Nonnull
+     public UnsupportedGroupPolicyExtensionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UnsupportedGroupPolicyExtensionRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IUnsupportedGroupPolicyExtensionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnsupportedGroupPolicyExtensionRequest)this;
+     @Nonnull
+     public UnsupportedGroupPolicyExtensionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Presence;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Presence Request.
  */
-public class PresenceRequest extends BaseRequest implements IPresenceRequest {
+public class PresenceRequest extends BaseRequest<Presence> {
 	
     /**
      * The request for the Presence
@@ -29,7 +31,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PresenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PresenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Presence.class);
     }
 
@@ -38,7 +40,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Presence> callback) {
+    public void get(@Nonnull final ICallback<? super Presence> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @return the Presence from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Presence get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Presence> callback) {
+    public void delete(@Nonnull final ICallback<? super Presence> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param sourcePresence the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Presence sourcePresence, final ICallback<? super Presence> callback) {
+    public void patch(@Nonnull final Presence sourcePresence, @Nonnull final ICallback<? super Presence> callback) {
         send(HttpMethod.PATCH, callback, sourcePresence);
     }
 
@@ -87,7 +90,8 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @return the updated Presence
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Presence patch(final Presence sourcePresence) throws ClientException {
+    @Nullable
+    public Presence patch(@Nonnull final Presence sourcePresence) throws ClientException {
         return send(HttpMethod.PATCH, sourcePresence);
     }
 
@@ -97,7 +101,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param newPresence the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Presence newPresence, final ICallback<? super Presence> callback) {
+    public void post(@Nonnull final Presence newPresence, @Nonnull final ICallback<? super Presence> callback) {
         send(HttpMethod.POST, callback, newPresence);
     }
 
@@ -108,7 +112,8 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @return the created Presence
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Presence post(final Presence newPresence) throws ClientException {
+    @Nullable
+    public Presence post(@Nonnull final Presence newPresence) throws ClientException {
         return send(HttpMethod.POST, newPresence);
     }
 
@@ -118,7 +123,7 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param newPresence the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Presence newPresence, final ICallback<? super Presence> callback) {
+    public void put(@Nonnull final Presence newPresence, @Nonnull final ICallback<? super Presence> callback) {
         send(HttpMethod.PUT, callback, newPresence);
     }
 
@@ -129,7 +134,8 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @return the created Presence
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Presence put(final Presence newPresence) throws ClientException {
+    @Nullable
+    public Presence put(@Nonnull final Presence newPresence) throws ClientException {
         return send(HttpMethod.PUT, newPresence);
     }
 
@@ -139,9 +145,10 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPresenceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PresenceRequest)this;
+     @Nonnull
+     public PresenceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PresenceRequest extends BaseRequest implements IPresenceRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPresenceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PresenceRequest)this;
+     @Nonnull
+     public PresenceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

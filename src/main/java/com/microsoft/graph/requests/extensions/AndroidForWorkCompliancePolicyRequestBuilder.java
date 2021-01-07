@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkCompliancePolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android For Work Compliance Policy Request Builder.
  */
-public class AndroidForWorkCompliancePolicyRequestBuilder extends BaseRequestBuilder implements IAndroidForWorkCompliancePolicyRequestBuilder {
+public class AndroidForWorkCompliancePolicyRequestBuilder extends BaseRequestBuilder<AndroidForWorkCompliancePolicy> {
 
     /**
      * The request builder for the AndroidForWorkCompliancePolicy
@@ -28,7 +30,7 @@ public class AndroidForWorkCompliancePolicyRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkCompliancePolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkCompliancePolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AndroidForWorkCompliancePolicyRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidForWorkCompliancePolicyRequest instance
+     * @return the AndroidForWorkCompliancePolicyRequest instance
      */
-    public IAndroidForWorkCompliancePolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AndroidForWorkCompliancePolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,64 +49,132 @@ public class AndroidForWorkCompliancePolicyRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidForWorkCompliancePolicyRequest instance
+     * @return the AndroidForWorkCompliancePolicyRequest instance
      */
-    public IAndroidForWorkCompliancePolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AndroidForWorkCompliancePolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AndroidForWorkCompliancePolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the DeviceCompliancePolicyAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentCollectionRequestBuilder assignments() {
         return new DeviceCompliancePolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceCompliancePolicyAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the DeviceCompliancePolicyAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceCompliancePolicyAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceCompliancePolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+    /**
+     *  Gets a request builder for the SettingStateDeviceSummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    /**
+     * Gets a request builder for the SettingStateDeviceSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
-    public IDeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
+    /**
+     *  Gets a request builder for the DeviceComplianceDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceComplianceDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceComplianceDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IDeviceComplianceDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    /**
+     * Gets a request builder for the DeviceComplianceDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceComplianceDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new DeviceComplianceDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceComplianceDeviceOverview
      *
-     * @return the IDeviceComplianceDeviceOverviewRequestBuilder instance
+     * @return the DeviceComplianceDeviceOverviewRequestBuilder instance
      */
-    public IDeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
+    @Nonnull
+    public DeviceComplianceDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceComplianceDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
-    public IDeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
+    /**
+     *  Gets a request builder for the DeviceComplianceScheduledActionForRule collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleCollectionRequestBuilder scheduledActionsForRule() {
         return new DeviceComplianceScheduledActionForRuleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule"), getClient(), null);
     }
 
-    public IDeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(final String id) {
+    /**
+     * Gets a request builder for the DeviceComplianceScheduledActionForRule item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceComplianceScheduledActionForRuleRequestBuilder scheduledActionsForRule(@Nonnull final String id) {
         return new DeviceComplianceScheduledActionForRuleRequestBuilder(getRequestUrlWithAdditionalSegment("scheduledActionsForRule") + "/" + id, getClient(), null);
     }
-    public IDeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
+    /**
+     *  Gets a request builder for the DeviceComplianceUserStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceComplianceUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceComplianceUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IDeviceComplianceUserStatusRequestBuilder userStatuses(final String id) {
+    /**
+     * Gets a request builder for the DeviceComplianceUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceComplianceUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new DeviceComplianceUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceComplianceUserOverview
      *
-     * @return the IDeviceComplianceUserOverviewRequestBuilder instance
+     * @return the DeviceComplianceUserOverviewRequestBuilder instance
      */
-    public IDeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
+    @Nonnull
+    public DeviceComplianceUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceComplianceUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 }

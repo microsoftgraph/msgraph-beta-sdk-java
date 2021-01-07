@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conditional Access Policy Request.
  */
-public class ConditionalAccessPolicyRequest extends BaseRequest implements IConditionalAccessPolicyRequest {
+public class ConditionalAccessPolicyRequest extends BaseRequest<ConditionalAccessPolicy> {
 	
     /**
      * The request for the ConditionalAccessPolicy
@@ -29,7 +31,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConditionalAccessPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConditionalAccessPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @return the ConditionalAccessPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ConditionalAccessPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConditionalAccessPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param sourceConditionalAccessPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConditionalAccessPolicy sourceConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
+    public void patch(@Nonnull final ConditionalAccessPolicy sourceConditionalAccessPolicy, @Nonnull final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceConditionalAccessPolicy);
     }
 
@@ -87,7 +90,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @return the updated ConditionalAccessPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConditionalAccessPolicy patch(final ConditionalAccessPolicy sourceConditionalAccessPolicy) throws ClientException {
+    @Nullable
+    public ConditionalAccessPolicy patch(@Nonnull final ConditionalAccessPolicy sourceConditionalAccessPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceConditionalAccessPolicy);
     }
 
@@ -97,7 +101,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param newConditionalAccessPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
+    public void post(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy, @Nonnull final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.POST, callback, newConditionalAccessPolicy);
     }
 
@@ -108,7 +112,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @return the created ConditionalAccessPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConditionalAccessPolicy post(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
+    @Nullable
+    public ConditionalAccessPolicy post(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
         return send(HttpMethod.POST, newConditionalAccessPolicy);
     }
 
@@ -118,7 +123,7 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param newConditionalAccessPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConditionalAccessPolicy newConditionalAccessPolicy, final ICallback<? super ConditionalAccessPolicy> callback) {
+    public void put(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy, @Nonnull final ICallback<? super ConditionalAccessPolicy> callback) {
         send(HttpMethod.PUT, callback, newConditionalAccessPolicy);
     }
 
@@ -129,7 +134,8 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @return the created ConditionalAccessPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConditionalAccessPolicy put(final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
+    @Nullable
+    public ConditionalAccessPolicy put(@Nonnull final ConditionalAccessPolicy newConditionalAccessPolicy) throws ClientException {
         return send(HttpMethod.PUT, newConditionalAccessPolicy);
     }
 
@@ -139,9 +145,10 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param value the select clause
      * @return the updated request
      */
-     public IConditionalAccessPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConditionalAccessPolicyRequest)this;
+     @Nonnull
+     public ConditionalAccessPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ConditionalAccessPolicyRequest extends BaseRequest implements ICond
      * @param value the expand clause
      * @return the updated request
      */
-     public IConditionalAccessPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConditionalAccessPolicyRequest)this;
+     @Nonnull
+     public ConditionalAccessPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintTaskDefinition;
-import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Print Task Definition Request.
  */
-public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTaskDefinitionRequest {
+public class PrintTaskDefinitionRequest extends BaseRequest<PrintTaskDefinition> {
 	
     /**
      * The request for the PrintTaskDefinition
@@ -33,7 +33,7 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintTaskDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintTaskDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrintTaskDefinition.class);
     }
 
@@ -42,7 +42,7 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrintTaskDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @return the PrintTaskDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrintTaskDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrintTaskDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @param sourcePrintTaskDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintTaskDefinition sourcePrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback) {
+    public void patch(@Nonnull final PrintTaskDefinition sourcePrintTaskDefinition, @Nonnull final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintTaskDefinition);
     }
 
@@ -91,7 +92,8 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @return the updated PrintTaskDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintTaskDefinition patch(final PrintTaskDefinition sourcePrintTaskDefinition) throws ClientException {
+    @Nullable
+    public PrintTaskDefinition patch(@Nonnull final PrintTaskDefinition sourcePrintTaskDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrintTaskDefinition);
     }
 
@@ -101,7 +103,7 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @param newPrintTaskDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback) {
+    public void post(@Nonnull final PrintTaskDefinition newPrintTaskDefinition, @Nonnull final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.POST, callback, newPrintTaskDefinition);
     }
 
@@ -112,7 +114,8 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @return the created PrintTaskDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintTaskDefinition post(final PrintTaskDefinition newPrintTaskDefinition) throws ClientException {
+    @Nullable
+    public PrintTaskDefinition post(@Nonnull final PrintTaskDefinition newPrintTaskDefinition) throws ClientException {
         return send(HttpMethod.POST, newPrintTaskDefinition);
     }
 
@@ -122,7 +125,7 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @param newPrintTaskDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintTaskDefinition newPrintTaskDefinition, final ICallback<? super PrintTaskDefinition> callback) {
+    public void put(@Nonnull final PrintTaskDefinition newPrintTaskDefinition, @Nonnull final ICallback<? super PrintTaskDefinition> callback) {
         send(HttpMethod.PUT, callback, newPrintTaskDefinition);
     }
 
@@ -133,7 +136,8 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @return the created PrintTaskDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintTaskDefinition put(final PrintTaskDefinition newPrintTaskDefinition) throws ClientException {
+    @Nullable
+    public PrintTaskDefinition put(@Nonnull final PrintTaskDefinition newPrintTaskDefinition) throws ClientException {
         return send(HttpMethod.PUT, newPrintTaskDefinition);
     }
 
@@ -143,9 +147,10 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @param value the select clause
      * @return the updated request
      */
-     public IPrintTaskDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrintTaskDefinitionRequest)this;
+     @Nonnull
+     public PrintTaskDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class PrintTaskDefinitionRequest extends BaseRequest implements IPrintTas
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrintTaskDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintTaskDefinitionRequest)this;
+     @Nonnull
+     public PrintTaskDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

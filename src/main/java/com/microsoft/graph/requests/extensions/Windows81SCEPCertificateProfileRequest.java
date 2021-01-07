@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows81SCEPCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows81SCEPCertificate Profile Request.
  */
-public class Windows81SCEPCertificateProfileRequest extends BaseRequest implements IWindows81SCEPCertificateProfileRequest {
+public class Windows81SCEPCertificateProfileRequest extends BaseRequest<Windows81SCEPCertificateProfile> {
 	
     /**
      * The request for the Windows81SCEPCertificateProfile
@@ -35,7 +34,7 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows81SCEPCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows81SCEPCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows81SCEPCertificateProfile.class);
     }
 
@@ -44,7 +43,7 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows81SCEPCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super Windows81SCEPCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @return the Windows81SCEPCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows81SCEPCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows81SCEPCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows81SCEPCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @param sourceWindows81SCEPCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81SCEPCertificateProfile sourceWindows81SCEPCertificateProfile, final ICallback<? super Windows81SCEPCertificateProfile> callback) {
+    public void patch(@Nonnull final Windows81SCEPCertificateProfile sourceWindows81SCEPCertificateProfile, @Nonnull final ICallback<? super Windows81SCEPCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81SCEPCertificateProfile);
     }
 
@@ -93,7 +93,8 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @return the updated Windows81SCEPCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81SCEPCertificateProfile patch(final Windows81SCEPCertificateProfile sourceWindows81SCEPCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows81SCEPCertificateProfile patch(@Nonnull final Windows81SCEPCertificateProfile sourceWindows81SCEPCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows81SCEPCertificateProfile);
     }
 
@@ -103,7 +104,7 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @param newWindows81SCEPCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<? super Windows81SCEPCertificateProfile> callback) {
+    public void post(@Nonnull final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, @Nonnull final ICallback<? super Windows81SCEPCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newWindows81SCEPCertificateProfile);
     }
 
@@ -114,7 +115,8 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @return the created Windows81SCEPCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81SCEPCertificateProfile post(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows81SCEPCertificateProfile post(@Nonnull final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newWindows81SCEPCertificateProfile);
     }
 
@@ -124,7 +126,7 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @param newWindows81SCEPCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, final ICallback<? super Windows81SCEPCertificateProfile> callback) {
+    public void put(@Nonnull final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile, @Nonnull final ICallback<? super Windows81SCEPCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newWindows81SCEPCertificateProfile);
     }
 
@@ -135,7 +137,8 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @return the created Windows81SCEPCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81SCEPCertificateProfile put(final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile) throws ClientException {
+    @Nullable
+    public Windows81SCEPCertificateProfile put(@Nonnull final Windows81SCEPCertificateProfile newWindows81SCEPCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newWindows81SCEPCertificateProfile);
     }
 
@@ -145,9 +148,10 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows81SCEPCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows81SCEPCertificateProfileRequest)this;
+     @Nonnull
+     public Windows81SCEPCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class Windows81SCEPCertificateProfileRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows81SCEPCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81SCEPCertificateProfileRequest)this;
+     @Nonnull
+     public Windows81SCEPCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

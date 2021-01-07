@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DimensionValue;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Dimension Value Request.
  */
-public class DimensionValueRequest extends BaseRequest implements IDimensionValueRequest {
+public class DimensionValueRequest extends BaseRequest<DimensionValue> {
 	
     /**
      * The request for the DimensionValue
@@ -29,7 +31,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DimensionValueRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DimensionValueRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DimensionValue.class);
     }
 
@@ -38,7 +40,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DimensionValue> callback) {
+    public void get(@Nonnull final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @return the DimensionValue from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DimensionValue get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DimensionValue> callback) {
+    public void delete(@Nonnull final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param sourceDimensionValue the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DimensionValue sourceDimensionValue, final ICallback<? super DimensionValue> callback) {
+    public void patch(@Nonnull final DimensionValue sourceDimensionValue, @Nonnull final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.PATCH, callback, sourceDimensionValue);
     }
 
@@ -87,7 +90,8 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @return the updated DimensionValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DimensionValue patch(final DimensionValue sourceDimensionValue) throws ClientException {
+    @Nullable
+    public DimensionValue patch(@Nonnull final DimensionValue sourceDimensionValue) throws ClientException {
         return send(HttpMethod.PATCH, sourceDimensionValue);
     }
 
@@ -97,7 +101,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param newDimensionValue the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DimensionValue newDimensionValue, final ICallback<? super DimensionValue> callback) {
+    public void post(@Nonnull final DimensionValue newDimensionValue, @Nonnull final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.POST, callback, newDimensionValue);
     }
 
@@ -108,7 +112,8 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @return the created DimensionValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DimensionValue post(final DimensionValue newDimensionValue) throws ClientException {
+    @Nullable
+    public DimensionValue post(@Nonnull final DimensionValue newDimensionValue) throws ClientException {
         return send(HttpMethod.POST, newDimensionValue);
     }
 
@@ -118,7 +123,7 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param newDimensionValue the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DimensionValue newDimensionValue, final ICallback<? super DimensionValue> callback) {
+    public void put(@Nonnull final DimensionValue newDimensionValue, @Nonnull final ICallback<? super DimensionValue> callback) {
         send(HttpMethod.PUT, callback, newDimensionValue);
     }
 
@@ -129,7 +134,8 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @return the created DimensionValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DimensionValue put(final DimensionValue newDimensionValue) throws ClientException {
+    @Nullable
+    public DimensionValue put(@Nonnull final DimensionValue newDimensionValue) throws ClientException {
         return send(HttpMethod.PUT, newDimensionValue);
     }
 
@@ -139,9 +145,10 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param value the select clause
      * @return the updated request
      */
-     public IDimensionValueRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DimensionValueRequest)this;
+     @Nonnull
+     public DimensionValueRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DimensionValueRequest extends BaseRequest implements IDimensionValu
      * @param value the expand clause
      * @return the updated request
      */
-     public IDimensionValueRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DimensionValueRequest)this;
+     @Nonnull
+     public DimensionValueRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

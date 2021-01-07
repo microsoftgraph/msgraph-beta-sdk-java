@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserAppInstallStatus;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User App Install Status Request Builder.
  */
-public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder implements IUserAppInstallStatusRequestBuilder {
+public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder<UserAppInstallStatus> {
 
     /**
      * The request builder for the UserAppInstallStatus
@@ -34,7 +33,7 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserAppInstallStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserAppInstallStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserAppInstallStatusRequest instance
+     * @return the UserAppInstallStatusRequest instance
      */
-    public IUserAppInstallStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserAppInstallStatusRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +52,10 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserAppInstallStatusRequest instance
+     * @return the UserAppInstallStatusRequest instance
      */
-    public IUserAppInstallStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserAppInstallStatusRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserAppInstallStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,16 +64,30 @@ public class UserAppInstallStatusRequestBuilder extends BaseRequestBuilder imple
     /**
      * Gets the request builder for MobileApp
      *
-     * @return the IMobileAppWithReferenceRequestBuilder instance
+     * @return the MobileAppWithReferenceRequestBuilder instance
      */
-    public IMobileAppWithReferenceRequestBuilder app() {
+    @Nonnull
+    public MobileAppWithReferenceRequestBuilder app() {
         return new MobileAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("app"), getClient(), null);
     }
-    public IMobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
+    /**
+     *  Gets a request builder for the MobileAppInstallStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobileAppInstallStatusCollectionRequestBuilder deviceStatuses() {
         return new MobileAppInstallStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IMobileAppInstallStatusRequestBuilder deviceStatuses(final String id) {
+    /**
+     * Gets a request builder for the MobileAppInstallStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobileAppInstallStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new MobileAppInstallStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 }

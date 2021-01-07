@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IpSecurityProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ip Security Profile Request.
  */
-public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurityProfileRequest {
+public class IpSecurityProfileRequest extends BaseRequest<IpSecurityProfile> {
 	
     /**
      * The request for the IpSecurityProfile
@@ -29,7 +31,7 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IpSecurityProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IpSecurityProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IpSecurityProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IpSecurityProfile> callback) {
+    public void get(@Nonnull final ICallback<? super IpSecurityProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @return the IpSecurityProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IpSecurityProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IpSecurityProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super IpSecurityProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @param sourceIpSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IpSecurityProfile sourceIpSecurityProfile, final ICallback<? super IpSecurityProfile> callback) {
+    public void patch(@Nonnull final IpSecurityProfile sourceIpSecurityProfile, @Nonnull final ICallback<? super IpSecurityProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIpSecurityProfile);
     }
 
@@ -87,7 +90,8 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @return the updated IpSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IpSecurityProfile patch(final IpSecurityProfile sourceIpSecurityProfile) throws ClientException {
+    @Nullable
+    public IpSecurityProfile patch(@Nonnull final IpSecurityProfile sourceIpSecurityProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceIpSecurityProfile);
     }
 
@@ -97,7 +101,7 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @param newIpSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IpSecurityProfile newIpSecurityProfile, final ICallback<? super IpSecurityProfile> callback) {
+    public void post(@Nonnull final IpSecurityProfile newIpSecurityProfile, @Nonnull final ICallback<? super IpSecurityProfile> callback) {
         send(HttpMethod.POST, callback, newIpSecurityProfile);
     }
 
@@ -108,7 +112,8 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @return the created IpSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IpSecurityProfile post(final IpSecurityProfile newIpSecurityProfile) throws ClientException {
+    @Nullable
+    public IpSecurityProfile post(@Nonnull final IpSecurityProfile newIpSecurityProfile) throws ClientException {
         return send(HttpMethod.POST, newIpSecurityProfile);
     }
 
@@ -118,7 +123,7 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @param newIpSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IpSecurityProfile newIpSecurityProfile, final ICallback<? super IpSecurityProfile> callback) {
+    public void put(@Nonnull final IpSecurityProfile newIpSecurityProfile, @Nonnull final ICallback<? super IpSecurityProfile> callback) {
         send(HttpMethod.PUT, callback, newIpSecurityProfile);
     }
 
@@ -129,7 +134,8 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @return the created IpSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IpSecurityProfile put(final IpSecurityProfile newIpSecurityProfile) throws ClientException {
+    @Nullable
+    public IpSecurityProfile put(@Nonnull final IpSecurityProfile newIpSecurityProfile) throws ClientException {
         return send(HttpMethod.PUT, newIpSecurityProfile);
     }
 
@@ -139,9 +145,10 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @param value the select clause
      * @return the updated request
      */
-     public IIpSecurityProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IpSecurityProfileRequest)this;
+     @Nonnull
+     public IpSecurityProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IpSecurityProfileRequest extends BaseRequest implements IIpSecurity
      * @param value the expand clause
      * @return the updated request
      */
-     public IIpSecurityProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IpSecurityProfileRequest)this;
+     @Nonnull
+     public IpSecurityProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

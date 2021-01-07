@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
-import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Unified Role Assignment Request.
  */
-public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifiedRoleAssignmentRequest {
+public class UnifiedRoleAssignmentRequest extends BaseRequest<UnifiedRoleAssignment> {
 	
     /**
      * The request for the UnifiedRoleAssignment
@@ -35,7 +34,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRoleAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnifiedRoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnifiedRoleAssignment.class);
     }
 
@@ -44,7 +43,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UnifiedRoleAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @return the UnifiedRoleAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UnifiedRoleAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UnifiedRoleAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param sourceUnifiedRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnifiedRoleAssignment sourceUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback) {
+    public void patch(@Nonnull final UnifiedRoleAssignment sourceUnifiedRoleAssignment, @Nonnull final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceUnifiedRoleAssignment);
     }
 
@@ -93,7 +93,8 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @return the updated UnifiedRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRoleAssignment patch(final UnifiedRoleAssignment sourceUnifiedRoleAssignment) throws ClientException {
+    @Nullable
+    public UnifiedRoleAssignment patch(@Nonnull final UnifiedRoleAssignment sourceUnifiedRoleAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceUnifiedRoleAssignment);
     }
 
@@ -103,7 +104,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param newUnifiedRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback) {
+    public void post(@Nonnull final UnifiedRoleAssignment newUnifiedRoleAssignment, @Nonnull final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newUnifiedRoleAssignment);
     }
 
@@ -114,7 +115,8 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @return the created UnifiedRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRoleAssignment post(final UnifiedRoleAssignment newUnifiedRoleAssignment) throws ClientException {
+    @Nullable
+    public UnifiedRoleAssignment post(@Nonnull final UnifiedRoleAssignment newUnifiedRoleAssignment) throws ClientException {
         return send(HttpMethod.POST, newUnifiedRoleAssignment);
     }
 
@@ -124,7 +126,7 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param newUnifiedRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnifiedRoleAssignment newUnifiedRoleAssignment, final ICallback<? super UnifiedRoleAssignment> callback) {
+    public void put(@Nonnull final UnifiedRoleAssignment newUnifiedRoleAssignment, @Nonnull final ICallback<? super UnifiedRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newUnifiedRoleAssignment);
     }
 
@@ -135,7 +137,8 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @return the created UnifiedRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRoleAssignment put(final UnifiedRoleAssignment newUnifiedRoleAssignment) throws ClientException {
+    @Nullable
+    public UnifiedRoleAssignment put(@Nonnull final UnifiedRoleAssignment newUnifiedRoleAssignment) throws ClientException {
         return send(HttpMethod.PUT, newUnifiedRoleAssignment);
     }
 
@@ -145,9 +148,10 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param value the select clause
      * @return the updated request
      */
-     public IUnifiedRoleAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UnifiedRoleAssignmentRequest)this;
+     @Nonnull
+     public UnifiedRoleAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class UnifiedRoleAssignmentRequest extends BaseRequest implements IUnifie
      * @param value the expand clause
      * @return the updated request
      */
-     public IUnifiedRoleAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnifiedRoleAssignmentRequest)this;
+     @Nonnull
+     public UnifiedRoleAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

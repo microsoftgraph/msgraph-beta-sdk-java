@@ -17,6 +17,8 @@ import com.microsoft.graph.models.extensions.DowngradeJustification;
 import com.microsoft.graph.models.extensions.InformationProtectionContentLabel;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Information Protection Label Request Builder.
  */
-public class InformationProtectionLabelRequestBuilder extends BaseRequestBuilder implements IInformationProtectionLabelRequestBuilder {
+public class InformationProtectionLabelRequestBuilder extends BaseRequestBuilder<InformationProtectionLabel> {
 
     /**
      * The request builder for the InformationProtectionLabel
@@ -34,7 +36,7 @@ public class InformationProtectionLabelRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionLabelRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InformationProtectionLabelRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +44,10 @@ public class InformationProtectionLabelRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IInformationProtectionLabelRequest instance
+     * @return the InformationProtectionLabelRequest instance
      */
-    public IInformationProtectionLabelRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public InformationProtectionLabelRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +55,10 @@ public class InformationProtectionLabelRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IInformationProtectionLabelRequest instance
+     * @return the InformationProtectionLabelRequest instance
      */
-    public IInformationProtectionLabelRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public InformationProtectionLabelRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.InformationProtectionLabelRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

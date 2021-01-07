@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SkypeForBusinessDeviceUsageDistributionUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Skype For Business Device Usage Distribution User Counts Request.
  */
-public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends BaseRequest implements ISkypeForBusinessDeviceUsageDistributionUserCountsRequest {
+public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends BaseRequest<SkypeForBusinessDeviceUsageDistributionUserCounts> {
 	
     /**
      * The request for the SkypeForBusinessDeviceUsageDistributionUserCounts
@@ -29,7 +31,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SkypeForBusinessDeviceUsageDistributionUserCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SkypeForBusinessDeviceUsageDistributionUserCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SkypeForBusinessDeviceUsageDistributionUserCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void get(@Nonnull final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @return the SkypeForBusinessDeviceUsageDistributionUserCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SkypeForBusinessDeviceUsageDistributionUserCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param sourceSkypeForBusinessDeviceUsageDistributionUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void patch(@Nonnull final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts, @Nonnull final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -87,7 +90,8 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @return the updated SkypeForBusinessDeviceUsageDistributionUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessDeviceUsageDistributionUserCounts patch(final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessDeviceUsageDistributionUserCounts patch(@Nonnull final SkypeForBusinessDeviceUsageDistributionUserCounts sourceSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -97,7 +101,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void post(@Nonnull final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, @Nonnull final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -108,7 +112,8 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @return the created SkypeForBusinessDeviceUsageDistributionUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessDeviceUsageDistributionUserCounts post(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessDeviceUsageDistributionUserCounts post(@Nonnull final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException {
         return send(HttpMethod.POST, newSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -118,7 +123,7 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param newSkypeForBusinessDeviceUsageDistributionUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
+    public void put(@Nonnull final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts, @Nonnull final ICallback<? super SkypeForBusinessDeviceUsageDistributionUserCounts> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -129,7 +134,8 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @return the created SkypeForBusinessDeviceUsageDistributionUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessDeviceUsageDistributionUserCounts put(final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessDeviceUsageDistributionUserCounts put(@Nonnull final SkypeForBusinessDeviceUsageDistributionUserCounts newSkypeForBusinessDeviceUsageDistributionUserCounts) throws ClientException {
         return send(HttpMethod.PUT, newSkypeForBusinessDeviceUsageDistributionUserCounts);
     }
 
@@ -139,9 +145,10 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param value the select clause
      * @return the updated request
      */
-     public ISkypeForBusinessDeviceUsageDistributionUserCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
+     @Nonnull
+     public SkypeForBusinessDeviceUsageDistributionUserCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SkypeForBusinessDeviceUsageDistributionUserCountsRequest extends Ba
      * @param value the expand clause
      * @return the updated request
      */
-     public ISkypeForBusinessDeviceUsageDistributionUserCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessDeviceUsageDistributionUserCountsRequest)this;
+     @Nonnull
+     public SkypeForBusinessDeviceUsageDistributionUserCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

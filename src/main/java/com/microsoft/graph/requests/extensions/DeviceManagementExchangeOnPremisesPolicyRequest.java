@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementExchangeOnPremisesPolicy;
-import com.microsoft.graph.requests.extensions.IOnPremisesConditionalAccessSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesConditionalAccessSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Exchange On Premises Policy Request.
  */
-public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest implements IDeviceManagementExchangeOnPremisesPolicyRequest {
+public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest<DeviceManagementExchangeOnPremisesPolicy> {
 	
     /**
      * The request for the DeviceManagementExchangeOnPremisesPolicy
@@ -31,7 +32,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementExchangeOnPremisesPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementExchangeOnPremisesPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementExchangeOnPremisesPolicy.class);
     }
 
@@ -40,7 +41,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @return the DeviceManagementExchangeOnPremisesPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementExchangeOnPremisesPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @param sourceDeviceManagementExchangeOnPremisesPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementExchangeOnPremisesPolicy sourceDeviceManagementExchangeOnPremisesPolicy, final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
+    public void patch(@Nonnull final DeviceManagementExchangeOnPremisesPolicy sourceDeviceManagementExchangeOnPremisesPolicy, @Nonnull final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementExchangeOnPremisesPolicy);
     }
 
@@ -89,7 +91,8 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @return the updated DeviceManagementExchangeOnPremisesPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementExchangeOnPremisesPolicy patch(final DeviceManagementExchangeOnPremisesPolicy sourceDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
+    @Nullable
+    public DeviceManagementExchangeOnPremisesPolicy patch(@Nonnull final DeviceManagementExchangeOnPremisesPolicy sourceDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementExchangeOnPremisesPolicy);
     }
 
@@ -99,7 +102,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @param newDeviceManagementExchangeOnPremisesPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
+    public void post(@Nonnull final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, @Nonnull final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementExchangeOnPremisesPolicy);
     }
 
@@ -110,7 +113,8 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @return the created DeviceManagementExchangeOnPremisesPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementExchangeOnPremisesPolicy post(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
+    @Nullable
+    public DeviceManagementExchangeOnPremisesPolicy post(@Nonnull final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementExchangeOnPremisesPolicy);
     }
 
@@ -120,7 +124,7 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @param newDeviceManagementExchangeOnPremisesPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
+    public void put(@Nonnull final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy, @Nonnull final ICallback<? super DeviceManagementExchangeOnPremisesPolicy> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementExchangeOnPremisesPolicy);
     }
 
@@ -131,7 +135,8 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @return the created DeviceManagementExchangeOnPremisesPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementExchangeOnPremisesPolicy put(final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
+    @Nullable
+    public DeviceManagementExchangeOnPremisesPolicy put(@Nonnull final DeviceManagementExchangeOnPremisesPolicy newDeviceManagementExchangeOnPremisesPolicy) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementExchangeOnPremisesPolicy);
     }
 
@@ -141,9 +146,10 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementExchangeOnPremisesPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementExchangeOnPremisesPolicyRequest)this;
+     @Nonnull
+     public DeviceManagementExchangeOnPremisesPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class DeviceManagementExchangeOnPremisesPolicyRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementExchangeOnPremisesPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementExchangeOnPremisesPolicyRequest)this;
+     @Nonnull
+     public DeviceManagementExchangeOnPremisesPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

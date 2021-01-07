@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Legalhold;
-import com.microsoft.graph.requests.extensions.ISiteSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -31,7 +27,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Legalhold Request Builder.
  */
-public class LegalholdRequestBuilder extends BaseRequestBuilder implements ILegalholdRequestBuilder {
+public class LegalholdRequestBuilder extends BaseRequestBuilder<Legalhold> {
 
     /**
      * The request builder for the Legalhold
@@ -40,7 +36,7 @@ public class LegalholdRequestBuilder extends BaseRequestBuilder implements ILega
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LegalholdRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LegalholdRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -48,9 +44,10 @@ public class LegalholdRequestBuilder extends BaseRequestBuilder implements ILega
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ILegalholdRequest instance
+     * @return the LegalholdRequest instance
      */
-    public ILegalholdRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public LegalholdRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -58,32 +55,72 @@ public class LegalholdRequestBuilder extends BaseRequestBuilder implements ILega
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ILegalholdRequest instance
+     * @return the LegalholdRequest instance
      */
-    public ILegalholdRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public LegalholdRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.LegalholdRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ISiteSourceCollectionRequestBuilder siteSources() {
+    /**
+     *  Gets a request builder for the SiteSource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SiteSourceCollectionRequestBuilder siteSources() {
         return new SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
     }
 
-    public ISiteSourceRequestBuilder siteSources(final String id) {
+    /**
+     * Gets a request builder for the SiteSource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
         return new SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
     }
-    public IUnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
+    /**
+     *  Gets a request builder for the UnifiedGroupSource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
         return new UnifiedGroupSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources"), getClient(), null);
     }
 
-    public IUnifiedGroupSourceRequestBuilder unifiedGroupSources(final String id) {
+    /**
+     * Gets a request builder for the UnifiedGroupSource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedGroupSourceRequestBuilder unifiedGroupSources(@Nonnull final String id) {
         return new UnifiedGroupSourceRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources") + "/" + id, getClient(), null);
     }
-    public IUserSourceCollectionRequestBuilder userSources() {
+    /**
+     *  Gets a request builder for the UserSource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserSourceCollectionRequestBuilder userSources() {
         return new UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
     }
 
-    public IUserSourceRequestBuilder userSources(final String id) {
+    /**
+     * Gets a request builder for the UserSource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserSourceRequestBuilder userSources(@Nonnull final String id) {
         return new UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
     }
 }

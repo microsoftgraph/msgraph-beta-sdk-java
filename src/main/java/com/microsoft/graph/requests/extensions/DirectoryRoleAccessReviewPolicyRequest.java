@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryRoleAccessReviewPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Role Access Review Policy Request.
  */
-public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implements IDirectoryRoleAccessReviewPolicyRequest {
+public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest<DirectoryRoleAccessReviewPolicy> {
 	
     /**
      * The request for the DirectoryRoleAccessReviewPolicy
@@ -29,7 +31,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRoleAccessReviewPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRoleAccessReviewPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryRoleAccessReviewPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @return the DirectoryRoleAccessReviewPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DirectoryRoleAccessReviewPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param sourceDirectoryRoleAccessReviewPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
+    public void patch(@Nonnull final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy, @Nonnull final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryRoleAccessReviewPolicy);
     }
 
@@ -87,7 +90,8 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @return the updated DirectoryRoleAccessReviewPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryRoleAccessReviewPolicy patch(final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy) throws ClientException {
+    @Nullable
+    public DirectoryRoleAccessReviewPolicy patch(@Nonnull final DirectoryRoleAccessReviewPolicy sourceDirectoryRoleAccessReviewPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectoryRoleAccessReviewPolicy);
     }
 
@@ -97,7 +101,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param newDirectoryRoleAccessReviewPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
+    public void post(@Nonnull final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, @Nonnull final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.POST, callback, newDirectoryRoleAccessReviewPolicy);
     }
 
@@ -108,7 +112,8 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @return the created DirectoryRoleAccessReviewPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryRoleAccessReviewPolicy post(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy) throws ClientException {
+    @Nullable
+    public DirectoryRoleAccessReviewPolicy post(@Nonnull final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy) throws ClientException {
         return send(HttpMethod.POST, newDirectoryRoleAccessReviewPolicy);
     }
 
@@ -118,7 +123,7 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param newDirectoryRoleAccessReviewPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
+    public void put(@Nonnull final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy, @Nonnull final ICallback<? super DirectoryRoleAccessReviewPolicy> callback) {
         send(HttpMethod.PUT, callback, newDirectoryRoleAccessReviewPolicy);
     }
 
@@ -129,7 +134,8 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @return the created DirectoryRoleAccessReviewPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryRoleAccessReviewPolicy put(final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy) throws ClientException {
+    @Nullable
+    public DirectoryRoleAccessReviewPolicy put(@Nonnull final DirectoryRoleAccessReviewPolicy newDirectoryRoleAccessReviewPolicy) throws ClientException {
         return send(HttpMethod.PUT, newDirectoryRoleAccessReviewPolicy);
     }
 
@@ -139,9 +145,10 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IDirectoryRoleAccessReviewPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DirectoryRoleAccessReviewPolicyRequest)this;
+     @Nonnull
+     public DirectoryRoleAccessReviewPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DirectoryRoleAccessReviewPolicyRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IDirectoryRoleAccessReviewPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryRoleAccessReviewPolicyRequest)this;
+     @Nonnull
+     public DirectoryRoleAccessReviewPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

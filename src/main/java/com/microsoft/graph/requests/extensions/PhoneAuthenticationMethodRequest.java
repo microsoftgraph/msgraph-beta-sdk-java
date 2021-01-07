@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PhoneAuthenticationMethod;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Phone Authentication Method Request.
  */
-public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPhoneAuthenticationMethodRequest {
+public class PhoneAuthenticationMethodRequest extends BaseRequest<PhoneAuthenticationMethod> {
 	
     /**
      * The request for the PhoneAuthenticationMethod
@@ -29,7 +31,7 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PhoneAuthenticationMethodRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PhoneAuthenticationMethodRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PhoneAuthenticationMethod.class);
     }
 
@@ -38,7 +40,7 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PhoneAuthenticationMethod> callback) {
+    public void get(@Nonnull final ICallback<? super PhoneAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @return the PhoneAuthenticationMethod from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PhoneAuthenticationMethod get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PhoneAuthenticationMethod> callback) {
+    public void delete(@Nonnull final ICallback<? super PhoneAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @param sourcePhoneAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PhoneAuthenticationMethod sourcePhoneAuthenticationMethod, final ICallback<? super PhoneAuthenticationMethod> callback) {
+    public void patch(@Nonnull final PhoneAuthenticationMethod sourcePhoneAuthenticationMethod, @Nonnull final ICallback<? super PhoneAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourcePhoneAuthenticationMethod);
     }
 
@@ -87,7 +90,8 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @return the updated PhoneAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PhoneAuthenticationMethod patch(final PhoneAuthenticationMethod sourcePhoneAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PhoneAuthenticationMethod patch(@Nonnull final PhoneAuthenticationMethod sourcePhoneAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PATCH, sourcePhoneAuthenticationMethod);
     }
 
@@ -97,7 +101,7 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @param newPhoneAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<? super PhoneAuthenticationMethod> callback) {
+    public void post(@Nonnull final PhoneAuthenticationMethod newPhoneAuthenticationMethod, @Nonnull final ICallback<? super PhoneAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newPhoneAuthenticationMethod);
     }
 
@@ -108,7 +112,8 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @return the created PhoneAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PhoneAuthenticationMethod post(final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PhoneAuthenticationMethod post(@Nonnull final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException {
         return send(HttpMethod.POST, newPhoneAuthenticationMethod);
     }
 
@@ -118,7 +123,7 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @param newPhoneAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PhoneAuthenticationMethod newPhoneAuthenticationMethod, final ICallback<? super PhoneAuthenticationMethod> callback) {
+    public void put(@Nonnull final PhoneAuthenticationMethod newPhoneAuthenticationMethod, @Nonnull final ICallback<? super PhoneAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newPhoneAuthenticationMethod);
     }
 
@@ -129,7 +134,8 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @return the created PhoneAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PhoneAuthenticationMethod put(final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PhoneAuthenticationMethod put(@Nonnull final PhoneAuthenticationMethod newPhoneAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PUT, newPhoneAuthenticationMethod);
     }
 
@@ -139,9 +145,10 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @param value the select clause
      * @return the updated request
      */
-     public IPhoneAuthenticationMethodRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PhoneAuthenticationMethodRequest)this;
+     @Nonnull
+     public PhoneAuthenticationMethodRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PhoneAuthenticationMethodRequest extends BaseRequest implements IPh
      * @param value the expand clause
      * @return the updated request
      */
-     public IPhoneAuthenticationMethodRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PhoneAuthenticationMethodRequest)this;
+     @Nonnull
+     public PhoneAuthenticationMethodRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

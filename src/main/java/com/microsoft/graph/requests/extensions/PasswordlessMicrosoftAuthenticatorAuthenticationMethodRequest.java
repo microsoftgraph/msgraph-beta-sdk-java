@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Passwordless Microsoft Authenticator Authentication Method Request.
  */
-public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest extends BaseRequest implements IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest {
+public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest extends BaseRequest<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> {
 	
     /**
      * The request for the PasswordlessMicrosoftAuthenticatorAuthenticationMethod
@@ -31,7 +32,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PasswordlessMicrosoftAuthenticatorAuthenticationMethod.class);
     }
 
@@ -40,7 +41,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void get(@Nonnull final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @return the PasswordlessMicrosoftAuthenticatorAuthenticationMethod from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void delete(@Nonnull final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void patch(@Nonnull final PasswordlessMicrosoftAuthenticatorAuthenticationMethod sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod, @Nonnull final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -89,7 +91,8 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @return the updated PasswordlessMicrosoftAuthenticatorAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethod patch(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethod patch(@Nonnull final PasswordlessMicrosoftAuthenticatorAuthenticationMethod sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PATCH, sourcePasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -99,7 +102,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void post(@Nonnull final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, @Nonnull final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -110,7 +113,8 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @return the created PasswordlessMicrosoftAuthenticatorAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethod post(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethod post(@Nonnull final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
         return send(HttpMethod.POST, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -120,7 +124,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param newPasswordlessMicrosoftAuthenticatorAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
+    public void put(@Nonnull final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod, @Nonnull final ICallback<? super PasswordlessMicrosoftAuthenticatorAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -131,7 +135,8 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @return the created PasswordlessMicrosoftAuthenticatorAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethod put(final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethod put(@Nonnull final PasswordlessMicrosoftAuthenticatorAuthenticationMethod newPasswordlessMicrosoftAuthenticatorAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PUT, newPasswordlessMicrosoftAuthenticatorAuthenticationMethod);
     }
 
@@ -141,9 +146,10 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param value the select clause
      * @return the updated request
      */
-     public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest)this;
+     @Nonnull
+     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest exten
      * @param value the expand clause
      * @return the updated request
      */
-     public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest)this;
+     @Nonnull
+     public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

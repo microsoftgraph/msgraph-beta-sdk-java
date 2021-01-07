@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EasEmailProfileConfigurationBase;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Eas Email Profile Configuration Base Request.
  */
-public class EasEmailProfileConfigurationBaseRequest extends BaseRequest implements IEasEmailProfileConfigurationBaseRequest {
+public class EasEmailProfileConfigurationBaseRequest extends BaseRequest<EasEmailProfileConfigurationBase> {
 	
     /**
      * The request for the EasEmailProfileConfigurationBase
@@ -30,10 +32,10 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public EasEmailProfileConfigurationBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends EasEmailProfileConfigurationBase> responseClass) {
+    public EasEmailProfileConfigurationBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends EasEmailProfileConfigurationBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EasEmailProfileConfigurationBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EasEmailProfileConfigurationBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EasEmailProfileConfigurationBase.class);
     }
 
@@ -53,7 +55,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EasEmailProfileConfigurationBase> callback) {
+    public void get(@Nonnull final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @return the EasEmailProfileConfigurationBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EasEmailProfileConfigurationBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EasEmailProfileConfigurationBase> callback) {
+    public void delete(@Nonnull final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param sourceEasEmailProfileConfigurationBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback) {
+    public void patch(@Nonnull final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase, @Nonnull final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.PATCH, callback, sourceEasEmailProfileConfigurationBase);
     }
 
@@ -102,7 +105,8 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @return the updated EasEmailProfileConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EasEmailProfileConfigurationBase patch(final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase) throws ClientException {
+    @Nullable
+    public EasEmailProfileConfigurationBase patch(@Nonnull final EasEmailProfileConfigurationBase sourceEasEmailProfileConfigurationBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceEasEmailProfileConfigurationBase);
     }
 
@@ -112,7 +116,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param newEasEmailProfileConfigurationBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback) {
+    public void post(@Nonnull final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, @Nonnull final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.POST, callback, newEasEmailProfileConfigurationBase);
     }
 
@@ -123,7 +127,8 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @return the created EasEmailProfileConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EasEmailProfileConfigurationBase post(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase) throws ClientException {
+    @Nullable
+    public EasEmailProfileConfigurationBase post(@Nonnull final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase) throws ClientException {
         return send(HttpMethod.POST, newEasEmailProfileConfigurationBase);
     }
 
@@ -133,7 +138,7 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param newEasEmailProfileConfigurationBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, final ICallback<? super EasEmailProfileConfigurationBase> callback) {
+    public void put(@Nonnull final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase, @Nonnull final ICallback<? super EasEmailProfileConfigurationBase> callback) {
         send(HttpMethod.PUT, callback, newEasEmailProfileConfigurationBase);
     }
 
@@ -144,7 +149,8 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @return the created EasEmailProfileConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EasEmailProfileConfigurationBase put(final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase) throws ClientException {
+    @Nullable
+    public EasEmailProfileConfigurationBase put(@Nonnull final EasEmailProfileConfigurationBase newEasEmailProfileConfigurationBase) throws ClientException {
         return send(HttpMethod.PUT, newEasEmailProfileConfigurationBase);
     }
 
@@ -154,9 +160,10 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IEasEmailProfileConfigurationBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EasEmailProfileConfigurationBaseRequest)this;
+     @Nonnull
+     public EasEmailProfileConfigurationBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class EasEmailProfileConfigurationBaseRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IEasEmailProfileConfigurationBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EasEmailProfileConfigurationBaseRequest)this;
+     @Nonnull
+     public EasEmailProfileConfigurationBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Picture;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Picture Request.
  */
-public class PictureRequest extends BaseRequest implements IPictureRequest {
+public class PictureRequest extends BaseRequest<Picture> {
 	
     /**
      * The request for the Picture
@@ -29,7 +31,7 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PictureRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PictureRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Picture.class);
     }
 
@@ -38,7 +40,7 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Picture> callback) {
+    public void get(@Nonnull final ICallback<? super Picture> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @return the Picture from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Picture get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Picture> callback) {
+    public void delete(@Nonnull final ICallback<? super Picture> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @param sourcePicture the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Picture sourcePicture, final ICallback<? super Picture> callback) {
+    public void patch(@Nonnull final Picture sourcePicture, @Nonnull final ICallback<? super Picture> callback) {
         send(HttpMethod.PATCH, callback, sourcePicture);
     }
 
@@ -87,7 +90,8 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @return the updated Picture
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Picture patch(final Picture sourcePicture) throws ClientException {
+    @Nullable
+    public Picture patch(@Nonnull final Picture sourcePicture) throws ClientException {
         return send(HttpMethod.PATCH, sourcePicture);
     }
 
@@ -97,7 +101,7 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @param newPicture the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Picture newPicture, final ICallback<? super Picture> callback) {
+    public void post(@Nonnull final Picture newPicture, @Nonnull final ICallback<? super Picture> callback) {
         send(HttpMethod.POST, callback, newPicture);
     }
 
@@ -108,7 +112,8 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @return the created Picture
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Picture post(final Picture newPicture) throws ClientException {
+    @Nullable
+    public Picture post(@Nonnull final Picture newPicture) throws ClientException {
         return send(HttpMethod.POST, newPicture);
     }
 
@@ -118,7 +123,7 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @param newPicture the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Picture newPicture, final ICallback<? super Picture> callback) {
+    public void put(@Nonnull final Picture newPicture, @Nonnull final ICallback<? super Picture> callback) {
         send(HttpMethod.PUT, callback, newPicture);
     }
 
@@ -129,7 +134,8 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @return the created Picture
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Picture put(final Picture newPicture) throws ClientException {
+    @Nullable
+    public Picture put(@Nonnull final Picture newPicture) throws ClientException {
         return send(HttpMethod.PUT, newPicture);
     }
 
@@ -139,9 +145,10 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPictureRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PictureRequest)this;
+     @Nonnull
+     public PictureRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PictureRequest extends BaseRequest implements IPictureRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPictureRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PictureRequest)this;
+     @Nonnull
+     public PictureRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

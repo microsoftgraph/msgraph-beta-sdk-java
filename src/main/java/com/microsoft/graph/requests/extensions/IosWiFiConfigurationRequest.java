@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosWiFiConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Wi Fi Configuration Request.
  */
-public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFiConfigurationRequest {
+public class IosWiFiConfigurationRequest extends BaseRequest<IosWiFiConfiguration> {
 	
     /**
      * The request for the IosWiFiConfiguration
@@ -30,10 +32,10 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public IosWiFiConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends IosWiFiConfiguration> responseClass) {
+    public IosWiFiConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends IosWiFiConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosWiFiConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosWiFiConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosWiFiConfiguration.class);
     }
 
@@ -53,7 +55,7 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosWiFiConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @return the IosWiFiConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosWiFiConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosWiFiConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @param sourceIosWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosWiFiConfiguration sourceIosWiFiConfiguration, final ICallback<? super IosWiFiConfiguration> callback) {
+    public void patch(@Nonnull final IosWiFiConfiguration sourceIosWiFiConfiguration, @Nonnull final ICallback<? super IosWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosWiFiConfiguration);
     }
 
@@ -102,7 +105,8 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @return the updated IosWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosWiFiConfiguration patch(final IosWiFiConfiguration sourceIosWiFiConfiguration) throws ClientException {
+    @Nullable
+    public IosWiFiConfiguration patch(@Nonnull final IosWiFiConfiguration sourceIosWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosWiFiConfiguration);
     }
 
@@ -112,7 +116,7 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @param newIosWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosWiFiConfiguration newIosWiFiConfiguration, final ICallback<? super IosWiFiConfiguration> callback) {
+    public void post(@Nonnull final IosWiFiConfiguration newIosWiFiConfiguration, @Nonnull final ICallback<? super IosWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosWiFiConfiguration);
     }
 
@@ -123,7 +127,8 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @return the created IosWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosWiFiConfiguration post(final IosWiFiConfiguration newIosWiFiConfiguration) throws ClientException {
+    @Nullable
+    public IosWiFiConfiguration post(@Nonnull final IosWiFiConfiguration newIosWiFiConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosWiFiConfiguration);
     }
 
@@ -133,7 +138,7 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @param newIosWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosWiFiConfiguration newIosWiFiConfiguration, final ICallback<? super IosWiFiConfiguration> callback) {
+    public void put(@Nonnull final IosWiFiConfiguration newIosWiFiConfiguration, @Nonnull final ICallback<? super IosWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosWiFiConfiguration);
     }
 
@@ -144,7 +149,8 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @return the created IosWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosWiFiConfiguration put(final IosWiFiConfiguration newIosWiFiConfiguration) throws ClientException {
+    @Nullable
+    public IosWiFiConfiguration put(@Nonnull final IosWiFiConfiguration newIosWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosWiFiConfiguration);
     }
 
@@ -154,9 +160,10 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @param value the select clause
      * @return the updated request
      */
-     public IIosWiFiConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosWiFiConfigurationRequest)this;
+     @Nonnull
+     public IosWiFiConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class IosWiFiConfigurationRequest extends BaseRequest implements IIosWiFi
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosWiFiConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosWiFiConfigurationRequest)this;
+     @Nonnull
+     public IosWiFiConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

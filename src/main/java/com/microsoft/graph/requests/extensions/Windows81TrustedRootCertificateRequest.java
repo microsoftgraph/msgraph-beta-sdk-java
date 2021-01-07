@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows81TrustedRootCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows81Trusted Root Certificate Request.
  */
-public class Windows81TrustedRootCertificateRequest extends BaseRequest implements IWindows81TrustedRootCertificateRequest {
+public class Windows81TrustedRootCertificateRequest extends BaseRequest<Windows81TrustedRootCertificate> {
 	
     /**
      * The request for the Windows81TrustedRootCertificate
@@ -29,7 +31,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows81TrustedRootCertificateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows81TrustedRootCertificateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows81TrustedRootCertificate.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows81TrustedRootCertificate> callback) {
+    public void get(@Nonnull final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @return the Windows81TrustedRootCertificate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows81TrustedRootCertificate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows81TrustedRootCertificate> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param sourceWindows81TrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
+    public void patch(@Nonnull final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate, @Nonnull final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81TrustedRootCertificate);
     }
 
@@ -87,7 +90,8 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @return the updated Windows81TrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81TrustedRootCertificate patch(final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate) throws ClientException {
+    @Nullable
+    public Windows81TrustedRootCertificate patch(@Nonnull final Windows81TrustedRootCertificate sourceWindows81TrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows81TrustedRootCertificate);
     }
 
@@ -97,7 +101,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param newWindows81TrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
+    public void post(@Nonnull final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, @Nonnull final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newWindows81TrustedRootCertificate);
     }
 
@@ -108,7 +112,8 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @return the created Windows81TrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81TrustedRootCertificate post(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException {
+    @Nullable
+    public Windows81TrustedRootCertificate post(@Nonnull final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException {
         return send(HttpMethod.POST, newWindows81TrustedRootCertificate);
     }
 
@@ -118,7 +123,7 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param newWindows81TrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, final ICallback<? super Windows81TrustedRootCertificate> callback) {
+    public void put(@Nonnull final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate, @Nonnull final ICallback<? super Windows81TrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newWindows81TrustedRootCertificate);
     }
 
@@ -129,7 +134,8 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @return the created Windows81TrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81TrustedRootCertificate put(final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException {
+    @Nullable
+    public Windows81TrustedRootCertificate put(@Nonnull final Windows81TrustedRootCertificate newWindows81TrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PUT, newWindows81TrustedRootCertificate);
     }
 
@@ -139,9 +145,10 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows81TrustedRootCertificateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows81TrustedRootCertificateRequest)this;
+     @Nonnull
+     public Windows81TrustedRootCertificateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows81TrustedRootCertificateRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows81TrustedRootCertificateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81TrustedRootCertificateRequest)this;
+     @Nonnull
+     public Windows81TrustedRootCertificateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

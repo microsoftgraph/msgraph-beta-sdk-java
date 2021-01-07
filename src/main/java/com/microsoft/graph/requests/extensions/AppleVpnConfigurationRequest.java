@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppleVpnConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Apple Vpn Configuration Request.
  */
-public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleVpnConfigurationRequest {
+public class AppleVpnConfigurationRequest extends BaseRequest<AppleVpnConfiguration> {
 	
     /**
      * The request for the AppleVpnConfiguration
@@ -30,10 +32,10 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AppleVpnConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AppleVpnConfiguration> responseClass) {
+    public AppleVpnConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AppleVpnConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppleVpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppleVpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppleVpnConfiguration.class);
     }
 
@@ -53,7 +55,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AppleVpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @return the AppleVpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AppleVpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AppleVpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param sourceAppleVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppleVpnConfiguration sourceAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback) {
+    public void patch(@Nonnull final AppleVpnConfiguration sourceAppleVpnConfiguration, @Nonnull final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAppleVpnConfiguration);
     }
 
@@ -102,7 +105,8 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @return the updated AppleVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleVpnConfiguration patch(final AppleVpnConfiguration sourceAppleVpnConfiguration) throws ClientException {
+    @Nullable
+    public AppleVpnConfiguration patch(@Nonnull final AppleVpnConfiguration sourceAppleVpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAppleVpnConfiguration);
     }
 
@@ -112,7 +116,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param newAppleVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback) {
+    public void post(@Nonnull final AppleVpnConfiguration newAppleVpnConfiguration, @Nonnull final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAppleVpnConfiguration);
     }
 
@@ -123,7 +127,8 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @return the created AppleVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleVpnConfiguration post(final AppleVpnConfiguration newAppleVpnConfiguration) throws ClientException {
+    @Nullable
+    public AppleVpnConfiguration post(@Nonnull final AppleVpnConfiguration newAppleVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAppleVpnConfiguration);
     }
 
@@ -133,7 +138,7 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param newAppleVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppleVpnConfiguration newAppleVpnConfiguration, final ICallback<? super AppleVpnConfiguration> callback) {
+    public void put(@Nonnull final AppleVpnConfiguration newAppleVpnConfiguration, @Nonnull final ICallback<? super AppleVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAppleVpnConfiguration);
     }
 
@@ -144,7 +149,8 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @return the created AppleVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleVpnConfiguration put(final AppleVpnConfiguration newAppleVpnConfiguration) throws ClientException {
+    @Nullable
+    public AppleVpnConfiguration put(@Nonnull final AppleVpnConfiguration newAppleVpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAppleVpnConfiguration);
     }
 
@@ -154,9 +160,10 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param value the select clause
      * @return the updated request
      */
-     public IAppleVpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AppleVpnConfigurationRequest)this;
+     @Nonnull
+     public AppleVpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class AppleVpnConfigurationRequest extends BaseRequest implements IAppleV
      * @param value the expand clause
      * @return the updated request
      */
-     public IAppleVpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppleVpnConfigurationRequest)this;
+     @Nonnull
+     public AppleVpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedApproval;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Privileged Approval Request Builder.
  */
-public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder implements IPrivilegedApprovalRequestBuilder {
+public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder<PrivilegedApproval> {
 
     /**
      * The request builder for the PrivilegedApproval
@@ -32,7 +32,7 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedApprovalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedApprovalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedApprovalRequest instance
+     * @return the PrivilegedApprovalRequest instance
      */
-    public IPrivilegedApprovalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrivilegedApprovalRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedApprovalRequest instance
+     * @return the PrivilegedApprovalRequest instance
      */
-    public IPrivilegedApprovalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrivilegedApprovalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrivilegedApprovalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Gets the request builder for PrivilegedRoleAssignmentRequest
      *
-     * @return the IPrivilegedRoleAssignmentRequestWithReferenceRequestBuilder instance
+     * @return the PrivilegedRoleAssignmentRequestWithReferenceRequestBuilder instance
      */
-    public IPrivilegedRoleAssignmentRequestWithReferenceRequestBuilder request() {
+    @Nonnull
+    public PrivilegedRoleAssignmentRequestWithReferenceRequestBuilder request() {
         return new PrivilegedRoleAssignmentRequestWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("request"), getClient(), null);
     }
 
     /**
      * Gets the request builder for PrivilegedRole
      *
-     * @return the IPrivilegedRoleRequestBuilder instance
+     * @return the PrivilegedRoleRequestBuilder instance
      */
-    public IPrivilegedRoleRequestBuilder roleInfo() {
+    @Nonnull
+    public PrivilegedRoleRequestBuilder roleInfo() {
         return new PrivilegedRoleRequestBuilder(getRequestUrlWithAdditionalSegment("roleInfo"), getClient(), null);
     }
 }

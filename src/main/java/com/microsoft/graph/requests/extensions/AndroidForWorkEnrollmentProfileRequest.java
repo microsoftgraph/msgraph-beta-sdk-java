@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkEnrollmentProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android For Work Enrollment Profile Request.
  */
-public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implements IAndroidForWorkEnrollmentProfileRequest {
+public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest<AndroidForWorkEnrollmentProfile> {
 	
     /**
      * The request for the AndroidForWorkEnrollmentProfile
@@ -29,7 +31,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkEnrollmentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkEnrollmentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkEnrollmentProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @return the AndroidForWorkEnrollmentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidForWorkEnrollmentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param sourceAndroidForWorkEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
+    public void patch(@Nonnull final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile, @Nonnull final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkEnrollmentProfile);
     }
 
@@ -87,7 +90,8 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @return the updated AndroidForWorkEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkEnrollmentProfile patch(final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkEnrollmentProfile patch(@Nonnull final AndroidForWorkEnrollmentProfile sourceAndroidForWorkEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidForWorkEnrollmentProfile);
     }
 
@@ -97,7 +101,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param newAndroidForWorkEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
+    public void post(@Nonnull final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, @Nonnull final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkEnrollmentProfile);
     }
 
@@ -108,7 +112,8 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @return the created AndroidForWorkEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkEnrollmentProfile post(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkEnrollmentProfile post(@Nonnull final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidForWorkEnrollmentProfile);
     }
 
@@ -118,7 +123,7 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param newAndroidForWorkEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
+    public void put(@Nonnull final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile, @Nonnull final ICallback<? super AndroidForWorkEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkEnrollmentProfile);
     }
 
@@ -129,7 +134,8 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @return the created AndroidForWorkEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkEnrollmentProfile put(final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkEnrollmentProfile put(@Nonnull final AndroidForWorkEnrollmentProfile newAndroidForWorkEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidForWorkEnrollmentProfile);
     }
 
@@ -139,9 +145,10 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidForWorkEnrollmentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidForWorkEnrollmentProfileRequest)this;
+     @Nonnull
+     public AndroidForWorkEnrollmentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidForWorkEnrollmentProfileRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidForWorkEnrollmentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkEnrollmentProfileRequest)this;
+     @Nonnull
+     public AndroidForWorkEnrollmentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

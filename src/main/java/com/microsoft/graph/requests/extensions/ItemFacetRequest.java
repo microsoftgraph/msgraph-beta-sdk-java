@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemFacet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Facet Request.
  */
-public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
+public class ItemFacetRequest extends BaseRequest<ItemFacet> {
 	
     /**
      * The request for the ItemFacet
@@ -30,10 +32,10 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ItemFacetRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ItemFacet> responseClass) {
+    public ItemFacetRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ItemFacet> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemFacetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemFacetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemFacet.class);
     }
 
@@ -53,7 +55,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemFacet> callback) {
+    public void get(@Nonnull final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @return the ItemFacet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemFacet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemFacet> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param sourceItemFacet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemFacet sourceItemFacet, final ICallback<? super ItemFacet> callback) {
+    public void patch(@Nonnull final ItemFacet sourceItemFacet, @Nonnull final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.PATCH, callback, sourceItemFacet);
     }
 
@@ -102,7 +105,8 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @return the updated ItemFacet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemFacet patch(final ItemFacet sourceItemFacet) throws ClientException {
+    @Nullable
+    public ItemFacet patch(@Nonnull final ItemFacet sourceItemFacet) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemFacet);
     }
 
@@ -112,7 +116,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param newItemFacet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemFacet newItemFacet, final ICallback<? super ItemFacet> callback) {
+    public void post(@Nonnull final ItemFacet newItemFacet, @Nonnull final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.POST, callback, newItemFacet);
     }
 
@@ -123,7 +127,8 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @return the created ItemFacet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemFacet post(final ItemFacet newItemFacet) throws ClientException {
+    @Nullable
+    public ItemFacet post(@Nonnull final ItemFacet newItemFacet) throws ClientException {
         return send(HttpMethod.POST, newItemFacet);
     }
 
@@ -133,7 +138,7 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param newItemFacet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemFacet newItemFacet, final ICallback<? super ItemFacet> callback) {
+    public void put(@Nonnull final ItemFacet newItemFacet, @Nonnull final ICallback<? super ItemFacet> callback) {
         send(HttpMethod.PUT, callback, newItemFacet);
     }
 
@@ -144,7 +149,8 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @return the created ItemFacet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemFacet put(final ItemFacet newItemFacet) throws ClientException {
+    @Nullable
+    public ItemFacet put(@Nonnull final ItemFacet newItemFacet) throws ClientException {
         return send(HttpMethod.PUT, newItemFacet);
     }
 
@@ -154,9 +160,10 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IItemFacetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemFacetRequest)this;
+     @Nonnull
+     public ItemFacetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class ItemFacetRequest extends BaseRequest implements IItemFacetRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemFacetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemFacetRequest)this;
+     @Nonnull
+     public ItemFacetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

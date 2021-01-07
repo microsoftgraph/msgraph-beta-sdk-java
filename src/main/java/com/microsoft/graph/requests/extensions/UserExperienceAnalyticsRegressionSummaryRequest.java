@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.graph.models.generated.UserExperienceAnalyticsSummarizedBy;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Experience Analytics Regression Summary Request.
  */
-public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest implements IUserExperienceAnalyticsRegressionSummaryRequest {
+public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest<UserExperienceAnalyticsRegressionSummary> {
 	
     /**
      * The request for the UserExperienceAnalyticsRegressionSummary
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsRegressionSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsRegressionSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsRegressionSummary.class);
     }
 
@@ -43,7 +43,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
+    public void get(@Nonnull final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +53,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @return the UserExperienceAnalyticsRegressionSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserExperienceAnalyticsRegressionSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +63,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +82,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @param sourceUserExperienceAnalyticsRegressionSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsRegressionSummary sourceUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
+    public void patch(@Nonnull final UserExperienceAnalyticsRegressionSummary sourceUserExperienceAnalyticsRegressionSummary, @Nonnull final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -92,7 +93,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @return the updated UserExperienceAnalyticsRegressionSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsRegressionSummary patch(final UserExperienceAnalyticsRegressionSummary sourceUserExperienceAnalyticsRegressionSummary) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsRegressionSummary patch(@Nonnull final UserExperienceAnalyticsRegressionSummary sourceUserExperienceAnalyticsRegressionSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -102,7 +104,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @param newUserExperienceAnalyticsRegressionSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
+    public void post(@Nonnull final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, @Nonnull final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -113,7 +115,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @return the created UserExperienceAnalyticsRegressionSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsRegressionSummary post(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsRegressionSummary post(@Nonnull final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary) throws ClientException {
         return send(HttpMethod.POST, newUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -123,7 +126,7 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @param newUserExperienceAnalyticsRegressionSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
+    public void put(@Nonnull final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary, @Nonnull final ICallback<? super UserExperienceAnalyticsRegressionSummary> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -134,7 +137,8 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @return the created UserExperienceAnalyticsRegressionSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsRegressionSummary put(final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsRegressionSummary put(@Nonnull final UserExperienceAnalyticsRegressionSummary newUserExperienceAnalyticsRegressionSummary) throws ClientException {
         return send(HttpMethod.PUT, newUserExperienceAnalyticsRegressionSummary);
     }
 
@@ -144,9 +148,10 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsRegressionSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserExperienceAnalyticsRegressionSummaryRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsRegressionSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -155,9 +160,10 @@ public class UserExperienceAnalyticsRegressionSummaryRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsRegressionSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsRegressionSummaryRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsRegressionSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

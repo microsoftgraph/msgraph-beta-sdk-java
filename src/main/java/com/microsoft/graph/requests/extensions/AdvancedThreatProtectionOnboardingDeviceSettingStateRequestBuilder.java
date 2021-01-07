@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdvancedThreatProtectionOnboardingDeviceSettingState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Advanced Threat Protection Onboarding Device Setting State Request Builder.
  */
-public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder extends BaseRequestBuilder implements IAdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder {
+public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder extends BaseRequestBuilder<AdvancedThreatProtectionOnboardingDeviceSettingState> {
 
     /**
      * The request builder for the AdvancedThreatProtectionOnboardingDeviceSettingState
@@ -28,7 +30,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest instance
+     * @return the AdvancedThreatProtectionOnboardingDeviceSettingStateRequest instance
      */
-    public IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest instance
+     * @return the AdvancedThreatProtectionOnboardingDeviceSettingStateRequest instance
      */
-    public IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AdvancedThreatProtectionOnboardingDeviceSettingStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationMultiTextBox;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Multi Text Box Request.
  */
-public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest implements IGroupPolicyPresentationMultiTextBoxRequest {
+public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest<GroupPolicyPresentationMultiTextBox> {
 	
     /**
      * The request for the GroupPolicyPresentationMultiTextBox
@@ -29,7 +31,7 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationMultiTextBoxRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationMultiTextBoxRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationMultiTextBox.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @return the GroupPolicyPresentationMultiTextBox from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationMultiTextBox get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @param sourceGroupPolicyPresentationMultiTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationMultiTextBox sourceGroupPolicyPresentationMultiTextBox, final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationMultiTextBox sourceGroupPolicyPresentationMultiTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationMultiTextBox);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @return the updated GroupPolicyPresentationMultiTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationMultiTextBox patch(final GroupPolicyPresentationMultiTextBox sourceGroupPolicyPresentationMultiTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationMultiTextBox patch(@Nonnull final GroupPolicyPresentationMultiTextBox sourceGroupPolicyPresentationMultiTextBox) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationMultiTextBox);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @param newGroupPolicyPresentationMultiTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationMultiTextBox);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @return the created GroupPolicyPresentationMultiTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationMultiTextBox post(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationMultiTextBox post(@Nonnull final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationMultiTextBox);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @param newGroupPolicyPresentationMultiTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationMultiTextBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationMultiTextBox);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @return the created GroupPolicyPresentationMultiTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationMultiTextBox put(final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationMultiTextBox put(@Nonnull final GroupPolicyPresentationMultiTextBox newGroupPolicyPresentationMultiTextBox) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationMultiTextBox);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationMultiTextBoxRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationMultiTextBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationMultiTextBoxRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyPresentationMultiTextBoxRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationMultiTextBoxRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationMultiTextBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationMultiTextBoxRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

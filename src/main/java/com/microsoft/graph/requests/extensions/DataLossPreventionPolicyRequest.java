@@ -14,6 +14,8 @@ import com.microsoft.graph.models.extensions.DlpNotification;
 import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesJobResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -23,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Data Loss Prevention Policy Request.
  */
-public class DataLossPreventionPolicyRequest extends BaseRequest implements IDataLossPreventionPolicyRequest {
+public class DataLossPreventionPolicyRequest extends BaseRequest<DataLossPreventionPolicy> {
 	
     /**
      * The request for the DataLossPreventionPolicy
@@ -32,7 +34,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataLossPreventionPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DataLossPreventionPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DataLossPreventionPolicy.class);
     }
 
@@ -41,7 +43,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DataLossPreventionPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -51,6 +53,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @return the DataLossPreventionPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DataLossPreventionPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -60,7 +63,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DataLossPreventionPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -79,7 +82,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param sourceDataLossPreventionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataLossPreventionPolicy sourceDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback) {
+    public void patch(@Nonnull final DataLossPreventionPolicy sourceDataLossPreventionPolicy, @Nonnull final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceDataLossPreventionPolicy);
     }
 
@@ -90,7 +93,8 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @return the updated DataLossPreventionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataLossPreventionPolicy patch(final DataLossPreventionPolicy sourceDataLossPreventionPolicy) throws ClientException {
+    @Nullable
+    public DataLossPreventionPolicy patch(@Nonnull final DataLossPreventionPolicy sourceDataLossPreventionPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceDataLossPreventionPolicy);
     }
 
@@ -100,7 +104,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param newDataLossPreventionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback) {
+    public void post(@Nonnull final DataLossPreventionPolicy newDataLossPreventionPolicy, @Nonnull final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.POST, callback, newDataLossPreventionPolicy);
     }
 
@@ -111,7 +115,8 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @return the created DataLossPreventionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataLossPreventionPolicy post(final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException {
+    @Nullable
+    public DataLossPreventionPolicy post(@Nonnull final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException {
         return send(HttpMethod.POST, newDataLossPreventionPolicy);
     }
 
@@ -121,7 +126,7 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param newDataLossPreventionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataLossPreventionPolicy newDataLossPreventionPolicy, final ICallback<? super DataLossPreventionPolicy> callback) {
+    public void put(@Nonnull final DataLossPreventionPolicy newDataLossPreventionPolicy, @Nonnull final ICallback<? super DataLossPreventionPolicy> callback) {
         send(HttpMethod.PUT, callback, newDataLossPreventionPolicy);
     }
 
@@ -132,7 +137,8 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @return the created DataLossPreventionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataLossPreventionPolicy put(final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException {
+    @Nullable
+    public DataLossPreventionPolicy put(@Nonnull final DataLossPreventionPolicy newDataLossPreventionPolicy) throws ClientException {
         return send(HttpMethod.PUT, newDataLossPreventionPolicy);
     }
 
@@ -142,9 +148,10 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param value the select clause
      * @return the updated request
      */
-     public IDataLossPreventionPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DataLossPreventionPolicyRequest)this;
+     @Nonnull
+     public DataLossPreventionPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -153,9 +160,10 @@ public class DataLossPreventionPolicyRequest extends BaseRequest implements IDat
      * @param value the expand clause
      * @return the updated request
      */
-     public IDataLossPreventionPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataLossPreventionPolicyRequest)this;
+     @Nonnull
+     public DataLossPreventionPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

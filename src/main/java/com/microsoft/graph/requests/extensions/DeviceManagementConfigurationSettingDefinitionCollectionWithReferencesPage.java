@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettin
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSettingDefinitionCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingDefinition;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Management Configuration Setting Definition Collection With References Page.
  */
-public class DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage extends BaseCollectionPage<DeviceManagementConfigurationSettingDefinition, IDeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder> implements IDeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage {
+public class DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage extends BaseCollectionPage<DeviceManagementConfigurationSettingDefinition, DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for DeviceManagementConfigurationSettingDefinition
@@ -35,7 +37,17 @@ public class DeviceManagementConfigurationSettingDefinitionCollectionWithReferen
      * @param response the serialized DeviceManagementConfigurationSettingDefinitionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage(final DeviceManagementConfigurationSettingDefinitionCollectionResponse response, final IDeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder builder) {
+    public DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage(@Nonnull final DeviceManagementConfigurationSettingDefinitionCollectionResponse response, @Nullable final DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for DeviceManagementConfigurationSettingDefinition
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage(@Nonnull final java.util.List<DeviceManagementConfigurationSettingDefinition> pageContents, @Nullable final DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

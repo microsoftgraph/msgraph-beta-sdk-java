@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppleExpeditedCheckinConfigurationBase;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Apple Expedited Checkin Configuration Base Request.
  */
-public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest implements IAppleExpeditedCheckinConfigurationBaseRequest {
+public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest<AppleExpeditedCheckinConfigurationBase> {
 	
     /**
      * The request for the AppleExpeditedCheckinConfigurationBase
@@ -30,10 +32,10 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AppleExpeditedCheckinConfigurationBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AppleExpeditedCheckinConfigurationBase> responseClass) {
+    public AppleExpeditedCheckinConfigurationBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AppleExpeditedCheckinConfigurationBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppleExpeditedCheckinConfigurationBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppleExpeditedCheckinConfigurationBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppleExpeditedCheckinConfigurationBase.class);
     }
 
@@ -53,7 +55,7 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
+    public void get(@Nonnull final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @return the AppleExpeditedCheckinConfigurationBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AppleExpeditedCheckinConfigurationBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
+    public void delete(@Nonnull final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @param sourceAppleExpeditedCheckinConfigurationBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppleExpeditedCheckinConfigurationBase sourceAppleExpeditedCheckinConfigurationBase, final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
+    public void patch(@Nonnull final AppleExpeditedCheckinConfigurationBase sourceAppleExpeditedCheckinConfigurationBase, @Nonnull final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAppleExpeditedCheckinConfigurationBase);
     }
 
@@ -102,7 +105,8 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @return the updated AppleExpeditedCheckinConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleExpeditedCheckinConfigurationBase patch(final AppleExpeditedCheckinConfigurationBase sourceAppleExpeditedCheckinConfigurationBase) throws ClientException {
+    @Nullable
+    public AppleExpeditedCheckinConfigurationBase patch(@Nonnull final AppleExpeditedCheckinConfigurationBase sourceAppleExpeditedCheckinConfigurationBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceAppleExpeditedCheckinConfigurationBase);
     }
 
@@ -112,7 +116,7 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @param newAppleExpeditedCheckinConfigurationBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
+    public void post(@Nonnull final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, @Nonnull final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
         send(HttpMethod.POST, callback, newAppleExpeditedCheckinConfigurationBase);
     }
 
@@ -123,7 +127,8 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @return the created AppleExpeditedCheckinConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleExpeditedCheckinConfigurationBase post(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase) throws ClientException {
+    @Nullable
+    public AppleExpeditedCheckinConfigurationBase post(@Nonnull final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase) throws ClientException {
         return send(HttpMethod.POST, newAppleExpeditedCheckinConfigurationBase);
     }
 
@@ -133,7 +138,7 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @param newAppleExpeditedCheckinConfigurationBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
+    public void put(@Nonnull final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase, @Nonnull final ICallback<? super AppleExpeditedCheckinConfigurationBase> callback) {
         send(HttpMethod.PUT, callback, newAppleExpeditedCheckinConfigurationBase);
     }
 
@@ -144,7 +149,8 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @return the created AppleExpeditedCheckinConfigurationBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleExpeditedCheckinConfigurationBase put(final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase) throws ClientException {
+    @Nullable
+    public AppleExpeditedCheckinConfigurationBase put(@Nonnull final AppleExpeditedCheckinConfigurationBase newAppleExpeditedCheckinConfigurationBase) throws ClientException {
         return send(HttpMethod.PUT, newAppleExpeditedCheckinConfigurationBase);
     }
 
@@ -154,9 +160,10 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IAppleExpeditedCheckinConfigurationBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AppleExpeditedCheckinConfigurationBaseRequest)this;
+     @Nonnull
+     public AppleExpeditedCheckinConfigurationBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class AppleExpeditedCheckinConfigurationBaseRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IAppleExpeditedCheckinConfigurationBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppleExpeditedCheckinConfigurationBaseRequest)this;
+     @Nonnull
+     public AppleExpeditedCheckinConfigurationBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

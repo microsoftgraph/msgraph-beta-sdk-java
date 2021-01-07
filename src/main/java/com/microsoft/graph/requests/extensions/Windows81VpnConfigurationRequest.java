@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows81VpnConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows81Vpn Configuration Request.
  */
-public class Windows81VpnConfigurationRequest extends BaseRequest implements IWindows81VpnConfigurationRequest {
+public class Windows81VpnConfigurationRequest extends BaseRequest<Windows81VpnConfiguration> {
 	
     /**
      * The request for the Windows81VpnConfiguration
@@ -30,10 +32,10 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public Windows81VpnConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Windows81VpnConfiguration> responseClass) {
+    public Windows81VpnConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Windows81VpnConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows81VpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows81VpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows81VpnConfiguration.class);
     }
 
@@ -53,7 +55,7 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows81VpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super Windows81VpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @return the Windows81VpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows81VpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows81VpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows81VpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @param sourceWindows81VpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows81VpnConfiguration sourceWindows81VpnConfiguration, final ICallback<? super Windows81VpnConfiguration> callback) {
+    public void patch(@Nonnull final Windows81VpnConfiguration sourceWindows81VpnConfiguration, @Nonnull final ICallback<? super Windows81VpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows81VpnConfiguration);
     }
 
@@ -102,7 +105,8 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @return the updated Windows81VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81VpnConfiguration patch(final Windows81VpnConfiguration sourceWindows81VpnConfiguration) throws ClientException {
+    @Nullable
+    public Windows81VpnConfiguration patch(@Nonnull final Windows81VpnConfiguration sourceWindows81VpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows81VpnConfiguration);
     }
 
@@ -112,7 +116,7 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @param newWindows81VpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows81VpnConfiguration newWindows81VpnConfiguration, final ICallback<? super Windows81VpnConfiguration> callback) {
+    public void post(@Nonnull final Windows81VpnConfiguration newWindows81VpnConfiguration, @Nonnull final ICallback<? super Windows81VpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows81VpnConfiguration);
     }
 
@@ -123,7 +127,8 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @return the created Windows81VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81VpnConfiguration post(final Windows81VpnConfiguration newWindows81VpnConfiguration) throws ClientException {
+    @Nullable
+    public Windows81VpnConfiguration post(@Nonnull final Windows81VpnConfiguration newWindows81VpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindows81VpnConfiguration);
     }
 
@@ -133,7 +138,7 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @param newWindows81VpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows81VpnConfiguration newWindows81VpnConfiguration, final ICallback<? super Windows81VpnConfiguration> callback) {
+    public void put(@Nonnull final Windows81VpnConfiguration newWindows81VpnConfiguration, @Nonnull final ICallback<? super Windows81VpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows81VpnConfiguration);
     }
 
@@ -144,7 +149,8 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @return the created Windows81VpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows81VpnConfiguration put(final Windows81VpnConfiguration newWindows81VpnConfiguration) throws ClientException {
+    @Nullable
+    public Windows81VpnConfiguration put(@Nonnull final Windows81VpnConfiguration newWindows81VpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindows81VpnConfiguration);
     }
 
@@ -154,9 +160,10 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows81VpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows81VpnConfigurationRequest)this;
+     @Nonnull
+     public Windows81VpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class Windows81VpnConfigurationRequest extends BaseRequest implements IWi
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows81VpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows81VpnConfigurationRequest)this;
+     @Nonnull
+     public Windows81VpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

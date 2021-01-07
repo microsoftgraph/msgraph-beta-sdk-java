@@ -9,15 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsManagementApp;
-import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsManagementAppHealthStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsManagementAppHealthStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Windows Management App With Reference Request.
  */
-public class WindowsManagementAppWithReferenceRequest extends BaseRequest implements IWindowsManagementAppWithReferenceRequest {
+public class WindowsManagementAppWithReferenceRequest extends BaseWithReferenceRequest<WindowsManagementApp> {
 
     /**
      * The request for the WindowsManagementApp
@@ -36,46 +36,9 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsManagementAppWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsManagementAppWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsManagementApp.class);
     }
-
-    public void post(final WindowsManagementApp newWindowsManagementApp, final IJsonBackedObject payload, final ICallback<? super WindowsManagementApp> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public WindowsManagementApp post(final WindowsManagementApp newWindowsManagementApp, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newWindowsManagementApp;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super WindowsManagementApp> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public WindowsManagementApp get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super WindowsManagementApp> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final WindowsManagementApp sourceWindowsManagementApp, final ICallback<? super WindowsManagementApp> callback) {
-		send(HttpMethod.PATCH, callback, sourceWindowsManagementApp);
-	}
-
-	public WindowsManagementApp patch(final WindowsManagementApp sourceWindowsManagementApp) throws ClientException {
-		return send(HttpMethod.PATCH, sourceWindowsManagementApp);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -83,9 +46,10 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-    public IWindowsManagementAppWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IWindowsManagementAppWithReferenceRequest)this;
+    @Nonnull
+    public WindowsManagementAppWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -94,8 +58,9 @@ public class WindowsManagementAppWithReferenceRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-    public IWindowsManagementAppWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsManagementAppWithReferenceRequest)this;
+    @Nonnull
+    public WindowsManagementAppWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

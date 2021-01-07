@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Synchronization;
 import com.microsoft.graph.models.extensions.SynchronizationSecretKeyStringValuePair;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Synchronization Request.
  */
-public class SynchronizationRequest extends BaseRequest implements ISynchronizationRequest {
+public class SynchronizationRequest extends BaseRequest<Synchronization> {
 	
     /**
      * The request for the Synchronization
@@ -38,7 +36,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SynchronizationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SynchronizationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Synchronization.class);
     }
 
@@ -47,7 +45,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Synchronization> callback) {
+    public void get(@Nonnull final ICallback<? super Synchronization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,6 +55,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @return the Synchronization from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Synchronization get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -66,7 +65,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Synchronization> callback) {
+    public void delete(@Nonnull final ICallback<? super Synchronization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +84,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param sourceSynchronization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Synchronization sourceSynchronization, final ICallback<? super Synchronization> callback) {
+    public void patch(@Nonnull final Synchronization sourceSynchronization, @Nonnull final ICallback<? super Synchronization> callback) {
         send(HttpMethod.PATCH, callback, sourceSynchronization);
     }
 
@@ -96,7 +95,8 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @return the updated Synchronization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Synchronization patch(final Synchronization sourceSynchronization) throws ClientException {
+    @Nullable
+    public Synchronization patch(@Nonnull final Synchronization sourceSynchronization) throws ClientException {
         return send(HttpMethod.PATCH, sourceSynchronization);
     }
 
@@ -106,7 +106,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param newSynchronization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Synchronization newSynchronization, final ICallback<? super Synchronization> callback) {
+    public void post(@Nonnull final Synchronization newSynchronization, @Nonnull final ICallback<? super Synchronization> callback) {
         send(HttpMethod.POST, callback, newSynchronization);
     }
 
@@ -117,7 +117,8 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @return the created Synchronization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Synchronization post(final Synchronization newSynchronization) throws ClientException {
+    @Nullable
+    public Synchronization post(@Nonnull final Synchronization newSynchronization) throws ClientException {
         return send(HttpMethod.POST, newSynchronization);
     }
 
@@ -127,7 +128,7 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param newSynchronization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Synchronization newSynchronization, final ICallback<? super Synchronization> callback) {
+    public void put(@Nonnull final Synchronization newSynchronization, @Nonnull final ICallback<? super Synchronization> callback) {
         send(HttpMethod.PUT, callback, newSynchronization);
     }
 
@@ -138,7 +139,8 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @return the created Synchronization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Synchronization put(final Synchronization newSynchronization) throws ClientException {
+    @Nullable
+    public Synchronization put(@Nonnull final Synchronization newSynchronization) throws ClientException {
         return send(HttpMethod.PUT, newSynchronization);
     }
 
@@ -148,9 +150,10 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param value the select clause
      * @return the updated request
      */
-     public ISynchronizationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SynchronizationRequest)this;
+     @Nonnull
+     public SynchronizationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,9 +162,10 @@ public class SynchronizationRequest extends BaseRequest implements ISynchronizat
      * @param value the expand clause
      * @return the updated request
      */
-     public ISynchronizationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SynchronizationRequest)this;
+     @Nonnull
+     public SynchronizationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

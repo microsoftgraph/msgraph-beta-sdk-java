@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationalBrandingProperties;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Organizational Branding Properties Request Builder.
  */
-public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestBuilder implements IOrganizationalBrandingPropertiesRequestBuilder {
+public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestBuilder<OrganizationalBrandingProperties> {
 
     /**
      * The request builder for the OrganizationalBrandingProperties
@@ -28,7 +30,7 @@ public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationalBrandingPropertiesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationalBrandingPropertiesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestB
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOrganizationalBrandingPropertiesRequest instance
+     * @return the OrganizationalBrandingPropertiesRequest instance
      */
-    public IOrganizationalBrandingPropertiesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OrganizationalBrandingPropertiesRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,23 +49,42 @@ public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestB
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOrganizationalBrandingPropertiesRequest instance
+     * @return the OrganizationalBrandingPropertiesRequest instance
      */
-    public IOrganizationalBrandingPropertiesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OrganizationalBrandingPropertiesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OrganizationalBrandingPropertiesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IOrganizationalBrandingPropertiesBackgroundImageStreamRequestBuilder backgroundImage() {
+    /**
+     * Gets the request builder for backgroundImage
+     *
+     * @return the OrganizationalBrandingPropertiesBackgroundImageStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingPropertiesBackgroundImageStreamRequestBuilder backgroundImage() {
         return new OrganizationalBrandingPropertiesBackgroundImageStreamRequestBuilder(getRequestUrlWithAdditionalSegment("backgroundImage"), getClient(), null);
     }
 
-    public IOrganizationalBrandingPropertiesBannerLogoStreamRequestBuilder bannerLogo() {
+    /**
+     * Gets the request builder for bannerLogo
+     *
+     * @return the OrganizationalBrandingPropertiesBannerLogoStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingPropertiesBannerLogoStreamRequestBuilder bannerLogo() {
         return new OrganizationalBrandingPropertiesBannerLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("bannerLogo"), getClient(), null);
     }
 
-    public IOrganizationalBrandingPropertiesSquareLogoStreamRequestBuilder squareLogo() {
+    /**
+     * Gets the request builder for squareLogo
+     *
+     * @return the OrganizationalBrandingPropertiesSquareLogoStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingPropertiesSquareLogoStreamRequestBuilder squareLogo() {
         return new OrganizationalBrandingPropertiesSquareLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("squareLogo"), getClient(), null);
     }
 }

@@ -10,14 +10,13 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidManagedAppProtection;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IManagedMobileAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedMobileAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyDeploymentSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -27,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Managed App Protection Request.
  */
-public class AndroidManagedAppProtectionRequest extends BaseRequest implements IAndroidManagedAppProtectionRequest {
+public class AndroidManagedAppProtectionRequest extends BaseRequest<AndroidManagedAppProtection> {
 	
     /**
      * The request for the AndroidManagedAppProtection
@@ -36,7 +35,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedAppProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedAppProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidManagedAppProtection.class);
     }
 
@@ -45,7 +44,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidManagedAppProtection> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,6 +54,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @return the AndroidManagedAppProtection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidManagedAppProtection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -64,7 +64,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidManagedAppProtection> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param sourceAndroidManagedAppProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedAppProtection sourceAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
+    public void patch(@Nonnull final AndroidManagedAppProtection sourceAndroidManagedAppProtection, @Nonnull final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedAppProtection);
     }
 
@@ -94,7 +94,8 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @return the updated AndroidManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedAppProtection patch(final AndroidManagedAppProtection sourceAndroidManagedAppProtection) throws ClientException {
+    @Nullable
+    public AndroidManagedAppProtection patch(@Nonnull final AndroidManagedAppProtection sourceAndroidManagedAppProtection) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidManagedAppProtection);
     }
 
@@ -104,7 +105,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param newAndroidManagedAppProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
+    public void post(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection, @Nonnull final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedAppProtection);
     }
 
@@ -115,7 +116,8 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @return the created AndroidManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedAppProtection post(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException {
+    @Nullable
+    public AndroidManagedAppProtection post(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException {
         return send(HttpMethod.POST, newAndroidManagedAppProtection);
     }
 
@@ -125,7 +127,7 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param newAndroidManagedAppProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedAppProtection newAndroidManagedAppProtection, final ICallback<? super AndroidManagedAppProtection> callback) {
+    public void put(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection, @Nonnull final ICallback<? super AndroidManagedAppProtection> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedAppProtection);
     }
 
@@ -136,7 +138,8 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @return the created AndroidManagedAppProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedAppProtection put(final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException {
+    @Nullable
+    public AndroidManagedAppProtection put(@Nonnull final AndroidManagedAppProtection newAndroidManagedAppProtection) throws ClientException {
         return send(HttpMethod.PUT, newAndroidManagedAppProtection);
     }
 
@@ -146,9 +149,10 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidManagedAppProtectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidManagedAppProtectionRequest)this;
+     @Nonnull
+     public AndroidManagedAppProtectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -157,9 +161,10 @@ public class AndroidManagedAppProtectionRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidManagedAppProtectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidManagedAppProtectionRequest)this;
+     @Nonnull
+     public AndroidManagedAppProtectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

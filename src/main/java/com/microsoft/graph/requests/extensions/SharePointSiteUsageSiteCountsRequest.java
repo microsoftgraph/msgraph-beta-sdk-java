@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharePointSiteUsageSiteCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Share Point Site Usage Site Counts Request.
  */
-public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements ISharePointSiteUsageSiteCountsRequest {
+public class SharePointSiteUsageSiteCountsRequest extends BaseRequest<SharePointSiteUsageSiteCounts> {
 	
     /**
      * The request for the SharePointSiteUsageSiteCounts
@@ -29,7 +31,7 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharePointSiteUsageSiteCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharePointSiteUsageSiteCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharePointSiteUsageSiteCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
+    public void get(@Nonnull final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @return the SharePointSiteUsageSiteCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SharePointSiteUsageSiteCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @param sourceSharePointSiteUsageSiteCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointSiteUsageSiteCounts sourceSharePointSiteUsageSiteCounts, final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
+    public void patch(@Nonnull final SharePointSiteUsageSiteCounts sourceSharePointSiteUsageSiteCounts, @Nonnull final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointSiteUsageSiteCounts);
     }
 
@@ -87,7 +90,8 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @return the updated SharePointSiteUsageSiteCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsageSiteCounts patch(final SharePointSiteUsageSiteCounts sourceSharePointSiteUsageSiteCounts) throws ClientException {
+    @Nullable
+    public SharePointSiteUsageSiteCounts patch(@Nonnull final SharePointSiteUsageSiteCounts sourceSharePointSiteUsageSiteCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceSharePointSiteUsageSiteCounts);
     }
 
@@ -97,7 +101,7 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @param newSharePointSiteUsageSiteCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
+    public void post(@Nonnull final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, @Nonnull final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
         send(HttpMethod.POST, callback, newSharePointSiteUsageSiteCounts);
     }
 
@@ -108,7 +112,8 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @return the created SharePointSiteUsageSiteCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsageSiteCounts post(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts) throws ClientException {
+    @Nullable
+    public SharePointSiteUsageSiteCounts post(@Nonnull final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts) throws ClientException {
         return send(HttpMethod.POST, newSharePointSiteUsageSiteCounts);
     }
 
@@ -118,7 +123,7 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @param newSharePointSiteUsageSiteCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
+    public void put(@Nonnull final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts, @Nonnull final ICallback<? super SharePointSiteUsageSiteCounts> callback) {
         send(HttpMethod.PUT, callback, newSharePointSiteUsageSiteCounts);
     }
 
@@ -129,7 +134,8 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @return the created SharePointSiteUsageSiteCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsageSiteCounts put(final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts) throws ClientException {
+    @Nullable
+    public SharePointSiteUsageSiteCounts put(@Nonnull final SharePointSiteUsageSiteCounts newSharePointSiteUsageSiteCounts) throws ClientException {
         return send(HttpMethod.PUT, newSharePointSiteUsageSiteCounts);
     }
 
@@ -139,9 +145,10 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public ISharePointSiteUsageSiteCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharePointSiteUsageSiteCountsRequest)this;
+     @Nonnull
+     public SharePointSiteUsageSiteCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SharePointSiteUsageSiteCountsRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharePointSiteUsageSiteCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointSiteUsageSiteCountsRequest)this;
+     @Nonnull
+     public SharePointSiteUsageSiteCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

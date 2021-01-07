@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOsVppAppAssignedLicense;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac Os Vpp App Assigned License Request.
  */
-public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IMacOsVppAppAssignedLicenseRequest {
+public class MacOsVppAppAssignedLicenseRequest extends BaseRequest<MacOsVppAppAssignedLicense> {
 	
     /**
      * The request for the MacOsVppAppAssignedLicense
@@ -29,7 +31,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOsVppAppAssignedLicenseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOsVppAppAssignedLicenseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOsVppAppAssignedLicense.class);
     }
 
@@ -38,7 +40,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOsVppAppAssignedLicense> callback) {
+    public void get(@Nonnull final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @return the MacOsVppAppAssignedLicense from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOsVppAppAssignedLicense get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOsVppAppAssignedLicense> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param sourceMacOsVppAppAssignedLicense the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback) {
+    public void patch(@Nonnull final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense, @Nonnull final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOsVppAppAssignedLicense);
     }
 
@@ -87,7 +90,8 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @return the updated MacOsVppAppAssignedLicense
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOsVppAppAssignedLicense patch(final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense) throws ClientException {
+    @Nullable
+    public MacOsVppAppAssignedLicense patch(@Nonnull final MacOsVppAppAssignedLicense sourceMacOsVppAppAssignedLicense) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOsVppAppAssignedLicense);
     }
 
@@ -97,7 +101,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param newMacOsVppAppAssignedLicense the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback) {
+    public void post(@Nonnull final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, @Nonnull final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.POST, callback, newMacOsVppAppAssignedLicense);
     }
 
@@ -108,7 +112,8 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @return the created MacOsVppAppAssignedLicense
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOsVppAppAssignedLicense post(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException {
+    @Nullable
+    public MacOsVppAppAssignedLicense post(@Nonnull final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException {
         return send(HttpMethod.POST, newMacOsVppAppAssignedLicense);
     }
 
@@ -118,7 +123,7 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param newMacOsVppAppAssignedLicense the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, final ICallback<? super MacOsVppAppAssignedLicense> callback) {
+    public void put(@Nonnull final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense, @Nonnull final ICallback<? super MacOsVppAppAssignedLicense> callback) {
         send(HttpMethod.PUT, callback, newMacOsVppAppAssignedLicense);
     }
 
@@ -129,7 +134,8 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @return the created MacOsVppAppAssignedLicense
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOsVppAppAssignedLicense put(final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException {
+    @Nullable
+    public MacOsVppAppAssignedLicense put(@Nonnull final MacOsVppAppAssignedLicense newMacOsVppAppAssignedLicense) throws ClientException {
         return send(HttpMethod.PUT, newMacOsVppAppAssignedLicense);
     }
 
@@ -139,9 +145,10 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOsVppAppAssignedLicenseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOsVppAppAssignedLicenseRequest)this;
+     @Nonnull
+     public MacOsVppAppAssignedLicenseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MacOsVppAppAssignedLicenseRequest extends BaseRequest implements IM
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOsVppAppAssignedLicenseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOsVppAppAssignedLicenseRequest)this;
+     @Nonnull
+     public MacOsVppAppAssignedLicenseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

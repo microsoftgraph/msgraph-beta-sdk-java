@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.VppToken;
 import com.microsoft.graph.models.extensions.VppTokenLicenseSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Vpp Token Request.
  */
-public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
+public class VppTokenRequest extends BaseRequest<VppToken> {
 	
     /**
      * The request for the VppToken
@@ -30,7 +32,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VppTokenRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VppTokenRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, VppToken.class);
     }
 
@@ -39,7 +41,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super VppToken> callback) {
+    public void get(@Nonnull final ICallback<? super VppToken> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @return the VppToken from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public VppToken get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super VppToken> callback) {
+    public void delete(@Nonnull final ICallback<? super VppToken> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param sourceVppToken the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final VppToken sourceVppToken, final ICallback<? super VppToken> callback) {
+    public void patch(@Nonnull final VppToken sourceVppToken, @Nonnull final ICallback<? super VppToken> callback) {
         send(HttpMethod.PATCH, callback, sourceVppToken);
     }
 
@@ -88,7 +91,8 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @return the updated VppToken
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VppToken patch(final VppToken sourceVppToken) throws ClientException {
+    @Nullable
+    public VppToken patch(@Nonnull final VppToken sourceVppToken) throws ClientException {
         return send(HttpMethod.PATCH, sourceVppToken);
     }
 
@@ -98,7 +102,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param newVppToken the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
+    public void post(@Nonnull final VppToken newVppToken, @Nonnull final ICallback<? super VppToken> callback) {
         send(HttpMethod.POST, callback, newVppToken);
     }
 
@@ -109,7 +113,8 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @return the created VppToken
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VppToken post(final VppToken newVppToken) throws ClientException {
+    @Nullable
+    public VppToken post(@Nonnull final VppToken newVppToken) throws ClientException {
         return send(HttpMethod.POST, newVppToken);
     }
 
@@ -119,7 +124,7 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param newVppToken the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final VppToken newVppToken, final ICallback<? super VppToken> callback) {
+    public void put(@Nonnull final VppToken newVppToken, @Nonnull final ICallback<? super VppToken> callback) {
         send(HttpMethod.PUT, callback, newVppToken);
     }
 
@@ -130,7 +135,8 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @return the created VppToken
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VppToken put(final VppToken newVppToken) throws ClientException {
+    @Nullable
+    public VppToken put(@Nonnull final VppToken newVppToken) throws ClientException {
         return send(HttpMethod.PUT, newVppToken);
     }
 
@@ -140,9 +146,10 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IVppTokenRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (VppTokenRequest)this;
+     @Nonnull
+     public VppTokenRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class VppTokenRequest extends BaseRequest implements IVppTokenRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IVppTokenRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (VppTokenRequest)this;
+     @Nonnull
+     public VppTokenRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Dns Record Request.
  */
-public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRecordRequest {
+public class DomainDnsRecordRequest extends BaseRequest<DomainDnsRecord> {
 	
     /**
      * The request for the DomainDnsRecord
@@ -30,10 +32,10 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DomainDnsRecordRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DomainDnsRecord> responseClass) {
+    public DomainDnsRecordRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DomainDnsRecord> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsRecordRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsRecord.class);
     }
 
@@ -53,7 +55,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DomainDnsRecord> callback) {
+    public void get(@Nonnull final ICallback<? super DomainDnsRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @return the DomainDnsRecord from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DomainDnsRecord get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DomainDnsRecord> callback) {
+    public void delete(@Nonnull final ICallback<? super DomainDnsRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param sourceDomainDnsRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsRecord sourceDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
+    public void patch(@Nonnull final DomainDnsRecord sourceDomainDnsRecord, @Nonnull final ICallback<? super DomainDnsRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsRecord);
     }
 
@@ -102,7 +105,8 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @return the updated DomainDnsRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsRecord patch(final DomainDnsRecord sourceDomainDnsRecord) throws ClientException {
+    @Nullable
+    public DomainDnsRecord patch(@Nonnull final DomainDnsRecord sourceDomainDnsRecord) throws ClientException {
         return send(HttpMethod.PATCH, sourceDomainDnsRecord);
     }
 
@@ -112,7 +116,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param newDomainDnsRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
+    public void post(@Nonnull final DomainDnsRecord newDomainDnsRecord, @Nonnull final ICallback<? super DomainDnsRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsRecord);
     }
 
@@ -123,7 +127,8 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @return the created DomainDnsRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsRecord post(final DomainDnsRecord newDomainDnsRecord) throws ClientException {
+    @Nullable
+    public DomainDnsRecord post(@Nonnull final DomainDnsRecord newDomainDnsRecord) throws ClientException {
         return send(HttpMethod.POST, newDomainDnsRecord);
     }
 
@@ -133,7 +138,7 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param newDomainDnsRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsRecord newDomainDnsRecord, final ICallback<? super DomainDnsRecord> callback) {
+    public void put(@Nonnull final DomainDnsRecord newDomainDnsRecord, @Nonnull final ICallback<? super DomainDnsRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsRecord);
     }
 
@@ -144,7 +149,8 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @return the created DomainDnsRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsRecord put(final DomainDnsRecord newDomainDnsRecord) throws ClientException {
+    @Nullable
+    public DomainDnsRecord put(@Nonnull final DomainDnsRecord newDomainDnsRecord) throws ClientException {
         return send(HttpMethod.PUT, newDomainDnsRecord);
     }
 
@@ -154,9 +160,10 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param value the select clause
      * @return the updated request
      */
-     public IDomainDnsRecordRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DomainDnsRecordRequest)this;
+     @Nonnull
+     public DomainDnsRecordRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class DomainDnsRecordRequest extends BaseRequest implements IDomainDnsRec
      * @param value the expand clause
      * @return the updated request
      */
-     public IDomainDnsRecordRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DomainDnsRecordRequest)this;
+     @Nonnull
+     public DomainDnsRecordRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

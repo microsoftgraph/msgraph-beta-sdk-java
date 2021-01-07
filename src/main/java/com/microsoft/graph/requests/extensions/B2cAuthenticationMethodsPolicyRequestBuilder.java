@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.B2cAuthenticationMethodsPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the B2c Authentication Methods Policy Request Builder.
  */
-public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder implements IB2cAuthenticationMethodsPolicyRequestBuilder {
+public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBuilder<B2cAuthenticationMethodsPolicy> {
 
     /**
      * The request builder for the B2cAuthenticationMethodsPolicy
@@ -28,7 +30,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public B2cAuthenticationMethodsPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public B2cAuthenticationMethodsPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IB2cAuthenticationMethodsPolicyRequest instance
+     * @return the B2cAuthenticationMethodsPolicyRequest instance
      */
-    public IB2cAuthenticationMethodsPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public B2cAuthenticationMethodsPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IB2cAuthenticationMethodsPolicyRequest instance
+     * @return the B2cAuthenticationMethodsPolicyRequest instance
      */
-    public IB2cAuthenticationMethodsPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public B2cAuthenticationMethodsPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

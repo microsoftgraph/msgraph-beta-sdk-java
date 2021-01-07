@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidWorkProfileCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Vpn Configuration Request.
  */
-public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest implements IAndroidWorkProfileVpnConfigurationRequest {
+public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest<AndroidWorkProfileVpnConfiguration> {
 	
     /**
      * The request for the AndroidWorkProfileVpnConfiguration
@@ -31,7 +32,7 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileVpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfileVpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWorkProfileVpnConfiguration.class);
     }
 
@@ -40,7 +41,7 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @return the AndroidWorkProfileVpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidWorkProfileVpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @param sourceAndroidWorkProfileVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileVpnConfiguration sourceAndroidWorkProfileVpnConfiguration, final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
+    public void patch(@Nonnull final AndroidWorkProfileVpnConfiguration sourceAndroidWorkProfileVpnConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileVpnConfiguration);
     }
 
@@ -89,7 +91,8 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @return the updated AndroidWorkProfileVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileVpnConfiguration patch(final AndroidWorkProfileVpnConfiguration sourceAndroidWorkProfileVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileVpnConfiguration patch(@Nonnull final AndroidWorkProfileVpnConfiguration sourceAndroidWorkProfileVpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidWorkProfileVpnConfiguration);
     }
 
@@ -99,7 +102,7 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @param newAndroidWorkProfileVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
+    public void post(@Nonnull final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileVpnConfiguration);
     }
 
@@ -110,7 +113,8 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @return the created AndroidWorkProfileVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileVpnConfiguration post(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileVpnConfiguration post(@Nonnull final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidWorkProfileVpnConfiguration);
     }
 
@@ -120,7 +124,7 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @param newAndroidWorkProfileVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
+    public void put(@Nonnull final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration, @Nonnull final ICallback<? super AndroidWorkProfileVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileVpnConfiguration);
     }
 
@@ -131,7 +135,8 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @return the created AndroidWorkProfileVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileVpnConfiguration put(final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileVpnConfiguration put(@Nonnull final AndroidWorkProfileVpnConfiguration newAndroidWorkProfileVpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidWorkProfileVpnConfiguration);
     }
 
@@ -141,9 +146,10 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidWorkProfileVpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileVpnConfigurationRequest)this;
+     @Nonnull
+     public AndroidWorkProfileVpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class AndroidWorkProfileVpnConfigurationRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidWorkProfileVpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileVpnConfigurationRequest)this;
+     @Nonnull
+     public AndroidWorkProfileVpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

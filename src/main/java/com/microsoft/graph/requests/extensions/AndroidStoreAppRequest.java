@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Store App Request.
  */
-public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStoreAppRequest {
+public class AndroidStoreAppRequest extends BaseRequest<AndroidStoreApp> {
 	
     /**
      * The request for the AndroidStoreApp
@@ -29,7 +31,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidStoreAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidStoreAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidStoreApp.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidStoreApp> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @return the AndroidStoreApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidStoreApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidStoreApp> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param sourceAndroidStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidStoreApp sourceAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback) {
+    public void patch(@Nonnull final AndroidStoreApp sourceAndroidStoreApp, @Nonnull final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidStoreApp);
     }
 
@@ -87,7 +90,8 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @return the updated AndroidStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidStoreApp patch(final AndroidStoreApp sourceAndroidStoreApp) throws ClientException {
+    @Nullable
+    public AndroidStoreApp patch(@Nonnull final AndroidStoreApp sourceAndroidStoreApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidStoreApp);
     }
 
@@ -97,7 +101,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param newAndroidStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidStoreApp newAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback) {
+    public void post(@Nonnull final AndroidStoreApp newAndroidStoreApp, @Nonnull final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.POST, callback, newAndroidStoreApp);
     }
 
@@ -108,7 +112,8 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @return the created AndroidStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidStoreApp post(final AndroidStoreApp newAndroidStoreApp) throws ClientException {
+    @Nullable
+    public AndroidStoreApp post(@Nonnull final AndroidStoreApp newAndroidStoreApp) throws ClientException {
         return send(HttpMethod.POST, newAndroidStoreApp);
     }
 
@@ -118,7 +123,7 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param newAndroidStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidStoreApp newAndroidStoreApp, final ICallback<? super AndroidStoreApp> callback) {
+    public void put(@Nonnull final AndroidStoreApp newAndroidStoreApp, @Nonnull final ICallback<? super AndroidStoreApp> callback) {
         send(HttpMethod.PUT, callback, newAndroidStoreApp);
     }
 
@@ -129,7 +134,8 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @return the created AndroidStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidStoreApp put(final AndroidStoreApp newAndroidStoreApp) throws ClientException {
+    @Nullable
+    public AndroidStoreApp put(@Nonnull final AndroidStoreApp newAndroidStoreApp) throws ClientException {
         return send(HttpMethod.PUT, newAndroidStoreApp);
     }
 
@@ -139,9 +145,10 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidStoreAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidStoreAppRequest)this;
+     @Nonnull
+     public AndroidStoreAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidStoreAppRequest extends BaseRequest implements IAndroidStore
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidStoreAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidStoreAppRequest)this;
+     @Nonnull
+     public AndroidStoreAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

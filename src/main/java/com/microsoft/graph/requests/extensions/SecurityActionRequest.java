@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityAction;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Action Request.
  */
-public class SecurityActionRequest extends BaseRequest implements ISecurityActionRequest {
+public class SecurityActionRequest extends BaseRequest<SecurityAction> {
 	
     /**
      * The request for the SecurityAction
@@ -29,7 +31,7 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityActionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityActionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecurityAction.class);
     }
 
@@ -38,7 +40,7 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SecurityAction> callback) {
+    public void get(@Nonnull final ICallback<? super SecurityAction> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @return the SecurityAction from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SecurityAction get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SecurityAction> callback) {
+    public void delete(@Nonnull final ICallback<? super SecurityAction> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @param sourceSecurityAction the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecurityAction sourceSecurityAction, final ICallback<? super SecurityAction> callback) {
+    public void patch(@Nonnull final SecurityAction sourceSecurityAction, @Nonnull final ICallback<? super SecurityAction> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurityAction);
     }
 
@@ -87,7 +90,8 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @return the updated SecurityAction
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityAction patch(final SecurityAction sourceSecurityAction) throws ClientException {
+    @Nullable
+    public SecurityAction patch(@Nonnull final SecurityAction sourceSecurityAction) throws ClientException {
         return send(HttpMethod.PATCH, sourceSecurityAction);
     }
 
@@ -97,7 +101,7 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @param newSecurityAction the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecurityAction newSecurityAction, final ICallback<? super SecurityAction> callback) {
+    public void post(@Nonnull final SecurityAction newSecurityAction, @Nonnull final ICallback<? super SecurityAction> callback) {
         send(HttpMethod.POST, callback, newSecurityAction);
     }
 
@@ -108,7 +112,8 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @return the created SecurityAction
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityAction post(final SecurityAction newSecurityAction) throws ClientException {
+    @Nullable
+    public SecurityAction post(@Nonnull final SecurityAction newSecurityAction) throws ClientException {
         return send(HttpMethod.POST, newSecurityAction);
     }
 
@@ -118,7 +123,7 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @param newSecurityAction the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecurityAction newSecurityAction, final ICallback<? super SecurityAction> callback) {
+    public void put(@Nonnull final SecurityAction newSecurityAction, @Nonnull final ICallback<? super SecurityAction> callback) {
         send(HttpMethod.PUT, callback, newSecurityAction);
     }
 
@@ -129,7 +134,8 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @return the created SecurityAction
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityAction put(final SecurityAction newSecurityAction) throws ClientException {
+    @Nullable
+    public SecurityAction put(@Nonnull final SecurityAction newSecurityAction) throws ClientException {
         return send(HttpMethod.PUT, newSecurityAction);
     }
 
@@ -139,9 +145,10 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @param value the select clause
      * @return the updated request
      */
-     public ISecurityActionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecurityActionRequest)this;
+     @Nonnull
+     public SecurityActionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SecurityActionRequest extends BaseRequest implements ISecurityActio
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecurityActionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityActionRequest)this;
+     @Nonnull
+     public SecurityActionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

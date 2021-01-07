@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsWifiEnterpriseEAPConfiguration;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.Windows81TrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Wifi Enterprise EAPConfiguration Request Builder.
  */
-public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseRequestBuilder implements IWindowsWifiEnterpriseEAPConfigurationRequestBuilder {
+public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseRequestBuilder<WindowsWifiEnterpriseEAPConfiguration> {
 
     /**
      * The request builder for the WindowsWifiEnterpriseEAPConfiguration
@@ -34,7 +33,7 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsWifiEnterpriseEAPConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsWifiEnterpriseEAPConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsWifiEnterpriseEAPConfigurationRequest instance
+     * @return the WindowsWifiEnterpriseEAPConfigurationRequest instance
      */
-    public IWindowsWifiEnterpriseEAPConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsWifiEnterpriseEAPConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,89 +52,172 @@ public class WindowsWifiEnterpriseEAPConfigurationRequestBuilder extends BaseReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsWifiEnterpriseEAPConfigurationRequest instance
+     * @return the WindowsWifiEnterpriseEAPConfigurationRequest instance
      */
-    public IWindowsWifiEnterpriseEAPConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsWifiEnterpriseEAPConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsWifiEnterpriseEAPConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+    /**
+     *  Gets a request builder for the SettingStateDeviceSummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    /**
+     * Gets a request builder for the SettingStateDeviceSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
-    public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
      *
-     * @return the IDeviceConfigurationDeviceOverviewRequestBuilder instance
+     * @return the DeviceConfigurationDeviceOverviewRequestBuilder instance
      */
-    public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
+    @Nonnull
+    public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
-    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationGroupAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
         return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
     }
 
-    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationGroupAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
         return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
-    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationUserStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
-     * @return the IDeviceConfigurationUserOverviewRequestBuilder instance
+     * @return the DeviceConfigurationUserOverviewRequestBuilder instance
      */
-    public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
+    @Nonnull
+    public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WindowsCertificateProfileBase
      *
-     * @return the IWindowsCertificateProfileBaseWithReferenceRequestBuilder instance
+     * @return the WindowsCertificateProfileBaseWithReferenceRequestBuilder instance
      */
-    public IWindowsCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication() {
+    @Nonnull
+    public WindowsCertificateProfileBaseWithReferenceRequestBuilder identityCertificateForClientAuthentication() {
         return new WindowsCertificateProfileBaseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityCertificateForClientAuthentication"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Windows81TrustedRootCertificate
      *
-     * @return the IWindows81TrustedRootCertificateWithReferenceRequestBuilder instance
+     * @return the Windows81TrustedRootCertificateWithReferenceRequestBuilder instance
      */
-    public IWindows81TrustedRootCertificateWithReferenceRequestBuilder rootCertificateForClientValidation() {
+    @Nonnull
+    public Windows81TrustedRootCertificateWithReferenceRequestBuilder rootCertificateForClientValidation() {
         return new Windows81TrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificateForClientValidation"), getClient(), null);
     }
-    public IWindows81TrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation() {
+    /**
+     *  Gets a request builder for the Windows81TrustedRootCertificate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public Windows81TrustedRootCertificateCollectionRequestBuilder rootCertificatesForServerValidation() {
         return new Windows81TrustedRootCertificateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation"), getClient(), null);
     }
 
-    public IWindows81TrustedRootCertificateRequestBuilder rootCertificatesForServerValidation(final String id) {
+    /**
+     * Gets a request builder for the Windows81TrustedRootCertificate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public Windows81TrustedRootCertificateRequestBuilder rootCertificatesForServerValidation(@Nonnull final String id) {
         return new Windows81TrustedRootCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificatesForServerValidation") + "/" + id, getClient(), null);
     }
 }

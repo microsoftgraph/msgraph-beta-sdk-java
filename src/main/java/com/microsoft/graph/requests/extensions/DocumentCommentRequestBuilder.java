@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DocumentComment;
-import com.microsoft.graph.requests.extensions.IDocumentCommentReplyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDocumentCommentReplyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DocumentCommentReplyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DocumentCommentReplyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Document Comment Request Builder.
  */
-public class DocumentCommentRequestBuilder extends BaseRequestBuilder implements IDocumentCommentRequestBuilder {
+public class DocumentCommentRequestBuilder extends BaseRequestBuilder<DocumentComment> {
 
     /**
      * The request builder for the DocumentComment
@@ -32,7 +32,7 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DocumentCommentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DocumentCommentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDocumentCommentRequest instance
+     * @return the DocumentCommentRequest instance
      */
-    public IDocumentCommentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DocumentCommentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class DocumentCommentRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDocumentCommentRequest instance
+     * @return the DocumentCommentRequest instance
      */
-    public IDocumentCommentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DocumentCommentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DocumentCommentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDocumentCommentReplyCollectionRequestBuilder replies() {
+    /**
+     *  Gets a request builder for the DocumentCommentReply collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DocumentCommentReplyCollectionRequestBuilder replies() {
         return new DocumentCommentReplyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("replies"), getClient(), null);
     }
 
-    public IDocumentCommentReplyRequestBuilder replies(final String id) {
+    /**
+     * Gets a request builder for the DocumentCommentReply item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DocumentCommentReplyRequestBuilder replies(@Nonnull final String id) {
         return new DocumentCommentReplyRequestBuilder(getRequestUrlWithAdditionalSegment("replies") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteResource;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Resource Request.
  */
-public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResourceRequest {
+public class OnenoteResourceRequest extends BaseRequest<OnenoteResource> {
 	
     /**
      * The request for the OnenoteResource
@@ -29,7 +31,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteResourceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteResourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteResource.class);
     }
 
@@ -38,7 +40,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteResource> callback) {
+    public void get(@Nonnull final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @return the OnenoteResource from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnenoteResource get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteResource> callback) {
+    public void delete(@Nonnull final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param sourceOnenoteResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteResource sourceOnenoteResource, final ICallback<? super OnenoteResource> callback) {
+    public void patch(@Nonnull final OnenoteResource sourceOnenoteResource, @Nonnull final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteResource);
     }
 
@@ -87,7 +90,8 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @return the updated OnenoteResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteResource patch(final OnenoteResource sourceOnenoteResource) throws ClientException {
+    @Nullable
+    public OnenoteResource patch(@Nonnull final OnenoteResource sourceOnenoteResource) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenoteResource);
     }
 
@@ -97,7 +101,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param newOnenoteResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback) {
+    public void post(@Nonnull final OnenoteResource newOnenoteResource, @Nonnull final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.POST, callback, newOnenoteResource);
     }
 
@@ -108,7 +112,8 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @return the created OnenoteResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteResource post(final OnenoteResource newOnenoteResource) throws ClientException {
+    @Nullable
+    public OnenoteResource post(@Nonnull final OnenoteResource newOnenoteResource) throws ClientException {
         return send(HttpMethod.POST, newOnenoteResource);
     }
 
@@ -118,7 +123,7 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param newOnenoteResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteResource newOnenoteResource, final ICallback<? super OnenoteResource> callback) {
+    public void put(@Nonnull final OnenoteResource newOnenoteResource, @Nonnull final ICallback<? super OnenoteResource> callback) {
         send(HttpMethod.PUT, callback, newOnenoteResource);
     }
 
@@ -129,7 +134,8 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @return the created OnenoteResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteResource put(final OnenoteResource newOnenoteResource) throws ClientException {
+    @Nullable
+    public OnenoteResource put(@Nonnull final OnenoteResource newOnenoteResource) throws ClientException {
         return send(HttpMethod.PUT, newOnenoteResource);
     }
 
@@ -139,9 +145,10 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteResourceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteResourceRequest)this;
+     @Nonnull
+     public OnenoteResourceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class OnenoteResourceRequest extends BaseRequest implements IOnenoteResou
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteResourceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteResourceRequest)this;
+     @Nonnull
+     public OnenoteResourceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

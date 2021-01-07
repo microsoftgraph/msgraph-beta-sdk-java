@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeClientConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Office Client Configuration Assignment Request Builder.
  */
-public class OfficeClientConfigurationAssignmentRequestBuilder extends BaseRequestBuilder implements IOfficeClientConfigurationAssignmentRequestBuilder {
+public class OfficeClientConfigurationAssignmentRequestBuilder extends BaseRequestBuilder<OfficeClientConfigurationAssignment> {
 
     /**
      * The request builder for the OfficeClientConfigurationAssignment
@@ -28,7 +30,7 @@ public class OfficeClientConfigurationAssignmentRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeClientConfigurationAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfficeClientConfigurationAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class OfficeClientConfigurationAssignmentRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOfficeClientConfigurationAssignmentRequest instance
+     * @return the OfficeClientConfigurationAssignmentRequest instance
      */
-    public IOfficeClientConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OfficeClientConfigurationAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class OfficeClientConfigurationAssignmentRequestBuilder extends BaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOfficeClientConfigurationAssignmentRequest instance
+     * @return the OfficeClientConfigurationAssignmentRequest instance
      */
-    public IOfficeClientConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OfficeClientConfigurationAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OfficeClientConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

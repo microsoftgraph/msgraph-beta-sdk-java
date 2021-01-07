@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsUserActivityUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams User Activity User Counts Request Builder.
  */
-public class TeamsUserActivityUserCountsRequestBuilder extends BaseRequestBuilder implements ITeamsUserActivityUserCountsRequestBuilder {
+public class TeamsUserActivityUserCountsRequestBuilder extends BaseRequestBuilder<TeamsUserActivityUserCounts> {
 
     /**
      * The request builder for the TeamsUserActivityUserCounts
@@ -28,7 +30,7 @@ public class TeamsUserActivityUserCountsRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsUserActivityUserCountsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsUserActivityUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class TeamsUserActivityUserCountsRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsUserActivityUserCountsRequest instance
+     * @return the TeamsUserActivityUserCountsRequest instance
      */
-    public ITeamsUserActivityUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TeamsUserActivityUserCountsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class TeamsUserActivityUserCountsRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsUserActivityUserCountsRequest instance
+     * @return the TeamsUserActivityUserCountsRequest instance
      */
-    public ITeamsUserActivityUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TeamsUserActivityUserCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TeamsUserActivityUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

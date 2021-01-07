@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineDeviceState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Baseline Device State Request Builder.
  */
-public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilder implements ISecurityBaselineDeviceStateRequestBuilder {
+public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilder<SecurityBaselineDeviceState> {
 
     /**
      * The request builder for the SecurityBaselineDeviceState
@@ -28,7 +30,7 @@ public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityBaselineDeviceStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityBaselineDeviceStateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityBaselineDeviceStateRequest instance
+     * @return the SecurityBaselineDeviceStateRequest instance
      */
-    public ISecurityBaselineDeviceStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SecurityBaselineDeviceStateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class SecurityBaselineDeviceStateRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityBaselineDeviceStateRequest instance
+     * @return the SecurityBaselineDeviceStateRequest instance
      */
-    public ISecurityBaselineDeviceStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SecurityBaselineDeviceStateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10EnrollmentCompletionPageConfigurationPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10Enrollment Completion Page Configuration Policy Set Item Request Builder.
  */
-public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestBuilder extends BaseRequestBuilder implements IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequestBuilder {
+public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestBuilder extends BaseRequestBuilder<Windows10EnrollmentCompletionPageConfigurationPolicySetItem> {
 
     /**
      * The request builder for the Windows10EnrollmentCompletionPageConfigurationPolicySetItem
@@ -28,7 +30,7 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestB
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest instance
+     * @return the Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest instance
      */
-    public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequestB
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest instance
+     * @return the Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest instance
      */
-    public IWindows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.Windows10EnrollmentCompletionPageConfigurationPolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

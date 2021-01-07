@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyPresentationValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Definition Value Request.
  */
-public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IGroupPolicyDefinitionValueRequest {
+public class GroupPolicyDefinitionValueRequest extends BaseRequest<GroupPolicyDefinitionValue> {
 	
     /**
      * The request for the GroupPolicyDefinitionValue
@@ -35,7 +34,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyDefinitionValueRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyDefinitionValueRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyDefinitionValue.class);
     }
 
@@ -44,7 +43,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyDefinitionValue> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @return the GroupPolicyDefinitionValue from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyDefinitionValue get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyDefinitionValue> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param sourceGroupPolicyDefinitionValue the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback) {
+    public void patch(@Nonnull final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue, @Nonnull final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyDefinitionValue);
     }
 
@@ -93,7 +93,8 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @return the updated GroupPolicyDefinitionValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyDefinitionValue patch(final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue) throws ClientException {
+    @Nullable
+    public GroupPolicyDefinitionValue patch(@Nonnull final GroupPolicyDefinitionValue sourceGroupPolicyDefinitionValue) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyDefinitionValue);
     }
 
@@ -103,7 +104,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param newGroupPolicyDefinitionValue the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback) {
+    public void post(@Nonnull final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, @Nonnull final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyDefinitionValue);
     }
 
@@ -114,7 +115,8 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @return the created GroupPolicyDefinitionValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyDefinitionValue post(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue) throws ClientException {
+    @Nullable
+    public GroupPolicyDefinitionValue post(@Nonnull final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyDefinitionValue);
     }
 
@@ -124,7 +126,7 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param newGroupPolicyDefinitionValue the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, final ICallback<? super GroupPolicyDefinitionValue> callback) {
+    public void put(@Nonnull final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue, @Nonnull final ICallback<? super GroupPolicyDefinitionValue> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyDefinitionValue);
     }
 
@@ -135,7 +137,8 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @return the created GroupPolicyDefinitionValue
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyDefinitionValue put(final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue) throws ClientException {
+    @Nullable
+    public GroupPolicyDefinitionValue put(@Nonnull final GroupPolicyDefinitionValue newGroupPolicyDefinitionValue) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyDefinitionValue);
     }
 
@@ -145,9 +148,10 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyDefinitionValueRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyDefinitionValueRequest)this;
+     @Nonnull
+     public GroupPolicyDefinitionValueRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class GroupPolicyDefinitionValueRequest extends BaseRequest implements IG
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyDefinitionValueRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyDefinitionValueRequest)this;
+     @Nonnull
+     public GroupPolicyDefinitionValueRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

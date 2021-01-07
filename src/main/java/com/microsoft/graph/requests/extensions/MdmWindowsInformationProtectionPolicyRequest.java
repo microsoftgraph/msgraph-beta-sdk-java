@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.MdmWindowsInformationProtectionPoli
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mdm Windows Information Protection Policy Request.
  */
-public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest implements IMdmWindowsInformationProtectionPolicyRequest {
+public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest<MdmWindowsInformationProtectionPolicy> {
 	
     /**
      * The request for the MdmWindowsInformationProtectionPolicy
@@ -30,7 +32,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MdmWindowsInformationProtectionPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MdmWindowsInformationProtectionPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MdmWindowsInformationProtectionPolicy.class);
     }
 
@@ -39,7 +41,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @return the MdmWindowsInformationProtectionPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MdmWindowsInformationProtectionPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param sourceMdmWindowsInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void patch(@Nonnull final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceMdmWindowsInformationProtectionPolicy);
     }
 
@@ -88,7 +91,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @return the updated MdmWindowsInformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MdmWindowsInformationProtectionPolicy patch(final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public MdmWindowsInformationProtectionPolicy patch(@Nonnull final MdmWindowsInformationProtectionPolicy sourceMdmWindowsInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceMdmWindowsInformationProtectionPolicy);
     }
 
@@ -98,7 +102,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param newMdmWindowsInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void post(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.POST, callback, newMdmWindowsInformationProtectionPolicy);
     }
 
@@ -109,7 +113,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @return the created MdmWindowsInformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MdmWindowsInformationProtectionPolicy post(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public MdmWindowsInformationProtectionPolicy post(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.POST, newMdmWindowsInformationProtectionPolicy);
     }
 
@@ -119,7 +124,7 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param newMdmWindowsInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
+    public void put(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy, @Nonnull final ICallback<? super MdmWindowsInformationProtectionPolicy> callback) {
         send(HttpMethod.PUT, callback, newMdmWindowsInformationProtectionPolicy);
     }
 
@@ -130,7 +135,8 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @return the created MdmWindowsInformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MdmWindowsInformationProtectionPolicy put(final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public MdmWindowsInformationProtectionPolicy put(@Nonnull final MdmWindowsInformationProtectionPolicy newMdmWindowsInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.PUT, newMdmWindowsInformationProtectionPolicy);
     }
 
@@ -140,9 +146,10 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IMdmWindowsInformationProtectionPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MdmWindowsInformationProtectionPolicyRequest)this;
+     @Nonnull
+     public MdmWindowsInformationProtectionPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class MdmWindowsInformationProtectionPolicyRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IMdmWindowsInformationProtectionPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MdmWindowsInformationProtectionPolicyRequest)this;
+     @Nonnull
+     public MdmWindowsInformationProtectionPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

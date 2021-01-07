@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DepMacOSEnrollmentProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Dep Mac OSEnrollment Profile Request Builder.
  */
-public class DepMacOSEnrollmentProfileRequestBuilder extends BaseRequestBuilder implements IDepMacOSEnrollmentProfileRequestBuilder {
+public class DepMacOSEnrollmentProfileRequestBuilder extends BaseRequestBuilder<DepMacOSEnrollmentProfile> {
 
     /**
      * The request builder for the DepMacOSEnrollmentProfile
@@ -28,7 +30,7 @@ public class DepMacOSEnrollmentProfileRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DepMacOSEnrollmentProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DepMacOSEnrollmentProfileRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DepMacOSEnrollmentProfileRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDepMacOSEnrollmentProfileRequest instance
+     * @return the DepMacOSEnrollmentProfileRequest instance
      */
-    public IDepMacOSEnrollmentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DepMacOSEnrollmentProfileRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DepMacOSEnrollmentProfileRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDepMacOSEnrollmentProfileRequest instance
+     * @return the DepMacOSEnrollmentProfileRequest instance
      */
-    public IDepMacOSEnrollmentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DepMacOSEnrollmentProfileRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DepMacOSEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

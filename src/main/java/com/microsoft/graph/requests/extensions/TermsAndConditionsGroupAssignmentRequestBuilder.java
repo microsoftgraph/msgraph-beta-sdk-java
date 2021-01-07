@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditionsGroupAssignment;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms And Conditions Group Assignment Request Builder.
  */
-public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequestBuilder implements ITermsAndConditionsGroupAssignmentRequestBuilder {
+public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequestBuilder<TermsAndConditionsGroupAssignment> {
 
     /**
      * The request builder for the TermsAndConditionsGroupAssignment
@@ -30,7 +31,7 @@ public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsGroupAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsGroupAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITermsAndConditionsGroupAssignmentRequest instance
+     * @return the TermsAndConditionsGroupAssignmentRequest instance
      */
-    public ITermsAndConditionsGroupAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TermsAndConditionsGroupAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITermsAndConditionsGroupAssignmentRequest instance
+     * @return the TermsAndConditionsGroupAssignmentRequest instance
      */
-    public ITermsAndConditionsGroupAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TermsAndConditionsGroupAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TermsAndConditionsGroupAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class TermsAndConditionsGroupAssignmentRequestBuilder extends BaseRequest
     /**
      * Gets the request builder for TermsAndConditions
      *
-     * @return the ITermsAndConditionsWithReferenceRequestBuilder instance
+     * @return the TermsAndConditionsWithReferenceRequestBuilder instance
      */
-    public ITermsAndConditionsWithReferenceRequestBuilder termsAndConditions() {
+    @Nonnull
+    public TermsAndConditionsWithReferenceRequestBuilder termsAndConditions() {
         return new TermsAndConditionsWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions"), getClient(), null);
     }
 }

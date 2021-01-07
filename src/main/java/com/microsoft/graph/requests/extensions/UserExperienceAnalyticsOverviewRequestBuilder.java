@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Experience Analytics Overview Request Builder.
  */
-public class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder implements IUserExperienceAnalyticsOverviewRequestBuilder {
+public class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBuilder<UserExperienceAnalyticsOverview> {
 
     /**
      * The request builder for the UserExperienceAnalyticsOverview
@@ -28,7 +30,7 @@ public class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsOverviewRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsOverviewRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsOverviewRequest instance
+     * @return the UserExperienceAnalyticsOverviewRequest instance
      */
-    public IUserExperienceAnalyticsOverviewRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsOverviewRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class UserExperienceAnalyticsOverviewRequestBuilder extends BaseRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsOverviewRequest instance
+     * @return the UserExperienceAnalyticsOverviewRequest instance
      */
-    public IUserExperienceAnalyticsOverviewRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsOverviewRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsOverviewRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedIOSStoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed IOSStore App Request.
  */
-public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIOSStoreAppRequest {
+public class ManagedIOSStoreAppRequest extends BaseRequest<ManagedIOSStoreApp> {
 	
     /**
      * The request for the ManagedIOSStoreApp
@@ -29,7 +31,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedIOSStoreAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedIOSStoreAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedIOSStoreApp.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedIOSStoreApp> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @return the ManagedIOSStoreApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedIOSStoreApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedIOSStoreApp> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param sourceManagedIOSStoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedIOSStoreApp sourceManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback) {
+    public void patch(@Nonnull final ManagedIOSStoreApp sourceManagedIOSStoreApp, @Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedIOSStoreApp);
     }
 
@@ -87,7 +90,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @return the updated ManagedIOSStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedIOSStoreApp patch(final ManagedIOSStoreApp sourceManagedIOSStoreApp) throws ClientException {
+    @Nullable
+    public ManagedIOSStoreApp patch(@Nonnull final ManagedIOSStoreApp sourceManagedIOSStoreApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedIOSStoreApp);
     }
 
@@ -97,7 +101,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param newManagedIOSStoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback) {
+    public void post(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp, @Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.POST, callback, newManagedIOSStoreApp);
     }
 
@@ -108,7 +112,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @return the created ManagedIOSStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedIOSStoreApp post(final ManagedIOSStoreApp newManagedIOSStoreApp) throws ClientException {
+    @Nullable
+    public ManagedIOSStoreApp post(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) throws ClientException {
         return send(HttpMethod.POST, newManagedIOSStoreApp);
     }
 
@@ -118,7 +123,7 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param newManagedIOSStoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedIOSStoreApp newManagedIOSStoreApp, final ICallback<? super ManagedIOSStoreApp> callback) {
+    public void put(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp, @Nonnull final ICallback<? super ManagedIOSStoreApp> callback) {
         send(HttpMethod.PUT, callback, newManagedIOSStoreApp);
     }
 
@@ -129,7 +134,8 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @return the created ManagedIOSStoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedIOSStoreApp put(final ManagedIOSStoreApp newManagedIOSStoreApp) throws ClientException {
+    @Nullable
+    public ManagedIOSStoreApp put(@Nonnull final ManagedIOSStoreApp newManagedIOSStoreApp) throws ClientException {
         return send(HttpMethod.PUT, newManagedIOSStoreApp);
     }
 
@@ -139,9 +145,10 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedIOSStoreAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedIOSStoreAppRequest)this;
+     @Nonnull
+     public ManagedIOSStoreAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedIOSStoreAppRequest extends BaseRequest implements IManagedIO
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedIOSStoreAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedIOSStoreAppRequest)this;
+     @Nonnull
+     public ManagedIOSStoreAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

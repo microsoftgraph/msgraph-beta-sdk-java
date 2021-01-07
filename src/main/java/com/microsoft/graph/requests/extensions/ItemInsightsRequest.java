@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemInsights;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Insights Request.
  */
-public class ItemInsightsRequest extends BaseRequest implements IItemInsightsRequest {
+public class ItemInsightsRequest extends BaseRequest<ItemInsights> {
 	
     /**
      * The request for the ItemInsights
@@ -29,7 +31,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemInsightsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemInsightsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemInsights.class);
     }
 
@@ -38,7 +40,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemInsights> callback) {
+    public void get(@Nonnull final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @return the ItemInsights from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemInsights get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemInsights> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param sourceItemInsights the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemInsights sourceItemInsights, final ICallback<? super ItemInsights> callback) {
+    public void patch(@Nonnull final ItemInsights sourceItemInsights, @Nonnull final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.PATCH, callback, sourceItemInsights);
     }
 
@@ -87,7 +90,8 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @return the updated ItemInsights
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemInsights patch(final ItemInsights sourceItemInsights) throws ClientException {
+    @Nullable
+    public ItemInsights patch(@Nonnull final ItemInsights sourceItemInsights) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemInsights);
     }
 
@@ -97,7 +101,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param newItemInsights the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemInsights newItemInsights, final ICallback<? super ItemInsights> callback) {
+    public void post(@Nonnull final ItemInsights newItemInsights, @Nonnull final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.POST, callback, newItemInsights);
     }
 
@@ -108,7 +112,8 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @return the created ItemInsights
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemInsights post(final ItemInsights newItemInsights) throws ClientException {
+    @Nullable
+    public ItemInsights post(@Nonnull final ItemInsights newItemInsights) throws ClientException {
         return send(HttpMethod.POST, newItemInsights);
     }
 
@@ -118,7 +123,7 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param newItemInsights the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemInsights newItemInsights, final ICallback<? super ItemInsights> callback) {
+    public void put(@Nonnull final ItemInsights newItemInsights, @Nonnull final ICallback<? super ItemInsights> callback) {
         send(HttpMethod.PUT, callback, newItemInsights);
     }
 
@@ -129,7 +134,8 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @return the created ItemInsights
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemInsights put(final ItemInsights newItemInsights) throws ClientException {
+    @Nullable
+    public ItemInsights put(@Nonnull final ItemInsights newItemInsights) throws ClientException {
         return send(HttpMethod.PUT, newItemInsights);
     }
 
@@ -139,9 +145,10 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param value the select clause
      * @return the updated request
      */
-     public IItemInsightsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemInsightsRequest)this;
+     @Nonnull
+     public ItemInsightsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ItemInsightsRequest extends BaseRequest implements IItemInsightsReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemInsightsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemInsightsRequest)this;
+     @Nonnull
+     public ItemInsightsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

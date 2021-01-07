@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OneDriveActivityUserDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the One Drive Activity User Detail Request.
  */
-public class OneDriveActivityUserDetailRequest extends BaseRequest implements IOneDriveActivityUserDetailRequest {
+public class OneDriveActivityUserDetailRequest extends BaseRequest<OneDriveActivityUserDetail> {
 	
     /**
      * The request for the OneDriveActivityUserDetail
@@ -29,7 +31,7 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OneDriveActivityUserDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OneDriveActivityUserDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OneDriveActivityUserDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OneDriveActivityUserDetail> callback) {
+    public void get(@Nonnull final ICallback<? super OneDriveActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @return the OneDriveActivityUserDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OneDriveActivityUserDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OneDriveActivityUserDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super OneDriveActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @param sourceOneDriveActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OneDriveActivityUserDetail sourceOneDriveActivityUserDetail, final ICallback<? super OneDriveActivityUserDetail> callback) {
+    public void patch(@Nonnull final OneDriveActivityUserDetail sourceOneDriveActivityUserDetail, @Nonnull final ICallback<? super OneDriveActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceOneDriveActivityUserDetail);
     }
 
@@ -87,7 +90,8 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @return the updated OneDriveActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OneDriveActivityUserDetail patch(final OneDriveActivityUserDetail sourceOneDriveActivityUserDetail) throws ClientException {
+    @Nullable
+    public OneDriveActivityUserDetail patch(@Nonnull final OneDriveActivityUserDetail sourceOneDriveActivityUserDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceOneDriveActivityUserDetail);
     }
 
@@ -97,7 +101,7 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @param newOneDriveActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OneDriveActivityUserDetail newOneDriveActivityUserDetail, final ICallback<? super OneDriveActivityUserDetail> callback) {
+    public void post(@Nonnull final OneDriveActivityUserDetail newOneDriveActivityUserDetail, @Nonnull final ICallback<? super OneDriveActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newOneDriveActivityUserDetail);
     }
 
@@ -108,7 +112,8 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @return the created OneDriveActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OneDriveActivityUserDetail post(final OneDriveActivityUserDetail newOneDriveActivityUserDetail) throws ClientException {
+    @Nullable
+    public OneDriveActivityUserDetail post(@Nonnull final OneDriveActivityUserDetail newOneDriveActivityUserDetail) throws ClientException {
         return send(HttpMethod.POST, newOneDriveActivityUserDetail);
     }
 
@@ -118,7 +123,7 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @param newOneDriveActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OneDriveActivityUserDetail newOneDriveActivityUserDetail, final ICallback<? super OneDriveActivityUserDetail> callback) {
+    public void put(@Nonnull final OneDriveActivityUserDetail newOneDriveActivityUserDetail, @Nonnull final ICallback<? super OneDriveActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newOneDriveActivityUserDetail);
     }
 
@@ -129,7 +134,8 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @return the created OneDriveActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OneDriveActivityUserDetail put(final OneDriveActivityUserDetail newOneDriveActivityUserDetail) throws ClientException {
+    @Nullable
+    public OneDriveActivityUserDetail put(@Nonnull final OneDriveActivityUserDetail newOneDriveActivityUserDetail) throws ClientException {
         return send(HttpMethod.PUT, newOneDriveActivityUserDetail);
     }
 
@@ -139,9 +145,10 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @param value the select clause
      * @return the updated request
      */
-     public IOneDriveActivityUserDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OneDriveActivityUserDetailRequest)this;
+     @Nonnull
+     public OneDriveActivityUserDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class OneDriveActivityUserDetailRequest extends BaseRequest implements IO
      * @param value the expand clause
      * @return the updated request
      */
-     public IOneDriveActivityUserDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OneDriveActivityUserDetailRequest)this;
+     @Nonnull
+     public OneDriveActivityUserDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

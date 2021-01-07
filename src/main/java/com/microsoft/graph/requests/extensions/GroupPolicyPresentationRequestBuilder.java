@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentation;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Policy Presentation Request Builder.
  */
-public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder implements IGroupPolicyPresentationRequestBuilder {
+public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder<GroupPolicyPresentation> {
 
     /**
      * The request builder for the GroupPolicyPresentation
@@ -30,7 +31,7 @@ public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationRequest instance
+     * @return the GroupPolicyPresentationRequest instance
      */
-    public IGroupPolicyPresentationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationRequest instance
+     * @return the GroupPolicyPresentationRequest instance
      */
-    public IGroupPolicyPresentationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class GroupPolicyPresentationRequestBuilder extends BaseRequestBuilder im
     /**
      * Gets the request builder for GroupPolicyDefinition
      *
-     * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
+     * @return the GroupPolicyDefinitionWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+    @Nonnull
+    public GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
         return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }

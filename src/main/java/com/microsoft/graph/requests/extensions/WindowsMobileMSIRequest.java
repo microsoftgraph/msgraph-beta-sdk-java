@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsMobileMSI;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Mobile MSIRequest.
  */
-public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobileMSIRequest {
+public class WindowsMobileMSIRequest extends BaseRequest<WindowsMobileMSI> {
 	
     /**
      * The request for the WindowsMobileMSI
@@ -29,7 +31,7 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsMobileMSIRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsMobileMSIRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsMobileMSI.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsMobileMSI> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsMobileMSI> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @return the WindowsMobileMSI from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsMobileMSI get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsMobileMSI> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsMobileMSI> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @param sourceWindowsMobileMSI the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsMobileMSI sourceWindowsMobileMSI, final ICallback<? super WindowsMobileMSI> callback) {
+    public void patch(@Nonnull final WindowsMobileMSI sourceWindowsMobileMSI, @Nonnull final ICallback<? super WindowsMobileMSI> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsMobileMSI);
     }
 
@@ -87,7 +90,8 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @return the updated WindowsMobileMSI
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsMobileMSI patch(final WindowsMobileMSI sourceWindowsMobileMSI) throws ClientException {
+    @Nullable
+    public WindowsMobileMSI patch(@Nonnull final WindowsMobileMSI sourceWindowsMobileMSI) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsMobileMSI);
     }
 
@@ -97,7 +101,7 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @param newWindowsMobileMSI the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<? super WindowsMobileMSI> callback) {
+    public void post(@Nonnull final WindowsMobileMSI newWindowsMobileMSI, @Nonnull final ICallback<? super WindowsMobileMSI> callback) {
         send(HttpMethod.POST, callback, newWindowsMobileMSI);
     }
 
@@ -108,7 +112,8 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @return the created WindowsMobileMSI
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsMobileMSI post(final WindowsMobileMSI newWindowsMobileMSI) throws ClientException {
+    @Nullable
+    public WindowsMobileMSI post(@Nonnull final WindowsMobileMSI newWindowsMobileMSI) throws ClientException {
         return send(HttpMethod.POST, newWindowsMobileMSI);
     }
 
@@ -118,7 +123,7 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @param newWindowsMobileMSI the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsMobileMSI newWindowsMobileMSI, final ICallback<? super WindowsMobileMSI> callback) {
+    public void put(@Nonnull final WindowsMobileMSI newWindowsMobileMSI, @Nonnull final ICallback<? super WindowsMobileMSI> callback) {
         send(HttpMethod.PUT, callback, newWindowsMobileMSI);
     }
 
@@ -129,7 +134,8 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @return the created WindowsMobileMSI
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsMobileMSI put(final WindowsMobileMSI newWindowsMobileMSI) throws ClientException {
+    @Nullable
+    public WindowsMobileMSI put(@Nonnull final WindowsMobileMSI newWindowsMobileMSI) throws ClientException {
         return send(HttpMethod.PUT, newWindowsMobileMSI);
     }
 
@@ -139,9 +145,10 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsMobileMSIRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsMobileMSIRequest)this;
+     @Nonnull
+     public WindowsMobileMSIRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsMobileMSIRequest extends BaseRequest implements IWindowsMobi
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsMobileMSIRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsMobileMSIRequest)this;
+     @Nonnull
+     public WindowsMobileMSIRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

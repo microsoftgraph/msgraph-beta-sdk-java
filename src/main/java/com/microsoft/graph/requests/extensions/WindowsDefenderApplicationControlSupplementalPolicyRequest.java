@@ -10,18 +10,15 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicy;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
-import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -31,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Defender Application Control Supplemental Policy Request.
  */
-public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends BaseRequest implements IWindowsDefenderApplicationControlSupplementalPolicyRequest {
+public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends BaseRequest<WindowsDefenderApplicationControlSupplementalPolicy> {
 	
     /**
      * The request for the WindowsDefenderApplicationControlSupplementalPolicy
@@ -40,7 +37,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsDefenderApplicationControlSupplementalPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicy.class);
     }
 
@@ -49,7 +46,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,6 +56,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @return the WindowsDefenderApplicationControlSupplementalPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsDefenderApplicationControlSupplementalPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -68,7 +66,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +85,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @param sourceWindowsDefenderApplicationControlSupplementalPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void patch(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsDefenderApplicationControlSupplementalPolicy);
     }
 
@@ -98,7 +96,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @return the updated WindowsDefenderApplicationControlSupplementalPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicy patch(final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicy patch(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicy sourceWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsDefenderApplicationControlSupplementalPolicy);
     }
 
@@ -108,7 +107,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @param newWindowsDefenderApplicationControlSupplementalPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void post(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.POST, callback, newWindowsDefenderApplicationControlSupplementalPolicy);
     }
 
@@ -119,7 +118,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @return the created WindowsDefenderApplicationControlSupplementalPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicy post(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicy post(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException {
         return send(HttpMethod.POST, newWindowsDefenderApplicationControlSupplementalPolicy);
     }
 
@@ -129,7 +129,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @param newWindowsDefenderApplicationControlSupplementalPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
+    public void put(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicy> callback) {
         send(HttpMethod.PUT, callback, newWindowsDefenderApplicationControlSupplementalPolicy);
     }
 
@@ -140,7 +140,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @return the created WindowsDefenderApplicationControlSupplementalPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicy put(final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicy put(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicy newWindowsDefenderApplicationControlSupplementalPolicy) throws ClientException {
         return send(HttpMethod.PUT, newWindowsDefenderApplicationControlSupplementalPolicy);
     }
 
@@ -150,9 +151,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsDefenderApplicationControlSupplementalPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsDefenderApplicationControlSupplementalPolicyRequest)this;
+     @Nonnull
+     public WindowsDefenderApplicationControlSupplementalPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -161,9 +163,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyRequest extends 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsDefenderApplicationControlSupplementalPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsDefenderApplicationControlSupplementalPolicyRequest)this;
+     @Nonnull
+     public WindowsDefenderApplicationControlSupplementalPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

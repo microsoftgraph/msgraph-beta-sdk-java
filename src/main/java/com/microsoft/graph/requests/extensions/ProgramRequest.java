@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Program;
-import com.microsoft.graph.requests.extensions.IProgramControlCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramControlRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Program Request.
  */
-public class ProgramRequest extends BaseRequest implements IProgramRequest {
+public class ProgramRequest extends BaseRequest<Program> {
 	
     /**
      * The request for the Program
@@ -33,7 +33,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProgramRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProgramRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Program.class);
     }
 
@@ -42,7 +42,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Program> callback) {
+    public void get(@Nonnull final ICallback<? super Program> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @return the Program from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Program get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Program> callback) {
+    public void delete(@Nonnull final ICallback<? super Program> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param sourceProgram the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Program sourceProgram, final ICallback<? super Program> callback) {
+    public void patch(@Nonnull final Program sourceProgram, @Nonnull final ICallback<? super Program> callback) {
         send(HttpMethod.PATCH, callback, sourceProgram);
     }
 
@@ -91,7 +92,8 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @return the updated Program
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Program patch(final Program sourceProgram) throws ClientException {
+    @Nullable
+    public Program patch(@Nonnull final Program sourceProgram) throws ClientException {
         return send(HttpMethod.PATCH, sourceProgram);
     }
 
@@ -101,7 +103,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param newProgram the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Program newProgram, final ICallback<? super Program> callback) {
+    public void post(@Nonnull final Program newProgram, @Nonnull final ICallback<? super Program> callback) {
         send(HttpMethod.POST, callback, newProgram);
     }
 
@@ -112,7 +114,8 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @return the created Program
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Program post(final Program newProgram) throws ClientException {
+    @Nullable
+    public Program post(@Nonnull final Program newProgram) throws ClientException {
         return send(HttpMethod.POST, newProgram);
     }
 
@@ -122,7 +125,7 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param newProgram the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Program newProgram, final ICallback<? super Program> callback) {
+    public void put(@Nonnull final Program newProgram, @Nonnull final ICallback<? super Program> callback) {
         send(HttpMethod.PUT, callback, newProgram);
     }
 
@@ -133,7 +136,8 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @return the created Program
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Program put(final Program newProgram) throws ClientException {
+    @Nullable
+    public Program put(@Nonnull final Program newProgram) throws ClientException {
         return send(HttpMethod.PUT, newProgram);
     }
 
@@ -143,9 +147,10 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IProgramRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ProgramRequest)this;
+     @Nonnull
+     public ProgramRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ProgramRequest extends BaseRequest implements IProgramRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IProgramRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProgramRequest)this;
+     @Nonnull
+     public ProgramRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

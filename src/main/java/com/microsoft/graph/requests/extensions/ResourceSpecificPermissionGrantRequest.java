@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Resource Specific Permission Grant Request.
  */
-public class ResourceSpecificPermissionGrantRequest extends BaseRequest implements IResourceSpecificPermissionGrantRequest {
+public class ResourceSpecificPermissionGrantRequest extends BaseRequest<ResourceSpecificPermissionGrant> {
 	
     /**
      * The request for the ResourceSpecificPermissionGrant
@@ -29,7 +31,7 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ResourceSpecificPermissionGrantRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ResourceSpecificPermissionGrantRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ResourceSpecificPermissionGrant.class);
     }
 
@@ -38,7 +40,7 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ResourceSpecificPermissionGrant> callback) {
+    public void get(@Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @return the ResourceSpecificPermissionGrant from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ResourceSpecificPermissionGrant get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ResourceSpecificPermissionGrant> callback) {
+    public void delete(@Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @param sourceResourceSpecificPermissionGrant the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback) {
+    public void patch(@Nonnull final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant, @Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
         send(HttpMethod.PATCH, callback, sourceResourceSpecificPermissionGrant);
     }
 
@@ -87,7 +90,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @return the updated ResourceSpecificPermissionGrant
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ResourceSpecificPermissionGrant patch(final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant) throws ClientException {
+    @Nullable
+    public ResourceSpecificPermissionGrant patch(@Nonnull final ResourceSpecificPermissionGrant sourceResourceSpecificPermissionGrant) throws ClientException {
         return send(HttpMethod.PATCH, sourceResourceSpecificPermissionGrant);
     }
 
@@ -97,7 +101,7 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @param newResourceSpecificPermissionGrant the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback) {
+    public void post(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, @Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
         send(HttpMethod.POST, callback, newResourceSpecificPermissionGrant);
     }
 
@@ -108,7 +112,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @return the created ResourceSpecificPermissionGrant
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ResourceSpecificPermissionGrant post(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException {
+    @Nullable
+    public ResourceSpecificPermissionGrant post(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException {
         return send(HttpMethod.POST, newResourceSpecificPermissionGrant);
     }
 
@@ -118,7 +123,7 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @param newResourceSpecificPermissionGrant the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, final ICallback<? super ResourceSpecificPermissionGrant> callback) {
+    public void put(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant, @Nonnull final ICallback<? super ResourceSpecificPermissionGrant> callback) {
         send(HttpMethod.PUT, callback, newResourceSpecificPermissionGrant);
     }
 
@@ -129,7 +134,8 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @return the created ResourceSpecificPermissionGrant
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ResourceSpecificPermissionGrant put(final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException {
+    @Nullable
+    public ResourceSpecificPermissionGrant put(@Nonnull final ResourceSpecificPermissionGrant newResourceSpecificPermissionGrant) throws ClientException {
         return send(HttpMethod.PUT, newResourceSpecificPermissionGrant);
     }
 
@@ -139,9 +145,10 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IResourceSpecificPermissionGrantRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ResourceSpecificPermissionGrantRequest)this;
+     @Nonnull
+     public ResourceSpecificPermissionGrantRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ResourceSpecificPermissionGrantRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IResourceSpecificPermissionGrantRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ResourceSpecificPermissionGrantRequest)this;
+     @Nonnull
+     public ResourceSpecificPermissionGrantRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

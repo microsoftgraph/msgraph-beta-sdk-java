@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailAuthenticationMethod;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Email Authentication Method Request Builder.
  */
-public class EmailAuthenticationMethodRequestBuilder extends BaseRequestBuilder implements IEmailAuthenticationMethodRequestBuilder {
+public class EmailAuthenticationMethodRequestBuilder extends BaseRequestBuilder<EmailAuthenticationMethod> {
 
     /**
      * The request builder for the EmailAuthenticationMethod
@@ -28,7 +30,7 @@ public class EmailAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmailAuthenticationMethodRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmailAuthenticationMethodRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class EmailAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEmailAuthenticationMethodRequest instance
+     * @return the EmailAuthenticationMethodRequest instance
      */
-    public IEmailAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EmailAuthenticationMethodRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class EmailAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEmailAuthenticationMethodRequest instance
+     * @return the EmailAuthenticationMethodRequest instance
      */
-    public IEmailAuthenticationMethodRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EmailAuthenticationMethodRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EmailAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

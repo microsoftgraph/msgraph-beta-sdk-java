@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WebAccount;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Web Account Request.
  */
-public class WebAccountRequest extends BaseRequest implements IWebAccountRequest {
+public class WebAccountRequest extends BaseRequest<WebAccount> {
 	
     /**
      * The request for the WebAccount
@@ -29,7 +31,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WebAccountRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WebAccountRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WebAccount.class);
     }
 
@@ -38,7 +40,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WebAccount> callback) {
+    public void get(@Nonnull final ICallback<? super WebAccount> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @return the WebAccount from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WebAccount get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WebAccount> callback) {
+    public void delete(@Nonnull final ICallback<? super WebAccount> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param sourceWebAccount the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WebAccount sourceWebAccount, final ICallback<? super WebAccount> callback) {
+    public void patch(@Nonnull final WebAccount sourceWebAccount, @Nonnull final ICallback<? super WebAccount> callback) {
         send(HttpMethod.PATCH, callback, sourceWebAccount);
     }
 
@@ -87,7 +90,8 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @return the updated WebAccount
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WebAccount patch(final WebAccount sourceWebAccount) throws ClientException {
+    @Nullable
+    public WebAccount patch(@Nonnull final WebAccount sourceWebAccount) throws ClientException {
         return send(HttpMethod.PATCH, sourceWebAccount);
     }
 
@@ -97,7 +101,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param newWebAccount the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WebAccount newWebAccount, final ICallback<? super WebAccount> callback) {
+    public void post(@Nonnull final WebAccount newWebAccount, @Nonnull final ICallback<? super WebAccount> callback) {
         send(HttpMethod.POST, callback, newWebAccount);
     }
 
@@ -108,7 +112,8 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @return the created WebAccount
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WebAccount post(final WebAccount newWebAccount) throws ClientException {
+    @Nullable
+    public WebAccount post(@Nonnull final WebAccount newWebAccount) throws ClientException {
         return send(HttpMethod.POST, newWebAccount);
     }
 
@@ -118,7 +123,7 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param newWebAccount the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WebAccount newWebAccount, final ICallback<? super WebAccount> callback) {
+    public void put(@Nonnull final WebAccount newWebAccount, @Nonnull final ICallback<? super WebAccount> callback) {
         send(HttpMethod.PUT, callback, newWebAccount);
     }
 
@@ -129,7 +134,8 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @return the created WebAccount
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WebAccount put(final WebAccount newWebAccount) throws ClientException {
+    @Nullable
+    public WebAccount put(@Nonnull final WebAccount newWebAccount) throws ClientException {
         return send(HttpMethod.PUT, newWebAccount);
     }
 
@@ -139,9 +145,10 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IWebAccountRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WebAccountRequest)this;
+     @Nonnull
+     public WebAccountRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WebAccountRequest extends BaseRequest implements IWebAccountRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IWebAccountRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WebAccountRequest)this;
+     @Nonnull
+     public WebAccountRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

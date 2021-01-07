@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementAutopilotPolicyStatusDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Autopilot Policy Status Detail Request.
  */
-public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequest implements IDeviceManagementAutopilotPolicyStatusDetailRequest {
+public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequest<DeviceManagementAutopilotPolicyStatusDetail> {
 	
     /**
      * The request for the DeviceManagementAutopilotPolicyStatusDetail
@@ -29,7 +31,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementAutopilotPolicyStatusDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementAutopilotPolicyStatusDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementAutopilotPolicyStatusDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @return the DeviceManagementAutopilotPolicyStatusDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementAutopilotPolicyStatusDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param sourceDeviceManagementAutopilotPolicyStatusDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void patch(@Nonnull final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail, @Nonnull final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @return the updated DeviceManagementAutopilotPolicyStatusDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementAutopilotPolicyStatusDetail patch(final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail) throws ClientException {
+    @Nullable
+    public DeviceManagementAutopilotPolicyStatusDetail patch(@Nonnull final DeviceManagementAutopilotPolicyStatusDetail sourceDeviceManagementAutopilotPolicyStatusDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param newDeviceManagementAutopilotPolicyStatusDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void post(@Nonnull final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, @Nonnull final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @return the created DeviceManagementAutopilotPolicyStatusDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementAutopilotPolicyStatusDetail post(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail) throws ClientException {
+    @Nullable
+    public DeviceManagementAutopilotPolicyStatusDetail post(@Nonnull final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param newDeviceManagementAutopilotPolicyStatusDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
+    public void put(@Nonnull final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail, @Nonnull final ICallback<? super DeviceManagementAutopilotPolicyStatusDetail> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @return the created DeviceManagementAutopilotPolicyStatusDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementAutopilotPolicyStatusDetail put(final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail) throws ClientException {
+    @Nullable
+    public DeviceManagementAutopilotPolicyStatusDetail put(@Nonnull final DeviceManagementAutopilotPolicyStatusDetail newDeviceManagementAutopilotPolicyStatusDetail) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementAutopilotPolicyStatusDetail);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementAutopilotPolicyStatusDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementAutopilotPolicyStatusDetailRequest)this;
+     @Nonnull
+     public DeviceManagementAutopilotPolicyStatusDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementAutopilotPolicyStatusDetailRequest extends BaseRequ
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementAutopilotPolicyStatusDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementAutopilotPolicyStatusDetailRequest)this;
+     @Nonnull
+     public DeviceManagementAutopilotPolicyStatusDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

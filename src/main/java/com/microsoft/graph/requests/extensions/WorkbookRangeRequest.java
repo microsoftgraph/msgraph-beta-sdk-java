@@ -10,14 +10,13 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRange;
 import com.microsoft.graph.models.extensions.WorkbookRangeView;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeSortRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeSortRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookWorksheetRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookWorksheetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -27,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Range Request.
  */
-public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeRequest {
+public class WorkbookRangeRequest extends BaseRequest<WorkbookRange> {
 	
     /**
      * The request for the WorkbookRange
@@ -36,7 +35,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookRange.class);
     }
 
@@ -45,7 +44,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookRange> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -55,6 +54,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @return the WorkbookRange from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookRange get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -64,7 +64,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookRange> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -83,7 +83,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param sourceWorkbookRange the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookRange sourceWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void patch(@Nonnull final WorkbookRange sourceWorkbookRange, @Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookRange);
     }
 
@@ -94,7 +94,8 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @return the updated WorkbookRange
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRange patch(final WorkbookRange sourceWorkbookRange) throws ClientException {
+    @Nullable
+    public WorkbookRange patch(@Nonnull final WorkbookRange sourceWorkbookRange) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookRange);
     }
 
@@ -104,7 +105,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param newWorkbookRange the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookRange newWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void post(@Nonnull final WorkbookRange newWorkbookRange, @Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.POST, callback, newWorkbookRange);
     }
 
@@ -115,7 +116,8 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @return the created WorkbookRange
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRange post(final WorkbookRange newWorkbookRange) throws ClientException {
+    @Nullable
+    public WorkbookRange post(@Nonnull final WorkbookRange newWorkbookRange) throws ClientException {
         return send(HttpMethod.POST, newWorkbookRange);
     }
 
@@ -125,7 +127,7 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param newWorkbookRange the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookRange newWorkbookRange, final ICallback<? super WorkbookRange> callback) {
+    public void put(@Nonnull final WorkbookRange newWorkbookRange, @Nonnull final ICallback<? super WorkbookRange> callback) {
         send(HttpMethod.PUT, callback, newWorkbookRange);
     }
 
@@ -136,7 +138,8 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @return the created WorkbookRange
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookRange put(final WorkbookRange newWorkbookRange) throws ClientException {
+    @Nullable
+    public WorkbookRange put(@Nonnull final WorkbookRange newWorkbookRange) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookRange);
     }
 
@@ -146,9 +149,10 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookRangeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookRangeRequest)this;
+     @Nonnull
+     public WorkbookRangeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -157,9 +161,10 @@ public class WorkbookRangeRequest extends BaseRequest implements IWorkbookRangeR
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookRangeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookRangeRequest)this;
+     @Nonnull
+     public WorkbookRangeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

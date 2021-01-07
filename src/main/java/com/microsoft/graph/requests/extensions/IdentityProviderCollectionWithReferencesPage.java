@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.IdentityProviderCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProviderCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionResponse;
 import com.microsoft.graph.models.extensions.IdentityProvider;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Identity Provider Collection With References Page.
  */
-public class IdentityProviderCollectionWithReferencesPage extends BaseCollectionPage<IdentityProvider, IIdentityProviderCollectionWithReferencesRequestBuilder> implements IIdentityProviderCollectionWithReferencesPage {
+public class IdentityProviderCollectionWithReferencesPage extends BaseCollectionPage<IdentityProvider, IdentityProviderCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for IdentityProvider
@@ -35,7 +37,17 @@ public class IdentityProviderCollectionWithReferencesPage extends BaseCollection
      * @param response the serialized IdentityProviderCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public IdentityProviderCollectionWithReferencesPage(final IdentityProviderCollectionResponse response, final IIdentityProviderCollectionWithReferencesRequestBuilder builder) {
+    public IdentityProviderCollectionWithReferencesPage(@Nonnull final IdentityProviderCollectionResponse response, @Nullable final IdentityProviderCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for IdentityProvider
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public IdentityProviderCollectionWithReferencesPage(@Nonnull final java.util.List<IdentityProvider> pageContents, @Nullable final IdentityProviderCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

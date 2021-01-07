@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Privileged Role Summary Request Builder.
  */
-public class PrivilegedRoleSummaryRequestBuilder extends BaseRequestBuilder implements IPrivilegedRoleSummaryRequestBuilder {
+public class PrivilegedRoleSummaryRequestBuilder extends BaseRequestBuilder<PrivilegedRoleSummary> {
 
     /**
      * The request builder for the PrivilegedRoleSummary
@@ -28,7 +30,7 @@ public class PrivilegedRoleSummaryRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PrivilegedRoleSummaryRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedRoleSummaryRequest instance
+     * @return the PrivilegedRoleSummaryRequest instance
      */
-    public IPrivilegedRoleSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrivilegedRoleSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PrivilegedRoleSummaryRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedRoleSummaryRequest instance
+     * @return the PrivilegedRoleSummaryRequest instance
      */
-    public IPrivilegedRoleSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrivilegedRoleSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrivilegedRoleSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

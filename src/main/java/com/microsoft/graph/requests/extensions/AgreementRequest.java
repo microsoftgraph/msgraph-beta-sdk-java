@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Agreement;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Agreement Request.
  */
-public class AgreementRequest extends BaseRequest implements IAgreementRequest {
+public class AgreementRequest extends BaseRequest<Agreement> {
 	
     /**
      * The request for the Agreement
@@ -39,7 +36,7 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Agreement.class);
     }
 
@@ -48,7 +45,7 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Agreement> callback) {
+    public void get(@Nonnull final ICallback<? super Agreement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +55,7 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @return the Agreement from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Agreement get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +65,7 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Agreement> callback) {
+    public void delete(@Nonnull final ICallback<? super Agreement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +84,7 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @param sourceAgreement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Agreement sourceAgreement, final ICallback<? super Agreement> callback) {
+    public void patch(@Nonnull final Agreement sourceAgreement, @Nonnull final ICallback<? super Agreement> callback) {
         send(HttpMethod.PATCH, callback, sourceAgreement);
     }
 
@@ -97,7 +95,8 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @return the updated Agreement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Agreement patch(final Agreement sourceAgreement) throws ClientException {
+    @Nullable
+    public Agreement patch(@Nonnull final Agreement sourceAgreement) throws ClientException {
         return send(HttpMethod.PATCH, sourceAgreement);
     }
 
@@ -107,7 +106,7 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @param newAgreement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Agreement newAgreement, final ICallback<? super Agreement> callback) {
+    public void post(@Nonnull final Agreement newAgreement, @Nonnull final ICallback<? super Agreement> callback) {
         send(HttpMethod.POST, callback, newAgreement);
     }
 
@@ -118,7 +117,8 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @return the created Agreement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Agreement post(final Agreement newAgreement) throws ClientException {
+    @Nullable
+    public Agreement post(@Nonnull final Agreement newAgreement) throws ClientException {
         return send(HttpMethod.POST, newAgreement);
     }
 
@@ -128,7 +128,7 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @param newAgreement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Agreement newAgreement, final ICallback<? super Agreement> callback) {
+    public void put(@Nonnull final Agreement newAgreement, @Nonnull final ICallback<? super Agreement> callback) {
         send(HttpMethod.PUT, callback, newAgreement);
     }
 
@@ -139,7 +139,8 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @return the created Agreement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Agreement put(final Agreement newAgreement) throws ClientException {
+    @Nullable
+    public Agreement put(@Nonnull final Agreement newAgreement) throws ClientException {
         return send(HttpMethod.PUT, newAgreement);
     }
 
@@ -149,9 +150,10 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IAgreementRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AgreementRequest)this;
+     @Nonnull
+     public AgreementRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +162,10 @@ public class AgreementRequest extends BaseRequest implements IAgreementRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IAgreementRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgreementRequest)this;
+     @Nonnull
+     public AgreementRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

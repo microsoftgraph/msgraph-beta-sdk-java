@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ApplicationSignInSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Application Sign In Summary Request.
  */
-public class ApplicationSignInSummaryRequest extends BaseRequest implements IApplicationSignInSummaryRequest {
+public class ApplicationSignInSummaryRequest extends BaseRequest<ApplicationSignInSummary> {
 	
     /**
      * The request for the ApplicationSignInSummary
@@ -29,7 +31,7 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationSignInSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationSignInSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationSignInSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ApplicationSignInSummary> callback) {
+    public void get(@Nonnull final ICallback<? super ApplicationSignInSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @return the ApplicationSignInSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ApplicationSignInSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ApplicationSignInSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super ApplicationSignInSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @param sourceApplicationSignInSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApplicationSignInSummary sourceApplicationSignInSummary, final ICallback<? super ApplicationSignInSummary> callback) {
+    public void patch(@Nonnull final ApplicationSignInSummary sourceApplicationSignInSummary, @Nonnull final ICallback<? super ApplicationSignInSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceApplicationSignInSummary);
     }
 
@@ -87,7 +90,8 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @return the updated ApplicationSignInSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationSignInSummary patch(final ApplicationSignInSummary sourceApplicationSignInSummary) throws ClientException {
+    @Nullable
+    public ApplicationSignInSummary patch(@Nonnull final ApplicationSignInSummary sourceApplicationSignInSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceApplicationSignInSummary);
     }
 
@@ -97,7 +101,7 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @param newApplicationSignInSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApplicationSignInSummary newApplicationSignInSummary, final ICallback<? super ApplicationSignInSummary> callback) {
+    public void post(@Nonnull final ApplicationSignInSummary newApplicationSignInSummary, @Nonnull final ICallback<? super ApplicationSignInSummary> callback) {
         send(HttpMethod.POST, callback, newApplicationSignInSummary);
     }
 
@@ -108,7 +112,8 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @return the created ApplicationSignInSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationSignInSummary post(final ApplicationSignInSummary newApplicationSignInSummary) throws ClientException {
+    @Nullable
+    public ApplicationSignInSummary post(@Nonnull final ApplicationSignInSummary newApplicationSignInSummary) throws ClientException {
         return send(HttpMethod.POST, newApplicationSignInSummary);
     }
 
@@ -118,7 +123,7 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @param newApplicationSignInSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApplicationSignInSummary newApplicationSignInSummary, final ICallback<? super ApplicationSignInSummary> callback) {
+    public void put(@Nonnull final ApplicationSignInSummary newApplicationSignInSummary, @Nonnull final ICallback<? super ApplicationSignInSummary> callback) {
         send(HttpMethod.PUT, callback, newApplicationSignInSummary);
     }
 
@@ -129,7 +134,8 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @return the created ApplicationSignInSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationSignInSummary put(final ApplicationSignInSummary newApplicationSignInSummary) throws ClientException {
+    @Nullable
+    public ApplicationSignInSummary put(@Nonnull final ApplicationSignInSummary newApplicationSignInSummary) throws ClientException {
         return send(HttpMethod.PUT, newApplicationSignInSummary);
     }
 
@@ -139,9 +145,10 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @param value the select clause
      * @return the updated request
      */
-     public IApplicationSignInSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ApplicationSignInSummaryRequest)this;
+     @Nonnull
+     public ApplicationSignInSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ApplicationSignInSummaryRequest extends BaseRequest implements IApp
      * @param value the expand clause
      * @return the updated request
      */
-     public IApplicationSignInSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApplicationSignInSummaryRequest)this;
+     @Nonnull
+     public ApplicationSignInSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

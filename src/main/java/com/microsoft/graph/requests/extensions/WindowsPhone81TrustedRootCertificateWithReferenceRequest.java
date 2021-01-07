@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhone81TrustedRootCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Windows Phone81Trusted Root Certificate With Reference Request.
  */
-public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends BaseRequest implements IWindowsPhone81TrustedRootCertificateWithReferenceRequest {
+public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends BaseWithReferenceRequest<WindowsPhone81TrustedRootCertificate> {
 
     /**
      * The request for the WindowsPhone81TrustedRootCertificate
@@ -32,46 +34,9 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81TrustedRootCertificateWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhone81TrustedRootCertificateWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsPhone81TrustedRootCertificate.class);
     }
-
-    public void post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public WindowsPhone81TrustedRootCertificate post(final WindowsPhone81TrustedRootCertificate newWindowsPhone81TrustedRootCertificate, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newWindowsPhone81TrustedRootCertificate;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public WindowsPhone81TrustedRootCertificate get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate, final ICallback<? super WindowsPhone81TrustedRootCertificate> callback) {
-		send(HttpMethod.PATCH, callback, sourceWindowsPhone81TrustedRootCertificate);
-	}
-
-	public WindowsPhone81TrustedRootCertificate patch(final WindowsPhone81TrustedRootCertificate sourceWindowsPhone81TrustedRootCertificate) throws ClientException {
-		return send(HttpMethod.PATCH, sourceWindowsPhone81TrustedRootCertificate);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
      * @param value the select clause
      * @return the updated request
      */
-    public IWindowsPhone81TrustedRootCertificateWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IWindowsPhone81TrustedRootCertificateWithReferenceRequest)this;
+    @Nonnull
+    public WindowsPhone81TrustedRootCertificateWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class WindowsPhone81TrustedRootCertificateWithReferenceRequest extends Ba
      * @param value the expand clause
      * @return the updated request
      */
-    public IWindowsPhone81TrustedRootCertificateWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (WindowsPhone81TrustedRootCertificateWithReferenceRequest)this;
+    @Nonnull
+    public WindowsPhone81TrustedRootCertificateWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

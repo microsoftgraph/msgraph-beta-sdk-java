@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRequest;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Package Resource Request Request.
  */
-public class AccessPackageResourceRequestRequest extends BaseRequest implements IAccessPackageResourceRequestRequest {
+public class AccessPackageResourceRequestRequest extends BaseRequest<AccessPackageResourceRequest> {
 	
     /**
      * The request for the AccessPackageResourceRequest
@@ -33,7 +33,7 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageResourceRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageResourceRequest.class);
     }
 
@@ -42,7 +42,7 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessPackageResourceRequest> callback) {
+    public void get(@Nonnull final ICallback<? super AccessPackageResourceRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @return the AccessPackageResourceRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessPackageResourceRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessPackageResourceRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessPackageResourceRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @param sourceAccessPackageResourceRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageResourceRequest sourceAccessPackageResourceRequest, final ICallback<? super AccessPackageResourceRequest> callback) {
+    public void patch(@Nonnull final AccessPackageResourceRequest sourceAccessPackageResourceRequest, @Nonnull final ICallback<? super AccessPackageResourceRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageResourceRequest);
     }
 
@@ -91,7 +92,8 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @return the updated AccessPackageResourceRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRequest patch(final AccessPackageResourceRequest sourceAccessPackageResourceRequest) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRequest patch(@Nonnull final AccessPackageResourceRequest sourceAccessPackageResourceRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessPackageResourceRequest);
     }
 
@@ -101,7 +103,7 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @param newAccessPackageResourceRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageResourceRequest newAccessPackageResourceRequest, final ICallback<? super AccessPackageResourceRequest> callback) {
+    public void post(@Nonnull final AccessPackageResourceRequest newAccessPackageResourceRequest, @Nonnull final ICallback<? super AccessPackageResourceRequest> callback) {
         send(HttpMethod.POST, callback, newAccessPackageResourceRequest);
     }
 
@@ -112,7 +114,8 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @return the created AccessPackageResourceRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRequest post(final AccessPackageResourceRequest newAccessPackageResourceRequest) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRequest post(@Nonnull final AccessPackageResourceRequest newAccessPackageResourceRequest) throws ClientException {
         return send(HttpMethod.POST, newAccessPackageResourceRequest);
     }
 
@@ -122,7 +125,7 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @param newAccessPackageResourceRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageResourceRequest newAccessPackageResourceRequest, final ICallback<? super AccessPackageResourceRequest> callback) {
+    public void put(@Nonnull final AccessPackageResourceRequest newAccessPackageResourceRequest, @Nonnull final ICallback<? super AccessPackageResourceRequest> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageResourceRequest);
     }
 
@@ -133,7 +136,8 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @return the created AccessPackageResourceRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRequest put(final AccessPackageResourceRequest newAccessPackageResourceRequest) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRequest put(@Nonnull final AccessPackageResourceRequest newAccessPackageResourceRequest) throws ClientException {
         return send(HttpMethod.PUT, newAccessPackageResourceRequest);
     }
 
@@ -143,9 +147,10 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessPackageResourceRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessPackageResourceRequestRequest)this;
+     @Nonnull
+     public AccessPackageResourceRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AccessPackageResourceRequestRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessPackageResourceRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageResourceRequestRequest)this;
+     @Nonnull
+     public AccessPackageResourceRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

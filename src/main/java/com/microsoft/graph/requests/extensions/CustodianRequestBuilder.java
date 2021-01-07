@@ -9,22 +9,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Custodian;
-import com.microsoft.graph.requests.extensions.ISiteSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseIndexOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseIndexOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +28,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Custodian Request Builder.
  */
-public class CustodianRequestBuilder extends BaseRequestBuilder implements ICustodianRequestBuilder {
+public class CustodianRequestBuilder extends BaseRequestBuilder<Custodian> {
 
     /**
      * The request builder for the Custodian
@@ -42,7 +37,7 @@ public class CustodianRequestBuilder extends BaseRequestBuilder implements ICust
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CustodianRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CustodianRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,9 +45,10 @@ public class CustodianRequestBuilder extends BaseRequestBuilder implements ICust
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICustodianRequest instance
+     * @return the CustodianRequest instance
      */
-    public ICustodianRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CustodianRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -60,9 +56,10 @@ public class CustodianRequestBuilder extends BaseRequestBuilder implements ICust
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICustodianRequest instance
+     * @return the CustodianRequest instance
      */
-    public ICustodianRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CustodianRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CustodianRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -71,42 +68,97 @@ public class CustodianRequestBuilder extends BaseRequestBuilder implements ICust
     /**
      * Gets the request builder for CaseIndexOperation
      *
-     * @return the ICaseIndexOperationWithReferenceRequestBuilder instance
+     * @return the CaseIndexOperationWithReferenceRequestBuilder instance
      */
-    public ICaseIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
+    @Nonnull
+    public CaseIndexOperationWithReferenceRequestBuilder lastIndexOperation() {
         return new CaseIndexOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastIndexOperation"), getClient(), null);
     }
-    public ISiteSourceCollectionRequestBuilder siteSources() {
+    /**
+     *  Gets a request builder for the SiteSource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SiteSourceCollectionRequestBuilder siteSources() {
         return new SiteSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources"), getClient(), null);
     }
 
-    public ISiteSourceRequestBuilder siteSources(final String id) {
+    /**
+     * Gets a request builder for the SiteSource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SiteSourceRequestBuilder siteSources(@Nonnull final String id) {
         return new SiteSourceRequestBuilder(getRequestUrlWithAdditionalSegment("siteSources") + "/" + id, getClient(), null);
     }
-    public IUnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
+    /**
+     *  Gets a request builder for the UnifiedGroupSource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnifiedGroupSourceCollectionRequestBuilder unifiedGroupSources() {
         return new UnifiedGroupSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources"), getClient(), null);
     }
 
-    public IUnifiedGroupSourceRequestBuilder unifiedGroupSources(final String id) {
+    /**
+     * Gets a request builder for the UnifiedGroupSource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnifiedGroupSourceRequestBuilder unifiedGroupSources(@Nonnull final String id) {
         return new UnifiedGroupSourceRequestBuilder(getRequestUrlWithAdditionalSegment("unifiedGroupSources") + "/" + id, getClient(), null);
     }
-    public IUserSourceCollectionRequestBuilder userSources() {
+    /**
+     *  Gets a request builder for the UserSource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserSourceCollectionRequestBuilder userSources() {
         return new UserSourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSources"), getClient(), null);
     }
 
-    public IUserSourceRequestBuilder userSources(final String id) {
+    /**
+     * Gets a request builder for the UserSource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserSourceRequestBuilder userSources(@Nonnull final String id) {
         return new UserSourceRequestBuilder(getRequestUrlWithAdditionalSegment("userSources") + "/" + id, getClient(), null);
     }
 
-    public ICustodianActivateRequestBuilder activate() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CustodianActivateRequestBuilder activate() {
         return new CustodianActivateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activate"), getClient(), null);
     }
 
-    public ICustodianReleaseRequestBuilder release() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CustodianReleaseRequestBuilder release() {
         return new CustodianReleaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.release"), getClient(), null);
     }
 
-    public ICustodianUpdateIndexRequestBuilder updateIndex() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CustodianUpdateIndexRequestBuilder updateIndex() {
         return new CustodianUpdateIndexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateIndex"), getClient(), null);
     }
 }

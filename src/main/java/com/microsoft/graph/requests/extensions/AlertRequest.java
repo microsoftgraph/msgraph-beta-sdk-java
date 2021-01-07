@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Alert;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Alert Request.
  */
-public class AlertRequest extends BaseRequest implements IAlertRequest {
+public class AlertRequest extends BaseRequest<Alert> {
 	
     /**
      * The request for the Alert
@@ -29,7 +31,7 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AlertRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AlertRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Alert.class);
     }
 
@@ -38,7 +40,7 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Alert> callback) {
+    public void get(@Nonnull final ICallback<? super Alert> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @return the Alert from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Alert get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Alert> callback) {
+    public void delete(@Nonnull final ICallback<? super Alert> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @param sourceAlert the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Alert sourceAlert, final ICallback<? super Alert> callback) {
+    public void patch(@Nonnull final Alert sourceAlert, @Nonnull final ICallback<? super Alert> callback) {
         send(HttpMethod.PATCH, callback, sourceAlert);
     }
 
@@ -87,7 +90,8 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @return the updated Alert
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Alert patch(final Alert sourceAlert) throws ClientException {
+    @Nullable
+    public Alert patch(@Nonnull final Alert sourceAlert) throws ClientException {
         return send(HttpMethod.PATCH, sourceAlert);
     }
 
@@ -97,7 +101,7 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @param newAlert the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Alert newAlert, final ICallback<? super Alert> callback) {
+    public void post(@Nonnull final Alert newAlert, @Nonnull final ICallback<? super Alert> callback) {
         send(HttpMethod.POST, callback, newAlert);
     }
 
@@ -108,7 +112,8 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @return the created Alert
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Alert post(final Alert newAlert) throws ClientException {
+    @Nullable
+    public Alert post(@Nonnull final Alert newAlert) throws ClientException {
         return send(HttpMethod.POST, newAlert);
     }
 
@@ -118,7 +123,7 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @param newAlert the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Alert newAlert, final ICallback<? super Alert> callback) {
+    public void put(@Nonnull final Alert newAlert, @Nonnull final ICallback<? super Alert> callback) {
         send(HttpMethod.PUT, callback, newAlert);
     }
 
@@ -129,7 +134,8 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @return the created Alert
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Alert put(final Alert newAlert) throws ClientException {
+    @Nullable
+    public Alert put(@Nonnull final Alert newAlert) throws ClientException {
         return send(HttpMethod.PUT, newAlert);
     }
 
@@ -139,9 +145,10 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IAlertRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AlertRequest)this;
+     @Nonnull
+     public AlertRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AlertRequest extends BaseRequest implements IAlertRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IAlertRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AlertRequest)this;
+     @Nonnull
+     public AlertRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

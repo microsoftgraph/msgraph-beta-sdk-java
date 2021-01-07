@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookTask;
-import com.microsoft.graph.requests.extensions.IAttachmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAttachmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AttachmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook Task Request.
  */
-public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskRequest {
+public class OutlookTaskRequest extends BaseRequest<OutlookTask> {
 	
     /**
      * The request for the OutlookTask
@@ -41,7 +37,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookTaskRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookTaskRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookTask.class);
     }
 
@@ -50,7 +46,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OutlookTask> callback) {
+    public void get(@Nonnull final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @return the OutlookTask from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OutlookTask get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OutlookTask> callback) {
+    public void delete(@Nonnull final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param sourceOutlookTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookTask sourceOutlookTask, final ICallback<? super OutlookTask> callback) {
+    public void patch(@Nonnull final OutlookTask sourceOutlookTask, @Nonnull final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookTask);
     }
 
@@ -99,7 +96,8 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @return the updated OutlookTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTask patch(final OutlookTask sourceOutlookTask) throws ClientException {
+    @Nullable
+    public OutlookTask patch(@Nonnull final OutlookTask sourceOutlookTask) throws ClientException {
         return send(HttpMethod.PATCH, sourceOutlookTask);
     }
 
@@ -109,7 +107,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param newOutlookTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookTask newOutlookTask, final ICallback<? super OutlookTask> callback) {
+    public void post(@Nonnull final OutlookTask newOutlookTask, @Nonnull final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.POST, callback, newOutlookTask);
     }
 
@@ -120,7 +118,8 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @return the created OutlookTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTask post(final OutlookTask newOutlookTask) throws ClientException {
+    @Nullable
+    public OutlookTask post(@Nonnull final OutlookTask newOutlookTask) throws ClientException {
         return send(HttpMethod.POST, newOutlookTask);
     }
 
@@ -130,7 +129,7 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param newOutlookTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookTask newOutlookTask, final ICallback<? super OutlookTask> callback) {
+    public void put(@Nonnull final OutlookTask newOutlookTask, @Nonnull final ICallback<? super OutlookTask> callback) {
         send(HttpMethod.PUT, callback, newOutlookTask);
     }
 
@@ -141,7 +140,8 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @return the created OutlookTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTask put(final OutlookTask newOutlookTask) throws ClientException {
+    @Nullable
+    public OutlookTask put(@Nonnull final OutlookTask newOutlookTask) throws ClientException {
         return send(HttpMethod.PUT, newOutlookTask);
     }
 
@@ -151,9 +151,10 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param value the select clause
      * @return the updated request
      */
-     public IOutlookTaskRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OutlookTaskRequest)this;
+     @Nonnull
+     public OutlookTaskRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class OutlookTaskRequest extends BaseRequest implements IOutlookTaskReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IOutlookTaskRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookTaskRequest)this;
+     @Nonnull
+     public OutlookTaskRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

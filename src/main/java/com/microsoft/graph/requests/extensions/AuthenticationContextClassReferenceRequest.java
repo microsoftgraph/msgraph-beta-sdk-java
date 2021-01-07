@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuthenticationContextClassReference;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Authentication Context Class Reference Request.
  */
-public class AuthenticationContextClassReferenceRequest extends BaseRequest implements IAuthenticationContextClassReferenceRequest {
+public class AuthenticationContextClassReferenceRequest extends BaseRequest<AuthenticationContextClassReference> {
 	
     /**
      * The request for the AuthenticationContextClassReference
@@ -29,7 +31,7 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuthenticationContextClassReferenceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuthenticationContextClassReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AuthenticationContextClassReference.class);
     }
 
@@ -38,7 +40,7 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AuthenticationContextClassReference> callback) {
+    public void get(@Nonnull final ICallback<? super AuthenticationContextClassReference> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @return the AuthenticationContextClassReference from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AuthenticationContextClassReference get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AuthenticationContextClassReference> callback) {
+    public void delete(@Nonnull final ICallback<? super AuthenticationContextClassReference> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @param sourceAuthenticationContextClassReference the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuthenticationContextClassReference sourceAuthenticationContextClassReference, final ICallback<? super AuthenticationContextClassReference> callback) {
+    public void patch(@Nonnull final AuthenticationContextClassReference sourceAuthenticationContextClassReference, @Nonnull final ICallback<? super AuthenticationContextClassReference> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthenticationContextClassReference);
     }
 
@@ -87,7 +90,8 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @return the updated AuthenticationContextClassReference
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationContextClassReference patch(final AuthenticationContextClassReference sourceAuthenticationContextClassReference) throws ClientException {
+    @Nullable
+    public AuthenticationContextClassReference patch(@Nonnull final AuthenticationContextClassReference sourceAuthenticationContextClassReference) throws ClientException {
         return send(HttpMethod.PATCH, sourceAuthenticationContextClassReference);
     }
 
@@ -97,7 +101,7 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @param newAuthenticationContextClassReference the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuthenticationContextClassReference newAuthenticationContextClassReference, final ICallback<? super AuthenticationContextClassReference> callback) {
+    public void post(@Nonnull final AuthenticationContextClassReference newAuthenticationContextClassReference, @Nonnull final ICallback<? super AuthenticationContextClassReference> callback) {
         send(HttpMethod.POST, callback, newAuthenticationContextClassReference);
     }
 
@@ -108,7 +112,8 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @return the created AuthenticationContextClassReference
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationContextClassReference post(final AuthenticationContextClassReference newAuthenticationContextClassReference) throws ClientException {
+    @Nullable
+    public AuthenticationContextClassReference post(@Nonnull final AuthenticationContextClassReference newAuthenticationContextClassReference) throws ClientException {
         return send(HttpMethod.POST, newAuthenticationContextClassReference);
     }
 
@@ -118,7 +123,7 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @param newAuthenticationContextClassReference the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuthenticationContextClassReference newAuthenticationContextClassReference, final ICallback<? super AuthenticationContextClassReference> callback) {
+    public void put(@Nonnull final AuthenticationContextClassReference newAuthenticationContextClassReference, @Nonnull final ICallback<? super AuthenticationContextClassReference> callback) {
         send(HttpMethod.PUT, callback, newAuthenticationContextClassReference);
     }
 
@@ -129,7 +134,8 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @return the created AuthenticationContextClassReference
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationContextClassReference put(final AuthenticationContextClassReference newAuthenticationContextClassReference) throws ClientException {
+    @Nullable
+    public AuthenticationContextClassReference put(@Nonnull final AuthenticationContextClassReference newAuthenticationContextClassReference) throws ClientException {
         return send(HttpMethod.PUT, newAuthenticationContextClassReference);
     }
 
@@ -139,9 +145,10 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IAuthenticationContextClassReferenceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuthenticationContextClassReferenceRequest)this;
+     @Nonnull
+     public AuthenticationContextClassReferenceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AuthenticationContextClassReferenceRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuthenticationContextClassReferenceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationContextClassReferenceRequest)this;
+     @Nonnull
+     public AuthenticationContextClassReferenceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

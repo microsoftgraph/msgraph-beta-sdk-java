@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CustomerPaymentJournal;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Customer Payment Journal Request.
  */
-public class CustomerPaymentJournalRequest extends BaseRequest implements ICustomerPaymentJournalRequest {
+public class CustomerPaymentJournalRequest extends BaseRequest<CustomerPaymentJournal> {
 	
     /**
      * The request for the CustomerPaymentJournal
@@ -35,7 +34,7 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CustomerPaymentJournalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CustomerPaymentJournalRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CustomerPaymentJournal.class);
     }
 
@@ -44,7 +43,7 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CustomerPaymentJournal> callback) {
+    public void get(@Nonnull final ICallback<? super CustomerPaymentJournal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @return the CustomerPaymentJournal from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CustomerPaymentJournal get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CustomerPaymentJournal> callback) {
+    public void delete(@Nonnull final ICallback<? super CustomerPaymentJournal> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @param sourceCustomerPaymentJournal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CustomerPaymentJournal sourceCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback) {
+    public void patch(@Nonnull final CustomerPaymentJournal sourceCustomerPaymentJournal, @Nonnull final ICallback<? super CustomerPaymentJournal> callback) {
         send(HttpMethod.PATCH, callback, sourceCustomerPaymentJournal);
     }
 
@@ -93,7 +93,8 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @return the updated CustomerPaymentJournal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CustomerPaymentJournal patch(final CustomerPaymentJournal sourceCustomerPaymentJournal) throws ClientException {
+    @Nullable
+    public CustomerPaymentJournal patch(@Nonnull final CustomerPaymentJournal sourceCustomerPaymentJournal) throws ClientException {
         return send(HttpMethod.PATCH, sourceCustomerPaymentJournal);
     }
 
@@ -103,7 +104,7 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @param newCustomerPaymentJournal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback) {
+    public void post(@Nonnull final CustomerPaymentJournal newCustomerPaymentJournal, @Nonnull final ICallback<? super CustomerPaymentJournal> callback) {
         send(HttpMethod.POST, callback, newCustomerPaymentJournal);
     }
 
@@ -114,7 +115,8 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @return the created CustomerPaymentJournal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CustomerPaymentJournal post(final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException {
+    @Nullable
+    public CustomerPaymentJournal post(@Nonnull final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException {
         return send(HttpMethod.POST, newCustomerPaymentJournal);
     }
 
@@ -124,7 +126,7 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @param newCustomerPaymentJournal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CustomerPaymentJournal newCustomerPaymentJournal, final ICallback<? super CustomerPaymentJournal> callback) {
+    public void put(@Nonnull final CustomerPaymentJournal newCustomerPaymentJournal, @Nonnull final ICallback<? super CustomerPaymentJournal> callback) {
         send(HttpMethod.PUT, callback, newCustomerPaymentJournal);
     }
 
@@ -135,7 +137,8 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @return the created CustomerPaymentJournal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CustomerPaymentJournal put(final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException {
+    @Nullable
+    public CustomerPaymentJournal put(@Nonnull final CustomerPaymentJournal newCustomerPaymentJournal) throws ClientException {
         return send(HttpMethod.PUT, newCustomerPaymentJournal);
     }
 
@@ -145,9 +148,10 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @param value the select clause
      * @return the updated request
      */
-     public ICustomerPaymentJournalRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CustomerPaymentJournalRequest)this;
+     @Nonnull
+     public CustomerPaymentJournalRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class CustomerPaymentJournalRequest extends BaseRequest implements ICusto
      * @param value the expand clause
      * @return the updated request
      */
-     public ICustomerPaymentJournalRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CustomerPaymentJournalRequest)this;
+     @Nonnull
+     public CustomerPaymentJournalRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

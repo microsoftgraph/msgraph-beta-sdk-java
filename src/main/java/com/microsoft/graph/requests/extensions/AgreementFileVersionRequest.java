@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementFileVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Agreement File Version Request.
  */
-public class AgreementFileVersionRequest extends BaseRequest implements IAgreementFileVersionRequest {
+public class AgreementFileVersionRequest extends BaseRequest<AgreementFileVersion> {
 	
     /**
      * The request for the AgreementFileVersion
@@ -29,7 +31,7 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementFileVersionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementFileVersionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AgreementFileVersion.class);
     }
 
@@ -38,7 +40,7 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AgreementFileVersion> callback) {
+    public void get(@Nonnull final ICallback<? super AgreementFileVersion> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @return the AgreementFileVersion from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AgreementFileVersion get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AgreementFileVersion> callback) {
+    public void delete(@Nonnull final ICallback<? super AgreementFileVersion> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @param sourceAgreementFileVersion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgreementFileVersion sourceAgreementFileVersion, final ICallback<? super AgreementFileVersion> callback) {
+    public void patch(@Nonnull final AgreementFileVersion sourceAgreementFileVersion, @Nonnull final ICallback<? super AgreementFileVersion> callback) {
         send(HttpMethod.PATCH, callback, sourceAgreementFileVersion);
     }
 
@@ -87,7 +90,8 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @return the updated AgreementFileVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFileVersion patch(final AgreementFileVersion sourceAgreementFileVersion) throws ClientException {
+    @Nullable
+    public AgreementFileVersion patch(@Nonnull final AgreementFileVersion sourceAgreementFileVersion) throws ClientException {
         return send(HttpMethod.PATCH, sourceAgreementFileVersion);
     }
 
@@ -97,7 +101,7 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @param newAgreementFileVersion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgreementFileVersion newAgreementFileVersion, final ICallback<? super AgreementFileVersion> callback) {
+    public void post(@Nonnull final AgreementFileVersion newAgreementFileVersion, @Nonnull final ICallback<? super AgreementFileVersion> callback) {
         send(HttpMethod.POST, callback, newAgreementFileVersion);
     }
 
@@ -108,7 +112,8 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @return the created AgreementFileVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFileVersion post(final AgreementFileVersion newAgreementFileVersion) throws ClientException {
+    @Nullable
+    public AgreementFileVersion post(@Nonnull final AgreementFileVersion newAgreementFileVersion) throws ClientException {
         return send(HttpMethod.POST, newAgreementFileVersion);
     }
 
@@ -118,7 +123,7 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @param newAgreementFileVersion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgreementFileVersion newAgreementFileVersion, final ICallback<? super AgreementFileVersion> callback) {
+    public void put(@Nonnull final AgreementFileVersion newAgreementFileVersion, @Nonnull final ICallback<? super AgreementFileVersion> callback) {
         send(HttpMethod.PUT, callback, newAgreementFileVersion);
     }
 
@@ -129,7 +134,8 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @return the created AgreementFileVersion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFileVersion put(final AgreementFileVersion newAgreementFileVersion) throws ClientException {
+    @Nullable
+    public AgreementFileVersion put(@Nonnull final AgreementFileVersion newAgreementFileVersion) throws ClientException {
         return send(HttpMethod.PUT, newAgreementFileVersion);
     }
 
@@ -139,9 +145,10 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @param value the select clause
      * @return the updated request
      */
-     public IAgreementFileVersionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AgreementFileVersionRequest)this;
+     @Nonnull
+     public AgreementFileVersionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AgreementFileVersionRequest extends BaseRequest implements IAgreeme
      * @param value the expand clause
      * @return the updated request
      */
-     public IAgreementFileVersionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgreementFileVersionRequest)this;
+     @Nonnull
+     public AgreementFileVersionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

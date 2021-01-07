@@ -9,28 +9,20 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesPublishingProfile;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -39,7 +31,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the On Premises Publishing Profile Request Builder.
  */
-public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilder implements IOnPremisesPublishingProfileRequestBuilder {
+public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilder<OnPremisesPublishingProfile> {
 
     /**
      * The request builder for the OnPremisesPublishingProfile
@@ -48,7 +40,7 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesPublishingProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnPremisesPublishingProfileRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -56,9 +48,10 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesPublishingProfileRequest instance
+     * @return the OnPremisesPublishingProfileRequest instance
      */
-    public IOnPremisesPublishingProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OnPremisesPublishingProfileRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -66,46 +59,112 @@ public class OnPremisesPublishingProfileRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesPublishingProfileRequest instance
+     * @return the OnPremisesPublishingProfileRequest instance
      */
-    public IOnPremisesPublishingProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OnPremisesPublishingProfileRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnPremisesPublishingProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IOnPremisesAgentGroupCollectionRequestBuilder agentGroups() {
+    /**
+     *  Gets a request builder for the OnPremisesAgentGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OnPremisesAgentGroupCollectionRequestBuilder agentGroups() {
         return new OnPremisesAgentGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups"), getClient(), null);
     }
 
-    public IOnPremisesAgentGroupRequestBuilder agentGroups(final String id) {
+    /**
+     * Gets a request builder for the OnPremisesAgentGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OnPremisesAgentGroupRequestBuilder agentGroups(@Nonnull final String id) {
         return new OnPremisesAgentGroupRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
     }
-    public IOnPremisesAgentCollectionRequestBuilder agents() {
+    /**
+     *  Gets a request builder for the OnPremisesAgent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OnPremisesAgentCollectionRequestBuilder agents() {
         return new OnPremisesAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agents"), getClient(), null);
     }
 
-    public IOnPremisesAgentRequestBuilder agents(final String id) {
+    /**
+     * Gets a request builder for the OnPremisesAgent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OnPremisesAgentRequestBuilder agents(@Nonnull final String id) {
         return new OnPremisesAgentRequestBuilder(getRequestUrlWithAdditionalSegment("agents") + "/" + id, getClient(), null);
     }
-    public IConnectorGroupCollectionRequestBuilder connectorGroups() {
+    /**
+     *  Gets a request builder for the ConnectorGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConnectorGroupCollectionRequestBuilder connectorGroups() {
         return new ConnectorGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectorGroups"), getClient(), null);
     }
 
-    public IConnectorGroupRequestBuilder connectorGroups(final String id) {
+    /**
+     * Gets a request builder for the ConnectorGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConnectorGroupRequestBuilder connectorGroups(@Nonnull final String id) {
         return new ConnectorGroupRequestBuilder(getRequestUrlWithAdditionalSegment("connectorGroups") + "/" + id, getClient(), null);
     }
-    public IConnectorCollectionRequestBuilder connectors() {
+    /**
+     *  Gets a request builder for the Connector collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ConnectorCollectionRequestBuilder connectors() {
         return new ConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);
     }
 
-    public IConnectorRequestBuilder connectors(final String id) {
+    /**
+     * Gets a request builder for the Connector item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ConnectorRequestBuilder connectors(@Nonnull final String id) {
         return new ConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("connectors") + "/" + id, getClient(), null);
     }
-    public IPublishedResourceCollectionRequestBuilder publishedResources() {
+    /**
+     *  Gets a request builder for the PublishedResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PublishedResourceCollectionRequestBuilder publishedResources() {
         return new PublishedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources"), getClient(), null);
     }
 
-    public IPublishedResourceRequestBuilder publishedResources(final String id) {
+    /**
+     * Gets a request builder for the PublishedResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PublishedResourceRequestBuilder publishedResources(@Nonnull final String id) {
         return new PublishedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources") + "/" + id, getClient(), null);
     }
 }

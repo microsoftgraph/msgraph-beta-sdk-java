@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceSubject;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Governance Subject Request.
  */
-public class GovernanceSubjectRequest extends BaseRequest implements IGovernanceSubjectRequest {
+public class GovernanceSubjectRequest extends BaseRequest<GovernanceSubject> {
 	
     /**
      * The request for the GovernanceSubject
@@ -29,7 +31,7 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GovernanceSubjectRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GovernanceSubjectRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GovernanceSubject.class);
     }
 
@@ -38,7 +40,7 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GovernanceSubject> callback) {
+    public void get(@Nonnull final ICallback<? super GovernanceSubject> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @return the GovernanceSubject from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GovernanceSubject get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GovernanceSubject> callback) {
+    public void delete(@Nonnull final ICallback<? super GovernanceSubject> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @param sourceGovernanceSubject the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GovernanceSubject sourceGovernanceSubject, final ICallback<? super GovernanceSubject> callback) {
+    public void patch(@Nonnull final GovernanceSubject sourceGovernanceSubject, @Nonnull final ICallback<? super GovernanceSubject> callback) {
         send(HttpMethod.PATCH, callback, sourceGovernanceSubject);
     }
 
@@ -87,7 +90,8 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @return the updated GovernanceSubject
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceSubject patch(final GovernanceSubject sourceGovernanceSubject) throws ClientException {
+    @Nullable
+    public GovernanceSubject patch(@Nonnull final GovernanceSubject sourceGovernanceSubject) throws ClientException {
         return send(HttpMethod.PATCH, sourceGovernanceSubject);
     }
 
@@ -97,7 +101,7 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @param newGovernanceSubject the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GovernanceSubject newGovernanceSubject, final ICallback<? super GovernanceSubject> callback) {
+    public void post(@Nonnull final GovernanceSubject newGovernanceSubject, @Nonnull final ICallback<? super GovernanceSubject> callback) {
         send(HttpMethod.POST, callback, newGovernanceSubject);
     }
 
@@ -108,7 +112,8 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @return the created GovernanceSubject
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceSubject post(final GovernanceSubject newGovernanceSubject) throws ClientException {
+    @Nullable
+    public GovernanceSubject post(@Nonnull final GovernanceSubject newGovernanceSubject) throws ClientException {
         return send(HttpMethod.POST, newGovernanceSubject);
     }
 
@@ -118,7 +123,7 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @param newGovernanceSubject the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GovernanceSubject newGovernanceSubject, final ICallback<? super GovernanceSubject> callback) {
+    public void put(@Nonnull final GovernanceSubject newGovernanceSubject, @Nonnull final ICallback<? super GovernanceSubject> callback) {
         send(HttpMethod.PUT, callback, newGovernanceSubject);
     }
 
@@ -129,7 +134,8 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @return the created GovernanceSubject
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceSubject put(final GovernanceSubject newGovernanceSubject) throws ClientException {
+    @Nullable
+    public GovernanceSubject put(@Nonnull final GovernanceSubject newGovernanceSubject) throws ClientException {
         return send(HttpMethod.PUT, newGovernanceSubject);
     }
 
@@ -139,9 +145,10 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @param value the select clause
      * @return the updated request
      */
-     public IGovernanceSubjectRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GovernanceSubjectRequest)this;
+     @Nonnull
+     public GovernanceSubjectRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GovernanceSubjectRequest extends BaseRequest implements IGovernance
      * @param value the expand clause
      * @return the updated request
      */
-     public IGovernanceSubjectRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GovernanceSubjectRequest)this;
+     @Nonnull
+     public GovernanceSubjectRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
-import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Room List Request Builder.
  */
-public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomListRequestBuilder {
+public class RoomListRequestBuilder extends BaseRequestBuilder<RoomList> {
 
     /**
      * The request builder for the RoomList
@@ -32,7 +32,7 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoomListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoomListRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRoomListRequest instance
+     * @return the RoomListRequest instance
      */
-    public IRoomListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RoomListRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRoomListRequest instance
+     * @return the RoomListRequest instance
      */
-    public IRoomListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RoomListRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.RoomListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IRoomCollectionRequestBuilder rooms() {
+    /**
+     *  Gets a request builder for the Room collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RoomCollectionRequestBuilder rooms() {
         return new RoomCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rooms"), getClient(), null);
     }
 
-    public IRoomRequestBuilder rooms(final String id) {
+    /**
+     * Gets a request builder for the Room item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RoomRequestBuilder rooms(@Nonnull final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
     }
 }

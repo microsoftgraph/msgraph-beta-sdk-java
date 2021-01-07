@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Command;
-import com.microsoft.graph.requests.extensions.IPayloadResponseRequestBuilder;
 import com.microsoft.graph.requests.extensions.PayloadResponseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Command Request Builder.
  */
-public class CommandRequestBuilder extends BaseRequestBuilder implements ICommandRequestBuilder {
+public class CommandRequestBuilder extends BaseRequestBuilder<Command> {
 
     /**
      * The request builder for the Command
@@ -30,7 +31,7 @@ public class CommandRequestBuilder extends BaseRequestBuilder implements IComman
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommandRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommandRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class CommandRequestBuilder extends BaseRequestBuilder implements IComman
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICommandRequest instance
+     * @return the CommandRequest instance
      */
-    public ICommandRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CommandRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class CommandRequestBuilder extends BaseRequestBuilder implements IComman
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICommandRequest instance
+     * @return the CommandRequest instance
      */
-    public ICommandRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CommandRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CommandRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class CommandRequestBuilder extends BaseRequestBuilder implements IComman
     /**
      * Gets the request builder for PayloadResponse
      *
-     * @return the IPayloadResponseWithReferenceRequestBuilder instance
+     * @return the PayloadResponseWithReferenceRequestBuilder instance
      */
-    public IPayloadResponseWithReferenceRequestBuilder responsepayload() {
+    @Nonnull
+    public PayloadResponseWithReferenceRequestBuilder responsepayload() {
         return new PayloadResponseWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("responsepayload"), getClient(), null);
     }
 }

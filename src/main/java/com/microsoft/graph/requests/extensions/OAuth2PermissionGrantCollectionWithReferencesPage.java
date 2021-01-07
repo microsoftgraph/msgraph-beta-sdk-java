@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionResponse;
 import com.microsoft.graph.models.extensions.OAuth2PermissionGrant;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the OAuth2Permission Grant Collection With References Page.
  */
-public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseCollectionPage<OAuth2PermissionGrant, IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder> implements IOAuth2PermissionGrantCollectionWithReferencesPage {
+public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseCollectionPage<OAuth2PermissionGrant, OAuth2PermissionGrantCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for OAuth2PermissionGrant
@@ -35,7 +37,17 @@ public class OAuth2PermissionGrantCollectionWithReferencesPage extends BaseColle
      * @param response the serialized OAuth2PermissionGrantCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public OAuth2PermissionGrantCollectionWithReferencesPage(final OAuth2PermissionGrantCollectionResponse response, final IOAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder) {
+    public OAuth2PermissionGrantCollectionWithReferencesPage(@Nonnull final OAuth2PermissionGrantCollectionResponse response, @Nullable final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for OAuth2PermissionGrant
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public OAuth2PermissionGrantCollectionWithReferencesPage(@Nonnull final java.util.List<OAuth2PermissionGrant> pageContents, @Nullable final OAuth2PermissionGrantCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

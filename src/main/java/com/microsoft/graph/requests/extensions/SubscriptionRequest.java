@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Subscription;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Subscription Request.
  */
-public class SubscriptionRequest extends BaseRequest implements ISubscriptionRequest {
+public class SubscriptionRequest extends BaseRequest<Subscription> {
 	
     /**
      * The request for the Subscription
@@ -29,7 +31,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscriptionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscriptionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Subscription.class);
     }
 
@@ -38,7 +40,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Subscription> callback) {
+    public void get(@Nonnull final ICallback<? super Subscription> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @return the Subscription from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Subscription get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Subscription> callback) {
+    public void delete(@Nonnull final ICallback<? super Subscription> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param sourceSubscription the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Subscription sourceSubscription, final ICallback<? super Subscription> callback) {
+    public void patch(@Nonnull final Subscription sourceSubscription, @Nonnull final ICallback<? super Subscription> callback) {
         send(HttpMethod.PATCH, callback, sourceSubscription);
     }
 
@@ -87,7 +90,8 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @return the updated Subscription
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Subscription patch(final Subscription sourceSubscription) throws ClientException {
+    @Nullable
+    public Subscription patch(@Nonnull final Subscription sourceSubscription) throws ClientException {
         return send(HttpMethod.PATCH, sourceSubscription);
     }
 
@@ -97,7 +101,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param newSubscription the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
+    public void post(@Nonnull final Subscription newSubscription, @Nonnull final ICallback<? super Subscription> callback) {
         send(HttpMethod.POST, callback, newSubscription);
     }
 
@@ -108,7 +112,8 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @return the created Subscription
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Subscription post(final Subscription newSubscription) throws ClientException {
+    @Nullable
+    public Subscription post(@Nonnull final Subscription newSubscription) throws ClientException {
         return send(HttpMethod.POST, newSubscription);
     }
 
@@ -118,7 +123,7 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param newSubscription the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Subscription newSubscription, final ICallback<? super Subscription> callback) {
+    public void put(@Nonnull final Subscription newSubscription, @Nonnull final ICallback<? super Subscription> callback) {
         send(HttpMethod.PUT, callback, newSubscription);
     }
 
@@ -129,7 +134,8 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @return the created Subscription
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Subscription put(final Subscription newSubscription) throws ClientException {
+    @Nullable
+    public Subscription put(@Nonnull final Subscription newSubscription) throws ClientException {
         return send(HttpMethod.PUT, newSubscription);
     }
 
@@ -139,9 +145,10 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param value the select clause
      * @return the updated request
      */
-     public ISubscriptionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SubscriptionRequest)this;
+     @Nonnull
+     public SubscriptionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SubscriptionRequest extends BaseRequest implements ISubscriptionReq
      * @param value the expand clause
      * @return the updated request
      */
-     public ISubscriptionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SubscriptionRequest)this;
+     @Nonnull
+     public SubscriptionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

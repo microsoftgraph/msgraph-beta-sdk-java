@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartSeriesFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Series Format Request.
  */
-public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWorkbookChartSeriesFormatRequest {
+public class WorkbookChartSeriesFormatRequest extends BaseRequest<WorkbookChartSeriesFormat> {
 	
     /**
      * The request for the WorkbookChartSeriesFormat
@@ -33,7 +33,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartSeriesFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartSeriesFormat.class);
     }
 
@@ -42,7 +42,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartSeriesFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @return the WorkbookChartSeriesFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartSeriesFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartSeriesFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param sourceWorkbookChartSeriesFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat, @Nonnull final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartSeriesFormat);
     }
 
@@ -91,7 +92,8 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @return the updated WorkbookChartSeriesFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartSeriesFormat patch(final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartSeriesFormat patch(@Nonnull final WorkbookChartSeriesFormat sourceWorkbookChartSeriesFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartSeriesFormat);
     }
 
@@ -101,7 +103,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartSeriesFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback) {
+    public void post(@Nonnull final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, @Nonnull final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartSeriesFormat);
     }
 
@@ -112,7 +114,8 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @return the created WorkbookChartSeriesFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartSeriesFormat post(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartSeriesFormat post(@Nonnull final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartSeriesFormat);
     }
 
@@ -122,7 +125,7 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartSeriesFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, final ICallback<? super WorkbookChartSeriesFormat> callback) {
+    public void put(@Nonnull final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat, @Nonnull final ICallback<? super WorkbookChartSeriesFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartSeriesFormat);
     }
 
@@ -133,7 +136,8 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @return the created WorkbookChartSeriesFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartSeriesFormat put(final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartSeriesFormat put(@Nonnull final WorkbookChartSeriesFormat newWorkbookChartSeriesFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartSeriesFormat);
     }
 
@@ -143,9 +147,10 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartSeriesFormatRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartSeriesFormatRequest)this;
+     @Nonnull
+     public WorkbookChartSeriesFormatRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class WorkbookChartSeriesFormatRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartSeriesFormatRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartSeriesFormatRequest)this;
+     @Nonnull
+     public WorkbookChartSeriesFormatRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

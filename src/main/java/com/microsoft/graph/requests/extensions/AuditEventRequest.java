@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuditEvent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Audit Event Request.
  */
-public class AuditEventRequest extends BaseRequest implements IAuditEventRequest {
+public class AuditEventRequest extends BaseRequest<AuditEvent> {
 	
     /**
      * The request for the AuditEvent
@@ -29,7 +31,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuditEventRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuditEventRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AuditEvent.class);
     }
 
@@ -38,7 +40,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AuditEvent> callback) {
+    public void get(@Nonnull final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @return the AuditEvent from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AuditEvent get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AuditEvent> callback) {
+    public void delete(@Nonnull final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param sourceAuditEvent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuditEvent sourceAuditEvent, final ICallback<? super AuditEvent> callback) {
+    public void patch(@Nonnull final AuditEvent sourceAuditEvent, @Nonnull final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.PATCH, callback, sourceAuditEvent);
     }
 
@@ -87,7 +90,8 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @return the updated AuditEvent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuditEvent patch(final AuditEvent sourceAuditEvent) throws ClientException {
+    @Nullable
+    public AuditEvent patch(@Nonnull final AuditEvent sourceAuditEvent) throws ClientException {
         return send(HttpMethod.PATCH, sourceAuditEvent);
     }
 
@@ -97,7 +101,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param newAuditEvent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback) {
+    public void post(@Nonnull final AuditEvent newAuditEvent, @Nonnull final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.POST, callback, newAuditEvent);
     }
 
@@ -108,7 +112,8 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @return the created AuditEvent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuditEvent post(final AuditEvent newAuditEvent) throws ClientException {
+    @Nullable
+    public AuditEvent post(@Nonnull final AuditEvent newAuditEvent) throws ClientException {
         return send(HttpMethod.POST, newAuditEvent);
     }
 
@@ -118,7 +123,7 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param newAuditEvent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuditEvent newAuditEvent, final ICallback<? super AuditEvent> callback) {
+    public void put(@Nonnull final AuditEvent newAuditEvent, @Nonnull final ICallback<? super AuditEvent> callback) {
         send(HttpMethod.PUT, callback, newAuditEvent);
     }
 
@@ -129,7 +134,8 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @return the created AuditEvent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuditEvent put(final AuditEvent newAuditEvent) throws ClientException {
+    @Nullable
+    public AuditEvent put(@Nonnull final AuditEvent newAuditEvent) throws ClientException {
         return send(HttpMethod.PUT, newAuditEvent);
     }
 
@@ -139,9 +145,10 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IAuditEventRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuditEventRequest)this;
+     @Nonnull
+     public AuditEventRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AuditEventRequest extends BaseRequest implements IAuditEventRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuditEventRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuditEventRequest)this;
+     @Nonnull
+     public AuditEventRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

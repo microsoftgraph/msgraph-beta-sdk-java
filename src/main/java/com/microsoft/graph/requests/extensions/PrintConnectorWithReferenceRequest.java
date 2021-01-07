@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Print Connector With Reference Request.
  */
-public class PrintConnectorWithReferenceRequest extends BaseRequest implements IPrintConnectorWithReferenceRequest {
+public class PrintConnectorWithReferenceRequest extends BaseWithReferenceRequest<PrintConnector> {
 
     /**
      * The request for the PrintConnector
@@ -32,46 +34,9 @@ public class PrintConnectorWithReferenceRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintConnectorWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintConnectorWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrintConnector.class);
     }
-
-    public void post(final PrintConnector newPrintConnector, final IJsonBackedObject payload, final ICallback<? super PrintConnector> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public PrintConnector post(final PrintConnector newPrintConnector, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newPrintConnector;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super PrintConnector> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public PrintConnector get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super PrintConnector> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final PrintConnector sourcePrintConnector, final ICallback<? super PrintConnector> callback) {
-		send(HttpMethod.PATCH, callback, sourcePrintConnector);
-	}
-
-	public PrintConnector patch(final PrintConnector sourcePrintConnector) throws ClientException {
-		return send(HttpMethod.PATCH, sourcePrintConnector);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class PrintConnectorWithReferenceRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-    public IPrintConnectorWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IPrintConnectorWithReferenceRequest)this;
+    @Nonnull
+    public PrintConnectorWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class PrintConnectorWithReferenceRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-    public IPrintConnectorWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrintConnectorWithReferenceRequest)this;
+    @Nonnull
+    public PrintConnectorWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

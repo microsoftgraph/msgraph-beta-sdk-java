@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RelyingPartyDetailedSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Relying Party Detailed Summary Request.
  */
-public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements IRelyingPartyDetailedSummaryRequest {
+public class RelyingPartyDetailedSummaryRequest extends BaseRequest<RelyingPartyDetailedSummary> {
 	
     /**
      * The request for the RelyingPartyDetailedSummary
@@ -29,7 +31,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RelyingPartyDetailedSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RelyingPartyDetailedSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RelyingPartyDetailedSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RelyingPartyDetailedSummary> callback) {
+    public void get(@Nonnull final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @return the RelyingPartyDetailedSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RelyingPartyDetailedSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RelyingPartyDetailedSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param sourceRelyingPartyDetailedSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback) {
+    public void patch(@Nonnull final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary, @Nonnull final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceRelyingPartyDetailedSummary);
     }
 
@@ -87,7 +90,8 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @return the updated RelyingPartyDetailedSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RelyingPartyDetailedSummary patch(final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary) throws ClientException {
+    @Nullable
+    public RelyingPartyDetailedSummary patch(@Nonnull final RelyingPartyDetailedSummary sourceRelyingPartyDetailedSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceRelyingPartyDetailedSummary);
     }
 
@@ -97,7 +101,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param newRelyingPartyDetailedSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback) {
+    public void post(@Nonnull final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, @Nonnull final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.POST, callback, newRelyingPartyDetailedSummary);
     }
 
@@ -108,7 +112,8 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @return the created RelyingPartyDetailedSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RelyingPartyDetailedSummary post(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary) throws ClientException {
+    @Nullable
+    public RelyingPartyDetailedSummary post(@Nonnull final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary) throws ClientException {
         return send(HttpMethod.POST, newRelyingPartyDetailedSummary);
     }
 
@@ -118,7 +123,7 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param newRelyingPartyDetailedSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, final ICallback<? super RelyingPartyDetailedSummary> callback) {
+    public void put(@Nonnull final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary, @Nonnull final ICallback<? super RelyingPartyDetailedSummary> callback) {
         send(HttpMethod.PUT, callback, newRelyingPartyDetailedSummary);
     }
 
@@ -129,7 +134,8 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @return the created RelyingPartyDetailedSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RelyingPartyDetailedSummary put(final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary) throws ClientException {
+    @Nullable
+    public RelyingPartyDetailedSummary put(@Nonnull final RelyingPartyDetailedSummary newRelyingPartyDetailedSummary) throws ClientException {
         return send(HttpMethod.PUT, newRelyingPartyDetailedSummary);
     }
 
@@ -139,9 +145,10 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IRelyingPartyDetailedSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RelyingPartyDetailedSummaryRequest)this;
+     @Nonnull
+     public RelyingPartyDetailedSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class RelyingPartyDetailedSummaryRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IRelyingPartyDetailedSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RelyingPartyDetailedSummaryRequest)this;
+     @Nonnull
+     public RelyingPartyDetailedSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

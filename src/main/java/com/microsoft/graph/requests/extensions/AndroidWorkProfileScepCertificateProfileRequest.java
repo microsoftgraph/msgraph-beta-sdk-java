@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileScepCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Work Profile Scep Certificate Profile Request.
  */
-public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest implements IAndroidWorkProfileScepCertificateProfileRequest {
+public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest<AndroidWorkProfileScepCertificateProfile> {
 	
     /**
      * The request for the AndroidWorkProfileScepCertificateProfile
@@ -33,7 +33,7 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileScepCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfileScepCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWorkProfileScepCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @return the AndroidWorkProfileScepCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidWorkProfileScepCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @param sourceAndroidWorkProfileScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidWorkProfileScepCertificateProfile sourceAndroidWorkProfileScepCertificateProfile, final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
+    public void patch(@Nonnull final AndroidWorkProfileScepCertificateProfile sourceAndroidWorkProfileScepCertificateProfile, @Nonnull final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileScepCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @return the updated AndroidWorkProfileScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileScepCertificateProfile patch(final AndroidWorkProfileScepCertificateProfile sourceAndroidWorkProfileScepCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileScepCertificateProfile patch(@Nonnull final AndroidWorkProfileScepCertificateProfile sourceAndroidWorkProfileScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidWorkProfileScepCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @param newAndroidWorkProfileScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile, final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
+    public void post(@Nonnull final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile, @Nonnull final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidWorkProfileScepCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @return the created AndroidWorkProfileScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileScepCertificateProfile post(final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileScepCertificateProfile post(@Nonnull final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidWorkProfileScepCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @param newAndroidWorkProfileScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile, final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
+    public void put(@Nonnull final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile, @Nonnull final ICallback<? super AndroidWorkProfileScepCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidWorkProfileScepCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @return the created AndroidWorkProfileScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidWorkProfileScepCertificateProfile put(final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidWorkProfileScepCertificateProfile put(@Nonnull final AndroidWorkProfileScepCertificateProfile newAndroidWorkProfileScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidWorkProfileScepCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidWorkProfileScepCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidWorkProfileScepCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidWorkProfileScepCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AndroidWorkProfileScepCertificateProfileRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidWorkProfileScepCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidWorkProfileScepCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidWorkProfileScepCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

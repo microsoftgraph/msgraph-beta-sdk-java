@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContinuousAccessEvaluationPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Continuous Access Evaluation Policy Request.
  */
-public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest implements IContinuousAccessEvaluationPolicyRequest {
+public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest<ContinuousAccessEvaluationPolicy> {
 	
     /**
      * The request for the ContinuousAccessEvaluationPolicy
@@ -29,7 +31,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContinuousAccessEvaluationPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContinuousAccessEvaluationPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ContinuousAccessEvaluationPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @return the ContinuousAccessEvaluationPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ContinuousAccessEvaluationPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param sourceContinuousAccessEvaluationPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
+    public void patch(@Nonnull final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy, @Nonnull final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceContinuousAccessEvaluationPolicy);
     }
 
@@ -87,7 +90,8 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @return the updated ContinuousAccessEvaluationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContinuousAccessEvaluationPolicy patch(final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy) throws ClientException {
+    @Nullable
+    public ContinuousAccessEvaluationPolicy patch(@Nonnull final ContinuousAccessEvaluationPolicy sourceContinuousAccessEvaluationPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceContinuousAccessEvaluationPolicy);
     }
 
@@ -97,7 +101,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param newContinuousAccessEvaluationPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
+    public void post(@Nonnull final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, @Nonnull final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.POST, callback, newContinuousAccessEvaluationPolicy);
     }
 
@@ -108,7 +112,8 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @return the created ContinuousAccessEvaluationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContinuousAccessEvaluationPolicy post(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy) throws ClientException {
+    @Nullable
+    public ContinuousAccessEvaluationPolicy post(@Nonnull final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy) throws ClientException {
         return send(HttpMethod.POST, newContinuousAccessEvaluationPolicy);
     }
 
@@ -118,7 +123,7 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param newContinuousAccessEvaluationPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
+    public void put(@Nonnull final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy, @Nonnull final ICallback<? super ContinuousAccessEvaluationPolicy> callback) {
         send(HttpMethod.PUT, callback, newContinuousAccessEvaluationPolicy);
     }
 
@@ -129,7 +134,8 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @return the created ContinuousAccessEvaluationPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ContinuousAccessEvaluationPolicy put(final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy) throws ClientException {
+    @Nullable
+    public ContinuousAccessEvaluationPolicy put(@Nonnull final ContinuousAccessEvaluationPolicy newContinuousAccessEvaluationPolicy) throws ClientException {
         return send(HttpMethod.PUT, newContinuousAccessEvaluationPolicy);
     }
 
@@ -139,9 +145,10 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IContinuousAccessEvaluationPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ContinuousAccessEvaluationPolicyRequest)this;
+     @Nonnull
+     public ContinuousAccessEvaluationPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ContinuousAccessEvaluationPolicyRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IContinuousAccessEvaluationPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContinuousAccessEvaluationPolicyRequest)this;
+     @Nonnull
+     public ContinuousAccessEvaluationPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

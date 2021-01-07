@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Health Script Assignment Request Builder.
  */
-public class DeviceHealthScriptAssignmentRequestBuilder extends BaseRequestBuilder implements IDeviceHealthScriptAssignmentRequestBuilder {
+public class DeviceHealthScriptAssignmentRequestBuilder extends BaseRequestBuilder<DeviceHealthScriptAssignment> {
 
     /**
      * The request builder for the DeviceHealthScriptAssignment
@@ -28,7 +30,7 @@ public class DeviceHealthScriptAssignmentRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceHealthScriptAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceHealthScriptAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceHealthScriptAssignmentRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceHealthScriptAssignmentRequest instance
+     * @return the DeviceHealthScriptAssignmentRequest instance
      */
-    public IDeviceHealthScriptAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceHealthScriptAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceHealthScriptAssignmentRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceHealthScriptAssignmentRequest instance
+     * @return the DeviceHealthScriptAssignmentRequest instance
      */
-    public IDeviceHealthScriptAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceHealthScriptAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

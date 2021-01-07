@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSSoftwareUpdateStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSSoftware Update State Summary Request.
  */
-public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implements IMacOSSoftwareUpdateStateSummaryRequest {
+public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest<MacOSSoftwareUpdateStateSummary> {
 	
     /**
      * The request for the MacOSSoftwareUpdateStateSummary
@@ -29,7 +31,7 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSSoftwareUpdateStateSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSSoftwareUpdateStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSSoftwareUpdateStateSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @return the MacOSSoftwareUpdateStateSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSSoftwareUpdateStateSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @param sourceMacOSSoftwareUpdateStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSSoftwareUpdateStateSummary sourceMacOSSoftwareUpdateStateSummary, final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
+    public void patch(@Nonnull final MacOSSoftwareUpdateStateSummary sourceMacOSSoftwareUpdateStateSummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSSoftwareUpdateStateSummary);
     }
 
@@ -87,7 +90,8 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @return the updated MacOSSoftwareUpdateStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateStateSummary patch(final MacOSSoftwareUpdateStateSummary sourceMacOSSoftwareUpdateStateSummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateStateSummary patch(@Nonnull final MacOSSoftwareUpdateStateSummary sourceMacOSSoftwareUpdateStateSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSSoftwareUpdateStateSummary);
     }
 
@@ -97,7 +101,7 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @param newMacOSSoftwareUpdateStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary, final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
+    public void post(@Nonnull final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
         send(HttpMethod.POST, callback, newMacOSSoftwareUpdateStateSummary);
     }
 
@@ -108,7 +112,8 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @return the created MacOSSoftwareUpdateStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateStateSummary post(final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateStateSummary post(@Nonnull final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary) throws ClientException {
         return send(HttpMethod.POST, newMacOSSoftwareUpdateStateSummary);
     }
 
@@ -118,7 +123,7 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @param newMacOSSoftwareUpdateStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary, final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
+    public void put(@Nonnull final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary, @Nonnull final ICallback<? super MacOSSoftwareUpdateStateSummary> callback) {
         send(HttpMethod.PUT, callback, newMacOSSoftwareUpdateStateSummary);
     }
 
@@ -129,7 +134,8 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @return the created MacOSSoftwareUpdateStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSSoftwareUpdateStateSummary put(final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary) throws ClientException {
+    @Nullable
+    public MacOSSoftwareUpdateStateSummary put(@Nonnull final MacOSSoftwareUpdateStateSummary newMacOSSoftwareUpdateStateSummary) throws ClientException {
         return send(HttpMethod.PUT, newMacOSSoftwareUpdateStateSummary);
     }
 
@@ -139,9 +145,10 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSSoftwareUpdateStateSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSSoftwareUpdateStateSummaryRequest)this;
+     @Nonnull
+     public MacOSSoftwareUpdateStateSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MacOSSoftwareUpdateStateSummaryRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSSoftwareUpdateStateSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSSoftwareUpdateStateSummaryRequest)this;
+     @Nonnull
+     public MacOSSoftwareUpdateStateSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

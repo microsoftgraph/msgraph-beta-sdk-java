@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesAgentGroup;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPublishedResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PublishedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the On Premises Agent Group Request Builder.
  */
-public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder implements IOnPremisesAgentGroupRequestBuilder {
+public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder<OnPremisesAgentGroup> {
 
     /**
      * The request builder for the OnPremisesAgentGroup
@@ -36,7 +34,7 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesAgentGroupRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnPremisesAgentGroupRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesAgentGroupRequest instance
+     * @return the OnPremisesAgentGroupRequest instance
      */
-    public IOnPremisesAgentGroupRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OnPremisesAgentGroupRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class OnPremisesAgentGroupRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesAgentGroupRequest instance
+     * @return the OnPremisesAgentGroupRequest instance
      */
-    public IOnPremisesAgentGroupRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OnPremisesAgentGroupRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IOnPremisesAgentCollectionRequestBuilder agents() {
+    /**
+     *  Gets a request builder for the OnPremisesAgent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OnPremisesAgentCollectionRequestBuilder agents() {
         return new OnPremisesAgentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agents"), getClient(), null);
     }
 
-    public IOnPremisesAgentRequestBuilder agents(final String id) {
+    /**
+     * Gets a request builder for the OnPremisesAgent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OnPremisesAgentRequestBuilder agents(@Nonnull final String id) {
         return new OnPremisesAgentRequestBuilder(getRequestUrlWithAdditionalSegment("agents") + "/" + id, getClient(), null);
     }
-    public IPublishedResourceCollectionRequestBuilder publishedResources() {
+    /**
+     *  Gets a request builder for the PublishedResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PublishedResourceCollectionRequestBuilder publishedResources() {
         return new PublishedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources"), getClient(), null);
     }
 
-    public IPublishedResourceRequestBuilder publishedResources(final String id) {
+    /**
+     * Gets a request builder for the PublishedResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PublishedResourceRequestBuilder publishedResources(@Nonnull final String id) {
         return new PublishedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("publishedResources") + "/" + id, getClient(), null);
     }
 }

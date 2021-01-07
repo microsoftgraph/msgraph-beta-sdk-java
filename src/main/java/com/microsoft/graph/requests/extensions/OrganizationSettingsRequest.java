@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationSettings;
-import com.microsoft.graph.requests.extensions.IProfileCardPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfileCardPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfileCardPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemInsightsSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemInsightsSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organization Settings Request.
  */
-public class OrganizationSettingsRequest extends BaseRequest implements IOrganizationSettingsRequest {
+public class OrganizationSettingsRequest extends BaseRequest<OrganizationSettings> {
 	
     /**
      * The request for the OrganizationSettings
@@ -35,7 +34,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrganizationSettings.class);
     }
 
@@ -44,7 +43,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OrganizationSettings> callback) {
+    public void get(@Nonnull final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @return the OrganizationSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OrganizationSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OrganizationSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param sourceOrganizationSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OrganizationSettings sourceOrganizationSettings, final ICallback<? super OrganizationSettings> callback) {
+    public void patch(@Nonnull final OrganizationSettings sourceOrganizationSettings, @Nonnull final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganizationSettings);
     }
 
@@ -93,7 +93,8 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @return the updated OrganizationSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationSettings patch(final OrganizationSettings sourceOrganizationSettings) throws ClientException {
+    @Nullable
+    public OrganizationSettings patch(@Nonnull final OrganizationSettings sourceOrganizationSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceOrganizationSettings);
     }
 
@@ -103,7 +104,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param newOrganizationSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OrganizationSettings newOrganizationSettings, final ICallback<? super OrganizationSettings> callback) {
+    public void post(@Nonnull final OrganizationSettings newOrganizationSettings, @Nonnull final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.POST, callback, newOrganizationSettings);
     }
 
@@ -114,7 +115,8 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @return the created OrganizationSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationSettings post(final OrganizationSettings newOrganizationSettings) throws ClientException {
+    @Nullable
+    public OrganizationSettings post(@Nonnull final OrganizationSettings newOrganizationSettings) throws ClientException {
         return send(HttpMethod.POST, newOrganizationSettings);
     }
 
@@ -124,7 +126,7 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param newOrganizationSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OrganizationSettings newOrganizationSettings, final ICallback<? super OrganizationSettings> callback) {
+    public void put(@Nonnull final OrganizationSettings newOrganizationSettings, @Nonnull final ICallback<? super OrganizationSettings> callback) {
         send(HttpMethod.PUT, callback, newOrganizationSettings);
     }
 
@@ -135,7 +137,8 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @return the created OrganizationSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationSettings put(final OrganizationSettings newOrganizationSettings) throws ClientException {
+    @Nullable
+    public OrganizationSettings put(@Nonnull final OrganizationSettings newOrganizationSettings) throws ClientException {
         return send(HttpMethod.PUT, newOrganizationSettings);
     }
 
@@ -145,9 +148,10 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param value the select clause
      * @return the updated request
      */
-     public IOrganizationSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrganizationSettingsRequest)this;
+     @Nonnull
+     public OrganizationSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class OrganizationSettingsRequest extends BaseRequest implements IOrganiz
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrganizationSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationSettingsRequest)this;
+     @Nonnull
+     public OrganizationSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

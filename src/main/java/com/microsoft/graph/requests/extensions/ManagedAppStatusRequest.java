@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Status Request.
  */
-public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppStatusRequest {
+public class ManagedAppStatusRequest extends BaseRequest<ManagedAppStatus> {
 	
     /**
      * The request for the ManagedAppStatus
@@ -30,10 +32,10 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ManagedAppStatusRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ManagedAppStatus> responseClass) {
+    public ManagedAppStatusRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ManagedAppStatus> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppStatus.class);
     }
 
@@ -53,7 +55,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppStatus> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @return the ManagedAppStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param sourceManagedAppStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppStatus sourceManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
+    public void patch(@Nonnull final ManagedAppStatus sourceManagedAppStatus, @Nonnull final ICallback<? super ManagedAppStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppStatus);
     }
 
@@ -102,7 +105,8 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @return the updated ManagedAppStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppStatus patch(final ManagedAppStatus sourceManagedAppStatus) throws ClientException {
+    @Nullable
+    public ManagedAppStatus patch(@Nonnull final ManagedAppStatus sourceManagedAppStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppStatus);
     }
 
@@ -112,7 +116,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param newManagedAppStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
+    public void post(@Nonnull final ManagedAppStatus newManagedAppStatus, @Nonnull final ICallback<? super ManagedAppStatus> callback) {
         send(HttpMethod.POST, callback, newManagedAppStatus);
     }
 
@@ -123,7 +127,8 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @return the created ManagedAppStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppStatus post(final ManagedAppStatus newManagedAppStatus) throws ClientException {
+    @Nullable
+    public ManagedAppStatus post(@Nonnull final ManagedAppStatus newManagedAppStatus) throws ClientException {
         return send(HttpMethod.POST, newManagedAppStatus);
     }
 
@@ -133,7 +138,7 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param newManagedAppStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppStatus newManagedAppStatus, final ICallback<? super ManagedAppStatus> callback) {
+    public void put(@Nonnull final ManagedAppStatus newManagedAppStatus, @Nonnull final ICallback<? super ManagedAppStatus> callback) {
         send(HttpMethod.PUT, callback, newManagedAppStatus);
     }
 
@@ -144,7 +149,8 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @return the created ManagedAppStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppStatus put(final ManagedAppStatus newManagedAppStatus) throws ClientException {
+    @Nullable
+    public ManagedAppStatus put(@Nonnull final ManagedAppStatus newManagedAppStatus) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppStatus);
     }
 
@@ -154,9 +160,10 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppStatusRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppStatusRequest)this;
+     @Nonnull
+     public ManagedAppStatusRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class ManagedAppStatusRequest extends BaseRequest implements IManagedAppS
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppStatusRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppStatusRequest)this;
+     @Nonnull
+     public ManagedAppStatusRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

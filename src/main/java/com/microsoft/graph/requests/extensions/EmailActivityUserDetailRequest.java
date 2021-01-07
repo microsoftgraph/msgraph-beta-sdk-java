@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailActivityUserDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Email Activity User Detail Request.
  */
-public class EmailActivityUserDetailRequest extends BaseRequest implements IEmailActivityUserDetailRequest {
+public class EmailActivityUserDetailRequest extends BaseRequest<EmailActivityUserDetail> {
 	
     /**
      * The request for the EmailActivityUserDetail
@@ -29,7 +31,7 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmailActivityUserDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmailActivityUserDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmailActivityUserDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmailActivityUserDetail> callback) {
+    public void get(@Nonnull final ICallback<? super EmailActivityUserDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @return the EmailActivityUserDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EmailActivityUserDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmailActivityUserDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super EmailActivityUserDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @param sourceEmailActivityUserDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailActivityUserDetail sourceEmailActivityUserDetail, final ICallback<? super EmailActivityUserDetail> callback) {
+    public void patch(@Nonnull final EmailActivityUserDetail sourceEmailActivityUserDetail, @Nonnull final ICallback<? super EmailActivityUserDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailActivityUserDetail);
     }
 
@@ -87,7 +90,8 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @return the updated EmailActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailActivityUserDetail patch(final EmailActivityUserDetail sourceEmailActivityUserDetail) throws ClientException {
+    @Nullable
+    public EmailActivityUserDetail patch(@Nonnull final EmailActivityUserDetail sourceEmailActivityUserDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmailActivityUserDetail);
     }
 
@@ -97,7 +101,7 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @param newEmailActivityUserDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailActivityUserDetail newEmailActivityUserDetail, final ICallback<? super EmailActivityUserDetail> callback) {
+    public void post(@Nonnull final EmailActivityUserDetail newEmailActivityUserDetail, @Nonnull final ICallback<? super EmailActivityUserDetail> callback) {
         send(HttpMethod.POST, callback, newEmailActivityUserDetail);
     }
 
@@ -108,7 +112,8 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @return the created EmailActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailActivityUserDetail post(final EmailActivityUserDetail newEmailActivityUserDetail) throws ClientException {
+    @Nullable
+    public EmailActivityUserDetail post(@Nonnull final EmailActivityUserDetail newEmailActivityUserDetail) throws ClientException {
         return send(HttpMethod.POST, newEmailActivityUserDetail);
     }
 
@@ -118,7 +123,7 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @param newEmailActivityUserDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailActivityUserDetail newEmailActivityUserDetail, final ICallback<? super EmailActivityUserDetail> callback) {
+    public void put(@Nonnull final EmailActivityUserDetail newEmailActivityUserDetail, @Nonnull final ICallback<? super EmailActivityUserDetail> callback) {
         send(HttpMethod.PUT, callback, newEmailActivityUserDetail);
     }
 
@@ -129,7 +134,8 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @return the created EmailActivityUserDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailActivityUserDetail put(final EmailActivityUserDetail newEmailActivityUserDetail) throws ClientException {
+    @Nullable
+    public EmailActivityUserDetail put(@Nonnull final EmailActivityUserDetail newEmailActivityUserDetail) throws ClientException {
         return send(HttpMethod.PUT, newEmailActivityUserDetail);
     }
 
@@ -139,9 +145,10 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @param value the select clause
      * @return the updated request
      */
-     public IEmailActivityUserDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmailActivityUserDetailRequest)this;
+     @Nonnull
+     public EmailActivityUserDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EmailActivityUserDetailRequest extends BaseRequest implements IEmai
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmailActivityUserDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailActivityUserDetailRequest)this;
+     @Nonnull
+     public EmailActivityUserDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

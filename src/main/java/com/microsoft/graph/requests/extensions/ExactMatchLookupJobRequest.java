@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExactMatchLookupJob;
-import com.microsoft.graph.requests.extensions.ILookupResultRowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILookupResultRowRequestBuilder;
 import com.microsoft.graph.requests.extensions.LookupResultRowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LookupResultRowRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Exact Match Lookup Job Request.
  */
-public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMatchLookupJobRequest {
+public class ExactMatchLookupJobRequest extends BaseRequest<ExactMatchLookupJob> {
 	
     /**
      * The request for the ExactMatchLookupJob
@@ -33,7 +33,7 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchLookupJobRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExactMatchLookupJobRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExactMatchLookupJob.class);
     }
 
@@ -42,7 +42,7 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExactMatchLookupJob> callback) {
+    public void get(@Nonnull final ICallback<? super ExactMatchLookupJob> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @return the ExactMatchLookupJob from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExactMatchLookupJob get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExactMatchLookupJob> callback) {
+    public void delete(@Nonnull final ICallback<? super ExactMatchLookupJob> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @param sourceExactMatchLookupJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExactMatchLookupJob sourceExactMatchLookupJob, final ICallback<? super ExactMatchLookupJob> callback) {
+    public void patch(@Nonnull final ExactMatchLookupJob sourceExactMatchLookupJob, @Nonnull final ICallback<? super ExactMatchLookupJob> callback) {
         send(HttpMethod.PATCH, callback, sourceExactMatchLookupJob);
     }
 
@@ -91,7 +92,8 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @return the updated ExactMatchLookupJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchLookupJob patch(final ExactMatchLookupJob sourceExactMatchLookupJob) throws ClientException {
+    @Nullable
+    public ExactMatchLookupJob patch(@Nonnull final ExactMatchLookupJob sourceExactMatchLookupJob) throws ClientException {
         return send(HttpMethod.PATCH, sourceExactMatchLookupJob);
     }
 
@@ -101,7 +103,7 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @param newExactMatchLookupJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExactMatchLookupJob newExactMatchLookupJob, final ICallback<? super ExactMatchLookupJob> callback) {
+    public void post(@Nonnull final ExactMatchLookupJob newExactMatchLookupJob, @Nonnull final ICallback<? super ExactMatchLookupJob> callback) {
         send(HttpMethod.POST, callback, newExactMatchLookupJob);
     }
 
@@ -112,7 +114,8 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @return the created ExactMatchLookupJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchLookupJob post(final ExactMatchLookupJob newExactMatchLookupJob) throws ClientException {
+    @Nullable
+    public ExactMatchLookupJob post(@Nonnull final ExactMatchLookupJob newExactMatchLookupJob) throws ClientException {
         return send(HttpMethod.POST, newExactMatchLookupJob);
     }
 
@@ -122,7 +125,7 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @param newExactMatchLookupJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExactMatchLookupJob newExactMatchLookupJob, final ICallback<? super ExactMatchLookupJob> callback) {
+    public void put(@Nonnull final ExactMatchLookupJob newExactMatchLookupJob, @Nonnull final ICallback<? super ExactMatchLookupJob> callback) {
         send(HttpMethod.PUT, callback, newExactMatchLookupJob);
     }
 
@@ -133,7 +136,8 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @return the created ExactMatchLookupJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchLookupJob put(final ExactMatchLookupJob newExactMatchLookupJob) throws ClientException {
+    @Nullable
+    public ExactMatchLookupJob put(@Nonnull final ExactMatchLookupJob newExactMatchLookupJob) throws ClientException {
         return send(HttpMethod.PUT, newExactMatchLookupJob);
     }
 
@@ -143,9 +147,10 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @param value the select clause
      * @return the updated request
      */
-     public IExactMatchLookupJobRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExactMatchLookupJobRequest)this;
+     @Nonnull
+     public ExactMatchLookupJobRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ExactMatchLookupJobRequest extends BaseRequest implements IExactMat
      * @param value the expand clause
      * @return the updated request
      */
-     public IExactMatchLookupJobRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExactMatchLookupJobRequest)this;
+     @Nonnull
+     public ExactMatchLookupJobRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudAppSecurityProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Cloud App Security Profile Request.
  */
-public class CloudAppSecurityProfileRequest extends BaseRequest implements ICloudAppSecurityProfileRequest {
+public class CloudAppSecurityProfileRequest extends BaseRequest<CloudAppSecurityProfile> {
 	
     /**
      * The request for the CloudAppSecurityProfile
@@ -29,7 +31,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudAppSecurityProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudAppSecurityProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CloudAppSecurityProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CloudAppSecurityProfile> callback) {
+    public void get(@Nonnull final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @return the CloudAppSecurityProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CloudAppSecurityProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CloudAppSecurityProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param sourceCloudAppSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CloudAppSecurityProfile sourceCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback) {
+    public void patch(@Nonnull final CloudAppSecurityProfile sourceCloudAppSecurityProfile, @Nonnull final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceCloudAppSecurityProfile);
     }
 
@@ -87,7 +90,8 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @return the updated CloudAppSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudAppSecurityProfile patch(final CloudAppSecurityProfile sourceCloudAppSecurityProfile) throws ClientException {
+    @Nullable
+    public CloudAppSecurityProfile patch(@Nonnull final CloudAppSecurityProfile sourceCloudAppSecurityProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceCloudAppSecurityProfile);
     }
 
@@ -97,7 +101,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param newCloudAppSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback) {
+    public void post(@Nonnull final CloudAppSecurityProfile newCloudAppSecurityProfile, @Nonnull final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.POST, callback, newCloudAppSecurityProfile);
     }
 
@@ -108,7 +112,8 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @return the created CloudAppSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudAppSecurityProfile post(final CloudAppSecurityProfile newCloudAppSecurityProfile) throws ClientException {
+    @Nullable
+    public CloudAppSecurityProfile post(@Nonnull final CloudAppSecurityProfile newCloudAppSecurityProfile) throws ClientException {
         return send(HttpMethod.POST, newCloudAppSecurityProfile);
     }
 
@@ -118,7 +123,7 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param newCloudAppSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CloudAppSecurityProfile newCloudAppSecurityProfile, final ICallback<? super CloudAppSecurityProfile> callback) {
+    public void put(@Nonnull final CloudAppSecurityProfile newCloudAppSecurityProfile, @Nonnull final ICallback<? super CloudAppSecurityProfile> callback) {
         send(HttpMethod.PUT, callback, newCloudAppSecurityProfile);
     }
 
@@ -129,7 +134,8 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @return the created CloudAppSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudAppSecurityProfile put(final CloudAppSecurityProfile newCloudAppSecurityProfile) throws ClientException {
+    @Nullable
+    public CloudAppSecurityProfile put(@Nonnull final CloudAppSecurityProfile newCloudAppSecurityProfile) throws ClientException {
         return send(HttpMethod.PUT, newCloudAppSecurityProfile);
     }
 
@@ -139,9 +145,10 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param value the select clause
      * @return the updated request
      */
-     public ICloudAppSecurityProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CloudAppSecurityProfileRequest)this;
+     @Nonnull
+     public CloudAppSecurityProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CloudAppSecurityProfileRequest extends BaseRequest implements IClou
      * @param value the expand clause
      * @return the updated request
      */
-     public ICloudAppSecurityProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CloudAppSecurityProfileRequest)this;
+     @Nonnull
+     public CloudAppSecurityProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

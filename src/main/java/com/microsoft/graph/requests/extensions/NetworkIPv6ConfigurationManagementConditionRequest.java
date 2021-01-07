@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NetworkIPv6ConfigurationManagementCondition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Network IPv6Configuration Management Condition Request.
  */
-public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequest implements INetworkIPv6ConfigurationManagementConditionRequest {
+public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequest<NetworkIPv6ConfigurationManagementCondition> {
 	
     /**
      * The request for the NetworkIPv6ConfigurationManagementCondition
@@ -29,7 +31,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NetworkIPv6ConfigurationManagementConditionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NetworkIPv6ConfigurationManagementConditionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, NetworkIPv6ConfigurationManagementCondition.class);
     }
 
@@ -38,7 +40,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void get(@Nonnull final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @return the NetworkIPv6ConfigurationManagementCondition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public NetworkIPv6ConfigurationManagementCondition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void delete(@Nonnull final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param sourceNetworkIPv6ConfigurationManagementCondition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void patch(@Nonnull final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition, @Nonnull final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.PATCH, callback, sourceNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -87,7 +90,8 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @return the updated NetworkIPv6ConfigurationManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NetworkIPv6ConfigurationManagementCondition patch(final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition) throws ClientException {
+    @Nullable
+    public NetworkIPv6ConfigurationManagementCondition patch(@Nonnull final NetworkIPv6ConfigurationManagementCondition sourceNetworkIPv6ConfigurationManagementCondition) throws ClientException {
         return send(HttpMethod.PATCH, sourceNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -97,7 +101,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param newNetworkIPv6ConfigurationManagementCondition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void post(@Nonnull final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, @Nonnull final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.POST, callback, newNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -108,7 +112,8 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @return the created NetworkIPv6ConfigurationManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NetworkIPv6ConfigurationManagementCondition post(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition) throws ClientException {
+    @Nullable
+    public NetworkIPv6ConfigurationManagementCondition post(@Nonnull final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition) throws ClientException {
         return send(HttpMethod.POST, newNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -118,7 +123,7 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param newNetworkIPv6ConfigurationManagementCondition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
+    public void put(@Nonnull final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition, @Nonnull final ICallback<? super NetworkIPv6ConfigurationManagementCondition> callback) {
         send(HttpMethod.PUT, callback, newNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -129,7 +134,8 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @return the created NetworkIPv6ConfigurationManagementCondition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public NetworkIPv6ConfigurationManagementCondition put(final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition) throws ClientException {
+    @Nullable
+    public NetworkIPv6ConfigurationManagementCondition put(@Nonnull final NetworkIPv6ConfigurationManagementCondition newNetworkIPv6ConfigurationManagementCondition) throws ClientException {
         return send(HttpMethod.PUT, newNetworkIPv6ConfigurationManagementCondition);
     }
 
@@ -139,9 +145,10 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param value the select clause
      * @return the updated request
      */
-     public INetworkIPv6ConfigurationManagementConditionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (NetworkIPv6ConfigurationManagementConditionRequest)this;
+     @Nonnull
+     public NetworkIPv6ConfigurationManagementConditionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class NetworkIPv6ConfigurationManagementConditionRequest extends BaseRequ
      * @param value the expand clause
      * @return the updated request
      */
-     public INetworkIPv6ConfigurationManagementConditionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (NetworkIPv6ConfigurationManagementConditionRequest)this;
+     @Nonnull
+     public NetworkIPv6ConfigurationManagementConditionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

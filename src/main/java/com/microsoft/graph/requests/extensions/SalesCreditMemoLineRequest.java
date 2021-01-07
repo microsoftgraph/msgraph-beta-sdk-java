@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesCreditMemoLine;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sales Credit Memo Line Request.
  */
-public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCreditMemoLineRequest {
+public class SalesCreditMemoLineRequest extends BaseRequest<SalesCreditMemoLine> {
 	
     /**
      * The request for the SalesCreditMemoLine
@@ -33,7 +33,7 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesCreditMemoLineRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesCreditMemoLineRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SalesCreditMemoLine.class);
     }
 
@@ -42,7 +42,7 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SalesCreditMemoLine> callback) {
+    public void get(@Nonnull final ICallback<? super SalesCreditMemoLine> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @return the SalesCreditMemoLine from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SalesCreditMemoLine get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SalesCreditMemoLine> callback) {
+    public void delete(@Nonnull final ICallback<? super SalesCreditMemoLine> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @param sourceSalesCreditMemoLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesCreditMemoLine sourceSalesCreditMemoLine, final ICallback<? super SalesCreditMemoLine> callback) {
+    public void patch(@Nonnull final SalesCreditMemoLine sourceSalesCreditMemoLine, @Nonnull final ICallback<? super SalesCreditMemoLine> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesCreditMemoLine);
     }
 
@@ -91,7 +92,8 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @return the updated SalesCreditMemoLine
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesCreditMemoLine patch(final SalesCreditMemoLine sourceSalesCreditMemoLine) throws ClientException {
+    @Nullable
+    public SalesCreditMemoLine patch(@Nonnull final SalesCreditMemoLine sourceSalesCreditMemoLine) throws ClientException {
         return send(HttpMethod.PATCH, sourceSalesCreditMemoLine);
     }
 
@@ -101,7 +103,7 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @param newSalesCreditMemoLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<? super SalesCreditMemoLine> callback) {
+    public void post(@Nonnull final SalesCreditMemoLine newSalesCreditMemoLine, @Nonnull final ICallback<? super SalesCreditMemoLine> callback) {
         send(HttpMethod.POST, callback, newSalesCreditMemoLine);
     }
 
@@ -112,7 +114,8 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @return the created SalesCreditMemoLine
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesCreditMemoLine post(final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException {
+    @Nullable
+    public SalesCreditMemoLine post(@Nonnull final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException {
         return send(HttpMethod.POST, newSalesCreditMemoLine);
     }
 
@@ -122,7 +125,7 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @param newSalesCreditMemoLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesCreditMemoLine newSalesCreditMemoLine, final ICallback<? super SalesCreditMemoLine> callback) {
+    public void put(@Nonnull final SalesCreditMemoLine newSalesCreditMemoLine, @Nonnull final ICallback<? super SalesCreditMemoLine> callback) {
         send(HttpMethod.PUT, callback, newSalesCreditMemoLine);
     }
 
@@ -133,7 +136,8 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @return the created SalesCreditMemoLine
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesCreditMemoLine put(final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException {
+    @Nullable
+    public SalesCreditMemoLine put(@Nonnull final SalesCreditMemoLine newSalesCreditMemoLine) throws ClientException {
         return send(HttpMethod.PUT, newSalesCreditMemoLine);
     }
 
@@ -143,9 +147,10 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @param value the select clause
      * @return the updated request
      */
-     public ISalesCreditMemoLineRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SalesCreditMemoLineRequest)this;
+     @Nonnull
+     public SalesCreditMemoLineRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class SalesCreditMemoLineRequest extends BaseRequest implements ISalesCre
      * @param value the expand clause
      * @return the updated request
      */
-     public ISalesCreditMemoLineRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesCreditMemoLineRequest)this;
+     @Nonnull
+     public SalesCreditMemoLineRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

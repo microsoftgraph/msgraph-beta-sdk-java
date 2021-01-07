@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleScopeTagRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device And App Management Role Assignment Request.
  */
-public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest implements IDeviceAndAppManagementRoleAssignmentRequest {
+public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest<DeviceAndAppManagementRoleAssignment> {
 	
     /**
      * The request for the DeviceAndAppManagementRoleAssignment
@@ -33,7 +33,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAndAppManagementRoleAssignment.class);
     }
 
@@ -42,7 +42,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @return the DeviceAndAppManagementRoleAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceAndAppManagementRoleAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param sourceDeviceAndAppManagementRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void patch(@Nonnull final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment, @Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceAndAppManagementRoleAssignment);
     }
 
@@ -91,7 +92,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @return the updated DeviceAndAppManagementRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementRoleAssignment patch(final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementRoleAssignment patch(@Nonnull final DeviceAndAppManagementRoleAssignment sourceDeviceAndAppManagementRoleAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceAndAppManagementRoleAssignment);
     }
 
@@ -101,7 +103,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param newDeviceAndAppManagementRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void post(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, @Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceAndAppManagementRoleAssignment);
     }
 
@@ -112,7 +114,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @return the created DeviceAndAppManagementRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementRoleAssignment post(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementRoleAssignment post(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
         return send(HttpMethod.POST, newDeviceAndAppManagementRoleAssignment);
     }
 
@@ -122,7 +125,7 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param newDeviceAndAppManagementRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
+    public void put(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment, @Nonnull final ICallback<? super DeviceAndAppManagementRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceAndAppManagementRoleAssignment);
     }
 
@@ -133,7 +136,8 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @return the created DeviceAndAppManagementRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementRoleAssignment put(final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementRoleAssignment put(@Nonnull final DeviceAndAppManagementRoleAssignment newDeviceAndAppManagementRoleAssignment) throws ClientException {
         return send(HttpMethod.PUT, newDeviceAndAppManagementRoleAssignment);
     }
 
@@ -143,9 +147,10 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceAndAppManagementRoleAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceAndAppManagementRoleAssignmentRequest)this;
+     @Nonnull
+     public DeviceAndAppManagementRoleAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class DeviceAndAppManagementRoleAssignmentRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceAndAppManagementRoleAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceAndAppManagementRoleAssignmentRequest)this;
+     @Nonnull
+     public DeviceAndAppManagementRoleAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

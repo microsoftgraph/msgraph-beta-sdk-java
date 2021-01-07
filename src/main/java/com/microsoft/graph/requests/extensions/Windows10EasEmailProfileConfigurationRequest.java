@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10EasEmailProfileConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Eas Email Profile Configuration Request.
  */
-public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest implements IWindows10EasEmailProfileConfigurationRequest {
+public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest<Windows10EasEmailProfileConfiguration> {
 	
     /**
      * The request for the Windows10EasEmailProfileConfiguration
@@ -29,7 +31,7 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10EasEmailProfileConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10EasEmailProfileConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10EasEmailProfileConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @return the Windows10EasEmailProfileConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10EasEmailProfileConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @param sourceWindows10EasEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10EasEmailProfileConfiguration sourceWindows10EasEmailProfileConfiguration, final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
+    public void patch(@Nonnull final Windows10EasEmailProfileConfiguration sourceWindows10EasEmailProfileConfiguration, @Nonnull final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10EasEmailProfileConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @return the updated Windows10EasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EasEmailProfileConfiguration patch(final Windows10EasEmailProfileConfiguration sourceWindows10EasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EasEmailProfileConfiguration patch(@Nonnull final Windows10EasEmailProfileConfiguration sourceWindows10EasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10EasEmailProfileConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @param newWindows10EasEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
+    public void post(@Nonnull final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, @Nonnull final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10EasEmailProfileConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @return the created Windows10EasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EasEmailProfileConfiguration post(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EasEmailProfileConfiguration post(@Nonnull final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindows10EasEmailProfileConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @param newWindows10EasEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
+    public void put(@Nonnull final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration, @Nonnull final ICallback<? super Windows10EasEmailProfileConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10EasEmailProfileConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @return the created Windows10EasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10EasEmailProfileConfiguration put(final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public Windows10EasEmailProfileConfiguration put(@Nonnull final Windows10EasEmailProfileConfiguration newWindows10EasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindows10EasEmailProfileConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10EasEmailProfileConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10EasEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public Windows10EasEmailProfileConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10EasEmailProfileConfigurationRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10EasEmailProfileConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10EasEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public Windows10EasEmailProfileConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

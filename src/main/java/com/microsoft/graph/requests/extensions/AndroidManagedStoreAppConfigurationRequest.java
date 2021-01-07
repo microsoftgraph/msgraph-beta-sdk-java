@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidManagedStoreAppConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Managed Store App Configuration Request.
  */
-public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest implements IAndroidManagedStoreAppConfigurationRequest {
+public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest<AndroidManagedStoreAppConfiguration> {
 	
     /**
      * The request for the AndroidManagedStoreAppConfiguration
@@ -29,7 +31,7 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedStoreAppConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedStoreAppConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidManagedStoreAppConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @return the AndroidManagedStoreAppConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidManagedStoreAppConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @param sourceAndroidManagedStoreAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidManagedStoreAppConfiguration sourceAndroidManagedStoreAppConfiguration, final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
+    public void patch(@Nonnull final AndroidManagedStoreAppConfiguration sourceAndroidManagedStoreAppConfiguration, @Nonnull final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidManagedStoreAppConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @return the updated AndroidManagedStoreAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreAppConfiguration patch(final AndroidManagedStoreAppConfiguration sourceAndroidManagedStoreAppConfiguration) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreAppConfiguration patch(@Nonnull final AndroidManagedStoreAppConfiguration sourceAndroidManagedStoreAppConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidManagedStoreAppConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @param newAndroidManagedStoreAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
+    public void post(@Nonnull final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, @Nonnull final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidManagedStoreAppConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @return the created AndroidManagedStoreAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreAppConfiguration post(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreAppConfiguration post(@Nonnull final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidManagedStoreAppConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @param newAndroidManagedStoreAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
+    public void put(@Nonnull final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration, @Nonnull final ICallback<? super AndroidManagedStoreAppConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidManagedStoreAppConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @return the created AndroidManagedStoreAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidManagedStoreAppConfiguration put(final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration) throws ClientException {
+    @Nullable
+    public AndroidManagedStoreAppConfiguration put(@Nonnull final AndroidManagedStoreAppConfiguration newAndroidManagedStoreAppConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidManagedStoreAppConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidManagedStoreAppConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidManagedStoreAppConfigurationRequest)this;
+     @Nonnull
+     public AndroidManagedStoreAppConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidManagedStoreAppConfigurationRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidManagedStoreAppConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidManagedStoreAppConfigurationRequest)this;
+     @Nonnull
+     public AndroidManagedStoreAppConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

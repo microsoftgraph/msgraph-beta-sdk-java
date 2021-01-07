@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsOfUseContainer;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Terms Of Use Container Request Builder.
  */
-public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implements ITermsOfUseContainerRequestBuilder {
+public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder<TermsOfUseContainer> {
 
     /**
      * The request builder for the TermsOfUseContainer
@@ -36,7 +34,7 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsOfUseContainerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsOfUseContainerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITermsOfUseContainerRequest instance
+     * @return the TermsOfUseContainerRequest instance
      */
-    public ITermsOfUseContainerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TermsOfUseContainerRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class TermsOfUseContainerRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITermsOfUseContainerRequest instance
+     * @return the TermsOfUseContainerRequest instance
      */
-    public ITermsOfUseContainerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TermsOfUseContainerRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TermsOfUseContainerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
+    /**
+     *  Gets a request builder for the AgreementAcceptance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgreementAcceptanceCollectionRequestBuilder agreementAcceptances() {
         return new AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances"), getClient(), null);
     }
 
-    public IAgreementAcceptanceRequestBuilder agreementAcceptances(final String id) {
+    /**
+     * Gets a request builder for the AgreementAcceptance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgreementAcceptanceRequestBuilder agreementAcceptances(@Nonnull final String id) {
         return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("agreementAcceptances") + "/" + id, getClient(), null);
     }
-    public IAgreementCollectionRequestBuilder agreements() {
+    /**
+     *  Gets a request builder for the Agreement collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgreementCollectionRequestBuilder agreements() {
         return new AgreementCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agreements"), getClient(), null);
     }
 
-    public IAgreementRequestBuilder agreements(final String id) {
+    /**
+     * Gets a request builder for the Agreement item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgreementRequestBuilder agreements(@Nonnull final String id) {
         return new AgreementRequestBuilder(getRequestUrlWithAdditionalSegment("agreements") + "/" + id, getClient(), null);
     }
 }

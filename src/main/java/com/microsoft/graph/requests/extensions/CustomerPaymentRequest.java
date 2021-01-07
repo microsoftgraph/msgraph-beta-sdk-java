@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CustomerPayment;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Customer Payment Request.
  */
-public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaymentRequest {
+public class CustomerPaymentRequest extends BaseRequest<CustomerPayment> {
 	
     /**
      * The request for the CustomerPayment
@@ -31,7 +32,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CustomerPaymentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CustomerPaymentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CustomerPayment.class);
     }
 
@@ -40,7 +41,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CustomerPayment> callback) {
+    public void get(@Nonnull final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @return the CustomerPayment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CustomerPayment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CustomerPayment> callback) {
+    public void delete(@Nonnull final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param sourceCustomerPayment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CustomerPayment sourceCustomerPayment, final ICallback<? super CustomerPayment> callback) {
+    public void patch(@Nonnull final CustomerPayment sourceCustomerPayment, @Nonnull final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.PATCH, callback, sourceCustomerPayment);
     }
 
@@ -89,7 +91,8 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @return the updated CustomerPayment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CustomerPayment patch(final CustomerPayment sourceCustomerPayment) throws ClientException {
+    @Nullable
+    public CustomerPayment patch(@Nonnull final CustomerPayment sourceCustomerPayment) throws ClientException {
         return send(HttpMethod.PATCH, sourceCustomerPayment);
     }
 
@@ -99,7 +102,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param newCustomerPayment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CustomerPayment newCustomerPayment, final ICallback<? super CustomerPayment> callback) {
+    public void post(@Nonnull final CustomerPayment newCustomerPayment, @Nonnull final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.POST, callback, newCustomerPayment);
     }
 
@@ -110,7 +113,8 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @return the created CustomerPayment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CustomerPayment post(final CustomerPayment newCustomerPayment) throws ClientException {
+    @Nullable
+    public CustomerPayment post(@Nonnull final CustomerPayment newCustomerPayment) throws ClientException {
         return send(HttpMethod.POST, newCustomerPayment);
     }
 
@@ -120,7 +124,7 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param newCustomerPayment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CustomerPayment newCustomerPayment, final ICallback<? super CustomerPayment> callback) {
+    public void put(@Nonnull final CustomerPayment newCustomerPayment, @Nonnull final ICallback<? super CustomerPayment> callback) {
         send(HttpMethod.PUT, callback, newCustomerPayment);
     }
 
@@ -131,7 +135,8 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @return the created CustomerPayment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CustomerPayment put(final CustomerPayment newCustomerPayment) throws ClientException {
+    @Nullable
+    public CustomerPayment put(@Nonnull final CustomerPayment newCustomerPayment) throws ClientException {
         return send(HttpMethod.PUT, newCustomerPayment);
     }
 
@@ -141,9 +146,10 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param value the select clause
      * @return the updated request
      */
-     public ICustomerPaymentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CustomerPaymentRequest)this;
+     @Nonnull
+     public CustomerPaymentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class CustomerPaymentRequest extends BaseRequest implements ICustomerPaym
      * @param value the expand clause
      * @return the updated request
      */
-     public ICustomerPaymentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CustomerPaymentRequest)this;
+     @Nonnull
+     public CustomerPaymentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

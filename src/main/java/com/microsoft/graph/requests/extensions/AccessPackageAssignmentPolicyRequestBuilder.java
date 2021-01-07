@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentPolicy;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Package Assignment Policy Request Builder.
  */
-public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuilder implements IAccessPackageAssignmentPolicyRequestBuilder {
+public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuilder<AccessPackageAssignmentPolicy> {
 
     /**
      * The request builder for the AccessPackageAssignmentPolicy
@@ -32,7 +32,7 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageAssignmentPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageAssignmentPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageAssignmentPolicyRequest instance
+     * @return the AccessPackageAssignmentPolicyRequest instance
      */
-    public IAccessPackageAssignmentPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessPackageAssignmentPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageAssignmentPolicyRequest instance
+     * @return the AccessPackageAssignmentPolicyRequest instance
      */
-    public IAccessPackageAssignmentPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessPackageAssignmentPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
     /**
      * Gets the request builder for AccessPackage
      *
-     * @return the IAccessPackageWithReferenceRequestBuilder instance
+     * @return the AccessPackageWithReferenceRequestBuilder instance
      */
-    public IAccessPackageWithReferenceRequestBuilder accessPackage() {
+    @Nonnull
+    public AccessPackageWithReferenceRequestBuilder accessPackage() {
         return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
     }
 
     /**
      * Gets the request builder for AccessPackageCatalog
      *
-     * @return the IAccessPackageCatalogRequestBuilder instance
+     * @return the AccessPackageCatalogRequestBuilder instance
      */
-    public IAccessPackageCatalogRequestBuilder accessPackageCatalog() {
+    @Nonnull
+    public AccessPackageCatalogRequestBuilder accessPackageCatalog() {
         return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalog"), getClient(), null);
     }
 }

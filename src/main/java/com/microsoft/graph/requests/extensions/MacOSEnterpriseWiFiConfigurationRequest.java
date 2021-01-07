@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSEnterpriseWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSEnterprise Wi Fi Configuration Request.
  */
-public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest implements IMacOSEnterpriseWiFiConfigurationRequest {
+public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest<MacOSEnterpriseWiFiConfiguration> {
 	
     /**
      * The request for the MacOSEnterpriseWiFiConfiguration
@@ -35,7 +34,7 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSEnterpriseWiFiConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSEnterpriseWiFiConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSEnterpriseWiFiConfiguration.class);
     }
 
@@ -44,7 +43,7 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @return the MacOSEnterpriseWiFiConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSEnterpriseWiFiConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @param sourceMacOSEnterpriseWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSEnterpriseWiFiConfiguration sourceMacOSEnterpriseWiFiConfiguration, final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
+    public void patch(@Nonnull final MacOSEnterpriseWiFiConfiguration sourceMacOSEnterpriseWiFiConfiguration, @Nonnull final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSEnterpriseWiFiConfiguration);
     }
 
@@ -93,7 +93,8 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @return the updated MacOSEnterpriseWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSEnterpriseWiFiConfiguration patch(final MacOSEnterpriseWiFiConfiguration sourceMacOSEnterpriseWiFiConfiguration) throws ClientException {
+    @Nullable
+    public MacOSEnterpriseWiFiConfiguration patch(@Nonnull final MacOSEnterpriseWiFiConfiguration sourceMacOSEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSEnterpriseWiFiConfiguration);
     }
 
@@ -103,7 +104,7 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @param newMacOSEnterpriseWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
+    public void post(@Nonnull final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, @Nonnull final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSEnterpriseWiFiConfiguration);
     }
 
@@ -114,7 +115,8 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @return the created MacOSEnterpriseWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSEnterpriseWiFiConfiguration post(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration) throws ClientException {
+    @Nullable
+    public MacOSEnterpriseWiFiConfiguration post(@Nonnull final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.POST, newMacOSEnterpriseWiFiConfiguration);
     }
 
@@ -124,7 +126,7 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @param newMacOSEnterpriseWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
+    public void put(@Nonnull final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration, @Nonnull final ICallback<? super MacOSEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSEnterpriseWiFiConfiguration);
     }
 
@@ -135,7 +137,8 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @return the created MacOSEnterpriseWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSEnterpriseWiFiConfiguration put(final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration) throws ClientException {
+    @Nullable
+    public MacOSEnterpriseWiFiConfiguration put(@Nonnull final MacOSEnterpriseWiFiConfiguration newMacOSEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newMacOSEnterpriseWiFiConfiguration);
     }
 
@@ -145,9 +148,10 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSEnterpriseWiFiConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSEnterpriseWiFiConfigurationRequest)this;
+     @Nonnull
+     public MacOSEnterpriseWiFiConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class MacOSEnterpriseWiFiConfigurationRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSEnterpriseWiFiConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSEnterpriseWiFiConfigurationRequest)this;
+     @Nonnull
+     public MacOSEnterpriseWiFiConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

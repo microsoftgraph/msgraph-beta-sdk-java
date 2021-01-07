@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Configuration Request.
  */
-public class ManagedAppConfigurationRequest extends BaseRequest implements IManagedAppConfigurationRequest {
+public class ManagedAppConfigurationRequest extends BaseRequest<ManagedAppConfiguration> {
 	
     /**
      * The request for the ManagedAppConfiguration
@@ -30,10 +32,10 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ManagedAppConfigurationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ManagedAppConfiguration> responseClass) {
+    public ManagedAppConfigurationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ManagedAppConfiguration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppConfiguration.class);
     }
 
@@ -53,7 +55,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @return the ManagedAppConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param sourceManagedAppConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppConfiguration sourceManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback) {
+    public void patch(@Nonnull final ManagedAppConfiguration sourceManagedAppConfiguration, @Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppConfiguration);
     }
 
@@ -102,7 +105,8 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @return the updated ManagedAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppConfiguration patch(final ManagedAppConfiguration sourceManagedAppConfiguration) throws ClientException {
+    @Nullable
+    public ManagedAppConfiguration patch(@Nonnull final ManagedAppConfiguration sourceManagedAppConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppConfiguration);
     }
 
@@ -112,7 +116,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param newManagedAppConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback) {
+    public void post(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration, @Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.POST, callback, newManagedAppConfiguration);
     }
 
@@ -123,7 +127,8 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @return the created ManagedAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppConfiguration post(final ManagedAppConfiguration newManagedAppConfiguration) throws ClientException {
+    @Nullable
+    public ManagedAppConfiguration post(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration) throws ClientException {
         return send(HttpMethod.POST, newManagedAppConfiguration);
     }
 
@@ -133,7 +138,7 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param newManagedAppConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppConfiguration newManagedAppConfiguration, final ICallback<? super ManagedAppConfiguration> callback) {
+    public void put(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration, @Nonnull final ICallback<? super ManagedAppConfiguration> callback) {
         send(HttpMethod.PUT, callback, newManagedAppConfiguration);
     }
 
@@ -144,7 +149,8 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @return the created ManagedAppConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppConfiguration put(final ManagedAppConfiguration newManagedAppConfiguration) throws ClientException {
+    @Nullable
+    public ManagedAppConfiguration put(@Nonnull final ManagedAppConfiguration newManagedAppConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppConfiguration);
     }
 
@@ -154,9 +160,10 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppConfigurationRequest)this;
+     @Nonnull
+     public ManagedAppConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class ManagedAppConfigurationRequest extends BaseRequest implements IMana
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppConfigurationRequest)this;
+     @Nonnull
+     public ManagedAppConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

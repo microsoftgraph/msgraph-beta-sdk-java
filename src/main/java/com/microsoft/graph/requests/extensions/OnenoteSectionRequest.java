@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteSection;
 import com.microsoft.graph.models.extensions.OnenoteOperation;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Section Request.
  */
-public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectionRequest {
+public class OnenoteSectionRequest extends BaseRequest<OnenoteSection> {
 	
     /**
      * The request for the OnenoteSection
@@ -38,7 +36,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteSectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteSectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteSection.class);
     }
 
@@ -47,7 +45,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteSection> callback) {
+    public void get(@Nonnull final ICallback<? super OnenoteSection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,6 +55,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @return the OnenoteSection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnenoteSection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -66,7 +65,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteSection> callback) {
+    public void delete(@Nonnull final ICallback<? super OnenoteSection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +84,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param sourceOnenoteSection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteSection sourceOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void patch(@Nonnull final OnenoteSection sourceOnenoteSection, @Nonnull final ICallback<? super OnenoteSection> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteSection);
     }
 
@@ -96,7 +95,8 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @return the updated OnenoteSection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteSection patch(final OnenoteSection sourceOnenoteSection) throws ClientException {
+    @Nullable
+    public OnenoteSection patch(@Nonnull final OnenoteSection sourceOnenoteSection) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenoteSection);
     }
 
@@ -106,7 +106,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param newOnenoteSection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void post(@Nonnull final OnenoteSection newOnenoteSection, @Nonnull final ICallback<? super OnenoteSection> callback) {
         send(HttpMethod.POST, callback, newOnenoteSection);
     }
 
@@ -117,7 +117,8 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @return the created OnenoteSection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteSection post(final OnenoteSection newOnenoteSection) throws ClientException {
+    @Nullable
+    public OnenoteSection post(@Nonnull final OnenoteSection newOnenoteSection) throws ClientException {
         return send(HttpMethod.POST, newOnenoteSection);
     }
 
@@ -127,7 +128,7 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param newOnenoteSection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteSection newOnenoteSection, final ICallback<? super OnenoteSection> callback) {
+    public void put(@Nonnull final OnenoteSection newOnenoteSection, @Nonnull final ICallback<? super OnenoteSection> callback) {
         send(HttpMethod.PUT, callback, newOnenoteSection);
     }
 
@@ -138,7 +139,8 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @return the created OnenoteSection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteSection put(final OnenoteSection newOnenoteSection) throws ClientException {
+    @Nullable
+    public OnenoteSection put(@Nonnull final OnenoteSection newOnenoteSection) throws ClientException {
         return send(HttpMethod.PUT, newOnenoteSection);
     }
 
@@ -148,9 +150,10 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteSectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteSectionRequest)this;
+     @Nonnull
+     public OnenoteSectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,9 +162,10 @@ public class OnenoteSectionRequest extends BaseRequest implements IOnenoteSectio
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteSectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteSectionRequest)this;
+     @Nonnull
+     public OnenoteSectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationPointsOutcome;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Points Outcome Request.
  */
-public class EducationPointsOutcomeRequest extends BaseRequest implements IEducationPointsOutcomeRequest {
+public class EducationPointsOutcomeRequest extends BaseRequest<EducationPointsOutcome> {
 	
     /**
      * The request for the EducationPointsOutcome
@@ -29,7 +31,7 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationPointsOutcomeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationPointsOutcomeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationPointsOutcome.class);
     }
 
@@ -38,7 +40,7 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationPointsOutcome> callback) {
+    public void get(@Nonnull final ICallback<? super EducationPointsOutcome> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @return the EducationPointsOutcome from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationPointsOutcome get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationPointsOutcome> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationPointsOutcome> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @param sourceEducationPointsOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationPointsOutcome sourceEducationPointsOutcome, final ICallback<? super EducationPointsOutcome> callback) {
+    public void patch(@Nonnull final EducationPointsOutcome sourceEducationPointsOutcome, @Nonnull final ICallback<? super EducationPointsOutcome> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationPointsOutcome);
     }
 
@@ -87,7 +90,8 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @return the updated EducationPointsOutcome
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationPointsOutcome patch(final EducationPointsOutcome sourceEducationPointsOutcome) throws ClientException {
+    @Nullable
+    public EducationPointsOutcome patch(@Nonnull final EducationPointsOutcome sourceEducationPointsOutcome) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationPointsOutcome);
     }
 
@@ -97,7 +101,7 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @param newEducationPointsOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationPointsOutcome newEducationPointsOutcome, final ICallback<? super EducationPointsOutcome> callback) {
+    public void post(@Nonnull final EducationPointsOutcome newEducationPointsOutcome, @Nonnull final ICallback<? super EducationPointsOutcome> callback) {
         send(HttpMethod.POST, callback, newEducationPointsOutcome);
     }
 
@@ -108,7 +112,8 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @return the created EducationPointsOutcome
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationPointsOutcome post(final EducationPointsOutcome newEducationPointsOutcome) throws ClientException {
+    @Nullable
+    public EducationPointsOutcome post(@Nonnull final EducationPointsOutcome newEducationPointsOutcome) throws ClientException {
         return send(HttpMethod.POST, newEducationPointsOutcome);
     }
 
@@ -118,7 +123,7 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @param newEducationPointsOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationPointsOutcome newEducationPointsOutcome, final ICallback<? super EducationPointsOutcome> callback) {
+    public void put(@Nonnull final EducationPointsOutcome newEducationPointsOutcome, @Nonnull final ICallback<? super EducationPointsOutcome> callback) {
         send(HttpMethod.PUT, callback, newEducationPointsOutcome);
     }
 
@@ -129,7 +134,8 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @return the created EducationPointsOutcome
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationPointsOutcome put(final EducationPointsOutcome newEducationPointsOutcome) throws ClientException {
+    @Nullable
+    public EducationPointsOutcome put(@Nonnull final EducationPointsOutcome newEducationPointsOutcome) throws ClientException {
         return send(HttpMethod.PUT, newEducationPointsOutcome);
     }
 
@@ -139,9 +145,10 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationPointsOutcomeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationPointsOutcomeRequest)this;
+     @Nonnull
+     public EducationPointsOutcomeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EducationPointsOutcomeRequest extends BaseRequest implements IEduca
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationPointsOutcomeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationPointsOutcomeRequest)this;
+     @Nonnull
+     public EducationPointsOutcomeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

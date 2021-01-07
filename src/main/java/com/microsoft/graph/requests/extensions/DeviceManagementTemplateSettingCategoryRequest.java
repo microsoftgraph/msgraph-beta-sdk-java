@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementTemplateSettingCategory;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Template Setting Category Request.
  */
-public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest implements IDeviceManagementTemplateSettingCategoryRequest {
+public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest<DeviceManagementTemplateSettingCategory> {
 	
     /**
      * The request for the DeviceManagementTemplateSettingCategory
@@ -33,7 +33,7 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementTemplateSettingCategoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementTemplateSettingCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementTemplateSettingCategory.class);
     }
 
@@ -42,7 +42,7 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @return the DeviceManagementTemplateSettingCategory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementTemplateSettingCategory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @param sourceDeviceManagementTemplateSettingCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementTemplateSettingCategory sourceDeviceManagementTemplateSettingCategory, final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
+    public void patch(@Nonnull final DeviceManagementTemplateSettingCategory sourceDeviceManagementTemplateSettingCategory, @Nonnull final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementTemplateSettingCategory);
     }
 
@@ -91,7 +92,8 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @return the updated DeviceManagementTemplateSettingCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementTemplateSettingCategory patch(final DeviceManagementTemplateSettingCategory sourceDeviceManagementTemplateSettingCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementTemplateSettingCategory patch(@Nonnull final DeviceManagementTemplateSettingCategory sourceDeviceManagementTemplateSettingCategory) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementTemplateSettingCategory);
     }
 
@@ -101,7 +103,7 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @param newDeviceManagementTemplateSettingCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
+    public void post(@Nonnull final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, @Nonnull final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementTemplateSettingCategory);
     }
 
@@ -112,7 +114,8 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @return the created DeviceManagementTemplateSettingCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementTemplateSettingCategory post(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementTemplateSettingCategory post(@Nonnull final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementTemplateSettingCategory);
     }
 
@@ -122,7 +125,7 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @param newDeviceManagementTemplateSettingCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
+    public void put(@Nonnull final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory, @Nonnull final ICallback<? super DeviceManagementTemplateSettingCategory> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementTemplateSettingCategory);
     }
 
@@ -133,7 +136,8 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @return the created DeviceManagementTemplateSettingCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementTemplateSettingCategory put(final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory) throws ClientException {
+    @Nullable
+    public DeviceManagementTemplateSettingCategory put(@Nonnull final DeviceManagementTemplateSettingCategory newDeviceManagementTemplateSettingCategory) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementTemplateSettingCategory);
     }
 
@@ -143,9 +147,10 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementTemplateSettingCategoryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementTemplateSettingCategoryRequest)this;
+     @Nonnull
+     public DeviceManagementTemplateSettingCategoryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class DeviceManagementTemplateSettingCategoryRequest extends BaseRequest 
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementTemplateSettingCategoryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementTemplateSettingCategoryRequest)this;
+     @Nonnull
+     public DeviceManagementTemplateSettingCategoryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

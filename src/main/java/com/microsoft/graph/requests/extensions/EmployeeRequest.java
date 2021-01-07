@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Employee;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Employee Request.
  */
-public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
+public class EmployeeRequest extends BaseRequest<Employee> {
 	
     /**
      * The request for the Employee
@@ -33,7 +33,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmployeeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmployeeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Employee.class);
     }
 
@@ -42,7 +42,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Employee> callback) {
+    public void get(@Nonnull final ICallback<? super Employee> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @return the Employee from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Employee get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Employee> callback) {
+    public void delete(@Nonnull final ICallback<? super Employee> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param sourceEmployee the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Employee sourceEmployee, final ICallback<? super Employee> callback) {
+    public void patch(@Nonnull final Employee sourceEmployee, @Nonnull final ICallback<? super Employee> callback) {
         send(HttpMethod.PATCH, callback, sourceEmployee);
     }
 
@@ -91,7 +92,8 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @return the updated Employee
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Employee patch(final Employee sourceEmployee) throws ClientException {
+    @Nullable
+    public Employee patch(@Nonnull final Employee sourceEmployee) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmployee);
     }
 
@@ -101,7 +103,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param newEmployee the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Employee newEmployee, final ICallback<? super Employee> callback) {
+    public void post(@Nonnull final Employee newEmployee, @Nonnull final ICallback<? super Employee> callback) {
         send(HttpMethod.POST, callback, newEmployee);
     }
 
@@ -112,7 +114,8 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @return the created Employee
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Employee post(final Employee newEmployee) throws ClientException {
+    @Nullable
+    public Employee post(@Nonnull final Employee newEmployee) throws ClientException {
         return send(HttpMethod.POST, newEmployee);
     }
 
@@ -122,7 +125,7 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param newEmployee the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Employee newEmployee, final ICallback<? super Employee> callback) {
+    public void put(@Nonnull final Employee newEmployee, @Nonnull final ICallback<? super Employee> callback) {
         send(HttpMethod.PUT, callback, newEmployee);
     }
 
@@ -133,7 +136,8 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @return the created Employee
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Employee put(final Employee newEmployee) throws ClientException {
+    @Nullable
+    public Employee put(@Nonnull final Employee newEmployee) throws ClientException {
         return send(HttpMethod.PUT, newEmployee);
     }
 
@@ -143,9 +147,10 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IEmployeeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmployeeRequest)this;
+     @Nonnull
+     public EmployeeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class EmployeeRequest extends BaseRequest implements IEmployeeRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmployeeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmployeeRequest)this;
+     @Nonnull
+     public EmployeeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationalBrandingLocalization;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organizational Branding Localization Request.
  */
-public class OrganizationalBrandingLocalizationRequest extends BaseRequest implements IOrganizationalBrandingLocalizationRequest {
+public class OrganizationalBrandingLocalizationRequest extends BaseRequest<OrganizationalBrandingLocalization> {
 	
     /**
      * The request for the OrganizationalBrandingLocalization
@@ -29,7 +31,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationalBrandingLocalizationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationalBrandingLocalizationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrganizationalBrandingLocalization.class);
     }
 
@@ -38,7 +40,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OrganizationalBrandingLocalization> callback) {
+    public void get(@Nonnull final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @return the OrganizationalBrandingLocalization from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OrganizationalBrandingLocalization get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OrganizationalBrandingLocalization> callback) {
+    public void delete(@Nonnull final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param sourceOrganizationalBrandingLocalization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback) {
+    public void patch(@Nonnull final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization, @Nonnull final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganizationalBrandingLocalization);
     }
 
@@ -87,7 +90,8 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @return the updated OrganizationalBrandingLocalization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBrandingLocalization patch(final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization) throws ClientException {
+    @Nullable
+    public OrganizationalBrandingLocalization patch(@Nonnull final OrganizationalBrandingLocalization sourceOrganizationalBrandingLocalization) throws ClientException {
         return send(HttpMethod.PATCH, sourceOrganizationalBrandingLocalization);
     }
 
@@ -97,7 +101,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param newOrganizationalBrandingLocalization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback) {
+    public void post(@Nonnull final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, @Nonnull final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.POST, callback, newOrganizationalBrandingLocalization);
     }
 
@@ -108,7 +112,8 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @return the created OrganizationalBrandingLocalization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBrandingLocalization post(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization) throws ClientException {
+    @Nullable
+    public OrganizationalBrandingLocalization post(@Nonnull final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization) throws ClientException {
         return send(HttpMethod.POST, newOrganizationalBrandingLocalization);
     }
 
@@ -118,7 +123,7 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param newOrganizationalBrandingLocalization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, final ICallback<? super OrganizationalBrandingLocalization> callback) {
+    public void put(@Nonnull final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization, @Nonnull final ICallback<? super OrganizationalBrandingLocalization> callback) {
         send(HttpMethod.PUT, callback, newOrganizationalBrandingLocalization);
     }
 
@@ -129,7 +134,8 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @return the created OrganizationalBrandingLocalization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBrandingLocalization put(final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization) throws ClientException {
+    @Nullable
+    public OrganizationalBrandingLocalization put(@Nonnull final OrganizationalBrandingLocalization newOrganizationalBrandingLocalization) throws ClientException {
         return send(HttpMethod.PUT, newOrganizationalBrandingLocalization);
     }
 
@@ -139,9 +145,10 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IOrganizationalBrandingLocalizationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrganizationalBrandingLocalizationRequest)this;
+     @Nonnull
+     public OrganizationalBrandingLocalizationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class OrganizationalBrandingLocalizationRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrganizationalBrandingLocalizationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationalBrandingLocalizationRequest)this;
+     @Nonnull
+     public OrganizationalBrandingLocalizationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

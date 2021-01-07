@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.JournalLine;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Journal Line Request Builder.
  */
-public class JournalLineRequestBuilder extends BaseRequestBuilder implements IJournalLineRequestBuilder {
+public class JournalLineRequestBuilder extends BaseRequestBuilder<JournalLine> {
 
     /**
      * The request builder for the JournalLine
@@ -30,7 +31,7 @@ public class JournalLineRequestBuilder extends BaseRequestBuilder implements IJo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public JournalLineRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public JournalLineRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class JournalLineRequestBuilder extends BaseRequestBuilder implements IJo
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IJournalLineRequest instance
+     * @return the JournalLineRequest instance
      */
-    public IJournalLineRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public JournalLineRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class JournalLineRequestBuilder extends BaseRequestBuilder implements IJo
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IJournalLineRequest instance
+     * @return the JournalLineRequest instance
      */
-    public IJournalLineRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public JournalLineRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.JournalLineRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class JournalLineRequestBuilder extends BaseRequestBuilder implements IJo
     /**
      * Gets the request builder for Account
      *
-     * @return the IAccountRequestBuilder instance
+     * @return the AccountRequestBuilder instance
      */
-    public IAccountRequestBuilder account() {
+    @Nonnull
+    public AccountRequestBuilder account() {
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("account"), getClient(), null);
     }
 }

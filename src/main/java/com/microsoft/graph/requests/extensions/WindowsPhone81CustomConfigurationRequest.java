@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhone81CustomConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Phone81Custom Configuration Request.
  */
-public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implements IWindowsPhone81CustomConfigurationRequest {
+public class WindowsPhone81CustomConfigurationRequest extends BaseRequest<WindowsPhone81CustomConfiguration> {
 	
     /**
      * The request for the WindowsPhone81CustomConfiguration
@@ -29,7 +31,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81CustomConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhone81CustomConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsPhone81CustomConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @return the WindowsPhone81CustomConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsPhone81CustomConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param sourceWindowsPhone81CustomConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void patch(@Nonnull final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration, @Nonnull final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81CustomConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @return the updated WindowsPhone81CustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhone81CustomConfiguration patch(final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration) throws ClientException {
+    @Nullable
+    public WindowsPhone81CustomConfiguration patch(@Nonnull final WindowsPhone81CustomConfiguration sourceWindowsPhone81CustomConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsPhone81CustomConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param newWindowsPhone81CustomConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void post(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, @Nonnull final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81CustomConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @return the created WindowsPhone81CustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhone81CustomConfiguration post(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) throws ClientException {
+    @Nullable
+    public WindowsPhone81CustomConfiguration post(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindowsPhone81CustomConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param newWindowsPhone81CustomConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
+    public void put(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration, @Nonnull final ICallback<? super WindowsPhone81CustomConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81CustomConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @return the created WindowsPhone81CustomConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhone81CustomConfiguration put(final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) throws ClientException {
+    @Nullable
+    public WindowsPhone81CustomConfiguration put(@Nonnull final WindowsPhone81CustomConfiguration newWindowsPhone81CustomConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsPhone81CustomConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsPhone81CustomConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsPhone81CustomConfigurationRequest)this;
+     @Nonnull
+     public WindowsPhone81CustomConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsPhone81CustomConfigurationRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsPhone81CustomConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81CustomConfigurationRequest)this;
+     @Nonnull
+     public WindowsPhone81CustomConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

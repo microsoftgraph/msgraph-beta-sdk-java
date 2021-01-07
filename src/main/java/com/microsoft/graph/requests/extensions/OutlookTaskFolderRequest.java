@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OutlookTaskFolder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook Task Folder Request.
  */
-public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTaskFolderRequest {
+public class OutlookTaskFolderRequest extends BaseRequest<OutlookTaskFolder> {
 	
     /**
      * The request for the OutlookTaskFolder
@@ -41,7 +37,7 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookTaskFolderRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookTaskFolderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookTaskFolder.class);
     }
 
@@ -50,7 +46,7 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OutlookTaskFolder> callback) {
+    public void get(@Nonnull final ICallback<? super OutlookTaskFolder> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @return the OutlookTaskFolder from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OutlookTaskFolder get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OutlookTaskFolder> callback) {
+    public void delete(@Nonnull final ICallback<? super OutlookTaskFolder> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @param sourceOutlookTaskFolder the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookTaskFolder sourceOutlookTaskFolder, final ICallback<? super OutlookTaskFolder> callback) {
+    public void patch(@Nonnull final OutlookTaskFolder sourceOutlookTaskFolder, @Nonnull final ICallback<? super OutlookTaskFolder> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookTaskFolder);
     }
 
@@ -99,7 +96,8 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @return the updated OutlookTaskFolder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTaskFolder patch(final OutlookTaskFolder sourceOutlookTaskFolder) throws ClientException {
+    @Nullable
+    public OutlookTaskFolder patch(@Nonnull final OutlookTaskFolder sourceOutlookTaskFolder) throws ClientException {
         return send(HttpMethod.PATCH, sourceOutlookTaskFolder);
     }
 
@@ -109,7 +107,7 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @param newOutlookTaskFolder the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<? super OutlookTaskFolder> callback) {
+    public void post(@Nonnull final OutlookTaskFolder newOutlookTaskFolder, @Nonnull final ICallback<? super OutlookTaskFolder> callback) {
         send(HttpMethod.POST, callback, newOutlookTaskFolder);
     }
 
@@ -120,7 +118,8 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @return the created OutlookTaskFolder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTaskFolder post(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException {
+    @Nullable
+    public OutlookTaskFolder post(@Nonnull final OutlookTaskFolder newOutlookTaskFolder) throws ClientException {
         return send(HttpMethod.POST, newOutlookTaskFolder);
     }
 
@@ -130,7 +129,7 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @param newOutlookTaskFolder the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookTaskFolder newOutlookTaskFolder, final ICallback<? super OutlookTaskFolder> callback) {
+    public void put(@Nonnull final OutlookTaskFolder newOutlookTaskFolder, @Nonnull final ICallback<? super OutlookTaskFolder> callback) {
         send(HttpMethod.PUT, callback, newOutlookTaskFolder);
     }
 
@@ -141,7 +140,8 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @return the created OutlookTaskFolder
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookTaskFolder put(final OutlookTaskFolder newOutlookTaskFolder) throws ClientException {
+    @Nullable
+    public OutlookTaskFolder put(@Nonnull final OutlookTaskFolder newOutlookTaskFolder) throws ClientException {
         return send(HttpMethod.PUT, newOutlookTaskFolder);
     }
 
@@ -151,9 +151,10 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @param value the select clause
      * @return the updated request
      */
-     public IOutlookTaskFolderRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OutlookTaskFolderRequest)this;
+     @Nonnull
+     public OutlookTaskFolderRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class OutlookTaskFolderRequest extends BaseRequest implements IOutlookTas
      * @param value the expand clause
      * @return the updated request
      */
-     public IOutlookTaskFolderRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookTaskFolderRequest)this;
+     @Nonnull
+     public OutlookTaskFolderRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

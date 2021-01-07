@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MuteParticipantsOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mute Participants Operation Request.
  */
-public class MuteParticipantsOperationRequest extends BaseRequest implements IMuteParticipantsOperationRequest {
+public class MuteParticipantsOperationRequest extends BaseRequest<MuteParticipantsOperation> {
 	
     /**
      * The request for the MuteParticipantsOperation
@@ -29,7 +31,7 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MuteParticipantsOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MuteParticipantsOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MuteParticipantsOperation.class);
     }
 
@@ -38,7 +40,7 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MuteParticipantsOperation> callback) {
+    public void get(@Nonnull final ICallback<? super MuteParticipantsOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @return the MuteParticipantsOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MuteParticipantsOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MuteParticipantsOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super MuteParticipantsOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @param sourceMuteParticipantsOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MuteParticipantsOperation sourceMuteParticipantsOperation, final ICallback<? super MuteParticipantsOperation> callback) {
+    public void patch(@Nonnull final MuteParticipantsOperation sourceMuteParticipantsOperation, @Nonnull final ICallback<? super MuteParticipantsOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceMuteParticipantsOperation);
     }
 
@@ -87,7 +90,8 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @return the updated MuteParticipantsOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MuteParticipantsOperation patch(final MuteParticipantsOperation sourceMuteParticipantsOperation) throws ClientException {
+    @Nullable
+    public MuteParticipantsOperation patch(@Nonnull final MuteParticipantsOperation sourceMuteParticipantsOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceMuteParticipantsOperation);
     }
 
@@ -97,7 +101,7 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @param newMuteParticipantsOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MuteParticipantsOperation newMuteParticipantsOperation, final ICallback<? super MuteParticipantsOperation> callback) {
+    public void post(@Nonnull final MuteParticipantsOperation newMuteParticipantsOperation, @Nonnull final ICallback<? super MuteParticipantsOperation> callback) {
         send(HttpMethod.POST, callback, newMuteParticipantsOperation);
     }
 
@@ -108,7 +112,8 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @return the created MuteParticipantsOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MuteParticipantsOperation post(final MuteParticipantsOperation newMuteParticipantsOperation) throws ClientException {
+    @Nullable
+    public MuteParticipantsOperation post(@Nonnull final MuteParticipantsOperation newMuteParticipantsOperation) throws ClientException {
         return send(HttpMethod.POST, newMuteParticipantsOperation);
     }
 
@@ -118,7 +123,7 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @param newMuteParticipantsOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MuteParticipantsOperation newMuteParticipantsOperation, final ICallback<? super MuteParticipantsOperation> callback) {
+    public void put(@Nonnull final MuteParticipantsOperation newMuteParticipantsOperation, @Nonnull final ICallback<? super MuteParticipantsOperation> callback) {
         send(HttpMethod.PUT, callback, newMuteParticipantsOperation);
     }
 
@@ -129,7 +134,8 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @return the created MuteParticipantsOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MuteParticipantsOperation put(final MuteParticipantsOperation newMuteParticipantsOperation) throws ClientException {
+    @Nullable
+    public MuteParticipantsOperation put(@Nonnull final MuteParticipantsOperation newMuteParticipantsOperation) throws ClientException {
         return send(HttpMethod.PUT, newMuteParticipantsOperation);
     }
 
@@ -139,9 +145,10 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @param value the select clause
      * @return the updated request
      */
-     public IMuteParticipantsOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MuteParticipantsOperationRequest)this;
+     @Nonnull
+     public MuteParticipantsOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MuteParticipantsOperationRequest extends BaseRequest implements IMu
      * @param value the expand clause
      * @return the updated request
      */
-     public IMuteParticipantsOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MuteParticipantsOperationRequest)this;
+     @Nonnull
+     public MuteParticipantsOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

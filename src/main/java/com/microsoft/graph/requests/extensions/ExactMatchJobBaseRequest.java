@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExactMatchJobBase;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Exact Match Job Base Request.
  */
-public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatchJobBaseRequest {
+public class ExactMatchJobBaseRequest extends BaseRequest<ExactMatchJobBase> {
 	
     /**
      * The request for the ExactMatchJobBase
@@ -30,10 +32,10 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ExactMatchJobBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ExactMatchJobBase> responseClass) {
+    public ExactMatchJobBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ExactMatchJobBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchJobBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExactMatchJobBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExactMatchJobBase.class);
     }
 
@@ -53,7 +55,7 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExactMatchJobBase> callback) {
+    public void get(@Nonnull final ICallback<? super ExactMatchJobBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @return the ExactMatchJobBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExactMatchJobBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExactMatchJobBase> callback) {
+    public void delete(@Nonnull final ICallback<? super ExactMatchJobBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @param sourceExactMatchJobBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExactMatchJobBase sourceExactMatchJobBase, final ICallback<? super ExactMatchJobBase> callback) {
+    public void patch(@Nonnull final ExactMatchJobBase sourceExactMatchJobBase, @Nonnull final ICallback<? super ExactMatchJobBase> callback) {
         send(HttpMethod.PATCH, callback, sourceExactMatchJobBase);
     }
 
@@ -102,7 +105,8 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @return the updated ExactMatchJobBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchJobBase patch(final ExactMatchJobBase sourceExactMatchJobBase) throws ClientException {
+    @Nullable
+    public ExactMatchJobBase patch(@Nonnull final ExactMatchJobBase sourceExactMatchJobBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceExactMatchJobBase);
     }
 
@@ -112,7 +116,7 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @param newExactMatchJobBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExactMatchJobBase newExactMatchJobBase, final ICallback<? super ExactMatchJobBase> callback) {
+    public void post(@Nonnull final ExactMatchJobBase newExactMatchJobBase, @Nonnull final ICallback<? super ExactMatchJobBase> callback) {
         send(HttpMethod.POST, callback, newExactMatchJobBase);
     }
 
@@ -123,7 +127,8 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @return the created ExactMatchJobBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchJobBase post(final ExactMatchJobBase newExactMatchJobBase) throws ClientException {
+    @Nullable
+    public ExactMatchJobBase post(@Nonnull final ExactMatchJobBase newExactMatchJobBase) throws ClientException {
         return send(HttpMethod.POST, newExactMatchJobBase);
     }
 
@@ -133,7 +138,7 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @param newExactMatchJobBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExactMatchJobBase newExactMatchJobBase, final ICallback<? super ExactMatchJobBase> callback) {
+    public void put(@Nonnull final ExactMatchJobBase newExactMatchJobBase, @Nonnull final ICallback<? super ExactMatchJobBase> callback) {
         send(HttpMethod.PUT, callback, newExactMatchJobBase);
     }
 
@@ -144,7 +149,8 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @return the created ExactMatchJobBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchJobBase put(final ExactMatchJobBase newExactMatchJobBase) throws ClientException {
+    @Nullable
+    public ExactMatchJobBase put(@Nonnull final ExactMatchJobBase newExactMatchJobBase) throws ClientException {
         return send(HttpMethod.PUT, newExactMatchJobBase);
     }
 
@@ -154,9 +160,10 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @param value the select clause
      * @return the updated request
      */
-     public IExactMatchJobBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExactMatchJobBaseRequest)this;
+     @Nonnull
+     public ExactMatchJobBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class ExactMatchJobBaseRequest extends BaseRequest implements IExactMatch
      * @param value the expand clause
      * @return the updated request
      */
-     public IExactMatchJobBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExactMatchJobBaseRequest)this;
+     @Nonnull
+     public ExactMatchJobBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

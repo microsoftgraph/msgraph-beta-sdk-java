@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntegerSettingInstance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Integer Setting Instance Request Builder.
  */
-public class DeviceManagementIntegerSettingInstanceRequestBuilder extends BaseRequestBuilder implements IDeviceManagementIntegerSettingInstanceRequestBuilder {
+public class DeviceManagementIntegerSettingInstanceRequestBuilder extends BaseRequestBuilder<DeviceManagementIntegerSettingInstance> {
 
     /**
      * The request builder for the DeviceManagementIntegerSettingInstance
@@ -28,7 +30,7 @@ public class DeviceManagementIntegerSettingInstanceRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntegerSettingInstanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementIntegerSettingInstanceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceManagementIntegerSettingInstanceRequestBuilder extends BaseRe
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementIntegerSettingInstanceRequest instance
+     * @return the DeviceManagementIntegerSettingInstanceRequest instance
      */
-    public IDeviceManagementIntegerSettingInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementIntegerSettingInstanceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceManagementIntegerSettingInstanceRequestBuilder extends BaseRe
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementIntegerSettingInstanceRequest instance
+     * @return the DeviceManagementIntegerSettingInstanceRequest instance
      */
-    public IDeviceManagementIntegerSettingInstanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementIntegerSettingInstanceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementIntegerSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerTask;
-import com.microsoft.graph.requests.extensions.IPlannerAssignedToTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerAssignedToTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerBucketTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerBucketTaskBoardTaskFormatRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerTaskDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerProgressTaskBoardTaskFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerProgressTaskBoardTaskFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Task Request.
  */
-public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskRequest {
+public class PlannerTaskRequest extends BaseRequest<PlannerTask> {
 	
     /**
      * The request for the PlannerTask
@@ -37,7 +35,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerTaskRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerTaskRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerTask.class);
     }
 
@@ -46,7 +44,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerTask> callback) {
+    public void get(@Nonnull final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @return the PlannerTask from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PlannerTask get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerTask> callback) {
+    public void delete(@Nonnull final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param sourcePlannerTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerTask sourcePlannerTask, final ICallback<? super PlannerTask> callback) {
+    public void patch(@Nonnull final PlannerTask sourcePlannerTask, @Nonnull final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerTask);
     }
 
@@ -95,7 +94,8 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @return the updated PlannerTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerTask patch(final PlannerTask sourcePlannerTask) throws ClientException {
+    @Nullable
+    public PlannerTask patch(@Nonnull final PlannerTask sourcePlannerTask) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerTask);
     }
 
@@ -105,7 +105,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param newPlannerTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback) {
+    public void post(@Nonnull final PlannerTask newPlannerTask, @Nonnull final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.POST, callback, newPlannerTask);
     }
 
@@ -116,7 +116,8 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @return the created PlannerTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerTask post(final PlannerTask newPlannerTask) throws ClientException {
+    @Nullable
+    public PlannerTask post(@Nonnull final PlannerTask newPlannerTask) throws ClientException {
         return send(HttpMethod.POST, newPlannerTask);
     }
 
@@ -126,7 +127,7 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param newPlannerTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerTask newPlannerTask, final ICallback<? super PlannerTask> callback) {
+    public void put(@Nonnull final PlannerTask newPlannerTask, @Nonnull final ICallback<? super PlannerTask> callback) {
         send(HttpMethod.PUT, callback, newPlannerTask);
     }
 
@@ -137,7 +138,8 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @return the created PlannerTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerTask put(final PlannerTask newPlannerTask) throws ClientException {
+    @Nullable
+    public PlannerTask put(@Nonnull final PlannerTask newPlannerTask) throws ClientException {
         return send(HttpMethod.PUT, newPlannerTask);
     }
 
@@ -147,9 +149,10 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param value the select clause
      * @return the updated request
      */
-     public IPlannerTaskRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PlannerTaskRequest)this;
+     @Nonnull
+     public PlannerTaskRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class PlannerTaskRequest extends BaseRequest implements IPlannerTaskReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlannerTaskRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PlannerTaskRequest)this;
+     @Nonnull
+     public PlannerTaskRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

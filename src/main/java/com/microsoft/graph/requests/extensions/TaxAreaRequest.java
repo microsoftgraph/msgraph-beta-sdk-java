@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TaxArea;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Tax Area Request.
  */
-public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
+public class TaxAreaRequest extends BaseRequest<TaxArea> {
 	
     /**
      * The request for the TaxArea
@@ -29,7 +31,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TaxAreaRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TaxAreaRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TaxArea.class);
     }
 
@@ -38,7 +40,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TaxArea> callback) {
+    public void get(@Nonnull final ICallback<? super TaxArea> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @return the TaxArea from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TaxArea get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TaxArea> callback) {
+    public void delete(@Nonnull final ICallback<? super TaxArea> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param sourceTaxArea the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TaxArea sourceTaxArea, final ICallback<? super TaxArea> callback) {
+    public void patch(@Nonnull final TaxArea sourceTaxArea, @Nonnull final ICallback<? super TaxArea> callback) {
         send(HttpMethod.PATCH, callback, sourceTaxArea);
     }
 
@@ -87,7 +90,8 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @return the updated TaxArea
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TaxArea patch(final TaxArea sourceTaxArea) throws ClientException {
+    @Nullable
+    public TaxArea patch(@Nonnull final TaxArea sourceTaxArea) throws ClientException {
         return send(HttpMethod.PATCH, sourceTaxArea);
     }
 
@@ -97,7 +101,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param newTaxArea the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TaxArea newTaxArea, final ICallback<? super TaxArea> callback) {
+    public void post(@Nonnull final TaxArea newTaxArea, @Nonnull final ICallback<? super TaxArea> callback) {
         send(HttpMethod.POST, callback, newTaxArea);
     }
 
@@ -108,7 +112,8 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @return the created TaxArea
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TaxArea post(final TaxArea newTaxArea) throws ClientException {
+    @Nullable
+    public TaxArea post(@Nonnull final TaxArea newTaxArea) throws ClientException {
         return send(HttpMethod.POST, newTaxArea);
     }
 
@@ -118,7 +123,7 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param newTaxArea the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TaxArea newTaxArea, final ICallback<? super TaxArea> callback) {
+    public void put(@Nonnull final TaxArea newTaxArea, @Nonnull final ICallback<? super TaxArea> callback) {
         send(HttpMethod.PUT, callback, newTaxArea);
     }
 
@@ -129,7 +134,8 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @return the created TaxArea
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TaxArea put(final TaxArea newTaxArea) throws ClientException {
+    @Nullable
+    public TaxArea put(@Nonnull final TaxArea newTaxArea) throws ClientException {
         return send(HttpMethod.PUT, newTaxArea);
     }
 
@@ -139,9 +145,10 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITaxAreaRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TaxAreaRequest)this;
+     @Nonnull
+     public TaxAreaRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TaxAreaRequest extends BaseRequest implements ITaxAreaRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITaxAreaRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TaxAreaRequest)this;
+     @Nonnull
+     public TaxAreaRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

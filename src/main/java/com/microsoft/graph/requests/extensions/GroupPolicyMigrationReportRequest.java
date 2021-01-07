@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyMigrationReport;
 import com.microsoft.graph.models.extensions.GroupPolicyObjectFile;
-import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicySettingMappingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicySettingMappingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnsupportedGroupPolicyExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnsupportedGroupPolicyExtensionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Migration Report Request.
  */
-public class GroupPolicyMigrationReportRequest extends BaseRequest implements IGroupPolicyMigrationReportRequest {
+public class GroupPolicyMigrationReportRequest extends BaseRequest<GroupPolicyMigrationReport> {
 	
     /**
      * The request for the GroupPolicyMigrationReport
@@ -38,7 +36,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyMigrationReportRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyMigrationReportRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyMigrationReport.class);
     }
 
@@ -47,7 +45,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyMigrationReport> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,6 +55,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @return the GroupPolicyMigrationReport from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyMigrationReport get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -66,7 +65,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyMigrationReport> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +84,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param sourceGroupPolicyMigrationReport the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback) {
+    public void patch(@Nonnull final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport, @Nonnull final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyMigrationReport);
     }
 
@@ -96,7 +95,8 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @return the updated GroupPolicyMigrationReport
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyMigrationReport patch(final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport) throws ClientException {
+    @Nullable
+    public GroupPolicyMigrationReport patch(@Nonnull final GroupPolicyMigrationReport sourceGroupPolicyMigrationReport) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyMigrationReport);
     }
 
@@ -106,7 +106,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param newGroupPolicyMigrationReport the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback) {
+    public void post(@Nonnull final GroupPolicyMigrationReport newGroupPolicyMigrationReport, @Nonnull final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyMigrationReport);
     }
 
@@ -117,7 +117,8 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @return the created GroupPolicyMigrationReport
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyMigrationReport post(final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException {
+    @Nullable
+    public GroupPolicyMigrationReport post(@Nonnull final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyMigrationReport);
     }
 
@@ -127,7 +128,7 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param newGroupPolicyMigrationReport the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport, final ICallback<? super GroupPolicyMigrationReport> callback) {
+    public void put(@Nonnull final GroupPolicyMigrationReport newGroupPolicyMigrationReport, @Nonnull final ICallback<? super GroupPolicyMigrationReport> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyMigrationReport);
     }
 
@@ -138,7 +139,8 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @return the created GroupPolicyMigrationReport
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyMigrationReport put(final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException {
+    @Nullable
+    public GroupPolicyMigrationReport put(@Nonnull final GroupPolicyMigrationReport newGroupPolicyMigrationReport) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyMigrationReport);
     }
 
@@ -148,9 +150,10 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyMigrationReportRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyMigrationReportRequest)this;
+     @Nonnull
+     public GroupPolicyMigrationReportRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,9 +162,10 @@ public class GroupPolicyMigrationReportRequest extends BaseRequest implements IG
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyMigrationReportRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyMigrationReportRequest)this;
+     @Nonnull
+     public GroupPolicyMigrationReportRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UrlAssessmentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Url Assessment Request Request.
  */
-public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAssessmentRequestRequest {
+public class UrlAssessmentRequestRequest extends BaseRequest<UrlAssessmentRequest> {
 	
     /**
      * The request for the UrlAssessmentRequest
@@ -29,7 +31,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UrlAssessmentRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UrlAssessmentRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UrlAssessmentRequest.class);
     }
 
@@ -38,7 +40,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UrlAssessmentRequest> callback) {
+    public void get(@Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @return the UrlAssessmentRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UrlAssessmentRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UrlAssessmentRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param sourceUrlAssessmentRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UrlAssessmentRequest sourceUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback) {
+    public void patch(@Nonnull final UrlAssessmentRequest sourceUrlAssessmentRequest, @Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceUrlAssessmentRequest);
     }
 
@@ -87,7 +90,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @return the updated UrlAssessmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UrlAssessmentRequest patch(final UrlAssessmentRequest sourceUrlAssessmentRequest) throws ClientException {
+    @Nullable
+    public UrlAssessmentRequest patch(@Nonnull final UrlAssessmentRequest sourceUrlAssessmentRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceUrlAssessmentRequest);
     }
 
@@ -97,7 +101,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param newUrlAssessmentRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback) {
+    public void post(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest, @Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.POST, callback, newUrlAssessmentRequest);
     }
 
@@ -108,7 +112,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @return the created UrlAssessmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UrlAssessmentRequest post(final UrlAssessmentRequest newUrlAssessmentRequest) throws ClientException {
+    @Nullable
+    public UrlAssessmentRequest post(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) throws ClientException {
         return send(HttpMethod.POST, newUrlAssessmentRequest);
     }
 
@@ -118,7 +123,7 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param newUrlAssessmentRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UrlAssessmentRequest newUrlAssessmentRequest, final ICallback<? super UrlAssessmentRequest> callback) {
+    public void put(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest, @Nonnull final ICallback<? super UrlAssessmentRequest> callback) {
         send(HttpMethod.PUT, callback, newUrlAssessmentRequest);
     }
 
@@ -129,7 +134,8 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @return the created UrlAssessmentRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UrlAssessmentRequest put(final UrlAssessmentRequest newUrlAssessmentRequest) throws ClientException {
+    @Nullable
+    public UrlAssessmentRequest put(@Nonnull final UrlAssessmentRequest newUrlAssessmentRequest) throws ClientException {
         return send(HttpMethod.PUT, newUrlAssessmentRequest);
     }
 
@@ -139,9 +145,10 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param value the select clause
      * @return the updated request
      */
-     public IUrlAssessmentRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UrlAssessmentRequestRequest)this;
+     @Nonnull
+     public UrlAssessmentRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UrlAssessmentRequestRequest extends BaseRequest implements IUrlAsse
      * @param value the expand clause
      * @return the updated request
      */
-     public IUrlAssessmentRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UrlAssessmentRequestRequest)this;
+     @Nonnull
+     public UrlAssessmentRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

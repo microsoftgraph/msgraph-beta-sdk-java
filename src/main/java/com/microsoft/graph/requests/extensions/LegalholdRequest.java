@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Legalhold;
-import com.microsoft.graph.requests.extensions.ISiteSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Legalhold Request.
  */
-public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
+public class LegalholdRequest extends BaseRequest<Legalhold> {
 	
     /**
      * The request for the Legalhold
@@ -41,7 +37,7 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LegalholdRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LegalholdRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Legalhold.class);
     }
 
@@ -50,7 +46,7 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Legalhold> callback) {
+    public void get(@Nonnull final ICallback<? super Legalhold> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @return the Legalhold from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Legalhold get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Legalhold> callback) {
+    public void delete(@Nonnull final ICallback<? super Legalhold> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @param sourceLegalhold the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Legalhold sourceLegalhold, final ICallback<? super Legalhold> callback) {
+    public void patch(@Nonnull final Legalhold sourceLegalhold, @Nonnull final ICallback<? super Legalhold> callback) {
         send(HttpMethod.PATCH, callback, sourceLegalhold);
     }
 
@@ -99,7 +96,8 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @return the updated Legalhold
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Legalhold patch(final Legalhold sourceLegalhold) throws ClientException {
+    @Nullable
+    public Legalhold patch(@Nonnull final Legalhold sourceLegalhold) throws ClientException {
         return send(HttpMethod.PATCH, sourceLegalhold);
     }
 
@@ -109,7 +107,7 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @param newLegalhold the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Legalhold newLegalhold, final ICallback<? super Legalhold> callback) {
+    public void post(@Nonnull final Legalhold newLegalhold, @Nonnull final ICallback<? super Legalhold> callback) {
         send(HttpMethod.POST, callback, newLegalhold);
     }
 
@@ -120,7 +118,8 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @return the created Legalhold
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Legalhold post(final Legalhold newLegalhold) throws ClientException {
+    @Nullable
+    public Legalhold post(@Nonnull final Legalhold newLegalhold) throws ClientException {
         return send(HttpMethod.POST, newLegalhold);
     }
 
@@ -130,7 +129,7 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @param newLegalhold the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Legalhold newLegalhold, final ICallback<? super Legalhold> callback) {
+    public void put(@Nonnull final Legalhold newLegalhold, @Nonnull final ICallback<? super Legalhold> callback) {
         send(HttpMethod.PUT, callback, newLegalhold);
     }
 
@@ -141,7 +140,8 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @return the created Legalhold
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Legalhold put(final Legalhold newLegalhold) throws ClientException {
+    @Nullable
+    public Legalhold put(@Nonnull final Legalhold newLegalhold) throws ClientException {
         return send(HttpMethod.PUT, newLegalhold);
     }
 
@@ -151,9 +151,10 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ILegalholdRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LegalholdRequest)this;
+     @Nonnull
+     public LegalholdRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class LegalholdRequest extends BaseRequest implements ILegalholdRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ILegalholdRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LegalholdRequest)this;
+     @Nonnull
+     public LegalholdRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

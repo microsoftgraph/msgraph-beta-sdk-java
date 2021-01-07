@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemPhone;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Phone Request.
  */
-public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
+public class ItemPhoneRequest extends BaseRequest<ItemPhone> {
 	
     /**
      * The request for the ItemPhone
@@ -29,7 +31,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemPhoneRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemPhoneRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemPhone.class);
     }
 
@@ -38,7 +40,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemPhone> callback) {
+    public void get(@Nonnull final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @return the ItemPhone from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemPhone get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemPhone> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param sourceItemPhone the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemPhone sourceItemPhone, final ICallback<? super ItemPhone> callback) {
+    public void patch(@Nonnull final ItemPhone sourceItemPhone, @Nonnull final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.PATCH, callback, sourceItemPhone);
     }
 
@@ -87,7 +90,8 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @return the updated ItemPhone
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemPhone patch(final ItemPhone sourceItemPhone) throws ClientException {
+    @Nullable
+    public ItemPhone patch(@Nonnull final ItemPhone sourceItemPhone) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemPhone);
     }
 
@@ -97,7 +101,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param newItemPhone the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemPhone newItemPhone, final ICallback<? super ItemPhone> callback) {
+    public void post(@Nonnull final ItemPhone newItemPhone, @Nonnull final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.POST, callback, newItemPhone);
     }
 
@@ -108,7 +112,8 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @return the created ItemPhone
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemPhone post(final ItemPhone newItemPhone) throws ClientException {
+    @Nullable
+    public ItemPhone post(@Nonnull final ItemPhone newItemPhone) throws ClientException {
         return send(HttpMethod.POST, newItemPhone);
     }
 
@@ -118,7 +123,7 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param newItemPhone the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemPhone newItemPhone, final ICallback<? super ItemPhone> callback) {
+    public void put(@Nonnull final ItemPhone newItemPhone, @Nonnull final ICallback<? super ItemPhone> callback) {
         send(HttpMethod.PUT, callback, newItemPhone);
     }
 
@@ -129,7 +134,8 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @return the created ItemPhone
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemPhone put(final ItemPhone newItemPhone) throws ClientException {
+    @Nullable
+    public ItemPhone put(@Nonnull final ItemPhone newItemPhone) throws ClientException {
         return send(HttpMethod.PUT, newItemPhone);
     }
 
@@ -139,9 +145,10 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IItemPhoneRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemPhoneRequest)this;
+     @Nonnull
+     public ItemPhoneRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ItemPhoneRequest extends BaseRequest implements IItemPhoneRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemPhoneRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemPhoneRequest)this;
+     @Nonnull
+     public ItemPhoneRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

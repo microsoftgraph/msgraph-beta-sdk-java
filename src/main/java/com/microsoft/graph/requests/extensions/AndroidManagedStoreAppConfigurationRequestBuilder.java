@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidManagedStoreAppConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Managed Store App Configuration Request Builder.
  */
-public class AndroidManagedStoreAppConfigurationRequestBuilder extends BaseRequestBuilder implements IAndroidManagedStoreAppConfigurationRequestBuilder {
+public class AndroidManagedStoreAppConfigurationRequestBuilder extends BaseRequestBuilder<AndroidManagedStoreAppConfiguration> {
 
     /**
      * The request builder for the AndroidManagedStoreAppConfiguration
@@ -28,7 +30,7 @@ public class AndroidManagedStoreAppConfigurationRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedStoreAppConfigurationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedStoreAppConfigurationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AndroidManagedStoreAppConfigurationRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidManagedStoreAppConfigurationRequest instance
+     * @return the AndroidManagedStoreAppConfigurationRequest instance
      */
-    public IAndroidManagedStoreAppConfigurationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AndroidManagedStoreAppConfigurationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,50 +49,92 @@ public class AndroidManagedStoreAppConfigurationRequestBuilder extends BaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidManagedStoreAppConfigurationRequest instance
+     * @return the AndroidManagedStoreAppConfigurationRequest instance
      */
-    public IAndroidManagedStoreAppConfigurationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AndroidManagedStoreAppConfigurationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AndroidManagedStoreAppConfigurationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new ManagedDeviceMobileAppConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ManagedDeviceMobileAppConfigurationDeviceSummary
      *
-     * @return the IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder deviceStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusSummary"), getClient(), null);
     }
-    public IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ManagedDeviceMobileAppConfigurationUserSummary
      *
-     * @return the IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
+     * @return the ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder instance
      */
-    public IManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder userStatusSummary() {
         return new ManagedDeviceMobileAppConfigurationUserSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusSummary"), getClient(), null);
     }
 }

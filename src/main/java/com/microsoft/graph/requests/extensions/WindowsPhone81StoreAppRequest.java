@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhone81StoreApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Phone81Store App Request.
  */
-public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindowsPhone81StoreAppRequest {
+public class WindowsPhone81StoreAppRequest extends BaseRequest<WindowsPhone81StoreApp> {
 	
     /**
      * The request for the WindowsPhone81StoreApp
@@ -29,7 +31,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhone81StoreAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhone81StoreAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsPhone81StoreApp.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsPhone81StoreApp> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @return the WindowsPhone81StoreApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsPhone81StoreApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsPhone81StoreApp> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param sourceWindowsPhone81StoreApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback) {
+    public void patch(@Nonnull final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp, @Nonnull final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhone81StoreApp);
     }
 
@@ -87,7 +90,8 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @return the updated WindowsPhone81StoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhone81StoreApp patch(final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp) throws ClientException {
+    @Nullable
+    public WindowsPhone81StoreApp patch(@Nonnull final WindowsPhone81StoreApp sourceWindowsPhone81StoreApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsPhone81StoreApp);
     }
 
@@ -97,7 +101,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param newWindowsPhone81StoreApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback) {
+    public void post(@Nonnull final WindowsPhone81StoreApp newWindowsPhone81StoreApp, @Nonnull final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.POST, callback, newWindowsPhone81StoreApp);
     }
 
@@ -108,7 +112,8 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @return the created WindowsPhone81StoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhone81StoreApp post(final WindowsPhone81StoreApp newWindowsPhone81StoreApp) throws ClientException {
+    @Nullable
+    public WindowsPhone81StoreApp post(@Nonnull final WindowsPhone81StoreApp newWindowsPhone81StoreApp) throws ClientException {
         return send(HttpMethod.POST, newWindowsPhone81StoreApp);
     }
 
@@ -118,7 +123,7 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param newWindowsPhone81StoreApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp, final ICallback<? super WindowsPhone81StoreApp> callback) {
+    public void put(@Nonnull final WindowsPhone81StoreApp newWindowsPhone81StoreApp, @Nonnull final ICallback<? super WindowsPhone81StoreApp> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhone81StoreApp);
     }
 
@@ -129,7 +134,8 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @return the created WindowsPhone81StoreApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhone81StoreApp put(final WindowsPhone81StoreApp newWindowsPhone81StoreApp) throws ClientException {
+    @Nullable
+    public WindowsPhone81StoreApp put(@Nonnull final WindowsPhone81StoreApp newWindowsPhone81StoreApp) throws ClientException {
         return send(HttpMethod.PUT, newWindowsPhone81StoreApp);
     }
 
@@ -139,9 +145,10 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsPhone81StoreAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsPhone81StoreAppRequest)this;
+     @Nonnull
+     public WindowsPhone81StoreAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsPhone81StoreAppRequest extends BaseRequest implements IWindo
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsPhone81StoreAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhone81StoreAppRequest)this;
+     @Nonnull
+     public WindowsPhone81StoreAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Privileged Role Settings Request Builder.
  */
-public class PrivilegedRoleSettingsRequestBuilder extends BaseRequestBuilder implements IPrivilegedRoleSettingsRequestBuilder {
+public class PrivilegedRoleSettingsRequestBuilder extends BaseRequestBuilder<PrivilegedRoleSettings> {
 
     /**
      * The request builder for the PrivilegedRoleSettings
@@ -28,7 +30,7 @@ public class PrivilegedRoleSettingsRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleSettingsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PrivilegedRoleSettingsRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedRoleSettingsRequest instance
+     * @return the PrivilegedRoleSettingsRequest instance
      */
-    public IPrivilegedRoleSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrivilegedRoleSettingsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PrivilegedRoleSettingsRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedRoleSettingsRequest instance
+     * @return the PrivilegedRoleSettingsRequest instance
      */
-    public IPrivilegedRoleSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrivilegedRoleSettingsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrivilegedRoleSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

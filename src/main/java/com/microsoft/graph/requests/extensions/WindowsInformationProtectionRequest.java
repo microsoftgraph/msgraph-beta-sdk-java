@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtection;
 import com.microsoft.graph.models.extensions.TargetedManagedAppPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITargetedManagedAppPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TargetedManagedAppPolicyAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLockerFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLockerFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection Request.
  */
-public class WindowsInformationProtectionRequest extends BaseRequest implements IWindowsInformationProtectionRequest {
+public class WindowsInformationProtectionRequest extends BaseRequest<WindowsInformationProtection> {
 	
     /**
      * The request for the WindowsInformationProtection
@@ -39,10 +37,10 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public WindowsInformationProtectionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends WindowsInformationProtection> responseClass) {
+    public WindowsInformationProtectionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends WindowsInformationProtection> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -53,7 +51,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtection.class);
     }
 
@@ -62,7 +60,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsInformationProtection> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsInformationProtection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,6 +70,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @return the WindowsInformationProtection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsInformationProtection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -81,7 +80,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsInformationProtection> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsInformationProtection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -100,7 +99,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param sourceWindowsInformationProtection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtection sourceWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback) {
+    public void patch(@Nonnull final WindowsInformationProtection sourceWindowsInformationProtection, @Nonnull final ICallback<? super WindowsInformationProtection> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtection);
     }
 
@@ -111,7 +110,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @return the updated WindowsInformationProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtection patch(final WindowsInformationProtection sourceWindowsInformationProtection) throws ClientException {
+    @Nullable
+    public WindowsInformationProtection patch(@Nonnull final WindowsInformationProtection sourceWindowsInformationProtection) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsInformationProtection);
     }
 
@@ -121,7 +121,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param newWindowsInformationProtection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback) {
+    public void post(@Nonnull final WindowsInformationProtection newWindowsInformationProtection, @Nonnull final ICallback<? super WindowsInformationProtection> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtection);
     }
 
@@ -132,7 +132,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @return the created WindowsInformationProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtection post(final WindowsInformationProtection newWindowsInformationProtection) throws ClientException {
+    @Nullable
+    public WindowsInformationProtection post(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) throws ClientException {
         return send(HttpMethod.POST, newWindowsInformationProtection);
     }
 
@@ -142,7 +143,7 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param newWindowsInformationProtection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtection newWindowsInformationProtection, final ICallback<? super WindowsInformationProtection> callback) {
+    public void put(@Nonnull final WindowsInformationProtection newWindowsInformationProtection, @Nonnull final ICallback<? super WindowsInformationProtection> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtection);
     }
 
@@ -153,7 +154,8 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @return the created WindowsInformationProtection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtection put(final WindowsInformationProtection newWindowsInformationProtection) throws ClientException {
+    @Nullable
+    public WindowsInformationProtection put(@Nonnull final WindowsInformationProtection newWindowsInformationProtection) throws ClientException {
         return send(HttpMethod.PUT, newWindowsInformationProtection);
     }
 
@@ -163,9 +165,10 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsInformationProtectionRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -174,9 +177,10 @@ public class WindowsInformationProtectionRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsInformationProtectionRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

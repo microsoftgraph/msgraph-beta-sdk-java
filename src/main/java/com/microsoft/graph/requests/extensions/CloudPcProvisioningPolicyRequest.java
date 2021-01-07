@@ -10,12 +10,12 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudPcProvisioningPolicy;
 import com.microsoft.graph.models.extensions.CloudPcProvisioningPolicyAssignment;
-import com.microsoft.graph.requests.extensions.ICloudPcProvisioningPolicyAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcProvisioningPolicyAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcProvisioningPolicyAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcProvisioningPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -25,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Cloud Pc Provisioning Policy Request.
  */
-public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICloudPcProvisioningPolicyRequest {
+public class CloudPcProvisioningPolicyRequest extends BaseRequest<CloudPcProvisioningPolicy> {
 	
     /**
      * The request for the CloudPcProvisioningPolicy
@@ -34,7 +34,7 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudPcProvisioningPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudPcProvisioningPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CloudPcProvisioningPolicy.class);
     }
 
@@ -43,7 +43,7 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CloudPcProvisioningPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super CloudPcProvisioningPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -53,6 +53,7 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @return the CloudPcProvisioningPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CloudPcProvisioningPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -62,7 +63,7 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CloudPcProvisioningPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super CloudPcProvisioningPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -81,7 +82,7 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @param sourceCloudPcProvisioningPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CloudPcProvisioningPolicy sourceCloudPcProvisioningPolicy, final ICallback<? super CloudPcProvisioningPolicy> callback) {
+    public void patch(@Nonnull final CloudPcProvisioningPolicy sourceCloudPcProvisioningPolicy, @Nonnull final ICallback<? super CloudPcProvisioningPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceCloudPcProvisioningPolicy);
     }
 
@@ -92,7 +93,8 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @return the updated CloudPcProvisioningPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPcProvisioningPolicy patch(final CloudPcProvisioningPolicy sourceCloudPcProvisioningPolicy) throws ClientException {
+    @Nullable
+    public CloudPcProvisioningPolicy patch(@Nonnull final CloudPcProvisioningPolicy sourceCloudPcProvisioningPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceCloudPcProvisioningPolicy);
     }
 
@@ -102,7 +104,7 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @param newCloudPcProvisioningPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy, final ICallback<? super CloudPcProvisioningPolicy> callback) {
+    public void post(@Nonnull final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy, @Nonnull final ICallback<? super CloudPcProvisioningPolicy> callback) {
         send(HttpMethod.POST, callback, newCloudPcProvisioningPolicy);
     }
 
@@ -113,7 +115,8 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @return the created CloudPcProvisioningPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPcProvisioningPolicy post(final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy) throws ClientException {
+    @Nullable
+    public CloudPcProvisioningPolicy post(@Nonnull final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy) throws ClientException {
         return send(HttpMethod.POST, newCloudPcProvisioningPolicy);
     }
 
@@ -123,7 +126,7 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @param newCloudPcProvisioningPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy, final ICallback<? super CloudPcProvisioningPolicy> callback) {
+    public void put(@Nonnull final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy, @Nonnull final ICallback<? super CloudPcProvisioningPolicy> callback) {
         send(HttpMethod.PUT, callback, newCloudPcProvisioningPolicy);
     }
 
@@ -134,7 +137,8 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @return the created CloudPcProvisioningPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPcProvisioningPolicy put(final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy) throws ClientException {
+    @Nullable
+    public CloudPcProvisioningPolicy put(@Nonnull final CloudPcProvisioningPolicy newCloudPcProvisioningPolicy) throws ClientException {
         return send(HttpMethod.PUT, newCloudPcProvisioningPolicy);
     }
 
@@ -144,9 +148,10 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @param value the select clause
      * @return the updated request
      */
-     public ICloudPcProvisioningPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CloudPcProvisioningPolicyRequest)this;
+     @Nonnull
+     public CloudPcProvisioningPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -155,9 +160,10 @@ public class CloudPcProvisioningPolicyRequest extends BaseRequest implements ICl
      * @param value the expand clause
      * @return the updated request
      */
-     public ICloudPcProvisioningPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CloudPcProvisioningPolicyRequest)this;
+     @Nonnull
+     public CloudPcProvisioningPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

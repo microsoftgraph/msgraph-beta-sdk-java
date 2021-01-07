@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfilePkcsCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Work Profile Pkcs Certificate Profile Request Builder.
  */
-public class AndroidWorkProfilePkcsCertificateProfileRequestBuilder extends BaseRequestBuilder implements IAndroidWorkProfilePkcsCertificateProfileRequestBuilder {
+public class AndroidWorkProfilePkcsCertificateProfileRequestBuilder extends BaseRequestBuilder<AndroidWorkProfilePkcsCertificateProfile> {
 
     /**
      * The request builder for the AndroidWorkProfilePkcsCertificateProfile
@@ -32,7 +32,7 @@ public class AndroidWorkProfilePkcsCertificateProfileRequestBuilder extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfilePkcsCertificateProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfilePkcsCertificateProfileRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AndroidWorkProfilePkcsCertificateProfileRequestBuilder extends Base
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidWorkProfilePkcsCertificateProfileRequest instance
+     * @return the AndroidWorkProfilePkcsCertificateProfileRequest instance
      */
-    public IAndroidWorkProfilePkcsCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AndroidWorkProfilePkcsCertificateProfileRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,80 +51,162 @@ public class AndroidWorkProfilePkcsCertificateProfileRequestBuilder extends Base
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidWorkProfilePkcsCertificateProfileRequest instance
+     * @return the AndroidWorkProfilePkcsCertificateProfileRequest instance
      */
-    public IAndroidWorkProfilePkcsCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AndroidWorkProfilePkcsCertificateProfileRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AndroidWorkProfilePkcsCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationAssignmentCollectionRequestBuilder assignments() {
         return new DeviceConfigurationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceConfigurationAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceConfigurationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
-    public ISettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
+    /**
+     *  Gets a request builder for the SettingStateDeviceSummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SettingStateDeviceSummaryCollectionRequestBuilder deviceSettingStateSummaries() {
         return new SettingStateDeviceSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries"), getClient(), null);
     }
 
-    public ISettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(final String id) {
+    /**
+     * Gets a request builder for the SettingStateDeviceSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SettingStateDeviceSummaryRequestBuilder deviceSettingStateSummaries(@Nonnull final String id) {
         return new SettingStateDeviceSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceSettingStateSummaries") + "/" + id, getClient(), null);
     }
-    public IDeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationDeviceStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationDeviceStatusCollectionRequestBuilder deviceStatuses() {
         return new DeviceConfigurationDeviceStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses"), getClient(), null);
     }
 
-    public IDeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationDeviceStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationDeviceStatusRequestBuilder deviceStatuses(@Nonnull final String id) {
         return new DeviceConfigurationDeviceStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceConfigurationDeviceOverview
      *
-     * @return the IDeviceConfigurationDeviceOverviewRequestBuilder instance
+     * @return the DeviceConfigurationDeviceOverviewRequestBuilder instance
      */
-    public IDeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
+    @Nonnull
+    public DeviceConfigurationDeviceOverviewRequestBuilder deviceStatusOverview() {
         return new DeviceConfigurationDeviceOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStatusOverview"), getClient(), null);
     }
-    public IDeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationGroupAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationGroupAssignmentCollectionRequestBuilder groupAssignments() {
         return new DeviceConfigurationGroupAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments"), getClient(), null);
     }
 
-    public IDeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationGroupAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationGroupAssignmentRequestBuilder groupAssignments(@Nonnull final String id) {
         return new DeviceConfigurationGroupAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("groupAssignments") + "/" + id, getClient(), null);
     }
-    public IDeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationUserStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationUserStatusCollectionRequestBuilder userStatuses() {
         return new DeviceConfigurationUserStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses"), getClient(), null);
     }
 
-    public IDeviceConfigurationUserStatusRequestBuilder userStatuses(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationUserStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationUserStatusRequestBuilder userStatuses(@Nonnull final String id) {
         return new DeviceConfigurationUserStatusRequestBuilder(getRequestUrlWithAdditionalSegment("userStatuses") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceConfigurationUserOverview
      *
-     * @return the IDeviceConfigurationUserOverviewRequestBuilder instance
+     * @return the DeviceConfigurationUserOverviewRequestBuilder instance
      */
-    public IDeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
+    @Nonnull
+    public DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
 
     /**
      * Gets the request builder for AndroidWorkProfileTrustedRootCertificate
      *
-     * @return the IAndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder instance
+     * @return the AndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder instance
      */
-    public IAndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
+    @Nonnull
+    public AndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder rootCertificate() {
         return new AndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rootCertificate"), getClient(), null);
     }
-    public IManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates() {
+    /**
+     *  Gets a request builder for the ManagedDeviceCertificateState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedDeviceCertificateStateCollectionRequestBuilder managedDeviceCertificateStates() {
         return new ManagedDeviceCertificateStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates"), getClient(), null);
     }
 
-    public IManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(final String id) {
+    /**
+     * Gets a request builder for the ManagedDeviceCertificateState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedDeviceCertificateStateRequestBuilder managedDeviceCertificateStates(@Nonnull final String id) {
         return new ManagedDeviceCertificateStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceCertificateStates") + "/" + id, getClient(), null);
     }
 }

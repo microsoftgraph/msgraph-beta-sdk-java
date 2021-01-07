@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DepEnrollmentProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Dep Enrollment Profile Request Builder.
  */
-public class DepEnrollmentProfileRequestBuilder extends BaseRequestBuilder implements IDepEnrollmentProfileRequestBuilder {
+public class DepEnrollmentProfileRequestBuilder extends BaseRequestBuilder<DepEnrollmentProfile> {
 
     /**
      * The request builder for the DepEnrollmentProfile
@@ -28,7 +30,7 @@ public class DepEnrollmentProfileRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DepEnrollmentProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DepEnrollmentProfileRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DepEnrollmentProfileRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDepEnrollmentProfileRequest instance
+     * @return the DepEnrollmentProfileRequest instance
      */
-    public IDepEnrollmentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DepEnrollmentProfileRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DepEnrollmentProfileRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDepEnrollmentProfileRequest instance
+     * @return the DepEnrollmentProfileRequest instance
      */
-    public IDepEnrollmentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DepEnrollmentProfileRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DepEnrollmentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

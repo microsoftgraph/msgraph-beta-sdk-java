@@ -12,24 +12,18 @@ import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.TimeZoneInformation;
 import com.microsoft.graph.models.generated.TimeZoneStandard;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskFolderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskFolderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OutlookTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -39,7 +33,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Outlook User Request.
  */
-public class OutlookUserRequest extends BaseRequest implements IOutlookUserRequest {
+public class OutlookUserRequest extends BaseRequest<OutlookUser> {
 	
     /**
      * The request for the OutlookUser
@@ -48,7 +42,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OutlookUserRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OutlookUserRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OutlookUser.class);
     }
 
@@ -57,7 +51,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OutlookUser> callback) {
+    public void get(@Nonnull final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +61,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @return the OutlookUser from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OutlookUser get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +71,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OutlookUser> callback) {
+    public void delete(@Nonnull final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +90,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param sourceOutlookUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OutlookUser sourceOutlookUser, final ICallback<? super OutlookUser> callback) {
+    public void patch(@Nonnull final OutlookUser sourceOutlookUser, @Nonnull final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.PATCH, callback, sourceOutlookUser);
     }
 
@@ -106,7 +101,8 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @return the updated OutlookUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookUser patch(final OutlookUser sourceOutlookUser) throws ClientException {
+    @Nullable
+    public OutlookUser patch(@Nonnull final OutlookUser sourceOutlookUser) throws ClientException {
         return send(HttpMethod.PATCH, sourceOutlookUser);
     }
 
@@ -116,7 +112,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param newOutlookUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OutlookUser newOutlookUser, final ICallback<? super OutlookUser> callback) {
+    public void post(@Nonnull final OutlookUser newOutlookUser, @Nonnull final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.POST, callback, newOutlookUser);
     }
 
@@ -127,7 +123,8 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @return the created OutlookUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookUser post(final OutlookUser newOutlookUser) throws ClientException {
+    @Nullable
+    public OutlookUser post(@Nonnull final OutlookUser newOutlookUser) throws ClientException {
         return send(HttpMethod.POST, newOutlookUser);
     }
 
@@ -137,7 +134,7 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param newOutlookUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OutlookUser newOutlookUser, final ICallback<? super OutlookUser> callback) {
+    public void put(@Nonnull final OutlookUser newOutlookUser, @Nonnull final ICallback<? super OutlookUser> callback) {
         send(HttpMethod.PUT, callback, newOutlookUser);
     }
 
@@ -148,7 +145,8 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @return the created OutlookUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OutlookUser put(final OutlookUser newOutlookUser) throws ClientException {
+    @Nullable
+    public OutlookUser put(@Nonnull final OutlookUser newOutlookUser) throws ClientException {
         return send(HttpMethod.PUT, newOutlookUser);
     }
 
@@ -158,9 +156,10 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param value the select clause
      * @return the updated request
      */
-     public IOutlookUserRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OutlookUserRequest)this;
+     @Nonnull
+     public OutlookUserRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +168,10 @@ public class OutlookUserRequest extends BaseRequest implements IOutlookUserReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IOutlookUserRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OutlookUserRequest)this;
+     @Nonnull
+     public OutlookUserRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

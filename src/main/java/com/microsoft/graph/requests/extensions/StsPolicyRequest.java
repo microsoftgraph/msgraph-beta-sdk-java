@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.StsPolicy;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sts Policy Request.
  */
-public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
+public class StsPolicyRequest extends BaseRequest<StsPolicy> {
 	
     /**
      * The request for the StsPolicy
@@ -34,10 +34,10 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public StsPolicyRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends StsPolicy> responseClass) {
+    public StsPolicyRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends StsPolicy> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -48,7 +48,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public StsPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public StsPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, StsPolicy.class);
     }
 
@@ -57,7 +57,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super StsPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +67,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @return the StsPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public StsPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +77,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super StsPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +96,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param sourceStsPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final StsPolicy sourceStsPolicy, final ICallback<? super StsPolicy> callback) {
+    public void patch(@Nonnull final StsPolicy sourceStsPolicy, @Nonnull final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceStsPolicy);
     }
 
@@ -106,7 +107,8 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @return the updated StsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public StsPolicy patch(final StsPolicy sourceStsPolicy) throws ClientException {
+    @Nullable
+    public StsPolicy patch(@Nonnull final StsPolicy sourceStsPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceStsPolicy);
     }
 
@@ -116,7 +118,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param newStsPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final StsPolicy newStsPolicy, final ICallback<? super StsPolicy> callback) {
+    public void post(@Nonnull final StsPolicy newStsPolicy, @Nonnull final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.POST, callback, newStsPolicy);
     }
 
@@ -127,7 +129,8 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @return the created StsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public StsPolicy post(final StsPolicy newStsPolicy) throws ClientException {
+    @Nullable
+    public StsPolicy post(@Nonnull final StsPolicy newStsPolicy) throws ClientException {
         return send(HttpMethod.POST, newStsPolicy);
     }
 
@@ -137,7 +140,7 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param newStsPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final StsPolicy newStsPolicy, final ICallback<? super StsPolicy> callback) {
+    public void put(@Nonnull final StsPolicy newStsPolicy, @Nonnull final ICallback<? super StsPolicy> callback) {
         send(HttpMethod.PUT, callback, newStsPolicy);
     }
 
@@ -148,7 +151,8 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @return the created StsPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public StsPolicy put(final StsPolicy newStsPolicy) throws ClientException {
+    @Nullable
+    public StsPolicy put(@Nonnull final StsPolicy newStsPolicy) throws ClientException {
         return send(HttpMethod.PUT, newStsPolicy);
     }
 
@@ -158,9 +162,10 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IStsPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (StsPolicyRequest)this;
+     @Nonnull
+     public StsPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +174,10 @@ public class StsPolicyRequest extends BaseRequest implements IStsPolicyRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IStsPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (StsPolicyRequest)this;
+     @Nonnull
+     public StsPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

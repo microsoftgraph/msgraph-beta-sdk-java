@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ComanagementEligibleDevice;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Comanagement Eligible Device Request.
  */
-public class ComanagementEligibleDeviceRequest extends BaseRequest implements IComanagementEligibleDeviceRequest {
+public class ComanagementEligibleDeviceRequest extends BaseRequest<ComanagementEligibleDevice> {
 	
     /**
      * The request for the ComanagementEligibleDevice
@@ -29,7 +31,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ComanagementEligibleDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ComanagementEligibleDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ComanagementEligibleDevice.class);
     }
 
@@ -38,7 +40,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ComanagementEligibleDevice> callback) {
+    public void get(@Nonnull final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @return the ComanagementEligibleDevice from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ComanagementEligibleDevice get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ComanagementEligibleDevice> callback) {
+    public void delete(@Nonnull final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param sourceComanagementEligibleDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ComanagementEligibleDevice sourceComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback) {
+    public void patch(@Nonnull final ComanagementEligibleDevice sourceComanagementEligibleDevice, @Nonnull final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceComanagementEligibleDevice);
     }
 
@@ -87,7 +90,8 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @return the updated ComanagementEligibleDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ComanagementEligibleDevice patch(final ComanagementEligibleDevice sourceComanagementEligibleDevice) throws ClientException {
+    @Nullable
+    public ComanagementEligibleDevice patch(@Nonnull final ComanagementEligibleDevice sourceComanagementEligibleDevice) throws ClientException {
         return send(HttpMethod.PATCH, sourceComanagementEligibleDevice);
     }
 
@@ -97,7 +101,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param newComanagementEligibleDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback) {
+    public void post(@Nonnull final ComanagementEligibleDevice newComanagementEligibleDevice, @Nonnull final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.POST, callback, newComanagementEligibleDevice);
     }
 
@@ -108,7 +112,8 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @return the created ComanagementEligibleDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ComanagementEligibleDevice post(final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException {
+    @Nullable
+    public ComanagementEligibleDevice post(@Nonnull final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException {
         return send(HttpMethod.POST, newComanagementEligibleDevice);
     }
 
@@ -118,7 +123,7 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param newComanagementEligibleDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ComanagementEligibleDevice newComanagementEligibleDevice, final ICallback<? super ComanagementEligibleDevice> callback) {
+    public void put(@Nonnull final ComanagementEligibleDevice newComanagementEligibleDevice, @Nonnull final ICallback<? super ComanagementEligibleDevice> callback) {
         send(HttpMethod.PUT, callback, newComanagementEligibleDevice);
     }
 
@@ -129,7 +134,8 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @return the created ComanagementEligibleDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ComanagementEligibleDevice put(final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException {
+    @Nullable
+    public ComanagementEligibleDevice put(@Nonnull final ComanagementEligibleDevice newComanagementEligibleDevice) throws ClientException {
         return send(HttpMethod.PUT, newComanagementEligibleDevice);
     }
 
@@ -139,9 +145,10 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param value the select clause
      * @return the updated request
      */
-     public IComanagementEligibleDeviceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ComanagementEligibleDeviceRequest)this;
+     @Nonnull
+     public ComanagementEligibleDeviceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ComanagementEligibleDeviceRequest extends BaseRequest implements IC
      * @param value the expand clause
      * @return the updated request
      */
-     public IComanagementEligibleDeviceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ComanagementEligibleDeviceRequest)this;
+     @Nonnull
+     public ComanagementEligibleDeviceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsDeviceUsageDistributionUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Teams Device Usage Distribution User Counts Request Builder.
  */
-public class TeamsDeviceUsageDistributionUserCountsRequestBuilder extends BaseRequestBuilder implements ITeamsDeviceUsageDistributionUserCountsRequestBuilder {
+public class TeamsDeviceUsageDistributionUserCountsRequestBuilder extends BaseRequestBuilder<TeamsDeviceUsageDistributionUserCounts> {
 
     /**
      * The request builder for the TeamsDeviceUsageDistributionUserCounts
@@ -28,7 +30,7 @@ public class TeamsDeviceUsageDistributionUserCountsRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsDeviceUsageDistributionUserCountsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsDeviceUsageDistributionUserCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class TeamsDeviceUsageDistributionUserCountsRequestBuilder extends BaseRe
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsDeviceUsageDistributionUserCountsRequest instance
+     * @return the TeamsDeviceUsageDistributionUserCountsRequest instance
      */
-    public ITeamsDeviceUsageDistributionUserCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TeamsDeviceUsageDistributionUserCountsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class TeamsDeviceUsageDistributionUserCountsRequestBuilder extends BaseRe
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITeamsDeviceUsageDistributionUserCountsRequest instance
+     * @return the TeamsDeviceUsageDistributionUserCountsRequest instance
      */
-    public ITeamsDeviceUsageDistributionUserCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TeamsDeviceUsageDistributionUserCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TeamsDeviceUsageDistributionUserCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

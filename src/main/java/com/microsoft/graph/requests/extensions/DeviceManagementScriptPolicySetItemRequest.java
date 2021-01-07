@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Script Policy Set Item Request.
  */
-public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest implements IDeviceManagementScriptPolicySetItemRequest {
+public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest<DeviceManagementScriptPolicySetItem> {
 	
     /**
      * The request for the DeviceManagementScriptPolicySetItem
@@ -29,7 +31,7 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementScriptPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementScriptPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementScriptPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @return the DeviceManagementScriptPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementScriptPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @param sourceDeviceManagementScriptPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScriptPolicySetItem sourceDeviceManagementScriptPolicySetItem, final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
+    public void patch(@Nonnull final DeviceManagementScriptPolicySetItem sourceDeviceManagementScriptPolicySetItem, @Nonnull final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @return the updated DeviceManagementScriptPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScriptPolicySetItem patch(final DeviceManagementScriptPolicySetItem sourceDeviceManagementScriptPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceManagementScriptPolicySetItem patch(@Nonnull final DeviceManagementScriptPolicySetItem sourceDeviceManagementScriptPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementScriptPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @param newDeviceManagementScriptPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
+    public void post(@Nonnull final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, @Nonnull final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScriptPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @return the created DeviceManagementScriptPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScriptPolicySetItem post(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceManagementScriptPolicySetItem post(@Nonnull final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementScriptPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @param newDeviceManagementScriptPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
+    public void put(@Nonnull final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem, @Nonnull final ICallback<? super DeviceManagementScriptPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScriptPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @return the created DeviceManagementScriptPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScriptPolicySetItem put(final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem) throws ClientException {
+    @Nullable
+    public DeviceManagementScriptPolicySetItem put(@Nonnull final DeviceManagementScriptPolicySetItem newDeviceManagementScriptPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementScriptPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementScriptPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementScriptPolicySetItemRequest)this;
+     @Nonnull
+     public DeviceManagementScriptPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementScriptPolicySetItemRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementScriptPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptPolicySetItemRequest)this;
+     @Nonnull
+     public DeviceManagementScriptPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

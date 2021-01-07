@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidCertificateProfileBase;
-import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Certificate Profile Base Request.
  */
-public class AndroidCertificateProfileBaseRequest extends BaseRequest implements IAndroidCertificateProfileBaseRequest {
+public class AndroidCertificateProfileBaseRequest extends BaseRequest<AndroidCertificateProfileBase> {
 	
     /**
      * The request for the AndroidCertificateProfileBase
@@ -32,10 +33,10 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AndroidCertificateProfileBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AndroidCertificateProfileBase> responseClass) {
+    public AndroidCertificateProfileBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AndroidCertificateProfileBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -46,7 +47,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidCertificateProfileBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidCertificateProfileBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidCertificateProfileBase.class);
     }
 
@@ -55,7 +56,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidCertificateProfileBase> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,6 +66,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @return the AndroidCertificateProfileBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidCertificateProfileBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -74,7 +76,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidCertificateProfileBase> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +95,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param sourceAndroidCertificateProfileBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
+    public void patch(@Nonnull final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase, @Nonnull final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidCertificateProfileBase);
     }
 
@@ -104,7 +106,8 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @return the updated AndroidCertificateProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidCertificateProfileBase patch(final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase) throws ClientException {
+    @Nullable
+    public AndroidCertificateProfileBase patch(@Nonnull final AndroidCertificateProfileBase sourceAndroidCertificateProfileBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidCertificateProfileBase);
     }
 
@@ -114,7 +117,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param newAndroidCertificateProfileBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
+    public void post(@Nonnull final AndroidCertificateProfileBase newAndroidCertificateProfileBase, @Nonnull final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.POST, callback, newAndroidCertificateProfileBase);
     }
 
@@ -125,7 +128,8 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @return the created AndroidCertificateProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidCertificateProfileBase post(final AndroidCertificateProfileBase newAndroidCertificateProfileBase) throws ClientException {
+    @Nullable
+    public AndroidCertificateProfileBase post(@Nonnull final AndroidCertificateProfileBase newAndroidCertificateProfileBase) throws ClientException {
         return send(HttpMethod.POST, newAndroidCertificateProfileBase);
     }
 
@@ -135,7 +139,7 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param newAndroidCertificateProfileBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase, final ICallback<? super AndroidCertificateProfileBase> callback) {
+    public void put(@Nonnull final AndroidCertificateProfileBase newAndroidCertificateProfileBase, @Nonnull final ICallback<? super AndroidCertificateProfileBase> callback) {
         send(HttpMethod.PUT, callback, newAndroidCertificateProfileBase);
     }
 
@@ -146,7 +150,8 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @return the created AndroidCertificateProfileBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidCertificateProfileBase put(final AndroidCertificateProfileBase newAndroidCertificateProfileBase) throws ClientException {
+    @Nullable
+    public AndroidCertificateProfileBase put(@Nonnull final AndroidCertificateProfileBase newAndroidCertificateProfileBase) throws ClientException {
         return send(HttpMethod.PUT, newAndroidCertificateProfileBase);
     }
 
@@ -156,9 +161,10 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidCertificateProfileBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidCertificateProfileBaseRequest)this;
+     @Nonnull
+     public AndroidCertificateProfileBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -167,9 +173,10 @@ public class AndroidCertificateProfileBaseRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidCertificateProfileBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidCertificateProfileBaseRequest)this;
+     @Nonnull
+     public AndroidCertificateProfileBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

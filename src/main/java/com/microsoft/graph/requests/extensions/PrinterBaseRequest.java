@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrinterBase;
-import com.microsoft.graph.requests.extensions.IPrintJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintJobRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Printer Base Request.
  */
-public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseRequest {
+public class PrinterBaseRequest extends BaseRequest<PrinterBase> {
 	
     /**
      * The request for the PrinterBase
@@ -34,10 +34,10 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public PrinterBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends PrinterBase> responseClass) {
+    public PrinterBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends PrinterBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -48,7 +48,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrinterBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrinterBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrinterBase.class);
     }
 
@@ -57,7 +57,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrinterBase> callback) {
+    public void get(@Nonnull final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +67,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @return the PrinterBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrinterBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +77,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrinterBase> callback) {
+    public void delete(@Nonnull final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +96,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param sourcePrinterBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrinterBase sourcePrinterBase, final ICallback<? super PrinterBase> callback) {
+    public void patch(@Nonnull final PrinterBase sourcePrinterBase, @Nonnull final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.PATCH, callback, sourcePrinterBase);
     }
 
@@ -106,7 +107,8 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @return the updated PrinterBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrinterBase patch(final PrinterBase sourcePrinterBase) throws ClientException {
+    @Nullable
+    public PrinterBase patch(@Nonnull final PrinterBase sourcePrinterBase) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrinterBase);
     }
 
@@ -116,7 +118,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param newPrinterBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrinterBase newPrinterBase, final ICallback<? super PrinterBase> callback) {
+    public void post(@Nonnull final PrinterBase newPrinterBase, @Nonnull final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.POST, callback, newPrinterBase);
     }
 
@@ -127,7 +129,8 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @return the created PrinterBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrinterBase post(final PrinterBase newPrinterBase) throws ClientException {
+    @Nullable
+    public PrinterBase post(@Nonnull final PrinterBase newPrinterBase) throws ClientException {
         return send(HttpMethod.POST, newPrinterBase);
     }
 
@@ -137,7 +140,7 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param newPrinterBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrinterBase newPrinterBase, final ICallback<? super PrinterBase> callback) {
+    public void put(@Nonnull final PrinterBase newPrinterBase, @Nonnull final ICallback<? super PrinterBase> callback) {
         send(HttpMethod.PUT, callback, newPrinterBase);
     }
 
@@ -148,7 +151,8 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @return the created PrinterBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrinterBase put(final PrinterBase newPrinterBase) throws ClientException {
+    @Nullable
+    public PrinterBase put(@Nonnull final PrinterBase newPrinterBase) throws ClientException {
         return send(HttpMethod.PUT, newPrinterBase);
     }
 
@@ -158,9 +162,10 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param value the select clause
      * @return the updated request
      */
-     public IPrinterBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrinterBaseRequest)this;
+     @Nonnull
+     public PrinterBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +174,10 @@ public class PrinterBaseRequest extends BaseRequest implements IPrinterBaseReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrinterBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrinterBaseRequest)this;
+     @Nonnull
+     public PrinterBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionResponse;
 import com.microsoft.graph.models.extensions.AgreementAcceptance;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Agreement Acceptance Collection With References Page.
  */
-public class AgreementAcceptanceCollectionWithReferencesPage extends BaseCollectionPage<AgreementAcceptance, IAgreementAcceptanceCollectionWithReferencesRequestBuilder> implements IAgreementAcceptanceCollectionWithReferencesPage {
+public class AgreementAcceptanceCollectionWithReferencesPage extends BaseCollectionPage<AgreementAcceptance, AgreementAcceptanceCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for AgreementAcceptance
@@ -35,7 +37,17 @@ public class AgreementAcceptanceCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized AgreementAcceptanceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public AgreementAcceptanceCollectionWithReferencesPage(final AgreementAcceptanceCollectionResponse response, final IAgreementAcceptanceCollectionWithReferencesRequestBuilder builder) {
+    public AgreementAcceptanceCollectionWithReferencesPage(@Nonnull final AgreementAcceptanceCollectionResponse response, @Nullable final AgreementAcceptanceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for AgreementAcceptance
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public AgreementAcceptanceCollectionWithReferencesPage(@Nonnull final java.util.List<AgreementAcceptance> pageContents, @Nullable final AgreementAcceptanceCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device And App Management Role Definition Request Builder.
  */
-public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder implements IDeviceAndAppManagementRoleDefinitionRequestBuilder {
+public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequestBuilder<DeviceAndAppManagementRoleDefinition> {
 
     /**
      * The request builder for the DeviceAndAppManagementRoleDefinition
@@ -28,7 +30,7 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementRoleDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementRoleDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceAndAppManagementRoleDefinitionRequest instance
+     * @return the DeviceAndAppManagementRoleDefinitionRequest instance
      */
-    public IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceAndAppManagementRoleDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class DeviceAndAppManagementRoleDefinitionRequestBuilder extends BaseRequ
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceAndAppManagementRoleDefinitionRequest instance
+     * @return the DeviceAndAppManagementRoleDefinitionRequest instance
      */
-    public IDeviceAndAppManagementRoleDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceAndAppManagementRoleDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceAndAppManagementRoleDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IRoleAssignmentCollectionRequestBuilder roleAssignments() {
+    /**
+     *  Gets a request builder for the RoleAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RoleAssignmentCollectionRequestBuilder roleAssignments() {
         return new RoleAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments"), getClient(), null);
     }
 
-    public IRoleAssignmentRequestBuilder roleAssignments(final String id) {
+    /**
+     * Gets a request builder for the RoleAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RoleAssignmentRequestBuilder roleAssignments(@Nonnull final String id) {
         return new RoleAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignments") + "/" + id, getClient(), null);
     }
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
-import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Analytics Request Builder.
  */
-public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements IItemAnalyticsRequestBuilder {
+public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder<ItemAnalytics> {
 
     /**
      * The request builder for the ItemAnalytics
@@ -32,7 +32,7 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemAnalyticsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemAnalyticsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemAnalyticsRequest instance
+     * @return the ItemAnalyticsRequest instance
      */
-    public IItemAnalyticsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ItemAnalyticsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemAnalyticsRequest instance
+     * @return the ItemAnalyticsRequest instance
      */
-    public IItemAnalyticsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ItemAnalyticsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemAnalyticsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,25 +63,40 @@ public class ItemAnalyticsRequestBuilder extends BaseRequestBuilder implements I
     /**
      * Gets the request builder for ItemActivityStat
      *
-     * @return the IItemActivityStatWithReferenceRequestBuilder instance
+     * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
-    public IItemActivityStatWithReferenceRequestBuilder allTime() {
+    @Nonnull
+    public ItemActivityStatWithReferenceRequestBuilder allTime() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("allTime"), getClient(), null);
     }
-    public IItemActivityStatCollectionRequestBuilder itemActivityStats() {
+    /**
+     *  Gets a request builder for the ItemActivityStat collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ItemActivityStatCollectionRequestBuilder itemActivityStats() {
         return new ItemActivityStatCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats"), getClient(), null);
     }
 
-    public IItemActivityStatRequestBuilder itemActivityStats(final String id) {
+    /**
+     * Gets a request builder for the ItemActivityStat item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ItemActivityStatRequestBuilder itemActivityStats(@Nonnull final String id) {
         return new ItemActivityStatRequestBuilder(getRequestUrlWithAdditionalSegment("itemActivityStats") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for ItemActivityStat
      *
-     * @return the IItemActivityStatWithReferenceRequestBuilder instance
+     * @return the ItemActivityStatWithReferenceRequestBuilder instance
      */
-    public IItemActivityStatWithReferenceRequestBuilder lastSevenDays() {
+    @Nonnull
+    public ItemActivityStatWithReferenceRequestBuilder lastSevenDays() {
         return new ItemActivityStatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastSevenDays"), getClient(), null);
     }
 }

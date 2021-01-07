@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration Group Assignment Request.
  */
-public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest implements IDeviceConfigurationGroupAssignmentRequest {
+public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest<DeviceConfigurationGroupAssignment> {
 	
     /**
      * The request for the DeviceConfigurationGroupAssignment
@@ -31,7 +32,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationGroupAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationGroupAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationGroupAssignment.class);
     }
 
@@ -40,7 +41,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @return the DeviceConfigurationGroupAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfigurationGroupAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param sourceDeviceConfigurationGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
+    public void patch(@Nonnull final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment, @Nonnull final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationGroupAssignment);
     }
 
@@ -89,7 +91,8 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @return the updated DeviceConfigurationGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationGroupAssignment patch(final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment) throws ClientException {
+    @Nullable
+    public DeviceConfigurationGroupAssignment patch(@Nonnull final DeviceConfigurationGroupAssignment sourceDeviceConfigurationGroupAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfigurationGroupAssignment);
     }
 
@@ -99,7 +102,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param newDeviceConfigurationGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
+    public void post(@Nonnull final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, @Nonnull final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationGroupAssignment);
     }
 
@@ -110,7 +113,8 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @return the created DeviceConfigurationGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationGroupAssignment post(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment) throws ClientException {
+    @Nullable
+    public DeviceConfigurationGroupAssignment post(@Nonnull final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfigurationGroupAssignment);
     }
 
@@ -120,7 +124,7 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param newDeviceConfigurationGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
+    public void put(@Nonnull final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment, @Nonnull final ICallback<? super DeviceConfigurationGroupAssignment> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationGroupAssignment);
     }
 
@@ -131,7 +135,8 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @return the created DeviceConfigurationGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationGroupAssignment put(final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment) throws ClientException {
+    @Nullable
+    public DeviceConfigurationGroupAssignment put(@Nonnull final DeviceConfigurationGroupAssignment newDeviceConfigurationGroupAssignment) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfigurationGroupAssignment);
     }
 
@@ -141,9 +146,10 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceConfigurationGroupAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceConfigurationGroupAssignmentRequest)this;
+     @Nonnull
+     public DeviceConfigurationGroupAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class DeviceConfigurationGroupAssignmentRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceConfigurationGroupAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationGroupAssignmentRequest)this;
+     @Nonnull
+     public DeviceConfigurationGroupAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

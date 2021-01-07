@@ -9,15 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsCategory;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the User Experience Analytics Category With Reference Request.
  */
-public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseRequest implements IUserExperienceAnalyticsCategoryWithReferenceRequest {
+public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseWithReferenceRequest<UserExperienceAnalyticsCategory> {
 
     /**
      * The request for the UserExperienceAnalyticsCategory
@@ -36,46 +36,9 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsCategoryWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsCategoryWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsCategory.class);
     }
-
-    public void post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final IJsonBackedObject payload, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public UserExperienceAnalyticsCategory post(final UserExperienceAnalyticsCategory newUserExperienceAnalyticsCategory, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newUserExperienceAnalyticsCategory;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super UserExperienceAnalyticsCategory> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public UserExperienceAnalyticsCategory get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super UserExperienceAnalyticsCategory> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory, final ICallback<? super UserExperienceAnalyticsCategory> callback) {
-		send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsCategory);
-	}
-
-	public UserExperienceAnalyticsCategory patch(final UserExperienceAnalyticsCategory sourceUserExperienceAnalyticsCategory) throws ClientException {
-		return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsCategory);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -83,9 +46,10 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
      * @param value the select clause
      * @return the updated request
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IUserExperienceAnalyticsCategoryWithReferenceRequest)this;
+    @Nonnull
+    public UserExperienceAnalyticsCategoryWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -94,8 +58,9 @@ public class UserExperienceAnalyticsCategoryWithReferenceRequest extends BaseReq
      * @param value the expand clause
      * @return the updated request
      */
-    public IUserExperienceAnalyticsCategoryWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (UserExperienceAnalyticsCategoryWithReferenceRequest)this;
+    @Nonnull
+    public UserExperienceAnalyticsCategoryWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

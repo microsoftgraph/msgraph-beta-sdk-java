@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AuditLogRoot;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryAuditRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryAuditRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProvisioningObjectSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProvisioningObjectSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRestrictedSignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.RestrictedSignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RestrictedSignInRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISignInRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SignInRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -36,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Audit Log Root Request.
  */
-public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootRequest {
+public class AuditLogRootRequest extends BaseRequest<AuditLogRoot> {
 	
     /**
      * The request for the AuditLogRoot
@@ -45,7 +39,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuditLogRootRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuditLogRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AuditLogRoot.class);
     }
 
@@ -54,7 +48,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AuditLogRoot> callback) {
+    public void get(@Nonnull final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +58,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @return the AuditLogRoot from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AuditLogRoot get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +68,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AuditLogRoot> callback) {
+    public void delete(@Nonnull final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +87,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param sourceAuditLogRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuditLogRoot sourceAuditLogRoot, final ICallback<? super AuditLogRoot> callback) {
+    public void patch(@Nonnull final AuditLogRoot sourceAuditLogRoot, @Nonnull final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceAuditLogRoot);
     }
 
@@ -103,7 +98,8 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @return the updated AuditLogRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuditLogRoot patch(final AuditLogRoot sourceAuditLogRoot) throws ClientException {
+    @Nullable
+    public AuditLogRoot patch(@Nonnull final AuditLogRoot sourceAuditLogRoot) throws ClientException {
         return send(HttpMethod.PATCH, sourceAuditLogRoot);
     }
 
@@ -113,7 +109,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param newAuditLogRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuditLogRoot newAuditLogRoot, final ICallback<? super AuditLogRoot> callback) {
+    public void post(@Nonnull final AuditLogRoot newAuditLogRoot, @Nonnull final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.POST, callback, newAuditLogRoot);
     }
 
@@ -124,7 +120,8 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @return the created AuditLogRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuditLogRoot post(final AuditLogRoot newAuditLogRoot) throws ClientException {
+    @Nullable
+    public AuditLogRoot post(@Nonnull final AuditLogRoot newAuditLogRoot) throws ClientException {
         return send(HttpMethod.POST, newAuditLogRoot);
     }
 
@@ -134,7 +131,7 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param newAuditLogRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuditLogRoot newAuditLogRoot, final ICallback<? super AuditLogRoot> callback) {
+    public void put(@Nonnull final AuditLogRoot newAuditLogRoot, @Nonnull final ICallback<? super AuditLogRoot> callback) {
         send(HttpMethod.PUT, callback, newAuditLogRoot);
     }
 
@@ -145,7 +142,8 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @return the created AuditLogRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuditLogRoot put(final AuditLogRoot newAuditLogRoot) throws ClientException {
+    @Nullable
+    public AuditLogRoot put(@Nonnull final AuditLogRoot newAuditLogRoot) throws ClientException {
         return send(HttpMethod.PUT, newAuditLogRoot);
     }
 
@@ -155,9 +153,10 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param value the select clause
      * @return the updated request
      */
-     public IAuditLogRootRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuditLogRootRequest)this;
+     @Nonnull
+     public AuditLogRootRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +165,10 @@ public class AuditLogRootRequest extends BaseRequest implements IAuditLogRootReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuditLogRootRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuditLogRootRequest)this;
+     @Nonnull
+     public AuditLogRootRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

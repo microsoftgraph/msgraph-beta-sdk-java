@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Activity Based Timeout Policy Request.
  */
-public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IActivityBasedTimeoutPolicyRequest {
+public class ActivityBasedTimeoutPolicyRequest extends BaseRequest<ActivityBasedTimeoutPolicy> {
 	
     /**
      * The request for the ActivityBasedTimeoutPolicy
@@ -29,7 +31,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActivityBasedTimeoutPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActivityBasedTimeoutPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ActivityBasedTimeoutPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @return the ActivityBasedTimeoutPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ActivityBasedTimeoutPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param sourceActivityBasedTimeoutPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
+    public void patch(@Nonnull final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy, @Nonnull final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceActivityBasedTimeoutPolicy);
     }
 
@@ -87,7 +90,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @return the updated ActivityBasedTimeoutPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActivityBasedTimeoutPolicy patch(final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy) throws ClientException {
+    @Nullable
+    public ActivityBasedTimeoutPolicy patch(@Nonnull final ActivityBasedTimeoutPolicy sourceActivityBasedTimeoutPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceActivityBasedTimeoutPolicy);
     }
 
@@ -97,7 +101,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param newActivityBasedTimeoutPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
+    public void post(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, @Nonnull final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.POST, callback, newActivityBasedTimeoutPolicy);
     }
 
@@ -108,7 +112,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @return the created ActivityBasedTimeoutPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActivityBasedTimeoutPolicy post(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
+    @Nullable
+    public ActivityBasedTimeoutPolicy post(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
         return send(HttpMethod.POST, newActivityBasedTimeoutPolicy);
     }
 
@@ -118,7 +123,7 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param newActivityBasedTimeoutPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
+    public void put(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy, @Nonnull final ICallback<? super ActivityBasedTimeoutPolicy> callback) {
         send(HttpMethod.PUT, callback, newActivityBasedTimeoutPolicy);
     }
 
@@ -129,7 +134,8 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @return the created ActivityBasedTimeoutPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ActivityBasedTimeoutPolicy put(final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
+    @Nullable
+    public ActivityBasedTimeoutPolicy put(@Nonnull final ActivityBasedTimeoutPolicy newActivityBasedTimeoutPolicy) throws ClientException {
         return send(HttpMethod.PUT, newActivityBasedTimeoutPolicy);
     }
 
@@ -139,9 +145,10 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param value the select clause
      * @return the updated request
      */
-     public IActivityBasedTimeoutPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ActivityBasedTimeoutPolicyRequest)this;
+     @Nonnull
+     public ActivityBasedTimeoutPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ActivityBasedTimeoutPolicyRequest extends BaseRequest implements IA
      * @param value the expand clause
      * @return the updated request
      */
-     public IActivityBasedTimeoutPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ActivityBasedTimeoutPolicyRequest)this;
+     @Nonnull
+     public ActivityBasedTimeoutPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

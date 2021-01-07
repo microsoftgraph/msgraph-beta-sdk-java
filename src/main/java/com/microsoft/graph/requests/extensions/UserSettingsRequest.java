@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserSettings;
-import com.microsoft.graph.requests.extensions.IRegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.RegionalAndLanguageSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShiftPreferencesRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Settings Request.
  */
-public class UserSettingsRequest extends BaseRequest implements IUserSettingsRequest {
+public class UserSettingsRequest extends BaseRequest<UserSettings> {
 	
     /**
      * The request for the UserSettings
@@ -33,7 +33,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserSettings.class);
     }
 
@@ -42,7 +42,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserSettings> callback) {
+    public void get(@Nonnull final ICallback<? super UserSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @return the UserSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super UserSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param sourceUserSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserSettings sourceUserSettings, final ICallback<? super UserSettings> callback) {
+    public void patch(@Nonnull final UserSettings sourceUserSettings, @Nonnull final ICallback<? super UserSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceUserSettings);
     }
 
@@ -91,7 +92,8 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @return the updated UserSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserSettings patch(final UserSettings sourceUserSettings) throws ClientException {
+    @Nullable
+    public UserSettings patch(@Nonnull final UserSettings sourceUserSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserSettings);
     }
 
@@ -101,7 +103,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param newUserSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserSettings newUserSettings, final ICallback<? super UserSettings> callback) {
+    public void post(@Nonnull final UserSettings newUserSettings, @Nonnull final ICallback<? super UserSettings> callback) {
         send(HttpMethod.POST, callback, newUserSettings);
     }
 
@@ -112,7 +114,8 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @return the created UserSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserSettings post(final UserSettings newUserSettings) throws ClientException {
+    @Nullable
+    public UserSettings post(@Nonnull final UserSettings newUserSettings) throws ClientException {
         return send(HttpMethod.POST, newUserSettings);
     }
 
@@ -122,7 +125,7 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param newUserSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserSettings newUserSettings, final ICallback<? super UserSettings> callback) {
+    public void put(@Nonnull final UserSettings newUserSettings, @Nonnull final ICallback<? super UserSettings> callback) {
         send(HttpMethod.PUT, callback, newUserSettings);
     }
 
@@ -133,7 +136,8 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @return the created UserSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserSettings put(final UserSettings newUserSettings) throws ClientException {
+    @Nullable
+    public UserSettings put(@Nonnull final UserSettings newUserSettings) throws ClientException {
         return send(HttpMethod.PUT, newUserSettings);
     }
 
@@ -143,9 +147,10 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param value the select clause
      * @return the updated request
      */
-     public IUserSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserSettingsRequest)this;
+     @Nonnull
+     public UserSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class UserSettingsRequest extends BaseRequest implements IUserSettingsReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserSettingsRequest)this;
+     @Nonnull
+     public UserSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

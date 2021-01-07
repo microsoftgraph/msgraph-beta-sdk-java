@@ -9,28 +9,20 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedAccess;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -40,7 +32,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Privileged Access Request.
  */
-public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedAccessRequest {
+public class PrivilegedAccessRequest extends BaseRequest<PrivilegedAccess> {
 	
     /**
      * The request for the PrivilegedAccess
@@ -49,7 +41,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedAccessRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedAccessRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedAccess.class);
     }
 
@@ -58,7 +50,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrivilegedAccess> callback) {
+    public void get(@Nonnull final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,6 +60,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @return the PrivilegedAccess from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrivilegedAccess get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -77,7 +70,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrivilegedAccess> callback) {
+    public void delete(@Nonnull final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -96,7 +89,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param sourcePrivilegedAccess the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedAccess sourcePrivilegedAccess, final ICallback<? super PrivilegedAccess> callback) {
+    public void patch(@Nonnull final PrivilegedAccess sourcePrivilegedAccess, @Nonnull final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedAccess);
     }
 
@@ -107,7 +100,8 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @return the updated PrivilegedAccess
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedAccess patch(final PrivilegedAccess sourcePrivilegedAccess) throws ClientException {
+    @Nullable
+    public PrivilegedAccess patch(@Nonnull final PrivilegedAccess sourcePrivilegedAccess) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrivilegedAccess);
     }
 
@@ -117,7 +111,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param newPrivilegedAccess the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback) {
+    public void post(@Nonnull final PrivilegedAccess newPrivilegedAccess, @Nonnull final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.POST, callback, newPrivilegedAccess);
     }
 
@@ -128,7 +122,8 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @return the created PrivilegedAccess
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedAccess post(final PrivilegedAccess newPrivilegedAccess) throws ClientException {
+    @Nullable
+    public PrivilegedAccess post(@Nonnull final PrivilegedAccess newPrivilegedAccess) throws ClientException {
         return send(HttpMethod.POST, newPrivilegedAccess);
     }
 
@@ -138,7 +133,7 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param newPrivilegedAccess the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedAccess newPrivilegedAccess, final ICallback<? super PrivilegedAccess> callback) {
+    public void put(@Nonnull final PrivilegedAccess newPrivilegedAccess, @Nonnull final ICallback<? super PrivilegedAccess> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedAccess);
     }
 
@@ -149,7 +144,8 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @return the created PrivilegedAccess
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedAccess put(final PrivilegedAccess newPrivilegedAccess) throws ClientException {
+    @Nullable
+    public PrivilegedAccess put(@Nonnull final PrivilegedAccess newPrivilegedAccess) throws ClientException {
         return send(HttpMethod.PUT, newPrivilegedAccess);
     }
 
@@ -159,9 +155,10 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param value the select clause
      * @return the updated request
      */
-     public IPrivilegedAccessRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrivilegedAccessRequest)this;
+     @Nonnull
+     public PrivilegedAccessRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -170,9 +167,10 @@ public class PrivilegedAccessRequest extends BaseRequest implements IPrivilegedA
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrivilegedAccessRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedAccessRequest)this;
+     @Nonnull
+     public PrivilegedAccessRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

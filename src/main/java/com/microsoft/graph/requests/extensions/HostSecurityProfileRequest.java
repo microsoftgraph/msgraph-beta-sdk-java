@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.HostSecurityProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Host Security Profile Request.
  */
-public class HostSecurityProfileRequest extends BaseRequest implements IHostSecurityProfileRequest {
+public class HostSecurityProfileRequest extends BaseRequest<HostSecurityProfile> {
 	
     /**
      * The request for the HostSecurityProfile
@@ -29,7 +31,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public HostSecurityProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public HostSecurityProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, HostSecurityProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super HostSecurityProfile> callback) {
+    public void get(@Nonnull final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @return the HostSecurityProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public HostSecurityProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super HostSecurityProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param sourceHostSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final HostSecurityProfile sourceHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback) {
+    public void patch(@Nonnull final HostSecurityProfile sourceHostSecurityProfile, @Nonnull final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceHostSecurityProfile);
     }
 
@@ -87,7 +90,8 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @return the updated HostSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public HostSecurityProfile patch(final HostSecurityProfile sourceHostSecurityProfile) throws ClientException {
+    @Nullable
+    public HostSecurityProfile patch(@Nonnull final HostSecurityProfile sourceHostSecurityProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceHostSecurityProfile);
     }
 
@@ -97,7 +101,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param newHostSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final HostSecurityProfile newHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback) {
+    public void post(@Nonnull final HostSecurityProfile newHostSecurityProfile, @Nonnull final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.POST, callback, newHostSecurityProfile);
     }
 
@@ -108,7 +112,8 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @return the created HostSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public HostSecurityProfile post(final HostSecurityProfile newHostSecurityProfile) throws ClientException {
+    @Nullable
+    public HostSecurityProfile post(@Nonnull final HostSecurityProfile newHostSecurityProfile) throws ClientException {
         return send(HttpMethod.POST, newHostSecurityProfile);
     }
 
@@ -118,7 +123,7 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param newHostSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final HostSecurityProfile newHostSecurityProfile, final ICallback<? super HostSecurityProfile> callback) {
+    public void put(@Nonnull final HostSecurityProfile newHostSecurityProfile, @Nonnull final ICallback<? super HostSecurityProfile> callback) {
         send(HttpMethod.PUT, callback, newHostSecurityProfile);
     }
 
@@ -129,7 +134,8 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @return the created HostSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public HostSecurityProfile put(final HostSecurityProfile newHostSecurityProfile) throws ClientException {
+    @Nullable
+    public HostSecurityProfile put(@Nonnull final HostSecurityProfile newHostSecurityProfile) throws ClientException {
         return send(HttpMethod.PUT, newHostSecurityProfile);
     }
 
@@ -139,9 +145,10 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param value the select clause
      * @return the updated request
      */
-     public IHostSecurityProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (HostSecurityProfileRequest)this;
+     @Nonnull
+     public HostSecurityProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class HostSecurityProfileRequest extends BaseRequest implements IHostSecu
      * @param value the expand clause
      * @return the updated request
      */
-     public IHostSecurityProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (HostSecurityProfileRequest)this;
+     @Nonnull
+     public HostSecurityProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

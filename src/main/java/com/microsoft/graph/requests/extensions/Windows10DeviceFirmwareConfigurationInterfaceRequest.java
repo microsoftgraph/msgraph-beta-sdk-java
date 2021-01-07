@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10DeviceFirmwareConfigurationInterface;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10Device Firmware Configuration Interface Request.
  */
-public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRequest implements IWindows10DeviceFirmwareConfigurationInterfaceRequest {
+public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRequest<Windows10DeviceFirmwareConfigurationInterface> {
 	
     /**
      * The request for the Windows10DeviceFirmwareConfigurationInterface
@@ -29,7 +31,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10DeviceFirmwareConfigurationInterfaceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10DeviceFirmwareConfigurationInterfaceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10DeviceFirmwareConfigurationInterface.class);
     }
 
@@ -38,7 +40,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @return the Windows10DeviceFirmwareConfigurationInterface from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10DeviceFirmwareConfigurationInterface get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param sourceWindows10DeviceFirmwareConfigurationInterface the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10DeviceFirmwareConfigurationInterface sourceWindows10DeviceFirmwareConfigurationInterface, final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void patch(@Nonnull final Windows10DeviceFirmwareConfigurationInterface sourceWindows10DeviceFirmwareConfigurationInterface, @Nonnull final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -87,7 +90,8 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @return the updated Windows10DeviceFirmwareConfigurationInterface
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10DeviceFirmwareConfigurationInterface patch(final Windows10DeviceFirmwareConfigurationInterface sourceWindows10DeviceFirmwareConfigurationInterface) throws ClientException {
+    @Nullable
+    public Windows10DeviceFirmwareConfigurationInterface patch(@Nonnull final Windows10DeviceFirmwareConfigurationInterface sourceWindows10DeviceFirmwareConfigurationInterface) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -97,7 +101,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param newWindows10DeviceFirmwareConfigurationInterface the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void post(@Nonnull final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, @Nonnull final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.POST, callback, newWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -108,7 +112,8 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @return the created Windows10DeviceFirmwareConfigurationInterface
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10DeviceFirmwareConfigurationInterface post(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface) throws ClientException {
+    @Nullable
+    public Windows10DeviceFirmwareConfigurationInterface post(@Nonnull final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface) throws ClientException {
         return send(HttpMethod.POST, newWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -118,7 +123,7 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param newWindows10DeviceFirmwareConfigurationInterface the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
+    public void put(@Nonnull final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface, @Nonnull final ICallback<? super Windows10DeviceFirmwareConfigurationInterface> callback) {
         send(HttpMethod.PUT, callback, newWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -129,7 +134,8 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @return the created Windows10DeviceFirmwareConfigurationInterface
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10DeviceFirmwareConfigurationInterface put(final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface) throws ClientException {
+    @Nullable
+    public Windows10DeviceFirmwareConfigurationInterface put(@Nonnull final Windows10DeviceFirmwareConfigurationInterface newWindows10DeviceFirmwareConfigurationInterface) throws ClientException {
         return send(HttpMethod.PUT, newWindows10DeviceFirmwareConfigurationInterface);
     }
 
@@ -139,9 +145,10 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10DeviceFirmwareConfigurationInterfaceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10DeviceFirmwareConfigurationInterfaceRequest)this;
+     @Nonnull
+     public Windows10DeviceFirmwareConfigurationInterfaceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Windows10DeviceFirmwareConfigurationInterfaceRequest extends BaseRe
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10DeviceFirmwareConfigurationInterfaceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10DeviceFirmwareConfigurationInterfaceRequest)this;
+     @Nonnull
+     public Windows10DeviceFirmwareConfigurationInterfaceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

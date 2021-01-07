@@ -11,36 +11,24 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataClassificationService;
 import com.microsoft.graph.models.extensions.ContentClassification;
 import com.microsoft.graph.models.extensions.ExactMatchClassificationResult;
-import com.microsoft.graph.requests.extensions.IExactMatchDataStoreCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchDataStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchDataStoreRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFileClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.FileClassificationRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJobResponseBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.JobResponseBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.JobResponseBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITextClassificationRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITextClassificationRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TextClassificationRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitiveTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitiveTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitiveTypeRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -50,7 +38,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Data Classification Service Request.
  */
-public class DataClassificationServiceRequest extends BaseRequest implements IDataClassificationServiceRequest {
+public class DataClassificationServiceRequest extends BaseRequest<DataClassificationService> {
 	
     /**
      * The request for the DataClassificationService
@@ -59,7 +47,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataClassificationServiceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DataClassificationServiceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DataClassificationService.class);
     }
 
@@ -68,7 +56,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DataClassificationService> callback) {
+    public void get(@Nonnull final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -78,6 +66,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @return the DataClassificationService from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DataClassificationService get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -87,7 +76,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DataClassificationService> callback) {
+    public void delete(@Nonnull final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -106,7 +95,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param sourceDataClassificationService the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataClassificationService sourceDataClassificationService, final ICallback<? super DataClassificationService> callback) {
+    public void patch(@Nonnull final DataClassificationService sourceDataClassificationService, @Nonnull final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.PATCH, callback, sourceDataClassificationService);
     }
 
@@ -117,7 +106,8 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @return the updated DataClassificationService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataClassificationService patch(final DataClassificationService sourceDataClassificationService) throws ClientException {
+    @Nullable
+    public DataClassificationService patch(@Nonnull final DataClassificationService sourceDataClassificationService) throws ClientException {
         return send(HttpMethod.PATCH, sourceDataClassificationService);
     }
 
@@ -127,7 +117,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param newDataClassificationService the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataClassificationService newDataClassificationService, final ICallback<? super DataClassificationService> callback) {
+    public void post(@Nonnull final DataClassificationService newDataClassificationService, @Nonnull final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.POST, callback, newDataClassificationService);
     }
 
@@ -138,7 +128,8 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @return the created DataClassificationService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataClassificationService post(final DataClassificationService newDataClassificationService) throws ClientException {
+    @Nullable
+    public DataClassificationService post(@Nonnull final DataClassificationService newDataClassificationService) throws ClientException {
         return send(HttpMethod.POST, newDataClassificationService);
     }
 
@@ -148,7 +139,7 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param newDataClassificationService the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataClassificationService newDataClassificationService, final ICallback<? super DataClassificationService> callback) {
+    public void put(@Nonnull final DataClassificationService newDataClassificationService, @Nonnull final ICallback<? super DataClassificationService> callback) {
         send(HttpMethod.PUT, callback, newDataClassificationService);
     }
 
@@ -159,7 +150,8 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @return the created DataClassificationService
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataClassificationService put(final DataClassificationService newDataClassificationService) throws ClientException {
+    @Nullable
+    public DataClassificationService put(@Nonnull final DataClassificationService newDataClassificationService) throws ClientException {
         return send(HttpMethod.PUT, newDataClassificationService);
     }
 
@@ -169,9 +161,10 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param value the select clause
      * @return the updated request
      */
-     public IDataClassificationServiceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DataClassificationServiceRequest)this;
+     @Nonnull
+     public DataClassificationServiceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -180,9 +173,10 @@ public class DataClassificationServiceRequest extends BaseRequest implements IDa
      * @param value the expand clause
      * @return the updated request
      */
-     public IDataClassificationServiceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataClassificationServiceRequest)this;
+     @Nonnull
+     public DataClassificationServiceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

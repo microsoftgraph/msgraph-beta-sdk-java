@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Defender Application Control Supplemental Policy Assignment Request.
  */
-public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest extends BaseRequest implements IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest {
+public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest extends BaseRequest<WindowsDefenderApplicationControlSupplementalPolicyAssignment> {
 	
     /**
      * The request for the WindowsDefenderApplicationControlSupplementalPolicyAssignment
@@ -29,7 +31,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicyAssignment.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @return the WindowsDefenderApplicationControlSupplementalPolicyAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void patch(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -87,7 +90,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @return the updated WindowsDefenderApplicationControlSupplementalPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignment patch(final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignment patch(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -97,7 +101,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void post(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.POST, callback, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -108,7 +112,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @return the created WindowsDefenderApplicationControlSupplementalPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignment post(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignment post(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
         return send(HttpMethod.POST, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -118,7 +123,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param newWindowsDefenderApplicationControlSupplementalPolicyAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
+    public void put(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyAssignment> callback) {
         send(HttpMethod.PUT, callback, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -129,7 +134,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @return the created WindowsDefenderApplicationControlSupplementalPolicyAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignment put(final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignment put(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment newWindowsDefenderApplicationControlSupplementalPolicyAssignment) throws ClientException {
         return send(HttpMethod.PUT, newWindowsDefenderApplicationControlSupplementalPolicyAssignment);
     }
 
@@ -139,9 +145,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest)this;
+     @Nonnull
+     public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest)this;
+     @Nonnull
+     public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

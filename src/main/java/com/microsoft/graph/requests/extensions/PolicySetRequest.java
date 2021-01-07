@@ -11,16 +11,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicySet;
 import com.microsoft.graph.models.extensions.PolicySetItem;
 import com.microsoft.graph.models.extensions.PolicySetAssignment;
-import com.microsoft.graph.requests.extensions.IPolicySetAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPolicySetAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPolicySetItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPolicySetItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PolicySetItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Policy Set Request.
  */
-public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
+public class PolicySetRequest extends BaseRequest<PolicySet> {
 	
     /**
      * The request for the PolicySet
@@ -39,7 +37,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicySetRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PolicySetRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PolicySet.class);
     }
 
@@ -48,7 +46,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PolicySet> callback) {
+    public void get(@Nonnull final ICallback<? super PolicySet> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +56,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @return the PolicySet from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PolicySet get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +66,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PolicySet> callback) {
+    public void delete(@Nonnull final ICallback<? super PolicySet> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +85,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param sourcePolicySet the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicySet sourcePolicySet, final ICallback<? super PolicySet> callback) {
+    public void patch(@Nonnull final PolicySet sourcePolicySet, @Nonnull final ICallback<? super PolicySet> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicySet);
     }
 
@@ -97,7 +96,8 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @return the updated PolicySet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicySet patch(final PolicySet sourcePolicySet) throws ClientException {
+    @Nullable
+    public PolicySet patch(@Nonnull final PolicySet sourcePolicySet) throws ClientException {
         return send(HttpMethod.PATCH, sourcePolicySet);
     }
 
@@ -107,7 +107,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param newPolicySet the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicySet newPolicySet, final ICallback<? super PolicySet> callback) {
+    public void post(@Nonnull final PolicySet newPolicySet, @Nonnull final ICallback<? super PolicySet> callback) {
         send(HttpMethod.POST, callback, newPolicySet);
     }
 
@@ -118,7 +118,8 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @return the created PolicySet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicySet post(final PolicySet newPolicySet) throws ClientException {
+    @Nullable
+    public PolicySet post(@Nonnull final PolicySet newPolicySet) throws ClientException {
         return send(HttpMethod.POST, newPolicySet);
     }
 
@@ -128,7 +129,7 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param newPolicySet the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicySet newPolicySet, final ICallback<? super PolicySet> callback) {
+    public void put(@Nonnull final PolicySet newPolicySet, @Nonnull final ICallback<? super PolicySet> callback) {
         send(HttpMethod.PUT, callback, newPolicySet);
     }
 
@@ -139,7 +140,8 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @return the created PolicySet
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicySet put(final PolicySet newPolicySet) throws ClientException {
+    @Nullable
+    public PolicySet put(@Nonnull final PolicySet newPolicySet) throws ClientException {
         return send(HttpMethod.PUT, newPolicySet);
     }
 
@@ -149,9 +151,10 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPolicySetRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PolicySetRequest)this;
+     @Nonnull
+     public PolicySetRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +163,10 @@ public class PolicySetRequest extends BaseRequest implements IPolicySetRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPolicySetRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicySetRequest)this;
+     @Nonnull
+     public PolicySetRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

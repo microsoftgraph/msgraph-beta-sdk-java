@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.ApplicationTemplate;
 import com.microsoft.graph.models.extensions.ApplicationServicePrincipal;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Application Template Request.
  */
-public class ApplicationTemplateRequest extends BaseRequest implements IApplicationTemplateRequest {
+public class ApplicationTemplateRequest extends BaseRequest<ApplicationTemplate> {
 	
     /**
      * The request for the ApplicationTemplate
@@ -30,7 +32,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApplicationTemplateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApplicationTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ApplicationTemplate.class);
     }
 
@@ -39,7 +41,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ApplicationTemplate> callback) {
+    public void get(@Nonnull final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @return the ApplicationTemplate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ApplicationTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ApplicationTemplate> callback) {
+    public void delete(@Nonnull final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param sourceApplicationTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ApplicationTemplate sourceApplicationTemplate, final ICallback<? super ApplicationTemplate> callback) {
+    public void patch(@Nonnull final ApplicationTemplate sourceApplicationTemplate, @Nonnull final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceApplicationTemplate);
     }
 
@@ -88,7 +91,8 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @return the updated ApplicationTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationTemplate patch(final ApplicationTemplate sourceApplicationTemplate) throws ClientException {
+    @Nullable
+    public ApplicationTemplate patch(@Nonnull final ApplicationTemplate sourceApplicationTemplate) throws ClientException {
         return send(HttpMethod.PATCH, sourceApplicationTemplate);
     }
 
@@ -98,7 +102,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param newApplicationTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ApplicationTemplate newApplicationTemplate, final ICallback<? super ApplicationTemplate> callback) {
+    public void post(@Nonnull final ApplicationTemplate newApplicationTemplate, @Nonnull final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.POST, callback, newApplicationTemplate);
     }
 
@@ -109,7 +113,8 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @return the created ApplicationTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationTemplate post(final ApplicationTemplate newApplicationTemplate) throws ClientException {
+    @Nullable
+    public ApplicationTemplate post(@Nonnull final ApplicationTemplate newApplicationTemplate) throws ClientException {
         return send(HttpMethod.POST, newApplicationTemplate);
     }
 
@@ -119,7 +124,7 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param newApplicationTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ApplicationTemplate newApplicationTemplate, final ICallback<? super ApplicationTemplate> callback) {
+    public void put(@Nonnull final ApplicationTemplate newApplicationTemplate, @Nonnull final ICallback<? super ApplicationTemplate> callback) {
         send(HttpMethod.PUT, callback, newApplicationTemplate);
     }
 
@@ -130,7 +135,8 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @return the created ApplicationTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ApplicationTemplate put(final ApplicationTemplate newApplicationTemplate) throws ClientException {
+    @Nullable
+    public ApplicationTemplate put(@Nonnull final ApplicationTemplate newApplicationTemplate) throws ClientException {
         return send(HttpMethod.PUT, newApplicationTemplate);
     }
 
@@ -140,9 +146,10 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param value the select clause
      * @return the updated request
      */
-     public IApplicationTemplateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ApplicationTemplateRequest)this;
+     @Nonnull
+     public ApplicationTemplateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class ApplicationTemplateRequest extends BaseRequest implements IApplicat
      * @param value the expand clause
      * @return the updated request
      */
-     public IApplicationTemplateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ApplicationTemplateRequest)this;
+     @Nonnull
+     public ApplicationTemplateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

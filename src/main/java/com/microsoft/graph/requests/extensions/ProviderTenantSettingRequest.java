@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ProviderTenantSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Provider Tenant Setting Request.
  */
-public class ProviderTenantSettingRequest extends BaseRequest implements IProviderTenantSettingRequest {
+public class ProviderTenantSettingRequest extends BaseRequest<ProviderTenantSetting> {
 	
     /**
      * The request for the ProviderTenantSetting
@@ -29,7 +31,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProviderTenantSettingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProviderTenantSettingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProviderTenantSetting.class);
     }
 
@@ -38,7 +40,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ProviderTenantSetting> callback) {
+    public void get(@Nonnull final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @return the ProviderTenantSetting from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ProviderTenantSetting get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ProviderTenantSetting> callback) {
+    public void delete(@Nonnull final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param sourceProviderTenantSetting the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProviderTenantSetting sourceProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback) {
+    public void patch(@Nonnull final ProviderTenantSetting sourceProviderTenantSetting, @Nonnull final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.PATCH, callback, sourceProviderTenantSetting);
     }
 
@@ -87,7 +90,8 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @return the updated ProviderTenantSetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProviderTenantSetting patch(final ProviderTenantSetting sourceProviderTenantSetting) throws ClientException {
+    @Nullable
+    public ProviderTenantSetting patch(@Nonnull final ProviderTenantSetting sourceProviderTenantSetting) throws ClientException {
         return send(HttpMethod.PATCH, sourceProviderTenantSetting);
     }
 
@@ -97,7 +101,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param newProviderTenantSetting the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback) {
+    public void post(@Nonnull final ProviderTenantSetting newProviderTenantSetting, @Nonnull final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.POST, callback, newProviderTenantSetting);
     }
 
@@ -108,7 +112,8 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @return the created ProviderTenantSetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProviderTenantSetting post(final ProviderTenantSetting newProviderTenantSetting) throws ClientException {
+    @Nullable
+    public ProviderTenantSetting post(@Nonnull final ProviderTenantSetting newProviderTenantSetting) throws ClientException {
         return send(HttpMethod.POST, newProviderTenantSetting);
     }
 
@@ -118,7 +123,7 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param newProviderTenantSetting the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProviderTenantSetting newProviderTenantSetting, final ICallback<? super ProviderTenantSetting> callback) {
+    public void put(@Nonnull final ProviderTenantSetting newProviderTenantSetting, @Nonnull final ICallback<? super ProviderTenantSetting> callback) {
         send(HttpMethod.PUT, callback, newProviderTenantSetting);
     }
 
@@ -129,7 +134,8 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @return the created ProviderTenantSetting
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProviderTenantSetting put(final ProviderTenantSetting newProviderTenantSetting) throws ClientException {
+    @Nullable
+    public ProviderTenantSetting put(@Nonnull final ProviderTenantSetting newProviderTenantSetting) throws ClientException {
         return send(HttpMethod.PUT, newProviderTenantSetting);
     }
 
@@ -139,9 +145,10 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param value the select clause
      * @return the updated request
      */
-     public IProviderTenantSettingRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ProviderTenantSettingRequest)this;
+     @Nonnull
+     public ProviderTenantSettingRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ProviderTenantSettingRequest extends BaseRequest implements IProvid
      * @param value the expand clause
      * @return the updated request
      */
-     public IProviderTenantSettingRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProviderTenantSettingRequest)this;
+     @Nonnull
+     public ProviderTenantSettingRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

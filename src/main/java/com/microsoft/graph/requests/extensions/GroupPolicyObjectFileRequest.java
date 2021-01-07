@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyObjectFile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Object File Request.
  */
-public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupPolicyObjectFileRequest {
+public class GroupPolicyObjectFileRequest extends BaseRequest<GroupPolicyObjectFile> {
 	
     /**
      * The request for the GroupPolicyObjectFile
@@ -29,7 +31,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyObjectFileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyObjectFileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyObjectFile.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyObjectFile> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @return the GroupPolicyObjectFile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyObjectFile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyObjectFile> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param sourceGroupPolicyObjectFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyObjectFile sourceGroupPolicyObjectFile, final ICallback<? super GroupPolicyObjectFile> callback) {
+    public void patch(@Nonnull final GroupPolicyObjectFile sourceGroupPolicyObjectFile, @Nonnull final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyObjectFile);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @return the updated GroupPolicyObjectFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyObjectFile patch(final GroupPolicyObjectFile sourceGroupPolicyObjectFile) throws ClientException {
+    @Nullable
+    public GroupPolicyObjectFile patch(@Nonnull final GroupPolicyObjectFile sourceGroupPolicyObjectFile) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyObjectFile);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param newGroupPolicyObjectFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<? super GroupPolicyObjectFile> callback) {
+    public void post(@Nonnull final GroupPolicyObjectFile newGroupPolicyObjectFile, @Nonnull final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyObjectFile);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @return the created GroupPolicyObjectFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyObjectFile post(final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException {
+    @Nullable
+    public GroupPolicyObjectFile post(@Nonnull final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyObjectFile);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param newGroupPolicyObjectFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyObjectFile newGroupPolicyObjectFile, final ICallback<? super GroupPolicyObjectFile> callback) {
+    public void put(@Nonnull final GroupPolicyObjectFile newGroupPolicyObjectFile, @Nonnull final ICallback<? super GroupPolicyObjectFile> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyObjectFile);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @return the created GroupPolicyObjectFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyObjectFile put(final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException {
+    @Nullable
+    public GroupPolicyObjectFile put(@Nonnull final GroupPolicyObjectFile newGroupPolicyObjectFile) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyObjectFile);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyObjectFileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyObjectFileRequest)this;
+     @Nonnull
+     public GroupPolicyObjectFileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyObjectFileRequest extends BaseRequest implements IGroupP
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyObjectFileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyObjectFileRequest)this;
+     @Nonnull
+     public GroupPolicyObjectFileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CaseExportOperation;
-import com.microsoft.graph.requests.extensions.IReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReviewSetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Case Export Operation Request.
  */
-public class CaseExportOperationRequest extends BaseRequest implements ICaseExportOperationRequest {
+public class CaseExportOperationRequest extends BaseRequest<CaseExportOperation> {
 	
     /**
      * The request for the CaseExportOperation
@@ -31,7 +32,7 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CaseExportOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CaseExportOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CaseExportOperation.class);
     }
 
@@ -40,7 +41,7 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CaseExportOperation> callback) {
+    public void get(@Nonnull final ICallback<? super CaseExportOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @return the CaseExportOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CaseExportOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CaseExportOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super CaseExportOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @param sourceCaseExportOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CaseExportOperation sourceCaseExportOperation, final ICallback<? super CaseExportOperation> callback) {
+    public void patch(@Nonnull final CaseExportOperation sourceCaseExportOperation, @Nonnull final ICallback<? super CaseExportOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceCaseExportOperation);
     }
 
@@ -89,7 +91,8 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @return the updated CaseExportOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseExportOperation patch(final CaseExportOperation sourceCaseExportOperation) throws ClientException {
+    @Nullable
+    public CaseExportOperation patch(@Nonnull final CaseExportOperation sourceCaseExportOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceCaseExportOperation);
     }
 
@@ -99,7 +102,7 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @param newCaseExportOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CaseExportOperation newCaseExportOperation, final ICallback<? super CaseExportOperation> callback) {
+    public void post(@Nonnull final CaseExportOperation newCaseExportOperation, @Nonnull final ICallback<? super CaseExportOperation> callback) {
         send(HttpMethod.POST, callback, newCaseExportOperation);
     }
 
@@ -110,7 +113,8 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @return the created CaseExportOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseExportOperation post(final CaseExportOperation newCaseExportOperation) throws ClientException {
+    @Nullable
+    public CaseExportOperation post(@Nonnull final CaseExportOperation newCaseExportOperation) throws ClientException {
         return send(HttpMethod.POST, newCaseExportOperation);
     }
 
@@ -120,7 +124,7 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @param newCaseExportOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CaseExportOperation newCaseExportOperation, final ICallback<? super CaseExportOperation> callback) {
+    public void put(@Nonnull final CaseExportOperation newCaseExportOperation, @Nonnull final ICallback<? super CaseExportOperation> callback) {
         send(HttpMethod.PUT, callback, newCaseExportOperation);
     }
 
@@ -131,7 +135,8 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @return the created CaseExportOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CaseExportOperation put(final CaseExportOperation newCaseExportOperation) throws ClientException {
+    @Nullable
+    public CaseExportOperation put(@Nonnull final CaseExportOperation newCaseExportOperation) throws ClientException {
         return send(HttpMethod.PUT, newCaseExportOperation);
     }
 
@@ -141,9 +146,10 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @param value the select clause
      * @return the updated request
      */
-     public ICaseExportOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CaseExportOperationRequest)this;
+     @Nonnull
+     public CaseExportOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class CaseExportOperationRequest extends BaseRequest implements ICaseExpo
      * @param value the expand clause
      * @return the updated request
      */
-     public ICaseExportOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CaseExportOperationRequest)this;
+     @Nonnull
+     public CaseExportOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

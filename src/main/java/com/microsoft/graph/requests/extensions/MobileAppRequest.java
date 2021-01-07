@@ -13,30 +13,21 @@ import com.microsoft.graph.models.extensions.MobileAppAssignment;
 import com.microsoft.graph.models.extensions.MobileAppRelationship;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
 import com.microsoft.graph.models.extensions.MobileAppRelationshipState;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -46,7 +37,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Request.
  */
-public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
+public class MobileAppRequest extends BaseRequest<MobileApp> {
 	
     /**
      * The request for the MobileApp
@@ -56,10 +47,10 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public MobileAppRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends MobileApp> responseClass) {
+    public MobileAppRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends MobileApp> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -70,7 +61,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileApp.class);
     }
 
@@ -79,7 +70,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileApp> callback) {
+    public void get(@Nonnull final ICallback<? super MobileApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -89,6 +80,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @return the MobileApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -98,7 +90,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileApp> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -117,7 +109,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param sourceMobileApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileApp sourceMobileApp, final ICallback<? super MobileApp> callback) {
+    public void patch(@Nonnull final MobileApp sourceMobileApp, @Nonnull final ICallback<? super MobileApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileApp);
     }
 
@@ -128,7 +120,8 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @return the updated MobileApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileApp patch(final MobileApp sourceMobileApp) throws ClientException {
+    @Nullable
+    public MobileApp patch(@Nonnull final MobileApp sourceMobileApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileApp);
     }
 
@@ -138,7 +131,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param newMobileApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback) {
+    public void post(@Nonnull final MobileApp newMobileApp, @Nonnull final ICallback<? super MobileApp> callback) {
         send(HttpMethod.POST, callback, newMobileApp);
     }
 
@@ -149,7 +142,8 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @return the created MobileApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileApp post(final MobileApp newMobileApp) throws ClientException {
+    @Nullable
+    public MobileApp post(@Nonnull final MobileApp newMobileApp) throws ClientException {
         return send(HttpMethod.POST, newMobileApp);
     }
 
@@ -159,7 +153,7 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param newMobileApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileApp newMobileApp, final ICallback<? super MobileApp> callback) {
+    public void put(@Nonnull final MobileApp newMobileApp, @Nonnull final ICallback<? super MobileApp> callback) {
         send(HttpMethod.PUT, callback, newMobileApp);
     }
 
@@ -170,7 +164,8 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @return the created MobileApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileApp put(final MobileApp newMobileApp) throws ClientException {
+    @Nullable
+    public MobileApp put(@Nonnull final MobileApp newMobileApp) throws ClientException {
         return send(HttpMethod.PUT, newMobileApp);
     }
 
@@ -180,9 +175,10 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppRequest)this;
+     @Nonnull
+     public MobileAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -191,9 +187,10 @@ public class MobileAppRequest extends BaseRequest implements IMobileAppRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppRequest)this;
+     @Nonnull
+     public MobileAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

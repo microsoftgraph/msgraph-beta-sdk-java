@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SitePage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Site Page Request.
  */
-public class SitePageRequest extends BaseRequest implements ISitePageRequest {
+public class SitePageRequest extends BaseRequest<SitePage> {
 	
     /**
      * The request for the SitePage
@@ -29,7 +31,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SitePageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SitePageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SitePage.class);
     }
 
@@ -38,7 +40,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SitePage> callback) {
+    public void get(@Nonnull final ICallback<? super SitePage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @return the SitePage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SitePage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SitePage> callback) {
+    public void delete(@Nonnull final ICallback<? super SitePage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param sourceSitePage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SitePage sourceSitePage, final ICallback<? super SitePage> callback) {
+    public void patch(@Nonnull final SitePage sourceSitePage, @Nonnull final ICallback<? super SitePage> callback) {
         send(HttpMethod.PATCH, callback, sourceSitePage);
     }
 
@@ -87,7 +90,8 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @return the updated SitePage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SitePage patch(final SitePage sourceSitePage) throws ClientException {
+    @Nullable
+    public SitePage patch(@Nonnull final SitePage sourceSitePage) throws ClientException {
         return send(HttpMethod.PATCH, sourceSitePage);
     }
 
@@ -97,7 +101,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param newSitePage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SitePage newSitePage, final ICallback<? super SitePage> callback) {
+    public void post(@Nonnull final SitePage newSitePage, @Nonnull final ICallback<? super SitePage> callback) {
         send(HttpMethod.POST, callback, newSitePage);
     }
 
@@ -108,7 +112,8 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @return the created SitePage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SitePage post(final SitePage newSitePage) throws ClientException {
+    @Nullable
+    public SitePage post(@Nonnull final SitePage newSitePage) throws ClientException {
         return send(HttpMethod.POST, newSitePage);
     }
 
@@ -118,7 +123,7 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param newSitePage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SitePage newSitePage, final ICallback<? super SitePage> callback) {
+    public void put(@Nonnull final SitePage newSitePage, @Nonnull final ICallback<? super SitePage> callback) {
         send(HttpMethod.PUT, callback, newSitePage);
     }
 
@@ -129,7 +134,8 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @return the created SitePage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SitePage put(final SitePage newSitePage) throws ClientException {
+    @Nullable
+    public SitePage put(@Nonnull final SitePage newSitePage) throws ClientException {
         return send(HttpMethod.PUT, newSitePage);
     }
 
@@ -139,9 +145,10 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ISitePageRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SitePageRequest)this;
+     @Nonnull
+     public SitePageRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SitePageRequest extends BaseRequest implements ISitePageRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ISitePageRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SitePageRequest)this;
+     @Nonnull
+     public SitePageRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

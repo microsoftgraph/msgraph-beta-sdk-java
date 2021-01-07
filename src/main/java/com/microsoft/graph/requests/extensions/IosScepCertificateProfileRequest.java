@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosScepCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Scep Certificate Profile Request.
  */
-public class IosScepCertificateProfileRequest extends BaseRequest implements IIosScepCertificateProfileRequest {
+public class IosScepCertificateProfileRequest extends BaseRequest<IosScepCertificateProfile> {
 	
     /**
      * The request for the IosScepCertificateProfile
@@ -35,7 +34,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosScepCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosScepCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosScepCertificateProfile.class);
     }
 
@@ -44,7 +43,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosScepCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @return the IosScepCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosScepCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosScepCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param sourceIosScepCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosScepCertificateProfile sourceIosScepCertificateProfile, final ICallback<? super IosScepCertificateProfile> callback) {
+    public void patch(@Nonnull final IosScepCertificateProfile sourceIosScepCertificateProfile, @Nonnull final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceIosScepCertificateProfile);
     }
 
@@ -93,7 +93,8 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @return the updated IosScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosScepCertificateProfile patch(final IosScepCertificateProfile sourceIosScepCertificateProfile) throws ClientException {
+    @Nullable
+    public IosScepCertificateProfile patch(@Nonnull final IosScepCertificateProfile sourceIosScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosScepCertificateProfile);
     }
 
@@ -103,7 +104,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param newIosScepCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosScepCertificateProfile newIosScepCertificateProfile, final ICallback<? super IosScepCertificateProfile> callback) {
+    public void post(@Nonnull final IosScepCertificateProfile newIosScepCertificateProfile, @Nonnull final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newIosScepCertificateProfile);
     }
 
@@ -114,7 +115,8 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @return the created IosScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosScepCertificateProfile post(final IosScepCertificateProfile newIosScepCertificateProfile) throws ClientException {
+    @Nullable
+    public IosScepCertificateProfile post(@Nonnull final IosScepCertificateProfile newIosScepCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newIosScepCertificateProfile);
     }
 
@@ -124,7 +126,7 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param newIosScepCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosScepCertificateProfile newIosScepCertificateProfile, final ICallback<? super IosScepCertificateProfile> callback) {
+    public void put(@Nonnull final IosScepCertificateProfile newIosScepCertificateProfile, @Nonnull final ICallback<? super IosScepCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newIosScepCertificateProfile);
     }
 
@@ -135,7 +137,8 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @return the created IosScepCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosScepCertificateProfile put(final IosScepCertificateProfile newIosScepCertificateProfile) throws ClientException {
+    @Nullable
+    public IosScepCertificateProfile put(@Nonnull final IosScepCertificateProfile newIosScepCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newIosScepCertificateProfile);
     }
 
@@ -145,9 +148,10 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param value the select clause
      * @return the updated request
      */
-     public IIosScepCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosScepCertificateProfileRequest)this;
+     @Nonnull
+     public IosScepCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class IosScepCertificateProfileRequest extends BaseRequest implements IIo
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosScepCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosScepCertificateProfileRequest)this;
+     @Nonnull
+     public IosScepCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

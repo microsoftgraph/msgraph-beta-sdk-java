@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.YammerDeviceUsageUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Yammer Device Usage User Counts Request.
  */
-public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements IYammerDeviceUsageUserCountsRequest {
+public class YammerDeviceUsageUserCountsRequest extends BaseRequest<YammerDeviceUsageUserCounts> {
 	
     /**
      * The request for the YammerDeviceUsageUserCounts
@@ -29,7 +31,7 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public YammerDeviceUsageUserCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public YammerDeviceUsageUserCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, YammerDeviceUsageUserCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super YammerDeviceUsageUserCounts> callback) {
+    public void get(@Nonnull final ICallback<? super YammerDeviceUsageUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @return the YammerDeviceUsageUserCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public YammerDeviceUsageUserCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super YammerDeviceUsageUserCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super YammerDeviceUsageUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @param sourceYammerDeviceUsageUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final YammerDeviceUsageUserCounts sourceYammerDeviceUsageUserCounts, final ICallback<? super YammerDeviceUsageUserCounts> callback) {
+    public void patch(@Nonnull final YammerDeviceUsageUserCounts sourceYammerDeviceUsageUserCounts, @Nonnull final ICallback<? super YammerDeviceUsageUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceYammerDeviceUsageUserCounts);
     }
 
@@ -87,7 +90,8 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @return the updated YammerDeviceUsageUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerDeviceUsageUserCounts patch(final YammerDeviceUsageUserCounts sourceYammerDeviceUsageUserCounts) throws ClientException {
+    @Nullable
+    public YammerDeviceUsageUserCounts patch(@Nonnull final YammerDeviceUsageUserCounts sourceYammerDeviceUsageUserCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceYammerDeviceUsageUserCounts);
     }
 
@@ -97,7 +101,7 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @param newYammerDeviceUsageUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<? super YammerDeviceUsageUserCounts> callback) {
+    public void post(@Nonnull final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, @Nonnull final ICallback<? super YammerDeviceUsageUserCounts> callback) {
         send(HttpMethod.POST, callback, newYammerDeviceUsageUserCounts);
     }
 
@@ -108,7 +112,8 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @return the created YammerDeviceUsageUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerDeviceUsageUserCounts post(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts) throws ClientException {
+    @Nullable
+    public YammerDeviceUsageUserCounts post(@Nonnull final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts) throws ClientException {
         return send(HttpMethod.POST, newYammerDeviceUsageUserCounts);
     }
 
@@ -118,7 +123,7 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @param newYammerDeviceUsageUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, final ICallback<? super YammerDeviceUsageUserCounts> callback) {
+    public void put(@Nonnull final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts, @Nonnull final ICallback<? super YammerDeviceUsageUserCounts> callback) {
         send(HttpMethod.PUT, callback, newYammerDeviceUsageUserCounts);
     }
 
@@ -129,7 +134,8 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @return the created YammerDeviceUsageUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerDeviceUsageUserCounts put(final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts) throws ClientException {
+    @Nullable
+    public YammerDeviceUsageUserCounts put(@Nonnull final YammerDeviceUsageUserCounts newYammerDeviceUsageUserCounts) throws ClientException {
         return send(HttpMethod.PUT, newYammerDeviceUsageUserCounts);
     }
 
@@ -139,9 +145,10 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IYammerDeviceUsageUserCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (YammerDeviceUsageUserCountsRequest)this;
+     @Nonnull
+     public YammerDeviceUsageUserCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class YammerDeviceUsageUserCountsRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IYammerDeviceUsageUserCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (YammerDeviceUsageUserCountsRequest)this;
+     @Nonnull
+     public YammerDeviceUsageUserCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

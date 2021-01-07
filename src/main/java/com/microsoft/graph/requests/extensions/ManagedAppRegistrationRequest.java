@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppRegistration;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedAppOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed App Registration Request.
  */
-public class ManagedAppRegistrationRequest extends BaseRequest implements IManagedAppRegistrationRequest {
+public class ManagedAppRegistrationRequest extends BaseRequest<ManagedAppRegistration> {
 	
     /**
      * The request for the ManagedAppRegistration
@@ -38,10 +36,10 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ManagedAppRegistrationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ManagedAppRegistration> responseClass) {
+    public ManagedAppRegistrationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ManagedAppRegistration> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -52,7 +50,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppRegistrationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppRegistrationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAppRegistration.class);
     }
 
@@ -61,7 +59,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAppRegistration> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -71,6 +69,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @return the ManagedAppRegistration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAppRegistration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -80,7 +79,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAppRegistration> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -99,7 +98,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param sourceManagedAppRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAppRegistration sourceManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
+    public void patch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAppRegistration);
     }
 
@@ -110,7 +109,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @return the updated ManagedAppRegistration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppRegistration patch(final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException {
+    @Nullable
+    public ManagedAppRegistration patch(@Nonnull final ManagedAppRegistration sourceManagedAppRegistration) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAppRegistration);
     }
 
@@ -120,7 +120,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param newManagedAppRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
+    public void post(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.POST, callback, newManagedAppRegistration);
     }
 
@@ -131,7 +131,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @return the created ManagedAppRegistration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppRegistration post(final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
+    @Nullable
+    public ManagedAppRegistration post(@Nonnull final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
         return send(HttpMethod.POST, newManagedAppRegistration);
     }
 
@@ -141,7 +142,7 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param newManagedAppRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAppRegistration newManagedAppRegistration, final ICallback<? super ManagedAppRegistration> callback) {
+    public void put(@Nonnull final ManagedAppRegistration newManagedAppRegistration, @Nonnull final ICallback<? super ManagedAppRegistration> callback) {
         send(HttpMethod.PUT, callback, newManagedAppRegistration);
     }
 
@@ -152,7 +153,8 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @return the created ManagedAppRegistration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAppRegistration put(final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
+    @Nullable
+    public ManagedAppRegistration put(@Nonnull final ManagedAppRegistration newManagedAppRegistration) throws ClientException {
         return send(HttpMethod.PUT, newManagedAppRegistration);
     }
 
@@ -162,9 +164,10 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAppRegistrationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAppRegistrationRequest)this;
+     @Nonnull
+     public ManagedAppRegistrationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -173,9 +176,10 @@ public class ManagedAppRegistrationRequest extends BaseRequest implements IManag
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAppRegistrationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAppRegistrationRequest)this;
+     @Nonnull
+     public ManagedAppRegistrationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

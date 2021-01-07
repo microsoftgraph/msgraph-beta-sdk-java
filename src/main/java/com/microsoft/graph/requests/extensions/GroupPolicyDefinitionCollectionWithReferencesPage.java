@@ -12,9 +12,11 @@ import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionResponse;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.google.gson.JsonObject;
@@ -27,7 +29,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Group Policy Definition Collection With References Page.
  */
-public class GroupPolicyDefinitionCollectionWithReferencesPage extends BaseCollectionPage<GroupPolicyDefinition, IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder> implements IGroupPolicyDefinitionCollectionWithReferencesPage {
+public class GroupPolicyDefinitionCollectionWithReferencesPage extends BaseCollectionPage<GroupPolicyDefinition, GroupPolicyDefinitionCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for GroupPolicyDefinition
@@ -35,7 +37,17 @@ public class GroupPolicyDefinitionCollectionWithReferencesPage extends BaseColle
      * @param response the serialized GroupPolicyDefinitionCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public GroupPolicyDefinitionCollectionWithReferencesPage(final GroupPolicyDefinitionCollectionResponse response, final IGroupPolicyDefinitionCollectionWithReferencesRequestBuilder builder) {
+    public GroupPolicyDefinitionCollectionWithReferencesPage(@Nonnull final GroupPolicyDefinitionCollectionResponse response, @Nullable final GroupPolicyDefinitionCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for GroupPolicyDefinition
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public GroupPolicyDefinitionCollectionWithReferencesPage(@Nonnull final java.util.List<GroupPolicyDefinition> pageContents, @Nullable final GroupPolicyDefinitionCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

@@ -10,16 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePool;
 import com.microsoft.graph.models.extensions.EmbeddedSIMActivationCodePoolAssignment;
-import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEmbeddedSIMActivationCodePoolAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmbeddedSIMActivationCodePoolAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEmbeddedSIMDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEmbeddedSIMDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmbeddedSIMDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmbeddedSIMDeviceStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -29,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Embedded SIMActivation Code Pool Request.
  */
-public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements IEmbeddedSIMActivationCodePoolRequest {
+public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest<EmbeddedSIMActivationCodePool> {
 	
     /**
      * The request for the EmbeddedSIMActivationCodePool
@@ -38,7 +36,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmbeddedSIMActivationCodePoolRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmbeddedSIMActivationCodePoolRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmbeddedSIMActivationCodePool.class);
     }
 
@@ -47,7 +45,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
+    public void get(@Nonnull final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -57,6 +55,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @return the EmbeddedSIMActivationCodePool from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EmbeddedSIMActivationCodePool get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -66,7 +65,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
+    public void delete(@Nonnull final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -85,7 +84,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param sourceEmbeddedSIMActivationCodePool the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
+    public void patch(@Nonnull final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool, @Nonnull final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.PATCH, callback, sourceEmbeddedSIMActivationCodePool);
     }
 
@@ -96,7 +95,8 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @return the updated EmbeddedSIMActivationCodePool
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmbeddedSIMActivationCodePool patch(final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool) throws ClientException {
+    @Nullable
+    public EmbeddedSIMActivationCodePool patch(@Nonnull final EmbeddedSIMActivationCodePool sourceEmbeddedSIMActivationCodePool) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmbeddedSIMActivationCodePool);
     }
 
@@ -106,7 +106,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param newEmbeddedSIMActivationCodePool the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
+    public void post(@Nonnull final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, @Nonnull final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.POST, callback, newEmbeddedSIMActivationCodePool);
     }
 
@@ -117,7 +117,8 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @return the created EmbeddedSIMActivationCodePool
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmbeddedSIMActivationCodePool post(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException {
+    @Nullable
+    public EmbeddedSIMActivationCodePool post(@Nonnull final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException {
         return send(HttpMethod.POST, newEmbeddedSIMActivationCodePool);
     }
 
@@ -127,7 +128,7 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param newEmbeddedSIMActivationCodePool the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
+    public void put(@Nonnull final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool, @Nonnull final ICallback<? super EmbeddedSIMActivationCodePool> callback) {
         send(HttpMethod.PUT, callback, newEmbeddedSIMActivationCodePool);
     }
 
@@ -138,7 +139,8 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @return the created EmbeddedSIMActivationCodePool
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmbeddedSIMActivationCodePool put(final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException {
+    @Nullable
+    public EmbeddedSIMActivationCodePool put(@Nonnull final EmbeddedSIMActivationCodePool newEmbeddedSIMActivationCodePool) throws ClientException {
         return send(HttpMethod.PUT, newEmbeddedSIMActivationCodePool);
     }
 
@@ -148,9 +150,10 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IEmbeddedSIMActivationCodePoolRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmbeddedSIMActivationCodePoolRequest)this;
+     @Nonnull
+     public EmbeddedSIMActivationCodePoolRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -159,9 +162,10 @@ public class EmbeddedSIMActivationCodePoolRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmbeddedSIMActivationCodePoolRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmbeddedSIMActivationCodePoolRequest)this;
+     @Nonnull
+     public EmbeddedSIMActivationCodePoolRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

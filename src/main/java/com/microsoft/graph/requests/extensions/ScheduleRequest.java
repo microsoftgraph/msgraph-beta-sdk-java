@@ -9,48 +9,30 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Schedule;
-import com.microsoft.graph.requests.extensions.IOfferShiftRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOfferShiftRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OfferShiftRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftChangeRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OpenShiftChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOpenShiftRequestBuilder;
 import com.microsoft.graph.requests.extensions.OpenShiftCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OpenShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchedulingGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchedulingGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchedulingGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShiftCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShiftRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISwapShiftsChangeRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SwapShiftsChangeRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeCardCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeCardRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeCardCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeCardRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffReasonRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffReasonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffReasonRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITimeOffRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TimeOffRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -60,7 +42,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Schedule Request.
  */
-public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
+public class ScheduleRequest extends BaseRequest<Schedule> {
 	
     /**
      * The request for the Schedule
@@ -69,7 +51,7 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ScheduleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScheduleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Schedule.class);
     }
 
@@ -78,7 +60,7 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Schedule> callback) {
+    public void get(@Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -88,6 +70,7 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @return the Schedule from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Schedule get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -97,7 +80,7 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Schedule> callback) {
+    public void delete(@Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -116,7 +99,7 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @param sourceSchedule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Schedule sourceSchedule, final ICallback<? super Schedule> callback) {
+    public void patch(@Nonnull final Schedule sourceSchedule, @Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.PATCH, callback, sourceSchedule);
     }
 
@@ -127,7 +110,8 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @return the updated Schedule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schedule patch(final Schedule sourceSchedule) throws ClientException {
+    @Nullable
+    public Schedule patch(@Nonnull final Schedule sourceSchedule) throws ClientException {
         return send(HttpMethod.PATCH, sourceSchedule);
     }
 
@@ -137,7 +121,7 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @param newSchedule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Schedule newSchedule, final ICallback<? super Schedule> callback) {
+    public void post(@Nonnull final Schedule newSchedule, @Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.POST, callback, newSchedule);
     }
 
@@ -148,7 +132,8 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @return the created Schedule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schedule post(final Schedule newSchedule) throws ClientException {
+    @Nullable
+    public Schedule post(@Nonnull final Schedule newSchedule) throws ClientException {
         return send(HttpMethod.POST, newSchedule);
     }
 
@@ -158,7 +143,7 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @param newSchedule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Schedule newSchedule, final ICallback<? super Schedule> callback) {
+    public void put(@Nonnull final Schedule newSchedule, @Nonnull final ICallback<? super Schedule> callback) {
         send(HttpMethod.PUT, callback, newSchedule);
     }
 
@@ -169,7 +154,8 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @return the created Schedule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Schedule put(final Schedule newSchedule) throws ClientException {
+    @Nullable
+    public Schedule put(@Nonnull final Schedule newSchedule) throws ClientException {
         return send(HttpMethod.PUT, newSchedule);
     }
 
@@ -179,9 +165,10 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IScheduleRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ScheduleRequest)this;
+     @Nonnull
+     public ScheduleRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -190,9 +177,10 @@ public class ScheduleRequest extends BaseRequest implements IScheduleRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IScheduleRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ScheduleRequest)this;
+     @Nonnull
+     public ScheduleRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

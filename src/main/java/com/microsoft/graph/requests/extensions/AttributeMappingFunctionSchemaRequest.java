@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Attribute Mapping Function Schema Request.
  */
-public class AttributeMappingFunctionSchemaRequest extends BaseRequest implements IAttributeMappingFunctionSchemaRequest {
+public class AttributeMappingFunctionSchemaRequest extends BaseRequest<AttributeMappingFunctionSchema> {
 	
     /**
      * The request for the AttributeMappingFunctionSchema
@@ -29,7 +31,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AttributeMappingFunctionSchemaRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttributeMappingFunctionSchemaRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AttributeMappingFunctionSchema.class);
     }
 
@@ -38,7 +40,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AttributeMappingFunctionSchema> callback) {
+    public void get(@Nonnull final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @return the AttributeMappingFunctionSchema from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AttributeMappingFunctionSchema get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AttributeMappingFunctionSchema> callback) {
+    public void delete(@Nonnull final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param sourceAttributeMappingFunctionSchema the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback) {
+    public void patch(@Nonnull final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema, @Nonnull final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.PATCH, callback, sourceAttributeMappingFunctionSchema);
     }
 
@@ -87,7 +90,8 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @return the updated AttributeMappingFunctionSchema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AttributeMappingFunctionSchema patch(final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema) throws ClientException {
+    @Nullable
+    public AttributeMappingFunctionSchema patch(@Nonnull final AttributeMappingFunctionSchema sourceAttributeMappingFunctionSchema) throws ClientException {
         return send(HttpMethod.PATCH, sourceAttributeMappingFunctionSchema);
     }
 
@@ -97,7 +101,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param newAttributeMappingFunctionSchema the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback) {
+    public void post(@Nonnull final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, @Nonnull final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.POST, callback, newAttributeMappingFunctionSchema);
     }
 
@@ -108,7 +112,8 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @return the created AttributeMappingFunctionSchema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AttributeMappingFunctionSchema post(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException {
+    @Nullable
+    public AttributeMappingFunctionSchema post(@Nonnull final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException {
         return send(HttpMethod.POST, newAttributeMappingFunctionSchema);
     }
 
@@ -118,7 +123,7 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param newAttributeMappingFunctionSchema the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, final ICallback<? super AttributeMappingFunctionSchema> callback) {
+    public void put(@Nonnull final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema, @Nonnull final ICallback<? super AttributeMappingFunctionSchema> callback) {
         send(HttpMethod.PUT, callback, newAttributeMappingFunctionSchema);
     }
 
@@ -129,7 +134,8 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @return the created AttributeMappingFunctionSchema
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AttributeMappingFunctionSchema put(final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException {
+    @Nullable
+    public AttributeMappingFunctionSchema put(@Nonnull final AttributeMappingFunctionSchema newAttributeMappingFunctionSchema) throws ClientException {
         return send(HttpMethod.PUT, newAttributeMappingFunctionSchema);
     }
 
@@ -139,9 +145,10 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IAttributeMappingFunctionSchemaRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AttributeMappingFunctionSchemaRequest)this;
+     @Nonnull
+     public AttributeMappingFunctionSchemaRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AttributeMappingFunctionSchemaRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IAttributeMappingFunctionSchemaRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AttributeMappingFunctionSchemaRequest)this;
+     @Nonnull
+     public AttributeMappingFunctionSchemaRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

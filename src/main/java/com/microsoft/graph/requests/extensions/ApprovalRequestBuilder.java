@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Approval;
-import com.microsoft.graph.requests.extensions.IApprovalStepCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IApprovalStepRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalStepCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalStepRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Approval Request Builder.
  */
-public class ApprovalRequestBuilder extends BaseRequestBuilder implements IApprovalRequestBuilder {
+public class ApprovalRequestBuilder extends BaseRequestBuilder<Approval> {
 
     /**
      * The request builder for the Approval
@@ -32,7 +32,7 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApprovalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApprovalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IApprovalRequest instance
+     * @return the ApprovalRequest instance
      */
-    public IApprovalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ApprovalRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,25 +51,52 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IApprovalRequest instance
+     * @return the ApprovalRequest instance
      */
-    public IApprovalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ApprovalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ApprovalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IApprovalStepCollectionRequestBuilder completedSteps() {
+    /**
+     *  Gets a request builder for the ApprovalStep collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApprovalStepCollectionRequestBuilder completedSteps() {
         return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("completedSteps"), getClient(), null);
     }
 
-    public IApprovalStepRequestBuilder completedSteps(final String id) {
+    /**
+     * Gets a request builder for the ApprovalStep item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApprovalStepRequestBuilder completedSteps(@Nonnull final String id) {
         return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("completedSteps") + "/" + id, getClient(), null);
     }
-    public IApprovalStepCollectionRequestBuilder pendingSteps() {
+    /**
+     *  Gets a request builder for the ApprovalStep collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApprovalStepCollectionRequestBuilder pendingSteps() {
         return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps"), getClient(), null);
     }
 
-    public IApprovalStepRequestBuilder pendingSteps(final String id) {
+    /**
+     * Gets a request builder for the ApprovalStep item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApprovalStepRequestBuilder pendingSteps(@Nonnull final String id) {
         return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps") + "/" + id, getClient(), null);
     }
 }

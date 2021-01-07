@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SubscribedSku;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Subscribed Sku Request.
  */
-public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuRequest {
+public class SubscribedSkuRequest extends BaseRequest<SubscribedSku> {
 	
     /**
      * The request for the SubscribedSku
@@ -29,7 +31,7 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SubscribedSkuRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SubscribedSkuRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SubscribedSku.class);
     }
 
@@ -38,7 +40,7 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SubscribedSku> callback) {
+    public void get(@Nonnull final ICallback<? super SubscribedSku> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @return the SubscribedSku from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SubscribedSku get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SubscribedSku> callback) {
+    public void delete(@Nonnull final ICallback<? super SubscribedSku> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @param sourceSubscribedSku the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SubscribedSku sourceSubscribedSku, final ICallback<? super SubscribedSku> callback) {
+    public void patch(@Nonnull final SubscribedSku sourceSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
         send(HttpMethod.PATCH, callback, sourceSubscribedSku);
     }
 
@@ -87,7 +90,8 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @return the updated SubscribedSku
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SubscribedSku patch(final SubscribedSku sourceSubscribedSku) throws ClientException {
+    @Nullable
+    public SubscribedSku patch(@Nonnull final SubscribedSku sourceSubscribedSku) throws ClientException {
         return send(HttpMethod.PATCH, sourceSubscribedSku);
     }
 
@@ -97,7 +101,7 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @param newSubscribedSku the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback) {
+    public void post(@Nonnull final SubscribedSku newSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
         send(HttpMethod.POST, callback, newSubscribedSku);
     }
 
@@ -108,7 +112,8 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @return the created SubscribedSku
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SubscribedSku post(final SubscribedSku newSubscribedSku) throws ClientException {
+    @Nullable
+    public SubscribedSku post(@Nonnull final SubscribedSku newSubscribedSku) throws ClientException {
         return send(HttpMethod.POST, newSubscribedSku);
     }
 
@@ -118,7 +123,7 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @param newSubscribedSku the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SubscribedSku newSubscribedSku, final ICallback<? super SubscribedSku> callback) {
+    public void put(@Nonnull final SubscribedSku newSubscribedSku, @Nonnull final ICallback<? super SubscribedSku> callback) {
         send(HttpMethod.PUT, callback, newSubscribedSku);
     }
 
@@ -129,7 +134,8 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @return the created SubscribedSku
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SubscribedSku put(final SubscribedSku newSubscribedSku) throws ClientException {
+    @Nullable
+    public SubscribedSku put(@Nonnull final SubscribedSku newSubscribedSku) throws ClientException {
         return send(HttpMethod.PUT, newSubscribedSku);
     }
 
@@ -139,9 +145,10 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @param value the select clause
      * @return the updated request
      */
-     public ISubscribedSkuRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SubscribedSkuRequest)this;
+     @Nonnull
+     public SubscribedSkuRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SubscribedSkuRequest extends BaseRequest implements ISubscribedSkuR
      * @param value the expand clause
      * @return the updated request
      */
-     public ISubscribedSkuRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SubscribedSkuRequest)this;
+     @Nonnull
+     public SubscribedSkuRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

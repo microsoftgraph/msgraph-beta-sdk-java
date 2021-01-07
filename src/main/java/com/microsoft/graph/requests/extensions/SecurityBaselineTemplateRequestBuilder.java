@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineTemplate;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineStateSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Baseline Template Request Builder.
  */
-public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder implements ISecurityBaselineTemplateRequestBuilder {
+public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder<SecurityBaselineTemplate> {
 
     /**
      * The request builder for the SecurityBaselineTemplate
@@ -38,7 +35,7 @@ public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityBaselineTemplateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityBaselineTemplateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityBaselineTemplateRequest instance
+     * @return the SecurityBaselineTemplateRequest instance
      */
-    public ISecurityBaselineTemplateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SecurityBaselineTemplateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,55 +54,122 @@ public class SecurityBaselineTemplateRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityBaselineTemplateRequest instance
+     * @return the SecurityBaselineTemplateRequest instance
      */
-    public ISecurityBaselineTemplateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SecurityBaselineTemplateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecurityBaselineTemplateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories() {
+    /**
+     *  Gets a request builder for the DeviceManagementTemplateSettingCategory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementTemplateSettingCategoryCollectionRequestBuilder categories() {
         return new DeviceManagementTemplateSettingCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categories"), getClient(), null);
     }
 
-    public IDeviceManagementTemplateSettingCategoryRequestBuilder categories(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementTemplateSettingCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementTemplateSettingCategoryRequestBuilder categories(@Nonnull final String id) {
         return new DeviceManagementTemplateSettingCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("categories") + "/" + id, getClient(), null);
     }
-    public IDeviceManagementTemplateCollectionRequestBuilder migratableTo() {
+    /**
+     *  Gets a request builder for the DeviceManagementTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementTemplateCollectionRequestBuilder migratableTo() {
         return new DeviceManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo"), getClient(), null);
     }
 
-    public IDeviceManagementTemplateRequestBuilder migratableTo(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementTemplateRequestBuilder migratableTo(@Nonnull final String id) {
         return new DeviceManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("migratableTo") + "/" + id, getClient(), null);
     }
-    public IDeviceManagementSettingInstanceCollectionRequestBuilder settings() {
+    /**
+     *  Gets a request builder for the DeviceManagementSettingInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementSettingInstanceCollectionRequestBuilder settings() {
         return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
-    public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementSettingInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementSettingInstanceRequestBuilder settings(@Nonnull final String id) {
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
-    public ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder categoryDeviceStateSummaries() {
+    /**
+     *  Gets a request builder for the SecurityBaselineCategoryStateSummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SecurityBaselineCategoryStateSummaryCollectionRequestBuilder categoryDeviceStateSummaries() {
         return new SecurityBaselineCategoryStateSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categoryDeviceStateSummaries"), getClient(), null);
     }
 
-    public ISecurityBaselineCategoryStateSummaryRequestBuilder categoryDeviceStateSummaries(final String id) {
+    /**
+     * Gets a request builder for the SecurityBaselineCategoryStateSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SecurityBaselineCategoryStateSummaryRequestBuilder categoryDeviceStateSummaries(@Nonnull final String id) {
         return new SecurityBaselineCategoryStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("categoryDeviceStateSummaries") + "/" + id, getClient(), null);
     }
-    public ISecurityBaselineDeviceStateCollectionRequestBuilder deviceStates() {
+    /**
+     *  Gets a request builder for the SecurityBaselineDeviceState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SecurityBaselineDeviceStateCollectionRequestBuilder deviceStates() {
         return new SecurityBaselineDeviceStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates"), getClient(), null);
     }
 
-    public ISecurityBaselineDeviceStateRequestBuilder deviceStates(final String id) {
+    /**
+     * Gets a request builder for the SecurityBaselineDeviceState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SecurityBaselineDeviceStateRequestBuilder deviceStates(@Nonnull final String id) {
         return new SecurityBaselineDeviceStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStates") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for SecurityBaselineStateSummary
      *
-     * @return the ISecurityBaselineStateSummaryRequestBuilder instance
+     * @return the SecurityBaselineStateSummaryRequestBuilder instance
      */
-    public ISecurityBaselineStateSummaryRequestBuilder deviceStateSummary() {
+    @Nonnull
+    public SecurityBaselineStateSummaryRequestBuilder deviceStateSummary() {
         return new SecurityBaselineStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceStateSummary"), getClient(), null);
     }
 }

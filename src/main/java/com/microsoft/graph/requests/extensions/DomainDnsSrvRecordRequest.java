@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsSrvRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Dns Srv Record Request.
  */
-public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDnsSrvRecordRequest {
+public class DomainDnsSrvRecordRequest extends BaseRequest<DomainDnsSrvRecord> {
 	
     /**
      * The request for the DomainDnsSrvRecord
@@ -29,7 +31,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsSrvRecordRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsSrvRecordRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainDnsSrvRecord.class);
     }
 
@@ -38,7 +40,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void get(@Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @return the DomainDnsSrvRecord from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DomainDnsSrvRecord get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void delete(@Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param sourceDomainDnsSrvRecord the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void patch(@Nonnull final DomainDnsSrvRecord sourceDomainDnsSrvRecord, @Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainDnsSrvRecord);
     }
 
@@ -87,7 +90,8 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @return the updated DomainDnsSrvRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsSrvRecord patch(final DomainDnsSrvRecord sourceDomainDnsSrvRecord) throws ClientException {
+    @Nullable
+    public DomainDnsSrvRecord patch(@Nonnull final DomainDnsSrvRecord sourceDomainDnsSrvRecord) throws ClientException {
         return send(HttpMethod.PATCH, sourceDomainDnsSrvRecord);
     }
 
@@ -97,7 +101,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param newDomainDnsSrvRecord the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void post(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord, @Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
         send(HttpMethod.POST, callback, newDomainDnsSrvRecord);
     }
 
@@ -108,7 +112,8 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @return the created DomainDnsSrvRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsSrvRecord post(final DomainDnsSrvRecord newDomainDnsSrvRecord) throws ClientException {
+    @Nullable
+    public DomainDnsSrvRecord post(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord) throws ClientException {
         return send(HttpMethod.POST, newDomainDnsSrvRecord);
     }
 
@@ -118,7 +123,7 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param newDomainDnsSrvRecord the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainDnsSrvRecord newDomainDnsSrvRecord, final ICallback<? super DomainDnsSrvRecord> callback) {
+    public void put(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord, @Nonnull final ICallback<? super DomainDnsSrvRecord> callback) {
         send(HttpMethod.PUT, callback, newDomainDnsSrvRecord);
     }
 
@@ -129,7 +134,8 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @return the created DomainDnsSrvRecord
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainDnsSrvRecord put(final DomainDnsSrvRecord newDomainDnsSrvRecord) throws ClientException {
+    @Nullable
+    public DomainDnsSrvRecord put(@Nonnull final DomainDnsSrvRecord newDomainDnsSrvRecord) throws ClientException {
         return send(HttpMethod.PUT, newDomainDnsSrvRecord);
     }
 
@@ -139,9 +145,10 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param value the select clause
      * @return the updated request
      */
-     public IDomainDnsSrvRecordRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DomainDnsSrvRecordRequest)this;
+     @Nonnull
+     public DomainDnsSrvRecordRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DomainDnsSrvRecordRequest extends BaseRequest implements IDomainDns
      * @param value the expand clause
      * @return the updated request
      */
-     public IDomainDnsSrvRecordRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DomainDnsSrvRecordRequest)this;
+     @Nonnull
+     public DomainDnsSrvRecordRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

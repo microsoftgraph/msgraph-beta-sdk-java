@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidVpnConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Vpn Configuration Request.
  */
-public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndroidVpnConfigurationRequest {
+public class AndroidVpnConfigurationRequest extends BaseRequest<AndroidVpnConfiguration> {
 	
     /**
      * The request for the AndroidVpnConfiguration
@@ -31,7 +32,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidVpnConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidVpnConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidVpnConfiguration.class);
     }
 
@@ -40,7 +41,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidVpnConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @return the AndroidVpnConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidVpnConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidVpnConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param sourceAndroidVpnConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidVpnConfiguration sourceAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback) {
+    public void patch(@Nonnull final AndroidVpnConfiguration sourceAndroidVpnConfiguration, @Nonnull final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidVpnConfiguration);
     }
 
@@ -89,7 +91,8 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @return the updated AndroidVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidVpnConfiguration patch(final AndroidVpnConfiguration sourceAndroidVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidVpnConfiguration patch(@Nonnull final AndroidVpnConfiguration sourceAndroidVpnConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidVpnConfiguration);
     }
 
@@ -99,7 +102,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param newAndroidVpnConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback) {
+    public void post(@Nonnull final AndroidVpnConfiguration newAndroidVpnConfiguration, @Nonnull final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidVpnConfiguration);
     }
 
@@ -110,7 +113,8 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @return the created AndroidVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidVpnConfiguration post(final AndroidVpnConfiguration newAndroidVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidVpnConfiguration post(@Nonnull final AndroidVpnConfiguration newAndroidVpnConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidVpnConfiguration);
     }
 
@@ -120,7 +124,7 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param newAndroidVpnConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidVpnConfiguration newAndroidVpnConfiguration, final ICallback<? super AndroidVpnConfiguration> callback) {
+    public void put(@Nonnull final AndroidVpnConfiguration newAndroidVpnConfiguration, @Nonnull final ICallback<? super AndroidVpnConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidVpnConfiguration);
     }
 
@@ -131,7 +135,8 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @return the created AndroidVpnConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidVpnConfiguration put(final AndroidVpnConfiguration newAndroidVpnConfiguration) throws ClientException {
+    @Nullable
+    public AndroidVpnConfiguration put(@Nonnull final AndroidVpnConfiguration newAndroidVpnConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidVpnConfiguration);
     }
 
@@ -141,9 +146,10 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidVpnConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidVpnConfigurationRequest)this;
+     @Nonnull
+     public AndroidVpnConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class AndroidVpnConfigurationRequest extends BaseRequest implements IAndr
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidVpnConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidVpnConfigurationRequest)this;
+     @Nonnull
+     public AndroidVpnConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

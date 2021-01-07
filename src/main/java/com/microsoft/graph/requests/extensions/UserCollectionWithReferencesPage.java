@@ -31,9 +31,11 @@ import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedDeviceSummarizedAppState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.UserCollectionResponse;
 import com.microsoft.graph.models.extensions.User;
 import com.google.gson.JsonObject;
@@ -46,7 +48,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the User Collection With References Page.
  */
-public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, IUserCollectionWithReferencesRequestBuilder> implements IUserCollectionWithReferencesPage {
+public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, UserCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for User
@@ -54,7 +56,17 @@ public class UserCollectionWithReferencesPage extends BaseCollectionPage<User, I
      * @param response the serialized UserCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public UserCollectionWithReferencesPage(final UserCollectionResponse response, final IUserCollectionWithReferencesRequestBuilder builder) {
+    public UserCollectionWithReferencesPage(@Nonnull final UserCollectionResponse response, @Nullable final UserCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for User
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public UserCollectionWithReferencesPage(@Nonnull final java.util.List<User> pageContents, @Nullable final UserCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

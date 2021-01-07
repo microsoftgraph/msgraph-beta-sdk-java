@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentSettingCategory;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Intent Setting Category Request Builder.
  */
-public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseRequestBuilder implements IDeviceManagementIntentSettingCategoryRequestBuilder {
+public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseRequestBuilder<DeviceManagementIntentSettingCategory> {
 
     /**
      * The request builder for the DeviceManagementIntentSettingCategory
@@ -32,7 +32,7 @@ public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntentSettingCategoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementIntentSettingCategoryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementIntentSettingCategoryRequest instance
+     * @return the DeviceManagementIntentSettingCategoryRequest instance
      */
-    public IDeviceManagementIntentSettingCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementIntentSettingCategoryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,25 +51,52 @@ public class DeviceManagementIntentSettingCategoryRequestBuilder extends BaseReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementIntentSettingCategoryRequest instance
+     * @return the DeviceManagementIntentSettingCategoryRequest instance
      */
-    public IDeviceManagementIntentSettingCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementIntentSettingCategoryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementIntentSettingCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
+    /**
+     *  Gets a request builder for the DeviceManagementSettingDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementSettingDefinitionCollectionRequestBuilder settingDefinitions() {
         return new DeviceManagementSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions"), getClient(), null);
     }
 
-    public IDeviceManagementSettingDefinitionRequestBuilder settingDefinitions(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementSettingDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementSettingDefinitionRequestBuilder settingDefinitions(@Nonnull final String id) {
         return new DeviceManagementSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("settingDefinitions") + "/" + id, getClient(), null);
     }
-    public IDeviceManagementSettingInstanceCollectionRequestBuilder settings() {
+    /**
+     *  Gets a request builder for the DeviceManagementSettingInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementSettingInstanceCollectionRequestBuilder settings() {
         return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
-    public IDeviceManagementSettingInstanceRequestBuilder settings(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementSettingInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementSettingInstanceRequestBuilder settings(@Nonnull final String id) {
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleDefinition;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoleAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Role Definition Request.
  */
-public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitionRequest {
+public class RoleDefinitionRequest extends BaseRequest<RoleDefinition> {
 	
     /**
      * The request for the RoleDefinition
@@ -34,10 +34,10 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public RoleDefinitionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends RoleDefinition> responseClass) {
+    public RoleDefinitionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends RoleDefinition> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -48,7 +48,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleDefinition.class);
     }
 
@@ -57,7 +57,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RoleDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +67,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @return the RoleDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RoleDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +77,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RoleDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +96,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param sourceRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoleDefinition sourceRoleDefinition, final ICallback<? super RoleDefinition> callback) {
+    public void patch(@Nonnull final RoleDefinition sourceRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceRoleDefinition);
     }
 
@@ -106,7 +107,8 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @return the updated RoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleDefinition patch(final RoleDefinition sourceRoleDefinition) throws ClientException {
+    @Nullable
+    public RoleDefinition patch(@Nonnull final RoleDefinition sourceRoleDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceRoleDefinition);
     }
 
@@ -116,7 +118,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param newRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
+    public void post(@Nonnull final RoleDefinition newRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.POST, callback, newRoleDefinition);
     }
 
@@ -127,7 +129,8 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @return the created RoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleDefinition post(final RoleDefinition newRoleDefinition) throws ClientException {
+    @Nullable
+    public RoleDefinition post(@Nonnull final RoleDefinition newRoleDefinition) throws ClientException {
         return send(HttpMethod.POST, newRoleDefinition);
     }
 
@@ -137,7 +140,7 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param newRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoleDefinition newRoleDefinition, final ICallback<? super RoleDefinition> callback) {
+    public void put(@Nonnull final RoleDefinition newRoleDefinition, @Nonnull final ICallback<? super RoleDefinition> callback) {
         send(HttpMethod.PUT, callback, newRoleDefinition);
     }
 
@@ -148,7 +151,8 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @return the created RoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleDefinition put(final RoleDefinition newRoleDefinition) throws ClientException {
+    @Nullable
+    public RoleDefinition put(@Nonnull final RoleDefinition newRoleDefinition) throws ClientException {
         return send(HttpMethod.PUT, newRoleDefinition);
     }
 
@@ -158,9 +162,10 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param value the select clause
      * @return the updated request
      */
-     public IRoleDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoleDefinitionRequest)this;
+     @Nonnull
+     public RoleDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +174,10 @@ public class RoleDefinitionRequest extends BaseRequest implements IRoleDefinitio
      * @param value the expand clause
      * @return the updated request
      */
-     public IRoleDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoleDefinitionRequest)this;
+     @Nonnull
+     public RoleDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

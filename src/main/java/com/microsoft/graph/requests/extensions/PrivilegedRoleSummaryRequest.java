@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Privileged Role Summary Request.
  */
-public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivilegedRoleSummaryRequest {
+public class PrivilegedRoleSummaryRequest extends BaseRequest<PrivilegedRoleSummary> {
 	
     /**
      * The request for the PrivilegedRoleSummary
@@ -29,7 +31,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedRoleSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrivilegedRoleSummary> callback) {
+    public void get(@Nonnull final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @return the PrivilegedRoleSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrivilegedRoleSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrivilegedRoleSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param sourcePrivilegedRoleSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedRoleSummary sourcePrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback) {
+    public void patch(@Nonnull final PrivilegedRoleSummary sourcePrivilegedRoleSummary, @Nonnull final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedRoleSummary);
     }
 
@@ -87,7 +90,8 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @return the updated PrivilegedRoleSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleSummary patch(final PrivilegedRoleSummary sourcePrivilegedRoleSummary) throws ClientException {
+    @Nullable
+    public PrivilegedRoleSummary patch(@Nonnull final PrivilegedRoleSummary sourcePrivilegedRoleSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrivilegedRoleSummary);
     }
 
@@ -97,7 +101,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param newPrivilegedRoleSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback) {
+    public void post(@Nonnull final PrivilegedRoleSummary newPrivilegedRoleSummary, @Nonnull final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.POST, callback, newPrivilegedRoleSummary);
     }
 
@@ -108,7 +112,8 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @return the created PrivilegedRoleSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleSummary post(final PrivilegedRoleSummary newPrivilegedRoleSummary) throws ClientException {
+    @Nullable
+    public PrivilegedRoleSummary post(@Nonnull final PrivilegedRoleSummary newPrivilegedRoleSummary) throws ClientException {
         return send(HttpMethod.POST, newPrivilegedRoleSummary);
     }
 
@@ -118,7 +123,7 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param newPrivilegedRoleSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedRoleSummary newPrivilegedRoleSummary, final ICallback<? super PrivilegedRoleSummary> callback) {
+    public void put(@Nonnull final PrivilegedRoleSummary newPrivilegedRoleSummary, @Nonnull final ICallback<? super PrivilegedRoleSummary> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedRoleSummary);
     }
 
@@ -129,7 +134,8 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @return the created PrivilegedRoleSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleSummary put(final PrivilegedRoleSummary newPrivilegedRoleSummary) throws ClientException {
+    @Nullable
+    public PrivilegedRoleSummary put(@Nonnull final PrivilegedRoleSummary newPrivilegedRoleSummary) throws ClientException {
         return send(HttpMethod.PUT, newPrivilegedRoleSummary);
     }
 
@@ -139,9 +145,10 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param value the select clause
      * @return the updated request
      */
-     public IPrivilegedRoleSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrivilegedRoleSummaryRequest)this;
+     @Nonnull
+     public PrivilegedRoleSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PrivilegedRoleSummaryRequest extends BaseRequest implements IPrivil
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrivilegedRoleSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedRoleSummaryRequest)this;
+     @Nonnull
+     public PrivilegedRoleSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

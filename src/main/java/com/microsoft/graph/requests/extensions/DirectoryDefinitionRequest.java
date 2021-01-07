@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Definition Request.
  */
-public class DirectoryDefinitionRequest extends BaseRequest implements IDirectoryDefinitionRequest {
+public class DirectoryDefinitionRequest extends BaseRequest<DirectoryDefinition> {
 	
     /**
      * The request for the DirectoryDefinition
@@ -29,7 +31,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryDefinition.class);
     }
 
@@ -38,7 +40,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DirectoryDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @return the DirectoryDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DirectoryDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DirectoryDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param sourceDirectoryDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryDefinition sourceDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback) {
+    public void patch(@Nonnull final DirectoryDefinition sourceDirectoryDefinition, @Nonnull final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryDefinition);
     }
 
@@ -87,7 +90,8 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @return the updated DirectoryDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryDefinition patch(final DirectoryDefinition sourceDirectoryDefinition) throws ClientException {
+    @Nullable
+    public DirectoryDefinition patch(@Nonnull final DirectoryDefinition sourceDirectoryDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectoryDefinition);
     }
 
@@ -97,7 +101,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param newDirectoryDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback) {
+    public void post(@Nonnull final DirectoryDefinition newDirectoryDefinition, @Nonnull final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.POST, callback, newDirectoryDefinition);
     }
 
@@ -108,7 +112,8 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @return the created DirectoryDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryDefinition post(final DirectoryDefinition newDirectoryDefinition) throws ClientException {
+    @Nullable
+    public DirectoryDefinition post(@Nonnull final DirectoryDefinition newDirectoryDefinition) throws ClientException {
         return send(HttpMethod.POST, newDirectoryDefinition);
     }
 
@@ -118,7 +123,7 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param newDirectoryDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryDefinition newDirectoryDefinition, final ICallback<? super DirectoryDefinition> callback) {
+    public void put(@Nonnull final DirectoryDefinition newDirectoryDefinition, @Nonnull final ICallback<? super DirectoryDefinition> callback) {
         send(HttpMethod.PUT, callback, newDirectoryDefinition);
     }
 
@@ -129,7 +134,8 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @return the created DirectoryDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryDefinition put(final DirectoryDefinition newDirectoryDefinition) throws ClientException {
+    @Nullable
+    public DirectoryDefinition put(@Nonnull final DirectoryDefinition newDirectoryDefinition) throws ClientException {
         return send(HttpMethod.PUT, newDirectoryDefinition);
     }
 
@@ -139,9 +145,10 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param value the select clause
      * @return the updated request
      */
-     public IDirectoryDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DirectoryDefinitionRequest)this;
+     @Nonnull
+     public DirectoryDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DirectoryDefinitionRequest extends BaseRequest implements IDirector
      * @param value the expand clause
      * @return the updated request
      */
-     public IDirectoryDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryDefinitionRequest)this;
+     @Nonnull
+     public DirectoryDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

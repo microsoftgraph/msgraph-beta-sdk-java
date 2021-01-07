@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationGroupAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Configuration Group Assignment Request Builder.
  */
-public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseRequestBuilder implements IDeviceConfigurationGroupAssignmentRequestBuilder {
+public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseRequestBuilder<DeviceConfigurationGroupAssignment> {
 
     /**
      * The request builder for the DeviceConfigurationGroupAssignment
@@ -30,7 +31,7 @@ public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationGroupAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationGroupAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseReques
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationGroupAssignmentRequest instance
+     * @return the DeviceConfigurationGroupAssignmentRequest instance
      */
-    public IDeviceConfigurationGroupAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceConfigurationGroupAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseReques
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceConfigurationGroupAssignmentRequest instance
+     * @return the DeviceConfigurationGroupAssignmentRequest instance
      */
-    public IDeviceConfigurationGroupAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceConfigurationGroupAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class DeviceConfigurationGroupAssignmentRequestBuilder extends BaseReques
     /**
      * Gets the request builder for DeviceConfiguration
      *
-     * @return the IDeviceConfigurationWithReferenceRequestBuilder instance
+     * @return the DeviceConfigurationWithReferenceRequestBuilder instance
      */
-    public IDeviceConfigurationWithReferenceRequestBuilder deviceConfiguration() {
+    @Nonnull
+    public DeviceConfigurationWithReferenceRequestBuilder deviceConfiguration() {
         return new DeviceConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfiguration"), getClient(), null);
     }
 }

@@ -11,16 +11,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyConfiguration;
 import com.microsoft.graph.models.extensions.GroupPolicyConfigurationAssignment;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinitionValue;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionValueRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Configuration Request.
  */
-public class GroupPolicyConfigurationRequest extends BaseRequest implements IGroupPolicyConfigurationRequest {
+public class GroupPolicyConfigurationRequest extends BaseRequest<GroupPolicyConfiguration> {
 	
     /**
      * The request for the GroupPolicyConfiguration
@@ -39,7 +37,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyConfiguration.class);
     }
 
@@ -48,7 +46,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +56,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @return the GroupPolicyConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +66,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +85,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param sourceGroupPolicyConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyConfiguration sourceGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback) {
+    public void patch(@Nonnull final GroupPolicyConfiguration sourceGroupPolicyConfiguration, @Nonnull final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyConfiguration);
     }
 
@@ -97,7 +96,8 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @return the updated GroupPolicyConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyConfiguration patch(final GroupPolicyConfiguration sourceGroupPolicyConfiguration) throws ClientException {
+    @Nullable
+    public GroupPolicyConfiguration patch(@Nonnull final GroupPolicyConfiguration sourceGroupPolicyConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyConfiguration);
     }
 
@@ -107,7 +107,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param newGroupPolicyConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback) {
+    public void post(@Nonnull final GroupPolicyConfiguration newGroupPolicyConfiguration, @Nonnull final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyConfiguration);
     }
 
@@ -118,7 +118,8 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @return the created GroupPolicyConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyConfiguration post(final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException {
+    @Nullable
+    public GroupPolicyConfiguration post(@Nonnull final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyConfiguration);
     }
 
@@ -128,7 +129,7 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param newGroupPolicyConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyConfiguration newGroupPolicyConfiguration, final ICallback<? super GroupPolicyConfiguration> callback) {
+    public void put(@Nonnull final GroupPolicyConfiguration newGroupPolicyConfiguration, @Nonnull final ICallback<? super GroupPolicyConfiguration> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyConfiguration);
     }
 
@@ -139,7 +140,8 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @return the created GroupPolicyConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyConfiguration put(final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException {
+    @Nullable
+    public GroupPolicyConfiguration put(@Nonnull final GroupPolicyConfiguration newGroupPolicyConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyConfiguration);
     }
 
@@ -149,9 +151,10 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyConfigurationRequest)this;
+     @Nonnull
+     public GroupPolicyConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +163,10 @@ public class GroupPolicyConfigurationRequest extends BaseRequest implements IGro
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyConfigurationRequest)this;
+     @Nonnull
+     public GroupPolicyConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

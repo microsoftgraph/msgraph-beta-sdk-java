@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ProvisioningObjectSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Provisioning Object Summary Request.
  */
-public class ProvisioningObjectSummaryRequest extends BaseRequest implements IProvisioningObjectSummaryRequest {
+public class ProvisioningObjectSummaryRequest extends BaseRequest<ProvisioningObjectSummary> {
 	
     /**
      * The request for the ProvisioningObjectSummary
@@ -29,7 +31,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProvisioningObjectSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProvisioningObjectSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ProvisioningObjectSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ProvisioningObjectSummary> callback) {
+    public void get(@Nonnull final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @return the ProvisioningObjectSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ProvisioningObjectSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ProvisioningObjectSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param sourceProvisioningObjectSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ProvisioningObjectSummary sourceProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback) {
+    public void patch(@Nonnull final ProvisioningObjectSummary sourceProvisioningObjectSummary, @Nonnull final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceProvisioningObjectSummary);
     }
 
@@ -87,7 +90,8 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @return the updated ProvisioningObjectSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProvisioningObjectSummary patch(final ProvisioningObjectSummary sourceProvisioningObjectSummary) throws ClientException {
+    @Nullable
+    public ProvisioningObjectSummary patch(@Nonnull final ProvisioningObjectSummary sourceProvisioningObjectSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceProvisioningObjectSummary);
     }
 
@@ -97,7 +101,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param newProvisioningObjectSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback) {
+    public void post(@Nonnull final ProvisioningObjectSummary newProvisioningObjectSummary, @Nonnull final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.POST, callback, newProvisioningObjectSummary);
     }
 
@@ -108,7 +112,8 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @return the created ProvisioningObjectSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProvisioningObjectSummary post(final ProvisioningObjectSummary newProvisioningObjectSummary) throws ClientException {
+    @Nullable
+    public ProvisioningObjectSummary post(@Nonnull final ProvisioningObjectSummary newProvisioningObjectSummary) throws ClientException {
         return send(HttpMethod.POST, newProvisioningObjectSummary);
     }
 
@@ -118,7 +123,7 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param newProvisioningObjectSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ProvisioningObjectSummary newProvisioningObjectSummary, final ICallback<? super ProvisioningObjectSummary> callback) {
+    public void put(@Nonnull final ProvisioningObjectSummary newProvisioningObjectSummary, @Nonnull final ICallback<? super ProvisioningObjectSummary> callback) {
         send(HttpMethod.PUT, callback, newProvisioningObjectSummary);
     }
 
@@ -129,7 +134,8 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @return the created ProvisioningObjectSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ProvisioningObjectSummary put(final ProvisioningObjectSummary newProvisioningObjectSummary) throws ClientException {
+    @Nullable
+    public ProvisioningObjectSummary put(@Nonnull final ProvisioningObjectSummary newProvisioningObjectSummary) throws ClientException {
         return send(HttpMethod.PUT, newProvisioningObjectSummary);
     }
 
@@ -139,9 +145,10 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param value the select clause
      * @return the updated request
      */
-     public IProvisioningObjectSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ProvisioningObjectSummaryRequest)this;
+     @Nonnull
+     public ProvisioningObjectSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ProvisioningObjectSummaryRequest extends BaseRequest implements IPr
      * @param value the expand clause
      * @return the updated request
      */
-     public IProvisioningObjectSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ProvisioningObjectSummaryRequest)this;
+     @Nonnull
+     public ProvisioningObjectSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

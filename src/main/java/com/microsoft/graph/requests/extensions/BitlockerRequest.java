@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Bitlocker;
-import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBitlockerRecoveryKeyRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRecoveryKeyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Bitlocker Request.
  */
-public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
+public class BitlockerRequest extends BaseRequest<Bitlocker> {
 	
     /**
      * The request for the Bitlocker
@@ -33,7 +33,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BitlockerRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BitlockerRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Bitlocker.class);
     }
 
@@ -42,7 +42,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Bitlocker> callback) {
+    public void get(@Nonnull final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @return the Bitlocker from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Bitlocker get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Bitlocker> callback) {
+    public void delete(@Nonnull final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param sourceBitlocker the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Bitlocker sourceBitlocker, final ICallback<? super Bitlocker> callback) {
+    public void patch(@Nonnull final Bitlocker sourceBitlocker, @Nonnull final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.PATCH, callback, sourceBitlocker);
     }
 
@@ -91,7 +92,8 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @return the updated Bitlocker
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Bitlocker patch(final Bitlocker sourceBitlocker) throws ClientException {
+    @Nullable
+    public Bitlocker patch(@Nonnull final Bitlocker sourceBitlocker) throws ClientException {
         return send(HttpMethod.PATCH, sourceBitlocker);
     }
 
@@ -101,7 +103,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param newBitlocker the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Bitlocker newBitlocker, final ICallback<? super Bitlocker> callback) {
+    public void post(@Nonnull final Bitlocker newBitlocker, @Nonnull final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.POST, callback, newBitlocker);
     }
 
@@ -112,7 +114,8 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @return the created Bitlocker
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Bitlocker post(final Bitlocker newBitlocker) throws ClientException {
+    @Nullable
+    public Bitlocker post(@Nonnull final Bitlocker newBitlocker) throws ClientException {
         return send(HttpMethod.POST, newBitlocker);
     }
 
@@ -122,7 +125,7 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param newBitlocker the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Bitlocker newBitlocker, final ICallback<? super Bitlocker> callback) {
+    public void put(@Nonnull final Bitlocker newBitlocker, @Nonnull final ICallback<? super Bitlocker> callback) {
         send(HttpMethod.PUT, callback, newBitlocker);
     }
 
@@ -133,7 +136,8 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @return the created Bitlocker
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Bitlocker put(final Bitlocker newBitlocker) throws ClientException {
+    @Nullable
+    public Bitlocker put(@Nonnull final Bitlocker newBitlocker) throws ClientException {
         return send(HttpMethod.PUT, newBitlocker);
     }
 
@@ -143,9 +147,10 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IBitlockerRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (BitlockerRequest)this;
+     @Nonnull
+     public BitlockerRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class BitlockerRequest extends BaseRequest implements IBitlockerRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IBitlockerRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BitlockerRequest)this;
+     @Nonnull
+     public BitlockerRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

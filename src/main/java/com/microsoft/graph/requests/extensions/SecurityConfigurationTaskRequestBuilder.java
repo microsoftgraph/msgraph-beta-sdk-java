@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityConfigurationTask;
-import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVulnerableManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VulnerableManagedDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Security Configuration Task Request Builder.
  */
-public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder implements ISecurityConfigurationTaskRequestBuilder {
+public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder<SecurityConfigurationTask> {
 
     /**
      * The request builder for the SecurityConfigurationTask
@@ -32,7 +32,7 @@ public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityConfigurationTaskRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityConfigurationTaskRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityConfigurationTaskRequest instance
+     * @return the SecurityConfigurationTaskRequest instance
      */
-    public ISecurityConfigurationTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SecurityConfigurationTaskRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISecurityConfigurationTaskRequest instance
+     * @return the SecurityConfigurationTaskRequest instance
      */
-    public ISecurityConfigurationTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SecurityConfigurationTaskRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SecurityConfigurationTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IVulnerableManagedDeviceCollectionRequestBuilder managedDevices() {
+    /**
+     *  Gets a request builder for the VulnerableManagedDevice collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public VulnerableManagedDeviceCollectionRequestBuilder managedDevices() {
         return new VulnerableManagedDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices"), getClient(), null);
     }
 
-    public IVulnerableManagedDeviceRequestBuilder managedDevices(final String id) {
+    /**
+     * Gets a request builder for the VulnerableManagedDevice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public VulnerableManagedDeviceRequestBuilder managedDevices(@Nonnull final String id) {
         return new VulnerableManagedDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("managedDevices") + "/" + id, getClient(), null);
     }
 }

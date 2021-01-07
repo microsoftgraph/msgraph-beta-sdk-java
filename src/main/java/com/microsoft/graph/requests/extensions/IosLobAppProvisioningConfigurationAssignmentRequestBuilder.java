@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Ios Lob App Provisioning Configuration Assignment Request Builder.
  */
-public class IosLobAppProvisioningConfigurationAssignmentRequestBuilder extends BaseRequestBuilder implements IIosLobAppProvisioningConfigurationAssignmentRequestBuilder {
+public class IosLobAppProvisioningConfigurationAssignmentRequestBuilder extends BaseRequestBuilder<IosLobAppProvisioningConfigurationAssignment> {
 
     /**
      * The request builder for the IosLobAppProvisioningConfigurationAssignment
@@ -28,7 +30,7 @@ public class IosLobAppProvisioningConfigurationAssignmentRequestBuilder extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosLobAppProvisioningConfigurationAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosLobAppProvisioningConfigurationAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class IosLobAppProvisioningConfigurationAssignmentRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIosLobAppProvisioningConfigurationAssignmentRequest instance
+     * @return the IosLobAppProvisioningConfigurationAssignmentRequest instance
      */
-    public IIosLobAppProvisioningConfigurationAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public IosLobAppProvisioningConfigurationAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class IosLobAppProvisioningConfigurationAssignmentRequestBuilder extends 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIosLobAppProvisioningConfigurationAssignmentRequest instance
+     * @return the IosLobAppProvisioningConfigurationAssignmentRequest instance
      */
-    public IIosLobAppProvisioningConfigurationAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public IosLobAppProvisioningConfigurationAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

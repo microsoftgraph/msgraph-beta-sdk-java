@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RiskDetection;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Risk Detection Request.
  */
-public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionRequest {
+public class RiskDetectionRequest extends BaseRequest<RiskDetection> {
 	
     /**
      * The request for the RiskDetection
@@ -29,7 +31,7 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RiskDetectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RiskDetectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RiskDetection.class);
     }
 
@@ -38,7 +40,7 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RiskDetection> callback) {
+    public void get(@Nonnull final ICallback<? super RiskDetection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @return the RiskDetection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RiskDetection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RiskDetection> callback) {
+    public void delete(@Nonnull final ICallback<? super RiskDetection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @param sourceRiskDetection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RiskDetection sourceRiskDetection, final ICallback<? super RiskDetection> callback) {
+    public void patch(@Nonnull final RiskDetection sourceRiskDetection, @Nonnull final ICallback<? super RiskDetection> callback) {
         send(HttpMethod.PATCH, callback, sourceRiskDetection);
     }
 
@@ -87,7 +90,8 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @return the updated RiskDetection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskDetection patch(final RiskDetection sourceRiskDetection) throws ClientException {
+    @Nullable
+    public RiskDetection patch(@Nonnull final RiskDetection sourceRiskDetection) throws ClientException {
         return send(HttpMethod.PATCH, sourceRiskDetection);
     }
 
@@ -97,7 +101,7 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @param newRiskDetection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RiskDetection newRiskDetection, final ICallback<? super RiskDetection> callback) {
+    public void post(@Nonnull final RiskDetection newRiskDetection, @Nonnull final ICallback<? super RiskDetection> callback) {
         send(HttpMethod.POST, callback, newRiskDetection);
     }
 
@@ -108,7 +112,8 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @return the created RiskDetection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskDetection post(final RiskDetection newRiskDetection) throws ClientException {
+    @Nullable
+    public RiskDetection post(@Nonnull final RiskDetection newRiskDetection) throws ClientException {
         return send(HttpMethod.POST, newRiskDetection);
     }
 
@@ -118,7 +123,7 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @param newRiskDetection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RiskDetection newRiskDetection, final ICallback<? super RiskDetection> callback) {
+    public void put(@Nonnull final RiskDetection newRiskDetection, @Nonnull final ICallback<? super RiskDetection> callback) {
         send(HttpMethod.PUT, callback, newRiskDetection);
     }
 
@@ -129,7 +134,8 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @return the created RiskDetection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskDetection put(final RiskDetection newRiskDetection) throws ClientException {
+    @Nullable
+    public RiskDetection put(@Nonnull final RiskDetection newRiskDetection) throws ClientException {
         return send(HttpMethod.PUT, newRiskDetection);
     }
 
@@ -139,9 +145,10 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @param value the select clause
      * @return the updated request
      */
-     public IRiskDetectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RiskDetectionRequest)this;
+     @Nonnull
+     public RiskDetectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class RiskDetectionRequest extends BaseRequest implements IRiskDetectionR
      * @param value the expand clause
      * @return the updated request
      */
-     public IRiskDetectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RiskDetectionRequest)this;
+     @Nonnull
+     public RiskDetectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

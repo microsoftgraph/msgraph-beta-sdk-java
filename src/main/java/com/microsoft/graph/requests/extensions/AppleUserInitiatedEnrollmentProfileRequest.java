@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AppleUserInitiatedEnrollmentProfile;
-import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppleEnrollmentProfileAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppleEnrollmentProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppleEnrollmentProfileAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Apple User Initiated Enrollment Profile Request.
  */
-public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest implements IAppleUserInitiatedEnrollmentProfileRequest {
+public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest<AppleUserInitiatedEnrollmentProfile> {
 	
     /**
      * The request for the AppleUserInitiatedEnrollmentProfile
@@ -33,7 +33,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppleUserInitiatedEnrollmentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppleUserInitiatedEnrollmentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AppleUserInitiatedEnrollmentProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @return the AppleUserInitiatedEnrollmentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AppleUserInitiatedEnrollmentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param sourceAppleUserInitiatedEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
+    public void patch(@Nonnull final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile, @Nonnull final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -91,7 +92,8 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @return the updated AppleUserInitiatedEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleUserInitiatedEnrollmentProfile patch(final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AppleUserInitiatedEnrollmentProfile patch(@Nonnull final AppleUserInitiatedEnrollmentProfile sourceAppleUserInitiatedEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -101,7 +103,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param newAppleUserInitiatedEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
+    public void post(@Nonnull final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, @Nonnull final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -112,7 +114,8 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @return the created AppleUserInitiatedEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleUserInitiatedEnrollmentProfile post(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AppleUserInitiatedEnrollmentProfile post(@Nonnull final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException {
         return send(HttpMethod.POST, newAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -122,7 +125,7 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param newAppleUserInitiatedEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
+    public void put(@Nonnull final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile, @Nonnull final ICallback<? super AppleUserInitiatedEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -133,7 +136,8 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @return the created AppleUserInitiatedEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AppleUserInitiatedEnrollmentProfile put(final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AppleUserInitiatedEnrollmentProfile put(@Nonnull final AppleUserInitiatedEnrollmentProfile newAppleUserInitiatedEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PUT, newAppleUserInitiatedEnrollmentProfile);
     }
 
@@ -143,9 +147,10 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IAppleUserInitiatedEnrollmentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AppleUserInitiatedEnrollmentProfileRequest)this;
+     @Nonnull
+     public AppleUserInitiatedEnrollmentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AppleUserInitiatedEnrollmentProfileRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IAppleUserInitiatedEnrollmentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AppleUserInitiatedEnrollmentProfileRequest)this;
+     @Nonnull
+     public AppleUserInitiatedEnrollmentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

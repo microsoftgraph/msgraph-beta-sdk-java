@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CountryRegion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Country Region Request.
  */
-public class CountryRegionRequest extends BaseRequest implements ICountryRegionRequest {
+public class CountryRegionRequest extends BaseRequest<CountryRegion> {
 	
     /**
      * The request for the CountryRegion
@@ -29,7 +31,7 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CountryRegionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CountryRegionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CountryRegion.class);
     }
 
@@ -38,7 +40,7 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CountryRegion> callback) {
+    public void get(@Nonnull final ICallback<? super CountryRegion> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @return the CountryRegion from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CountryRegion get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CountryRegion> callback) {
+    public void delete(@Nonnull final ICallback<? super CountryRegion> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @param sourceCountryRegion the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CountryRegion sourceCountryRegion, final ICallback<? super CountryRegion> callback) {
+    public void patch(@Nonnull final CountryRegion sourceCountryRegion, @Nonnull final ICallback<? super CountryRegion> callback) {
         send(HttpMethod.PATCH, callback, sourceCountryRegion);
     }
 
@@ -87,7 +90,8 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @return the updated CountryRegion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CountryRegion patch(final CountryRegion sourceCountryRegion) throws ClientException {
+    @Nullable
+    public CountryRegion patch(@Nonnull final CountryRegion sourceCountryRegion) throws ClientException {
         return send(HttpMethod.PATCH, sourceCountryRegion);
     }
 
@@ -97,7 +101,7 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @param newCountryRegion the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CountryRegion newCountryRegion, final ICallback<? super CountryRegion> callback) {
+    public void post(@Nonnull final CountryRegion newCountryRegion, @Nonnull final ICallback<? super CountryRegion> callback) {
         send(HttpMethod.POST, callback, newCountryRegion);
     }
 
@@ -108,7 +112,8 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @return the created CountryRegion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CountryRegion post(final CountryRegion newCountryRegion) throws ClientException {
+    @Nullable
+    public CountryRegion post(@Nonnull final CountryRegion newCountryRegion) throws ClientException {
         return send(HttpMethod.POST, newCountryRegion);
     }
 
@@ -118,7 +123,7 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @param newCountryRegion the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CountryRegion newCountryRegion, final ICallback<? super CountryRegion> callback) {
+    public void put(@Nonnull final CountryRegion newCountryRegion, @Nonnull final ICallback<? super CountryRegion> callback) {
         send(HttpMethod.PUT, callback, newCountryRegion);
     }
 
@@ -129,7 +134,8 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @return the created CountryRegion
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CountryRegion put(final CountryRegion newCountryRegion) throws ClientException {
+    @Nullable
+    public CountryRegion put(@Nonnull final CountryRegion newCountryRegion) throws ClientException {
         return send(HttpMethod.PUT, newCountryRegion);
     }
 
@@ -139,9 +145,10 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @param value the select clause
      * @return the updated request
      */
-     public ICountryRegionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CountryRegionRequest)this;
+     @Nonnull
+     public CountryRegionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CountryRegionRequest extends BaseRequest implements ICountryRegionR
      * @param value the expand clause
      * @return the updated request
      */
-     public ICountryRegionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CountryRegionRequest)this;
+     @Nonnull
+     public CountryRegionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

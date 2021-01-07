@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsAndConditionsGroupAssignment;
-import com.microsoft.graph.requests.extensions.ITermsAndConditionsRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsAndConditionsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Terms And Conditions Group Assignment Request.
  */
-public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implements ITermsAndConditionsGroupAssignmentRequest {
+public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest<TermsAndConditionsGroupAssignment> {
 	
     /**
      * The request for the TermsAndConditionsGroupAssignment
@@ -31,7 +32,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsAndConditionsGroupAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsAndConditionsGroupAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsAndConditionsGroupAssignment.class);
     }
 
@@ -40,7 +41,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @return the TermsAndConditionsGroupAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TermsAndConditionsGroupAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param sourceTermsAndConditionsGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
+    public void patch(@Nonnull final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment, @Nonnull final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceTermsAndConditionsGroupAssignment);
     }
 
@@ -89,7 +91,8 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @return the updated TermsAndConditionsGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsGroupAssignment patch(final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment) throws ClientException {
+    @Nullable
+    public TermsAndConditionsGroupAssignment patch(@Nonnull final TermsAndConditionsGroupAssignment sourceTermsAndConditionsGroupAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceTermsAndConditionsGroupAssignment);
     }
 
@@ -99,7 +102,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param newTermsAndConditionsGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
+    public void post(@Nonnull final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, @Nonnull final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.POST, callback, newTermsAndConditionsGroupAssignment);
     }
 
@@ -110,7 +113,8 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @return the created TermsAndConditionsGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsGroupAssignment post(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment) throws ClientException {
+    @Nullable
+    public TermsAndConditionsGroupAssignment post(@Nonnull final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment) throws ClientException {
         return send(HttpMethod.POST, newTermsAndConditionsGroupAssignment);
     }
 
@@ -120,7 +124,7 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param newTermsAndConditionsGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
+    public void put(@Nonnull final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment, @Nonnull final ICallback<? super TermsAndConditionsGroupAssignment> callback) {
         send(HttpMethod.PUT, callback, newTermsAndConditionsGroupAssignment);
     }
 
@@ -131,7 +135,8 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @return the created TermsAndConditionsGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsAndConditionsGroupAssignment put(final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment) throws ClientException {
+    @Nullable
+    public TermsAndConditionsGroupAssignment put(@Nonnull final TermsAndConditionsGroupAssignment newTermsAndConditionsGroupAssignment) throws ClientException {
         return send(HttpMethod.PUT, newTermsAndConditionsGroupAssignment);
     }
 
@@ -141,9 +146,10 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public ITermsAndConditionsGroupAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TermsAndConditionsGroupAssignmentRequest)this;
+     @Nonnull
+     public TermsAndConditionsGroupAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class TermsAndConditionsGroupAssignmentRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public ITermsAndConditionsGroupAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermsAndConditionsGroupAssignmentRequest)this;
+     @Nonnull
+     public TermsAndConditionsGroupAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

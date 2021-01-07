@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsIdentityProtectionConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Identity Protection Configuration Request.
  */
-public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest implements IWindowsIdentityProtectionConfigurationRequest {
+public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest<WindowsIdentityProtectionConfiguration> {
 	
     /**
      * The request for the WindowsIdentityProtectionConfiguration
@@ -29,7 +31,7 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsIdentityProtectionConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsIdentityProtectionConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsIdentityProtectionConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @return the WindowsIdentityProtectionConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsIdentityProtectionConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @param sourceWindowsIdentityProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsIdentityProtectionConfiguration sourceWindowsIdentityProtectionConfiguration, final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
+    public void patch(@Nonnull final WindowsIdentityProtectionConfiguration sourceWindowsIdentityProtectionConfiguration, @Nonnull final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsIdentityProtectionConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @return the updated WindowsIdentityProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsIdentityProtectionConfiguration patch(final WindowsIdentityProtectionConfiguration sourceWindowsIdentityProtectionConfiguration) throws ClientException {
+    @Nullable
+    public WindowsIdentityProtectionConfiguration patch(@Nonnull final WindowsIdentityProtectionConfiguration sourceWindowsIdentityProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsIdentityProtectionConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @param newWindowsIdentityProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
+    public void post(@Nonnull final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, @Nonnull final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsIdentityProtectionConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @return the created WindowsIdentityProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsIdentityProtectionConfiguration post(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration) throws ClientException {
+    @Nullable
+    public WindowsIdentityProtectionConfiguration post(@Nonnull final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindowsIdentityProtectionConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @param newWindowsIdentityProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
+    public void put(@Nonnull final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration, @Nonnull final ICallback<? super WindowsIdentityProtectionConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsIdentityProtectionConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @return the created WindowsIdentityProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsIdentityProtectionConfiguration put(final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration) throws ClientException {
+    @Nullable
+    public WindowsIdentityProtectionConfiguration put(@Nonnull final WindowsIdentityProtectionConfiguration newWindowsIdentityProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsIdentityProtectionConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsIdentityProtectionConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsIdentityProtectionConfigurationRequest)this;
+     @Nonnull
+     public WindowsIdentityProtectionConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsIdentityProtectionConfigurationRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsIdentityProtectionConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsIdentityProtectionConfigurationRequest)this;
+     @Nonnull
+     public WindowsIdentityProtectionConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

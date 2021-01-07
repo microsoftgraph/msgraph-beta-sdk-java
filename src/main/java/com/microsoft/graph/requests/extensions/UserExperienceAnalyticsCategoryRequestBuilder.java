@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsCategory;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Experience Analytics Category Request Builder.
  */
-public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBuilder implements IUserExperienceAnalyticsCategoryRequestBuilder {
+public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBuilder<UserExperienceAnalyticsCategory> {
 
     /**
      * The request builder for the UserExperienceAnalyticsCategory
@@ -32,7 +32,7 @@ public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsCategoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsCategoryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBu
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsCategoryRequest instance
+     * @return the UserExperienceAnalyticsCategoryRequest instance
      */
-    public IUserExperienceAnalyticsCategoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsCategoryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class UserExperienceAnalyticsCategoryRequestBuilder extends BaseRequestBu
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserExperienceAnalyticsCategoryRequest instance
+     * @return the UserExperienceAnalyticsCategoryRequest instance
      */
-    public IUserExperienceAnalyticsCategoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserExperienceAnalyticsCategoryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IUserExperienceAnalyticsMetricCollectionRequestBuilder metricValues() {
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsMetric collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsMetricCollectionRequestBuilder metricValues() {
         return new UserExperienceAnalyticsMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("metricValues"), getClient(), null);
     }
 
-    public IUserExperienceAnalyticsMetricRequestBuilder metricValues(final String id) {
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsMetric item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsMetricRequestBuilder metricValues(@Nonnull final String id) {
         return new UserExperienceAnalyticsMetricRequestBuilder(getRequestUrlWithAdditionalSegment("metricValues") + "/" + id, getClient(), null);
     }
 }

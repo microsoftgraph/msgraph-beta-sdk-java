@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Vendor;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Vendor Request.
  */
-public class VendorRequest extends BaseRequest implements IVendorRequest {
+public class VendorRequest extends BaseRequest<Vendor> {
 	
     /**
      * The request for the Vendor
@@ -39,7 +36,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VendorRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VendorRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Vendor.class);
     }
 
@@ -48,7 +45,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Vendor> callback) {
+    public void get(@Nonnull final ICallback<? super Vendor> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +55,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @return the Vendor from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Vendor get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +65,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Vendor> callback) {
+    public void delete(@Nonnull final ICallback<? super Vendor> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +84,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param sourceVendor the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Vendor sourceVendor, final ICallback<? super Vendor> callback) {
+    public void patch(@Nonnull final Vendor sourceVendor, @Nonnull final ICallback<? super Vendor> callback) {
         send(HttpMethod.PATCH, callback, sourceVendor);
     }
 
@@ -97,7 +95,8 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @return the updated Vendor
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Vendor patch(final Vendor sourceVendor) throws ClientException {
+    @Nullable
+    public Vendor patch(@Nonnull final Vendor sourceVendor) throws ClientException {
         return send(HttpMethod.PATCH, sourceVendor);
     }
 
@@ -107,7 +106,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param newVendor the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Vendor newVendor, final ICallback<? super Vendor> callback) {
+    public void post(@Nonnull final Vendor newVendor, @Nonnull final ICallback<? super Vendor> callback) {
         send(HttpMethod.POST, callback, newVendor);
     }
 
@@ -118,7 +117,8 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @return the created Vendor
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Vendor post(final Vendor newVendor) throws ClientException {
+    @Nullable
+    public Vendor post(@Nonnull final Vendor newVendor) throws ClientException {
         return send(HttpMethod.POST, newVendor);
     }
 
@@ -128,7 +128,7 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param newVendor the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Vendor newVendor, final ICallback<? super Vendor> callback) {
+    public void put(@Nonnull final Vendor newVendor, @Nonnull final ICallback<? super Vendor> callback) {
         send(HttpMethod.PUT, callback, newVendor);
     }
 
@@ -139,7 +139,8 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @return the created Vendor
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Vendor put(final Vendor newVendor) throws ClientException {
+    @Nullable
+    public Vendor put(@Nonnull final Vendor newVendor) throws ClientException {
         return send(HttpMethod.PUT, newVendor);
     }
 
@@ -149,9 +150,10 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IVendorRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (VendorRequest)this;
+     @Nonnull
+     public VendorRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +162,10 @@ public class VendorRequest extends BaseRequest implements IVendorRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IVendorRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (VendorRequest)this;
+     @Nonnull
+     public VendorRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

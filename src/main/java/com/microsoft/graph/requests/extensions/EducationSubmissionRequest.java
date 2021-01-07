@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationSubmission;
-import com.microsoft.graph.requests.extensions.IEducationOutcomeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationOutcomeRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationOutcomeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationOutcomeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSubmissionResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Submission Request.
  */
-public class EducationSubmissionRequest extends BaseRequest implements IEducationSubmissionRequest {
+public class EducationSubmissionRequest extends BaseRequest<EducationSubmission> {
 	
     /**
      * The request for the EducationSubmission
@@ -37,7 +35,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationSubmissionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationSubmissionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationSubmission.class);
     }
 
@@ -46,7 +44,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationSubmission> callback) {
+    public void get(@Nonnull final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @return the EducationSubmission from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationSubmission get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationSubmission> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param sourceEducationSubmission the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationSubmission sourceEducationSubmission, final ICallback<? super EducationSubmission> callback) {
+    public void patch(@Nonnull final EducationSubmission sourceEducationSubmission, @Nonnull final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationSubmission);
     }
 
@@ -95,7 +94,8 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @return the updated EducationSubmission
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationSubmission patch(final EducationSubmission sourceEducationSubmission) throws ClientException {
+    @Nullable
+    public EducationSubmission patch(@Nonnull final EducationSubmission sourceEducationSubmission) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationSubmission);
     }
 
@@ -105,7 +105,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param newEducationSubmission the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationSubmission newEducationSubmission, final ICallback<? super EducationSubmission> callback) {
+    public void post(@Nonnull final EducationSubmission newEducationSubmission, @Nonnull final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.POST, callback, newEducationSubmission);
     }
 
@@ -116,7 +116,8 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @return the created EducationSubmission
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationSubmission post(final EducationSubmission newEducationSubmission) throws ClientException {
+    @Nullable
+    public EducationSubmission post(@Nonnull final EducationSubmission newEducationSubmission) throws ClientException {
         return send(HttpMethod.POST, newEducationSubmission);
     }
 
@@ -126,7 +127,7 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param newEducationSubmission the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationSubmission newEducationSubmission, final ICallback<? super EducationSubmission> callback) {
+    public void put(@Nonnull final EducationSubmission newEducationSubmission, @Nonnull final ICallback<? super EducationSubmission> callback) {
         send(HttpMethod.PUT, callback, newEducationSubmission);
     }
 
@@ -137,7 +138,8 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @return the created EducationSubmission
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationSubmission put(final EducationSubmission newEducationSubmission) throws ClientException {
+    @Nullable
+    public EducationSubmission put(@Nonnull final EducationSubmission newEducationSubmission) throws ClientException {
         return send(HttpMethod.PUT, newEducationSubmission);
     }
 
@@ -147,9 +149,10 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationSubmissionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationSubmissionRequest)this;
+     @Nonnull
+     public EducationSubmissionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class EducationSubmissionRequest extends BaseRequest implements IEducatio
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationSubmissionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationSubmissionRequest)this;
+     @Nonnull
+     public EducationSubmissionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

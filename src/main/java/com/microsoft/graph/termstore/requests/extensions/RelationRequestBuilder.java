@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Relation;
-import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Relation Request Builder.
  */
-public class RelationRequestBuilder extends BaseRequestBuilder implements IRelationRequestBuilder {
+public class RelationRequestBuilder extends BaseRequestBuilder<Relation> {
 
     /**
      * The request builder for the Relation
@@ -32,7 +32,7 @@ public class RelationRequestBuilder extends BaseRequestBuilder implements IRelat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RelationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RelationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class RelationRequestBuilder extends BaseRequestBuilder implements IRelat
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IRelationRequest instance
+     * @return the RelationRequest instance
      */
-    public IRelationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public RelationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class RelationRequestBuilder extends BaseRequestBuilder implements IRelat
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IRelationRequest instance
+     * @return the RelationRequest instance
      */
-    public IRelationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public RelationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.termstore.requests.extensions.RelationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,27 +63,30 @@ public class RelationRequestBuilder extends BaseRequestBuilder implements IRelat
     /**
      * Gets the request builder for Term
      *
-     * @return the ITermWithReferenceRequestBuilder instance
+     * @return the TermWithReferenceRequestBuilder instance
      */
-    public ITermWithReferenceRequestBuilder fromTerm() {
+    @Nonnull
+    public TermWithReferenceRequestBuilder fromTerm() {
         return new TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("fromTerm"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Set
      *
-     * @return the ISetWithReferenceRequestBuilder instance
+     * @return the SetWithReferenceRequestBuilder instance
      */
-    public ISetWithReferenceRequestBuilder set() {
+    @Nonnull
+    public SetWithReferenceRequestBuilder set() {
         return new SetWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("set"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Term
      *
-     * @return the ITermWithReferenceRequestBuilder instance
+     * @return the TermWithReferenceRequestBuilder instance
      */
-    public ITermWithReferenceRequestBuilder toTerm() {
+    @Nonnull
+    public TermWithReferenceRequestBuilder toTerm() {
         return new TermWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("toTerm"), getClient(), null);
     }
 }

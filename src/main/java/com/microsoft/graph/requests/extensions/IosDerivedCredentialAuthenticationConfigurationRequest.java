@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosDerivedCredentialAuthenticationConfiguration;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Derived Credential Authentication Configuration Request.
  */
-public class IosDerivedCredentialAuthenticationConfigurationRequest extends BaseRequest implements IIosDerivedCredentialAuthenticationConfigurationRequest {
+public class IosDerivedCredentialAuthenticationConfigurationRequest extends BaseRequest<IosDerivedCredentialAuthenticationConfiguration> {
 	
     /**
      * The request for the IosDerivedCredentialAuthenticationConfiguration
@@ -31,7 +32,7 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosDerivedCredentialAuthenticationConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosDerivedCredentialAuthenticationConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosDerivedCredentialAuthenticationConfiguration.class);
     }
 
@@ -40,7 +41,7 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @return the IosDerivedCredentialAuthenticationConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosDerivedCredentialAuthenticationConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @param sourceIosDerivedCredentialAuthenticationConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosDerivedCredentialAuthenticationConfiguration sourceIosDerivedCredentialAuthenticationConfiguration, final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
+    public void patch(@Nonnull final IosDerivedCredentialAuthenticationConfiguration sourceIosDerivedCredentialAuthenticationConfiguration, @Nonnull final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -89,7 +91,8 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @return the updated IosDerivedCredentialAuthenticationConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosDerivedCredentialAuthenticationConfiguration patch(final IosDerivedCredentialAuthenticationConfiguration sourceIosDerivedCredentialAuthenticationConfiguration) throws ClientException {
+    @Nullable
+    public IosDerivedCredentialAuthenticationConfiguration patch(@Nonnull final IosDerivedCredentialAuthenticationConfiguration sourceIosDerivedCredentialAuthenticationConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -99,7 +102,7 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @param newIosDerivedCredentialAuthenticationConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
+    public void post(@Nonnull final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, @Nonnull final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -110,7 +113,8 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @return the created IosDerivedCredentialAuthenticationConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosDerivedCredentialAuthenticationConfiguration post(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration) throws ClientException {
+    @Nullable
+    public IosDerivedCredentialAuthenticationConfiguration post(@Nonnull final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -120,7 +124,7 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @param newIosDerivedCredentialAuthenticationConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
+    public void put(@Nonnull final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration, @Nonnull final ICallback<? super IosDerivedCredentialAuthenticationConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -131,7 +135,8 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @return the created IosDerivedCredentialAuthenticationConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosDerivedCredentialAuthenticationConfiguration put(final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration) throws ClientException {
+    @Nullable
+    public IosDerivedCredentialAuthenticationConfiguration put(@Nonnull final IosDerivedCredentialAuthenticationConfiguration newIosDerivedCredentialAuthenticationConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosDerivedCredentialAuthenticationConfiguration);
     }
 
@@ -141,9 +146,10 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @param value the select clause
      * @return the updated request
      */
-     public IIosDerivedCredentialAuthenticationConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosDerivedCredentialAuthenticationConfigurationRequest)this;
+     @Nonnull
+     public IosDerivedCredentialAuthenticationConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class IosDerivedCredentialAuthenticationConfigurationRequest extends Base
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosDerivedCredentialAuthenticationConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosDerivedCredentialAuthenticationConfigurationRequest)this;
+     @Nonnull
+     public IosDerivedCredentialAuthenticationConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

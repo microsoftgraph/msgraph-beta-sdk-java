@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesAgent;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the On Premises Agent Request Builder.
  */
-public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder implements IOnPremisesAgentRequestBuilder {
+public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder<OnPremisesAgent> {
 
     /**
      * The request builder for the OnPremisesAgent
@@ -32,7 +32,7 @@ public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesAgentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnPremisesAgentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesAgentRequest instance
+     * @return the OnPremisesAgentRequest instance
      */
-    public IOnPremisesAgentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OnPremisesAgentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class OnPremisesAgentRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnPremisesAgentRequest instance
+     * @return the OnPremisesAgentRequest instance
      */
-    public IOnPremisesAgentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OnPremisesAgentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnPremisesAgentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IOnPremisesAgentGroupCollectionRequestBuilder agentGroups() {
+    /**
+     *  Gets a request builder for the OnPremisesAgentGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OnPremisesAgentGroupCollectionRequestBuilder agentGroups() {
         return new OnPremisesAgentGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups"), getClient(), null);
     }
 
-    public IOnPremisesAgentGroupRequestBuilder agentGroups(final String id) {
+    /**
+     * Gets a request builder for the OnPremisesAgentGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OnPremisesAgentGroupRequestBuilder agentGroups(@Nonnull final String id) {
         return new OnPremisesAgentGroupRequestBuilder(getRequestUrlWithAdditionalSegment("agentGroups") + "/" + id, getClient(), null);
     }
 }

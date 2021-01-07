@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplication;
-import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Rbac Application Request.
  */
-public class RbacApplicationRequest extends BaseRequest implements IRbacApplicationRequest {
+public class RbacApplicationRequest extends BaseRequest<RbacApplication> {
 	
     /**
      * The request for the RbacApplication
@@ -41,7 +37,7 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RbacApplicationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RbacApplicationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RbacApplication.class);
     }
 
@@ -50,7 +46,7 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RbacApplication> callback) {
+    public void get(@Nonnull final ICallback<? super RbacApplication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @return the RbacApplication from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RbacApplication get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RbacApplication> callback) {
+    public void delete(@Nonnull final ICallback<? super RbacApplication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @param sourceRbacApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RbacApplication sourceRbacApplication, final ICallback<? super RbacApplication> callback) {
+    public void patch(@Nonnull final RbacApplication sourceRbacApplication, @Nonnull final ICallback<? super RbacApplication> callback) {
         send(HttpMethod.PATCH, callback, sourceRbacApplication);
     }
 
@@ -99,7 +96,8 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @return the updated RbacApplication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RbacApplication patch(final RbacApplication sourceRbacApplication) throws ClientException {
+    @Nullable
+    public RbacApplication patch(@Nonnull final RbacApplication sourceRbacApplication) throws ClientException {
         return send(HttpMethod.PATCH, sourceRbacApplication);
     }
 
@@ -109,7 +107,7 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @param newRbacApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RbacApplication newRbacApplication, final ICallback<? super RbacApplication> callback) {
+    public void post(@Nonnull final RbacApplication newRbacApplication, @Nonnull final ICallback<? super RbacApplication> callback) {
         send(HttpMethod.POST, callback, newRbacApplication);
     }
 
@@ -120,7 +118,8 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @return the created RbacApplication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RbacApplication post(final RbacApplication newRbacApplication) throws ClientException {
+    @Nullable
+    public RbacApplication post(@Nonnull final RbacApplication newRbacApplication) throws ClientException {
         return send(HttpMethod.POST, newRbacApplication);
     }
 
@@ -130,7 +129,7 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @param newRbacApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RbacApplication newRbacApplication, final ICallback<? super RbacApplication> callback) {
+    public void put(@Nonnull final RbacApplication newRbacApplication, @Nonnull final ICallback<? super RbacApplication> callback) {
         send(HttpMethod.PUT, callback, newRbacApplication);
     }
 
@@ -141,7 +140,8 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @return the created RbacApplication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RbacApplication put(final RbacApplication newRbacApplication) throws ClientException {
+    @Nullable
+    public RbacApplication put(@Nonnull final RbacApplication newRbacApplication) throws ClientException {
         return send(HttpMethod.PUT, newRbacApplication);
     }
 
@@ -151,9 +151,10 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @param value the select clause
      * @return the updated request
      */
-     public IRbacApplicationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RbacApplicationRequest)this;
+     @Nonnull
+     public RbacApplicationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class RbacApplicationRequest extends BaseRequest implements IRbacApplicat
      * @param value the expand clause
      * @return the updated request
      */
-     public IRbacApplicationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RbacApplicationRequest)this;
+     @Nonnull
+     public RbacApplicationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

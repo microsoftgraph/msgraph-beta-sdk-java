@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ImportedWindowsAutopilotDeviceIdentityUpload;
-import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Imported Windows Autopilot Device Identity Upload Request.
  */
-public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseRequest implements IImportedWindowsAutopilotDeviceIdentityUploadRequest {
+public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseRequest<ImportedWindowsAutopilotDeviceIdentityUpload> {
 	
     /**
      * The request for the ImportedWindowsAutopilotDeviceIdentityUpload
@@ -33,7 +33,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedWindowsAutopilotDeviceIdentityUploadRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ImportedWindowsAutopilotDeviceIdentityUploadRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ImportedWindowsAutopilotDeviceIdentityUpload.class);
     }
 
@@ -42,7 +42,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
+    public void get(@Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @return the ImportedWindowsAutopilotDeviceIdentityUpload from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ImportedWindowsAutopilotDeviceIdentityUpload get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
+    public void delete(@Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @param sourceImportedWindowsAutopilotDeviceIdentityUpload the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ImportedWindowsAutopilotDeviceIdentityUpload sourceImportedWindowsAutopilotDeviceIdentityUpload, final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
+    public void patch(@Nonnull final ImportedWindowsAutopilotDeviceIdentityUpload sourceImportedWindowsAutopilotDeviceIdentityUpload, @Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
         send(HttpMethod.PATCH, callback, sourceImportedWindowsAutopilotDeviceIdentityUpload);
     }
 
@@ -91,7 +92,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @return the updated ImportedWindowsAutopilotDeviceIdentityUpload
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedWindowsAutopilotDeviceIdentityUpload patch(final ImportedWindowsAutopilotDeviceIdentityUpload sourceImportedWindowsAutopilotDeviceIdentityUpload) throws ClientException {
+    @Nullable
+    public ImportedWindowsAutopilotDeviceIdentityUpload patch(@Nonnull final ImportedWindowsAutopilotDeviceIdentityUpload sourceImportedWindowsAutopilotDeviceIdentityUpload) throws ClientException {
         return send(HttpMethod.PATCH, sourceImportedWindowsAutopilotDeviceIdentityUpload);
     }
 
@@ -101,7 +103,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @param newImportedWindowsAutopilotDeviceIdentityUpload the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload, final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
+    public void post(@Nonnull final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload, @Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
         send(HttpMethod.POST, callback, newImportedWindowsAutopilotDeviceIdentityUpload);
     }
 
@@ -112,7 +114,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @return the created ImportedWindowsAutopilotDeviceIdentityUpload
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedWindowsAutopilotDeviceIdentityUpload post(final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload) throws ClientException {
+    @Nullable
+    public ImportedWindowsAutopilotDeviceIdentityUpload post(@Nonnull final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload) throws ClientException {
         return send(HttpMethod.POST, newImportedWindowsAutopilotDeviceIdentityUpload);
     }
 
@@ -122,7 +125,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @param newImportedWindowsAutopilotDeviceIdentityUpload the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload, final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
+    public void put(@Nonnull final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload, @Nonnull final ICallback<? super ImportedWindowsAutopilotDeviceIdentityUpload> callback) {
         send(HttpMethod.PUT, callback, newImportedWindowsAutopilotDeviceIdentityUpload);
     }
 
@@ -133,7 +136,8 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @return the created ImportedWindowsAutopilotDeviceIdentityUpload
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ImportedWindowsAutopilotDeviceIdentityUpload put(final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload) throws ClientException {
+    @Nullable
+    public ImportedWindowsAutopilotDeviceIdentityUpload put(@Nonnull final ImportedWindowsAutopilotDeviceIdentityUpload newImportedWindowsAutopilotDeviceIdentityUpload) throws ClientException {
         return send(HttpMethod.PUT, newImportedWindowsAutopilotDeviceIdentityUpload);
     }
 
@@ -143,9 +147,10 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @param value the select clause
      * @return the updated request
      */
-     public IImportedWindowsAutopilotDeviceIdentityUploadRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ImportedWindowsAutopilotDeviceIdentityUploadRequest)this;
+     @Nonnull
+     public ImportedWindowsAutopilotDeviceIdentityUploadRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequest extends BaseReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IImportedWindowsAutopilotDeviceIdentityUploadRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ImportedWindowsAutopilotDeviceIdentityUploadRequest)this;
+     @Nonnull
+     public ImportedWindowsAutopilotDeviceIdentityUploadRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementExportJob;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Export Job Request.
  */
-public class DeviceManagementExportJobRequest extends BaseRequest implements IDeviceManagementExportJobRequest {
+public class DeviceManagementExportJobRequest extends BaseRequest<DeviceManagementExportJob> {
 	
     /**
      * The request for the DeviceManagementExportJob
@@ -29,7 +31,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementExportJobRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementExportJobRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementExportJob.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementExportJob> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @return the DeviceManagementExportJob from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementExportJob get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementExportJob> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param sourceDeviceManagementExportJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementExportJob sourceDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback) {
+    public void patch(@Nonnull final DeviceManagementExportJob sourceDeviceManagementExportJob, @Nonnull final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementExportJob);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @return the updated DeviceManagementExportJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementExportJob patch(final DeviceManagementExportJob sourceDeviceManagementExportJob) throws ClientException {
+    @Nullable
+    public DeviceManagementExportJob patch(@Nonnull final DeviceManagementExportJob sourceDeviceManagementExportJob) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementExportJob);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param newDeviceManagementExportJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback) {
+    public void post(@Nonnull final DeviceManagementExportJob newDeviceManagementExportJob, @Nonnull final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementExportJob);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @return the created DeviceManagementExportJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementExportJob post(final DeviceManagementExportJob newDeviceManagementExportJob) throws ClientException {
+    @Nullable
+    public DeviceManagementExportJob post(@Nonnull final DeviceManagementExportJob newDeviceManagementExportJob) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementExportJob);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param newDeviceManagementExportJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementExportJob newDeviceManagementExportJob, final ICallback<? super DeviceManagementExportJob> callback) {
+    public void put(@Nonnull final DeviceManagementExportJob newDeviceManagementExportJob, @Nonnull final ICallback<? super DeviceManagementExportJob> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementExportJob);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @return the created DeviceManagementExportJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementExportJob put(final DeviceManagementExportJob newDeviceManagementExportJob) throws ClientException {
+    @Nullable
+    public DeviceManagementExportJob put(@Nonnull final DeviceManagementExportJob newDeviceManagementExportJob) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementExportJob);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementExportJobRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementExportJobRequest)this;
+     @Nonnull
+     public DeviceManagementExportJobRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementExportJobRequest extends BaseRequest implements IDe
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementExportJobRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementExportJobRequest)this;
+     @Nonnull
+     public DeviceManagementExportJobRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

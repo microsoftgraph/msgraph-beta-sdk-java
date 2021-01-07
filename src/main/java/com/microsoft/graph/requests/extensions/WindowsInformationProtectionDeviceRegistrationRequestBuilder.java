@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionDeviceRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Information Protection Device Registration Request Builder.
  */
-public class WindowsInformationProtectionDeviceRegistrationRequestBuilder extends BaseRequestBuilder implements IWindowsInformationProtectionDeviceRegistrationRequestBuilder {
+public class WindowsInformationProtectionDeviceRegistrationRequestBuilder extends BaseRequestBuilder<WindowsInformationProtectionDeviceRegistration> {
 
     /**
      * The request builder for the WindowsInformationProtectionDeviceRegistration
@@ -28,7 +30,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionDeviceRegistrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionDeviceRegistrationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsInformationProtectionDeviceRegistrationRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionDeviceRegistrationRequest instance
+     * @return the WindowsInformationProtectionDeviceRegistrationRequest instance
      */
-    public IWindowsInformationProtectionDeviceRegistrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionDeviceRegistrationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +49,21 @@ public class WindowsInformationProtectionDeviceRegistrationRequestBuilder extend
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsInformationProtectionDeviceRegistrationRequest instance
+     * @return the WindowsInformationProtectionDeviceRegistrationRequest instance
      */
-    public IWindowsInformationProtectionDeviceRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsInformationProtectionDeviceRegistrationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsInformationProtectionDeviceRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWindowsInformationProtectionDeviceRegistrationWipeRequestBuilder wipe() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public WindowsInformationProtectionDeviceRegistrationWipeRequestBuilder wipe() {
         return new WindowsInformationProtectionDeviceRegistrationWipeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipe"), getClient(), null);
     }
 }

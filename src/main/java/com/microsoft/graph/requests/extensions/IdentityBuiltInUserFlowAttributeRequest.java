@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityBuiltInUserFlowAttribute;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity Built In User Flow Attribute Request.
  */
-public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest implements IIdentityBuiltInUserFlowAttributeRequest {
+public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest<IdentityBuiltInUserFlowAttribute> {
 	
     /**
      * The request for the IdentityBuiltInUserFlowAttribute
@@ -29,7 +31,7 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityBuiltInUserFlowAttributeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityBuiltInUserFlowAttributeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityBuiltInUserFlowAttribute.class);
     }
 
@@ -38,7 +40,7 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @return the IdentityBuiltInUserFlowAttribute from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IdentityBuiltInUserFlowAttribute get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
+    public void delete(@Nonnull final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @param sourceIdentityBuiltInUserFlowAttribute the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityBuiltInUserFlowAttribute sourceIdentityBuiltInUserFlowAttribute, final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
+    public void patch(@Nonnull final IdentityBuiltInUserFlowAttribute sourceIdentityBuiltInUserFlowAttribute, @Nonnull final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityBuiltInUserFlowAttribute);
     }
 
@@ -87,7 +90,8 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @return the updated IdentityBuiltInUserFlowAttribute
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityBuiltInUserFlowAttribute patch(final IdentityBuiltInUserFlowAttribute sourceIdentityBuiltInUserFlowAttribute) throws ClientException {
+    @Nullable
+    public IdentityBuiltInUserFlowAttribute patch(@Nonnull final IdentityBuiltInUserFlowAttribute sourceIdentityBuiltInUserFlowAttribute) throws ClientException {
         return send(HttpMethod.PATCH, sourceIdentityBuiltInUserFlowAttribute);
     }
 
@@ -97,7 +101,7 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @param newIdentityBuiltInUserFlowAttribute the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute, final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
+    public void post(@Nonnull final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute, @Nonnull final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
         send(HttpMethod.POST, callback, newIdentityBuiltInUserFlowAttribute);
     }
 
@@ -108,7 +112,8 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @return the created IdentityBuiltInUserFlowAttribute
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityBuiltInUserFlowAttribute post(final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute) throws ClientException {
+    @Nullable
+    public IdentityBuiltInUserFlowAttribute post(@Nonnull final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute) throws ClientException {
         return send(HttpMethod.POST, newIdentityBuiltInUserFlowAttribute);
     }
 
@@ -118,7 +123,7 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @param newIdentityBuiltInUserFlowAttribute the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute, final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
+    public void put(@Nonnull final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute, @Nonnull final ICallback<? super IdentityBuiltInUserFlowAttribute> callback) {
         send(HttpMethod.PUT, callback, newIdentityBuiltInUserFlowAttribute);
     }
 
@@ -129,7 +134,8 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @return the created IdentityBuiltInUserFlowAttribute
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityBuiltInUserFlowAttribute put(final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute) throws ClientException {
+    @Nullable
+    public IdentityBuiltInUserFlowAttribute put(@Nonnull final IdentityBuiltInUserFlowAttribute newIdentityBuiltInUserFlowAttribute) throws ClientException {
         return send(HttpMethod.PUT, newIdentityBuiltInUserFlowAttribute);
     }
 
@@ -139,9 +145,10 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentityBuiltInUserFlowAttributeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityBuiltInUserFlowAttributeRequest)this;
+     @Nonnull
+     public IdentityBuiltInUserFlowAttributeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IdentityBuiltInUserFlowAttributeRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentityBuiltInUserFlowAttributeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityBuiltInUserFlowAttributeRequest)this;
+     @Nonnull
+     public IdentityBuiltInUserFlowAttributeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

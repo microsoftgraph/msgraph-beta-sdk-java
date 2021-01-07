@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationComboBox;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Combo Box Request.
  */
-public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implements IGroupPolicyPresentationComboBoxRequest {
+public class GroupPolicyPresentationComboBoxRequest extends BaseRequest<GroupPolicyPresentationComboBox> {
 	
     /**
      * The request for the GroupPolicyPresentationComboBox
@@ -29,7 +31,7 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationComboBoxRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationComboBoxRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationComboBox.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationComboBox> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationComboBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @return the GroupPolicyPresentationComboBox from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationComboBox get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationComboBox> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationComboBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @param sourceGroupPolicyPresentationComboBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationComboBox sourceGroupPolicyPresentationComboBox, final ICallback<? super GroupPolicyPresentationComboBox> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationComboBox sourceGroupPolicyPresentationComboBox, @Nonnull final ICallback<? super GroupPolicyPresentationComboBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationComboBox);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @return the updated GroupPolicyPresentationComboBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationComboBox patch(final GroupPolicyPresentationComboBox sourceGroupPolicyPresentationComboBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationComboBox patch(@Nonnull final GroupPolicyPresentationComboBox sourceGroupPolicyPresentationComboBox) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationComboBox);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @param newGroupPolicyPresentationComboBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<? super GroupPolicyPresentationComboBox> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, @Nonnull final ICallback<? super GroupPolicyPresentationComboBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationComboBox);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @return the created GroupPolicyPresentationComboBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationComboBox post(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationComboBox post(@Nonnull final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationComboBox);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @param newGroupPolicyPresentationComboBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, final ICallback<? super GroupPolicyPresentationComboBox> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox, @Nonnull final ICallback<? super GroupPolicyPresentationComboBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationComboBox);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @return the created GroupPolicyPresentationComboBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationComboBox put(final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationComboBox put(@Nonnull final GroupPolicyPresentationComboBox newGroupPolicyPresentationComboBox) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationComboBox);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationComboBoxRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationComboBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationComboBoxRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyPresentationComboBoxRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationComboBoxRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationComboBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationComboBoxRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

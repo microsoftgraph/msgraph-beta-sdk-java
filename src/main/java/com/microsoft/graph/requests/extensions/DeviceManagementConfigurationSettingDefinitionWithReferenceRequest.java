@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Device Management Configuration Setting Definition With Reference Request.
  */
-public class DeviceManagementConfigurationSettingDefinitionWithReferenceRequest extends BaseRequest implements IDeviceManagementConfigurationSettingDefinitionWithReferenceRequest {
+public class DeviceManagementConfigurationSettingDefinitionWithReferenceRequest extends BaseWithReferenceRequest<DeviceManagementConfigurationSettingDefinition> {
 
     /**
      * The request for the DeviceManagementConfigurationSettingDefinition
@@ -32,46 +34,9 @@ public class DeviceManagementConfigurationSettingDefinitionWithReferenceRequest 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationSettingDefinitionWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationSettingDefinitionWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationSettingDefinition.class);
     }
-
-    public void post(final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition, final IJsonBackedObject payload, final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public DeviceManagementConfigurationSettingDefinition post(final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newDeviceManagementConfigurationSettingDefinition;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public DeviceManagementConfigurationSettingDefinition get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final DeviceManagementConfigurationSettingDefinition sourceDeviceManagementConfigurationSettingDefinition, final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
-		send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationSettingDefinition);
-	}
-
-	public DeviceManagementConfigurationSettingDefinition patch(final DeviceManagementConfigurationSettingDefinition sourceDeviceManagementConfigurationSettingDefinition) throws ClientException {
-		return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationSettingDefinition);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class DeviceManagementConfigurationSettingDefinitionWithReferenceRequest 
      * @param value the select clause
      * @return the updated request
      */
-    public IDeviceManagementConfigurationSettingDefinitionWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IDeviceManagementConfigurationSettingDefinitionWithReferenceRequest)this;
+    @Nonnull
+    public DeviceManagementConfigurationSettingDefinitionWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class DeviceManagementConfigurationSettingDefinitionWithReferenceRequest 
      * @param value the expand clause
      * @return the updated request
      */
-    public IDeviceManagementConfigurationSettingDefinitionWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (DeviceManagementConfigurationSettingDefinitionWithReferenceRequest)this;
+    @Nonnull
+    public DeviceManagementConfigurationSettingDefinitionWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

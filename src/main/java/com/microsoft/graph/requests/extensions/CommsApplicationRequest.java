@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CommsApplication;
-import com.microsoft.graph.requests.extensions.ICallCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICallRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CallRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnlineMeetingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Comms Application Request.
  */
-public class CommsApplicationRequest extends BaseRequest implements ICommsApplicationRequest {
+public class CommsApplicationRequest extends BaseRequest<CommsApplication> {
 	
     /**
      * The request for the CommsApplication
@@ -37,7 +35,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommsApplicationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommsApplicationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CommsApplication.class);
     }
 
@@ -46,7 +44,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CommsApplication> callback) {
+    public void get(@Nonnull final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @return the CommsApplication from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CommsApplication get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CommsApplication> callback) {
+    public void delete(@Nonnull final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param sourceCommsApplication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CommsApplication sourceCommsApplication, final ICallback<? super CommsApplication> callback) {
+    public void patch(@Nonnull final CommsApplication sourceCommsApplication, @Nonnull final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.PATCH, callback, sourceCommsApplication);
     }
 
@@ -95,7 +94,8 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @return the updated CommsApplication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CommsApplication patch(final CommsApplication sourceCommsApplication) throws ClientException {
+    @Nullable
+    public CommsApplication patch(@Nonnull final CommsApplication sourceCommsApplication) throws ClientException {
         return send(HttpMethod.PATCH, sourceCommsApplication);
     }
 
@@ -105,7 +105,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param newCommsApplication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CommsApplication newCommsApplication, final ICallback<? super CommsApplication> callback) {
+    public void post(@Nonnull final CommsApplication newCommsApplication, @Nonnull final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.POST, callback, newCommsApplication);
     }
 
@@ -116,7 +116,8 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @return the created CommsApplication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CommsApplication post(final CommsApplication newCommsApplication) throws ClientException {
+    @Nullable
+    public CommsApplication post(@Nonnull final CommsApplication newCommsApplication) throws ClientException {
         return send(HttpMethod.POST, newCommsApplication);
     }
 
@@ -126,7 +127,7 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param newCommsApplication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CommsApplication newCommsApplication, final ICallback<? super CommsApplication> callback) {
+    public void put(@Nonnull final CommsApplication newCommsApplication, @Nonnull final ICallback<? super CommsApplication> callback) {
         send(HttpMethod.PUT, callback, newCommsApplication);
     }
 
@@ -137,7 +138,8 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @return the created CommsApplication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CommsApplication put(final CommsApplication newCommsApplication) throws ClientException {
+    @Nullable
+    public CommsApplication put(@Nonnull final CommsApplication newCommsApplication) throws ClientException {
         return send(HttpMethod.PUT, newCommsApplication);
     }
 
@@ -147,9 +149,10 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param value the select clause
      * @return the updated request
      */
-     public ICommsApplicationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CommsApplicationRequest)this;
+     @Nonnull
+     public CommsApplicationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class CommsApplicationRequest extends BaseRequest implements ICommsApplic
      * @param value the expand clause
      * @return the updated request
      */
-     public ICommsApplicationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CommsApplicationRequest)this;
+     @Nonnull
+     public CommsApplicationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

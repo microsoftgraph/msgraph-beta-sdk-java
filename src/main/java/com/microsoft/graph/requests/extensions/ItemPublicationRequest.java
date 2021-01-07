@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemPublication;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Publication Request.
  */
-public class ItemPublicationRequest extends BaseRequest implements IItemPublicationRequest {
+public class ItemPublicationRequest extends BaseRequest<ItemPublication> {
 	
     /**
      * The request for the ItemPublication
@@ -29,7 +31,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemPublicationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemPublicationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemPublication.class);
     }
 
@@ -38,7 +40,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemPublication> callback) {
+    public void get(@Nonnull final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @return the ItemPublication from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemPublication get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemPublication> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param sourceItemPublication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemPublication sourceItemPublication, final ICallback<? super ItemPublication> callback) {
+    public void patch(@Nonnull final ItemPublication sourceItemPublication, @Nonnull final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.PATCH, callback, sourceItemPublication);
     }
 
@@ -87,7 +90,8 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @return the updated ItemPublication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemPublication patch(final ItemPublication sourceItemPublication) throws ClientException {
+    @Nullable
+    public ItemPublication patch(@Nonnull final ItemPublication sourceItemPublication) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemPublication);
     }
 
@@ -97,7 +101,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param newItemPublication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemPublication newItemPublication, final ICallback<? super ItemPublication> callback) {
+    public void post(@Nonnull final ItemPublication newItemPublication, @Nonnull final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.POST, callback, newItemPublication);
     }
 
@@ -108,7 +112,8 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @return the created ItemPublication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemPublication post(final ItemPublication newItemPublication) throws ClientException {
+    @Nullable
+    public ItemPublication post(@Nonnull final ItemPublication newItemPublication) throws ClientException {
         return send(HttpMethod.POST, newItemPublication);
     }
 
@@ -118,7 +123,7 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param newItemPublication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemPublication newItemPublication, final ICallback<? super ItemPublication> callback) {
+    public void put(@Nonnull final ItemPublication newItemPublication, @Nonnull final ICallback<? super ItemPublication> callback) {
         send(HttpMethod.PUT, callback, newItemPublication);
     }
 
@@ -129,7 +134,8 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @return the created ItemPublication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemPublication put(final ItemPublication newItemPublication) throws ClientException {
+    @Nullable
+    public ItemPublication put(@Nonnull final ItemPublication newItemPublication) throws ClientException {
         return send(HttpMethod.PUT, newItemPublication);
     }
 
@@ -139,9 +145,10 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param value the select clause
      * @return the updated request
      */
-     public IItemPublicationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemPublicationRequest)this;
+     @Nonnull
+     public ItemPublicationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ItemPublicationRequest extends BaseRequest implements IItemPublicat
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemPublicationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemPublicationRequest)this;
+     @Nonnull
+     public ItemPublicationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

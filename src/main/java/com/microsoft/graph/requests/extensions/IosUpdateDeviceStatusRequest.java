@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosUpdateDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Update Device Status Request.
  */
-public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpdateDeviceStatusRequest {
+public class IosUpdateDeviceStatusRequest extends BaseRequest<IosUpdateDeviceStatus> {
 	
     /**
      * The request for the IosUpdateDeviceStatus
@@ -29,7 +31,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosUpdateDeviceStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosUpdateDeviceStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosUpdateDeviceStatus.class);
     }
 
@@ -38,7 +40,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void get(@Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @return the IosUpdateDeviceStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosUpdateDeviceStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param sourceIosUpdateDeviceStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void patch(@Nonnull final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceIosUpdateDeviceStatus);
     }
 
@@ -87,7 +90,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @return the updated IosUpdateDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosUpdateDeviceStatus patch(final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus) throws ClientException {
+    @Nullable
+    public IosUpdateDeviceStatus patch(@Nonnull final IosUpdateDeviceStatus sourceIosUpdateDeviceStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosUpdateDeviceStatus);
     }
 
@@ -97,7 +101,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param newIosUpdateDeviceStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void post(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
         send(HttpMethod.POST, callback, newIosUpdateDeviceStatus);
     }
 
@@ -108,7 +112,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @return the created IosUpdateDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosUpdateDeviceStatus post(final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
+    @Nullable
+    public IosUpdateDeviceStatus post(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
         return send(HttpMethod.POST, newIosUpdateDeviceStatus);
     }
 
@@ -118,7 +123,7 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param newIosUpdateDeviceStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus, final ICallback<? super IosUpdateDeviceStatus> callback) {
+    public void put(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus, @Nonnull final ICallback<? super IosUpdateDeviceStatus> callback) {
         send(HttpMethod.PUT, callback, newIosUpdateDeviceStatus);
     }
 
@@ -129,7 +134,8 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @return the created IosUpdateDeviceStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosUpdateDeviceStatus put(final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
+    @Nullable
+    public IosUpdateDeviceStatus put(@Nonnull final IosUpdateDeviceStatus newIosUpdateDeviceStatus) throws ClientException {
         return send(HttpMethod.PUT, newIosUpdateDeviceStatus);
     }
 
@@ -139,9 +145,10 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param value the select clause
      * @return the updated request
      */
-     public IIosUpdateDeviceStatusRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosUpdateDeviceStatusRequest)this;
+     @Nonnull
+     public IosUpdateDeviceStatusRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class IosUpdateDeviceStatusRequest extends BaseRequest implements IIosUpd
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosUpdateDeviceStatusRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosUpdateDeviceStatusRequest)this;
+     @Nonnull
+     public IosUpdateDeviceStatusRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

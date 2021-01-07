@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EnrollmentProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Enrollment Profile Request.
  */
-public class EnrollmentProfileRequest extends BaseRequest implements IEnrollmentProfileRequest {
+public class EnrollmentProfileRequest extends BaseRequest<EnrollmentProfile> {
 	
     /**
      * The request for the EnrollmentProfile
@@ -30,10 +32,10 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public EnrollmentProfileRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends EnrollmentProfile> responseClass) {
+    public EnrollmentProfileRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends EnrollmentProfile> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnrollmentProfile.class);
     }
 
@@ -53,7 +55,7 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EnrollmentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super EnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @return the EnrollmentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EnrollmentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EnrollmentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super EnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @param sourceEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnrollmentProfile sourceEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback) {
+    public void patch(@Nonnull final EnrollmentProfile sourceEnrollmentProfile, @Nonnull final ICallback<? super EnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceEnrollmentProfile);
     }
 
@@ -102,7 +105,8 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @return the updated EnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentProfile patch(final EnrollmentProfile sourceEnrollmentProfile) throws ClientException {
+    @Nullable
+    public EnrollmentProfile patch(@Nonnull final EnrollmentProfile sourceEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceEnrollmentProfile);
     }
 
@@ -112,7 +116,7 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @param newEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnrollmentProfile newEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback) {
+    public void post(@Nonnull final EnrollmentProfile newEnrollmentProfile, @Nonnull final ICallback<? super EnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newEnrollmentProfile);
     }
 
@@ -123,7 +127,8 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @return the created EnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentProfile post(final EnrollmentProfile newEnrollmentProfile) throws ClientException {
+    @Nullable
+    public EnrollmentProfile post(@Nonnull final EnrollmentProfile newEnrollmentProfile) throws ClientException {
         return send(HttpMethod.POST, newEnrollmentProfile);
     }
 
@@ -133,7 +138,7 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @param newEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnrollmentProfile newEnrollmentProfile, final ICallback<? super EnrollmentProfile> callback) {
+    public void put(@Nonnull final EnrollmentProfile newEnrollmentProfile, @Nonnull final ICallback<? super EnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newEnrollmentProfile);
     }
 
@@ -144,7 +149,8 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @return the created EnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentProfile put(final EnrollmentProfile newEnrollmentProfile) throws ClientException {
+    @Nullable
+    public EnrollmentProfile put(@Nonnull final EnrollmentProfile newEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PUT, newEnrollmentProfile);
     }
 
@@ -154,9 +160,10 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @param value the select clause
      * @return the updated request
      */
-     public IEnrollmentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EnrollmentProfileRequest)this;
+     @Nonnull
+     public EnrollmentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class EnrollmentProfileRequest extends BaseRequest implements IEnrollment
      * @param value the expand clause
      * @return the updated request
      */
-     public IEnrollmentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EnrollmentProfileRequest)this;
+     @Nonnull
+     public EnrollmentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

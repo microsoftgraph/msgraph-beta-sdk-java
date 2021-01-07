@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Review Instance Request.
  */
-public class AccessReviewInstanceRequest extends BaseRequest implements IAccessReviewInstanceRequest {
+public class AccessReviewInstanceRequest extends BaseRequest<AccessReviewInstance> {
 	
     /**
      * The request for the AccessReviewInstance
@@ -35,7 +34,7 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewInstanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessReviewInstanceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessReviewInstance.class);
     }
 
@@ -44,7 +43,7 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessReviewInstance> callback) {
+    public void get(@Nonnull final ICallback<? super AccessReviewInstance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @return the AccessReviewInstance from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessReviewInstance get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessReviewInstance> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessReviewInstance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @param sourceAccessReviewInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessReviewInstance sourceAccessReviewInstance, final ICallback<? super AccessReviewInstance> callback) {
+    public void patch(@Nonnull final AccessReviewInstance sourceAccessReviewInstance, @Nonnull final ICallback<? super AccessReviewInstance> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessReviewInstance);
     }
 
@@ -93,7 +93,8 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @return the updated AccessReviewInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewInstance patch(final AccessReviewInstance sourceAccessReviewInstance) throws ClientException {
+    @Nullable
+    public AccessReviewInstance patch(@Nonnull final AccessReviewInstance sourceAccessReviewInstance) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessReviewInstance);
     }
 
@@ -103,7 +104,7 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @param newAccessReviewInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessReviewInstance newAccessReviewInstance, final ICallback<? super AccessReviewInstance> callback) {
+    public void post(@Nonnull final AccessReviewInstance newAccessReviewInstance, @Nonnull final ICallback<? super AccessReviewInstance> callback) {
         send(HttpMethod.POST, callback, newAccessReviewInstance);
     }
 
@@ -114,7 +115,8 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @return the created AccessReviewInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewInstance post(final AccessReviewInstance newAccessReviewInstance) throws ClientException {
+    @Nullable
+    public AccessReviewInstance post(@Nonnull final AccessReviewInstance newAccessReviewInstance) throws ClientException {
         return send(HttpMethod.POST, newAccessReviewInstance);
     }
 
@@ -124,7 +126,7 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @param newAccessReviewInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessReviewInstance newAccessReviewInstance, final ICallback<? super AccessReviewInstance> callback) {
+    public void put(@Nonnull final AccessReviewInstance newAccessReviewInstance, @Nonnull final ICallback<? super AccessReviewInstance> callback) {
         send(HttpMethod.PUT, callback, newAccessReviewInstance);
     }
 
@@ -135,7 +137,8 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @return the created AccessReviewInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewInstance put(final AccessReviewInstance newAccessReviewInstance) throws ClientException {
+    @Nullable
+    public AccessReviewInstance put(@Nonnull final AccessReviewInstance newAccessReviewInstance) throws ClientException {
         return send(HttpMethod.PUT, newAccessReviewInstance);
     }
 
@@ -145,9 +148,10 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessReviewInstanceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessReviewInstanceRequest)this;
+     @Nonnull
+     public AccessReviewInstanceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class AccessReviewInstanceRequest extends BaseRequest implements IAccessR
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessReviewInstanceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessReviewInstanceRequest)this;
+     @Nonnull
+     public AccessReviewInstanceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

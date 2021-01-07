@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintTaskDefinition;
-import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Print Task Definition Request Builder.
  */
-public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder implements IPrintTaskDefinitionRequestBuilder {
+public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder<PrintTaskDefinition> {
 
     /**
      * The request builder for the PrintTaskDefinition
@@ -32,7 +32,7 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintTaskDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintTaskDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrintTaskDefinitionRequest instance
+     * @return the PrintTaskDefinitionRequest instance
      */
-    public IPrintTaskDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrintTaskDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class PrintTaskDefinitionRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrintTaskDefinitionRequest instance
+     * @return the PrintTaskDefinitionRequest instance
      */
-    public IPrintTaskDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrintTaskDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrintTaskDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPrintTaskCollectionRequestBuilder tasks() {
+    /**
+     *  Gets a request builder for the PrintTask collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrintTaskCollectionRequestBuilder tasks() {
         return new PrintTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public IPrintTaskRequestBuilder tasks(final String id) {
+    /**
+     * Gets a request builder for the PrintTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrintTaskRequestBuilder tasks(@Nonnull final String id) {
         return new PrintTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

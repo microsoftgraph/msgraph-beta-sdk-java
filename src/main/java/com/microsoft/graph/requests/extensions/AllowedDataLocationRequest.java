@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AllowedDataLocation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Allowed Data Location Request.
  */
-public class AllowedDataLocationRequest extends BaseRequest implements IAllowedDataLocationRequest {
+public class AllowedDataLocationRequest extends BaseRequest<AllowedDataLocation> {
 	
     /**
      * The request for the AllowedDataLocation
@@ -29,7 +31,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AllowedDataLocationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AllowedDataLocationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AllowedDataLocation.class);
     }
 
@@ -38,7 +40,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AllowedDataLocation> callback) {
+    public void get(@Nonnull final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @return the AllowedDataLocation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AllowedDataLocation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AllowedDataLocation> callback) {
+    public void delete(@Nonnull final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param sourceAllowedDataLocation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AllowedDataLocation sourceAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback) {
+    public void patch(@Nonnull final AllowedDataLocation sourceAllowedDataLocation, @Nonnull final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.PATCH, callback, sourceAllowedDataLocation);
     }
 
@@ -87,7 +90,8 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @return the updated AllowedDataLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AllowedDataLocation patch(final AllowedDataLocation sourceAllowedDataLocation) throws ClientException {
+    @Nullable
+    public AllowedDataLocation patch(@Nonnull final AllowedDataLocation sourceAllowedDataLocation) throws ClientException {
         return send(HttpMethod.PATCH, sourceAllowedDataLocation);
     }
 
@@ -97,7 +101,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param newAllowedDataLocation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback) {
+    public void post(@Nonnull final AllowedDataLocation newAllowedDataLocation, @Nonnull final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.POST, callback, newAllowedDataLocation);
     }
 
@@ -108,7 +112,8 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @return the created AllowedDataLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AllowedDataLocation post(final AllowedDataLocation newAllowedDataLocation) throws ClientException {
+    @Nullable
+    public AllowedDataLocation post(@Nonnull final AllowedDataLocation newAllowedDataLocation) throws ClientException {
         return send(HttpMethod.POST, newAllowedDataLocation);
     }
 
@@ -118,7 +123,7 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param newAllowedDataLocation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AllowedDataLocation newAllowedDataLocation, final ICallback<? super AllowedDataLocation> callback) {
+    public void put(@Nonnull final AllowedDataLocation newAllowedDataLocation, @Nonnull final ICallback<? super AllowedDataLocation> callback) {
         send(HttpMethod.PUT, callback, newAllowedDataLocation);
     }
 
@@ -129,7 +134,8 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @return the created AllowedDataLocation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AllowedDataLocation put(final AllowedDataLocation newAllowedDataLocation) throws ClientException {
+    @Nullable
+    public AllowedDataLocation put(@Nonnull final AllowedDataLocation newAllowedDataLocation) throws ClientException {
         return send(HttpMethod.PUT, newAllowedDataLocation);
     }
 
@@ -139,9 +145,10 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param value the select clause
      * @return the updated request
      */
-     public IAllowedDataLocationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AllowedDataLocationRequest)this;
+     @Nonnull
+     public AllowedDataLocationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AllowedDataLocationRequest extends BaseRequest implements IAllowedD
      * @param value the expand clause
      * @return the updated request
      */
-     public IAllowedDataLocationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AllowedDataLocationRequest)this;
+     @Nonnull
+     public AllowedDataLocationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

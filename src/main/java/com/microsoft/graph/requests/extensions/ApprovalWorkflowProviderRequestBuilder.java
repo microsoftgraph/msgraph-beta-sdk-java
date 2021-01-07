@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ApprovalWorkflowProvider;
-import com.microsoft.graph.requests.extensions.IBusinessFlowCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBusinessFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BusinessFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernancePolicyTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernancePolicyTemplateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Approval Workflow Provider Request Builder.
  */
-public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder implements IApprovalWorkflowProviderRequestBuilder {
+public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder<ApprovalWorkflowProvider> {
 
     /**
      * The request builder for the ApprovalWorkflowProvider
@@ -36,7 +34,7 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ApprovalWorkflowProviderRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ApprovalWorkflowProviderRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IApprovalWorkflowProviderRequest instance
+     * @return the ApprovalWorkflowProviderRequest instance
      */
-    public IApprovalWorkflowProviderRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ApprovalWorkflowProviderRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,32 +53,72 @@ public class ApprovalWorkflowProviderRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IApprovalWorkflowProviderRequest instance
+     * @return the ApprovalWorkflowProviderRequest instance
      */
-    public IApprovalWorkflowProviderRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ApprovalWorkflowProviderRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ApprovalWorkflowProviderRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IBusinessFlowCollectionRequestBuilder businessFlows() {
+    /**
+     *  Gets a request builder for the BusinessFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BusinessFlowCollectionRequestBuilder businessFlows() {
         return new BusinessFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlows"), getClient(), null);
     }
 
-    public IBusinessFlowRequestBuilder businessFlows(final String id) {
+    /**
+     * Gets a request builder for the BusinessFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BusinessFlowRequestBuilder businessFlows(@Nonnull final String id) {
         return new BusinessFlowRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlows") + "/" + id, getClient(), null);
     }
-    public IBusinessFlowCollectionRequestBuilder businessFlowsWithRequestsAwaitingMyDecision() {
+    /**
+     *  Gets a request builder for the BusinessFlow collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BusinessFlowCollectionRequestBuilder businessFlowsWithRequestsAwaitingMyDecision() {
         return new BusinessFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlowsWithRequestsAwaitingMyDecision"), getClient(), null);
     }
 
-    public IBusinessFlowRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(final String id) {
+    /**
+     * Gets a request builder for the BusinessFlow item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BusinessFlowRequestBuilder businessFlowsWithRequestsAwaitingMyDecision(@Nonnull final String id) {
         return new BusinessFlowRequestBuilder(getRequestUrlWithAdditionalSegment("businessFlowsWithRequestsAwaitingMyDecision") + "/" + id, getClient(), null);
     }
-    public IGovernancePolicyTemplateCollectionRequestBuilder policyTemplates() {
+    /**
+     *  Gets a request builder for the GovernancePolicyTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GovernancePolicyTemplateCollectionRequestBuilder policyTemplates() {
         return new GovernancePolicyTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("policyTemplates"), getClient(), null);
     }
 
-    public IGovernancePolicyTemplateRequestBuilder policyTemplates(final String id) {
+    /**
+     * Gets a request builder for the GovernancePolicyTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GovernancePolicyTemplateRequestBuilder policyTemplates(@Nonnull final String id) {
         return new GovernancePolicyTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("policyTemplates") + "/" + id, getClient(), null);
     }
 }

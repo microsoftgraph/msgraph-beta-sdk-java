@@ -11,20 +11,16 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
-import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -33,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Printer Request Builder.
  */
-public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinterRequestBuilder {
+public class PrinterRequestBuilder extends BaseRequestBuilder<Printer> {
 
     /**
      * The request builder for the Printer
@@ -42,7 +38,7 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrinterRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrinterRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -50,9 +46,10 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrinterRequest instance
+     * @return the PrinterRequest instance
      */
-    public IPrinterRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrinterRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -60,60 +57,129 @@ public class PrinterRequestBuilder extends BaseRequestBuilder implements IPrinte
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrinterRequest instance
+     * @return the PrinterRequest instance
      */
-    public IPrinterRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrinterRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrinterRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IPrintJobCollectionRequestBuilder jobs() {
+    /**
+     *  Gets a request builder for the PrintJob collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrintJobCollectionRequestBuilder jobs() {
         return new PrintJobCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("jobs"), getClient(), null);
     }
 
-    public IPrintJobRequestBuilder jobs(final String id) {
+    /**
+     * Gets a request builder for the PrintJob item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrintJobRequestBuilder jobs(@Nonnull final String id) {
         return new PrintJobRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
-    public IPrintConnectorCollectionWithReferencesRequestBuilder connectors() {
+    /**
+     *  Gets a request builder for the PrintConnector collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrintConnectorCollectionWithReferencesRequestBuilder connectors() {
         return new PrintConnectorCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("connectors"), getClient(), null);
     }
 
-    public IPrintConnectorWithReferenceRequestBuilder connectors(final String id) {
+    /**
+     * Gets a request builder for the PrintConnector item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrintConnectorWithReferenceRequestBuilder connectors(@Nonnull final String id) {
         return new PrintConnectorWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("connectors") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for PrinterShare
      *
-     * @return the IPrinterShareWithReferenceRequestBuilder instance
+     * @return the PrinterShareWithReferenceRequestBuilder instance
      */
-    public IPrinterShareWithReferenceRequestBuilder share() {
+    @Nonnull
+    public PrinterShareWithReferenceRequestBuilder share() {
         return new PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("share"), getClient(), null);
     }
-    public IPrinterShareCollectionWithReferencesRequestBuilder shares() {
+    /**
+     *  Gets a request builder for the PrinterShare collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrinterShareCollectionWithReferencesRequestBuilder shares() {
         return new PrinterShareCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shares"), getClient(), null);
     }
 
-    public IPrinterShareWithReferenceRequestBuilder shares(final String id) {
+    /**
+     * Gets a request builder for the PrinterShare item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrinterShareWithReferenceRequestBuilder shares(@Nonnull final String id) {
         return new PrinterShareWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("shares") + "/" + id, getClient(), null);
     }
-    public IPrintTaskTriggerCollectionRequestBuilder taskTriggers() {
+    /**
+     *  Gets a request builder for the PrintTaskTrigger collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrintTaskTriggerCollectionRequestBuilder taskTriggers() {
         return new PrintTaskTriggerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers"), getClient(), null);
     }
 
-    public IPrintTaskTriggerRequestBuilder taskTriggers(final String id) {
+    /**
+     * Gets a request builder for the PrintTaskTrigger item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrintTaskTriggerRequestBuilder taskTriggers(@Nonnull final String id) {
         return new PrintTaskTriggerRequestBuilder(getRequestUrlWithAdditionalSegment("taskTriggers") + "/" + id, getClient(), null);
     }
 
-    public IPrinterResetDefaultsRequestBuilder resetDefaults() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public PrinterResetDefaultsRequestBuilder resetDefaults() {
         return new PrinterResetDefaultsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetDefaults"), getClient(), null);
     }
 
-    public IPrinterRestoreFactoryDefaultsRequestBuilder restoreFactoryDefaults() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public PrinterRestoreFactoryDefaultsRequestBuilder restoreFactoryDefaults() {
         return new PrinterRestoreFactoryDefaultsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreFactoryDefaults"), getClient(), null);
     }
 
-    public IPrinterGetCapabilitiesRequestBuilder getCapabilities() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public PrinterGetCapabilitiesRequestBuilder getCapabilities() {
         return new PrinterGetCapabilitiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCapabilities"), getClient(), null);
     }
 }

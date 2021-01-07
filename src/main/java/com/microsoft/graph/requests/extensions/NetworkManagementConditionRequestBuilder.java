@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.NetworkManagementCondition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Network Management Condition Request Builder.
  */
-public class NetworkManagementConditionRequestBuilder extends BaseRequestBuilder implements INetworkManagementConditionRequestBuilder {
+public class NetworkManagementConditionRequestBuilder extends BaseRequestBuilder<NetworkManagementCondition> {
 
     /**
      * The request builder for the NetworkManagementCondition
@@ -28,7 +30,7 @@ public class NetworkManagementConditionRequestBuilder extends BaseRequestBuilder
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public NetworkManagementConditionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public NetworkManagementConditionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class NetworkManagementConditionRequestBuilder extends BaseRequestBuilder
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the INetworkManagementConditionRequest instance
+     * @return the NetworkManagementConditionRequest instance
      */
-    public INetworkManagementConditionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public NetworkManagementConditionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class NetworkManagementConditionRequestBuilder extends BaseRequestBuilder
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the INetworkManagementConditionRequest instance
+     * @return the NetworkManagementConditionRequest instance
      */
-    public INetworkManagementConditionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public NetworkManagementConditionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.NetworkManagementConditionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements() {
+    /**
+     *  Gets a request builder for the ManagementConditionStatement collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementConditionStatementCollectionWithReferencesRequestBuilder managementConditionStatements() {
         return new ManagementConditionStatementCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements"), getClient(), null);
     }
 
-    public IManagementConditionStatementWithReferenceRequestBuilder managementConditionStatements(final String id) {
+    /**
+     * Gets a request builder for the ManagementConditionStatement item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementConditionStatementWithReferenceRequestBuilder managementConditionStatements(@Nonnull final String id) {
         return new ManagementConditionStatementWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("managementConditionStatements") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharePointSiteUsagePages;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Share Point Site Usage Pages Request.
  */
-public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISharePointSiteUsagePagesRequest {
+public class SharePointSiteUsagePagesRequest extends BaseRequest<SharePointSiteUsagePages> {
 	
     /**
      * The request for the SharePointSiteUsagePages
@@ -29,7 +31,7 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharePointSiteUsagePagesRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharePointSiteUsagePagesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharePointSiteUsagePages.class);
     }
 
@@ -38,7 +40,7 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SharePointSiteUsagePages> callback) {
+    public void get(@Nonnull final ICallback<? super SharePointSiteUsagePages> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @return the SharePointSiteUsagePages from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SharePointSiteUsagePages get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SharePointSiteUsagePages> callback) {
+    public void delete(@Nonnull final ICallback<? super SharePointSiteUsagePages> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @param sourceSharePointSiteUsagePages the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointSiteUsagePages sourceSharePointSiteUsagePages, final ICallback<? super SharePointSiteUsagePages> callback) {
+    public void patch(@Nonnull final SharePointSiteUsagePages sourceSharePointSiteUsagePages, @Nonnull final ICallback<? super SharePointSiteUsagePages> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointSiteUsagePages);
     }
 
@@ -87,7 +90,8 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @return the updated SharePointSiteUsagePages
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsagePages patch(final SharePointSiteUsagePages sourceSharePointSiteUsagePages) throws ClientException {
+    @Nullable
+    public SharePointSiteUsagePages patch(@Nonnull final SharePointSiteUsagePages sourceSharePointSiteUsagePages) throws ClientException {
         return send(HttpMethod.PATCH, sourceSharePointSiteUsagePages);
     }
 
@@ -97,7 +101,7 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @param newSharePointSiteUsagePages the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointSiteUsagePages newSharePointSiteUsagePages, final ICallback<? super SharePointSiteUsagePages> callback) {
+    public void post(@Nonnull final SharePointSiteUsagePages newSharePointSiteUsagePages, @Nonnull final ICallback<? super SharePointSiteUsagePages> callback) {
         send(HttpMethod.POST, callback, newSharePointSiteUsagePages);
     }
 
@@ -108,7 +112,8 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @return the created SharePointSiteUsagePages
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsagePages post(final SharePointSiteUsagePages newSharePointSiteUsagePages) throws ClientException {
+    @Nullable
+    public SharePointSiteUsagePages post(@Nonnull final SharePointSiteUsagePages newSharePointSiteUsagePages) throws ClientException {
         return send(HttpMethod.POST, newSharePointSiteUsagePages);
     }
 
@@ -118,7 +123,7 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @param newSharePointSiteUsagePages the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointSiteUsagePages newSharePointSiteUsagePages, final ICallback<? super SharePointSiteUsagePages> callback) {
+    public void put(@Nonnull final SharePointSiteUsagePages newSharePointSiteUsagePages, @Nonnull final ICallback<? super SharePointSiteUsagePages> callback) {
         send(HttpMethod.PUT, callback, newSharePointSiteUsagePages);
     }
 
@@ -129,7 +134,8 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @return the created SharePointSiteUsagePages
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsagePages put(final SharePointSiteUsagePages newSharePointSiteUsagePages) throws ClientException {
+    @Nullable
+    public SharePointSiteUsagePages put(@Nonnull final SharePointSiteUsagePages newSharePointSiteUsagePages) throws ClientException {
         return send(HttpMethod.PUT, newSharePointSiteUsagePages);
     }
 
@@ -139,9 +145,10 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @param value the select clause
      * @return the updated request
      */
-     public ISharePointSiteUsagePagesRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharePointSiteUsagePagesRequest)this;
+     @Nonnull
+     public SharePointSiteUsagePagesRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SharePointSiteUsagePagesRequest extends BaseRequest implements ISha
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharePointSiteUsagePagesRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointSiteUsagePagesRequest)this;
+     @Nonnull
+     public SharePointSiteUsagePagesRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

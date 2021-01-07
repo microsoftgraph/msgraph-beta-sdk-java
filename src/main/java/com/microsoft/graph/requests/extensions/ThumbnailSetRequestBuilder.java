@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ThumbnailSet;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Thumbnail Set Request Builder.
  */
-public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IThumbnailSetRequestBuilder {
+public class ThumbnailSetRequestBuilder extends BaseRequestBuilder<ThumbnailSet> {
 
     /**
      * The request builder for the ThumbnailSet
@@ -28,7 +30,7 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThumbnailSetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThumbnailSetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IThumbnailSetRequest instance
+     * @return the ThumbnailSetRequest instance
      */
-    public IThumbnailSetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ThumbnailSetRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,14 +49,20 @@ public class ThumbnailSetRequestBuilder extends BaseRequestBuilder implements IT
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IThumbnailSetRequest instance
+     * @return the ThumbnailSetRequest instance
      */
-    public IThumbnailSetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ThumbnailSetRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ThumbnailSetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
-    @Override
-    public IThumbnailRequestBuilder getThumbnailSize(final String size) {
+    /**
+     * Gets a request builder to get the thumbnail of a certain size
+     * @param size the size to get
+     * @return a request builder to get the thumbnail of a certain size
+     */
+    @Nonnull
+    public ThumbnailRequestBuilder getThumbnailSize(@Nonnull final String size) {
         return new ThumbnailRequestBuilder(getRequestUrlWithAdditionalSegment(size), getClient(), /* options */ null);
     }
 

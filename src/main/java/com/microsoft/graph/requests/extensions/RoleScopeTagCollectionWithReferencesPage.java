@@ -13,9 +13,11 @@ import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.microsoft.graph.models.extensions.RoleScopeTagAutoAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.RoleScopeTagCollectionResponse;
 import com.microsoft.graph.models.extensions.RoleScopeTag;
 import com.google.gson.JsonObject;
@@ -28,7 +30,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Role Scope Tag Collection With References Page.
  */
-public class RoleScopeTagCollectionWithReferencesPage extends BaseCollectionPage<RoleScopeTag, IRoleScopeTagCollectionWithReferencesRequestBuilder> implements IRoleScopeTagCollectionWithReferencesPage {
+public class RoleScopeTagCollectionWithReferencesPage extends BaseCollectionPage<RoleScopeTag, RoleScopeTagCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for RoleScopeTag
@@ -36,7 +38,17 @@ public class RoleScopeTagCollectionWithReferencesPage extends BaseCollectionPage
      * @param response the serialized RoleScopeTagCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public RoleScopeTagCollectionWithReferencesPage(final RoleScopeTagCollectionResponse response, final IRoleScopeTagCollectionWithReferencesRequestBuilder builder) {
+    public RoleScopeTagCollectionWithReferencesPage(@Nonnull final RoleScopeTagCollectionResponse response, @Nullable final RoleScopeTagCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for RoleScopeTag
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public RoleScopeTagCollectionWithReferencesPage(@Nonnull final java.util.List<RoleScopeTag> pageContents, @Nullable final RoleScopeTagCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

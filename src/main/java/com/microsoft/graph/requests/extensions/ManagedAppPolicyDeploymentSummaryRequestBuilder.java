@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAppPolicyDeploymentSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed App Policy Deployment Summary Request Builder.
  */
-public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequestBuilder implements IManagedAppPolicyDeploymentSummaryRequestBuilder {
+public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequestBuilder<ManagedAppPolicyDeploymentSummary> {
 
     /**
      * The request builder for the ManagedAppPolicyDeploymentSummary
@@ -28,7 +30,7 @@ public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAppPolicyDeploymentSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAppPolicyDeploymentSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppPolicyDeploymentSummaryRequest instance
+     * @return the ManagedAppPolicyDeploymentSummaryRequest instance
      */
-    public IManagedAppPolicyDeploymentSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedAppPolicyDeploymentSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class ManagedAppPolicyDeploymentSummaryRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedAppPolicyDeploymentSummaryRequest instance
+     * @return the ManagedAppPolicyDeploymentSummaryRequest instance
      */
-    public IManagedAppPolicyDeploymentSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedAppPolicyDeploymentSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedAppPolicyDeploymentSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

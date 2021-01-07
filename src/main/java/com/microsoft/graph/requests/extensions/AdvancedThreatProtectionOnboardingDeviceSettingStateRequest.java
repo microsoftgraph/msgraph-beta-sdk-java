@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdvancedThreatProtectionOnboardingDeviceSettingState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Advanced Threat Protection Onboarding Device Setting State Request.
  */
-public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends BaseRequest implements IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest {
+public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends BaseRequest<AdvancedThreatProtectionOnboardingDeviceSettingState> {
 	
     /**
      * The request for the AdvancedThreatProtectionOnboardingDeviceSettingState
@@ -29,7 +31,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdvancedThreatProtectionOnboardingDeviceSettingStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AdvancedThreatProtectionOnboardingDeviceSettingState.class);
     }
 
@@ -38,7 +40,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
+    public void get(@Nonnull final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @return the AdvancedThreatProtectionOnboardingDeviceSettingState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AdvancedThreatProtectionOnboardingDeviceSettingState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
+    public void delete(@Nonnull final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @param sourceAdvancedThreatProtectionOnboardingDeviceSettingState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AdvancedThreatProtectionOnboardingDeviceSettingState sourceAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
+    public void patch(@Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState sourceAdvancedThreatProtectionOnboardingDeviceSettingState, @Nonnull final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
         send(HttpMethod.PATCH, callback, sourceAdvancedThreatProtectionOnboardingDeviceSettingState);
     }
 
@@ -87,7 +90,8 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @return the updated AdvancedThreatProtectionOnboardingDeviceSettingState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdvancedThreatProtectionOnboardingDeviceSettingState patch(final AdvancedThreatProtectionOnboardingDeviceSettingState sourceAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
+    @Nullable
+    public AdvancedThreatProtectionOnboardingDeviceSettingState patch(@Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState sourceAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
         return send(HttpMethod.PATCH, sourceAdvancedThreatProtectionOnboardingDeviceSettingState);
     }
 
@@ -97,7 +101,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @param newAdvancedThreatProtectionOnboardingDeviceSettingState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
+    public void post(@Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, @Nonnull final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
         send(HttpMethod.POST, callback, newAdvancedThreatProtectionOnboardingDeviceSettingState);
     }
 
@@ -108,7 +112,8 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @return the created AdvancedThreatProtectionOnboardingDeviceSettingState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdvancedThreatProtectionOnboardingDeviceSettingState post(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
+    @Nullable
+    public AdvancedThreatProtectionOnboardingDeviceSettingState post(@Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
         return send(HttpMethod.POST, newAdvancedThreatProtectionOnboardingDeviceSettingState);
     }
 
@@ -118,7 +123,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @param newAdvancedThreatProtectionOnboardingDeviceSettingState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
+    public void put(@Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState, @Nonnull final ICallback<? super AdvancedThreatProtectionOnboardingDeviceSettingState> callback) {
         send(HttpMethod.PUT, callback, newAdvancedThreatProtectionOnboardingDeviceSettingState);
     }
 
@@ -129,7 +134,8 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @return the created AdvancedThreatProtectionOnboardingDeviceSettingState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdvancedThreatProtectionOnboardingDeviceSettingState put(final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
+    @Nullable
+    public AdvancedThreatProtectionOnboardingDeviceSettingState put(@Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState newAdvancedThreatProtectionOnboardingDeviceSettingState) throws ClientException {
         return send(HttpMethod.PUT, newAdvancedThreatProtectionOnboardingDeviceSettingState);
     }
 
@@ -139,9 +145,10 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @param value the select clause
      * @return the updated request
      */
-     public IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AdvancedThreatProtectionOnboardingDeviceSettingStateRequest)this;
+     @Nonnull
+     public AdvancedThreatProtectionOnboardingDeviceSettingStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStateRequest extends
      * @param value the expand clause
      * @return the updated request
      */
-     public IAdvancedThreatProtectionOnboardingDeviceSettingStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AdvancedThreatProtectionOnboardingDeviceSettingStateRequest)this;
+     @Nonnull
+     public AdvancedThreatProtectionOnboardingDeviceSettingStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

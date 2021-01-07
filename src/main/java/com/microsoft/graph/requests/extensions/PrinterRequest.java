@@ -11,20 +11,16 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Printer;
 import com.microsoft.graph.models.extensions.PrintCertificateSigningRequest;
 import com.microsoft.graph.models.extensions.PrinterCapabilities;
-import com.microsoft.graph.requests.extensions.IPrintConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskTriggerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskTriggerRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskTriggerRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +30,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Printer Request.
  */
-public class PrinterRequest extends BaseRequest implements IPrinterRequest {
+public class PrinterRequest extends BaseRequest<Printer> {
 	
     /**
      * The request for the Printer
@@ -43,7 +39,7 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrinterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrinterRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Printer.class);
     }
 
@@ -52,7 +48,7 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Printer> callback) {
+    public void get(@Nonnull final ICallback<? super Printer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +58,7 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @return the Printer from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Printer get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +68,7 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Printer> callback) {
+    public void delete(@Nonnull final ICallback<? super Printer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +87,7 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @param sourcePrinter the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Printer sourcePrinter, final ICallback<? super Printer> callback) {
+    public void patch(@Nonnull final Printer sourcePrinter, @Nonnull final ICallback<? super Printer> callback) {
         send(HttpMethod.PATCH, callback, sourcePrinter);
     }
 
@@ -101,7 +98,8 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @return the updated Printer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Printer patch(final Printer sourcePrinter) throws ClientException {
+    @Nullable
+    public Printer patch(@Nonnull final Printer sourcePrinter) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrinter);
     }
 
@@ -111,7 +109,7 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @param newPrinter the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Printer newPrinter, final ICallback<? super Printer> callback) {
+    public void post(@Nonnull final Printer newPrinter, @Nonnull final ICallback<? super Printer> callback) {
         send(HttpMethod.POST, callback, newPrinter);
     }
 
@@ -122,7 +120,8 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @return the created Printer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Printer post(final Printer newPrinter) throws ClientException {
+    @Nullable
+    public Printer post(@Nonnull final Printer newPrinter) throws ClientException {
         return send(HttpMethod.POST, newPrinter);
     }
 
@@ -132,7 +131,7 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @param newPrinter the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Printer newPrinter, final ICallback<? super Printer> callback) {
+    public void put(@Nonnull final Printer newPrinter, @Nonnull final ICallback<? super Printer> callback) {
         send(HttpMethod.PUT, callback, newPrinter);
     }
 
@@ -143,7 +142,8 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @return the created Printer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Printer put(final Printer newPrinter) throws ClientException {
+    @Nullable
+    public Printer put(@Nonnull final Printer newPrinter) throws ClientException {
         return send(HttpMethod.PUT, newPrinter);
     }
 
@@ -153,9 +153,10 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPrinterRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrinterRequest)this;
+     @Nonnull
+     public PrinterRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,9 +165,10 @@ public class PrinterRequest extends BaseRequest implements IPrinterRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrinterRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrinterRequest)this;
+     @Nonnull
+     public PrinterRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

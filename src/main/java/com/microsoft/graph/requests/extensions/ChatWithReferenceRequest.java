@@ -14,27 +14,21 @@ import com.microsoft.graph.models.extensions.ItemBody;
 import com.microsoft.graph.models.extensions.KeyValuePair;
 import com.microsoft.graph.models.extensions.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.extensions.ChatMessage;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppInstallationRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppInstallationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatMessageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -44,7 +38,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Chat With Reference Request.
  */
-public class ChatWithReferenceRequest extends BaseRequest implements IChatWithReferenceRequest {
+public class ChatWithReferenceRequest extends BaseWithReferenceRequest<Chat> {
 
     /**
      * The request for the Chat
@@ -53,46 +47,9 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ChatWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ChatWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Chat.class);
     }
-
-    public void post(final Chat newChat, final IJsonBackedObject payload, final ICallback<? super Chat> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public Chat post(final Chat newChat, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newChat;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super Chat> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public Chat get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super Chat> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final Chat sourceChat, final ICallback<? super Chat> callback) {
-		send(HttpMethod.PATCH, callback, sourceChat);
-	}
-
-	public Chat patch(final Chat sourceChat) throws ClientException {
-		return send(HttpMethod.PATCH, sourceChat);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -100,9 +57,10 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
      * @param value the select clause
      * @return the updated request
      */
-    public IChatWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IChatWithReferenceRequest)this;
+    @Nonnull
+    public ChatWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -111,8 +69,9 @@ public class ChatWithReferenceRequest extends BaseRequest implements IChatWithRe
      * @param value the expand clause
      * @return the updated request
      */
-    public IChatWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ChatWithReferenceRequest)this;
+    @Nonnull
+    public ChatWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

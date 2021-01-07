@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Setting Instance Request.
  */
-public class DeviceManagementSettingInstanceRequest extends BaseRequest implements IDeviceManagementSettingInstanceRequest {
+public class DeviceManagementSettingInstanceRequest extends BaseRequest<DeviceManagementSettingInstance> {
 	
     /**
      * The request for the DeviceManagementSettingInstance
@@ -30,10 +32,10 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceManagementSettingInstanceRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceManagementSettingInstance> responseClass) {
+    public DeviceManagementSettingInstanceRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceManagementSettingInstance> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementSettingInstanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementSettingInstanceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementSettingInstance.class);
     }
 
@@ -53,7 +55,7 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementSettingInstance> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementSettingInstance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @return the DeviceManagementSettingInstance from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementSettingInstance get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementSettingInstance> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementSettingInstance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @param sourceDeviceManagementSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementSettingInstance sourceDeviceManagementSettingInstance, final ICallback<? super DeviceManagementSettingInstance> callback) {
+    public void patch(@Nonnull final DeviceManagementSettingInstance sourceDeviceManagementSettingInstance, @Nonnull final ICallback<? super DeviceManagementSettingInstance> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementSettingInstance);
     }
 
@@ -102,7 +105,8 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @return the updated DeviceManagementSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementSettingInstance patch(final DeviceManagementSettingInstance sourceDeviceManagementSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementSettingInstance patch(@Nonnull final DeviceManagementSettingInstance sourceDeviceManagementSettingInstance) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementSettingInstance);
     }
 
@@ -112,7 +116,7 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @param newDeviceManagementSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementSettingInstance newDeviceManagementSettingInstance, final ICallback<? super DeviceManagementSettingInstance> callback) {
+    public void post(@Nonnull final DeviceManagementSettingInstance newDeviceManagementSettingInstance, @Nonnull final ICallback<? super DeviceManagementSettingInstance> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementSettingInstance);
     }
 
@@ -123,7 +127,8 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @return the created DeviceManagementSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementSettingInstance post(final DeviceManagementSettingInstance newDeviceManagementSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementSettingInstance post(@Nonnull final DeviceManagementSettingInstance newDeviceManagementSettingInstance) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementSettingInstance);
     }
 
@@ -133,7 +138,7 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @param newDeviceManagementSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementSettingInstance newDeviceManagementSettingInstance, final ICallback<? super DeviceManagementSettingInstance> callback) {
+    public void put(@Nonnull final DeviceManagementSettingInstance newDeviceManagementSettingInstance, @Nonnull final ICallback<? super DeviceManagementSettingInstance> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementSettingInstance);
     }
 
@@ -144,7 +149,8 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @return the created DeviceManagementSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementSettingInstance put(final DeviceManagementSettingInstance newDeviceManagementSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementSettingInstance put(@Nonnull final DeviceManagementSettingInstance newDeviceManagementSettingInstance) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementSettingInstance);
     }
 
@@ -154,9 +160,10 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementSettingInstanceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementSettingInstanceRequest)this;
+     @Nonnull
+     public DeviceManagementSettingInstanceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class DeviceManagementSettingInstanceRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementSettingInstanceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementSettingInstanceRequest)this;
+     @Nonnull
+     public DeviceManagementSettingInstanceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Request;
-import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Request Request.
  */
-public class RequestRequest extends BaseRequest implements IRequestRequest {
+public class RequestRequest extends BaseRequest<Request> {
 	
     /**
      * The request for the Request
@@ -32,10 +33,10 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public RequestRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Request> responseClass) {
+    public RequestRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Request> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -46,7 +47,7 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Request.class);
     }
 
@@ -55,7 +56,7 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Request> callback) {
+    public void get(@Nonnull final ICallback<? super Request> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -65,6 +66,7 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @return the Request from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Request get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -74,7 +76,7 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Request> callback) {
+    public void delete(@Nonnull final ICallback<? super Request> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -93,7 +95,7 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @param sourceRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Request sourceRequest, final ICallback<? super Request> callback) {
+    public void patch(@Nonnull final Request sourceRequest, @Nonnull final ICallback<? super Request> callback) {
         send(HttpMethod.PATCH, callback, sourceRequest);
     }
 
@@ -104,7 +106,8 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @return the updated Request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Request patch(final Request sourceRequest) throws ClientException {
+    @Nullable
+    public Request patch(@Nonnull final Request sourceRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceRequest);
     }
 
@@ -114,7 +117,7 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @param newRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Request newRequest, final ICallback<? super Request> callback) {
+    public void post(@Nonnull final Request newRequest, @Nonnull final ICallback<? super Request> callback) {
         send(HttpMethod.POST, callback, newRequest);
     }
 
@@ -125,7 +128,8 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @return the created Request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Request post(final Request newRequest) throws ClientException {
+    @Nullable
+    public Request post(@Nonnull final Request newRequest) throws ClientException {
         return send(HttpMethod.POST, newRequest);
     }
 
@@ -135,7 +139,7 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @param newRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Request newRequest, final ICallback<? super Request> callback) {
+    public void put(@Nonnull final Request newRequest, @Nonnull final ICallback<? super Request> callback) {
         send(HttpMethod.PUT, callback, newRequest);
     }
 
@@ -146,7 +150,8 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @return the created Request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Request put(final Request newRequest) throws ClientException {
+    @Nullable
+    public Request put(@Nonnull final Request newRequest) throws ClientException {
         return send(HttpMethod.PUT, newRequest);
     }
 
@@ -156,9 +161,10 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RequestRequest)this;
+     @Nonnull
+     public RequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -167,9 +173,10 @@ public class RequestRequest extends BaseRequest implements IRequestRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RequestRequest)this;
+     @Nonnull
+     public RequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

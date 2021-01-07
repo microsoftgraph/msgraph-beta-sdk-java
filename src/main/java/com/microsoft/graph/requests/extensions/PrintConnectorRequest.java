@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Print Connector Request.
  */
-public class PrintConnectorRequest extends BaseRequest implements IPrintConnectorRequest {
+public class PrintConnectorRequest extends BaseRequest<PrintConnector> {
 	
     /**
      * The request for the PrintConnector
@@ -29,7 +31,7 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintConnectorRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintConnectorRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrintConnector.class);
     }
 
@@ -38,7 +40,7 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrintConnector> callback) {
+    public void get(@Nonnull final ICallback<? super PrintConnector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @return the PrintConnector from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrintConnector get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrintConnector> callback) {
+    public void delete(@Nonnull final ICallback<? super PrintConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @param sourcePrintConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintConnector sourcePrintConnector, final ICallback<? super PrintConnector> callback) {
+    public void patch(@Nonnull final PrintConnector sourcePrintConnector, @Nonnull final ICallback<? super PrintConnector> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintConnector);
     }
 
@@ -87,7 +90,8 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @return the updated PrintConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintConnector patch(final PrintConnector sourcePrintConnector) throws ClientException {
+    @Nullable
+    public PrintConnector patch(@Nonnull final PrintConnector sourcePrintConnector) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrintConnector);
     }
 
@@ -97,7 +101,7 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @param newPrintConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintConnector newPrintConnector, final ICallback<? super PrintConnector> callback) {
+    public void post(@Nonnull final PrintConnector newPrintConnector, @Nonnull final ICallback<? super PrintConnector> callback) {
         send(HttpMethod.POST, callback, newPrintConnector);
     }
 
@@ -108,7 +112,8 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @return the created PrintConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintConnector post(final PrintConnector newPrintConnector) throws ClientException {
+    @Nullable
+    public PrintConnector post(@Nonnull final PrintConnector newPrintConnector) throws ClientException {
         return send(HttpMethod.POST, newPrintConnector);
     }
 
@@ -118,7 +123,7 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @param newPrintConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintConnector newPrintConnector, final ICallback<? super PrintConnector> callback) {
+    public void put(@Nonnull final PrintConnector newPrintConnector, @Nonnull final ICallback<? super PrintConnector> callback) {
         send(HttpMethod.PUT, callback, newPrintConnector);
     }
 
@@ -129,7 +134,8 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @return the created PrintConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintConnector put(final PrintConnector newPrintConnector) throws ClientException {
+    @Nullable
+    public PrintConnector put(@Nonnull final PrintConnector newPrintConnector) throws ClientException {
         return send(HttpMethod.PUT, newPrintConnector);
     }
 
@@ -139,9 +145,10 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @param value the select clause
      * @return the updated request
      */
-     public IPrintConnectorRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrintConnectorRequest)this;
+     @Nonnull
+     public PrintConnectorRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PrintConnectorRequest extends BaseRequest implements IPrintConnecto
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrintConnectorRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintConnectorRequest)this;
+     @Nonnull
+     public PrintConnectorRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

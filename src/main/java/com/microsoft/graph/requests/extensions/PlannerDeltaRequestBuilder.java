@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerDelta;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Planner Delta Request Builder.
  */
-public class PlannerDeltaRequestBuilder extends BaseRequestBuilder implements IPlannerDeltaRequestBuilder {
+public class PlannerDeltaRequestBuilder extends BaseRequestBuilder<PlannerDelta> {
 
     /**
      * The request builder for the PlannerDelta
@@ -28,7 +30,7 @@ public class PlannerDeltaRequestBuilder extends BaseRequestBuilder implements IP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerDeltaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerDeltaRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PlannerDeltaRequestBuilder extends BaseRequestBuilder implements IP
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerDeltaRequest instance
+     * @return the PlannerDeltaRequest instance
      */
-    public IPlannerDeltaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlannerDeltaRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PlannerDeltaRequestBuilder extends BaseRequestBuilder implements IP
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlannerDeltaRequest instance
+     * @return the PlannerDeltaRequest instance
      */
-    public IPlannerDeltaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlannerDeltaRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlannerDeltaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

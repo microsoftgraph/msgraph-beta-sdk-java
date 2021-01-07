@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceEnrollmentWindowsHelloForBusinessConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Enrollment Windows Hello For Business Configuration Request.
  */
-public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends BaseRequest implements IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest {
+public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends BaseRequest<DeviceEnrollmentWindowsHelloForBusinessConfiguration> {
 	
     /**
      * The request for the DeviceEnrollmentWindowsHelloForBusinessConfiguration
@@ -29,7 +31,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceEnrollmentWindowsHelloForBusinessConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return the DeviceEnrollmentWindowsHelloForBusinessConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceEnrollmentWindowsHelloForBusinessConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void patch(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return the updated DeviceEnrollmentWindowsHelloForBusinessConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentWindowsHelloForBusinessConfiguration patch(final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentWindowsHelloForBusinessConfiguration patch(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void post(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.POST, callback, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return the created DeviceEnrollmentWindowsHelloForBusinessConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentWindowsHelloForBusinessConfiguration post(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentWindowsHelloForBusinessConfiguration post(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException {
         return send(HttpMethod.POST, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param newDeviceEnrollmentWindowsHelloForBusinessConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
+    public void put(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration, @Nonnull final ICallback<? super DeviceEnrollmentWindowsHelloForBusinessConfiguration> callback) {
         send(HttpMethod.PUT, callback, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @return the created DeviceEnrollmentWindowsHelloForBusinessConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceEnrollmentWindowsHelloForBusinessConfiguration put(final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException {
+    @Nullable
+    public DeviceEnrollmentWindowsHelloForBusinessConfiguration put(@Nonnull final DeviceEnrollmentWindowsHelloForBusinessConfiguration newDeviceEnrollmentWindowsHelloForBusinessConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newDeviceEnrollmentWindowsHelloForBusinessConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest)this;
+     @Nonnull
+     public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest extends
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceEnrollmentWindowsHelloForBusinessConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest)this;
+     @Nonnull
+     public DeviceEnrollmentWindowsHelloForBusinessConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

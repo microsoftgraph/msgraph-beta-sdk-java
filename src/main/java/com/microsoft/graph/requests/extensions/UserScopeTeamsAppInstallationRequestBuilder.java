@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserScopeTeamsAppInstallation;
-import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ChatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Scope Teams App Installation Request Builder.
  */
-public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuilder implements IUserScopeTeamsAppInstallationRequestBuilder {
+public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuilder<UserScopeTeamsAppInstallation> {
 
     /**
      * The request builder for the UserScopeTeamsAppInstallation
@@ -30,7 +31,7 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserScopeTeamsAppInstallationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserScopeTeamsAppInstallationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserScopeTeamsAppInstallationRequest instance
+     * @return the UserScopeTeamsAppInstallationRequest instance
      */
-    public IUserScopeTeamsAppInstallationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserScopeTeamsAppInstallationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserScopeTeamsAppInstallationRequest instance
+     * @return the UserScopeTeamsAppInstallationRequest instance
      */
-    public IUserScopeTeamsAppInstallationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserScopeTeamsAppInstallationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserScopeTeamsAppInstallationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,27 +62,30 @@ public class UserScopeTeamsAppInstallationRequestBuilder extends BaseRequestBuil
     /**
      * Gets the request builder for TeamsApp
      *
-     * @return the ITeamsAppWithReferenceRequestBuilder instance
+     * @return the TeamsAppWithReferenceRequestBuilder instance
      */
-    public ITeamsAppWithReferenceRequestBuilder teamsApp() {
+    @Nonnull
+    public TeamsAppWithReferenceRequestBuilder teamsApp() {
         return new TeamsAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsApp"), getClient(), null);
     }
 
     /**
      * Gets the request builder for TeamsAppDefinition
      *
-     * @return the ITeamsAppDefinitionWithReferenceRequestBuilder instance
+     * @return the TeamsAppDefinitionWithReferenceRequestBuilder instance
      */
-    public ITeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition() {
+    @Nonnull
+    public TeamsAppDefinitionWithReferenceRequestBuilder teamsAppDefinition() {
         return new TeamsAppDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("teamsAppDefinition"), getClient(), null);
     }
 
     /**
      * Gets the request builder for Chat
      *
-     * @return the IChatWithReferenceRequestBuilder instance
+     * @return the ChatWithReferenceRequestBuilder instance
      */
-    public IChatWithReferenceRequestBuilder chat() {
+    @Nonnull
+    public ChatWithReferenceRequestBuilder chat() {
         return new ChatWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("chat"), getClient(), null);
     }
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageSubject;
-import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Package Subject Request.
  */
-public class AccessPackageSubjectRequest extends BaseRequest implements IAccessPackageSubjectRequest {
+public class AccessPackageSubjectRequest extends BaseRequest<AccessPackageSubject> {
 	
     /**
      * The request for the AccessPackageSubject
@@ -31,7 +32,7 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageSubjectRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageSubjectRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageSubject.class);
     }
 
@@ -40,7 +41,7 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessPackageSubject> callback) {
+    public void get(@Nonnull final ICallback<? super AccessPackageSubject> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @return the AccessPackageSubject from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessPackageSubject get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessPackageSubject> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessPackageSubject> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @param sourceAccessPackageSubject the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageSubject sourceAccessPackageSubject, final ICallback<? super AccessPackageSubject> callback) {
+    public void patch(@Nonnull final AccessPackageSubject sourceAccessPackageSubject, @Nonnull final ICallback<? super AccessPackageSubject> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageSubject);
     }
 
@@ -89,7 +91,8 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @return the updated AccessPackageSubject
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageSubject patch(final AccessPackageSubject sourceAccessPackageSubject) throws ClientException {
+    @Nullable
+    public AccessPackageSubject patch(@Nonnull final AccessPackageSubject sourceAccessPackageSubject) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessPackageSubject);
     }
 
@@ -99,7 +102,7 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @param newAccessPackageSubject the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageSubject newAccessPackageSubject, final ICallback<? super AccessPackageSubject> callback) {
+    public void post(@Nonnull final AccessPackageSubject newAccessPackageSubject, @Nonnull final ICallback<? super AccessPackageSubject> callback) {
         send(HttpMethod.POST, callback, newAccessPackageSubject);
     }
 
@@ -110,7 +113,8 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @return the created AccessPackageSubject
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageSubject post(final AccessPackageSubject newAccessPackageSubject) throws ClientException {
+    @Nullable
+    public AccessPackageSubject post(@Nonnull final AccessPackageSubject newAccessPackageSubject) throws ClientException {
         return send(HttpMethod.POST, newAccessPackageSubject);
     }
 
@@ -120,7 +124,7 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @param newAccessPackageSubject the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageSubject newAccessPackageSubject, final ICallback<? super AccessPackageSubject> callback) {
+    public void put(@Nonnull final AccessPackageSubject newAccessPackageSubject, @Nonnull final ICallback<? super AccessPackageSubject> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageSubject);
     }
 
@@ -131,7 +135,8 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @return the created AccessPackageSubject
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageSubject put(final AccessPackageSubject newAccessPackageSubject) throws ClientException {
+    @Nullable
+    public AccessPackageSubject put(@Nonnull final AccessPackageSubject newAccessPackageSubject) throws ClientException {
         return send(HttpMethod.PUT, newAccessPackageSubject);
     }
 
@@ -141,9 +146,10 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessPackageSubjectRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessPackageSubjectRequest)this;
+     @Nonnull
+     public AccessPackageSubjectRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class AccessPackageSubjectRequest extends BaseRequest implements IAccessP
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessPackageSubjectRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageSubjectRequest)this;
+     @Nonnull
+     public AccessPackageSubjectRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

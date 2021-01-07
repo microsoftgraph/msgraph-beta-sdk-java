@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSTrustedRootCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSTrusted Root Certificate Request.
  */
-public class MacOSTrustedRootCertificateRequest extends BaseRequest implements IMacOSTrustedRootCertificateRequest {
+public class MacOSTrustedRootCertificateRequest extends BaseRequest<MacOSTrustedRootCertificate> {
 	
     /**
      * The request for the MacOSTrustedRootCertificate
@@ -29,7 +31,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSTrustedRootCertificateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSTrustedRootCertificateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSTrustedRootCertificate.class);
     }
 
@@ -38,7 +40,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSTrustedRootCertificate> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @return the MacOSTrustedRootCertificate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSTrustedRootCertificate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSTrustedRootCertificate> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param sourceMacOSTrustedRootCertificate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
+    public void patch(@Nonnull final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate, @Nonnull final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSTrustedRootCertificate);
     }
 
@@ -87,7 +90,8 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @return the updated MacOSTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSTrustedRootCertificate patch(final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public MacOSTrustedRootCertificate patch(@Nonnull final MacOSTrustedRootCertificate sourceMacOSTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSTrustedRootCertificate);
     }
 
@@ -97,7 +101,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param newMacOSTrustedRootCertificate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
+    public void post(@Nonnull final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, @Nonnull final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.POST, callback, newMacOSTrustedRootCertificate);
     }
 
@@ -108,7 +112,8 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @return the created MacOSTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSTrustedRootCertificate post(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public MacOSTrustedRootCertificate post(@Nonnull final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.POST, newMacOSTrustedRootCertificate);
     }
 
@@ -118,7 +123,7 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param newMacOSTrustedRootCertificate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, final ICallback<? super MacOSTrustedRootCertificate> callback) {
+    public void put(@Nonnull final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate, @Nonnull final ICallback<? super MacOSTrustedRootCertificate> callback) {
         send(HttpMethod.PUT, callback, newMacOSTrustedRootCertificate);
     }
 
@@ -129,7 +134,8 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @return the created MacOSTrustedRootCertificate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSTrustedRootCertificate put(final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException {
+    @Nullable
+    public MacOSTrustedRootCertificate put(@Nonnull final MacOSTrustedRootCertificate newMacOSTrustedRootCertificate) throws ClientException {
         return send(HttpMethod.PUT, newMacOSTrustedRootCertificate);
     }
 
@@ -139,9 +145,10 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSTrustedRootCertificateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSTrustedRootCertificateRequest)this;
+     @Nonnull
+     public MacOSTrustedRootCertificateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MacOSTrustedRootCertificateRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSTrustedRootCertificateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSTrustedRootCertificateRequest)this;
+     @Nonnull
+     public MacOSTrustedRootCertificateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

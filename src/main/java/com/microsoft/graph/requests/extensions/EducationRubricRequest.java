@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationRubric;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Rubric Request.
  */
-public class EducationRubricRequest extends BaseRequest implements IEducationRubricRequest {
+public class EducationRubricRequest extends BaseRequest<EducationRubric> {
 	
     /**
      * The request for the EducationRubric
@@ -29,7 +31,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationRubricRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationRubricRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationRubric.class);
     }
 
@@ -38,7 +40,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationRubric> callback) {
+    public void get(@Nonnull final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @return the EducationRubric from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationRubric get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationRubric> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param sourceEducationRubric the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationRubric sourceEducationRubric, final ICallback<? super EducationRubric> callback) {
+    public void patch(@Nonnull final EducationRubric sourceEducationRubric, @Nonnull final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationRubric);
     }
 
@@ -87,7 +90,8 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @return the updated EducationRubric
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationRubric patch(final EducationRubric sourceEducationRubric) throws ClientException {
+    @Nullable
+    public EducationRubric patch(@Nonnull final EducationRubric sourceEducationRubric) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationRubric);
     }
 
@@ -97,7 +101,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param newEducationRubric the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationRubric newEducationRubric, final ICallback<? super EducationRubric> callback) {
+    public void post(@Nonnull final EducationRubric newEducationRubric, @Nonnull final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.POST, callback, newEducationRubric);
     }
 
@@ -108,7 +112,8 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @return the created EducationRubric
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationRubric post(final EducationRubric newEducationRubric) throws ClientException {
+    @Nullable
+    public EducationRubric post(@Nonnull final EducationRubric newEducationRubric) throws ClientException {
         return send(HttpMethod.POST, newEducationRubric);
     }
 
@@ -118,7 +123,7 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param newEducationRubric the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationRubric newEducationRubric, final ICallback<? super EducationRubric> callback) {
+    public void put(@Nonnull final EducationRubric newEducationRubric, @Nonnull final ICallback<? super EducationRubric> callback) {
         send(HttpMethod.PUT, callback, newEducationRubric);
     }
 
@@ -129,7 +134,8 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @return the created EducationRubric
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationRubric put(final EducationRubric newEducationRubric) throws ClientException {
+    @Nullable
+    public EducationRubric put(@Nonnull final EducationRubric newEducationRubric) throws ClientException {
         return send(HttpMethod.PUT, newEducationRubric);
     }
 
@@ -139,9 +145,10 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationRubricRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationRubricRequest)this;
+     @Nonnull
+     public EducationRubricRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EducationRubricRequest extends BaseRequest implements IEducationRub
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationRubricRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationRubricRequest)this;
+     @Nonnull
+     public EducationRubricRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

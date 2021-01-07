@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtectionPolicy;
-import com.microsoft.graph.requests.extensions.IInformationProtectionLabelCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionLabelRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Information Protection Policy Request.
  */
-public class InformationProtectionPolicyRequest extends BaseRequest implements IInformationProtectionPolicyRequest {
+public class InformationProtectionPolicyRequest extends BaseRequest<InformationProtectionPolicy> {
 	
     /**
      * The request for the InformationProtectionPolicy
@@ -33,7 +33,7 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InformationProtectionPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InformationProtectionPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, InformationProtectionPolicy.class);
     }
 
@@ -42,7 +42,7 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super InformationProtectionPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super InformationProtectionPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @return the InformationProtectionPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public InformationProtectionPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super InformationProtectionPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super InformationProtectionPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @param sourceInformationProtectionPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final InformationProtectionPolicy sourceInformationProtectionPolicy, final ICallback<? super InformationProtectionPolicy> callback) {
+    public void patch(@Nonnull final InformationProtectionPolicy sourceInformationProtectionPolicy, @Nonnull final ICallback<? super InformationProtectionPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceInformationProtectionPolicy);
     }
 
@@ -91,7 +92,8 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @return the updated InformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InformationProtectionPolicy patch(final InformationProtectionPolicy sourceInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public InformationProtectionPolicy patch(@Nonnull final InformationProtectionPolicy sourceInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceInformationProtectionPolicy);
     }
 
@@ -101,7 +103,7 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @param newInformationProtectionPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final InformationProtectionPolicy newInformationProtectionPolicy, final ICallback<? super InformationProtectionPolicy> callback) {
+    public void post(@Nonnull final InformationProtectionPolicy newInformationProtectionPolicy, @Nonnull final ICallback<? super InformationProtectionPolicy> callback) {
         send(HttpMethod.POST, callback, newInformationProtectionPolicy);
     }
 
@@ -112,7 +114,8 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @return the created InformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InformationProtectionPolicy post(final InformationProtectionPolicy newInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public InformationProtectionPolicy post(@Nonnull final InformationProtectionPolicy newInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.POST, newInformationProtectionPolicy);
     }
 
@@ -122,7 +125,7 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @param newInformationProtectionPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final InformationProtectionPolicy newInformationProtectionPolicy, final ICallback<? super InformationProtectionPolicy> callback) {
+    public void put(@Nonnull final InformationProtectionPolicy newInformationProtectionPolicy, @Nonnull final ICallback<? super InformationProtectionPolicy> callback) {
         send(HttpMethod.PUT, callback, newInformationProtectionPolicy);
     }
 
@@ -133,7 +136,8 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @return the created InformationProtectionPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public InformationProtectionPolicy put(final InformationProtectionPolicy newInformationProtectionPolicy) throws ClientException {
+    @Nullable
+    public InformationProtectionPolicy put(@Nonnull final InformationProtectionPolicy newInformationProtectionPolicy) throws ClientException {
         return send(HttpMethod.PUT, newInformationProtectionPolicy);
     }
 
@@ -143,9 +147,10 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IInformationProtectionPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (InformationProtectionPolicyRequest)this;
+     @Nonnull
+     public InformationProtectionPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class InformationProtectionPolicyRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IInformationProtectionPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (InformationProtectionPolicyRequest)this;
+     @Nonnull
+     public InformationProtectionPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -13,18 +13,15 @@ import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptRemediationHistory;
 import com.microsoft.graph.models.generated.GlobalDeviceHealthScriptState;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptRemediationSummary;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Health Script Request.
  */
-public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHealthScriptRequest {
+public class DeviceHealthScriptRequest extends BaseRequest<DeviceHealthScript> {
 	
     /**
      * The request for the DeviceHealthScript
@@ -43,7 +40,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceHealthScriptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceHealthScriptRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceHealthScript.class);
     }
 
@@ -52,7 +49,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceHealthScript> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +59,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @return the DeviceHealthScript from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceHealthScript get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +69,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceHealthScript> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +88,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param sourceDeviceHealthScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceHealthScript sourceDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback) {
+    public void patch(@Nonnull final DeviceHealthScript sourceDeviceHealthScript, @Nonnull final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceHealthScript);
     }
 
@@ -101,7 +99,8 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @return the updated DeviceHealthScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceHealthScript patch(final DeviceHealthScript sourceDeviceHealthScript) throws ClientException {
+    @Nullable
+    public DeviceHealthScript patch(@Nonnull final DeviceHealthScript sourceDeviceHealthScript) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceHealthScript);
     }
 
@@ -111,7 +110,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param newDeviceHealthScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceHealthScript newDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback) {
+    public void post(@Nonnull final DeviceHealthScript newDeviceHealthScript, @Nonnull final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.POST, callback, newDeviceHealthScript);
     }
 
@@ -122,7 +121,8 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @return the created DeviceHealthScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceHealthScript post(final DeviceHealthScript newDeviceHealthScript) throws ClientException {
+    @Nullable
+    public DeviceHealthScript post(@Nonnull final DeviceHealthScript newDeviceHealthScript) throws ClientException {
         return send(HttpMethod.POST, newDeviceHealthScript);
     }
 
@@ -132,7 +132,7 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param newDeviceHealthScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceHealthScript newDeviceHealthScript, final ICallback<? super DeviceHealthScript> callback) {
+    public void put(@Nonnull final DeviceHealthScript newDeviceHealthScript, @Nonnull final ICallback<? super DeviceHealthScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceHealthScript);
     }
 
@@ -143,7 +143,8 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @return the created DeviceHealthScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceHealthScript put(final DeviceHealthScript newDeviceHealthScript) throws ClientException {
+    @Nullable
+    public DeviceHealthScript put(@Nonnull final DeviceHealthScript newDeviceHealthScript) throws ClientException {
         return send(HttpMethod.PUT, newDeviceHealthScript);
     }
 
@@ -153,9 +154,10 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceHealthScriptRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceHealthScriptRequest)this;
+     @Nonnull
+     public DeviceHealthScriptRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,9 +166,10 @@ public class DeviceHealthScriptRequest extends BaseRequest implements IDeviceHea
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceHealthScriptRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceHealthScriptRequest)this;
+     @Nonnull
+     public DeviceHealthScriptRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

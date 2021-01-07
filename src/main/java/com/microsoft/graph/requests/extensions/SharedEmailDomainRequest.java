@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedEmailDomain;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared Email Domain Request.
  */
-public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmailDomainRequest {
+public class SharedEmailDomainRequest extends BaseRequest<SharedEmailDomain> {
 	
     /**
      * The request for the SharedEmailDomain
@@ -29,7 +31,7 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedEmailDomainRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedEmailDomainRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedEmailDomain.class);
     }
 
@@ -38,7 +40,7 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SharedEmailDomain> callback) {
+    public void get(@Nonnull final ICallback<? super SharedEmailDomain> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @return the SharedEmailDomain from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SharedEmailDomain get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SharedEmailDomain> callback) {
+    public void delete(@Nonnull final ICallback<? super SharedEmailDomain> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @param sourceSharedEmailDomain the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharedEmailDomain sourceSharedEmailDomain, final ICallback<? super SharedEmailDomain> callback) {
+    public void patch(@Nonnull final SharedEmailDomain sourceSharedEmailDomain, @Nonnull final ICallback<? super SharedEmailDomain> callback) {
         send(HttpMethod.PATCH, callback, sourceSharedEmailDomain);
     }
 
@@ -87,7 +90,8 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @return the updated SharedEmailDomain
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedEmailDomain patch(final SharedEmailDomain sourceSharedEmailDomain) throws ClientException {
+    @Nullable
+    public SharedEmailDomain patch(@Nonnull final SharedEmailDomain sourceSharedEmailDomain) throws ClientException {
         return send(HttpMethod.PATCH, sourceSharedEmailDomain);
     }
 
@@ -97,7 +101,7 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @param newSharedEmailDomain the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharedEmailDomain newSharedEmailDomain, final ICallback<? super SharedEmailDomain> callback) {
+    public void post(@Nonnull final SharedEmailDomain newSharedEmailDomain, @Nonnull final ICallback<? super SharedEmailDomain> callback) {
         send(HttpMethod.POST, callback, newSharedEmailDomain);
     }
 
@@ -108,7 +112,8 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @return the created SharedEmailDomain
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedEmailDomain post(final SharedEmailDomain newSharedEmailDomain) throws ClientException {
+    @Nullable
+    public SharedEmailDomain post(@Nonnull final SharedEmailDomain newSharedEmailDomain) throws ClientException {
         return send(HttpMethod.POST, newSharedEmailDomain);
     }
 
@@ -118,7 +123,7 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @param newSharedEmailDomain the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharedEmailDomain newSharedEmailDomain, final ICallback<? super SharedEmailDomain> callback) {
+    public void put(@Nonnull final SharedEmailDomain newSharedEmailDomain, @Nonnull final ICallback<? super SharedEmailDomain> callback) {
         send(HttpMethod.PUT, callback, newSharedEmailDomain);
     }
 
@@ -129,7 +134,8 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @return the created SharedEmailDomain
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedEmailDomain put(final SharedEmailDomain newSharedEmailDomain) throws ClientException {
+    @Nullable
+    public SharedEmailDomain put(@Nonnull final SharedEmailDomain newSharedEmailDomain) throws ClientException {
         return send(HttpMethod.PUT, newSharedEmailDomain);
     }
 
@@ -139,9 +145,10 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @param value the select clause
      * @return the updated request
      */
-     public ISharedEmailDomainRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharedEmailDomainRequest)this;
+     @Nonnull
+     public SharedEmailDomainRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SharedEmailDomainRequest extends BaseRequest implements ISharedEmai
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharedEmailDomainRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharedEmailDomainRequest)this;
+     @Nonnull
+     public SharedEmailDomainRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

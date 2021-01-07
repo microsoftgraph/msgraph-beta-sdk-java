@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthDevicePerformance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Experience Analytics App Health Device Performance Request.
  */
-public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends BaseRequest implements IUserExperienceAnalyticsAppHealthDevicePerformanceRequest {
+public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends BaseRequest<UserExperienceAnalyticsAppHealthDevicePerformance> {
 	
     /**
      * The request for the UserExperienceAnalyticsAppHealthDevicePerformance
@@ -29,7 +31,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsAppHealthDevicePerformanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsAppHealthDevicePerformanceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsAppHealthDevicePerformance.class);
     }
 
@@ -38,7 +40,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void get(@Nonnull final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @return the UserExperienceAnalyticsAppHealthDevicePerformance from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserExperienceAnalyticsAppHealthDevicePerformance get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void delete(@Nonnull final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param sourceUserExperienceAnalyticsAppHealthDevicePerformance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void patch(@Nonnull final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance, @Nonnull final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -87,7 +90,8 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @return the updated UserExperienceAnalyticsAppHealthDevicePerformance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsAppHealthDevicePerformance patch(final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsAppHealthDevicePerformance patch(@Nonnull final UserExperienceAnalyticsAppHealthDevicePerformance sourceUserExperienceAnalyticsAppHealthDevicePerformance) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -97,7 +101,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param newUserExperienceAnalyticsAppHealthDevicePerformance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void post(@Nonnull final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, @Nonnull final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -108,7 +112,8 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @return the created UserExperienceAnalyticsAppHealthDevicePerformance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsAppHealthDevicePerformance post(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsAppHealthDevicePerformance post(@Nonnull final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance) throws ClientException {
         return send(HttpMethod.POST, newUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -118,7 +123,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param newUserExperienceAnalyticsAppHealthDevicePerformance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
+    public void put(@Nonnull final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance, @Nonnull final ICallback<? super UserExperienceAnalyticsAppHealthDevicePerformance> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -129,7 +134,8 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @return the created UserExperienceAnalyticsAppHealthDevicePerformance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsAppHealthDevicePerformance put(final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsAppHealthDevicePerformance put(@Nonnull final UserExperienceAnalyticsAppHealthDevicePerformance newUserExperienceAnalyticsAppHealthDevicePerformance) throws ClientException {
         return send(HttpMethod.PUT, newUserExperienceAnalyticsAppHealthDevicePerformance);
     }
 
@@ -139,9 +145,10 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param value the select clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsAppHealthDevicePerformanceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserExperienceAnalyticsAppHealthDevicePerformanceRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsAppHealthDevicePerformanceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceRequest extends Ba
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsAppHealthDevicePerformanceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsAppHealthDevicePerformanceRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsAppHealthDevicePerformanceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExactMatchSession;
-import com.microsoft.graph.requests.extensions.IExactMatchUploadAgentRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExactMatchUploadAgentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Exact Match Session Request Builder.
  */
-public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implements IExactMatchSessionRequestBuilder {
+public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder<ExactMatchSession> {
 
     /**
      * The request builder for the ExactMatchSession
@@ -30,7 +31,7 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchSessionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExactMatchSessionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IExactMatchSessionRequest instance
+     * @return the ExactMatchSessionRequest instance
      */
-    public IExactMatchSessionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ExactMatchSessionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IExactMatchSessionRequest instance
+     * @return the ExactMatchSessionRequest instance
      */
-    public IExactMatchSessionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ExactMatchSessionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ExactMatchSessionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,21 +62,37 @@ public class ExactMatchSessionRequestBuilder extends BaseRequestBuilder implemen
     /**
      * Gets the request builder for ExactMatchUploadAgent
      *
-     * @return the IExactMatchUploadAgentRequestBuilder instance
+     * @return the ExactMatchUploadAgentRequestBuilder instance
      */
-    public IExactMatchUploadAgentRequestBuilder uploadAgent() {
+    @Nonnull
+    public ExactMatchUploadAgentRequestBuilder uploadAgent() {
         return new ExactMatchUploadAgentRequestBuilder(getRequestUrlWithAdditionalSegment("uploadAgent"), getClient(), null);
     }
 
-    public IExactMatchSessionCancelRequestBuilder cancel() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ExactMatchSessionCancelRequestBuilder cancel() {
         return new ExactMatchSessionCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.cancel"), getClient(), null);
     }
 
-    public IExactMatchSessionRenewRequestBuilder renew() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ExactMatchSessionRenewRequestBuilder renew() {
         return new ExactMatchSessionRenewRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.renew"), getClient(), null);
     }
 
-    public IExactMatchSessionCommitRequestBuilder commit() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ExactMatchSessionCommitRequestBuilder commit() {
         return new ExactMatchSessionCommitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.commit"), getClient(), null);
     }
 }

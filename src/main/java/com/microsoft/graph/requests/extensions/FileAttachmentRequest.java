@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.FileAttachment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the File Attachment Request.
  */
-public class FileAttachmentRequest extends BaseRequest implements IFileAttachmentRequest {
+public class FileAttachmentRequest extends BaseRequest<FileAttachment> {
 	
     /**
      * The request for the FileAttachment
@@ -29,7 +31,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FileAttachmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FileAttachmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, FileAttachment.class);
     }
 
@@ -38,7 +40,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super FileAttachment> callback) {
+    public void get(@Nonnull final ICallback<? super FileAttachment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @return the FileAttachment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public FileAttachment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super FileAttachment> callback) {
+    public void delete(@Nonnull final ICallback<? super FileAttachment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param sourceFileAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final FileAttachment sourceFileAttachment, final ICallback<? super FileAttachment> callback) {
+    public void patch(@Nonnull final FileAttachment sourceFileAttachment, @Nonnull final ICallback<? super FileAttachment> callback) {
         send(HttpMethod.PATCH, callback, sourceFileAttachment);
     }
 
@@ -87,7 +90,8 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @return the updated FileAttachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FileAttachment patch(final FileAttachment sourceFileAttachment) throws ClientException {
+    @Nullable
+    public FileAttachment patch(@Nonnull final FileAttachment sourceFileAttachment) throws ClientException {
         return send(HttpMethod.PATCH, sourceFileAttachment);
     }
 
@@ -97,7 +101,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param newFileAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final FileAttachment newFileAttachment, final ICallback<? super FileAttachment> callback) {
+    public void post(@Nonnull final FileAttachment newFileAttachment, @Nonnull final ICallback<? super FileAttachment> callback) {
         send(HttpMethod.POST, callback, newFileAttachment);
     }
 
@@ -108,7 +112,8 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @return the created FileAttachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FileAttachment post(final FileAttachment newFileAttachment) throws ClientException {
+    @Nullable
+    public FileAttachment post(@Nonnull final FileAttachment newFileAttachment) throws ClientException {
         return send(HttpMethod.POST, newFileAttachment);
     }
 
@@ -118,7 +123,7 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param newFileAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final FileAttachment newFileAttachment, final ICallback<? super FileAttachment> callback) {
+    public void put(@Nonnull final FileAttachment newFileAttachment, @Nonnull final ICallback<? super FileAttachment> callback) {
         send(HttpMethod.PUT, callback, newFileAttachment);
     }
 
@@ -129,7 +134,8 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @return the created FileAttachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public FileAttachment put(final FileAttachment newFileAttachment) throws ClientException {
+    @Nullable
+    public FileAttachment put(@Nonnull final FileAttachment newFileAttachment) throws ClientException {
         return send(HttpMethod.PUT, newFileAttachment);
     }
 
@@ -139,9 +145,10 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param value the select clause
      * @return the updated request
      */
-     public IFileAttachmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (FileAttachmentRequest)this;
+     @Nonnull
+     public FileAttachmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class FileAttachmentRequest extends BaseRequest implements IFileAttachmen
      * @param value the expand clause
      * @return the updated request
      */
-     public IFileAttachmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FileAttachmentRequest)this;
+     @Nonnull
+     public FileAttachmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

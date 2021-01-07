@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonInterest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Interest Request.
  */
-public class PersonInterestRequest extends BaseRequest implements IPersonInterestRequest {
+public class PersonInterestRequest extends BaseRequest<PersonInterest> {
 	
     /**
      * The request for the PersonInterest
@@ -29,7 +31,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonInterestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonInterestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonInterest.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonInterest> callback) {
+    public void get(@Nonnull final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @return the PersonInterest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonInterest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonInterest> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param sourcePersonInterest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonInterest sourcePersonInterest, final ICallback<? super PersonInterest> callback) {
+    public void patch(@Nonnull final PersonInterest sourcePersonInterest, @Nonnull final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonInterest);
     }
 
@@ -87,7 +90,8 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @return the updated PersonInterest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonInterest patch(final PersonInterest sourcePersonInterest) throws ClientException {
+    @Nullable
+    public PersonInterest patch(@Nonnull final PersonInterest sourcePersonInterest) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonInterest);
     }
 
@@ -97,7 +101,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param newPersonInterest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonInterest newPersonInterest, final ICallback<? super PersonInterest> callback) {
+    public void post(@Nonnull final PersonInterest newPersonInterest, @Nonnull final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.POST, callback, newPersonInterest);
     }
 
@@ -108,7 +112,8 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @return the created PersonInterest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonInterest post(final PersonInterest newPersonInterest) throws ClientException {
+    @Nullable
+    public PersonInterest post(@Nonnull final PersonInterest newPersonInterest) throws ClientException {
         return send(HttpMethod.POST, newPersonInterest);
     }
 
@@ -118,7 +123,7 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param newPersonInterest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonInterest newPersonInterest, final ICallback<? super PersonInterest> callback) {
+    public void put(@Nonnull final PersonInterest newPersonInterest, @Nonnull final ICallback<? super PersonInterest> callback) {
         send(HttpMethod.PUT, callback, newPersonInterest);
     }
 
@@ -129,7 +134,8 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @return the created PersonInterest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonInterest put(final PersonInterest newPersonInterest) throws ClientException {
+    @Nullable
+    public PersonInterest put(@Nonnull final PersonInterest newPersonInterest) throws ClientException {
         return send(HttpMethod.PUT, newPersonInterest);
     }
 
@@ -139,9 +145,10 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonInterestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonInterestRequest)this;
+     @Nonnull
+     public PersonInterestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonInterestRequest extends BaseRequest implements IPersonInteres
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonInterestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonInterestRequest)this;
+     @Nonnull
+     public PersonInterestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

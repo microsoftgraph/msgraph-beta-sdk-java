@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalGroup;
-import com.microsoft.graph.requests.extensions.IExternalGroupMemberCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupMemberRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the External Group Request.
  */
-public class ExternalGroupRequest extends BaseRequest implements IExternalGroupRequest {
+public class ExternalGroupRequest extends BaseRequest<ExternalGroup> {
 	
     /**
      * The request for the ExternalGroup
@@ -33,7 +33,7 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExternalGroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExternalGroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExternalGroup.class);
     }
 
@@ -42,7 +42,7 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExternalGroup> callback) {
+    public void get(@Nonnull final ICallback<? super ExternalGroup> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @return the ExternalGroup from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExternalGroup get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExternalGroup> callback) {
+    public void delete(@Nonnull final ICallback<? super ExternalGroup> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @param sourceExternalGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExternalGroup sourceExternalGroup, final ICallback<? super ExternalGroup> callback) {
+    public void patch(@Nonnull final ExternalGroup sourceExternalGroup, @Nonnull final ICallback<? super ExternalGroup> callback) {
         send(HttpMethod.PATCH, callback, sourceExternalGroup);
     }
 
@@ -91,7 +92,8 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @return the updated ExternalGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalGroup patch(final ExternalGroup sourceExternalGroup) throws ClientException {
+    @Nullable
+    public ExternalGroup patch(@Nonnull final ExternalGroup sourceExternalGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourceExternalGroup);
     }
 
@@ -101,7 +103,7 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @param newExternalGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExternalGroup newExternalGroup, final ICallback<? super ExternalGroup> callback) {
+    public void post(@Nonnull final ExternalGroup newExternalGroup, @Nonnull final ICallback<? super ExternalGroup> callback) {
         send(HttpMethod.POST, callback, newExternalGroup);
     }
 
@@ -112,7 +114,8 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @return the created ExternalGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalGroup post(final ExternalGroup newExternalGroup) throws ClientException {
+    @Nullable
+    public ExternalGroup post(@Nonnull final ExternalGroup newExternalGroup) throws ClientException {
         return send(HttpMethod.POST, newExternalGroup);
     }
 
@@ -122,7 +125,7 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @param newExternalGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExternalGroup newExternalGroup, final ICallback<? super ExternalGroup> callback) {
+    public void put(@Nonnull final ExternalGroup newExternalGroup, @Nonnull final ICallback<? super ExternalGroup> callback) {
         send(HttpMethod.PUT, callback, newExternalGroup);
     }
 
@@ -133,7 +136,8 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @return the created ExternalGroup
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalGroup put(final ExternalGroup newExternalGroup) throws ClientException {
+    @Nullable
+    public ExternalGroup put(@Nonnull final ExternalGroup newExternalGroup) throws ClientException {
         return send(HttpMethod.PUT, newExternalGroup);
     }
 
@@ -143,9 +147,10 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @param value the select clause
      * @return the updated request
      */
-     public IExternalGroupRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExternalGroupRequest)this;
+     @Nonnull
+     public ExternalGroupRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ExternalGroupRequest extends BaseRequest implements IExternalGroupR
      * @param value the expand clause
      * @return the updated request
      */
-     public IExternalGroupRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExternalGroupRequest)this;
+     @Nonnull
+     public ExternalGroupRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

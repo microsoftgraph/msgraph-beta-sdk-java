@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationDecimalTextBox;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Decimal Text Box Request.
  */
-public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest implements IGroupPolicyPresentationDecimalTextBoxRequest {
+public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest<GroupPolicyPresentationDecimalTextBox> {
 	
     /**
      * The request for the GroupPolicyPresentationDecimalTextBox
@@ -29,7 +31,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationDecimalTextBoxRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationDecimalTextBoxRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationDecimalTextBox.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @return the GroupPolicyPresentationDecimalTextBox from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationDecimalTextBox get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param sourceGroupPolicyPresentationDecimalTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @return the updated GroupPolicyPresentationDecimalTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationDecimalTextBox patch(final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationDecimalTextBox patch(@Nonnull final GroupPolicyPresentationDecimalTextBox sourceGroupPolicyPresentationDecimalTextBox) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param newGroupPolicyPresentationDecimalTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @return the created GroupPolicyPresentationDecimalTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationDecimalTextBox post(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationDecimalTextBox post(@Nonnull final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param newGroupPolicyPresentationDecimalTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationDecimalTextBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @return the created GroupPolicyPresentationDecimalTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationDecimalTextBox put(final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationDecimalTextBox put(@Nonnull final GroupPolicyPresentationDecimalTextBox newGroupPolicyPresentationDecimalTextBox) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationDecimalTextBox);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationDecimalTextBoxRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationDecimalTextBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationDecimalTextBoxRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyPresentationDecimalTextBoxRequest extends BaseRequest im
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationDecimalTextBoxRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationDecimalTextBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationDecimalTextBoxRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

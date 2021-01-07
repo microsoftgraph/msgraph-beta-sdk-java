@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.TenantSetupInfo;
 import com.microsoft.graph.models.extensions.RoleSuccessStatistics;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Privileged Signup Status Request.
  */
-public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivilegedSignupStatusRequest {
+public class PrivilegedSignupStatusRequest extends BaseRequest<PrivilegedSignupStatus> {
 	
     /**
      * The request for the PrivilegedSignupStatus
@@ -31,7 +33,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedSignupStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedSignupStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedSignupStatus.class);
     }
 
@@ -40,7 +42,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrivilegedSignupStatus> callback) {
+    public void get(@Nonnull final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +52,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @return the PrivilegedSignupStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrivilegedSignupStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +62,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrivilegedSignupStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +81,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param sourcePrivilegedSignupStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedSignupStatus sourcePrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback) {
+    public void patch(@Nonnull final PrivilegedSignupStatus sourcePrivilegedSignupStatus, @Nonnull final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedSignupStatus);
     }
 
@@ -89,7 +92,8 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @return the updated PrivilegedSignupStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedSignupStatus patch(final PrivilegedSignupStatus sourcePrivilegedSignupStatus) throws ClientException {
+    @Nullable
+    public PrivilegedSignupStatus patch(@Nonnull final PrivilegedSignupStatus sourcePrivilegedSignupStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrivilegedSignupStatus);
     }
 
@@ -99,7 +103,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param newPrivilegedSignupStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback) {
+    public void post(@Nonnull final PrivilegedSignupStatus newPrivilegedSignupStatus, @Nonnull final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.POST, callback, newPrivilegedSignupStatus);
     }
 
@@ -110,7 +114,8 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @return the created PrivilegedSignupStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedSignupStatus post(final PrivilegedSignupStatus newPrivilegedSignupStatus) throws ClientException {
+    @Nullable
+    public PrivilegedSignupStatus post(@Nonnull final PrivilegedSignupStatus newPrivilegedSignupStatus) throws ClientException {
         return send(HttpMethod.POST, newPrivilegedSignupStatus);
     }
 
@@ -120,7 +125,7 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param newPrivilegedSignupStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedSignupStatus newPrivilegedSignupStatus, final ICallback<? super PrivilegedSignupStatus> callback) {
+    public void put(@Nonnull final PrivilegedSignupStatus newPrivilegedSignupStatus, @Nonnull final ICallback<? super PrivilegedSignupStatus> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedSignupStatus);
     }
 
@@ -131,7 +136,8 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @return the created PrivilegedSignupStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedSignupStatus put(final PrivilegedSignupStatus newPrivilegedSignupStatus) throws ClientException {
+    @Nullable
+    public PrivilegedSignupStatus put(@Nonnull final PrivilegedSignupStatus newPrivilegedSignupStatus) throws ClientException {
         return send(HttpMethod.PUT, newPrivilegedSignupStatus);
     }
 
@@ -141,9 +147,10 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param value the select clause
      * @return the updated request
      */
-     public IPrivilegedSignupStatusRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrivilegedSignupStatusRequest)this;
+     @Nonnull
+     public PrivilegedSignupStatusRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +159,10 @@ public class PrivilegedSignupStatusRequest extends BaseRequest implements IPrivi
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrivilegedSignupStatusRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedSignupStatusRequest)this;
+     @Nonnull
+     public PrivilegedSignupStatusRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

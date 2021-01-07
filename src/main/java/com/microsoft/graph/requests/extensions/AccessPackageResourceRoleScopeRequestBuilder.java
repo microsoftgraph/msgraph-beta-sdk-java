@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRoleScope;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Package Resource Role Scope Request Builder.
  */
-public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBuilder implements IAccessPackageResourceRoleScopeRequestBuilder {
+public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBuilder<AccessPackageResourceRoleScope> {
 
     /**
      * The request builder for the AccessPackageResourceRoleScope
@@ -32,7 +32,7 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceRoleScopeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageResourceRoleScopeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageResourceRoleScopeRequest instance
+     * @return the AccessPackageResourceRoleScopeRequest instance
      */
-    public IAccessPackageResourceRoleScopeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessPackageResourceRoleScopeRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageResourceRoleScopeRequest instance
+     * @return the AccessPackageResourceRoleScopeRequest instance
      */
-    public IAccessPackageResourceRoleScopeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessPackageResourceRoleScopeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class AccessPackageResourceRoleScopeRequestBuilder extends BaseRequestBui
     /**
      * Gets the request builder for AccessPackageResourceRole
      *
-     * @return the IAccessPackageResourceRoleRequestBuilder instance
+     * @return the AccessPackageResourceRoleRequestBuilder instance
      */
-    public IAccessPackageResourceRoleRequestBuilder accessPackageResourceRole() {
+    @Nonnull
+    public AccessPackageResourceRoleRequestBuilder accessPackageResourceRole() {
         return new AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRole"), getClient(), null);
     }
 
     /**
      * Gets the request builder for AccessPackageResourceScope
      *
-     * @return the IAccessPackageResourceScopeRequestBuilder instance
+     * @return the AccessPackageResourceScopeRequestBuilder instance
      */
-    public IAccessPackageResourceScopeRequestBuilder accessPackageResourceScope() {
+    @Nonnull
+    public AccessPackageResourceScopeRequestBuilder accessPackageResourceScope() {
         return new AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScope"), getClient(), null);
     }
 }

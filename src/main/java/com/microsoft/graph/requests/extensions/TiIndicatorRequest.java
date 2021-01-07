@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.models.extensions.ResultInfo;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ti Indicator Request.
  */
-public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorRequest {
+public class TiIndicatorRequest extends BaseRequest<TiIndicator> {
 	
     /**
      * The request for the TiIndicator
@@ -30,7 +32,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TiIndicatorRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TiIndicatorRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TiIndicator.class);
     }
 
@@ -39,7 +41,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TiIndicator> callback) {
+    public void get(@Nonnull final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @return the TiIndicator from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TiIndicator get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TiIndicator> callback) {
+    public void delete(@Nonnull final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param sourceTiIndicator the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TiIndicator sourceTiIndicator, final ICallback<? super TiIndicator> callback) {
+    public void patch(@Nonnull final TiIndicator sourceTiIndicator, @Nonnull final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.PATCH, callback, sourceTiIndicator);
     }
 
@@ -88,7 +91,8 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @return the updated TiIndicator
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TiIndicator patch(final TiIndicator sourceTiIndicator) throws ClientException {
+    @Nullable
+    public TiIndicator patch(@Nonnull final TiIndicator sourceTiIndicator) throws ClientException {
         return send(HttpMethod.PATCH, sourceTiIndicator);
     }
 
@@ -98,7 +102,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param newTiIndicator the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback) {
+    public void post(@Nonnull final TiIndicator newTiIndicator, @Nonnull final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.POST, callback, newTiIndicator);
     }
 
@@ -109,7 +113,8 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @return the created TiIndicator
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TiIndicator post(final TiIndicator newTiIndicator) throws ClientException {
+    @Nullable
+    public TiIndicator post(@Nonnull final TiIndicator newTiIndicator) throws ClientException {
         return send(HttpMethod.POST, newTiIndicator);
     }
 
@@ -119,7 +124,7 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param newTiIndicator the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TiIndicator newTiIndicator, final ICallback<? super TiIndicator> callback) {
+    public void put(@Nonnull final TiIndicator newTiIndicator, @Nonnull final ICallback<? super TiIndicator> callback) {
         send(HttpMethod.PUT, callback, newTiIndicator);
     }
 
@@ -130,7 +135,8 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @return the created TiIndicator
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TiIndicator put(final TiIndicator newTiIndicator) throws ClientException {
+    @Nullable
+    public TiIndicator put(@Nonnull final TiIndicator newTiIndicator) throws ClientException {
         return send(HttpMethod.PUT, newTiIndicator);
     }
 
@@ -140,9 +146,10 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param value the select clause
      * @return the updated request
      */
-     public ITiIndicatorRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TiIndicatorRequest)this;
+     @Nonnull
+     public TiIndicatorRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class TiIndicatorRequest extends BaseRequest implements ITiIndicatorReque
      * @param value the expand clause
      * @return the updated request
      */
-     public ITiIndicatorRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TiIndicatorRequest)this;
+     @Nonnull
+     public TiIndicatorRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

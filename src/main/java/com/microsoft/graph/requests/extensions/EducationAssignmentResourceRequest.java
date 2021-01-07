@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationAssignmentResource;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Assignment Resource Request.
  */
-public class EducationAssignmentResourceRequest extends BaseRequest implements IEducationAssignmentResourceRequest {
+public class EducationAssignmentResourceRequest extends BaseRequest<EducationAssignmentResource> {
 	
     /**
      * The request for the EducationAssignmentResource
@@ -29,7 +31,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationAssignmentResourceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationAssignmentResourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationAssignmentResource.class);
     }
 
@@ -38,7 +40,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationAssignmentResource> callback) {
+    public void get(@Nonnull final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @return the EducationAssignmentResource from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationAssignmentResource get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationAssignmentResource> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param sourceEducationAssignmentResource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationAssignmentResource sourceEducationAssignmentResource, final ICallback<? super EducationAssignmentResource> callback) {
+    public void patch(@Nonnull final EducationAssignmentResource sourceEducationAssignmentResource, @Nonnull final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationAssignmentResource);
     }
 
@@ -87,7 +90,8 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @return the updated EducationAssignmentResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationAssignmentResource patch(final EducationAssignmentResource sourceEducationAssignmentResource) throws ClientException {
+    @Nullable
+    public EducationAssignmentResource patch(@Nonnull final EducationAssignmentResource sourceEducationAssignmentResource) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationAssignmentResource);
     }
 
@@ -97,7 +101,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param newEducationAssignmentResource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<? super EducationAssignmentResource> callback) {
+    public void post(@Nonnull final EducationAssignmentResource newEducationAssignmentResource, @Nonnull final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.POST, callback, newEducationAssignmentResource);
     }
 
@@ -108,7 +112,8 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @return the created EducationAssignmentResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationAssignmentResource post(final EducationAssignmentResource newEducationAssignmentResource) throws ClientException {
+    @Nullable
+    public EducationAssignmentResource post(@Nonnull final EducationAssignmentResource newEducationAssignmentResource) throws ClientException {
         return send(HttpMethod.POST, newEducationAssignmentResource);
     }
 
@@ -118,7 +123,7 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param newEducationAssignmentResource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationAssignmentResource newEducationAssignmentResource, final ICallback<? super EducationAssignmentResource> callback) {
+    public void put(@Nonnull final EducationAssignmentResource newEducationAssignmentResource, @Nonnull final ICallback<? super EducationAssignmentResource> callback) {
         send(HttpMethod.PUT, callback, newEducationAssignmentResource);
     }
 
@@ -129,7 +134,8 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @return the created EducationAssignmentResource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationAssignmentResource put(final EducationAssignmentResource newEducationAssignmentResource) throws ClientException {
+    @Nullable
+    public EducationAssignmentResource put(@Nonnull final EducationAssignmentResource newEducationAssignmentResource) throws ClientException {
         return send(HttpMethod.PUT, newEducationAssignmentResource);
     }
 
@@ -139,9 +145,10 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationAssignmentResourceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationAssignmentResourceRequest)this;
+     @Nonnull
+     public EducationAssignmentResourceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EducationAssignmentResourceRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationAssignmentResourceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationAssignmentResourceRequest)this;
+     @Nonnull
+     public EducationAssignmentResourceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsApp;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamsAppDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsAppDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams App Request.
  */
-public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
+public class TeamsAppRequest extends BaseRequest<TeamsApp> {
 	
     /**
      * The request for the TeamsApp
@@ -33,7 +33,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsApp.class);
     }
 
@@ -42,7 +42,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsApp> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @return the TeamsApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsApp> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param sourceTeamsApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsApp sourceTeamsApp, final ICallback<? super TeamsApp> callback) {
+    public void patch(@Nonnull final TeamsApp sourceTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsApp);
     }
 
@@ -91,7 +92,8 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @return the updated TeamsApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsApp patch(final TeamsApp sourceTeamsApp) throws ClientException {
+    @Nullable
+    public TeamsApp patch(@Nonnull final TeamsApp sourceTeamsApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsApp);
     }
 
@@ -101,7 +103,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param newTeamsApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
+    public void post(@Nonnull final TeamsApp newTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.POST, callback, newTeamsApp);
     }
 
@@ -112,7 +114,8 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @return the created TeamsApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsApp post(final TeamsApp newTeamsApp) throws ClientException {
+    @Nullable
+    public TeamsApp post(@Nonnull final TeamsApp newTeamsApp) throws ClientException {
         return send(HttpMethod.POST, newTeamsApp);
     }
 
@@ -122,7 +125,7 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param newTeamsApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsApp newTeamsApp, final ICallback<? super TeamsApp> callback) {
+    public void put(@Nonnull final TeamsApp newTeamsApp, @Nonnull final ICallback<? super TeamsApp> callback) {
         send(HttpMethod.PUT, callback, newTeamsApp);
     }
 
@@ -133,7 +136,8 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @return the created TeamsApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsApp put(final TeamsApp newTeamsApp) throws ClientException {
+    @Nullable
+    public TeamsApp put(@Nonnull final TeamsApp newTeamsApp) throws ClientException {
         return send(HttpMethod.PUT, newTeamsApp);
     }
 
@@ -143,9 +147,10 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsAppRequest)this;
+     @Nonnull
+     public TeamsAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class TeamsAppRequest extends BaseRequest implements ITeamsAppRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsAppRequest)this;
+     @Nonnull
+     public TeamsAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

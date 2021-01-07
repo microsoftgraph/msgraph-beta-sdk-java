@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Package Assignment Request Request Builder.
  */
-public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBuilder implements IAccessPackageAssignmentRequestRequestBuilder {
+public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBuilder<AccessPackageAssignmentRequest> {
 
     /**
      * The request builder for the AccessPackageAssignmentRequest
@@ -34,7 +33,7 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageAssignmentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageAssignmentRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageAssignmentRequestRequest instance
+     * @return the AccessPackageAssignmentRequestRequest instance
      */
-    public IAccessPackageAssignmentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessPackageAssignmentRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +52,10 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageAssignmentRequestRequest instance
+     * @return the AccessPackageAssignmentRequestRequest instance
      */
-    public IAccessPackageAssignmentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessPackageAssignmentRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,31 +64,39 @@ public class AccessPackageAssignmentRequestRequestBuilder extends BaseRequestBui
     /**
      * Gets the request builder for AccessPackage
      *
-     * @return the IAccessPackageWithReferenceRequestBuilder instance
+     * @return the AccessPackageWithReferenceRequestBuilder instance
      */
-    public IAccessPackageWithReferenceRequestBuilder accessPackage() {
+    @Nonnull
+    public AccessPackageWithReferenceRequestBuilder accessPackage() {
         return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackage"), getClient(), null);
     }
 
     /**
      * Gets the request builder for AccessPackageAssignment
      *
-     * @return the IAccessPackageAssignmentRequestBuilder instance
+     * @return the AccessPackageAssignmentRequestBuilder instance
      */
-    public IAccessPackageAssignmentRequestBuilder accessPackageAssignment() {
+    @Nonnull
+    public AccessPackageAssignmentRequestBuilder accessPackageAssignment() {
         return new AccessPackageAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignment"), getClient(), null);
     }
 
     /**
      * Gets the request builder for AccessPackageSubject
      *
-     * @return the IAccessPackageSubjectRequestBuilder instance
+     * @return the AccessPackageSubjectRequestBuilder instance
      */
-    public IAccessPackageSubjectRequestBuilder requestor() {
+    @Nonnull
+    public AccessPackageSubjectRequestBuilder requestor() {
         return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("requestor"), getClient(), null);
     }
 
-    public IAccessPackageAssignmentRequestCancelRequestBuilder cancel() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentRequestCancelRequestBuilder cancel() {
         return new AccessPackageAssignmentRequestCancelRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Cancel"), getClient(), null);
     }
 }

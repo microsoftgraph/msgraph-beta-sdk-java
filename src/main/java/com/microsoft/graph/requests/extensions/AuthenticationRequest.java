@@ -9,36 +9,24 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Authentication;
-import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEmailAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LongRunningOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -48,7 +36,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Authentication Request.
  */
-public class AuthenticationRequest extends BaseRequest implements IAuthenticationRequest {
+public class AuthenticationRequest extends BaseRequest<Authentication> {
 	
     /**
      * The request for the Authentication
@@ -57,7 +45,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuthenticationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuthenticationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Authentication.class);
     }
 
@@ -66,7 +54,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Authentication> callback) {
+    public void get(@Nonnull final ICallback<? super Authentication> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -76,6 +64,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @return the Authentication from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Authentication get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -85,7 +74,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Authentication> callback) {
+    public void delete(@Nonnull final ICallback<? super Authentication> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -104,7 +93,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param sourceAuthentication the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Authentication sourceAuthentication, final ICallback<? super Authentication> callback) {
+    public void patch(@Nonnull final Authentication sourceAuthentication, @Nonnull final ICallback<? super Authentication> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthentication);
     }
 
@@ -115,7 +104,8 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @return the updated Authentication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Authentication patch(final Authentication sourceAuthentication) throws ClientException {
+    @Nullable
+    public Authentication patch(@Nonnull final Authentication sourceAuthentication) throws ClientException {
         return send(HttpMethod.PATCH, sourceAuthentication);
     }
 
@@ -125,7 +115,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param newAuthentication the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Authentication newAuthentication, final ICallback<? super Authentication> callback) {
+    public void post(@Nonnull final Authentication newAuthentication, @Nonnull final ICallback<? super Authentication> callback) {
         send(HttpMethod.POST, callback, newAuthentication);
     }
 
@@ -136,7 +126,8 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @return the created Authentication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Authentication post(final Authentication newAuthentication) throws ClientException {
+    @Nullable
+    public Authentication post(@Nonnull final Authentication newAuthentication) throws ClientException {
         return send(HttpMethod.POST, newAuthentication);
     }
 
@@ -146,7 +137,7 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param newAuthentication the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Authentication newAuthentication, final ICallback<? super Authentication> callback) {
+    public void put(@Nonnull final Authentication newAuthentication, @Nonnull final ICallback<? super Authentication> callback) {
         send(HttpMethod.PUT, callback, newAuthentication);
     }
 
@@ -157,7 +148,8 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @return the created Authentication
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Authentication put(final Authentication newAuthentication) throws ClientException {
+    @Nullable
+    public Authentication put(@Nonnull final Authentication newAuthentication) throws ClientException {
         return send(HttpMethod.PUT, newAuthentication);
     }
 
@@ -167,9 +159,10 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param value the select clause
      * @return the updated request
      */
-     public IAuthenticationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuthenticationRequest)this;
+     @Nonnull
+     public AuthenticationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -178,9 +171,10 @@ public class AuthenticationRequest extends BaseRequest implements IAuthenticatio
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuthenticationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationRequest)this;
+     @Nonnull
+     public AuthenticationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

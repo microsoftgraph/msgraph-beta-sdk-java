@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedIOSLobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed IOSLob App Request.
  */
-public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSLobAppRequest {
+public class ManagedIOSLobAppRequest extends BaseRequest<ManagedIOSLobApp> {
 	
     /**
      * The request for the ManagedIOSLobApp
@@ -29,7 +31,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedIOSLobAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedIOSLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedIOSLobApp.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedIOSLobApp> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @return the ManagedIOSLobApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedIOSLobApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedIOSLobApp> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param sourceManagedIOSLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedIOSLobApp sourceManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback) {
+    public void patch(@Nonnull final ManagedIOSLobApp sourceManagedIOSLobApp, @Nonnull final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedIOSLobApp);
     }
 
@@ -87,7 +90,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @return the updated ManagedIOSLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedIOSLobApp patch(final ManagedIOSLobApp sourceManagedIOSLobApp) throws ClientException {
+    @Nullable
+    public ManagedIOSLobApp patch(@Nonnull final ManagedIOSLobApp sourceManagedIOSLobApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedIOSLobApp);
     }
 
@@ -97,7 +101,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param newManagedIOSLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback) {
+    public void post(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp, @Nonnull final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.POST, callback, newManagedIOSLobApp);
     }
 
@@ -108,7 +112,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @return the created ManagedIOSLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedIOSLobApp post(final ManagedIOSLobApp newManagedIOSLobApp) throws ClientException {
+    @Nullable
+    public ManagedIOSLobApp post(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp) throws ClientException {
         return send(HttpMethod.POST, newManagedIOSLobApp);
     }
 
@@ -118,7 +123,7 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param newManagedIOSLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedIOSLobApp newManagedIOSLobApp, final ICallback<? super ManagedIOSLobApp> callback) {
+    public void put(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp, @Nonnull final ICallback<? super ManagedIOSLobApp> callback) {
         send(HttpMethod.PUT, callback, newManagedIOSLobApp);
     }
 
@@ -129,7 +134,8 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @return the created ManagedIOSLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedIOSLobApp put(final ManagedIOSLobApp newManagedIOSLobApp) throws ClientException {
+    @Nullable
+    public ManagedIOSLobApp put(@Nonnull final ManagedIOSLobApp newManagedIOSLobApp) throws ClientException {
         return send(HttpMethod.PUT, newManagedIOSLobApp);
     }
 
@@ -139,9 +145,10 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedIOSLobAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedIOSLobAppRequest)this;
+     @Nonnull
+     public ManagedIOSLobAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedIOSLobAppRequest extends BaseRequest implements IManagedIOSL
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedIOSLobAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedIOSLobAppRequest)this;
+     @Nonnull
+     public ManagedIOSLobAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

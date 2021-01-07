@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Financials;
-import com.microsoft.graph.requests.extensions.ICompanyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICompanyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Financials Request.
  */
-public class FinancialsRequest extends BaseRequest implements IFinancialsRequest {
+public class FinancialsRequest extends BaseRequest<Financials> {
 	
     /**
      * The request for the Financials
@@ -33,7 +33,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FinancialsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FinancialsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Financials.class);
     }
 
@@ -42,7 +42,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Financials> callback) {
+    public void get(@Nonnull final ICallback<? super Financials> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @return the Financials from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Financials get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Financials> callback) {
+    public void delete(@Nonnull final ICallback<? super Financials> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param sourceFinancials the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Financials sourceFinancials, final ICallback<? super Financials> callback) {
+    public void patch(@Nonnull final Financials sourceFinancials, @Nonnull final ICallback<? super Financials> callback) {
         send(HttpMethod.PATCH, callback, sourceFinancials);
     }
 
@@ -91,7 +92,8 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @return the updated Financials
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Financials patch(final Financials sourceFinancials) throws ClientException {
+    @Nullable
+    public Financials patch(@Nonnull final Financials sourceFinancials) throws ClientException {
         return send(HttpMethod.PATCH, sourceFinancials);
     }
 
@@ -101,7 +103,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param newFinancials the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Financials newFinancials, final ICallback<? super Financials> callback) {
+    public void post(@Nonnull final Financials newFinancials, @Nonnull final ICallback<? super Financials> callback) {
         send(HttpMethod.POST, callback, newFinancials);
     }
 
@@ -112,7 +114,8 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @return the created Financials
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Financials post(final Financials newFinancials) throws ClientException {
+    @Nullable
+    public Financials post(@Nonnull final Financials newFinancials) throws ClientException {
         return send(HttpMethod.POST, newFinancials);
     }
 
@@ -122,7 +125,7 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param newFinancials the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Financials newFinancials, final ICallback<? super Financials> callback) {
+    public void put(@Nonnull final Financials newFinancials, @Nonnull final ICallback<? super Financials> callback) {
         send(HttpMethod.PUT, callback, newFinancials);
     }
 
@@ -133,7 +136,8 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @return the created Financials
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Financials put(final Financials newFinancials) throws ClientException {
+    @Nullable
+    public Financials put(@Nonnull final Financials newFinancials) throws ClientException {
         return send(HttpMethod.PUT, newFinancials);
     }
 
@@ -143,9 +147,10 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IFinancialsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (FinancialsRequest)this;
+     @Nonnull
+     public FinancialsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class FinancialsRequest extends BaseRequest implements IFinancialsRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IFinancialsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (FinancialsRequest)this;
+     @Nonnull
+     public FinancialsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

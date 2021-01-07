@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Room;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Room Request.
  */
-public class RoomRequest extends BaseRequest implements IRoomRequest {
+public class RoomRequest extends BaseRequest<Room> {
 	
     /**
      * The request for the Room
@@ -29,7 +31,7 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoomRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoomRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Room.class);
     }
 
@@ -38,7 +40,7 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Room> callback) {
+    public void get(@Nonnull final ICallback<? super Room> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @return the Room from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Room get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Room> callback) {
+    public void delete(@Nonnull final ICallback<? super Room> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @param sourceRoom the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Room sourceRoom, final ICallback<? super Room> callback) {
+    public void patch(@Nonnull final Room sourceRoom, @Nonnull final ICallback<? super Room> callback) {
         send(HttpMethod.PATCH, callback, sourceRoom);
     }
 
@@ -87,7 +90,8 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @return the updated Room
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Room patch(final Room sourceRoom) throws ClientException {
+    @Nullable
+    public Room patch(@Nonnull final Room sourceRoom) throws ClientException {
         return send(HttpMethod.PATCH, sourceRoom);
     }
 
@@ -97,7 +101,7 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @param newRoom the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Room newRoom, final ICallback<? super Room> callback) {
+    public void post(@Nonnull final Room newRoom, @Nonnull final ICallback<? super Room> callback) {
         send(HttpMethod.POST, callback, newRoom);
     }
 
@@ -108,7 +112,8 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @return the created Room
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Room post(final Room newRoom) throws ClientException {
+    @Nullable
+    public Room post(@Nonnull final Room newRoom) throws ClientException {
         return send(HttpMethod.POST, newRoom);
     }
 
@@ -118,7 +123,7 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @param newRoom the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Room newRoom, final ICallback<? super Room> callback) {
+    public void put(@Nonnull final Room newRoom, @Nonnull final ICallback<? super Room> callback) {
         send(HttpMethod.PUT, callback, newRoom);
     }
 
@@ -129,7 +134,8 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @return the created Room
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Room put(final Room newRoom) throws ClientException {
+    @Nullable
+    public Room put(@Nonnull final Room newRoom) throws ClientException {
         return send(HttpMethod.PUT, newRoom);
     }
 
@@ -139,9 +145,10 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IRoomRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoomRequest)this;
+     @Nonnull
+     public RoomRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class RoomRequest extends BaseRequest implements IRoomRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IRoomRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoomRequest)this;
+     @Nonnull
+     public RoomRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

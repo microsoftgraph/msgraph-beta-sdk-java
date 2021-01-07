@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
-import com.microsoft.graph.requests.extensions.IAuthenticationContextClassReferenceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationContextClassReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationContextClassReferenceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationContextClassReferenceRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INamedLocationRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NamedLocationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Conditional Access Root Request.
  */
-public class ConditionalAccessRootRequest extends BaseRequest implements IConditionalAccessRootRequest {
+public class ConditionalAccessRootRequest extends BaseRequest<ConditionalAccessRoot> {
 	
     /**
      * The request for the ConditionalAccessRoot
@@ -41,7 +37,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConditionalAccessRootRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConditionalAccessRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ConditionalAccessRoot.class);
     }
 
@@ -50,7 +46,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ConditionalAccessRoot> callback) {
+    public void get(@Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @return the ConditionalAccessRoot from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ConditionalAccessRoot get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ConditionalAccessRoot> callback) {
+    public void delete(@Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param sourceConditionalAccessRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ConditionalAccessRoot sourceConditionalAccessRoot, final ICallback<? super ConditionalAccessRoot> callback) {
+    public void patch(@Nonnull final ConditionalAccessRoot sourceConditionalAccessRoot, @Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
         send(HttpMethod.PATCH, callback, sourceConditionalAccessRoot);
     }
 
@@ -99,7 +96,8 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @return the updated ConditionalAccessRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConditionalAccessRoot patch(final ConditionalAccessRoot sourceConditionalAccessRoot) throws ClientException {
+    @Nullable
+    public ConditionalAccessRoot patch(@Nonnull final ConditionalAccessRoot sourceConditionalAccessRoot) throws ClientException {
         return send(HttpMethod.PATCH, sourceConditionalAccessRoot);
     }
 
@@ -109,7 +107,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param newConditionalAccessRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ConditionalAccessRoot newConditionalAccessRoot, final ICallback<? super ConditionalAccessRoot> callback) {
+    public void post(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot, @Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
         send(HttpMethod.POST, callback, newConditionalAccessRoot);
     }
 
@@ -120,7 +118,8 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @return the created ConditionalAccessRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConditionalAccessRoot post(final ConditionalAccessRoot newConditionalAccessRoot) throws ClientException {
+    @Nullable
+    public ConditionalAccessRoot post(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) throws ClientException {
         return send(HttpMethod.POST, newConditionalAccessRoot);
     }
 
@@ -130,7 +129,7 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param newConditionalAccessRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ConditionalAccessRoot newConditionalAccessRoot, final ICallback<? super ConditionalAccessRoot> callback) {
+    public void put(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot, @Nonnull final ICallback<? super ConditionalAccessRoot> callback) {
         send(HttpMethod.PUT, callback, newConditionalAccessRoot);
     }
 
@@ -141,7 +140,8 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @return the created ConditionalAccessRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ConditionalAccessRoot put(final ConditionalAccessRoot newConditionalAccessRoot) throws ClientException {
+    @Nullable
+    public ConditionalAccessRoot put(@Nonnull final ConditionalAccessRoot newConditionalAccessRoot) throws ClientException {
         return send(HttpMethod.PUT, newConditionalAccessRoot);
     }
 
@@ -151,9 +151,10 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param value the select clause
      * @return the updated request
      */
-     public IConditionalAccessRootRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConditionalAccessRootRequest)this;
+     @Nonnull
+     public ConditionalAccessRootRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class ConditionalAccessRootRequest extends BaseRequest implements ICondit
      * @param value the expand clause
      * @return the updated request
      */
-     public IConditionalAccessRootRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConditionalAccessRootRequest)this;
+     @Nonnull
+     public ConditionalAccessRootRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

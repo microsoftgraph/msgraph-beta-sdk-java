@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.AppLogCollectionRequest;
 import com.microsoft.graph.models.extensions.AppLogCollectionDownloadDetails;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the App Log Collection Request Request Builder.
  */
-public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder implements IAppLogCollectionRequestRequestBuilder {
+public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder<AppLogCollectionRequest> {
 
     /**
      * The request builder for the AppLogCollectionRequest
@@ -29,7 +31,7 @@ public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AppLogCollectionRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AppLogCollectionRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -37,9 +39,10 @@ public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAppLogCollectionRequestRequest instance
+     * @return the AppLogCollectionRequestRequest instance
      */
-    public IAppLogCollectionRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AppLogCollectionRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -47,15 +50,21 @@ public class AppLogCollectionRequestRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAppLogCollectionRequestRequest instance
+     * @return the AppLogCollectionRequestRequest instance
      */
-    public IAppLogCollectionRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AppLogCollectionRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AppLogCollectionRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IAppLogCollectionRequestCreateDownloadUrlRequestBuilder createDownloadUrl() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AppLogCollectionRequestCreateDownloadUrlRequestBuilder createDownloadUrl() {
         return new AppLogCollectionRequestCreateDownloadUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createDownloadUrl"), getClient(), null);
     }
 }

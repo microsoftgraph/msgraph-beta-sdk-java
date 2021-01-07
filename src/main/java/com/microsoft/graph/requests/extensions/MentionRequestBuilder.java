@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Mention;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mention Request Builder.
  */
-public class MentionRequestBuilder extends BaseRequestBuilder implements IMentionRequestBuilder {
+public class MentionRequestBuilder extends BaseRequestBuilder<Mention> {
 
     /**
      * The request builder for the Mention
@@ -28,7 +30,7 @@ public class MentionRequestBuilder extends BaseRequestBuilder implements IMentio
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MentionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MentionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class MentionRequestBuilder extends BaseRequestBuilder implements IMentio
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMentionRequest instance
+     * @return the MentionRequest instance
      */
-    public IMentionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MentionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class MentionRequestBuilder extends BaseRequestBuilder implements IMentio
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMentionRequest instance
+     * @return the MentionRequest instance
      */
-    public IMentionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MentionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MentionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

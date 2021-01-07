@@ -11,50 +11,31 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Credential;
 import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDelegatedPermissionClassificationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDelegatedPermissionClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DelegatedPermissionClassificationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILicenseDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LicenseDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOAuth2PermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OAuth2PermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISynchronizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.SynchronizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -64,7 +45,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Service Principal Request.
  */
-public class ServicePrincipalRequest extends BaseRequest implements IServicePrincipalRequest {
+public class ServicePrincipalRequest extends BaseRequest<ServicePrincipal> {
 	
     /**
      * The request for the ServicePrincipal
@@ -73,7 +54,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ServicePrincipalRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ServicePrincipalRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ServicePrincipal.class);
     }
 
@@ -82,7 +63,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ServicePrincipal> callback) {
+    public void get(@Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -92,6 +73,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @return the ServicePrincipal from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ServicePrincipal get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -101,7 +83,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ServicePrincipal> callback) {
+    public void delete(@Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -120,7 +102,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param sourceServicePrincipal the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ServicePrincipal sourceServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void patch(@Nonnull final ServicePrincipal sourceServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.PATCH, callback, sourceServicePrincipal);
     }
 
@@ -131,7 +113,8 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @return the updated ServicePrincipal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ServicePrincipal patch(final ServicePrincipal sourceServicePrincipal) throws ClientException {
+    @Nullable
+    public ServicePrincipal patch(@Nonnull final ServicePrincipal sourceServicePrincipal) throws ClientException {
         return send(HttpMethod.PATCH, sourceServicePrincipal);
     }
 
@@ -141,7 +124,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param newServicePrincipal the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void post(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.POST, callback, newServicePrincipal);
     }
 
@@ -152,7 +135,8 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @return the created ServicePrincipal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ServicePrincipal post(final ServicePrincipal newServicePrincipal) throws ClientException {
+    @Nullable
+    public ServicePrincipal post(@Nonnull final ServicePrincipal newServicePrincipal) throws ClientException {
         return send(HttpMethod.POST, newServicePrincipal);
     }
 
@@ -162,7 +146,7 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param newServicePrincipal the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ServicePrincipal newServicePrincipal, final ICallback<? super ServicePrincipal> callback) {
+    public void put(@Nonnull final ServicePrincipal newServicePrincipal, @Nonnull final ICallback<? super ServicePrincipal> callback) {
         send(HttpMethod.PUT, callback, newServicePrincipal);
     }
 
@@ -173,7 +157,8 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @return the created ServicePrincipal
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ServicePrincipal put(final ServicePrincipal newServicePrincipal) throws ClientException {
+    @Nullable
+    public ServicePrincipal put(@Nonnull final ServicePrincipal newServicePrincipal) throws ClientException {
         return send(HttpMethod.PUT, newServicePrincipal);
     }
 
@@ -183,9 +168,10 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param value the select clause
      * @return the updated request
      */
-     public IServicePrincipalRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ServicePrincipalRequest)this;
+     @Nonnull
+     public ServicePrincipalRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -194,9 +180,10 @@ public class ServicePrincipalRequest extends BaseRequest implements IServicePrin
      * @param value the expand clause
      * @return the updated request
      */
-     public IServicePrincipalRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ServicePrincipalRequest)this;
+     @Nonnull
+     public ServicePrincipalRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

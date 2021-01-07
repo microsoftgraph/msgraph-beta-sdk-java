@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserConsentRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Consent Request Request Builder.
  */
-public class UserConsentRequestRequestBuilder extends BaseRequestBuilder implements IUserConsentRequestRequestBuilder {
+public class UserConsentRequestRequestBuilder extends BaseRequestBuilder<UserConsentRequest> {
 
     /**
      * The request builder for the UserConsentRequest
@@ -28,7 +30,7 @@ public class UserConsentRequestRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserConsentRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserConsentRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class UserConsentRequestRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserConsentRequestRequest instance
+     * @return the UserConsentRequestRequest instance
      */
-    public IUserConsentRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserConsentRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class UserConsentRequestRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserConsentRequestRequest instance
+     * @return the UserConsentRequestRequest instance
      */
-    public IUserConsentRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserConsentRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserConsentRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,9 +61,10 @@ public class UserConsentRequestRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Gets the request builder for Approval
      *
-     * @return the IApprovalRequestBuilder instance
+     * @return the ApprovalRequestBuilder instance
      */
-    public IApprovalRequestBuilder approval() {
+    @Nonnull
+    public ApprovalRequestBuilder approval() {
         return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approval"), getClient(), null);
     }
 }

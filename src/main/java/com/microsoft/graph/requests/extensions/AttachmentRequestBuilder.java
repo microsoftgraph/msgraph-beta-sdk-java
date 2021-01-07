@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.AttachmentItem;
 import com.microsoft.graph.models.extensions.UploadSession;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Attachment Request Builder.
  */
-public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAttachmentRequestBuilder {
+public class AttachmentRequestBuilder extends BaseRequestBuilder<Attachment> {
 
     /**
      * The request builder for the Attachment
@@ -30,7 +32,7 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AttachmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttachmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +40,10 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAttachmentRequest instance
+     * @return the AttachmentRequest instance
      */
-    public IAttachmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AttachmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +51,10 @@ public class AttachmentRequestBuilder extends BaseRequestBuilder implements IAtt
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAttachmentRequest instance
+     * @return the AttachmentRequest instance
      */
-    public IAttachmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AttachmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AttachmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

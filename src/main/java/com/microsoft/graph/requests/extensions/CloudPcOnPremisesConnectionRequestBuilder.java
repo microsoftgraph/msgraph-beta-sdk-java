@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudPcOnPremisesConnection;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Cloud Pc On Premises Connection Request Builder.
  */
-public class CloudPcOnPremisesConnectionRequestBuilder extends BaseRequestBuilder implements ICloudPcOnPremisesConnectionRequestBuilder {
+public class CloudPcOnPremisesConnectionRequestBuilder extends BaseRequestBuilder<CloudPcOnPremisesConnection> {
 
     /**
      * The request builder for the CloudPcOnPremisesConnection
@@ -28,7 +30,7 @@ public class CloudPcOnPremisesConnectionRequestBuilder extends BaseRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudPcOnPremisesConnectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudPcOnPremisesConnectionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class CloudPcOnPremisesConnectionRequestBuilder extends BaseRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICloudPcOnPremisesConnectionRequest instance
+     * @return the CloudPcOnPremisesConnectionRequest instance
      */
-    public ICloudPcOnPremisesConnectionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CloudPcOnPremisesConnectionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +49,21 @@ public class CloudPcOnPremisesConnectionRequestBuilder extends BaseRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICloudPcOnPremisesConnectionRequest instance
+     * @return the CloudPcOnPremisesConnectionRequest instance
      */
-    public ICloudPcOnPremisesConnectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CloudPcOnPremisesConnectionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CloudPcOnPremisesConnectionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public ICloudPcOnPremisesConnectionRunHealthChecksRequestBuilder runHealthChecks() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CloudPcOnPremisesConnectionRunHealthChecksRequestBuilder runHealthChecks() {
         return new CloudPcOnPremisesConnectionRunHealthChecksRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.runHealthChecks"), getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.LanguageProficiency;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Language Proficiency Request.
  */
-public class LanguageProficiencyRequest extends BaseRequest implements ILanguageProficiencyRequest {
+public class LanguageProficiencyRequest extends BaseRequest<LanguageProficiency> {
 	
     /**
      * The request for the LanguageProficiency
@@ -29,7 +31,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public LanguageProficiencyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public LanguageProficiencyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, LanguageProficiency.class);
     }
 
@@ -38,7 +40,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super LanguageProficiency> callback) {
+    public void get(@Nonnull final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @return the LanguageProficiency from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public LanguageProficiency get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super LanguageProficiency> callback) {
+    public void delete(@Nonnull final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param sourceLanguageProficiency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final LanguageProficiency sourceLanguageProficiency, final ICallback<? super LanguageProficiency> callback) {
+    public void patch(@Nonnull final LanguageProficiency sourceLanguageProficiency, @Nonnull final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.PATCH, callback, sourceLanguageProficiency);
     }
 
@@ -87,7 +90,8 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @return the updated LanguageProficiency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LanguageProficiency patch(final LanguageProficiency sourceLanguageProficiency) throws ClientException {
+    @Nullable
+    public LanguageProficiency patch(@Nonnull final LanguageProficiency sourceLanguageProficiency) throws ClientException {
         return send(HttpMethod.PATCH, sourceLanguageProficiency);
     }
 
@@ -97,7 +101,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param newLanguageProficiency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback) {
+    public void post(@Nonnull final LanguageProficiency newLanguageProficiency, @Nonnull final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.POST, callback, newLanguageProficiency);
     }
 
@@ -108,7 +112,8 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @return the created LanguageProficiency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LanguageProficiency post(final LanguageProficiency newLanguageProficiency) throws ClientException {
+    @Nullable
+    public LanguageProficiency post(@Nonnull final LanguageProficiency newLanguageProficiency) throws ClientException {
         return send(HttpMethod.POST, newLanguageProficiency);
     }
 
@@ -118,7 +123,7 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param newLanguageProficiency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final LanguageProficiency newLanguageProficiency, final ICallback<? super LanguageProficiency> callback) {
+    public void put(@Nonnull final LanguageProficiency newLanguageProficiency, @Nonnull final ICallback<? super LanguageProficiency> callback) {
         send(HttpMethod.PUT, callback, newLanguageProficiency);
     }
 
@@ -129,7 +134,8 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @return the created LanguageProficiency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public LanguageProficiency put(final LanguageProficiency newLanguageProficiency) throws ClientException {
+    @Nullable
+    public LanguageProficiency put(@Nonnull final LanguageProficiency newLanguageProficiency) throws ClientException {
         return send(HttpMethod.PUT, newLanguageProficiency);
     }
 
@@ -139,9 +145,10 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param value the select clause
      * @return the updated request
      */
-     public ILanguageProficiencyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (LanguageProficiencyRequest)this;
+     @Nonnull
+     public LanguageProficiencyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class LanguageProficiencyRequest extends BaseRequest implements ILanguage
      * @param value the expand clause
      * @return the updated request
      */
-     public ILanguageProficiencyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (LanguageProficiencyRequest)this;
+     @Nonnull
+     public LanguageProficiencyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

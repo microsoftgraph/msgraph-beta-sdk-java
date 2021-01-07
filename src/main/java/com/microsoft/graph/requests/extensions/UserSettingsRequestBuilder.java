@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserSettings;
-import com.microsoft.graph.requests.extensions.IRegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.RegionalAndLanguageSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShiftPreferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShiftPreferencesRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the User Settings Request Builder.
  */
-public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IUserSettingsRequestBuilder {
+public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings> {
 
     /**
      * The request builder for the UserSettings
@@ -32,7 +32,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserSettingsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IUserSettingsRequest instance
+     * @return the UserSettingsRequest instance
      */
-    public IUserSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public UserSettingsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IUserSettingsRequest instance
+     * @return the UserSettingsRequest instance
      */
-    public IUserSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public UserSettingsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.UserSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder implements IU
     /**
      * Gets the request builder for RegionalAndLanguageSettings
      *
-     * @return the IRegionalAndLanguageSettingsRequestBuilder instance
+     * @return the RegionalAndLanguageSettingsRequestBuilder instance
      */
-    public IRegionalAndLanguageSettingsRequestBuilder regionalAndLanguageSettings() {
+    @Nonnull
+    public RegionalAndLanguageSettingsRequestBuilder regionalAndLanguageSettings() {
         return new RegionalAndLanguageSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("regionalAndLanguageSettings"), getClient(), null);
     }
 
     /**
      * Gets the request builder for ShiftPreferences
      *
-     * @return the IShiftPreferencesRequestBuilder instance
+     * @return the ShiftPreferencesRequestBuilder instance
      */
-    public IShiftPreferencesRequestBuilder shiftPreferences() {
+    @Nonnull
+    public ShiftPreferencesRequestBuilder shiftPreferences() {
         return new ShiftPreferencesRequestBuilder(getRequestUrlWithAdditionalSegment("shiftPreferences"), getClient(), null);
     }
 }

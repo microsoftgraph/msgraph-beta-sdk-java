@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationRoot;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Root Request Builder.
  */
-public class EducationRootRequestBuilder extends BaseRequestBuilder implements IEducationRootRequestBuilder {
+public class EducationRootRequestBuilder extends BaseRequestBuilder<EducationRoot> {
 
     /**
      * The request builder for the EducationRoot
@@ -44,7 +38,7 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationRootRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationRootRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,9 +46,10 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEducationRootRequest instance
+     * @return the EducationRootRequest instance
      */
-    public IEducationRootRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationRootRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,48 +57,102 @@ public class EducationRootRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationRootRequest instance
+     * @return the EducationRootRequest instance
      */
-    public IEducationRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationRootRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationRootRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IEducationSynchronizationProfileCollectionRequestBuilder synchronizationProfiles() {
+    /**
+     *  Gets a request builder for the EducationSynchronizationProfile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationSynchronizationProfileCollectionRequestBuilder synchronizationProfiles() {
         return new EducationSynchronizationProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("synchronizationProfiles"), getClient(), null);
     }
 
-    public IEducationSynchronizationProfileRequestBuilder synchronizationProfiles(final String id) {
+    /**
+     * Gets a request builder for the EducationSynchronizationProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationSynchronizationProfileRequestBuilder synchronizationProfiles(@Nonnull final String id) {
         return new EducationSynchronizationProfileRequestBuilder(getRequestUrlWithAdditionalSegment("synchronizationProfiles") + "/" + id, getClient(), null);
     }
-    public IEducationClassCollectionRequestBuilder classes() {
+    /**
+     *  Gets a request builder for the EducationClass collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationClassCollectionRequestBuilder classes() {
         return new EducationClassCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("classes"), getClient(), null);
     }
 
-    public IEducationClassRequestBuilder classes(final String id) {
+    /**
+     * Gets a request builder for the EducationClass item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationClassRequestBuilder classes(@Nonnull final String id) {
         return new EducationClassRequestBuilder(getRequestUrlWithAdditionalSegment("classes") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for EducationUser
      *
-     * @return the IEducationUserRequestBuilder instance
+     * @return the EducationUserRequestBuilder instance
      */
-    public IEducationUserRequestBuilder me() {
+    @Nonnull
+    public EducationUserRequestBuilder me() {
         return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("me"), getClient(), null);
     }
-    public IEducationSchoolCollectionRequestBuilder schools() {
+    /**
+     *  Gets a request builder for the EducationSchool collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationSchoolCollectionRequestBuilder schools() {
         return new EducationSchoolCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("schools"), getClient(), null);
     }
 
-    public IEducationSchoolRequestBuilder schools(final String id) {
+    /**
+     * Gets a request builder for the EducationSchool item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationSchoolRequestBuilder schools(@Nonnull final String id) {
         return new EducationSchoolRequestBuilder(getRequestUrlWithAdditionalSegment("schools") + "/" + id, getClient(), null);
     }
-    public IEducationUserCollectionRequestBuilder users() {
+    /**
+     *  Gets a request builder for the EducationUser collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EducationUserCollectionRequestBuilder users() {
         return new EducationUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
-    public IEducationUserRequestBuilder users(final String id) {
+    /**
+     * Gets a request builder for the EducationUser item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EducationUserRequestBuilder users(@Nonnull final String id) {
         return new EducationUserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 }

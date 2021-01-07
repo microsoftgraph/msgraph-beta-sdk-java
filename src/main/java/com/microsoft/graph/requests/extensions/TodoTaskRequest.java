@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTask;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.LinkedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LinkedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Todo Task Request.
  */
-public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
+public class TodoTaskRequest extends BaseRequest<TodoTask> {
 	
     /**
      * The request for the TodoTask
@@ -37,7 +35,7 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTask.class);
     }
 
@@ -46,7 +44,7 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TodoTask> callback) {
+    public void get(@Nonnull final ICallback<? super TodoTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @return the TodoTask from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TodoTask get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TodoTask> callback) {
+    public void delete(@Nonnull final ICallback<? super TodoTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @param sourceTodoTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TodoTask sourceTodoTask, final ICallback<? super TodoTask> callback) {
+    public void patch(@Nonnull final TodoTask sourceTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
         send(HttpMethod.PATCH, callback, sourceTodoTask);
     }
 
@@ -95,7 +94,8 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @return the updated TodoTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TodoTask patch(final TodoTask sourceTodoTask) throws ClientException {
+    @Nullable
+    public TodoTask patch(@Nonnull final TodoTask sourceTodoTask) throws ClientException {
         return send(HttpMethod.PATCH, sourceTodoTask);
     }
 
@@ -105,7 +105,7 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @param newTodoTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TodoTask newTodoTask, final ICallback<? super TodoTask> callback) {
+    public void post(@Nonnull final TodoTask newTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
         send(HttpMethod.POST, callback, newTodoTask);
     }
 
@@ -116,7 +116,8 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @return the created TodoTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TodoTask post(final TodoTask newTodoTask) throws ClientException {
+    @Nullable
+    public TodoTask post(@Nonnull final TodoTask newTodoTask) throws ClientException {
         return send(HttpMethod.POST, newTodoTask);
     }
 
@@ -126,7 +127,7 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @param newTodoTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TodoTask newTodoTask, final ICallback<? super TodoTask> callback) {
+    public void put(@Nonnull final TodoTask newTodoTask, @Nonnull final ICallback<? super TodoTask> callback) {
         send(HttpMethod.PUT, callback, newTodoTask);
     }
 
@@ -137,7 +138,8 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @return the created TodoTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TodoTask put(final TodoTask newTodoTask) throws ClientException {
+    @Nullable
+    public TodoTask put(@Nonnull final TodoTask newTodoTask) throws ClientException {
         return send(HttpMethod.PUT, newTodoTask);
     }
 
@@ -147,9 +149,10 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ITodoTaskRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TodoTaskRequest)this;
+     @Nonnull
+     public TodoTaskRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class TodoTaskRequest extends BaseRequest implements ITodoTaskRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ITodoTaskRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TodoTaskRequest)this;
+     @Nonnull
+     public TodoTaskRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

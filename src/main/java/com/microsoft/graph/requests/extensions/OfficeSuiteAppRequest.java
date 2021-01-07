@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OfficeSuiteApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office Suite App Request.
  */
-public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAppRequest {
+public class OfficeSuiteAppRequest extends BaseRequest<OfficeSuiteApp> {
 	
     /**
      * The request for the OfficeSuiteApp
@@ -29,7 +31,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OfficeSuiteAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OfficeSuiteAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OfficeSuiteApp.class);
     }
 
@@ -38,7 +40,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OfficeSuiteApp> callback) {
+    public void get(@Nonnull final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @return the OfficeSuiteApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OfficeSuiteApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OfficeSuiteApp> callback) {
+    public void delete(@Nonnull final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param sourceOfficeSuiteApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OfficeSuiteApp sourceOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback) {
+    public void patch(@Nonnull final OfficeSuiteApp sourceOfficeSuiteApp, @Nonnull final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.PATCH, callback, sourceOfficeSuiteApp);
     }
 
@@ -87,7 +90,8 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @return the updated OfficeSuiteApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfficeSuiteApp patch(final OfficeSuiteApp sourceOfficeSuiteApp) throws ClientException {
+    @Nullable
+    public OfficeSuiteApp patch(@Nonnull final OfficeSuiteApp sourceOfficeSuiteApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceOfficeSuiteApp);
     }
 
@@ -97,7 +101,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param newOfficeSuiteApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback) {
+    public void post(@Nonnull final OfficeSuiteApp newOfficeSuiteApp, @Nonnull final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.POST, callback, newOfficeSuiteApp);
     }
 
@@ -108,7 +112,8 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @return the created OfficeSuiteApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfficeSuiteApp post(final OfficeSuiteApp newOfficeSuiteApp) throws ClientException {
+    @Nullable
+    public OfficeSuiteApp post(@Nonnull final OfficeSuiteApp newOfficeSuiteApp) throws ClientException {
         return send(HttpMethod.POST, newOfficeSuiteApp);
     }
 
@@ -118,7 +123,7 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param newOfficeSuiteApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OfficeSuiteApp newOfficeSuiteApp, final ICallback<? super OfficeSuiteApp> callback) {
+    public void put(@Nonnull final OfficeSuiteApp newOfficeSuiteApp, @Nonnull final ICallback<? super OfficeSuiteApp> callback) {
         send(HttpMethod.PUT, callback, newOfficeSuiteApp);
     }
 
@@ -129,7 +134,8 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @return the created OfficeSuiteApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OfficeSuiteApp put(final OfficeSuiteApp newOfficeSuiteApp) throws ClientException {
+    @Nullable
+    public OfficeSuiteApp put(@Nonnull final OfficeSuiteApp newOfficeSuiteApp) throws ClientException {
         return send(HttpMethod.PUT, newOfficeSuiteApp);
     }
 
@@ -139,9 +145,10 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param value the select clause
      * @return the updated request
      */
-     public IOfficeSuiteAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OfficeSuiteAppRequest)this;
+     @Nonnull
+     public OfficeSuiteAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class OfficeSuiteAppRequest extends BaseRequest implements IOfficeSuiteAp
      * @param value the expand clause
      * @return the updated request
      */
-     public IOfficeSuiteAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OfficeSuiteAppRequest)this;
+     @Nonnull
+     public OfficeSuiteAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

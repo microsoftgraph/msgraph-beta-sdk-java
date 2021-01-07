@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.JobResponseBase;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Job Response Base Request.
  */
-public class JobResponseBaseRequest extends BaseRequest implements IJobResponseBaseRequest {
+public class JobResponseBaseRequest extends BaseRequest<JobResponseBase> {
 	
     /**
      * The request for the JobResponseBase
@@ -30,10 +32,10 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public JobResponseBaseRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends JobResponseBase> responseClass) {
+    public JobResponseBaseRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends JobResponseBase> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public JobResponseBaseRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public JobResponseBaseRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, JobResponseBase.class);
     }
 
@@ -53,7 +55,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super JobResponseBase> callback) {
+    public void get(@Nonnull final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @return the JobResponseBase from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public JobResponseBase get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super JobResponseBase> callback) {
+    public void delete(@Nonnull final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param sourceJobResponseBase the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final JobResponseBase sourceJobResponseBase, final ICallback<? super JobResponseBase> callback) {
+    public void patch(@Nonnull final JobResponseBase sourceJobResponseBase, @Nonnull final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.PATCH, callback, sourceJobResponseBase);
     }
 
@@ -102,7 +105,8 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @return the updated JobResponseBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public JobResponseBase patch(final JobResponseBase sourceJobResponseBase) throws ClientException {
+    @Nullable
+    public JobResponseBase patch(@Nonnull final JobResponseBase sourceJobResponseBase) throws ClientException {
         return send(HttpMethod.PATCH, sourceJobResponseBase);
     }
 
@@ -112,7 +116,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param newJobResponseBase the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final JobResponseBase newJobResponseBase, final ICallback<? super JobResponseBase> callback) {
+    public void post(@Nonnull final JobResponseBase newJobResponseBase, @Nonnull final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.POST, callback, newJobResponseBase);
     }
 
@@ -123,7 +127,8 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @return the created JobResponseBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public JobResponseBase post(final JobResponseBase newJobResponseBase) throws ClientException {
+    @Nullable
+    public JobResponseBase post(@Nonnull final JobResponseBase newJobResponseBase) throws ClientException {
         return send(HttpMethod.POST, newJobResponseBase);
     }
 
@@ -133,7 +138,7 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param newJobResponseBase the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final JobResponseBase newJobResponseBase, final ICallback<? super JobResponseBase> callback) {
+    public void put(@Nonnull final JobResponseBase newJobResponseBase, @Nonnull final ICallback<? super JobResponseBase> callback) {
         send(HttpMethod.PUT, callback, newJobResponseBase);
     }
 
@@ -144,7 +149,8 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @return the created JobResponseBase
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public JobResponseBase put(final JobResponseBase newJobResponseBase) throws ClientException {
+    @Nullable
+    public JobResponseBase put(@Nonnull final JobResponseBase newJobResponseBase) throws ClientException {
         return send(HttpMethod.PUT, newJobResponseBase);
     }
 
@@ -154,9 +160,10 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param value the select clause
      * @return the updated request
      */
-     public IJobResponseBaseRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (JobResponseBaseRequest)this;
+     @Nonnull
+     public JobResponseBaseRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class JobResponseBaseRequest extends BaseRequest implements IJobResponseB
      * @param value the expand clause
      * @return the updated request
      */
-     public IJobResponseBaseRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (JobResponseBaseRequest)this;
+     @Nonnull
+     public JobResponseBaseRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

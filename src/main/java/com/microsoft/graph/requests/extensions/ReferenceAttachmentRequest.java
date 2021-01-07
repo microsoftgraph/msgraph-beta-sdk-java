@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ReferenceAttachment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Reference Attachment Request.
  */
-public class ReferenceAttachmentRequest extends BaseRequest implements IReferenceAttachmentRequest {
+public class ReferenceAttachmentRequest extends BaseRequest<ReferenceAttachment> {
 	
     /**
      * The request for the ReferenceAttachment
@@ -29,7 +31,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ReferenceAttachmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ReferenceAttachmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ReferenceAttachment.class);
     }
 
@@ -38,7 +40,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ReferenceAttachment> callback) {
+    public void get(@Nonnull final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @return the ReferenceAttachment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ReferenceAttachment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ReferenceAttachment> callback) {
+    public void delete(@Nonnull final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param sourceReferenceAttachment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ReferenceAttachment sourceReferenceAttachment, final ICallback<? super ReferenceAttachment> callback) {
+    public void patch(@Nonnull final ReferenceAttachment sourceReferenceAttachment, @Nonnull final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.PATCH, callback, sourceReferenceAttachment);
     }
 
@@ -87,7 +90,8 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @return the updated ReferenceAttachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReferenceAttachment patch(final ReferenceAttachment sourceReferenceAttachment) throws ClientException {
+    @Nullable
+    public ReferenceAttachment patch(@Nonnull final ReferenceAttachment sourceReferenceAttachment) throws ClientException {
         return send(HttpMethod.PATCH, sourceReferenceAttachment);
     }
 
@@ -97,7 +101,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param newReferenceAttachment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ReferenceAttachment newReferenceAttachment, final ICallback<? super ReferenceAttachment> callback) {
+    public void post(@Nonnull final ReferenceAttachment newReferenceAttachment, @Nonnull final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.POST, callback, newReferenceAttachment);
     }
 
@@ -108,7 +112,8 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @return the created ReferenceAttachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReferenceAttachment post(final ReferenceAttachment newReferenceAttachment) throws ClientException {
+    @Nullable
+    public ReferenceAttachment post(@Nonnull final ReferenceAttachment newReferenceAttachment) throws ClientException {
         return send(HttpMethod.POST, newReferenceAttachment);
     }
 
@@ -118,7 +123,7 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param newReferenceAttachment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ReferenceAttachment newReferenceAttachment, final ICallback<? super ReferenceAttachment> callback) {
+    public void put(@Nonnull final ReferenceAttachment newReferenceAttachment, @Nonnull final ICallback<? super ReferenceAttachment> callback) {
         send(HttpMethod.PUT, callback, newReferenceAttachment);
     }
 
@@ -129,7 +134,8 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @return the created ReferenceAttachment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ReferenceAttachment put(final ReferenceAttachment newReferenceAttachment) throws ClientException {
+    @Nullable
+    public ReferenceAttachment put(@Nonnull final ReferenceAttachment newReferenceAttachment) throws ClientException {
         return send(HttpMethod.PUT, newReferenceAttachment);
     }
 
@@ -139,9 +145,10 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param value the select clause
      * @return the updated request
      */
-     public IReferenceAttachmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ReferenceAttachmentRequest)this;
+     @Nonnull
+     public ReferenceAttachmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ReferenceAttachmentRequest extends BaseRequest implements IReferenc
      * @param value the expand clause
      * @return the updated request
      */
-     public IReferenceAttachmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ReferenceAttachmentRequest)this;
+     @Nonnull
+     public ReferenceAttachmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

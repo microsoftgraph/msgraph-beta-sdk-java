@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationFeedbackOutcome;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Education Feedback Outcome Request Builder.
  */
-public class EducationFeedbackOutcomeRequestBuilder extends BaseRequestBuilder implements IEducationFeedbackOutcomeRequestBuilder {
+public class EducationFeedbackOutcomeRequestBuilder extends BaseRequestBuilder<EducationFeedbackOutcome> {
 
     /**
      * The request builder for the EducationFeedbackOutcome
@@ -28,7 +30,7 @@ public class EducationFeedbackOutcomeRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationFeedbackOutcomeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationFeedbackOutcomeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class EducationFeedbackOutcomeRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IEducationFeedbackOutcomeRequest instance
+     * @return the EducationFeedbackOutcomeRequest instance
      */
-    public IEducationFeedbackOutcomeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public EducationFeedbackOutcomeRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class EducationFeedbackOutcomeRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IEducationFeedbackOutcomeRequest instance
+     * @return the EducationFeedbackOutcomeRequest instance
      */
-    public IEducationFeedbackOutcomeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public EducationFeedbackOutcomeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.EducationFeedbackOutcomeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

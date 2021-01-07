@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EnrollmentRestrictionsConfigurationPolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Enrollment Restrictions Configuration Policy Set Item Request.
  */
-public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends BaseRequest implements IEnrollmentRestrictionsConfigurationPolicySetItemRequest {
+public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends BaseRequest<EnrollmentRestrictionsConfigurationPolicySetItem> {
 	
     /**
      * The request for the EnrollmentRestrictionsConfigurationPolicySetItem
@@ -29,7 +31,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EnrollmentRestrictionsConfigurationPolicySetItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EnrollmentRestrictionsConfigurationPolicySetItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EnrollmentRestrictionsConfigurationPolicySetItem.class);
     }
 
@@ -38,7 +40,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void get(@Nonnull final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @return the EnrollmentRestrictionsConfigurationPolicySetItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EnrollmentRestrictionsConfigurationPolicySetItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void delete(@Nonnull final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param sourceEnrollmentRestrictionsConfigurationPolicySetItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void patch(@Nonnull final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem, @Nonnull final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.PATCH, callback, sourceEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -87,7 +90,8 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @return the updated EnrollmentRestrictionsConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentRestrictionsConfigurationPolicySetItem patch(final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public EnrollmentRestrictionsConfigurationPolicySetItem patch(@Nonnull final EnrollmentRestrictionsConfigurationPolicySetItem sourceEnrollmentRestrictionsConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -97,7 +101,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param newEnrollmentRestrictionsConfigurationPolicySetItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void post(@Nonnull final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, @Nonnull final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.POST, callback, newEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -108,7 +112,8 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @return the created EnrollmentRestrictionsConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentRestrictionsConfigurationPolicySetItem post(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public EnrollmentRestrictionsConfigurationPolicySetItem post(@Nonnull final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.POST, newEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -118,7 +123,7 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param newEnrollmentRestrictionsConfigurationPolicySetItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
+    public void put(@Nonnull final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem, @Nonnull final ICallback<? super EnrollmentRestrictionsConfigurationPolicySetItem> callback) {
         send(HttpMethod.PUT, callback, newEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -129,7 +134,8 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @return the created EnrollmentRestrictionsConfigurationPolicySetItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EnrollmentRestrictionsConfigurationPolicySetItem put(final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem) throws ClientException {
+    @Nullable
+    public EnrollmentRestrictionsConfigurationPolicySetItem put(@Nonnull final EnrollmentRestrictionsConfigurationPolicySetItem newEnrollmentRestrictionsConfigurationPolicySetItem) throws ClientException {
         return send(HttpMethod.PUT, newEnrollmentRestrictionsConfigurationPolicySetItem);
     }
 
@@ -139,9 +145,10 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param value the select clause
      * @return the updated request
      */
-     public IEnrollmentRestrictionsConfigurationPolicySetItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EnrollmentRestrictionsConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public EnrollmentRestrictionsConfigurationPolicySetItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EnrollmentRestrictionsConfigurationPolicySetItemRequest extends Bas
      * @param value the expand clause
      * @return the updated request
      */
-     public IEnrollmentRestrictionsConfigurationPolicySetItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EnrollmentRestrictionsConfigurationPolicySetItemRequest)this;
+     @Nonnull
+     public EnrollmentRestrictionsConfigurationPolicySetItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

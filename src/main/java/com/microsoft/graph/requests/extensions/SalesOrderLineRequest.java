@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesOrderLine;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sales Order Line Request.
  */
-public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLineRequest {
+public class SalesOrderLineRequest extends BaseRequest<SalesOrderLine> {
 	
     /**
      * The request for the SalesOrderLine
@@ -33,7 +33,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesOrderLineRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesOrderLineRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SalesOrderLine.class);
     }
 
@@ -42,7 +42,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SalesOrderLine> callback) {
+    public void get(@Nonnull final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @return the SalesOrderLine from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SalesOrderLine get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SalesOrderLine> callback) {
+    public void delete(@Nonnull final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param sourceSalesOrderLine the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesOrderLine sourceSalesOrderLine, final ICallback<? super SalesOrderLine> callback) {
+    public void patch(@Nonnull final SalesOrderLine sourceSalesOrderLine, @Nonnull final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesOrderLine);
     }
 
@@ -91,7 +92,8 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @return the updated SalesOrderLine
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesOrderLine patch(final SalesOrderLine sourceSalesOrderLine) throws ClientException {
+    @Nullable
+    public SalesOrderLine patch(@Nonnull final SalesOrderLine sourceSalesOrderLine) throws ClientException {
         return send(HttpMethod.PATCH, sourceSalesOrderLine);
     }
 
@@ -101,7 +103,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param newSalesOrderLine the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesOrderLine newSalesOrderLine, final ICallback<? super SalesOrderLine> callback) {
+    public void post(@Nonnull final SalesOrderLine newSalesOrderLine, @Nonnull final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.POST, callback, newSalesOrderLine);
     }
 
@@ -112,7 +114,8 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @return the created SalesOrderLine
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesOrderLine post(final SalesOrderLine newSalesOrderLine) throws ClientException {
+    @Nullable
+    public SalesOrderLine post(@Nonnull final SalesOrderLine newSalesOrderLine) throws ClientException {
         return send(HttpMethod.POST, newSalesOrderLine);
     }
 
@@ -122,7 +125,7 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param newSalesOrderLine the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesOrderLine newSalesOrderLine, final ICallback<? super SalesOrderLine> callback) {
+    public void put(@Nonnull final SalesOrderLine newSalesOrderLine, @Nonnull final ICallback<? super SalesOrderLine> callback) {
         send(HttpMethod.PUT, callback, newSalesOrderLine);
     }
 
@@ -133,7 +136,8 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @return the created SalesOrderLine
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesOrderLine put(final SalesOrderLine newSalesOrderLine) throws ClientException {
+    @Nullable
+    public SalesOrderLine put(@Nonnull final SalesOrderLine newSalesOrderLine) throws ClientException {
         return send(HttpMethod.PUT, newSalesOrderLine);
     }
 
@@ -143,9 +147,10 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param value the select clause
      * @return the updated request
      */
-     public ISalesOrderLineRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SalesOrderLineRequest)this;
+     @Nonnull
+     public SalesOrderLineRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class SalesOrderLineRequest extends BaseRequest implements ISalesOrderLin
      * @param value the expand clause
      * @return the updated request
      */
-     public ISalesOrderLineRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesOrderLineRequest)this;
+     @Nonnull
+     public SalesOrderLineRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

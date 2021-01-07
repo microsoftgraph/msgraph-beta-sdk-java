@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidManagedAppRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Managed App Registration Request Builder.
  */
-public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuilder implements IAndroidManagedAppRegistrationRequestBuilder {
+public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuilder<AndroidManagedAppRegistration> {
 
     /**
      * The request builder for the AndroidManagedAppRegistration
@@ -28,7 +30,7 @@ public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidManagedAppRegistrationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidManagedAppRegistrationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidManagedAppRegistrationRequest instance
+     * @return the AndroidManagedAppRegistrationRequest instance
      */
-    public IAndroidManagedAppRegistrationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AndroidManagedAppRegistrationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,32 +49,72 @@ public class AndroidManagedAppRegistrationRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidManagedAppRegistrationRequest instance
+     * @return the AndroidManagedAppRegistrationRequest instance
      */
-    public IAndroidManagedAppRegistrationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AndroidManagedAppRegistrationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AndroidManagedAppRegistrationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
+    /**
+     *  Gets a request builder for the ManagedAppPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedAppPolicyCollectionRequestBuilder appliedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies"), getClient(), null);
     }
 
-    public IManagedAppPolicyRequestBuilder appliedPolicies(final String id) {
+    /**
+     * Gets a request builder for the ManagedAppPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedAppPolicyRequestBuilder appliedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appliedPolicies") + "/" + id, getClient(), null);
     }
-    public IManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
+    /**
+     *  Gets a request builder for the ManagedAppPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedAppPolicyCollectionRequestBuilder intendedPolicies() {
         return new ManagedAppPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies"), getClient(), null);
     }
 
-    public IManagedAppPolicyRequestBuilder intendedPolicies(final String id) {
+    /**
+     * Gets a request builder for the ManagedAppPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedAppPolicyRequestBuilder intendedPolicies(@Nonnull final String id) {
         return new ManagedAppPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("intendedPolicies") + "/" + id, getClient(), null);
     }
-    public IManagedAppOperationCollectionRequestBuilder operations() {
+    /**
+     *  Gets a request builder for the ManagedAppOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedAppOperationCollectionRequestBuilder operations() {
         return new ManagedAppOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
     }
 
-    public IManagedAppOperationRequestBuilder operations(final String id) {
+    /**
+     * Gets a request builder for the ManagedAppOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedAppOperationRequestBuilder operations(@Nonnull final String id) {
         return new ManagedAppOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityUserFlow;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Identity User Flow Request.
  */
-public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUserFlowRequest {
+public class IdentityUserFlowRequest extends BaseRequest<IdentityUserFlow> {
 	
     /**
      * The request for the IdentityUserFlow
@@ -30,10 +32,10 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public IdentityUserFlowRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends IdentityUserFlow> responseClass) {
+    public IdentityUserFlowRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends IdentityUserFlow> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityUserFlowRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityUserFlowRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IdentityUserFlow.class);
     }
 
@@ -53,7 +55,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IdentityUserFlow> callback) {
+    public void get(@Nonnull final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @return the IdentityUserFlow from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IdentityUserFlow get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IdentityUserFlow> callback) {
+    public void delete(@Nonnull final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param sourceIdentityUserFlow the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IdentityUserFlow sourceIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback) {
+    public void patch(@Nonnull final IdentityUserFlow sourceIdentityUserFlow, @Nonnull final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.PATCH, callback, sourceIdentityUserFlow);
     }
 
@@ -102,7 +105,8 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @return the updated IdentityUserFlow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityUserFlow patch(final IdentityUserFlow sourceIdentityUserFlow) throws ClientException {
+    @Nullable
+    public IdentityUserFlow patch(@Nonnull final IdentityUserFlow sourceIdentityUserFlow) throws ClientException {
         return send(HttpMethod.PATCH, sourceIdentityUserFlow);
     }
 
@@ -112,7 +116,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param newIdentityUserFlow the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IdentityUserFlow newIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback) {
+    public void post(@Nonnull final IdentityUserFlow newIdentityUserFlow, @Nonnull final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.POST, callback, newIdentityUserFlow);
     }
 
@@ -123,7 +127,8 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @return the created IdentityUserFlow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityUserFlow post(final IdentityUserFlow newIdentityUserFlow) throws ClientException {
+    @Nullable
+    public IdentityUserFlow post(@Nonnull final IdentityUserFlow newIdentityUserFlow) throws ClientException {
         return send(HttpMethod.POST, newIdentityUserFlow);
     }
 
@@ -133,7 +138,7 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param newIdentityUserFlow the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IdentityUserFlow newIdentityUserFlow, final ICallback<? super IdentityUserFlow> callback) {
+    public void put(@Nonnull final IdentityUserFlow newIdentityUserFlow, @Nonnull final ICallback<? super IdentityUserFlow> callback) {
         send(HttpMethod.PUT, callback, newIdentityUserFlow);
     }
 
@@ -144,7 +149,8 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @return the created IdentityUserFlow
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IdentityUserFlow put(final IdentityUserFlow newIdentityUserFlow) throws ClientException {
+    @Nullable
+    public IdentityUserFlow put(@Nonnull final IdentityUserFlow newIdentityUserFlow) throws ClientException {
         return send(HttpMethod.PUT, newIdentityUserFlow);
     }
 
@@ -154,9 +160,10 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param value the select clause
      * @return the updated request
      */
-     public IIdentityUserFlowRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IdentityUserFlowRequest)this;
+     @Nonnull
+     public IdentityUserFlowRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class IdentityUserFlowRequest extends BaseRequest implements IIdentityUse
      * @param value the expand clause
      * @return the updated request
      */
-     public IIdentityUserFlowRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IdentityUserFlowRequest)this;
+     @Nonnull
+     public IdentityUserFlowRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

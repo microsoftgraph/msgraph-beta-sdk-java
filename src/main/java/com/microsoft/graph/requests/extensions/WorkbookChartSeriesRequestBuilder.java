@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartSeries;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartPointRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartPointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartSeriesFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartSeriesFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Series Request Builder.
  */
-public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implements IWorkbookChartSeriesRequestBuilder {
+public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder<WorkbookChartSeries> {
 
     /**
      * The request builder for the WorkbookChartSeries
@@ -34,7 +33,7 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartSeriesRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartSeriesRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartSeriesRequest instance
+     * @return the WorkbookChartSeriesRequest instance
      */
-    public IWorkbookChartSeriesRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartSeriesRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +52,10 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartSeriesRequest instance
+     * @return the WorkbookChartSeriesRequest instance
      */
-    public IWorkbookChartSeriesRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartSeriesRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartSeriesRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,16 +64,30 @@ public class WorkbookChartSeriesRequestBuilder extends BaseRequestBuilder implem
     /**
      * Gets the request builder for WorkbookChartSeriesFormat
      *
-     * @return the IWorkbookChartSeriesFormatRequestBuilder instance
+     * @return the WorkbookChartSeriesFormatRequestBuilder instance
      */
-    public IWorkbookChartSeriesFormatRequestBuilder format() {
+    @Nonnull
+    public WorkbookChartSeriesFormatRequestBuilder format() {
         return new WorkbookChartSeriesFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
-    public IWorkbookChartPointCollectionRequestBuilder points() {
+    /**
+     *  Gets a request builder for the WorkbookChartPoint collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WorkbookChartPointCollectionRequestBuilder points() {
         return new WorkbookChartPointCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("points"), getClient(), null);
     }
 
-    public IWorkbookChartPointRequestBuilder points(final String id) {
+    /**
+     * Gets a request builder for the WorkbookChartPoint item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WorkbookChartPointRequestBuilder points(@Nonnull final String id) {
         return new WorkbookChartPointRequestBuilder(getRequestUrlWithAdditionalSegment("points") + "/" + id, getClient(), null);
     }
 }

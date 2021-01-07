@@ -9,32 +9,22 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Onenote;
-import com.microsoft.graph.requests.extensions.INotebookCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.INotebookRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.NotebookRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenotePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenotePageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISectionGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SectionGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteSectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteSectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -44,7 +34,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Request.
  */
-public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
+public class OnenoteRequest extends BaseRequest<Onenote> {
 	
     /**
      * The request for the Onenote
@@ -53,7 +43,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Onenote.class);
     }
 
@@ -62,7 +52,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Onenote> callback) {
+    public void get(@Nonnull final ICallback<? super Onenote> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -72,6 +62,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @return the Onenote from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Onenote get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -81,7 +72,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Onenote> callback) {
+    public void delete(@Nonnull final ICallback<? super Onenote> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -100,7 +91,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param sourceOnenote the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Onenote sourceOnenote, final ICallback<? super Onenote> callback) {
+    public void patch(@Nonnull final Onenote sourceOnenote, @Nonnull final ICallback<? super Onenote> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenote);
     }
 
@@ -111,7 +102,8 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @return the updated Onenote
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Onenote patch(final Onenote sourceOnenote) throws ClientException {
+    @Nullable
+    public Onenote patch(@Nonnull final Onenote sourceOnenote) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenote);
     }
 
@@ -121,7 +113,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param newOnenote the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Onenote newOnenote, final ICallback<? super Onenote> callback) {
+    public void post(@Nonnull final Onenote newOnenote, @Nonnull final ICallback<? super Onenote> callback) {
         send(HttpMethod.POST, callback, newOnenote);
     }
 
@@ -132,7 +124,8 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @return the created Onenote
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Onenote post(final Onenote newOnenote) throws ClientException {
+    @Nullable
+    public Onenote post(@Nonnull final Onenote newOnenote) throws ClientException {
         return send(HttpMethod.POST, newOnenote);
     }
 
@@ -142,7 +135,7 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param newOnenote the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Onenote newOnenote, final ICallback<? super Onenote> callback) {
+    public void put(@Nonnull final Onenote newOnenote, @Nonnull final ICallback<? super Onenote> callback) {
         send(HttpMethod.PUT, callback, newOnenote);
     }
 
@@ -153,7 +146,8 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @return the created Onenote
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Onenote put(final Onenote newOnenote) throws ClientException {
+    @Nullable
+    public Onenote put(@Nonnull final Onenote newOnenote) throws ClientException {
         return send(HttpMethod.PUT, newOnenote);
     }
 
@@ -163,9 +157,10 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteRequest)this;
+     @Nonnull
+     public OnenoteRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -174,9 +169,10 @@ public class OnenoteRequest extends BaseRequest implements IOnenoteRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteRequest)this;
+     @Nonnull
+     public OnenoteRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

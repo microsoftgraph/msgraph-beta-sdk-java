@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementComplexSettingInstance;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Complex Setting Instance Request Builder.
  */
-public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRequestBuilder implements IDeviceManagementComplexSettingInstanceRequestBuilder {
+public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRequestBuilder<DeviceManagementComplexSettingInstance> {
 
     /**
      * The request builder for the DeviceManagementComplexSettingInstance
@@ -32,7 +32,7 @@ public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementComplexSettingInstanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementComplexSettingInstanceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRe
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementComplexSettingInstanceRequest instance
+     * @return the DeviceManagementComplexSettingInstanceRequest instance
      */
-    public IDeviceManagementComplexSettingInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementComplexSettingInstanceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class DeviceManagementComplexSettingInstanceRequestBuilder extends BaseRe
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementComplexSettingInstanceRequest instance
+     * @return the DeviceManagementComplexSettingInstanceRequest instance
      */
-    public IDeviceManagementComplexSettingInstanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementComplexSettingInstanceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementComplexSettingInstanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceManagementSettingInstanceCollectionRequestBuilder value() {
+    /**
+     *  Gets a request builder for the DeviceManagementSettingInstance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementSettingInstanceCollectionRequestBuilder value() {
         return new DeviceManagementSettingInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("value"), getClient(), null);
     }
 
-    public IDeviceManagementSettingInstanceRequestBuilder value(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementSettingInstance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementSettingInstanceRequestBuilder value(@Nonnull final String id) {
         return new DeviceManagementSettingInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("value") + "/" + id, getClient(), null);
     }
 }

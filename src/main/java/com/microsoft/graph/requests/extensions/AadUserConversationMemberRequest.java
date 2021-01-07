@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AadUserConversationMember;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Aad User Conversation Member Request.
  */
-public class AadUserConversationMemberRequest extends BaseRequest implements IAadUserConversationMemberRequest {
+public class AadUserConversationMemberRequest extends BaseRequest<AadUserConversationMember> {
 	
     /**
      * The request for the AadUserConversationMember
@@ -31,7 +32,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AadUserConversationMemberRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AadUserConversationMemberRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AadUserConversationMember.class);
     }
 
@@ -40,7 +41,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AadUserConversationMember> callback) {
+    public void get(@Nonnull final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @return the AadUserConversationMember from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AadUserConversationMember get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AadUserConversationMember> callback) {
+    public void delete(@Nonnull final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param sourceAadUserConversationMember the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AadUserConversationMember sourceAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback) {
+    public void patch(@Nonnull final AadUserConversationMember sourceAadUserConversationMember, @Nonnull final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.PATCH, callback, sourceAadUserConversationMember);
     }
 
@@ -89,7 +91,8 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @return the updated AadUserConversationMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AadUserConversationMember patch(final AadUserConversationMember sourceAadUserConversationMember) throws ClientException {
+    @Nullable
+    public AadUserConversationMember patch(@Nonnull final AadUserConversationMember sourceAadUserConversationMember) throws ClientException {
         return send(HttpMethod.PATCH, sourceAadUserConversationMember);
     }
 
@@ -99,7 +102,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param newAadUserConversationMember the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AadUserConversationMember newAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback) {
+    public void post(@Nonnull final AadUserConversationMember newAadUserConversationMember, @Nonnull final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.POST, callback, newAadUserConversationMember);
     }
 
@@ -110,7 +113,8 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @return the created AadUserConversationMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AadUserConversationMember post(final AadUserConversationMember newAadUserConversationMember) throws ClientException {
+    @Nullable
+    public AadUserConversationMember post(@Nonnull final AadUserConversationMember newAadUserConversationMember) throws ClientException {
         return send(HttpMethod.POST, newAadUserConversationMember);
     }
 
@@ -120,7 +124,7 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param newAadUserConversationMember the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AadUserConversationMember newAadUserConversationMember, final ICallback<? super AadUserConversationMember> callback) {
+    public void put(@Nonnull final AadUserConversationMember newAadUserConversationMember, @Nonnull final ICallback<? super AadUserConversationMember> callback) {
         send(HttpMethod.PUT, callback, newAadUserConversationMember);
     }
 
@@ -131,7 +135,8 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @return the created AadUserConversationMember
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AadUserConversationMember put(final AadUserConversationMember newAadUserConversationMember) throws ClientException {
+    @Nullable
+    public AadUserConversationMember put(@Nonnull final AadUserConversationMember newAadUserConversationMember) throws ClientException {
         return send(HttpMethod.PUT, newAadUserConversationMember);
     }
 
@@ -141,9 +146,10 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param value the select clause
      * @return the updated request
      */
-     public IAadUserConversationMemberRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AadUserConversationMemberRequest)this;
+     @Nonnull
+     public AadUserConversationMemberRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class AadUserConversationMemberRequest extends BaseRequest implements IAa
      * @param value the expand clause
      * @return the updated request
      */
-     public IAadUserConversationMemberRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AadUserConversationMemberRequest)this;
+     @Nonnull
+     public AadUserConversationMemberRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

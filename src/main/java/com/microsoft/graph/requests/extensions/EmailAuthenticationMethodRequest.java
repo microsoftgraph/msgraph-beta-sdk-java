@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EmailAuthenticationMethod;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Email Authentication Method Request.
  */
-public class EmailAuthenticationMethodRequest extends BaseRequest implements IEmailAuthenticationMethodRequest {
+public class EmailAuthenticationMethodRequest extends BaseRequest<EmailAuthenticationMethod> {
 	
     /**
      * The request for the EmailAuthenticationMethod
@@ -29,7 +31,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EmailAuthenticationMethodRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EmailAuthenticationMethodRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EmailAuthenticationMethod.class);
     }
 
@@ -38,7 +40,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EmailAuthenticationMethod> callback) {
+    public void get(@Nonnull final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @return the EmailAuthenticationMethod from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EmailAuthenticationMethod get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EmailAuthenticationMethod> callback) {
+    public void delete(@Nonnull final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param sourceEmailAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EmailAuthenticationMethod sourceEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback) {
+    public void patch(@Nonnull final EmailAuthenticationMethod sourceEmailAuthenticationMethod, @Nonnull final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceEmailAuthenticationMethod);
     }
 
@@ -87,7 +90,8 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @return the updated EmailAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAuthenticationMethod patch(final EmailAuthenticationMethod sourceEmailAuthenticationMethod) throws ClientException {
+    @Nullable
+    public EmailAuthenticationMethod patch(@Nonnull final EmailAuthenticationMethod sourceEmailAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PATCH, sourceEmailAuthenticationMethod);
     }
 
@@ -97,7 +101,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param newEmailAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback) {
+    public void post(@Nonnull final EmailAuthenticationMethod newEmailAuthenticationMethod, @Nonnull final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newEmailAuthenticationMethod);
     }
 
@@ -108,7 +112,8 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @return the created EmailAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAuthenticationMethod post(final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException {
+    @Nullable
+    public EmailAuthenticationMethod post(@Nonnull final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException {
         return send(HttpMethod.POST, newEmailAuthenticationMethod);
     }
 
@@ -118,7 +123,7 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param newEmailAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EmailAuthenticationMethod newEmailAuthenticationMethod, final ICallback<? super EmailAuthenticationMethod> callback) {
+    public void put(@Nonnull final EmailAuthenticationMethod newEmailAuthenticationMethod, @Nonnull final ICallback<? super EmailAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newEmailAuthenticationMethod);
     }
 
@@ -129,7 +134,8 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @return the created EmailAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EmailAuthenticationMethod put(final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException {
+    @Nullable
+    public EmailAuthenticationMethod put(@Nonnull final EmailAuthenticationMethod newEmailAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PUT, newEmailAuthenticationMethod);
     }
 
@@ -139,9 +145,10 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param value the select clause
      * @return the updated request
      */
-     public IEmailAuthenticationMethodRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EmailAuthenticationMethodRequest)this;
+     @Nonnull
+     public EmailAuthenticationMethodRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EmailAuthenticationMethodRequest extends BaseRequest implements IEm
      * @param value the expand clause
      * @return the updated request
      */
-     public IEmailAuthenticationMethodRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EmailAuthenticationMethodRequest)this;
+     @Nonnull
+     public EmailAuthenticationMethodRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

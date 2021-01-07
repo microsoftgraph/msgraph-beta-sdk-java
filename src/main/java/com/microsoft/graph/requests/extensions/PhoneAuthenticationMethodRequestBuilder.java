@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PhoneAuthenticationMethod;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Phone Authentication Method Request Builder.
  */
-public class PhoneAuthenticationMethodRequestBuilder extends BaseRequestBuilder implements IPhoneAuthenticationMethodRequestBuilder {
+public class PhoneAuthenticationMethodRequestBuilder extends BaseRequestBuilder<PhoneAuthenticationMethod> {
 
     /**
      * The request builder for the PhoneAuthenticationMethod
@@ -28,7 +30,7 @@ public class PhoneAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PhoneAuthenticationMethodRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PhoneAuthenticationMethodRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PhoneAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPhoneAuthenticationMethodRequest instance
+     * @return the PhoneAuthenticationMethodRequest instance
      */
-    public IPhoneAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PhoneAuthenticationMethodRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PhoneAuthenticationMethodRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPhoneAuthenticationMethodRequest instance
+     * @return the PhoneAuthenticationMethodRequest instance
      */
-    public IPhoneAuthenticationMethodRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PhoneAuthenticationMethodRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

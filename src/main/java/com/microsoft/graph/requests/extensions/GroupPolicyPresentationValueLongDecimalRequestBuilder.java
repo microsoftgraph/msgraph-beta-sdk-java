@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationValueLongDecimal;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Policy Presentation Value Long Decimal Request Builder.
  */
-public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseRequestBuilder implements IGroupPolicyPresentationValueLongDecimalRequestBuilder {
+public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseRequestBuilder<GroupPolicyPresentationValueLongDecimal> {
 
     /**
      * The request builder for the GroupPolicyPresentationValueLongDecimal
@@ -28,7 +30,7 @@ public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationValueLongDecimalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationValueLongDecimalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseR
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationValueLongDecimalRequest instance
+     * @return the GroupPolicyPresentationValueLongDecimalRequest instance
      */
-    public IGroupPolicyPresentationValueLongDecimalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationValueLongDecimalRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseR
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationValueLongDecimalRequest instance
+     * @return the GroupPolicyPresentationValueLongDecimalRequest instance
      */
-    public IGroupPolicyPresentationValueLongDecimalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationValueLongDecimalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationValueLongDecimalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,18 +61,20 @@ public class GroupPolicyPresentationValueLongDecimalRequestBuilder extends BaseR
     /**
      * Gets the request builder for GroupPolicyDefinitionValue
      *
-     * @return the IGroupPolicyDefinitionValueWithReferenceRequestBuilder instance
+     * @return the GroupPolicyDefinitionValueWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue() {
+    @Nonnull
+    public GroupPolicyDefinitionValueWithReferenceRequestBuilder definitionValue() {
         return new GroupPolicyDefinitionValueWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionValue"), getClient(), null);
     }
 
     /**
      * Gets the request builder for GroupPolicyPresentation
      *
-     * @return the IGroupPolicyPresentationWithReferenceRequestBuilder instance
+     * @return the GroupPolicyPresentationWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyPresentationWithReferenceRequestBuilder presentation() {
+    @Nonnull
+    public GroupPolicyPresentationWithReferenceRequestBuilder presentation() {
         return new GroupPolicyPresentationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("presentation"), getClient(), null);
     }
 }

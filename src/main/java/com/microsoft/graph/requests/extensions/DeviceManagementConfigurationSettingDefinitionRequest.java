@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Configuration Setting Definition Request.
  */
-public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseRequest implements IDeviceManagementConfigurationSettingDefinitionRequest {
+public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseRequest<DeviceManagementConfigurationSettingDefinition> {
 	
     /**
      * The request for the DeviceManagementConfigurationSettingDefinition
@@ -30,10 +32,10 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceManagementConfigurationSettingDefinitionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceManagementConfigurationSettingDefinition> responseClass) {
+    public DeviceManagementConfigurationSettingDefinitionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceManagementConfigurationSettingDefinition> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationSettingDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationSettingDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationSettingDefinition.class);
     }
 
@@ -53,7 +55,7 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @return the DeviceManagementConfigurationSettingDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementConfigurationSettingDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @param sourceDeviceManagementConfigurationSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementConfigurationSettingDefinition sourceDeviceManagementConfigurationSettingDefinition, final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
+    public void patch(@Nonnull final DeviceManagementConfigurationSettingDefinition sourceDeviceManagementConfigurationSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationSettingDefinition);
     }
 
@@ -102,7 +105,8 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @return the updated DeviceManagementConfigurationSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSettingDefinition patch(final DeviceManagementConfigurationSettingDefinition sourceDeviceManagementConfigurationSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSettingDefinition patch(@Nonnull final DeviceManagementConfigurationSettingDefinition sourceDeviceManagementConfigurationSettingDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationSettingDefinition);
     }
 
@@ -112,7 +116,7 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @param newDeviceManagementConfigurationSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition, final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
+    public void post(@Nonnull final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementConfigurationSettingDefinition);
     }
 
@@ -123,7 +127,8 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @return the created DeviceManagementConfigurationSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSettingDefinition post(final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSettingDefinition post(@Nonnull final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementConfigurationSettingDefinition);
     }
 
@@ -133,7 +138,7 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @param newDeviceManagementConfigurationSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition, final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
+    public void put(@Nonnull final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationSettingDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementConfigurationSettingDefinition);
     }
 
@@ -144,7 +149,8 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @return the created DeviceManagementConfigurationSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationSettingDefinition put(final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationSettingDefinition put(@Nonnull final DeviceManagementConfigurationSettingDefinition newDeviceManagementConfigurationSettingDefinition) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementConfigurationSettingDefinition);
     }
 
@@ -154,9 +160,10 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationSettingDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementConfigurationSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationSettingDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class DeviceManagementConfigurationSettingDefinitionRequest extends BaseR
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationSettingDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementConfigurationSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationSettingDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

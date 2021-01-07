@@ -12,20 +12,16 @@ import com.microsoft.graph.models.extensions.DeviceManagementTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.extensions.DeviceManagementIntent;
 import com.microsoft.graph.models.extensions.DeviceManagementSettingComparison;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateSettingCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateSettingCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementTemplateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -35,7 +31,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Template Request.
  */
-public class DeviceManagementTemplateRequest extends BaseRequest implements IDeviceManagementTemplateRequest {
+public class DeviceManagementTemplateRequest extends BaseRequest<DeviceManagementTemplate> {
 	
     /**
      * The request for the DeviceManagementTemplate
@@ -45,10 +41,10 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceManagementTemplateRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceManagementTemplate> responseClass) {
+    public DeviceManagementTemplateRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceManagementTemplate> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -59,7 +55,7 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementTemplateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementTemplate.class);
     }
 
@@ -68,7 +64,7 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementTemplate> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -78,6 +74,7 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @return the DeviceManagementTemplate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -87,7 +84,7 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementTemplate> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -106,7 +103,7 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @param sourceDeviceManagementTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementTemplate sourceDeviceManagementTemplate, final ICallback<? super DeviceManagementTemplate> callback) {
+    public void patch(@Nonnull final DeviceManagementTemplate sourceDeviceManagementTemplate, @Nonnull final ICallback<? super DeviceManagementTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementTemplate);
     }
 
@@ -117,7 +114,8 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @return the updated DeviceManagementTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementTemplate patch(final DeviceManagementTemplate sourceDeviceManagementTemplate) throws ClientException {
+    @Nullable
+    public DeviceManagementTemplate patch(@Nonnull final DeviceManagementTemplate sourceDeviceManagementTemplate) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementTemplate);
     }
 
@@ -127,7 +125,7 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @param newDeviceManagementTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<? super DeviceManagementTemplate> callback) {
+    public void post(@Nonnull final DeviceManagementTemplate newDeviceManagementTemplate, @Nonnull final ICallback<? super DeviceManagementTemplate> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementTemplate);
     }
 
@@ -138,7 +136,8 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @return the created DeviceManagementTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementTemplate post(final DeviceManagementTemplate newDeviceManagementTemplate) throws ClientException {
+    @Nullable
+    public DeviceManagementTemplate post(@Nonnull final DeviceManagementTemplate newDeviceManagementTemplate) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementTemplate);
     }
 
@@ -148,7 +147,7 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @param newDeviceManagementTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementTemplate newDeviceManagementTemplate, final ICallback<? super DeviceManagementTemplate> callback) {
+    public void put(@Nonnull final DeviceManagementTemplate newDeviceManagementTemplate, @Nonnull final ICallback<? super DeviceManagementTemplate> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementTemplate);
     }
 
@@ -159,7 +158,8 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @return the created DeviceManagementTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementTemplate put(final DeviceManagementTemplate newDeviceManagementTemplate) throws ClientException {
+    @Nullable
+    public DeviceManagementTemplate put(@Nonnull final DeviceManagementTemplate newDeviceManagementTemplate) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementTemplate);
     }
 
@@ -169,9 +169,10 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementTemplateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementTemplateRequest)this;
+     @Nonnull
+     public DeviceManagementTemplateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -180,9 +181,10 @@ public class DeviceManagementTemplateRequest extends BaseRequest implements IDev
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementTemplateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementTemplateRequest)this;
+     @Nonnull
+     public DeviceManagementTemplateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

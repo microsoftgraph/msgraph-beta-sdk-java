@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainDnsMxRecord;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Domain Dns Mx Record Request Builder.
  */
-public class DomainDnsMxRecordRequestBuilder extends BaseRequestBuilder implements IDomainDnsMxRecordRequestBuilder {
+public class DomainDnsMxRecordRequestBuilder extends BaseRequestBuilder<DomainDnsMxRecord> {
 
     /**
      * The request builder for the DomainDnsMxRecord
@@ -28,7 +30,7 @@ public class DomainDnsMxRecordRequestBuilder extends BaseRequestBuilder implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainDnsMxRecordRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainDnsMxRecordRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DomainDnsMxRecordRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDomainDnsMxRecordRequest instance
+     * @return the DomainDnsMxRecordRequest instance
      */
-    public IDomainDnsMxRecordRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DomainDnsMxRecordRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DomainDnsMxRecordRequestBuilder extends BaseRequestBuilder implemen
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDomainDnsMxRecordRequest instance
+     * @return the DomainDnsMxRecordRequest instance
      */
-    public IDomainDnsMxRecordRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DomainDnsMxRecordRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DomainDnsMxRecordRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

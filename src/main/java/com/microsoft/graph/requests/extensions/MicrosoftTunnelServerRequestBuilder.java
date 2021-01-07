@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftTunnelServer;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Microsoft Tunnel Server Request Builder.
  */
-public class MicrosoftTunnelServerRequestBuilder extends BaseRequestBuilder implements IMicrosoftTunnelServerRequestBuilder {
+public class MicrosoftTunnelServerRequestBuilder extends BaseRequestBuilder<MicrosoftTunnelServer> {
 
     /**
      * The request builder for the MicrosoftTunnelServer
@@ -28,7 +30,7 @@ public class MicrosoftTunnelServerRequestBuilder extends BaseRequestBuilder impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MicrosoftTunnelServerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MicrosoftTunnelServerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class MicrosoftTunnelServerRequestBuilder extends BaseRequestBuilder impl
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMicrosoftTunnelServerRequest instance
+     * @return the MicrosoftTunnelServerRequest instance
      */
-    public IMicrosoftTunnelServerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MicrosoftTunnelServerRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class MicrosoftTunnelServerRequestBuilder extends BaseRequestBuilder impl
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMicrosoftTunnelServerRequest instance
+     * @return the MicrosoftTunnelServerRequest instance
      */
-    public IMicrosoftTunnelServerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MicrosoftTunnelServerRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MicrosoftTunnelServerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

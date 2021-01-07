@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ThreatAssessmentResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Threat Assessment Result Request.
  */
-public class ThreatAssessmentResultRequest extends BaseRequest implements IThreatAssessmentResultRequest {
+public class ThreatAssessmentResultRequest extends BaseRequest<ThreatAssessmentResult> {
 	
     /**
      * The request for the ThreatAssessmentResult
@@ -29,7 +31,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ThreatAssessmentResultRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ThreatAssessmentResultRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ThreatAssessmentResult.class);
     }
 
@@ -38,7 +40,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ThreatAssessmentResult> callback) {
+    public void get(@Nonnull final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @return the ThreatAssessmentResult from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ThreatAssessmentResult get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ThreatAssessmentResult> callback) {
+    public void delete(@Nonnull final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param sourceThreatAssessmentResult the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ThreatAssessmentResult sourceThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
+    public void patch(@Nonnull final ThreatAssessmentResult sourceThreatAssessmentResult, @Nonnull final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.PATCH, callback, sourceThreatAssessmentResult);
     }
 
@@ -87,7 +90,8 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @return the updated ThreatAssessmentResult
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ThreatAssessmentResult patch(final ThreatAssessmentResult sourceThreatAssessmentResult) throws ClientException {
+    @Nullable
+    public ThreatAssessmentResult patch(@Nonnull final ThreatAssessmentResult sourceThreatAssessmentResult) throws ClientException {
         return send(HttpMethod.PATCH, sourceThreatAssessmentResult);
     }
 
@@ -97,7 +101,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param newThreatAssessmentResult the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
+    public void post(@Nonnull final ThreatAssessmentResult newThreatAssessmentResult, @Nonnull final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.POST, callback, newThreatAssessmentResult);
     }
 
@@ -108,7 +112,8 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @return the created ThreatAssessmentResult
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ThreatAssessmentResult post(final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException {
+    @Nullable
+    public ThreatAssessmentResult post(@Nonnull final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException {
         return send(HttpMethod.POST, newThreatAssessmentResult);
     }
 
@@ -118,7 +123,7 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param newThreatAssessmentResult the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ThreatAssessmentResult newThreatAssessmentResult, final ICallback<? super ThreatAssessmentResult> callback) {
+    public void put(@Nonnull final ThreatAssessmentResult newThreatAssessmentResult, @Nonnull final ICallback<? super ThreatAssessmentResult> callback) {
         send(HttpMethod.PUT, callback, newThreatAssessmentResult);
     }
 
@@ -129,7 +134,8 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @return the created ThreatAssessmentResult
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ThreatAssessmentResult put(final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException {
+    @Nullable
+    public ThreatAssessmentResult put(@Nonnull final ThreatAssessmentResult newThreatAssessmentResult) throws ClientException {
         return send(HttpMethod.PUT, newThreatAssessmentResult);
     }
 
@@ -139,9 +145,10 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param value the select clause
      * @return the updated request
      */
-     public IThreatAssessmentResultRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ThreatAssessmentResultRequest)this;
+     @Nonnull
+     public ThreatAssessmentResultRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ThreatAssessmentResultRequest extends BaseRequest implements IThrea
      * @param value the expand clause
      * @return the updated request
      */
-     public IThreatAssessmentResultRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ThreatAssessmentResultRequest)this;
+     @Nonnull
+     public ThreatAssessmentResultRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

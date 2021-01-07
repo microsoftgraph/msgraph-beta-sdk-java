@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.VirtualEndpoint;
-import com.microsoft.graph.requests.extensions.ICloudPCCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPCRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPCCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPCRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcDeviceImageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcDeviceImageRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcDeviceImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcDeviceImageRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcOnPremisesConnectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcOnPremisesConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcOnPremisesConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcOnPremisesConnectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcProvisioningPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICloudPcProvisioningPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudPcProvisioningPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Virtual Endpoint Request Builder.
  */
-public class VirtualEndpointRequestBuilder extends BaseRequestBuilder implements IVirtualEndpointRequestBuilder {
+public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEndpoint> {
 
     /**
      * The request builder for the VirtualEndpoint
@@ -44,7 +38,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VirtualEndpointRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VirtualEndpointRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,9 +46,10 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder implements
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IVirtualEndpointRequest instance
+     * @return the VirtualEndpointRequest instance
      */
-    public IVirtualEndpointRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public VirtualEndpointRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,43 +57,101 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder implements
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IVirtualEndpointRequest instance
+     * @return the VirtualEndpointRequest instance
      */
-    public IVirtualEndpointRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public VirtualEndpointRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.VirtualEndpointRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ICloudPCCollectionRequestBuilder cloudPCs() {
+    /**
+     *  Gets a request builder for the CloudPC collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPCCollectionRequestBuilder cloudPCs() {
         return new CloudPCCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs"), getClient(), null);
     }
 
-    public ICloudPCRequestBuilder cloudPCs(final String id) {
+    /**
+     * Gets a request builder for the CloudPC item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPCRequestBuilder cloudPCs(@Nonnull final String id) {
         return new CloudPCRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCs") + "/" + id, getClient(), null);
     }
-    public ICloudPcDeviceImageCollectionRequestBuilder deviceImages() {
+    /**
+     *  Gets a request builder for the CloudPcDeviceImage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcDeviceImageCollectionRequestBuilder deviceImages() {
         return new CloudPcDeviceImageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages"), getClient(), null);
     }
 
-    public ICloudPcDeviceImageRequestBuilder deviceImages(final String id) {
+    /**
+     * Gets a request builder for the CloudPcDeviceImage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcDeviceImageRequestBuilder deviceImages(@Nonnull final String id) {
         return new CloudPcDeviceImageRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages") + "/" + id, getClient(), null);
     }
-    public ICloudPcOnPremisesConnectionCollectionRequestBuilder onPremisesConnections() {
+    /**
+     *  Gets a request builder for the CloudPcOnPremisesConnection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcOnPremisesConnectionCollectionRequestBuilder onPremisesConnections() {
         return new CloudPcOnPremisesConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesConnections"), getClient(), null);
     }
 
-    public ICloudPcOnPremisesConnectionRequestBuilder onPremisesConnections(final String id) {
+    /**
+     * Gets a request builder for the CloudPcOnPremisesConnection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcOnPremisesConnectionRequestBuilder onPremisesConnections(@Nonnull final String id) {
         return new CloudPcOnPremisesConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("onPremisesConnections") + "/" + id, getClient(), null);
     }
-    public ICloudPcProvisioningPolicyCollectionRequestBuilder provisioningPolicies() {
+    /**
+     *  Gets a request builder for the CloudPcProvisioningPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcProvisioningPolicyCollectionRequestBuilder provisioningPolicies() {
         return new CloudPcProvisioningPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies"), getClient(), null);
     }
 
-    public ICloudPcProvisioningPolicyRequestBuilder provisioningPolicies(final String id) {
+    /**
+     * Gets a request builder for the CloudPcProvisioningPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcProvisioningPolicyRequestBuilder provisioningPolicies(@Nonnull final String id) {
         return new CloudPcProvisioningPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies") + "/" + id, getClient(), null);
     }
 
-    public IVirtualEndpointGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public VirtualEndpointGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions() {
         return new VirtualEndpointGetEffectivePermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectivePermissions"), getClient(), null);
     }
 }

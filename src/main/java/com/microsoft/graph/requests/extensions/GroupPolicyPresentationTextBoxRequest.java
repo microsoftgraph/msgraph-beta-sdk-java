@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationTextBox;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Text Box Request.
  */
-public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implements IGroupPolicyPresentationTextBoxRequest {
+public class GroupPolicyPresentationTextBoxRequest extends BaseRequest<GroupPolicyPresentationTextBox> {
 	
     /**
      * The request for the GroupPolicyPresentationTextBox
@@ -29,7 +31,7 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationTextBoxRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationTextBoxRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationTextBox.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationTextBox> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationTextBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @return the GroupPolicyPresentationTextBox from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationTextBox get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationTextBox> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationTextBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @param sourceGroupPolicyPresentationTextBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationTextBox sourceGroupPolicyPresentationTextBox, final ICallback<? super GroupPolicyPresentationTextBox> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationTextBox sourceGroupPolicyPresentationTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationTextBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationTextBox);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @return the updated GroupPolicyPresentationTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationTextBox patch(final GroupPolicyPresentationTextBox sourceGroupPolicyPresentationTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationTextBox patch(@Nonnull final GroupPolicyPresentationTextBox sourceGroupPolicyPresentationTextBox) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationTextBox);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @param newGroupPolicyPresentationTextBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, final ICallback<? super GroupPolicyPresentationTextBox> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationTextBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationTextBox);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @return the created GroupPolicyPresentationTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationTextBox post(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationTextBox post(@Nonnull final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationTextBox);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @param newGroupPolicyPresentationTextBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, final ICallback<? super GroupPolicyPresentationTextBox> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox, @Nonnull final ICallback<? super GroupPolicyPresentationTextBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationTextBox);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @return the created GroupPolicyPresentationTextBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationTextBox put(final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationTextBox put(@Nonnull final GroupPolicyPresentationTextBox newGroupPolicyPresentationTextBox) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationTextBox);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationTextBoxRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationTextBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationTextBoxRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyPresentationTextBoxRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationTextBoxRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationTextBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationTextBoxRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsManagedDevice;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Managed Device Request Builder.
  */
-public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder implements IWindowsManagedDeviceRequestBuilder {
+public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<WindowsManagedDevice> {
 
     /**
      * The request builder for the WindowsManagedDevice
@@ -28,7 +30,7 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsManagedDeviceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsManagedDeviceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsManagedDeviceRequest instance
+     * @return the WindowsManagedDeviceRequest instance
      */
-    public IWindowsManagedDeviceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsManagedDeviceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,78 +49,172 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsManagedDeviceRequest instance
+     * @return the WindowsManagedDeviceRequest instance
      */
-    public IWindowsManagedDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsManagedDeviceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsManagedDeviceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
+    /**
+     *  Gets a request builder for the SecurityBaselineState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
         return new SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
     }
 
-    public ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id) {
+    /**
+     * Gets a request builder for the SecurityBaselineState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SecurityBaselineStateRequestBuilder securityBaselineStates(@Nonnull final String id) {
         return new SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
     }
-    public IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
+    /**
+     *  Gets a request builder for the DeviceCompliancePolicyState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
     }
 
-    public IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id) {
+    /**
+     * Gets a request builder for the DeviceCompliancePolicyState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(@Nonnull final String id) {
         return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
     }
-    public IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
+    /**
+     *  Gets a request builder for the DeviceConfigurationState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
         return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
     }
 
-    public IDeviceConfigurationStateRequestBuilder deviceConfigurationStates(final String id) {
+    /**
+     * Gets a request builder for the DeviceConfigurationState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceConfigurationStateRequestBuilder deviceConfigurationStates(@Nonnull final String id) {
         return new DeviceConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates") + "/" + id, getClient(), null);
     }
-    public IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates() {
+    /**
+     *  Gets a request builder for the ManagedDeviceMobileAppConfigurationState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates() {
         return new ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates"), getClient(), null);
     }
 
-    public IManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(final String id) {
+    /**
+     * Gets a request builder for the ManagedDeviceMobileAppConfigurationState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(@Nonnull final String id) {
         return new ManagedDeviceMobileAppConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates") + "/" + id, getClient(), null);
     }
-    public IDetectedAppCollectionWithReferencesRequestBuilder detectedApps() {
+    /**
+     *  Gets a request builder for the DetectedApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DetectedAppCollectionWithReferencesRequestBuilder detectedApps() {
         return new DetectedAppCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps"), getClient(), null);
     }
 
-    public IDetectedAppWithReferenceRequestBuilder detectedApps(final String id) {
+    /**
+     * Gets a request builder for the DetectedApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DetectedAppWithReferenceRequestBuilder detectedApps(@Nonnull final String id) {
         return new DetectedAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for DeviceCategory
      *
-     * @return the IDeviceCategoryRequestBuilder instance
+     * @return the DeviceCategoryRequestBuilder instance
      */
-    public IDeviceCategoryRequestBuilder deviceCategory() {
+    @Nonnull
+    public DeviceCategoryRequestBuilder deviceCategory() {
         return new DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
     }
-    public IDeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests() {
+    /**
+     *  Gets a request builder for the DeviceLogCollectionResponse collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceLogCollectionResponseCollectionRequestBuilder logCollectionRequests() {
         return new DeviceLogCollectionResponseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests"), getClient(), null);
     }
 
-    public IDeviceLogCollectionResponseRequestBuilder logCollectionRequests(final String id) {
+    /**
+     * Gets a request builder for the DeviceLogCollectionResponse item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceLogCollectionResponseRequestBuilder logCollectionRequests(@Nonnull final String id) {
         return new DeviceLogCollectionResponseRequestBuilder(getRequestUrlWithAdditionalSegment("logCollectionRequests") + "/" + id, getClient(), null);
     }
-    public IUserCollectionRequestBuilder users() {
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserCollectionRequestBuilder users() {
         return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
-    public IUserRequestBuilder users(final String id) {
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserRequestBuilder users(@Nonnull final String id) {
         return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WindowsProtectionState
      *
-     * @return the IWindowsProtectionStateRequestBuilder instance
+     * @return the WindowsProtectionStateRequestBuilder instance
      */
-    public IWindowsProtectionStateRequestBuilder windowsProtectionState() {
+    @Nonnull
+    public WindowsProtectionStateRequestBuilder windowsProtectionState() {
         return new WindowsProtectionStateRequestBuilder(getRequestUrlWithAdditionalSegment("windowsProtectionState"), getClient(), null);
     }
 }

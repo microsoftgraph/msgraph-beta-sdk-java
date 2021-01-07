@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonAnnotation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Annotation Request.
  */
-public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnotationRequest {
+public class PersonAnnotationRequest extends BaseRequest<PersonAnnotation> {
 	
     /**
      * The request for the PersonAnnotation
@@ -29,7 +31,7 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonAnnotationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonAnnotationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonAnnotation.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonAnnotation> callback) {
+    public void get(@Nonnull final ICallback<? super PersonAnnotation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @return the PersonAnnotation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonAnnotation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonAnnotation> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonAnnotation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @param sourcePersonAnnotation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonAnnotation sourcePersonAnnotation, final ICallback<? super PersonAnnotation> callback) {
+    public void patch(@Nonnull final PersonAnnotation sourcePersonAnnotation, @Nonnull final ICallback<? super PersonAnnotation> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonAnnotation);
     }
 
@@ -87,7 +90,8 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @return the updated PersonAnnotation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonAnnotation patch(final PersonAnnotation sourcePersonAnnotation) throws ClientException {
+    @Nullable
+    public PersonAnnotation patch(@Nonnull final PersonAnnotation sourcePersonAnnotation) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonAnnotation);
     }
 
@@ -97,7 +101,7 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @param newPersonAnnotation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonAnnotation newPersonAnnotation, final ICallback<? super PersonAnnotation> callback) {
+    public void post(@Nonnull final PersonAnnotation newPersonAnnotation, @Nonnull final ICallback<? super PersonAnnotation> callback) {
         send(HttpMethod.POST, callback, newPersonAnnotation);
     }
 
@@ -108,7 +112,8 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @return the created PersonAnnotation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonAnnotation post(final PersonAnnotation newPersonAnnotation) throws ClientException {
+    @Nullable
+    public PersonAnnotation post(@Nonnull final PersonAnnotation newPersonAnnotation) throws ClientException {
         return send(HttpMethod.POST, newPersonAnnotation);
     }
 
@@ -118,7 +123,7 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @param newPersonAnnotation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonAnnotation newPersonAnnotation, final ICallback<? super PersonAnnotation> callback) {
+    public void put(@Nonnull final PersonAnnotation newPersonAnnotation, @Nonnull final ICallback<? super PersonAnnotation> callback) {
         send(HttpMethod.PUT, callback, newPersonAnnotation);
     }
 
@@ -129,7 +134,8 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @return the created PersonAnnotation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonAnnotation put(final PersonAnnotation newPersonAnnotation) throws ClientException {
+    @Nullable
+    public PersonAnnotation put(@Nonnull final PersonAnnotation newPersonAnnotation) throws ClientException {
         return send(HttpMethod.PUT, newPersonAnnotation);
     }
 
@@ -139,9 +145,10 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonAnnotationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonAnnotationRequest)this;
+     @Nonnull
+     public PersonAnnotationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonAnnotationRequest extends BaseRequest implements IPersonAnnot
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonAnnotationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonAnnotationRequest)this;
+     @Nonnull
+     public PersonAnnotationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

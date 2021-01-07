@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TrustFrameworkPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Trust Framework Policy Request Builder.
  */
-public class TrustFrameworkPolicyRequestBuilder extends BaseRequestBuilder implements ITrustFrameworkPolicyRequestBuilder {
+public class TrustFrameworkPolicyRequestBuilder extends BaseRequestBuilder<TrustFrameworkPolicy> {
 
     /**
      * The request builder for the TrustFrameworkPolicy
@@ -28,7 +30,7 @@ public class TrustFrameworkPolicyRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TrustFrameworkPolicyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TrustFrameworkPolicyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class TrustFrameworkPolicyRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITrustFrameworkPolicyRequest instance
+     * @return the TrustFrameworkPolicyRequest instance
      */
-    public ITrustFrameworkPolicyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TrustFrameworkPolicyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +49,21 @@ public class TrustFrameworkPolicyRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITrustFrameworkPolicyRequest instance
+     * @return the TrustFrameworkPolicyRequest instance
      */
-    public ITrustFrameworkPolicyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TrustFrameworkPolicyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TrustFrameworkPolicyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public ITrustFrameworkPolicyStreamRequestBuilder content() {
+    /**
+     * Gets a request builder to get the binary value of the object
+     * @return the stream request builder
+     */
+    @Nonnull
+    public TrustFrameworkPolicyStreamRequestBuilder content() {
         return new TrustFrameworkPolicyStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
     }
 }

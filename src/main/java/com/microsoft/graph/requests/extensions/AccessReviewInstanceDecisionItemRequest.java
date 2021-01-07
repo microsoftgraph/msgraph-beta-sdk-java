@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewInstanceDecisionItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Review Instance Decision Item Request.
  */
-public class AccessReviewInstanceDecisionItemRequest extends BaseRequest implements IAccessReviewInstanceDecisionItemRequest {
+public class AccessReviewInstanceDecisionItemRequest extends BaseRequest<AccessReviewInstanceDecisionItem> {
 	
     /**
      * The request for the AccessReviewInstanceDecisionItem
@@ -29,7 +31,7 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewInstanceDecisionItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessReviewInstanceDecisionItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessReviewInstanceDecisionItem.class);
     }
 
@@ -38,7 +40,7 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
+    public void get(@Nonnull final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @return the AccessReviewInstanceDecisionItem from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessReviewInstanceDecisionItem get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @param sourceAccessReviewInstanceDecisionItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessReviewInstanceDecisionItem sourceAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
+    public void patch(@Nonnull final AccessReviewInstanceDecisionItem sourceAccessReviewInstanceDecisionItem, @Nonnull final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessReviewInstanceDecisionItem);
     }
 
@@ -87,7 +90,8 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @return the updated AccessReviewInstanceDecisionItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewInstanceDecisionItem patch(final AccessReviewInstanceDecisionItem sourceAccessReviewInstanceDecisionItem) throws ClientException {
+    @Nullable
+    public AccessReviewInstanceDecisionItem patch(@Nonnull final AccessReviewInstanceDecisionItem sourceAccessReviewInstanceDecisionItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessReviewInstanceDecisionItem);
     }
 
@@ -97,7 +101,7 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @param newAccessReviewInstanceDecisionItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
+    public void post(@Nonnull final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, @Nonnull final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
         send(HttpMethod.POST, callback, newAccessReviewInstanceDecisionItem);
     }
 
@@ -108,7 +112,8 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @return the created AccessReviewInstanceDecisionItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewInstanceDecisionItem post(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem) throws ClientException {
+    @Nullable
+    public AccessReviewInstanceDecisionItem post(@Nonnull final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem) throws ClientException {
         return send(HttpMethod.POST, newAccessReviewInstanceDecisionItem);
     }
 
@@ -118,7 +123,7 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @param newAccessReviewInstanceDecisionItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
+    public void put(@Nonnull final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem, @Nonnull final ICallback<? super AccessReviewInstanceDecisionItem> callback) {
         send(HttpMethod.PUT, callback, newAccessReviewInstanceDecisionItem);
     }
 
@@ -129,7 +134,8 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @return the created AccessReviewInstanceDecisionItem
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewInstanceDecisionItem put(final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem) throws ClientException {
+    @Nullable
+    public AccessReviewInstanceDecisionItem put(@Nonnull final AccessReviewInstanceDecisionItem newAccessReviewInstanceDecisionItem) throws ClientException {
         return send(HttpMethod.PUT, newAccessReviewInstanceDecisionItem);
     }
 
@@ -139,9 +145,10 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessReviewInstanceDecisionItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessReviewInstanceDecisionItemRequest)this;
+     @Nonnull
+     public AccessReviewInstanceDecisionItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AccessReviewInstanceDecisionItemRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessReviewInstanceDecisionItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessReviewInstanceDecisionItemRequest)this;
+     @Nonnull
+     public AccessReviewInstanceDecisionItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

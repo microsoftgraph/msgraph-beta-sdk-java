@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsPhoneEASEmailProfileConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Phone EASEmail Profile Configuration Request.
  */
-public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest implements IWindowsPhoneEASEmailProfileConfigurationRequest {
+public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest<WindowsPhoneEASEmailProfileConfiguration> {
 	
     /**
      * The request for the WindowsPhoneEASEmailProfileConfiguration
@@ -29,7 +31,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsPhoneEASEmailProfileConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsPhoneEASEmailProfileConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsPhoneEASEmailProfileConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @return the WindowsPhoneEASEmailProfileConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsPhoneEASEmailProfileConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param sourceWindowsPhoneEASEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void patch(@Nonnull final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration, @Nonnull final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @return the updated WindowsPhoneEASEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhoneEASEmailProfileConfiguration patch(final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public WindowsPhoneEASEmailProfileConfiguration patch(@Nonnull final WindowsPhoneEASEmailProfileConfiguration sourceWindowsPhoneEASEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param newWindowsPhoneEASEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void post(@Nonnull final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, @Nonnull final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @return the created WindowsPhoneEASEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhoneEASEmailProfileConfiguration post(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public WindowsPhoneEASEmailProfileConfiguration post(@Nonnull final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param newWindowsPhoneEASEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
+    public void put(@Nonnull final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration, @Nonnull final ICallback<? super WindowsPhoneEASEmailProfileConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @return the created WindowsPhoneEASEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsPhoneEASEmailProfileConfiguration put(final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public WindowsPhoneEASEmailProfileConfiguration put(@Nonnull final WindowsPhoneEASEmailProfileConfiguration newWindowsPhoneEASEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsPhoneEASEmailProfileConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsPhoneEASEmailProfileConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsPhoneEASEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public WindowsPhoneEASEmailProfileConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsPhoneEASEmailProfileConfigurationRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsPhoneEASEmailProfileConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsPhoneEASEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public WindowsPhoneEASEmailProfileConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

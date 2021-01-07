@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsUniversalAppXContainedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Universal App XContained App Request.
  */
-public class WindowsUniversalAppXContainedAppRequest extends BaseRequest implements IWindowsUniversalAppXContainedAppRequest {
+public class WindowsUniversalAppXContainedAppRequest extends BaseRequest<WindowsUniversalAppXContainedApp> {
 	
     /**
      * The request for the WindowsUniversalAppXContainedApp
@@ -29,7 +31,7 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsUniversalAppXContainedAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsUniversalAppXContainedAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsUniversalAppXContainedApp.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @return the WindowsUniversalAppXContainedApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsUniversalAppXContainedApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @param sourceWindowsUniversalAppXContainedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsUniversalAppXContainedApp sourceWindowsUniversalAppXContainedApp, final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
+    public void patch(@Nonnull final WindowsUniversalAppXContainedApp sourceWindowsUniversalAppXContainedApp, @Nonnull final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsUniversalAppXContainedApp);
     }
 
@@ -87,7 +90,8 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @return the updated WindowsUniversalAppXContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUniversalAppXContainedApp patch(final WindowsUniversalAppXContainedApp sourceWindowsUniversalAppXContainedApp) throws ClientException {
+    @Nullable
+    public WindowsUniversalAppXContainedApp patch(@Nonnull final WindowsUniversalAppXContainedApp sourceWindowsUniversalAppXContainedApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsUniversalAppXContainedApp);
     }
 
@@ -97,7 +101,7 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @param newWindowsUniversalAppXContainedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
+    public void post(@Nonnull final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, @Nonnull final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
         send(HttpMethod.POST, callback, newWindowsUniversalAppXContainedApp);
     }
 
@@ -108,7 +112,8 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @return the created WindowsUniversalAppXContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUniversalAppXContainedApp post(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp) throws ClientException {
+    @Nullable
+    public WindowsUniversalAppXContainedApp post(@Nonnull final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp) throws ClientException {
         return send(HttpMethod.POST, newWindowsUniversalAppXContainedApp);
     }
 
@@ -118,7 +123,7 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @param newWindowsUniversalAppXContainedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
+    public void put(@Nonnull final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp, @Nonnull final ICallback<? super WindowsUniversalAppXContainedApp> callback) {
         send(HttpMethod.PUT, callback, newWindowsUniversalAppXContainedApp);
     }
 
@@ -129,7 +134,8 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @return the created WindowsUniversalAppXContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsUniversalAppXContainedApp put(final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp) throws ClientException {
+    @Nullable
+    public WindowsUniversalAppXContainedApp put(@Nonnull final WindowsUniversalAppXContainedApp newWindowsUniversalAppXContainedApp) throws ClientException {
         return send(HttpMethod.PUT, newWindowsUniversalAppXContainedApp);
     }
 
@@ -139,9 +145,10 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsUniversalAppXContainedAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsUniversalAppXContainedAppRequest)this;
+     @Nonnull
+     public WindowsUniversalAppXContainedAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsUniversalAppXContainedAppRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsUniversalAppXContainedAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsUniversalAppXContainedAppRequest)this;
+     @Nonnull
+     public WindowsUniversalAppXContainedAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

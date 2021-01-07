@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Todo;
-import com.microsoft.graph.requests.extensions.ITodoTaskListCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskListRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskListRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Todo Request Builder.
  */
-public class TodoRequestBuilder extends BaseRequestBuilder implements ITodoRequestBuilder {
+public class TodoRequestBuilder extends BaseRequestBuilder<Todo> {
 
     /**
      * The request builder for the Todo
@@ -32,7 +32,7 @@ public class TodoRequestBuilder extends BaseRequestBuilder implements ITodoReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class TodoRequestBuilder extends BaseRequestBuilder implements ITodoReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITodoRequest instance
+     * @return the TodoRequest instance
      */
-    public ITodoRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TodoRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class TodoRequestBuilder extends BaseRequestBuilder implements ITodoReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITodoRequest instance
+     * @return the TodoRequest instance
      */
-    public ITodoRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TodoRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TodoRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ITodoTaskListCollectionRequestBuilder lists() {
+    /**
+     *  Gets a request builder for the TodoTaskList collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TodoTaskListCollectionRequestBuilder lists() {
         return new TodoTaskListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("lists"), getClient(), null);
     }
 
-    public ITodoTaskListRequestBuilder lists(final String id) {
+    /**
+     * Gets a request builder for the TodoTaskList item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TodoTaskListRequestBuilder lists(@Nonnull final String id) {
         return new TodoTaskListRequestBuilder(getRequestUrlWithAdditionalSegment("lists") + "/" + id, getClient(), null);
     }
 }

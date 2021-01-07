@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Place;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Place Request Builder.
  */
-public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceRequestBuilder {
+public class PlaceRequestBuilder extends BaseRequestBuilder<Place> {
 
     /**
      * The request builder for the Place
@@ -28,7 +30,7 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlaceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlaceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPlaceRequest instance
+     * @return the PlaceRequest instance
      */
-    public IPlaceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PlaceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PlaceRequestBuilder extends BaseRequestBuilder implements IPlaceReq
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPlaceRequest instance
+     * @return the PlaceRequest instance
      */
-    public IPlaceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PlaceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PlaceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemCategory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Category Request.
  */
-public class ItemCategoryRequest extends BaseRequest implements IItemCategoryRequest {
+public class ItemCategoryRequest extends BaseRequest<ItemCategory> {
 	
     /**
      * The request for the ItemCategory
@@ -29,7 +31,7 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemCategoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemCategoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemCategory.class);
     }
 
@@ -38,7 +40,7 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemCategory> callback) {
+    public void get(@Nonnull final ICallback<? super ItemCategory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @return the ItemCategory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemCategory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemCategory> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemCategory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @param sourceItemCategory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemCategory sourceItemCategory, final ICallback<? super ItemCategory> callback) {
+    public void patch(@Nonnull final ItemCategory sourceItemCategory, @Nonnull final ICallback<? super ItemCategory> callback) {
         send(HttpMethod.PATCH, callback, sourceItemCategory);
     }
 
@@ -87,7 +90,8 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @return the updated ItemCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemCategory patch(final ItemCategory sourceItemCategory) throws ClientException {
+    @Nullable
+    public ItemCategory patch(@Nonnull final ItemCategory sourceItemCategory) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemCategory);
     }
 
@@ -97,7 +101,7 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @param newItemCategory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemCategory newItemCategory, final ICallback<? super ItemCategory> callback) {
+    public void post(@Nonnull final ItemCategory newItemCategory, @Nonnull final ICallback<? super ItemCategory> callback) {
         send(HttpMethod.POST, callback, newItemCategory);
     }
 
@@ -108,7 +112,8 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @return the created ItemCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemCategory post(final ItemCategory newItemCategory) throws ClientException {
+    @Nullable
+    public ItemCategory post(@Nonnull final ItemCategory newItemCategory) throws ClientException {
         return send(HttpMethod.POST, newItemCategory);
     }
 
@@ -118,7 +123,7 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @param newItemCategory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemCategory newItemCategory, final ICallback<? super ItemCategory> callback) {
+    public void put(@Nonnull final ItemCategory newItemCategory, @Nonnull final ICallback<? super ItemCategory> callback) {
         send(HttpMethod.PUT, callback, newItemCategory);
     }
 
@@ -129,7 +134,8 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @return the created ItemCategory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemCategory put(final ItemCategory newItemCategory) throws ClientException {
+    @Nullable
+    public ItemCategory put(@Nonnull final ItemCategory newItemCategory) throws ClientException {
         return send(HttpMethod.PUT, newItemCategory);
     }
 
@@ -139,9 +145,10 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @param value the select clause
      * @return the updated request
      */
-     public IItemCategoryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemCategoryRequest)this;
+     @Nonnull
+     public ItemCategoryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ItemCategoryRequest extends BaseRequest implements IItemCategoryReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemCategoryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemCategoryRequest)this;
+     @Nonnull
+     public ItemCategoryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

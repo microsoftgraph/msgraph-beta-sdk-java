@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Todo Task List Request Builder.
  */
-public class TodoTaskListRequestBuilder extends BaseRequestBuilder implements ITodoTaskListRequestBuilder {
+public class TodoTaskListRequestBuilder extends BaseRequestBuilder<TodoTaskList> {
 
     /**
      * The request builder for the TodoTaskList
@@ -36,7 +34,7 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder implements IT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder implements IT
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITodoTaskListRequest instance
+     * @return the TodoTaskListRequest instance
      */
-    public ITodoTaskListRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TodoTaskListRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class TodoTaskListRequestBuilder extends BaseRequestBuilder implements IT
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITodoTaskListRequest instance
+     * @return the TodoTaskListRequest instance
      */
-    public ITodoTaskListRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TodoTaskListRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TodoTaskListRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IExtensionCollectionRequestBuilder extensions() {
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public ITodoTaskCollectionRequestBuilder tasks() {
+    /**
+     *  Gets a request builder for the TodoTask collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TodoTaskCollectionRequestBuilder tasks() {
         return new TodoTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }
 
-    public ITodoTaskRequestBuilder tasks(final String id) {
+    /**
+     * Gets a request builder for the TodoTask item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TodoTaskRequestBuilder tasks(@Nonnull final String id) {
         return new TodoTaskRequestBuilder(getRequestUrlWithAdditionalSegment("tasks") + "/" + id, getClient(), null);
     }
 }

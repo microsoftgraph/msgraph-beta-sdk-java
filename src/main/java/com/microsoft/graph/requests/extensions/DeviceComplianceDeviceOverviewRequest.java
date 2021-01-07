@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceDeviceOverview;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Device Overview Request.
  */
-public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implements IDeviceComplianceDeviceOverviewRequest {
+public class DeviceComplianceDeviceOverviewRequest extends BaseRequest<DeviceComplianceDeviceOverview> {
 	
     /**
      * The request for the DeviceComplianceDeviceOverview
@@ -29,7 +31,7 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceDeviceOverviewRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceDeviceOverviewRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceDeviceOverview.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceDeviceOverview> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceComplianceDeviceOverview> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @return the DeviceComplianceDeviceOverview from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceComplianceDeviceOverview get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceDeviceOverview> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceComplianceDeviceOverview> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @param sourceDeviceComplianceDeviceOverview the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceDeviceOverview sourceDeviceComplianceDeviceOverview, final ICallback<? super DeviceComplianceDeviceOverview> callback) {
+    public void patch(@Nonnull final DeviceComplianceDeviceOverview sourceDeviceComplianceDeviceOverview, @Nonnull final ICallback<? super DeviceComplianceDeviceOverview> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceDeviceOverview);
     }
 
@@ -87,7 +90,8 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @return the updated DeviceComplianceDeviceOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceDeviceOverview patch(final DeviceComplianceDeviceOverview sourceDeviceComplianceDeviceOverview) throws ClientException {
+    @Nullable
+    public DeviceComplianceDeviceOverview patch(@Nonnull final DeviceComplianceDeviceOverview sourceDeviceComplianceDeviceOverview) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceComplianceDeviceOverview);
     }
 
@@ -97,7 +101,7 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @param newDeviceComplianceDeviceOverview the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<? super DeviceComplianceDeviceOverview> callback) {
+    public void post(@Nonnull final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, @Nonnull final ICallback<? super DeviceComplianceDeviceOverview> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceDeviceOverview);
     }
 
@@ -108,7 +112,8 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @return the created DeviceComplianceDeviceOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceDeviceOverview post(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview) throws ClientException {
+    @Nullable
+    public DeviceComplianceDeviceOverview post(@Nonnull final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview) throws ClientException {
         return send(HttpMethod.POST, newDeviceComplianceDeviceOverview);
     }
 
@@ -118,7 +123,7 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @param newDeviceComplianceDeviceOverview the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, final ICallback<? super DeviceComplianceDeviceOverview> callback) {
+    public void put(@Nonnull final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview, @Nonnull final ICallback<? super DeviceComplianceDeviceOverview> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceDeviceOverview);
     }
 
@@ -129,7 +134,8 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @return the created DeviceComplianceDeviceOverview
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceDeviceOverview put(final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview) throws ClientException {
+    @Nullable
+    public DeviceComplianceDeviceOverview put(@Nonnull final DeviceComplianceDeviceOverview newDeviceComplianceDeviceOverview) throws ClientException {
         return send(HttpMethod.PUT, newDeviceComplianceDeviceOverview);
     }
 
@@ -139,9 +145,10 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceComplianceDeviceOverviewRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceComplianceDeviceOverviewRequest)this;
+     @Nonnull
+     public DeviceComplianceDeviceOverviewRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceComplianceDeviceOverviewRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceComplianceDeviceOverviewRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComplianceDeviceOverviewRequest)this;
+     @Nonnull
+     public DeviceComplianceDeviceOverviewRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

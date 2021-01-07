@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementDomainJoinConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Domain Join Connector Request Builder.
  */
-public class DeviceManagementDomainJoinConnectorRequestBuilder extends BaseRequestBuilder implements IDeviceManagementDomainJoinConnectorRequestBuilder {
+public class DeviceManagementDomainJoinConnectorRequestBuilder extends BaseRequestBuilder<DeviceManagementDomainJoinConnector> {
 
     /**
      * The request builder for the DeviceManagementDomainJoinConnector
@@ -28,7 +30,7 @@ public class DeviceManagementDomainJoinConnectorRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementDomainJoinConnectorRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementDomainJoinConnectorRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceManagementDomainJoinConnectorRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementDomainJoinConnectorRequest instance
+     * @return the DeviceManagementDomainJoinConnectorRequest instance
      */
-    public IDeviceManagementDomainJoinConnectorRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementDomainJoinConnectorRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceManagementDomainJoinConnectorRequestBuilder extends BaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementDomainJoinConnectorRequest instance
+     * @return the DeviceManagementDomainJoinConnectorRequest instance
      */
-    public IDeviceManagementDomainJoinConnectorRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementDomainJoinConnectorRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementReports;
-import com.microsoft.graph.requests.extensions.IDeviceManagementCachedReportConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementCachedReportConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementCachedReportConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementExportJobRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementExportJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementExportJobRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementReportScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementReportScheduleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Reports Request.
  */
-public class DeviceManagementReportsRequest extends BaseRequest implements IDeviceManagementReportsRequest {
+public class DeviceManagementReportsRequest extends BaseRequest<DeviceManagementReports> {
 	
     /**
      * The request for the DeviceManagementReports
@@ -41,7 +37,7 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementReportsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementReportsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementReports.class);
     }
 
@@ -50,7 +46,7 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementReports> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementReports> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @return the DeviceManagementReports from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementReports get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementReports> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementReports> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @param sourceDeviceManagementReports the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementReports sourceDeviceManagementReports, final ICallback<? super DeviceManagementReports> callback) {
+    public void patch(@Nonnull final DeviceManagementReports sourceDeviceManagementReports, @Nonnull final ICallback<? super DeviceManagementReports> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementReports);
     }
 
@@ -99,7 +96,8 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @return the updated DeviceManagementReports
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementReports patch(final DeviceManagementReports sourceDeviceManagementReports) throws ClientException {
+    @Nullable
+    public DeviceManagementReports patch(@Nonnull final DeviceManagementReports sourceDeviceManagementReports) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementReports);
     }
 
@@ -109,7 +107,7 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @param newDeviceManagementReports the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementReports newDeviceManagementReports, final ICallback<? super DeviceManagementReports> callback) {
+    public void post(@Nonnull final DeviceManagementReports newDeviceManagementReports, @Nonnull final ICallback<? super DeviceManagementReports> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementReports);
     }
 
@@ -120,7 +118,8 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @return the created DeviceManagementReports
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementReports post(final DeviceManagementReports newDeviceManagementReports) throws ClientException {
+    @Nullable
+    public DeviceManagementReports post(@Nonnull final DeviceManagementReports newDeviceManagementReports) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementReports);
     }
 
@@ -130,7 +129,7 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @param newDeviceManagementReports the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementReports newDeviceManagementReports, final ICallback<? super DeviceManagementReports> callback) {
+    public void put(@Nonnull final DeviceManagementReports newDeviceManagementReports, @Nonnull final ICallback<? super DeviceManagementReports> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementReports);
     }
 
@@ -141,7 +140,8 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @return the created DeviceManagementReports
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementReports put(final DeviceManagementReports newDeviceManagementReports) throws ClientException {
+    @Nullable
+    public DeviceManagementReports put(@Nonnull final DeviceManagementReports newDeviceManagementReports) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementReports);
     }
 
@@ -151,9 +151,10 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementReportsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementReportsRequest)this;
+     @Nonnull
+     public DeviceManagementReportsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class DeviceManagementReportsRequest extends BaseRequest implements IDevi
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementReportsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementReportsRequest)this;
+     @Nonnull
+     public DeviceManagementReportsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

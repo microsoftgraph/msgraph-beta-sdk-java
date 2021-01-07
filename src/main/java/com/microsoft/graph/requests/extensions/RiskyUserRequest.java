@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RiskyUser;
-import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRiskyUserHistoryItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RiskyUserHistoryItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Risky User Request.
  */
-public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
+public class RiskyUserRequest extends BaseRequest<RiskyUser> {
 	
     /**
      * The request for the RiskyUser
@@ -34,10 +34,10 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public RiskyUserRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends RiskyUser> responseClass) {
+    public RiskyUserRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends RiskyUser> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -48,7 +48,7 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RiskyUserRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RiskyUserRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RiskyUser.class);
     }
 
@@ -57,7 +57,7 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RiskyUser> callback) {
+    public void get(@Nonnull final ICallback<? super RiskyUser> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +67,7 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @return the RiskyUser from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RiskyUser get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +77,7 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RiskyUser> callback) {
+    public void delete(@Nonnull final ICallback<? super RiskyUser> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +96,7 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @param sourceRiskyUser the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RiskyUser sourceRiskyUser, final ICallback<? super RiskyUser> callback) {
+    public void patch(@Nonnull final RiskyUser sourceRiskyUser, @Nonnull final ICallback<? super RiskyUser> callback) {
         send(HttpMethod.PATCH, callback, sourceRiskyUser);
     }
 
@@ -106,7 +107,8 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @return the updated RiskyUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskyUser patch(final RiskyUser sourceRiskyUser) throws ClientException {
+    @Nullable
+    public RiskyUser patch(@Nonnull final RiskyUser sourceRiskyUser) throws ClientException {
         return send(HttpMethod.PATCH, sourceRiskyUser);
     }
 
@@ -116,7 +118,7 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @param newRiskyUser the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RiskyUser newRiskyUser, final ICallback<? super RiskyUser> callback) {
+    public void post(@Nonnull final RiskyUser newRiskyUser, @Nonnull final ICallback<? super RiskyUser> callback) {
         send(HttpMethod.POST, callback, newRiskyUser);
     }
 
@@ -127,7 +129,8 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @return the created RiskyUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskyUser post(final RiskyUser newRiskyUser) throws ClientException {
+    @Nullable
+    public RiskyUser post(@Nonnull final RiskyUser newRiskyUser) throws ClientException {
         return send(HttpMethod.POST, newRiskyUser);
     }
 
@@ -137,7 +140,7 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @param newRiskyUser the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RiskyUser newRiskyUser, final ICallback<? super RiskyUser> callback) {
+    public void put(@Nonnull final RiskyUser newRiskyUser, @Nonnull final ICallback<? super RiskyUser> callback) {
         send(HttpMethod.PUT, callback, newRiskyUser);
     }
 
@@ -148,7 +151,8 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @return the created RiskyUser
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RiskyUser put(final RiskyUser newRiskyUser) throws ClientException {
+    @Nullable
+    public RiskyUser put(@Nonnull final RiskyUser newRiskyUser) throws ClientException {
         return send(HttpMethod.PUT, newRiskyUser);
     }
 
@@ -158,9 +162,10 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IRiskyUserRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RiskyUserRequest)this;
+     @Nonnull
+     public RiskyUserRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +174,10 @@ public class RiskyUserRequest extends BaseRequest implements IRiskyUserRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IRiskyUserRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RiskyUserRequest)this;
+     @Nonnull
+     public RiskyUserRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartLegend;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLegendFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLegendFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Legend Request Builder.
  */
-public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implements IWorkbookChartLegendRequestBuilder {
+public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder<WorkbookChartLegend> {
 
     /**
      * The request builder for the WorkbookChartLegend
@@ -30,7 +31,7 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartLegendRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartLegendRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartLegendRequest instance
+     * @return the WorkbookChartLegendRequest instance
      */
-    public IWorkbookChartLegendRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartLegendRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartLegendRequest instance
+     * @return the WorkbookChartLegendRequest instance
      */
-    public IWorkbookChartLegendRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartLegendRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartLegendRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class WorkbookChartLegendRequestBuilder extends BaseRequestBuilder implem
     /**
      * Gets the request builder for WorkbookChartLegendFormat
      *
-     * @return the IWorkbookChartLegendFormatRequestBuilder instance
+     * @return the WorkbookChartLegendFormatRequestBuilder instance
      */
-    public IWorkbookChartLegendFormatRequestBuilder format() {
+    @Nonnull
+    public WorkbookChartLegendFormatRequestBuilder format() {
         return new WorkbookChartLegendFormatRequestBuilder(getRequestUrlWithAdditionalSegment("format"), getClient(), null);
     }
 }

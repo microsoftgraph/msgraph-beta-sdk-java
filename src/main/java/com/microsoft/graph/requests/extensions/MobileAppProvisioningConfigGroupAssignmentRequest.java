@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile App Provisioning Config Group Assignment Request.
  */
-public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseRequest implements IMobileAppProvisioningConfigGroupAssignmentRequest {
+public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseRequest<MobileAppProvisioningConfigGroupAssignment> {
 	
     /**
      * The request for the MobileAppProvisioningConfigGroupAssignment
@@ -29,7 +31,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppProvisioningConfigGroupAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppProvisioningConfigGroupAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileAppProvisioningConfigGroupAssignment.class);
     }
 
@@ -38,7 +40,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @return the MobileAppProvisioningConfigGroupAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileAppProvisioningConfigGroupAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param sourceMobileAppProvisioningConfigGroupAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void patch(@Nonnull final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment, @Nonnull final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -87,7 +90,8 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @return the updated MobileAppProvisioningConfigGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppProvisioningConfigGroupAssignment patch(final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment) throws ClientException {
+    @Nullable
+    public MobileAppProvisioningConfigGroupAssignment patch(@Nonnull final MobileAppProvisioningConfigGroupAssignment sourceMobileAppProvisioningConfigGroupAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -97,7 +101,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param newMobileAppProvisioningConfigGroupAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void post(@Nonnull final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, @Nonnull final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.POST, callback, newMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -108,7 +112,8 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @return the created MobileAppProvisioningConfigGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppProvisioningConfigGroupAssignment post(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment) throws ClientException {
+    @Nullable
+    public MobileAppProvisioningConfigGroupAssignment post(@Nonnull final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment) throws ClientException {
         return send(HttpMethod.POST, newMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -118,7 +123,7 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param newMobileAppProvisioningConfigGroupAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
+    public void put(@Nonnull final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment, @Nonnull final ICallback<? super MobileAppProvisioningConfigGroupAssignment> callback) {
         send(HttpMethod.PUT, callback, newMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -129,7 +134,8 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @return the created MobileAppProvisioningConfigGroupAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileAppProvisioningConfigGroupAssignment put(final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment) throws ClientException {
+    @Nullable
+    public MobileAppProvisioningConfigGroupAssignment put(@Nonnull final MobileAppProvisioningConfigGroupAssignment newMobileAppProvisioningConfigGroupAssignment) throws ClientException {
         return send(HttpMethod.PUT, newMobileAppProvisioningConfigGroupAssignment);
     }
 
@@ -139,9 +145,10 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileAppProvisioningConfigGroupAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileAppProvisioningConfigGroupAssignmentRequest)this;
+     @Nonnull
+     public MobileAppProvisioningConfigGroupAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MobileAppProvisioningConfigGroupAssignmentRequest extends BaseReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileAppProvisioningConfigGroupAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileAppProvisioningConfigGroupAssignmentRequest)this;
+     @Nonnull
+     public MobileAppProvisioningConfigGroupAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

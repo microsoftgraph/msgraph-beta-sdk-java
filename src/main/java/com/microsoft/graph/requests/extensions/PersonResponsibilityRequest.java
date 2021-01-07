@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonResponsibility;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Responsibility Request.
  */
-public class PersonResponsibilityRequest extends BaseRequest implements IPersonResponsibilityRequest {
+public class PersonResponsibilityRequest extends BaseRequest<PersonResponsibility> {
 	
     /**
      * The request for the PersonResponsibility
@@ -29,7 +31,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonResponsibilityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonResponsibilityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonResponsibility.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonResponsibility> callback) {
+    public void get(@Nonnull final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @return the PersonResponsibility from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonResponsibility get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonResponsibility> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param sourcePersonResponsibility the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonResponsibility sourcePersonResponsibility, final ICallback<? super PersonResponsibility> callback) {
+    public void patch(@Nonnull final PersonResponsibility sourcePersonResponsibility, @Nonnull final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonResponsibility);
     }
 
@@ -87,7 +90,8 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @return the updated PersonResponsibility
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonResponsibility patch(final PersonResponsibility sourcePersonResponsibility) throws ClientException {
+    @Nullable
+    public PersonResponsibility patch(@Nonnull final PersonResponsibility sourcePersonResponsibility) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonResponsibility);
     }
 
@@ -97,7 +101,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param newPersonResponsibility the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonResponsibility newPersonResponsibility, final ICallback<? super PersonResponsibility> callback) {
+    public void post(@Nonnull final PersonResponsibility newPersonResponsibility, @Nonnull final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.POST, callback, newPersonResponsibility);
     }
 
@@ -108,7 +112,8 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @return the created PersonResponsibility
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonResponsibility post(final PersonResponsibility newPersonResponsibility) throws ClientException {
+    @Nullable
+    public PersonResponsibility post(@Nonnull final PersonResponsibility newPersonResponsibility) throws ClientException {
         return send(HttpMethod.POST, newPersonResponsibility);
     }
 
@@ -118,7 +123,7 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param newPersonResponsibility the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonResponsibility newPersonResponsibility, final ICallback<? super PersonResponsibility> callback) {
+    public void put(@Nonnull final PersonResponsibility newPersonResponsibility, @Nonnull final ICallback<? super PersonResponsibility> callback) {
         send(HttpMethod.PUT, callback, newPersonResponsibility);
     }
 
@@ -129,7 +134,8 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @return the created PersonResponsibility
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonResponsibility put(final PersonResponsibility newPersonResponsibility) throws ClientException {
+    @Nullable
+    public PersonResponsibility put(@Nonnull final PersonResponsibility newPersonResponsibility) throws ClientException {
         return send(HttpMethod.PUT, newPersonResponsibility);
     }
 
@@ -139,9 +145,10 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonResponsibilityRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonResponsibilityRequest)this;
+     @Nonnull
+     public PersonResponsibilityRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonResponsibilityRequest extends BaseRequest implements IPersonR
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonResponsibilityRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonResponsibilityRequest)this;
+     @Nonnull
+     public PersonResponsibilityRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Program;
-import com.microsoft.graph.requests.extensions.IProgramControlCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProgramControlRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProgramControlRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Program Request Builder.
  */
-public class ProgramRequestBuilder extends BaseRequestBuilder implements IProgramRequestBuilder {
+public class ProgramRequestBuilder extends BaseRequestBuilder<Program> {
 
     /**
      * The request builder for the Program
@@ -32,7 +32,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder implements IProgra
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ProgramRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ProgramRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ProgramRequestBuilder extends BaseRequestBuilder implements IProgra
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IProgramRequest instance
+     * @return the ProgramRequest instance
      */
-    public IProgramRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ProgramRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class ProgramRequestBuilder extends BaseRequestBuilder implements IProgra
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IProgramRequest instance
+     * @return the ProgramRequest instance
      */
-    public IProgramRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ProgramRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ProgramRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IProgramControlCollectionRequestBuilder controls() {
+    /**
+     *  Gets a request builder for the ProgramControl collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ProgramControlCollectionRequestBuilder controls() {
         return new ProgramControlCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("controls"), getClient(), null);
     }
 
-    public IProgramControlRequestBuilder controls(final String id) {
+    /**
+     * Gets a request builder for the ProgramControl item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ProgramControlRequestBuilder controls(@Nonnull final String id) {
         return new ProgramControlRequestBuilder(getRequestUrlWithAdditionalSegment("controls") + "/" + id, getClient(), null);
     }
 }

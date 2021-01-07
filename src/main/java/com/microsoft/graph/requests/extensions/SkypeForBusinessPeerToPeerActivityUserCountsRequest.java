@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SkypeForBusinessPeerToPeerActivityUserCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Skype For Business Peer To Peer Activity User Counts Request.
  */
-public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseRequest implements ISkypeForBusinessPeerToPeerActivityUserCountsRequest {
+public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseRequest<SkypeForBusinessPeerToPeerActivityUserCounts> {
 	
     /**
      * The request for the SkypeForBusinessPeerToPeerActivityUserCounts
@@ -29,7 +31,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SkypeForBusinessPeerToPeerActivityUserCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SkypeForBusinessPeerToPeerActivityUserCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SkypeForBusinessPeerToPeerActivityUserCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
+    public void get(@Nonnull final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @return the SkypeForBusinessPeerToPeerActivityUserCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SkypeForBusinessPeerToPeerActivityUserCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @param sourceSkypeForBusinessPeerToPeerActivityUserCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessPeerToPeerActivityUserCounts sourceSkypeForBusinessPeerToPeerActivityUserCounts, final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
+    public void patch(@Nonnull final SkypeForBusinessPeerToPeerActivityUserCounts sourceSkypeForBusinessPeerToPeerActivityUserCounts, @Nonnull final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessPeerToPeerActivityUserCounts);
     }
 
@@ -87,7 +90,8 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @return the updated SkypeForBusinessPeerToPeerActivityUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessPeerToPeerActivityUserCounts patch(final SkypeForBusinessPeerToPeerActivityUserCounts sourceSkypeForBusinessPeerToPeerActivityUserCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessPeerToPeerActivityUserCounts patch(@Nonnull final SkypeForBusinessPeerToPeerActivityUserCounts sourceSkypeForBusinessPeerToPeerActivityUserCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceSkypeForBusinessPeerToPeerActivityUserCounts);
     }
 
@@ -97,7 +101,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @param newSkypeForBusinessPeerToPeerActivityUserCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts, final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
+    public void post(@Nonnull final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts, @Nonnull final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessPeerToPeerActivityUserCounts);
     }
 
@@ -108,7 +112,8 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @return the created SkypeForBusinessPeerToPeerActivityUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessPeerToPeerActivityUserCounts post(final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessPeerToPeerActivityUserCounts post(@Nonnull final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts) throws ClientException {
         return send(HttpMethod.POST, newSkypeForBusinessPeerToPeerActivityUserCounts);
     }
 
@@ -118,7 +123,7 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @param newSkypeForBusinessPeerToPeerActivityUserCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts, final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
+    public void put(@Nonnull final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts, @Nonnull final ICallback<? super SkypeForBusinessPeerToPeerActivityUserCounts> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessPeerToPeerActivityUserCounts);
     }
 
@@ -129,7 +134,8 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @return the created SkypeForBusinessPeerToPeerActivityUserCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessPeerToPeerActivityUserCounts put(final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessPeerToPeerActivityUserCounts put(@Nonnull final SkypeForBusinessPeerToPeerActivityUserCounts newSkypeForBusinessPeerToPeerActivityUserCounts) throws ClientException {
         return send(HttpMethod.PUT, newSkypeForBusinessPeerToPeerActivityUserCounts);
     }
 
@@ -139,9 +145,10 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @param value the select clause
      * @return the updated request
      */
-     public ISkypeForBusinessPeerToPeerActivityUserCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SkypeForBusinessPeerToPeerActivityUserCountsRequest)this;
+     @Nonnull
+     public SkypeForBusinessPeerToPeerActivityUserCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SkypeForBusinessPeerToPeerActivityUserCountsRequest extends BaseReq
      * @param value the expand clause
      * @return the updated request
      */
-     public ISkypeForBusinessPeerToPeerActivityUserCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessPeerToPeerActivityUserCountsRequest)this;
+     @Nonnull
+     public SkypeForBusinessPeerToPeerActivityUserCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

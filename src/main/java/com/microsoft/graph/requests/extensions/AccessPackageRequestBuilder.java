@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackage;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Package Request Builder.
  */
-public class AccessPackageRequestBuilder extends BaseRequestBuilder implements IAccessPackageRequestBuilder {
+public class AccessPackageRequestBuilder extends BaseRequestBuilder<AccessPackage> {
 
     /**
      * The request builder for the AccessPackage
@@ -38,7 +35,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageRequest instance
+     * @return the AccessPackageRequest instance
      */
-    public IAccessPackageRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessPackageRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,34 +54,62 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageRequest instance
+     * @return the AccessPackageRequest instance
      */
-    public IAccessPackageRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessPackageRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessPackageRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
+    /**
+     *  Gets a request builder for the AccessPackageAssignmentPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
         return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies"), getClient(), null);
     }
 
-    public IAccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageAssignmentPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageAssignmentPolicyRequestBuilder accessPackageAssignmentPolicies(@Nonnull final String id) {
         return new AccessPackageAssignmentPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for AccessPackageCatalog
      *
-     * @return the IAccessPackageCatalogWithReferenceRequestBuilder instance
+     * @return the AccessPackageCatalogWithReferenceRequestBuilder instance
      */
-    public IAccessPackageCatalogWithReferenceRequestBuilder accessPackageCatalog() {
+    @Nonnull
+    public AccessPackageCatalogWithReferenceRequestBuilder accessPackageCatalog() {
         return new AccessPackageCatalogWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalog"), getClient(), null);
     }
-    public IAccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes() {
+    /**
+     *  Gets a request builder for the AccessPackageResourceRoleScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageResourceRoleScopeCollectionRequestBuilder accessPackageResourceRoleScopes() {
         return new AccessPackageResourceRoleScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes"), getClient(), null);
     }
 
-    public IAccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageResourceRoleScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(@Nonnull final String id) {
         return new AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes") + "/" + id, getClient(), null);
     }
 }

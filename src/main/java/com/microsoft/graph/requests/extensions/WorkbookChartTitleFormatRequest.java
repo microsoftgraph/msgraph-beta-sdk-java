@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartTitleFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Title Format Request.
  */
-public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWorkbookChartTitleFormatRequest {
+public class WorkbookChartTitleFormatRequest extends BaseRequest<WorkbookChartTitleFormat> {
 	
     /**
      * The request for the WorkbookChartTitleFormat
@@ -33,7 +33,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartTitleFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartTitleFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartTitleFormat.class);
     }
 
@@ -42,7 +42,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartTitleFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartTitleFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @return the WorkbookChartTitleFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartTitleFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartTitleFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartTitleFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param sourceWorkbookChartTitleFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat, final ICallback<? super WorkbookChartTitleFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat, @Nonnull final ICallback<? super WorkbookChartTitleFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartTitleFormat);
     }
 
@@ -91,7 +92,8 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @return the updated WorkbookChartTitleFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartTitleFormat patch(final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartTitleFormat patch(@Nonnull final WorkbookChartTitleFormat sourceWorkbookChartTitleFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartTitleFormat);
     }
 
@@ -101,7 +103,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param newWorkbookChartTitleFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<? super WorkbookChartTitleFormat> callback) {
+    public void post(@Nonnull final WorkbookChartTitleFormat newWorkbookChartTitleFormat, @Nonnull final ICallback<? super WorkbookChartTitleFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartTitleFormat);
     }
 
@@ -112,7 +114,8 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @return the created WorkbookChartTitleFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartTitleFormat post(final WorkbookChartTitleFormat newWorkbookChartTitleFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartTitleFormat post(@Nonnull final WorkbookChartTitleFormat newWorkbookChartTitleFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartTitleFormat);
     }
 
@@ -122,7 +125,7 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param newWorkbookChartTitleFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartTitleFormat newWorkbookChartTitleFormat, final ICallback<? super WorkbookChartTitleFormat> callback) {
+    public void put(@Nonnull final WorkbookChartTitleFormat newWorkbookChartTitleFormat, @Nonnull final ICallback<? super WorkbookChartTitleFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartTitleFormat);
     }
 
@@ -133,7 +136,8 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @return the created WorkbookChartTitleFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartTitleFormat put(final WorkbookChartTitleFormat newWorkbookChartTitleFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartTitleFormat put(@Nonnull final WorkbookChartTitleFormat newWorkbookChartTitleFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartTitleFormat);
     }
 
@@ -143,9 +147,10 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartTitleFormatRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartTitleFormatRequest)this;
+     @Nonnull
+     public WorkbookChartTitleFormatRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class WorkbookChartTitleFormatRequest extends BaseRequest implements IWor
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartTitleFormatRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartTitleFormatRequest)this;
+     @Nonnull
+     public WorkbookChartTitleFormatRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

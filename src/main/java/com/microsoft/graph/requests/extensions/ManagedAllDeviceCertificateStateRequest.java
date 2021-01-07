@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedAllDeviceCertificateState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed All Device Certificate State Request.
  */
-public class ManagedAllDeviceCertificateStateRequest extends BaseRequest implements IManagedAllDeviceCertificateStateRequest {
+public class ManagedAllDeviceCertificateStateRequest extends BaseRequest<ManagedAllDeviceCertificateState> {
 	
     /**
      * The request for the ManagedAllDeviceCertificateState
@@ -29,7 +31,7 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedAllDeviceCertificateStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedAllDeviceCertificateStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedAllDeviceCertificateState.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedAllDeviceCertificateState> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedAllDeviceCertificateState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @return the ManagedAllDeviceCertificateState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedAllDeviceCertificateState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedAllDeviceCertificateState> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedAllDeviceCertificateState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @param sourceManagedAllDeviceCertificateState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedAllDeviceCertificateState sourceManagedAllDeviceCertificateState, final ICallback<? super ManagedAllDeviceCertificateState> callback) {
+    public void patch(@Nonnull final ManagedAllDeviceCertificateState sourceManagedAllDeviceCertificateState, @Nonnull final ICallback<? super ManagedAllDeviceCertificateState> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedAllDeviceCertificateState);
     }
 
@@ -87,7 +90,8 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @return the updated ManagedAllDeviceCertificateState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAllDeviceCertificateState patch(final ManagedAllDeviceCertificateState sourceManagedAllDeviceCertificateState) throws ClientException {
+    @Nullable
+    public ManagedAllDeviceCertificateState patch(@Nonnull final ManagedAllDeviceCertificateState sourceManagedAllDeviceCertificateState) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedAllDeviceCertificateState);
     }
 
@@ -97,7 +101,7 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @param newManagedAllDeviceCertificateState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState, final ICallback<? super ManagedAllDeviceCertificateState> callback) {
+    public void post(@Nonnull final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState, @Nonnull final ICallback<? super ManagedAllDeviceCertificateState> callback) {
         send(HttpMethod.POST, callback, newManagedAllDeviceCertificateState);
     }
 
@@ -108,7 +112,8 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @return the created ManagedAllDeviceCertificateState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAllDeviceCertificateState post(final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState) throws ClientException {
+    @Nullable
+    public ManagedAllDeviceCertificateState post(@Nonnull final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState) throws ClientException {
         return send(HttpMethod.POST, newManagedAllDeviceCertificateState);
     }
 
@@ -118,7 +123,7 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @param newManagedAllDeviceCertificateState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState, final ICallback<? super ManagedAllDeviceCertificateState> callback) {
+    public void put(@Nonnull final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState, @Nonnull final ICallback<? super ManagedAllDeviceCertificateState> callback) {
         send(HttpMethod.PUT, callback, newManagedAllDeviceCertificateState);
     }
 
@@ -129,7 +134,8 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @return the created ManagedAllDeviceCertificateState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedAllDeviceCertificateState put(final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState) throws ClientException {
+    @Nullable
+    public ManagedAllDeviceCertificateState put(@Nonnull final ManagedAllDeviceCertificateState newManagedAllDeviceCertificateState) throws ClientException {
         return send(HttpMethod.PUT, newManagedAllDeviceCertificateState);
     }
 
@@ -139,9 +145,10 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedAllDeviceCertificateStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedAllDeviceCertificateStateRequest)this;
+     @Nonnull
+     public ManagedAllDeviceCertificateStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedAllDeviceCertificateStateRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedAllDeviceCertificateStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedAllDeviceCertificateStateRequest)this;
+     @Nonnull
+     public ManagedAllDeviceCertificateStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

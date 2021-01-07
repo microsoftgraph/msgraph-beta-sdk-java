@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRbacResourceNamespace;
-import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceActionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceActionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceActionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceActionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Unified Rbac Resource Namespace Request.
  */
-public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements IUnifiedRbacResourceNamespaceRequest {
+public class UnifiedRbacResourceNamespaceRequest extends BaseRequest<UnifiedRbacResourceNamespace> {
 	
     /**
      * The request for the UnifiedRbacResourceNamespace
@@ -33,7 +33,7 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRbacResourceNamespaceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnifiedRbacResourceNamespaceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnifiedRbacResourceNamespace.class);
     }
 
@@ -42,7 +42,7 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UnifiedRbacResourceNamespace> callback) {
+    public void get(@Nonnull final ICallback<? super UnifiedRbacResourceNamespace> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @return the UnifiedRbacResourceNamespace from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UnifiedRbacResourceNamespace get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UnifiedRbacResourceNamespace> callback) {
+    public void delete(@Nonnull final ICallback<? super UnifiedRbacResourceNamespace> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @param sourceUnifiedRbacResourceNamespace the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnifiedRbacResourceNamespace sourceUnifiedRbacResourceNamespace, final ICallback<? super UnifiedRbacResourceNamespace> callback) {
+    public void patch(@Nonnull final UnifiedRbacResourceNamespace sourceUnifiedRbacResourceNamespace, @Nonnull final ICallback<? super UnifiedRbacResourceNamespace> callback) {
         send(HttpMethod.PATCH, callback, sourceUnifiedRbacResourceNamespace);
     }
 
@@ -91,7 +92,8 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @return the updated UnifiedRbacResourceNamespace
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRbacResourceNamespace patch(final UnifiedRbacResourceNamespace sourceUnifiedRbacResourceNamespace) throws ClientException {
+    @Nullable
+    public UnifiedRbacResourceNamespace patch(@Nonnull final UnifiedRbacResourceNamespace sourceUnifiedRbacResourceNamespace) throws ClientException {
         return send(HttpMethod.PATCH, sourceUnifiedRbacResourceNamespace);
     }
 
@@ -101,7 +103,7 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @param newUnifiedRbacResourceNamespace the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace, final ICallback<? super UnifiedRbacResourceNamespace> callback) {
+    public void post(@Nonnull final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace, @Nonnull final ICallback<? super UnifiedRbacResourceNamespace> callback) {
         send(HttpMethod.POST, callback, newUnifiedRbacResourceNamespace);
     }
 
@@ -112,7 +114,8 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @return the created UnifiedRbacResourceNamespace
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRbacResourceNamespace post(final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace) throws ClientException {
+    @Nullable
+    public UnifiedRbacResourceNamespace post(@Nonnull final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace) throws ClientException {
         return send(HttpMethod.POST, newUnifiedRbacResourceNamespace);
     }
 
@@ -122,7 +125,7 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @param newUnifiedRbacResourceNamespace the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace, final ICallback<? super UnifiedRbacResourceNamespace> callback) {
+    public void put(@Nonnull final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace, @Nonnull final ICallback<? super UnifiedRbacResourceNamespace> callback) {
         send(HttpMethod.PUT, callback, newUnifiedRbacResourceNamespace);
     }
 
@@ -133,7 +136,8 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @return the created UnifiedRbacResourceNamespace
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRbacResourceNamespace put(final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace) throws ClientException {
+    @Nullable
+    public UnifiedRbacResourceNamespace put(@Nonnull final UnifiedRbacResourceNamespace newUnifiedRbacResourceNamespace) throws ClientException {
         return send(HttpMethod.PUT, newUnifiedRbacResourceNamespace);
     }
 
@@ -143,9 +147,10 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IUnifiedRbacResourceNamespaceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UnifiedRbacResourceNamespaceRequest)this;
+     @Nonnull
+     public UnifiedRbacResourceNamespaceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class UnifiedRbacResourceNamespaceRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IUnifiedRbacResourceNamespaceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnifiedRbacResourceNamespaceRequest)this;
+     @Nonnull
+     public UnifiedRbacResourceNamespaceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

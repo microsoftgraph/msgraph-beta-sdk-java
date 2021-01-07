@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DirectoryAudit;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Directory Audit Request.
  */
-public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAuditRequest {
+public class DirectoryAuditRequest extends BaseRequest<DirectoryAudit> {
 	
     /**
      * The request for the DirectoryAudit
@@ -29,7 +31,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryAuditRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryAuditRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DirectoryAudit.class);
     }
 
@@ -38,7 +40,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DirectoryAudit> callback) {
+    public void get(@Nonnull final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @return the DirectoryAudit from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DirectoryAudit get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DirectoryAudit> callback) {
+    public void delete(@Nonnull final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param sourceDirectoryAudit the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DirectoryAudit sourceDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
+    public void patch(@Nonnull final DirectoryAudit sourceDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.PATCH, callback, sourceDirectoryAudit);
     }
 
@@ -87,7 +90,8 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @return the updated DirectoryAudit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryAudit patch(final DirectoryAudit sourceDirectoryAudit) throws ClientException {
+    @Nullable
+    public DirectoryAudit patch(@Nonnull final DirectoryAudit sourceDirectoryAudit) throws ClientException {
         return send(HttpMethod.PATCH, sourceDirectoryAudit);
     }
 
@@ -97,7 +101,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param newDirectoryAudit the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
+    public void post(@Nonnull final DirectoryAudit newDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.POST, callback, newDirectoryAudit);
     }
 
@@ -108,7 +112,8 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @return the created DirectoryAudit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryAudit post(final DirectoryAudit newDirectoryAudit) throws ClientException {
+    @Nullable
+    public DirectoryAudit post(@Nonnull final DirectoryAudit newDirectoryAudit) throws ClientException {
         return send(HttpMethod.POST, newDirectoryAudit);
     }
 
@@ -118,7 +123,7 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param newDirectoryAudit the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DirectoryAudit newDirectoryAudit, final ICallback<? super DirectoryAudit> callback) {
+    public void put(@Nonnull final DirectoryAudit newDirectoryAudit, @Nonnull final ICallback<? super DirectoryAudit> callback) {
         send(HttpMethod.PUT, callback, newDirectoryAudit);
     }
 
@@ -129,7 +134,8 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @return the created DirectoryAudit
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DirectoryAudit put(final DirectoryAudit newDirectoryAudit) throws ClientException {
+    @Nullable
+    public DirectoryAudit put(@Nonnull final DirectoryAudit newDirectoryAudit) throws ClientException {
         return send(HttpMethod.PUT, newDirectoryAudit);
     }
 
@@ -139,9 +145,10 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param value the select clause
      * @return the updated request
      */
-     public IDirectoryAuditRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DirectoryAuditRequest)this;
+     @Nonnull
+     public DirectoryAuditRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DirectoryAuditRequest extends BaseRequest implements IDirectoryAudi
      * @param value the expand clause
      * @return the updated request
      */
-     public IDirectoryAuditRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DirectoryAuditRequest)this;
+     @Nonnull
+     public DirectoryAuditRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

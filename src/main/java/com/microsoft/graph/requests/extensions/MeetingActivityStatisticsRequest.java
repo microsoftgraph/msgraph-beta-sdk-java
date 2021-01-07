@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MeetingActivityStatistics;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Meeting Activity Statistics Request.
  */
-public class MeetingActivityStatisticsRequest extends BaseRequest implements IMeetingActivityStatisticsRequest {
+public class MeetingActivityStatisticsRequest extends BaseRequest<MeetingActivityStatistics> {
 	
     /**
      * The request for the MeetingActivityStatistics
@@ -29,7 +31,7 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MeetingActivityStatisticsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MeetingActivityStatisticsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MeetingActivityStatistics.class);
     }
 
@@ -38,7 +40,7 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MeetingActivityStatistics> callback) {
+    public void get(@Nonnull final ICallback<? super MeetingActivityStatistics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @return the MeetingActivityStatistics from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MeetingActivityStatistics get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MeetingActivityStatistics> callback) {
+    public void delete(@Nonnull final ICallback<? super MeetingActivityStatistics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @param sourceMeetingActivityStatistics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MeetingActivityStatistics sourceMeetingActivityStatistics, final ICallback<? super MeetingActivityStatistics> callback) {
+    public void patch(@Nonnull final MeetingActivityStatistics sourceMeetingActivityStatistics, @Nonnull final ICallback<? super MeetingActivityStatistics> callback) {
         send(HttpMethod.PATCH, callback, sourceMeetingActivityStatistics);
     }
 
@@ -87,7 +90,8 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @return the updated MeetingActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MeetingActivityStatistics patch(final MeetingActivityStatistics sourceMeetingActivityStatistics) throws ClientException {
+    @Nullable
+    public MeetingActivityStatistics patch(@Nonnull final MeetingActivityStatistics sourceMeetingActivityStatistics) throws ClientException {
         return send(HttpMethod.PATCH, sourceMeetingActivityStatistics);
     }
 
@@ -97,7 +101,7 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @param newMeetingActivityStatistics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MeetingActivityStatistics newMeetingActivityStatistics, final ICallback<? super MeetingActivityStatistics> callback) {
+    public void post(@Nonnull final MeetingActivityStatistics newMeetingActivityStatistics, @Nonnull final ICallback<? super MeetingActivityStatistics> callback) {
         send(HttpMethod.POST, callback, newMeetingActivityStatistics);
     }
 
@@ -108,7 +112,8 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @return the created MeetingActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MeetingActivityStatistics post(final MeetingActivityStatistics newMeetingActivityStatistics) throws ClientException {
+    @Nullable
+    public MeetingActivityStatistics post(@Nonnull final MeetingActivityStatistics newMeetingActivityStatistics) throws ClientException {
         return send(HttpMethod.POST, newMeetingActivityStatistics);
     }
 
@@ -118,7 +123,7 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @param newMeetingActivityStatistics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MeetingActivityStatistics newMeetingActivityStatistics, final ICallback<? super MeetingActivityStatistics> callback) {
+    public void put(@Nonnull final MeetingActivityStatistics newMeetingActivityStatistics, @Nonnull final ICallback<? super MeetingActivityStatistics> callback) {
         send(HttpMethod.PUT, callback, newMeetingActivityStatistics);
     }
 
@@ -129,7 +134,8 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @return the created MeetingActivityStatistics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MeetingActivityStatistics put(final MeetingActivityStatistics newMeetingActivityStatistics) throws ClientException {
+    @Nullable
+    public MeetingActivityStatistics put(@Nonnull final MeetingActivityStatistics newMeetingActivityStatistics) throws ClientException {
         return send(HttpMethod.PUT, newMeetingActivityStatistics);
     }
 
@@ -139,9 +145,10 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @param value the select clause
      * @return the updated request
      */
-     public IMeetingActivityStatisticsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MeetingActivityStatisticsRequest)this;
+     @Nonnull
+     public MeetingActivityStatisticsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MeetingActivityStatisticsRequest extends BaseRequest implements IMe
      * @param value the expand clause
      * @return the updated request
      */
-     public IMeetingActivityStatisticsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MeetingActivityStatisticsRequest)this;
+     @Nonnull
+     public MeetingActivityStatisticsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

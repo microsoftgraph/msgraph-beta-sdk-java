@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkNineWorkEasConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android For Work Nine Work Eas Configuration Request.
  */
-public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest implements IAndroidForWorkNineWorkEasConfigurationRequest {
+public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest<AndroidForWorkNineWorkEasConfiguration> {
 	
     /**
      * The request for the AndroidForWorkNineWorkEasConfiguration
@@ -29,7 +31,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkNineWorkEasConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkNineWorkEasConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkNineWorkEasConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @return the AndroidForWorkNineWorkEasConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidForWorkNineWorkEasConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param sourceAndroidForWorkNineWorkEasConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void patch(@Nonnull final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration, @Nonnull final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @return the updated AndroidForWorkNineWorkEasConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkNineWorkEasConfiguration patch(final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkNineWorkEasConfiguration patch(@Nonnull final AndroidForWorkNineWorkEasConfiguration sourceAndroidForWorkNineWorkEasConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param newAndroidForWorkNineWorkEasConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void post(@Nonnull final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, @Nonnull final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @return the created AndroidForWorkNineWorkEasConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkNineWorkEasConfiguration post(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkNineWorkEasConfiguration post(@Nonnull final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param newAndroidForWorkNineWorkEasConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
+    public void put(@Nonnull final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration, @Nonnull final ICallback<? super AndroidForWorkNineWorkEasConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @return the created AndroidForWorkNineWorkEasConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkNineWorkEasConfiguration put(final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkNineWorkEasConfiguration put(@Nonnull final AndroidForWorkNineWorkEasConfiguration newAndroidForWorkNineWorkEasConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidForWorkNineWorkEasConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidForWorkNineWorkEasConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidForWorkNineWorkEasConfigurationRequest)this;
+     @Nonnull
+     public AndroidForWorkNineWorkEasConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidForWorkNineWorkEasConfigurationRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidForWorkNineWorkEasConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkNineWorkEasConfigurationRequest)this;
+     @Nonnull
+     public AndroidForWorkNineWorkEasConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

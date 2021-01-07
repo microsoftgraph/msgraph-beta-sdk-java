@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsAutopilotSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Autopilot Settings Request Builder.
  */
-public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder implements IWindowsAutopilotSettingsRequestBuilder {
+public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder<WindowsAutopilotSettings> {
 
     /**
      * The request builder for the WindowsAutopilotSettings
@@ -28,7 +30,7 @@ public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAutopilotSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsAutopilotSettingsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsAutopilotSettingsRequest instance
+     * @return the WindowsAutopilotSettingsRequest instance
      */
-    public IWindowsAutopilotSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsAutopilotSettingsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,15 +49,21 @@ public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsAutopilotSettingsRequest instance
+     * @return the WindowsAutopilotSettingsRequest instance
      */
-    public IWindowsAutopilotSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsAutopilotSettingsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsAutopilotSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IWindowsAutopilotSettingsSyncRequestBuilder sync() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public WindowsAutopilotSettingsSyncRequestBuilder sync() {
         return new WindowsAutopilotSettingsSyncRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sync"), getClient(), null);
     }
 }

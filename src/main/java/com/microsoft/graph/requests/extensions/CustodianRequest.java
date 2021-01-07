@@ -9,22 +9,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Custodian;
-import com.microsoft.graph.requests.extensions.ISiteSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedGroupSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedGroupSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICaseIndexOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CaseIndexOperationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Custodian Request.
  */
-public class CustodianRequest extends BaseRequest implements ICustodianRequest {
+public class CustodianRequest extends BaseRequest<Custodian> {
 	
     /**
      * The request for the Custodian
@@ -43,7 +38,7 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CustodianRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CustodianRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Custodian.class);
     }
 
@@ -52,7 +47,7 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Custodian> callback) {
+    public void get(@Nonnull final ICallback<? super Custodian> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +57,7 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @return the Custodian from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Custodian get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +67,7 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Custodian> callback) {
+    public void delete(@Nonnull final ICallback<? super Custodian> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +86,7 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @param sourceCustodian the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Custodian sourceCustodian, final ICallback<? super Custodian> callback) {
+    public void patch(@Nonnull final Custodian sourceCustodian, @Nonnull final ICallback<? super Custodian> callback) {
         send(HttpMethod.PATCH, callback, sourceCustodian);
     }
 
@@ -101,7 +97,8 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @return the updated Custodian
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Custodian patch(final Custodian sourceCustodian) throws ClientException {
+    @Nullable
+    public Custodian patch(@Nonnull final Custodian sourceCustodian) throws ClientException {
         return send(HttpMethod.PATCH, sourceCustodian);
     }
 
@@ -111,7 +108,7 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @param newCustodian the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Custodian newCustodian, final ICallback<? super Custodian> callback) {
+    public void post(@Nonnull final Custodian newCustodian, @Nonnull final ICallback<? super Custodian> callback) {
         send(HttpMethod.POST, callback, newCustodian);
     }
 
@@ -122,7 +119,8 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @return the created Custodian
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Custodian post(final Custodian newCustodian) throws ClientException {
+    @Nullable
+    public Custodian post(@Nonnull final Custodian newCustodian) throws ClientException {
         return send(HttpMethod.POST, newCustodian);
     }
 
@@ -132,7 +130,7 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @param newCustodian the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Custodian newCustodian, final ICallback<? super Custodian> callback) {
+    public void put(@Nonnull final Custodian newCustodian, @Nonnull final ICallback<? super Custodian> callback) {
         send(HttpMethod.PUT, callback, newCustodian);
     }
 
@@ -143,7 +141,8 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @return the created Custodian
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Custodian put(final Custodian newCustodian) throws ClientException {
+    @Nullable
+    public Custodian put(@Nonnull final Custodian newCustodian) throws ClientException {
         return send(HttpMethod.PUT, newCustodian);
     }
 
@@ -153,9 +152,10 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ICustodianRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CustodianRequest)this;
+     @Nonnull
+     public CustodianRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,9 +164,10 @@ public class CustodianRequest extends BaseRequest implements ICustodianRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ICustodianRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CustodianRequest)this;
+     @Nonnull
+     public CustodianRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Package Catalog Request Builder.
  */
-public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder implements IAccessPackageCatalogRequestBuilder {
+public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<AccessPackageCatalog> {
 
     /**
      * The request builder for the AccessPackageCatalog
@@ -44,7 +38,7 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageCatalogRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageCatalogRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,9 +46,10 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageCatalogRequest instance
+     * @return the AccessPackageCatalogRequest instance
      */
-    public IAccessPackageCatalogRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessPackageCatalogRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,39 +57,92 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageCatalogRequest instance
+     * @return the AccessPackageCatalogRequest instance
      */
-    public IAccessPackageCatalogRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessPackageCatalogRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessPackageCatalogRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles() {
+    /**
+     *  Gets a request builder for the AccessPackageResourceRole collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles() {
         return new AccessPackageResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles"), getClient(), null);
     }
 
-    public IAccessPackageResourceRoleRequestBuilder accessPackageResourceRoles(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageResourceRole item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageResourceRoleRequestBuilder accessPackageResourceRoles(@Nonnull final String id) {
         return new AccessPackageResourceRoleRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles") + "/" + id, getClient(), null);
     }
-    public IAccessPackageResourceCollectionRequestBuilder accessPackageResources() {
+    /**
+     *  Gets a request builder for the AccessPackageResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageResourceCollectionRequestBuilder accessPackageResources() {
         return new AccessPackageResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources"), getClient(), null);
     }
 
-    public IAccessPackageResourceRequestBuilder accessPackageResources(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageResourceRequestBuilder accessPackageResources(@Nonnull final String id) {
         return new AccessPackageResourceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResources") + "/" + id, getClient(), null);
     }
-    public IAccessPackageResourceScopeCollectionRequestBuilder accessPackageResourceScopes() {
+    /**
+     *  Gets a request builder for the AccessPackageResourceScope collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageResourceScopeCollectionRequestBuilder accessPackageResourceScopes() {
         return new AccessPackageResourceScopeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes"), getClient(), null);
     }
 
-    public IAccessPackageResourceScopeRequestBuilder accessPackageResourceScopes(final String id) {
+    /**
+     * Gets a request builder for the AccessPackageResourceScope item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageResourceScopeRequestBuilder accessPackageResourceScopes(@Nonnull final String id) {
         return new AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes") + "/" + id, getClient(), null);
     }
-    public IAccessPackageCollectionRequestBuilder accessPackages() {
+    /**
+     *  Gets a request builder for the AccessPackage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageCollectionRequestBuilder accessPackages() {
         return new AccessPackageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages"), getClient(), null);
     }
 
-    public IAccessPackageRequestBuilder accessPackages(final String id) {
+    /**
+     * Gets a request builder for the AccessPackage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageRequestBuilder accessPackages(@Nonnull final String id) {
         return new AccessPackageRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackages") + "/" + id, getClient(), null);
     }
 }

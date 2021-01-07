@@ -9,24 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Directory;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedEmailDomainCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedEmailDomainCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SharedEmailDomainRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IFeatureRolloutPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.FeatureRolloutPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -35,7 +29,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Directory Request Builder.
  */
-public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDirectoryRequestBuilder {
+public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
 
     /**
      * The request builder for the Directory
@@ -44,7 +38,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DirectoryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DirectoryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -52,9 +46,10 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryRequest instance
+     * @return the DirectoryRequest instance
      */
-    public IDirectoryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DirectoryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -62,60 +57,152 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder implements IDire
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDirectoryRequest instance
+     * @return the DirectoryRequest instance
      */
-    public IDirectoryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DirectoryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DirectoryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAdministrativeUnitCollectionRequestBuilder administrativeUnits() {
+    /**
+     *  Gets a request builder for the AdministrativeUnit collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AdministrativeUnitCollectionRequestBuilder administrativeUnits() {
         return new AdministrativeUnitCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits"), getClient(), null);
     }
 
-    public IAdministrativeUnitRequestBuilder administrativeUnits(final String id) {
+    /**
+     * Gets a request builder for the AdministrativeUnit item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AdministrativeUnitRequestBuilder administrativeUnits(@Nonnull final String id) {
         return new AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder deletedItems() {
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionRequestBuilder deletedItems() {
         return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder deletedItems(final String id) {
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectRequestBuilder deletedItems(@Nonnull final String id) {
         return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id, getClient(), null);
     }
-    public IUserCollectionRequestBuilder deletedItemsAsUser() {
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserCollectionRequestBuilder deletedItemsAsUser() {
         return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.user", getClient(), null);
     }
 
-    public IUserRequestBuilder deletedItemsAsUser(final String id) {
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserRequestBuilder deletedItemsAsUser(@Nonnull final String id) {
         return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.user", getClient(), null);
     }
-    public IGroupCollectionRequestBuilder deletedItemsAsGroup() {
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupCollectionRequestBuilder deletedItemsAsGroup() {
         return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.group", getClient(), null);
     }
 
-    public IGroupRequestBuilder deletedItemsAsGroup(final String id) {
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupRequestBuilder deletedItemsAsGroup(@Nonnull final String id) {
         return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.group", getClient(), null);
     }
-    public IApplicationCollectionRequestBuilder deletedItemsAsApplication() {
+    /**
+     *  Gets a request builder for the Application collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApplicationCollectionRequestBuilder deletedItemsAsApplication() {
         return new ApplicationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/microsoft.graph.application", getClient(), null);
     }
 
-    public IApplicationRequestBuilder deletedItemsAsApplication(final String id) {
+    /**
+     * Gets a request builder for the Application item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApplicationRequestBuilder deletedItemsAsApplication(@Nonnull final String id) {
         return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.application", getClient(), null);
     }
-    public ISharedEmailDomainCollectionRequestBuilder sharedEmailDomains() {
+    /**
+     *  Gets a request builder for the SharedEmailDomain collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SharedEmailDomainCollectionRequestBuilder sharedEmailDomains() {
         return new SharedEmailDomainCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomains"), getClient(), null);
     }
 
-    public ISharedEmailDomainRequestBuilder sharedEmailDomains(final String id) {
+    /**
+     * Gets a request builder for the SharedEmailDomain item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SharedEmailDomainRequestBuilder sharedEmailDomains(@Nonnull final String id) {
         return new SharedEmailDomainRequestBuilder(getRequestUrlWithAdditionalSegment("sharedEmailDomains") + "/" + id, getClient(), null);
     }
-    public IFeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies() {
+    /**
+     *  Gets a request builder for the FeatureRolloutPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public FeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies() {
         return new FeatureRolloutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies"), getClient(), null);
     }
 
-    public IFeatureRolloutPolicyRequestBuilder featureRolloutPolicies(final String id) {
+    /**
+     * Gets a request builder for the FeatureRolloutPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public FeatureRolloutPolicyRequestBuilder featureRolloutPolicies(@Nonnull final String id) {
         return new FeatureRolloutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerEnrollmentProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Device Owner Enrollment Profile Request.
  */
-public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest implements IAndroidDeviceOwnerEnrollmentProfileRequest {
+public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest<AndroidDeviceOwnerEnrollmentProfile> {
 	
     /**
      * The request for the AndroidDeviceOwnerEnrollmentProfile
@@ -29,7 +31,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceOwnerEnrollmentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidDeviceOwnerEnrollmentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerEnrollmentProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @return the AndroidDeviceOwnerEnrollmentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidDeviceOwnerEnrollmentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @param sourceAndroidDeviceOwnerEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerEnrollmentProfile sourceAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
+    public void patch(@Nonnull final AndroidDeviceOwnerEnrollmentProfile sourceAndroidDeviceOwnerEnrollmentProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerEnrollmentProfile);
     }
 
@@ -87,7 +90,8 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @return the updated AndroidDeviceOwnerEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerEnrollmentProfile patch(final AndroidDeviceOwnerEnrollmentProfile sourceAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerEnrollmentProfile patch(@Nonnull final AndroidDeviceOwnerEnrollmentProfile sourceAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidDeviceOwnerEnrollmentProfile);
     }
 
@@ -97,7 +101,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @param newAndroidDeviceOwnerEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
+    public void post(@Nonnull final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerEnrollmentProfile);
     }
 
@@ -108,7 +112,8 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @return the created AndroidDeviceOwnerEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerEnrollmentProfile post(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerEnrollmentProfile post(@Nonnull final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidDeviceOwnerEnrollmentProfile);
     }
 
@@ -118,7 +123,7 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @param newAndroidDeviceOwnerEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
+    public void put(@Nonnull final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerEnrollmentProfile);
     }
 
@@ -129,7 +134,8 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @return the created AndroidDeviceOwnerEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerEnrollmentProfile put(final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerEnrollmentProfile put(@Nonnull final AndroidDeviceOwnerEnrollmentProfile newAndroidDeviceOwnerEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidDeviceOwnerEnrollmentProfile);
     }
 
@@ -139,9 +145,10 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidDeviceOwnerEnrollmentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidDeviceOwnerEnrollmentProfileRequest)this;
+     @Nonnull
+     public AndroidDeviceOwnerEnrollmentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidDeviceOwnerEnrollmentProfileRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidDeviceOwnerEnrollmentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerEnrollmentProfileRequest)this;
+     @Nonnull
+     public AndroidDeviceOwnerEnrollmentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

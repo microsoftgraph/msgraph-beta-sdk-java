@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementDomainJoinConnector;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Domain Join Connector Request.
  */
-public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest implements IDeviceManagementDomainJoinConnectorRequest {
+public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest<DeviceManagementDomainJoinConnector> {
 	
     /**
      * The request for the DeviceManagementDomainJoinConnector
@@ -29,7 +31,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementDomainJoinConnectorRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementDomainJoinConnectorRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementDomainJoinConnector.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @return the DeviceManagementDomainJoinConnector from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementDomainJoinConnector get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param sourceDeviceManagementDomainJoinConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
+    public void patch(@Nonnull final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector, @Nonnull final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementDomainJoinConnector);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @return the updated DeviceManagementDomainJoinConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementDomainJoinConnector patch(final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector) throws ClientException {
+    @Nullable
+    public DeviceManagementDomainJoinConnector patch(@Nonnull final DeviceManagementDomainJoinConnector sourceDeviceManagementDomainJoinConnector) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementDomainJoinConnector);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param newDeviceManagementDomainJoinConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
+    public void post(@Nonnull final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, @Nonnull final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementDomainJoinConnector);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @return the created DeviceManagementDomainJoinConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementDomainJoinConnector post(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector) throws ClientException {
+    @Nullable
+    public DeviceManagementDomainJoinConnector post(@Nonnull final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementDomainJoinConnector);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param newDeviceManagementDomainJoinConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
+    public void put(@Nonnull final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector, @Nonnull final ICallback<? super DeviceManagementDomainJoinConnector> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementDomainJoinConnector);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @return the created DeviceManagementDomainJoinConnector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementDomainJoinConnector put(final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector) throws ClientException {
+    @Nullable
+    public DeviceManagementDomainJoinConnector put(@Nonnull final DeviceManagementDomainJoinConnector newDeviceManagementDomainJoinConnector) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementDomainJoinConnector);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementDomainJoinConnectorRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementDomainJoinConnectorRequest)this;
+     @Nonnull
+     public DeviceManagementDomainJoinConnectorRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementDomainJoinConnectorRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementDomainJoinConnectorRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementDomainJoinConnectorRequest)this;
+     @Nonnull
+     public DeviceManagementDomainJoinConnectorRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

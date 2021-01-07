@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SecurityBaselineTemplate;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineCategoryStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineCategoryStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.SecurityBaselineStateSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Security Baseline Template Request.
  */
-public class SecurityBaselineTemplateRequest extends BaseRequest implements ISecurityBaselineTemplateRequest {
+public class SecurityBaselineTemplateRequest extends BaseRequest<SecurityBaselineTemplate> {
 	
     /**
      * The request for the SecurityBaselineTemplate
@@ -39,7 +36,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SecurityBaselineTemplateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SecurityBaselineTemplateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SecurityBaselineTemplate.class);
     }
 
@@ -48,7 +45,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SecurityBaselineTemplate> callback) {
+    public void get(@Nonnull final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +55,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @return the SecurityBaselineTemplate from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SecurityBaselineTemplate get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +65,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SecurityBaselineTemplate> callback) {
+    public void delete(@Nonnull final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +84,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param sourceSecurityBaselineTemplate the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SecurityBaselineTemplate sourceSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback) {
+    public void patch(@Nonnull final SecurityBaselineTemplate sourceSecurityBaselineTemplate, @Nonnull final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.PATCH, callback, sourceSecurityBaselineTemplate);
     }
 
@@ -97,7 +95,8 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @return the updated SecurityBaselineTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineTemplate patch(final SecurityBaselineTemplate sourceSecurityBaselineTemplate) throws ClientException {
+    @Nullable
+    public SecurityBaselineTemplate patch(@Nonnull final SecurityBaselineTemplate sourceSecurityBaselineTemplate) throws ClientException {
         return send(HttpMethod.PATCH, sourceSecurityBaselineTemplate);
     }
 
@@ -107,7 +106,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param newSecurityBaselineTemplate the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback) {
+    public void post(@Nonnull final SecurityBaselineTemplate newSecurityBaselineTemplate, @Nonnull final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.POST, callback, newSecurityBaselineTemplate);
     }
 
@@ -118,7 +117,8 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @return the created SecurityBaselineTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineTemplate post(final SecurityBaselineTemplate newSecurityBaselineTemplate) throws ClientException {
+    @Nullable
+    public SecurityBaselineTemplate post(@Nonnull final SecurityBaselineTemplate newSecurityBaselineTemplate) throws ClientException {
         return send(HttpMethod.POST, newSecurityBaselineTemplate);
     }
 
@@ -128,7 +128,7 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param newSecurityBaselineTemplate the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SecurityBaselineTemplate newSecurityBaselineTemplate, final ICallback<? super SecurityBaselineTemplate> callback) {
+    public void put(@Nonnull final SecurityBaselineTemplate newSecurityBaselineTemplate, @Nonnull final ICallback<? super SecurityBaselineTemplate> callback) {
         send(HttpMethod.PUT, callback, newSecurityBaselineTemplate);
     }
 
@@ -139,7 +139,8 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @return the created SecurityBaselineTemplate
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SecurityBaselineTemplate put(final SecurityBaselineTemplate newSecurityBaselineTemplate) throws ClientException {
+    @Nullable
+    public SecurityBaselineTemplate put(@Nonnull final SecurityBaselineTemplate newSecurityBaselineTemplate) throws ClientException {
         return send(HttpMethod.PUT, newSecurityBaselineTemplate);
     }
 
@@ -149,9 +150,10 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param value the select clause
      * @return the updated request
      */
-     public ISecurityBaselineTemplateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SecurityBaselineTemplateRequest)this;
+     @Nonnull
+     public SecurityBaselineTemplateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +162,10 @@ public class SecurityBaselineTemplateRequest extends BaseRequest implements ISec
      * @param value the expand clause
      * @return the updated request
      */
-     public ISecurityBaselineTemplateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SecurityBaselineTemplateRequest)this;
+     @Nonnull
+     public SecurityBaselineTemplateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

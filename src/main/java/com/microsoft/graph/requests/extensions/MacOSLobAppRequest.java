@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSLobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSLob App Request.
  */
-public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppRequest {
+public class MacOSLobAppRequest extends BaseRequest<MacOSLobApp> {
 	
     /**
      * The request for the MacOSLobApp
@@ -29,7 +31,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSLobAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSLobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSLobApp.class);
     }
 
@@ -38,7 +40,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSLobApp> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @return the MacOSLobApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSLobApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSLobApp> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param sourceMacOSLobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSLobApp sourceMacOSLobApp, final ICallback<? super MacOSLobApp> callback) {
+    public void patch(@Nonnull final MacOSLobApp sourceMacOSLobApp, @Nonnull final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSLobApp);
     }
 
@@ -87,7 +90,8 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @return the updated MacOSLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSLobApp patch(final MacOSLobApp sourceMacOSLobApp) throws ClientException {
+    @Nullable
+    public MacOSLobApp patch(@Nonnull final MacOSLobApp sourceMacOSLobApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSLobApp);
     }
 
@@ -97,7 +101,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param newMacOSLobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSLobApp newMacOSLobApp, final ICallback<? super MacOSLobApp> callback) {
+    public void post(@Nonnull final MacOSLobApp newMacOSLobApp, @Nonnull final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.POST, callback, newMacOSLobApp);
     }
 
@@ -108,7 +112,8 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @return the created MacOSLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSLobApp post(final MacOSLobApp newMacOSLobApp) throws ClientException {
+    @Nullable
+    public MacOSLobApp post(@Nonnull final MacOSLobApp newMacOSLobApp) throws ClientException {
         return send(HttpMethod.POST, newMacOSLobApp);
     }
 
@@ -118,7 +123,7 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param newMacOSLobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSLobApp newMacOSLobApp, final ICallback<? super MacOSLobApp> callback) {
+    public void put(@Nonnull final MacOSLobApp newMacOSLobApp, @Nonnull final ICallback<? super MacOSLobApp> callback) {
         send(HttpMethod.PUT, callback, newMacOSLobApp);
     }
 
@@ -129,7 +134,8 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @return the created MacOSLobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSLobApp put(final MacOSLobApp newMacOSLobApp) throws ClientException {
+    @Nullable
+    public MacOSLobApp put(@Nonnull final MacOSLobApp newMacOSLobApp) throws ClientException {
         return send(HttpMethod.PUT, newMacOSLobApp);
     }
 
@@ -139,9 +145,10 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSLobAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSLobAppRequest)this;
+     @Nonnull
+     public MacOSLobAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MacOSLobAppRequest extends BaseRequest implements IMacOSLobAppReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSLobAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSLobAppRequest)this;
+     @Nonnull
+     public MacOSLobAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

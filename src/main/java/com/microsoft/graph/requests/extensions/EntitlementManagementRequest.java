@@ -9,50 +9,31 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectedOrganizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectedOrganizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectedOrganizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntitlementManagementSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -62,7 +43,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Entitlement Management Request.
  */
-public class EntitlementManagementRequest extends BaseRequest implements IEntitlementManagementRequest {
+public class EntitlementManagementRequest extends BaseRequest<EntitlementManagement> {
 	
     /**
      * The request for the EntitlementManagement
@@ -71,7 +52,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntitlementManagementRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntitlementManagementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EntitlementManagement.class);
     }
 
@@ -80,7 +61,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EntitlementManagement> callback) {
+    public void get(@Nonnull final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -90,6 +71,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @return the EntitlementManagement from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EntitlementManagement get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -99,7 +81,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EntitlementManagement> callback) {
+    public void delete(@Nonnull final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -118,7 +100,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param sourceEntitlementManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EntitlementManagement sourceEntitlementManagement, final ICallback<? super EntitlementManagement> callback) {
+    public void patch(@Nonnull final EntitlementManagement sourceEntitlementManagement, @Nonnull final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.PATCH, callback, sourceEntitlementManagement);
     }
 
@@ -129,7 +111,8 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @return the updated EntitlementManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EntitlementManagement patch(final EntitlementManagement sourceEntitlementManagement) throws ClientException {
+    @Nullable
+    public EntitlementManagement patch(@Nonnull final EntitlementManagement sourceEntitlementManagement) throws ClientException {
         return send(HttpMethod.PATCH, sourceEntitlementManagement);
     }
 
@@ -139,7 +122,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param newEntitlementManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EntitlementManagement newEntitlementManagement, final ICallback<? super EntitlementManagement> callback) {
+    public void post(@Nonnull final EntitlementManagement newEntitlementManagement, @Nonnull final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.POST, callback, newEntitlementManagement);
     }
 
@@ -150,7 +133,8 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @return the created EntitlementManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EntitlementManagement post(final EntitlementManagement newEntitlementManagement) throws ClientException {
+    @Nullable
+    public EntitlementManagement post(@Nonnull final EntitlementManagement newEntitlementManagement) throws ClientException {
         return send(HttpMethod.POST, newEntitlementManagement);
     }
 
@@ -160,7 +144,7 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param newEntitlementManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EntitlementManagement newEntitlementManagement, final ICallback<? super EntitlementManagement> callback) {
+    public void put(@Nonnull final EntitlementManagement newEntitlementManagement, @Nonnull final ICallback<? super EntitlementManagement> callback) {
         send(HttpMethod.PUT, callback, newEntitlementManagement);
     }
 
@@ -171,7 +155,8 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @return the created EntitlementManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EntitlementManagement put(final EntitlementManagement newEntitlementManagement) throws ClientException {
+    @Nullable
+    public EntitlementManagement put(@Nonnull final EntitlementManagement newEntitlementManagement) throws ClientException {
         return send(HttpMethod.PUT, newEntitlementManagement);
     }
 
@@ -181,9 +166,10 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param value the select clause
      * @return the updated request
      */
-     public IEntitlementManagementRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EntitlementManagementRequest)this;
+     @Nonnull
+     public EntitlementManagementRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -192,9 +178,10 @@ public class EntitlementManagementRequest extends BaseRequest implements IEntitl
      * @param value the expand clause
      * @return the updated request
      */
-     public IEntitlementManagementRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EntitlementManagementRequest)this;
+     @Nonnull
+     public EntitlementManagementRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

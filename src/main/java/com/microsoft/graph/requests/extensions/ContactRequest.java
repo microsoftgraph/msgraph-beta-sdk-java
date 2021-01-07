@@ -9,22 +9,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Contact;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMultiValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MultiValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Contact Request.
  */
-public class ContactRequest extends BaseRequest implements IContactRequest {
+public class ContactRequest extends BaseRequest<Contact> {
 	
     /**
      * The request for the Contact
@@ -43,7 +38,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ContactRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ContactRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Contact.class);
     }
 
@@ -52,7 +47,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Contact> callback) {
+    public void get(@Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +57,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @return the Contact from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Contact get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +67,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Contact> callback) {
+    public void delete(@Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +86,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param sourceContact the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Contact sourceContact, final ICallback<? super Contact> callback) {
+    public void patch(@Nonnull final Contact sourceContact, @Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.PATCH, callback, sourceContact);
     }
 
@@ -101,7 +97,8 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @return the updated Contact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contact patch(final Contact sourceContact) throws ClientException {
+    @Nullable
+    public Contact patch(@Nonnull final Contact sourceContact) throws ClientException {
         return send(HttpMethod.PATCH, sourceContact);
     }
 
@@ -111,7 +108,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param newContact the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Contact newContact, final ICallback<? super Contact> callback) {
+    public void post(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.POST, callback, newContact);
     }
 
@@ -122,7 +119,8 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @return the created Contact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contact post(final Contact newContact) throws ClientException {
+    @Nullable
+    public Contact post(@Nonnull final Contact newContact) throws ClientException {
         return send(HttpMethod.POST, newContact);
     }
 
@@ -132,7 +130,7 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param newContact the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Contact newContact, final ICallback<? super Contact> callback) {
+    public void put(@Nonnull final Contact newContact, @Nonnull final ICallback<? super Contact> callback) {
         send(HttpMethod.PUT, callback, newContact);
     }
 
@@ -143,7 +141,8 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @return the created Contact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Contact put(final Contact newContact) throws ClientException {
+    @Nullable
+    public Contact put(@Nonnull final Contact newContact) throws ClientException {
         return send(HttpMethod.PUT, newContact);
     }
 
@@ -153,9 +152,10 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IContactRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ContactRequest)this;
+     @Nonnull
+     public ContactRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,9 +164,10 @@ public class ContactRequest extends BaseRequest implements IContactRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IContactRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ContactRequest)this;
+     @Nonnull
+     public ContactRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

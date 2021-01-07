@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRequest;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageSubjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageSubjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Package Resource Request Request Builder.
  */
-public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuilder implements IAccessPackageResourceRequestRequestBuilder {
+public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuilder<AccessPackageResourceRequest> {
 
     /**
      * The request builder for the AccessPackageResourceRequest
@@ -32,7 +32,7 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceRequestRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageResourceRequestRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageResourceRequestRequest instance
+     * @return the AccessPackageResourceRequestRequest instance
      */
-    public IAccessPackageResourceRequestRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessPackageResourceRequestRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessPackageResourceRequestRequest instance
+     * @return the AccessPackageResourceRequestRequest instance
      */
-    public IAccessPackageResourceRequestRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessPackageResourceRequestRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessPackageResourceRequestRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class AccessPackageResourceRequestRequestBuilder extends BaseRequestBuild
     /**
      * Gets the request builder for AccessPackageResource
      *
-     * @return the IAccessPackageResourceWithReferenceRequestBuilder instance
+     * @return the AccessPackageResourceWithReferenceRequestBuilder instance
      */
-    public IAccessPackageResourceWithReferenceRequestBuilder accessPackageResource() {
+    @Nonnull
+    public AccessPackageResourceWithReferenceRequestBuilder accessPackageResource() {
         return new AccessPackageResourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResource"), getClient(), null);
     }
 
     /**
      * Gets the request builder for AccessPackageSubject
      *
-     * @return the IAccessPackageSubjectRequestBuilder instance
+     * @return the AccessPackageSubjectRequestBuilder instance
      */
-    public IAccessPackageSubjectRequestBuilder requestor() {
+    @Nonnull
+    public AccessPackageSubjectRequestBuilder requestor() {
         return new AccessPackageSubjectRequestBuilder(getRequestUrlWithAdditionalSegment("requestor"), getClient(), null);
     }
 }

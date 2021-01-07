@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkPkcsCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android For Work Pkcs Certificate Profile Request.
  */
-public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest implements IAndroidForWorkPkcsCertificateProfileRequest {
+public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest<AndroidForWorkPkcsCertificateProfile> {
 	
     /**
      * The request for the AndroidForWorkPkcsCertificateProfile
@@ -33,7 +33,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkPkcsCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkPkcsCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkPkcsCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @return the AndroidForWorkPkcsCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidForWorkPkcsCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param sourceAndroidForWorkPkcsCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkPkcsCertificateProfile sourceAndroidForWorkPkcsCertificateProfile, final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
+    public void patch(@Nonnull final AndroidForWorkPkcsCertificateProfile sourceAndroidForWorkPkcsCertificateProfile, @Nonnull final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @return the updated AndroidForWorkPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkPkcsCertificateProfile patch(final AndroidForWorkPkcsCertificateProfile sourceAndroidForWorkPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkPkcsCertificateProfile patch(@Nonnull final AndroidForWorkPkcsCertificateProfile sourceAndroidForWorkPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param newAndroidForWorkPkcsCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
+    public void post(@Nonnull final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, @Nonnull final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @return the created AndroidForWorkPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkPkcsCertificateProfile post(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkPkcsCertificateProfile post(@Nonnull final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param newAndroidForWorkPkcsCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
+    public void put(@Nonnull final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile, @Nonnull final ICallback<? super AndroidForWorkPkcsCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @return the created AndroidForWorkPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkPkcsCertificateProfile put(final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkPkcsCertificateProfile put(@Nonnull final AndroidForWorkPkcsCertificateProfile newAndroidForWorkPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidForWorkPkcsCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidForWorkPkcsCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidForWorkPkcsCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidForWorkPkcsCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AndroidForWorkPkcsCertificateProfileRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidForWorkPkcsCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkPkcsCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidForWorkPkcsCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

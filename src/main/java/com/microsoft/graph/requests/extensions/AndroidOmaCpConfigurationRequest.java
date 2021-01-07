@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidOmaCpConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Oma Cp Configuration Request.
  */
-public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAndroidOmaCpConfigurationRequest {
+public class AndroidOmaCpConfigurationRequest extends BaseRequest<AndroidOmaCpConfiguration> {
 	
     /**
      * The request for the AndroidOmaCpConfiguration
@@ -29,7 +31,7 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidOmaCpConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidOmaCpConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidOmaCpConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidOmaCpConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidOmaCpConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @return the AndroidOmaCpConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidOmaCpConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidOmaCpConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidOmaCpConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @param sourceAndroidOmaCpConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidOmaCpConfiguration sourceAndroidOmaCpConfiguration, final ICallback<? super AndroidOmaCpConfiguration> callback) {
+    public void patch(@Nonnull final AndroidOmaCpConfiguration sourceAndroidOmaCpConfiguration, @Nonnull final ICallback<? super AndroidOmaCpConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidOmaCpConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @return the updated AndroidOmaCpConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidOmaCpConfiguration patch(final AndroidOmaCpConfiguration sourceAndroidOmaCpConfiguration) throws ClientException {
+    @Nullable
+    public AndroidOmaCpConfiguration patch(@Nonnull final AndroidOmaCpConfiguration sourceAndroidOmaCpConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidOmaCpConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @param newAndroidOmaCpConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, final ICallback<? super AndroidOmaCpConfiguration> callback) {
+    public void post(@Nonnull final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, @Nonnull final ICallback<? super AndroidOmaCpConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidOmaCpConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @return the created AndroidOmaCpConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidOmaCpConfiguration post(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration) throws ClientException {
+    @Nullable
+    public AndroidOmaCpConfiguration post(@Nonnull final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidOmaCpConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @param newAndroidOmaCpConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, final ICallback<? super AndroidOmaCpConfiguration> callback) {
+    public void put(@Nonnull final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration, @Nonnull final ICallback<? super AndroidOmaCpConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidOmaCpConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @return the created AndroidOmaCpConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidOmaCpConfiguration put(final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration) throws ClientException {
+    @Nullable
+    public AndroidOmaCpConfiguration put(@Nonnull final AndroidOmaCpConfiguration newAndroidOmaCpConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidOmaCpConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidOmaCpConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidOmaCpConfigurationRequest)this;
+     @Nonnull
+     public AndroidOmaCpConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidOmaCpConfigurationRequest extends BaseRequest implements IAn
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidOmaCpConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidOmaCpConfigurationRequest)this;
+     @Nonnull
+     public AndroidOmaCpConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonWebsite;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Website Request.
  */
-public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteRequest {
+public class PersonWebsiteRequest extends BaseRequest<PersonWebsite> {
 	
     /**
      * The request for the PersonWebsite
@@ -29,7 +31,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonWebsiteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonWebsiteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonWebsite.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonWebsite> callback) {
+    public void get(@Nonnull final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @return the PersonWebsite from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonWebsite get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonWebsite> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param sourcePersonWebsite the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonWebsite sourcePersonWebsite, final ICallback<? super PersonWebsite> callback) {
+    public void patch(@Nonnull final PersonWebsite sourcePersonWebsite, @Nonnull final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonWebsite);
     }
 
@@ -87,7 +90,8 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @return the updated PersonWebsite
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonWebsite patch(final PersonWebsite sourcePersonWebsite) throws ClientException {
+    @Nullable
+    public PersonWebsite patch(@Nonnull final PersonWebsite sourcePersonWebsite) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonWebsite);
     }
 
@@ -97,7 +101,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param newPersonWebsite the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback) {
+    public void post(@Nonnull final PersonWebsite newPersonWebsite, @Nonnull final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.POST, callback, newPersonWebsite);
     }
 
@@ -108,7 +112,8 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @return the created PersonWebsite
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonWebsite post(final PersonWebsite newPersonWebsite) throws ClientException {
+    @Nullable
+    public PersonWebsite post(@Nonnull final PersonWebsite newPersonWebsite) throws ClientException {
         return send(HttpMethod.POST, newPersonWebsite);
     }
 
@@ -118,7 +123,7 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param newPersonWebsite the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonWebsite newPersonWebsite, final ICallback<? super PersonWebsite> callback) {
+    public void put(@Nonnull final PersonWebsite newPersonWebsite, @Nonnull final ICallback<? super PersonWebsite> callback) {
         send(HttpMethod.PUT, callback, newPersonWebsite);
     }
 
@@ -129,7 +134,8 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @return the created PersonWebsite
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonWebsite put(final PersonWebsite newPersonWebsite) throws ClientException {
+    @Nullable
+    public PersonWebsite put(@Nonnull final PersonWebsite newPersonWebsite) throws ClientException {
         return send(HttpMethod.PUT, newPersonWebsite);
     }
 
@@ -139,9 +145,10 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonWebsiteRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonWebsiteRequest)this;
+     @Nonnull
+     public PersonWebsiteRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonWebsiteRequest extends BaseRequest implements IPersonWebsiteR
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonWebsiteRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonWebsiteRequest)this;
+     @Nonnull
+     public PersonWebsiteRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

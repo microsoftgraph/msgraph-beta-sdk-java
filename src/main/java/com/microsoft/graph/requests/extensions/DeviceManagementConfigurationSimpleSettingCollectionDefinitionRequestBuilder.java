@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSimpleSettingCollectionDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Configuration Simple Setting Collection Definition Request Builder.
  */
-public class DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequestBuilder extends BaseRequestBuilder implements IDeviceManagementConfigurationSimpleSettingCollectionDefinitionRequestBuilder {
+public class DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequestBuilder extends BaseRequestBuilder<DeviceManagementConfigurationSimpleSettingCollectionDefinition> {
 
     /**
      * The request builder for the DeviceManagementConfigurationSimpleSettingCollectionDefinition
@@ -28,7 +30,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinitionReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinitionReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest instance
+     * @return the DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest instance
      */
-    public IDeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinitionReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest instance
+     * @return the DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest instance
      */
-    public IDeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementConfigurationSimpleSettingCollectionDefinitionRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

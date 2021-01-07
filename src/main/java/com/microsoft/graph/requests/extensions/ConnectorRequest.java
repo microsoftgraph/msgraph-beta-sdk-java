@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Connector;
-import com.microsoft.graph.requests.extensions.IConnectorGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectorGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectorGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Connector Request.
  */
-public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
+public class ConnectorRequest extends BaseRequest<Connector> {
 	
     /**
      * The request for the Connector
@@ -33,7 +33,7 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ConnectorRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ConnectorRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Connector.class);
     }
 
@@ -42,7 +42,7 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Connector> callback) {
+    public void get(@Nonnull final ICallback<? super Connector> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @return the Connector from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Connector get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Connector> callback) {
+    public void delete(@Nonnull final ICallback<? super Connector> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @param sourceConnector the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Connector sourceConnector, final ICallback<? super Connector> callback) {
+    public void patch(@Nonnull final Connector sourceConnector, @Nonnull final ICallback<? super Connector> callback) {
         send(HttpMethod.PATCH, callback, sourceConnector);
     }
 
@@ -91,7 +92,8 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @return the updated Connector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Connector patch(final Connector sourceConnector) throws ClientException {
+    @Nullable
+    public Connector patch(@Nonnull final Connector sourceConnector) throws ClientException {
         return send(HttpMethod.PATCH, sourceConnector);
     }
 
@@ -101,7 +103,7 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @param newConnector the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Connector newConnector, final ICallback<? super Connector> callback) {
+    public void post(@Nonnull final Connector newConnector, @Nonnull final ICallback<? super Connector> callback) {
         send(HttpMethod.POST, callback, newConnector);
     }
 
@@ -112,7 +114,8 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @return the created Connector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Connector post(final Connector newConnector) throws ClientException {
+    @Nullable
+    public Connector post(@Nonnull final Connector newConnector) throws ClientException {
         return send(HttpMethod.POST, newConnector);
     }
 
@@ -122,7 +125,7 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @param newConnector the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Connector newConnector, final ICallback<? super Connector> callback) {
+    public void put(@Nonnull final Connector newConnector, @Nonnull final ICallback<? super Connector> callback) {
         send(HttpMethod.PUT, callback, newConnector);
     }
 
@@ -133,7 +136,8 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @return the created Connector
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Connector put(final Connector newConnector) throws ClientException {
+    @Nullable
+    public Connector put(@Nonnull final Connector newConnector) throws ClientException {
         return send(HttpMethod.PUT, newConnector);
     }
 
@@ -143,9 +147,10 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IConnectorRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ConnectorRequest)this;
+     @Nonnull
+     public ConnectorRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ConnectorRequest extends BaseRequest implements IConnectorRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IConnectorRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ConnectorRequest)this;
+     @Nonnull
+     public ConnectorRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

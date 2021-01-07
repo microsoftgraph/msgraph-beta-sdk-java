@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RestrictedSignIn;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Restricted Sign In Request.
  */
-public class RestrictedSignInRequest extends BaseRequest implements IRestrictedSignInRequest {
+public class RestrictedSignInRequest extends BaseRequest<RestrictedSignIn> {
 	
     /**
      * The request for the RestrictedSignIn
@@ -29,7 +31,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RestrictedSignInRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RestrictedSignInRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RestrictedSignIn.class);
     }
 
@@ -38,7 +40,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RestrictedSignIn> callback) {
+    public void get(@Nonnull final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @return the RestrictedSignIn from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RestrictedSignIn get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RestrictedSignIn> callback) {
+    public void delete(@Nonnull final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param sourceRestrictedSignIn the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RestrictedSignIn sourceRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
+    public void patch(@Nonnull final RestrictedSignIn sourceRestrictedSignIn, @Nonnull final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.PATCH, callback, sourceRestrictedSignIn);
     }
 
@@ -87,7 +90,8 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @return the updated RestrictedSignIn
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RestrictedSignIn patch(final RestrictedSignIn sourceRestrictedSignIn) throws ClientException {
+    @Nullable
+    public RestrictedSignIn patch(@Nonnull final RestrictedSignIn sourceRestrictedSignIn) throws ClientException {
         return send(HttpMethod.PATCH, sourceRestrictedSignIn);
     }
 
@@ -97,7 +101,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param newRestrictedSignIn the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
+    public void post(@Nonnull final RestrictedSignIn newRestrictedSignIn, @Nonnull final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.POST, callback, newRestrictedSignIn);
     }
 
@@ -108,7 +112,8 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @return the created RestrictedSignIn
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RestrictedSignIn post(final RestrictedSignIn newRestrictedSignIn) throws ClientException {
+    @Nullable
+    public RestrictedSignIn post(@Nonnull final RestrictedSignIn newRestrictedSignIn) throws ClientException {
         return send(HttpMethod.POST, newRestrictedSignIn);
     }
 
@@ -118,7 +123,7 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param newRestrictedSignIn the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RestrictedSignIn newRestrictedSignIn, final ICallback<? super RestrictedSignIn> callback) {
+    public void put(@Nonnull final RestrictedSignIn newRestrictedSignIn, @Nonnull final ICallback<? super RestrictedSignIn> callback) {
         send(HttpMethod.PUT, callback, newRestrictedSignIn);
     }
 
@@ -129,7 +134,8 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @return the created RestrictedSignIn
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RestrictedSignIn put(final RestrictedSignIn newRestrictedSignIn) throws ClientException {
+    @Nullable
+    public RestrictedSignIn put(@Nonnull final RestrictedSignIn newRestrictedSignIn) throws ClientException {
         return send(HttpMethod.PUT, newRestrictedSignIn);
     }
 
@@ -139,9 +145,10 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param value the select clause
      * @return the updated request
      */
-     public IRestrictedSignInRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RestrictedSignInRequest)this;
+     @Nonnull
+     public RestrictedSignInRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class RestrictedSignInRequest extends BaseRequest implements IRestrictedS
      * @param value the expand clause
      * @return the updated request
      */
-     public IRestrictedSignInRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RestrictedSignInRequest)this;
+     @Nonnull
+     public RestrictedSignInRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

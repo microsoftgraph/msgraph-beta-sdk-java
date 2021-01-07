@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.ChatInfo;
 import com.microsoft.graph.models.extensions.MeetingParticipants;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Online Meeting Request Builder.
  */
-public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements IOnlineMeetingRequestBuilder {
+public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeeting> {
 
     /**
      * The request builder for the OnlineMeeting
@@ -30,7 +32,7 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnlineMeetingRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnlineMeetingRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +40,10 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IOnlineMeetingRequest instance
+     * @return the OnlineMeetingRequest instance
      */
-    public IOnlineMeetingRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public OnlineMeetingRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,23 +51,42 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder implements I
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IOnlineMeetingRequest instance
+     * @return the OnlineMeetingRequest instance
      */
-    public IOnlineMeetingRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public OnlineMeetingRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.OnlineMeetingRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
 
-    public IOnlineMeetingAlternativeRecordingStreamRequestBuilder alternativeRecording() {
+    /**
+     * Gets the request builder for alternativeRecording
+     *
+     * @return the OnlineMeetingAlternativeRecordingStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OnlineMeetingAlternativeRecordingStreamRequestBuilder alternativeRecording() {
         return new OnlineMeetingAlternativeRecordingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("alternativeRecording"), getClient(), null);
     }
 
-    public IOnlineMeetingAttendeeReportStreamRequestBuilder attendeeReport() {
+    /**
+     * Gets the request builder for attendeeReport
+     *
+     * @return the OnlineMeetingAttendeeReportStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OnlineMeetingAttendeeReportStreamRequestBuilder attendeeReport() {
         return new OnlineMeetingAttendeeReportStreamRequestBuilder(getRequestUrlWithAdditionalSegment("attendeeReport"), getClient(), null);
     }
 
-    public IOnlineMeetingRecordingStreamRequestBuilder recording() {
+    /**
+     * Gets the request builder for recording
+     *
+     * @return the OnlineMeetingRecordingStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OnlineMeetingRecordingStreamRequestBuilder recording() {
         return new OnlineMeetingRecordingStreamRequestBuilder(getRequestUrlWithAdditionalSegment("recording"), getClient(), null);
     }
 }

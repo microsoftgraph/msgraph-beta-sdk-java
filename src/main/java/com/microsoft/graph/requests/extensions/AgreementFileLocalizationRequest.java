@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementFileLocalization;
-import com.microsoft.graph.requests.extensions.IAgreementFileVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Agreement File Localization Request.
  */
-public class AgreementFileLocalizationRequest extends BaseRequest implements IAgreementFileLocalizationRequest {
+public class AgreementFileLocalizationRequest extends BaseRequest<AgreementFileLocalization> {
 	
     /**
      * The request for the AgreementFileLocalization
@@ -33,7 +33,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementFileLocalizationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementFileLocalizationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AgreementFileLocalization.class);
     }
 
@@ -42,7 +42,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AgreementFileLocalization> callback) {
+    public void get(@Nonnull final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @return the AgreementFileLocalization from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AgreementFileLocalization get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AgreementFileLocalization> callback) {
+    public void delete(@Nonnull final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param sourceAgreementFileLocalization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgreementFileLocalization sourceAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback) {
+    public void patch(@Nonnull final AgreementFileLocalization sourceAgreementFileLocalization, @Nonnull final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.PATCH, callback, sourceAgreementFileLocalization);
     }
 
@@ -91,7 +92,8 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @return the updated AgreementFileLocalization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFileLocalization patch(final AgreementFileLocalization sourceAgreementFileLocalization) throws ClientException {
+    @Nullable
+    public AgreementFileLocalization patch(@Nonnull final AgreementFileLocalization sourceAgreementFileLocalization) throws ClientException {
         return send(HttpMethod.PATCH, sourceAgreementFileLocalization);
     }
 
@@ -101,7 +103,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param newAgreementFileLocalization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback) {
+    public void post(@Nonnull final AgreementFileLocalization newAgreementFileLocalization, @Nonnull final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.POST, callback, newAgreementFileLocalization);
     }
 
@@ -112,7 +114,8 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @return the created AgreementFileLocalization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFileLocalization post(final AgreementFileLocalization newAgreementFileLocalization) throws ClientException {
+    @Nullable
+    public AgreementFileLocalization post(@Nonnull final AgreementFileLocalization newAgreementFileLocalization) throws ClientException {
         return send(HttpMethod.POST, newAgreementFileLocalization);
     }
 
@@ -122,7 +125,7 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param newAgreementFileLocalization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgreementFileLocalization newAgreementFileLocalization, final ICallback<? super AgreementFileLocalization> callback) {
+    public void put(@Nonnull final AgreementFileLocalization newAgreementFileLocalization, @Nonnull final ICallback<? super AgreementFileLocalization> callback) {
         send(HttpMethod.PUT, callback, newAgreementFileLocalization);
     }
 
@@ -133,7 +136,8 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @return the created AgreementFileLocalization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFileLocalization put(final AgreementFileLocalization newAgreementFileLocalization) throws ClientException {
+    @Nullable
+    public AgreementFileLocalization put(@Nonnull final AgreementFileLocalization newAgreementFileLocalization) throws ClientException {
         return send(HttpMethod.PUT, newAgreementFileLocalization);
     }
 
@@ -143,9 +147,10 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param value the select clause
      * @return the updated request
      */
-     public IAgreementFileLocalizationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AgreementFileLocalizationRequest)this;
+     @Nonnull
+     public AgreementFileLocalizationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AgreementFileLocalizationRequest extends BaseRequest implements IAg
      * @param value the expand clause
      * @return the updated request
      */
-     public IAgreementFileLocalizationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgreementFileLocalizationRequest)this;
+     @Nonnull
+     public AgreementFileLocalizationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

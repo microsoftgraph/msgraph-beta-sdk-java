@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DepIOSEnrollmentProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Dep IOSEnrollment Profile Request.
  */
-public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepIOSEnrollmentProfileRequest {
+public class DepIOSEnrollmentProfileRequest extends BaseRequest<DepIOSEnrollmentProfile> {
 	
     /**
      * The request for the DepIOSEnrollmentProfile
@@ -29,7 +31,7 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DepIOSEnrollmentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DepIOSEnrollmentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DepIOSEnrollmentProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DepIOSEnrollmentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @return the DepIOSEnrollmentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DepIOSEnrollmentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DepIOSEnrollmentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @param sourceDepIOSEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback) {
+    public void patch(@Nonnull final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile, @Nonnull final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceDepIOSEnrollmentProfile);
     }
 
@@ -87,7 +90,8 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @return the updated DepIOSEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepIOSEnrollmentProfile patch(final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile) throws ClientException {
+    @Nullable
+    public DepIOSEnrollmentProfile patch(@Nonnull final DepIOSEnrollmentProfile sourceDepIOSEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceDepIOSEnrollmentProfile);
     }
 
@@ -97,7 +101,7 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @param newDepIOSEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback) {
+    public void post(@Nonnull final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, @Nonnull final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newDepIOSEnrollmentProfile);
     }
 
@@ -108,7 +112,8 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @return the created DepIOSEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepIOSEnrollmentProfile post(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile) throws ClientException {
+    @Nullable
+    public DepIOSEnrollmentProfile post(@Nonnull final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile) throws ClientException {
         return send(HttpMethod.POST, newDepIOSEnrollmentProfile);
     }
 
@@ -118,7 +123,7 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @param newDepIOSEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, final ICallback<? super DepIOSEnrollmentProfile> callback) {
+    public void put(@Nonnull final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile, @Nonnull final ICallback<? super DepIOSEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newDepIOSEnrollmentProfile);
     }
 
@@ -129,7 +134,8 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @return the created DepIOSEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepIOSEnrollmentProfile put(final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile) throws ClientException {
+    @Nullable
+    public DepIOSEnrollmentProfile put(@Nonnull final DepIOSEnrollmentProfile newDepIOSEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PUT, newDepIOSEnrollmentProfile);
     }
 
@@ -139,9 +145,10 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @param value the select clause
      * @return the updated request
      */
-     public IDepIOSEnrollmentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DepIOSEnrollmentProfileRequest)this;
+     @Nonnull
+     public DepIOSEnrollmentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DepIOSEnrollmentProfileRequest extends BaseRequest implements IDepI
      * @param value the expand clause
      * @return the updated request
      */
-     public IDepIOSEnrollmentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DepIOSEnrollmentProfileRequest)this;
+     @Nonnull
+     public DepIOSEnrollmentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

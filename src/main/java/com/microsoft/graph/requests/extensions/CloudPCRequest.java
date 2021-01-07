@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CloudPC;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Cloud PCRequest.
  */
-public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
+public class CloudPCRequest extends BaseRequest<CloudPC> {
 	
     /**
      * The request for the CloudPC
@@ -29,7 +31,7 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CloudPCRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CloudPCRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, CloudPC.class);
     }
 
@@ -38,7 +40,7 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super CloudPC> callback) {
+    public void get(@Nonnull final ICallback<? super CloudPC> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @return the CloudPC from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public CloudPC get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super CloudPC> callback) {
+    public void delete(@Nonnull final ICallback<? super CloudPC> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @param sourceCloudPC the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final CloudPC sourceCloudPC, final ICallback<? super CloudPC> callback) {
+    public void patch(@Nonnull final CloudPC sourceCloudPC, @Nonnull final ICallback<? super CloudPC> callback) {
         send(HttpMethod.PATCH, callback, sourceCloudPC);
     }
 
@@ -87,7 +90,8 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @return the updated CloudPC
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPC patch(final CloudPC sourceCloudPC) throws ClientException {
+    @Nullable
+    public CloudPC patch(@Nonnull final CloudPC sourceCloudPC) throws ClientException {
         return send(HttpMethod.PATCH, sourceCloudPC);
     }
 
@@ -97,7 +101,7 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @param newCloudPC the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final CloudPC newCloudPC, final ICallback<? super CloudPC> callback) {
+    public void post(@Nonnull final CloudPC newCloudPC, @Nonnull final ICallback<? super CloudPC> callback) {
         send(HttpMethod.POST, callback, newCloudPC);
     }
 
@@ -108,7 +112,8 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @return the created CloudPC
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPC post(final CloudPC newCloudPC) throws ClientException {
+    @Nullable
+    public CloudPC post(@Nonnull final CloudPC newCloudPC) throws ClientException {
         return send(HttpMethod.POST, newCloudPC);
     }
 
@@ -118,7 +123,7 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @param newCloudPC the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final CloudPC newCloudPC, final ICallback<? super CloudPC> callback) {
+    public void put(@Nonnull final CloudPC newCloudPC, @Nonnull final ICallback<? super CloudPC> callback) {
         send(HttpMethod.PUT, callback, newCloudPC);
     }
 
@@ -129,7 +134,8 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @return the created CloudPC
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public CloudPC put(final CloudPC newCloudPC) throws ClientException {
+    @Nullable
+    public CloudPC put(@Nonnull final CloudPC newCloudPC) throws ClientException {
         return send(HttpMethod.PUT, newCloudPC);
     }
 
@@ -139,9 +145,10 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ICloudPCRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CloudPCRequest)this;
+     @Nonnull
+     public CloudPCRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CloudPCRequest extends BaseRequest implements ICloudPCRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ICloudPCRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CloudPCRequest)this;
+     @Nonnull
+     public CloudPCRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

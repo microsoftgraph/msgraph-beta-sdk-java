@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Defender Application Control Supplemental Policy Assignment Request Builder.
  */
-public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder extends BaseRequestBuilder implements IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder {
+public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder extends BaseRequestBuilder<WindowsDefenderApplicationControlSupplementalPolicyAssignment> {
 
     /**
      * The request builder for the WindowsDefenderApplicationControlSupplementalPolicyAssignment
@@ -28,7 +30,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest instance
+     * @return the WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest instance
      */
-    public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentReques
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest instance
+     * @return the WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest instance
      */
-    public IWindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

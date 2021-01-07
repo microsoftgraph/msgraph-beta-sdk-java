@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookRangeFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeBorderRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeBorderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookRangeFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookRangeFontRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookFormatProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookFormatProtectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Range Format Request Builder.
  */
-public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder implements IWorkbookRangeFormatRequestBuilder {
+public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder<WorkbookRangeFormat> {
 
     /**
      * The request builder for the WorkbookRangeFormat
@@ -38,7 +35,7 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookRangeFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookRangeFormatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder implem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeFormatRequest instance
+     * @return the WorkbookRangeFormatRequest instance
      */
-    public IWorkbookRangeFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookRangeFormatRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,53 +54,80 @@ public class WorkbookRangeFormatRequestBuilder extends BaseRequestBuilder implem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookRangeFormatRequest instance
+     * @return the WorkbookRangeFormatRequest instance
      */
-    public IWorkbookRangeFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookRangeFormatRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookRangeFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IWorkbookRangeBorderCollectionRequestBuilder borders() {
+    /**
+     *  Gets a request builder for the WorkbookRangeBorder collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WorkbookRangeBorderCollectionRequestBuilder borders() {
         return new WorkbookRangeBorderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("borders"), getClient(), null);
     }
 
-    public IWorkbookRangeBorderRequestBuilder borders(final String id) {
+    /**
+     * Gets a request builder for the WorkbookRangeBorder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WorkbookRangeBorderRequestBuilder borders(@Nonnull final String id) {
         return new WorkbookRangeBorderRequestBuilder(getRequestUrlWithAdditionalSegment("borders") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeFill
      *
-     * @return the IWorkbookRangeFillRequestBuilder instance
+     * @return the WorkbookRangeFillRequestBuilder instance
      */
-    public IWorkbookRangeFillRequestBuilder fill() {
+    @Nonnull
+    public WorkbookRangeFillRequestBuilder fill() {
         return new WorkbookRangeFillRequestBuilder(getRequestUrlWithAdditionalSegment("fill"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookRangeFont
      *
-     * @return the IWorkbookRangeFontRequestBuilder instance
+     * @return the WorkbookRangeFontRequestBuilder instance
      */
-    public IWorkbookRangeFontRequestBuilder font() {
+    @Nonnull
+    public WorkbookRangeFontRequestBuilder font() {
         return new WorkbookRangeFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookFormatProtection
      *
-     * @return the IWorkbookFormatProtectionRequestBuilder instance
+     * @return the WorkbookFormatProtectionRequestBuilder instance
      */
-    public IWorkbookFormatProtectionRequestBuilder protection() {
+    @Nonnull
+    public WorkbookFormatProtectionRequestBuilder protection() {
         return new WorkbookFormatProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("protection"), getClient(), null);
     }
 
-    public IWorkbookRangeFormatAutofitColumnsRequestBuilder autofitColumns() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public WorkbookRangeFormatAutofitColumnsRequestBuilder autofitColumns() {
         return new WorkbookRangeFormatAutofitColumnsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitColumns"), getClient(), null);
     }
 
-    public IWorkbookRangeFormatAutofitRowsRequestBuilder autofitRows() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public WorkbookRangeFormatAutofitRowsRequestBuilder autofitRows() {
         return new WorkbookRangeFormatAutofitRowsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.autofitRows"), getClient(), null);
     }
 }

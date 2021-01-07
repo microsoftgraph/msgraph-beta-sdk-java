@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Operation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Operation Request.
  */
-public class OperationRequest extends BaseRequest implements IOperationRequest {
+public class OperationRequest extends BaseRequest<Operation> {
 	
     /**
      * The request for the Operation
@@ -30,10 +32,10 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public OperationRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends Operation> responseClass) {
+    public OperationRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends Operation> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Operation.class);
     }
 
@@ -53,7 +55,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Operation> callback) {
+    public void get(@Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @return the Operation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Operation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Operation> callback) {
+    public void delete(@Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param sourceOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Operation sourceOperation, final ICallback<? super Operation> callback) {
+    public void patch(@Nonnull final Operation sourceOperation, @Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.PATCH, callback, sourceOperation);
     }
 
@@ -102,7 +105,8 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @return the updated Operation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Operation patch(final Operation sourceOperation) throws ClientException {
+    @Nullable
+    public Operation patch(@Nonnull final Operation sourceOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceOperation);
     }
 
@@ -112,7 +116,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param newOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Operation newOperation, final ICallback<? super Operation> callback) {
+    public void post(@Nonnull final Operation newOperation, @Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.POST, callback, newOperation);
     }
 
@@ -123,7 +127,8 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @return the created Operation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Operation post(final Operation newOperation) throws ClientException {
+    @Nullable
+    public Operation post(@Nonnull final Operation newOperation) throws ClientException {
         return send(HttpMethod.POST, newOperation);
     }
 
@@ -133,7 +138,7 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param newOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Operation newOperation, final ICallback<? super Operation> callback) {
+    public void put(@Nonnull final Operation newOperation, @Nonnull final ICallback<? super Operation> callback) {
         send(HttpMethod.PUT, callback, newOperation);
     }
 
@@ -144,7 +149,8 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @return the created Operation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Operation put(final Operation newOperation) throws ClientException {
+    @Nullable
+    public Operation put(@Nonnull final Operation newOperation) throws ClientException {
         return send(HttpMethod.PUT, newOperation);
     }
 
@@ -154,9 +160,10 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OperationRequest)this;
+     @Nonnull
+     public OperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class OperationRequest extends BaseRequest implements IOperationRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OperationRequest)this;
+     @Nonnull
+     public OperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

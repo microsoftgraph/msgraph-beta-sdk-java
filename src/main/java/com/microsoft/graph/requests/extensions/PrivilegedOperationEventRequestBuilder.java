@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedOperationEvent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Privileged Operation Event Request Builder.
  */
-public class PrivilegedOperationEventRequestBuilder extends BaseRequestBuilder implements IPrivilegedOperationEventRequestBuilder {
+public class PrivilegedOperationEventRequestBuilder extends BaseRequestBuilder<PrivilegedOperationEvent> {
 
     /**
      * The request builder for the PrivilegedOperationEvent
@@ -28,7 +30,7 @@ public class PrivilegedOperationEventRequestBuilder extends BaseRequestBuilder i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedOperationEventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedOperationEventRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class PrivilegedOperationEventRequestBuilder extends BaseRequestBuilder i
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedOperationEventRequest instance
+     * @return the PrivilegedOperationEventRequest instance
      */
-    public IPrivilegedOperationEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrivilegedOperationEventRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class PrivilegedOperationEventRequestBuilder extends BaseRequestBuilder i
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrivilegedOperationEventRequest instance
+     * @return the PrivilegedOperationEventRequest instance
      */
-    public IPrivilegedOperationEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrivilegedOperationEventRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrivilegedOperationEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemPhone;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Phone Request Builder.
  */
-public class ItemPhoneRequestBuilder extends BaseRequestBuilder implements IItemPhoneRequestBuilder {
+public class ItemPhoneRequestBuilder extends BaseRequestBuilder<ItemPhone> {
 
     /**
      * The request builder for the ItemPhone
@@ -28,7 +30,7 @@ public class ItemPhoneRequestBuilder extends BaseRequestBuilder implements IItem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemPhoneRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemPhoneRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ItemPhoneRequestBuilder extends BaseRequestBuilder implements IItem
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemPhoneRequest instance
+     * @return the ItemPhoneRequest instance
      */
-    public IItemPhoneRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ItemPhoneRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class ItemPhoneRequestBuilder extends BaseRequestBuilder implements IItem
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemPhoneRequest instance
+     * @return the ItemPhoneRequest instance
      */
-    public IItemPhoneRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ItemPhoneRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemPhoneRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

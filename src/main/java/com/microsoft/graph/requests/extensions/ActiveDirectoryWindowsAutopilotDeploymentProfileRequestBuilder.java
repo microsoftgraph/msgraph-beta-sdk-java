@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ActiveDirectoryWindowsAutopilotDeploymentProfile;
-import com.microsoft.graph.requests.extensions.IWindowsDomainJoinConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDomainJoinConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Active Directory Windows Autopilot Deployment Profile Request Builder.
  */
-public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequestBuilder implements IActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder {
+public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder extends BaseRequestBuilder<ActiveDirectoryWindowsAutopilotDeploymentProfile> {
 
     /**
      * The request builder for the ActiveDirectoryWindowsAutopilotDeploymentProfile
@@ -30,7 +31,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder exte
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IActiveDirectoryWindowsAutopilotDeploymentProfileRequest instance
+     * @return the ActiveDirectoryWindowsAutopilotDeploymentProfileRequest instance
      */
-    public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,34 +50,62 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfileRequestBuilder exte
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IActiveDirectoryWindowsAutopilotDeploymentProfileRequest instance
+     * @return the ActiveDirectoryWindowsAutopilotDeploymentProfileRequest instance
      */
-    public IActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ActiveDirectoryWindowsAutopilotDeploymentProfileRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ActiveDirectoryWindowsAutopilotDeploymentProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IWindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
+    /**
+     *  Gets a request builder for the WindowsAutopilotDeviceIdentity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsAutopilotDeviceIdentityCollectionRequestBuilder assignedDevices() {
         return new WindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices"), getClient(), null);
     }
 
-    public IWindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(final String id) {
+    /**
+     * Gets a request builder for the WindowsAutopilotDeviceIdentity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsAutopilotDeviceIdentityRequestBuilder assignedDevices(@Nonnull final String id) {
         return new WindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("assignedDevices") + "/" + id, getClient(), null);
     }
-    public IWindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the WindowsAutopilotDeploymentProfileAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder assignments() {
         return new WindowsAutopilotDeploymentProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IWindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the WindowsAutopilotDeploymentProfileAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsAutopilotDeploymentProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new WindowsAutopilotDeploymentProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for WindowsDomainJoinConfiguration
      *
-     * @return the IWindowsDomainJoinConfigurationRequestBuilder instance
+     * @return the WindowsDomainJoinConfigurationRequestBuilder instance
      */
-    public IWindowsDomainJoinConfigurationRequestBuilder domainJoinConfiguration() {
+    @Nonnull
+    public WindowsDomainJoinConfigurationRequestBuilder domainJoinConfiguration() {
         return new WindowsDomainJoinConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("domainJoinConfiguration"), getClient(), null);
     }
 }

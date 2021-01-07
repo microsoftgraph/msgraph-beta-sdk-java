@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Item;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Request.
  */
-public class ItemRequest extends BaseRequest implements IItemRequest {
+public class ItemRequest extends BaseRequest<Item> {
 	
     /**
      * The request for the Item
@@ -35,7 +34,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Item.class);
     }
 
@@ -44,7 +43,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Item> callback) {
+    public void get(@Nonnull final ICallback<? super Item> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @return the Item from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Item get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Item> callback) {
+    public void delete(@Nonnull final ICallback<? super Item> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param sourceItem the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Item sourceItem, final ICallback<? super Item> callback) {
+    public void patch(@Nonnull final Item sourceItem, @Nonnull final ICallback<? super Item> callback) {
         send(HttpMethod.PATCH, callback, sourceItem);
     }
 
@@ -93,7 +93,8 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @return the updated Item
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Item patch(final Item sourceItem) throws ClientException {
+    @Nullable
+    public Item patch(@Nonnull final Item sourceItem) throws ClientException {
         return send(HttpMethod.PATCH, sourceItem);
     }
 
@@ -103,7 +104,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param newItem the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Item newItem, final ICallback<? super Item> callback) {
+    public void post(@Nonnull final Item newItem, @Nonnull final ICallback<? super Item> callback) {
         send(HttpMethod.POST, callback, newItem);
     }
 
@@ -114,7 +115,8 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @return the created Item
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Item post(final Item newItem) throws ClientException {
+    @Nullable
+    public Item post(@Nonnull final Item newItem) throws ClientException {
         return send(HttpMethod.POST, newItem);
     }
 
@@ -124,7 +126,7 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param newItem the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Item newItem, final ICallback<? super Item> callback) {
+    public void put(@Nonnull final Item newItem, @Nonnull final ICallback<? super Item> callback) {
         send(HttpMethod.PUT, callback, newItem);
     }
 
@@ -135,7 +137,8 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @return the created Item
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Item put(final Item newItem) throws ClientException {
+    @Nullable
+    public Item put(@Nonnull final Item newItem) throws ClientException {
         return send(HttpMethod.PUT, newItem);
     }
 
@@ -145,9 +148,10 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IItemRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemRequest)this;
+     @Nonnull
+     public ItemRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class ItemRequest extends BaseRequest implements IItemRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemRequest)this;
+     @Nonnull
+     public ItemRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

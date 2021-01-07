@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PurchaseInvoice;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.VendorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Purchase Invoice Request.
  */
-public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvoiceRequest {
+public class PurchaseInvoiceRequest extends BaseRequest<PurchaseInvoice> {
 	
     /**
      * The request for the PurchaseInvoice
@@ -37,7 +35,7 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PurchaseInvoiceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PurchaseInvoiceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PurchaseInvoice.class);
     }
 
@@ -46,7 +44,7 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PurchaseInvoice> callback) {
+    public void get(@Nonnull final ICallback<? super PurchaseInvoice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @return the PurchaseInvoice from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PurchaseInvoice get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PurchaseInvoice> callback) {
+    public void delete(@Nonnull final ICallback<? super PurchaseInvoice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @param sourcePurchaseInvoice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PurchaseInvoice sourcePurchaseInvoice, final ICallback<? super PurchaseInvoice> callback) {
+    public void patch(@Nonnull final PurchaseInvoice sourcePurchaseInvoice, @Nonnull final ICallback<? super PurchaseInvoice> callback) {
         send(HttpMethod.PATCH, callback, sourcePurchaseInvoice);
     }
 
@@ -95,7 +94,8 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @return the updated PurchaseInvoice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PurchaseInvoice patch(final PurchaseInvoice sourcePurchaseInvoice) throws ClientException {
+    @Nullable
+    public PurchaseInvoice patch(@Nonnull final PurchaseInvoice sourcePurchaseInvoice) throws ClientException {
         return send(HttpMethod.PATCH, sourcePurchaseInvoice);
     }
 
@@ -105,7 +105,7 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @param newPurchaseInvoice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PurchaseInvoice newPurchaseInvoice, final ICallback<? super PurchaseInvoice> callback) {
+    public void post(@Nonnull final PurchaseInvoice newPurchaseInvoice, @Nonnull final ICallback<? super PurchaseInvoice> callback) {
         send(HttpMethod.POST, callback, newPurchaseInvoice);
     }
 
@@ -116,7 +116,8 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @return the created PurchaseInvoice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PurchaseInvoice post(final PurchaseInvoice newPurchaseInvoice) throws ClientException {
+    @Nullable
+    public PurchaseInvoice post(@Nonnull final PurchaseInvoice newPurchaseInvoice) throws ClientException {
         return send(HttpMethod.POST, newPurchaseInvoice);
     }
 
@@ -126,7 +127,7 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @param newPurchaseInvoice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PurchaseInvoice newPurchaseInvoice, final ICallback<? super PurchaseInvoice> callback) {
+    public void put(@Nonnull final PurchaseInvoice newPurchaseInvoice, @Nonnull final ICallback<? super PurchaseInvoice> callback) {
         send(HttpMethod.PUT, callback, newPurchaseInvoice);
     }
 
@@ -137,7 +138,8 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @return the created PurchaseInvoice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PurchaseInvoice put(final PurchaseInvoice newPurchaseInvoice) throws ClientException {
+    @Nullable
+    public PurchaseInvoice put(@Nonnull final PurchaseInvoice newPurchaseInvoice) throws ClientException {
         return send(HttpMethod.PUT, newPurchaseInvoice);
     }
 
@@ -147,9 +149,10 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @param value the select clause
      * @return the updated request
      */
-     public IPurchaseInvoiceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PurchaseInvoiceRequest)this;
+     @Nonnull
+     public PurchaseInvoiceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class PurchaseInvoiceRequest extends BaseRequest implements IPurchaseInvo
      * @param value the expand clause
      * @return the updated request
      */
-     public IPurchaseInvoiceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PurchaseInvoiceRequest)this;
+     @Nonnull
+     public PurchaseInvoiceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Financials;
-import com.microsoft.graph.requests.extensions.ICompanyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICompanyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Financials Request Builder.
  */
-public class FinancialsRequestBuilder extends BaseRequestBuilder implements IFinancialsRequestBuilder {
+public class FinancialsRequestBuilder extends BaseRequestBuilder<Financials> {
 
     /**
      * The request builder for the Financials
@@ -32,7 +32,7 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder implements IFin
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public FinancialsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public FinancialsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder implements IFin
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IFinancialsRequest instance
+     * @return the FinancialsRequest instance
      */
-    public IFinancialsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public FinancialsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class FinancialsRequestBuilder extends BaseRequestBuilder implements IFin
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IFinancialsRequest instance
+     * @return the FinancialsRequest instance
      */
-    public IFinancialsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public FinancialsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.FinancialsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public ICompanyCollectionRequestBuilder companies() {
+    /**
+     *  Gets a request builder for the Company collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CompanyCollectionRequestBuilder companies() {
         return new CompanyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("companies"), getClient(), null);
     }
 
-    public ICompanyRequestBuilder companies(final String id) {
+    /**
+     * Gets a request builder for the Company item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CompanyRequestBuilder companies(@Nonnull final String id) {
         return new CompanyRequestBuilder(getRequestUrlWithAdditionalSegment("companies") + "/" + id, getClient(), null);
     }
 }

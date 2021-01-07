@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Mention;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mention Request.
  */
-public class MentionRequest extends BaseRequest implements IMentionRequest {
+public class MentionRequest extends BaseRequest<Mention> {
 	
     /**
      * The request for the Mention
@@ -29,7 +31,7 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MentionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MentionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Mention.class);
     }
 
@@ -38,7 +40,7 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Mention> callback) {
+    public void get(@Nonnull final ICallback<? super Mention> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @return the Mention from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Mention get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Mention> callback) {
+    public void delete(@Nonnull final ICallback<? super Mention> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @param sourceMention the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Mention sourceMention, final ICallback<? super Mention> callback) {
+    public void patch(@Nonnull final Mention sourceMention, @Nonnull final ICallback<? super Mention> callback) {
         send(HttpMethod.PATCH, callback, sourceMention);
     }
 
@@ -87,7 +90,8 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @return the updated Mention
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Mention patch(final Mention sourceMention) throws ClientException {
+    @Nullable
+    public Mention patch(@Nonnull final Mention sourceMention) throws ClientException {
         return send(HttpMethod.PATCH, sourceMention);
     }
 
@@ -97,7 +101,7 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @param newMention the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Mention newMention, final ICallback<? super Mention> callback) {
+    public void post(@Nonnull final Mention newMention, @Nonnull final ICallback<? super Mention> callback) {
         send(HttpMethod.POST, callback, newMention);
     }
 
@@ -108,7 +112,8 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @return the created Mention
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Mention post(final Mention newMention) throws ClientException {
+    @Nullable
+    public Mention post(@Nonnull final Mention newMention) throws ClientException {
         return send(HttpMethod.POST, newMention);
     }
 
@@ -118,7 +123,7 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @param newMention the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Mention newMention, final ICallback<? super Mention> callback) {
+    public void put(@Nonnull final Mention newMention, @Nonnull final ICallback<? super Mention> callback) {
         send(HttpMethod.PUT, callback, newMention);
     }
 
@@ -129,7 +134,8 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @return the created Mention
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Mention put(final Mention newMention) throws ClientException {
+    @Nullable
+    public Mention put(@Nonnull final Mention newMention) throws ClientException {
         return send(HttpMethod.PUT, newMention);
     }
 
@@ -139,9 +145,10 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IMentionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MentionRequest)this;
+     @Nonnull
+     public MentionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MentionRequest extends BaseRequest implements IMentionRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IMentionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MentionRequest)this;
+     @Nonnull
+     public MentionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

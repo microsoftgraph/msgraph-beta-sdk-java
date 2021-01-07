@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppInstallStatus;
-import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Install Status Request Builder.
  */
-public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder implements IMobileAppInstallStatusRequestBuilder {
+public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder<MobileAppInstallStatus> {
 
     /**
      * The request builder for the MobileAppInstallStatus
@@ -30,7 +31,7 @@ public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppInstallStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppInstallStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppInstallStatusRequest instance
+     * @return the MobileAppInstallStatusRequest instance
      */
-    public IMobileAppInstallStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MobileAppInstallStatusRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppInstallStatusRequest instance
+     * @return the MobileAppInstallStatusRequest instance
      */
-    public IMobileAppInstallStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MobileAppInstallStatusRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class MobileAppInstallStatusRequestBuilder extends BaseRequestBuilder imp
     /**
      * Gets the request builder for MobileApp
      *
-     * @return the IMobileAppWithReferenceRequestBuilder instance
+     * @return the MobileAppWithReferenceRequestBuilder instance
      */
-    public IMobileAppWithReferenceRequestBuilder app() {
+    @Nonnull
+    public MobileAppWithReferenceRequestBuilder app() {
         return new MobileAppWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("app"), getClient(), null);
     }
 }

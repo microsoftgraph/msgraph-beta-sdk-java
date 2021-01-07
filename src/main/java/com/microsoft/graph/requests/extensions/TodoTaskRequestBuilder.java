@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTask;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ILinkedResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.LinkedResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.LinkedResourceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Todo Task Request Builder.
  */
-public class TodoTaskRequestBuilder extends BaseRequestBuilder implements ITodoTaskRequestBuilder {
+public class TodoTaskRequestBuilder extends BaseRequestBuilder<TodoTask> {
 
     /**
      * The request builder for the TodoTask
@@ -36,7 +34,7 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder implements ITodoT
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder implements ITodoT
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ITodoTaskRequest instance
+     * @return the TodoTaskRequest instance
      */
-    public ITodoTaskRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public TodoTaskRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,25 +53,52 @@ public class TodoTaskRequestBuilder extends BaseRequestBuilder implements ITodoT
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ITodoTaskRequest instance
+     * @return the TodoTaskRequest instance
      */
-    public ITodoTaskRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public TodoTaskRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.TodoTaskRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IExtensionCollectionRequestBuilder extensions() {
+    /**
+     *  Gets a request builder for the Extension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ExtensionCollectionRequestBuilder extensions() {
         return new ExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions"), getClient(), null);
     }
 
-    public IExtensionRequestBuilder extensions(final String id) {
+    /**
+     * Gets a request builder for the Extension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ExtensionRequestBuilder extensions(@Nonnull final String id) {
         return new ExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("extensions") + "/" + id, getClient(), null);
     }
-    public ILinkedResourceCollectionRequestBuilder linkedResources() {
+    /**
+     *  Gets a request builder for the LinkedResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public LinkedResourceCollectionRequestBuilder linkedResources() {
         return new LinkedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources"), getClient(), null);
     }
 
-    public ILinkedResourceRequestBuilder linkedResources(final String id) {
+    /**
+     * Gets a request builder for the LinkedResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public LinkedResourceRequestBuilder linkedResources(@Nonnull final String id) {
         return new LinkedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("linkedResources") + "/" + id, getClient(), null);
     }
 }

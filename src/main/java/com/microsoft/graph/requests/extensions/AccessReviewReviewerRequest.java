@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewReviewer;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Review Reviewer Request.
  */
-public class AccessReviewReviewerRequest extends BaseRequest implements IAccessReviewReviewerRequest {
+public class AccessReviewReviewerRequest extends BaseRequest<AccessReviewReviewer> {
 	
     /**
      * The request for the AccessReviewReviewer
@@ -29,7 +31,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewReviewerRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessReviewReviewerRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessReviewReviewer.class);
     }
 
@@ -38,7 +40,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessReviewReviewer> callback) {
+    public void get(@Nonnull final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @return the AccessReviewReviewer from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessReviewReviewer get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessReviewReviewer> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param sourceAccessReviewReviewer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessReviewReviewer sourceAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback) {
+    public void patch(@Nonnull final AccessReviewReviewer sourceAccessReviewReviewer, @Nonnull final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessReviewReviewer);
     }
 
@@ -87,7 +90,8 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @return the updated AccessReviewReviewer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewReviewer patch(final AccessReviewReviewer sourceAccessReviewReviewer) throws ClientException {
+    @Nullable
+    public AccessReviewReviewer patch(@Nonnull final AccessReviewReviewer sourceAccessReviewReviewer) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessReviewReviewer);
     }
 
@@ -97,7 +101,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param newAccessReviewReviewer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback) {
+    public void post(@Nonnull final AccessReviewReviewer newAccessReviewReviewer, @Nonnull final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.POST, callback, newAccessReviewReviewer);
     }
 
@@ -108,7 +112,8 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @return the created AccessReviewReviewer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewReviewer post(final AccessReviewReviewer newAccessReviewReviewer) throws ClientException {
+    @Nullable
+    public AccessReviewReviewer post(@Nonnull final AccessReviewReviewer newAccessReviewReviewer) throws ClientException {
         return send(HttpMethod.POST, newAccessReviewReviewer);
     }
 
@@ -118,7 +123,7 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param newAccessReviewReviewer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessReviewReviewer newAccessReviewReviewer, final ICallback<? super AccessReviewReviewer> callback) {
+    public void put(@Nonnull final AccessReviewReviewer newAccessReviewReviewer, @Nonnull final ICallback<? super AccessReviewReviewer> callback) {
         send(HttpMethod.PUT, callback, newAccessReviewReviewer);
     }
 
@@ -129,7 +134,8 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @return the created AccessReviewReviewer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessReviewReviewer put(final AccessReviewReviewer newAccessReviewReviewer) throws ClientException {
+    @Nullable
+    public AccessReviewReviewer put(@Nonnull final AccessReviewReviewer newAccessReviewReviewer) throws ClientException {
         return send(HttpMethod.PUT, newAccessReviewReviewer);
     }
 
@@ -139,9 +145,10 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessReviewReviewerRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessReviewReviewerRequest)this;
+     @Nonnull
+     public AccessReviewReviewerRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AccessReviewReviewerRequest extends BaseRequest implements IAccessR
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessReviewReviewerRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessReviewReviewerRequest)this;
+     @Nonnull
+     public AccessReviewReviewerRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

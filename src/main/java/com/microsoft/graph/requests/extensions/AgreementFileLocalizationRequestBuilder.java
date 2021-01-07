@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementFileLocalization;
-import com.microsoft.graph.requests.extensions.IAgreementFileVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileVersionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Agreement File Localization Request Builder.
  */
-public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder implements IAgreementFileLocalizationRequestBuilder {
+public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder<AgreementFileLocalization> {
 
     /**
      * The request builder for the AgreementFileLocalization
@@ -32,7 +32,7 @@ public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementFileLocalizationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementFileLocalizationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAgreementFileLocalizationRequest instance
+     * @return the AgreementFileLocalizationRequest instance
      */
-    public IAgreementFileLocalizationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AgreementFileLocalizationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class AgreementFileLocalizationRequestBuilder extends BaseRequestBuilder 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAgreementFileLocalizationRequest instance
+     * @return the AgreementFileLocalizationRequest instance
      */
-    public IAgreementFileLocalizationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AgreementFileLocalizationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAgreementFileVersionCollectionRequestBuilder versions() {
+    /**
+     *  Gets a request builder for the AgreementFileVersion collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgreementFileVersionCollectionRequestBuilder versions() {
         return new AgreementFileVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("versions"), getClient(), null);
     }
 
-    public IAgreementFileVersionRequestBuilder versions(final String id) {
+    /**
+     * Gets a request builder for the AgreementFileVersion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgreementFileVersionRequestBuilder versions(@Nonnull final String id) {
         return new AgreementFileVersionRequestBuilder(getRequestUrlWithAdditionalSegment("versions") + "/" + id, getClient(), null);
     }
 }

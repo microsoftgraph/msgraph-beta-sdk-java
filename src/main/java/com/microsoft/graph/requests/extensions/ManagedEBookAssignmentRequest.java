@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed EBook Assignment Request.
  */
-public class ManagedEBookAssignmentRequest extends BaseRequest implements IManagedEBookAssignmentRequest {
+public class ManagedEBookAssignmentRequest extends BaseRequest<ManagedEBookAssignment> {
 	
     /**
      * The request for the ManagedEBookAssignment
@@ -30,10 +32,10 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ManagedEBookAssignmentRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ManagedEBookAssignment> responseClass) {
+    public ManagedEBookAssignmentRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ManagedEBookAssignment> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedEBookAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedEBookAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedEBookAssignment.class);
     }
 
@@ -53,7 +55,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedEBookAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @return the ManagedEBookAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedEBookAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedEBookAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param sourceManagedEBookAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedEBookAssignment sourceManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void patch(@Nonnull final ManagedEBookAssignment sourceManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedEBookAssignment);
     }
 
@@ -102,7 +105,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @return the updated ManagedEBookAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedEBookAssignment patch(final ManagedEBookAssignment sourceManagedEBookAssignment) throws ClientException {
+    @Nullable
+    public ManagedEBookAssignment patch(@Nonnull final ManagedEBookAssignment sourceManagedEBookAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedEBookAssignment);
     }
 
@@ -112,7 +116,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param newManagedEBookAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void post(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
         send(HttpMethod.POST, callback, newManagedEBookAssignment);
     }
 
@@ -123,7 +127,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @return the created ManagedEBookAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedEBookAssignment post(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
+    @Nullable
+    public ManagedEBookAssignment post(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
         return send(HttpMethod.POST, newManagedEBookAssignment);
     }
 
@@ -133,7 +138,7 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param newManagedEBookAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedEBookAssignment newManagedEBookAssignment, final ICallback<? super ManagedEBookAssignment> callback) {
+    public void put(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment, @Nonnull final ICallback<? super ManagedEBookAssignment> callback) {
         send(HttpMethod.PUT, callback, newManagedEBookAssignment);
     }
 
@@ -144,7 +149,8 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @return the created ManagedEBookAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedEBookAssignment put(final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
+    @Nullable
+    public ManagedEBookAssignment put(@Nonnull final ManagedEBookAssignment newManagedEBookAssignment) throws ClientException {
         return send(HttpMethod.PUT, newManagedEBookAssignment);
     }
 
@@ -154,9 +160,10 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedEBookAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedEBookAssignmentRequest)this;
+     @Nonnull
+     public ManagedEBookAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class ManagedEBookAssignmentRequest extends BaseRequest implements IManag
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedEBookAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedEBookAssignmentRequest)this;
+     @Nonnull
+     public ManagedEBookAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

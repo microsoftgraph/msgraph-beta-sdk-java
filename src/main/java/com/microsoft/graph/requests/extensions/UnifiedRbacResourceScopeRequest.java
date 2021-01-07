@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRbacResourceScope;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Unified Rbac Resource Scope Request.
  */
-public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUnifiedRbacResourceScopeRequest {
+public class UnifiedRbacResourceScopeRequest extends BaseRequest<UnifiedRbacResourceScope> {
 	
     /**
      * The request for the UnifiedRbacResourceScope
@@ -29,7 +31,7 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRbacResourceScopeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnifiedRbacResourceScopeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnifiedRbacResourceScope.class);
     }
 
@@ -38,7 +40,7 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UnifiedRbacResourceScope> callback) {
+    public void get(@Nonnull final ICallback<? super UnifiedRbacResourceScope> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @return the UnifiedRbacResourceScope from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UnifiedRbacResourceScope get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UnifiedRbacResourceScope> callback) {
+    public void delete(@Nonnull final ICallback<? super UnifiedRbacResourceScope> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @param sourceUnifiedRbacResourceScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnifiedRbacResourceScope sourceUnifiedRbacResourceScope, final ICallback<? super UnifiedRbacResourceScope> callback) {
+    public void patch(@Nonnull final UnifiedRbacResourceScope sourceUnifiedRbacResourceScope, @Nonnull final ICallback<? super UnifiedRbacResourceScope> callback) {
         send(HttpMethod.PATCH, callback, sourceUnifiedRbacResourceScope);
     }
 
@@ -87,7 +90,8 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @return the updated UnifiedRbacResourceScope
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRbacResourceScope patch(final UnifiedRbacResourceScope sourceUnifiedRbacResourceScope) throws ClientException {
+    @Nullable
+    public UnifiedRbacResourceScope patch(@Nonnull final UnifiedRbacResourceScope sourceUnifiedRbacResourceScope) throws ClientException {
         return send(HttpMethod.PATCH, sourceUnifiedRbacResourceScope);
     }
 
@@ -97,7 +101,7 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @param newUnifiedRbacResourceScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnifiedRbacResourceScope newUnifiedRbacResourceScope, final ICallback<? super UnifiedRbacResourceScope> callback) {
+    public void post(@Nonnull final UnifiedRbacResourceScope newUnifiedRbacResourceScope, @Nonnull final ICallback<? super UnifiedRbacResourceScope> callback) {
         send(HttpMethod.POST, callback, newUnifiedRbacResourceScope);
     }
 
@@ -108,7 +112,8 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @return the created UnifiedRbacResourceScope
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRbacResourceScope post(final UnifiedRbacResourceScope newUnifiedRbacResourceScope) throws ClientException {
+    @Nullable
+    public UnifiedRbacResourceScope post(@Nonnull final UnifiedRbacResourceScope newUnifiedRbacResourceScope) throws ClientException {
         return send(HttpMethod.POST, newUnifiedRbacResourceScope);
     }
 
@@ -118,7 +123,7 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @param newUnifiedRbacResourceScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnifiedRbacResourceScope newUnifiedRbacResourceScope, final ICallback<? super UnifiedRbacResourceScope> callback) {
+    public void put(@Nonnull final UnifiedRbacResourceScope newUnifiedRbacResourceScope, @Nonnull final ICallback<? super UnifiedRbacResourceScope> callback) {
         send(HttpMethod.PUT, callback, newUnifiedRbacResourceScope);
     }
 
@@ -129,7 +134,8 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @return the created UnifiedRbacResourceScope
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRbacResourceScope put(final UnifiedRbacResourceScope newUnifiedRbacResourceScope) throws ClientException {
+    @Nullable
+    public UnifiedRbacResourceScope put(@Nonnull final UnifiedRbacResourceScope newUnifiedRbacResourceScope) throws ClientException {
         return send(HttpMethod.PUT, newUnifiedRbacResourceScope);
     }
 
@@ -139,9 +145,10 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @param value the select clause
      * @return the updated request
      */
-     public IUnifiedRbacResourceScopeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UnifiedRbacResourceScopeRequest)this;
+     @Nonnull
+     public UnifiedRbacResourceScopeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UnifiedRbacResourceScopeRequest extends BaseRequest implements IUni
      * @param value the expand clause
      * @return the updated request
      */
-     public IUnifiedRbacResourceScopeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnifiedRbacResourceScopeRequest)this;
+     @Nonnull
+     public UnifiedRbacResourceScopeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

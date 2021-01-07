@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.External;
-import com.microsoft.graph.requests.extensions.IExternalConnectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalConnectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the External Request Builder.
  */
-public class ExternalRequestBuilder extends BaseRequestBuilder implements IExternalRequestBuilder {
+public class ExternalRequestBuilder extends BaseRequestBuilder<External> {
 
     /**
      * The request builder for the External
@@ -32,7 +32,7 @@ public class ExternalRequestBuilder extends BaseRequestBuilder implements IExter
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExternalRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExternalRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ExternalRequestBuilder extends BaseRequestBuilder implements IExter
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IExternalRequest instance
+     * @return the ExternalRequest instance
      */
-    public IExternalRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ExternalRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class ExternalRequestBuilder extends BaseRequestBuilder implements IExter
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IExternalRequest instance
+     * @return the ExternalRequest instance
      */
-    public IExternalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ExternalRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ExternalRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IExternalConnectionCollectionRequestBuilder connections() {
+    /**
+     *  Gets a request builder for the ExternalConnection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ExternalConnectionCollectionRequestBuilder connections() {
         return new ExternalConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("connections"), getClient(), null);
     }
 
-    public IExternalConnectionRequestBuilder connections(final String id) {
+    /**
+     * Gets a request builder for the ExternalConnection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ExternalConnectionRequestBuilder connections(@Nonnull final String id) {
         return new ExternalConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("connections") + "/" + id, getClient(), null);
     }
 }

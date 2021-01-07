@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemAnalytics;
-import com.microsoft.graph.requests.extensions.IItemActivityStatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityStatRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityStatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Item Analytics Request.
  */
-public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsRequest {
+public class ItemAnalyticsRequest extends BaseRequest<ItemAnalytics> {
 	
     /**
      * The request for the ItemAnalytics
@@ -33,7 +33,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemAnalyticsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemAnalyticsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemAnalytics.class);
     }
 
@@ -42,7 +42,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ItemAnalytics> callback) {
+    public void get(@Nonnull final ICallback<? super ItemAnalytics> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @return the ItemAnalytics from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ItemAnalytics get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ItemAnalytics> callback) {
+    public void delete(@Nonnull final ICallback<? super ItemAnalytics> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param sourceItemAnalytics the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ItemAnalytics sourceItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
+    public void patch(@Nonnull final ItemAnalytics sourceItemAnalytics, @Nonnull final ICallback<? super ItemAnalytics> callback) {
         send(HttpMethod.PATCH, callback, sourceItemAnalytics);
     }
 
@@ -91,7 +92,8 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @return the updated ItemAnalytics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemAnalytics patch(final ItemAnalytics sourceItemAnalytics) throws ClientException {
+    @Nullable
+    public ItemAnalytics patch(@Nonnull final ItemAnalytics sourceItemAnalytics) throws ClientException {
         return send(HttpMethod.PATCH, sourceItemAnalytics);
     }
 
@@ -101,7 +103,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param newItemAnalytics the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ItemAnalytics newItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
+    public void post(@Nonnull final ItemAnalytics newItemAnalytics, @Nonnull final ICallback<? super ItemAnalytics> callback) {
         send(HttpMethod.POST, callback, newItemAnalytics);
     }
 
@@ -112,7 +114,8 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @return the created ItemAnalytics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemAnalytics post(final ItemAnalytics newItemAnalytics) throws ClientException {
+    @Nullable
+    public ItemAnalytics post(@Nonnull final ItemAnalytics newItemAnalytics) throws ClientException {
         return send(HttpMethod.POST, newItemAnalytics);
     }
 
@@ -122,7 +125,7 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param newItemAnalytics the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ItemAnalytics newItemAnalytics, final ICallback<? super ItemAnalytics> callback) {
+    public void put(@Nonnull final ItemAnalytics newItemAnalytics, @Nonnull final ICallback<? super ItemAnalytics> callback) {
         send(HttpMethod.PUT, callback, newItemAnalytics);
     }
 
@@ -133,7 +136,8 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @return the created ItemAnalytics
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ItemAnalytics put(final ItemAnalytics newItemAnalytics) throws ClientException {
+    @Nullable
+    public ItemAnalytics put(@Nonnull final ItemAnalytics newItemAnalytics) throws ClientException {
         return send(HttpMethod.PUT, newItemAnalytics);
     }
 
@@ -143,9 +147,10 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param value the select clause
      * @return the updated request
      */
-     public IItemAnalyticsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ItemAnalyticsRequest)this;
+     @Nonnull
+     public ItemAnalyticsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class ItemAnalyticsRequest extends BaseRequest implements IItemAnalyticsR
      * @param value the expand clause
      * @return the updated request
      */
-     public IItemAnalyticsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ItemAnalyticsRequest)this;
+     @Nonnull
+     public ItemAnalyticsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

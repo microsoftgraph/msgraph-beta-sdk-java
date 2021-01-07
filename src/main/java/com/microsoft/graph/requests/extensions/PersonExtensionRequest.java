@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonExtension;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Extension Request.
  */
-public class PersonExtensionRequest extends BaseRequest implements IPersonExtensionRequest {
+public class PersonExtensionRequest extends BaseRequest<PersonExtension> {
 	
     /**
      * The request for the PersonExtension
@@ -29,7 +31,7 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonExtensionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonExtensionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonExtension.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonExtension> callback) {
+    public void get(@Nonnull final ICallback<? super PersonExtension> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @return the PersonExtension from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonExtension get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonExtension> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonExtension> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @param sourcePersonExtension the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonExtension sourcePersonExtension, final ICallback<? super PersonExtension> callback) {
+    public void patch(@Nonnull final PersonExtension sourcePersonExtension, @Nonnull final ICallback<? super PersonExtension> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonExtension);
     }
 
@@ -87,7 +90,8 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @return the updated PersonExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonExtension patch(final PersonExtension sourcePersonExtension) throws ClientException {
+    @Nullable
+    public PersonExtension patch(@Nonnull final PersonExtension sourcePersonExtension) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonExtension);
     }
 
@@ -97,7 +101,7 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @param newPersonExtension the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonExtension newPersonExtension, final ICallback<? super PersonExtension> callback) {
+    public void post(@Nonnull final PersonExtension newPersonExtension, @Nonnull final ICallback<? super PersonExtension> callback) {
         send(HttpMethod.POST, callback, newPersonExtension);
     }
 
@@ -108,7 +112,8 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @return the created PersonExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonExtension post(final PersonExtension newPersonExtension) throws ClientException {
+    @Nullable
+    public PersonExtension post(@Nonnull final PersonExtension newPersonExtension) throws ClientException {
         return send(HttpMethod.POST, newPersonExtension);
     }
 
@@ -118,7 +123,7 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @param newPersonExtension the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonExtension newPersonExtension, final ICallback<? super PersonExtension> callback) {
+    public void put(@Nonnull final PersonExtension newPersonExtension, @Nonnull final ICallback<? super PersonExtension> callback) {
         send(HttpMethod.PUT, callback, newPersonExtension);
     }
 
@@ -129,7 +134,8 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @return the created PersonExtension
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonExtension put(final PersonExtension newPersonExtension) throws ClientException {
+    @Nullable
+    public PersonExtension put(@Nonnull final PersonExtension newPersonExtension) throws ClientException {
         return send(HttpMethod.PUT, newPersonExtension);
     }
 
@@ -139,9 +145,10 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonExtensionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonExtensionRequest)this;
+     @Nonnull
+     public PersonExtensionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonExtensionRequest extends BaseRequest implements IPersonExtens
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonExtensionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonExtensionRequest)this;
+     @Nonnull
+     public PersonExtensionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileAppTroubleshootingEvent;
-import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppLogCollectionRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppLogCollectionRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppLogCollectionRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mobile App Troubleshooting Event Request Builder.
  */
-public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuilder implements IMobileAppTroubleshootingEventRequestBuilder {
+public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuilder<MobileAppTroubleshootingEvent> {
 
     /**
      * The request builder for the MobileAppTroubleshootingEvent
@@ -32,7 +32,7 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileAppTroubleshootingEventRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileAppTroubleshootingEventRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppTroubleshootingEventRequest instance
+     * @return the MobileAppTroubleshootingEventRequest instance
      */
-    public IMobileAppTroubleshootingEventRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MobileAppTroubleshootingEventRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class MobileAppTroubleshootingEventRequestBuilder extends BaseRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMobileAppTroubleshootingEventRequest instance
+     * @return the MobileAppTroubleshootingEventRequest instance
      */
-    public IMobileAppTroubleshootingEventRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MobileAppTroubleshootingEventRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MobileAppTroubleshootingEventRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAppLogCollectionRequestCollectionRequestBuilder appLogCollectionRequests() {
+    /**
+     *  Gets a request builder for the AppLogCollectionRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppLogCollectionRequestCollectionRequestBuilder appLogCollectionRequests() {
         return new AppLogCollectionRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appLogCollectionRequests"), getClient(), null);
     }
 
-    public IAppLogCollectionRequestRequestBuilder appLogCollectionRequests(final String id) {
+    /**
+     * Gets a request builder for the AppLogCollectionRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppLogCollectionRequestRequestBuilder appLogCollectionRequests(@Nonnull final String id) {
         return new AppLogCollectionRequestRequestBuilder(getRequestUrlWithAdditionalSegment("appLogCollectionRequests") + "/" + id, getClient(), null);
     }
 }

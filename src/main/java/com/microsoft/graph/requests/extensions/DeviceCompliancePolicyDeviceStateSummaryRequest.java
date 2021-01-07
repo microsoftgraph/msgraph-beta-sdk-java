@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyDeviceStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Policy Device State Summary Request.
  */
-public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest implements IDeviceCompliancePolicyDeviceStateSummaryRequest {
+public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest<DeviceCompliancePolicyDeviceStateSummary> {
 	
     /**
      * The request for the DeviceCompliancePolicyDeviceStateSummary
@@ -29,7 +31,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCompliancePolicyDeviceStateSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCompliancePolicyDeviceStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCompliancePolicyDeviceStateSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return the DeviceCompliancePolicyDeviceStateSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceCompliancePolicyDeviceStateSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param sourceDeviceCompliancePolicyDeviceStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary, final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void patch(@Nonnull final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary, @Nonnull final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -87,7 +90,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return the updated DeviceCompliancePolicyDeviceStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyDeviceStateSummary patch(final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyDeviceStateSummary patch(@Nonnull final DeviceCompliancePolicyDeviceStateSummary sourceDeviceCompliancePolicyDeviceStateSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -97,7 +101,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param newDeviceCompliancePolicyDeviceStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void post(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, @Nonnull final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -108,7 +112,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return the created DeviceCompliancePolicyDeviceStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyDeviceStateSummary post(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyDeviceStateSummary post(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) throws ClientException {
         return send(HttpMethod.POST, newDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -118,7 +123,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param newDeviceCompliancePolicyDeviceStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
+    public void put(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary, @Nonnull final ICallback<? super DeviceCompliancePolicyDeviceStateSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -129,7 +134,8 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @return the created DeviceCompliancePolicyDeviceStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCompliancePolicyDeviceStateSummary put(final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) throws ClientException {
+    @Nullable
+    public DeviceCompliancePolicyDeviceStateSummary put(@Nonnull final DeviceCompliancePolicyDeviceStateSummary newDeviceCompliancePolicyDeviceStateSummary) throws ClientException {
         return send(HttpMethod.PUT, newDeviceCompliancePolicyDeviceStateSummary);
     }
 
@@ -139,9 +145,10 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceCompliancePolicyDeviceStateSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceCompliancePolicyDeviceStateSummaryRequest)this;
+     @Nonnull
+     public DeviceCompliancePolicyDeviceStateSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceCompliancePolicyDeviceStateSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceCompliancePolicyDeviceStateSummaryRequest)this;
+     @Nonnull
+     public DeviceCompliancePolicyDeviceStateSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

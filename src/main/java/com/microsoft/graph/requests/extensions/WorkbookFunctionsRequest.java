@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.WorkbookFunctions;
 import com.microsoft.graph.models.extensions.WorkbookFunctionResult;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Functions Request.
  */
-public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFunctionsRequest {
+public class WorkbookFunctionsRequest extends BaseRequest<WorkbookFunctions> {
 	
     /**
      * The request for the WorkbookFunctions
@@ -30,7 +32,7 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFunctionsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFunctionsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFunctions.class);
     }
 
@@ -39,7 +41,7 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookFunctions> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookFunctions> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -49,6 +51,7 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @return the WorkbookFunctions from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookFunctions get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -58,7 +61,7 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookFunctions> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookFunctions> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -77,7 +80,7 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @param sourceWorkbookFunctions the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookFunctions sourceWorkbookFunctions, final ICallback<? super WorkbookFunctions> callback) {
+    public void patch(@Nonnull final WorkbookFunctions sourceWorkbookFunctions, @Nonnull final ICallback<? super WorkbookFunctions> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookFunctions);
     }
 
@@ -88,7 +91,8 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @return the updated WorkbookFunctions
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookFunctions patch(final WorkbookFunctions sourceWorkbookFunctions) throws ClientException {
+    @Nullable
+    public WorkbookFunctions patch(@Nonnull final WorkbookFunctions sourceWorkbookFunctions) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookFunctions);
     }
 
@@ -98,7 +102,7 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @param newWorkbookFunctions the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookFunctions newWorkbookFunctions, final ICallback<? super WorkbookFunctions> callback) {
+    public void post(@Nonnull final WorkbookFunctions newWorkbookFunctions, @Nonnull final ICallback<? super WorkbookFunctions> callback) {
         send(HttpMethod.POST, callback, newWorkbookFunctions);
     }
 
@@ -109,7 +113,8 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @return the created WorkbookFunctions
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookFunctions post(final WorkbookFunctions newWorkbookFunctions) throws ClientException {
+    @Nullable
+    public WorkbookFunctions post(@Nonnull final WorkbookFunctions newWorkbookFunctions) throws ClientException {
         return send(HttpMethod.POST, newWorkbookFunctions);
     }
 
@@ -119,7 +124,7 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @param newWorkbookFunctions the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookFunctions newWorkbookFunctions, final ICallback<? super WorkbookFunctions> callback) {
+    public void put(@Nonnull final WorkbookFunctions newWorkbookFunctions, @Nonnull final ICallback<? super WorkbookFunctions> callback) {
         send(HttpMethod.PUT, callback, newWorkbookFunctions);
     }
 
@@ -130,7 +135,8 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @return the created WorkbookFunctions
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookFunctions put(final WorkbookFunctions newWorkbookFunctions) throws ClientException {
+    @Nullable
+    public WorkbookFunctions put(@Nonnull final WorkbookFunctions newWorkbookFunctions) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookFunctions);
     }
 
@@ -140,9 +146,10 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookFunctionsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookFunctionsRequest)this;
+     @Nonnull
+     public WorkbookFunctionsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -151,9 +158,10 @@ public class WorkbookFunctionsRequest extends BaseRequest implements IWorkbookFu
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookFunctionsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookFunctionsRequest)this;
+     @Nonnull
+     public WorkbookFunctionsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

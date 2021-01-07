@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SiteSource;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Site Source Request.
  */
-public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest {
+public class SiteSourceRequest extends BaseRequest<SiteSource> {
 	
     /**
      * The request for the SiteSource
@@ -31,7 +32,7 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteSourceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteSourceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteSource.class);
     }
 
@@ -40,7 +41,7 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SiteSource> callback) {
+    public void get(@Nonnull final ICallback<? super SiteSource> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @return the SiteSource from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SiteSource get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SiteSource> callback) {
+    public void delete(@Nonnull final ICallback<? super SiteSource> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @param sourceSiteSource the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SiteSource sourceSiteSource, final ICallback<? super SiteSource> callback) {
+    public void patch(@Nonnull final SiteSource sourceSiteSource, @Nonnull final ICallback<? super SiteSource> callback) {
         send(HttpMethod.PATCH, callback, sourceSiteSource);
     }
 
@@ -89,7 +91,8 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @return the updated SiteSource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SiteSource patch(final SiteSource sourceSiteSource) throws ClientException {
+    @Nullable
+    public SiteSource patch(@Nonnull final SiteSource sourceSiteSource) throws ClientException {
         return send(HttpMethod.PATCH, sourceSiteSource);
     }
 
@@ -99,7 +102,7 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @param newSiteSource the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SiteSource newSiteSource, final ICallback<? super SiteSource> callback) {
+    public void post(@Nonnull final SiteSource newSiteSource, @Nonnull final ICallback<? super SiteSource> callback) {
         send(HttpMethod.POST, callback, newSiteSource);
     }
 
@@ -110,7 +113,8 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @return the created SiteSource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SiteSource post(final SiteSource newSiteSource) throws ClientException {
+    @Nullable
+    public SiteSource post(@Nonnull final SiteSource newSiteSource) throws ClientException {
         return send(HttpMethod.POST, newSiteSource);
     }
 
@@ -120,7 +124,7 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @param newSiteSource the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SiteSource newSiteSource, final ICallback<? super SiteSource> callback) {
+    public void put(@Nonnull final SiteSource newSiteSource, @Nonnull final ICallback<? super SiteSource> callback) {
         send(HttpMethod.PUT, callback, newSiteSource);
     }
 
@@ -131,7 +135,8 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @return the created SiteSource
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SiteSource put(final SiteSource newSiteSource) throws ClientException {
+    @Nullable
+    public SiteSource put(@Nonnull final SiteSource newSiteSource) throws ClientException {
         return send(HttpMethod.PUT, newSiteSource);
     }
 
@@ -141,9 +146,10 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @param value the select clause
      * @return the updated request
      */
-     public ISiteSourceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SiteSourceRequest)this;
+     @Nonnull
+     public SiteSourceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class SiteSourceRequest extends BaseRequest implements ISiteSourceRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public ISiteSourceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SiteSourceRequest)this;
+     @Nonnull
+     public SiteSourceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

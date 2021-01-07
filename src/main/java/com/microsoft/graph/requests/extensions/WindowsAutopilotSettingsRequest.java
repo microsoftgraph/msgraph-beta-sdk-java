@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsAutopilotSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Autopilot Settings Request.
  */
-public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWindowsAutopilotSettingsRequest {
+public class WindowsAutopilotSettingsRequest extends BaseRequest<WindowsAutopilotSettings> {
 	
     /**
      * The request for the WindowsAutopilotSettings
@@ -29,7 +31,7 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAutopilotSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsAutopilotSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsAutopilotSettings.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsAutopilotSettings> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsAutopilotSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @return the WindowsAutopilotSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsAutopilotSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsAutopilotSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsAutopilotSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @param sourceWindowsAutopilotSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAutopilotSettings sourceWindowsAutopilotSettings, final ICallback<? super WindowsAutopilotSettings> callback) {
+    public void patch(@Nonnull final WindowsAutopilotSettings sourceWindowsAutopilotSettings, @Nonnull final ICallback<? super WindowsAutopilotSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAutopilotSettings);
     }
 
@@ -87,7 +90,8 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @return the updated WindowsAutopilotSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotSettings patch(final WindowsAutopilotSettings sourceWindowsAutopilotSettings) throws ClientException {
+    @Nullable
+    public WindowsAutopilotSettings patch(@Nonnull final WindowsAutopilotSettings sourceWindowsAutopilotSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsAutopilotSettings);
     }
 
@@ -97,7 +101,7 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @param newWindowsAutopilotSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAutopilotSettings newWindowsAutopilotSettings, final ICallback<? super WindowsAutopilotSettings> callback) {
+    public void post(@Nonnull final WindowsAutopilotSettings newWindowsAutopilotSettings, @Nonnull final ICallback<? super WindowsAutopilotSettings> callback) {
         send(HttpMethod.POST, callback, newWindowsAutopilotSettings);
     }
 
@@ -108,7 +112,8 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @return the created WindowsAutopilotSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotSettings post(final WindowsAutopilotSettings newWindowsAutopilotSettings) throws ClientException {
+    @Nullable
+    public WindowsAutopilotSettings post(@Nonnull final WindowsAutopilotSettings newWindowsAutopilotSettings) throws ClientException {
         return send(HttpMethod.POST, newWindowsAutopilotSettings);
     }
 
@@ -118,7 +123,7 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @param newWindowsAutopilotSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAutopilotSettings newWindowsAutopilotSettings, final ICallback<? super WindowsAutopilotSettings> callback) {
+    public void put(@Nonnull final WindowsAutopilotSettings newWindowsAutopilotSettings, @Nonnull final ICallback<? super WindowsAutopilotSettings> callback) {
         send(HttpMethod.PUT, callback, newWindowsAutopilotSettings);
     }
 
@@ -129,7 +134,8 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @return the created WindowsAutopilotSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAutopilotSettings put(final WindowsAutopilotSettings newWindowsAutopilotSettings) throws ClientException {
+    @Nullable
+    public WindowsAutopilotSettings put(@Nonnull final WindowsAutopilotSettings newWindowsAutopilotSettings) throws ClientException {
         return send(HttpMethod.PUT, newWindowsAutopilotSettings);
     }
 
@@ -139,9 +145,10 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsAutopilotSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsAutopilotSettingsRequest)this;
+     @Nonnull
+     public WindowsAutopilotSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsAutopilotSettingsRequest extends BaseRequest implements IWin
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsAutopilotSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAutopilotSettingsRequest)this;
+     @Nonnull
+     public WindowsAutopilotSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

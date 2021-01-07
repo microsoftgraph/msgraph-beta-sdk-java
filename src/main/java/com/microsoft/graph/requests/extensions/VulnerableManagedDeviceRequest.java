@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.VulnerableManagedDevice;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Vulnerable Managed Device Request.
  */
-public class VulnerableManagedDeviceRequest extends BaseRequest implements IVulnerableManagedDeviceRequest {
+public class VulnerableManagedDeviceRequest extends BaseRequest<VulnerableManagedDevice> {
 	
     /**
      * The request for the VulnerableManagedDevice
@@ -29,7 +31,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public VulnerableManagedDeviceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public VulnerableManagedDeviceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, VulnerableManagedDevice.class);
     }
 
@@ -38,7 +40,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super VulnerableManagedDevice> callback) {
+    public void get(@Nonnull final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @return the VulnerableManagedDevice from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public VulnerableManagedDevice get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super VulnerableManagedDevice> callback) {
+    public void delete(@Nonnull final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param sourceVulnerableManagedDevice the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final VulnerableManagedDevice sourceVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback) {
+    public void patch(@Nonnull final VulnerableManagedDevice sourceVulnerableManagedDevice, @Nonnull final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.PATCH, callback, sourceVulnerableManagedDevice);
     }
 
@@ -87,7 +90,8 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @return the updated VulnerableManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VulnerableManagedDevice patch(final VulnerableManagedDevice sourceVulnerableManagedDevice) throws ClientException {
+    @Nullable
+    public VulnerableManagedDevice patch(@Nonnull final VulnerableManagedDevice sourceVulnerableManagedDevice) throws ClientException {
         return send(HttpMethod.PATCH, sourceVulnerableManagedDevice);
     }
 
@@ -97,7 +101,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param newVulnerableManagedDevice the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback) {
+    public void post(@Nonnull final VulnerableManagedDevice newVulnerableManagedDevice, @Nonnull final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.POST, callback, newVulnerableManagedDevice);
     }
 
@@ -108,7 +112,8 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @return the created VulnerableManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VulnerableManagedDevice post(final VulnerableManagedDevice newVulnerableManagedDevice) throws ClientException {
+    @Nullable
+    public VulnerableManagedDevice post(@Nonnull final VulnerableManagedDevice newVulnerableManagedDevice) throws ClientException {
         return send(HttpMethod.POST, newVulnerableManagedDevice);
     }
 
@@ -118,7 +123,7 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param newVulnerableManagedDevice the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final VulnerableManagedDevice newVulnerableManagedDevice, final ICallback<? super VulnerableManagedDevice> callback) {
+    public void put(@Nonnull final VulnerableManagedDevice newVulnerableManagedDevice, @Nonnull final ICallback<? super VulnerableManagedDevice> callback) {
         send(HttpMethod.PUT, callback, newVulnerableManagedDevice);
     }
 
@@ -129,7 +134,8 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @return the created VulnerableManagedDevice
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public VulnerableManagedDevice put(final VulnerableManagedDevice newVulnerableManagedDevice) throws ClientException {
+    @Nullable
+    public VulnerableManagedDevice put(@Nonnull final VulnerableManagedDevice newVulnerableManagedDevice) throws ClientException {
         return send(HttpMethod.PUT, newVulnerableManagedDevice);
     }
 
@@ -139,9 +145,10 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param value the select clause
      * @return the updated request
      */
-     public IVulnerableManagedDeviceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (VulnerableManagedDeviceRequest)this;
+     @Nonnull
+     public VulnerableManagedDeviceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class VulnerableManagedDeviceRequest extends BaseRequest implements IVuln
      * @param value the expand clause
      * @return the updated request
      */
-     public IVulnerableManagedDeviceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (VulnerableManagedDeviceRequest)this;
+     @Nonnull
+     public VulnerableManagedDeviceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

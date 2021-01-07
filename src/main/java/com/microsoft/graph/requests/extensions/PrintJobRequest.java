@@ -11,16 +11,14 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintJob;
 import com.microsoft.graph.models.extensions.PrintJobStatus;
 import com.microsoft.graph.models.extensions.PrintJobConfiguration;
-import com.microsoft.graph.requests.extensions.IPrintDocumentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintDocumentRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintDocumentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintDocumentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Print Job Request.
  */
-public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
+public class PrintJobRequest extends BaseRequest<PrintJob> {
 	
     /**
      * The request for the PrintJob
@@ -39,7 +37,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintJobRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintJobRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrintJob.class);
     }
 
@@ -48,7 +46,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrintJob> callback) {
+    public void get(@Nonnull final ICallback<? super PrintJob> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +56,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @return the PrintJob from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrintJob get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +66,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrintJob> callback) {
+    public void delete(@Nonnull final ICallback<? super PrintJob> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +85,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param sourcePrintJob the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrintJob sourcePrintJob, final ICallback<? super PrintJob> callback) {
+    public void patch(@Nonnull final PrintJob sourcePrintJob, @Nonnull final ICallback<? super PrintJob> callback) {
         send(HttpMethod.PATCH, callback, sourcePrintJob);
     }
 
@@ -97,7 +96,8 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @return the updated PrintJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintJob patch(final PrintJob sourcePrintJob) throws ClientException {
+    @Nullable
+    public PrintJob patch(@Nonnull final PrintJob sourcePrintJob) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrintJob);
     }
 
@@ -107,7 +107,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param newPrintJob the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback) {
+    public void post(@Nonnull final PrintJob newPrintJob, @Nonnull final ICallback<? super PrintJob> callback) {
         send(HttpMethod.POST, callback, newPrintJob);
     }
 
@@ -118,7 +118,8 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @return the created PrintJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintJob post(final PrintJob newPrintJob) throws ClientException {
+    @Nullable
+    public PrintJob post(@Nonnull final PrintJob newPrintJob) throws ClientException {
         return send(HttpMethod.POST, newPrintJob);
     }
 
@@ -128,7 +129,7 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param newPrintJob the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrintJob newPrintJob, final ICallback<? super PrintJob> callback) {
+    public void put(@Nonnull final PrintJob newPrintJob, @Nonnull final ICallback<? super PrintJob> callback) {
         send(HttpMethod.PUT, callback, newPrintJob);
     }
 
@@ -139,7 +140,8 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @return the created PrintJob
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrintJob put(final PrintJob newPrintJob) throws ClientException {
+    @Nullable
+    public PrintJob put(@Nonnull final PrintJob newPrintJob) throws ClientException {
         return send(HttpMethod.PUT, newPrintJob);
     }
 
@@ -149,9 +151,10 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IPrintJobRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrintJobRequest)this;
+     @Nonnull
+     public PrintJobRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +163,10 @@ public class PrintJobRequest extends BaseRequest implements IPrintJobRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrintJobRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrintJobRequest)this;
+     @Nonnull
+     public PrintJobRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

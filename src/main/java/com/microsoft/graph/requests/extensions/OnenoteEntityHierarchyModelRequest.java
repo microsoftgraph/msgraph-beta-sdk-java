@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteEntityHierarchyModel;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Entity Hierarchy Model Request.
  */
-public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements IOnenoteEntityHierarchyModelRequest {
+public class OnenoteEntityHierarchyModelRequest extends BaseRequest<OnenoteEntityHierarchyModel> {
 	
     /**
      * The request for the OnenoteEntityHierarchyModel
@@ -30,10 +32,10 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public OnenoteEntityHierarchyModelRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends OnenoteEntityHierarchyModel> responseClass) {
+    public OnenoteEntityHierarchyModelRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends OnenoteEntityHierarchyModel> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteEntityHierarchyModelRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteEntityHierarchyModelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteEntityHierarchyModel.class);
     }
 
@@ -53,7 +55,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteEntityHierarchyModel> callback) {
+    public void get(@Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @return the OnenoteEntityHierarchyModel from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnenoteEntityHierarchyModel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteEntityHierarchyModel> callback) {
+    public void delete(@Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param sourceOnenoteEntityHierarchyModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback) {
+    public void patch(@Nonnull final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel, @Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteEntityHierarchyModel);
     }
 
@@ -102,7 +105,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @return the updated OnenoteEntityHierarchyModel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteEntityHierarchyModel patch(final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel) throws ClientException {
+    @Nullable
+    public OnenoteEntityHierarchyModel patch(@Nonnull final OnenoteEntityHierarchyModel sourceOnenoteEntityHierarchyModel) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenoteEntityHierarchyModel);
     }
 
@@ -112,7 +116,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param newOnenoteEntityHierarchyModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback) {
+    public void post(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, @Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.POST, callback, newOnenoteEntityHierarchyModel);
     }
 
@@ -123,7 +127,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @return the created OnenoteEntityHierarchyModel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteEntityHierarchyModel post(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException {
+    @Nullable
+    public OnenoteEntityHierarchyModel post(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException {
         return send(HttpMethod.POST, newOnenoteEntityHierarchyModel);
     }
 
@@ -133,7 +138,7 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param newOnenoteEntityHierarchyModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, final ICallback<? super OnenoteEntityHierarchyModel> callback) {
+    public void put(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel, @Nonnull final ICallback<? super OnenoteEntityHierarchyModel> callback) {
         send(HttpMethod.PUT, callback, newOnenoteEntityHierarchyModel);
     }
 
@@ -144,7 +149,8 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @return the created OnenoteEntityHierarchyModel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteEntityHierarchyModel put(final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException {
+    @Nullable
+    public OnenoteEntityHierarchyModel put(@Nonnull final OnenoteEntityHierarchyModel newOnenoteEntityHierarchyModel) throws ClientException {
         return send(HttpMethod.PUT, newOnenoteEntityHierarchyModel);
     }
 
@@ -154,9 +160,10 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteEntityHierarchyModelRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteEntityHierarchyModelRequest)this;
+     @Nonnull
+     public OnenoteEntityHierarchyModelRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class OnenoteEntityHierarchyModelRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteEntityHierarchyModelRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteEntityHierarchyModelRequest)this;
+     @Nonnull
+     public OnenoteEntityHierarchyModelRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,26 +11,19 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceCustomAttributeShellScript;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptGroupAssignment;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -40,7 +33,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Custom Attribute Shell Script Request.
  */
-public class DeviceCustomAttributeShellScriptRequest extends BaseRequest implements IDeviceCustomAttributeShellScriptRequest {
+public class DeviceCustomAttributeShellScriptRequest extends BaseRequest<DeviceCustomAttributeShellScript> {
 	
     /**
      * The request for the DeviceCustomAttributeShellScript
@@ -49,7 +42,7 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceCustomAttributeShellScriptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceCustomAttributeShellScriptRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceCustomAttributeShellScript.class);
     }
 
@@ -58,7 +51,7 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceCustomAttributeShellScript> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceCustomAttributeShellScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -68,6 +61,7 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @return the DeviceCustomAttributeShellScript from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceCustomAttributeShellScript get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -77,7 +71,7 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceCustomAttributeShellScript> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceCustomAttributeShellScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -96,7 +90,7 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @param sourceDeviceCustomAttributeShellScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceCustomAttributeShellScript sourceDeviceCustomAttributeShellScript, final ICallback<? super DeviceCustomAttributeShellScript> callback) {
+    public void patch(@Nonnull final DeviceCustomAttributeShellScript sourceDeviceCustomAttributeShellScript, @Nonnull final ICallback<? super DeviceCustomAttributeShellScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceCustomAttributeShellScript);
     }
 
@@ -107,7 +101,8 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @return the updated DeviceCustomAttributeShellScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCustomAttributeShellScript patch(final DeviceCustomAttributeShellScript sourceDeviceCustomAttributeShellScript) throws ClientException {
+    @Nullable
+    public DeviceCustomAttributeShellScript patch(@Nonnull final DeviceCustomAttributeShellScript sourceDeviceCustomAttributeShellScript) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceCustomAttributeShellScript);
     }
 
@@ -117,7 +112,7 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @param newDeviceCustomAttributeShellScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript, final ICallback<? super DeviceCustomAttributeShellScript> callback) {
+    public void post(@Nonnull final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript, @Nonnull final ICallback<? super DeviceCustomAttributeShellScript> callback) {
         send(HttpMethod.POST, callback, newDeviceCustomAttributeShellScript);
     }
 
@@ -128,7 +123,8 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @return the created DeviceCustomAttributeShellScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCustomAttributeShellScript post(final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript) throws ClientException {
+    @Nullable
+    public DeviceCustomAttributeShellScript post(@Nonnull final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript) throws ClientException {
         return send(HttpMethod.POST, newDeviceCustomAttributeShellScript);
     }
 
@@ -138,7 +134,7 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @param newDeviceCustomAttributeShellScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript, final ICallback<? super DeviceCustomAttributeShellScript> callback) {
+    public void put(@Nonnull final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript, @Nonnull final ICallback<? super DeviceCustomAttributeShellScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceCustomAttributeShellScript);
     }
 
@@ -149,7 +145,8 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @return the created DeviceCustomAttributeShellScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceCustomAttributeShellScript put(final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript) throws ClientException {
+    @Nullable
+    public DeviceCustomAttributeShellScript put(@Nonnull final DeviceCustomAttributeShellScript newDeviceCustomAttributeShellScript) throws ClientException {
         return send(HttpMethod.PUT, newDeviceCustomAttributeShellScript);
     }
 
@@ -159,9 +156,10 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceCustomAttributeShellScriptRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceCustomAttributeShellScriptRequest)this;
+     @Nonnull
+     public DeviceCustomAttributeShellScriptRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -170,9 +168,10 @@ public class DeviceCustomAttributeShellScriptRequest extends BaseRequest impleme
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceCustomAttributeShellScriptRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceCustomAttributeShellScriptRequest)this;
+     @Nonnull
+     public DeviceCustomAttributeShellScriptRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

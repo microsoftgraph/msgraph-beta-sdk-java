@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrgContact;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Org Contact Request.
  */
-public class OrgContactRequest extends BaseRequest implements IOrgContactRequest {
+public class OrgContactRequest extends BaseRequest<OrgContact> {
 	
     /**
      * The request for the OrgContact
@@ -33,7 +33,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrgContactRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrgContactRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrgContact.class);
     }
 
@@ -42,7 +42,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OrgContact> callback) {
+    public void get(@Nonnull final ICallback<? super OrgContact> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @return the OrgContact from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OrgContact get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OrgContact> callback) {
+    public void delete(@Nonnull final ICallback<? super OrgContact> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param sourceOrgContact the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OrgContact sourceOrgContact, final ICallback<? super OrgContact> callback) {
+    public void patch(@Nonnull final OrgContact sourceOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
         send(HttpMethod.PATCH, callback, sourceOrgContact);
     }
 
@@ -91,7 +92,8 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @return the updated OrgContact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrgContact patch(final OrgContact sourceOrgContact) throws ClientException {
+    @Nullable
+    public OrgContact patch(@Nonnull final OrgContact sourceOrgContact) throws ClientException {
         return send(HttpMethod.PATCH, sourceOrgContact);
     }
 
@@ -101,7 +103,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param newOrgContact the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
+    public void post(@Nonnull final OrgContact newOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
         send(HttpMethod.POST, callback, newOrgContact);
     }
 
@@ -112,7 +114,8 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @return the created OrgContact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrgContact post(final OrgContact newOrgContact) throws ClientException {
+    @Nullable
+    public OrgContact post(@Nonnull final OrgContact newOrgContact) throws ClientException {
         return send(HttpMethod.POST, newOrgContact);
     }
 
@@ -122,7 +125,7 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param newOrgContact the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OrgContact newOrgContact, final ICallback<? super OrgContact> callback) {
+    public void put(@Nonnull final OrgContact newOrgContact, @Nonnull final ICallback<? super OrgContact> callback) {
         send(HttpMethod.PUT, callback, newOrgContact);
     }
 
@@ -133,7 +136,8 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @return the created OrgContact
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrgContact put(final OrgContact newOrgContact) throws ClientException {
+    @Nullable
+    public OrgContact put(@Nonnull final OrgContact newOrgContact) throws ClientException {
         return send(HttpMethod.PUT, newOrgContact);
     }
 
@@ -143,9 +147,10 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IOrgContactRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrgContactRequest)this;
+     @Nonnull
+     public OrgContactRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class OrgContactRequest extends BaseRequest implements IOrgContactRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrgContactRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrgContactRequest)this;
+     @Nonnull
+     public OrgContactRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

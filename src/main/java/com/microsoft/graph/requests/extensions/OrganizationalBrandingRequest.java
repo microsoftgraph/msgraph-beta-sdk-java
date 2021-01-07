@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OrganizationalBranding;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingLocalizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organizational Branding Request.
  */
-public class OrganizationalBrandingRequest extends BaseRequest implements IOrganizationalBrandingRequest {
+public class OrganizationalBrandingRequest extends BaseRequest<OrganizationalBranding> {
 	
     /**
      * The request for the OrganizationalBranding
@@ -33,7 +33,7 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationalBrandingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationalBrandingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OrganizationalBranding.class);
     }
 
@@ -42,7 +42,7 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OrganizationalBranding> callback) {
+    public void get(@Nonnull final ICallback<? super OrganizationalBranding> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @return the OrganizationalBranding from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OrganizationalBranding get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OrganizationalBranding> callback) {
+    public void delete(@Nonnull final ICallback<? super OrganizationalBranding> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @param sourceOrganizationalBranding the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OrganizationalBranding sourceOrganizationalBranding, final ICallback<? super OrganizationalBranding> callback) {
+    public void patch(@Nonnull final OrganizationalBranding sourceOrganizationalBranding, @Nonnull final ICallback<? super OrganizationalBranding> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganizationalBranding);
     }
 
@@ -91,7 +92,8 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @return the updated OrganizationalBranding
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBranding patch(final OrganizationalBranding sourceOrganizationalBranding) throws ClientException {
+    @Nullable
+    public OrganizationalBranding patch(@Nonnull final OrganizationalBranding sourceOrganizationalBranding) throws ClientException {
         return send(HttpMethod.PATCH, sourceOrganizationalBranding);
     }
 
@@ -101,7 +103,7 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @param newOrganizationalBranding the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OrganizationalBranding newOrganizationalBranding, final ICallback<? super OrganizationalBranding> callback) {
+    public void post(@Nonnull final OrganizationalBranding newOrganizationalBranding, @Nonnull final ICallback<? super OrganizationalBranding> callback) {
         send(HttpMethod.POST, callback, newOrganizationalBranding);
     }
 
@@ -112,7 +114,8 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @return the created OrganizationalBranding
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBranding post(final OrganizationalBranding newOrganizationalBranding) throws ClientException {
+    @Nullable
+    public OrganizationalBranding post(@Nonnull final OrganizationalBranding newOrganizationalBranding) throws ClientException {
         return send(HttpMethod.POST, newOrganizationalBranding);
     }
 
@@ -122,7 +125,7 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @param newOrganizationalBranding the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OrganizationalBranding newOrganizationalBranding, final ICallback<? super OrganizationalBranding> callback) {
+    public void put(@Nonnull final OrganizationalBranding newOrganizationalBranding, @Nonnull final ICallback<? super OrganizationalBranding> callback) {
         send(HttpMethod.PUT, callback, newOrganizationalBranding);
     }
 
@@ -133,7 +136,8 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @return the created OrganizationalBranding
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OrganizationalBranding put(final OrganizationalBranding newOrganizationalBranding) throws ClientException {
+    @Nullable
+    public OrganizationalBranding put(@Nonnull final OrganizationalBranding newOrganizationalBranding) throws ClientException {
         return send(HttpMethod.PUT, newOrganizationalBranding);
     }
 
@@ -143,9 +147,10 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @param value the select clause
      * @return the updated request
      */
-     public IOrganizationalBrandingRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrganizationalBrandingRequest)this;
+     @Nonnull
+     public OrganizationalBrandingRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class OrganizationalBrandingRequest extends BaseRequest implements IOrgan
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrganizationalBrandingRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationalBrandingRequest)this;
+     @Nonnull
+     public OrganizationalBrandingRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

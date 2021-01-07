@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Currency;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Currency Request.
  */
-public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
+public class CurrencyRequest extends BaseRequest<Currency> {
 	
     /**
      * The request for the Currency
@@ -29,7 +31,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CurrencyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CurrencyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Currency.class);
     }
 
@@ -38,7 +40,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Currency> callback) {
+    public void get(@Nonnull final ICallback<? super Currency> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @return the Currency from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Currency get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Currency> callback) {
+    public void delete(@Nonnull final ICallback<? super Currency> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param sourceCurrency the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Currency sourceCurrency, final ICallback<? super Currency> callback) {
+    public void patch(@Nonnull final Currency sourceCurrency, @Nonnull final ICallback<? super Currency> callback) {
         send(HttpMethod.PATCH, callback, sourceCurrency);
     }
 
@@ -87,7 +90,8 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @return the updated Currency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Currency patch(final Currency sourceCurrency) throws ClientException {
+    @Nullable
+    public Currency patch(@Nonnull final Currency sourceCurrency) throws ClientException {
         return send(HttpMethod.PATCH, sourceCurrency);
     }
 
@@ -97,7 +101,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param newCurrency the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Currency newCurrency, final ICallback<? super Currency> callback) {
+    public void post(@Nonnull final Currency newCurrency, @Nonnull final ICallback<? super Currency> callback) {
         send(HttpMethod.POST, callback, newCurrency);
     }
 
@@ -108,7 +112,8 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @return the created Currency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Currency post(final Currency newCurrency) throws ClientException {
+    @Nullable
+    public Currency post(@Nonnull final Currency newCurrency) throws ClientException {
         return send(HttpMethod.POST, newCurrency);
     }
 
@@ -118,7 +123,7 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param newCurrency the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Currency newCurrency, final ICallback<? super Currency> callback) {
+    public void put(@Nonnull final Currency newCurrency, @Nonnull final ICallback<? super Currency> callback) {
         send(HttpMethod.PUT, callback, newCurrency);
     }
 
@@ -129,7 +134,8 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @return the created Currency
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Currency put(final Currency newCurrency) throws ClientException {
+    @Nullable
+    public Currency put(@Nonnull final Currency newCurrency) throws ClientException {
         return send(HttpMethod.PUT, newCurrency);
     }
 
@@ -139,9 +145,10 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ICurrencyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CurrencyRequest)this;
+     @Nonnull
+     public CurrencyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class CurrencyRequest extends BaseRequest implements ICurrencyRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ICurrencyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CurrencyRequest)this;
+     @Nonnull
+     public CurrencyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

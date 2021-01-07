@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileTrustedRootCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Android Work Profile Trusted Root Certificate With Reference Request.
  */
-public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extends BaseRequest implements IAndroidWorkProfileTrustedRootCertificateWithReferenceRequest {
+public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extends BaseWithReferenceRequest<AndroidWorkProfileTrustedRootCertificate> {
 
     /**
      * The request for the AndroidWorkProfileTrustedRootCertificate
@@ -32,46 +34,9 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidWorkProfileTrustedRootCertificateWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidWorkProfileTrustedRootCertificateWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidWorkProfileTrustedRootCertificate.class);
     }
-
-    public void post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final IJsonBackedObject payload, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public AndroidWorkProfileTrustedRootCertificate post(final AndroidWorkProfileTrustedRootCertificate newAndroidWorkProfileTrustedRootCertificate, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newAndroidWorkProfileTrustedRootCertificate;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public AndroidWorkProfileTrustedRootCertificate get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate, final ICallback<? super AndroidWorkProfileTrustedRootCertificate> callback) {
-		send(HttpMethod.PATCH, callback, sourceAndroidWorkProfileTrustedRootCertificate);
-	}
-
-	public AndroidWorkProfileTrustedRootCertificate patch(final AndroidWorkProfileTrustedRootCertificate sourceAndroidWorkProfileTrustedRootCertificate) throws ClientException {
-		return send(HttpMethod.PATCH, sourceAndroidWorkProfileTrustedRootCertificate);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
      * @param value the select clause
      * @return the updated request
      */
-    public IAndroidWorkProfileTrustedRootCertificateWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IAndroidWorkProfileTrustedRootCertificateWithReferenceRequest)this;
+    @Nonnull
+    public AndroidWorkProfileTrustedRootCertificateWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class AndroidWorkProfileTrustedRootCertificateWithReferenceRequest extend
      * @param value the expand clause
      * @return the updated request
      */
-    public IAndroidWorkProfileTrustedRootCertificateWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (AndroidWorkProfileTrustedRootCertificateWithReferenceRequest)this;
+    @Nonnull
+    public AndroidWorkProfileTrustedRootCertificateWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

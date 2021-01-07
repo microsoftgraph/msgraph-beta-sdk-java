@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicySetAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Policy Set Assignment Request.
  */
-public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySetAssignmentRequest {
+public class PolicySetAssignmentRequest extends BaseRequest<PolicySetAssignment> {
 	
     /**
      * The request for the PolicySetAssignment
@@ -29,7 +31,7 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicySetAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PolicySetAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PolicySetAssignment.class);
     }
 
@@ -38,7 +40,7 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PolicySetAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super PolicySetAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @return the PolicySetAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PolicySetAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PolicySetAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super PolicySetAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @param sourcePolicySetAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicySetAssignment sourcePolicySetAssignment, final ICallback<? super PolicySetAssignment> callback) {
+    public void patch(@Nonnull final PolicySetAssignment sourcePolicySetAssignment, @Nonnull final ICallback<? super PolicySetAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicySetAssignment);
     }
 
@@ -87,7 +90,8 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @return the updated PolicySetAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicySetAssignment patch(final PolicySetAssignment sourcePolicySetAssignment) throws ClientException {
+    @Nullable
+    public PolicySetAssignment patch(@Nonnull final PolicySetAssignment sourcePolicySetAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourcePolicySetAssignment);
     }
 
@@ -97,7 +101,7 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @param newPolicySetAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicySetAssignment newPolicySetAssignment, final ICallback<? super PolicySetAssignment> callback) {
+    public void post(@Nonnull final PolicySetAssignment newPolicySetAssignment, @Nonnull final ICallback<? super PolicySetAssignment> callback) {
         send(HttpMethod.POST, callback, newPolicySetAssignment);
     }
 
@@ -108,7 +112,8 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @return the created PolicySetAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicySetAssignment post(final PolicySetAssignment newPolicySetAssignment) throws ClientException {
+    @Nullable
+    public PolicySetAssignment post(@Nonnull final PolicySetAssignment newPolicySetAssignment) throws ClientException {
         return send(HttpMethod.POST, newPolicySetAssignment);
     }
 
@@ -118,7 +123,7 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @param newPolicySetAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicySetAssignment newPolicySetAssignment, final ICallback<? super PolicySetAssignment> callback) {
+    public void put(@Nonnull final PolicySetAssignment newPolicySetAssignment, @Nonnull final ICallback<? super PolicySetAssignment> callback) {
         send(HttpMethod.PUT, callback, newPolicySetAssignment);
     }
 
@@ -129,7 +134,8 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @return the created PolicySetAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicySetAssignment put(final PolicySetAssignment newPolicySetAssignment) throws ClientException {
+    @Nullable
+    public PolicySetAssignment put(@Nonnull final PolicySetAssignment newPolicySetAssignment) throws ClientException {
         return send(HttpMethod.PUT, newPolicySetAssignment);
     }
 
@@ -139,9 +145,10 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @param value the select clause
      * @return the updated request
      */
-     public IPolicySetAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PolicySetAssignmentRequest)this;
+     @Nonnull
+     public PolicySetAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PolicySetAssignmentRequest extends BaseRequest implements IPolicySe
      * @param value the expand clause
      * @return the updated request
      */
-     public IPolicySetAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicySetAssignmentRequest)this;
+     @Nonnull
+     public PolicySetAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

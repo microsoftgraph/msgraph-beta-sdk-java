@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidGeneralDeviceConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android General Device Configuration Request.
  */
-public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implements IAndroidGeneralDeviceConfigurationRequest {
+public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest<AndroidGeneralDeviceConfiguration> {
 	
     /**
      * The request for the AndroidGeneralDeviceConfiguration
@@ -29,7 +31,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidGeneralDeviceConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidGeneralDeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidGeneralDeviceConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @return the AndroidGeneralDeviceConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidGeneralDeviceConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param sourceAndroidGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
+    public void patch(@Nonnull final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidGeneralDeviceConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @return the updated AndroidGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidGeneralDeviceConfiguration patch(final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public AndroidGeneralDeviceConfiguration patch(@Nonnull final AndroidGeneralDeviceConfiguration sourceAndroidGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidGeneralDeviceConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param newAndroidGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
+    public void post(@Nonnull final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidGeneralDeviceConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @return the created AndroidGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidGeneralDeviceConfiguration post(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public AndroidGeneralDeviceConfiguration post(@Nonnull final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidGeneralDeviceConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param newAndroidGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
+    public void put(@Nonnull final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidGeneralDeviceConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @return the created AndroidGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidGeneralDeviceConfiguration put(final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public AndroidGeneralDeviceConfiguration put(@Nonnull final AndroidGeneralDeviceConfiguration newAndroidGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidGeneralDeviceConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidGeneralDeviceConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidGeneralDeviceConfigurationRequest)this;
+     @Nonnull
+     public AndroidGeneralDeviceConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidGeneralDeviceConfigurationRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidGeneralDeviceConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidGeneralDeviceConfigurationRequest)this;
+     @Nonnull
+     public AndroidGeneralDeviceConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

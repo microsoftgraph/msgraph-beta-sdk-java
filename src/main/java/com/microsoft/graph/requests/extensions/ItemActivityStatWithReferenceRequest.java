@@ -9,15 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
-import com.microsoft.graph.requests.extensions.IItemActivityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemActivityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -27,7 +27,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Item Activity Stat With Reference Request.
  */
-public class ItemActivityStatWithReferenceRequest extends BaseRequest implements IItemActivityStatWithReferenceRequest {
+public class ItemActivityStatWithReferenceRequest extends BaseWithReferenceRequest<ItemActivityStat> {
 
     /**
      * The request for the ItemActivityStat
@@ -36,46 +36,9 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemActivityStatWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemActivityStatWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ItemActivityStat.class);
     }
-
-    public void post(final ItemActivityStat newItemActivityStat, final IJsonBackedObject payload, final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public ItemActivityStat post(final ItemActivityStat newItemActivityStat, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newItemActivityStat;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super ItemActivityStat> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public ItemActivityStat get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super ItemActivityStat> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final ItemActivityStat sourceItemActivityStat, final ICallback<? super ItemActivityStat> callback) {
-		send(HttpMethod.PATCH, callback, sourceItemActivityStat);
-	}
-
-	public ItemActivityStat patch(final ItemActivityStat sourceItemActivityStat) throws ClientException {
-		return send(HttpMethod.PATCH, sourceItemActivityStat);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -83,9 +46,10 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-    public IItemActivityStatWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IItemActivityStatWithReferenceRequest)this;
+    @Nonnull
+    public ItemActivityStatWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -94,8 +58,9 @@ public class ItemActivityStatWithReferenceRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-    public IItemActivityStatWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (ItemActivityStatWithReferenceRequest)this;
+    @Nonnull
+    public ItemActivityStatWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

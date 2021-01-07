@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DepMacOSEnrollmentProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Dep Mac OSEnrollment Profile Request.
  */
-public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDepMacOSEnrollmentProfileRequest {
+public class DepMacOSEnrollmentProfileRequest extends BaseRequest<DepMacOSEnrollmentProfile> {
 	
     /**
      * The request for the DepMacOSEnrollmentProfile
@@ -29,7 +31,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DepMacOSEnrollmentProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DepMacOSEnrollmentProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DepMacOSEnrollmentProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DepMacOSEnrollmentProfile> callback) {
+    public void get(@Nonnull final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @return the DepMacOSEnrollmentProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DepMacOSEnrollmentProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DepMacOSEnrollmentProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param sourceDepMacOSEnrollmentProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
+    public void patch(@Nonnull final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile, @Nonnull final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceDepMacOSEnrollmentProfile);
     }
 
@@ -87,7 +90,8 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @return the updated DepMacOSEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepMacOSEnrollmentProfile patch(final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile) throws ClientException {
+    @Nullable
+    public DepMacOSEnrollmentProfile patch(@Nonnull final DepMacOSEnrollmentProfile sourceDepMacOSEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceDepMacOSEnrollmentProfile);
     }
 
@@ -97,7 +101,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param newDepMacOSEnrollmentProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
+    public void post(@Nonnull final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, @Nonnull final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.POST, callback, newDepMacOSEnrollmentProfile);
     }
 
@@ -108,7 +112,8 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @return the created DepMacOSEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepMacOSEnrollmentProfile post(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile) throws ClientException {
+    @Nullable
+    public DepMacOSEnrollmentProfile post(@Nonnull final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile) throws ClientException {
         return send(HttpMethod.POST, newDepMacOSEnrollmentProfile);
     }
 
@@ -118,7 +123,7 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param newDepMacOSEnrollmentProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, final ICallback<? super DepMacOSEnrollmentProfile> callback) {
+    public void put(@Nonnull final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile, @Nonnull final ICallback<? super DepMacOSEnrollmentProfile> callback) {
         send(HttpMethod.PUT, callback, newDepMacOSEnrollmentProfile);
     }
 
@@ -129,7 +134,8 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @return the created DepMacOSEnrollmentProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DepMacOSEnrollmentProfile put(final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile) throws ClientException {
+    @Nullable
+    public DepMacOSEnrollmentProfile put(@Nonnull final DepMacOSEnrollmentProfile newDepMacOSEnrollmentProfile) throws ClientException {
         return send(HttpMethod.PUT, newDepMacOSEnrollmentProfile);
     }
 
@@ -139,9 +145,10 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param value the select clause
      * @return the updated request
      */
-     public IDepMacOSEnrollmentProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DepMacOSEnrollmentProfileRequest)this;
+     @Nonnull
+     public DepMacOSEnrollmentProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DepMacOSEnrollmentProfileRequest extends BaseRequest implements IDe
      * @param value the expand clause
      * @return the updated request
      */
-     public IDepMacOSEnrollmentProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DepMacOSEnrollmentProfileRequest)this;
+     @Nonnull
+     public DepMacOSEnrollmentProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

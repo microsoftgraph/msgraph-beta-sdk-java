@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftAuthenticatorAuthenticationMethodTarget;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Microsoft Authenticator Authentication Method Target Request Builder.
  */
-public class MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder extends BaseRequestBuilder implements IMicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder {
+public class MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder extends BaseRequestBuilder<MicrosoftAuthenticatorAuthenticationMethodTarget> {
 
     /**
      * The request builder for the MicrosoftAuthenticatorAuthenticationMethodTarget
@@ -28,7 +30,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder exte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder exte
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMicrosoftAuthenticatorAuthenticationMethodTargetRequest instance
+     * @return the MicrosoftAuthenticatorAuthenticationMethodTargetRequest instance
      */
-    public IMicrosoftAuthenticatorAuthenticationMethodTargetRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MicrosoftAuthenticatorAuthenticationMethodTargetRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class MicrosoftAuthenticatorAuthenticationMethodTargetRequestBuilder exte
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMicrosoftAuthenticatorAuthenticationMethodTargetRequest instance
+     * @return the MicrosoftAuthenticatorAuthenticationMethodTargetRequest instance
      */
-    public IMicrosoftAuthenticatorAuthenticationMethodTargetRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MicrosoftAuthenticatorAuthenticationMethodTargetRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodTargetRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TodoTaskList;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITodoTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TodoTaskRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Todo Task List Request.
  */
-public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListRequest {
+public class TodoTaskListRequest extends BaseRequest<TodoTaskList> {
 	
     /**
      * The request for the TodoTaskList
@@ -37,7 +35,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TodoTaskListRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TodoTaskListRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TodoTaskList.class);
     }
 
@@ -46,7 +44,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TodoTaskList> callback) {
+    public void get(@Nonnull final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @return the TodoTaskList from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TodoTaskList get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TodoTaskList> callback) {
+    public void delete(@Nonnull final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param sourceTodoTaskList the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TodoTaskList sourceTodoTaskList, final ICallback<? super TodoTaskList> callback) {
+    public void patch(@Nonnull final TodoTaskList sourceTodoTaskList, @Nonnull final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.PATCH, callback, sourceTodoTaskList);
     }
 
@@ -95,7 +94,8 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @return the updated TodoTaskList
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TodoTaskList patch(final TodoTaskList sourceTodoTaskList) throws ClientException {
+    @Nullable
+    public TodoTaskList patch(@Nonnull final TodoTaskList sourceTodoTaskList) throws ClientException {
         return send(HttpMethod.PATCH, sourceTodoTaskList);
     }
 
@@ -105,7 +105,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param newTodoTaskList the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback) {
+    public void post(@Nonnull final TodoTaskList newTodoTaskList, @Nonnull final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.POST, callback, newTodoTaskList);
     }
 
@@ -116,7 +116,8 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @return the created TodoTaskList
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TodoTaskList post(final TodoTaskList newTodoTaskList) throws ClientException {
+    @Nullable
+    public TodoTaskList post(@Nonnull final TodoTaskList newTodoTaskList) throws ClientException {
         return send(HttpMethod.POST, newTodoTaskList);
     }
 
@@ -126,7 +127,7 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param newTodoTaskList the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TodoTaskList newTodoTaskList, final ICallback<? super TodoTaskList> callback) {
+    public void put(@Nonnull final TodoTaskList newTodoTaskList, @Nonnull final ICallback<? super TodoTaskList> callback) {
         send(HttpMethod.PUT, callback, newTodoTaskList);
     }
 
@@ -137,7 +138,8 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @return the created TodoTaskList
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TodoTaskList put(final TodoTaskList newTodoTaskList) throws ClientException {
+    @Nullable
+    public TodoTaskList put(@Nonnull final TodoTaskList newTodoTaskList) throws ClientException {
         return send(HttpMethod.PUT, newTodoTaskList);
     }
 
@@ -147,9 +149,10 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param value the select clause
      * @return the updated request
      */
-     public ITodoTaskListRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TodoTaskListRequest)this;
+     @Nonnull
+     public TodoTaskListRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class TodoTaskListRequest extends BaseRequest implements ITodoTaskListReq
      * @param value the expand clause
      * @return the updated request
      */
-     public ITodoTaskListRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TodoTaskListRequest)this;
+     @Nonnull
+     public TodoTaskListRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsProtectionState;
-import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsDeviceMalwareStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDeviceMalwareStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Protection State Request Builder.
  */
-public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder implements IWindowsProtectionStateRequestBuilder {
+public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder<WindowsProtectionState> {
 
     /**
      * The request builder for the WindowsProtectionState
@@ -32,7 +32,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsProtectionStateRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsProtectionStateRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder imp
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsProtectionStateRequest instance
+     * @return the WindowsProtectionStateRequest instance
      */
-    public IWindowsProtectionStateRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsProtectionStateRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder imp
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsProtectionStateRequest instance
+     * @return the WindowsProtectionStateRequest instance
      */
-    public IWindowsProtectionStateRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsProtectionStateRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsProtectionStateRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IWindowsDeviceMalwareStateCollectionRequestBuilder detectedMalwareState() {
+    /**
+     *  Gets a request builder for the WindowsDeviceMalwareState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsDeviceMalwareStateCollectionRequestBuilder detectedMalwareState() {
         return new WindowsDeviceMalwareStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("detectedMalwareState"), getClient(), null);
     }
 
-    public IWindowsDeviceMalwareStateRequestBuilder detectedMalwareState(final String id) {
+    /**
+     * Gets a request builder for the WindowsDeviceMalwareState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsDeviceMalwareStateRequestBuilder detectedMalwareState(@Nonnull final String id) {
         return new WindowsDeviceMalwareStateRequestBuilder(getRequestUrlWithAdditionalSegment("detectedMalwareState") + "/" + id, getClient(), null);
     }
 }

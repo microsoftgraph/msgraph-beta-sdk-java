@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Invitation;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Invitation Request Builder.
  */
-public class InvitationRequestBuilder extends BaseRequestBuilder implements IInvitationRequestBuilder {
+public class InvitationRequestBuilder extends BaseRequestBuilder<Invitation> {
 
     /**
      * The request builder for the Invitation
@@ -30,7 +31,7 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public InvitationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public InvitationRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IInvitationRequest instance
+     * @return the InvitationRequest instance
      */
-    public IInvitationRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public InvitationRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IInvitationRequest instance
+     * @return the InvitationRequest instance
      */
-    public IInvitationRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public InvitationRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.InvitationRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class InvitationRequestBuilder extends BaseRequestBuilder implements IInv
     /**
      * Gets the request builder for User
      *
-     * @return the IUserWithReferenceRequestBuilder instance
+     * @return the UserWithReferenceRequestBuilder instance
      */
-    public IUserWithReferenceRequestBuilder invitedUser() {
+    @Nonnull
+    public UserWithReferenceRequestBuilder invitedUser() {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("invitedUser"), getClient(), null);
     }
 }

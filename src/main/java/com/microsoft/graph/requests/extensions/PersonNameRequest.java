@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PersonName;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Person Name Request.
  */
-public class PersonNameRequest extends BaseRequest implements IPersonNameRequest {
+public class PersonNameRequest extends BaseRequest<PersonName> {
 	
     /**
      * The request for the PersonName
@@ -29,7 +31,7 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PersonNameRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PersonNameRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PersonName.class);
     }
 
@@ -38,7 +40,7 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PersonName> callback) {
+    public void get(@Nonnull final ICallback<? super PersonName> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @return the PersonName from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PersonName get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PersonName> callback) {
+    public void delete(@Nonnull final ICallback<? super PersonName> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @param sourcePersonName the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PersonName sourcePersonName, final ICallback<? super PersonName> callback) {
+    public void patch(@Nonnull final PersonName sourcePersonName, @Nonnull final ICallback<? super PersonName> callback) {
         send(HttpMethod.PATCH, callback, sourcePersonName);
     }
 
@@ -87,7 +90,8 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @return the updated PersonName
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonName patch(final PersonName sourcePersonName) throws ClientException {
+    @Nullable
+    public PersonName patch(@Nonnull final PersonName sourcePersonName) throws ClientException {
         return send(HttpMethod.PATCH, sourcePersonName);
     }
 
@@ -97,7 +101,7 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @param newPersonName the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PersonName newPersonName, final ICallback<? super PersonName> callback) {
+    public void post(@Nonnull final PersonName newPersonName, @Nonnull final ICallback<? super PersonName> callback) {
         send(HttpMethod.POST, callback, newPersonName);
     }
 
@@ -108,7 +112,8 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @return the created PersonName
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonName post(final PersonName newPersonName) throws ClientException {
+    @Nullable
+    public PersonName post(@Nonnull final PersonName newPersonName) throws ClientException {
         return send(HttpMethod.POST, newPersonName);
     }
 
@@ -118,7 +123,7 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @param newPersonName the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PersonName newPersonName, final ICallback<? super PersonName> callback) {
+    public void put(@Nonnull final PersonName newPersonName, @Nonnull final ICallback<? super PersonName> callback) {
         send(HttpMethod.PUT, callback, newPersonName);
     }
 
@@ -129,7 +134,8 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @return the created PersonName
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PersonName put(final PersonName newPersonName) throws ClientException {
+    @Nullable
+    public PersonName put(@Nonnull final PersonName newPersonName) throws ClientException {
         return send(HttpMethod.PUT, newPersonName);
     }
 
@@ -139,9 +145,10 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IPersonNameRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PersonNameRequest)this;
+     @Nonnull
+     public PersonNameRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PersonNameRequest extends BaseRequest implements IPersonNameRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IPersonNameRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PersonNameRequest)this;
+     @Nonnull
+     public PersonNameRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

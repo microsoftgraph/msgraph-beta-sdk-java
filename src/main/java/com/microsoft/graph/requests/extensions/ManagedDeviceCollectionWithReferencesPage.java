@@ -20,9 +20,11 @@ import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.google.gson.JsonObject;
@@ -35,7 +37,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Managed Device Collection With References Page.
  */
-public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPage<ManagedDevice, IManagedDeviceCollectionWithReferencesRequestBuilder> implements IManagedDeviceCollectionWithReferencesPage {
+public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPage<ManagedDevice, ManagedDeviceCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for ManagedDevice
@@ -43,7 +45,17 @@ public class ManagedDeviceCollectionWithReferencesPage extends BaseCollectionPag
      * @param response the serialized ManagedDeviceCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public ManagedDeviceCollectionWithReferencesPage(final ManagedDeviceCollectionResponse response, final IManagedDeviceCollectionWithReferencesRequestBuilder builder) {
+    public ManagedDeviceCollectionWithReferencesPage(@Nonnull final ManagedDeviceCollectionResponse response, @Nullable final ManagedDeviceCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for ManagedDevice
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public ManagedDeviceCollectionWithReferencesPage(@Nonnull final java.util.List<ManagedDevice> pageContents, @Nullable final ManagedDeviceCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

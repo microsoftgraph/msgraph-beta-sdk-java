@@ -9,21 +9,18 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Term;
-import com.microsoft.graph.termstore.requests.extensions.ITermCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.TermRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IRelationRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -33,7 +30,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Term With Reference Request.
  */
-public class TermWithReferenceRequest extends BaseRequest implements ITermWithReferenceRequest {
+public class TermWithReferenceRequest extends BaseWithReferenceRequest<Term> {
 
     /**
      * The request for the Term
@@ -42,46 +39,9 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Term.class);
     }
-
-    public void post(final Term newTerm, final IJsonBackedObject payload, final ICallback<? super Term> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public Term post(final Term newTerm, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newTerm;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super Term> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public Term get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super Term> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final Term sourceTerm, final ICallback<? super Term> callback) {
-		send(HttpMethod.PATCH, callback, sourceTerm);
-	}
-
-	public Term patch(final Term sourceTerm) throws ClientException {
-		return send(HttpMethod.PATCH, sourceTerm);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -89,9 +49,10 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
      * @param value the select clause
      * @return the updated request
      */
-    public ITermWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (ITermWithReferenceRequest)this;
+    @Nonnull
+    public TermWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -100,8 +61,9 @@ public class TermWithReferenceRequest extends BaseRequest implements ITermWithRe
      * @param value the expand clause
      * @return the updated request
      */
-    public ITermWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (TermWithReferenceRequest)this;
+    @Nonnull
+    public TermWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

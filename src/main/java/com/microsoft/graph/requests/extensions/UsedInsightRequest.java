@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UsedInsight;
-import com.microsoft.graph.requests.extensions.IEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Used Insight Request.
  */
-public class UsedInsightRequest extends BaseRequest implements IUsedInsightRequest {
+public class UsedInsightRequest extends BaseRequest<UsedInsight> {
 	
     /**
      * The request for the UsedInsight
@@ -31,7 +32,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UsedInsightRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UsedInsightRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UsedInsight.class);
     }
 
@@ -40,7 +41,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UsedInsight> callback) {
+    public void get(@Nonnull final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @return the UsedInsight from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UsedInsight get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UsedInsight> callback) {
+    public void delete(@Nonnull final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param sourceUsedInsight the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UsedInsight sourceUsedInsight, final ICallback<? super UsedInsight> callback) {
+    public void patch(@Nonnull final UsedInsight sourceUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.PATCH, callback, sourceUsedInsight);
     }
 
@@ -89,7 +91,8 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @return the updated UsedInsight
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UsedInsight patch(final UsedInsight sourceUsedInsight) throws ClientException {
+    @Nullable
+    public UsedInsight patch(@Nonnull final UsedInsight sourceUsedInsight) throws ClientException {
         return send(HttpMethod.PATCH, sourceUsedInsight);
     }
 
@@ -99,7 +102,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param newUsedInsight the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback) {
+    public void post(@Nonnull final UsedInsight newUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.POST, callback, newUsedInsight);
     }
 
@@ -110,7 +113,8 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @return the created UsedInsight
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UsedInsight post(final UsedInsight newUsedInsight) throws ClientException {
+    @Nullable
+    public UsedInsight post(@Nonnull final UsedInsight newUsedInsight) throws ClientException {
         return send(HttpMethod.POST, newUsedInsight);
     }
 
@@ -120,7 +124,7 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param newUsedInsight the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UsedInsight newUsedInsight, final ICallback<? super UsedInsight> callback) {
+    public void put(@Nonnull final UsedInsight newUsedInsight, @Nonnull final ICallback<? super UsedInsight> callback) {
         send(HttpMethod.PUT, callback, newUsedInsight);
     }
 
@@ -131,7 +135,8 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @return the created UsedInsight
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UsedInsight put(final UsedInsight newUsedInsight) throws ClientException {
+    @Nullable
+    public UsedInsight put(@Nonnull final UsedInsight newUsedInsight) throws ClientException {
         return send(HttpMethod.PUT, newUsedInsight);
     }
 
@@ -141,9 +146,10 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param value the select clause
      * @return the updated request
      */
-     public IUsedInsightRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UsedInsightRequest)this;
+     @Nonnull
+     public UsedInsightRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class UsedInsightRequest extends BaseRequest implements IUsedInsightReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IUsedInsightRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UsedInsightRequest)this;
+     @Nonnull
+     public UsedInsightRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

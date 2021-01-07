@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerPkcsCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Device Owner Pkcs Certificate Profile Request.
  */
-public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest implements IAndroidDeviceOwnerPkcsCertificateProfileRequest {
+public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest<AndroidDeviceOwnerPkcsCertificateProfile> {
 	
     /**
      * The request for the AndroidDeviceOwnerPkcsCertificateProfile
@@ -33,7 +33,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceOwnerPkcsCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidDeviceOwnerPkcsCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerPkcsCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @return the AndroidDeviceOwnerPkcsCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidDeviceOwnerPkcsCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @param sourceAndroidDeviceOwnerPkcsCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerPkcsCertificateProfile sourceAndroidDeviceOwnerPkcsCertificateProfile, final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
+    public void patch(@Nonnull final AndroidDeviceOwnerPkcsCertificateProfile sourceAndroidDeviceOwnerPkcsCertificateProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerPkcsCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @return the updated AndroidDeviceOwnerPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerPkcsCertificateProfile patch(final AndroidDeviceOwnerPkcsCertificateProfile sourceAndroidDeviceOwnerPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerPkcsCertificateProfile patch(@Nonnull final AndroidDeviceOwnerPkcsCertificateProfile sourceAndroidDeviceOwnerPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidDeviceOwnerPkcsCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @param newAndroidDeviceOwnerPkcsCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile, final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
+    public void post(@Nonnull final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerPkcsCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @return the created AndroidDeviceOwnerPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerPkcsCertificateProfile post(final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerPkcsCertificateProfile post(@Nonnull final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidDeviceOwnerPkcsCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @param newAndroidDeviceOwnerPkcsCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile, final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
+    public void put(@Nonnull final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerPkcsCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerPkcsCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @return the created AndroidDeviceOwnerPkcsCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerPkcsCertificateProfile put(final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerPkcsCertificateProfile put(@Nonnull final AndroidDeviceOwnerPkcsCertificateProfile newAndroidDeviceOwnerPkcsCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidDeviceOwnerPkcsCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidDeviceOwnerPkcsCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidDeviceOwnerPkcsCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidDeviceOwnerPkcsCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AndroidDeviceOwnerPkcsCertificateProfileRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidDeviceOwnerPkcsCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerPkcsCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidDeviceOwnerPkcsCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

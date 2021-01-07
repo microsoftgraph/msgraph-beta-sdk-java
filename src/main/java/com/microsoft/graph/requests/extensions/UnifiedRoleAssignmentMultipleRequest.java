@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentMultiple;
-import com.microsoft.graph.requests.extensions.IAppScopeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -30,7 +27,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Unified Role Assignment Multiple Request.
  */
-public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements IUnifiedRoleAssignmentMultipleRequest {
+public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest<UnifiedRoleAssignmentMultiple> {
 	
     /**
      * The request for the UnifiedRoleAssignmentMultiple
@@ -39,7 +36,7 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UnifiedRoleAssignmentMultipleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UnifiedRoleAssignmentMultipleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UnifiedRoleAssignmentMultiple.class);
     }
 
@@ -48,7 +45,7 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
+    public void get(@Nonnull final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -58,6 +55,7 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @return the UnifiedRoleAssignmentMultiple from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UnifiedRoleAssignmentMultiple get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -67,7 +65,7 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
+    public void delete(@Nonnull final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -86,7 +84,7 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @param sourceUnifiedRoleAssignmentMultiple the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UnifiedRoleAssignmentMultiple sourceUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
+    public void patch(@Nonnull final UnifiedRoleAssignmentMultiple sourceUnifiedRoleAssignmentMultiple, @Nonnull final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
         send(HttpMethod.PATCH, callback, sourceUnifiedRoleAssignmentMultiple);
     }
 
@@ -97,7 +95,8 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @return the updated UnifiedRoleAssignmentMultiple
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRoleAssignmentMultiple patch(final UnifiedRoleAssignmentMultiple sourceUnifiedRoleAssignmentMultiple) throws ClientException {
+    @Nullable
+    public UnifiedRoleAssignmentMultiple patch(@Nonnull final UnifiedRoleAssignmentMultiple sourceUnifiedRoleAssignmentMultiple) throws ClientException {
         return send(HttpMethod.PATCH, sourceUnifiedRoleAssignmentMultiple);
     }
 
@@ -107,7 +106,7 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @param newUnifiedRoleAssignmentMultiple the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
+    public void post(@Nonnull final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, @Nonnull final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
         send(HttpMethod.POST, callback, newUnifiedRoleAssignmentMultiple);
     }
 
@@ -118,7 +117,8 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @return the created UnifiedRoleAssignmentMultiple
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRoleAssignmentMultiple post(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException {
+    @Nullable
+    public UnifiedRoleAssignmentMultiple post(@Nonnull final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException {
         return send(HttpMethod.POST, newUnifiedRoleAssignmentMultiple);
     }
 
@@ -128,7 +128,7 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @param newUnifiedRoleAssignmentMultiple the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
+    public void put(@Nonnull final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple, @Nonnull final ICallback<? super UnifiedRoleAssignmentMultiple> callback) {
         send(HttpMethod.PUT, callback, newUnifiedRoleAssignmentMultiple);
     }
 
@@ -139,7 +139,8 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @return the created UnifiedRoleAssignmentMultiple
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UnifiedRoleAssignmentMultiple put(final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException {
+    @Nullable
+    public UnifiedRoleAssignmentMultiple put(@Nonnull final UnifiedRoleAssignmentMultiple newUnifiedRoleAssignmentMultiple) throws ClientException {
         return send(HttpMethod.PUT, newUnifiedRoleAssignmentMultiple);
     }
 
@@ -149,9 +150,10 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IUnifiedRoleAssignmentMultipleRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UnifiedRoleAssignmentMultipleRequest)this;
+     @Nonnull
+     public UnifiedRoleAssignmentMultipleRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -160,9 +162,10 @@ public class UnifiedRoleAssignmentMultipleRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IUnifiedRoleAssignmentMultipleRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UnifiedRoleAssignmentMultipleRequest)this;
+     @Nonnull
+     public UnifiedRoleAssignmentMultipleRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

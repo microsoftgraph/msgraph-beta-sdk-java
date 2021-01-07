@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MessageRule;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Message Rule Request.
  */
-public class MessageRuleRequest extends BaseRequest implements IMessageRuleRequest {
+public class MessageRuleRequest extends BaseRequest<MessageRule> {
 	
     /**
      * The request for the MessageRule
@@ -29,7 +31,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MessageRuleRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MessageRuleRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MessageRule.class);
     }
 
@@ -38,7 +40,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MessageRule> callback) {
+    public void get(@Nonnull final ICallback<? super MessageRule> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @return the MessageRule from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MessageRule get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MessageRule> callback) {
+    public void delete(@Nonnull final ICallback<? super MessageRule> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param sourceMessageRule the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MessageRule sourceMessageRule, final ICallback<? super MessageRule> callback) {
+    public void patch(@Nonnull final MessageRule sourceMessageRule, @Nonnull final ICallback<? super MessageRule> callback) {
         send(HttpMethod.PATCH, callback, sourceMessageRule);
     }
 
@@ -87,7 +90,8 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @return the updated MessageRule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MessageRule patch(final MessageRule sourceMessageRule) throws ClientException {
+    @Nullable
+    public MessageRule patch(@Nonnull final MessageRule sourceMessageRule) throws ClientException {
         return send(HttpMethod.PATCH, sourceMessageRule);
     }
 
@@ -97,7 +101,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param newMessageRule the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
+    public void post(@Nonnull final MessageRule newMessageRule, @Nonnull final ICallback<? super MessageRule> callback) {
         send(HttpMethod.POST, callback, newMessageRule);
     }
 
@@ -108,7 +112,8 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @return the created MessageRule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MessageRule post(final MessageRule newMessageRule) throws ClientException {
+    @Nullable
+    public MessageRule post(@Nonnull final MessageRule newMessageRule) throws ClientException {
         return send(HttpMethod.POST, newMessageRule);
     }
 
@@ -118,7 +123,7 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param newMessageRule the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MessageRule newMessageRule, final ICallback<? super MessageRule> callback) {
+    public void put(@Nonnull final MessageRule newMessageRule, @Nonnull final ICallback<? super MessageRule> callback) {
         send(HttpMethod.PUT, callback, newMessageRule);
     }
 
@@ -129,7 +134,8 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @return the created MessageRule
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MessageRule put(final MessageRule newMessageRule) throws ClientException {
+    @Nullable
+    public MessageRule put(@Nonnull final MessageRule newMessageRule) throws ClientException {
         return send(HttpMethod.PUT, newMessageRule);
     }
 
@@ -139,9 +145,10 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param value the select clause
      * @return the updated request
      */
-     public IMessageRuleRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MessageRuleRequest)this;
+     @Nonnull
+     public MessageRuleRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MessageRuleRequest extends BaseRequest implements IMessageRuleReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IMessageRuleRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MessageRuleRequest)this;
+     @Nonnull
+     public MessageRuleRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Management Derived Credential Settings Request Builder.
  */
-public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends BaseRequestBuilder implements IDeviceManagementDerivedCredentialSettingsRequestBuilder {
+public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends BaseRequestBuilder<DeviceManagementDerivedCredentialSettings> {
 
     /**
      * The request builder for the DeviceManagementDerivedCredentialSettings
@@ -28,7 +30,7 @@ public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementDerivedCredentialSettingsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementDerivedCredentialSettingsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends Bas
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementDerivedCredentialSettingsRequest instance
+     * @return the DeviceManagementDerivedCredentialSettingsRequest instance
      */
-    public IDeviceManagementDerivedCredentialSettingsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceManagementDerivedCredentialSettingsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceManagementDerivedCredentialSettingsRequestBuilder extends Bas
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceManagementDerivedCredentialSettingsRequest instance
+     * @return the DeviceManagementDerivedCredentialSettingsRequest instance
      */
-    public IDeviceManagementDerivedCredentialSettingsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceManagementDerivedCredentialSettingsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

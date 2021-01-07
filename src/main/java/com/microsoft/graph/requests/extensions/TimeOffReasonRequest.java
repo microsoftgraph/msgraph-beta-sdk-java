@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TimeOffReason;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Time Off Reason Request.
  */
-public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonRequest {
+public class TimeOffReasonRequest extends BaseRequest<TimeOffReason> {
 	
     /**
      * The request for the TimeOffReason
@@ -29,7 +31,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TimeOffReasonRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TimeOffReasonRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TimeOffReason.class);
     }
 
@@ -38,7 +40,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TimeOffReason> callback) {
+    public void get(@Nonnull final ICallback<? super TimeOffReason> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @return the TimeOffReason from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TimeOffReason get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TimeOffReason> callback) {
+    public void delete(@Nonnull final ICallback<? super TimeOffReason> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param sourceTimeOffReason the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TimeOffReason sourceTimeOffReason, final ICallback<? super TimeOffReason> callback) {
+    public void patch(@Nonnull final TimeOffReason sourceTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
         send(HttpMethod.PATCH, callback, sourceTimeOffReason);
     }
 
@@ -87,7 +90,8 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @return the updated TimeOffReason
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TimeOffReason patch(final TimeOffReason sourceTimeOffReason) throws ClientException {
+    @Nullable
+    public TimeOffReason patch(@Nonnull final TimeOffReason sourceTimeOffReason) throws ClientException {
         return send(HttpMethod.PATCH, sourceTimeOffReason);
     }
 
@@ -97,7 +101,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param newTimeOffReason the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback) {
+    public void post(@Nonnull final TimeOffReason newTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
         send(HttpMethod.POST, callback, newTimeOffReason);
     }
 
@@ -108,7 +112,8 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @return the created TimeOffReason
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TimeOffReason post(final TimeOffReason newTimeOffReason) throws ClientException {
+    @Nullable
+    public TimeOffReason post(@Nonnull final TimeOffReason newTimeOffReason) throws ClientException {
         return send(HttpMethod.POST, newTimeOffReason);
     }
 
@@ -118,7 +123,7 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param newTimeOffReason the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TimeOffReason newTimeOffReason, final ICallback<? super TimeOffReason> callback) {
+    public void put(@Nonnull final TimeOffReason newTimeOffReason, @Nonnull final ICallback<? super TimeOffReason> callback) {
         send(HttpMethod.PUT, callback, newTimeOffReason);
     }
 
@@ -129,7 +134,8 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @return the created TimeOffReason
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TimeOffReason put(final TimeOffReason newTimeOffReason) throws ClientException {
+    @Nullable
+    public TimeOffReason put(@Nonnull final TimeOffReason newTimeOffReason) throws ClientException {
         return send(HttpMethod.PUT, newTimeOffReason);
     }
 
@@ -139,9 +145,10 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param value the select clause
      * @return the updated request
      */
-     public ITimeOffReasonRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TimeOffReasonRequest)this;
+     @Nonnull
+     public TimeOffReasonRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TimeOffReasonRequest extends BaseRequest implements ITimeOffReasonR
      * @param value the expand clause
      * @return the updated request
      */
-     public ITimeOffReasonRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TimeOffReasonRequest)this;
+     @Nonnull
+     public TimeOffReasonRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

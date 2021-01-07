@@ -10,18 +10,15 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceComplianceScript;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptAssignment;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceHealthScriptAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceHealthScriptAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptDeviceStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptDeviceStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceComplianceScriptRunSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceComplianceScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -31,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Compliance Script Request.
  */
-public class DeviceComplianceScriptRequest extends BaseRequest implements IDeviceComplianceScriptRequest {
+public class DeviceComplianceScriptRequest extends BaseRequest<DeviceComplianceScript> {
 	
     /**
      * The request for the DeviceComplianceScript
@@ -40,7 +37,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceComplianceScriptRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceComplianceScriptRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceComplianceScript.class);
     }
 
@@ -49,7 +46,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceComplianceScript> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -59,6 +56,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @return the DeviceComplianceScript from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceComplianceScript get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -68,7 +66,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceComplianceScript> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -87,7 +85,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param sourceDeviceComplianceScript the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceComplianceScript sourceDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback) {
+    public void patch(@Nonnull final DeviceComplianceScript sourceDeviceComplianceScript, @Nonnull final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceComplianceScript);
     }
 
@@ -98,7 +96,8 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @return the updated DeviceComplianceScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceScript patch(final DeviceComplianceScript sourceDeviceComplianceScript) throws ClientException {
+    @Nullable
+    public DeviceComplianceScript patch(@Nonnull final DeviceComplianceScript sourceDeviceComplianceScript) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceComplianceScript);
     }
 
@@ -108,7 +107,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceComplianceScript the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback) {
+    public void post(@Nonnull final DeviceComplianceScript newDeviceComplianceScript, @Nonnull final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.POST, callback, newDeviceComplianceScript);
     }
 
@@ -119,7 +118,8 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @return the created DeviceComplianceScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceScript post(final DeviceComplianceScript newDeviceComplianceScript) throws ClientException {
+    @Nullable
+    public DeviceComplianceScript post(@Nonnull final DeviceComplianceScript newDeviceComplianceScript) throws ClientException {
         return send(HttpMethod.POST, newDeviceComplianceScript);
     }
 
@@ -129,7 +129,7 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param newDeviceComplianceScript the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceComplianceScript newDeviceComplianceScript, final ICallback<? super DeviceComplianceScript> callback) {
+    public void put(@Nonnull final DeviceComplianceScript newDeviceComplianceScript, @Nonnull final ICallback<? super DeviceComplianceScript> callback) {
         send(HttpMethod.PUT, callback, newDeviceComplianceScript);
     }
 
@@ -140,7 +140,8 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @return the created DeviceComplianceScript
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceComplianceScript put(final DeviceComplianceScript newDeviceComplianceScript) throws ClientException {
+    @Nullable
+    public DeviceComplianceScript put(@Nonnull final DeviceComplianceScript newDeviceComplianceScript) throws ClientException {
         return send(HttpMethod.PUT, newDeviceComplianceScript);
     }
 
@@ -150,9 +151,10 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceComplianceScriptRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceComplianceScriptRequest)this;
+     @Nonnull
+     public DeviceComplianceScriptRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -161,9 +163,10 @@ public class DeviceComplianceScriptRequest extends BaseRequest implements IDevic
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceComplianceScriptRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceComplianceScriptRequest)this;
+     @Nonnull
+     public DeviceComplianceScriptRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

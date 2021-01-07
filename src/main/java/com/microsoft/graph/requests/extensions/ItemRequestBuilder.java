@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Item;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemCategoryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Item Request Builder.
  */
-public class ItemRequestBuilder extends BaseRequestBuilder implements IItemRequestBuilder {
+public class ItemRequestBuilder extends BaseRequestBuilder<Item> {
 
     /**
      * The request builder for the Item
@@ -34,7 +33,7 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IItemRequest instance
+     * @return the ItemRequest instance
      */
-    public IItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ItemRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,9 +52,10 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IItemRequest instance
+     * @return the ItemRequest instance
      */
-    public IItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ItemRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -63,16 +64,30 @@ public class ItemRequestBuilder extends BaseRequestBuilder implements IItemReque
     /**
      * Gets the request builder for ItemCategory
      *
-     * @return the IItemCategoryRequestBuilder instance
+     * @return the ItemCategoryRequestBuilder instance
      */
-    public IItemCategoryRequestBuilder itemCategory() {
+    @Nonnull
+    public ItemCategoryRequestBuilder itemCategory() {
         return new ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategory"), getClient(), null);
     }
-    public IPictureCollectionRequestBuilder picture() {
+    /**
+     *  Gets a request builder for the Picture collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PictureCollectionRequestBuilder picture() {
         return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
-    public IPictureRequestBuilder picture(final String id) {
+    /**
+     * Gets a request builder for the Picture item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PictureRequestBuilder picture(@Nonnull final String id) {
         return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
 }

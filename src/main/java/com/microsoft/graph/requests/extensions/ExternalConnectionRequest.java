@@ -9,22 +9,17 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExternalConnection;
-import com.microsoft.graph.requests.extensions.IExternalGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExternalItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExternalItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectionOperationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConnectionOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConnectionOperationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISchemaRequestBuilder;
 import com.microsoft.graph.requests.extensions.SchemaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -34,7 +29,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the External Connection Request.
  */
-public class ExternalConnectionRequest extends BaseRequest implements IExternalConnectionRequest {
+public class ExternalConnectionRequest extends BaseRequest<ExternalConnection> {
 	
     /**
      * The request for the ExternalConnection
@@ -43,7 +38,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExternalConnectionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExternalConnectionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExternalConnection.class);
     }
 
@@ -52,7 +47,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExternalConnection> callback) {
+    public void get(@Nonnull final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -62,6 +57,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @return the ExternalConnection from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExternalConnection get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -71,7 +67,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExternalConnection> callback) {
+    public void delete(@Nonnull final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -90,7 +86,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param sourceExternalConnection the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExternalConnection sourceExternalConnection, final ICallback<? super ExternalConnection> callback) {
+    public void patch(@Nonnull final ExternalConnection sourceExternalConnection, @Nonnull final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.PATCH, callback, sourceExternalConnection);
     }
 
@@ -101,7 +97,8 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @return the updated ExternalConnection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalConnection patch(final ExternalConnection sourceExternalConnection) throws ClientException {
+    @Nullable
+    public ExternalConnection patch(@Nonnull final ExternalConnection sourceExternalConnection) throws ClientException {
         return send(HttpMethod.PATCH, sourceExternalConnection);
     }
 
@@ -111,7 +108,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param newExternalConnection the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback) {
+    public void post(@Nonnull final ExternalConnection newExternalConnection, @Nonnull final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.POST, callback, newExternalConnection);
     }
 
@@ -122,7 +119,8 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @return the created ExternalConnection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalConnection post(final ExternalConnection newExternalConnection) throws ClientException {
+    @Nullable
+    public ExternalConnection post(@Nonnull final ExternalConnection newExternalConnection) throws ClientException {
         return send(HttpMethod.POST, newExternalConnection);
     }
 
@@ -132,7 +130,7 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param newExternalConnection the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExternalConnection newExternalConnection, final ICallback<? super ExternalConnection> callback) {
+    public void put(@Nonnull final ExternalConnection newExternalConnection, @Nonnull final ICallback<? super ExternalConnection> callback) {
         send(HttpMethod.PUT, callback, newExternalConnection);
     }
 
@@ -143,7 +141,8 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @return the created ExternalConnection
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExternalConnection put(final ExternalConnection newExternalConnection) throws ClientException {
+    @Nullable
+    public ExternalConnection put(@Nonnull final ExternalConnection newExternalConnection) throws ClientException {
         return send(HttpMethod.PUT, newExternalConnection);
     }
 
@@ -153,9 +152,10 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param value the select clause
      * @return the updated request
      */
-     public IExternalConnectionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExternalConnectionRequest)this;
+     @Nonnull
+     public ExternalConnectionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -164,9 +164,10 @@ public class ExternalConnectionRequest extends BaseRequest implements IExternalC
      * @param value the expand clause
      * @return the updated request
      */
-     public IExternalConnectionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExternalConnectionRequest)this;
+     @Nonnull
+     public ExternalConnectionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

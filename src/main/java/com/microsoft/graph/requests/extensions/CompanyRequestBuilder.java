@@ -9,148 +9,80 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Company;
-import com.microsoft.graph.requests.extensions.IAccountCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccountRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgedAccountsPayableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgedAccountsPayableRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgedAccountsPayableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgedAccountsPayableRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgedAccountsReceivableCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgedAccountsReceivableRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgedAccountsReceivableCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgedAccountsReceivableRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICompanyInformationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICompanyInformationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CompanyInformationRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICountryRegionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICountryRegionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CountryRegionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CountryRegionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentJournalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentJournalRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentJournalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentJournalRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerPaymentRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerPaymentRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDimensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDimensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DimensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DimensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDimensionValueCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDimensionValueRequestBuilder;
 import com.microsoft.graph.requests.extensions.DimensionValueCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DimensionValueRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEmployeeCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEmployeeRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmployeeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EmployeeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGeneralLedgerEntryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGeneralLedgerEntryRequestBuilder;
 import com.microsoft.graph.requests.extensions.GeneralLedgerEntryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GeneralLedgerEntryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IJournalRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.JournalRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PictureRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPurchaseInvoiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PurchaseInvoiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesCreditMemoLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesCreditMemoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesCreditMemoRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesCreditMemoRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesInvoiceRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesInvoiceRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesOrderLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesOrderLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesOrderCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesOrderRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesOrderRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShipmentMethodCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITaxAreaCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITaxAreaRequestBuilder;
 import com.microsoft.graph.requests.extensions.TaxAreaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TaxAreaRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITaxGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITaxGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.TaxGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TaxGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnitOfMeasureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnitOfMeasureRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnitOfMeasureCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnitOfMeasureRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVendorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IVendorRequestBuilder;
 import com.microsoft.graph.requests.extensions.VendorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VendorRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -159,7 +91,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Company Request Builder.
  */
-public class CompanyRequestBuilder extends BaseRequestBuilder implements ICompanyRequestBuilder {
+public class CompanyRequestBuilder extends BaseRequestBuilder<Company> {
 
     /**
      * The request builder for the Company
@@ -168,7 +100,7 @@ public class CompanyRequestBuilder extends BaseRequestBuilder implements ICompan
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CompanyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CompanyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -176,9 +108,10 @@ public class CompanyRequestBuilder extends BaseRequestBuilder implements ICompan
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ICompanyRequest instance
+     * @return the CompanyRequest instance
      */
-    public ICompanyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public CompanyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -186,256 +119,712 @@ public class CompanyRequestBuilder extends BaseRequestBuilder implements ICompan
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ICompanyRequest instance
+     * @return the CompanyRequest instance
      */
-    public ICompanyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public CompanyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.CompanyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAccountCollectionRequestBuilder accounts() {
+    /**
+     *  Gets a request builder for the Account collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccountCollectionRequestBuilder accounts() {
         return new AccountCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accounts"), getClient(), null);
     }
 
-    public IAccountRequestBuilder accounts(final String id) {
+    /**
+     * Gets a request builder for the Account item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccountRequestBuilder accounts(@Nonnull final String id) {
         return new AccountRequestBuilder(getRequestUrlWithAdditionalSegment("accounts") + "/" + id, getClient(), null);
     }
-    public IAgedAccountsPayableCollectionRequestBuilder agedAccountsPayable() {
+    /**
+     *  Gets a request builder for the AgedAccountsPayable collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgedAccountsPayableCollectionRequestBuilder agedAccountsPayable() {
         return new AgedAccountsPayableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsPayable"), getClient(), null);
     }
 
-    public IAgedAccountsPayableRequestBuilder agedAccountsPayable(final String id) {
+    /**
+     * Gets a request builder for the AgedAccountsPayable item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgedAccountsPayableRequestBuilder agedAccountsPayable(@Nonnull final String id) {
         return new AgedAccountsPayableRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsPayable") + "/" + id, getClient(), null);
     }
-    public IAgedAccountsReceivableCollectionRequestBuilder agedAccountsReceivable() {
+    /**
+     *  Gets a request builder for the AgedAccountsReceivable collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgedAccountsReceivableCollectionRequestBuilder agedAccountsReceivable() {
         return new AgedAccountsReceivableCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsReceivable"), getClient(), null);
     }
 
-    public IAgedAccountsReceivableRequestBuilder agedAccountsReceivable(final String id) {
+    /**
+     * Gets a request builder for the AgedAccountsReceivable item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgedAccountsReceivableRequestBuilder agedAccountsReceivable(@Nonnull final String id) {
         return new AgedAccountsReceivableRequestBuilder(getRequestUrlWithAdditionalSegment("agedAccountsReceivable") + "/" + id, getClient(), null);
     }
-    public ICompanyInformationCollectionRequestBuilder companyInformation() {
+    /**
+     *  Gets a request builder for the CompanyInformation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CompanyInformationCollectionRequestBuilder companyInformation() {
         return new CompanyInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("companyInformation"), getClient(), null);
     }
 
-    public ICompanyInformationRequestBuilder companyInformation(final String id) {
+    /**
+     * Gets a request builder for the CompanyInformation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CompanyInformationRequestBuilder companyInformation(@Nonnull final String id) {
         return new CompanyInformationRequestBuilder(getRequestUrlWithAdditionalSegment("companyInformation") + "/" + id, getClient(), null);
     }
-    public ICountryRegionCollectionRequestBuilder countriesRegions() {
+    /**
+     *  Gets a request builder for the CountryRegion collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CountryRegionCollectionRequestBuilder countriesRegions() {
         return new CountryRegionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("countriesRegions"), getClient(), null);
     }
 
-    public ICountryRegionRequestBuilder countriesRegions(final String id) {
+    /**
+     * Gets a request builder for the CountryRegion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CountryRegionRequestBuilder countriesRegions(@Nonnull final String id) {
         return new CountryRegionRequestBuilder(getRequestUrlWithAdditionalSegment("countriesRegions") + "/" + id, getClient(), null);
     }
-    public ICurrencyCollectionRequestBuilder currencies() {
+    /**
+     *  Gets a request builder for the Currency collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CurrencyCollectionRequestBuilder currencies() {
         return new CurrencyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("currencies"), getClient(), null);
     }
 
-    public ICurrencyRequestBuilder currencies(final String id) {
+    /**
+     * Gets a request builder for the Currency item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CurrencyRequestBuilder currencies(@Nonnull final String id) {
         return new CurrencyRequestBuilder(getRequestUrlWithAdditionalSegment("currencies") + "/" + id, getClient(), null);
     }
-    public ICustomerPaymentJournalCollectionRequestBuilder customerPaymentJournals() {
+    /**
+     *  Gets a request builder for the CustomerPaymentJournal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomerPaymentJournalCollectionRequestBuilder customerPaymentJournals() {
         return new CustomerPaymentJournalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPaymentJournals"), getClient(), null);
     }
 
-    public ICustomerPaymentJournalRequestBuilder customerPaymentJournals(final String id) {
+    /**
+     * Gets a request builder for the CustomerPaymentJournal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomerPaymentJournalRequestBuilder customerPaymentJournals(@Nonnull final String id) {
         return new CustomerPaymentJournalRequestBuilder(getRequestUrlWithAdditionalSegment("customerPaymentJournals") + "/" + id, getClient(), null);
     }
-    public ICustomerPaymentCollectionRequestBuilder customerPayments() {
+    /**
+     *  Gets a request builder for the CustomerPayment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomerPaymentCollectionRequestBuilder customerPayments() {
         return new CustomerPaymentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments"), getClient(), null);
     }
 
-    public ICustomerPaymentRequestBuilder customerPayments(final String id) {
+    /**
+     * Gets a request builder for the CustomerPayment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomerPaymentRequestBuilder customerPayments(@Nonnull final String id) {
         return new CustomerPaymentRequestBuilder(getRequestUrlWithAdditionalSegment("customerPayments") + "/" + id, getClient(), null);
     }
-    public ICustomerCollectionRequestBuilder customers() {
+    /**
+     *  Gets a request builder for the Customer collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomerCollectionRequestBuilder customers() {
         return new CustomerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customers"), getClient(), null);
     }
 
-    public ICustomerRequestBuilder customers(final String id) {
+    /**
+     * Gets a request builder for the Customer item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomerRequestBuilder customers(@Nonnull final String id) {
         return new CustomerRequestBuilder(getRequestUrlWithAdditionalSegment("customers") + "/" + id, getClient(), null);
     }
-    public IDimensionCollectionRequestBuilder dimensions() {
+    /**
+     *  Gets a request builder for the Dimension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DimensionCollectionRequestBuilder dimensions() {
         return new DimensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensions"), getClient(), null);
     }
 
-    public IDimensionRequestBuilder dimensions(final String id) {
+    /**
+     * Gets a request builder for the Dimension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DimensionRequestBuilder dimensions(@Nonnull final String id) {
         return new DimensionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensions") + "/" + id, getClient(), null);
     }
-    public IDimensionValueCollectionRequestBuilder dimensionValues() {
+    /**
+     *  Gets a request builder for the DimensionValue collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DimensionValueCollectionRequestBuilder dimensionValues() {
         return new DimensionValueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues"), getClient(), null);
     }
 
-    public IDimensionValueRequestBuilder dimensionValues(final String id) {
+    /**
+     * Gets a request builder for the DimensionValue item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DimensionValueRequestBuilder dimensionValues(@Nonnull final String id) {
         return new DimensionValueRequestBuilder(getRequestUrlWithAdditionalSegment("dimensionValues") + "/" + id, getClient(), null);
     }
-    public IEmployeeCollectionRequestBuilder employees() {
+    /**
+     *  Gets a request builder for the Employee collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public EmployeeCollectionRequestBuilder employees() {
         return new EmployeeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("employees"), getClient(), null);
     }
 
-    public IEmployeeRequestBuilder employees(final String id) {
+    /**
+     * Gets a request builder for the Employee item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public EmployeeRequestBuilder employees(@Nonnull final String id) {
         return new EmployeeRequestBuilder(getRequestUrlWithAdditionalSegment("employees") + "/" + id, getClient(), null);
     }
-    public IGeneralLedgerEntryCollectionRequestBuilder generalLedgerEntries() {
+    /**
+     *  Gets a request builder for the GeneralLedgerEntry collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GeneralLedgerEntryCollectionRequestBuilder generalLedgerEntries() {
         return new GeneralLedgerEntryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("generalLedgerEntries"), getClient(), null);
     }
 
-    public IGeneralLedgerEntryRequestBuilder generalLedgerEntries(final String id) {
+    /**
+     * Gets a request builder for the GeneralLedgerEntry item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GeneralLedgerEntryRequestBuilder generalLedgerEntries(@Nonnull final String id) {
         return new GeneralLedgerEntryRequestBuilder(getRequestUrlWithAdditionalSegment("generalLedgerEntries") + "/" + id, getClient(), null);
     }
-    public IItemCategoryCollectionRequestBuilder itemCategories() {
+    /**
+     *  Gets a request builder for the ItemCategory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ItemCategoryCollectionRequestBuilder itemCategories() {
         return new ItemCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategories"), getClient(), null);
     }
 
-    public IItemCategoryRequestBuilder itemCategories(final String id) {
+    /**
+     * Gets a request builder for the ItemCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ItemCategoryRequestBuilder itemCategories(@Nonnull final String id) {
         return new ItemCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("itemCategories") + "/" + id, getClient(), null);
     }
-    public IItemCollectionRequestBuilder items() {
+    /**
+     *  Gets a request builder for the Item collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ItemCollectionRequestBuilder items() {
         return new ItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
 
-    public IItemRequestBuilder items(final String id) {
+    /**
+     * Gets a request builder for the Item item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ItemRequestBuilder items(@Nonnull final String id) {
         return new ItemRequestBuilder(getRequestUrlWithAdditionalSegment("items") + "/" + id, getClient(), null);
     }
-    public IJournalLineCollectionRequestBuilder journalLines() {
+    /**
+     *  Gets a request builder for the JournalLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public JournalLineCollectionRequestBuilder journalLines() {
         return new JournalLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines"), getClient(), null);
     }
 
-    public IJournalLineRequestBuilder journalLines(final String id) {
+    /**
+     * Gets a request builder for the JournalLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public JournalLineRequestBuilder journalLines(@Nonnull final String id) {
         return new JournalLineRequestBuilder(getRequestUrlWithAdditionalSegment("journalLines") + "/" + id, getClient(), null);
     }
-    public IJournalCollectionRequestBuilder journals() {
+    /**
+     *  Gets a request builder for the Journal collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public JournalCollectionRequestBuilder journals() {
         return new JournalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("journals"), getClient(), null);
     }
 
-    public IJournalRequestBuilder journals(final String id) {
+    /**
+     * Gets a request builder for the Journal item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public JournalRequestBuilder journals(@Nonnull final String id) {
         return new JournalRequestBuilder(getRequestUrlWithAdditionalSegment("journals") + "/" + id, getClient(), null);
     }
-    public IPaymentMethodCollectionRequestBuilder paymentMethods() {
+    /**
+     *  Gets a request builder for the PaymentMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PaymentMethodCollectionRequestBuilder paymentMethods() {
         return new PaymentMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethods"), getClient(), null);
     }
 
-    public IPaymentMethodRequestBuilder paymentMethods(final String id) {
+    /**
+     * Gets a request builder for the PaymentMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PaymentMethodRequestBuilder paymentMethods(@Nonnull final String id) {
         return new PaymentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("paymentMethods") + "/" + id, getClient(), null);
     }
-    public IPaymentTermCollectionRequestBuilder paymentTerms() {
+    /**
+     *  Gets a request builder for the PaymentTerm collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PaymentTermCollectionRequestBuilder paymentTerms() {
         return new PaymentTermCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerms"), getClient(), null);
     }
 
-    public IPaymentTermRequestBuilder paymentTerms(final String id) {
+    /**
+     * Gets a request builder for the PaymentTerm item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PaymentTermRequestBuilder paymentTerms(@Nonnull final String id) {
         return new PaymentTermRequestBuilder(getRequestUrlWithAdditionalSegment("paymentTerms") + "/" + id, getClient(), null);
     }
-    public IPictureCollectionRequestBuilder picture() {
+    /**
+     *  Gets a request builder for the Picture collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PictureCollectionRequestBuilder picture() {
         return new PictureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("picture"), getClient(), null);
     }
 
-    public IPictureRequestBuilder picture(final String id) {
+    /**
+     * Gets a request builder for the Picture item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PictureRequestBuilder picture(@Nonnull final String id) {
         return new PictureRequestBuilder(getRequestUrlWithAdditionalSegment("picture") + "/" + id, getClient(), null);
     }
-    public IPurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
+    /**
+     *  Gets a request builder for the PurchaseInvoiceLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PurchaseInvoiceLineCollectionRequestBuilder purchaseInvoiceLines() {
         return new PurchaseInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines"), getClient(), null);
     }
 
-    public IPurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(final String id) {
+    /**
+     * Gets a request builder for the PurchaseInvoiceLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PurchaseInvoiceLineRequestBuilder purchaseInvoiceLines(@Nonnull final String id) {
         return new PurchaseInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoiceLines") + "/" + id, getClient(), null);
     }
-    public IPurchaseInvoiceCollectionRequestBuilder purchaseInvoices() {
+    /**
+     *  Gets a request builder for the PurchaseInvoice collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PurchaseInvoiceCollectionRequestBuilder purchaseInvoices() {
         return new PurchaseInvoiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoices"), getClient(), null);
     }
 
-    public IPurchaseInvoiceRequestBuilder purchaseInvoices(final String id) {
+    /**
+     * Gets a request builder for the PurchaseInvoice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PurchaseInvoiceRequestBuilder purchaseInvoices(@Nonnull final String id) {
         return new PurchaseInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("purchaseInvoices") + "/" + id, getClient(), null);
     }
-    public ISalesCreditMemoLineCollectionRequestBuilder salesCreditMemoLines() {
+    /**
+     *  Gets a request builder for the SalesCreditMemoLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesCreditMemoLineCollectionRequestBuilder salesCreditMemoLines() {
         return new SalesCreditMemoLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines"), getClient(), null);
     }
 
-    public ISalesCreditMemoLineRequestBuilder salesCreditMemoLines(final String id) {
+    /**
+     * Gets a request builder for the SalesCreditMemoLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesCreditMemoLineRequestBuilder salesCreditMemoLines(@Nonnull final String id) {
         return new SalesCreditMemoLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemoLines") + "/" + id, getClient(), null);
     }
-    public ISalesCreditMemoCollectionRequestBuilder salesCreditMemos() {
+    /**
+     *  Gets a request builder for the SalesCreditMemo collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesCreditMemoCollectionRequestBuilder salesCreditMemos() {
         return new SalesCreditMemoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemos"), getClient(), null);
     }
 
-    public ISalesCreditMemoRequestBuilder salesCreditMemos(final String id) {
+    /**
+     * Gets a request builder for the SalesCreditMemo item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesCreditMemoRequestBuilder salesCreditMemos(@Nonnull final String id) {
         return new SalesCreditMemoRequestBuilder(getRequestUrlWithAdditionalSegment("salesCreditMemos") + "/" + id, getClient(), null);
     }
-    public ISalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
+    /**
+     *  Gets a request builder for the SalesInvoiceLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesInvoiceLineCollectionRequestBuilder salesInvoiceLines() {
         return new SalesInvoiceLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines"), getClient(), null);
     }
 
-    public ISalesInvoiceLineRequestBuilder salesInvoiceLines(final String id) {
+    /**
+     * Gets a request builder for the SalesInvoiceLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesInvoiceLineRequestBuilder salesInvoiceLines(@Nonnull final String id) {
         return new SalesInvoiceLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoiceLines") + "/" + id, getClient(), null);
     }
-    public ISalesInvoiceCollectionRequestBuilder salesInvoices() {
+    /**
+     *  Gets a request builder for the SalesInvoice collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesInvoiceCollectionRequestBuilder salesInvoices() {
         return new SalesInvoiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoices"), getClient(), null);
     }
 
-    public ISalesInvoiceRequestBuilder salesInvoices(final String id) {
+    /**
+     * Gets a request builder for the SalesInvoice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesInvoiceRequestBuilder salesInvoices(@Nonnull final String id) {
         return new SalesInvoiceRequestBuilder(getRequestUrlWithAdditionalSegment("salesInvoices") + "/" + id, getClient(), null);
     }
-    public ISalesOrderLineCollectionRequestBuilder salesOrderLines() {
+    /**
+     *  Gets a request builder for the SalesOrderLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesOrderLineCollectionRequestBuilder salesOrderLines() {
         return new SalesOrderLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines"), getClient(), null);
     }
 
-    public ISalesOrderLineRequestBuilder salesOrderLines(final String id) {
+    /**
+     * Gets a request builder for the SalesOrderLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesOrderLineRequestBuilder salesOrderLines(@Nonnull final String id) {
         return new SalesOrderLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrderLines") + "/" + id, getClient(), null);
     }
-    public ISalesOrderCollectionRequestBuilder salesOrders() {
+    /**
+     *  Gets a request builder for the SalesOrder collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesOrderCollectionRequestBuilder salesOrders() {
         return new SalesOrderCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrders"), getClient(), null);
     }
 
-    public ISalesOrderRequestBuilder salesOrders(final String id) {
+    /**
+     * Gets a request builder for the SalesOrder item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesOrderRequestBuilder salesOrders(@Nonnull final String id) {
         return new SalesOrderRequestBuilder(getRequestUrlWithAdditionalSegment("salesOrders") + "/" + id, getClient(), null);
     }
-    public ISalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
+    /**
+     *  Gets a request builder for the SalesQuoteLine collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesQuoteLineCollectionRequestBuilder salesQuoteLines() {
         return new SalesQuoteLineCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines"), getClient(), null);
     }
 
-    public ISalesQuoteLineRequestBuilder salesQuoteLines(final String id) {
+    /**
+     * Gets a request builder for the SalesQuoteLine item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesQuoteLineRequestBuilder salesQuoteLines(@Nonnull final String id) {
         return new SalesQuoteLineRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuoteLines") + "/" + id, getClient(), null);
     }
-    public ISalesQuoteCollectionRequestBuilder salesQuotes() {
+    /**
+     *  Gets a request builder for the SalesQuote collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SalesQuoteCollectionRequestBuilder salesQuotes() {
         return new SalesQuoteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuotes"), getClient(), null);
     }
 
-    public ISalesQuoteRequestBuilder salesQuotes(final String id) {
+    /**
+     * Gets a request builder for the SalesQuote item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SalesQuoteRequestBuilder salesQuotes(@Nonnull final String id) {
         return new SalesQuoteRequestBuilder(getRequestUrlWithAdditionalSegment("salesQuotes") + "/" + id, getClient(), null);
     }
-    public IShipmentMethodCollectionRequestBuilder shipmentMethods() {
+    /**
+     *  Gets a request builder for the ShipmentMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ShipmentMethodCollectionRequestBuilder shipmentMethods() {
         return new ShipmentMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethods"), getClient(), null);
     }
 
-    public IShipmentMethodRequestBuilder shipmentMethods(final String id) {
+    /**
+     * Gets a request builder for the ShipmentMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ShipmentMethodRequestBuilder shipmentMethods(@Nonnull final String id) {
         return new ShipmentMethodRequestBuilder(getRequestUrlWithAdditionalSegment("shipmentMethods") + "/" + id, getClient(), null);
     }
-    public ITaxAreaCollectionRequestBuilder taxAreas() {
+    /**
+     *  Gets a request builder for the TaxArea collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TaxAreaCollectionRequestBuilder taxAreas() {
         return new TaxAreaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taxAreas"), getClient(), null);
     }
 
-    public ITaxAreaRequestBuilder taxAreas(final String id) {
+    /**
+     * Gets a request builder for the TaxArea item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TaxAreaRequestBuilder taxAreas(@Nonnull final String id) {
         return new TaxAreaRequestBuilder(getRequestUrlWithAdditionalSegment("taxAreas") + "/" + id, getClient(), null);
     }
-    public ITaxGroupCollectionRequestBuilder taxGroups() {
+    /**
+     *  Gets a request builder for the TaxGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TaxGroupCollectionRequestBuilder taxGroups() {
         return new TaxGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("taxGroups"), getClient(), null);
     }
 
-    public ITaxGroupRequestBuilder taxGroups(final String id) {
+    /**
+     * Gets a request builder for the TaxGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TaxGroupRequestBuilder taxGroups(@Nonnull final String id) {
         return new TaxGroupRequestBuilder(getRequestUrlWithAdditionalSegment("taxGroups") + "/" + id, getClient(), null);
     }
-    public IUnitOfMeasureCollectionRequestBuilder unitsOfMeasure() {
+    /**
+     *  Gets a request builder for the UnitOfMeasure collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UnitOfMeasureCollectionRequestBuilder unitsOfMeasure() {
         return new UnitOfMeasureCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("unitsOfMeasure"), getClient(), null);
     }
 
-    public IUnitOfMeasureRequestBuilder unitsOfMeasure(final String id) {
+    /**
+     * Gets a request builder for the UnitOfMeasure item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UnitOfMeasureRequestBuilder unitsOfMeasure(@Nonnull final String id) {
         return new UnitOfMeasureRequestBuilder(getRequestUrlWithAdditionalSegment("unitsOfMeasure") + "/" + id, getClient(), null);
     }
-    public IVendorCollectionRequestBuilder vendors() {
+    /**
+     *  Gets a request builder for the Vendor collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public VendorCollectionRequestBuilder vendors() {
         return new VendorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("vendors"), getClient(), null);
     }
 
-    public IVendorRequestBuilder vendors(final String id) {
+    /**
+     * Gets a request builder for the Vendor item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public VendorRequestBuilder vendors(@Nonnull final String id) {
         return new VendorRequestBuilder(getRequestUrlWithAdditionalSegment("vendors") + "/" + id, getClient(), null);
     }
 }

@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoleManagement;
-import com.microsoft.graph.requests.extensions.IRbacApplicationRequestBuilder;
 import com.microsoft.graph.requests.extensions.RbacApplicationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRbacApplicationMultipleRequestBuilder;
 import com.microsoft.graph.requests.extensions.RbacApplicationMultipleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Role Management Request.
  */
-public class RoleManagementRequest extends BaseRequest implements IRoleManagementRequest {
+public class RoleManagementRequest extends BaseRequest<RoleManagement> {
 	
     /**
      * The request for the RoleManagement
@@ -33,7 +33,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RoleManagementRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RoleManagementRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RoleManagement.class);
     }
 
@@ -42,7 +42,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RoleManagement> callback) {
+    public void get(@Nonnull final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @return the RoleManagement from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RoleManagement get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RoleManagement> callback) {
+    public void delete(@Nonnull final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param sourceRoleManagement the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RoleManagement sourceRoleManagement, final ICallback<? super RoleManagement> callback) {
+    public void patch(@Nonnull final RoleManagement sourceRoleManagement, @Nonnull final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.PATCH, callback, sourceRoleManagement);
     }
 
@@ -91,7 +92,8 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @return the updated RoleManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleManagement patch(final RoleManagement sourceRoleManagement) throws ClientException {
+    @Nullable
+    public RoleManagement patch(@Nonnull final RoleManagement sourceRoleManagement) throws ClientException {
         return send(HttpMethod.PATCH, sourceRoleManagement);
     }
 
@@ -101,7 +103,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param newRoleManagement the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RoleManagement newRoleManagement, final ICallback<? super RoleManagement> callback) {
+    public void post(@Nonnull final RoleManagement newRoleManagement, @Nonnull final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.POST, callback, newRoleManagement);
     }
 
@@ -112,7 +114,8 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @return the created RoleManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleManagement post(final RoleManagement newRoleManagement) throws ClientException {
+    @Nullable
+    public RoleManagement post(@Nonnull final RoleManagement newRoleManagement) throws ClientException {
         return send(HttpMethod.POST, newRoleManagement);
     }
 
@@ -122,7 +125,7 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param newRoleManagement the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RoleManagement newRoleManagement, final ICallback<? super RoleManagement> callback) {
+    public void put(@Nonnull final RoleManagement newRoleManagement, @Nonnull final ICallback<? super RoleManagement> callback) {
         send(HttpMethod.PUT, callback, newRoleManagement);
     }
 
@@ -133,7 +136,8 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @return the created RoleManagement
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RoleManagement put(final RoleManagement newRoleManagement) throws ClientException {
+    @Nullable
+    public RoleManagement put(@Nonnull final RoleManagement newRoleManagement) throws ClientException {
         return send(HttpMethod.PUT, newRoleManagement);
     }
 
@@ -143,9 +147,10 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param value the select clause
      * @return the updated request
      */
-     public IRoleManagementRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RoleManagementRequest)this;
+     @Nonnull
+     public RoleManagementRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class RoleManagementRequest extends BaseRequest implements IRoleManagemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IRoleManagementRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RoleManagementRequest)this;
+     @Nonnull
+     public RoleManagementRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

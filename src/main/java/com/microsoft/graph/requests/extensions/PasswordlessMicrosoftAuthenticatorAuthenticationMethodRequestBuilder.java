@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Passwordless Microsoft Authenticator Authentication Method Request Builder.
  */
-public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder extends BaseRequestBuilder implements IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder {
+public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder extends BaseRequestBuilder<PasswordlessMicrosoftAuthenticatorAuthenticationMethod> {
 
     /**
      * The request builder for the PasswordlessMicrosoftAuthenticatorAuthenticationMethod
@@ -30,7 +31,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilde
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilde
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest instance
+     * @return the PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest instance
      */
-    public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilde
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest instance
+     * @return the PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest instance
      */
-    public IPasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodRequestBuilde
     /**
      * Gets the request builder for Device
      *
-     * @return the IDeviceRequestBuilder instance
+     * @return the DeviceRequestBuilder instance
      */
-    public IDeviceRequestBuilder device() {
+    @Nonnull
+    public DeviceRequestBuilder device() {
         return new DeviceRequestBuilder(getRequestUrlWithAdditionalSegment("device"), getClient(), null);
     }
 }

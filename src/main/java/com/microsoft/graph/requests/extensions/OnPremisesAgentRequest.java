@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnPremisesAgent;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnPremisesAgentGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnPremisesAgentGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the On Premises Agent Request.
  */
-public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAgentRequest {
+public class OnPremisesAgentRequest extends BaseRequest<OnPremisesAgent> {
 	
     /**
      * The request for the OnPremisesAgent
@@ -33,7 +33,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnPremisesAgentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnPremisesAgentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnPremisesAgent.class);
     }
 
@@ -42,7 +42,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnPremisesAgent> callback) {
+    public void get(@Nonnull final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @return the OnPremisesAgent from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnPremisesAgent get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnPremisesAgent> callback) {
+    public void delete(@Nonnull final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param sourceOnPremisesAgent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnPremisesAgent sourceOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback) {
+    public void patch(@Nonnull final OnPremisesAgent sourceOnPremisesAgent, @Nonnull final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.PATCH, callback, sourceOnPremisesAgent);
     }
 
@@ -91,7 +92,8 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @return the updated OnPremisesAgent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesAgent patch(final OnPremisesAgent sourceOnPremisesAgent) throws ClientException {
+    @Nullable
+    public OnPremisesAgent patch(@Nonnull final OnPremisesAgent sourceOnPremisesAgent) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnPremisesAgent);
     }
 
@@ -101,7 +103,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param newOnPremisesAgent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnPremisesAgent newOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback) {
+    public void post(@Nonnull final OnPremisesAgent newOnPremisesAgent, @Nonnull final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.POST, callback, newOnPremisesAgent);
     }
 
@@ -112,7 +114,8 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @return the created OnPremisesAgent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesAgent post(final OnPremisesAgent newOnPremisesAgent) throws ClientException {
+    @Nullable
+    public OnPremisesAgent post(@Nonnull final OnPremisesAgent newOnPremisesAgent) throws ClientException {
         return send(HttpMethod.POST, newOnPremisesAgent);
     }
 
@@ -122,7 +125,7 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param newOnPremisesAgent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnPremisesAgent newOnPremisesAgent, final ICallback<? super OnPremisesAgent> callback) {
+    public void put(@Nonnull final OnPremisesAgent newOnPremisesAgent, @Nonnull final ICallback<? super OnPremisesAgent> callback) {
         send(HttpMethod.PUT, callback, newOnPremisesAgent);
     }
 
@@ -133,7 +136,8 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @return the created OnPremisesAgent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnPremisesAgent put(final OnPremisesAgent newOnPremisesAgent) throws ClientException {
+    @Nullable
+    public OnPremisesAgent put(@Nonnull final OnPremisesAgent newOnPremisesAgent) throws ClientException {
         return send(HttpMethod.PUT, newOnPremisesAgent);
     }
 
@@ -143,9 +147,10 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param value the select clause
      * @return the updated request
      */
-     public IOnPremisesAgentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnPremisesAgentRequest)this;
+     @Nonnull
+     public OnPremisesAgentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class OnPremisesAgentRequest extends BaseRequest implements IOnPremisesAg
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnPremisesAgentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnPremisesAgentRequest)this;
+     @Nonnull
+     public OnPremisesAgentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

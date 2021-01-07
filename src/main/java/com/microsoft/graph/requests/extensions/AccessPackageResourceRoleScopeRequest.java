@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRoleScope;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Access Package Resource Role Scope Request.
  */
-public class AccessPackageResourceRoleScopeRequest extends BaseRequest implements IAccessPackageResourceRoleScopeRequest {
+public class AccessPackageResourceRoleScopeRequest extends BaseRequest<AccessPackageResourceRoleScope> {
 	
     /**
      * The request for the AccessPackageResourceRoleScope
@@ -33,7 +33,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessPackageResourceRoleScopeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessPackageResourceRoleScopeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AccessPackageResourceRoleScope.class);
     }
 
@@ -42,7 +42,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AccessPackageResourceRoleScope> callback) {
+    public void get(@Nonnull final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @return the AccessPackageResourceRoleScope from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AccessPackageResourceRoleScope get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AccessPackageResourceRoleScope> callback) {
+    public void delete(@Nonnull final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param sourceAccessPackageResourceRoleScope the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback) {
+    public void patch(@Nonnull final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope, @Nonnull final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.PATCH, callback, sourceAccessPackageResourceRoleScope);
     }
 
@@ -91,7 +92,8 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @return the updated AccessPackageResourceRoleScope
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRoleScope patch(final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRoleScope patch(@Nonnull final AccessPackageResourceRoleScope sourceAccessPackageResourceRoleScope) throws ClientException {
         return send(HttpMethod.PATCH, sourceAccessPackageResourceRoleScope);
     }
 
@@ -101,7 +103,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param newAccessPackageResourceRoleScope the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback) {
+    public void post(@Nonnull final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, @Nonnull final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.POST, callback, newAccessPackageResourceRoleScope);
     }
 
@@ -112,7 +114,8 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @return the created AccessPackageResourceRoleScope
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRoleScope post(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRoleScope post(@Nonnull final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException {
         return send(HttpMethod.POST, newAccessPackageResourceRoleScope);
     }
 
@@ -122,7 +125,7 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param newAccessPackageResourceRoleScope the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, final ICallback<? super AccessPackageResourceRoleScope> callback) {
+    public void put(@Nonnull final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope, @Nonnull final ICallback<? super AccessPackageResourceRoleScope> callback) {
         send(HttpMethod.PUT, callback, newAccessPackageResourceRoleScope);
     }
 
@@ -133,7 +136,8 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @return the created AccessPackageResourceRoleScope
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AccessPackageResourceRoleScope put(final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException {
+    @Nullable
+    public AccessPackageResourceRoleScope put(@Nonnull final AccessPackageResourceRoleScope newAccessPackageResourceRoleScope) throws ClientException {
         return send(HttpMethod.PUT, newAccessPackageResourceRoleScope);
     }
 
@@ -143,9 +147,10 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IAccessPackageResourceRoleScopeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AccessPackageResourceRoleScopeRequest)this;
+     @Nonnull
+     public AccessPackageResourceRoleScopeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AccessPackageResourceRoleScopeRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IAccessPackageResourceRoleScopeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AccessPackageResourceRoleScopeRequest)this;
+     @Nonnull
+     public AccessPackageResourceRoleScopeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

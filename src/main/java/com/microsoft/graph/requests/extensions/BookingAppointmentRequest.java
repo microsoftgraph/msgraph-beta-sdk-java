@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.BookingAppointment;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Booking Appointment Request.
  */
-public class BookingAppointmentRequest extends BaseRequest implements IBookingAppointmentRequest {
+public class BookingAppointmentRequest extends BaseRequest<BookingAppointment> {
 	
     /**
      * The request for the BookingAppointment
@@ -29,7 +31,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public BookingAppointmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public BookingAppointmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, BookingAppointment.class);
     }
 
@@ -38,7 +40,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super BookingAppointment> callback) {
+    public void get(@Nonnull final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @return the BookingAppointment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public BookingAppointment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super BookingAppointment> callback) {
+    public void delete(@Nonnull final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param sourceBookingAppointment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final BookingAppointment sourceBookingAppointment, final ICallback<? super BookingAppointment> callback) {
+    public void patch(@Nonnull final BookingAppointment sourceBookingAppointment, @Nonnull final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.PATCH, callback, sourceBookingAppointment);
     }
 
@@ -87,7 +90,8 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @return the updated BookingAppointment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingAppointment patch(final BookingAppointment sourceBookingAppointment) throws ClientException {
+    @Nullable
+    public BookingAppointment patch(@Nonnull final BookingAppointment sourceBookingAppointment) throws ClientException {
         return send(HttpMethod.PATCH, sourceBookingAppointment);
     }
 
@@ -97,7 +101,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param newBookingAppointment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final BookingAppointment newBookingAppointment, final ICallback<? super BookingAppointment> callback) {
+    public void post(@Nonnull final BookingAppointment newBookingAppointment, @Nonnull final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.POST, callback, newBookingAppointment);
     }
 
@@ -108,7 +112,8 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @return the created BookingAppointment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingAppointment post(final BookingAppointment newBookingAppointment) throws ClientException {
+    @Nullable
+    public BookingAppointment post(@Nonnull final BookingAppointment newBookingAppointment) throws ClientException {
         return send(HttpMethod.POST, newBookingAppointment);
     }
 
@@ -118,7 +123,7 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param newBookingAppointment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final BookingAppointment newBookingAppointment, final ICallback<? super BookingAppointment> callback) {
+    public void put(@Nonnull final BookingAppointment newBookingAppointment, @Nonnull final ICallback<? super BookingAppointment> callback) {
         send(HttpMethod.PUT, callback, newBookingAppointment);
     }
 
@@ -129,7 +134,8 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @return the created BookingAppointment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public BookingAppointment put(final BookingAppointment newBookingAppointment) throws ClientException {
+    @Nullable
+    public BookingAppointment put(@Nonnull final BookingAppointment newBookingAppointment) throws ClientException {
         return send(HttpMethod.PUT, newBookingAppointment);
     }
 
@@ -139,9 +145,10 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param value the select clause
      * @return the updated request
      */
-     public IBookingAppointmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (BookingAppointmentRequest)this;
+     @Nonnull
+     public BookingAppointmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class BookingAppointmentRequest extends BaseRequest implements IBookingAp
      * @param value the expand clause
      * @return the updated request
      */
-     public IBookingAppointmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (BookingAppointmentRequest)this;
+     @Nonnull
+     public BookingAppointmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

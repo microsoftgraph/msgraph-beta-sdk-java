@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharePointSiteUsageDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Share Point Site Usage Detail Request.
  */
-public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISharePointSiteUsageDetailRequest {
+public class SharePointSiteUsageDetailRequest extends BaseRequest<SharePointSiteUsageDetail> {
 	
     /**
      * The request for the SharePointSiteUsageDetail
@@ -29,7 +31,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharePointSiteUsageDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharePointSiteUsageDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharePointSiteUsageDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SharePointSiteUsageDetail> callback) {
+    public void get(@Nonnull final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @return the SharePointSiteUsageDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SharePointSiteUsageDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SharePointSiteUsageDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param sourceSharePointSiteUsageDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback) {
+    public void patch(@Nonnull final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail, @Nonnull final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceSharePointSiteUsageDetail);
     }
 
@@ -87,7 +90,8 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @return the updated SharePointSiteUsageDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsageDetail patch(final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail) throws ClientException {
+    @Nullable
+    public SharePointSiteUsageDetail patch(@Nonnull final SharePointSiteUsageDetail sourceSharePointSiteUsageDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceSharePointSiteUsageDetail);
     }
 
@@ -97,7 +101,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param newSharePointSiteUsageDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback) {
+    public void post(@Nonnull final SharePointSiteUsageDetail newSharePointSiteUsageDetail, @Nonnull final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.POST, callback, newSharePointSiteUsageDetail);
     }
 
@@ -108,7 +112,8 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @return the created SharePointSiteUsageDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsageDetail post(final SharePointSiteUsageDetail newSharePointSiteUsageDetail) throws ClientException {
+    @Nullable
+    public SharePointSiteUsageDetail post(@Nonnull final SharePointSiteUsageDetail newSharePointSiteUsageDetail) throws ClientException {
         return send(HttpMethod.POST, newSharePointSiteUsageDetail);
     }
 
@@ -118,7 +123,7 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param newSharePointSiteUsageDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail, final ICallback<? super SharePointSiteUsageDetail> callback) {
+    public void put(@Nonnull final SharePointSiteUsageDetail newSharePointSiteUsageDetail, @Nonnull final ICallback<? super SharePointSiteUsageDetail> callback) {
         send(HttpMethod.PUT, callback, newSharePointSiteUsageDetail);
     }
 
@@ -129,7 +134,8 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @return the created SharePointSiteUsageDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharePointSiteUsageDetail put(final SharePointSiteUsageDetail newSharePointSiteUsageDetail) throws ClientException {
+    @Nullable
+    public SharePointSiteUsageDetail put(@Nonnull final SharePointSiteUsageDetail newSharePointSiteUsageDetail) throws ClientException {
         return send(HttpMethod.PUT, newSharePointSiteUsageDetail);
     }
 
@@ -139,9 +145,10 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param value the select clause
      * @return the updated request
      */
-     public ISharePointSiteUsageDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharePointSiteUsageDetailRequest)this;
+     @Nonnull
+     public SharePointSiteUsageDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SharePointSiteUsageDetailRequest extends BaseRequest implements ISh
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharePointSiteUsageDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharePointSiteUsageDetailRequest)this;
+     @Nonnull
+     public SharePointSiteUsageDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

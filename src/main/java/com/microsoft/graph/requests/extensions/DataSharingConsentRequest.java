@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataSharingConsent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Data Sharing Consent Request.
  */
-public class DataSharingConsentRequest extends BaseRequest implements IDataSharingConsentRequest {
+public class DataSharingConsentRequest extends BaseRequest<DataSharingConsent> {
 	
     /**
      * The request for the DataSharingConsent
@@ -29,7 +31,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataSharingConsentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DataSharingConsentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DataSharingConsent.class);
     }
 
@@ -38,7 +40,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DataSharingConsent> callback) {
+    public void get(@Nonnull final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @return the DataSharingConsent from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DataSharingConsent get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DataSharingConsent> callback) {
+    public void delete(@Nonnull final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param sourceDataSharingConsent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DataSharingConsent sourceDataSharingConsent, final ICallback<? super DataSharingConsent> callback) {
+    public void patch(@Nonnull final DataSharingConsent sourceDataSharingConsent, @Nonnull final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.PATCH, callback, sourceDataSharingConsent);
     }
 
@@ -87,7 +90,8 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @return the updated DataSharingConsent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataSharingConsent patch(final DataSharingConsent sourceDataSharingConsent) throws ClientException {
+    @Nullable
+    public DataSharingConsent patch(@Nonnull final DataSharingConsent sourceDataSharingConsent) throws ClientException {
         return send(HttpMethod.PATCH, sourceDataSharingConsent);
     }
 
@@ -97,7 +101,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param newDataSharingConsent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback) {
+    public void post(@Nonnull final DataSharingConsent newDataSharingConsent, @Nonnull final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.POST, callback, newDataSharingConsent);
     }
 
@@ -108,7 +112,8 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @return the created DataSharingConsent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataSharingConsent post(final DataSharingConsent newDataSharingConsent) throws ClientException {
+    @Nullable
+    public DataSharingConsent post(@Nonnull final DataSharingConsent newDataSharingConsent) throws ClientException {
         return send(HttpMethod.POST, newDataSharingConsent);
     }
 
@@ -118,7 +123,7 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param newDataSharingConsent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DataSharingConsent newDataSharingConsent, final ICallback<? super DataSharingConsent> callback) {
+    public void put(@Nonnull final DataSharingConsent newDataSharingConsent, @Nonnull final ICallback<? super DataSharingConsent> callback) {
         send(HttpMethod.PUT, callback, newDataSharingConsent);
     }
 
@@ -129,7 +134,8 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @return the created DataSharingConsent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DataSharingConsent put(final DataSharingConsent newDataSharingConsent) throws ClientException {
+    @Nullable
+    public DataSharingConsent put(@Nonnull final DataSharingConsent newDataSharingConsent) throws ClientException {
         return send(HttpMethod.PUT, newDataSharingConsent);
     }
 
@@ -139,9 +145,10 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param value the select clause
      * @return the updated request
      */
-     public IDataSharingConsentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DataSharingConsentRequest)this;
+     @Nonnull
+     public DataSharingConsentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DataSharingConsentRequest extends BaseRequest implements IDataShari
      * @param value the expand clause
      * @return the updated request
      */
-     public IDataSharingConsentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DataSharingConsentRequest)this;
+     @Nonnull
+     public DataSharingConsentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SharedInsight;
-import com.microsoft.graph.requests.extensions.IEntityRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Shared Insight Request.
  */
-public class SharedInsightRequest extends BaseRequest implements ISharedInsightRequest {
+public class SharedInsightRequest extends BaseRequest<SharedInsight> {
 	
     /**
      * The request for the SharedInsight
@@ -31,7 +32,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SharedInsightRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SharedInsightRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SharedInsight.class);
     }
 
@@ -40,7 +41,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SharedInsight> callback) {
+    public void get(@Nonnull final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @return the SharedInsight from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SharedInsight get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SharedInsight> callback) {
+    public void delete(@Nonnull final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param sourceSharedInsight the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SharedInsight sourceSharedInsight, final ICallback<? super SharedInsight> callback) {
+    public void patch(@Nonnull final SharedInsight sourceSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.PATCH, callback, sourceSharedInsight);
     }
 
@@ -89,7 +91,8 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @return the updated SharedInsight
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedInsight patch(final SharedInsight sourceSharedInsight) throws ClientException {
+    @Nullable
+    public SharedInsight patch(@Nonnull final SharedInsight sourceSharedInsight) throws ClientException {
         return send(HttpMethod.PATCH, sourceSharedInsight);
     }
 
@@ -99,7 +102,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param newSharedInsight the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
+    public void post(@Nonnull final SharedInsight newSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.POST, callback, newSharedInsight);
     }
 
@@ -110,7 +113,8 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @return the created SharedInsight
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedInsight post(final SharedInsight newSharedInsight) throws ClientException {
+    @Nullable
+    public SharedInsight post(@Nonnull final SharedInsight newSharedInsight) throws ClientException {
         return send(HttpMethod.POST, newSharedInsight);
     }
 
@@ -120,7 +124,7 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param newSharedInsight the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SharedInsight newSharedInsight, final ICallback<? super SharedInsight> callback) {
+    public void put(@Nonnull final SharedInsight newSharedInsight, @Nonnull final ICallback<? super SharedInsight> callback) {
         send(HttpMethod.PUT, callback, newSharedInsight);
     }
 
@@ -131,7 +135,8 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @return the created SharedInsight
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SharedInsight put(final SharedInsight newSharedInsight) throws ClientException {
+    @Nullable
+    public SharedInsight put(@Nonnull final SharedInsight newSharedInsight) throws ClientException {
         return send(HttpMethod.PUT, newSharedInsight);
     }
 
@@ -141,9 +146,10 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param value the select clause
      * @return the updated request
      */
-     public ISharedInsightRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SharedInsightRequest)this;
+     @Nonnull
+     public SharedInsightRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class SharedInsightRequest extends BaseRequest implements ISharedInsightR
      * @param value the expand clause
      * @return the updated request
      */
-     public ISharedInsightRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SharedInsightRequest)this;
+     @Nonnull
+     public SharedInsightRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

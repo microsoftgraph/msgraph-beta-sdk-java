@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrintTaskTrigger;
-import com.microsoft.graph.requests.extensions.IPrintTaskDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -21,7 +22,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Print Task Trigger Request Builder.
  */
-public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implements IPrintTaskTriggerRequestBuilder {
+public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder<PrintTaskTrigger> {
 
     /**
      * The request builder for the PrintTaskTrigger
@@ -30,7 +31,7 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrintTaskTriggerRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrintTaskTriggerRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -38,9 +39,10 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implement
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IPrintTaskTriggerRequest instance
+     * @return the PrintTaskTriggerRequest instance
      */
-    public IPrintTaskTriggerRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public PrintTaskTriggerRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -48,9 +50,10 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implement
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IPrintTaskTriggerRequest instance
+     * @return the PrintTaskTriggerRequest instance
      */
-    public IPrintTaskTriggerRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public PrintTaskTriggerRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.PrintTaskTriggerRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -59,9 +62,10 @@ public class PrintTaskTriggerRequestBuilder extends BaseRequestBuilder implement
     /**
      * Gets the request builder for PrintTaskDefinition
      *
-     * @return the IPrintTaskDefinitionWithReferenceRequestBuilder instance
+     * @return the PrintTaskDefinitionWithReferenceRequestBuilder instance
      */
-    public IPrintTaskDefinitionWithReferenceRequestBuilder definition() {
+    @Nonnull
+    public PrintTaskDefinitionWithReferenceRequestBuilder definition() {
         return new PrintTaskDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }

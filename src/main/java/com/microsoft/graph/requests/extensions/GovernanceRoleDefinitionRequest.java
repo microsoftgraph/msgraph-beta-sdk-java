@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GovernanceRoleDefinition;
-import com.microsoft.graph.requests.extensions.IGovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceResourceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGovernanceRoleSettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.GovernanceRoleSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Governance Role Definition Request.
  */
-public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGovernanceRoleDefinitionRequest {
+public class GovernanceRoleDefinitionRequest extends BaseRequest<GovernanceRoleDefinition> {
 	
     /**
      * The request for the GovernanceRoleDefinition
@@ -33,7 +33,7 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GovernanceRoleDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GovernanceRoleDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GovernanceRoleDefinition.class);
     }
 
@@ -42,7 +42,7 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GovernanceRoleDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super GovernanceRoleDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @return the GovernanceRoleDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GovernanceRoleDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GovernanceRoleDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super GovernanceRoleDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @param sourceGovernanceRoleDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GovernanceRoleDefinition sourceGovernanceRoleDefinition, final ICallback<? super GovernanceRoleDefinition> callback) {
+    public void patch(@Nonnull final GovernanceRoleDefinition sourceGovernanceRoleDefinition, @Nonnull final ICallback<? super GovernanceRoleDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceGovernanceRoleDefinition);
     }
 
@@ -91,7 +92,8 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @return the updated GovernanceRoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceRoleDefinition patch(final GovernanceRoleDefinition sourceGovernanceRoleDefinition) throws ClientException {
+    @Nullable
+    public GovernanceRoleDefinition patch(@Nonnull final GovernanceRoleDefinition sourceGovernanceRoleDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceGovernanceRoleDefinition);
     }
 
@@ -101,7 +103,7 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @param newGovernanceRoleDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<? super GovernanceRoleDefinition> callback) {
+    public void post(@Nonnull final GovernanceRoleDefinition newGovernanceRoleDefinition, @Nonnull final ICallback<? super GovernanceRoleDefinition> callback) {
         send(HttpMethod.POST, callback, newGovernanceRoleDefinition);
     }
 
@@ -112,7 +114,8 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @return the created GovernanceRoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceRoleDefinition post(final GovernanceRoleDefinition newGovernanceRoleDefinition) throws ClientException {
+    @Nullable
+    public GovernanceRoleDefinition post(@Nonnull final GovernanceRoleDefinition newGovernanceRoleDefinition) throws ClientException {
         return send(HttpMethod.POST, newGovernanceRoleDefinition);
     }
 
@@ -122,7 +125,7 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @param newGovernanceRoleDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GovernanceRoleDefinition newGovernanceRoleDefinition, final ICallback<? super GovernanceRoleDefinition> callback) {
+    public void put(@Nonnull final GovernanceRoleDefinition newGovernanceRoleDefinition, @Nonnull final ICallback<? super GovernanceRoleDefinition> callback) {
         send(HttpMethod.PUT, callback, newGovernanceRoleDefinition);
     }
 
@@ -133,7 +136,8 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @return the created GovernanceRoleDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GovernanceRoleDefinition put(final GovernanceRoleDefinition newGovernanceRoleDefinition) throws ClientException {
+    @Nullable
+    public GovernanceRoleDefinition put(@Nonnull final GovernanceRoleDefinition newGovernanceRoleDefinition) throws ClientException {
         return send(HttpMethod.PUT, newGovernanceRoleDefinition);
     }
 
@@ -143,9 +147,10 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @param value the select clause
      * @return the updated request
      */
-     public IGovernanceRoleDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GovernanceRoleDefinitionRequest)this;
+     @Nonnull
+     public GovernanceRoleDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class GovernanceRoleDefinitionRequest extends BaseRequest implements IGov
      * @param value the expand clause
      * @return the updated request
      */
-     public IGovernanceRoleDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GovernanceRoleDefinitionRequest)this;
+     @Nonnull
+     public GovernanceRoleDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

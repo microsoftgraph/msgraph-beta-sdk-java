@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Win32LobApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Win32Lob App Request.
  */
-public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppRequest {
+public class Win32LobAppRequest extends BaseRequest<Win32LobApp> {
 	
     /**
      * The request for the Win32LobApp
@@ -29,7 +31,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Win32LobAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Win32LobAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Win32LobApp.class);
     }
 
@@ -38,7 +40,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Win32LobApp> callback) {
+    public void get(@Nonnull final ICallback<? super Win32LobApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @return the Win32LobApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Win32LobApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Win32LobApp> callback) {
+    public void delete(@Nonnull final ICallback<? super Win32LobApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param sourceWin32LobApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Win32LobApp sourceWin32LobApp, final ICallback<? super Win32LobApp> callback) {
+    public void patch(@Nonnull final Win32LobApp sourceWin32LobApp, @Nonnull final ICallback<? super Win32LobApp> callback) {
         send(HttpMethod.PATCH, callback, sourceWin32LobApp);
     }
 
@@ -87,7 +90,8 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @return the updated Win32LobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Win32LobApp patch(final Win32LobApp sourceWin32LobApp) throws ClientException {
+    @Nullable
+    public Win32LobApp patch(@Nonnull final Win32LobApp sourceWin32LobApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceWin32LobApp);
     }
 
@@ -97,7 +101,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param newWin32LobApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Win32LobApp newWin32LobApp, final ICallback<? super Win32LobApp> callback) {
+    public void post(@Nonnull final Win32LobApp newWin32LobApp, @Nonnull final ICallback<? super Win32LobApp> callback) {
         send(HttpMethod.POST, callback, newWin32LobApp);
     }
 
@@ -108,7 +112,8 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @return the created Win32LobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Win32LobApp post(final Win32LobApp newWin32LobApp) throws ClientException {
+    @Nullable
+    public Win32LobApp post(@Nonnull final Win32LobApp newWin32LobApp) throws ClientException {
         return send(HttpMethod.POST, newWin32LobApp);
     }
 
@@ -118,7 +123,7 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param newWin32LobApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Win32LobApp newWin32LobApp, final ICallback<? super Win32LobApp> callback) {
+    public void put(@Nonnull final Win32LobApp newWin32LobApp, @Nonnull final ICallback<? super Win32LobApp> callback) {
         send(HttpMethod.PUT, callback, newWin32LobApp);
     }
 
@@ -129,7 +134,8 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @return the created Win32LobApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Win32LobApp put(final Win32LobApp newWin32LobApp) throws ClientException {
+    @Nullable
+    public Win32LobApp put(@Nonnull final Win32LobApp newWin32LobApp) throws ClientException {
         return send(HttpMethod.PUT, newWin32LobApp);
     }
 
@@ -139,9 +145,10 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param value the select clause
      * @return the updated request
      */
-     public IWin32LobAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Win32LobAppRequest)this;
+     @Nonnull
+     public Win32LobAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Win32LobAppRequest extends BaseRequest implements IWin32LobAppReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IWin32LobAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Win32LobAppRequest)this;
+     @Nonnull
+     public Win32LobAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

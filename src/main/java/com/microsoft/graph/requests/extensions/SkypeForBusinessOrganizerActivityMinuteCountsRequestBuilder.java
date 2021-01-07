@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SkypeForBusinessOrganizerActivityMinuteCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Skype For Business Organizer Activity Minute Counts Request Builder.
  */
-public class SkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder extends BaseRequestBuilder implements ISkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder {
+public class SkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder extends BaseRequestBuilder<SkypeForBusinessOrganizerActivityMinuteCounts> {
 
     /**
      * The request builder for the SkypeForBusinessOrganizerActivityMinuteCounts
@@ -28,7 +30,7 @@ public class SkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class SkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder extends
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISkypeForBusinessOrganizerActivityMinuteCountsRequest instance
+     * @return the SkypeForBusinessOrganizerActivityMinuteCountsRequest instance
      */
-    public ISkypeForBusinessOrganizerActivityMinuteCountsRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SkypeForBusinessOrganizerActivityMinuteCountsRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class SkypeForBusinessOrganizerActivityMinuteCountsRequestBuilder extends
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISkypeForBusinessOrganizerActivityMinuteCountsRequest instance
+     * @return the SkypeForBusinessOrganizerActivityMinuteCountsRequest instance
      */
-    public ISkypeForBusinessOrganizerActivityMinuteCountsRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SkypeForBusinessOrganizerActivityMinuteCountsRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SkypeForBusinessOrganizerActivityMinuteCountsRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

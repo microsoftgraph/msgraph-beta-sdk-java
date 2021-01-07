@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSEndpointProtectionConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mac OSEndpoint Protection Configuration Request.
  */
-public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest implements IMacOSEndpointProtectionConfigurationRequest {
+public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest<MacOSEndpointProtectionConfiguration> {
 	
     /**
      * The request for the MacOSEndpointProtectionConfiguration
@@ -29,7 +31,7 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSEndpointProtectionConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSEndpointProtectionConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MacOSEndpointProtectionConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @return the MacOSEndpointProtectionConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MacOSEndpointProtectionConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @param sourceMacOSEndpointProtectionConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MacOSEndpointProtectionConfiguration sourceMacOSEndpointProtectionConfiguration, final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
+    public void patch(@Nonnull final MacOSEndpointProtectionConfiguration sourceMacOSEndpointProtectionConfiguration, @Nonnull final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceMacOSEndpointProtectionConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @return the updated MacOSEndpointProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSEndpointProtectionConfiguration patch(final MacOSEndpointProtectionConfiguration sourceMacOSEndpointProtectionConfiguration) throws ClientException {
+    @Nullable
+    public MacOSEndpointProtectionConfiguration patch(@Nonnull final MacOSEndpointProtectionConfiguration sourceMacOSEndpointProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceMacOSEndpointProtectionConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @param newMacOSEndpointProtectionConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
+    public void post(@Nonnull final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, @Nonnull final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
         send(HttpMethod.POST, callback, newMacOSEndpointProtectionConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @return the created MacOSEndpointProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSEndpointProtectionConfiguration post(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration) throws ClientException {
+    @Nullable
+    public MacOSEndpointProtectionConfiguration post(@Nonnull final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration) throws ClientException {
         return send(HttpMethod.POST, newMacOSEndpointProtectionConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @param newMacOSEndpointProtectionConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
+    public void put(@Nonnull final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration, @Nonnull final ICallback<? super MacOSEndpointProtectionConfiguration> callback) {
         send(HttpMethod.PUT, callback, newMacOSEndpointProtectionConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @return the created MacOSEndpointProtectionConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MacOSEndpointProtectionConfiguration put(final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration) throws ClientException {
+    @Nullable
+    public MacOSEndpointProtectionConfiguration put(@Nonnull final MacOSEndpointProtectionConfiguration newMacOSEndpointProtectionConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newMacOSEndpointProtectionConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @param value the select clause
      * @return the updated request
      */
-     public IMacOSEndpointProtectionConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MacOSEndpointProtectionConfigurationRequest)this;
+     @Nonnull
+     public MacOSEndpointProtectionConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MacOSEndpointProtectionConfigurationRequest extends BaseRequest imp
      * @param value the expand clause
      * @return the updated request
      */
-     public IMacOSEndpointProtectionConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MacOSEndpointProtectionConfigurationRequest)this;
+     @Nonnull
+     public MacOSEndpointProtectionConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

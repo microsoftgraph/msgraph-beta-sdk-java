@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrinterCreateOperation;
-import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Printer Create Operation Request.
  */
-public class PrinterCreateOperationRequest extends BaseRequest implements IPrinterCreateOperationRequest {
+public class PrinterCreateOperationRequest extends BaseRequest<PrinterCreateOperation> {
 	
     /**
      * The request for the PrinterCreateOperation
@@ -31,7 +32,7 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrinterCreateOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrinterCreateOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrinterCreateOperation.class);
     }
 
@@ -40,7 +41,7 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrinterCreateOperation> callback) {
+    public void get(@Nonnull final ICallback<? super PrinterCreateOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @return the PrinterCreateOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrinterCreateOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrinterCreateOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super PrinterCreateOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @param sourcePrinterCreateOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrinterCreateOperation sourcePrinterCreateOperation, final ICallback<? super PrinterCreateOperation> callback) {
+    public void patch(@Nonnull final PrinterCreateOperation sourcePrinterCreateOperation, @Nonnull final ICallback<? super PrinterCreateOperation> callback) {
         send(HttpMethod.PATCH, callback, sourcePrinterCreateOperation);
     }
 
@@ -89,7 +91,8 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @return the updated PrinterCreateOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrinterCreateOperation patch(final PrinterCreateOperation sourcePrinterCreateOperation) throws ClientException {
+    @Nullable
+    public PrinterCreateOperation patch(@Nonnull final PrinterCreateOperation sourcePrinterCreateOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrinterCreateOperation);
     }
 
@@ -99,7 +102,7 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @param newPrinterCreateOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<? super PrinterCreateOperation> callback) {
+    public void post(@Nonnull final PrinterCreateOperation newPrinterCreateOperation, @Nonnull final ICallback<? super PrinterCreateOperation> callback) {
         send(HttpMethod.POST, callback, newPrinterCreateOperation);
     }
 
@@ -110,7 +113,8 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @return the created PrinterCreateOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrinterCreateOperation post(final PrinterCreateOperation newPrinterCreateOperation) throws ClientException {
+    @Nullable
+    public PrinterCreateOperation post(@Nonnull final PrinterCreateOperation newPrinterCreateOperation) throws ClientException {
         return send(HttpMethod.POST, newPrinterCreateOperation);
     }
 
@@ -120,7 +124,7 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @param newPrinterCreateOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrinterCreateOperation newPrinterCreateOperation, final ICallback<? super PrinterCreateOperation> callback) {
+    public void put(@Nonnull final PrinterCreateOperation newPrinterCreateOperation, @Nonnull final ICallback<? super PrinterCreateOperation> callback) {
         send(HttpMethod.PUT, callback, newPrinterCreateOperation);
     }
 
@@ -131,7 +135,8 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @return the created PrinterCreateOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrinterCreateOperation put(final PrinterCreateOperation newPrinterCreateOperation) throws ClientException {
+    @Nullable
+    public PrinterCreateOperation put(@Nonnull final PrinterCreateOperation newPrinterCreateOperation) throws ClientException {
         return send(HttpMethod.PUT, newPrinterCreateOperation);
     }
 
@@ -141,9 +146,10 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @param value the select clause
      * @return the updated request
      */
-     public IPrinterCreateOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrinterCreateOperationRequest)this;
+     @Nonnull
+     public PrinterCreateOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class PrinterCreateOperationRequest extends BaseRequest implements IPrint
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrinterCreateOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrinterCreateOperationRequest)this;
+     @Nonnull
+     public PrinterCreateOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

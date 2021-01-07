@@ -9,18 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Agreement;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -29,7 +26,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Agreement Request Builder.
  */
-public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgreementRequestBuilder {
+public class AgreementRequestBuilder extends BaseRequestBuilder<Agreement> {
 
     /**
      * The request builder for the Agreement
@@ -38,7 +35,7 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -46,9 +43,10 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAgreementRequest instance
+     * @return the AgreementRequest instance
      */
-    public IAgreementRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AgreementRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -56,34 +54,62 @@ public class AgreementRequestBuilder extends BaseRequestBuilder implements IAgre
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAgreementRequest instance
+     * @return the AgreementRequest instance
      */
-    public IAgreementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AgreementRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AgreementRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAgreementAcceptanceCollectionRequestBuilder acceptances() {
+    /**
+     *  Gets a request builder for the AgreementAcceptance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgreementAcceptanceCollectionRequestBuilder acceptances() {
         return new AgreementAcceptanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances"), getClient(), null);
     }
 
-    public IAgreementAcceptanceRequestBuilder acceptances(final String id) {
+    /**
+     * Gets a request builder for the AgreementAcceptance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgreementAcceptanceRequestBuilder acceptances(@Nonnull final String id) {
         return new AgreementAcceptanceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptances") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for AgreementFile
      *
-     * @return the IAgreementFileRequestBuilder instance
+     * @return the AgreementFileRequestBuilder instance
      */
-    public IAgreementFileRequestBuilder file() {
+    @Nonnull
+    public AgreementFileRequestBuilder file() {
         return new AgreementFileRequestBuilder(getRequestUrlWithAdditionalSegment("file"), getClient(), null);
     }
-    public IAgreementFileLocalizationCollectionRequestBuilder files() {
+    /**
+     *  Gets a request builder for the AgreementFileLocalization collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AgreementFileLocalizationCollectionRequestBuilder files() {
         return new AgreementFileLocalizationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("files"), getClient(), null);
     }
 
-    public IAgreementFileLocalizationRequestBuilder files(final String id) {
+    /**
+     * Gets a request builder for the AgreementFileLocalization item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AgreementFileLocalizationRequestBuilder files(@Nonnull final String id) {
         return new AgreementFileLocalizationRequestBuilder(getRequestUrlWithAdditionalSegment("files") + "/" + id, getClient(), null);
     }
 }

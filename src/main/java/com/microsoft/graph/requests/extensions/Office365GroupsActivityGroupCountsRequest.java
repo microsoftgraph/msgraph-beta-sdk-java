@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Office365GroupsActivityGroupCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office365Groups Activity Group Counts Request.
  */
-public class Office365GroupsActivityGroupCountsRequest extends BaseRequest implements IOffice365GroupsActivityGroupCountsRequest {
+public class Office365GroupsActivityGroupCountsRequest extends BaseRequest<Office365GroupsActivityGroupCounts> {
 	
     /**
      * The request for the Office365GroupsActivityGroupCounts
@@ -29,7 +31,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Office365GroupsActivityGroupCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Office365GroupsActivityGroupCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Office365GroupsActivityGroupCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
+    public void get(@Nonnull final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @return the Office365GroupsActivityGroupCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Office365GroupsActivityGroupCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param sourceOffice365GroupsActivityGroupCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365GroupsActivityGroupCounts sourceOffice365GroupsActivityGroupCounts, final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
+    public void patch(@Nonnull final Office365GroupsActivityGroupCounts sourceOffice365GroupsActivityGroupCounts, @Nonnull final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365GroupsActivityGroupCounts);
     }
 
@@ -87,7 +90,8 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @return the updated Office365GroupsActivityGroupCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365GroupsActivityGroupCounts patch(final Office365GroupsActivityGroupCounts sourceOffice365GroupsActivityGroupCounts) throws ClientException {
+    @Nullable
+    public Office365GroupsActivityGroupCounts patch(@Nonnull final Office365GroupsActivityGroupCounts sourceOffice365GroupsActivityGroupCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceOffice365GroupsActivityGroupCounts);
     }
 
@@ -97,7 +101,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param newOffice365GroupsActivityGroupCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
+    public void post(@Nonnull final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, @Nonnull final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.POST, callback, newOffice365GroupsActivityGroupCounts);
     }
 
@@ -108,7 +112,8 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @return the created Office365GroupsActivityGroupCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365GroupsActivityGroupCounts post(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts) throws ClientException {
+    @Nullable
+    public Office365GroupsActivityGroupCounts post(@Nonnull final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts) throws ClientException {
         return send(HttpMethod.POST, newOffice365GroupsActivityGroupCounts);
     }
 
@@ -118,7 +123,7 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param newOffice365GroupsActivityGroupCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
+    public void put(@Nonnull final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts, @Nonnull final ICallback<? super Office365GroupsActivityGroupCounts> callback) {
         send(HttpMethod.PUT, callback, newOffice365GroupsActivityGroupCounts);
     }
 
@@ -129,7 +134,8 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @return the created Office365GroupsActivityGroupCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365GroupsActivityGroupCounts put(final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts) throws ClientException {
+    @Nullable
+    public Office365GroupsActivityGroupCounts put(@Nonnull final Office365GroupsActivityGroupCounts newOffice365GroupsActivityGroupCounts) throws ClientException {
         return send(HttpMethod.PUT, newOffice365GroupsActivityGroupCounts);
     }
 
@@ -139,9 +145,10 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IOffice365GroupsActivityGroupCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Office365GroupsActivityGroupCountsRequest)this;
+     @Nonnull
+     public Office365GroupsActivityGroupCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Office365GroupsActivityGroupCountsRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IOffice365GroupsActivityGroupCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365GroupsActivityGroupCountsRequest)this;
+     @Nonnull
+     public Office365GroupsActivityGroupCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

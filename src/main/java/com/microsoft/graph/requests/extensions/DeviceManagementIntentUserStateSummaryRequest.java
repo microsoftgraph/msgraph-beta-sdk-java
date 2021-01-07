@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntentUserStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Intent User State Summary Request.
  */
-public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest implements IDeviceManagementIntentUserStateSummaryRequest {
+public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest<DeviceManagementIntentUserStateSummary> {
 	
     /**
      * The request for the DeviceManagementIntentUserStateSummary
@@ -29,7 +31,7 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntentUserStateSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementIntentUserStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementIntentUserStateSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @return the DeviceManagementIntentUserStateSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementIntentUserStateSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @param sourceDeviceManagementIntentUserStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntentUserStateSummary sourceDeviceManagementIntentUserStateSummary, final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
+    public void patch(@Nonnull final DeviceManagementIntentUserStateSummary sourceDeviceManagementIntentUserStateSummary, @Nonnull final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntentUserStateSummary);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @return the updated DeviceManagementIntentUserStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentUserStateSummary patch(final DeviceManagementIntentUserStateSummary sourceDeviceManagementIntentUserStateSummary) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentUserStateSummary patch(@Nonnull final DeviceManagementIntentUserStateSummary sourceDeviceManagementIntentUserStateSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementIntentUserStateSummary);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @param newDeviceManagementIntentUserStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
+    public void post(@Nonnull final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, @Nonnull final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntentUserStateSummary);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @return the created DeviceManagementIntentUserStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentUserStateSummary post(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentUserStateSummary post(@Nonnull final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementIntentUserStateSummary);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @param newDeviceManagementIntentUserStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
+    public void put(@Nonnull final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary, @Nonnull final ICallback<? super DeviceManagementIntentUserStateSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntentUserStateSummary);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @return the created DeviceManagementIntentUserStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntentUserStateSummary put(final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary) throws ClientException {
+    @Nullable
+    public DeviceManagementIntentUserStateSummary put(@Nonnull final DeviceManagementIntentUserStateSummary newDeviceManagementIntentUserStateSummary) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementIntentUserStateSummary);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementIntentUserStateSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementIntentUserStateSummaryRequest)this;
+     @Nonnull
+     public DeviceManagementIntentUserStateSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementIntentUserStateSummaryRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementIntentUserStateSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntentUserStateSummaryRequest)this;
+     @Nonnull
+     public DeviceManagementIntentUserStateSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

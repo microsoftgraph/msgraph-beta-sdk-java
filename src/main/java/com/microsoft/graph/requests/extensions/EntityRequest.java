@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Entity;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Entity Request.
  */
-public class EntityRequest extends BaseRequest implements IEntityRequest {
+public class EntityRequest extends BaseRequest<Entity> {
 	
     /**
      * The request for the Entity
@@ -30,10 +32,10 @@ public class EntityRequest extends BaseRequest implements IEntityRequest {
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public EntityRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<Entity> responseClass) {
+    public EntityRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<Entity> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class EntityRequest extends BaseRequest implements IEntityRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntityRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntityRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Entity.class);
     }
 
@@ -54,9 +56,10 @@ public class EntityRequest extends BaseRequest implements IEntityRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IEntityRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EntityRequest)this;
+     @Nonnull
+     public EntityRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -65,9 +68,10 @@ public class EntityRequest extends BaseRequest implements IEntityRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IEntityRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EntityRequest)this;
+     @Nonnull
+     public EntityRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

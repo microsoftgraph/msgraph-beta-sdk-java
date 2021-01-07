@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DataSource;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Data Source Request Builder.
  */
-public class DataSourceRequestBuilder extends BaseRequestBuilder implements IDataSourceRequestBuilder {
+public class DataSourceRequestBuilder extends BaseRequestBuilder<DataSource> {
 
     /**
      * The request builder for the DataSource
@@ -28,7 +30,7 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder implements IDat
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DataSourceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DataSourceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder implements IDat
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDataSourceRequest instance
+     * @return the DataSourceRequest instance
      */
-    public IDataSourceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DataSourceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DataSourceRequestBuilder extends BaseRequestBuilder implements IDat
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDataSourceRequest instance
+     * @return the DataSourceRequest instance
      */
-    public IDataSourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DataSourceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DataSourceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

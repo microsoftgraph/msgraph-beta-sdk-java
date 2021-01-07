@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Office365ActivationCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Office365Activation Counts Request.
  */
-public class Office365ActivationCountsRequest extends BaseRequest implements IOffice365ActivationCountsRequest {
+public class Office365ActivationCountsRequest extends BaseRequest<Office365ActivationCounts> {
 	
     /**
      * The request for the Office365ActivationCounts
@@ -29,7 +31,7 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Office365ActivationCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Office365ActivationCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Office365ActivationCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Office365ActivationCounts> callback) {
+    public void get(@Nonnull final ICallback<? super Office365ActivationCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @return the Office365ActivationCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Office365ActivationCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Office365ActivationCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super Office365ActivationCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @param sourceOffice365ActivationCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Office365ActivationCounts sourceOffice365ActivationCounts, final ICallback<? super Office365ActivationCounts> callback) {
+    public void patch(@Nonnull final Office365ActivationCounts sourceOffice365ActivationCounts, @Nonnull final ICallback<? super Office365ActivationCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceOffice365ActivationCounts);
     }
 
@@ -87,7 +90,8 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @return the updated Office365ActivationCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365ActivationCounts patch(final Office365ActivationCounts sourceOffice365ActivationCounts) throws ClientException {
+    @Nullable
+    public Office365ActivationCounts patch(@Nonnull final Office365ActivationCounts sourceOffice365ActivationCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceOffice365ActivationCounts);
     }
 
@@ -97,7 +101,7 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @param newOffice365ActivationCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Office365ActivationCounts newOffice365ActivationCounts, final ICallback<? super Office365ActivationCounts> callback) {
+    public void post(@Nonnull final Office365ActivationCounts newOffice365ActivationCounts, @Nonnull final ICallback<? super Office365ActivationCounts> callback) {
         send(HttpMethod.POST, callback, newOffice365ActivationCounts);
     }
 
@@ -108,7 +112,8 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @return the created Office365ActivationCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365ActivationCounts post(final Office365ActivationCounts newOffice365ActivationCounts) throws ClientException {
+    @Nullable
+    public Office365ActivationCounts post(@Nonnull final Office365ActivationCounts newOffice365ActivationCounts) throws ClientException {
         return send(HttpMethod.POST, newOffice365ActivationCounts);
     }
 
@@ -118,7 +123,7 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @param newOffice365ActivationCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Office365ActivationCounts newOffice365ActivationCounts, final ICallback<? super Office365ActivationCounts> callback) {
+    public void put(@Nonnull final Office365ActivationCounts newOffice365ActivationCounts, @Nonnull final ICallback<? super Office365ActivationCounts> callback) {
         send(HttpMethod.PUT, callback, newOffice365ActivationCounts);
     }
 
@@ -129,7 +134,8 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @return the created Office365ActivationCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Office365ActivationCounts put(final Office365ActivationCounts newOffice365ActivationCounts) throws ClientException {
+    @Nullable
+    public Office365ActivationCounts put(@Nonnull final Office365ActivationCounts newOffice365ActivationCounts) throws ClientException {
         return send(HttpMethod.PUT, newOffice365ActivationCounts);
     }
 
@@ -139,9 +145,10 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @param value the select clause
      * @return the updated request
      */
-     public IOffice365ActivationCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Office365ActivationCountsRequest)this;
+     @Nonnull
+     public Office365ActivationCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class Office365ActivationCountsRequest extends BaseRequest implements IOf
      * @param value the expand clause
      * @return the updated request
      */
-     public IOffice365ActivationCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Office365ActivationCountsRequest)this;
+     @Nonnull
+     public Office365ActivationCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

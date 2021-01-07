@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidEnterpriseWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidTrustedRootCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidTrustedRootCertificateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Enterprise Wi Fi Configuration Request.
  */
-public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest implements IAndroidEnterpriseWiFiConfigurationRequest {
+public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest<AndroidEnterpriseWiFiConfiguration> {
 	
     /**
      * The request for the AndroidEnterpriseWiFiConfiguration
@@ -33,7 +33,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidEnterpriseWiFiConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidEnterpriseWiFiConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidEnterpriseWiFiConfiguration.class);
     }
 
@@ -42,7 +42,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @return the AndroidEnterpriseWiFiConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidEnterpriseWiFiConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param sourceAndroidEnterpriseWiFiConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidEnterpriseWiFiConfiguration sourceAndroidEnterpriseWiFiConfiguration, final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
+    public void patch(@Nonnull final AndroidEnterpriseWiFiConfiguration sourceAndroidEnterpriseWiFiConfiguration, @Nonnull final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -91,7 +92,8 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @return the updated AndroidEnterpriseWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidEnterpriseWiFiConfiguration patch(final AndroidEnterpriseWiFiConfiguration sourceAndroidEnterpriseWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidEnterpriseWiFiConfiguration patch(@Nonnull final AndroidEnterpriseWiFiConfiguration sourceAndroidEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -101,7 +103,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param newAndroidEnterpriseWiFiConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
+    public void post(@Nonnull final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, @Nonnull final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -112,7 +114,8 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @return the created AndroidEnterpriseWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidEnterpriseWiFiConfiguration post(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidEnterpriseWiFiConfiguration post(@Nonnull final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -122,7 +125,7 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param newAndroidEnterpriseWiFiConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
+    public void put(@Nonnull final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration, @Nonnull final ICallback<? super AndroidEnterpriseWiFiConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -133,7 +136,8 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @return the created AndroidEnterpriseWiFiConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidEnterpriseWiFiConfiguration put(final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException {
+    @Nullable
+    public AndroidEnterpriseWiFiConfiguration put(@Nonnull final AndroidEnterpriseWiFiConfiguration newAndroidEnterpriseWiFiConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidEnterpriseWiFiConfiguration);
     }
 
@@ -143,9 +147,10 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidEnterpriseWiFiConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidEnterpriseWiFiConfigurationRequest)this;
+     @Nonnull
+     public AndroidEnterpriseWiFiConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AndroidEnterpriseWiFiConfigurationRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidEnterpriseWiFiConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidEnterpriseWiFiConfigurationRequest)this;
+     @Nonnull
+     public AndroidEnterpriseWiFiConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

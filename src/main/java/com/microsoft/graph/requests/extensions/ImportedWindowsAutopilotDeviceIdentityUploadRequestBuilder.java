@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ImportedWindowsAutopilotDeviceIdentityUpload;
-import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IImportedWindowsAutopilotDeviceIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Imported Windows Autopilot Device Identity Upload Request Builder.
  */
-public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends BaseRequestBuilder implements IImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder {
+public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends BaseRequestBuilder<ImportedWindowsAutopilotDeviceIdentityUpload> {
 
     /**
      * The request builder for the ImportedWindowsAutopilotDeviceIdentityUpload
@@ -32,7 +32,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends 
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IImportedWindowsAutopilotDeviceIdentityUploadRequest instance
+     * @return the ImportedWindowsAutopilotDeviceIdentityUploadRequest instance
      */
-    public IImportedWindowsAutopilotDeviceIdentityUploadRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ImportedWindowsAutopilotDeviceIdentityUploadRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class ImportedWindowsAutopilotDeviceIdentityUploadRequestBuilder extends 
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IImportedWindowsAutopilotDeviceIdentityUploadRequest instance
+     * @return the ImportedWindowsAutopilotDeviceIdentityUploadRequest instance
      */
-    public IImportedWindowsAutopilotDeviceIdentityUploadRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ImportedWindowsAutopilotDeviceIdentityUploadRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ImportedWindowsAutopilotDeviceIdentityUploadRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder deviceIdentities() {
+    /**
+     *  Gets a request builder for the ImportedWindowsAutopilotDeviceIdentity collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder deviceIdentities() {
         return new ImportedWindowsAutopilotDeviceIdentityCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceIdentities"), getClient(), null);
     }
 
-    public IImportedWindowsAutopilotDeviceIdentityRequestBuilder deviceIdentities(final String id) {
+    /**
+     * Gets a request builder for the ImportedWindowsAutopilotDeviceIdentity item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ImportedWindowsAutopilotDeviceIdentityRequestBuilder deviceIdentities(@Nonnull final String id) {
         return new ImportedWindowsAutopilotDeviceIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("deviceIdentities") + "/" + id, getClient(), null);
     }
 }

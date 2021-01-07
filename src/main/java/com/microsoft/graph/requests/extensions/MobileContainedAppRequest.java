@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MobileContainedApp;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mobile Contained App Request.
  */
-public class MobileContainedAppRequest extends BaseRequest implements IMobileContainedAppRequest {
+public class MobileContainedAppRequest extends BaseRequest<MobileContainedApp> {
 	
     /**
      * The request for the MobileContainedApp
@@ -30,10 +32,10 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public MobileContainedAppRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends MobileContainedApp> responseClass) {
+    public MobileContainedAppRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends MobileContainedApp> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MobileContainedAppRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MobileContainedAppRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MobileContainedApp.class);
     }
 
@@ -53,7 +55,7 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MobileContainedApp> callback) {
+    public void get(@Nonnull final ICallback<? super MobileContainedApp> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @return the MobileContainedApp from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MobileContainedApp get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MobileContainedApp> callback) {
+    public void delete(@Nonnull final ICallback<? super MobileContainedApp> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @param sourceMobileContainedApp the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MobileContainedApp sourceMobileContainedApp, final ICallback<? super MobileContainedApp> callback) {
+    public void patch(@Nonnull final MobileContainedApp sourceMobileContainedApp, @Nonnull final ICallback<? super MobileContainedApp> callback) {
         send(HttpMethod.PATCH, callback, sourceMobileContainedApp);
     }
 
@@ -102,7 +105,8 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @return the updated MobileContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileContainedApp patch(final MobileContainedApp sourceMobileContainedApp) throws ClientException {
+    @Nullable
+    public MobileContainedApp patch(@Nonnull final MobileContainedApp sourceMobileContainedApp) throws ClientException {
         return send(HttpMethod.PATCH, sourceMobileContainedApp);
     }
 
@@ -112,7 +116,7 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @param newMobileContainedApp the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MobileContainedApp newMobileContainedApp, final ICallback<? super MobileContainedApp> callback) {
+    public void post(@Nonnull final MobileContainedApp newMobileContainedApp, @Nonnull final ICallback<? super MobileContainedApp> callback) {
         send(HttpMethod.POST, callback, newMobileContainedApp);
     }
 
@@ -123,7 +127,8 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @return the created MobileContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileContainedApp post(final MobileContainedApp newMobileContainedApp) throws ClientException {
+    @Nullable
+    public MobileContainedApp post(@Nonnull final MobileContainedApp newMobileContainedApp) throws ClientException {
         return send(HttpMethod.POST, newMobileContainedApp);
     }
 
@@ -133,7 +138,7 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @param newMobileContainedApp the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MobileContainedApp newMobileContainedApp, final ICallback<? super MobileContainedApp> callback) {
+    public void put(@Nonnull final MobileContainedApp newMobileContainedApp, @Nonnull final ICallback<? super MobileContainedApp> callback) {
         send(HttpMethod.PUT, callback, newMobileContainedApp);
     }
 
@@ -144,7 +149,8 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @return the created MobileContainedApp
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MobileContainedApp put(final MobileContainedApp newMobileContainedApp) throws ClientException {
+    @Nullable
+    public MobileContainedApp put(@Nonnull final MobileContainedApp newMobileContainedApp) throws ClientException {
         return send(HttpMethod.PUT, newMobileContainedApp);
     }
 
@@ -154,9 +160,10 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @param value the select clause
      * @return the updated request
      */
-     public IMobileContainedAppRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MobileContainedAppRequest)this;
+     @Nonnull
+     public MobileContainedAppRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class MobileContainedAppRequest extends BaseRequest implements IMobileCon
      * @param value the expand clause
      * @return the updated request
      */
-     public IMobileContainedAppRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MobileContainedAppRequest)this;
+     @Nonnull
+     public MobileContainedAppRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

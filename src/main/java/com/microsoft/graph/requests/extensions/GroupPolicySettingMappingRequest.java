@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicySettingMapping;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Setting Mapping Request.
  */
-public class GroupPolicySettingMappingRequest extends BaseRequest implements IGroupPolicySettingMappingRequest {
+public class GroupPolicySettingMappingRequest extends BaseRequest<GroupPolicySettingMapping> {
 	
     /**
      * The request for the GroupPolicySettingMapping
@@ -29,7 +31,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicySettingMappingRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicySettingMappingRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicySettingMapping.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicySettingMapping> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @return the GroupPolicySettingMapping from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicySettingMapping get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicySettingMapping> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param sourceGroupPolicySettingMapping the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicySettingMapping sourceGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback) {
+    public void patch(@Nonnull final GroupPolicySettingMapping sourceGroupPolicySettingMapping, @Nonnull final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicySettingMapping);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @return the updated GroupPolicySettingMapping
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicySettingMapping patch(final GroupPolicySettingMapping sourceGroupPolicySettingMapping) throws ClientException {
+    @Nullable
+    public GroupPolicySettingMapping patch(@Nonnull final GroupPolicySettingMapping sourceGroupPolicySettingMapping) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicySettingMapping);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param newGroupPolicySettingMapping the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback) {
+    public void post(@Nonnull final GroupPolicySettingMapping newGroupPolicySettingMapping, @Nonnull final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.POST, callback, newGroupPolicySettingMapping);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @return the created GroupPolicySettingMapping
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicySettingMapping post(final GroupPolicySettingMapping newGroupPolicySettingMapping) throws ClientException {
+    @Nullable
+    public GroupPolicySettingMapping post(@Nonnull final GroupPolicySettingMapping newGroupPolicySettingMapping) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicySettingMapping);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param newGroupPolicySettingMapping the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicySettingMapping newGroupPolicySettingMapping, final ICallback<? super GroupPolicySettingMapping> callback) {
+    public void put(@Nonnull final GroupPolicySettingMapping newGroupPolicySettingMapping, @Nonnull final ICallback<? super GroupPolicySettingMapping> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicySettingMapping);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @return the created GroupPolicySettingMapping
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicySettingMapping put(final GroupPolicySettingMapping newGroupPolicySettingMapping) throws ClientException {
+    @Nullable
+    public GroupPolicySettingMapping put(@Nonnull final GroupPolicySettingMapping newGroupPolicySettingMapping) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicySettingMapping);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicySettingMappingRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicySettingMappingRequest)this;
+     @Nonnull
+     public GroupPolicySettingMappingRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicySettingMappingRequest extends BaseRequest implements IGr
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicySettingMappingRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicySettingMappingRequest)this;
+     @Nonnull
+     public GroupPolicySettingMappingRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

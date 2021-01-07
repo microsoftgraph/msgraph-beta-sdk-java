@@ -19,9 +19,11 @@ import com.microsoft.graph.models.extensions.WindowsPrivacyDataAccessControlItem
 import com.microsoft.graph.models.extensions.IosAvailableUpdateVersion;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionWithReferencesRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationCollectionResponse;
 import com.microsoft.graph.models.extensions.DeviceConfiguration;
 import com.google.gson.JsonObject;
@@ -34,7 +36,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 /**
  * The class for the Device Configuration Collection With References Page.
  */
-public class DeviceConfigurationCollectionWithReferencesPage extends BaseCollectionPage<DeviceConfiguration, IDeviceConfigurationCollectionWithReferencesRequestBuilder> implements IDeviceConfigurationCollectionWithReferencesPage {
+public class DeviceConfigurationCollectionWithReferencesPage extends BaseCollectionPage<DeviceConfiguration, DeviceConfigurationCollectionWithReferencesRequestBuilder> {
 
     /**
      * A collection page for DeviceConfiguration
@@ -42,7 +44,17 @@ public class DeviceConfigurationCollectionWithReferencesPage extends BaseCollect
      * @param response the serialized DeviceConfigurationCollectionResponse from the service
      * @param builder  the request builder for the next collection page
      */
-    public DeviceConfigurationCollectionWithReferencesPage(final DeviceConfigurationCollectionResponse response, final IDeviceConfigurationCollectionWithReferencesRequestBuilder builder) {
+    public DeviceConfigurationCollectionWithReferencesPage(@Nonnull final DeviceConfigurationCollectionResponse response, @Nullable final DeviceConfigurationCollectionWithReferencesRequestBuilder builder) {
         super(response.value, builder, response.additionalDataManager());
+    }
+
+    /**
+     * Creates the collection page for DeviceConfiguration
+     *
+     * @param pageContents       the contents of this page
+     * @param nextRequestBuilder the request builder for the next page
+     */
+    public DeviceConfigurationCollectionWithReferencesPage(@Nonnull final java.util.List<DeviceConfiguration> pageContents, @Nullable final DeviceConfigurationCollectionWithReferencesRequestBuilder nextRequestBuilder) {
+        super(pageContents, nextRequestBuilder);
     }
 }

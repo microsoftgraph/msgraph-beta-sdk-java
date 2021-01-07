@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationCheckBox;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Policy Presentation Check Box Request.
  */
-public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implements IGroupPolicyPresentationCheckBoxRequest {
+public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest<GroupPolicyPresentationCheckBox> {
 	
     /**
      * The request for the GroupPolicyPresentationCheckBox
@@ -29,7 +31,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationCheckBoxRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationCheckBoxRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, GroupPolicyPresentationCheckBox.class);
     }
 
@@ -38,7 +40,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
+    public void get(@Nonnull final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @return the GroupPolicyPresentationCheckBox from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public GroupPolicyPresentationCheckBox get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
+    public void delete(@Nonnull final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param sourceGroupPolicyPresentationCheckBox the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
+    public void patch(@Nonnull final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox, @Nonnull final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.PATCH, callback, sourceGroupPolicyPresentationCheckBox);
     }
 
@@ -87,7 +90,8 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @return the updated GroupPolicyPresentationCheckBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationCheckBox patch(final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationCheckBox patch(@Nonnull final GroupPolicyPresentationCheckBox sourceGroupPolicyPresentationCheckBox) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroupPolicyPresentationCheckBox);
     }
 
@@ -97,7 +101,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param newGroupPolicyPresentationCheckBox the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
+    public void post(@Nonnull final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, @Nonnull final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.POST, callback, newGroupPolicyPresentationCheckBox);
     }
 
@@ -108,7 +112,8 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @return the created GroupPolicyPresentationCheckBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationCheckBox post(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationCheckBox post(@Nonnull final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox) throws ClientException {
         return send(HttpMethod.POST, newGroupPolicyPresentationCheckBox);
     }
 
@@ -118,7 +123,7 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param newGroupPolicyPresentationCheckBox the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
+    public void put(@Nonnull final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox, @Nonnull final ICallback<? super GroupPolicyPresentationCheckBox> callback) {
         send(HttpMethod.PUT, callback, newGroupPolicyPresentationCheckBox);
     }
 
@@ -129,7 +134,8 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @return the created GroupPolicyPresentationCheckBox
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public GroupPolicyPresentationCheckBox put(final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox) throws ClientException {
+    @Nullable
+    public GroupPolicyPresentationCheckBox put(@Nonnull final GroupPolicyPresentationCheckBox newGroupPolicyPresentationCheckBox) throws ClientException {
         return send(HttpMethod.PUT, newGroupPolicyPresentationCheckBox);
     }
 
@@ -139,9 +145,10 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationCheckBoxRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupPolicyPresentationCheckBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationCheckBoxRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class GroupPolicyPresentationCheckBoxRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupPolicyPresentationCheckBoxRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupPolicyPresentationCheckBoxRequest)this;
+     @Nonnull
+     public GroupPolicyPresentationCheckBoxRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

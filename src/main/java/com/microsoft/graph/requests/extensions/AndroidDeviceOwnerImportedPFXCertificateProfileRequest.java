@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerImportedPFXCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android Device Owner Imported PFXCertificate Profile Request.
  */
-public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends BaseRequest implements IAndroidDeviceOwnerImportedPFXCertificateProfileRequest {
+public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends BaseRequest<AndroidDeviceOwnerImportedPFXCertificateProfile> {
 	
     /**
      * The request for the AndroidDeviceOwnerImportedPFXCertificateProfile
@@ -33,7 +33,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceOwnerImportedPFXCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidDeviceOwnerImportedPFXCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidDeviceOwnerImportedPFXCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @return the AndroidDeviceOwnerImportedPFXCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidDeviceOwnerImportedPFXCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param sourceAndroidDeviceOwnerImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void patch(@Nonnull final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @return the updated AndroidDeviceOwnerImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerImportedPFXCertificateProfile patch(final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerImportedPFXCertificateProfile patch(@Nonnull final AndroidDeviceOwnerImportedPFXCertificateProfile sourceAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void post(@Nonnull final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @return the created AndroidDeviceOwnerImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerImportedPFXCertificateProfile post(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerImportedPFXCertificateProfile post(@Nonnull final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param newAndroidDeviceOwnerImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
+    public void put(@Nonnull final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile, @Nonnull final ICallback<? super AndroidDeviceOwnerImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @return the created AndroidDeviceOwnerImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidDeviceOwnerImportedPFXCertificateProfile put(final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidDeviceOwnerImportedPFXCertificateProfile put(@Nonnull final AndroidDeviceOwnerImportedPFXCertificateProfile newAndroidDeviceOwnerImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidDeviceOwnerImportedPFXCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidDeviceOwnerImportedPFXCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidDeviceOwnerImportedPFXCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidDeviceOwnerImportedPFXCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfileRequest extends Base
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidDeviceOwnerImportedPFXCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidDeviceOwnerImportedPFXCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidDeviceOwnerImportedPFXCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

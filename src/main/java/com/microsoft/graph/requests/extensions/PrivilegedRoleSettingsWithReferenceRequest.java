@@ -11,9 +11,11 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 
 import com.microsoft.graph.options.QueryOption;
-import com.microsoft.graph.http.BaseRequest;
+import com.microsoft.graph.http.BaseWithReferenceRequest;
 import com.microsoft.graph.http.HttpMethod;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.serializer.IJsonBackedObject;
@@ -23,7 +25,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 /**
  * The class for the Privileged Role Settings With Reference Request.
  */
-public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest implements IPrivilegedRoleSettingsWithReferenceRequest {
+public class PrivilegedRoleSettingsWithReferenceRequest extends BaseWithReferenceRequest<PrivilegedRoleSettings> {
 
     /**
      * The request for the PrivilegedRoleSettings
@@ -32,46 +34,9 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleSettingsWithReferenceRequest(String requestUrl, IBaseClient client, java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleSettingsWithReferenceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedRoleSettings.class);
     }
-
-    public void post(final PrivilegedRoleSettings newPrivilegedRoleSettings, final IJsonBackedObject payload, final ICallback<? super PrivilegedRoleSettings> callback) {
-        send(HttpMethod.POST, callback, payload);
-    }
-
-    public PrivilegedRoleSettings post(final PrivilegedRoleSettings newPrivilegedRoleSettings, final IJsonBackedObject payload) throws ClientException {
-        IJsonBackedObject response = send(HttpMethod.POST, payload);
-        if (response != null){
-            return newPrivilegedRoleSettings;
-        }
-        return null;
-    }
-
-    public void get(final ICallback<? super PrivilegedRoleSettings> callback) {
-        send(HttpMethod.GET, callback, null);
-    }
-
-    public PrivilegedRoleSettings get() throws ClientException {
-       return send(HttpMethod.GET, null);
-    }
-
-	public void delete(final ICallback<? super PrivilegedRoleSettings> callback) {
-		send(HttpMethod.DELETE, callback, null);
-	}
-
-	public void delete() throws ClientException {
-		send(HttpMethod.DELETE, null);
-	}
-
-	public void patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings, final ICallback<? super PrivilegedRoleSettings> callback) {
-		send(HttpMethod.PATCH, callback, sourcePrivilegedRoleSettings);
-	}
-
-	public PrivilegedRoleSettings patch(final PrivilegedRoleSettings sourcePrivilegedRoleSettings) throws ClientException {
-		return send(HttpMethod.PATCH, sourcePrivilegedRoleSettings);
-	}
-
 
     /**
      * Sets the select clause for the request
@@ -79,9 +44,10 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-    public IPrivilegedRoleSettingsWithReferenceRequest select(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-        return (IPrivilegedRoleSettingsWithReferenceRequest)this;
+    @Nonnull
+    public PrivilegedRoleSettingsWithReferenceRequest select(@Nonnull final String value) {
+        addSelectOption(value);
+        return this;
     }
 
     /**
@@ -90,8 +56,9 @@ public class PrivilegedRoleSettingsWithReferenceRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-    public IPrivilegedRoleSettingsWithReferenceRequest expand(final String value) {
-        getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-        return (PrivilegedRoleSettingsWithReferenceRequest)this;
+    @Nonnull
+    public PrivilegedRoleSettingsWithReferenceRequest expand(@Nonnull final String value) {
+        addExpandOption(value);
+        return this;
     }
 }

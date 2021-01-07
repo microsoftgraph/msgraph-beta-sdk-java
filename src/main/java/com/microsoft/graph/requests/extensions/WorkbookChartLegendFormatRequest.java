@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartLegendFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFillRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFillRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Legend Format Request.
  */
-public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWorkbookChartLegendFormatRequest {
+public class WorkbookChartLegendFormatRequest extends BaseRequest<WorkbookChartLegendFormat> {
 	
     /**
      * The request for the WorkbookChartLegendFormat
@@ -33,7 +33,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartLegendFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartLegendFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartLegendFormat.class);
     }
 
@@ -42,7 +42,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @return the WorkbookChartLegendFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartLegendFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param sourceWorkbookChartLegendFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat, @Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartLegendFormat);
     }
 
@@ -91,7 +92,8 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @return the updated WorkbookChartLegendFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartLegendFormat patch(final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartLegendFormat patch(@Nonnull final WorkbookChartLegendFormat sourceWorkbookChartLegendFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartLegendFormat);
     }
 
@@ -101,7 +103,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartLegendFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void post(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat, @Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartLegendFormat);
     }
 
@@ -112,7 +114,8 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @return the created WorkbookChartLegendFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartLegendFormat post(final WorkbookChartLegendFormat newWorkbookChartLegendFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartLegendFormat post(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartLegendFormat);
     }
 
@@ -122,7 +125,7 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param newWorkbookChartLegendFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat, final ICallback<? super WorkbookChartLegendFormat> callback) {
+    public void put(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat, @Nonnull final ICallback<? super WorkbookChartLegendFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartLegendFormat);
     }
 
@@ -133,7 +136,8 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @return the created WorkbookChartLegendFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartLegendFormat put(final WorkbookChartLegendFormat newWorkbookChartLegendFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartLegendFormat put(@Nonnull final WorkbookChartLegendFormat newWorkbookChartLegendFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartLegendFormat);
     }
 
@@ -143,9 +147,10 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartLegendFormatRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartLegendFormatRequest)this;
+     @Nonnull
+     public WorkbookChartLegendFormatRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class WorkbookChartLegendFormatRequest extends BaseRequest implements IWo
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartLegendFormatRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartLegendFormatRequest)this;
+     @Nonnull
+     public WorkbookChartLegendFormatRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

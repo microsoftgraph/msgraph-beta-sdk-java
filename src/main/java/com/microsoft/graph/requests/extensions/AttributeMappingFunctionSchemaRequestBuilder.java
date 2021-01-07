@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AttributeMappingFunctionSchema;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Attribute Mapping Function Schema Request Builder.
  */
-public class AttributeMappingFunctionSchemaRequestBuilder extends BaseRequestBuilder implements IAttributeMappingFunctionSchemaRequestBuilder {
+public class AttributeMappingFunctionSchemaRequestBuilder extends BaseRequestBuilder<AttributeMappingFunctionSchema> {
 
     /**
      * The request builder for the AttributeMappingFunctionSchema
@@ -28,7 +30,7 @@ public class AttributeMappingFunctionSchemaRequestBuilder extends BaseRequestBui
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AttributeMappingFunctionSchemaRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AttributeMappingFunctionSchemaRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AttributeMappingFunctionSchemaRequestBuilder extends BaseRequestBui
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAttributeMappingFunctionSchemaRequest instance
+     * @return the AttributeMappingFunctionSchemaRequest instance
      */
-    public IAttributeMappingFunctionSchemaRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AttributeMappingFunctionSchemaRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class AttributeMappingFunctionSchemaRequestBuilder extends BaseRequestBui
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAttributeMappingFunctionSchemaRequest instance
+     * @return the AttributeMappingFunctionSchemaRequest instance
      */
-    public IAttributeMappingFunctionSchemaRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AttributeMappingFunctionSchemaRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AttributeMappingFunctionSchemaRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

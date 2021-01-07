@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagementSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Entitlement Management Settings Request.
  */
-public class EntitlementManagementSettingsRequest extends BaseRequest implements IEntitlementManagementSettingsRequest {
+public class EntitlementManagementSettingsRequest extends BaseRequest<EntitlementManagementSettings> {
 	
     /**
      * The request for the EntitlementManagementSettings
@@ -29,7 +31,7 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EntitlementManagementSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EntitlementManagementSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EntitlementManagementSettings.class);
     }
 
@@ -38,7 +40,7 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EntitlementManagementSettings> callback) {
+    public void get(@Nonnull final ICallback<? super EntitlementManagementSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @return the EntitlementManagementSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EntitlementManagementSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EntitlementManagementSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super EntitlementManagementSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @param sourceEntitlementManagementSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EntitlementManagementSettings sourceEntitlementManagementSettings, final ICallback<? super EntitlementManagementSettings> callback) {
+    public void patch(@Nonnull final EntitlementManagementSettings sourceEntitlementManagementSettings, @Nonnull final ICallback<? super EntitlementManagementSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceEntitlementManagementSettings);
     }
 
@@ -87,7 +90,8 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @return the updated EntitlementManagementSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EntitlementManagementSettings patch(final EntitlementManagementSettings sourceEntitlementManagementSettings) throws ClientException {
+    @Nullable
+    public EntitlementManagementSettings patch(@Nonnull final EntitlementManagementSettings sourceEntitlementManagementSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceEntitlementManagementSettings);
     }
 
@@ -97,7 +101,7 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @param newEntitlementManagementSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EntitlementManagementSettings newEntitlementManagementSettings, final ICallback<? super EntitlementManagementSettings> callback) {
+    public void post(@Nonnull final EntitlementManagementSettings newEntitlementManagementSettings, @Nonnull final ICallback<? super EntitlementManagementSettings> callback) {
         send(HttpMethod.POST, callback, newEntitlementManagementSettings);
     }
 
@@ -108,7 +112,8 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @return the created EntitlementManagementSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EntitlementManagementSettings post(final EntitlementManagementSettings newEntitlementManagementSettings) throws ClientException {
+    @Nullable
+    public EntitlementManagementSettings post(@Nonnull final EntitlementManagementSettings newEntitlementManagementSettings) throws ClientException {
         return send(HttpMethod.POST, newEntitlementManagementSettings);
     }
 
@@ -118,7 +123,7 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @param newEntitlementManagementSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EntitlementManagementSettings newEntitlementManagementSettings, final ICallback<? super EntitlementManagementSettings> callback) {
+    public void put(@Nonnull final EntitlementManagementSettings newEntitlementManagementSettings, @Nonnull final ICallback<? super EntitlementManagementSettings> callback) {
         send(HttpMethod.PUT, callback, newEntitlementManagementSettings);
     }
 
@@ -129,7 +134,8 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @return the created EntitlementManagementSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EntitlementManagementSettings put(final EntitlementManagementSettings newEntitlementManagementSettings) throws ClientException {
+    @Nullable
+    public EntitlementManagementSettings put(@Nonnull final EntitlementManagementSettings newEntitlementManagementSettings) throws ClientException {
         return send(HttpMethod.PUT, newEntitlementManagementSettings);
     }
 
@@ -139,9 +145,10 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IEntitlementManagementSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EntitlementManagementSettingsRequest)this;
+     @Nonnull
+     public EntitlementManagementSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EntitlementManagementSettingsRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IEntitlementManagementSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EntitlementManagementSettingsRequest)this;
+     @Nonnull
+     public EntitlementManagementSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceEncryptionState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Managed Device Encryption State Request.
  */
-public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements IManagedDeviceEncryptionStateRequest {
+public class ManagedDeviceEncryptionStateRequest extends BaseRequest<ManagedDeviceEncryptionState> {
 	
     /**
      * The request for the ManagedDeviceEncryptionState
@@ -29,7 +31,7 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceEncryptionStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceEncryptionStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ManagedDeviceEncryptionState.class);
     }
 
@@ -38,7 +40,7 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ManagedDeviceEncryptionState> callback) {
+    public void get(@Nonnull final ICallback<? super ManagedDeviceEncryptionState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @return the ManagedDeviceEncryptionState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ManagedDeviceEncryptionState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ManagedDeviceEncryptionState> callback) {
+    public void delete(@Nonnull final ICallback<? super ManagedDeviceEncryptionState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @param sourceManagedDeviceEncryptionState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ManagedDeviceEncryptionState sourceManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback) {
+    public void patch(@Nonnull final ManagedDeviceEncryptionState sourceManagedDeviceEncryptionState, @Nonnull final ICallback<? super ManagedDeviceEncryptionState> callback) {
         send(HttpMethod.PATCH, callback, sourceManagedDeviceEncryptionState);
     }
 
@@ -87,7 +90,8 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @return the updated ManagedDeviceEncryptionState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceEncryptionState patch(final ManagedDeviceEncryptionState sourceManagedDeviceEncryptionState) throws ClientException {
+    @Nullable
+    public ManagedDeviceEncryptionState patch(@Nonnull final ManagedDeviceEncryptionState sourceManagedDeviceEncryptionState) throws ClientException {
         return send(HttpMethod.PATCH, sourceManagedDeviceEncryptionState);
     }
 
@@ -97,7 +101,7 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @param newManagedDeviceEncryptionState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback) {
+    public void post(@Nonnull final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, @Nonnull final ICallback<? super ManagedDeviceEncryptionState> callback) {
         send(HttpMethod.POST, callback, newManagedDeviceEncryptionState);
     }
 
@@ -108,7 +112,8 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @return the created ManagedDeviceEncryptionState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceEncryptionState post(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState) throws ClientException {
+    @Nullable
+    public ManagedDeviceEncryptionState post(@Nonnull final ManagedDeviceEncryptionState newManagedDeviceEncryptionState) throws ClientException {
         return send(HttpMethod.POST, newManagedDeviceEncryptionState);
     }
 
@@ -118,7 +123,7 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @param newManagedDeviceEncryptionState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, final ICallback<? super ManagedDeviceEncryptionState> callback) {
+    public void put(@Nonnull final ManagedDeviceEncryptionState newManagedDeviceEncryptionState, @Nonnull final ICallback<? super ManagedDeviceEncryptionState> callback) {
         send(HttpMethod.PUT, callback, newManagedDeviceEncryptionState);
     }
 
@@ -129,7 +134,8 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @return the created ManagedDeviceEncryptionState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ManagedDeviceEncryptionState put(final ManagedDeviceEncryptionState newManagedDeviceEncryptionState) throws ClientException {
+    @Nullable
+    public ManagedDeviceEncryptionState put(@Nonnull final ManagedDeviceEncryptionState newManagedDeviceEncryptionState) throws ClientException {
         return send(HttpMethod.PUT, newManagedDeviceEncryptionState);
     }
 
@@ -139,9 +145,10 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IManagedDeviceEncryptionStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ManagedDeviceEncryptionStateRequest)this;
+     @Nonnull
+     public ManagedDeviceEncryptionStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ManagedDeviceEncryptionStateRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IManagedDeviceEncryptionStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ManagedDeviceEncryptionStateRequest)this;
+     @Nonnull
+     public ManagedDeviceEncryptionStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

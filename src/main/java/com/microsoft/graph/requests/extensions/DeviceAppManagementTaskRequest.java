@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.DeviceAppManagementTask;
 import com.microsoft.graph.models.generated.DeviceAppManagementTaskStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device App Management Task Request.
  */
-public class DeviceAppManagementTaskRequest extends BaseRequest implements IDeviceAppManagementTaskRequest {
+public class DeviceAppManagementTaskRequest extends BaseRequest<DeviceAppManagementTask> {
 	
     /**
      * The request for the DeviceAppManagementTask
@@ -31,10 +33,10 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceAppManagementTaskRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceAppManagementTask> responseClass) {
+    public DeviceAppManagementTaskRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceAppManagementTask> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -45,7 +47,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAppManagementTaskRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAppManagementTaskRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAppManagementTask.class);
     }
 
@@ -54,7 +56,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceAppManagementTask> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +66,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @return the DeviceAppManagementTask from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceAppManagementTask get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +76,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceAppManagementTask> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +95,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param sourceDeviceAppManagementTask the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceAppManagementTask sourceDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback) {
+    public void patch(@Nonnull final DeviceAppManagementTask sourceDeviceAppManagementTask, @Nonnull final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceAppManagementTask);
     }
 
@@ -103,7 +106,8 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @return the updated DeviceAppManagementTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAppManagementTask patch(final DeviceAppManagementTask sourceDeviceAppManagementTask) throws ClientException {
+    @Nullable
+    public DeviceAppManagementTask patch(@Nonnull final DeviceAppManagementTask sourceDeviceAppManagementTask) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceAppManagementTask);
     }
 
@@ -113,7 +117,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param newDeviceAppManagementTask the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback) {
+    public void post(@Nonnull final DeviceAppManagementTask newDeviceAppManagementTask, @Nonnull final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.POST, callback, newDeviceAppManagementTask);
     }
 
@@ -124,7 +128,8 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @return the created DeviceAppManagementTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAppManagementTask post(final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException {
+    @Nullable
+    public DeviceAppManagementTask post(@Nonnull final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException {
         return send(HttpMethod.POST, newDeviceAppManagementTask);
     }
 
@@ -134,7 +139,7 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param newDeviceAppManagementTask the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceAppManagementTask newDeviceAppManagementTask, final ICallback<? super DeviceAppManagementTask> callback) {
+    public void put(@Nonnull final DeviceAppManagementTask newDeviceAppManagementTask, @Nonnull final ICallback<? super DeviceAppManagementTask> callback) {
         send(HttpMethod.PUT, callback, newDeviceAppManagementTask);
     }
 
@@ -145,7 +150,8 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @return the created DeviceAppManagementTask
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAppManagementTask put(final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException {
+    @Nullable
+    public DeviceAppManagementTask put(@Nonnull final DeviceAppManagementTask newDeviceAppManagementTask) throws ClientException {
         return send(HttpMethod.PUT, newDeviceAppManagementTask);
     }
 
@@ -155,9 +161,10 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceAppManagementTaskRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceAppManagementTaskRequest)this;
+     @Nonnull
+     public DeviceAppManagementTaskRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +173,10 @@ public class DeviceAppManagementTaskRequest extends BaseRequest implements IDevi
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceAppManagementTaskRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceAppManagementTaskRequest)this;
+     @Nonnull
+     public DeviceAppManagementTaskRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

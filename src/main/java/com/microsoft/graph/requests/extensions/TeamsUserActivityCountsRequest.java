@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TeamsUserActivityCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Teams User Activity Counts Request.
  */
-public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeamsUserActivityCountsRequest {
+public class TeamsUserActivityCountsRequest extends BaseRequest<TeamsUserActivityCounts> {
 	
     /**
      * The request for the TeamsUserActivityCounts
@@ -29,7 +31,7 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TeamsUserActivityCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TeamsUserActivityCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TeamsUserActivityCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TeamsUserActivityCounts> callback) {
+    public void get(@Nonnull final ICallback<? super TeamsUserActivityCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @return the TeamsUserActivityCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TeamsUserActivityCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TeamsUserActivityCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super TeamsUserActivityCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @param sourceTeamsUserActivityCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TeamsUserActivityCounts sourceTeamsUserActivityCounts, final ICallback<? super TeamsUserActivityCounts> callback) {
+    public void patch(@Nonnull final TeamsUserActivityCounts sourceTeamsUserActivityCounts, @Nonnull final ICallback<? super TeamsUserActivityCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceTeamsUserActivityCounts);
     }
 
@@ -87,7 +90,8 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @return the updated TeamsUserActivityCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsUserActivityCounts patch(final TeamsUserActivityCounts sourceTeamsUserActivityCounts) throws ClientException {
+    @Nullable
+    public TeamsUserActivityCounts patch(@Nonnull final TeamsUserActivityCounts sourceTeamsUserActivityCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceTeamsUserActivityCounts);
     }
 
@@ -97,7 +101,7 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @param newTeamsUserActivityCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TeamsUserActivityCounts newTeamsUserActivityCounts, final ICallback<? super TeamsUserActivityCounts> callback) {
+    public void post(@Nonnull final TeamsUserActivityCounts newTeamsUserActivityCounts, @Nonnull final ICallback<? super TeamsUserActivityCounts> callback) {
         send(HttpMethod.POST, callback, newTeamsUserActivityCounts);
     }
 
@@ -108,7 +112,8 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @return the created TeamsUserActivityCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsUserActivityCounts post(final TeamsUserActivityCounts newTeamsUserActivityCounts) throws ClientException {
+    @Nullable
+    public TeamsUserActivityCounts post(@Nonnull final TeamsUserActivityCounts newTeamsUserActivityCounts) throws ClientException {
         return send(HttpMethod.POST, newTeamsUserActivityCounts);
     }
 
@@ -118,7 +123,7 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @param newTeamsUserActivityCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TeamsUserActivityCounts newTeamsUserActivityCounts, final ICallback<? super TeamsUserActivityCounts> callback) {
+    public void put(@Nonnull final TeamsUserActivityCounts newTeamsUserActivityCounts, @Nonnull final ICallback<? super TeamsUserActivityCounts> callback) {
         send(HttpMethod.PUT, callback, newTeamsUserActivityCounts);
     }
 
@@ -129,7 +134,8 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @return the created TeamsUserActivityCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TeamsUserActivityCounts put(final TeamsUserActivityCounts newTeamsUserActivityCounts) throws ClientException {
+    @Nullable
+    public TeamsUserActivityCounts put(@Nonnull final TeamsUserActivityCounts newTeamsUserActivityCounts) throws ClientException {
         return send(HttpMethod.PUT, newTeamsUserActivityCounts);
     }
 
@@ -139,9 +145,10 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @param value the select clause
      * @return the updated request
      */
-     public ITeamsUserActivityCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TeamsUserActivityCountsRequest)this;
+     @Nonnull
+     public TeamsUserActivityCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class TeamsUserActivityCountsRequest extends BaseRequest implements ITeam
      * @param value the expand clause
      * @return the updated request
      */
-     public ITeamsUserActivityCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TeamsUserActivityCountsRequest)this;
+     @Nonnull
+     public TeamsUserActivityCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

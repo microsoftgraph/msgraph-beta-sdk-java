@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10GeneralConfiguration;
-import com.microsoft.graph.requests.extensions.IWindowsPrivacyDataAccessControlItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsPrivacyDataAccessControlItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsPrivacyDataAccessControlItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows10General Configuration Request.
  */
-public class Windows10GeneralConfigurationRequest extends BaseRequest implements IWindows10GeneralConfigurationRequest {
+public class Windows10GeneralConfigurationRequest extends BaseRequest<Windows10GeneralConfiguration> {
 	
     /**
      * The request for the Windows10GeneralConfiguration
@@ -33,7 +33,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10GeneralConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10GeneralConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Windows10GeneralConfiguration.class);
     }
 
@@ -42,7 +42,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Windows10GeneralConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @return the Windows10GeneralConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Windows10GeneralConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Windows10GeneralConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param sourceWindows10GeneralConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback) {
+    public void patch(@Nonnull final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration, @Nonnull final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindows10GeneralConfiguration);
     }
 
@@ -91,7 +92,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @return the updated Windows10GeneralConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10GeneralConfiguration patch(final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration) throws ClientException {
+    @Nullable
+    public Windows10GeneralConfiguration patch(@Nonnull final Windows10GeneralConfiguration sourceWindows10GeneralConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindows10GeneralConfiguration);
     }
 
@@ -101,7 +103,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param newWindows10GeneralConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback) {
+    public void post(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration, @Nonnull final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.POST, callback, newWindows10GeneralConfiguration);
     }
 
@@ -112,7 +114,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @return the created Windows10GeneralConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10GeneralConfiguration post(final Windows10GeneralConfiguration newWindows10GeneralConfiguration) throws ClientException {
+    @Nullable
+    public Windows10GeneralConfiguration post(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration) throws ClientException {
         return send(HttpMethod.POST, newWindows10GeneralConfiguration);
     }
 
@@ -122,7 +125,7 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param newWindows10GeneralConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration, final ICallback<? super Windows10GeneralConfiguration> callback) {
+    public void put(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration, @Nonnull final ICallback<? super Windows10GeneralConfiguration> callback) {
         send(HttpMethod.PUT, callback, newWindows10GeneralConfiguration);
     }
 
@@ -133,7 +136,8 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @return the created Windows10GeneralConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Windows10GeneralConfiguration put(final Windows10GeneralConfiguration newWindows10GeneralConfiguration) throws ClientException {
+    @Nullable
+    public Windows10GeneralConfiguration put(@Nonnull final Windows10GeneralConfiguration newWindows10GeneralConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newWindows10GeneralConfiguration);
     }
 
@@ -143,9 +147,10 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param value the select clause
      * @return the updated request
      */
-     public IWindows10GeneralConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (Windows10GeneralConfigurationRequest)this;
+     @Nonnull
+     public Windows10GeneralConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class Windows10GeneralConfigurationRequest extends BaseRequest implements
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindows10GeneralConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (Windows10GeneralConfigurationRequest)this;
+     @Nonnull
+     public Windows10GeneralConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

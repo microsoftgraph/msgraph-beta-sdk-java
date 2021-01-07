@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceConfigurationUserStateSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Configuration User State Summary Request.
  */
-public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest implements IDeviceConfigurationUserStateSummaryRequest {
+public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest<DeviceConfigurationUserStateSummary> {
 	
     /**
      * The request for the DeviceConfigurationUserStateSummary
@@ -29,7 +31,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceConfigurationUserStateSummaryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceConfigurationUserStateSummaryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceConfigurationUserStateSummary.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @return the DeviceConfigurationUserStateSummary from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceConfigurationUserStateSummary get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param sourceDeviceConfigurationUserStateSummary the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
+    public void patch(@Nonnull final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary, @Nonnull final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceConfigurationUserStateSummary);
     }
 
@@ -87,7 +90,8 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @return the updated DeviceConfigurationUserStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationUserStateSummary patch(final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary) throws ClientException {
+    @Nullable
+    public DeviceConfigurationUserStateSummary patch(@Nonnull final DeviceConfigurationUserStateSummary sourceDeviceConfigurationUserStateSummary) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceConfigurationUserStateSummary);
     }
 
@@ -97,7 +101,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param newDeviceConfigurationUserStateSummary the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
+    public void post(@Nonnull final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, @Nonnull final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.POST, callback, newDeviceConfigurationUserStateSummary);
     }
 
@@ -108,7 +112,8 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @return the created DeviceConfigurationUserStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationUserStateSummary post(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary) throws ClientException {
+    @Nullable
+    public DeviceConfigurationUserStateSummary post(@Nonnull final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary) throws ClientException {
         return send(HttpMethod.POST, newDeviceConfigurationUserStateSummary);
     }
 
@@ -118,7 +123,7 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param newDeviceConfigurationUserStateSummary the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
+    public void put(@Nonnull final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary, @Nonnull final ICallback<? super DeviceConfigurationUserStateSummary> callback) {
         send(HttpMethod.PUT, callback, newDeviceConfigurationUserStateSummary);
     }
 
@@ -129,7 +134,8 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @return the created DeviceConfigurationUserStateSummary
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceConfigurationUserStateSummary put(final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary) throws ClientException {
+    @Nullable
+    public DeviceConfigurationUserStateSummary put(@Nonnull final DeviceConfigurationUserStateSummary newDeviceConfigurationUserStateSummary) throws ClientException {
         return send(HttpMethod.PUT, newDeviceConfigurationUserStateSummary);
     }
 
@@ -139,9 +145,10 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceConfigurationUserStateSummaryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceConfigurationUserStateSummaryRequest)this;
+     @Nonnull
+     public DeviceConfigurationUserStateSummaryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceConfigurationUserStateSummaryRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceConfigurationUserStateSummaryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceConfigurationUserStateSummaryRequest)this;
+     @Nonnull
+     public DeviceConfigurationUserStateSummaryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

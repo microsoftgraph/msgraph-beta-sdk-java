@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionDeviceRegistration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Information Protection Device Registration Request.
  */
-public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseRequest implements IWindowsInformationProtectionDeviceRegistrationRequest {
+public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseRequest<WindowsInformationProtectionDeviceRegistration> {
 	
     /**
      * The request for the WindowsInformationProtectionDeviceRegistration
@@ -29,7 +31,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsInformationProtectionDeviceRegistrationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsInformationProtectionDeviceRegistrationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsInformationProtectionDeviceRegistration.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @return the WindowsInformationProtectionDeviceRegistration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsInformationProtectionDeviceRegistration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @param sourceWindowsInformationProtectionDeviceRegistration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
+    public void patch(@Nonnull final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration, @Nonnull final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsInformationProtectionDeviceRegistration);
     }
 
@@ -87,7 +90,8 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @return the updated WindowsInformationProtectionDeviceRegistration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionDeviceRegistration patch(final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionDeviceRegistration patch(@Nonnull final WindowsInformationProtectionDeviceRegistration sourceWindowsInformationProtectionDeviceRegistration) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsInformationProtectionDeviceRegistration);
     }
 
@@ -97,7 +101,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @param newWindowsInformationProtectionDeviceRegistration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
+    public void post(@Nonnull final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, @Nonnull final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         send(HttpMethod.POST, callback, newWindowsInformationProtectionDeviceRegistration);
     }
 
@@ -108,7 +112,8 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @return the created WindowsInformationProtectionDeviceRegistration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionDeviceRegistration post(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionDeviceRegistration post(@Nonnull final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException {
         return send(HttpMethod.POST, newWindowsInformationProtectionDeviceRegistration);
     }
 
@@ -118,7 +123,7 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @param newWindowsInformationProtectionDeviceRegistration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
+    public void put(@Nonnull final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration, @Nonnull final ICallback<? super WindowsInformationProtectionDeviceRegistration> callback) {
         send(HttpMethod.PUT, callback, newWindowsInformationProtectionDeviceRegistration);
     }
 
@@ -129,7 +134,8 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @return the created WindowsInformationProtectionDeviceRegistration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsInformationProtectionDeviceRegistration put(final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException {
+    @Nullable
+    public WindowsInformationProtectionDeviceRegistration put(@Nonnull final WindowsInformationProtectionDeviceRegistration newWindowsInformationProtectionDeviceRegistration) throws ClientException {
         return send(HttpMethod.PUT, newWindowsInformationProtectionDeviceRegistration);
     }
 
@@ -139,9 +145,10 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionDeviceRegistrationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsInformationProtectionDeviceRegistrationRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionDeviceRegistrationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsInformationProtectionDeviceRegistrationRequest extends BaseR
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsInformationProtectionDeviceRegistrationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsInformationProtectionDeviceRegistrationRequest)this;
+     @Nonnull
+     public WindowsInformationProtectionDeviceRegistrationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

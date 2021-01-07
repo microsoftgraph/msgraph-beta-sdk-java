@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SkypeForBusinessParticipantActivityCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Skype For Business Participant Activity Counts Request.
  */
-public class SkypeForBusinessParticipantActivityCountsRequest extends BaseRequest implements ISkypeForBusinessParticipantActivityCountsRequest {
+public class SkypeForBusinessParticipantActivityCountsRequest extends BaseRequest<SkypeForBusinessParticipantActivityCounts> {
 	
     /**
      * The request for the SkypeForBusinessParticipantActivityCounts
@@ -29,7 +31,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SkypeForBusinessParticipantActivityCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SkypeForBusinessParticipantActivityCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SkypeForBusinessParticipantActivityCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
+    public void get(@Nonnull final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @return the SkypeForBusinessParticipantActivityCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SkypeForBusinessParticipantActivityCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param sourceSkypeForBusinessParticipantActivityCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SkypeForBusinessParticipantActivityCounts sourceSkypeForBusinessParticipantActivityCounts, final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
+    public void patch(@Nonnull final SkypeForBusinessParticipantActivityCounts sourceSkypeForBusinessParticipantActivityCounts, @Nonnull final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -87,7 +90,8 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @return the updated SkypeForBusinessParticipantActivityCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessParticipantActivityCounts patch(final SkypeForBusinessParticipantActivityCounts sourceSkypeForBusinessParticipantActivityCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessParticipantActivityCounts patch(@Nonnull final SkypeForBusinessParticipantActivityCounts sourceSkypeForBusinessParticipantActivityCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -97,7 +101,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param newSkypeForBusinessParticipantActivityCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
+    public void post(@Nonnull final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, @Nonnull final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.POST, callback, newSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -108,7 +112,8 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @return the created SkypeForBusinessParticipantActivityCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessParticipantActivityCounts post(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessParticipantActivityCounts post(@Nonnull final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts) throws ClientException {
         return send(HttpMethod.POST, newSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -118,7 +123,7 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param newSkypeForBusinessParticipantActivityCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
+    public void put(@Nonnull final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts, @Nonnull final ICallback<? super SkypeForBusinessParticipantActivityCounts> callback) {
         send(HttpMethod.PUT, callback, newSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -129,7 +134,8 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @return the created SkypeForBusinessParticipantActivityCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SkypeForBusinessParticipantActivityCounts put(final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts) throws ClientException {
+    @Nullable
+    public SkypeForBusinessParticipantActivityCounts put(@Nonnull final SkypeForBusinessParticipantActivityCounts newSkypeForBusinessParticipantActivityCounts) throws ClientException {
         return send(HttpMethod.PUT, newSkypeForBusinessParticipantActivityCounts);
     }
 
@@ -139,9 +145,10 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-     public ISkypeForBusinessParticipantActivityCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SkypeForBusinessParticipantActivityCountsRequest)this;
+     @Nonnull
+     public SkypeForBusinessParticipantActivityCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SkypeForBusinessParticipantActivityCountsRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-     public ISkypeForBusinessParticipantActivityCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SkypeForBusinessParticipantActivityCountsRequest)this;
+     @Nonnull
+     public SkypeForBusinessParticipantActivityCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

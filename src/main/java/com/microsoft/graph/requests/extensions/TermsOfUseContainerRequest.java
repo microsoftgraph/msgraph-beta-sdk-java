@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.TermsOfUseContainer;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Terms Of Use Container Request.
  */
-public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfUseContainerRequest {
+public class TermsOfUseContainerRequest extends BaseRequest<TermsOfUseContainer> {
 	
     /**
      * The request for the TermsOfUseContainer
@@ -37,7 +35,7 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TermsOfUseContainerRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public TermsOfUseContainerRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, TermsOfUseContainer.class);
     }
 
@@ -46,7 +44,7 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super TermsOfUseContainer> callback) {
+    public void get(@Nonnull final ICallback<? super TermsOfUseContainer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @return the TermsOfUseContainer from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public TermsOfUseContainer get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super TermsOfUseContainer> callback) {
+    public void delete(@Nonnull final ICallback<? super TermsOfUseContainer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @param sourceTermsOfUseContainer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final TermsOfUseContainer sourceTermsOfUseContainer, final ICallback<? super TermsOfUseContainer> callback) {
+    public void patch(@Nonnull final TermsOfUseContainer sourceTermsOfUseContainer, @Nonnull final ICallback<? super TermsOfUseContainer> callback) {
         send(HttpMethod.PATCH, callback, sourceTermsOfUseContainer);
     }
 
@@ -95,7 +94,8 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @return the updated TermsOfUseContainer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsOfUseContainer patch(final TermsOfUseContainer sourceTermsOfUseContainer) throws ClientException {
+    @Nullable
+    public TermsOfUseContainer patch(@Nonnull final TermsOfUseContainer sourceTermsOfUseContainer) throws ClientException {
         return send(HttpMethod.PATCH, sourceTermsOfUseContainer);
     }
 
@@ -105,7 +105,7 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @param newTermsOfUseContainer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<? super TermsOfUseContainer> callback) {
+    public void post(@Nonnull final TermsOfUseContainer newTermsOfUseContainer, @Nonnull final ICallback<? super TermsOfUseContainer> callback) {
         send(HttpMethod.POST, callback, newTermsOfUseContainer);
     }
 
@@ -116,7 +116,8 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @return the created TermsOfUseContainer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsOfUseContainer post(final TermsOfUseContainer newTermsOfUseContainer) throws ClientException {
+    @Nullable
+    public TermsOfUseContainer post(@Nonnull final TermsOfUseContainer newTermsOfUseContainer) throws ClientException {
         return send(HttpMethod.POST, newTermsOfUseContainer);
     }
 
@@ -126,7 +127,7 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @param newTermsOfUseContainer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final TermsOfUseContainer newTermsOfUseContainer, final ICallback<? super TermsOfUseContainer> callback) {
+    public void put(@Nonnull final TermsOfUseContainer newTermsOfUseContainer, @Nonnull final ICallback<? super TermsOfUseContainer> callback) {
         send(HttpMethod.PUT, callback, newTermsOfUseContainer);
     }
 
@@ -137,7 +138,8 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @return the created TermsOfUseContainer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public TermsOfUseContainer put(final TermsOfUseContainer newTermsOfUseContainer) throws ClientException {
+    @Nullable
+    public TermsOfUseContainer put(@Nonnull final TermsOfUseContainer newTermsOfUseContainer) throws ClientException {
         return send(HttpMethod.PUT, newTermsOfUseContainer);
     }
 
@@ -147,9 +149,10 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @param value the select clause
      * @return the updated request
      */
-     public ITermsOfUseContainerRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (TermsOfUseContainerRequest)this;
+     @Nonnull
+     public TermsOfUseContainerRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class TermsOfUseContainerRequest extends BaseRequest implements ITermsOfU
      * @param value the expand clause
      * @return the updated request
      */
-     public ITermsOfUseContainerRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (TermsOfUseContainerRequest)this;
+     @Nonnull
+     public TermsOfUseContainerRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

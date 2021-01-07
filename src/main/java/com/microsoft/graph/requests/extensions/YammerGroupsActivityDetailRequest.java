@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.YammerGroupsActivityDetail;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Yammer Groups Activity Detail Request.
  */
-public class YammerGroupsActivityDetailRequest extends BaseRequest implements IYammerGroupsActivityDetailRequest {
+public class YammerGroupsActivityDetailRequest extends BaseRequest<YammerGroupsActivityDetail> {
 	
     /**
      * The request for the YammerGroupsActivityDetail
@@ -29,7 +31,7 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public YammerGroupsActivityDetailRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public YammerGroupsActivityDetailRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, YammerGroupsActivityDetail.class);
     }
 
@@ -38,7 +40,7 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super YammerGroupsActivityDetail> callback) {
+    public void get(@Nonnull final ICallback<? super YammerGroupsActivityDetail> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @return the YammerGroupsActivityDetail from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public YammerGroupsActivityDetail get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super YammerGroupsActivityDetail> callback) {
+    public void delete(@Nonnull final ICallback<? super YammerGroupsActivityDetail> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @param sourceYammerGroupsActivityDetail the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final YammerGroupsActivityDetail sourceYammerGroupsActivityDetail, final ICallback<? super YammerGroupsActivityDetail> callback) {
+    public void patch(@Nonnull final YammerGroupsActivityDetail sourceYammerGroupsActivityDetail, @Nonnull final ICallback<? super YammerGroupsActivityDetail> callback) {
         send(HttpMethod.PATCH, callback, sourceYammerGroupsActivityDetail);
     }
 
@@ -87,7 +90,8 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @return the updated YammerGroupsActivityDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerGroupsActivityDetail patch(final YammerGroupsActivityDetail sourceYammerGroupsActivityDetail) throws ClientException {
+    @Nullable
+    public YammerGroupsActivityDetail patch(@Nonnull final YammerGroupsActivityDetail sourceYammerGroupsActivityDetail) throws ClientException {
         return send(HttpMethod.PATCH, sourceYammerGroupsActivityDetail);
     }
 
@@ -97,7 +101,7 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @param newYammerGroupsActivityDetail the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final YammerGroupsActivityDetail newYammerGroupsActivityDetail, final ICallback<? super YammerGroupsActivityDetail> callback) {
+    public void post(@Nonnull final YammerGroupsActivityDetail newYammerGroupsActivityDetail, @Nonnull final ICallback<? super YammerGroupsActivityDetail> callback) {
         send(HttpMethod.POST, callback, newYammerGroupsActivityDetail);
     }
 
@@ -108,7 +112,8 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @return the created YammerGroupsActivityDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerGroupsActivityDetail post(final YammerGroupsActivityDetail newYammerGroupsActivityDetail) throws ClientException {
+    @Nullable
+    public YammerGroupsActivityDetail post(@Nonnull final YammerGroupsActivityDetail newYammerGroupsActivityDetail) throws ClientException {
         return send(HttpMethod.POST, newYammerGroupsActivityDetail);
     }
 
@@ -118,7 +123,7 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @param newYammerGroupsActivityDetail the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final YammerGroupsActivityDetail newYammerGroupsActivityDetail, final ICallback<? super YammerGroupsActivityDetail> callback) {
+    public void put(@Nonnull final YammerGroupsActivityDetail newYammerGroupsActivityDetail, @Nonnull final ICallback<? super YammerGroupsActivityDetail> callback) {
         send(HttpMethod.PUT, callback, newYammerGroupsActivityDetail);
     }
 
@@ -129,7 +134,8 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @return the created YammerGroupsActivityDetail
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public YammerGroupsActivityDetail put(final YammerGroupsActivityDetail newYammerGroupsActivityDetail) throws ClientException {
+    @Nullable
+    public YammerGroupsActivityDetail put(@Nonnull final YammerGroupsActivityDetail newYammerGroupsActivityDetail) throws ClientException {
         return send(HttpMethod.PUT, newYammerGroupsActivityDetail);
     }
 
@@ -139,9 +145,10 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @param value the select clause
      * @return the updated request
      */
-     public IYammerGroupsActivityDetailRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (YammerGroupsActivityDetailRequest)this;
+     @Nonnull
+     public YammerGroupsActivityDetailRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class YammerGroupsActivityDetailRequest extends BaseRequest implements IY
      * @param value the expand clause
      * @return the updated request
      */
-     public IYammerGroupsActivityDetailRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (YammerGroupsActivityDetailRequest)this;
+     @Nonnull
+     public YammerGroupsActivityDetailRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

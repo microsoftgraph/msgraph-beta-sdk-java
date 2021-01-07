@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.OnenoteEntitySchemaObjectModel;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Onenote Entity Schema Object Model Request.
  */
-public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implements IOnenoteEntitySchemaObjectModelRequest {
+public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest<OnenoteEntitySchemaObjectModel> {
 	
     /**
      * The request for the OnenoteEntitySchemaObjectModel
@@ -30,10 +32,10 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public OnenoteEntitySchemaObjectModelRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends OnenoteEntitySchemaObjectModel> responseClass) {
+    public OnenoteEntitySchemaObjectModelRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends OnenoteEntitySchemaObjectModel> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OnenoteEntitySchemaObjectModelRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OnenoteEntitySchemaObjectModelRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, OnenoteEntitySchemaObjectModel.class);
     }
 
@@ -53,7 +55,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void get(@Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @return the OnenoteEntitySchemaObjectModel from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public OnenoteEntitySchemaObjectModel get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void delete(@Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param sourceOnenoteEntitySchemaObjectModel the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void patch(@Nonnull final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel, @Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.PATCH, callback, sourceOnenoteEntitySchemaObjectModel);
     }
 
@@ -102,7 +105,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @return the updated OnenoteEntitySchemaObjectModel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteEntitySchemaObjectModel patch(final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel) throws ClientException {
+    @Nullable
+    public OnenoteEntitySchemaObjectModel patch(@Nonnull final OnenoteEntitySchemaObjectModel sourceOnenoteEntitySchemaObjectModel) throws ClientException {
         return send(HttpMethod.PATCH, sourceOnenoteEntitySchemaObjectModel);
     }
 
@@ -112,7 +116,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param newOnenoteEntitySchemaObjectModel the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void post(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, @Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.POST, callback, newOnenoteEntitySchemaObjectModel);
     }
 
@@ -123,7 +127,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @return the created OnenoteEntitySchemaObjectModel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteEntitySchemaObjectModel post(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) throws ClientException {
+    @Nullable
+    public OnenoteEntitySchemaObjectModel post(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) throws ClientException {
         return send(HttpMethod.POST, newOnenoteEntitySchemaObjectModel);
     }
 
@@ -133,7 +138,7 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param newOnenoteEntitySchemaObjectModel the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
+    public void put(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel, @Nonnull final ICallback<? super OnenoteEntitySchemaObjectModel> callback) {
         send(HttpMethod.PUT, callback, newOnenoteEntitySchemaObjectModel);
     }
 
@@ -144,7 +149,8 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @return the created OnenoteEntitySchemaObjectModel
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public OnenoteEntitySchemaObjectModel put(final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) throws ClientException {
+    @Nullable
+    public OnenoteEntitySchemaObjectModel put(@Nonnull final OnenoteEntitySchemaObjectModel newOnenoteEntitySchemaObjectModel) throws ClientException {
         return send(HttpMethod.PUT, newOnenoteEntitySchemaObjectModel);
     }
 
@@ -154,9 +160,10 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IOnenoteEntitySchemaObjectModelRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OnenoteEntitySchemaObjectModelRequest)this;
+     @Nonnull
+     public OnenoteEntitySchemaObjectModelRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class OnenoteEntitySchemaObjectModelRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IOnenoteEntitySchemaObjectModelRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OnenoteEntitySchemaObjectModelRequest)this;
+     @Nonnull
+     public OnenoteEntitySchemaObjectModelRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

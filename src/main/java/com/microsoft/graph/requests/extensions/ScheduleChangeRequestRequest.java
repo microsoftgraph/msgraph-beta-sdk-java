@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ScheduleChangeRequest;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Schedule Change Request Request.
  */
-public class ScheduleChangeRequestRequest extends BaseRequest implements IScheduleChangeRequestRequest {
+public class ScheduleChangeRequestRequest extends BaseRequest<ScheduleChangeRequest> {
 	
     /**
      * The request for the ScheduleChangeRequest
@@ -30,10 +32,10 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public ScheduleChangeRequestRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends ScheduleChangeRequest> responseClass) {
+    public ScheduleChangeRequestRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends ScheduleChangeRequest> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ScheduleChangeRequestRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ScheduleChangeRequestRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ScheduleChangeRequest.class);
     }
 
@@ -53,7 +55,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ScheduleChangeRequest> callback) {
+    public void get(@Nonnull final ICallback<? super ScheduleChangeRequest> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @return the ScheduleChangeRequest from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ScheduleChangeRequest get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ScheduleChangeRequest> callback) {
+    public void delete(@Nonnull final ICallback<? super ScheduleChangeRequest> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param sourceScheduleChangeRequest the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ScheduleChangeRequest sourceScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback) {
+    public void patch(@Nonnull final ScheduleChangeRequest sourceScheduleChangeRequest, @Nonnull final ICallback<? super ScheduleChangeRequest> callback) {
         send(HttpMethod.PATCH, callback, sourceScheduleChangeRequest);
     }
 
@@ -102,7 +105,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @return the updated ScheduleChangeRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ScheduleChangeRequest patch(final ScheduleChangeRequest sourceScheduleChangeRequest) throws ClientException {
+    @Nullable
+    public ScheduleChangeRequest patch(@Nonnull final ScheduleChangeRequest sourceScheduleChangeRequest) throws ClientException {
         return send(HttpMethod.PATCH, sourceScheduleChangeRequest);
     }
 
@@ -112,7 +116,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param newScheduleChangeRequest the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback) {
+    public void post(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest, @Nonnull final ICallback<? super ScheduleChangeRequest> callback) {
         send(HttpMethod.POST, callback, newScheduleChangeRequest);
     }
 
@@ -123,7 +127,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @return the created ScheduleChangeRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ScheduleChangeRequest post(final ScheduleChangeRequest newScheduleChangeRequest) throws ClientException {
+    @Nullable
+    public ScheduleChangeRequest post(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest) throws ClientException {
         return send(HttpMethod.POST, newScheduleChangeRequest);
     }
 
@@ -133,7 +138,7 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param newScheduleChangeRequest the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ScheduleChangeRequest newScheduleChangeRequest, final ICallback<? super ScheduleChangeRequest> callback) {
+    public void put(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest, @Nonnull final ICallback<? super ScheduleChangeRequest> callback) {
         send(HttpMethod.PUT, callback, newScheduleChangeRequest);
     }
 
@@ -144,7 +149,8 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @return the created ScheduleChangeRequest
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ScheduleChangeRequest put(final ScheduleChangeRequest newScheduleChangeRequest) throws ClientException {
+    @Nullable
+    public ScheduleChangeRequest put(@Nonnull final ScheduleChangeRequest newScheduleChangeRequest) throws ClientException {
         return send(HttpMethod.PUT, newScheduleChangeRequest);
     }
 
@@ -154,9 +160,10 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param value the select clause
      * @return the updated request
      */
-     public IScheduleChangeRequestRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ScheduleChangeRequestRequest)this;
+     @Nonnull
+     public ScheduleChangeRequestRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class ScheduleChangeRequestRequest extends BaseRequest implements ISchedu
      * @param value the expand clause
      * @return the updated request
      */
-     public IScheduleChangeRequestRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ScheduleChangeRequestRequest)this;
+     @Nonnull
+     public ScheduleChangeRequestRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

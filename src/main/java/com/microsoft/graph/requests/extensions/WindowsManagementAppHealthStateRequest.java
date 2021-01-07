@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsManagementAppHealthState;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Management App Health State Request.
  */
-public class WindowsManagementAppHealthStateRequest extends BaseRequest implements IWindowsManagementAppHealthStateRequest {
+public class WindowsManagementAppHealthStateRequest extends BaseRequest<WindowsManagementAppHealthState> {
 	
     /**
      * The request for the WindowsManagementAppHealthState
@@ -29,7 +31,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsManagementAppHealthStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsManagementAppHealthStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsManagementAppHealthState.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsManagementAppHealthState> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @return the WindowsManagementAppHealthState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsManagementAppHealthState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsManagementAppHealthState> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param sourceWindowsManagementAppHealthState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback) {
+    public void patch(@Nonnull final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState, @Nonnull final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsManagementAppHealthState);
     }
 
@@ -87,7 +90,8 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @return the updated WindowsManagementAppHealthState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagementAppHealthState patch(final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState) throws ClientException {
+    @Nullable
+    public WindowsManagementAppHealthState patch(@Nonnull final WindowsManagementAppHealthState sourceWindowsManagementAppHealthState) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsManagementAppHealthState);
     }
 
@@ -97,7 +101,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param newWindowsManagementAppHealthState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback) {
+    public void post(@Nonnull final WindowsManagementAppHealthState newWindowsManagementAppHealthState, @Nonnull final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.POST, callback, newWindowsManagementAppHealthState);
     }
 
@@ -108,7 +112,8 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @return the created WindowsManagementAppHealthState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagementAppHealthState post(final WindowsManagementAppHealthState newWindowsManagementAppHealthState) throws ClientException {
+    @Nullable
+    public WindowsManagementAppHealthState post(@Nonnull final WindowsManagementAppHealthState newWindowsManagementAppHealthState) throws ClientException {
         return send(HttpMethod.POST, newWindowsManagementAppHealthState);
     }
 
@@ -118,7 +123,7 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param newWindowsManagementAppHealthState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState, final ICallback<? super WindowsManagementAppHealthState> callback) {
+    public void put(@Nonnull final WindowsManagementAppHealthState newWindowsManagementAppHealthState, @Nonnull final ICallback<? super WindowsManagementAppHealthState> callback) {
         send(HttpMethod.PUT, callback, newWindowsManagementAppHealthState);
     }
 
@@ -129,7 +134,8 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @return the created WindowsManagementAppHealthState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsManagementAppHealthState put(final WindowsManagementAppHealthState newWindowsManagementAppHealthState) throws ClientException {
+    @Nullable
+    public WindowsManagementAppHealthState put(@Nonnull final WindowsManagementAppHealthState newWindowsManagementAppHealthState) throws ClientException {
         return send(HttpMethod.PUT, newWindowsManagementAppHealthState);
     }
 
@@ -139,9 +145,10 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsManagementAppHealthStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsManagementAppHealthStateRequest)this;
+     @Nonnull
+     public WindowsManagementAppHealthStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsManagementAppHealthStateRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsManagementAppHealthStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsManagementAppHealthStateRequest)this;
+     @Nonnull
+     public WindowsManagementAppHealthStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

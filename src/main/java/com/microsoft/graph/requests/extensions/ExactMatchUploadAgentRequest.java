@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ExactMatchUploadAgent;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Exact Match Upload Agent Request.
  */
-public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactMatchUploadAgentRequest {
+public class ExactMatchUploadAgentRequest extends BaseRequest<ExactMatchUploadAgent> {
 	
     /**
      * The request for the ExactMatchUploadAgent
@@ -29,7 +31,7 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ExactMatchUploadAgentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ExactMatchUploadAgentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, ExactMatchUploadAgent.class);
     }
 
@@ -38,7 +40,7 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super ExactMatchUploadAgent> callback) {
+    public void get(@Nonnull final ICallback<? super ExactMatchUploadAgent> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @return the ExactMatchUploadAgent from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public ExactMatchUploadAgent get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super ExactMatchUploadAgent> callback) {
+    public void delete(@Nonnull final ICallback<? super ExactMatchUploadAgent> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @param sourceExactMatchUploadAgent the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final ExactMatchUploadAgent sourceExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback) {
+    public void patch(@Nonnull final ExactMatchUploadAgent sourceExactMatchUploadAgent, @Nonnull final ICallback<? super ExactMatchUploadAgent> callback) {
         send(HttpMethod.PATCH, callback, sourceExactMatchUploadAgent);
     }
 
@@ -87,7 +90,8 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @return the updated ExactMatchUploadAgent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchUploadAgent patch(final ExactMatchUploadAgent sourceExactMatchUploadAgent) throws ClientException {
+    @Nullable
+    public ExactMatchUploadAgent patch(@Nonnull final ExactMatchUploadAgent sourceExactMatchUploadAgent) throws ClientException {
         return send(HttpMethod.PATCH, sourceExactMatchUploadAgent);
     }
 
@@ -97,7 +101,7 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @param newExactMatchUploadAgent the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback) {
+    public void post(@Nonnull final ExactMatchUploadAgent newExactMatchUploadAgent, @Nonnull final ICallback<? super ExactMatchUploadAgent> callback) {
         send(HttpMethod.POST, callback, newExactMatchUploadAgent);
     }
 
@@ -108,7 +112,8 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @return the created ExactMatchUploadAgent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchUploadAgent post(final ExactMatchUploadAgent newExactMatchUploadAgent) throws ClientException {
+    @Nullable
+    public ExactMatchUploadAgent post(@Nonnull final ExactMatchUploadAgent newExactMatchUploadAgent) throws ClientException {
         return send(HttpMethod.POST, newExactMatchUploadAgent);
     }
 
@@ -118,7 +123,7 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @param newExactMatchUploadAgent the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final ExactMatchUploadAgent newExactMatchUploadAgent, final ICallback<? super ExactMatchUploadAgent> callback) {
+    public void put(@Nonnull final ExactMatchUploadAgent newExactMatchUploadAgent, @Nonnull final ICallback<? super ExactMatchUploadAgent> callback) {
         send(HttpMethod.PUT, callback, newExactMatchUploadAgent);
     }
 
@@ -129,7 +134,8 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @return the created ExactMatchUploadAgent
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public ExactMatchUploadAgent put(final ExactMatchUploadAgent newExactMatchUploadAgent) throws ClientException {
+    @Nullable
+    public ExactMatchUploadAgent put(@Nonnull final ExactMatchUploadAgent newExactMatchUploadAgent) throws ClientException {
         return send(HttpMethod.PUT, newExactMatchUploadAgent);
     }
 
@@ -139,9 +145,10 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @param value the select clause
      * @return the updated request
      */
-     public IExactMatchUploadAgentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (ExactMatchUploadAgentRequest)this;
+     @Nonnull
+     public ExactMatchUploadAgentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class ExactMatchUploadAgentRequest extends BaseRequest implements IExactM
      * @param value the expand clause
      * @return the updated request
      */
-     public IExactMatchUploadAgentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (ExactMatchUploadAgentRequest)this;
+     @Nonnull
+     public ExactMatchUploadAgentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsScoreHistory;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the User Experience Analytics Score History Request.
  */
-public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest implements IUserExperienceAnalyticsScoreHistoryRequest {
+public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest<UserExperienceAnalyticsScoreHistory> {
 	
     /**
      * The request for the UserExperienceAnalyticsScoreHistory
@@ -29,7 +31,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UserExperienceAnalyticsScoreHistoryRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UserExperienceAnalyticsScoreHistoryRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UserExperienceAnalyticsScoreHistory.class);
     }
 
@@ -38,7 +40,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
+    public void get(@Nonnull final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @return the UserExperienceAnalyticsScoreHistory from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UserExperienceAnalyticsScoreHistory get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
+    public void delete(@Nonnull final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param sourceUserExperienceAnalyticsScoreHistory the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
+    public void patch(@Nonnull final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory, @Nonnull final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.PATCH, callback, sourceUserExperienceAnalyticsScoreHistory);
     }
 
@@ -87,7 +90,8 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @return the updated UserExperienceAnalyticsScoreHistory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsScoreHistory patch(final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsScoreHistory patch(@Nonnull final UserExperienceAnalyticsScoreHistory sourceUserExperienceAnalyticsScoreHistory) throws ClientException {
         return send(HttpMethod.PATCH, sourceUserExperienceAnalyticsScoreHistory);
     }
 
@@ -97,7 +101,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param newUserExperienceAnalyticsScoreHistory the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
+    public void post(@Nonnull final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, @Nonnull final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.POST, callback, newUserExperienceAnalyticsScoreHistory);
     }
 
@@ -108,7 +112,8 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @return the created UserExperienceAnalyticsScoreHistory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsScoreHistory post(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsScoreHistory post(@Nonnull final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException {
         return send(HttpMethod.POST, newUserExperienceAnalyticsScoreHistory);
     }
 
@@ -118,7 +123,7 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param newUserExperienceAnalyticsScoreHistory the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
+    public void put(@Nonnull final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory, @Nonnull final ICallback<? super UserExperienceAnalyticsScoreHistory> callback) {
         send(HttpMethod.PUT, callback, newUserExperienceAnalyticsScoreHistory);
     }
 
@@ -129,7 +134,8 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @return the created UserExperienceAnalyticsScoreHistory
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UserExperienceAnalyticsScoreHistory put(final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException {
+    @Nullable
+    public UserExperienceAnalyticsScoreHistory put(@Nonnull final UserExperienceAnalyticsScoreHistory newUserExperienceAnalyticsScoreHistory) throws ClientException {
         return send(HttpMethod.PUT, newUserExperienceAnalyticsScoreHistory);
     }
 
@@ -139,9 +145,10 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param value the select clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsScoreHistoryRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UserExperienceAnalyticsScoreHistoryRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsScoreHistoryRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UserExperienceAnalyticsScoreHistoryRequest extends BaseRequest impl
      * @param value the expand clause
      * @return the updated request
      */
-     public IUserExperienceAnalyticsScoreHistoryRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UserExperienceAnalyticsScoreHistoryRequest)this;
+     @Nonnull
+     public UserExperienceAnalyticsScoreHistoryRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

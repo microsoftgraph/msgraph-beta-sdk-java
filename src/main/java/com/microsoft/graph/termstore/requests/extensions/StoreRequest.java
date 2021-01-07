@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Store;
-import com.microsoft.graph.termstore.requests.extensions.IGroupCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.GroupCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.GroupRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetCollectionRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -28,7 +26,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Store Request.
  */
-public class StoreRequest extends BaseRequest implements IStoreRequest {
+public class StoreRequest extends BaseRequest<Store> {
 	
     /**
      * The request for the Store
@@ -37,7 +35,7 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public StoreRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public StoreRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Store.class);
     }
 
@@ -46,7 +44,7 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Store> callback) {
+    public void get(@Nonnull final ICallback<? super Store> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -56,6 +54,7 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @return the Store from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Store get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -65,7 +64,7 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Store> callback) {
+    public void delete(@Nonnull final ICallback<? super Store> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -84,7 +83,7 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @param sourceStore the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Store sourceStore, final ICallback<? super Store> callback) {
+    public void patch(@Nonnull final Store sourceStore, @Nonnull final ICallback<? super Store> callback) {
         send(HttpMethod.PATCH, callback, sourceStore);
     }
 
@@ -95,7 +94,8 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @return the updated Store
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Store patch(final Store sourceStore) throws ClientException {
+    @Nullable
+    public Store patch(@Nonnull final Store sourceStore) throws ClientException {
         return send(HttpMethod.PATCH, sourceStore);
     }
 
@@ -105,7 +105,7 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @param newStore the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Store newStore, final ICallback<? super Store> callback) {
+    public void post(@Nonnull final Store newStore, @Nonnull final ICallback<? super Store> callback) {
         send(HttpMethod.POST, callback, newStore);
     }
 
@@ -116,7 +116,8 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @return the created Store
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Store post(final Store newStore) throws ClientException {
+    @Nullable
+    public Store post(@Nonnull final Store newStore) throws ClientException {
         return send(HttpMethod.POST, newStore);
     }
 
@@ -126,7 +127,7 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @param newStore the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Store newStore, final ICallback<? super Store> callback) {
+    public void put(@Nonnull final Store newStore, @Nonnull final ICallback<? super Store> callback) {
         send(HttpMethod.PUT, callback, newStore);
     }
 
@@ -137,7 +138,8 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @return the created Store
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Store put(final Store newStore) throws ClientException {
+    @Nullable
+    public Store put(@Nonnull final Store newStore) throws ClientException {
         return send(HttpMethod.PUT, newStore);
     }
 
@@ -147,9 +149,10 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IStoreRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (StoreRequest)this;
+     @Nonnull
+     public StoreRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -158,9 +161,10 @@ public class StoreRequest extends BaseRequest implements IStoreRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IStoreRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (StoreRequest)this;
+     @Nonnull
+     public StoreRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

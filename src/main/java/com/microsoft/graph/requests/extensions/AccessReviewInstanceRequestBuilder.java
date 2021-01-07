@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -25,7 +24,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Access Review Instance Request Builder.
  */
-public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder implements IAccessReviewInstanceRequestBuilder {
+public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder<AccessReviewInstance> {
 
     /**
      * The request builder for the AccessReviewInstance
@@ -34,7 +33,7 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AccessReviewInstanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AccessReviewInstanceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -42,9 +41,10 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAccessReviewInstanceRequest instance
+     * @return the AccessReviewInstanceRequest instance
      */
-    public IAccessReviewInstanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AccessReviewInstanceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -52,47 +52,87 @@ public class AccessReviewInstanceRequestBuilder extends BaseRequestBuilder imple
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAccessReviewInstanceRequest instance
+     * @return the AccessReviewInstanceRequest instance
      */
-    public IAccessReviewInstanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AccessReviewInstanceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AccessReviewInstanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IAccessReviewInstanceDecisionItemCollectionRequestBuilder decisions() {
+    /**
+     *  Gets a request builder for the AccessReviewInstanceDecisionItem collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceDecisionItemCollectionRequestBuilder decisions() {
         return new AccessReviewInstanceDecisionItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("decisions"), getClient(), null);
     }
 
-    public IAccessReviewInstanceDecisionItemRequestBuilder decisions(final String id) {
+    /**
+     * Gets a request builder for the AccessReviewInstanceDecisionItem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessReviewInstanceDecisionItemRequestBuilder decisions(@Nonnull final String id) {
         return new AccessReviewInstanceDecisionItemRequestBuilder(getRequestUrlWithAdditionalSegment("decisions") + "/" + id, getClient(), null);
     }
 
     /**
      * Gets the request builder for AccessReviewScheduleDefinition
      *
-     * @return the IAccessReviewScheduleDefinitionWithReferenceRequestBuilder instance
+     * @return the AccessReviewScheduleDefinitionWithReferenceRequestBuilder instance
      */
-    public IAccessReviewScheduleDefinitionWithReferenceRequestBuilder definition() {
+    @Nonnull
+    public AccessReviewScheduleDefinitionWithReferenceRequestBuilder definition() {
         return new AccessReviewScheduleDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 
-    public IAccessReviewInstanceStopRequestBuilder stop() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceStopRequestBuilder stop() {
         return new AccessReviewInstanceStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 
-    public IAccessReviewInstanceAcceptRecommendationsRequestBuilder acceptRecommendations() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceAcceptRecommendationsRequestBuilder acceptRecommendations() {
         return new AccessReviewInstanceAcceptRecommendationsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.acceptRecommendations"), getClient(), null);
     }
 
-    public IAccessReviewInstanceApplyDecisionsRequestBuilder applyDecisions() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceApplyDecisionsRequestBuilder applyDecisions() {
         return new AccessReviewInstanceApplyDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.applyDecisions"), getClient(), null);
     }
 
-    public IAccessReviewInstanceResetDecisionsRequestBuilder resetDecisions() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceResetDecisionsRequestBuilder resetDecisions() {
         return new AccessReviewInstanceResetDecisionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resetDecisions"), getClient(), null);
     }
 
-    public IAccessReviewInstanceSendReminderRequestBuilder sendReminder() {
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessReviewInstanceSendReminderRequestBuilder sendReminder() {
         return new AccessReviewInstanceSendReminderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendReminder"), getClient(), null);
     }
 }

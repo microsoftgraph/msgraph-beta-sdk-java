@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkGeneralDeviceConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android For Work General Device Configuration Request.
  */
-public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest implements IAndroidForWorkGeneralDeviceConfigurationRequest {
+public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest<AndroidForWorkGeneralDeviceConfiguration> {
 	
     /**
      * The request for the AndroidForWorkGeneralDeviceConfiguration
@@ -29,7 +31,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkGeneralDeviceConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkGeneralDeviceConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkGeneralDeviceConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @return the AndroidForWorkGeneralDeviceConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidForWorkGeneralDeviceConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param sourceAndroidForWorkGeneralDeviceConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkGeneralDeviceConfiguration sourceAndroidForWorkGeneralDeviceConfiguration, final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void patch(@Nonnull final AndroidForWorkGeneralDeviceConfiguration sourceAndroidForWorkGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @return the updated AndroidForWorkGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkGeneralDeviceConfiguration patch(final AndroidForWorkGeneralDeviceConfiguration sourceAndroidForWorkGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkGeneralDeviceConfiguration patch(@Nonnull final AndroidForWorkGeneralDeviceConfiguration sourceAndroidForWorkGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param newAndroidForWorkGeneralDeviceConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void post(@Nonnull final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @return the created AndroidForWorkGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkGeneralDeviceConfiguration post(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkGeneralDeviceConfiguration post(@Nonnull final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.POST, newAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param newAndroidForWorkGeneralDeviceConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
+    public void put(@Nonnull final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration, @Nonnull final ICallback<? super AndroidForWorkGeneralDeviceConfiguration> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @return the created AndroidForWorkGeneralDeviceConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkGeneralDeviceConfiguration put(final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration) throws ClientException {
+    @Nullable
+    public AndroidForWorkGeneralDeviceConfiguration put(@Nonnull final AndroidForWorkGeneralDeviceConfiguration newAndroidForWorkGeneralDeviceConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newAndroidForWorkGeneralDeviceConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidForWorkGeneralDeviceConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidForWorkGeneralDeviceConfigurationRequest)this;
+     @Nonnull
+     public AndroidForWorkGeneralDeviceConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AndroidForWorkGeneralDeviceConfigurationRequest extends BaseRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidForWorkGeneralDeviceConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkGeneralDeviceConfigurationRequest)this;
+     @Nonnull
+     public AndroidForWorkGeneralDeviceConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

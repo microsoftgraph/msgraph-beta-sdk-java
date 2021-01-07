@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementAssignmentFilter;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device And App Management Assignment Filter Request.
  */
-public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest implements IDeviceAndAppManagementAssignmentFilterRequest {
+public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest<DeviceAndAppManagementAssignmentFilter> {
 	
     /**
      * The request for the DeviceAndAppManagementAssignmentFilter
@@ -29,7 +31,7 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceAndAppManagementAssignmentFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceAndAppManagementAssignmentFilterRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceAndAppManagementAssignmentFilter.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @return the DeviceAndAppManagementAssignmentFilter from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceAndAppManagementAssignmentFilter get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @param sourceDeviceAndAppManagementAssignmentFilter the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceAndAppManagementAssignmentFilter sourceDeviceAndAppManagementAssignmentFilter, final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
+    public void patch(@Nonnull final DeviceAndAppManagementAssignmentFilter sourceDeviceAndAppManagementAssignmentFilter, @Nonnull final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceAndAppManagementAssignmentFilter);
     }
 
@@ -87,7 +90,8 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @return the updated DeviceAndAppManagementAssignmentFilter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementAssignmentFilter patch(final DeviceAndAppManagementAssignmentFilter sourceDeviceAndAppManagementAssignmentFilter) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementAssignmentFilter patch(@Nonnull final DeviceAndAppManagementAssignmentFilter sourceDeviceAndAppManagementAssignmentFilter) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceAndAppManagementAssignmentFilter);
     }
 
@@ -97,7 +101,7 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @param newDeviceAndAppManagementAssignmentFilter the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
+    public void post(@Nonnull final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, @Nonnull final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
         send(HttpMethod.POST, callback, newDeviceAndAppManagementAssignmentFilter);
     }
 
@@ -108,7 +112,8 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @return the created DeviceAndAppManagementAssignmentFilter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementAssignmentFilter post(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementAssignmentFilter post(@Nonnull final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException {
         return send(HttpMethod.POST, newDeviceAndAppManagementAssignmentFilter);
     }
 
@@ -118,7 +123,7 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @param newDeviceAndAppManagementAssignmentFilter the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
+    public void put(@Nonnull final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter, @Nonnull final ICallback<? super DeviceAndAppManagementAssignmentFilter> callback) {
         send(HttpMethod.PUT, callback, newDeviceAndAppManagementAssignmentFilter);
     }
 
@@ -129,7 +134,8 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @return the created DeviceAndAppManagementAssignmentFilter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceAndAppManagementAssignmentFilter put(final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException {
+    @Nullable
+    public DeviceAndAppManagementAssignmentFilter put(@Nonnull final DeviceAndAppManagementAssignmentFilter newDeviceAndAppManagementAssignmentFilter) throws ClientException {
         return send(HttpMethod.PUT, newDeviceAndAppManagementAssignmentFilter);
     }
 
@@ -139,9 +145,10 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceAndAppManagementAssignmentFilterRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceAndAppManagementAssignmentFilterRequest)this;
+     @Nonnull
+     public DeviceAndAppManagementAssignmentFilterRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceAndAppManagementAssignmentFilterRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceAndAppManagementAssignmentFilterRequest)this;
+     @Nonnull
+     public DeviceAndAppManagementAssignmentFilterRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

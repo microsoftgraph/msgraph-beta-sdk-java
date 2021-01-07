@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Command;
-import com.microsoft.graph.requests.extensions.IPayloadResponseRequestBuilder;
 import com.microsoft.graph.requests.extensions.PayloadResponseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Command Request.
  */
-public class CommandRequest extends BaseRequest implements ICommandRequest {
+public class CommandRequest extends BaseRequest<Command> {
 	
     /**
      * The request for the Command
@@ -31,7 +32,7 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public CommandRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public CommandRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Command.class);
     }
 
@@ -40,7 +41,7 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Command> callback) {
+    public void get(@Nonnull final ICallback<? super Command> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @return the Command from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Command get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Command> callback) {
+    public void delete(@Nonnull final ICallback<? super Command> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @param sourceCommand the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Command sourceCommand, final ICallback<? super Command> callback) {
+    public void patch(@Nonnull final Command sourceCommand, @Nonnull final ICallback<? super Command> callback) {
         send(HttpMethod.PATCH, callback, sourceCommand);
     }
 
@@ -89,7 +91,8 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @return the updated Command
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Command patch(final Command sourceCommand) throws ClientException {
+    @Nullable
+    public Command patch(@Nonnull final Command sourceCommand) throws ClientException {
         return send(HttpMethod.PATCH, sourceCommand);
     }
 
@@ -99,7 +102,7 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @param newCommand the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Command newCommand, final ICallback<? super Command> callback) {
+    public void post(@Nonnull final Command newCommand, @Nonnull final ICallback<? super Command> callback) {
         send(HttpMethod.POST, callback, newCommand);
     }
 
@@ -110,7 +113,8 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @return the created Command
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Command post(final Command newCommand) throws ClientException {
+    @Nullable
+    public Command post(@Nonnull final Command newCommand) throws ClientException {
         return send(HttpMethod.POST, newCommand);
     }
 
@@ -120,7 +124,7 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @param newCommand the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Command newCommand, final ICallback<? super Command> callback) {
+    public void put(@Nonnull final Command newCommand, @Nonnull final ICallback<? super Command> callback) {
         send(HttpMethod.PUT, callback, newCommand);
     }
 
@@ -131,7 +135,8 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @return the created Command
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Command put(final Command newCommand) throws ClientException {
+    @Nullable
+    public Command put(@Nonnull final Command newCommand) throws ClientException {
         return send(HttpMethod.PUT, newCommand);
     }
 
@@ -141,9 +146,10 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public ICommandRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (CommandRequest)this;
+     @Nonnull
+     public CommandRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class CommandRequest extends BaseRequest implements ICommandRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public ICommandRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (CommandRequest)this;
+     @Nonnull
+     public CommandRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

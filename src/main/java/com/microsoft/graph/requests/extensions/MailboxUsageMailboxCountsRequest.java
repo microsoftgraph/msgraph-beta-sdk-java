@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MailboxUsageMailboxCounts;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Mailbox Usage Mailbox Counts Request.
  */
-public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMailboxUsageMailboxCountsRequest {
+public class MailboxUsageMailboxCountsRequest extends BaseRequest<MailboxUsageMailboxCounts> {
 	
     /**
      * The request for the MailboxUsageMailboxCounts
@@ -29,7 +31,7 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MailboxUsageMailboxCountsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MailboxUsageMailboxCountsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MailboxUsageMailboxCounts.class);
     }
 
@@ -38,7 +40,7 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MailboxUsageMailboxCounts> callback) {
+    public void get(@Nonnull final ICallback<? super MailboxUsageMailboxCounts> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @return the MailboxUsageMailboxCounts from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MailboxUsageMailboxCounts get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MailboxUsageMailboxCounts> callback) {
+    public void delete(@Nonnull final ICallback<? super MailboxUsageMailboxCounts> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @param sourceMailboxUsageMailboxCounts the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MailboxUsageMailboxCounts sourceMailboxUsageMailboxCounts, final ICallback<? super MailboxUsageMailboxCounts> callback) {
+    public void patch(@Nonnull final MailboxUsageMailboxCounts sourceMailboxUsageMailboxCounts, @Nonnull final ICallback<? super MailboxUsageMailboxCounts> callback) {
         send(HttpMethod.PATCH, callback, sourceMailboxUsageMailboxCounts);
     }
 
@@ -87,7 +90,8 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @return the updated MailboxUsageMailboxCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MailboxUsageMailboxCounts patch(final MailboxUsageMailboxCounts sourceMailboxUsageMailboxCounts) throws ClientException {
+    @Nullable
+    public MailboxUsageMailboxCounts patch(@Nonnull final MailboxUsageMailboxCounts sourceMailboxUsageMailboxCounts) throws ClientException {
         return send(HttpMethod.PATCH, sourceMailboxUsageMailboxCounts);
     }
 
@@ -97,7 +101,7 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @param newMailboxUsageMailboxCounts the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, final ICallback<? super MailboxUsageMailboxCounts> callback) {
+    public void post(@Nonnull final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, @Nonnull final ICallback<? super MailboxUsageMailboxCounts> callback) {
         send(HttpMethod.POST, callback, newMailboxUsageMailboxCounts);
     }
 
@@ -108,7 +112,8 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @return the created MailboxUsageMailboxCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MailboxUsageMailboxCounts post(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts) throws ClientException {
+    @Nullable
+    public MailboxUsageMailboxCounts post(@Nonnull final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts) throws ClientException {
         return send(HttpMethod.POST, newMailboxUsageMailboxCounts);
     }
 
@@ -118,7 +123,7 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @param newMailboxUsageMailboxCounts the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, final ICallback<? super MailboxUsageMailboxCounts> callback) {
+    public void put(@Nonnull final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts, @Nonnull final ICallback<? super MailboxUsageMailboxCounts> callback) {
         send(HttpMethod.PUT, callback, newMailboxUsageMailboxCounts);
     }
 
@@ -129,7 +134,8 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @return the created MailboxUsageMailboxCounts
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MailboxUsageMailboxCounts put(final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts) throws ClientException {
+    @Nullable
+    public MailboxUsageMailboxCounts put(@Nonnull final MailboxUsageMailboxCounts newMailboxUsageMailboxCounts) throws ClientException {
         return send(HttpMethod.PUT, newMailboxUsageMailboxCounts);
     }
 
@@ -139,9 +145,10 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @param value the select clause
      * @return the updated request
      */
-     public IMailboxUsageMailboxCountsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MailboxUsageMailboxCountsRequest)this;
+     @Nonnull
+     public MailboxUsageMailboxCountsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MailboxUsageMailboxCountsRequest extends BaseRequest implements IMa
      * @param value the expand clause
      * @return the updated request
      */
-     public IMailboxUsageMailboxCountsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MailboxUsageMailboxCountsRequest)this;
+     @Nonnull
+     public MailboxUsageMailboxCountsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

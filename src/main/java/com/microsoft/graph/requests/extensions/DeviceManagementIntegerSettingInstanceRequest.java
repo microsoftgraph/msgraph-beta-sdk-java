@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementIntegerSettingInstance;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Integer Setting Instance Request.
  */
-public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest implements IDeviceManagementIntegerSettingInstanceRequest {
+public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest<DeviceManagementIntegerSettingInstance> {
 	
     /**
      * The request for the DeviceManagementIntegerSettingInstance
@@ -29,7 +31,7 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementIntegerSettingInstanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementIntegerSettingInstanceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementIntegerSettingInstance.class);
     }
 
@@ -38,7 +40,7 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @return the DeviceManagementIntegerSettingInstance from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementIntegerSettingInstance get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @param sourceDeviceManagementIntegerSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementIntegerSettingInstance sourceDeviceManagementIntegerSettingInstance, final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
+    public void patch(@Nonnull final DeviceManagementIntegerSettingInstance sourceDeviceManagementIntegerSettingInstance, @Nonnull final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementIntegerSettingInstance);
     }
 
@@ -87,7 +90,8 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @return the updated DeviceManagementIntegerSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntegerSettingInstance patch(final DeviceManagementIntegerSettingInstance sourceDeviceManagementIntegerSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementIntegerSettingInstance patch(@Nonnull final DeviceManagementIntegerSettingInstance sourceDeviceManagementIntegerSettingInstance) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementIntegerSettingInstance);
     }
 
@@ -97,7 +101,7 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @param newDeviceManagementIntegerSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
+    public void post(@Nonnull final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, @Nonnull final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementIntegerSettingInstance);
     }
 
@@ -108,7 +112,8 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @return the created DeviceManagementIntegerSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntegerSettingInstance post(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementIntegerSettingInstance post(@Nonnull final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementIntegerSettingInstance);
     }
 
@@ -118,7 +123,7 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @param newDeviceManagementIntegerSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
+    public void put(@Nonnull final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance, @Nonnull final ICallback<? super DeviceManagementIntegerSettingInstance> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementIntegerSettingInstance);
     }
 
@@ -129,7 +134,8 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @return the created DeviceManagementIntegerSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementIntegerSettingInstance put(final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementIntegerSettingInstance put(@Nonnull final DeviceManagementIntegerSettingInstance newDeviceManagementIntegerSettingInstance) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementIntegerSettingInstance);
     }
 
@@ -139,9 +145,10 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementIntegerSettingInstanceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementIntegerSettingInstanceRequest)this;
+     @Nonnull
+     public DeviceManagementIntegerSettingInstanceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DeviceManagementIntegerSettingInstanceRequest extends BaseRequest i
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementIntegerSettingInstanceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementIntegerSettingInstanceRequest)this;
+     @Nonnull
+     public DeviceManagementIntegerSettingInstanceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

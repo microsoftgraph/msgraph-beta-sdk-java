@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AgreementFile;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Agreement File Request.
  */
-public class AgreementFileRequest extends BaseRequest implements IAgreementFileRequest {
+public class AgreementFileRequest extends BaseRequest<AgreementFile> {
 	
     /**
      * The request for the AgreementFile
@@ -33,7 +33,7 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AgreementFileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AgreementFileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AgreementFile.class);
     }
 
@@ -42,7 +42,7 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AgreementFile> callback) {
+    public void get(@Nonnull final ICallback<? super AgreementFile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @return the AgreementFile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AgreementFile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AgreementFile> callback) {
+    public void delete(@Nonnull final ICallback<? super AgreementFile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @param sourceAgreementFile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AgreementFile sourceAgreementFile, final ICallback<? super AgreementFile> callback) {
+    public void patch(@Nonnull final AgreementFile sourceAgreementFile, @Nonnull final ICallback<? super AgreementFile> callback) {
         send(HttpMethod.PATCH, callback, sourceAgreementFile);
     }
 
@@ -91,7 +92,8 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @return the updated AgreementFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFile patch(final AgreementFile sourceAgreementFile) throws ClientException {
+    @Nullable
+    public AgreementFile patch(@Nonnull final AgreementFile sourceAgreementFile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAgreementFile);
     }
 
@@ -101,7 +103,7 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @param newAgreementFile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AgreementFile newAgreementFile, final ICallback<? super AgreementFile> callback) {
+    public void post(@Nonnull final AgreementFile newAgreementFile, @Nonnull final ICallback<? super AgreementFile> callback) {
         send(HttpMethod.POST, callback, newAgreementFile);
     }
 
@@ -112,7 +114,8 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @return the created AgreementFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFile post(final AgreementFile newAgreementFile) throws ClientException {
+    @Nullable
+    public AgreementFile post(@Nonnull final AgreementFile newAgreementFile) throws ClientException {
         return send(HttpMethod.POST, newAgreementFile);
     }
 
@@ -122,7 +125,7 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @param newAgreementFile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AgreementFile newAgreementFile, final ICallback<? super AgreementFile> callback) {
+    public void put(@Nonnull final AgreementFile newAgreementFile, @Nonnull final ICallback<? super AgreementFile> callback) {
         send(HttpMethod.PUT, callback, newAgreementFile);
     }
 
@@ -133,7 +136,8 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @return the created AgreementFile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AgreementFile put(final AgreementFile newAgreementFile) throws ClientException {
+    @Nullable
+    public AgreementFile put(@Nonnull final AgreementFile newAgreementFile) throws ClientException {
         return send(HttpMethod.PUT, newAgreementFile);
     }
 
@@ -143,9 +147,10 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @param value the select clause
      * @return the updated request
      */
-     public IAgreementFileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AgreementFileRequest)this;
+     @Nonnull
+     public AgreementFileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AgreementFileRequest extends BaseRequest implements IAgreementFileR
      * @param value the expand clause
      * @return the updated request
      */
-     public IAgreementFileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AgreementFileRequest)this;
+     @Nonnull
+     public AgreementFileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EditionUpgradeConfiguration;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Edition Upgrade Configuration Request.
  */
-public class EditionUpgradeConfigurationRequest extends BaseRequest implements IEditionUpgradeConfigurationRequest {
+public class EditionUpgradeConfigurationRequest extends BaseRequest<EditionUpgradeConfiguration> {
 	
     /**
      * The request for the EditionUpgradeConfiguration
@@ -29,7 +31,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EditionUpgradeConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EditionUpgradeConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EditionUpgradeConfiguration.class);
     }
 
@@ -38,7 +40,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super EditionUpgradeConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @return the EditionUpgradeConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EditionUpgradeConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super EditionUpgradeConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param sourceEditionUpgradeConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void patch(@Nonnull final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration, @Nonnull final ICallback<? super EditionUpgradeConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceEditionUpgradeConfiguration);
     }
 
@@ -87,7 +90,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @return the updated EditionUpgradeConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EditionUpgradeConfiguration patch(final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration) throws ClientException {
+    @Nullable
+    public EditionUpgradeConfiguration patch(@Nonnull final EditionUpgradeConfiguration sourceEditionUpgradeConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceEditionUpgradeConfiguration);
     }
 
@@ -97,7 +101,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param newEditionUpgradeConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void post(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration, @Nonnull final ICallback<? super EditionUpgradeConfiguration> callback) {
         send(HttpMethod.POST, callback, newEditionUpgradeConfiguration);
     }
 
@@ -108,7 +112,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @return the created EditionUpgradeConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EditionUpgradeConfiguration post(final EditionUpgradeConfiguration newEditionUpgradeConfiguration) throws ClientException {
+    @Nullable
+    public EditionUpgradeConfiguration post(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration) throws ClientException {
         return send(HttpMethod.POST, newEditionUpgradeConfiguration);
     }
 
@@ -118,7 +123,7 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param newEditionUpgradeConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EditionUpgradeConfiguration newEditionUpgradeConfiguration, final ICallback<? super EditionUpgradeConfiguration> callback) {
+    public void put(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration, @Nonnull final ICallback<? super EditionUpgradeConfiguration> callback) {
         send(HttpMethod.PUT, callback, newEditionUpgradeConfiguration);
     }
 
@@ -129,7 +134,8 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @return the created EditionUpgradeConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EditionUpgradeConfiguration put(final EditionUpgradeConfiguration newEditionUpgradeConfiguration) throws ClientException {
+    @Nullable
+    public EditionUpgradeConfiguration put(@Nonnull final EditionUpgradeConfiguration newEditionUpgradeConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newEditionUpgradeConfiguration);
     }
 
@@ -139,9 +145,10 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IEditionUpgradeConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EditionUpgradeConfigurationRequest)this;
+     @Nonnull
+     public EditionUpgradeConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EditionUpgradeConfigurationRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IEditionUpgradeConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EditionUpgradeConfigurationRequest)this;
+     @Nonnull
+     public EditionUpgradeConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationChoiceSettingDefinition;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Configuration Choice Setting Definition Request.
  */
-public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends BaseRequest implements IDeviceManagementConfigurationChoiceSettingDefinitionRequest {
+public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends BaseRequest<DeviceManagementConfigurationChoiceSettingDefinition> {
 	
     /**
      * The request for the DeviceManagementConfigurationChoiceSettingDefinition
@@ -30,10 +32,10 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public DeviceManagementConfigurationChoiceSettingDefinitionRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends DeviceManagementConfigurationChoiceSettingDefinition> responseClass) {
+    public DeviceManagementConfigurationChoiceSettingDefinitionRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceManagementConfigurationChoiceSettingDefinition> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementConfigurationChoiceSettingDefinitionRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementConfigurationChoiceSettingDefinitionRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementConfigurationChoiceSettingDefinition.class);
     }
 
@@ -53,7 +55,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @return the DeviceManagementConfigurationChoiceSettingDefinition from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementConfigurationChoiceSettingDefinition get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @param sourceDeviceManagementConfigurationChoiceSettingDefinition the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementConfigurationChoiceSettingDefinition sourceDeviceManagementConfigurationChoiceSettingDefinition, final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
+    public void patch(@Nonnull final DeviceManagementConfigurationChoiceSettingDefinition sourceDeviceManagementConfigurationChoiceSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementConfigurationChoiceSettingDefinition);
     }
 
@@ -102,7 +105,8 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @return the updated DeviceManagementConfigurationChoiceSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationChoiceSettingDefinition patch(final DeviceManagementConfigurationChoiceSettingDefinition sourceDeviceManagementConfigurationChoiceSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationChoiceSettingDefinition patch(@Nonnull final DeviceManagementConfigurationChoiceSettingDefinition sourceDeviceManagementConfigurationChoiceSettingDefinition) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementConfigurationChoiceSettingDefinition);
     }
 
@@ -112,7 +116,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @param newDeviceManagementConfigurationChoiceSettingDefinition the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition, final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
+    public void post(@Nonnull final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementConfigurationChoiceSettingDefinition);
     }
 
@@ -123,7 +127,8 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @return the created DeviceManagementConfigurationChoiceSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationChoiceSettingDefinition post(final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationChoiceSettingDefinition post(@Nonnull final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementConfigurationChoiceSettingDefinition);
     }
 
@@ -133,7 +138,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @param newDeviceManagementConfigurationChoiceSettingDefinition the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition, final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
+    public void put(@Nonnull final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition, @Nonnull final ICallback<? super DeviceManagementConfigurationChoiceSettingDefinition> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementConfigurationChoiceSettingDefinition);
     }
 
@@ -144,7 +149,8 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @return the created DeviceManagementConfigurationChoiceSettingDefinition
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementConfigurationChoiceSettingDefinition put(final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition) throws ClientException {
+    @Nullable
+    public DeviceManagementConfigurationChoiceSettingDefinition put(@Nonnull final DeviceManagementConfigurationChoiceSettingDefinition newDeviceManagementConfigurationChoiceSettingDefinition) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementConfigurationChoiceSettingDefinition);
     }
 
@@ -154,9 +160,10 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationChoiceSettingDefinitionRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementConfigurationChoiceSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationChoiceSettingDefinitionRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class DeviceManagementConfigurationChoiceSettingDefinitionRequest extends
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementConfigurationChoiceSettingDefinitionRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementConfigurationChoiceSettingDefinitionRequest)this;
+     @Nonnull
+     public DeviceManagementConfigurationChoiceSettingDefinitionRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

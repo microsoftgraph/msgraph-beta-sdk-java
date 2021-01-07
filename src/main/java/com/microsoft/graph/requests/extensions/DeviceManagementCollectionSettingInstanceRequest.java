@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementCollectionSettingInstance;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Collection Setting Instance Request.
  */
-public class DeviceManagementCollectionSettingInstanceRequest extends BaseRequest implements IDeviceManagementCollectionSettingInstanceRequest {
+public class DeviceManagementCollectionSettingInstanceRequest extends BaseRequest<DeviceManagementCollectionSettingInstance> {
 	
     /**
      * The request for the DeviceManagementCollectionSettingInstance
@@ -33,7 +33,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementCollectionSettingInstanceRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementCollectionSettingInstanceRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementCollectionSettingInstance.class);
     }
 
@@ -42,7 +42,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @return the DeviceManagementCollectionSettingInstance from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementCollectionSettingInstance get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param sourceDeviceManagementCollectionSettingInstance the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
+    public void patch(@Nonnull final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance, @Nonnull final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementCollectionSettingInstance);
     }
 
@@ -91,7 +92,8 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @return the updated DeviceManagementCollectionSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementCollectionSettingInstance patch(final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementCollectionSettingInstance patch(@Nonnull final DeviceManagementCollectionSettingInstance sourceDeviceManagementCollectionSettingInstance) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementCollectionSettingInstance);
     }
 
@@ -101,7 +103,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param newDeviceManagementCollectionSettingInstance the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
+    public void post(@Nonnull final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, @Nonnull final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementCollectionSettingInstance);
     }
 
@@ -112,7 +114,8 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @return the created DeviceManagementCollectionSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementCollectionSettingInstance post(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementCollectionSettingInstance post(@Nonnull final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementCollectionSettingInstance);
     }
 
@@ -122,7 +125,7 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param newDeviceManagementCollectionSettingInstance the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
+    public void put(@Nonnull final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance, @Nonnull final ICallback<? super DeviceManagementCollectionSettingInstance> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementCollectionSettingInstance);
     }
 
@@ -133,7 +136,8 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @return the created DeviceManagementCollectionSettingInstance
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementCollectionSettingInstance put(final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance) throws ClientException {
+    @Nullable
+    public DeviceManagementCollectionSettingInstance put(@Nonnull final DeviceManagementCollectionSettingInstance newDeviceManagementCollectionSettingInstance) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementCollectionSettingInstance);
     }
 
@@ -143,9 +147,10 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementCollectionSettingInstanceRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementCollectionSettingInstanceRequest)this;
+     @Nonnull
+     public DeviceManagementCollectionSettingInstanceRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class DeviceManagementCollectionSettingInstanceRequest extends BaseReques
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementCollectionSettingInstanceRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementCollectionSettingInstanceRequest)this;
+     @Nonnull
+     public DeviceManagementCollectionSettingInstanceRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

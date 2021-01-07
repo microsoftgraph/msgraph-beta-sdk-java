@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationDeviceStatus;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Managed Device Mobile App Configuration Device Status Request Builder.
  */
-public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder extends BaseRequestBuilder implements IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder {
+public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder extends BaseRequestBuilder<ManagedDeviceMobileAppConfigurationDeviceStatus> {
 
     /**
      * The request builder for the ManagedDeviceMobileAppConfigurationDeviceStatus
@@ -28,7 +30,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder exten
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder exten
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder exten
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
+     * @return the ManagedDeviceMobileAppConfigurationDeviceStatusRequest instance
      */
-    public IManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public ManagedDeviceMobileAppConfigurationDeviceStatusRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

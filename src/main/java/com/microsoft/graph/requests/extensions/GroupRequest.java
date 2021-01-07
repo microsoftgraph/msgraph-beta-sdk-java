@@ -12,68 +12,40 @@ import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.AssignedLicense;
 import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -83,7 +55,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Group Request.
  */
-public class GroupRequest extends BaseRequest implements IGroupRequest {
+public class GroupRequest extends BaseRequest<Group> {
 	
     /**
      * The request for the Group
@@ -92,7 +64,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Group.class);
     }
 
@@ -101,7 +73,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Group> callback) {
+    public void get(@Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -111,6 +83,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @return the Group from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Group get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -120,7 +93,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Group> callback) {
+    public void delete(@Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -139,7 +112,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param sourceGroup the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Group sourceGroup, final ICallback<? super Group> callback) {
+    public void patch(@Nonnull final Group sourceGroup, @Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.PATCH, callback, sourceGroup);
     }
 
@@ -150,7 +123,8 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @return the updated Group
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Group patch(final Group sourceGroup) throws ClientException {
+    @Nullable
+    public Group patch(@Nonnull final Group sourceGroup) throws ClientException {
         return send(HttpMethod.PATCH, sourceGroup);
     }
 
@@ -160,7 +134,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param newGroup the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Group newGroup, final ICallback<? super Group> callback) {
+    public void post(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.POST, callback, newGroup);
     }
 
@@ -171,7 +145,8 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @return the created Group
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Group post(final Group newGroup) throws ClientException {
+    @Nullable
+    public Group post(@Nonnull final Group newGroup) throws ClientException {
         return send(HttpMethod.POST, newGroup);
     }
 
@@ -181,7 +156,7 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param newGroup the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Group newGroup, final ICallback<? super Group> callback) {
+    public void put(@Nonnull final Group newGroup, @Nonnull final ICallback<? super Group> callback) {
         send(HttpMethod.PUT, callback, newGroup);
     }
 
@@ -192,7 +167,8 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @return the created Group
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Group put(final Group newGroup) throws ClientException {
+    @Nullable
+    public Group put(@Nonnull final Group newGroup) throws ClientException {
         return send(HttpMethod.PUT, newGroup);
     }
 
@@ -202,9 +178,10 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param value the select clause
      * @return the updated request
      */
-     public IGroupRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (GroupRequest)this;
+     @Nonnull
+     public GroupRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -213,9 +190,10 @@ public class GroupRequest extends BaseRequest implements IGroupRequest {
      * @param value the expand clause
      * @return the updated request
      */
-     public IGroupRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (GroupRequest)this;
+     @Nonnull
+     public GroupRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

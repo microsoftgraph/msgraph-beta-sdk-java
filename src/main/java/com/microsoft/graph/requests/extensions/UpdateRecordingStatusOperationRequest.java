@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UpdateRecordingStatusOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Update Recording Status Operation Request.
  */
-public class UpdateRecordingStatusOperationRequest extends BaseRequest implements IUpdateRecordingStatusOperationRequest {
+public class UpdateRecordingStatusOperationRequest extends BaseRequest<UpdateRecordingStatusOperation> {
 	
     /**
      * The request for the UpdateRecordingStatusOperation
@@ -29,7 +31,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public UpdateRecordingStatusOperationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public UpdateRecordingStatusOperationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, UpdateRecordingStatusOperation.class);
     }
 
@@ -38,7 +40,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super UpdateRecordingStatusOperation> callback) {
+    public void get(@Nonnull final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @return the UpdateRecordingStatusOperation from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public UpdateRecordingStatusOperation get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super UpdateRecordingStatusOperation> callback) {
+    public void delete(@Nonnull final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param sourceUpdateRecordingStatusOperation the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback) {
+    public void patch(@Nonnull final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation, @Nonnull final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.PATCH, callback, sourceUpdateRecordingStatusOperation);
     }
 
@@ -87,7 +90,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @return the updated UpdateRecordingStatusOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UpdateRecordingStatusOperation patch(final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation) throws ClientException {
+    @Nullable
+    public UpdateRecordingStatusOperation patch(@Nonnull final UpdateRecordingStatusOperation sourceUpdateRecordingStatusOperation) throws ClientException {
         return send(HttpMethod.PATCH, sourceUpdateRecordingStatusOperation);
     }
 
@@ -97,7 +101,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param newUpdateRecordingStatusOperation the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback) {
+    public void post(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, @Nonnull final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.POST, callback, newUpdateRecordingStatusOperation);
     }
 
@@ -108,7 +112,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @return the created UpdateRecordingStatusOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UpdateRecordingStatusOperation post(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) throws ClientException {
+    @Nullable
+    public UpdateRecordingStatusOperation post(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) throws ClientException {
         return send(HttpMethod.POST, newUpdateRecordingStatusOperation);
     }
 
@@ -118,7 +123,7 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param newUpdateRecordingStatusOperation the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, final ICallback<? super UpdateRecordingStatusOperation> callback) {
+    public void put(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation, @Nonnull final ICallback<? super UpdateRecordingStatusOperation> callback) {
         send(HttpMethod.PUT, callback, newUpdateRecordingStatusOperation);
     }
 
@@ -129,7 +134,8 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @return the created UpdateRecordingStatusOperation
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public UpdateRecordingStatusOperation put(final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) throws ClientException {
+    @Nullable
+    public UpdateRecordingStatusOperation put(@Nonnull final UpdateRecordingStatusOperation newUpdateRecordingStatusOperation) throws ClientException {
         return send(HttpMethod.PUT, newUpdateRecordingStatusOperation);
     }
 
@@ -139,9 +145,10 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param value the select clause
      * @return the updated request
      */
-     public IUpdateRecordingStatusOperationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (UpdateRecordingStatusOperationRequest)this;
+     @Nonnull
+     public UpdateRecordingStatusOperationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class UpdateRecordingStatusOperationRequest extends BaseRequest implement
      * @param value the expand clause
      * @return the updated request
      */
-     public IUpdateRecordingStatusOperationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (UpdateRecordingStatusOperationRequest)this;
+     @Nonnull
+     public UpdateRecordingStatusOperationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

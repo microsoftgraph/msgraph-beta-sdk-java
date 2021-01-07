@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisTitleFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Axis Title Format Request.
  */
-public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements IWorkbookChartAxisTitleFormatRequest {
+public class WorkbookChartAxisTitleFormatRequest extends BaseRequest<WorkbookChartAxisTitleFormat> {
 	
     /**
      * The request for the WorkbookChartAxisTitleFormat
@@ -31,7 +32,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisTitleFormatRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxisTitleFormatRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartAxisTitleFormat.class);
     }
 
@@ -40,7 +41,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @return the WorkbookChartAxisTitleFormat from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartAxisTitleFormat get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param sourceWorkbookChartAxisTitleFormat the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
+    public void patch(@Nonnull final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat, @Nonnull final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartAxisTitleFormat);
     }
 
@@ -89,7 +91,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @return the updated WorkbookChartAxisTitleFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisTitleFormat patch(final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisTitleFormat patch(@Nonnull final WorkbookChartAxisTitleFormat sourceWorkbookChartAxisTitleFormat) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartAxisTitleFormat);
     }
 
@@ -99,7 +102,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param newWorkbookChartAxisTitleFormat the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
+    public void post(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, @Nonnull final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartAxisTitleFormat);
     }
 
@@ -110,7 +113,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @return the created WorkbookChartAxisTitleFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisTitleFormat post(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisTitleFormat post(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartAxisTitleFormat);
     }
 
@@ -120,7 +124,7 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param newWorkbookChartAxisTitleFormat the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
+    public void put(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat, @Nonnull final ICallback<? super WorkbookChartAxisTitleFormat> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartAxisTitleFormat);
     }
 
@@ -131,7 +135,8 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @return the created WorkbookChartAxisTitleFormat
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartAxisTitleFormat put(final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) throws ClientException {
+    @Nullable
+    public WorkbookChartAxisTitleFormat put(@Nonnull final WorkbookChartAxisTitleFormat newWorkbookChartAxisTitleFormat) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartAxisTitleFormat);
     }
 
@@ -141,9 +146,10 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartAxisTitleFormatRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartAxisTitleFormatRequest)this;
+     @Nonnull
+     public WorkbookChartAxisTitleFormatRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class WorkbookChartAxisTitleFormatRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartAxisTitleFormatRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartAxisTitleFormatRequest)this;
+     @Nonnull
+     public WorkbookChartAxisTitleFormatRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

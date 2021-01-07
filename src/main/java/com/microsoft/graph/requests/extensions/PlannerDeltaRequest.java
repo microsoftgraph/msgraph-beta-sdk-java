@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerDelta;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Planner Delta Request.
  */
-public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaRequest {
+public class PlannerDeltaRequest extends BaseRequest<PlannerDelta> {
 	
     /**
      * The request for the PlannerDelta
@@ -30,10 +32,10 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public PlannerDeltaRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends PlannerDelta> responseClass) {
+    public PlannerDeltaRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends PlannerDelta> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -44,7 +46,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PlannerDeltaRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PlannerDeltaRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PlannerDelta.class);
     }
 
@@ -53,7 +55,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PlannerDelta> callback) {
+    public void get(@Nonnull final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -63,6 +65,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @return the PlannerDelta from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PlannerDelta get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -72,7 +75,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PlannerDelta> callback) {
+    public void delete(@Nonnull final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -91,7 +94,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param sourcePlannerDelta the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PlannerDelta sourcePlannerDelta, final ICallback<? super PlannerDelta> callback) {
+    public void patch(@Nonnull final PlannerDelta sourcePlannerDelta, @Nonnull final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.PATCH, callback, sourcePlannerDelta);
     }
 
@@ -102,7 +105,8 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @return the updated PlannerDelta
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerDelta patch(final PlannerDelta sourcePlannerDelta) throws ClientException {
+    @Nullable
+    public PlannerDelta patch(@Nonnull final PlannerDelta sourcePlannerDelta) throws ClientException {
         return send(HttpMethod.PATCH, sourcePlannerDelta);
     }
 
@@ -112,7 +116,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param newPlannerDelta the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback) {
+    public void post(@Nonnull final PlannerDelta newPlannerDelta, @Nonnull final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.POST, callback, newPlannerDelta);
     }
 
@@ -123,7 +127,8 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @return the created PlannerDelta
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerDelta post(final PlannerDelta newPlannerDelta) throws ClientException {
+    @Nullable
+    public PlannerDelta post(@Nonnull final PlannerDelta newPlannerDelta) throws ClientException {
         return send(HttpMethod.POST, newPlannerDelta);
     }
 
@@ -133,7 +138,7 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param newPlannerDelta the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PlannerDelta newPlannerDelta, final ICallback<? super PlannerDelta> callback) {
+    public void put(@Nonnull final PlannerDelta newPlannerDelta, @Nonnull final ICallback<? super PlannerDelta> callback) {
         send(HttpMethod.PUT, callback, newPlannerDelta);
     }
 
@@ -144,7 +149,8 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @return the created PlannerDelta
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PlannerDelta put(final PlannerDelta newPlannerDelta) throws ClientException {
+    @Nullable
+    public PlannerDelta put(@Nonnull final PlannerDelta newPlannerDelta) throws ClientException {
         return send(HttpMethod.PUT, newPlannerDelta);
     }
 
@@ -154,9 +160,10 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param value the select clause
      * @return the updated request
      */
-     public IPlannerDeltaRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PlannerDeltaRequest)this;
+     @Nonnull
+     public PlannerDeltaRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -165,9 +172,10 @@ public class PlannerDeltaRequest extends BaseRequest implements IPlannerDeltaReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IPlannerDeltaRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PlannerDeltaRequest)this;
+     @Nonnull
+     public PlannerDeltaRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

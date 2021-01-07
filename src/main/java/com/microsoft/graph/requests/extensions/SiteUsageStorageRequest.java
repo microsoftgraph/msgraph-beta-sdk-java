@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SiteUsageStorage;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Site Usage Storage Request.
  */
-public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageStorageRequest {
+public class SiteUsageStorageRequest extends BaseRequest<SiteUsageStorage> {
 	
     /**
      * The request for the SiteUsageStorage
@@ -29,7 +31,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SiteUsageStorageRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SiteUsageStorageRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SiteUsageStorage.class);
     }
 
@@ -38,7 +40,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SiteUsageStorage> callback) {
+    public void get(@Nonnull final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @return the SiteUsageStorage from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SiteUsageStorage get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SiteUsageStorage> callback) {
+    public void delete(@Nonnull final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param sourceSiteUsageStorage the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SiteUsageStorage sourceSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback) {
+    public void patch(@Nonnull final SiteUsageStorage sourceSiteUsageStorage, @Nonnull final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.PATCH, callback, sourceSiteUsageStorage);
     }
 
@@ -87,7 +90,8 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @return the updated SiteUsageStorage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SiteUsageStorage patch(final SiteUsageStorage sourceSiteUsageStorage) throws ClientException {
+    @Nullable
+    public SiteUsageStorage patch(@Nonnull final SiteUsageStorage sourceSiteUsageStorage) throws ClientException {
         return send(HttpMethod.PATCH, sourceSiteUsageStorage);
     }
 
@@ -97,7 +101,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param newSiteUsageStorage the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SiteUsageStorage newSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback) {
+    public void post(@Nonnull final SiteUsageStorage newSiteUsageStorage, @Nonnull final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.POST, callback, newSiteUsageStorage);
     }
 
@@ -108,7 +112,8 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @return the created SiteUsageStorage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SiteUsageStorage post(final SiteUsageStorage newSiteUsageStorage) throws ClientException {
+    @Nullable
+    public SiteUsageStorage post(@Nonnull final SiteUsageStorage newSiteUsageStorage) throws ClientException {
         return send(HttpMethod.POST, newSiteUsageStorage);
     }
 
@@ -118,7 +123,7 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param newSiteUsageStorage the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SiteUsageStorage newSiteUsageStorage, final ICallback<? super SiteUsageStorage> callback) {
+    public void put(@Nonnull final SiteUsageStorage newSiteUsageStorage, @Nonnull final ICallback<? super SiteUsageStorage> callback) {
         send(HttpMethod.PUT, callback, newSiteUsageStorage);
     }
 
@@ -129,7 +134,8 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @return the created SiteUsageStorage
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SiteUsageStorage put(final SiteUsageStorage newSiteUsageStorage) throws ClientException {
+    @Nullable
+    public SiteUsageStorage put(@Nonnull final SiteUsageStorage newSiteUsageStorage) throws ClientException {
         return send(HttpMethod.PUT, newSiteUsageStorage);
     }
 
@@ -139,9 +145,10 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param value the select clause
      * @return the updated request
      */
-     public ISiteUsageStorageRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SiteUsageStorageRequest)this;
+     @Nonnull
+     public SiteUsageStorageRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class SiteUsageStorageRequest extends BaseRequest implements ISiteUsageSt
      * @param value the expand clause
      * @return the updated request
      */
-     public ISiteUsageStorageRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SiteUsageStorageRequest)this;
+     @Nonnull
+     public SiteUsageStorageRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -12,24 +12,18 @@ import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfiguration;
 import com.microsoft.graph.models.extensions.MobileAppProvisioningConfigGroupAssignment;
 import com.microsoft.graph.models.extensions.IosLobAppProvisioningConfigurationAssignment;
 import com.microsoft.graph.models.extensions.HasPayloadLinkResultItem;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosLobAppProvisioningConfigurationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosLobAppProvisioningConfigurationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationDeviceStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppProvisioningConfigGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppProvisioningConfigGroupAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationUserStatusRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -39,7 +33,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Lob App Provisioning Configuration Request.
  */
-public class IosLobAppProvisioningConfigurationRequest extends BaseRequest implements IIosLobAppProvisioningConfigurationRequest {
+public class IosLobAppProvisioningConfigurationRequest extends BaseRequest<IosLobAppProvisioningConfiguration> {
 	
     /**
      * The request for the IosLobAppProvisioningConfiguration
@@ -48,7 +42,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosLobAppProvisioningConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosLobAppProvisioningConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosLobAppProvisioningConfiguration.class);
     }
 
@@ -57,7 +51,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -67,6 +61,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @return the IosLobAppProvisioningConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosLobAppProvisioningConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -76,7 +71,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -95,7 +90,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param sourceIosLobAppProvisioningConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
+    public void patch(@Nonnull final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration, @Nonnull final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosLobAppProvisioningConfiguration);
     }
 
@@ -106,7 +101,8 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @return the updated IosLobAppProvisioningConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosLobAppProvisioningConfiguration patch(final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration) throws ClientException {
+    @Nullable
+    public IosLobAppProvisioningConfiguration patch(@Nonnull final IosLobAppProvisioningConfiguration sourceIosLobAppProvisioningConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosLobAppProvisioningConfiguration);
     }
 
@@ -116,7 +112,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param newIosLobAppProvisioningConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
+    public void post(@Nonnull final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, @Nonnull final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosLobAppProvisioningConfiguration);
     }
 
@@ -127,7 +123,8 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @return the created IosLobAppProvisioningConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosLobAppProvisioningConfiguration post(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException {
+    @Nullable
+    public IosLobAppProvisioningConfiguration post(@Nonnull final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosLobAppProvisioningConfiguration);
     }
 
@@ -137,7 +134,7 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param newIosLobAppProvisioningConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
+    public void put(@Nonnull final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration, @Nonnull final ICallback<? super IosLobAppProvisioningConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosLobAppProvisioningConfiguration);
     }
 
@@ -148,7 +145,8 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @return the created IosLobAppProvisioningConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosLobAppProvisioningConfiguration put(final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException {
+    @Nullable
+    public IosLobAppProvisioningConfiguration put(@Nonnull final IosLobAppProvisioningConfiguration newIosLobAppProvisioningConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosLobAppProvisioningConfiguration);
     }
 
@@ -158,9 +156,10 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param value the select clause
      * @return the updated request
      */
-     public IIosLobAppProvisioningConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosLobAppProvisioningConfigurationRequest)this;
+     @Nonnull
+     public IosLobAppProvisioningConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -169,9 +168,10 @@ public class IosLobAppProvisioningConfigurationRequest extends BaseRequest imple
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosLobAppProvisioningConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosLobAppProvisioningConfigurationRequest)this;
+     @Nonnull
+     public IosLobAppProvisioningConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

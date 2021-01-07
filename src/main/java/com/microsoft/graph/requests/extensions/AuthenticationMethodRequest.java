@@ -12,6 +12,8 @@ import com.microsoft.graph.models.extensions.AuthenticationMethod;
 import com.microsoft.graph.models.extensions.PasswordResetResponse;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -21,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Authentication Method Request.
  */
-public class AuthenticationMethodRequest extends BaseRequest implements IAuthenticationMethodRequest {
+public class AuthenticationMethodRequest extends BaseRequest<AuthenticationMethod> {
 	
     /**
      * The request for the AuthenticationMethod
@@ -31,10 +33,10 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param requestOptions the options for this request
      * @param responseClass  the class of the response
      */
-    public AuthenticationMethodRequest(final String requestUrl,
-            final IBaseClient client,
-            final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
-            final Class<? extends AuthenticationMethod> responseClass) {
+    public AuthenticationMethodRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends AuthenticationMethod> responseClass) {
         super(requestUrl, client, requestOptions, responseClass);
     }
 
@@ -45,7 +47,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AuthenticationMethodRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AuthenticationMethodRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AuthenticationMethod.class);
     }
 
@@ -54,7 +56,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AuthenticationMethod> callback) {
+    public void get(@Nonnull final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -64,6 +66,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @return the AuthenticationMethod from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AuthenticationMethod get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -73,7 +76,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AuthenticationMethod> callback) {
+    public void delete(@Nonnull final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -92,7 +95,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param sourceAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AuthenticationMethod sourceAuthenticationMethod, final ICallback<? super AuthenticationMethod> callback) {
+    public void patch(@Nonnull final AuthenticationMethod sourceAuthenticationMethod, @Nonnull final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourceAuthenticationMethod);
     }
 
@@ -103,7 +106,8 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @return the updated AuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationMethod patch(final AuthenticationMethod sourceAuthenticationMethod) throws ClientException {
+    @Nullable
+    public AuthenticationMethod patch(@Nonnull final AuthenticationMethod sourceAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PATCH, sourceAuthenticationMethod);
     }
 
@@ -113,7 +117,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param newAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AuthenticationMethod newAuthenticationMethod, final ICallback<? super AuthenticationMethod> callback) {
+    public void post(@Nonnull final AuthenticationMethod newAuthenticationMethod, @Nonnull final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newAuthenticationMethod);
     }
 
@@ -124,7 +128,8 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @return the created AuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationMethod post(final AuthenticationMethod newAuthenticationMethod) throws ClientException {
+    @Nullable
+    public AuthenticationMethod post(@Nonnull final AuthenticationMethod newAuthenticationMethod) throws ClientException {
         return send(HttpMethod.POST, newAuthenticationMethod);
     }
 
@@ -134,7 +139,7 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param newAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AuthenticationMethod newAuthenticationMethod, final ICallback<? super AuthenticationMethod> callback) {
+    public void put(@Nonnull final AuthenticationMethod newAuthenticationMethod, @Nonnull final ICallback<? super AuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newAuthenticationMethod);
     }
 
@@ -145,7 +150,8 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @return the created AuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AuthenticationMethod put(final AuthenticationMethod newAuthenticationMethod) throws ClientException {
+    @Nullable
+    public AuthenticationMethod put(@Nonnull final AuthenticationMethod newAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PUT, newAuthenticationMethod);
     }
 
@@ -155,9 +161,10 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param value the select clause
      * @return the updated request
      */
-     public IAuthenticationMethodRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AuthenticationMethodRequest)this;
+     @Nonnull
+     public AuthenticationMethodRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -166,9 +173,10 @@ public class AuthenticationMethodRequest extends BaseRequest implements IAuthent
      * @param value the expand clause
      * @return the updated request
      */
-     public IAuthenticationMethodRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AuthenticationMethodRequest)this;
+     @Nonnull
+     public AuthenticationMethodRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

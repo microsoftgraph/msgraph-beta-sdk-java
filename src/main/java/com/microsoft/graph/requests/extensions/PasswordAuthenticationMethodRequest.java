@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PasswordAuthenticationMethod;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Password Authentication Method Request.
  */
-public class PasswordAuthenticationMethodRequest extends BaseRequest implements IPasswordAuthenticationMethodRequest {
+public class PasswordAuthenticationMethodRequest extends BaseRequest<PasswordAuthenticationMethod> {
 	
     /**
      * The request for the PasswordAuthenticationMethod
@@ -29,7 +31,7 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PasswordAuthenticationMethodRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PasswordAuthenticationMethodRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PasswordAuthenticationMethod.class);
     }
 
@@ -38,7 +40,7 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PasswordAuthenticationMethod> callback) {
+    public void get(@Nonnull final ICallback<? super PasswordAuthenticationMethod> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @return the PasswordAuthenticationMethod from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PasswordAuthenticationMethod get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PasswordAuthenticationMethod> callback) {
+    public void delete(@Nonnull final ICallback<? super PasswordAuthenticationMethod> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @param sourcePasswordAuthenticationMethod the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PasswordAuthenticationMethod sourcePasswordAuthenticationMethod, final ICallback<? super PasswordAuthenticationMethod> callback) {
+    public void patch(@Nonnull final PasswordAuthenticationMethod sourcePasswordAuthenticationMethod, @Nonnull final ICallback<? super PasswordAuthenticationMethod> callback) {
         send(HttpMethod.PATCH, callback, sourcePasswordAuthenticationMethod);
     }
 
@@ -87,7 +90,8 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @return the updated PasswordAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PasswordAuthenticationMethod patch(final PasswordAuthenticationMethod sourcePasswordAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PasswordAuthenticationMethod patch(@Nonnull final PasswordAuthenticationMethod sourcePasswordAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PATCH, sourcePasswordAuthenticationMethod);
     }
 
@@ -97,7 +101,7 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @param newPasswordAuthenticationMethod the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<? super PasswordAuthenticationMethod> callback) {
+    public void post(@Nonnull final PasswordAuthenticationMethod newPasswordAuthenticationMethod, @Nonnull final ICallback<? super PasswordAuthenticationMethod> callback) {
         send(HttpMethod.POST, callback, newPasswordAuthenticationMethod);
     }
 
@@ -108,7 +112,8 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @return the created PasswordAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PasswordAuthenticationMethod post(final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PasswordAuthenticationMethod post(@Nonnull final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException {
         return send(HttpMethod.POST, newPasswordAuthenticationMethod);
     }
 
@@ -118,7 +123,7 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @param newPasswordAuthenticationMethod the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod, final ICallback<? super PasswordAuthenticationMethod> callback) {
+    public void put(@Nonnull final PasswordAuthenticationMethod newPasswordAuthenticationMethod, @Nonnull final ICallback<? super PasswordAuthenticationMethod> callback) {
         send(HttpMethod.PUT, callback, newPasswordAuthenticationMethod);
     }
 
@@ -129,7 +134,8 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @return the created PasswordAuthenticationMethod
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PasswordAuthenticationMethod put(final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException {
+    @Nullable
+    public PasswordAuthenticationMethod put(@Nonnull final PasswordAuthenticationMethod newPasswordAuthenticationMethod) throws ClientException {
         return send(HttpMethod.PUT, newPasswordAuthenticationMethod);
     }
 
@@ -139,9 +145,10 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @param value the select clause
      * @return the updated request
      */
-     public IPasswordAuthenticationMethodRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PasswordAuthenticationMethodRequest)this;
+     @Nonnull
+     public PasswordAuthenticationMethodRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class PasswordAuthenticationMethodRequest extends BaseRequest implements 
      * @param value the expand clause
      * @return the updated request
      */
-     public IPasswordAuthenticationMethodRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PasswordAuthenticationMethodRequest)this;
+     @Nonnull
+     public PasswordAuthenticationMethodRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

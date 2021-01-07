@@ -13,6 +13,8 @@ import com.microsoft.graph.models.extensions.WorkbookFilterCriteria;
 import com.microsoft.graph.models.extensions.WorkbookIcon;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Filter Request.
  */
-public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilterRequest {
+public class WorkbookFilterRequest extends BaseRequest<WorkbookFilter> {
 	
     /**
      * The request for the WorkbookFilter
@@ -31,7 +33,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookFilterRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookFilterRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookFilter.class);
     }
 
@@ -40,7 +42,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookFilter> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookFilter> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +52,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @return the WorkbookFilter from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookFilter get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +62,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookFilter> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookFilter> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +81,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param sourceWorkbookFilter the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookFilter sourceWorkbookFilter, final ICallback<? super WorkbookFilter> callback) {
+    public void patch(@Nonnull final WorkbookFilter sourceWorkbookFilter, @Nonnull final ICallback<? super WorkbookFilter> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookFilter);
     }
 
@@ -89,7 +92,8 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @return the updated WorkbookFilter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookFilter patch(final WorkbookFilter sourceWorkbookFilter) throws ClientException {
+    @Nullable
+    public WorkbookFilter patch(@Nonnull final WorkbookFilter sourceWorkbookFilter) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookFilter);
     }
 
@@ -99,7 +103,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param newWorkbookFilter the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookFilter newWorkbookFilter, final ICallback<? super WorkbookFilter> callback) {
+    public void post(@Nonnull final WorkbookFilter newWorkbookFilter, @Nonnull final ICallback<? super WorkbookFilter> callback) {
         send(HttpMethod.POST, callback, newWorkbookFilter);
     }
 
@@ -110,7 +114,8 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @return the created WorkbookFilter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookFilter post(final WorkbookFilter newWorkbookFilter) throws ClientException {
+    @Nullable
+    public WorkbookFilter post(@Nonnull final WorkbookFilter newWorkbookFilter) throws ClientException {
         return send(HttpMethod.POST, newWorkbookFilter);
     }
 
@@ -120,7 +125,7 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param newWorkbookFilter the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookFilter newWorkbookFilter, final ICallback<? super WorkbookFilter> callback) {
+    public void put(@Nonnull final WorkbookFilter newWorkbookFilter, @Nonnull final ICallback<? super WorkbookFilter> callback) {
         send(HttpMethod.PUT, callback, newWorkbookFilter);
     }
 
@@ -131,7 +136,8 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @return the created WorkbookFilter
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookFilter put(final WorkbookFilter newWorkbookFilter) throws ClientException {
+    @Nullable
+    public WorkbookFilter put(@Nonnull final WorkbookFilter newWorkbookFilter) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookFilter);
     }
 
@@ -141,9 +147,10 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookFilterRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookFilterRequest)this;
+     @Nonnull
+     public WorkbookFilterRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +159,10 @@ public class WorkbookFilterRequest extends BaseRequest implements IWorkbookFilte
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookFilterRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookFilterRequest)this;
+     @Nonnull
+     public WorkbookFilterRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

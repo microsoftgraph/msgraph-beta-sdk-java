@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus;
-import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows Defender Application Control Supplemental Policy Deployment Status Request.
  */
-public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest extends BaseRequest implements IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest {
+public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest extends BaseRequest<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> {
 	
     /**
      * The request for the WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
@@ -31,7 +32,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus.class);
     }
 
@@ -40,7 +41,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @return the WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
+    public void patch(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
     }
 
@@ -89,7 +91,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @return the updated WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus patch(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus patch(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
     }
 
@@ -99,7 +102,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
+    public void post(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
         send(HttpMethod.POST, callback, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
     }
 
@@ -110,7 +113,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @return the created WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus post(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus post(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
         return send(HttpMethod.POST, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
     }
 
@@ -120,7 +124,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
+    public void put(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus, @Nonnull final ICallback<? super WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> callback) {
         send(HttpMethod.PUT, callback, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
     }
 
@@ -131,7 +135,8 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @return the created WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus put(final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
+    @Nullable
+    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus put(@Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus) throws ClientException {
         return send(HttpMethod.PUT, newWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus);
     }
 
@@ -141,9 +146,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest)this;
+     @Nonnull
+     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest)this;
+     @Nonnull
+     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

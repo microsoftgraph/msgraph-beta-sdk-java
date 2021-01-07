@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedRoleAssignment;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivilegedRoleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Privileged Role Assignment Request.
  */
-public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPrivilegedRoleAssignmentRequest {
+public class PrivilegedRoleAssignmentRequest extends BaseRequest<PrivilegedRoleAssignment> {
 	
     /**
      * The request for the PrivilegedRoleAssignment
@@ -31,7 +32,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PrivilegedRoleAssignmentRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PrivilegedRoleAssignmentRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PrivilegedRoleAssignment.class);
     }
 
@@ -40,7 +41,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PrivilegedRoleAssignment> callback) {
+    public void get(@Nonnull final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @return the PrivilegedRoleAssignment from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PrivilegedRoleAssignment get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PrivilegedRoleAssignment> callback) {
+    public void delete(@Nonnull final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param sourcePrivilegedRoleAssignment the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
+    public void patch(@Nonnull final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment, @Nonnull final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.PATCH, callback, sourcePrivilegedRoleAssignment);
     }
 
@@ -89,7 +91,8 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @return the updated PrivilegedRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleAssignment patch(final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment) throws ClientException {
+    @Nullable
+    public PrivilegedRoleAssignment patch(@Nonnull final PrivilegedRoleAssignment sourcePrivilegedRoleAssignment) throws ClientException {
         return send(HttpMethod.PATCH, sourcePrivilegedRoleAssignment);
     }
 
@@ -99,7 +102,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param newPrivilegedRoleAssignment the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
+    public void post(@Nonnull final PrivilegedRoleAssignment newPrivilegedRoleAssignment, @Nonnull final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.POST, callback, newPrivilegedRoleAssignment);
     }
 
@@ -110,7 +113,8 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @return the created PrivilegedRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleAssignment post(final PrivilegedRoleAssignment newPrivilegedRoleAssignment) throws ClientException {
+    @Nullable
+    public PrivilegedRoleAssignment post(@Nonnull final PrivilegedRoleAssignment newPrivilegedRoleAssignment) throws ClientException {
         return send(HttpMethod.POST, newPrivilegedRoleAssignment);
     }
 
@@ -120,7 +124,7 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param newPrivilegedRoleAssignment the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PrivilegedRoleAssignment newPrivilegedRoleAssignment, final ICallback<? super PrivilegedRoleAssignment> callback) {
+    public void put(@Nonnull final PrivilegedRoleAssignment newPrivilegedRoleAssignment, @Nonnull final ICallback<? super PrivilegedRoleAssignment> callback) {
         send(HttpMethod.PUT, callback, newPrivilegedRoleAssignment);
     }
 
@@ -131,7 +135,8 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @return the created PrivilegedRoleAssignment
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PrivilegedRoleAssignment put(final PrivilegedRoleAssignment newPrivilegedRoleAssignment) throws ClientException {
+    @Nullable
+    public PrivilegedRoleAssignment put(@Nonnull final PrivilegedRoleAssignment newPrivilegedRoleAssignment) throws ClientException {
         return send(HttpMethod.PUT, newPrivilegedRoleAssignment);
     }
 
@@ -141,9 +146,10 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param value the select clause
      * @return the updated request
      */
-     public IPrivilegedRoleAssignmentRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PrivilegedRoleAssignmentRequest)this;
+     @Nonnull
+     public PrivilegedRoleAssignmentRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class PrivilegedRoleAssignmentRequest extends BaseRequest implements IPri
      * @param value the expand clause
      * @return the updated request
      */
-     public IPrivilegedRoleAssignmentRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PrivilegedRoleAssignmentRequest)this;
+     @Nonnull
+     public PrivilegedRoleAssignmentRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

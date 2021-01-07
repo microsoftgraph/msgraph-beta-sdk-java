@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsAppX;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Windows App XRequest.
  */
-public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXRequest {
+public class WindowsAppXRequest extends BaseRequest<WindowsAppX> {
 	
     /**
      * The request for the WindowsAppX
@@ -29,7 +31,7 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAppXRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsAppXRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WindowsAppX.class);
     }
 
@@ -38,7 +40,7 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WindowsAppX> callback) {
+    public void get(@Nonnull final ICallback<? super WindowsAppX> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @return the WindowsAppX from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WindowsAppX get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WindowsAppX> callback) {
+    public void delete(@Nonnull final ICallback<? super WindowsAppX> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @param sourceWindowsAppX the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WindowsAppX sourceWindowsAppX, final ICallback<? super WindowsAppX> callback) {
+    public void patch(@Nonnull final WindowsAppX sourceWindowsAppX, @Nonnull final ICallback<? super WindowsAppX> callback) {
         send(HttpMethod.PATCH, callback, sourceWindowsAppX);
     }
 
@@ -87,7 +90,8 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @return the updated WindowsAppX
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAppX patch(final WindowsAppX sourceWindowsAppX) throws ClientException {
+    @Nullable
+    public WindowsAppX patch(@Nonnull final WindowsAppX sourceWindowsAppX) throws ClientException {
         return send(HttpMethod.PATCH, sourceWindowsAppX);
     }
 
@@ -97,7 +101,7 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @param newWindowsAppX the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WindowsAppX newWindowsAppX, final ICallback<? super WindowsAppX> callback) {
+    public void post(@Nonnull final WindowsAppX newWindowsAppX, @Nonnull final ICallback<? super WindowsAppX> callback) {
         send(HttpMethod.POST, callback, newWindowsAppX);
     }
 
@@ -108,7 +112,8 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @return the created WindowsAppX
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAppX post(final WindowsAppX newWindowsAppX) throws ClientException {
+    @Nullable
+    public WindowsAppX post(@Nonnull final WindowsAppX newWindowsAppX) throws ClientException {
         return send(HttpMethod.POST, newWindowsAppX);
     }
 
@@ -118,7 +123,7 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @param newWindowsAppX the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WindowsAppX newWindowsAppX, final ICallback<? super WindowsAppX> callback) {
+    public void put(@Nonnull final WindowsAppX newWindowsAppX, @Nonnull final ICallback<? super WindowsAppX> callback) {
         send(HttpMethod.PUT, callback, newWindowsAppX);
     }
 
@@ -129,7 +134,8 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @return the created WindowsAppX
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WindowsAppX put(final WindowsAppX newWindowsAppX) throws ClientException {
+    @Nullable
+    public WindowsAppX put(@Nonnull final WindowsAppX newWindowsAppX) throws ClientException {
         return send(HttpMethod.PUT, newWindowsAppX);
     }
 
@@ -139,9 +145,10 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @param value the select clause
      * @return the updated request
      */
-     public IWindowsAppXRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WindowsAppXRequest)this;
+     @Nonnull
+     public WindowsAppXRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class WindowsAppXRequest extends BaseRequest implements IWindowsAppXReque
      * @param value the expand clause
      * @return the updated request
      */
-     public IWindowsAppXRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WindowsAppXRequest)this;
+     @Nonnull
+     public WindowsAppXRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

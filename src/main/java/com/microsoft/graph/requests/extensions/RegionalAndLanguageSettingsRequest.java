@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RegionalAndLanguageSettings;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Regional And Language Settings Request.
  */
-public class RegionalAndLanguageSettingsRequest extends BaseRequest implements IRegionalAndLanguageSettingsRequest {
+public class RegionalAndLanguageSettingsRequest extends BaseRequest<RegionalAndLanguageSettings> {
 	
     /**
      * The request for the RegionalAndLanguageSettings
@@ -29,7 +31,7 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public RegionalAndLanguageSettingsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public RegionalAndLanguageSettingsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, RegionalAndLanguageSettings.class);
     }
 
@@ -38,7 +40,7 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super RegionalAndLanguageSettings> callback) {
+    public void get(@Nonnull final ICallback<? super RegionalAndLanguageSettings> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @return the RegionalAndLanguageSettings from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public RegionalAndLanguageSettings get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super RegionalAndLanguageSettings> callback) {
+    public void delete(@Nonnull final ICallback<? super RegionalAndLanguageSettings> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @param sourceRegionalAndLanguageSettings the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final RegionalAndLanguageSettings sourceRegionalAndLanguageSettings, final ICallback<? super RegionalAndLanguageSettings> callback) {
+    public void patch(@Nonnull final RegionalAndLanguageSettings sourceRegionalAndLanguageSettings, @Nonnull final ICallback<? super RegionalAndLanguageSettings> callback) {
         send(HttpMethod.PATCH, callback, sourceRegionalAndLanguageSettings);
     }
 
@@ -87,7 +90,8 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @return the updated RegionalAndLanguageSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RegionalAndLanguageSettings patch(final RegionalAndLanguageSettings sourceRegionalAndLanguageSettings) throws ClientException {
+    @Nullable
+    public RegionalAndLanguageSettings patch(@Nonnull final RegionalAndLanguageSettings sourceRegionalAndLanguageSettings) throws ClientException {
         return send(HttpMethod.PATCH, sourceRegionalAndLanguageSettings);
     }
 
@@ -97,7 +101,7 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @param newRegionalAndLanguageSettings the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final RegionalAndLanguageSettings newRegionalAndLanguageSettings, final ICallback<? super RegionalAndLanguageSettings> callback) {
+    public void post(@Nonnull final RegionalAndLanguageSettings newRegionalAndLanguageSettings, @Nonnull final ICallback<? super RegionalAndLanguageSettings> callback) {
         send(HttpMethod.POST, callback, newRegionalAndLanguageSettings);
     }
 
@@ -108,7 +112,8 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @return the created RegionalAndLanguageSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RegionalAndLanguageSettings post(final RegionalAndLanguageSettings newRegionalAndLanguageSettings) throws ClientException {
+    @Nullable
+    public RegionalAndLanguageSettings post(@Nonnull final RegionalAndLanguageSettings newRegionalAndLanguageSettings) throws ClientException {
         return send(HttpMethod.POST, newRegionalAndLanguageSettings);
     }
 
@@ -118,7 +123,7 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @param newRegionalAndLanguageSettings the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final RegionalAndLanguageSettings newRegionalAndLanguageSettings, final ICallback<? super RegionalAndLanguageSettings> callback) {
+    public void put(@Nonnull final RegionalAndLanguageSettings newRegionalAndLanguageSettings, @Nonnull final ICallback<? super RegionalAndLanguageSettings> callback) {
         send(HttpMethod.PUT, callback, newRegionalAndLanguageSettings);
     }
 
@@ -129,7 +134,8 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @return the created RegionalAndLanguageSettings
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public RegionalAndLanguageSettings put(final RegionalAndLanguageSettings newRegionalAndLanguageSettings) throws ClientException {
+    @Nullable
+    public RegionalAndLanguageSettings put(@Nonnull final RegionalAndLanguageSettings newRegionalAndLanguageSettings) throws ClientException {
         return send(HttpMethod.PUT, newRegionalAndLanguageSettings);
     }
 
@@ -139,9 +145,10 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @param value the select clause
      * @return the updated request
      */
-     public IRegionalAndLanguageSettingsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (RegionalAndLanguageSettingsRequest)this;
+     @Nonnull
+     public RegionalAndLanguageSettingsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class RegionalAndLanguageSettingsRequest extends BaseRequest implements I
      * @param value the expand clause
      * @return the updated request
      */
-     public IRegionalAndLanguageSettingsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (RegionalAndLanguageSettingsRequest)this;
+     @Nonnull
+     public RegionalAndLanguageSettingsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

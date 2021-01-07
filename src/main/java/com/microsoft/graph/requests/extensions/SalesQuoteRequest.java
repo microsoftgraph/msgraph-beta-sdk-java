@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SalesQuote;
-import com.microsoft.graph.requests.extensions.ISalesQuoteLineCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISalesQuoteLineRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SalesQuoteLineRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.CurrencyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICustomerRequestBuilder;
 import com.microsoft.graph.requests.extensions.CustomerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
 import com.microsoft.graph.requests.extensions.PaymentTermRequestBuilder;
-import com.microsoft.graph.requests.extensions.IShipmentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ShipmentMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Sales Quote Request.
  */
-public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest {
+public class SalesQuoteRequest extends BaseRequest<SalesQuote> {
 	
     /**
      * The request for the SalesQuote
@@ -41,7 +37,7 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SalesQuoteRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SalesQuoteRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, SalesQuote.class);
     }
 
@@ -50,7 +46,7 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super SalesQuote> callback) {
+    public void get(@Nonnull final ICallback<? super SalesQuote> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @return the SalesQuote from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public SalesQuote get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super SalesQuote> callback) {
+    public void delete(@Nonnull final ICallback<? super SalesQuote> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @param sourceSalesQuote the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final SalesQuote sourceSalesQuote, final ICallback<? super SalesQuote> callback) {
+    public void patch(@Nonnull final SalesQuote sourceSalesQuote, @Nonnull final ICallback<? super SalesQuote> callback) {
         send(HttpMethod.PATCH, callback, sourceSalesQuote);
     }
 
@@ -99,7 +96,8 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @return the updated SalesQuote
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesQuote patch(final SalesQuote sourceSalesQuote) throws ClientException {
+    @Nullable
+    public SalesQuote patch(@Nonnull final SalesQuote sourceSalesQuote) throws ClientException {
         return send(HttpMethod.PATCH, sourceSalesQuote);
     }
 
@@ -109,7 +107,7 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @param newSalesQuote the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final SalesQuote newSalesQuote, final ICallback<? super SalesQuote> callback) {
+    public void post(@Nonnull final SalesQuote newSalesQuote, @Nonnull final ICallback<? super SalesQuote> callback) {
         send(HttpMethod.POST, callback, newSalesQuote);
     }
 
@@ -120,7 +118,8 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @return the created SalesQuote
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesQuote post(final SalesQuote newSalesQuote) throws ClientException {
+    @Nullable
+    public SalesQuote post(@Nonnull final SalesQuote newSalesQuote) throws ClientException {
         return send(HttpMethod.POST, newSalesQuote);
     }
 
@@ -130,7 +129,7 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @param newSalesQuote the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final SalesQuote newSalesQuote, final ICallback<? super SalesQuote> callback) {
+    public void put(@Nonnull final SalesQuote newSalesQuote, @Nonnull final ICallback<? super SalesQuote> callback) {
         send(HttpMethod.PUT, callback, newSalesQuote);
     }
 
@@ -141,7 +140,8 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @return the created SalesQuote
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public SalesQuote put(final SalesQuote newSalesQuote) throws ClientException {
+    @Nullable
+    public SalesQuote put(@Nonnull final SalesQuote newSalesQuote) throws ClientException {
         return send(HttpMethod.PUT, newSalesQuote);
     }
 
@@ -151,9 +151,10 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @param value the select clause
      * @return the updated request
      */
-     public ISalesQuoteRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (SalesQuoteRequest)this;
+     @Nonnull
+     public SalesQuoteRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class SalesQuoteRequest extends BaseRequest implements ISalesQuoteRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public ISalesQuoteRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (SalesQuoteRequest)this;
+     @Nonnull
+     public SalesQuoteRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DomainSecurityProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Domain Security Profile Request.
  */
-public class DomainSecurityProfileRequest extends BaseRequest implements IDomainSecurityProfileRequest {
+public class DomainSecurityProfileRequest extends BaseRequest<DomainSecurityProfile> {
 	
     /**
      * The request for the DomainSecurityProfile
@@ -29,7 +31,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DomainSecurityProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DomainSecurityProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DomainSecurityProfile.class);
     }
 
@@ -38,7 +40,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DomainSecurityProfile> callback) {
+    public void get(@Nonnull final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @return the DomainSecurityProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DomainSecurityProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DomainSecurityProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param sourceDomainSecurityProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DomainSecurityProfile sourceDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback) {
+    public void patch(@Nonnull final DomainSecurityProfile sourceDomainSecurityProfile, @Nonnull final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceDomainSecurityProfile);
     }
 
@@ -87,7 +90,8 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @return the updated DomainSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainSecurityProfile patch(final DomainSecurityProfile sourceDomainSecurityProfile) throws ClientException {
+    @Nullable
+    public DomainSecurityProfile patch(@Nonnull final DomainSecurityProfile sourceDomainSecurityProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceDomainSecurityProfile);
     }
 
@@ -97,7 +101,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param newDomainSecurityProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback) {
+    public void post(@Nonnull final DomainSecurityProfile newDomainSecurityProfile, @Nonnull final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.POST, callback, newDomainSecurityProfile);
     }
 
@@ -108,7 +112,8 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @return the created DomainSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainSecurityProfile post(final DomainSecurityProfile newDomainSecurityProfile) throws ClientException {
+    @Nullable
+    public DomainSecurityProfile post(@Nonnull final DomainSecurityProfile newDomainSecurityProfile) throws ClientException {
         return send(HttpMethod.POST, newDomainSecurityProfile);
     }
 
@@ -118,7 +123,7 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param newDomainSecurityProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DomainSecurityProfile newDomainSecurityProfile, final ICallback<? super DomainSecurityProfile> callback) {
+    public void put(@Nonnull final DomainSecurityProfile newDomainSecurityProfile, @Nonnull final ICallback<? super DomainSecurityProfile> callback) {
         send(HttpMethod.PUT, callback, newDomainSecurityProfile);
     }
 
@@ -129,7 +134,8 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @return the created DomainSecurityProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DomainSecurityProfile put(final DomainSecurityProfile newDomainSecurityProfile) throws ClientException {
+    @Nullable
+    public DomainSecurityProfile put(@Nonnull final DomainSecurityProfile newDomainSecurityProfile) throws ClientException {
         return send(HttpMethod.PUT, newDomainSecurityProfile);
     }
 
@@ -139,9 +145,10 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param value the select clause
      * @return the updated request
      */
-     public IDomainSecurityProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DomainSecurityProfileRequest)this;
+     @Nonnull
+     public DomainSecurityProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class DomainSecurityProfileRequest extends BaseRequest implements IDomain
      * @param value the expand clause
      * @return the updated request
      */
-     public IDomainSecurityProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DomainSecurityProfileRequest)this;
+     @Nonnull
+     public DomainSecurityProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

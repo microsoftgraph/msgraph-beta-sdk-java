@@ -9,20 +9,16 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Organization;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.CertificateBasedAuthConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationalBrandingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOrganizationSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.OrganizationSettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -32,7 +28,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Organization Request.
  */
-public class OrganizationRequest extends BaseRequest implements IOrganizationRequest {
+public class OrganizationRequest extends BaseRequest<Organization> {
 	
     /**
      * The request for the Organization
@@ -41,7 +37,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public OrganizationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public OrganizationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, Organization.class);
     }
 
@@ -50,7 +46,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super Organization> callback) {
+    public void get(@Nonnull final ICallback<? super Organization> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -60,6 +56,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @return the Organization from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public Organization get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -69,7 +66,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super Organization> callback) {
+    public void delete(@Nonnull final ICallback<? super Organization> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -88,7 +85,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param sourceOrganization the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final Organization sourceOrganization, final ICallback<? super Organization> callback) {
+    public void patch(@Nonnull final Organization sourceOrganization, @Nonnull final ICallback<? super Organization> callback) {
         send(HttpMethod.PATCH, callback, sourceOrganization);
     }
 
@@ -99,7 +96,8 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @return the updated Organization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Organization patch(final Organization sourceOrganization) throws ClientException {
+    @Nullable
+    public Organization patch(@Nonnull final Organization sourceOrganization) throws ClientException {
         return send(HttpMethod.PATCH, sourceOrganization);
     }
 
@@ -109,7 +107,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param newOrganization the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final Organization newOrganization, final ICallback<? super Organization> callback) {
+    public void post(@Nonnull final Organization newOrganization, @Nonnull final ICallback<? super Organization> callback) {
         send(HttpMethod.POST, callback, newOrganization);
     }
 
@@ -120,7 +118,8 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @return the created Organization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Organization post(final Organization newOrganization) throws ClientException {
+    @Nullable
+    public Organization post(@Nonnull final Organization newOrganization) throws ClientException {
         return send(HttpMethod.POST, newOrganization);
     }
 
@@ -130,7 +129,7 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param newOrganization the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final Organization newOrganization, final ICallback<? super Organization> callback) {
+    public void put(@Nonnull final Organization newOrganization, @Nonnull final ICallback<? super Organization> callback) {
         send(HttpMethod.PUT, callback, newOrganization);
     }
 
@@ -141,7 +140,8 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @return the created Organization
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public Organization put(final Organization newOrganization) throws ClientException {
+    @Nullable
+    public Organization put(@Nonnull final Organization newOrganization) throws ClientException {
         return send(HttpMethod.PUT, newOrganization);
     }
 
@@ -151,9 +151,10 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param value the select clause
      * @return the updated request
      */
-     public IOrganizationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (OrganizationRequest)this;
+     @Nonnull
+     public OrganizationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -162,9 +163,10 @@ public class OrganizationRequest extends BaseRequest implements IOrganizationReq
      * @param value the expand clause
      * @return the updated request
      */
-     public IOrganizationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (OrganizationRequest)this;
+     @Nonnull
+     public OrganizationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -10,10 +10,11 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityUserFlowAttributeAssignment;
 import com.microsoft.graph.models.extensions.AssignmentOrder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity User Flow Attribute Assignment Request Builder.
  */
-public class IdentityUserFlowAttributeAssignmentRequestBuilder extends BaseRequestBuilder implements IIdentityUserFlowAttributeAssignmentRequestBuilder {
+public class IdentityUserFlowAttributeAssignmentRequestBuilder extends BaseRequestBuilder<IdentityUserFlowAttributeAssignment> {
 
     /**
      * The request builder for the IdentityUserFlowAttributeAssignment
@@ -31,7 +32,7 @@ public class IdentityUserFlowAttributeAssignmentRequestBuilder extends BaseReque
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityUserFlowAttributeAssignmentRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityUserFlowAttributeAssignmentRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -39,9 +40,10 @@ public class IdentityUserFlowAttributeAssignmentRequestBuilder extends BaseReque
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityUserFlowAttributeAssignmentRequest instance
+     * @return the IdentityUserFlowAttributeAssignmentRequest instance
      */
-    public IIdentityUserFlowAttributeAssignmentRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public IdentityUserFlowAttributeAssignmentRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -49,9 +51,10 @@ public class IdentityUserFlowAttributeAssignmentRequestBuilder extends BaseReque
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityUserFlowAttributeAssignmentRequest instance
+     * @return the IdentityUserFlowAttributeAssignmentRequest instance
      */
-    public IIdentityUserFlowAttributeAssignmentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public IdentityUserFlowAttributeAssignmentRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -60,9 +63,10 @@ public class IdentityUserFlowAttributeAssignmentRequestBuilder extends BaseReque
     /**
      * Gets the request builder for IdentityUserFlowAttribute
      *
-     * @return the IIdentityUserFlowAttributeWithReferenceRequestBuilder instance
+     * @return the IdentityUserFlowAttributeWithReferenceRequestBuilder instance
      */
-    public IIdentityUserFlowAttributeWithReferenceRequestBuilder userAttribute() {
+    @Nonnull
+    public IdentityUserFlowAttributeWithReferenceRequestBuilder userAttribute() {
         return new IdentityUserFlowAttributeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("userAttribute"), getClient(), null);
     }
 }

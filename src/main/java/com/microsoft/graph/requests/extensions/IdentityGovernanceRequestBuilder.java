@@ -9,16 +9,14 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityGovernance;
-import com.microsoft.graph.requests.extensions.IAccessReviewSetRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewSetRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAppConsentApprovalRouteRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppConsentApprovalRouteRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITermsOfUseContainerRequestBuilder;
 import com.microsoft.graph.requests.extensions.TermsOfUseContainerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEntitlementManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.EntitlementManagementRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -27,7 +25,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Identity Governance Request Builder.
  */
-public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder implements IIdentityGovernanceRequestBuilder {
+public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<IdentityGovernance> {
 
     /**
      * The request builder for the IdentityGovernance
@@ -36,7 +34,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IdentityGovernanceRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IdentityGovernanceRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -44,9 +42,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityGovernanceRequest instance
+     * @return the IdentityGovernanceRequest instance
      */
-    public IIdentityGovernanceRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public IdentityGovernanceRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -54,9 +53,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IIdentityGovernanceRequest instance
+     * @return the IdentityGovernanceRequest instance
      */
-    public IIdentityGovernanceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public IdentityGovernanceRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.IdentityGovernanceRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -65,36 +65,40 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder impleme
     /**
      * Gets the request builder for AccessReviewSet
      *
-     * @return the IAccessReviewSetRequestBuilder instance
+     * @return the AccessReviewSetRequestBuilder instance
      */
-    public IAccessReviewSetRequestBuilder accessReviews() {
+    @Nonnull
+    public AccessReviewSetRequestBuilder accessReviews() {
         return new AccessReviewSetRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviews"), getClient(), null);
     }
 
     /**
      * Gets the request builder for AppConsentApprovalRoute
      *
-     * @return the IAppConsentApprovalRouteRequestBuilder instance
+     * @return the AppConsentApprovalRouteRequestBuilder instance
      */
-    public IAppConsentApprovalRouteRequestBuilder appConsent() {
+    @Nonnull
+    public AppConsentApprovalRouteRequestBuilder appConsent() {
         return new AppConsentApprovalRouteRequestBuilder(getRequestUrlWithAdditionalSegment("appConsent"), getClient(), null);
     }
 
     /**
      * Gets the request builder for TermsOfUseContainer
      *
-     * @return the ITermsOfUseContainerRequestBuilder instance
+     * @return the TermsOfUseContainerRequestBuilder instance
      */
-    public ITermsOfUseContainerRequestBuilder termsOfUse() {
+    @Nonnull
+    public TermsOfUseContainerRequestBuilder termsOfUse() {
         return new TermsOfUseContainerRequestBuilder(getRequestUrlWithAdditionalSegment("termsOfUse"), getClient(), null);
     }
 
     /**
      * Gets the request builder for EntitlementManagement
      *
-     * @return the IEntitlementManagementRequestBuilder instance
+     * @return the EntitlementManagementRequestBuilder instance
      */
-    public IEntitlementManagementRequestBuilder entitlementManagement() {
+    @Nonnull
+    public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
     }
 }

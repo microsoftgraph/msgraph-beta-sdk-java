@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WindowsAutopilotDeploymentProfilePolicySetItem;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows Autopilot Deployment Profile Policy Set Item Request Builder.
  */
-public class WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder extends BaseRequestBuilder implements IWindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder {
+public class WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder extends BaseRequestBuilder<WindowsAutopilotDeploymentProfilePolicySetItem> {
 
     /**
      * The request builder for the WindowsAutopilotDeploymentProfilePolicySetItem
@@ -28,7 +30,7 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder extend
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder extend
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsAutopilotDeploymentProfilePolicySetItemRequest instance
+     * @return the WindowsAutopilotDeploymentProfilePolicySetItemRequest instance
      */
-    public IWindowsAutopilotDeploymentProfilePolicySetItemRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WindowsAutopilotDeploymentProfilePolicySetItemRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class WindowsAutopilotDeploymentProfilePolicySetItemRequestBuilder extend
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindowsAutopilotDeploymentProfilePolicySetItemRequest instance
+     * @return the WindowsAutopilotDeploymentProfilePolicySetItemRequest instance
      */
-    public IWindowsAutopilotDeploymentProfilePolicySetItemRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WindowsAutopilotDeploymentProfilePolicySetItemRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WindowsAutopilotDeploymentProfilePolicySetItemRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

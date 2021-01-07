@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftTunnelServer;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Microsoft Tunnel Server Request.
  */
-public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicrosoftTunnelServerRequest {
+public class MicrosoftTunnelServerRequest extends BaseRequest<MicrosoftTunnelServer> {
 	
     /**
      * The request for the MicrosoftTunnelServer
@@ -29,7 +31,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MicrosoftTunnelServerRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MicrosoftTunnelServerRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, MicrosoftTunnelServer.class);
     }
 
@@ -38,7 +40,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super MicrosoftTunnelServer> callback) {
+    public void get(@Nonnull final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @return the MicrosoftTunnelServer from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public MicrosoftTunnelServer get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super MicrosoftTunnelServer> callback) {
+    public void delete(@Nonnull final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param sourceMicrosoftTunnelServer the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final MicrosoftTunnelServer sourceMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback) {
+    public void patch(@Nonnull final MicrosoftTunnelServer sourceMicrosoftTunnelServer, @Nonnull final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.PATCH, callback, sourceMicrosoftTunnelServer);
     }
 
@@ -87,7 +90,8 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @return the updated MicrosoftTunnelServer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftTunnelServer patch(final MicrosoftTunnelServer sourceMicrosoftTunnelServer) throws ClientException {
+    @Nullable
+    public MicrosoftTunnelServer patch(@Nonnull final MicrosoftTunnelServer sourceMicrosoftTunnelServer) throws ClientException {
         return send(HttpMethod.PATCH, sourceMicrosoftTunnelServer);
     }
 
@@ -97,7 +101,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param newMicrosoftTunnelServer the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback) {
+    public void post(@Nonnull final MicrosoftTunnelServer newMicrosoftTunnelServer, @Nonnull final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.POST, callback, newMicrosoftTunnelServer);
     }
 
@@ -108,7 +112,8 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @return the created MicrosoftTunnelServer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftTunnelServer post(final MicrosoftTunnelServer newMicrosoftTunnelServer) throws ClientException {
+    @Nullable
+    public MicrosoftTunnelServer post(@Nonnull final MicrosoftTunnelServer newMicrosoftTunnelServer) throws ClientException {
         return send(HttpMethod.POST, newMicrosoftTunnelServer);
     }
 
@@ -118,7 +123,7 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param newMicrosoftTunnelServer the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final MicrosoftTunnelServer newMicrosoftTunnelServer, final ICallback<? super MicrosoftTunnelServer> callback) {
+    public void put(@Nonnull final MicrosoftTunnelServer newMicrosoftTunnelServer, @Nonnull final ICallback<? super MicrosoftTunnelServer> callback) {
         send(HttpMethod.PUT, callback, newMicrosoftTunnelServer);
     }
 
@@ -129,7 +134,8 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @return the created MicrosoftTunnelServer
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public MicrosoftTunnelServer put(final MicrosoftTunnelServer newMicrosoftTunnelServer) throws ClientException {
+    @Nullable
+    public MicrosoftTunnelServer put(@Nonnull final MicrosoftTunnelServer newMicrosoftTunnelServer) throws ClientException {
         return send(HttpMethod.PUT, newMicrosoftTunnelServer);
     }
 
@@ -139,9 +145,10 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param value the select clause
      * @return the updated request
      */
-     public IMicrosoftTunnelServerRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (MicrosoftTunnelServerRequest)this;
+     @Nonnull
+     public MicrosoftTunnelServerRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class MicrosoftTunnelServerRequest extends BaseRequest implements IMicros
      * @param value the expand clause
      * @return the updated request
      */
-     public IMicrosoftTunnelServerRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (MicrosoftTunnelServerRequest)this;
+     @Nonnull
+     public MicrosoftTunnelServerRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

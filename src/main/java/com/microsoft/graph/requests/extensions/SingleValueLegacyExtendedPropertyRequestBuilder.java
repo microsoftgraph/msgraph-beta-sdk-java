@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.SingleValueLegacyExtendedProperty;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Single Value Legacy Extended Property Request Builder.
  */
-public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder implements ISingleValueLegacyExtendedPropertyRequestBuilder {
+public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequestBuilder<SingleValueLegacyExtendedProperty> {
 
     /**
      * The request builder for the SingleValueLegacyExtendedProperty
@@ -28,7 +30,7 @@ public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public SingleValueLegacyExtendedPropertyRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public SingleValueLegacyExtendedPropertyRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the ISingleValueLegacyExtendedPropertyRequest instance
+     * @return the SingleValueLegacyExtendedPropertyRequest instance
      */
-    public ISingleValueLegacyExtendedPropertyRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class SingleValueLegacyExtendedPropertyRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the ISingleValueLegacyExtendedPropertyRequest instance
+     * @return the SingleValueLegacyExtendedPropertyRequest instance
      */
-    public ISingleValueLegacyExtendedPropertyRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public SingleValueLegacyExtendedPropertyRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

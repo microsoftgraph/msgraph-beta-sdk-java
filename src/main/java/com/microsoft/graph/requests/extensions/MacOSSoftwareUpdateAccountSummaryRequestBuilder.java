@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MacOSSoftwareUpdateAccountSummary;
-import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateCategorySummaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMacOSSoftwareUpdateCategorySummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateCategorySummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateCategorySummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Mac OSSoftware Update Account Summary Request Builder.
  */
-public class MacOSSoftwareUpdateAccountSummaryRequestBuilder extends BaseRequestBuilder implements IMacOSSoftwareUpdateAccountSummaryRequestBuilder {
+public class MacOSSoftwareUpdateAccountSummaryRequestBuilder extends BaseRequestBuilder<MacOSSoftwareUpdateAccountSummary> {
 
     /**
      * The request builder for the MacOSSoftwareUpdateAccountSummary
@@ -32,7 +32,7 @@ public class MacOSSoftwareUpdateAccountSummaryRequestBuilder extends BaseRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public MacOSSoftwareUpdateAccountSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public MacOSSoftwareUpdateAccountSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class MacOSSoftwareUpdateAccountSummaryRequestBuilder extends BaseRequest
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IMacOSSoftwareUpdateAccountSummaryRequest instance
+     * @return the MacOSSoftwareUpdateAccountSummaryRequest instance
      */
-    public IMacOSSoftwareUpdateAccountSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public MacOSSoftwareUpdateAccountSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,18 +51,32 @@ public class MacOSSoftwareUpdateAccountSummaryRequestBuilder extends BaseRequest
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IMacOSSoftwareUpdateAccountSummaryRequest instance
+     * @return the MacOSSoftwareUpdateAccountSummaryRequest instance
      */
-    public IMacOSSoftwareUpdateAccountSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public MacOSSoftwareUpdateAccountSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.MacOSSoftwareUpdateAccountSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IMacOSSoftwareUpdateCategorySummaryCollectionRequestBuilder categorySummaries() {
+    /**
+     *  Gets a request builder for the MacOSSoftwareUpdateCategorySummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MacOSSoftwareUpdateCategorySummaryCollectionRequestBuilder categorySummaries() {
         return new MacOSSoftwareUpdateCategorySummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("categorySummaries"), getClient(), null);
     }
 
-    public IMacOSSoftwareUpdateCategorySummaryRequestBuilder categorySummaries(final String id) {
+    /**
+     * Gets a request builder for the MacOSSoftwareUpdateCategorySummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MacOSSoftwareUpdateCategorySummaryRequestBuilder categorySummaries(@Nonnull final String id) {
         return new MacOSSoftwareUpdateCategorySummaryRequestBuilder(getRequestUrlWithAdditionalSegment("categorySummaries") + "/" + id, getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentationLongDecimalTextBox;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Group Policy Presentation Long Decimal Text Box Request Builder.
  */
-public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends BaseRequestBuilder implements IGroupPolicyPresentationLongDecimalTextBoxRequestBuilder {
+public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends BaseRequestBuilder<GroupPolicyPresentationLongDecimalTextBox> {
 
     /**
      * The request builder for the GroupPolicyPresentationLongDecimalTextBox
@@ -28,7 +30,7 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends Bas
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public GroupPolicyPresentationLongDecimalTextBoxRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public GroupPolicyPresentationLongDecimalTextBoxRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends Bas
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationLongDecimalTextBoxRequest instance
+     * @return the GroupPolicyPresentationLongDecimalTextBoxRequest instance
      */
-    public IGroupPolicyPresentationLongDecimalTextBoxRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationLongDecimalTextBoxRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends Bas
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IGroupPolicyPresentationLongDecimalTextBoxRequest instance
+     * @return the GroupPolicyPresentationLongDecimalTextBoxRequest instance
      */
-    public IGroupPolicyPresentationLongDecimalTextBoxRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public GroupPolicyPresentationLongDecimalTextBoxRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.GroupPolicyPresentationLongDecimalTextBoxRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -57,9 +61,10 @@ public class GroupPolicyPresentationLongDecimalTextBoxRequestBuilder extends Bas
     /**
      * Gets the request builder for GroupPolicyDefinition
      *
-     * @return the IGroupPolicyDefinitionWithReferenceRequestBuilder instance
+     * @return the GroupPolicyDefinitionWithReferenceRequestBuilder instance
      */
-    public IGroupPolicyDefinitionWithReferenceRequestBuilder definition() {
+    @Nonnull
+    public GroupPolicyDefinitionWithReferenceRequestBuilder definition() {
         return new GroupPolicyDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definition"), getClient(), null);
     }
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AdminConsentRequestPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Admin Consent Request Policy Request.
  */
-public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAdminConsentRequestPolicyRequest {
+public class AdminConsentRequestPolicyRequest extends BaseRequest<AdminConsentRequestPolicy> {
 	
     /**
      * The request for the AdminConsentRequestPolicy
@@ -29,7 +31,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AdminConsentRequestPolicyRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AdminConsentRequestPolicyRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AdminConsentRequestPolicy.class);
     }
 
@@ -38,7 +40,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AdminConsentRequestPolicy> callback) {
+    public void get(@Nonnull final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @return the AdminConsentRequestPolicy from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AdminConsentRequestPolicy get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AdminConsentRequestPolicy> callback) {
+    public void delete(@Nonnull final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param sourceAdminConsentRequestPolicy the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback) {
+    public void patch(@Nonnull final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy, @Nonnull final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.PATCH, callback, sourceAdminConsentRequestPolicy);
     }
 
@@ -87,7 +90,8 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @return the updated AdminConsentRequestPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdminConsentRequestPolicy patch(final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy) throws ClientException {
+    @Nullable
+    public AdminConsentRequestPolicy patch(@Nonnull final AdminConsentRequestPolicy sourceAdminConsentRequestPolicy) throws ClientException {
         return send(HttpMethod.PATCH, sourceAdminConsentRequestPolicy);
     }
 
@@ -97,7 +101,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param newAdminConsentRequestPolicy the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback) {
+    public void post(@Nonnull final AdminConsentRequestPolicy newAdminConsentRequestPolicy, @Nonnull final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.POST, callback, newAdminConsentRequestPolicy);
     }
 
@@ -108,7 +112,8 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @return the created AdminConsentRequestPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdminConsentRequestPolicy post(final AdminConsentRequestPolicy newAdminConsentRequestPolicy) throws ClientException {
+    @Nullable
+    public AdminConsentRequestPolicy post(@Nonnull final AdminConsentRequestPolicy newAdminConsentRequestPolicy) throws ClientException {
         return send(HttpMethod.POST, newAdminConsentRequestPolicy);
     }
 
@@ -118,7 +123,7 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param newAdminConsentRequestPolicy the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy, final ICallback<? super AdminConsentRequestPolicy> callback) {
+    public void put(@Nonnull final AdminConsentRequestPolicy newAdminConsentRequestPolicy, @Nonnull final ICallback<? super AdminConsentRequestPolicy> callback) {
         send(HttpMethod.PUT, callback, newAdminConsentRequestPolicy);
     }
 
@@ -129,7 +134,8 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @return the created AdminConsentRequestPolicy
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AdminConsentRequestPolicy put(final AdminConsentRequestPolicy newAdminConsentRequestPolicy) throws ClientException {
+    @Nullable
+    public AdminConsentRequestPolicy put(@Nonnull final AdminConsentRequestPolicy newAdminConsentRequestPolicy) throws ClientException {
         return send(HttpMethod.PUT, newAdminConsentRequestPolicy);
     }
 
@@ -139,9 +145,10 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param value the select clause
      * @return the updated request
      */
-     public IAdminConsentRequestPolicyRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AdminConsentRequestPolicyRequest)this;
+     @Nonnull
+     public AdminConsentRequestPolicyRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class AdminConsentRequestPolicyRequest extends BaseRequest implements IAd
      * @param value the expand clause
      * @return the updated request
      */
-     public IAdminConsentRequestPolicyRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AdminConsentRequestPolicyRequest)this;
+     @Nonnull
+     public AdminConsentRequestPolicyRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

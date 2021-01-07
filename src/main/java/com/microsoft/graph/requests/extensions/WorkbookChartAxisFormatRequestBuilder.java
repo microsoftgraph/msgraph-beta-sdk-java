@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartAxisFormat;
-import com.microsoft.graph.requests.extensions.IWorkbookChartFontRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartFontRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWorkbookChartLineFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartLineFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -23,7 +23,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Workbook Chart Axis Format Request Builder.
  */
-public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder implements IWorkbookChartAxisFormatRequestBuilder {
+public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder<WorkbookChartAxisFormat> {
 
     /**
      * The request builder for the WorkbookChartAxisFormat
@@ -32,7 +32,7 @@ public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder im
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartAxisFormatRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartAxisFormatRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -40,9 +40,10 @@ public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder im
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartAxisFormatRequest instance
+     * @return the WorkbookChartAxisFormatRequest instance
      */
-    public IWorkbookChartAxisFormatRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public WorkbookChartAxisFormatRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -50,9 +51,10 @@ public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder im
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWorkbookChartAxisFormatRequest instance
+     * @return the WorkbookChartAxisFormatRequest instance
      */
-    public IWorkbookChartAxisFormatRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public WorkbookChartAxisFormatRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.WorkbookChartAxisFormatRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
@@ -61,18 +63,20 @@ public class WorkbookChartAxisFormatRequestBuilder extends BaseRequestBuilder im
     /**
      * Gets the request builder for WorkbookChartFont
      *
-     * @return the IWorkbookChartFontRequestBuilder instance
+     * @return the WorkbookChartFontRequestBuilder instance
      */
-    public IWorkbookChartFontRequestBuilder font() {
+    @Nonnull
+    public WorkbookChartFontRequestBuilder font() {
         return new WorkbookChartFontRequestBuilder(getRequestUrlWithAdditionalSegment("font"), getClient(), null);
     }
 
     /**
      * Gets the request builder for WorkbookChartLineFormat
      *
-     * @return the IWorkbookChartLineFormatRequestBuilder instance
+     * @return the WorkbookChartLineFormatRequestBuilder instance
      */
-    public IWorkbookChartLineFormatRequestBuilder line() {
+    @Nonnull
+    public WorkbookChartLineFormatRequestBuilder line() {
         return new WorkbookChartLineFormatRequestBuilder(getRequestUrlWithAdditionalSegment("line"), getClient(), null);
     }
 }

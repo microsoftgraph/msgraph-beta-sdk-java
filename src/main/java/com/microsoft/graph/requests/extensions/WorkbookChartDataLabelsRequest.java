@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.WorkbookChartDataLabels;
-import com.microsoft.graph.requests.extensions.IWorkbookChartDataLabelFormatRequestBuilder;
 import com.microsoft.graph.requests.extensions.WorkbookChartDataLabelFormatRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Workbook Chart Data Labels Request.
  */
-public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWorkbookChartDataLabelsRequest {
+public class WorkbookChartDataLabelsRequest extends BaseRequest<WorkbookChartDataLabels> {
 	
     /**
      * The request for the WorkbookChartDataLabels
@@ -31,7 +32,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public WorkbookChartDataLabelsRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public WorkbookChartDataLabelsRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, WorkbookChartDataLabels.class);
     }
 
@@ -40,7 +41,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super WorkbookChartDataLabels> callback) {
+    public void get(@Nonnull final ICallback<? super WorkbookChartDataLabels> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @return the WorkbookChartDataLabels from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public WorkbookChartDataLabels get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super WorkbookChartDataLabels> callback) {
+    public void delete(@Nonnull final ICallback<? super WorkbookChartDataLabels> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @param sourceWorkbookChartDataLabels the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final WorkbookChartDataLabels sourceWorkbookChartDataLabels, final ICallback<? super WorkbookChartDataLabels> callback) {
+    public void patch(@Nonnull final WorkbookChartDataLabels sourceWorkbookChartDataLabels, @Nonnull final ICallback<? super WorkbookChartDataLabels> callback) {
         send(HttpMethod.PATCH, callback, sourceWorkbookChartDataLabels);
     }
 
@@ -89,7 +91,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @return the updated WorkbookChartDataLabels
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartDataLabels patch(final WorkbookChartDataLabels sourceWorkbookChartDataLabels) throws ClientException {
+    @Nullable
+    public WorkbookChartDataLabels patch(@Nonnull final WorkbookChartDataLabels sourceWorkbookChartDataLabels) throws ClientException {
         return send(HttpMethod.PATCH, sourceWorkbookChartDataLabels);
     }
 
@@ -99,7 +102,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @param newWorkbookChartDataLabels the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<? super WorkbookChartDataLabels> callback) {
+    public void post(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels, @Nonnull final ICallback<? super WorkbookChartDataLabels> callback) {
         send(HttpMethod.POST, callback, newWorkbookChartDataLabels);
     }
 
@@ -110,7 +113,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @return the created WorkbookChartDataLabels
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartDataLabels post(final WorkbookChartDataLabels newWorkbookChartDataLabels) throws ClientException {
+    @Nullable
+    public WorkbookChartDataLabels post(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels) throws ClientException {
         return send(HttpMethod.POST, newWorkbookChartDataLabels);
     }
 
@@ -120,7 +124,7 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @param newWorkbookChartDataLabels the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final WorkbookChartDataLabels newWorkbookChartDataLabels, final ICallback<? super WorkbookChartDataLabels> callback) {
+    public void put(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels, @Nonnull final ICallback<? super WorkbookChartDataLabels> callback) {
         send(HttpMethod.PUT, callback, newWorkbookChartDataLabels);
     }
 
@@ -131,7 +135,8 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @return the created WorkbookChartDataLabels
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public WorkbookChartDataLabels put(final WorkbookChartDataLabels newWorkbookChartDataLabels) throws ClientException {
+    @Nullable
+    public WorkbookChartDataLabels put(@Nonnull final WorkbookChartDataLabels newWorkbookChartDataLabels) throws ClientException {
         return send(HttpMethod.PUT, newWorkbookChartDataLabels);
     }
 
@@ -141,9 +146,10 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @param value the select clause
      * @return the updated request
      */
-     public IWorkbookChartDataLabelsRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (WorkbookChartDataLabelsRequest)this;
+     @Nonnull
+     public WorkbookChartDataLabelsRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class WorkbookChartDataLabelsRequest extends BaseRequest implements IWork
      * @param value the expand clause
      * @return the updated request
      */
-     public IWorkbookChartDataLabelsRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (WorkbookChartDataLabelsRequest)this;
+     @Nonnull
+     public WorkbookChartDataLabelsRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

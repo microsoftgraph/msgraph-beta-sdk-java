@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows10XCertificateProfile;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Windows10XCertificate Profile Request Builder.
  */
-public class Windows10XCertificateProfileRequestBuilder extends BaseRequestBuilder implements IWindows10XCertificateProfileRequestBuilder {
+public class Windows10XCertificateProfileRequestBuilder extends BaseRequestBuilder<Windows10XCertificateProfile> {
 
     /**
      * The request builder for the Windows10XCertificateProfile
@@ -28,7 +30,7 @@ public class Windows10XCertificateProfileRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public Windows10XCertificateProfileRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public Windows10XCertificateProfileRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class Windows10XCertificateProfileRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10XCertificateProfileRequest instance
+     * @return the Windows10XCertificateProfileRequest instance
      */
-    public IWindows10XCertificateProfileRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public Windows10XCertificateProfileRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,18 +49,32 @@ public class Windows10XCertificateProfileRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IWindows10XCertificateProfileRequest instance
+     * @return the Windows10XCertificateProfileRequest instance
      */
-    public IWindows10XCertificateProfileRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public Windows10XCertificateProfileRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.Windows10XCertificateProfileRequest(getRequestUrl(), getClient(), requestOptions);
     }
 
 
-    public IDeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
+    /**
+     *  Gets a request builder for the DeviceManagementResourceAccessProfileAssignment collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder assignments() {
         return new DeviceManagementResourceAccessProfileAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);
     }
 
-    public IDeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(final String id) {
+    /**
+     * Gets a request builder for the DeviceManagementResourceAccessProfileAssignment item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementResourceAccessProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new DeviceManagementResourceAccessProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
     }
 }

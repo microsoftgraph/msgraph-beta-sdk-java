@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidDeviceComplianceLocalActionLockDeviceWithPasscode;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Android Device Compliance Local Action Lock Device With Passcode Request Builder.
  */
-public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuilder extends BaseRequestBuilder implements IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuilder {
+public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuilder extends BaseRequestBuilder<AndroidDeviceComplianceLocalActionLockDeviceWithPasscode> {
 
     /**
      * The request builder for the AndroidDeviceComplianceLocalActionLockDeviceWithPasscode
@@ -28,7 +30,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuil
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuil
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest instance
+     * @return the AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest instance
      */
-    public IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequestBuil
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest instance
+     * @return the AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest instance
      */
-    public IAndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.AndroidDeviceComplianceLocalActionLockDeviceWithPasscodeRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

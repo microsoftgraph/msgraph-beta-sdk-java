@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidForWorkImportedPFXCertificateProfile;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -24,7 +24,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Android For Work Imported PFXCertificate Profile Request.
  */
-public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequest implements IAndroidForWorkImportedPFXCertificateProfileRequest {
+public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequest<AndroidForWorkImportedPFXCertificateProfile> {
 	
     /**
      * The request for the AndroidForWorkImportedPFXCertificateProfile
@@ -33,7 +33,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public AndroidForWorkImportedPFXCertificateProfileRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public AndroidForWorkImportedPFXCertificateProfileRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, AndroidForWorkImportedPFXCertificateProfile.class);
     }
 
@@ -42,7 +42,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void get(@Nonnull final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -52,6 +52,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @return the AndroidForWorkImportedPFXCertificateProfile from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public AndroidForWorkImportedPFXCertificateProfile get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -61,7 +62,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void delete(@Nonnull final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -80,7 +81,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param sourceAndroidForWorkImportedPFXCertificateProfile the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void patch(@Nonnull final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile, @Nonnull final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PATCH, callback, sourceAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -91,7 +92,8 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @return the updated AndroidForWorkImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkImportedPFXCertificateProfile patch(final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkImportedPFXCertificateProfile patch(@Nonnull final AndroidForWorkImportedPFXCertificateProfile sourceAndroidForWorkImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.PATCH, sourceAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -101,7 +103,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param newAndroidForWorkImportedPFXCertificateProfile the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void post(@Nonnull final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, @Nonnull final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.POST, callback, newAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -112,7 +114,8 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @return the created AndroidForWorkImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkImportedPFXCertificateProfile post(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkImportedPFXCertificateProfile post(@Nonnull final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.POST, newAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -122,7 +125,7 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param newAndroidForWorkImportedPFXCertificateProfile the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
+    public void put(@Nonnull final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile, @Nonnull final ICallback<? super AndroidForWorkImportedPFXCertificateProfile> callback) {
         send(HttpMethod.PUT, callback, newAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -133,7 +136,8 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @return the created AndroidForWorkImportedPFXCertificateProfile
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public AndroidForWorkImportedPFXCertificateProfile put(final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile) throws ClientException {
+    @Nullable
+    public AndroidForWorkImportedPFXCertificateProfile put(@Nonnull final AndroidForWorkImportedPFXCertificateProfile newAndroidForWorkImportedPFXCertificateProfile) throws ClientException {
         return send(HttpMethod.PUT, newAndroidForWorkImportedPFXCertificateProfile);
     }
 
@@ -143,9 +147,10 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param value the select clause
      * @return the updated request
      */
-     public IAndroidForWorkImportedPFXCertificateProfileRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (AndroidForWorkImportedPFXCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidForWorkImportedPFXCertificateProfileRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -154,9 +159,10 @@ public class AndroidForWorkImportedPFXCertificateProfileRequest extends BaseRequ
      * @param value the expand clause
      * @return the updated request
      */
-     public IAndroidForWorkImportedPFXCertificateProfileRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (AndroidForWorkImportedPFXCertificateProfileRequest)this;
+     @Nonnull
+     public AndroidForWorkImportedPFXCertificateProfileRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptRunSummary;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 
@@ -19,7 +21,7 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 /**
  * The class for the Device Health Script Run Summary Request Builder.
  */
-public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuilder implements IDeviceHealthScriptRunSummaryRequestBuilder {
+public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuilder<DeviceHealthScriptRunSummary> {
 
     /**
      * The request builder for the DeviceHealthScriptRunSummary
@@ -28,7 +30,7 @@ public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuild
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceHealthScriptRunSummaryRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceHealthScriptRunSummaryRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
     }
 
@@ -36,9 +38,10 @@ public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuild
      * Creates the request
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceHealthScriptRunSummaryRequest instance
+     * @return the DeviceHealthScriptRunSummaryRequest instance
      */
-    public IDeviceHealthScriptRunSummaryRequest buildRequest(final com.microsoft.graph.options.Option... requestOptions) {
+    @Nonnull
+    public DeviceHealthScriptRunSummaryRequest buildRequest(@Nullable final com.microsoft.graph.options.Option... requestOptions) {
         return buildRequest(getOptions(requestOptions));
     }
 
@@ -46,9 +49,10 @@ public class DeviceHealthScriptRunSummaryRequestBuilder extends BaseRequestBuild
      * Creates the request with specific requestOptions instead of the existing requestOptions
      *
      * @param requestOptions the options for this request
-     * @return the IDeviceHealthScriptRunSummaryRequest instance
+     * @return the DeviceHealthScriptRunSummaryRequest instance
      */
-    public IDeviceHealthScriptRunSummaryRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    @Nonnull
+    public DeviceHealthScriptRunSummaryRequest buildRequest(@Nonnull final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         return new com.microsoft.graph.requests.extensions.DeviceHealthScriptRunSummaryRequest(getRequestUrl(), getClient(), requestOptions);
     }
 

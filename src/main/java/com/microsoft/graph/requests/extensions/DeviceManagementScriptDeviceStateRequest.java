@@ -9,10 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementScriptDeviceState;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -22,7 +23,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Device Management Script Device State Request.
  */
-public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implements IDeviceManagementScriptDeviceStateRequest {
+public class DeviceManagementScriptDeviceStateRequest extends BaseRequest<DeviceManagementScriptDeviceState> {
 	
     /**
      * The request for the DeviceManagementScriptDeviceState
@@ -31,7 +32,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public DeviceManagementScriptDeviceStateRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public DeviceManagementScriptDeviceStateRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, DeviceManagementScriptDeviceState.class);
     }
 
@@ -40,7 +41,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super DeviceManagementScriptDeviceState> callback) {
+    public void get(@Nonnull final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -50,6 +51,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @return the DeviceManagementScriptDeviceState from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public DeviceManagementScriptDeviceState get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -59,7 +61,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super DeviceManagementScriptDeviceState> callback) {
+    public void delete(@Nonnull final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -78,7 +80,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param sourceDeviceManagementScriptDeviceState the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final DeviceManagementScriptDeviceState sourceDeviceManagementScriptDeviceState, final ICallback<? super DeviceManagementScriptDeviceState> callback) {
+    public void patch(@Nonnull final DeviceManagementScriptDeviceState sourceDeviceManagementScriptDeviceState, @Nonnull final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.PATCH, callback, sourceDeviceManagementScriptDeviceState);
     }
 
@@ -89,7 +91,8 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @return the updated DeviceManagementScriptDeviceState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScriptDeviceState patch(final DeviceManagementScriptDeviceState sourceDeviceManagementScriptDeviceState) throws ClientException {
+    @Nullable
+    public DeviceManagementScriptDeviceState patch(@Nonnull final DeviceManagementScriptDeviceState sourceDeviceManagementScriptDeviceState) throws ClientException {
         return send(HttpMethod.PATCH, sourceDeviceManagementScriptDeviceState);
     }
 
@@ -99,7 +102,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param newDeviceManagementScriptDeviceState the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<? super DeviceManagementScriptDeviceState> callback) {
+    public void post(@Nonnull final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, @Nonnull final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.POST, callback, newDeviceManagementScriptDeviceState);
     }
 
@@ -110,7 +113,8 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @return the created DeviceManagementScriptDeviceState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScriptDeviceState post(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState) throws ClientException {
+    @Nullable
+    public DeviceManagementScriptDeviceState post(@Nonnull final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState) throws ClientException {
         return send(HttpMethod.POST, newDeviceManagementScriptDeviceState);
     }
 
@@ -120,7 +124,7 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param newDeviceManagementScriptDeviceState the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, final ICallback<? super DeviceManagementScriptDeviceState> callback) {
+    public void put(@Nonnull final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState, @Nonnull final ICallback<? super DeviceManagementScriptDeviceState> callback) {
         send(HttpMethod.PUT, callback, newDeviceManagementScriptDeviceState);
     }
 
@@ -131,7 +135,8 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @return the created DeviceManagementScriptDeviceState
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public DeviceManagementScriptDeviceState put(final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState) throws ClientException {
+    @Nullable
+    public DeviceManagementScriptDeviceState put(@Nonnull final DeviceManagementScriptDeviceState newDeviceManagementScriptDeviceState) throws ClientException {
         return send(HttpMethod.PUT, newDeviceManagementScriptDeviceState);
     }
 
@@ -141,9 +146,10 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param value the select clause
      * @return the updated request
      */
-     public IDeviceManagementScriptDeviceStateRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (DeviceManagementScriptDeviceStateRequest)this;
+     @Nonnull
+     public DeviceManagementScriptDeviceStateRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -152,9 +158,10 @@ public class DeviceManagementScriptDeviceStateRequest extends BaseRequest implem
      * @param value the expand clause
      * @return the updated request
      */
-     public IDeviceManagementScriptDeviceStateRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (DeviceManagementScriptDeviceStateRequest)this;
+     @Nonnull
+     public DeviceManagementScriptDeviceStateRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

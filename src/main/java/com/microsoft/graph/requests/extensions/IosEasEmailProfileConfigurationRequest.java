@@ -9,14 +9,13 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosEasEmailProfileConfiguration;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IosCertificateProfileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -26,7 +25,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Ios Eas Email Profile Configuration Request.
  */
-public class IosEasEmailProfileConfigurationRequest extends BaseRequest implements IIosEasEmailProfileConfigurationRequest {
+public class IosEasEmailProfileConfigurationRequest extends BaseRequest<IosEasEmailProfileConfiguration> {
 	
     /**
      * The request for the IosEasEmailProfileConfiguration
@@ -35,7 +34,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public IosEasEmailProfileConfigurationRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public IosEasEmailProfileConfigurationRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, IosEasEmailProfileConfiguration.class);
     }
 
@@ -44,7 +43,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super IosEasEmailProfileConfiguration> callback) {
+    public void get(@Nonnull final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -54,6 +53,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @return the IosEasEmailProfileConfiguration from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public IosEasEmailProfileConfiguration get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -63,7 +63,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super IosEasEmailProfileConfiguration> callback) {
+    public void delete(@Nonnull final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -82,7 +82,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param sourceIosEasEmailProfileConfiguration the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback) {
+    public void patch(@Nonnull final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration, @Nonnull final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.PATCH, callback, sourceIosEasEmailProfileConfiguration);
     }
 
@@ -93,7 +93,8 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @return the updated IosEasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosEasEmailProfileConfiguration patch(final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public IosEasEmailProfileConfiguration patch(@Nonnull final IosEasEmailProfileConfiguration sourceIosEasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PATCH, sourceIosEasEmailProfileConfiguration);
     }
 
@@ -103,7 +104,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param newIosEasEmailProfileConfiguration the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback) {
+    public void post(@Nonnull final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, @Nonnull final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.POST, callback, newIosEasEmailProfileConfiguration);
     }
 
@@ -114,7 +115,8 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @return the created IosEasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosEasEmailProfileConfiguration post(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public IosEasEmailProfileConfiguration post(@Nonnull final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.POST, newIosEasEmailProfileConfiguration);
     }
 
@@ -124,7 +126,7 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param newIosEasEmailProfileConfiguration the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, final ICallback<? super IosEasEmailProfileConfiguration> callback) {
+    public void put(@Nonnull final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration, @Nonnull final ICallback<? super IosEasEmailProfileConfiguration> callback) {
         send(HttpMethod.PUT, callback, newIosEasEmailProfileConfiguration);
     }
 
@@ -135,7 +137,8 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @return the created IosEasEmailProfileConfiguration
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public IosEasEmailProfileConfiguration put(final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException {
+    @Nullable
+    public IosEasEmailProfileConfiguration put(@Nonnull final IosEasEmailProfileConfiguration newIosEasEmailProfileConfiguration) throws ClientException {
         return send(HttpMethod.PUT, newIosEasEmailProfileConfiguration);
     }
 
@@ -145,9 +148,10 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param value the select clause
      * @return the updated request
      */
-     public IIosEasEmailProfileConfigurationRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (IosEasEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public IosEasEmailProfileConfigurationRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -156,9 +160,10 @@ public class IosEasEmailProfileConfigurationRequest extends BaseRequest implemen
      * @param value the expand clause
      * @return the updated request
      */
-     public IIosEasEmailProfileConfigurationRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (IosEasEmailProfileConfigurationRequest)this;
+     @Nonnull
+     public IosEasEmailProfileConfigurationRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

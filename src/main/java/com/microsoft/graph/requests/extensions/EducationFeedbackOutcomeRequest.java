@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationFeedbackOutcome;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -20,7 +22,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Education Feedback Outcome Request.
  */
-public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEducationFeedbackOutcomeRequest {
+public class EducationFeedbackOutcomeRequest extends BaseRequest<EducationFeedbackOutcome> {
 	
     /**
      * The request for the EducationFeedbackOutcome
@@ -29,7 +31,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public EducationFeedbackOutcomeRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public EducationFeedbackOutcomeRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, EducationFeedbackOutcome.class);
     }
 
@@ -38,7 +40,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super EducationFeedbackOutcome> callback) {
+    public void get(@Nonnull final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -48,6 +50,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @return the EducationFeedbackOutcome from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public EducationFeedbackOutcome get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -57,7 +60,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super EducationFeedbackOutcome> callback) {
+    public void delete(@Nonnull final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -76,7 +79,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param sourceEducationFeedbackOutcome the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final EducationFeedbackOutcome sourceEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback) {
+    public void patch(@Nonnull final EducationFeedbackOutcome sourceEducationFeedbackOutcome, @Nonnull final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.PATCH, callback, sourceEducationFeedbackOutcome);
     }
 
@@ -87,7 +90,8 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @return the updated EducationFeedbackOutcome
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationFeedbackOutcome patch(final EducationFeedbackOutcome sourceEducationFeedbackOutcome) throws ClientException {
+    @Nullable
+    public EducationFeedbackOutcome patch(@Nonnull final EducationFeedbackOutcome sourceEducationFeedbackOutcome) throws ClientException {
         return send(HttpMethod.PATCH, sourceEducationFeedbackOutcome);
     }
 
@@ -97,7 +101,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param newEducationFeedbackOutcome the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback) {
+    public void post(@Nonnull final EducationFeedbackOutcome newEducationFeedbackOutcome, @Nonnull final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.POST, callback, newEducationFeedbackOutcome);
     }
 
@@ -108,7 +112,8 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @return the created EducationFeedbackOutcome
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationFeedbackOutcome post(final EducationFeedbackOutcome newEducationFeedbackOutcome) throws ClientException {
+    @Nullable
+    public EducationFeedbackOutcome post(@Nonnull final EducationFeedbackOutcome newEducationFeedbackOutcome) throws ClientException {
         return send(HttpMethod.POST, newEducationFeedbackOutcome);
     }
 
@@ -118,7 +123,7 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param newEducationFeedbackOutcome the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final EducationFeedbackOutcome newEducationFeedbackOutcome, final ICallback<? super EducationFeedbackOutcome> callback) {
+    public void put(@Nonnull final EducationFeedbackOutcome newEducationFeedbackOutcome, @Nonnull final ICallback<? super EducationFeedbackOutcome> callback) {
         send(HttpMethod.PUT, callback, newEducationFeedbackOutcome);
     }
 
@@ -129,7 +134,8 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @return the created EducationFeedbackOutcome
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public EducationFeedbackOutcome put(final EducationFeedbackOutcome newEducationFeedbackOutcome) throws ClientException {
+    @Nullable
+    public EducationFeedbackOutcome put(@Nonnull final EducationFeedbackOutcome newEducationFeedbackOutcome) throws ClientException {
         return send(HttpMethod.PUT, newEducationFeedbackOutcome);
     }
 
@@ -139,9 +145,10 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param value the select clause
      * @return the updated request
      */
-     public IEducationFeedbackOutcomeRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (EducationFeedbackOutcomeRequest)this;
+     @Nonnull
+     public EducationFeedbackOutcomeRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -150,9 +157,10 @@ public class EducationFeedbackOutcomeRequest extends BaseRequest implements IEdu
      * @param value the expand clause
      * @return the updated request
      */
-     public IEducationFeedbackOutcomeRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (EducationFeedbackOutcomeRequest)this;
+     @Nonnull
+     public EducationFeedbackOutcomeRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }

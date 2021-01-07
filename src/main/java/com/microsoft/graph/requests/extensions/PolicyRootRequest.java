@@ -9,56 +9,34 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthorizationPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthorizationPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthorizationPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IClaimsMappingPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ClaimsMappingPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IHomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.HomeRealmDiscoveryPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPermissionGrantPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PermissionGrantPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrivateLinkResourcePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivateLinkResourcePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrivateLinkResourcePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenIssuancePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdminConsentRequestPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleAccessReviewPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
+import javax.annotation.Nullable;
+import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequest;
 import com.microsoft.graph.http.HttpMethod;
@@ -68,7 +46,7 @@ import com.microsoft.graph.http.HttpMethod;
 /**
  * The class for the Policy Root Request.
  */
-public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest {
+public class PolicyRootRequest extends BaseRequest<PolicyRoot> {
 	
     /**
      * The request for the PolicyRoot
@@ -77,7 +55,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public PolicyRootRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
+    public PolicyRootRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions, PolicyRoot.class);
     }
 
@@ -86,7 +64,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      *
      * @param callback the callback to be called after success or failure
      */
-    public void get(final ICallback<? super PolicyRoot> callback) {
+    public void get(@Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.GET, callback, null);
     }
 
@@ -96,6 +74,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @return the PolicyRoot from the request
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
+    @Nullable
     public PolicyRoot get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
@@ -105,7 +84,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      *
      * @param callback the callback when the deletion action has completed
      */
-    public void delete(final ICallback<? super PolicyRoot> callback) {
+    public void delete(@Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.DELETE, callback, null);
     }
 
@@ -124,7 +103,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param sourcePolicyRoot the source object with updates
      * @param callback the callback to be called after success or failure
      */
-    public void patch(final PolicyRoot sourcePolicyRoot, final ICallback<? super PolicyRoot> callback) {
+    public void patch(@Nonnull final PolicyRoot sourcePolicyRoot, @Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.PATCH, callback, sourcePolicyRoot);
     }
 
@@ -135,7 +114,8 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @return the updated PolicyRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicyRoot patch(final PolicyRoot sourcePolicyRoot) throws ClientException {
+    @Nullable
+    public PolicyRoot patch(@Nonnull final PolicyRoot sourcePolicyRoot) throws ClientException {
         return send(HttpMethod.PATCH, sourcePolicyRoot);
     }
 
@@ -145,7 +125,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param newPolicyRoot the new object to create
      * @param callback the callback to be called after success or failure
      */
-    public void post(final PolicyRoot newPolicyRoot, final ICallback<? super PolicyRoot> callback) {
+    public void post(@Nonnull final PolicyRoot newPolicyRoot, @Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.POST, callback, newPolicyRoot);
     }
 
@@ -156,7 +136,8 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @return the created PolicyRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicyRoot post(final PolicyRoot newPolicyRoot) throws ClientException {
+    @Nullable
+    public PolicyRoot post(@Nonnull final PolicyRoot newPolicyRoot) throws ClientException {
         return send(HttpMethod.POST, newPolicyRoot);
     }
 
@@ -166,7 +147,7 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param newPolicyRoot the object to create/update
      * @param callback the callback to be called after success or failure
      */
-    public void put(final PolicyRoot newPolicyRoot, final ICallback<? super PolicyRoot> callback) {
+    public void put(@Nonnull final PolicyRoot newPolicyRoot, @Nonnull final ICallback<? super PolicyRoot> callback) {
         send(HttpMethod.PUT, callback, newPolicyRoot);
     }
 
@@ -177,7 +158,8 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @return the created PolicyRoot
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
-    public PolicyRoot put(final PolicyRoot newPolicyRoot) throws ClientException {
+    @Nullable
+    public PolicyRoot put(@Nonnull final PolicyRoot newPolicyRoot) throws ClientException {
         return send(HttpMethod.PUT, newPolicyRoot);
     }
 
@@ -187,9 +169,10 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param value the select clause
      * @return the updated request
      */
-     public IPolicyRootRequest select(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$select", value));
-         return (PolicyRootRequest)this;
+     @Nonnull
+     public PolicyRootRequest select(@Nonnull final String value) {
+         addSelectOption(value);
+         return this;
      }
 
     /**
@@ -198,9 +181,10 @@ public class PolicyRootRequest extends BaseRequest implements IPolicyRootRequest
      * @param value the expand clause
      * @return the updated request
      */
-     public IPolicyRootRequest expand(final String value) {
-         getQueryOptions().add(new com.microsoft.graph.options.QueryOption("$expand", value));
-         return (PolicyRootRequest)this;
+     @Nonnull
+     public PolicyRootRequest expand(@Nonnull final String value) {
+         addExpandOption(value);
+         return this;
      }
 
 }
