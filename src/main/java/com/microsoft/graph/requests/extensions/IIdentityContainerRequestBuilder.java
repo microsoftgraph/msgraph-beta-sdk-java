@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
+import com.microsoft.graph.requests.extensions.IIdentityApiConnectorCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityApiConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2xIdentityUserFlowCollectionRequestBuilder;
@@ -51,6 +53,10 @@ public interface IIdentityContainerRequestBuilder extends IRequestBuilder {
      * @return the IConditionalAccessRootRequestBuilder instance
      */
     IConditionalAccessRootRequestBuilder conditionalAccess();
+
+    IIdentityApiConnectorCollectionRequestBuilder apiConnectors();
+
+    IIdentityApiConnectorRequestBuilder apiConnectors(final String id);
 
     IB2cIdentityUserFlowCollectionRequestBuilder b2cUserFlows();
 

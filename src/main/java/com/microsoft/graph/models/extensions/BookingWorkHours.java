@@ -36,7 +36,7 @@ public class BookingWorkHours implements IJsonBackedObject {
 
     /**
      * The Day.
-     * The day of the week represented by this instance.
+     * The day of the week represented by this instance. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
      */
     @SerializedName(value = "day", alternate = {"Day"})
     @Expose

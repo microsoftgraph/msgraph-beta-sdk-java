@@ -34,7 +34,7 @@ public class Settings implements IJsonBackedObject {
 
     /**
      * The Has Graph Mailbox.
-     * 
+     * Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
      */
     @SerializedName(value = "hasGraphMailbox", alternate = {"HasGraphMailbox"})
     @Expose
@@ -42,7 +42,7 @@ public class Settings implements IJsonBackedObject {
 
     /**
      * The Has License.
-     * 
+     * Specifies if the user has a MyAnalytics license assigned.
      */
     @SerializedName(value = "hasLicense", alternate = {"HasLicense"})
     @Expose
@@ -50,7 +50,7 @@ public class Settings implements IJsonBackedObject {
 
     /**
      * The Has Opted Out.
-     * 
+     * Specifies if the user opted out of MyAnalytics.
      */
     @SerializedName(value = "hasOptedOut", alternate = {"HasOptedOut"})
     @Expose

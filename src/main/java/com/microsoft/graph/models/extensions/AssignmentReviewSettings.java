@@ -35,7 +35,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Duration In Days.
-     * 
+     * The number of days to allow input from reviewers.
      */
     @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
@@ -43,7 +43,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * If true, access reviews are required for assignments from this policy.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -51,7 +51,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence Type.
-     * 
+     * The interval for recurrence, such as monthly or quarterly.
      */
     @SerializedName(value = "recurrenceType", alternate = {"RecurrenceType"})
     @Expose
@@ -59,7 +59,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Reviewers.
-     * 
+     * If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
@@ -67,7 +67,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Reviewer Type.
-     * 
+     * Who should be asked to do the review, either Self or Reviewers.
      */
     @SerializedName(value = "reviewerType", alternate = {"ReviewerType"})
     @Expose
@@ -75,7 +75,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * When the first review should start.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

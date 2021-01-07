@@ -34,7 +34,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Business Flow Template Id.
-     * 
+     * The business flow template identifier. Required on create.  This value is case sensitive.
      */
     @SerializedName(value = "businessFlowTemplateId", alternate = {"BusinessFlowTemplateId"})
     @Expose
@@ -42,7 +42,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The user who created this review.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description provided by the access review creator, to show to the reviewers.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The access review name. Required on create.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -66,7 +66,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The DateTime when the review is scheduled to end. This must be at least one day later than the start date.  Required on create.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -74,7 +74,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewed Entity.
-     * 
+     * The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
      */
     @SerializedName(value = "reviewedEntity", alternate = {"ReviewedEntity"})
     @Expose
@@ -82,7 +82,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewer Type.
-     * 
+     * The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
      */
     @SerializedName(value = "reviewerType", alternate = {"ReviewerType"})
     @Expose
@@ -90,7 +90,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * The settings of an accessReview, see type definition below.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -98,7 +98,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The DateTime when the review is scheduled to be start.  This could be a date in the future.  Required on create.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -106,7 +106,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -114,7 +114,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Decisions.
-     * 
+     * The collection of decisions for this access review.
      */
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
@@ -122,7 +122,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Instances.
-     * 
+     * The collection of access reviews instances past, present and future, if this object is a recurring access review.
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
@@ -130,7 +130,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The My Decisions.
-     * 
+     * The collection of decisions for the caller, if the caller is a reviewer.
      */
     @SerializedName(value = "myDecisions", alternate = {"MyDecisions"})
     @Expose
@@ -138,7 +138,7 @@ public class AccessReview extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewers.
-     * 
+     * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose

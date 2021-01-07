@@ -35,7 +35,7 @@ public class RubricCriterion implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of this criterion.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

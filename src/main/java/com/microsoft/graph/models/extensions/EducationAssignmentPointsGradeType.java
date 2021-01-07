@@ -25,7 +25,7 @@ public class EducationAssignmentPointsGradeType extends EducationAssignmentGrade
 
     /**
      * The Max Points.
-     * 
+     * Max points possible for this assignment.
      */
     @SerializedName(value = "maxPoints", alternate = {"MaxPoints"})
     @Expose

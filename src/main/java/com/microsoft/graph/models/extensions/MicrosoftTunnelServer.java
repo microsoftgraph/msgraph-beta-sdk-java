@@ -42,7 +42,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
 
     /**
      * The Tunnel Server Health Status.
-     * The MicrosoftTunnelServer's health status
+     * The MicrosoftTunnelServer's health status. Possible values are: unknown, healthy, unhealthy, warning, offline, upgradeInProgress, upgradeFailed.
      */
     @SerializedName(value = "tunnelServerHealthStatus", alternate = {"TunnelServerHealthStatus"})
     @Expose

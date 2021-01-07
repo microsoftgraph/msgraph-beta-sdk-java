@@ -26,7 +26,7 @@ public class ItemPhone extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Friendly name the user has assigned this phone number.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -34,7 +34,7 @@ public class ItemPhone extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Number.
-     * 
+     * Phone number provided by the user.
      */
     @SerializedName(value = "number", alternate = {"Number"})
     @Expose
@@ -42,7 +42,7 @@ public class ItemPhone extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of phone number within the object. Possible values are: home, business, mobile, other, assistant, homeFax, businessFax, otherFax, pager, radio.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

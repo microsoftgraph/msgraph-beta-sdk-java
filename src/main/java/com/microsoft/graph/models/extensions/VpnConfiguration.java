@@ -27,7 +27,7 @@ public class VpnConfiguration extends DeviceConfiguration implements IJsonBacked
 
     /**
      * The Authentication Method.
-     * Authentication method.
+     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose

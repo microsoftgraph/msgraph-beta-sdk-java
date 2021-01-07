@@ -34,7 +34,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Altitude In Meters.
-     * 
+     * The altitude, in meters, that the printer is located at.
      */
     @SerializedName(value = "altitudeInMeters", alternate = {"AltitudeInMeters"})
     @Expose
@@ -42,7 +42,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Building.
-     * 
+     * The building that the printer is located in.
      */
     @SerializedName(value = "building", alternate = {"Building"})
     @Expose
@@ -50,7 +50,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The City.
-     * 
+     * The city that the printer is located in.
      */
     @SerializedName(value = "city", alternate = {"City"})
     @Expose
@@ -58,15 +58,23 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Country Or Region.
-     * 
+     * The country or region that the printer is located in.
      */
     @SerializedName(value = "countryOrRegion", alternate = {"CountryOrRegion"})
     @Expose
     public String countryOrRegion;
 
     /**
+     * The Floor.
+     * The floor that the printer is located on. Only numerical values are supported right now.
+     */
+    @SerializedName(value = "floor", alternate = {"Floor"})
+    @Expose
+    public String floor;
+
+    /**
      * The Floor Description.
-     * 
+     * The description of the floor that the printer is located on.
      */
     @SerializedName(value = "floorDescription", alternate = {"FloorDescription"})
     @Expose
@@ -82,7 +90,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Latitude.
-     * 
+     * The latitude that the printer is located at.
      */
     @SerializedName(value = "latitude", alternate = {"Latitude"})
     @Expose
@@ -90,7 +98,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Longitude.
-     * 
+     * The longitude that the printer is located at.
      */
     @SerializedName(value = "longitude", alternate = {"Longitude"})
     @Expose
@@ -98,7 +106,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Organization.
-     * 
+     * The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
      */
     @SerializedName(value = "organization", alternate = {"Organization"})
     @Expose
@@ -106,7 +114,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Postal Code.
-     * 
+     * The postal code that the printer is located in.
      */
     @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
@@ -114,11 +122,19 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Room Description.
-     * 
+     * The description of the room that the printer is located in.
      */
     @SerializedName(value = "roomDescription", alternate = {"RoomDescription"})
     @Expose
     public String roomDescription;
+
+    /**
+     * The Room Name.
+     * The room that the printer is located in. Only numerical values are supported right now.
+     */
+    @SerializedName(value = "roomName", alternate = {"RoomName"})
+    @Expose
+    public String roomName;
 
     /**
      * The Room Number.
@@ -130,7 +146,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Site.
-     * 
+     * The site that the printer is located in.
      */
     @SerializedName(value = "site", alternate = {"Site"})
     @Expose
@@ -138,7 +154,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The State Or Province.
-     * 
+     * The state or province that the printer is located in.
      */
     @SerializedName(value = "stateOrProvince", alternate = {"StateOrProvince"})
     @Expose
@@ -146,7 +162,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Street Address.
-     * 
+     * The street address where the printer is located.
      */
     @SerializedName(value = "streetAddress", alternate = {"StreetAddress"})
     @Expose
@@ -154,7 +170,7 @@ public class PrinterLocation implements IJsonBackedObject {
 
     /**
      * The Subdivision.
-     * 
+     * The subdivision that the printer is located in. The elements should be in hierarchical order.
      */
     @SerializedName(value = "subdivision", alternate = {"Subdivision"})
     @Expose

@@ -34,7 +34,7 @@ public class TargetPolicyEndpoints implements IJsonBackedObject {
 
     /**
      * The Platform Types.
-     * 
+     * Use to filter the notification distribution to a specific platform or platforms. Valid values are Windows, iOS, Android and WebPush. By default, all push endpoint types (Windows, iOS, Android and WebPush) are enabled.
      */
     @SerializedName(value = "platformTypes", alternate = {"PlatformTypes"})
     @Expose

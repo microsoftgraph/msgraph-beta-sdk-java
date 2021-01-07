@@ -35,7 +35,7 @@ public class ProvisioningSystemDetails implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * Details of the system.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -43,7 +43,7 @@ public class ProvisioningSystemDetails implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the system that a user was provisioned to or from.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -51,7 +51,7 @@ public class ProvisioningSystemDetails implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Identifier of the system that a user was provisioned to or from.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

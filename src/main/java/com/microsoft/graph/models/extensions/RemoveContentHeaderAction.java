@@ -25,7 +25,7 @@ public class RemoveContentHeaderAction extends InformationProtectionAction imple
 
     /**
      * The Ui Element Names.
-     * 
+     * The name of the UI element of the header to be removed.
      */
     @SerializedName(value = "uiElementNames", alternate = {"UiElementNames"})
     @Expose

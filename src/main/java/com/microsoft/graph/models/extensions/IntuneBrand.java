@@ -86,7 +86,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Custom Cant See Privacy Message.
-     * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+     * The custom privacy message used to explain what the organization can’t see or do on managed devices.
      */
     @SerializedName(value = "customCantSeePrivacyMessage", alternate = {"CustomCantSeePrivacyMessage"})
     @Expose
@@ -94,7 +94,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Custom Privacy Message.
-     * The custom privacy message used to explain what the organization can???t see or do on managed devices.
+     * The custom privacy message used to explain what the organization can’t see or do on managed devices.
      */
     @SerializedName(value = "customPrivacyMessage", alternate = {"CustomPrivacyMessage"})
     @Expose
@@ -126,7 +126,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Enrollment Availability.
-     * Customized device enrollment flow displayed to the end user 
+     * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
      */
     @SerializedName(value = "enrollmentAvailability", alternate = {"EnrollmentAvailability"})
     @Expose

@@ -25,7 +25,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Certification Id.
-     * 
+     * The referenceable identifier for the certification.
      */
     @SerializedName(value = "certificationId", alternate = {"CertificationId"})
     @Expose
@@ -33,7 +33,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Description.
-     * 
+     * Description of the certification.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -41,7 +41,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * 
+     * Title of the certification.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The End Date.
-     * 
+     * The date that the certification expires.
      */
     @SerializedName(value = "endDate", alternate = {"EndDate"})
     @Expose
@@ -57,7 +57,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Issued Date.
-     * 
+     * The date that the certification was issued.
      */
     @SerializedName(value = "issuedDate", alternate = {"IssuedDate"})
     @Expose
@@ -65,7 +65,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Issuing Authority.
-     * 
+     * Authority which granted the certification.
      */
     @SerializedName(value = "issuingAuthority", alternate = {"IssuingAuthority"})
     @Expose
@@ -73,7 +73,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Issuing Company.
-     * 
+     * Company which granted the certification.
      */
     @SerializedName(value = "issuingCompany", alternate = {"IssuingCompany"})
     @Expose
@@ -81,7 +81,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Start Date.
-     * 
+     * The date that the certification became valid.
      */
     @SerializedName(value = "startDate", alternate = {"StartDate"})
     @Expose
@@ -89,7 +89,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Thumbnail Url.
-     * 
+     * URL referencing a thumbnail of the certification.
      */
     @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose
@@ -97,7 +97,7 @@ public class PersonCertification extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Web Url.
-     * 
+     * URL referencing the certification.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

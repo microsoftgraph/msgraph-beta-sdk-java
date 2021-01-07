@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -19,22 +20,12 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Cloud Pc Source Device Image.
  */
-public class CloudPcSourceDeviceImage implements IJsonBackedObject {
+public class CloudPcSourceDeviceImage extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Display Name.
-     * 
+     * The display name for the source image.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

@@ -38,7 +38,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
 
     /**
      * The Compliance State.
-     * Managed Device ComplianceStatus
+     * Managed Device ComplianceStatus. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
     @SerializedName(value = "complianceState", alternate = {"ComplianceState"})
     @Expose
@@ -62,7 +62,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
 
     /**
      * The Device Type.
-     * Managed Device Device Type
+     * Managed Device Device Type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
@@ -94,7 +94,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
 
     /**
      * The Management Agent.
-     * Managed Device ManagementAgentType
+     * Managed Device ManagementAgentType. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, windowsManagementCloudApi.
      */
     @SerializedName(value = "managementAgent", alternate = {"ManagementAgent"})
     @Expose
@@ -102,7 +102,7 @@ public class RetireScheduledManagedDevice implements IJsonBackedObject {
 
     /**
      * The Owner Type.
-     * Managed Device ManagedDeviceOwnerType
+     * Managed Device ManagedDeviceOwnerType. Possible values are: unknown, company, personal.
      */
     @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose

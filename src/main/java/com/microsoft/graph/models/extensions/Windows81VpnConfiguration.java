@@ -35,7 +35,7 @@ public class Windows81VpnConfiguration extends WindowsVpnConfiguration implement
 
     /**
      * The Connection Type.
-     * Connection type.
+     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose

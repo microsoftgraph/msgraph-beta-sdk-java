@@ -57,7 +57,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Feature Rollout Policies.
-     * 
+     * Nullable.
      */
     @SerializedName(value = "featureRolloutPolicies", alternate = {"FeatureRolloutPolicies"})
     @Expose

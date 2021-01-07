@@ -42,7 +42,7 @@ public class DeviceManagementIntentUserState extends Entity implements IJsonBack
 
     /**
      * The State.
-     * User state for an intent
+     * User state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

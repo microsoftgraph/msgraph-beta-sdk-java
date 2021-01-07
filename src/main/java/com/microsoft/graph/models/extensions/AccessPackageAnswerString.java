@@ -25,7 +25,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements IJ
 
     /**
      * The Value.
-     * 
+     * The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

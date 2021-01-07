@@ -67,7 +67,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Devices.
-     * 
+     * Devices in the policy.
      */
     @SerializedName(value = "devices", alternate = {"Devices"})
     @Expose
@@ -75,7 +75,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Device States.
-     * 
+     * Device states in the policy.
      */
     @SerializedName(value = "deviceStates", alternate = {"DeviceStates"})
     @Expose
@@ -99,7 +99,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Sign In Risk Levels.
-     * Risk levels included in the policy. Possible values are: low, medium, high, none.
+     * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
      */
     @SerializedName(value = "signInRiskLevels", alternate = {"SignInRiskLevels"})
     @Expose
@@ -107,7 +107,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The User Risk Levels.
-     * 
+     * User risk levels included in the policy. Possible values are: low, medium, high, none.
      */
     @SerializedName(value = "userRiskLevels", alternate = {"UserRiskLevels"})
     @Expose

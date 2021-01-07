@@ -37,7 +37,7 @@ public class ProvisioningStep implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Summary of what occurred during the step.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -45,7 +45,7 @@ public class ProvisioningStep implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * Details of what occurred during the step.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -53,7 +53,7 @@ public class ProvisioningStep implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name of the step.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -61,7 +61,7 @@ public class ProvisioningStep implements IJsonBackedObject {
 
     /**
      * The Provisioning Step Type.
-     * 
+     * Type of step. Possible values are: import, scoping, matching, processing, referenceResolution, export, unknownFutureValue.
      */
     @SerializedName(value = "provisioningStepType", alternate = {"ProvisioningStepType"})
     @Expose
@@ -69,7 +69,7 @@ public class ProvisioningStep implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Status of the step. Possible values are: success, warning,  failure, skipped, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

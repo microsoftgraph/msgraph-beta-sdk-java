@@ -37,7 +37,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Assigned To.
-     * 
+     * The name of the person who has been assigned the task in Outlook. Read-only.
      */
     @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
@@ -45,7 +45,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
-     * 
+     * The task body that typically contains information about the task. Note that only HTML type is supported.
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -53,7 +53,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * The date in the specified time zone that the task was finished.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -61,7 +61,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Due Date Time.
-     * 
+     * The date in the specified time zone that the task is to be finished.
      */
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
@@ -69,7 +69,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * 
+     * Set to true if the task has attachments.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -157,7 +157,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * 
+     * The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
@@ -165,7 +165,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Multi Value Extended Properties.
-     * 
+     * The collection of multi-value extended properties defined for the task. Read-only. Nullable.
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
@@ -173,7 +173,7 @@ public class OutlookTask extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Single Value Extended Properties.
-     * 
+     * The collection of single-value extended properties defined for the task. Read-only. Nullable.
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose

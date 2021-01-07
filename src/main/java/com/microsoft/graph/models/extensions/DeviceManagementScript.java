@@ -99,7 +99,7 @@ public class DeviceManagementScript extends Entity implements IJsonBackedObject 
 
     /**
      * The Run As Account.
-     * Indicates the type of execution context.
+     * Indicates the type of execution context. Possible values are: system, user.
      */
     @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose

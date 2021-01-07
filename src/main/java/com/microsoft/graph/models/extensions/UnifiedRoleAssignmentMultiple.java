@@ -30,7 +30,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The App Scope Ids.
-     * 
+     * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
      */
     @SerializedName(value = "appScopeIds", alternate = {"AppScopeIds"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Description.
-     * 
+     * Description of the role assignment.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -54,7 +54,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Directory Scope Ids.
-     * 
+     * Ids of the directory objects representing the scopes of the assignment. The scopes of an assignment determine the set of resources for which the principals have been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
      */
     @SerializedName(value = "directoryScopeIds", alternate = {"DirectoryScopeIds"})
     @Expose
@@ -62,7 +62,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Display Name.
-     * 
+     * Name of the role assignment. Required.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -70,7 +70,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Principal Ids.
-     * 
+     * Objectids of the principals to which the assignment is granted.
      */
     @SerializedName(value = "principalIds", alternate = {"PrincipalIds"})
     @Expose
@@ -78,7 +78,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Role Definition Id.
-     * 
+     * ID of the unifiedRoleDefinition the assignment is for.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose

@@ -49,7 +49,7 @@ public class Print implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * Tenant-wide settings for the Universal Print service.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -57,7 +57,7 @@ public class Print implements IJsonBackedObject {
 
     /**
      * The Connectors.
-     * 
+     * The list of available print connectors.
      */
     @SerializedName(value = "connectors", alternate = {"Connectors"})
     @Expose
@@ -73,7 +73,7 @@ public class Print implements IJsonBackedObject {
 
     /**
      * The Printers.
-     * 
+     * The list of printers registered in the tenant.
      */
     @SerializedName(value = "printers", alternate = {"Printers"})
     @Expose
@@ -97,7 +97,7 @@ public class Print implements IJsonBackedObject {
 
     /**
      * The Services.
-     * 
+     * The list of available Universal Print service endpoints.
      */
     @SerializedName(value = "services", alternate = {"Services"})
     @Expose
@@ -105,7 +105,7 @@ public class Print implements IJsonBackedObject {
 
     /**
      * The Shares.
-     * 
+     * The list of printer shares registered in the tenant.
      */
     @SerializedName(value = "shares", alternate = {"Shares"})
     @Expose

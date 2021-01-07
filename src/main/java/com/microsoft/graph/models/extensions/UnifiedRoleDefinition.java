@@ -28,7 +28,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -44,7 +44,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Built In.
-     * 
+     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.
      */
     @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
@@ -52,7 +52,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -60,7 +60,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Scopes.
-     * 
+     * List of scopes permissions granted by the role definition apply to. Currently only '/' is supported. Read-only when isBuiltIn is true. DO NOT USE. This is going to be deprecated soon. Attach scope to role assignment
      */
     @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose
@@ -68,7 +68,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Permissions.
-     * 
+     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      */
     @SerializedName(value = "rolePermissions", alternate = {"RolePermissions"})
     @Expose
@@ -76,7 +76,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Template Id.
-     * 
+     * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
@@ -84,7 +84,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * Indicates version of the unifiedRoleDefinition. Read-only when isBuiltIn is true.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

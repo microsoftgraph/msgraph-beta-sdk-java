@@ -42,7 +42,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements IJson
 
     /**
      * The State.
-     * The connector state.
+     * The connector state. Possible values are: active, error, inactive.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

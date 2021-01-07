@@ -34,7 +34,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
 
     /**
      * The Duration In Days.
-     * 
+     * The duration in days for recurrence.
      */
     @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
@@ -42,7 +42,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence Count.
-     * 
+     * The count of recurrences, if the value of recurrenceEndType is occurrences, or 0 otherwise.
      */
     @SerializedName(value = "recurrenceCount", alternate = {"RecurrenceCount"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence End Type.
-     * 
+     * How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it is never, then there is no explicit end of the recurrence series. If it is endBy, then the recurrence ends at a certain date. If it is occurrences, then the series ends after recurrenceCount instances of the review have completed.
      */
     @SerializedName(value = "recurrenceEndType", alternate = {"RecurrenceEndType"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessReviewRecurrenceSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence Type.
-     * 
+     * The recurrence interval. Possible vaules: onetime, weekly, monthly, quarterly, halfyearly or annual.
      */
     @SerializedName(value = "recurrenceType", alternate = {"RecurrenceType"})
     @Expose

@@ -33,7 +33,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyPresentation impl
 
     /**
      * The Value Prefix.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "valuePrefix", alternate = {"ValuePrefix"})
     @Expose

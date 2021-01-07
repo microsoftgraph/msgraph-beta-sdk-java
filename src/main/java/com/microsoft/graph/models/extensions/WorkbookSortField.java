@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.WorkbookIcon;
+import com.microsoft.graph.models.extensions.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -20,18 +21,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Workbook Sort Field.
  */
-public class WorkbookSortField implements IJsonBackedObject {
+public class WorkbookSortField extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Ascending.
@@ -51,7 +42,7 @@ public class WorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Data Option.
-     * Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
+     * Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
      */
     @SerializedName(value = "dataOption", alternate = {"DataOption"})
     @Expose
@@ -75,7 +66,7 @@ public class WorkbookSortField implements IJsonBackedObject {
 
     /**
      * The Sort On.
-     * Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
+     * Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
      */
     @SerializedName(value = "sortOn", alternate = {"SortOn"})
     @Expose

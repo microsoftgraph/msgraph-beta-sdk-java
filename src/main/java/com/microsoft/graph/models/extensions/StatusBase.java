@@ -35,7 +35,7 @@ public class StatusBase implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Possible values are: success, warning, failure, skipped, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

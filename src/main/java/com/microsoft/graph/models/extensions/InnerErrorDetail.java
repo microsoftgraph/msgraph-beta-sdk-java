@@ -34,7 +34,7 @@ public class InnerErrorDetail implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * The human-readable error message. Read-only.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -42,7 +42,7 @@ public class InnerErrorDetail implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * The source of the error. Read-only.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

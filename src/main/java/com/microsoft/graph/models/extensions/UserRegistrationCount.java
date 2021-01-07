@@ -35,7 +35,7 @@ public class UserRegistrationCount implements IJsonBackedObject {
 
     /**
      * The Registration Count.
-     * 
+     * Provides the registration count for your tenant.
      */
     @SerializedName(value = "registrationCount", alternate = {"RegistrationCount"})
     @Expose
@@ -43,7 +43,7 @@ public class UserRegistrationCount implements IJsonBackedObject {
 
     /**
      * The Registration Status.
-     * 
+     * Represents the status of user registration. Possible values are: registered, enabled, capable, and mfaRegistered.
      */
     @SerializedName(value = "registrationStatus", alternate = {"RegistrationStatus"})
     @Expose

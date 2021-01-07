@@ -36,7 +36,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
 
     /**
      * The User Domain Name Source.
-     * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device.
+     * UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
      */
     @SerializedName(value = "userDomainNameSource", alternate = {"UserDomainNameSource"})
     @Expose
@@ -44,7 +44,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
 
     /**
      * The Username AADSource.
-     * Name of the AAD field, that will be used to retrieve UserName for email profile.
+     * Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
      */
     @SerializedName(value = "usernameAADSource", alternate = {"UsernameAADSource"})
     @Expose
@@ -52,7 +52,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
 
     /**
      * The Username Source.
-     * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+     * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
      */
     @SerializedName(value = "usernameSource", alternate = {"UsernameSource"})
     @Expose

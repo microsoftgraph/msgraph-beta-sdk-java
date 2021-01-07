@@ -35,7 +35,7 @@ public class CompanyDetail implements IJsonBackedObject {
 
     /**
      * The Address.
-     * 
+     * Address of the company.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -43,7 +43,7 @@ public class CompanyDetail implements IJsonBackedObject {
 
     /**
      * The Department.
-     * 
+     * Department Name within a company.
      */
     @SerializedName(value = "department", alternate = {"Department"})
     @Expose
@@ -51,7 +51,7 @@ public class CompanyDetail implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Company name.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -59,7 +59,7 @@ public class CompanyDetail implements IJsonBackedObject {
 
     /**
      * The Office Location.
-     * 
+     * Office Location of the person referred to.
      */
     @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
@@ -67,7 +67,7 @@ public class CompanyDetail implements IJsonBackedObject {
 
     /**
      * The Pronunciation.
-     * 
+     * Pronunciation guide for the company name.
      */
     @SerializedName(value = "pronunciation", alternate = {"Pronunciation"})
     @Expose
@@ -75,7 +75,7 @@ public class CompanyDetail implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Link to the company home page.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

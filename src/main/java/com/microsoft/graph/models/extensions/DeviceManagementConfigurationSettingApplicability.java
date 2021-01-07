@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationSettingApplicability implements IJsonB
 
     /**
      * The Device Mode.
-     * Device Mode that setting can be applied on
+     * Device Mode that setting can be applied on. Possible values are: none, kiosk.
      */
     @SerializedName(value = "deviceMode", alternate = {"DeviceMode"})
     @Expose
@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationSettingApplicability implements IJsonB
 
     /**
      * The Platform.
-     * Platform setting can be applied on
+     * Platform setting can be applied on. Possible values are: none, macOS, windows10X, windows10.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
@@ -61,7 +61,7 @@ public class DeviceManagementConfigurationSettingApplicability implements IJsonB
 
     /**
      * The Technologies.
-     * Which technology channels this setting can be deployed through
+     * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

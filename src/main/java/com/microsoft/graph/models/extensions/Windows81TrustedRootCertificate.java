@@ -34,7 +34,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
 
     /**
      * The Destination Store.
-     * Destination store location for the Trusted Root Certificate.
+     * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
      */
     @SerializedName(value = "destinationStore", alternate = {"DestinationStore"})
     @Expose

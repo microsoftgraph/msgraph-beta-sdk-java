@@ -36,7 +36,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Apply Actions.
-     * 
+     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction. See accessReviewApplyAction.
      */
     @SerializedName(value = "applyActions", alternate = {"ApplyActions"})
     @Expose
@@ -44,7 +44,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Auto Apply Decisions Enabled.
-     * 
+     * Flag to indicate whether auto-apply feature is enabled.
      */
     @SerializedName(value = "autoApplyDecisionsEnabled", alternate = {"AutoApplyDecisionsEnabled"})
     @Expose
@@ -52,7 +52,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision.
-     * 
+     * Decision chosen if defaultDecisionEnabled is enabled. Can be one of 'Approve', 'Deny', or 'Recommendation'.
      */
     @SerializedName(value = "defaultDecision", alternate = {"DefaultDecision"})
     @Expose
@@ -60,7 +60,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision Enabled.
-     * 
+     * Flag to indicate whether default decision is enabled/disabled when reviewers do not respond.
      */
     @SerializedName(value = "defaultDecisionEnabled", alternate = {"DefaultDecisionEnabled"})
     @Expose
@@ -68,7 +68,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Instance Duration In Days.
-     * 
+     * Duration of each recurrence of review (accessReviewInstance) in number of days.
      */
     @SerializedName(value = "instanceDurationInDays", alternate = {"InstanceDurationInDays"})
     @Expose
@@ -76,7 +76,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Justification Required On Approval.
-     * 
+     * Flag to indicate whether reviewers are required to provide justification with their decision.
      */
     @SerializedName(value = "justificationRequiredOnApproval", alternate = {"JustificationRequiredOnApproval"})
     @Expose
@@ -84,7 +84,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Mail Notifications Enabled.
-     * 
+     * Flag to indicate whether emails are enabled/disabled.
      */
     @SerializedName(value = "mailNotificationsEnabled", alternate = {"MailNotificationsEnabled"})
     @Expose
@@ -92,7 +92,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recommendations Enabled.
-     * 
+     * Flag to indicate whether decision recommendations are enabled/disabled.
      */
     @SerializedName(value = "recommendationsEnabled", alternate = {"RecommendationsEnabled"})
     @Expose
@@ -100,7 +100,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * 
+     * Detailed settings for recurrence. Using standard Outlook recurrence object.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
@@ -108,7 +108,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Reminder Notifications Enabled.
-     * 
+     * Flag to indicate whether reminders are enabled/disabled.
      */
     @SerializedName(value = "reminderNotificationsEnabled", alternate = {"ReminderNotificationsEnabled"})
     @Expose

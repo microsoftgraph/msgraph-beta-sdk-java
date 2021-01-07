@@ -35,7 +35,7 @@ public class PasswordSingleSignOnCredentialSet implements IJsonBackedObject {
 
     /**
      * The Credentials.
-     * 
+     * A list of credential objects that define the complete sign in flow.
      */
     @SerializedName(value = "credentials", alternate = {"Credentials"})
     @Expose
@@ -43,7 +43,7 @@ public class PasswordSingleSignOnCredentialSet implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The ID of the user or group this credential set belongs to.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

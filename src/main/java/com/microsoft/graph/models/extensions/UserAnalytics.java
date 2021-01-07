@@ -28,7 +28,7 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * The current settings for a user to use the analytics API.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -36,7 +36,7 @@ public class UserAnalytics extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Statistics.
-     * 
+     * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
      */
     @SerializedName(value = "activityStatistics", alternate = {"ActivityStatistics"})
     @Expose

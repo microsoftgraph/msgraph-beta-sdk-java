@@ -60,7 +60,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
 
     /**
      * The Metered Connection Limit.
-     * Specify the metered connection limit type for the wifi connection.
+     * Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
      */
     @SerializedName(value = "meteredConnectionLimit", alternate = {"MeteredConnectionLimit"})
     @Expose
@@ -108,7 +108,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
 
     /**
      * The Proxy Setting.
-     * Specify the proxy setting for Wi-Fi configuration
+     * Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
      */
     @SerializedName(value = "proxySetting", alternate = {"ProxySetting"})
     @Expose
@@ -124,7 +124,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements IJs
 
     /**
      * The Wifi Security Type.
-     * Specify the Wifi Security Type.
+     * Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
      */
     @SerializedName(value = "wifiSecurityType", alternate = {"WifiSecurityType"})
     @Expose

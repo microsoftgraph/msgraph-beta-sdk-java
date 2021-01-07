@@ -42,7 +42,7 @@ public class DeviceManagementTroubleshootingErrorResource implements IJsonBacked
 
     /**
      * The Text.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose

@@ -26,7 +26,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
     /**
      * The Allow Teachers In Multiple Schools.
-     * 
+     * Indicates whether the source has multiple identifiers for a single student or teacher.
      */
     @SerializedName(value = "allowTeachersInMultipleSchools", alternate = {"AllowTeachersInMultipleSchools"})
     @Expose
@@ -34,7 +34,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
     /**
      * The Client Id.
-     * 
+     * The client ID used to connect to PowerSchool.
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
@@ -42,7 +42,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
     /**
      * The Client Secret.
-     * 
+     * The client secret to authenticate the connection to the PowerSchool instance.
      */
     @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose
@@ -50,7 +50,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
     /**
      * The Connection Url.
-     * 
+     * The connection URL to the PowerSchool instance.
      */
     @SerializedName(value = "connectionUrl", alternate = {"ConnectionUrl"})
     @Expose
@@ -58,7 +58,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
     /**
      * The Customizations.
-     * 
+     * Optional customization to be applied to the synchronization profile.
      */
     @SerializedName(value = "customizations", alternate = {"Customizations"})
     @Expose
@@ -66,7 +66,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
     /**
      * The Schools Ids.
-     * 
+     * The list of schools to sync.
      */
     @SerializedName(value = "schoolsIds", alternate = {"SchoolsIds"})
     @Expose
@@ -74,7 +74,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
 
     /**
      * The School Year.
-     * 
+     * The school year to sync.
      */
     @SerializedName(value = "schoolYear", alternate = {"SchoolYear"})
     @Expose

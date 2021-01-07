@@ -44,7 +44,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Color Mode.
-     * 
+     * The default color mode to use when printing the document. Valid values are described in the following table.
      */
     @SerializedName(value = "colorMode", alternate = {"ColorMode"})
     @Expose
@@ -52,7 +52,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * 
+     * The default content (MIME) type to use when processing documents.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -60,7 +60,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Copies Per Job.
-     * 
+     * The default number of copies printed per job.
      */
     @SerializedName(value = "copiesPerJob", alternate = {"CopiesPerJob"})
     @Expose
@@ -76,7 +76,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Dpi.
-     * 
+     * The default resolution in DPI to use when printing the job.
      */
     @SerializedName(value = "dpi", alternate = {"Dpi"})
     @Expose
@@ -92,7 +92,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Duplex Mode.
-     * 
+     * The default duplex (double-sided) configuration to use when printing a document. Valid values are described in the following table.
      */
     @SerializedName(value = "duplexMode", alternate = {"DuplexMode"})
     @Expose
@@ -100,7 +100,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Finishings.
-     * 
+     * The default set of finishings to apply to print jobs. Valid values are described in the following table.
      */
     @SerializedName(value = "finishings", alternate = {"Finishings"})
     @Expose
@@ -108,7 +108,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Fit Pdf To Page.
-     * 
+     * The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
      */
     @SerializedName(value = "fitPdfToPage", alternate = {"FitPdfToPage"})
     @Expose
@@ -116,7 +116,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Media Color.
-     * 
+     * The default media (such as paper) color to print the document on.
      */
     @SerializedName(value = "mediaColor", alternate = {"MediaColor"})
     @Expose
@@ -124,7 +124,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Media Size.
-     * 
+     * The default media size to use. Supports standard size names for ISO and ANSI media sizes, along with any custom sizes supported by the associated printer.
      */
     @SerializedName(value = "mediaSize", alternate = {"MediaSize"})
     @Expose
@@ -132,7 +132,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * 
+     * The default media (such as paper) type to print the document on. Valid values are described in the following table.
      */
     @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
@@ -140,7 +140,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Multipage Layout.
-     * 
+     * The default direction to lay out pages when multiple pages are being printed per sheet. Valid values are described in the following table.
      */
     @SerializedName(value = "multipageLayout", alternate = {"MultipageLayout"})
     @Expose
@@ -148,7 +148,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Orientation.
-     * 
+     * The default orientation to use when printing the document. Valid values are described in the following table.
      */
     @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
@@ -156,7 +156,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Output Bin.
-     * 
+     * The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
      */
     @SerializedName(value = "outputBin", alternate = {"OutputBin"})
     @Expose
@@ -164,7 +164,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Pages Per Sheet.
-     * 
+     * The default number of document pages to print on each sheet.
      */
     @SerializedName(value = "pagesPerSheet", alternate = {"PagesPerSheet"})
     @Expose
@@ -204,7 +204,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Quality.
-     * 
+     * The default quality to use when printing the document. Valid values are described in the following table.
      */
     @SerializedName(value = "quality", alternate = {"Quality"})
     @Expose
@@ -212,7 +212,7 @@ public class PrinterDefaults implements IJsonBackedObject {
 
     /**
      * The Scaling.
-     * 
+     * Specifies how the printer scales the document data to fit the requested media. Valid values are described in the following table.
      */
     @SerializedName(value = "scaling", alternate = {"Scaling"})
     @Expose

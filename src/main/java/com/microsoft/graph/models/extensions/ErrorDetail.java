@@ -35,7 +35,7 @@ public class ErrorDetail implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * A collection of inner errors, if any. Read-only, nullable.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -43,7 +43,7 @@ public class ErrorDetail implements IJsonBackedObject {
 
     /**
      * The Error Code.
-     * 
+     * The error code associated with the error, if any. Read-only, nullable.
      */
     @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
@@ -51,7 +51,7 @@ public class ErrorDetail implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * The human-readable error message. Read-only.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose

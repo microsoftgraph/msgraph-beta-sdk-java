@@ -26,7 +26,7 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * 
+     * Contains the long-form name for the language.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -42,7 +42,7 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Reading.
-     * 
+     * Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      */
     @SerializedName(value = "reading", alternate = {"Reading"})
     @Expose
@@ -50,7 +50,7 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Spoken.
-     * 
+     * Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      */
     @SerializedName(value = "spoken", alternate = {"Spoken"})
     @Expose
@@ -58,7 +58,7 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Tag.
-     * 
+     * Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).
      */
     @SerializedName(value = "tag", alternate = {"Tag"})
     @Expose
@@ -66,7 +66,7 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Written.
-     * 
+     * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      */
     @SerializedName(value = "written", alternate = {"Written"})
     @Expose

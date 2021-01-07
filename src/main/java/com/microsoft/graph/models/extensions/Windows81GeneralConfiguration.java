@@ -198,7 +198,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Minimum Auto Install Classification.
-     * The minimum update classification to install automatically.
+     * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
      */
     @SerializedName(value = "minimumAutoInstallClassification", alternate = {"MinimumAutoInstallClassification"})
     @Expose
@@ -278,7 +278,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Updates Minimum Auto Install Classification.
-     * The minimum update classification to install automatically.
+     * The minimum update classification to install automatically. Possible values are: userDefined, recommendedAndImportant, important, none.
      */
     @SerializedName(value = "updatesMinimumAutoInstallClassification", alternate = {"UpdatesMinimumAutoInstallClassification"})
     @Expose

@@ -27,7 +27,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements IJson
 
     /**
      * The Access Level.
-     * This indicates an access level for the privacy data category to which the specified application will be given to.
+     * This indicates an access level for the privacy data category to which the specified application will be given to. Possible values are: notConfigured, forceAllow, forceDeny, userInControl.
      */
     @SerializedName(value = "accessLevel", alternate = {"AccessLevel"})
     @Expose
@@ -51,7 +51,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements IJson
 
     /**
      * The Data Category.
-     * This indicates a privacy data category to which the specific access control will apply.
+     * This indicates a privacy data category to which the specific access control will apply. Possible values are: notConfigured, accountInfo, appsRunInBackground, calendar, callHistory, camera, contacts, diagnosticsInfo, email, location, messaging, microphone, motion, notifications, phone, radios, tasks, syncWithDevices, trustedDevices.
      */
     @SerializedName(value = "dataCategory", alternate = {"DataCategory"})
     @Expose

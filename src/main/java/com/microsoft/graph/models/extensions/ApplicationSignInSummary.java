@@ -25,7 +25,7 @@ public class ApplicationSignInSummary extends Entity implements IJsonBackedObjec
 
     /**
      * The App Display Name.
-     * 
+     * Name of the application that the user signed in to.
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -33,7 +33,7 @@ public class ApplicationSignInSummary extends Entity implements IJsonBackedObjec
 
     /**
      * The Failed Sign In Count.
-     * 
+     * Count of failed sign-ins made by the application.
      */
     @SerializedName(value = "failedSignInCount", alternate = {"FailedSignInCount"})
     @Expose
@@ -41,7 +41,7 @@ public class ApplicationSignInSummary extends Entity implements IJsonBackedObjec
 
     /**
      * The Successful Sign In Count.
-     * 
+     * Count of successful sign-ins made by the application.
      */
     @SerializedName(value = "successfulSignInCount", alternate = {"SuccessfulSignInCount"})
     @Expose
@@ -49,7 +49,7 @@ public class ApplicationSignInSummary extends Entity implements IJsonBackedObjec
 
     /**
      * The Success Percentage.
-     * 
+     * Percentage of successful sign-ins made by the application.
      */
     @SerializedName(value = "successPercentage", alternate = {"SuccessPercentage"})
     @Expose

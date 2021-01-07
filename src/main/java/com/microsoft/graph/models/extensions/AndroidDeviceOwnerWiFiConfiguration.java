@@ -74,7 +74,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
 
     /**
      * The Wi Fi Security Type.
-     * Indicates whether Wi-Fi endpoint uses an EAP based security type.
+     * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wep, wpaPersonal, wpaEnterprise.
      */
     @SerializedName(value = "wiFiSecurityType", alternate = {"WiFiSecurityType"})
     @Expose

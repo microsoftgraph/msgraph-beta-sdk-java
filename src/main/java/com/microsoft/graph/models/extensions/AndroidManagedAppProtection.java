@@ -49,7 +49,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Device Manufacturer Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
+     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfAndroidDeviceManufacturerNotAllowed", alternate = {"AppActionIfAndroidDeviceManufacturerNotAllowed"})
     @Expose
@@ -65,7 +65,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Safety Net Apps Verification Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails.
+     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfAndroidSafetyNetAppsVerificationFailed", alternate = {"AppActionIfAndroidSafetyNetAppsVerificationFailed"})
     @Expose
@@ -73,7 +73,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Safety Net Device Attestation Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails.
+     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfAndroidSafetyNetDeviceAttestationFailed", alternate = {"AppActionIfAndroidSafetyNetDeviceAttestationFailed"})
     @Expose
@@ -113,7 +113,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Display Name.
-     * Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Friendly name of the preferred custom browser to open weblink on Android.
      */
     @SerializedName(value = "customBrowserDisplayName", alternate = {"CustomBrowserDisplayName"})
     @Expose
@@ -121,7 +121,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Custom Browser Package Id.
-     * Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Unique identifier of a custom browser to open weblink on Android.
      */
     @SerializedName(value = "customBrowserPackageId", alternate = {"CustomBrowserPackageId"})
     @Expose
@@ -241,7 +241,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Required Android Safety Net Apps Verification Type.
-     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
+     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
      */
     @SerializedName(value = "requiredAndroidSafetyNetAppsVerificationType", alternate = {"RequiredAndroidSafetyNetAppsVerificationType"})
     @Expose
@@ -249,7 +249,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Required Android Safety Net Device Attestation Type.
-     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
+     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
      */
     @SerializedName(value = "requiredAndroidSafetyNetDeviceAttestationType", alternate = {"RequiredAndroidSafetyNetDeviceAttestationType"})
     @Expose

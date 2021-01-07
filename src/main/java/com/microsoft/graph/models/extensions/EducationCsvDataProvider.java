@@ -26,7 +26,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
 
     /**
      * The Customizations.
-     * 
+     * Optional customizations to be applied to the synchronization profile.
      */
     @SerializedName(value = "customizations", alternate = {"Customizations"})
     @Expose

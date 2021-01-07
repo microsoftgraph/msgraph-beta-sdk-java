@@ -76,7 +76,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements IJsonB
 
     /**
      * The Update Category.
-     * Software update type
+     * Software update type. Possible values are: critical, configurationDataFile, firmware, other.
      */
     @SerializedName(value = "updateCategory", alternate = {"UpdateCategory"})
     @Expose

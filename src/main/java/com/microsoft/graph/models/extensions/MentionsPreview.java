@@ -34,7 +34,7 @@ public class MentionsPreview implements IJsonBackedObject {
 
     /**
      * The Is Mentioned.
-     * 
+     * True if the signed-in user is mentioned in the parent resource instance. Read-only. Supports filter.
      */
     @SerializedName(value = "isMentioned", alternate = {"IsMentioned"})
     @Expose

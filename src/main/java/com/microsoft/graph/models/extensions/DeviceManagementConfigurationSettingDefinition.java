@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Access Types.
-     * Read/write access mode of the setting
+     * Read/write access mode of the setting. Possible values are: none, add, copy, delete, get, replace, execute.
      */
     @SerializedName(value = "accessTypes", alternate = {"AccessTypes"})
     @Expose
@@ -133,7 +133,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Setting Usage.
-     * Setting type, for example, configuration and compliance
+     * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
      */
     @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
     @Expose

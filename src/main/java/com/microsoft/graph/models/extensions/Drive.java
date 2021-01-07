@@ -74,7 +74,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * 
+     * The list of recent activities that took place under this drive.
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
@@ -82,7 +82,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Bundles.
-     * 
+     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      */
     @SerializedName(value = "bundles", alternate = {"Bundles"})
     @Expose
