@@ -110,7 +110,6 @@ public class ReportRootGetSkypeForBusinessActivityCountsCollectionRequest extend
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

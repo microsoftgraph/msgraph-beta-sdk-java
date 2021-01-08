@@ -110,7 +110,6 @@ public class ReportRootGetTeamsUserActivityCountsCollectionRequest extends BaseF
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

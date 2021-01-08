@@ -110,7 +110,6 @@ public class NoteDeltaCollectionRequest extends BaseDeltaCollectionRequest<Note,
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

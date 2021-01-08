@@ -110,7 +110,6 @@ public class ReportRootGetRelyingPartyDetailedSummaryCollectionRequest extends B
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

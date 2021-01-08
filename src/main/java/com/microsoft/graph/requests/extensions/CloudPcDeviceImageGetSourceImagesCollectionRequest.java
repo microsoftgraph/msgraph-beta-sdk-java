@@ -110,7 +110,6 @@ public class CloudPcDeviceImageGetSourceImagesCollectionRequest extends BaseFunc
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

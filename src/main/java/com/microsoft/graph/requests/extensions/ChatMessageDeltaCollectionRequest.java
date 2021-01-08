@@ -110,7 +110,6 @@ public class ChatMessageDeltaCollectionRequest extends BaseDeltaCollectionReques
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

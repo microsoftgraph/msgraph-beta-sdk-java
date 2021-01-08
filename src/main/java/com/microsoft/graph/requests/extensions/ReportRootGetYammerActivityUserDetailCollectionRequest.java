@@ -110,7 +110,6 @@ public class ReportRootGetYammerActivityUserDetailCollectionRequest extends Base
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

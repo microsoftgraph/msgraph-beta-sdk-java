@@ -113,7 +113,9 @@ public class SearchHit implements IJsonBackedObject {
     /**
      * The _source.
      * 
+     * @deprecated The _source property is deprecated and will stop supporting on December 15, 2020. Please use the new property resource.
      */
+    @Deprecated
     @SerializedName(value = "_source", alternate = {"_source"})
     @Expose
 	@Nullable

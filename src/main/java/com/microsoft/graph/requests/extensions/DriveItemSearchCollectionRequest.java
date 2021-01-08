@@ -110,7 +110,6 @@ public class DriveItemSearchCollectionRequest extends BaseFunctionCollectionRequ
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

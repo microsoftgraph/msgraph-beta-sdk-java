@@ -109,7 +109,6 @@ public class AuditEventGetAuditCategoriesCollectionRequest extends BaseFunctionC
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

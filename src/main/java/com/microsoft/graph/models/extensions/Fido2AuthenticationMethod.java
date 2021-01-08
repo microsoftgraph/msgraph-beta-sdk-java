@@ -66,7 +66,9 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
     /**
      * The Creation Date Time.
      * 
+     * @deprecated The creationDateTime property is deprecated and will stop returning data on December 31, 2020. Please use the createdDateTime property.
      */
+    @Deprecated
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
 	@Nullable

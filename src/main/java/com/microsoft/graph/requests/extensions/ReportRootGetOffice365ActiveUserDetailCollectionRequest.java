@@ -110,7 +110,6 @@ public class ReportRootGetOffice365ActiveUserDetailCollectionRequest extends Bas
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

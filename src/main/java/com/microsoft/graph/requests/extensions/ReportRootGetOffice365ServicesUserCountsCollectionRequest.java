@@ -110,7 +110,6 @@ public class ReportRootGetOffice365ServicesUserCountsCollectionRequest extends B
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

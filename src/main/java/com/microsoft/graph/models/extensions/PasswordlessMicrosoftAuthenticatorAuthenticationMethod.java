@@ -38,7 +38,9 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     /**
      * The Creation Date Time.
      * 
+     * @deprecated The creationDateTime property is deprecated and will stop returning data on December 31, 2020. Please use the createdDateTime property.
      */
+    @Deprecated
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
 	@Nullable

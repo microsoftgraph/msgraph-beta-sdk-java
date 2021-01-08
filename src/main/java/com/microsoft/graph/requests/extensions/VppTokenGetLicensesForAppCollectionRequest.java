@@ -110,7 +110,6 @@ public class VppTokenGetLicensesForAppCollectionRequest extends BaseFunctionColl
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

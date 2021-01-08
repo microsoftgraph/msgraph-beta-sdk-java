@@ -110,7 +110,6 @@ public class OAuth2PermissionGrantDeltaCollectionRequest extends BaseDeltaCollec
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

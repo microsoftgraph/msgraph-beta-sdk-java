@@ -110,7 +110,6 @@ public class ReportRootGetSharePointSiteUsageDetailCollectionRequest extends Bas
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

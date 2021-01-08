@@ -110,7 +110,6 @@ public class SiteGetActivitiesByIntervalCollectionRequest extends BaseFunctionCo
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

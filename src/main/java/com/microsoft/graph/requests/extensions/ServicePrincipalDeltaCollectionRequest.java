@@ -110,7 +110,6 @@ public class ServicePrincipalDeltaCollectionRequest extends BaseDeltaCollectionR
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

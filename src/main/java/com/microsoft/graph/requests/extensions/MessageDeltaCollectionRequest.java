@@ -110,7 +110,6 @@ public class MessageDeltaCollectionRequest extends BaseDeltaCollectionRequest<Me
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

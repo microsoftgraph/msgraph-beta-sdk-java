@@ -110,7 +110,6 @@ public class EducationClassDeltaCollectionRequest extends BaseDeltaCollectionReq
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

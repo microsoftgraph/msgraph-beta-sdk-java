@@ -110,7 +110,6 @@ public class PlannerDeltaDeltaCollectionRequest extends BaseDeltaCollectionReque
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

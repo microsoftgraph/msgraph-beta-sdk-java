@@ -110,7 +110,6 @@ public class ChannelGetAllMessagesCollectionRequest extends BaseFunctionCollecti
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

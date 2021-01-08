@@ -110,7 +110,6 @@ public class UserGetLoggedOnManagedDevicesCollectionRequest extends BaseFunction
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

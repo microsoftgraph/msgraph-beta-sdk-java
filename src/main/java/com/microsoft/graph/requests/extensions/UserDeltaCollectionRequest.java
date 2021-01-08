@@ -110,7 +110,6 @@ public class UserDeltaCollectionRequest extends BaseDeltaCollectionRequest<User,
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

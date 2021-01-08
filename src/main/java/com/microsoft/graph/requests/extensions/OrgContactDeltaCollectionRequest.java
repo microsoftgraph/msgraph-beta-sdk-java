@@ -110,7 +110,6 @@ public class OrgContactDeltaCollectionRequest extends BaseDeltaCollectionRequest
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

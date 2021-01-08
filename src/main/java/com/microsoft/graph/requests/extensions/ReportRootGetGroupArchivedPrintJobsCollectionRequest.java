@@ -110,7 +110,6 @@ public class ReportRootGetGroupArchivedPrintJobsCollectionRequest extends BaseFu
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request

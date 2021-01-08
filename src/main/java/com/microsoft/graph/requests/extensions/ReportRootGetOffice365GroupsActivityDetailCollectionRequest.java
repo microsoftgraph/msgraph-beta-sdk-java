@@ -110,7 +110,6 @@ public class ReportRootGetOffice365GroupsActivityDetailCollectionRequest extends
         addCountOption(true);
         return this;
     }
- 
 
     /**
      * Sets the top value for the request
