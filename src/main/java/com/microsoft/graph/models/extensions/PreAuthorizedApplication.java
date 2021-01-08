@@ -42,7 +42,7 @@ public class PreAuthorizedApplication implements IJsonBackedObject {
 
     /**
      * The Permission Ids.
-     * 
+     * The unique identifier for the oauth2PermissionScopes the application requires.
      */
     @SerializedName(value = "permissionIds", alternate = {"PermissionIds"})
     @Expose

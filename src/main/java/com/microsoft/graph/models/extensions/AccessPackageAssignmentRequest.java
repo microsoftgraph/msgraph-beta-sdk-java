@@ -30,7 +30,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Answers.
-     * 
+     * Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
      */
     @SerializedName(value = "answers", alternate = {"Answers"})
     @Expose
@@ -38,7 +38,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Completed Date.
-     * 
+     * The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName(value = "completedDate", alternate = {"CompletedDate"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Created Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -62,7 +62,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Is Validation Only.
-     * 
+     * True if the request is not to be processed for assignment.
      */
     @SerializedName(value = "isValidationOnly", alternate = {"IsValidationOnly"})
     @Expose
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Justification.
-     * 
+     * The requestor's supplied justification.
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Request State.
-     * 
+     * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
      */
     @SerializedName(value = "requestState", alternate = {"RequestState"})
     @Expose
@@ -86,7 +86,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Request Status.
-     * 
+     * More information on the request processing status. Read-only.
      */
     @SerializedName(value = "requestStatus", alternate = {"RequestStatus"})
     @Expose
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Request Type.
-     * 
+     * One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
@@ -102,7 +102,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Schedule.
-     * 
+     * The range of dates that access is to be assigned to the requestor. Read-only.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
@@ -126,7 +126,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Requestor.
-     * 
+     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.
      */
     @SerializedName(value = "requestor", alternate = {"Requestor"})
     @Expose

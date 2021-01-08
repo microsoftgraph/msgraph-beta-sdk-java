@@ -8,10 +8,13 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.UserFlowApiConnectorConfiguration;
 import com.microsoft.graph.models.extensions.IdentityProvider;
+import com.microsoft.graph.models.extensions.UserFlowLanguageConfiguration;
 import com.microsoft.graph.models.extensions.IdentityUserFlowAttributeAssignment;
 import com.microsoft.graph.models.extensions.IdentityUserFlow;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionPage;
+import com.microsoft.graph.requests.extensions.UserFlowLanguageConfigurationCollectionPage;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentCollectionPage;
 
 
@@ -28,14 +31,46 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
 
     /**
+     * The Api Connector Configuration.
+     * Configuration for enabling an API connector for use as part of the user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     */
+    @SerializedName(value = "apiConnectorConfiguration", alternate = {"ApiConnectorConfiguration"})
+    @Expose
+    public UserFlowApiConnectorConfiguration apiConnectorConfiguration;
+
+    /**
+     * The Default Language Tag.
+     * Indicates the default language of the b2cIdentityUserFlow that is used when no ui_locale tag is specified in the request. This field is RFC 5646 compliant.
+     */
+    @SerializedName(value = "defaultLanguageTag", alternate = {"DefaultLanguageTag"})
+    @Expose
+    public String defaultLanguageTag;
+
+    /**
+     * The Is Language Customization Enabled.
+     * The property that determines whether language customization is enabled within the B2C user flow. Language customization is not enabled by default for B2C user flows.
+     */
+    @SerializedName(value = "isLanguageCustomizationEnabled", alternate = {"IsLanguageCustomizationEnabled"})
+    @Expose
+    public Boolean isLanguageCustomizationEnabled;
+
+    /**
      * The Identity Providers.
-     * 
+     * The identity providers included in the user flow.
      */
     public IdentityProviderCollectionPage identityProviders;
 
     /**
+     * The Languages.
+     * The languages supported for customization within the user flow. Language customization is not enabled by default in B2C user flows.
+     */
+    @SerializedName(value = "languages", alternate = {"Languages"})
+    @Expose
+    public UserFlowLanguageConfigurationCollectionPage languages;
+
+    /**
      * The User Attribute Assignments.
-     * 
+     * The user attribute assignments included in the user flow.
      */
     @SerializedName(value = "userAttributeAssignments", alternate = {"UserAttributeAssignments"})
     @Expose
@@ -83,6 +118,10 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
         if (json.has("identityProviders")) {
             identityProviders = serializer.deserializeObject(json.get("identityProviders").toString(), IdentityProviderCollectionPage.class);
+        }
+
+        if (json.has("languages")) {
+            languages = serializer.deserializeObject(json.get("languages").toString(), UserFlowLanguageConfigurationCollectionPage.class);
         }
 
         if (json.has("userAttributeAssignments")) {

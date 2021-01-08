@@ -86,7 +86,7 @@ public class MacOsVppApp extends MobileApp implements IJsonBackedObject {
 
     /**
      * The Vpp Token Account Type.
-     * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: `business`, `education`.
+     * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
      */
     @SerializedName(value = "vppTokenAccountType", alternate = {"VppTokenAccountType"})
     @Expose

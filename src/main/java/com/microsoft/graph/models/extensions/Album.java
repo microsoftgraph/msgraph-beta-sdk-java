@@ -34,7 +34,7 @@ public class Album implements IJsonBackedObject {
 
     /**
      * The Cover Image Item Id.
-     * 
+     * Unique identifier of the [driveItem][] that is the cover of the album.
      */
     @SerializedName(value = "coverImageItemId", alternate = {"CoverImageItemId"})
     @Expose

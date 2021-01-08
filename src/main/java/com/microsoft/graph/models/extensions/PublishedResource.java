@@ -28,7 +28,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display Name of the publishedResource.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Publishing Type.
-     * 
+     * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
      */
     @SerializedName(value = "publishingType", alternate = {"PublishingType"})
     @Expose
@@ -44,7 +44,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Name.
-     * 
+     * Name of the publishedResource.
      */
     @SerializedName(value = "resourceName", alternate = {"ResourceName"})
     @Expose
@@ -52,7 +52,7 @@ public class PublishedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Agent Groups.
-     * 
+     * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
      */
     @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose

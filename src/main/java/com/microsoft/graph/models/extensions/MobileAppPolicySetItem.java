@@ -27,7 +27,7 @@ public class MobileAppPolicySetItem extends PolicySetItem implements IJsonBacked
 
     /**
      * The Intent.
-     * Install intent of the MobileAppPolicySetItem.
+     * Install intent of the MobileAppPolicySetItem. Possible values are: available, required, uninstall, availableWithoutEnrollment.
      */
     @SerializedName(value = "intent", alternate = {"Intent"})
     @Expose

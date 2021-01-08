@@ -34,7 +34,7 @@ public class DirectorySizeQuota implements IJsonBackedObject {
 
     /**
      * The Total.
-     * 
+     * Total amount of the directory quota.
      */
     @SerializedName(value = "total", alternate = {"Total"})
     @Expose
@@ -42,7 +42,7 @@ public class DirectorySizeQuota implements IJsonBackedObject {
 
     /**
      * The Used.
-     * 
+     * Used amount of the directory quota.
      */
     @SerializedName(value = "used", alternate = {"Used"})
     @Expose

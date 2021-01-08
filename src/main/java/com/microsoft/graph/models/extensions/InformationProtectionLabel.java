@@ -26,7 +26,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
 
     /**
      * The Color.
-     * 
+     * The color that the UI should display for the label, if configured.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
@@ -34,7 +34,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
 
     /**
      * The Description.
-     * 
+     * The admin-defined description for the label.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -42,7 +42,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
 
     /**
      * The Is Active.
-     * 
+     * Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -50,7 +50,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
 
     /**
      * The Name.
-     * 
+     * The plaintext name of the label.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -66,7 +66,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
 
     /**
      * The Sensitivity.
-     * 
+     * The sensitivity value of the label, where lower is less sensitive.
      */
     @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
     @Expose
@@ -74,7 +74,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
 
     /**
      * The Tooltip.
-     * 
+     * The tooltip that should be displayed for the label in a UI.
      */
     @SerializedName(value = "tooltip", alternate = {"Tooltip"})
     @Expose

@@ -36,7 +36,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Address.
-     * 
+     * The street address of the business. The address property, together with phone and webSiteUrl, appear in the footer of a business scheduling page.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -44,7 +44,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Business Hours.
-     * 
+     * The hours of operation for the business.
      */
     @SerializedName(value = "businessHours", alternate = {"BusinessHours"})
     @Expose
@@ -52,7 +52,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Business Type.
-     * 
+     * The type of business.
      */
     @SerializedName(value = "businessType", alternate = {"BusinessType"})
     @Expose
@@ -60,7 +60,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Default Currency Iso.
-     * 
+     * The code for the currency that the business operates in on Microsoft Bookings.
      */
     @SerializedName(value = "defaultCurrencyIso", alternate = {"DefaultCurrencyIso"})
     @Expose
@@ -68,7 +68,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Email.
-     * 
+     * The email address for the business.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -76,7 +76,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Is Published.
-     * 
+     * The scheduling page has been made available to external customers. Use the publish and unpublish actions to set this property. Read-only.
      */
     @SerializedName(value = "isPublished", alternate = {"IsPublished"})
     @Expose
@@ -84,7 +84,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Phone.
-     * 
+     * The telephone number for the business. The phone property, together with address and webSiteUrl, appear in the footer of a business scheduling page.
      */
     @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose
@@ -92,7 +92,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Public Url.
-     * 
+     * The URL for the scheduling page, which is set after you publish or unpublish the page. Read-only.
      */
     @SerializedName(value = "publicUrl", alternate = {"PublicUrl"})
     @Expose
@@ -100,7 +100,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Scheduling Policy.
-     * 
+     * Specifies how bookings can be created for this business.
      */
     @SerializedName(value = "schedulingPolicy", alternate = {"SchedulingPolicy"})
     @Expose
@@ -116,7 +116,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Appointments.
-     * All appointments in this business.
+     * All the appointments of this business. Read-only. Nullable.
      */
     @SerializedName(value = "appointments", alternate = {"Appointments"})
     @Expose
@@ -124,7 +124,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Calendar View.
-     * A calendar view of appointments in this business.
+     * The set of appointments of this business in a specified date range. Read-only. Nullable.
      */
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
@@ -132,7 +132,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Customers.
-     * All customers of this business.
+     * All the customers of this business. Read-only. Nullable.
      */
     @SerializedName(value = "customers", alternate = {"Customers"})
     @Expose
@@ -140,7 +140,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Services.
-     * All services offered by this business.
+     * All the services offered by this business. Read-only. Nullable.
      */
     @SerializedName(value = "services", alternate = {"Services"})
     @Expose
@@ -148,7 +148,7 @@ public class BookingBusiness extends BookingNamedEntity implements IJsonBackedOb
 
     /**
      * The Staff Members.
-     * All staff members that provides services in this business.
+     * All the staff members that provide services in this business. Read-only. Nullable.
      */
     @SerializedName(value = "staffMembers", alternate = {"StaffMembers"})
     @Expose

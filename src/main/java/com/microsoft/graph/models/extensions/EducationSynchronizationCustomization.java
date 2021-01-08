@@ -34,7 +34,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
 
     /**
      * The Allow Display Name Update.
-     * 
+     * Indicates whether the display name of the resource can be overwritten by the sync.
      */
     @SerializedName(value = "allowDisplayNameUpdate", alternate = {"AllowDisplayNameUpdate"})
     @Expose
@@ -42,7 +42,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
 
     /**
      * The Is Sync Deferred.
-     * 
+     * Indicates whether synchronization of the parent entity is deferred to a later date.
      */
     @SerializedName(value = "isSyncDeferred", alternate = {"IsSyncDeferred"})
     @Expose
@@ -50,7 +50,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
 
     /**
      * The Optional Properties To Sync.
-     * 
+     * The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters
      */
     @SerializedName(value = "optionalPropertiesToSync", alternate = {"OptionalPropertiesToSync"})
     @Expose
@@ -58,7 +58,7 @@ public class EducationSynchronizationCustomization implements IJsonBackedObject 
 
     /**
      * The Synchronization Start Date.
-     * 
+     * The date that the synchronization should start. This value should be set to a future date. If set to null, the resource will be synchronized when the profile setup completes. Only applies to Student Enrollments
      */
     @SerializedName(value = "synchronizationStartDate", alternate = {"SynchronizationStartDate"})
     @Expose

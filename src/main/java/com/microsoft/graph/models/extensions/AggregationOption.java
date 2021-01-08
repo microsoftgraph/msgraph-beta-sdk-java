@@ -35,7 +35,7 @@ public class AggregationOption implements IJsonBackedObject {
 
     /**
      * The Bucket Definition.
-     * 
+     * Specifies the criteria to compute an aggregation. Optional.
      */
     @SerializedName(value = "bucketDefinition", alternate = {"BucketDefinition"})
     @Expose
@@ -43,7 +43,7 @@ public class AggregationOption implements IJsonBackedObject {
 
     /**
      * The Field.
-     * 
+     * Specifies the field in the schema of the specified entity type that aggregation should be computed on. Required.
      */
     @SerializedName(value = "field", alternate = {"Field"})
     @Expose
@@ -51,7 +51,7 @@ public class AggregationOption implements IJsonBackedObject {
 
     /**
      * The Size.
-     * 
+     * The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

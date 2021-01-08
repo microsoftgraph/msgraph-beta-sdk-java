@@ -101,7 +101,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Flag.
-     * 
+     * The flag value that indicates the status, start date, due date, or completion date for the contact.
      */
     @SerializedName(value = "flag", alternate = {"Flag"})
     @Expose
@@ -109,7 +109,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Gender.
-     * 
+     * The contact's gender.
      */
     @SerializedName(value = "gender", alternate = {"Gender"})
     @Expose
@@ -301,7 +301,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the contact. Read-only. Nullable.
+     * The collection of open extensions defined for the contact. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose

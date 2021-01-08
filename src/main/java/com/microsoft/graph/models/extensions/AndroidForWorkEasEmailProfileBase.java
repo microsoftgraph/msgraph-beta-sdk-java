@@ -30,7 +30,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
 
     /**
      * The Authentication Method.
-     * Authentication method for Exchange ActiveSync.
+     * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -38,7 +38,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
 
     /**
      * The Duration Of Email To Sync.
-     * Duration of time email should be synced to.
+     * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
      */
     @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
@@ -46,7 +46,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
 
     /**
      * The Email Address Source.
-     * Email attribute that is picked from AAD and injected into this profile before installing on the device.
+     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
      */
     @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
@@ -70,7 +70,7 @@ public class AndroidForWorkEasEmailProfileBase extends DeviceConfiguration imple
 
     /**
      * The Username Source.
-     * Username attribute that is picked from AAD and injected into this profile before installing on the device.
+     * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
      */
     @SerializedName(value = "usernameSource", alternate = {"UsernameSource"})
     @Expose

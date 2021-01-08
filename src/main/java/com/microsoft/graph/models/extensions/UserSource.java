@@ -26,7 +26,7 @@ public class UserSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * Email address of the user's mailbox.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -34,7 +34,7 @@ public class UserSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Included Sources.
-     * 
+     * Specifies which sources are included in this group. Possible values are: mailbox, site.
      */
     @SerializedName(value = "includedSources", alternate = {"IncludedSources"})
     @Expose

@@ -34,7 +34,7 @@ public class ServiceInformation implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the cloud service (for example, Twitter, Instagram).
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -42,7 +42,7 @@ public class ServiceInformation implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Contains the URL for the service being referenced.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

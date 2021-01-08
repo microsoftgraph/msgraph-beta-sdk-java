@@ -34,7 +34,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements IJsonBack
 
     /**
      * The Max Device Occurrence.
-     * Maximum times setting can be set on device. 
+     * Maximum times setting can be set on device.
      */
     @SerializedName(value = "maxDeviceOccurrence", alternate = {"MaxDeviceOccurrence"})
     @Expose

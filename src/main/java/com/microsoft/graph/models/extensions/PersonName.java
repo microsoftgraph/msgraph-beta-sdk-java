@@ -26,7 +26,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -34,7 +34,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The First.
-     * 
+     * First name of the user.
      */
     @SerializedName(value = "first", alternate = {"First"})
     @Expose
@@ -42,7 +42,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Initials.
-     * 
+     * Initials of the user.
      */
     @SerializedName(value = "initials", alternate = {"Initials"})
     @Expose
@@ -50,7 +50,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Language Tag.
-     * 
+     * Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
@@ -58,7 +58,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Last.
-     * 
+     * Last name of the user.
      */
     @SerializedName(value = "last", alternate = {"Last"})
     @Expose
@@ -66,7 +66,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Maiden.
-     * 
+     * Maiden name of the user.
      */
     @SerializedName(value = "maiden", alternate = {"Maiden"})
     @Expose
@@ -74,7 +74,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Middle.
-     * 
+     * Middle name of the user.
      */
     @SerializedName(value = "middle", alternate = {"Middle"})
     @Expose
@@ -82,7 +82,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Nickname.
-     * 
+     * Nickname of the user.
      */
     @SerializedName(value = "nickname", alternate = {"Nickname"})
     @Expose
@@ -90,7 +90,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Pronunciation.
-     * 
+     * Guidance on how to pronounce the users name.
      */
     @SerializedName(value = "pronunciation", alternate = {"Pronunciation"})
     @Expose
@@ -98,7 +98,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Suffix.
-     * 
+     * Designators used after the users name (eg: PhD.)
      */
     @SerializedName(value = "suffix", alternate = {"Suffix"})
     @Expose
@@ -106,7 +106,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

@@ -33,7 +33,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Authentication Method.
-     * Specify the authentication method.
+     * Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -57,7 +57,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Authentication Type.
-     * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you???re using certificate authentication, make sure the certificate type matches the authentication type.
+     * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      */
     @SerializedName(value = "authenticationType", alternate = {"AuthenticationType"})
     @Expose
@@ -65,7 +65,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Cache Credentials.
-     * Specify whether to cache user credentials on the device so that users don???t need to keep entering them each time they connect.
+     * Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
      */
     @SerializedName(value = "cacheCredentials", alternate = {"CacheCredentials"})
     @Expose
@@ -89,7 +89,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
      */
     @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
@@ -113,7 +113,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Inner Authentication Protocol For EAPTTLS.
-     * Specify inner authentication protocol for EAP TTLS.
+     * Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      */
     @SerializedName(value = "innerAuthenticationProtocolForEAPTTLS", alternate = {"InnerAuthenticationProtocolForEAPTTLS"})
     @Expose
@@ -169,7 +169,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Network Single Sign On.
-     * Specify the network single sign on type.
+     * Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
      */
     @SerializedName(value = "networkSingleSignOn", alternate = {"NetworkSingleSignOn"})
     @Expose
@@ -217,7 +217,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The User Based Virtual Lan.
-     * Specifiy whether to change the virtual LAN used by the device based on the user???s credentials. Cannot be used when NetworkSingleSignOnType is set to ???Disabled.
+     * Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
      */
     @SerializedName(value = "userBasedVirtualLan", alternate = {"UserBasedVirtualLan"})
     @Expose

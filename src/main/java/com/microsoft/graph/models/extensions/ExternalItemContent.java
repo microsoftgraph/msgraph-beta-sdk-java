@@ -35,7 +35,7 @@ public class ExternalItemContent implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of content in the value property. Possible values are text and html. Required.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -43,7 +43,7 @@ public class ExternalItemContent implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * The content for the externalItem. Required.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

@@ -36,7 +36,7 @@ public class ExpressionInputObject implements IJsonBackedObject {
 
     /**
      * The Definition.
-     * 
+     * Definition of the test object.
      */
     @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
@@ -44,7 +44,7 @@ public class ExpressionInputObject implements IJsonBackedObject {
 
     /**
      * The Properties.
-     * 
+     * Property values of the test object.
      */
     @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose

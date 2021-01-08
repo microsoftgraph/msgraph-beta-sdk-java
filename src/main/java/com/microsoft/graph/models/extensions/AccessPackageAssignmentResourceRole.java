@@ -30,7 +30,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Origin Id.
-     * 
+     * A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
      */
     @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
@@ -38,7 +38,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Origin System.
-     * 
+     * The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
      */
     @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Status.
-     * 
+     * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -54,7 +54,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Access Package Assignments.
-     * 
+     * The access package assignments resulting in this role assignment. Read-only. Nullable.
      */
     @SerializedName(value = "accessPackageAssignments", alternate = {"AccessPackageAssignments"})
     @Expose
@@ -62,7 +62,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Access Package Resource Role.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "accessPackageResourceRole", alternate = {"AccessPackageResourceRole"})
     @Expose
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Access Package Resource Scope.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "accessPackageResourceScope", alternate = {"AccessPackageResourceScope"})
     @Expose
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Access Package Subject.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "accessPackageSubject", alternate = {"AccessPackageSubject"})
     @Expose

@@ -35,7 +35,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
 
     /**
      * The Applies To.
-     * 
+     * The user role type to assign to the license. Possible values are: student, teacher, faculty.
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
@@ -43,7 +43,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
 
     /**
      * The Source Property Name.
-     * 
+     * The name of the source property, which should be a field name in the source data. This property is case-sensitive.
      */
     @SerializedName(value = "sourcePropertyName", alternate = {"SourcePropertyName"})
     @Expose
@@ -51,7 +51,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
 
     /**
      * The Target Domain.
-     * 
+     * The domain to suffix with the source property to match on the target. If provided as null, the source property will be used to match with the target property.
      */
     @SerializedName(value = "targetDomain", alternate = {"TargetDomain"})
     @Expose
@@ -59,7 +59,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
 
     /**
      * The Target Property Name.
-     * 
+     * The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
      */
     @SerializedName(value = "targetPropertyName", alternate = {"TargetPropertyName"})
     @Expose

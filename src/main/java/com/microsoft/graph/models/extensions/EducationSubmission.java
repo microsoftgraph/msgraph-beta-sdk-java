@@ -32,7 +32,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Recipient.
-     * 
+     * Who this submission is assigned to.
      */
     @SerializedName(value = "recipient", alternate = {"Recipient"})
     @Expose
@@ -40,7 +40,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Released By.
-     * 
+     * User who moved the status of this submission to released.
      */
     @SerializedName(value = "releasedBy", alternate = {"ReleasedBy"})
     @Expose
@@ -48,7 +48,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Released Date Time.
-     * 
+     * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "releasedDateTime", alternate = {"ReleasedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources Folder Url.
-     * 
+     * Folder where all file resources for this submission need to be stored.
      */
     @SerializedName(value = "resourcesFolderUrl", alternate = {"ResourcesFolderUrl"})
     @Expose
@@ -64,7 +64,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Returned By.
-     * 
+     * User who moved the status of this submission to returned.
      */
     @SerializedName(value = "returnedBy", alternate = {"ReturnedBy"})
     @Expose
@@ -72,7 +72,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Returned Date Time.
-     * 
+     * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "returnedDateTime", alternate = {"ReturnedDateTime"})
     @Expose
@@ -80,7 +80,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Read-Only. Possible values are: working, submitted, released, returned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -88,7 +88,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Submitted By.
-     * 
+     * User who moved the resource into the submitted state.
      */
     @SerializedName(value = "submittedBy", alternate = {"SubmittedBy"})
     @Expose
@@ -96,7 +96,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Submitted Date Time.
-     * 
+     * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "submittedDateTime", alternate = {"SubmittedDateTime"})
     @Expose
@@ -104,7 +104,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Unsubmitted By.
-     * 
+     * User who moved the resource from submitted into the working state.
      */
     @SerializedName(value = "unsubmittedBy", alternate = {"UnsubmittedBy"})
     @Expose
@@ -112,7 +112,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Unsubmitted Date Time.
-     * 
+     * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "unsubmittedDateTime", alternate = {"UnsubmittedDateTime"})
     @Expose
@@ -120,7 +120,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Outcomes.
-     * 
+     * Read-Write. Nullable.
      */
     @SerializedName(value = "outcomes", alternate = {"Outcomes"})
     @Expose
@@ -128,7 +128,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources.
-     * 
+     * Nullable.
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
@@ -136,7 +136,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Submitted Resources.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "submittedResources", alternate = {"SubmittedResources"})
     @Expose

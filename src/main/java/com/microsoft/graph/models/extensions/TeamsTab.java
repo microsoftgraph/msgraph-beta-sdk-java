@@ -51,7 +51,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Sort Order Index.
-     * 
+     * Index of the order used for sorting tabs.
      */
     @SerializedName(value = "sortOrderIndex", alternate = {"SortOrderIndex"})
     @Expose
@@ -75,7 +75,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App.
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * The application that is linked to the tab.
      */
     @SerializedName(value = "teamsApp", alternate = {"TeamsApp"})
     @Expose

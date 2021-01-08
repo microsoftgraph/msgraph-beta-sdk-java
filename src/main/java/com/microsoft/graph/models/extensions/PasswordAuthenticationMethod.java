@@ -33,7 +33,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
 
     /**
      * The Creation Date Time.
-     * 
+     * The date and time when this password was last updated. This property is currently not populated. Read-only. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
 
     /**
      * The Password.
-     * 
+     * For security, the password is always returned as null from a LIST or GET operation.
      */
     @SerializedName(value = "password", alternate = {"Password"})
     @Expose

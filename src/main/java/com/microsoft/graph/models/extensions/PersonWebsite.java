@@ -25,7 +25,7 @@ public class PersonWebsite extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * Contains categories a user has associated with the website (for example, personal, recipes).
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -33,7 +33,7 @@ public class PersonWebsite extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Contains a description of the website.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -41,7 +41,7 @@ public class PersonWebsite extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Contains a friendly name for the website.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class PersonWebsite extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Contains a link to the website itself.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

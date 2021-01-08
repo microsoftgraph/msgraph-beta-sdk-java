@@ -247,7 +247,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Intune Account Id.
-     * Intune Account Id for given tenant
+     * Intune Account ID for given tenant
      */
     @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
     @Expose
@@ -271,7 +271,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Maximum Dep Tokens.
-     * Maximum number of dep tokens allowed per-tenant.
+     * Maximum number of DEP tokens allowed per-tenant.
      */
     @SerializedName(value = "maximumDepTokens", alternate = {"MaximumDepTokens"})
     @Expose
@@ -335,7 +335,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscriptions.
-     * Tenant's Subscription.
+     * Tenant's Subscription. Possible values are: none, intune, office365, intunePremium, intune_EDU, intune_SMB.
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose
@@ -343,7 +343,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscription State.
-     * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
      */
     @SerializedName(value = "subscriptionState", alternate = {"SubscriptionState"})
     @Expose

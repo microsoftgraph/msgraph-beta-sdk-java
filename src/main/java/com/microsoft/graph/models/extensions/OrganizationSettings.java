@@ -28,7 +28,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Item Insights.
-     * 
+     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. Get itemInsightsSettings through this navigation property.
      */
     @SerializedName(value = "itemInsights", alternate = {"ItemInsights"})
     @Expose
@@ -36,7 +36,7 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Profile Card Properties.
-     * 
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
      */
     @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
     @Expose

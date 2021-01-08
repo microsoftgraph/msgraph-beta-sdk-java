@@ -59,7 +59,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
 
     /**
      * The Profile Applicability.
-     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)).
+     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
      */
     @SerializedName(value = "profileApplicability", alternate = {"ProfileApplicability"})
     @Expose

@@ -32,7 +32,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
 
     /**
      * The Authentication Method.
-     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
+     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -40,7 +40,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
 
     /**
      * The Eap Fast Configuration.
-     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
+     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      */
     @SerializedName(value = "eapFastConfiguration", alternate = {"EapFastConfiguration"})
     @Expose
@@ -48,7 +48,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
 
     /**
      * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the wired network. Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
      */
     @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
@@ -64,7 +64,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
 
     /**
      * The Network Interface.
-     * Network interface.
+     * Network interface. Possible values are: anyEthernet, firstActiveEthernet, secondActiveEthernet, thirdActiveEthernet, firstEthernet, secondEthernet, thirdEthernet.
      */
     @SerializedName(value = "networkInterface", alternate = {"NetworkInterface"})
     @Expose
@@ -80,7 +80,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
 
     /**
      * The Non Eap Authentication Method For Eap Ttls.
-     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
+     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      */
     @SerializedName(value = "nonEapAuthenticationMethodForEapTtls", alternate = {"NonEapAuthenticationMethodForEapTtls"})
     @Expose

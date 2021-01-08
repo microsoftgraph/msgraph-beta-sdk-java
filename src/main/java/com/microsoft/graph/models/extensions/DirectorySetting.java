@@ -26,7 +26,7 @@ public class DirectorySetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of this group of settings, which comes from the associated template. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -34,7 +34,7 @@ public class DirectorySetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Template Id.
-     * 
+     * Unique identifier for the template used to create this group of settings. Read-only.
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
@@ -42,7 +42,7 @@ public class DirectorySetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-     * 
+     * Collection of name value pairs. Must contain and set all the settings defined in the template.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose

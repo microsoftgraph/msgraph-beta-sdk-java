@@ -25,7 +25,7 @@ public class EducationFormResource extends EducationResource implements IJsonBac
 
     /**
      * The Edit Url.
-     * 
+     * Teacher URL for the Form.
      */
     @SerializedName(value = "editUrl", alternate = {"EditUrl"})
     @Expose
@@ -33,7 +33,7 @@ public class EducationFormResource extends EducationResource implements IJsonBac
 
     /**
      * The Form Id.
-     * 
+     * Id of the Form.
      */
     @SerializedName(value = "formId", alternate = {"FormId"})
     @Expose
@@ -41,7 +41,7 @@ public class EducationFormResource extends EducationResource implements IJsonBac
 
     /**
      * The Is Group Form.
-     * 
+     * Whether the Form belongs to a class group.
      */
     @SerializedName(value = "isGroupForm", alternate = {"IsGroupForm"})
     @Expose
@@ -49,7 +49,7 @@ public class EducationFormResource extends EducationResource implements IJsonBac
 
     /**
      * The Original Form Id.
-     * 
+     * Original id of the Form.
      */
     @SerializedName(value = "originalFormId", alternate = {"OriginalFormId"})
     @Expose
@@ -57,7 +57,7 @@ public class EducationFormResource extends EducationResource implements IJsonBac
 
     /**
      * The View Url.
-     * 
+     * Student URL for the Form.
      */
     @SerializedName(value = "viewUrl", alternate = {"ViewUrl"})
     @Expose

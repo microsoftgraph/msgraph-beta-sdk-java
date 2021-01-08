@@ -84,7 +84,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements IJson
 
     /**
      * The Update Schedule Type.
-     * Update schedule type
+     * Update schedule type. Possible values are: updateOutsideOfActiveHours, alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
      */
     @SerializedName(value = "updateScheduleType", alternate = {"UpdateScheduleType"})
     @Expose

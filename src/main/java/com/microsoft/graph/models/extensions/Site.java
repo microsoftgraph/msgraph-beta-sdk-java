@@ -140,7 +140,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Pages.
-     * 
+     * The collection of pages in the SitePages list in this site.
      */
     @SerializedName(value = "pages", alternate = {"Pages"})
     @Expose

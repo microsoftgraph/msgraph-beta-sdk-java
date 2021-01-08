@@ -30,7 +30,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
 
     /**
      * The Certificate Store.
-     * Target store certificate
+     * Target store certificate. Possible values are: user, machine.
      */
     @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
@@ -62,7 +62,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
 
     /**
      * The Certification Authority Type.
-     * Certification authority type
+     * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
      */
     @SerializedName(value = "certificationAuthorityType", alternate = {"CertificationAuthorityType"})
     @Expose

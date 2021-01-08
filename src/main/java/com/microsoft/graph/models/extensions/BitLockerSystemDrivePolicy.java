@@ -37,7 +37,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
 
     /**
      * The Encryption Method.
-     * Select the encryption method for operating system drives.
+     * Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      */
     @SerializedName(value = "encryptionMethod", alternate = {"EncryptionMethod"})
     @Expose
@@ -101,7 +101,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
 
     /**
      * The Startup Authentication Tpm Key Usage.
-     * Indicates if TPM startup key is allowed/required/disallowed.
+     * Indicates if TPM startup key is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
      */
     @SerializedName(value = "startupAuthenticationTpmKeyUsage", alternate = {"StartupAuthenticationTpmKeyUsage"})
     @Expose
@@ -109,7 +109,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
 
     /**
      * The Startup Authentication Tpm Pin And Key Usage.
-     * Indicates if TPM startup pin key and key are allowed/required/disallowed.
+     * Indicates if TPM startup pin key and key are allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
      */
     @SerializedName(value = "startupAuthenticationTpmPinAndKeyUsage", alternate = {"StartupAuthenticationTpmPinAndKeyUsage"})
     @Expose
@@ -117,7 +117,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
 
     /**
      * The Startup Authentication Tpm Pin Usage.
-     * Indicates if TPM startup pin is allowed/required/disallowed.
+     * Indicates if TPM startup pin is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
      */
     @SerializedName(value = "startupAuthenticationTpmPinUsage", alternate = {"StartupAuthenticationTpmPinUsage"})
     @Expose
@@ -125,7 +125,7 @@ public class BitLockerSystemDrivePolicy implements IJsonBackedObject {
 
     /**
      * The Startup Authentication Tpm Usage.
-     * Indicates if TPM startup is allowed/required/disallowed.
+     * Indicates if TPM startup is allowed/required/disallowed. Possible values are: blocked, required, allowed, notConfigured.
      */
     @SerializedName(value = "startupAuthenticationTpmUsage", alternate = {"StartupAuthenticationTpmUsage"})
     @Expose

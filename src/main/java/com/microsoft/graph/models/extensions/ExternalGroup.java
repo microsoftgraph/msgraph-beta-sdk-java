@@ -27,7 +27,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of the external group. Optional.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -35,7 +35,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The friendly name of the external group. Optional.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -43,7 +43,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

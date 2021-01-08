@@ -36,7 +36,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
 
     /**
      * The Is Descending.
-     * 
+     * True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.
      */
     @SerializedName(value = "isDescending", alternate = {"IsDescending"})
     @Expose
@@ -44,7 +44,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
 
     /**
      * The Minimum Count.
-     * 
+     * The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
      */
     @SerializedName(value = "minimumCount", alternate = {"MinimumCount"})
     @Expose
@@ -52,7 +52,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
 
     /**
      * The Prefix Filter.
-     * 
+     * A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
      */
     @SerializedName(value = "prefixFilter", alternate = {"PrefixFilter"})
     @Expose
@@ -60,7 +60,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
 
     /**
      * The Ranges.
-     * 
+     * Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
      */
     @SerializedName(value = "ranges", alternate = {"Ranges"})
     @Expose
@@ -68,7 +68,7 @@ public class BucketAggregationDefinition implements IJsonBackedObject {
 
     /**
      * The Sort By.
-     * 
+     * The possible values are count to sort by the number of matches in the aggregation, keyAsStringto sort alphabeticaly based on the key in the aggregation, keyAsNumber for numerical sorting based on the key in the aggregation. Required.
      */
     @SerializedName(value = "sortBy", alternate = {"SortBy"})
     @Expose

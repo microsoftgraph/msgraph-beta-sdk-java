@@ -51,7 +51,7 @@ public class SettingSource implements IJsonBackedObject {
 
     /**
      * The Source Type.
-     * 
+     * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
      */
     @SerializedName(value = "sourceType", alternate = {"SourceType"})
     @Expose

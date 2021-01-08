@@ -35,7 +35,7 @@ public class Initiator implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the person or service that initiated the provisioning event.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -43,7 +43,7 @@ public class Initiator implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Uniquely identifies the person or service that initiated the provisioning event.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -51,7 +51,7 @@ public class Initiator implements IJsonBackedObject {
 
     /**
      * The Initiator Type.
-     * 
+     * Type of initiator. Possible values are: user, app, system, unknownFutureValue.
      */
     @SerializedName(value = "initiatorType", alternate = {"InitiatorType"})
     @Expose

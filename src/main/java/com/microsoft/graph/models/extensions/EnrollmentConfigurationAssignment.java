@@ -27,7 +27,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements IJsonBa
 
     /**
      * The Source.
-     * Type of resource used for deployment to a group, direct or policySet
+     * Type of resource used for deployment to a group, direct or policySet. Possible values are: direct, policySets.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -43,7 +43,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements IJsonBa
 
     /**
      * The Target.
-     * Not yet documented
+     * Represents an assignment to managed devices in the tenant
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

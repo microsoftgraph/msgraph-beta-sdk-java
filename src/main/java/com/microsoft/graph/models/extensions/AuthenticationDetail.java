@@ -34,7 +34,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Method.
-     * 
+     * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -42,7 +42,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Method Detail.
-     * 
+     * Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
      */
     @SerializedName(value = "authenticationMethodDetail", alternate = {"AuthenticationMethodDetail"})
     @Expose
@@ -50,7 +50,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Step Date Time.
-     * 
+     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "authenticationStepDateTime", alternate = {"AuthenticationStepDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Step Requirement.
-     * 
+     * The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
      */
     @SerializedName(value = "authenticationStepRequirement", alternate = {"AuthenticationStepRequirement"})
     @Expose
@@ -66,7 +66,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Step Result Detail.
-     * 
+     * Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token.
      */
     @SerializedName(value = "authenticationStepResultDetail", alternate = {"AuthenticationStepResultDetail"})
     @Expose
@@ -74,7 +74,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Succeeded.
-     * 
+     * Indicates the status of the authentication step. Possible values: succeeded, failed.
      */
     @SerializedName(value = "succeeded", alternate = {"Succeeded"})
     @Expose

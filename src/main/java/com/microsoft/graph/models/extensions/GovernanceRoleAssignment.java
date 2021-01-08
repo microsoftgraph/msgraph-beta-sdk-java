@@ -29,7 +29,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Assignment State.
-     * 
+     * The state of the assignment. The value can be  Eligible for eligible assignment Active - if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
      */
     @SerializedName(value = "assignmentState", alternate = {"AssignmentState"})
     @Expose
@@ -37,7 +37,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The End Date Time.
-     * 
+     * For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The External Id.
-     * 
+     * The external ID the resource that is used to identify the role assignment in the provider.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -53,7 +53,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Linked Eligible Role Assignment Id.
-     * 
+     * If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null.
      */
     @SerializedName(value = "linkedEligibleRoleAssignmentId", alternate = {"LinkedEligibleRoleAssignmentId"})
     @Expose
@@ -61,7 +61,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Member Type.
-     * 
+     * The type of member. The value can be: Inherited - the role assignment is inherited from a parent resource scopeGroup- the role assignment is not inherited, but comes from the membership of a group assignmentUser - the role assignment is neither inherited nor from a group assignment.
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -69,7 +69,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Resource Id.
-     * 
+     * Required. The ID of the resource which the role assignment is associated with.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -77,7 +77,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Role Definition Id.
-     * 
+     * Required. The ID of the role definition which the role assignment is associated with.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -85,7 +85,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Start Date Time.
-     * 
+     * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -101,7 +101,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Subject Id.
-     * 
+     * Required. The ID of the subject which the role assignment is associated with.
      */
     @SerializedName(value = "subjectId", alternate = {"SubjectId"})
     @Expose
@@ -109,7 +109,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Linked Eligible Role Assignment.
-     * 
+     * Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
      */
     @SerializedName(value = "linkedEligibleRoleAssignment", alternate = {"LinkedEligibleRoleAssignment"})
     @Expose
@@ -117,7 +117,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Resource.
-     * 
+     * Read-only. The resource associated with the role assignment.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
@@ -125,7 +125,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Role Definition.
-     * 
+     * Read-only. The role definition associated with the role assignment.
      */
     @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose
@@ -133,7 +133,7 @@ public class GovernanceRoleAssignment extends Entity implements IJsonBackedObjec
 
     /**
      * The Subject.
-     * 
+     * Read-only. The subject associated with the role assignment.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose

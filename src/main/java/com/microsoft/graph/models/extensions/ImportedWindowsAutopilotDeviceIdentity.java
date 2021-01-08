@@ -58,7 +58,7 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
 
     /**
      * The Order Identifier.
-     * Order Id of the Windows autopilot device.
+     * Order Id of the Windows autopilot device. - Deprecate
      */
     @SerializedName(value = "orderIdentifier", alternate = {"OrderIdentifier"})
     @Expose

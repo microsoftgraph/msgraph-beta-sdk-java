@@ -35,7 +35,7 @@ public class Filter implements IJsonBackedObject {
 
     /**
      * The Category Filter Groups.
-     * 
+     * *Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      */
     @SerializedName(value = "categoryFilterGroups", alternate = {"CategoryFilterGroups"})
     @Expose
@@ -43,7 +43,7 @@ public class Filter implements IJsonBackedObject {
 
     /**
      * The Groups.
-     * 
+     * Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned'. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
@@ -51,7 +51,7 @@ public class Filter implements IJsonBackedObject {
 
     /**
      * The Input Filter Groups.
-     * 
+     * *Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn't satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.
      */
     @SerializedName(value = "inputFilterGroups", alternate = {"InputFilterGroups"})
     @Expose

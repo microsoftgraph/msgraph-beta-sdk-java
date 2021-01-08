@@ -28,7 +28,7 @@ public class Relation extends Entity implements IJsonBackedObject {
 
     /**
      * The Relationship.
-     * 
+     * The type of relation. Possible values are: pin, reuse.
      */
     @SerializedName(value = "relationship", alternate = {"Relationship"})
     @Expose
@@ -36,7 +36,7 @@ public class Relation extends Entity implements IJsonBackedObject {
 
     /**
      * The From Term.
-     * 
+     * The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
      */
     @SerializedName(value = "fromTerm", alternate = {"FromTerm"})
     @Expose
@@ -44,7 +44,7 @@ public class Relation extends Entity implements IJsonBackedObject {
 
     /**
      * The Set.
-     * 
+     * The [set] in which the relation is relevant.
      */
     @SerializedName(value = "set", alternate = {"Set"})
     @Expose
@@ -52,7 +52,7 @@ public class Relation extends Entity implements IJsonBackedObject {
 
     /**
      * The To Term.
-     * 
+     * The to [term] of the relation. The term to which the relationship is defined.
      */
     @SerializedName(value = "toTerm", alternate = {"ToTerm"})
     @Expose

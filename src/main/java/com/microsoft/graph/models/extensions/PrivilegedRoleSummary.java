@@ -26,7 +26,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
 
     /**
      * The Elevated Count.
-     * 
+     * The number of users that have the role assigned and the role is activated.
      */
     @SerializedName(value = "elevatedCount", alternate = {"ElevatedCount"})
     @Expose
@@ -34,7 +34,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Count.
-     * 
+     * The number of users that have the role assigned but the role is deactivated.
      */
     @SerializedName(value = "managedCount", alternate = {"ManagedCount"})
     @Expose
@@ -42,7 +42,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
 
     /**
      * The Mfa Enabled.
-     * 
+     * true if the role activation requires MFA. false if the role activation doesn't require MFA.
      */
     @SerializedName(value = "mfaEnabled", alternate = {"MfaEnabled"})
     @Expose
@@ -50,7 +50,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -58,7 +58,7 @@ public class PrivilegedRoleSummary extends Entity implements IJsonBackedObject {
 
     /**
      * The Users Count.
-     * 
+     * The number of users that are assigned with the role.
      */
     @SerializedName(value = "usersCount", alternate = {"UsersCount"})
     @Expose

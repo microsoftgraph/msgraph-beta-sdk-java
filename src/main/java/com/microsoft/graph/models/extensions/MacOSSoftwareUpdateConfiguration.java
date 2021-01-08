@@ -28,7 +28,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
 
     /**
      * The All Other Update Behavior.
-     * Update behavior for all other updates.
+     * Update behavior for all other updates. Possible values are: notConfigured, default.
      */
     @SerializedName(value = "allOtherUpdateBehavior", alternate = {"AllOtherUpdateBehavior"})
     @Expose
@@ -36,7 +36,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
 
     /**
      * The Config Data Update Behavior.
-     * Update behavior for configuration data file updates.
+     * Update behavior for configuration data file updates. Possible values are: notConfigured, default.
      */
     @SerializedName(value = "configDataUpdateBehavior", alternate = {"ConfigDataUpdateBehavior"})
     @Expose
@@ -44,7 +44,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
 
     /**
      * The Critical Update Behavior.
-     * Update behavior for critical updates.
+     * Update behavior for critical updates. Possible values are: notConfigured, default.
      */
     @SerializedName(value = "criticalUpdateBehavior", alternate = {"CriticalUpdateBehavior"})
     @Expose
@@ -60,7 +60,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
 
     /**
      * The Firmware Update Behavior.
-     * Update behavior for firmware updates.
+     * Update behavior for firmware updates. Possible values are: notConfigured, default.
      */
     @SerializedName(value = "firmwareUpdateBehavior", alternate = {"FirmwareUpdateBehavior"})
     @Expose
@@ -68,7 +68,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
 
     /**
      * The Update Schedule Type.
-     * Update schedule type
+     * Update schedule type. Possible values are: alwaysUpdate, updateDuringTimeWindows, updateOutsideOfTimeWindows.
      */
     @SerializedName(value = "updateScheduleType", alternate = {"UpdateScheduleType"})
     @Expose

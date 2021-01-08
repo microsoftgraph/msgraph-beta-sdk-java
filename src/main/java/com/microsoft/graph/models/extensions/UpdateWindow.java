@@ -34,7 +34,7 @@ public class UpdateWindow implements IJsonBackedObject {
 
     /**
      * The Update Window End Time.
-     * 
+     * End of a time window during which agents can receive updates
      */
     @SerializedName(value = "updateWindowEndTime", alternate = {"UpdateWindowEndTime"})
     @Expose
@@ -42,7 +42,7 @@ public class UpdateWindow implements IJsonBackedObject {
 
     /**
      * The Update Window Start Time.
-     * 
+     * Start of a time window during which agents can receive updates
      */
     @SerializedName(value = "updateWindowStartTime", alternate = {"UpdateWindowStartTime"})
     @Expose

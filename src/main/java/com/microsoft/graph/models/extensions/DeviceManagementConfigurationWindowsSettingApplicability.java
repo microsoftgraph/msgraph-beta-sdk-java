@@ -51,7 +51,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
 
     /**
      * The Required Azure Ad Trust Type.
-     * Required AzureAD trust type
+     * Required AzureAD trust type. Possible values are: none, azureAdJoined, addWorkAccount, mdmOnly.
      */
     @SerializedName(value = "requiredAzureAdTrustType", alternate = {"RequiredAzureAdTrustType"})
     @Expose

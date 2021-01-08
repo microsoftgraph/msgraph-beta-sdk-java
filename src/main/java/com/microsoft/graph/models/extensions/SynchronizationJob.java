@@ -29,7 +29,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Schedule.
-     * 
+     * Schedule used to run the job. Read-only.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
@@ -37,7 +37,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Status of the job, which includes when the job was last run, current job state, and errors.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -45,7 +45,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Synchronization Job Settings.
-     * 
+     * Settings associated with the job. Some settings are inherited from the template.
      */
     @SerializedName(value = "synchronizationJobSettings", alternate = {"SynchronizationJobSettings"})
     @Expose
@@ -53,7 +53,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Template Id.
-     * 
+     * Identifier of the synchronization template this job is based on.
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose
@@ -61,7 +61,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Schema.
-     * 
+     * The synchronization schema configured for the job.
      */
     @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose
