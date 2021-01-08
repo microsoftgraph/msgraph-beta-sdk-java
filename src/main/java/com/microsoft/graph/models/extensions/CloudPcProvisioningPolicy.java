@@ -28,7 +28,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * 
+     * The provisioning policy description.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * 
+     * The display name for the provisioning policy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -44,7 +44,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Image Display Name.
-     * 
+     * The display name for the OS image you’re provisioning.
      */
     @SerializedName(value = "imageDisplayName", alternate = {"ImageDisplayName"})
     @Expose
@@ -52,7 +52,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Image Id.
-     * 
+     * The ID of the OS image you want to provision on cloud PCs. The format for a gallery type image is: {publisher_offer_sku}.
      */
     @SerializedName(value = "imageId", alternate = {"ImageId"})
     @Expose
@@ -60,7 +60,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Image Type.
-     * 
+     * The type of OS image (custom or gallery) you want to provision on cloud PCs. Possible values are: gallery, custom.
      */
     @SerializedName(value = "imageType", alternate = {"ImageType"})
     @Expose
@@ -68,7 +68,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The On Premises Connection Id.
-     * 
+     * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
      */
     @SerializedName(value = "onPremisesConnectionId", alternate = {"OnPremisesConnectionId"})
     @Expose
@@ -76,7 +76,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Assignments.
-     * 
+     * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

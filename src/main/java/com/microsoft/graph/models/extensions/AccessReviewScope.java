@@ -34,7 +34,7 @@ public class AccessReviewScope implements IJsonBackedObject {
 
     /**
      * The Query.
-     * 
+     * The query specifying what will be reviewed. See table for examples.
      */
     @SerializedName(value = "query", alternate = {"Query"})
     @Expose
@@ -42,7 +42,7 @@ public class AccessReviewScope implements IJsonBackedObject {
 
     /**
      * The Query Type.
-     * 
+     * The type of query. Examples include MicrosoftGraph and ARM.
      */
     @SerializedName(value = "queryType", alternate = {"QueryType"})
     @Expose

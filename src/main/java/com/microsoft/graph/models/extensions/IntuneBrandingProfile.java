@@ -119,7 +119,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
     /**
      * The Enrollment Availability.
-     * Customized device enrollment flow displayed to the end user 
+     * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
      */
     @SerializedName(value = "enrollmentAvailability", alternate = {"EnrollmentAvailability"})
     @Expose
@@ -175,7 +175,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
     /**
      * The Online Support Site Name.
-     * Display name of the company/organization???s IT helpdesk site
+     * Display name of the company/organization’s IT helpdesk site
      */
     @SerializedName(value = "onlineSupportSiteName", alternate = {"OnlineSupportSiteName"})
     @Expose
@@ -183,7 +183,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
     /**
      * The Online Support Site Url.
-     * URL to the company/organization???s IT helpdesk site
+     * URL to the company/organization’s IT helpdesk site
      */
     @SerializedName(value = "onlineSupportSiteUrl", alternate = {"OnlineSupportSiteUrl"})
     @Expose
@@ -191,7 +191,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
     /**
      * The Privacy Url.
-     * URL to the company/organization???s privacy policy
+     * URL to the company/organization’s privacy policy
      */
     @SerializedName(value = "privacyUrl", alternate = {"PrivacyUrl"})
     @Expose

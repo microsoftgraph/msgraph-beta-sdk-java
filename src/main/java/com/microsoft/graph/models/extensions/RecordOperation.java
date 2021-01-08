@@ -26,7 +26,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
 
     /**
      * The Completion Reason.
-     * 
+     * Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
      */
     @SerializedName(value = "completionReason", alternate = {"CompletionReason"})
     @Expose

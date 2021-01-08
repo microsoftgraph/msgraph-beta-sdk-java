@@ -25,7 +25,7 @@ public class EmailAuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Email Address.
-     * 
+     * The email address registered to this user.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose

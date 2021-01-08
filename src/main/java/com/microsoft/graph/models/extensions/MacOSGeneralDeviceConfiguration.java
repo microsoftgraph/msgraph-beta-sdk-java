@@ -430,7 +430,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
     /**
      * The Update Delay Policy.
-     * Determines whether to delay OS and/or app updates for macOS.
+     * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
      */
     @SerializedName(value = "updateDelayPolicy", alternate = {"UpdateDelayPolicy"})
     @Expose

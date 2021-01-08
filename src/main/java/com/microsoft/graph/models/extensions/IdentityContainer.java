@@ -9,11 +9,13 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ConditionalAccessRoot;
+import com.microsoft.graph.models.extensions.IdentityApiConnector;
 import com.microsoft.graph.models.extensions.B2cIdentityUserFlow;
 import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
 import com.microsoft.graph.models.extensions.IdentityUserFlowAttribute;
 import com.microsoft.graph.models.extensions.IdentityUserFlow;
 import com.microsoft.graph.models.extensions.ContinuousAccessEvaluationPolicy;
+import com.microsoft.graph.requests.extensions.IdentityApiConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.extensions.B2xIdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeCollectionPage;
@@ -49,6 +51,14 @@ public class IdentityContainer implements IJsonBackedObject {
     @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
     @Expose
     public ConditionalAccessRoot conditionalAccess;
+
+    /**
+     * The Api Connectors.
+     * 
+     */
+    @SerializedName(value = "apiConnectors", alternate = {"ApiConnectors"})
+    @Expose
+    public IdentityApiConnectorCollectionPage apiConnectors;
 
     /**
      * The B2c User Flows.
@@ -129,6 +139,10 @@ public class IdentityContainer implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("apiConnectors")) {
+            apiConnectors = serializer.deserializeObject(json.get("apiConnectors").toString(), IdentityApiConnectorCollectionPage.class);
+        }
 
         if (json.has("b2cUserFlows")) {
             b2cUserFlows = serializer.deserializeObject(json.get("b2cUserFlows").toString(), B2cIdentityUserFlowCollectionPage.class);

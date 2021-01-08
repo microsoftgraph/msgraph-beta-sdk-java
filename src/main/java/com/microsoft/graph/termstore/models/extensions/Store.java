@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.termstore.models.extensions.Group;
 import com.microsoft.graph.termstore.models.extensions.Set;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.termstore.requests.extensions.GroupCollectionPage;
 import com.microsoft.graph.termstore.requests.extensions.SetCollectionPage;
 
@@ -23,22 +24,12 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Store.
  */
-public class Store implements IJsonBackedObject {
+public class Store extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Default Language Tag.
-     * 
+     * Default language of the term store.
      */
     @SerializedName(value = "defaultLanguageTag", alternate = {"DefaultLanguageTag"})
     @Expose
@@ -46,7 +37,7 @@ public class Store implements IJsonBackedObject {
 
     /**
      * The Language Tags.
-     * 
+     * List of languages for the term store.
      */
     @SerializedName(value = "languageTags", alternate = {"LanguageTags"})
     @Expose
@@ -54,7 +45,7 @@ public class Store implements IJsonBackedObject {
 
     /**
      * The Groups.
-     * 
+     * Collection of all groups available in the term store.
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
@@ -62,7 +53,7 @@ public class Store implements IJsonBackedObject {
 
     /**
      * The Sets.
-     * 
+     * Collection of all sets available in the term store.
      */
     @SerializedName(value = "sets", alternate = {"Sets"})
     @Expose

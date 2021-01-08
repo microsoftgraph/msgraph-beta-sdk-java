@@ -25,7 +25,7 @@ public class BusinessFlowTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the business flow template
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

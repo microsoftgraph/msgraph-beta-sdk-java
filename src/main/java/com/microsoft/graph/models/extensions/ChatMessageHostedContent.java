@@ -25,7 +25,7 @@ public class ChatMessageHostedContent extends Entity implements IJsonBackedObjec
 
     /**
      * The Content Bytes.
-     * 
+     * Write-only. When posting new chat message hosted content, represents the bytes of the payload. These are represented as a base64Encoded string.
      */
     @SerializedName(value = "contentBytes", alternate = {"ContentBytes"})
     @Expose
@@ -33,7 +33,7 @@ public class ChatMessageHostedContent extends Entity implements IJsonBackedObjec
 
     /**
      * The Content Type.
-     * 
+     * Write-only. When posting new chat message hosted content, represents the type of content, such as image/png.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose

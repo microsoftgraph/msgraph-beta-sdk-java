@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RoomList;
 import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISpaceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISpaceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -40,5 +42,9 @@ public interface IRoomListRequestBuilder extends IRequestBuilder {
     IRoomCollectionRequestBuilder rooms();
 
     IRoomRequestBuilder rooms(final String id);
+
+    ISpaceCollectionRequestBuilder spaces();
+
+    ISpaceRequestBuilder spaces(final String id);
 
 }

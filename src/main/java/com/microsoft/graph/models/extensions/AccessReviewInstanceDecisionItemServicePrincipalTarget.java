@@ -25,7 +25,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
 
     /**
      * The App Id.
-     * 
+     * The appId for the service principal entity being reviewed.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -33,7 +33,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalTarget extends Acce
 
     /**
      * The Service Principal Display Name.
-     * 
+     * The display name of the service principal whose access is being reviewed.
      */
     @SerializedName(value = "servicePrincipalDisplayName", alternate = {"ServicePrincipalDisplayName"})
     @Expose

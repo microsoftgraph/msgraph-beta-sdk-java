@@ -52,7 +52,7 @@ public class WindowsKioskProfile implements IJsonBackedObject {
 
     /**
      * The Profile Name.
-     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      */
     @SerializedName(value = "profileName", alternate = {"ProfileName"})
     @Expose

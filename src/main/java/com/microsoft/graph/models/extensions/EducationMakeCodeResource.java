@@ -25,7 +25,7 @@ public class EducationMakeCodeResource extends EducationResource implements IJso
 
     /**
      * The Host Web Url.
-     * 
+     * Host for the type of MakeCode resource (for example, arcade, microbit)
      */
     @SerializedName(value = "hostWebUrl", alternate = {"HostWebUrl"})
     @Expose
@@ -33,7 +33,7 @@ public class EducationMakeCodeResource extends EducationResource implements IJso
 
     /**
      * The Project Id.
-     * 
+     * ID of the MakeCode project
      */
     @SerializedName(value = "projectId", alternate = {"ProjectId"})
     @Expose

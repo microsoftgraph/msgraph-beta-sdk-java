@@ -33,7 +33,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
+     * Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -73,7 +73,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Detection Timing Type.
-     * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      */
     @SerializedName(value = "detectionTimingType", alternate = {"DetectionTimingType"})
     @Expose
@@ -113,7 +113,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * Details of the detected risk. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -121,7 +121,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Event Type.
-     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic
+     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
      */
     @SerializedName(value = "riskEventType", alternate = {"RiskEventType"})
     @Expose
@@ -129,7 +129,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level.
-     * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
      */
     @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose
@@ -137,7 +137,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk State.
-     * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
      */
     @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
@@ -145,7 +145,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Type.
-     * 
+     * List of risk event types.Note: This property is deprecated. Use riskEventTypes instead.
      */
     @SerializedName(value = "riskType", alternate = {"RiskType"})
     @Expose
@@ -161,7 +161,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Issuer Type.
-     * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
+     * Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
      */
     @SerializedName(value = "tokenIssuerType", alternate = {"TokenIssuerType"})
     @Expose
@@ -169,7 +169,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * The user principal name (UPN) of the user.
+     * Name of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose

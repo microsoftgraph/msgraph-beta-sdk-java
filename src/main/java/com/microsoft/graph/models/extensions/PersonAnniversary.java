@@ -26,7 +26,7 @@ public class PersonAnniversary extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Date.
-     * 
+     * Contains the date associated with the anniversary type.
      */
     @SerializedName(value = "date", alternate = {"Date"})
     @Expose
@@ -34,7 +34,7 @@ public class PersonAnniversary extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of anniversary the date represents. Possible values are: birthday, wedding, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

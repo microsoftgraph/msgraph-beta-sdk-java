@@ -25,7 +25,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements IJsonB
 
     /**
      * The Active.
-     * 
+     * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
      */
     @SerializedName(value = "active", alternate = {"Active"})
     @Expose
@@ -33,7 +33,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements IJsonB
 
     /**
      * The Report Date.
-     * 
+     * The date on which a number of groups were active.
      */
     @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
@@ -41,7 +41,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements IJsonB
 
     /**
      * The Report Period.
-     * 
+     * The number of days the report covers.
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -49,7 +49,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements IJsonB
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -57,7 +57,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements IJsonB
 
     /**
      * The Total.
-     * 
+     * The total number of groups.
      */
     @SerializedName(value = "total", alternate = {"Total"})
     @Expose

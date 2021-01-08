@@ -48,7 +48,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
 
     /**
      * The Connection Type.
-     * Connection type.
+     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose

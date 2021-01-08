@@ -25,7 +25,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
 
     /**
      * The Points.
-     * 
+     * Number of points a teacher is giving this submission object.
      */
     @SerializedName(value = "points", alternate = {"Points"})
     @Expose

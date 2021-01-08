@@ -13,6 +13,10 @@ import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionReques
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserFlowLanguageConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserFlowLanguageConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserFlowLanguageConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserFlowLanguageConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder;

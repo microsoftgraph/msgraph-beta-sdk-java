@@ -34,7 +34,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The Applied Policies.
-     * 
+     * List of policies delivered to the device as last checkin.
      */
     @SerializedName(value = "appliedPolicies", alternate = {"AppliedPolicies"})
     @Expose
@@ -42,7 +42,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The Checkin Date Time.
-     * 
+     * Last device check-in time in UTC.
      */
     @SerializedName(value = "checkinDateTime", alternate = {"CheckinDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The Device Name.
-     * 
+     * Device name trying to check-in.
      */
     @SerializedName(value = "deviceName", alternate = {"DeviceName"})
     @Expose
@@ -58,7 +58,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The Device Platform.
-     * 
+     * Device platform trying to check-in.
      */
     @SerializedName(value = "devicePlatform", alternate = {"DevicePlatform"})
     @Expose
@@ -66,7 +66,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The Device Platform Version.
-     * 
+     * Device platform version trying to check-in.
      */
     @SerializedName(value = "devicePlatformVersion", alternate = {"DevicePlatformVersion"})
     @Expose
@@ -74,7 +74,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The Error Message.
-     * 
+     * Error message if any associated for the last checkin.
      */
     @SerializedName(value = "errorMessage", alternate = {"ErrorMessage"})
     @Expose
@@ -82,7 +82,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * User identifier using the device.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -90,7 +90,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * User principal name using the device.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -98,7 +98,7 @@ public class OfficeClientCheckinStatus implements IJsonBackedObject {
 
     /**
      * The Was Successful.
-     * 
+     * If the last checkin was successful.
      */
     @SerializedName(value = "wasSuccessful", alternate = {"WasSuccessful"})
     @Expose

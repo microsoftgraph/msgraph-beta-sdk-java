@@ -53,7 +53,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Password Single Sign On Settings.
-     * 
+     * The collection for settings related to password single sign-on. Use $select=passwordSingleSignOnSettings to read the property. Read-only for applicationTemplates except for custom applicationTemplates.
      */
     @SerializedName(value = "passwordSingleSignOnSettings", alternate = {"PasswordSingleSignOnSettings"})
     @Expose
@@ -157,7 +157,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Error Url.
-     * 
+     * Deprecated. Don't use.
      */
     @SerializedName(value = "errorUrl", alternate = {"ErrorUrl"})
     @Expose
@@ -237,7 +237,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Token Signing Key End Date Time.
-     * 
+     * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.
      */
     @SerializedName(value = "preferredTokenSigningKeyEndDateTime", alternate = {"PreferredTokenSigningKeyEndDateTime"})
     @Expose
@@ -245,7 +245,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Preferred Token Signing Key Thumbprint.
-     * 
+     * Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
      */
     @SerializedName(value = "preferredTokenSigningKeyThumbprint", alternate = {"PreferredTokenSigningKeyThumbprint"})
     @Expose
@@ -253,7 +253,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Published Permission Scopes.
-     * 
+     * The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable.
      */
     @SerializedName(value = "publishedPermissionScopes", alternate = {"PublishedPermissionScopes"})
     @Expose
@@ -277,7 +277,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Saml Metadata Url.
-     * 
+     * The url where the service exposes SAML metadata for federation.
      */
     @SerializedName(value = "samlMetadataUrl", alternate = {"SamlMetadataUrl"})
     @Expose
@@ -309,7 +309,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Sign In Audience.
-     * 
+     * Specifies what Microsoft accounts are supported for the associated application. Read-only.
      */
     @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose
@@ -361,7 +361,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Delegated Permission Classifications.
-     * 
+     * The permission classifications for delegated permissions exposed by the app that this service principal represents.
      */
     @SerializedName(value = "delegatedPermissionClassifications", alternate = {"DelegatedPermissionClassifications"})
     @Expose

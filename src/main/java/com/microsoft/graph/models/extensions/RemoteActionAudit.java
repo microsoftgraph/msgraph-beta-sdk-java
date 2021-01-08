@@ -27,7 +27,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Action.
-     * The action name.
+     * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -35,7 +35,7 @@ public class RemoteActionAudit extends Entity implements IJsonBackedObject {
 
     /**
      * The Action State.
-     * Action state.
+     * Action state. Possible values are: none, pending, canceled, active, done, failed, notSupported.
      */
     @SerializedName(value = "actionState", alternate = {"ActionState"})
     @Expose

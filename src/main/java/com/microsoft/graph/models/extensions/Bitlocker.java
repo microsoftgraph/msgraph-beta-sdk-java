@@ -27,7 +27,7 @@ public class Bitlocker extends Entity implements IJsonBackedObject {
 
     /**
      * The Recovery Keys.
-     * 
+     * The recovery keys associated with the bitlocker entity.
      */
     @SerializedName(value = "recoveryKeys", alternate = {"RecoveryKeys"})
     @Expose

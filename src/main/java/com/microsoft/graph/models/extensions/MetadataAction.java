@@ -26,7 +26,7 @@ public class MetadataAction extends InformationProtectionAction implements IJson
 
     /**
      * The Metadata To Add.
-     * 
+     * A collection of key value pairs that should be added to the file.
      */
     @SerializedName(value = "metadataToAdd", alternate = {"MetadataToAdd"})
     @Expose
@@ -34,7 +34,7 @@ public class MetadataAction extends InformationProtectionAction implements IJson
 
     /**
      * The Metadata To Remove.
-     * 
+     * A collection of strings that indicate which keys to remove from the file metadata.
      */
     @SerializedName(value = "metadataToRemove", alternate = {"MetadataToRemove"})
     @Expose

@@ -36,7 +36,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Activity Identifier.
-     * 
+     * Identifier of the job run.
      */
     @SerializedName(value = "activityIdentifier", alternate = {"ActivityIdentifier"})
     @Expose
@@ -44,7 +44,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Entitled.
-     * 
+     * Count of processed entries that were assigned for this application.
      */
     @SerializedName(value = "countEntitled", alternate = {"CountEntitled"})
     @Expose
@@ -52,7 +52,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Entitled For Provisioning.
-     * 
+     * Count of processed entries that were assigned for provisioning.
      */
     @SerializedName(value = "countEntitledForProvisioning", alternate = {"CountEntitledForProvisioning"})
     @Expose
@@ -60,7 +60,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Escrowed.
-     * 
+     * Count of entries that were escrowed (errors).
      */
     @SerializedName(value = "countEscrowed", alternate = {"CountEscrowed"})
     @Expose
@@ -68,7 +68,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Escrowed Raw.
-     * 
+     * Count of entries that were escrowed, including system-generated escrows.
      */
     @SerializedName(value = "countEscrowedRaw", alternate = {"CountEscrowedRaw"})
     @Expose
@@ -76,7 +76,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Exported.
-     * 
+     * Count of exported entries.
      */
     @SerializedName(value = "countExported", alternate = {"CountExported"})
     @Expose
@@ -84,7 +84,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Exports.
-     * 
+     * Count of entries that were expected to be exported.
      */
     @SerializedName(value = "countExports", alternate = {"CountExports"})
     @Expose
@@ -92,7 +92,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Imported.
-     * 
+     * Count of imported entries.
      */
     @SerializedName(value = "countImported", alternate = {"CountImported"})
     @Expose
@@ -100,7 +100,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Imported Deltas.
-     * 
+     * Count of imported delta-changes.
      */
     @SerializedName(value = "countImportedDeltas", alternate = {"CountImportedDeltas"})
     @Expose
@@ -108,7 +108,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Count Imported Reference Deltas.
-     * 
+     * Count of imported delta-changes pertaining to reference changes.
      */
     @SerializedName(value = "countImportedReferenceDeltas", alternate = {"CountImportedReferenceDeltas"})
     @Expose
@@ -116,7 +116,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Error.
-     * 
+     * If an error was encountered, contains a synchronizationError object with details.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -124,7 +124,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Code summarizing the result of this run. Possible values are: Succeeded, Failed, EntryLevelErrors.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -132,7 +132,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Time Began.
-     * 
+     * Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "timeBegan", alternate = {"TimeBegan"})
     @Expose
@@ -140,7 +140,7 @@ public class SynchronizationTaskExecution implements IJsonBackedObject {
 
     /**
      * The Time Ended.
-     * 
+     * Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "timeEnded", alternate = {"TimeEnded"})
     @Expose

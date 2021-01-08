@@ -35,7 +35,7 @@ public class MacOSSystemExtensionTypeMapping implements IJsonBackedObject {
 
     /**
      * The Allowed Types.
-     * Gets or sets the allowed macOS system extension types.
+     * Gets or sets the allowed macOS system extension types. Possible values are: driverExtensionsAllowed, networkExtensionsAllowed, endpointSecurityExtensionsAllowed.
      */
     @SerializedName(value = "allowedTypes", alternate = {"AllowedTypes"})
     @Expose

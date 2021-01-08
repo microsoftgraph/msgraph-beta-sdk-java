@@ -66,7 +66,7 @@ public class SymantecCodeSigningCertificate extends Entity implements IJsonBacke
 
     /**
      * The Status.
-     * The Cert Status Provisioned or not Provisioned.
+     * The Cert Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

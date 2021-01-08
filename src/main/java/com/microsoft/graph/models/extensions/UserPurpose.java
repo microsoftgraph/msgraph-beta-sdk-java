@@ -35,7 +35,7 @@ public class UserPurpose implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Represents the user's recipient or mailbox type in Exchange Online. Possible values are: unknown, user, linked, shared, room, equipment, and others. See the next section for more information.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

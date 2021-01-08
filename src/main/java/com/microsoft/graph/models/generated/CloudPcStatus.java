@@ -36,21 +36,9 @@ public enum CloudPcStatus
     */
     DEPROVISIONING,
     /**
-    * upgrade Failed
+    * failed
     */
-    UPGRADE_FAILED,
-    /**
-    * provision Failed
-    */
-    PROVISION_FAILED,
-    /**
-    * deprovision Failed
-    */
-    DEPROVISION_FAILED,
-    /**
-    * reprovision Failed
-    */
-    REPROVISION_FAILED,
+    FAILED,
     /**
     * For CloudPcStatus values that were not expected from the service
     */

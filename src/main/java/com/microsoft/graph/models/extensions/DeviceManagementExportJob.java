@@ -43,7 +43,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Format.
-     * Format of the exported report
+     * Format of the exported report. Possible values are: csv, pdf.
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
@@ -83,7 +83,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Status.
-     * Status of the export job
+     * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

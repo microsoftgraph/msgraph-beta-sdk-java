@@ -32,7 +32,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Favorite Plan References.
-     * 
+     * A collection containing the references to the plans that the user has marked as favorites.
      */
     @SerializedName(value = "favoritePlanReferences", alternate = {"FavoritePlanReferences"})
     @Expose
@@ -40,7 +40,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Recent Plan References.
-     * 
+     * A collection containing references to the plans that were viewed recently by the user in apps that support recent plans.
      */
     @SerializedName(value = "recentPlanReferences", alternate = {"RecentPlanReferences"})
     @Expose
@@ -56,7 +56,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Favorite Plans.
-     * 
+     * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
      */
     public PlannerPlanCollectionPage favoritePlans;
 
@@ -70,13 +70,13 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Recent Plans.
-     * 
+     * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
      */
     public PlannerPlanCollectionPage recentPlans;
 
     /**
      * The Tasks.
-     * Read-only. Nullable. Returns the plannerPlans shared with the user.
+     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

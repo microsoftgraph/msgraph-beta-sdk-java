@@ -35,7 +35,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
 
     /**
      * The Allow Multiple Occurrences.
-     * 
+     * The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).
      */
     @SerializedName(value = "allowMultipleOccurrences", alternate = {"AllowMultipleOccurrences"})
     @Expose
@@ -43,7 +43,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Parameter name.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -51,7 +51,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
 
     /**
      * The Required.
-     * 
+     * true if the parameter is required; otherwise false.
      */
     @SerializedName(value = "required", alternate = {"Required"})
     @Expose
@@ -59,7 +59,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Possible values are: Boolean, Binary, Reference, Integer, String. Default is String.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

@@ -33,7 +33,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Authentication Method.
-     * Authentication method for this VPN connection.
+     * Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -49,7 +49,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Connection Type.
-     * Connection type.
+     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, customVpn, ciscoIPSec, citrix, ciscoAnyConnectV2, paloAltoGlobalProtect, zscalerPrivateAccess, f5Access2018, citrixSso, paloAltoGlobalProtectV2, ikEv2, alwaysOn, microsoftTunnel, netMotionMobility.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
@@ -137,7 +137,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Provider Type.
-     * Provider type for per-app VPN.
+     * Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
      */
     @SerializedName(value = "providerType", alternate = {"ProviderType"})
     @Expose

@@ -26,7 +26,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements IJsonB
 
     /**
      * The Feedback.
-     * 
+     * Teacher's written feedback to the student.
      */
     @SerializedName(value = "feedback", alternate = {"Feedback"})
     @Expose
@@ -34,7 +34,7 @@ public class EducationFeedbackOutcome extends EducationOutcome implements IJsonB
 
     /**
      * The Published Feedback.
-     * 
+     * A copy of the feedback property that is made when the grade is released to the student.
      */
     @SerializedName(value = "publishedFeedback", alternate = {"PublishedFeedback"})
     @Expose

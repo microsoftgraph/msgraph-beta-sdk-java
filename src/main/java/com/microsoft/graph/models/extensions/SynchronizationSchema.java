@@ -28,7 +28,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
 
     /**
      * The Synchronization Rules.
-     * 
+     * A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
      */
     @SerializedName(value = "synchronizationRules", alternate = {"SynchronizationRules"})
     @Expose
@@ -36,7 +36,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * The version of the schema, updated automatically with every schema change.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -44,7 +44,7 @@ public class SynchronizationSchema extends Entity implements IJsonBackedObject {
 
     /**
      * The Directories.
-     * 
+     * Contains the collection of directories and all of their objects.
      */
     @SerializedName(value = "directories", alternate = {"Directories"})
     @Expose

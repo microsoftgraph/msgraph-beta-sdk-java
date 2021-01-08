@@ -35,7 +35,7 @@ public class ProvisionedIdentity implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * Details of the identity.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -43,7 +43,7 @@ public class ProvisionedIdentity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the identity.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -51,7 +51,7 @@ public class ProvisionedIdentity implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Uniquely identifies the identity.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -59,7 +59,7 @@ public class ProvisionedIdentity implements IJsonBackedObject {
 
     /**
      * The Identity Type.
-     * 
+     * Type of identity that has been provisioned, such as 'user' or 'group'.
      */
     @SerializedName(value = "identityType", alternate = {"IdentityType"})
     @Expose

@@ -27,7 +27,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Phone Number.
-     * 
+     * The phone number to text or call for authentication. Phone numbers use the format '+&amp;lt;country code&amp;gt; &amp;lt;number&amp;gt;x&amp;lt;extension&amp;gt;', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
      */
     @SerializedName(value = "phoneNumber", alternate = {"PhoneNumber"})
     @Expose
@@ -35,7 +35,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Phone Type.
-     * 
+     * The type of this phone. Possible values are: mobile, alternateMobile, or office.
      */
     @SerializedName(value = "phoneType", alternate = {"PhoneType"})
     @Expose
@@ -43,7 +43,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Sms Sign In State.
-     * 
+     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured.
      */
     @SerializedName(value = "smsSignInState", alternate = {"SmsSignInState"})
     @Expose

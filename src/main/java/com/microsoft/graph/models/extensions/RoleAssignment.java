@@ -59,7 +59,7 @@ public class RoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope Type.
-     * Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty.
+     * Specifies the type of scope for a Role Assignment. Default type 'ResourceScope' allows assignment of ResourceScopes. For 'AllDevices', 'AllLicensedUsers', and 'AllDevicesAndLicensedUsers', the ResourceScopes property should be left empty. Possible values are: resourceScope, allDevices, allLicensedUsers, allDevicesAndLicensedUsers.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose

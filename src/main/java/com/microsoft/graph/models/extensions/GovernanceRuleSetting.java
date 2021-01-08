@@ -34,7 +34,7 @@ public class GovernanceRuleSetting implements IJsonBackedObject {
 
     /**
      * The Rule Identifier.
-     * 
+     * The id of the rule. For example, ExpirationRule and MfaRule.
      */
     @SerializedName(value = "ruleIdentifier", alternate = {"RuleIdentifier"})
     @Expose
@@ -42,7 +42,7 @@ public class GovernanceRuleSetting implements IJsonBackedObject {
 
     /**
      * The Setting.
-     * 
+     * The settings of the rule. The value is a JSON string with a list of pairs in the format of Parameter_Name:Parameter_Value. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
      */
     @SerializedName(value = "setting", alternate = {"Setting"})
     @Expose

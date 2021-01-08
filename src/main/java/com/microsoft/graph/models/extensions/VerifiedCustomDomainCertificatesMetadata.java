@@ -34,7 +34,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
 
     /**
      * The Expiry Date.
-     * 
+     * The expiry date of the custom domain certificate. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "expiryDate", alternate = {"ExpiryDate"})
     @Expose
@@ -42,7 +42,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
 
     /**
      * The Issue Date.
-     * 
+     * The issue date of the custom domain. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "issueDate", alternate = {"IssueDate"})
     @Expose
@@ -50,7 +50,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
 
     /**
      * The Issuer Name.
-     * 
+     * The issuer name of the custom domain certificate.
      */
     @SerializedName(value = "issuerName", alternate = {"IssuerName"})
     @Expose
@@ -58,7 +58,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
 
     /**
      * The Subject Name.
-     * 
+     * The subject name of the custom domain certificate.
      */
     @SerializedName(value = "subjectName", alternate = {"SubjectName"})
     @Expose
@@ -66,7 +66,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements IJsonBackedObje
 
     /**
      * The Thumbprint.
-     * 
+     * The thumbprint associated with the custom domain certificate.
      */
     @SerializedName(value = "thumbprint", alternate = {"Thumbprint"})
     @Expose

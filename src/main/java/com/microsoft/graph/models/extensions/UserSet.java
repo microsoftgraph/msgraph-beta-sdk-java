@@ -34,7 +34,7 @@ public class UserSet implements IJsonBackedObject {
 
     /**
      * The Is Backup.
-     * 
+     * For a user in an approval stage, this property indicates whether the user is a backup fallback approver.
      */
     @SerializedName(value = "isBackup", alternate = {"IsBackup"})
     @Expose

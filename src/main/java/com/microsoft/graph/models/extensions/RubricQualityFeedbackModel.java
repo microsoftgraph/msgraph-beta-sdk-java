@@ -35,7 +35,7 @@ public class RubricQualityFeedbackModel implements IJsonBackedObject {
 
     /**
      * The Feedback.
-     * 
+     * Specific feedback for one quality of this rubric.
      */
     @SerializedName(value = "feedback", alternate = {"Feedback"})
     @Expose
@@ -43,7 +43,7 @@ public class RubricQualityFeedbackModel implements IJsonBackedObject {
 
     /**
      * The Quality Id.
-     * 
+     * The ID of the rubricQuality that this feedback is related to.
      */
     @SerializedName(value = "qualityId", alternate = {"QualityId"})
     @Expose

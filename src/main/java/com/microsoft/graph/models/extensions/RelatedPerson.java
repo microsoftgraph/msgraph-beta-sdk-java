@@ -35,7 +35,7 @@ public class RelatedPerson implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the person.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -43,7 +43,7 @@ public class RelatedPerson implements IJsonBackedObject {
 
     /**
      * The Relationship.
-     * 
+     * Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
      */
     @SerializedName(value = "relationship", alternate = {"Relationship"})
     @Expose
@@ -51,7 +51,7 @@ public class RelatedPerson implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * Email address or reference to person within organization.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

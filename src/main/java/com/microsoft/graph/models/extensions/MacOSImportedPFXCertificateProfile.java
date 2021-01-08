@@ -28,7 +28,7 @@ public class MacOSImportedPFXCertificateProfile extends MacOSCertificateProfileB
 
     /**
      * The Intended Purpose.
-     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
+     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
      */
     @SerializedName(value = "intendedPurpose", alternate = {"IntendedPurpose"})
     @Expose

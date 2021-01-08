@@ -25,7 +25,7 @@ public class ItemInsightsSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Disabled For Group.
-     * 
+     * The ID of an Azure AD group, of which the members' item insights are disabled. Default is empty. Optional.
      */
     @SerializedName(value = "disabledForGroup", alternate = {"DisabledForGroup"})
     @Expose
@@ -33,7 +33,7 @@ public class ItemInsightsSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled In Organization.
-     * 
+     * true if organization item insights are enabled; false if organization item insights are disabled for all users without exceptions. Default is true. Optional.
      */
     @SerializedName(value = "isEnabledInOrganization", alternate = {"IsEnabledInOrganization"})
     @Expose

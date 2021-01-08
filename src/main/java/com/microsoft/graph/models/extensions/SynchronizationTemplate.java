@@ -27,7 +27,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Application Id.
-     * 
+     * Identifier of the application this template belongs to.
      */
     @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
@@ -35,7 +35,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Default.
-     * 
+     * true if this template is recommended to be the default for the application.
      */
     @SerializedName(value = "default", alternate = {"Default"})
     @Expose
@@ -43,7 +43,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Description.
-     * 
+     * Description of the template.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -51,7 +51,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Discoverable.
-     * 
+     * true if this template should appear in the collection of templates available for the application instance (service principal).
      */
     @SerializedName(value = "discoverable", alternate = {"Discoverable"})
     @Expose
@@ -59,7 +59,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Factory Tag.
-     * 
+     * One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
      */
     @SerializedName(value = "factoryTag", alternate = {"FactoryTag"})
     @Expose
@@ -67,7 +67,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Metadata.
-     * 
+     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -75,7 +75,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Schema.
-     * 
+     * Default synchronization schema for the jobs based on this template.
      */
     @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose

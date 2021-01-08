@@ -35,7 +35,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Approval Stage Time Out In Days.
-     * 
+     * The number of days that a request can be pending a response before it is automatically denied.
      */
     @SerializedName(value = "approvalStageTimeOutInDays", alternate = {"ApprovalStageTimeOutInDays"})
     @Expose
@@ -43,7 +43,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Escalation Approvers.
-     * 
+     * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
      */
     @SerializedName(value = "escalationApprovers", alternate = {"EscalationApprovers"})
     @Expose
@@ -51,7 +51,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Escalation Time In Minutes.
-     * 
+     * If escalation is required, the time a request can be pending a response from a primary approver.
      */
     @SerializedName(value = "escalationTimeInMinutes", alternate = {"EscalationTimeInMinutes"})
     @Expose
@@ -59,7 +59,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Is Approver Justification Required.
-     * 
+     * Indicates whether the approver is required to provide a justification for approving a request.
      */
     @SerializedName(value = "isApproverJustificationRequired", alternate = {"IsApproverJustificationRequired"})
     @Expose
@@ -67,7 +67,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Is Escalation Enabled.
-     * 
+     * If true, then one or more escalation approvers are configured in this approval stage.
      */
     @SerializedName(value = "isEscalationEnabled", alternate = {"IsEscalationEnabled"})
     @Expose
@@ -75,7 +75,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Primary Approvers.
-     * 
+     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.
      */
     @SerializedName(value = "primaryApprovers", alternate = {"PrimaryApprovers"})
     @Expose

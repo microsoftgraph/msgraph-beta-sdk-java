@@ -33,7 +33,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Acknowledged Date Time.
-     * 
+     * Date and time the custodian acknowledged a hold notification.
      */
     @SerializedName(value = "acknowledgedDateTime", alternate = {"AcknowledgedDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Apply Hold To Sources.
-     * 
+     * Identifies whether a custodian's sources were placed on hold during creation.
      */
     @SerializedName(value = "applyHoldToSources", alternate = {"ApplyHoldToSources"})
     @Expose
@@ -49,7 +49,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the custodian was added to the case.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the custodian.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -65,7 +65,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * Email address of the custodian.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -73,7 +73,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date and time the custodian object was last modified
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -81,7 +81,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Released Date Time.
-     * 
+     * Date and time the custodian was released from the case.
      */
     @SerializedName(value = "releasedDateTime", alternate = {"ReleasedDateTime"})
     @Expose
@@ -89,7 +89,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Status of the custodian. Possible values are: active, released.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -105,7 +105,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Site Sources.
-     * 
+     * Data source entity for SharePoint sites associated with the custodian.
      */
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
@@ -113,7 +113,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The Unified Group Sources.
-     * 
+     * Data source entity for groups associated with the custodian.
      */
     @SerializedName(value = "unifiedGroupSources", alternate = {"UnifiedGroupSources"})
     @Expose
@@ -121,7 +121,7 @@ public class Custodian extends Entity implements IJsonBackedObject {
 
     /**
      * The User Sources.
-     * 
+     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose

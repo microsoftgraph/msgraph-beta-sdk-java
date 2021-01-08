@@ -26,7 +26,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * Contains categories a user has associated with the skill (for example, personal, professional, hobby).
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -34,7 +34,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Collaboration Tags.
-     * 
+     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
      */
     @SerializedName(value = "collaborationTags", alternate = {"CollaborationTags"})
     @Expose
@@ -42,7 +42,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Contains a friendly name for the skill.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -50,7 +50,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Proficiency.
-     * 
+     * Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
      */
     @SerializedName(value = "proficiency", alternate = {"Proficiency"})
     @Expose
@@ -58,7 +58,7 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Contains a link to an information source about the skill.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

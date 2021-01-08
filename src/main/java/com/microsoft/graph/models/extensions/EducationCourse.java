@@ -34,7 +34,7 @@ public class EducationCourse implements IJsonBackedObject {
 
     /**
      * The Course Number.
-     * 
+     * Unique identifier for the course.
      */
     @SerializedName(value = "courseNumber", alternate = {"CourseNumber"})
     @Expose
@@ -42,7 +42,7 @@ public class EducationCourse implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the course.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -50,7 +50,7 @@ public class EducationCourse implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the course.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class EducationCourse implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * ID of the course from the syncing system.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -66,7 +66,7 @@ public class EducationCourse implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * Subject of the course.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose

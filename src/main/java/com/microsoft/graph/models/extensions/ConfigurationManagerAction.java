@@ -35,7 +35,7 @@ public class ConfigurationManagerAction implements IJsonBackedObject {
 
     /**
      * The Action.
-     * The action type to trigger on Configuration Manager client
+     * The action type to trigger on Configuration Manager client. Possible values are: refreshMachinePolicy, refreshUserPolicy, wakeUpClient, appEvaluation.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose

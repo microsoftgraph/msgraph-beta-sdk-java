@@ -59,7 +59,7 @@ public class MacOSAppleEventReceiver implements IJsonBackedObject {
 
     /**
      * The Identifier Type.
-     * Use bundle ID for an app or path for a process or executable that receives the Apple Event.
+     * Use bundle ID for an app or path for a process or executable that receives the Apple Event. Possible values are: bundleID, path.
      */
     @SerializedName(value = "identifierType", alternate = {"IdentifierType"})
     @Expose

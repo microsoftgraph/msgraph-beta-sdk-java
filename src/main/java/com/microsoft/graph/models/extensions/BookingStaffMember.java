@@ -27,7 +27,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Availability Is Affected By Personal Calendar.
-     * 
+     * True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
      */
     @SerializedName(value = "availabilityIsAffectedByPersonalCalendar", alternate = {"AvailabilityIsAffectedByPersonalCalendar"})
     @Expose
@@ -35,7 +35,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Color Index.
-     * 
+     * Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
      */
     @SerializedName(value = "colorIndex", alternate = {"ColorIndex"})
     @Expose
@@ -43,7 +43,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Role.
-     * 
+     * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest. Required.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose
@@ -51,7 +51,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Use Business Hours.
-     * 
+     * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
      */
     @SerializedName(value = "useBusinessHours", alternate = {"UseBusinessHours"})
     @Expose
@@ -59,7 +59,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Working Hours.
-     * 
+     * The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
      */
     @SerializedName(value = "workingHours", alternate = {"WorkingHours"})
     @Expose

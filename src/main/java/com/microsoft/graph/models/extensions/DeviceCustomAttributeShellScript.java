@@ -52,7 +52,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements IJsonBac
 
     /**
      * The Custom Attribute Type.
-     * The expected type of the custom attribute's value.
+     * The expected type of the custom attribute's value. Possible values are: integer, string, dateTime.
      */
     @SerializedName(value = "customAttributeType", alternate = {"CustomAttributeType"})
     @Expose
@@ -100,7 +100,7 @@ public class DeviceCustomAttributeShellScript extends Entity implements IJsonBac
 
     /**
      * The Run As Account.
-     * Indicates the type of execution context.
+     * Indicates the type of execution context. Possible values are: system, user.
      */
     @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose

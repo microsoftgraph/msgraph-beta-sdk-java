@@ -34,7 +34,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Type.
-     * 
+     * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
      */
     @SerializedName(value = "chatType", alternate = {"ChatType"})
     @Expose
@@ -42,7 +42,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time at which the chat was created. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * 
+     * Date and time at which the chat was renamed or list of members were last changed. Read-only.
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Topic.
-     * 
+     * (Optional) Subject or topic for the chat. Only available for group chats.
      */
     @SerializedName(value = "topic", alternate = {"Topic"})
     @Expose
@@ -66,7 +66,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Installed Apps.
-     * 
+     * A collection of all the apps in the chat. Nullable.
      */
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
@@ -74,7 +74,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * A collection of all the members in the chat. Nullable.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

@@ -29,7 +29,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * DateTime when review instance is scheduled to end.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * 
+     * Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. In the case of a single-group review, the scope defined at the accessReviewScheduleDefinition level applies to all instances. In the case of all groups review, scope may be different for each group. Read-only.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -45,7 +45,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * DateTime when review instance is scheduled to start. May be in the future.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -53,7 +53,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.  Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -61,7 +61,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Decisions.
-     * 
+     * Each user reviewed in an accessReviewInstance has a decision item representing if their access was approved, denied, or not yet reviewed.
      */
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
@@ -69,7 +69,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Definition.
-     * 
+     * There is exactly one accessReviewScheduleDefinition associated with each instance. It is the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
      */
     @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose

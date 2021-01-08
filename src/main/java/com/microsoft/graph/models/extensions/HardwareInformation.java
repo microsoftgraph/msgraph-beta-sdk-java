@@ -38,7 +38,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Battery Charge Cycles.
-     * The number of charge cycles the device???s current battery has gone through. Valid values 0 to 2147483647
+     * The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryChargeCycles", alternate = {"BatteryChargeCycles"})
     @Expose
@@ -46,7 +46,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Battery Health Percentage.
-     * The device???s current battery???s health percentage. Valid values 0 to 100
+     * The device’s current battery’s health percentage. Valid values 0 to 100
      */
     @SerializedName(value = "batteryHealthPercentage", alternate = {"BatteryHealthPercentage"})
     @Expose
@@ -54,7 +54,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Battery Serial Number.
-     * The serial number of the device???s current battery
+     * The serial number of the device’s current battery
      */
     @SerializedName(value = "batterySerialNumber", alternate = {"BatterySerialNumber"})
     @Expose
@@ -70,7 +70,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Full Qualified Domain Name.
-     * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. 
+     * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
      */
     @SerializedName(value = "deviceFullQualifiedDomainName", alternate = {"DeviceFullQualifiedDomainName"})
     @Expose
@@ -78,7 +78,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Guard Local System Authority Credential Guard State.
-     * Local System Authority (LSA) credential guard status. 
+     * Local System Authority (LSA) credential guard status. . Possible values are: running, rebootRequired, notLicensed, notConfigured, virtualizationBasedSecurityNotRunning.
      */
     @SerializedName(value = "deviceGuardLocalSystemAuthorityCredentialGuardState", alternate = {"DeviceGuardLocalSystemAuthorityCredentialGuardState"})
     @Expose
@@ -86,7 +86,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Guard Virtualization Based Security Hardware Requirement State.
-     * Virtualization-based security hardware requirement status.
+     * Virtualization-based security hardware requirement status. Possible values are: meetHardwareRequirements, secureBootRequired, dmaProtectionRequired, hyperVNotSupportedForGuestVM, hyperVNotAvailable.
      */
     @SerializedName(value = "deviceGuardVirtualizationBasedSecurityHardwareRequirementState", alternate = {"DeviceGuardVirtualizationBasedSecurityHardwareRequirementState"})
     @Expose
@@ -94,7 +94,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Guard Virtualization Based Security State.
-     * Virtualization-based security status. 
+     * Virtualization-based security status. . Possible values are: running, rebootRequired, require64BitArchitecture, notLicensed, notConfigured, doesNotMeetHardwareRequirements, other.
      */
     @SerializedName(value = "deviceGuardVirtualizationBasedSecurityState", alternate = {"DeviceGuardVirtualizationBasedSecurityState"})
     @Expose

@@ -34,7 +34,7 @@ public class DisplayNameLocalization implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -42,7 +42,7 @@ public class DisplayNameLocalization implements IJsonBackedObject {
 
     /**
      * The Language Tag.
-     * 
+     * Provides the language culture-code and friendly name of the language that the displayName field has been provided in.
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose

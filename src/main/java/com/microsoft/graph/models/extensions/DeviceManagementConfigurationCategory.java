@@ -59,7 +59,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Platforms.
-     * Platforms types, which settings in the category have.
+     * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
@@ -67,7 +67,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Technologies.
-     * Technologies types, which settings in the category have.
+     * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

@@ -43,7 +43,7 @@ public class DeviceManagementExchangeDeviceClass implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Type of device which is impacted by this rule e.g. Model, Family
+     * Type of device which is impacted by this rule e.g. Model, Family. Possible values are: family, model.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

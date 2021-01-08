@@ -55,7 +55,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
 
     /**
      * The Error Code.
-     * Error code if any occured.
+     * Error code if any occured. Possible values are: noError, unauthorized, notFound, deleted.
      */
     @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
@@ -87,7 +87,7 @@ public class PolicySet extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Validation/assignment status of the PolicySet.
+     * Validation/assignment status of the PolicySet. Possible values are: unknown, validating, partialSuccess, success, error, notAssigned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
