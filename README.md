@@ -111,7 +111,7 @@ For more detailed documentation, see:
 * [Collections](https://docs.microsoft.com/graph/sdks/paging)
 * [Making requests](https://docs.microsoft.com/graph/sdks/create-requests)
 * [Known issues](https://github.com/MicrosoftGraph/msgraph-sdk-java/issues)
-* [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md)
+* [Contributions](https://github.com/microsoftgraph/msgraph-beta-sdk-java/blob/master/CONTRIBUTING.md)
 
 ## 5. Issues
 
@@ -132,5 +132,4 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
-
 
