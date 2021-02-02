@@ -106,7 +106,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Microsoft Store For Business Portal Selection.
-     * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']. Possible values are: none, companyPortal, privateStore.
+     * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']
      */
     @SerializedName(value = "microsoftStoreForBusinessPortalSelection", alternate = {"MicrosoftStoreForBusinessPortalSelection"})
     @Expose

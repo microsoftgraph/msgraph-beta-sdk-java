@@ -28,7 +28,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * A description for this feature rollout policy.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for this  feature rollout policy.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -44,7 +44,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Feature.
-     * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose
@@ -52,7 +52,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Applied To Organization.
-     * Indicates whether this feature rollout policy should be applied to the entire organization.
+     * 
      */
     @SerializedName(value = "isAppliedToOrganization", alternate = {"IsAppliedToOrganization"})
     @Expose
@@ -60,7 +60,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * Indicates whether the feature rollout is enabled.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -68,7 +68,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Applies To.
-     * Nullable. Specifies a list of directoryObjects that feature is enabled for.
+     * 
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose

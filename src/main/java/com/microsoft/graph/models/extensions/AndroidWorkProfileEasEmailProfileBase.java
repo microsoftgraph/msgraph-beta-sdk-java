@@ -30,7 +30,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
 
     /**
      * The Authentication Method.
-     * Authentication method for Exchange ActiveSync. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Authentication method for Exchange ActiveSync.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -38,7 +38,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
 
     /**
      * The Duration Of Email To Sync.
-     * Duration of time email should be synced to. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Duration of time email should be synced to.
      */
     @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
@@ -46,7 +46,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
 
     /**
      * The Email Address Source.
-     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Email attribute that is picked from AAD and injected into this profile before installing on the device.
      */
     @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
@@ -70,7 +70,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
 
     /**
      * The Username Source.
-     * Username attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: username, userPrincipalName, samAccountName, primarySmtpAddress.
+     * Username attribute that is picked from AAD and injected into this profile before installing on the device.
      */
     @SerializedName(value = "usernameSource", alternate = {"UsernameSource"})
     @Expose

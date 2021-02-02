@@ -26,7 +26,7 @@ public class SiteSource extends DataSource implements IJsonBackedObject {
 
     /**
      * The Site.
-     * The SharePoint site associated with the siteSource.
+     * 
      */
     @SerializedName(value = "site", alternate = {"Site"})
     @Expose

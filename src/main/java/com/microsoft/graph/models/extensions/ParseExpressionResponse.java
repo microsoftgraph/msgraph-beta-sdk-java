@@ -36,7 +36,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
 
     /**
      * The Error.
-     * Error details, if expression evaluation resulted in an error.
+     * 
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -44,7 +44,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
 
     /**
      * The Evaluation Result.
-     * A collection of values produced by the evaluation of the expression.
+     * 
      */
     @SerializedName(value = "evaluationResult", alternate = {"EvaluationResult"})
     @Expose
@@ -52,7 +52,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
 
     /**
      * The Evaluation Succeeded.
-     * true if the evaluation was successful.
+     * 
      */
     @SerializedName(value = "evaluationSucceeded", alternate = {"EvaluationSucceeded"})
     @Expose
@@ -60,7 +60,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
 
     /**
      * The Parsed Expression.
-     * An attributeMappingSource object representing the parsed expression.
+     * 
      */
     @SerializedName(value = "parsedExpression", alternate = {"ParsedExpression"})
     @Expose
@@ -68,7 +68,7 @@ public class ParseExpressionResponse implements IJsonBackedObject {
 
     /**
      * The Parsing Succeeded.
-     * true if the expression was parsed successfully.
+     * 
      */
     @SerializedName(value = "parsingSucceeded", alternate = {"ParsingSucceeded"})
     @Expose

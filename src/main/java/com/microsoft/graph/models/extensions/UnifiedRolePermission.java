@@ -34,7 +34,7 @@ public class UnifiedRolePermission implements IJsonBackedObject {
 
     /**
      * The Allowed Resource Actions.
-     * Set of tasks that can be perfomed on a resource.
+     * 
      */
     @SerializedName(value = "allowedResourceActions", alternate = {"AllowedResourceActions"})
     @Expose
@@ -42,7 +42,7 @@ public class UnifiedRolePermission implements IJsonBackedObject {
 
     /**
      * The Condition.
-     * Optional constraints that must be met for the permission to be effective.
+     * 
      */
     @SerializedName(value = "condition", alternate = {"Condition"})
     @Expose

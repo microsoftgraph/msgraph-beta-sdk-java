@@ -44,7 +44,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
 
     /**
      * The Discovery Source.
-     * Apple device discovery source. Possible values are: unknown, adminImport, deviceEnrollmentProgram.
+     * Apple device discovery source.
      */
     @SerializedName(value = "discoverySource", alternate = {"DiscoverySource"})
     @Expose
@@ -52,7 +52,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
 
     /**
      * The Enrollment State.
-     * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * The state of the device in Intune
      */
     @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
@@ -68,7 +68,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
 
     /**
      * The Is Supervised.
-     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/HT202837
+     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
      */
     @SerializedName(value = "isSupervised", alternate = {"IsSupervised"})
     @Expose
@@ -84,7 +84,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
 
     /**
      * The Platform.
-     * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
+     * The platform of the Device.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose

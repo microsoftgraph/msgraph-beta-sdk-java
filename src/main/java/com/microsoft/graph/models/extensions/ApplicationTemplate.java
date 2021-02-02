@@ -25,7 +25,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer,Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
+     * 
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -33,7 +33,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * A description of the application.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -41,7 +41,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the application.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Home Page Url.
-     * The home page URL of the application.
+     * 
      */
     @SerializedName(value = "homePageUrl", alternate = {"HomePageUrl"})
     @Expose
@@ -57,7 +57,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Logo Url.
-     * The URL to get the logo for this application.
+     * 
      */
     @SerializedName(value = "logoUrl", alternate = {"LogoUrl"})
     @Expose
@@ -65,7 +65,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Publisher.
-     * The name of the publisher for this application.
+     * 
      */
     @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
@@ -73,7 +73,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Provisioning Types.
-     * The list of provisioning modes supported by this application. The only valid value is sync.
+     * 
      */
     @SerializedName(value = "supportedProvisioningTypes", alternate = {"SupportedProvisioningTypes"})
     @Expose
@@ -81,7 +81,7 @@ public class ApplicationTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Single Sign On Modes.
-     * The list of single sign-on modes supported by this application. The supported values are password, saml, external, and oidc.
+     * 
      */
     @SerializedName(value = "supportedSingleSignOnModes", alternate = {"SupportedSingleSignOnModes"})
     @Expose

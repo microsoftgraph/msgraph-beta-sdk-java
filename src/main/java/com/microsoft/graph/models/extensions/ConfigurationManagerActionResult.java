@@ -26,7 +26,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
 
     /**
      * The Action Delivery Status.
-     * State of the action being delivered to on-prem server. Possible values are: unknown, pendingDelivery, deliveredToConnectorService, failedToDeliverToConnectorService, deliveredToOnPremisesServer.
+     * State of the action being delivered to on-prem server
      */
     @SerializedName(value = "actionDeliveryStatus", alternate = {"ActionDeliveryStatus"})
     @Expose

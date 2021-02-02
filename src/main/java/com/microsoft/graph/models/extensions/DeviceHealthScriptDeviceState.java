@@ -28,7 +28,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
 
     /**
      * The Detection State.
-     * Detection state from the lastest device health script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Detection state from the lastest device health script execution
      */
     @SerializedName(value = "detectionState", alternate = {"DetectionState"})
     @Expose
@@ -100,7 +100,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
 
     /**
      * The Remediation State.
-     * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
+     * Remediation state from the lastest device health script execution
      */
     @SerializedName(value = "remediationState", alternate = {"RemediationState"})
     @Expose

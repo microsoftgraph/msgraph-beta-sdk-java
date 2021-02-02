@@ -66,7 +66,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
 
     /**
      * The Configuration Account Type.
-     * The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount.
+     * The account type used to by ConfigurationAccount.
      */
     @SerializedName(value = "configurationAccountType", alternate = {"ConfigurationAccountType"})
     @Expose

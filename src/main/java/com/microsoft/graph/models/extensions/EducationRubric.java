@@ -30,7 +30,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * The user who created this resource.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -38,7 +38,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description of this rubric.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -54,7 +54,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of this rubric.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -62,7 +62,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Grading.
-     * The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
+     * 
      */
     @SerializedName(value = "grading", alternate = {"Grading"})
     @Expose
@@ -70,7 +70,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * The last user to modify the resource.
+     * 
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -78,7 +78,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -86,7 +86,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Levels.
-     * The collection of levels making up this rubric.
+     * 
      */
     @SerializedName(value = "levels", alternate = {"Levels"})
     @Expose
@@ -94,7 +94,7 @@ public class EducationRubric extends Entity implements IJsonBackedObject {
 
     /**
      * The Qualities.
-     * The collection of qualities making up this rubric.
+     * 
      */
     @SerializedName(value = "qualities", alternate = {"Qualities"})
     @Expose

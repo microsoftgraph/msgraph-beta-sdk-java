@@ -34,7 +34,7 @@ public class AssignmentOrder implements IJsonBackedObject {
 
     /**
      * The Order.
-     * A list of identityUserFlowAttribute IDs provided to determine the order in which attributes should be collected within a user flow.
+     * 
      */
     @SerializedName(value = "order", alternate = {"Order"})
     @Expose

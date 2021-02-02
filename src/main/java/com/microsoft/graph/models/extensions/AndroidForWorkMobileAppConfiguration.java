@@ -51,7 +51,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
 
     /**
      * The Profile Applicability.
-     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: default, androidWorkProfile, androidDeviceOwner.
+     * Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)).
      */
     @SerializedName(value = "profileApplicability", alternate = {"ProfileApplicability"})
     @Expose

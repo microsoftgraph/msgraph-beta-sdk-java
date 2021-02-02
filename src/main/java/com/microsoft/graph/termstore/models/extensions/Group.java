@@ -28,7 +28,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time of group creation. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description giving details on the term usage.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -44,7 +44,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Name of group.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -52,7 +52,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
+     * 
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -60,7 +60,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
     /**
      * The Sets.
-     * All sets under the group in a term [store].
+     * 
      */
     @SerializedName(value = "sets", alternate = {"Sets"})
     @Expose

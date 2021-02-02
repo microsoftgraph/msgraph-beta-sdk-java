@@ -26,7 +26,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * A description for the resource role.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -34,7 +34,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * The display name of the resource role such as the role defined by the application.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -42,7 +42,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
 
     /**
      * The Origin Id.
-     * The unique identifier of the resource role in the origin system.
+     * 
      */
     @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
 
     /**
      * The Origin System.
-     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
+     * 
      */
     @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
 
     /**
      * The Access Package Resource.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResource", alternate = {"AccessPackageResource"})
     @Expose

@@ -27,7 +27,7 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
 
     /**
      * The Advanced Threat Protection Required Security Level.
-     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
     @Expose

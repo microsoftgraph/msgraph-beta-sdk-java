@@ -31,7 +31,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
     /**
      * The Client Registration Status.
-     * ClientRegistrationStatus. Possible values are: notRegistered, registered, revoked, keyConflict, approvalPending, certificateReset, notRegisteredPendingEnrollment, unknown.
+     * ClientRegistrationStatus
      */
     @SerializedName(value = "clientRegistrationStatus", alternate = {"ClientRegistrationStatus"})
     @Expose
@@ -47,7 +47,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
     /**
      * The Device Type.
-     * DeviceType. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, blackberry, palm, unknown, cloudPC.
+     * DeviceType
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
@@ -63,7 +63,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
     /**
      * The Management Agents.
-     * ManagementAgents. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm.
+     * ManagementAgents
      */
     @SerializedName(value = "managementAgents", alternate = {"ManagementAgents"})
     @Expose
@@ -71,7 +71,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
     /**
      * The Management State.
-     * ManagementState. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+     * ManagementState
      */
     @SerializedName(value = "managementState", alternate = {"ManagementState"})
     @Expose
@@ -119,7 +119,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
     /**
      * The Owner Type.
-     * OwnerType. Possible values are: unknown, company, personal.
+     * OwnerType
      */
     @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
@@ -143,7 +143,7 @@ public class ComanagementEligibleDevice extends Entity implements IJsonBackedObj
 
     /**
      * The Status.
-     * ComanagementEligibleStatus. Possible values are: comanaged, eligible, eligibleButNotAzureAdJoined, needsOsUpdate, ineligible.
+     * ComanagementEligibleStatus
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

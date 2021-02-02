@@ -27,7 +27,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Authoring Languages.
-     * Prioritized list of languages the user reads and authors in.Returned by default. Not nullable.
+     * 
      */
     @SerializedName(value = "authoringLanguages", alternate = {"AuthoringLanguages"})
     @Expose
@@ -35,7 +35,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Default Display Language.
-     * The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
+     * 
      */
     @SerializedName(value = "defaultDisplayLanguage", alternate = {"DefaultDisplayLanguage"})
     @Expose
@@ -43,7 +43,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Default Regional Format.
-     * The locale that drives the default date, time, and calendar formatting.Returned by default.
+     * 
      */
     @SerializedName(value = "defaultRegionalFormat", alternate = {"DefaultRegionalFormat"})
     @Expose
@@ -51,7 +51,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Default Speech Input Language.
-     * The language a user expected to use as input for text to speech scenarios.Returned by default.
+     * 
      */
     @SerializedName(value = "defaultSpeechInputLanguage", alternate = {"DefaultSpeechInputLanguage"})
     @Expose
@@ -59,7 +59,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Default Translation Language.
-     * The language a user expects to have documents, emails, and messages translated into.Returned by default.
+     * 
      */
     @SerializedName(value = "defaultTranslationLanguage", alternate = {"DefaultTranslationLanguage"})
     @Expose
@@ -67,7 +67,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Regional Format Overrides.
-     * Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
+     * 
      */
     @SerializedName(value = "regionalFormatOverrides", alternate = {"RegionalFormatOverrides"})
     @Expose

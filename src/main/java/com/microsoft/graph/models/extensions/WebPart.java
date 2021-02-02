@@ -35,7 +35,7 @@ public class WebPart implements IJsonBackedObject {
 
     /**
      * The Data.
-     * The required properties for the webPart (varies by webPart)
+     * 
      */
     @SerializedName(value = "data", alternate = {"Data"})
     @Expose
@@ -43,7 +43,7 @@ public class WebPart implements IJsonBackedObject {
 
     /**
      * The Type.
-     * A unique identifier specifying the webPart type. Read-only.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

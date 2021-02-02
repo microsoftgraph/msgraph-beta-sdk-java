@@ -310,7 +310,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
 
     /**
      * The Required Password Complexity.
-     * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. Possible values are: none, low, medium, high.
+     * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
      */
     @SerializedName(value = "requiredPasswordComplexity", alternate = {"RequiredPasswordComplexity"})
     @Expose

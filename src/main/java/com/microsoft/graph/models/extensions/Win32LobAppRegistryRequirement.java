@@ -34,7 +34,7 @@ public class Win32LobAppRegistryRequirement extends Win32LobAppRequirement imple
 
     /**
      * The Detection Type.
-     * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
+     * The registry data detection type
      */
     @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose

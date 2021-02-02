@@ -34,7 +34,7 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements IJsonBackedOb
 
     /**
      * The Description.
-     * Admin’s description of this local user or group.
+     * Admin???s description of this local user or group.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -50,7 +50,7 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements IJsonBackedOb
 
     /**
      * The Security Identifier.
-     * The security identifier of this local user or group (e.g. S-1-5-32-544).
+     * The security identifier of this local user or group (e.g. *S-1-5-32-544).
      */
     @SerializedName(value = "securityIdentifier", alternate = {"SecurityIdentifier"})
     @Expose

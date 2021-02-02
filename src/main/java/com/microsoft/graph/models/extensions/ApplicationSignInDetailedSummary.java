@@ -26,7 +26,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
 
     /**
      * The Aggregated Event Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * 
      */
     @SerializedName(value = "aggregatedEventDateTime", alternate = {"AggregatedEventDateTime"})
     @Expose
@@ -34,7 +34,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
 
     /**
      * The App Display Name.
-     * Name of the application that the user signed in to.
+     * 
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -42,7 +42,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
 
     /**
      * The App Id.
-     * ID of the application that the user signed in to.
+     * 
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -50,7 +50,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
 
     /**
      * The Sign In Count.
-     * Count of sign-ins made by the application.
+     * 
      */
     @SerializedName(value = "signInCount", alternate = {"SignInCount"})
     @Expose
@@ -58,7 +58,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements IJsonBac
 
     /**
      * The Status.
-     * Details of the sign-in status.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

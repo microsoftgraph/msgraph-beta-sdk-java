@@ -34,7 +34,7 @@ public class ClaimsMapping implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The claim that provides the display name or full name for the user. It is a required propoerty.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -42,7 +42,7 @@ public class ClaimsMapping implements IJsonBackedObject {
 
     /**
      * The Email.
-     * The claim that provides the email address of the user.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -50,7 +50,7 @@ public class ClaimsMapping implements IJsonBackedObject {
 
     /**
      * The Given Name.
-     * The claim that provides the first name of the user.
+     * 
      */
     @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
@@ -58,7 +58,7 @@ public class ClaimsMapping implements IJsonBackedObject {
 
     /**
      * The Surname.
-     * The claim that provides the last name of the user.
+     * 
      */
     @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
@@ -66,7 +66,7 @@ public class ClaimsMapping implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The claim that provides the unique identifier for the signed-in user. It is a required propoerty.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

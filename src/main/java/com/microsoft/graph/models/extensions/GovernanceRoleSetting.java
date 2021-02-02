@@ -28,7 +28,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Admin Eligible Settings.
-     * The rule settings that are evaluated when an administrator tries to add an eligible role assignment.
+     * 
      */
     @SerializedName(value = "adminEligibleSettings", alternate = {"AdminEligibleSettings"})
     @Expose
@@ -36,7 +36,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Admin Member Settings.
-     * The rule settings that are evaluated when an administrator tries to add a direct member role assignment.
+     * 
      */
     @SerializedName(value = "adminMemberSettings", alternate = {"AdminMemberSettings"})
     @Expose
@@ -44,7 +44,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default.
-     * Read-only. Indicate if the roleSetting is a default roleSetting
+     * 
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -52,7 +52,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated By.
-     * Read-only. The display name of the administrator who last updated the roleSetting.
+     * 
      */
     @SerializedName(value = "lastUpdatedBy", alternate = {"LastUpdatedBy"})
     @Expose
@@ -60,7 +60,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * Read-only. The time when the role setting was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * Required. The id of the resource that the role setting is associated with.
+     * 
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -76,7 +76,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definition Id.
-     * Required. The id of the role definition that the role setting is associated with.
+     * 
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -84,7 +84,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The User Eligible Settings.
-     * The rule settings that are evaluated when a user tries to add an eligible role assignment. The setting is not supported for now.
+     * 
      */
     @SerializedName(value = "userEligibleSettings", alternate = {"UserEligibleSettings"})
     @Expose
@@ -92,7 +92,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The User Member Settings.
-     * The rule settings that are evaluated when a user tries to activate his role assignment.
+     * 
      */
     @SerializedName(value = "userMemberSettings", alternate = {"UserMemberSettings"})
     @Expose
@@ -100,7 +100,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Read-only. The associated resource for this role setting.
+     * 
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
@@ -108,7 +108,7 @@ public class GovernanceRoleSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definition.
-     * Read-only. The role definition that is enforced with this role setting.
+     * 
      */
     @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose

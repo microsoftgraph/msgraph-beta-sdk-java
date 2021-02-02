@@ -35,7 +35,7 @@ public class SynchronizationJobRestartCriteria implements IJsonBackedObject {
 
     /**
      * The Reset Scope.
-     * Comma-separated combination of the following values: Full, QuarantineState, Watermark, Escrows, ConnectorDataStore. Use Full if you want all of the options.
+     * 
      */
     @SerializedName(value = "resetScope", alternate = {"ResetScope"})
     @Expose

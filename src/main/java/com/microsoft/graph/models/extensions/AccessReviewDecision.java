@@ -26,7 +26,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Recommendation.
-     * The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
+     * 
      */
     @SerializedName(value = "accessRecommendation", alternate = {"AccessRecommendation"})
     @Expose
@@ -34,7 +34,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Review Id.
-     * The feature-generated id of the access review.
+     * 
      */
     @SerializedName(value = "accessReviewId", alternate = {"AccessReviewId"})
     @Expose
@@ -42,7 +42,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Applied By.
-     * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
+     * 
      */
     @SerializedName(value = "appliedBy", alternate = {"AppliedBy"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Applied Date Time.
-     * The date and time when the review decision was applied.
+     * 
      */
     @SerializedName(value = "appliedDateTime", alternate = {"AppliedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Apply Result.
-     * The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
+     * 
      */
     @SerializedName(value = "applyResult", alternate = {"ApplyResult"})
     @Expose
@@ -66,7 +66,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Justification.
-     * The reviewer's business justification, if supplied.
+     * 
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -74,7 +74,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewed By.
-     * The identity of the reviewer. If the recommendation was used as the review, the userPrincipalName is empty.
+     * 
      */
     @SerializedName(value = "reviewedBy", alternate = {"ReviewedBy"})
     @Expose
@@ -90,7 +90,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Review Result.
-     * The result of the review, one of NotReviewed, Deny, DontKnow or Approve.
+     * 
      */
     @SerializedName(value = "reviewResult", alternate = {"ReviewResult"})
     @Expose

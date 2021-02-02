@@ -36,7 +36,7 @@ public class AppleOwnerTypeEnrollmentType implements IJsonBackedObject {
 
     /**
      * The Enrollment Type.
-     * The enrollment type. Possible values are: unknown, device, user.
+     * The enrollment type.
      */
     @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose
@@ -44,7 +44,7 @@ public class AppleOwnerTypeEnrollmentType implements IJsonBackedObject {
 
     /**
      * The Owner Type.
-     * The owner type. Possible values are: unknown, company, personal.
+     * The owner type.
      */
     @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose

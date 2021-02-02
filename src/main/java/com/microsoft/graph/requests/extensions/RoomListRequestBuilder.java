@@ -13,10 +13,6 @@ import com.microsoft.graph.requests.extensions.IRoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IRoomRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.RoomRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISpaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISpaceRequestBuilder;
-import com.microsoft.graph.requests.extensions.SpaceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SpaceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -67,12 +63,5 @@ public class RoomListRequestBuilder extends BaseRequestBuilder implements IRoomL
 
     public IRoomRequestBuilder rooms(final String id) {
         return new RoomRequestBuilder(getRequestUrlWithAdditionalSegment("rooms") + "/" + id, getClient(), null);
-    }
-    public ISpaceCollectionRequestBuilder spaces() {
-        return new SpaceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("spaces"), getClient(), null);
-    }
-
-    public ISpaceRequestBuilder spaces(final String id) {
-        return new SpaceRequestBuilder(getRequestUrlWithAdditionalSegment("spaces") + "/" + id, getClient(), null);
     }
 }

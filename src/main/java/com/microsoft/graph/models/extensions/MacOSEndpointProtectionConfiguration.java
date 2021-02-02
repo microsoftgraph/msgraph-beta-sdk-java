@@ -29,7 +29,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Automatic Sample Submission.
-     * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable automatic file sample submission for Microsoft Defender Advanced Threat Protection on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionAutomaticSampleSubmission", alternate = {"AdvancedThreatProtectionAutomaticSampleSubmission"})
     @Expose
@@ -37,7 +37,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Cloud Delivered.
-     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable cloud-delivered protection for Microsoft Defender Advanced Threat Protection on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionCloudDelivered", alternate = {"AdvancedThreatProtectionCloudDelivered"})
     @Expose
@@ -45,7 +45,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Diagnostic Data Collection.
-     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable diagnostic and usage data collection for Microsoft Defender Advanced Threat Protection on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionDiagnosticDataCollection", alternate = {"AdvancedThreatProtectionDiagnosticDataCollection"})
     @Expose
@@ -85,7 +85,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Advanced Threat Protection Real Time.
-     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS. Possible values are: notConfigured, enabled, disabled.
+     * Determines whether or not to enable real-time protection for Microsoft Defender Advanced Threat Protection on macOS.
      */
     @SerializedName(value = "advancedThreatProtectionRealTime", alternate = {"AdvancedThreatProtectionRealTime"})
     @Expose
@@ -133,7 +133,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The File Vault Institutional Recovery Key Certificate File Name.
-     * File name of the institutional recovery key certificate to display in UI. (.der).
+     * File name of the institutional recovery key certificate to display in UI. (*.der).
      */
     @SerializedName(value = "fileVaultInstitutionalRecoveryKeyCertificateFileName", alternate = {"FileVaultInstitutionalRecoveryKeyCertificateFileName"})
     @Expose
@@ -165,7 +165,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The File Vault Selected Recovery Key Types.
-     * Required if FileVault is enabled, determines the type(s) of recovery key to use. . Possible values are: notConfigured, institutionalRecoveryKey, personalRecoveryKey.
+     * Required if FileVault is enabled, determines the type(s) of recovery key to use. 
      */
     @SerializedName(value = "fileVaultSelectedRecoveryKeyTypes", alternate = {"FileVaultSelectedRecoveryKeyTypes"})
     @Expose
@@ -181,7 +181,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Firewall Block All Incoming.
-     * Corresponds to the 'Block all incoming connections' option.
+     * Corresponds to the ???Block all incoming connections??? option.
      */
     @SerializedName(value = "firewallBlockAllIncoming", alternate = {"FirewallBlockAllIncoming"})
     @Expose
@@ -197,7 +197,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Firewall Enable Stealth Mode.
-     * Corresponds to 'Enable stealth mode.'
+     * Corresponds to ???Enable stealth mode.???
      */
     @SerializedName(value = "firewallEnableStealthMode", alternate = {"FirewallEnableStealthMode"})
     @Expose
@@ -205,7 +205,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
 
     /**
      * The Gatekeeper Allowed App Source.
-     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
+     * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
      */
     @SerializedName(value = "gatekeeperAllowedAppSource", alternate = {"GatekeeperAllowedAppSource"})
     @Expose

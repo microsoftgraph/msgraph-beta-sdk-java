@@ -36,7 +36,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
 
     /**
      * The Category.
-     * The category. Possible values are: unknown, advancedThreatProtection.
+     * The category.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -92,7 +92,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
 
     /**
      * The Priority.
-     * The priority. Possible values are: none, high, low.
+     * The priority.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -100,7 +100,7 @@ public class DeviceAppManagementTask extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * The status. Possible values are: unknown, pending, active, completed, rejected.
+     * The status.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

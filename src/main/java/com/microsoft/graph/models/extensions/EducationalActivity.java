@@ -27,7 +27,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Completion Month Year.
-     * The month and year the user graduated or completed the activity.
+     * 
      */
     @SerializedName(value = "completionMonthYear", alternate = {"CompletionMonthYear"})
     @Expose
@@ -35,7 +35,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The End Month Year.
-     * The month and year the user completed the educational activity referenced.
+     * 
      */
     @SerializedName(value = "endMonthYear", alternate = {"EndMonthYear"})
     @Expose
@@ -43,7 +43,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Institution.
-     * Contains details of the institution studied at.
+     * 
      */
     @SerializedName(value = "institution", alternate = {"Institution"})
     @Expose
@@ -51,7 +51,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Program.
-     * Contains extended information about the program or course.
+     * 
      */
     @SerializedName(value = "program", alternate = {"Program"})
     @Expose
@@ -59,7 +59,7 @@ public class EducationalActivity extends ItemFacet implements IJsonBackedObject 
 
     /**
      * The Start Month Year.
-     * The month and year the user commenced the activity referenced.
+     * 
      */
     @SerializedName(value = "startMonthYear", alternate = {"StartMonthYear"})
     @Expose

@@ -36,7 +36,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Access Recommendations Enabled.
-     * Indicates whether showing recommendations to reviewers is enabled.
+     * 
      */
     @SerializedName(value = "accessRecommendationsEnabled", alternate = {"AccessRecommendationsEnabled"})
     @Expose
@@ -44,7 +44,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Activity Duration In Days.
-     * The number of days of user activities to show to reviewers.
+     * 
      */
     @SerializedName(value = "activityDurationInDays", alternate = {"ActivityDurationInDays"})
     @Expose
@@ -52,7 +52,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Auto Apply Review Results Enabled.
-     * Indicates whether the auto-apply capability, to automatically change the target object access resource, is enabled.  If not enabled, a user must, after the review completes, apply the access review.
+     * 
      */
     @SerializedName(value = "autoApplyReviewResultsEnabled", alternate = {"AutoApplyReviewResultsEnabled"})
     @Expose
@@ -60,7 +60,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Auto Review Enabled.
-     * Indicates whether a decision should be set if the reviewer did not supply one. For use when auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+     * 
      */
     @SerializedName(value = "autoReviewEnabled", alternate = {"AutoReviewEnabled"})
     @Expose
@@ -68,7 +68,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Auto Review Settings.
-     * Detailed settings for how the feature should set the review decision. For use when auto-apply is enabled.
+     * 
      */
     @SerializedName(value = "autoReviewSettings", alternate = {"AutoReviewSettings"})
     @Expose
@@ -76,7 +76,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Justification Required On Approval.
-     * Indicates whether reviewers are required to provide a justification when reviewing access.
+     * 
      */
     @SerializedName(value = "justificationRequiredOnApproval", alternate = {"JustificationRequiredOnApproval"})
     @Expose
@@ -84,7 +84,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Mail Notifications Enabled.
-     * Indicates whether sending mails to reviewers and the review creator is enabled.
+     * 
      */
     @SerializedName(value = "mailNotificationsEnabled", alternate = {"MailNotificationsEnabled"})
     @Expose
@@ -92,7 +92,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence Settings.
-     * Detailed settings for recurrence.
+     * 
      */
     @SerializedName(value = "recurrenceSettings", alternate = {"RecurrenceSettings"})
     @Expose
@@ -100,7 +100,7 @@ public class AccessReviewSettings implements IJsonBackedObject {
 
     /**
      * The Reminders Enabled.
-     * Indicates whether sending reminder emails to reviewers is enabled.
+     * 
      */
     @SerializedName(value = "remindersEnabled", alternate = {"RemindersEnabled"})
     @Expose

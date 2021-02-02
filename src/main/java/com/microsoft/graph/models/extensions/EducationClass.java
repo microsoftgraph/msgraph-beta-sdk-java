@@ -46,7 +46,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Course.
-     * Course information for the class
+     * 
      */
     @SerializedName(value = "course", alternate = {"Course"})
     @Expose
@@ -94,7 +94,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source.
-     * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
+     * How this class was created. The possible values are: sis, manual, unknownFutureValue.
      */
     @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
@@ -102,7 +102,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source Detail.
-     * The name of the external source this resources was generated from.
+     * 
      */
     @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
     @Expose
@@ -110,7 +110,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Grade.
-     * Grade level of the class.
+     * 
      */
     @SerializedName(value = "grade", alternate = {"Grade"})
     @Expose
@@ -126,7 +126,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Term.
-     * Term for the class.
+     * Term for this class.
      */
     @SerializedName(value = "term", alternate = {"Term"})
     @Expose
@@ -142,7 +142,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * All assignments associated with this class. Nullable.
+     * 
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

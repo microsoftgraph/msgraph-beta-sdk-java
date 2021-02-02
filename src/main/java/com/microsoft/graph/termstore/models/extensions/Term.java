@@ -33,7 +33,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time of term creation. Read-only
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Descriptions.
-     * Description about term that is dependent on the languageTag
+     * 
      */
     @SerializedName(value = "descriptions", alternate = {"Descriptions"})
     @Expose
@@ -57,7 +57,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Last date and time of term modification. Read-only
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Properties.
-     * Collection of properties on the term
+     * 
      */
     @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
@@ -73,7 +73,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Children.
-     * Children of current term
+     * 
      */
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
@@ -81,7 +81,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Relations.
-     * To indicate which terms are related to the current term as either pinned or reused
+     * 
      */
     @SerializedName(value = "relations", alternate = {"Relations"})
     @Expose
@@ -89,7 +89,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Set.
-     * The [set] in which the term is created
+     * 
      */
     @SerializedName(value = "set", alternate = {"Set"})
     @Expose

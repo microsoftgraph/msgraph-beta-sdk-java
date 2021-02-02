@@ -33,7 +33,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Status.
-     * Has the value Published if the access packages are available for management.
+     * 
      */
     @SerializedName(value = "catalogStatus", alternate = {"CatalogStatus"})
     @Expose
@@ -41,7 +41,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Type.
-     * One of UserManaged or ServiceDefault.
+     * 
      */
     @SerializedName(value = "catalogType", alternate = {"CatalogType"})
     @Expose
@@ -49,7 +49,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * UPN of the user who created this resource. Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -57,7 +57,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description of the access package catalog.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -73,7 +73,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the access package catalog.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Externally Visible.
-     * Whether the access packages in this catalog can be requested by users outside of the tenant.
+     * 
      */
     @SerializedName(value = "isExternallyVisible", alternate = {"IsExternallyVisible"})
     @Expose
@@ -89,7 +89,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Modified By.
-     * The UPN of the user who last modified this resource. Read-only.
+     * 
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -97,7 +97,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Modified Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
+     * 
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -113,7 +113,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resources.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResources", alternate = {"AccessPackageResources"})
     @Expose
@@ -129,7 +129,7 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Packages.
-     * The access packages in this catalog. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackages", alternate = {"AccessPackages"})
     @Expose

@@ -35,7 +35,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements IJsonBackedO
 
     /**
      * The Context.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "context", alternate = {"Context"})
     @Expose
@@ -43,7 +43,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements IJsonBackedO
 
     /**
      * The Failure.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "failure", alternate = {"Failure"})
     @Expose

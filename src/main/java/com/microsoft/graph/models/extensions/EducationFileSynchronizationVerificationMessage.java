@@ -34,7 +34,7 @@ public class EducationFileSynchronizationVerificationMessage implements IJsonBac
 
     /**
      * The Description.
-     * Detailed information about the message type.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -50,7 +50,7 @@ public class EducationFileSynchronizationVerificationMessage implements IJsonBac
 
     /**
      * The Type.
-     * Type of the message. Possible values are: error, warning, information.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

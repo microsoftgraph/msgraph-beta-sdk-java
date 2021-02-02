@@ -52,7 +52,7 @@ public class DeviceManagementApplicabilityRuleOsEdition implements IJsonBackedOb
 
     /**
      * The Rule Type.
-     * Applicability Rule type. Possible values are: include, exclude.
+     * Applicability Rule type.
      */
     @SerializedName(value = "ruleType", alternate = {"RuleType"})
     @Expose

@@ -152,7 +152,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Application Guard Enabled Options.
-     * Enable Windows Defender Application Guard for newer Windows builds. Possible values are: notConfigured, enabledForEdge, enabledForOffice, enabledForEdgeAndOffice.
+     * Enable Windows Defender Application Guard for newer Windows builds
      */
     @SerializedName(value = "applicationGuardEnabledOptions", alternate = {"ApplicationGuardEnabledOptions"})
     @Expose
@@ -216,7 +216,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Bit Locker Recovery Password Rotation.
-     * This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE). Possible values are: notConfigured, disabled, enabledForAzureAd, enabledForAzureAdAndHybrid.
+     * This setting initiates a client-driven recovery password rotation after an OS drive recovery (either by using bootmgr or WinRE).
      */
     @SerializedName(value = "bitLockerRecoveryPasswordRotation", alternate = {"BitLockerRecoveryPasswordRotation"})
     @Expose
@@ -248,7 +248,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Adobe Reader Launch Child Process.
-     * Value indicating the behavior of Adobe Reader from creating child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of Adobe Reader from creating child processes
      */
     @SerializedName(value = "defenderAdobeReaderLaunchChildProcess", alternate = {"DefenderAdobeReaderLaunchChildProcess"})
     @Expose
@@ -256,7 +256,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Advanced Ransomeware Protection Type.
-     * Value indicating use of advanced protection against ransomeware. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating use of advanced protection against ransomeware
      */
     @SerializedName(value = "defenderAdvancedRansomewareProtectionType", alternate = {"DefenderAdvancedRansomewareProtectionType"})
     @Expose
@@ -376,7 +376,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Cloud Block Level.
-     * Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the "Join Microsoft MAPS" setting enabled in order to function.
      */
     @SerializedName(value = "defenderCloudBlockLevel", alternate = {"DefenderCloudBlockLevel"})
     @Expose
@@ -384,7 +384,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Cloud Extended Timeout In Seconds.
-     * Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
+     * Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- "Configure the 'Block at First Sight' feature; "Join Microsoft MAPS"; "Send file samples when further analysis is required". Valid values 0 to 50
      */
     @SerializedName(value = "defenderCloudExtendedTimeoutInSeconds", alternate = {"DefenderCloudExtendedTimeoutInSeconds"})
     @Expose
@@ -504,7 +504,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Email Content Execution.
-     * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client). Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client)
      */
     @SerializedName(value = "defenderEmailContentExecution", alternate = {"DefenderEmailContentExecution"})
     @Expose
@@ -512,7 +512,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Email Content Execution Type.
-     * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client). Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating if execution of executable content (exe, dll, ps, js, vbs, etc) should be dropped from email (webmail/mail-client)
      */
     @SerializedName(value = "defenderEmailContentExecutionType", alternate = {"DefenderEmailContentExecutionType"})
     @Expose
@@ -584,7 +584,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Guard My Folders Type.
-     * Value indicating the behavior of protected folders. Possible values are: userDefined, enable, auditMode, blockDiskModification, auditDiskModification.
+     * Value indicating the behavior of protected folders
      */
     @SerializedName(value = "defenderGuardMyFoldersType", alternate = {"DefenderGuardMyFoldersType"})
     @Expose
@@ -592,7 +592,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Network Protection Type.
-     * Value indicating the behavior of NetworkProtection. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of NetworkProtection
      */
     @SerializedName(value = "defenderNetworkProtectionType", alternate = {"DefenderNetworkProtectionType"})
     @Expose
@@ -600,7 +600,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Executable Content Creation Or Launch.
-     * Value indicating the behavior of Office applications/macros creating or launching executable content. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of Office applications/macros creating or launching executable content
      */
     @SerializedName(value = "defenderOfficeAppsExecutableContentCreationOrLaunch", alternate = {"DefenderOfficeAppsExecutableContentCreationOrLaunch"})
     @Expose
@@ -608,7 +608,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Executable Content Creation Or Launch Type.
-     * Value indicating the behavior of Office applications/macros creating or launching executable content. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating the behavior of Office applications/macros creating or launching executable content
      */
     @SerializedName(value = "defenderOfficeAppsExecutableContentCreationOrLaunchType", alternate = {"DefenderOfficeAppsExecutableContentCreationOrLaunchType"})
     @Expose
@@ -616,7 +616,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Launch Child Process.
-     * Value indicating the behavior of Office application launching child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of Office application launching child processes
      */
     @SerializedName(value = "defenderOfficeAppsLaunchChildProcess", alternate = {"DefenderOfficeAppsLaunchChildProcess"})
     @Expose
@@ -624,7 +624,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Launch Child Process Type.
-     * Value indicating the behavior of Office application launching child processes. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating the behavior of Office application launching child processes
      */
     @SerializedName(value = "defenderOfficeAppsLaunchChildProcessType", alternate = {"DefenderOfficeAppsLaunchChildProcessType"})
     @Expose
@@ -632,7 +632,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Other Process Injection.
-     * Value indicating the behavior of  Office applications injecting into other processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of  Office applications injecting into other processes
      */
     @SerializedName(value = "defenderOfficeAppsOtherProcessInjection", alternate = {"DefenderOfficeAppsOtherProcessInjection"})
     @Expose
@@ -640,7 +640,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Other Process Injection Type.
-     * Value indicating the behavior of Office applications injecting into other processes. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating the behavior of Office applications injecting into other processes
      */
     @SerializedName(value = "defenderOfficeAppsOtherProcessInjectionType", alternate = {"DefenderOfficeAppsOtherProcessInjectionType"})
     @Expose
@@ -648,7 +648,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Communication Apps Launch Child Process.
-     * Value indicating the behavior of Office communication applications, including Microsoft Outlook, from creating child processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of Office communication applications, including Microsoft Outlook, from creating child processes
      */
     @SerializedName(value = "defenderOfficeCommunicationAppsLaunchChildProcess", alternate = {"DefenderOfficeCommunicationAppsLaunchChildProcess"})
     @Expose
@@ -656,7 +656,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Macro Code Allow Win32Imports.
-     * Value indicating the behavior of Win32 imports from Macro code in Office. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of Win32 imports from Macro code in Office
      */
     @SerializedName(value = "defenderOfficeMacroCodeAllowWin32Imports", alternate = {"DefenderOfficeMacroCodeAllowWin32Imports"})
     @Expose
@@ -664,7 +664,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Macro Code Allow Win32Imports Type.
-     * Value indicating the behavior of Win32 imports from Macro code in Office. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating the behavior of Win32 imports from Macro code in Office
      */
     @SerializedName(value = "defenderOfficeMacroCodeAllowWin32ImportsType", alternate = {"DefenderOfficeMacroCodeAllowWin32ImportsType"})
     @Expose
@@ -672,7 +672,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Potentially Unwanted App Action.
-     * Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer.
      */
     @SerializedName(value = "defenderPotentiallyUnwantedAppAction", alternate = {"DefenderPotentiallyUnwantedAppAction"})
     @Expose
@@ -680,7 +680,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Prevent Credential Stealing Type.
-     * Value indicating if credential stealing from the Windows local security authority subsystem is permitted. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating if credential stealing from the Windows local security authority subsystem is permitted
      */
     @SerializedName(value = "defenderPreventCredentialStealingType", alternate = {"DefenderPreventCredentialStealingType"})
     @Expose
@@ -688,7 +688,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Process Creation.
-     * Value indicating response to process creations originating from PSExec and WMI commands. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating response to process creations originating from PSExec and WMI commands
      */
     @SerializedName(value = "defenderProcessCreation", alternate = {"DefenderProcessCreation"})
     @Expose
@@ -696,7 +696,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Process Creation Type.
-     * Value indicating response to process creations originating from PSExec and WMI commands. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating response to process creations originating from PSExec and WMI commands
      */
     @SerializedName(value = "defenderProcessCreationType", alternate = {"DefenderProcessCreationType"})
     @Expose
@@ -712,7 +712,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Scan Direction.
-     * Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Controls which sets of files should be monitored.
      */
     @SerializedName(value = "defenderScanDirection", alternate = {"DefenderScanDirection"})
     @Expose
@@ -728,7 +728,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Scan Type.
-     * Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
+     * Selects whether to perform a quick scan or full scan.
      */
     @SerializedName(value = "defenderScanType", alternate = {"DefenderScanType"})
     @Expose
@@ -744,7 +744,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Scheduled Scan Day.
-     * Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Selects the day that the Windows Defender scan should run.
      */
     @SerializedName(value = "defenderScheduledScanDay", alternate = {"DefenderScheduledScanDay"})
     @Expose
@@ -760,7 +760,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Script Downloaded Payload Execution.
-     * Value indicating the behavior of js/vbs executing payload downloaded from Internet. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of js/vbs executing payload downloaded from Internet
      */
     @SerializedName(value = "defenderScriptDownloadedPayloadExecution", alternate = {"DefenderScriptDownloadedPayloadExecution"})
     @Expose
@@ -768,7 +768,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Script Downloaded Payload Execution Type.
-     * Value indicating the behavior of js/vbs executing payload downloaded from Internet. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating the behavior of js/vbs executing payload downloaded from Internet
      */
     @SerializedName(value = "defenderScriptDownloadedPayloadExecutionType", alternate = {"DefenderScriptDownloadedPayloadExecutionType"})
     @Expose
@@ -776,7 +776,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Script Obfuscated Macro Code.
-     * Value indicating the behavior of obfuscated js/vbs/ps/macro code. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of obfuscated js/vbs/ps/macro code
      */
     @SerializedName(value = "defenderScriptObfuscatedMacroCode", alternate = {"DefenderScriptObfuscatedMacroCode"})
     @Expose
@@ -784,7 +784,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Script Obfuscated Macro Code Type.
-     * Value indicating the behavior of obfuscated js/vbs/ps/macro code. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating the behavior of obfuscated js/vbs/ps/macro code
      */
     @SerializedName(value = "defenderScriptObfuscatedMacroCodeType", alternate = {"DefenderScriptObfuscatedMacroCodeType"})
     @Expose
@@ -864,7 +864,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Security Center Disable Ransomware UI.
-     * Used to disable the display of the ransomware protection area.
+     * Used to disable the display of the ransomware protection area. 
      */
     @SerializedName(value = "defenderSecurityCenterDisableRansomwareUI", alternate = {"DefenderSecurityCenterDisableRansomwareUI"})
     @Expose
@@ -928,7 +928,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Security Center ITContact Display.
-     * Configure where to display IT contact information to end users. Possible values are: notConfigured, displayInAppAndInNotifications, displayOnlyInApp, displayOnlyInNotifications.
+     * Configure where to display IT contact information to end users.
      */
     @SerializedName(value = "defenderSecurityCenterITContactDisplay", alternate = {"DefenderSecurityCenterITContactDisplay"})
     @Expose
@@ -936,7 +936,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Security Center Notifications From App.
-     * Notifications to show from the displayed areas of app. Possible values are: notConfigured, blockNoncriticalNotifications, blockAllNotifications.
+     * Notifications to show from the displayed areas of app
      */
     @SerializedName(value = "defenderSecurityCenterNotificationsFromApp", alternate = {"DefenderSecurityCenterNotificationsFromApp"})
     @Expose
@@ -960,7 +960,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Submit Samples Consent Type.
-     * Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
+     * Checks for the user consent level in Windows Defender to send data.
      */
     @SerializedName(value = "defenderSubmitSamplesConsentType", alternate = {"DefenderSubmitSamplesConsentType"})
     @Expose
@@ -968,7 +968,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Untrusted Executable.
-     * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria
      */
     @SerializedName(value = "defenderUntrustedExecutable", alternate = {"DefenderUntrustedExecutable"})
     @Expose
@@ -976,7 +976,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Untrusted Executable Type.
-     * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating response to executables that don't meet a prevalence, age, or trusted list criteria
      */
     @SerializedName(value = "defenderUntrustedExecutableType", alternate = {"DefenderUntrustedExecutableType"})
     @Expose
@@ -984,7 +984,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Untrusted USBProcess.
-     * Value indicating response to untrusted and unsigned processes that run from USB. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating response to untrusted and unsigned processes that run from USB
      */
     @SerializedName(value = "defenderUntrustedUSBProcess", alternate = {"DefenderUntrustedUSBProcess"})
     @Expose
@@ -992,7 +992,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Untrusted USBProcess Type.
-     * Value indicating response to untrusted and unsigned processes that run from USB. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating response to untrusted and unsigned processes that run from USB
      */
     @SerializedName(value = "defenderUntrustedUSBProcessType", alternate = {"DefenderUntrustedUSBProcessType"})
     @Expose
@@ -1016,7 +1016,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Device Guard Launch System Guard.
-     * Allows the IT admin to configure the launch of System Guard. Possible values are: notConfigured, enabled, disabled.
+     * Allows the IT admin to configure the launch of System Guard.
      */
     @SerializedName(value = "deviceGuardLaunchSystemGuard", alternate = {"DeviceGuardLaunchSystemGuard"})
     @Expose
@@ -1024,7 +1024,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Device Guard Local System Authority Credential Guard Settings.
-     * Turn on Credential Guard when Platform Security Level with Secure Boot and Virtualization Based Security are both enabled. Possible values are: notConfigured, enableWithUEFILock, enableWithoutUEFILock, disable.
+     * Turn on Credential Guard when Platform Security Level with Secure Boot and Virtualization Based Security are both enabled.
      */
     @SerializedName(value = "deviceGuardLocalSystemAuthorityCredentialGuardSettings", alternate = {"DeviceGuardLocalSystemAuthorityCredentialGuardSettings"})
     @Expose
@@ -1032,7 +1032,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Device Guard Secure Boot With DMA.
-     * Specifies whether Platform Security Level is enabled at next reboot. Possible values are: notConfigured, withoutDMA, withDMA.
+     * Specifies whether Platform Security Level is enabled at next reboot.
      */
     @SerializedName(value = "deviceGuardSecureBootWithDMA", alternate = {"DeviceGuardSecureBootWithDMA"})
     @Expose
@@ -1168,7 +1168,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Lan Manager Authentication Level.
-     * This security setting determines which challenge/response authentication protocol is used for network logons. Possible values are: lmAndNltm, lmNtlmAndNtlmV2, lmAndNtlmOnly, lmAndNtlmV2, lmNtlmV2AndNotLm, lmNtlmV2AndNotLmOrNtm.
+     * This security setting determines which challenge/response authentication protocol is used for network logons.
      */
     @SerializedName(value = "lanManagerAuthenticationLevel", alternate = {"LanManagerAuthenticationLevel"})
     @Expose
@@ -1184,7 +1184,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Administrator Account Name.
-     * Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
+     * Define a different account name to be associated with the security identifier (SID) for the account ???Administrator???.
      */
     @SerializedName(value = "localSecurityOptionsAdministratorAccountName", alternate = {"LocalSecurityOptionsAdministratorAccountName"})
     @Expose
@@ -1192,7 +1192,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Administrator Elevation Prompt Behavior.
-     * Define the behavior of the elevation prompt for admins in Admin Approval Mode. Possible values are: notConfigured, elevateWithoutPrompting, promptForCredentialsOnTheSecureDesktop, promptForConsentOnTheSecureDesktop, promptForCredentials, promptForConsent, promptForConsentForNonWindowsBinaries.
+     * Define the behavior of the elevation prompt for admins in Admin Approval Mode.
      */
     @SerializedName(value = "localSecurityOptionsAdministratorElevationPromptBehavior", alternate = {"LocalSecurityOptionsAdministratorElevationPromptBehavior"})
     @Expose
@@ -1384,7 +1384,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Do Not Store LANManager Hash Value On Next Password Change.
-     * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It???s not stored by default.
      */
     @SerializedName(value = "localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", alternate = {"LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange"})
     @Expose
@@ -1392,7 +1392,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Format And Eject Of Removable Media Allowed User.
-     * Define who is allowed to format and eject removable NTFS media. Possible values are: notConfigured, administrators, administratorsAndPowerUsers, administratorsAndInteractiveUsers.
+     * Define who is allowed to format and eject removable NTFS media.
      */
     @SerializedName(value = "localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", alternate = {"LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser"})
     @Expose
@@ -1400,7 +1400,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Guest Account Name.
-     * Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
+     * Define a different account name to be associated with the security identifier (SID) for the account ???Guest???.
      */
     @SerializedName(value = "localSecurityOptionsGuestAccountName", alternate = {"LocalSecurityOptionsGuestAccountName"})
     @Expose
@@ -1416,7 +1416,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Hide Username At Sign In.
-     * Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Do not display the username of the person signing in to this device after credentials are entered and before the device???s desktop is shown.
      */
     @SerializedName(value = "localSecurityOptionsHideUsernameAtSignIn", alternate = {"LocalSecurityOptionsHideUsernameAtSignIn"})
     @Expose
@@ -1424,7 +1424,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Information Displayed On Lock Screen.
-     * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown. Possible values are: notConfigured, administrators, administratorsAndPowerUsers, administratorsAndInteractiveUsers.
+     * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown
      */
     @SerializedName(value = "localSecurityOptionsInformationDisplayedOnLockScreen", alternate = {"LocalSecurityOptionsInformationDisplayedOnLockScreen"})
     @Expose
@@ -1432,7 +1432,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Information Shown On Lock Screen.
-     * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown. Possible values are: notConfigured, userDisplayNameDomainUser, userDisplayNameOnly, doNotDisplayUser.
+     * Configure the user information that is displayed when the session is locked. If not configured, user display name, domain and username are shown
      */
     @SerializedName(value = "localSecurityOptionsInformationShownOnLockScreen", alternate = {"LocalSecurityOptionsInformationShownOnLockScreen"})
     @Expose
@@ -1456,7 +1456,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Machine Inactivity Limit.
-     * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Define maximum minutes of inactivity on the interactive desktop???s login screen until the screen saver runs. Valid values 0 to 9999
      */
     @SerializedName(value = "localSecurityOptionsMachineInactivityLimit", alternate = {"LocalSecurityOptionsMachineInactivityLimit"})
     @Expose
@@ -1464,7 +1464,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Machine Inactivity Limit In Minutes.
-     * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Define maximum minutes of inactivity on the interactive desktop???s login screen until the screen saver runs. Valid values 0 to 9999
      */
     @SerializedName(value = "localSecurityOptionsMachineInactivityLimitInMinutes", alternate = {"LocalSecurityOptionsMachineInactivityLimitInMinutes"})
     @Expose
@@ -1472,7 +1472,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Minimum Session Security For Ntlm Ssp Based Clients.
-     * This security setting allows a client to require the negotiation of 128-bit encryption and/or NTLMv2 session security. Possible values are: none, requireNtmlV2SessionSecurity, require128BitEncryption, ntlmV2And128BitEncryption.
+     * This security setting allows a client to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
      */
     @SerializedName(value = "localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients", alternate = {"LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients"})
     @Expose
@@ -1480,7 +1480,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Minimum Session Security For Ntlm Ssp Based Servers.
-     * This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security. Possible values are: none, requireNtmlV2SessionSecurity, require128BitEncryption, ntlmV2And128BitEncryption.
+     * This security setting allows a server to require the negotiation of 128-bit encryption and/or NTLMv2 session security.
      */
     @SerializedName(value = "localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers", alternate = {"LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers"})
     @Expose
@@ -1504,7 +1504,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Smart Card Removal Behavior.
-     * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader. Possible values are: lockWorkstation, noAction, forceLogoff, disconnectRemoteDesktopSession.
+     * This security setting determines what happens when the smart card for a logged-on user is removed from the smart card reader.
      */
     @SerializedName(value = "localSecurityOptionsSmartCardRemovalBehavior", alternate = {"LocalSecurityOptionsSmartCardRemovalBehavior"})
     @Expose
@@ -1512,7 +1512,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Standard User Elevation Prompt Behavior.
-     * Define the behavior of the elevation prompt for standard users. Possible values are: notConfigured, automaticallyDenyElevationRequests, promptForCredentialsOnTheSecureDesktop, promptForCredentials.
+     * Define the behavior of the elevation prompt for standard users.
      */
     @SerializedName(value = "localSecurityOptionsStandardUserElevationPromptBehavior", alternate = {"LocalSecurityOptionsStandardUserElevationPromptBehavior"})
     @Expose
@@ -1552,7 +1552,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Smart Screen Block Override For Files.
-     * Allows IT Admins to control whether users can can ignore SmartScreen warnings and run malicious files.
+     * Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
      */
     @SerializedName(value = "smartScreenBlockOverrideForFiles", alternate = {"SmartScreenBlockOverrideForFiles"})
     @Expose
@@ -1672,7 +1672,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The User Rights Deny Local Log On.
-     * This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported
+     * This user right determines which users cannot log on to the computer. States NotConfigured, Blocked are supported 
      */
     @SerializedName(value = "userRightsDenyLocalLogOn", alternate = {"UserRightsDenyLocalLogOn"})
     @Expose
@@ -1712,7 +1712,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The User Rights Local Log On.
-     * This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported
+     * This user right determines which users can log on to the computer. States NotConfigured, Allowed are supported 
      */
     @SerializedName(value = "userRightsLocalLogOn", alternate = {"UserRightsLocalLogOn"})
     @Expose
@@ -1800,7 +1800,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Windows Defender Tamper Protection.
-     * Configure windows defender TamperProtection settings. Possible values are: notConfigured, enable, disable.
+     * Configure windows defender TamperProtection settings
      */
     @SerializedName(value = "windowsDefenderTamperProtection", alternate = {"WindowsDefenderTamperProtection"})
     @Expose
@@ -1808,7 +1808,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Xbox Services Accessory Management Service Startup Mode.
-     * This setting determines whether the Accessory management service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
+     * This setting determines whether the Accessory management service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
      */
     @SerializedName(value = "xboxServicesAccessoryManagementServiceStartupMode", alternate = {"XboxServicesAccessoryManagementServiceStartupMode"})
     @Expose
@@ -1824,7 +1824,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Xbox Services Live Auth Manager Service Startup Mode.
-     * This setting determines whether Live Auth Manager service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
+     * This setting determines whether Live Auth Manager service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
      */
     @SerializedName(value = "xboxServicesLiveAuthManagerServiceStartupMode", alternate = {"XboxServicesLiveAuthManagerServiceStartupMode"})
     @Expose
@@ -1832,7 +1832,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Xbox Services Live Game Save Service Startup Mode.
-     * This setting determines whether Live Game save service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
+     * This setting determines whether Live Game save service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
      */
     @SerializedName(value = "xboxServicesLiveGameSaveServiceStartupMode", alternate = {"XboxServicesLiveGameSaveServiceStartupMode"})
     @Expose
@@ -1840,7 +1840,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Xbox Services Live Networking Service Startup Mode.
-     * This setting determines whether Networking service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual. Possible values are: manual, automatic, disabled.
+     * This setting determines whether Networking service's start type is Automatic(2), Manual(3), Disabled(4). Default: Manual.
      */
     @SerializedName(value = "xboxServicesLiveNetworkingServiceStartupMode", alternate = {"XboxServicesLiveNetworkingServiceStartupMode"})
     @Expose

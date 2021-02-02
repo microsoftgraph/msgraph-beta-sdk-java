@@ -33,7 +33,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
 
     /**
      * The Payload File Name.
-     * Payload file name (.xml).
+     * Payload file name (*.xml).
      */
     @SerializedName(value = "payloadFileName", alternate = {"PayloadFileName"})
     @Expose

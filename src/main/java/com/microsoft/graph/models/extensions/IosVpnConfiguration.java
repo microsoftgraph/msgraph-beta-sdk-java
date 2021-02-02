@@ -52,7 +52,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements IJsonB
 
     /**
      * The Strict Enforcement.
-     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
+     * Zscaler only. Blocks network traffic until the user signs into Zscaler app. "True" means traffic is blocked.
      */
     @SerializedName(value = "strictEnforcement", alternate = {"StrictEnforcement"})
     @Expose

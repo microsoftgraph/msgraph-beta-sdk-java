@@ -32,7 +32,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
 
     /**
      * The Advanced Bit Locker States.
-     * Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeEncryptionMethodMismatch, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeUnprotected, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
+     * Advanced BitLocker State
      */
     @SerializedName(value = "advancedBitLockerStates", alternate = {"AdvancedBitLockerStates"})
     @Expose
@@ -48,7 +48,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
 
     /**
      * The Device Type.
-     * Platform of the device. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, blackberry, palm, unknown.
+     * Platform of the device.
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
@@ -56,7 +56,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
 
     /**
      * The Encryption Policy Setting State.
-     * Encryption policy setting state. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Encryption policy setting state
      */
     @SerializedName(value = "encryptionPolicySettingState", alternate = {"EncryptionPolicySettingState"})
     @Expose
@@ -64,7 +64,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
 
     /**
      * The Encryption Readiness State.
-     * Encryption readiness state. Possible values are: notReady, ready.
+     * Encryption readiness state
      */
     @SerializedName(value = "encryptionReadinessState", alternate = {"EncryptionReadinessState"})
     @Expose
@@ -72,7 +72,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
 
     /**
      * The Encryption State.
-     * Device encryption state. Possible values are: notEncrypted, encrypted.
+     * Device encryption state
      */
     @SerializedName(value = "encryptionState", alternate = {"EncryptionState"})
     @Expose
@@ -80,7 +80,7 @@ public class ManagedDeviceEncryptionState extends Entity implements IJsonBackedO
 
     /**
      * The File Vault States.
-     * FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
+     * FileVault State
      */
     @SerializedName(value = "fileVaultStates", alternate = {"FileVaultStates"})
     @Expose

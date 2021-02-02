@@ -34,7 +34,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
 
     /**
      * The Object Id.
-     * The identifier of an object to which a synchronizationJob  is to be applied.
+     * 
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
@@ -42,7 +42,7 @@ public class SynchronizationJobSubject implements IJsonBackedObject {
 
     /**
      * The Object Type Name.
-     * The type of the object to which a synchronizationJob  is to be applied.
+     * 
      */
     @SerializedName(value = "objectTypeName", alternate = {"ObjectTypeName"})
     @Expose

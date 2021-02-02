@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.generated.TeamsAppPublishingState;
-import com.microsoft.graph.models.extensions.TeamworkBot;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -28,7 +27,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Azure ADApp Id.
-     * The WebApplicationInfo.id from the Teams App manifest.
+     * 
      */
     @SerializedName(value = "azureADAppId", alternate = {"AzureADAppId"})
     @Expose
@@ -84,7 +83,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App Id.
-     * The id from the Teams App manifest.
+     * The ID from the Teams app manifest.
      */
     @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose
@@ -97,14 +96,6 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
     public String version;
-
-    /**
-     * The Bot.
-     * The details of the bot specified in the Teams App manifest.
-     */
-    @SerializedName(value = "bot", alternate = {"Bot"})
-    @Expose
-    public TeamworkBot bot;
 
 
     /**

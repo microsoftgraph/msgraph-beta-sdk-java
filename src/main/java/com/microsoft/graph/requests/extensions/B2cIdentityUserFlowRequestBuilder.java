@@ -13,10 +13,6 @@ import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionReques
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserFlowLanguageConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserFlowLanguageConfigurationRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserFlowLanguageConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserFlowLanguageConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
@@ -71,13 +67,6 @@ public class B2cIdentityUserFlowRequestBuilder extends BaseRequestBuilder implem
 
     public IIdentityProviderWithReferenceRequestBuilder identityProviders(final String id) {
         return new IdentityProviderWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
-    }
-    public IUserFlowLanguageConfigurationCollectionRequestBuilder languages() {
-        return new UserFlowLanguageConfigurationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("languages"), getClient(), null);
-    }
-
-    public IUserFlowLanguageConfigurationRequestBuilder languages(final String id) {
-        return new UserFlowLanguageConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("languages") + "/" + id, getClient(), null);
     }
     public IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder userAttributeAssignments() {
         return new IdentityUserFlowAttributeAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userAttributeAssignments"), getClient(), null);

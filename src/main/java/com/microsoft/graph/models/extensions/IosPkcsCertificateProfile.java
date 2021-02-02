@@ -29,7 +29,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
 
     /**
      * The Certificate Store.
-     * Target store certificate. Possible values are: user, machine.
+     * Target store certificate
      */
     @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose

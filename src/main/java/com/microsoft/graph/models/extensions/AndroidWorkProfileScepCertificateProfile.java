@@ -32,7 +32,7 @@ public class AndroidWorkProfileScepCertificateProfile extends AndroidWorkProfile
 
     /**
      * The Certificate Store.
-     * Target store certificate. Possible values are: user, machine.
+     * Target store certificate
      */
     @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
@@ -48,7 +48,7 @@ public class AndroidWorkProfileScepCertificateProfile extends AndroidWorkProfile
 
     /**
      * The Hash Algorithm.
-     * SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * SCEP Hash Algorithm
      */
     @SerializedName(value = "hashAlgorithm", alternate = {"HashAlgorithm"})
     @Expose
@@ -56,7 +56,7 @@ public class AndroidWorkProfileScepCertificateProfile extends AndroidWorkProfile
 
     /**
      * The Key Size.
-     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * SCEP Key Size
      */
     @SerializedName(value = "keySize", alternate = {"KeySize"})
     @Expose
@@ -64,7 +64,7 @@ public class AndroidWorkProfileScepCertificateProfile extends AndroidWorkProfile
 
     /**
      * The Key Usage.
-     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * SCEP Key Usage
      */
     @SerializedName(value = "keyUsage", alternate = {"KeyUsage"})
     @Expose

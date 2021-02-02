@@ -27,7 +27,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
 
     /**
      * The Deployment Status.
-     * The deployment state of the policy. Possible values are: unknown, success, tokenError, notAuthorizedByToken, policyNotFound.
+     * The deployment state of the policy.
      */
     @SerializedName(value = "deploymentStatus", alternate = {"DeploymentStatus"})
     @Expose

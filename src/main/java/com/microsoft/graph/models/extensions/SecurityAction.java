@@ -30,7 +30,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Action Reason.
-     * Reason for invoking this action.
+     * 
      */
     @SerializedName(value = "actionReason", alternate = {"ActionReason"})
     @Expose
@@ -38,7 +38,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
+     * 
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -46,7 +46,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Azure Tenant Id.
-     * Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
+     * 
      */
     @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
@@ -62,7 +62,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -78,7 +78,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Error Info.
-     * Error info when the action fails.
+     * 
      */
     @SerializedName(value = "errorInfo", alternate = {"ErrorInfo"})
     @Expose
@@ -86,7 +86,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Action Date Time.
-     * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
@@ -94,7 +94,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Action name.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -102,7 +102,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Parameters.
-     * Collection of parameters (key-value pairs) necessary to invoke the action, e.g. URL or fileHash to block, etc.). Required
+     * 
      */
     @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
@@ -110,7 +110,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The States.
-     * Collection of securityActionState to keep the history of an action.
+     * 
      */
     @SerializedName(value = "states", alternate = {"States"})
     @Expose
@@ -118,7 +118,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -126,7 +126,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The User.
-     * The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
+     * 
      */
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
@@ -134,7 +134,7 @@ public class SecurityAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Vendor Information.
-     * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (e.g. vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
+     * 
      */
     @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose

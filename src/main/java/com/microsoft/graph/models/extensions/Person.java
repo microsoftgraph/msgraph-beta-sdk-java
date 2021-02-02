@@ -62,7 +62,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Email Addresses.
-     * The person's email addresses.
+     * 
      */
     @SerializedName(value = "emailAddresses", alternate = {"EmailAddresses"})
     @Expose
@@ -86,7 +86,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Mailbox Type.
-     * The type of mailbox that is represented by the person's email address.
+     * 
      */
     @SerializedName(value = "mailboxType", alternate = {"MailboxType"})
     @Expose
@@ -110,7 +110,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Person Type.
-     * The type of person, for example distribution list.
+     * The type of person.
      */
     @SerializedName(value = "personType", alternate = {"PersonType"})
     @Expose
@@ -142,7 +142,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Sources.
-     * The sources the user data comes from, for example Directory or Outlook Contacts.
+     * 
      */
     @SerializedName(value = "sources", alternate = {"Sources"})
     @Expose
@@ -158,7 +158,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Title.
-     * The person's title.
+     * 
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

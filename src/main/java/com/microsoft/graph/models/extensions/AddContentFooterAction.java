@@ -26,7 +26,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
 
     /**
      * The Alignment.
-     * Possible values are: left, right, center.
+     * 
      */
     @SerializedName(value = "alignment", alternate = {"Alignment"})
     @Expose
@@ -34,7 +34,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
 
     /**
      * The Font Color.
-     * Color of the font to use for the footer.
+     * 
      */
     @SerializedName(value = "fontColor", alternate = {"FontColor"})
     @Expose
@@ -42,7 +42,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
 
     /**
      * The Font Name.
-     * Name of the font to use for the footer.
+     * 
      */
     @SerializedName(value = "fontName", alternate = {"FontName"})
     @Expose
@@ -50,7 +50,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
 
     /**
      * The Font Size.
-     * Font size to use for the footer.
+     * 
      */
     @SerializedName(value = "fontSize", alternate = {"FontSize"})
     @Expose
@@ -58,7 +58,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
 
     /**
      * The Margin.
-     * The margin of the header from the bottom of the document.
+     * 
      */
     @SerializedName(value = "margin", alternate = {"Margin"})
     @Expose
@@ -66,7 +66,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
 
     /**
      * The Text.
-     * The contents of the footer itself.
+     * 
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose
@@ -74,7 +74,7 @@ public class AddContentFooterAction extends InformationProtectionAction implemen
 
     /**
      * The Ui Element Name.
-     * The name of the UI element where the footer should be placed.
+     * 
      */
     @SerializedName(value = "uiElementName", alternate = {"UiElementName"})
     @Expose

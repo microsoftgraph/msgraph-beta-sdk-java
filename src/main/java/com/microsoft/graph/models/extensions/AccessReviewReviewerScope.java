@@ -25,7 +25,7 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements IJso
 
     /**
      * The Query Root.
-     * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query (i.e., ./manager) is specified.
+     * 
      */
     @SerializedName(value = "queryRoot", alternate = {"QueryRoot"})
     @Expose

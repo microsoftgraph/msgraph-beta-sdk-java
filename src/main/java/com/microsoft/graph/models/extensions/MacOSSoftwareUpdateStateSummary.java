@@ -51,7 +51,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements IJsonBack
 
     /**
      * The State.
-     * State of the software update. Possible values are: success, downloading, downloaded, installing, idle, available, scheduled, downloadFailed, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installInsufficientSpace, installInsufficientPower, installFailed, commandFailed.
+     * State of the software update
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -59,7 +59,7 @@ public class MacOSSoftwareUpdateStateSummary extends Entity implements IJsonBack
 
     /**
      * The Update Category.
-     * Software update category. Possible values are: critical, configurationDataFile, firmware, other.
+     * Software update category
      */
     @SerializedName(value = "updateCategory", alternate = {"UpdateCategory"})
     @Expose

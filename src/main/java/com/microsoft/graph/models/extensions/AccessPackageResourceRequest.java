@@ -27,7 +27,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Catalog Id.
-     * The unique ID of the access package catalog.
+     * 
      */
     @SerializedName(value = "catalogId", alternate = {"CatalogId"})
     @Expose
@@ -43,7 +43,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Expiration Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -51,7 +51,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Is Validation Only.
-     * If set, does not add the resource.
+     * 
      */
     @SerializedName(value = "isValidationOnly", alternate = {"IsValidationOnly"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Justification.
-     * The requestor's justification for adding the resource.
+     * 
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -67,7 +67,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request State.
-     * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added. Read-Only.
+     * 
      */
     @SerializedName(value = "requestState", alternate = {"RequestState"})
     @Expose
@@ -75,7 +75,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request Status.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "requestStatus", alternate = {"RequestStatus"})
     @Expose
@@ -83,7 +83,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request Type.
-     * Use AdminAdd to add a resource, if the caller is an administrator or resource owner.
+     * 
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose
@@ -91,7 +91,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Access Package Resource.
-     * Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResource", alternate = {"AccessPackageResource"})
     @Expose
@@ -99,7 +99,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Requestor.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "requestor", alternate = {"Requestor"})
     @Expose

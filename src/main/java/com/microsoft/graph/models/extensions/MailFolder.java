@@ -52,14 +52,6 @@ public class MailFolder extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Is Hidden.
-     * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
-     */
-    @SerializedName(value = "isHidden", alternate = {"IsHidden"})
-    @Expose
-    public Boolean isHidden;
-
-    /**
      * The Parent Folder Id.
      * The unique identifier for the mailFolder's parent mailFolder.
      */
@@ -85,7 +77,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Well Known Name.
-     * The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null.
+     * 
      */
     @SerializedName(value = "wellKnownName", alternate = {"WellKnownName"})
     @Expose

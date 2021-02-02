@@ -29,7 +29,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
 
     /**
      * The Delivery Optimization Priority.
-     * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
+     * The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments.
      */
     @SerializedName(value = "deliveryOptimizationPriority", alternate = {"DeliveryOptimizationPriority"})
     @Expose

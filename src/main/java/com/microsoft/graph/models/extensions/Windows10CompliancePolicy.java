@@ -93,7 +93,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
 
     /**
      * The Device Compliance Policy Script.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "deviceCompliancePolicyScript", alternate = {"DeviceCompliancePolicyScript"})
     @Expose
@@ -109,7 +109,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
 
     /**
      * The Device Threat Protection Required Security Level.
-     * Require Device Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Require Device Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose

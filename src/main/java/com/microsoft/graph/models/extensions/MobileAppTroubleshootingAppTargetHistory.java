@@ -34,7 +34,7 @@ public class MobileAppTroubleshootingAppTargetHistory extends MobileAppTroublesh
 
     /**
      * The Run State.
-     * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Status of the item.
      */
     @SerializedName(value = "runState", alternate = {"RunState"})
     @Expose

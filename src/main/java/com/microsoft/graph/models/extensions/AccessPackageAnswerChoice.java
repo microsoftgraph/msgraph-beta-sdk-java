@@ -35,7 +35,7 @@ public class AccessPackageAnswerChoice implements IJsonBackedObject {
 
     /**
      * The Actual Value.
-     * The actual value of the selected choice. This is typically a string value which is understandable by applications. Required.
+     * 
      */
     @SerializedName(value = "actualValue", alternate = {"ActualValue"})
     @Expose
@@ -43,7 +43,7 @@ public class AccessPackageAnswerChoice implements IJsonBackedObject {
 
     /**
      * The Display Value.
-     * The localized display values shown to the requestor and approvers. Required.
+     * 
      */
     @SerializedName(value = "displayValue", alternate = {"DisplayValue"})
     @Expose

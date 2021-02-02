@@ -25,7 +25,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Description.
-     * Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -33,7 +33,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Display Name.
-     * The value is always 'Continuous Access Evaluation'. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -41,7 +41,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Groups.
-     * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty.
+     * 
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
@@ -49,7 +49,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Is Enabled.
-     * true to indicate whether continuous access evaluation should be performed; otherwise false.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -57,7 +57,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Users.
-     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty.
+     * 
      */
     @SerializedName(value = "users", alternate = {"Users"})
     @Expose

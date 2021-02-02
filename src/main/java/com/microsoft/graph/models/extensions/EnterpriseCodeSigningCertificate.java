@@ -58,7 +58,7 @@ public class EnterpriseCodeSigningCertificate extends Entity implements IJsonBac
 
     /**
      * The Status.
-     * The Certificate Status Provisioned or not Provisioned. Possible values are: notProvisioned, provisioned.
+     * The Certificate Status Provisioned or not Provisioned.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

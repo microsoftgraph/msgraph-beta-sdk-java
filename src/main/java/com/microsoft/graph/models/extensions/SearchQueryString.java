@@ -34,7 +34,7 @@ public class SearchQueryString implements IJsonBackedObject {
 
     /**
      * The Query.
-     * Contains the actual search terms of the request.
+     * 
      */
     @SerializedName(value = "query", alternate = {"Query"})
     @Expose

@@ -11,8 +11,6 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.B2xIdentityUserFlow;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserFlowLanguageConfigurationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserFlowLanguageConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeAssignmentRequestBuilder;
 import java.util.Arrays;
@@ -44,10 +42,6 @@ public interface IB2xIdentityUserFlowRequestBuilder extends IRequestBuilder {
     IIdentityProviderCollectionWithReferencesRequestBuilder identityProviders();
 
     IIdentityProviderWithReferenceRequestBuilder identityProviders(final String id);
-
-    IUserFlowLanguageConfigurationCollectionRequestBuilder languages();
-
-    IUserFlowLanguageConfigurationRequestBuilder languages(final String id);
 
     IIdentityUserFlowAttributeAssignmentCollectionRequestBuilder userAttributeAssignments();
 

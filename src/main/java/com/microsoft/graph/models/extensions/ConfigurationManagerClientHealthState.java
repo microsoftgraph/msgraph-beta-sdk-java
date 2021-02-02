@@ -51,7 +51,7 @@ public class ConfigurationManagerClientHealthState implements IJsonBackedObject 
 
     /**
      * The State.
-     * Current configuration manager client state. Possible values are: unknown, installed, healthy, installFailed, updateFailed, communicationError.
+     * Current configuration manager client state.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

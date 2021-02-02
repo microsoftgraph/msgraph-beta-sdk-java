@@ -31,7 +31,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Backup Reviewers.
-     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. See accessReviewReviewerScope.
+     * 
      */
     @SerializedName(value = "backupReviewers", alternate = {"BackupReviewers"})
     @Expose
@@ -39,7 +39,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Created By.
-     * User who created this review.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -47,7 +47,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Created Date Time.
-     * DateTime when review series was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Description For Admins.
-     * Description provided by review creators to provide more context of the review to admins.
+     * 
      */
     @SerializedName(value = "descriptionForAdmins", alternate = {"DescriptionForAdmins"})
     @Expose
@@ -63,7 +63,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Description For Reviewers.
-     * Description provided  by review creators to provide more context of the review to reviewers. Reviewers will see this description in the email sent to them requesting their review.
+     * 
      */
     @SerializedName(value = "descriptionForReviewers", alternate = {"DescriptionForReviewers"})
     @Expose
@@ -71,7 +71,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Display Name.
-     * Name of access review series. Required on create.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -79,7 +79,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Instance Enumeration Scope.
-     * In the case of an all groups review, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
+     * 
      */
     @SerializedName(value = "instanceEnumerationScope", alternate = {"InstanceEnumerationScope"})
     @Expose
@@ -87,7 +87,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Last Modified Date Time.
-     * DateTime when review series was last modified.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Reviewers.
-     * This collection of access review scopes is used to define who are the reviewers. See accessReviewReviewerScope. Required on create.
+     * 
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
@@ -103,7 +103,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Scope.
-     * Defines scope of users reviewed in a group. For supported scopes, see accessReviewScope. Required on create.
+     * 
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -111,7 +111,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Settings.
-     * The settings for an access review series, see type definition below.
+     * 
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -119,7 +119,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Status.
-     * This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -127,7 +127,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Instances.
-     * Set of access reviews instances for this access review series. Access reviews that do not recur will only have one instance; otherwise, there will be an instance for each recurrence.
+     * 
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose

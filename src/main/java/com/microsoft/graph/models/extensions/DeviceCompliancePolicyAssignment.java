@@ -27,7 +27,7 @@ public class DeviceCompliancePolicyAssignment extends Entity implements IJsonBac
 
     /**
      * The Source.
-     * The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets.
+     * The assignment source for the device compliance policy, direct or parcel/policySet.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

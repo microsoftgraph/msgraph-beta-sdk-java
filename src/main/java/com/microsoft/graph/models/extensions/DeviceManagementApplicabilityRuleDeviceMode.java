@@ -36,7 +36,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements IJsonBackedO
 
     /**
      * The Device Mode.
-     * Applicability rule for device mode. Possible values are: standardConfiguration, sModeConfiguration.
+     * Applicability rule for device mode.
      */
     @SerializedName(value = "deviceMode", alternate = {"DeviceMode"})
     @Expose
@@ -52,7 +52,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements IJsonBackedO
 
     /**
      * The Rule Type.
-     * Applicability Rule type. Possible values are: include, exclude.
+     * Applicability Rule type.
      */
     @SerializedName(value = "ruleType", alternate = {"RuleType"})
     @Expose

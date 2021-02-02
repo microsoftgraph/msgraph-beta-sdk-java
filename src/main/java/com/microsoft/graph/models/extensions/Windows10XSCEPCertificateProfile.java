@@ -33,7 +33,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
 
     /**
      * The Certificate Store.
-     * Target store certificate. Possible values are: user, machine.
+     * Target store certificate
      */
     @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
@@ -41,7 +41,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
 
     /**
      * The Certificate Validity Period Scale.
-     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Scale for the Certificate Validity Period
      */
     @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose
@@ -73,7 +73,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
 
     /**
      * The Key Size.
-     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * SCEP Key Size.
      */
     @SerializedName(value = "keySize", alternate = {"KeySize"})
     @Expose
@@ -81,7 +81,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
 
     /**
      * The Key Storage Provider.
-     * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Key Storage Provider (KSP)
      */
     @SerializedName(value = "keyStorageProvider", alternate = {"KeyStorageProvider"})
     @Expose
@@ -89,7 +89,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
 
     /**
      * The Key Usage.
-     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * SCEP Key Usage.
      */
     @SerializedName(value = "keyUsage", alternate = {"KeyUsage"})
     @Expose

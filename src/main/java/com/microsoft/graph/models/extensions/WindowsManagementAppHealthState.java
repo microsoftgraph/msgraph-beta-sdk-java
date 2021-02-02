@@ -42,7 +42,7 @@ public class WindowsManagementAppHealthState extends Entity implements IJsonBack
 
     /**
      * The Health State.
-     * Windows management app health state. Possible values are: unknown, healthy, unhealthy.
+     * Windows management app health state.
      */
     @SerializedName(value = "healthState", alternate = {"HealthState"})
     @Expose

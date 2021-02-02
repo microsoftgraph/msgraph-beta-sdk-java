@@ -45,7 +45,7 @@ public class MobileAppAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * The resource type which is the source for the assignment. Possible values are: direct, policySets.
+     * The resource type which is the source for the assignment.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

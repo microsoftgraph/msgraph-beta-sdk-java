@@ -36,7 +36,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
 
     /**
      * The Allow New Message From Bots.
-     * Indicates whether bots are allowed to post messages.
+     * 
      */
     @SerializedName(value = "allowNewMessageFromBots", alternate = {"AllowNewMessageFromBots"})
     @Expose
@@ -44,7 +44,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
 
     /**
      * The Allow New Message From Connectors.
-     * Indicates whether connectors are allowed to post messages.
+     * 
      */
     @SerializedName(value = "allowNewMessageFromConnectors", alternate = {"AllowNewMessageFromConnectors"})
     @Expose
@@ -52,7 +52,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
 
     /**
      * The Reply Restriction.
-     * Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "replyRestriction", alternate = {"ReplyRestriction"})
     @Expose
@@ -60,7 +60,7 @@ public class ChannelModerationSettings implements IJsonBackedObject {
 
     /**
      * The User New Message Restriction.
-     * Indicates who is allowed to post messages to teams channel. Possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "userNewMessageRestriction", alternate = {"UserNewMessageRestriction"})
     @Expose

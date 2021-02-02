@@ -36,7 +36,7 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Endpoint Type.
-     * The type of endpoint. Possible values are: default, voicemail.
+     * 
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose
@@ -52,7 +52,7 @@ public class InvitationParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Replaces Call Id.
-     * Optional. The call which the target idenity is currently a part of. This call will be dropped once the participant is added.
+     * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
      */
     @SerializedName(value = "replacesCallId", alternate = {"ReplacesCallId"})
     @Expose

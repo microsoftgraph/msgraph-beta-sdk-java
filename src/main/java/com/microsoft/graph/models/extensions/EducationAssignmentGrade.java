@@ -35,7 +35,7 @@ public class EducationAssignmentGrade implements IJsonBackedObject {
 
     /**
      * The Graded By.
-     * User who did the grading.
+     * 
      */
     @SerializedName(value = "gradedBy", alternate = {"GradedBy"})
     @Expose
@@ -43,7 +43,7 @@ public class EducationAssignmentGrade implements IJsonBackedObject {
 
     /**
      * The Graded Date Time.
-     * Moment in time when the grade was applied to this submission object. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "gradedDateTime", alternate = {"GradedDateTime"})
     @Expose

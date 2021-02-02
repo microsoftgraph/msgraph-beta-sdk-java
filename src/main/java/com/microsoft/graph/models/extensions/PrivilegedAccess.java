@@ -35,7 +35,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the provider managed by PIM.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -43,7 +43,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources.
-     * A collection of resources for the provider.
+     * 
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose
@@ -51,7 +51,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignment Requests.
-     * A collection of role assignment requests for the provider.
+     * 
      */
     @SerializedName(value = "roleAssignmentRequests", alternate = {"RoleAssignmentRequests"})
     @Expose
@@ -59,7 +59,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignments.
-     * A collection of role assignments for the provider.
+     * 
      */
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
@@ -67,7 +67,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definitions.
-     * A collection of role defintions for the provider.
+     * 
      */
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
@@ -75,7 +75,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Settings.
-     * A collection of role settings for the provider.
+     * 
      */
     @SerializedName(value = "roleSettings", alternate = {"RoleSettings"})
     @Expose

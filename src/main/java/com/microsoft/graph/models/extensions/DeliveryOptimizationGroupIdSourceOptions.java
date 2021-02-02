@@ -26,7 +26,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
 
     /**
      * The Group Id Source Option.
-     * Set this policy to restrict peer selection to a specific source. Possible values are: notConfigured, adSite, authenticatedDomainSid, dhcpUserOption, dnsSuffix.
+     * Set this policy to restrict peer selection to a specific source.
      */
     @SerializedName(value = "groupIdSourceOption", alternate = {"GroupIdSourceOption"})
     @Expose

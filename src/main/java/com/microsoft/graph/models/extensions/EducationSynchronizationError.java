@@ -25,7 +25,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
 
     /**
      * The Entry Type.
-     * Represents the sync entity (school, section, student, teacher).
+     * 
      */
     @SerializedName(value = "entryType", alternate = {"EntryType"})
     @Expose
@@ -33,7 +33,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
 
     /**
      * The Error Code.
-     * Represents the error code for this error.
+     * 
      */
     @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
@@ -41,7 +41,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
 
     /**
      * The Error Message.
-     * Contains a description of the error.
+     * 
      */
     @SerializedName(value = "errorMessage", alternate = {"ErrorMessage"})
     @Expose
@@ -49,7 +49,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
 
     /**
      * The Joining Value.
-     * The unique identifier for the entry.
+     * 
      */
     @SerializedName(value = "joiningValue", alternate = {"JoiningValue"})
     @Expose
@@ -57,7 +57,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
 
     /**
      * The Recorded Date Time.
-     * The time of occurrence of this error.
+     * 
      */
     @SerializedName(value = "recordedDateTime", alternate = {"RecordedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class EducationSynchronizationError extends Entity implements IJsonBacked
 
     /**
      * The Reportable Identifier.
-     * The identifier of this error entry.
+     * 
      */
     @SerializedName(value = "reportableIdentifier", alternate = {"ReportableIdentifier"})
     @Expose

@@ -31,7 +31,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Connector Group Type.
-     * Indicates the type of hybrid agent. This pre-set by the system. Read-only.
+     * 
      */
     @SerializedName(value = "connectorGroupType", alternate = {"ConnectorGroupType"})
     @Expose
@@ -39,7 +39,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default.
-     * Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
+     * 
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -47,7 +47,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name associated with the connectorGroup.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -55,7 +55,7 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Region.
-     * The region the connectorGroup is assigned to and will optimize traffic for. This region can only be set if no connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: nam, eur, aus, asia, ind.
+     * 
      */
     @SerializedName(value = "region", alternate = {"Region"})
     @Expose
@@ -63,13 +63,13 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Applications.
-     * Read-only. Nullable.
+     * 
      */
     public ApplicationCollectionPage applications;
 
     /**
      * The Members.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

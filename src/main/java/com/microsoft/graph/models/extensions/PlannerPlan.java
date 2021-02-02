@@ -32,7 +32,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Contexts.
-     * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
+     * 
      */
     @SerializedName(value = "contexts", alternate = {"Contexts"})
     @Expose

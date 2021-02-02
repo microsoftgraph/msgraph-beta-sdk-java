@@ -26,7 +26,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
 
     /**
      * The Matching Options.
-     * Mapping between the user account and the options to use to uniquely identify the user to update.
+     * 
      */
     @SerializedName(value = "matchingOptions", alternate = {"MatchingOptions"})
     @Expose

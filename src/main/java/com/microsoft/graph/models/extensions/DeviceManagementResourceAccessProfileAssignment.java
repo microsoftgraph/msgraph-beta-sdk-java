@@ -27,7 +27,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
 
     /**
      * The Intent.
-     * The assignment intent for the resource access profile. Possible values are: apply, remove.
+     * The assignment intent for the resource access profile.
      */
     @SerializedName(value = "intent", alternate = {"Intent"})
     @Expose

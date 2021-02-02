@@ -28,7 +28,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Url.
-     * The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/beta/print/printers/{printerId}/jobs/{jobId}. Read-only.
+     * 
      */
     @SerializedName(value = "parentUrl", alternate = {"ParentUrl"})
     @Expose
@@ -36,7 +36,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The current execution status of this printTask. The calling application is responsible for updating this status when processing is finished, unless the related printJob has been redirected to another printer. Failure to report completion will result in the related print job being blocked from printing and eventually deleted.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -44,7 +44,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Definition.
-     * The printTaskDefinition that was used to create this task. Read-only.
+     * 
      */
     @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
@@ -52,7 +52,7 @@ public class PrintTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Trigger.
-     * The printTaskTrigger that triggered this task's execution. Read-only.
+     * 
      */
     @SerializedName(value = "trigger", alternate = {"Trigger"})
     @Expose

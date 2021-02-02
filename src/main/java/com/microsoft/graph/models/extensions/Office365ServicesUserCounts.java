@@ -25,7 +25,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Exchange Active.
-     * The number of active users on Exchange. Any user who can read and send email is considered an active user.
+     * 
      */
     @SerializedName(value = "exchangeActive", alternate = {"ExchangeActive"})
     @Expose
@@ -33,7 +33,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Exchange Inactive.
-     * The number of inactive users on Exchange.
+     * 
      */
     @SerializedName(value = "exchangeInactive", alternate = {"ExchangeInactive"})
     @Expose
@@ -41,7 +41,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Office365Active.
-     * The number of active users on Microsoft 365.
+     * 
      */
     @SerializedName(value = "office365Active", alternate = {"Office365Active"})
     @Expose
@@ -49,7 +49,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Office365Inactive.
-     * The number of inactive users on Microsoft 365.
+     * 
      */
     @SerializedName(value = "office365Inactive", alternate = {"Office365Inactive"})
     @Expose
@@ -57,7 +57,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The One Drive Active.
-     * The number of active users on OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
+     * 
      */
     @SerializedName(value = "oneDriveActive", alternate = {"OneDriveActive"})
     @Expose
@@ -65,7 +65,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The One Drive Inactive.
-     * The number of inactive users on OneDrive.
+     * 
      */
     @SerializedName(value = "oneDriveInactive", alternate = {"OneDriveInactive"})
     @Expose
@@ -73,7 +73,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Report Period.
-     * The number of days the report covers.
+     * 
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -81,7 +81,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Report Refresh Date.
-     * The latest date of the content.
+     * 
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -89,7 +89,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Share Point Active.
-     * The number of active users on SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
+     * 
      */
     @SerializedName(value = "sharePointActive", alternate = {"SharePointActive"})
     @Expose
@@ -97,7 +97,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Share Point Inactive.
-     * The number of inactive users on SharePoint.
+     * 
      */
     @SerializedName(value = "sharePointInactive", alternate = {"SharePointInactive"})
     @Expose
@@ -105,7 +105,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Skype For Business Active.
-     * The number of active users on Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
+     * 
      */
     @SerializedName(value = "skypeForBusinessActive", alternate = {"SkypeForBusinessActive"})
     @Expose
@@ -113,7 +113,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Skype For Business Inactive.
-     * The number of inactive users on Skype For Business.
+     * 
      */
     @SerializedName(value = "skypeForBusinessInactive", alternate = {"SkypeForBusinessInactive"})
     @Expose
@@ -121,7 +121,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Teams Active.
-     * The number of active users on Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
+     * 
      */
     @SerializedName(value = "teamsActive", alternate = {"TeamsActive"})
     @Expose
@@ -129,7 +129,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Teams Inactive.
-     * The number of inactive users on Microsoft Teams.
+     * 
      */
     @SerializedName(value = "teamsInactive", alternate = {"TeamsInactive"})
     @Expose
@@ -137,7 +137,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Yammer Active.
-     * The number of active users on Yammer. Any user who can post, read, or like messages is considered an active user.
+     * 
      */
     @SerializedName(value = "yammerActive", alternate = {"YammerActive"})
     @Expose
@@ -145,7 +145,7 @@ public class Office365ServicesUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Yammer Inactive.
-     * The number of inactive users on Yammer.
+     * 
      */
     @SerializedName(value = "yammerInactive", alternate = {"YammerInactive"})
     @Expose

@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsDeviceStartupHistory extends Entity implemen
 
     /**
      * The Restart Category.
-     * OS restart category. Possible values are: unknown, restartWithUpdate, restartWithoutUpdate, blueScreen, shutdownWithUpdate, shutdownWithoutUpdate, longPowerButtonPress, bootError.
+     * OS restart category
      */
     @SerializedName(value = "restartCategory", alternate = {"RestartCategory"})
     @Expose

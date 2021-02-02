@@ -60,7 +60,7 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
 
     /**
      * The Install State.
-     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+     * The install state of the app.
      */
     @SerializedName(value = "installState", alternate = {"InstallState"})
     @Expose
@@ -68,7 +68,7 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
 
     /**
      * The Install State Detail.
-     * The install state detail of the app. Possible values are: noAdditionalDetails, dependencyFailedToInstall, dependencyWithRequirementsNotMet, dependencyPendingReboot, dependencyWithAutoInstallDisabled, iosAppStoreUpdateFailedToInstall, vppAppHasUpdateAvailable, userRejectedUpdate, seeInstallErrorCode, autoInstallDisabled, managedAppNoLongerPresent, userRejectedInstall, userIsNotLoggedIntoAppStore, seeUninstallErrorCode, pendingReboot, installingDependencies, contentDownloaded, powerShellScriptRequirementNotMet, registryRequirementNotMet, fileSystemRequirementNotMet, platformNotApplicable, minimumCpuSpeedNotMet, minimumLogicalProcessorCountNotMet, minimumPhysicalMemoryNotMet, minimumOsVersionNotMet, minimumDiskSpaceNotMet, processorArchitectureNotApplicable.
+     * The install state detail of the app.
      */
     @SerializedName(value = "installStateDetail", alternate = {"InstallStateDetail"})
     @Expose
@@ -84,7 +84,7 @@ public class MobileAppInstallStatus extends Entity implements IJsonBackedObject 
 
     /**
      * The Mobile App Install Status Value.
-     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
+     * The install state of the app.
      */
     @SerializedName(value = "mobileAppInstallStatusValue", alternate = {"MobileAppInstallStatusValue"})
     @Expose

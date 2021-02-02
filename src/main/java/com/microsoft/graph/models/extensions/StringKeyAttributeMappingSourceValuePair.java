@@ -35,7 +35,7 @@ public class StringKeyAttributeMappingSourceValuePair implements IJsonBackedObje
 
     /**
      * The Key.
-     * The name of the parameter.
+     * 
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -43,7 +43,7 @@ public class StringKeyAttributeMappingSourceValuePair implements IJsonBackedObje
 
     /**
      * The Value.
-     * The value of the parameter.
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

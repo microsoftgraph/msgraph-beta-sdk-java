@@ -66,7 +66,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements IJsonBac
 
     /**
      * The Certificate Revoke Status.
-     * Revoke status. Possible values are: none, pending, issued, failed, revoked.
+     * Revoke status
      */
     @SerializedName(value = "certificateRevokeStatus", alternate = {"CertificateRevokeStatus"})
     @Expose

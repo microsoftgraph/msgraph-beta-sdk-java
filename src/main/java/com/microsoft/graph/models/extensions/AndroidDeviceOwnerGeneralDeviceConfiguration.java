@@ -59,7 +59,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Apps Auto Update Policy.
-     * Indicates the value of the app auto update policy. Possible values are: notConfigured, userChoice, never, wiFiOnly, always.
+     * Indicates the value of the app auto update policy.
      */
     @SerializedName(value = "appsAutoUpdatePolicy", alternate = {"AppsAutoUpdatePolicy"})
     @Expose
@@ -67,7 +67,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Apps Default Permission Policy.
-     * Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically.
      */
     @SerializedName(value = "appsDefaultPermissionPolicy", alternate = {"AppsDefaultPermissionPolicy"})
     @Expose
@@ -139,7 +139,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Enrollment Profile.
-     * Indicates which enrollment profile you want to configure. Possible values are: notConfigured, dedicatedDevice, fullyManaged.
+     * Indicates which enrollment profile you want to configure.
      */
     @SerializedName(value = "enrollmentProfile", alternate = {"EnrollmentProfile"})
     @Expose
@@ -179,7 +179,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Customization Device Settings Blocked.
-     * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
+     * Indicates whether a user can access the device's Settings app while in Kiosk Mode.
      */
     @SerializedName(value = "kioskCustomizationDeviceSettingsBlocked", alternate = {"KioskCustomizationDeviceSettingsBlocked"})
     @Expose
@@ -195,7 +195,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Customization Status Bar.
-     * Indicates whether system info and notifications are disabled in Kiosk Mode. Possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
+     * Indicates whether system info and notifications are disabled in Kiosk Mode.
      */
     @SerializedName(value = "kioskCustomizationStatusBar", alternate = {"KioskCustomizationStatusBar"})
     @Expose
@@ -211,7 +211,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Customization System Navigation.
-     * Indicates which navigation features are enabled in Kiosk Mode. Possible values are: notConfigured, navigationEnabled, homeButtonOnly.
+     * Indicates which navigation features are enabled in Kiosk Mode.
      */
     @SerializedName(value = "kioskCustomizationSystemNavigation", alternate = {"KioskCustomizationSystemNavigation"})
     @Expose
@@ -259,7 +259,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Mode Folder Icon.
-     * Folder icon configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
+     * Folder icon configuration for managed home screen in Kiosk Mode.
      */
     @SerializedName(value = "kioskModeFolderIcon", alternate = {"KioskModeFolderIcon"})
     @Expose
@@ -267,7 +267,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Mode Icon Size.
-     * Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
+     * Icon size configuration for managed home screen in Kiosk Mode.
      */
     @SerializedName(value = "kioskModeIconSize", alternate = {"KioskModeIconSize"})
     @Expose
@@ -291,7 +291,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Mode Screen Orientation.
-     * Screen orientation configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, portrait, landscape, autoRotate.
+     * Screen orientation configuration for managed home screen in Kiosk Mode.
      */
     @SerializedName(value = "kioskModeScreenOrientation", alternate = {"KioskModeScreenOrientation"})
     @Expose
@@ -363,7 +363,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Mode Virtual Home Button Type.
-     * Indicates whether the virtual home button is a swipe up home button or a floating home button. Possible values are: notConfigured, swipeUp, floating.
+     * Indicates whether the virtual home button is a swipe up home button or a floating home button.
      */
     @SerializedName(value = "kioskModeVirtualHomeButtonType", alternate = {"KioskModeVirtualHomeButtonType"})
     @Expose
@@ -443,7 +443,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Microsoft Launcher Dock Presence Configuration.
-     * Indicates whether or not you want to configure the device dock. Possible values are: notConfigured, show, hide, disabled.
+     * Indicates whether or not you want to configure the device dock.
      */
     @SerializedName(value = "microsoftLauncherDockPresenceConfiguration", alternate = {"MicrosoftLauncherDockPresenceConfiguration"})
     @Expose
@@ -467,7 +467,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Microsoft Launcher Search Bar Placement Configuration.
-     * Indicates the search bar placement configuration on the device. Possible values are: notConfigured, top, bottom, hide.
+     * Indicates the search bar placement configuration on the device.
      */
     @SerializedName(value = "microsoftLauncherSearchBarPlacementConfiguration", alternate = {"MicrosoftLauncherSearchBarPlacementConfiguration"})
     @Expose
@@ -587,7 +587,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Password Required Type.
-     * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Indicates the minimum password quality required on the device.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -627,7 +627,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Play Store Mode.
-     * Indicates the Play Store mode of the device. Possible values are: notConfigured, allowList, blockList.
+     * Indicates the Play Store mode of the device.
      */
     @SerializedName(value = "playStoreMode", alternate = {"PlayStoreMode"})
     @Expose
@@ -707,7 +707,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The System Update Install Type.
-     * The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.
+     * The type of system update configuration.
      */
     @SerializedName(value = "systemUpdateInstallType", alternate = {"SystemUpdateInstallType"})
     @Expose
@@ -867,7 +867,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Work Profile Password Required Type.
-     * Indicates the minimum password quality required on the work profile password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Indicates the minimum password quality required on the work profile password.
      */
     @SerializedName(value = "workProfilePasswordRequiredType", alternate = {"WorkProfilePasswordRequiredType"})
     @Expose

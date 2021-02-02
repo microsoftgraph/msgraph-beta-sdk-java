@@ -36,7 +36,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
 
     /**
      * The Action Failure Reason.
-     * The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+     * The reason for the revoke licenses action failure.
      */
     @SerializedName(value = "actionFailureReason", alternate = {"ActionFailureReason"})
     @Expose
@@ -52,7 +52,7 @@ public class IosVppAppRevokeLicensesActionResult implements IJsonBackedObject {
 
     /**
      * The Action State.
-     * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * State of the action
      */
     @SerializedName(value = "actionState", alternate = {"ActionState"})
     @Expose

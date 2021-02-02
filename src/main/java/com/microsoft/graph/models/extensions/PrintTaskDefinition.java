@@ -28,7 +28,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * The application that created the printTaskDefinition. Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -36,7 +36,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the printTaskDefinition.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -44,7 +44,7 @@ public class PrintTaskDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+     * 
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

@@ -49,7 +49,7 @@ public class ContactFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Well Known Name.
-     * The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder.
+     * 
      */
     @SerializedName(value = "wellKnownName", alternate = {"WellKnownName"})
     @Expose

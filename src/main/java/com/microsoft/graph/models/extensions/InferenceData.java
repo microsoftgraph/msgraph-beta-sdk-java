@@ -34,7 +34,7 @@ public class InferenceData implements IJsonBackedObject {
 
     /**
      * The Confidence Score.
-     * Confidence score reflecting the accuracy of the data inferred about the user.
+     * 
      */
     @SerializedName(value = "confidenceScore", alternate = {"ConfidenceScore"})
     @Expose
@@ -42,7 +42,7 @@ public class InferenceData implements IJsonBackedObject {
 
     /**
      * The User Has Verified Accuracy.
-     * Records if the user has confirmed this inference as being True or False.
+     * 
      */
     @SerializedName(value = "userHasVerifiedAccuracy", alternate = {"UserHasVerifiedAccuracy"})
     @Expose

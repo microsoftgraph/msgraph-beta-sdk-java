@@ -37,7 +37,7 @@ public class DeviceManagementExchangeOnPremisesPolicy extends Entity implements 
 
     /**
      * The Default Access Level.
-     * Default access state in Exchange. This rule applies globally to the entire Exchange organization. Possible values are: none, allow, block, quarantine.
+     * Default access state in Exchange. This rule applies globally to the entire Exchange organization
      */
     @SerializedName(value = "defaultAccessLevel", alternate = {"DefaultAccessLevel"})
     @Expose

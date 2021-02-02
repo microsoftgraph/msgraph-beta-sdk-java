@@ -27,7 +27,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements IJsonBa
 
     /**
      * The Detection State.
-     * Detection state from the lastest device compliance script execution. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
+     * Detection state from the lastest device compliance script execution
      */
     @SerializedName(value = "detectionState", alternate = {"DetectionState"})
     @Expose

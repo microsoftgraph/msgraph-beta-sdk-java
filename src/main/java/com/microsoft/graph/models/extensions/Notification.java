@@ -28,7 +28,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Time To Live.
-     * Sets how long (in seconds) this notification content will stay in each platform’s notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user’s Windows Action Center.
+     * 
      */
     @SerializedName(value = "displayTimeToLive", alternate = {"DisplayTimeToLive"})
     @Expose
@@ -36,7 +36,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: '2019-01-01T00:00:00Z'). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
+     * 
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -44,7 +44,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Group Name.
-     * The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
+     * 
      */
     @SerializedName(value = "groupName", alternate = {"GroupName"})
     @Expose
@@ -52,7 +52,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Payload.
-     * This is the data content of a raw or visual user notification that will be delivered to and consumed by the app client receiving this notification.
+     * 
      */
     @SerializedName(value = "payload", alternate = {"Payload"})
     @Expose
@@ -60,7 +60,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
+     * 
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -68,7 +68,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Host Name.
-     * Represents the host name of the app to which the calling service wants to post the notification, for the given user. If targeting web endpoints (see targetPolicy.platformTypes), ensure that targetHostName is the same as the name used when creating a subscription on the client side within the application JSON property.
+     * 
      */
     @SerializedName(value = "targetHostName", alternate = {"TargetHostName"})
     @Expose
@@ -76,7 +76,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Policy.
-     * Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user.
+     * 
      */
     @SerializedName(value = "targetPolicy", alternate = {"TargetPolicy"})
     @Expose

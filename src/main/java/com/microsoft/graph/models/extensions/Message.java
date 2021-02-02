@@ -58,7 +58,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body Preview.
-     * The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
+     * The first 255 characters of the message body. It is in text format.
      */
     @SerializedName(value = "bodyPreview", alternate = {"BodyPreview"})
     @Expose
@@ -290,7 +290,7 @@ public class Message extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Mentions.
-     * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
+     * 
      */
     @SerializedName(value = "mentions", alternate = {"Mentions"})
     @Expose

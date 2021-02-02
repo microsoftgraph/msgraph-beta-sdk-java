@@ -26,7 +26,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Contains the description the user has provided for the account on the service being referenced.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -34,7 +34,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Service.
-     * Contains basic detail about the service that is being associated.
+     * 
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose
@@ -42,7 +42,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Status Message.
-     * Contains a status message from the cloud service if provided or synchronized.
+     * 
      */
     @SerializedName(value = "statusMessage", alternate = {"StatusMessage"})
     @Expose
@@ -50,7 +50,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The user name  displayed for the webaccount.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -58,7 +58,7 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * Contains a link to the user's profile on the cloud service if one exists.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

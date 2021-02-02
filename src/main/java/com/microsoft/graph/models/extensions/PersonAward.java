@@ -25,7 +25,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Descpription of the award or honor.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -33,7 +33,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Name of the award or honor.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -41,7 +41,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Issued Date.
-     * The date that the award or honor was granted.
+     * 
      */
     @SerializedName(value = "issuedDate", alternate = {"IssuedDate"})
     @Expose
@@ -49,7 +49,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Issuing Authority.
-     * Authority which granted the award or honor.
+     * 
      */
     @SerializedName(value = "issuingAuthority", alternate = {"IssuingAuthority"})
     @Expose
@@ -57,7 +57,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Thumbnail Url.
-     * URL referencing a thumbnail of the award or honor.
+     * 
      */
     @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose
@@ -65,7 +65,7 @@ public class PersonAward extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * URL referencing the award or honor.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

@@ -27,7 +27,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Domain Name.
-     * The fully qualified domain name (FQDN) of the Active Directory domain you want to join.
+     * 
      */
     @SerializedName(value = "adDomainName", alternate = {"AdDomainName"})
     @Expose
@@ -35,7 +35,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Domain Password.
-     * The password associated with adDomainUsername.
+     * 
      */
     @SerializedName(value = "adDomainPassword", alternate = {"AdDomainPassword"})
     @Expose
@@ -43,7 +43,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Domain Username.
-     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: contoso@microsoft.com.
+     * 
      */
     @SerializedName(value = "adDomainUsername", alternate = {"AdDomainUsername"})
     @Expose
@@ -51,7 +51,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * The display name for the on-premises connection.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Health Check Status.
-     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+     * 
      */
     @SerializedName(value = "healthCheckStatus", alternate = {"HealthCheckStatus"})
     @Expose
@@ -67,7 +67,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Health Check Status Details.
-     * The details of the connection's health checks and the corresponding results. Returned only on $select. See an example of getting the healthCheckStatusDetails property.Read-only.
+     * 
      */
     @SerializedName(value = "healthCheckStatusDetails", alternate = {"HealthCheckStatusDetails"})
     @Expose
@@ -75,7 +75,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The In Use.
-     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Read-only.
+     * 
      */
     @SerializedName(value = "inUse", alternate = {"InUse"})
     @Expose
@@ -83,7 +83,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Organizational Unit.
-     * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * 
      */
     @SerializedName(value = "organizationalUnit", alternate = {"OrganizationalUnit"})
     @Expose
@@ -91,7 +91,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Resource Group Id.
-     * The ID of the target resource group. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}'.
+     * 
      */
     @SerializedName(value = "resourceGroupId", alternate = {"ResourceGroupId"})
     @Expose
@@ -99,7 +99,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Subnet Id.
-     * The ID of the target subnet. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}'.
+     * 
      */
     @SerializedName(value = "subnetId", alternate = {"SubnetId"})
     @Expose
@@ -107,7 +107,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Subscription Id.
-     * The ID of the target Azure subscription that’s associated with your tenant.
+     * 
      */
     @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
     @Expose
@@ -115,7 +115,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Subscription Name.
-     * The name of the target Azure subscription. Read-only.
+     * 
      */
     @SerializedName(value = "subscriptionName", alternate = {"SubscriptionName"})
     @Expose
@@ -123,7 +123,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Virtual Network Id.
-     * The ID of the target virtual network. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}'.
+     * 
      */
     @SerializedName(value = "virtualNetworkId", alternate = {"VirtualNetworkId"})
     @Expose

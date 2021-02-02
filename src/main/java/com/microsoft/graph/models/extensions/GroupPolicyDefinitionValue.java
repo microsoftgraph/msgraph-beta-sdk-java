@@ -29,7 +29,7 @@ public class GroupPolicyDefinitionValue extends Entity implements IJsonBackedObj
 
     /**
      * The Configuration Type.
-     * Specifies how the value should be configured. This can be either as a Policy or as a Preference. Possible values are: policy, preference.
+     * Specifies how the value should be configured. This can be either as a Policy or as a Preference.
      */
     @SerializedName(value = "configurationType", alternate = {"ConfigurationType"})
     @Expose

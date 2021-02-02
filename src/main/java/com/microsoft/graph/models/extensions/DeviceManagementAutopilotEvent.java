@@ -62,7 +62,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Deployment State.
-     * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout.
+     * Deployment state like Success, Failure, InProgress, SuccessWithTimeout.
      */
     @SerializedName(value = "deploymentState", alternate = {"DeploymentState"})
     @Expose
@@ -134,7 +134,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Enrollment State.
-     * Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Enrollment state like Enrolled, Failed.
      */
     @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
@@ -142,7 +142,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Enrollment Type.
-     * Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
+     * Enrollment type.
      */
     @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose

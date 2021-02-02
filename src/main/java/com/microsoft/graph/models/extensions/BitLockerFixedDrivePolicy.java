@@ -36,7 +36,7 @@ public class BitLockerFixedDrivePolicy implements IJsonBackedObject {
 
     /**
      * The Encryption Method.
-     * Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     * Select the encryption method for fixed drives.
      */
     @SerializedName(value = "encryptionMethod", alternate = {"EncryptionMethod"})
     @Expose

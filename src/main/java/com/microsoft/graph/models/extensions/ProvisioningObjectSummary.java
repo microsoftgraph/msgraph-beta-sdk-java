@@ -32,7 +32,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Action.
-     * Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Azure AD activity list.
+     * 
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -40,7 +40,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Activity Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Change Id.
-     * Unique ID of this change in this cycle.
+     * 
      */
     @SerializedName(value = "changeId", alternate = {"ChangeId"})
     @Expose
@@ -56,7 +56,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Cycle Id.
-     * Unique ID per job iteration.
+     * 
      */
     @SerializedName(value = "cycleId", alternate = {"CycleId"})
     @Expose
@@ -64,7 +64,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Duration In Milliseconds.
-     * Indicates how long this provisioning action took to finish. Measured in milliseconds.
+     * 
      */
     @SerializedName(value = "durationInMilliseconds", alternate = {"DurationInMilliseconds"})
     @Expose
@@ -72,7 +72,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Initiated By.
-     * Details of who initiated this provisioning.
+     * 
      */
     @SerializedName(value = "initiatedBy", alternate = {"InitiatedBy"})
     @Expose
@@ -80,7 +80,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Job Id.
-     * The unique ID for the whole provisioning job.
+     * 
      */
     @SerializedName(value = "jobId", alternate = {"JobId"})
     @Expose
@@ -88,7 +88,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Modified Properties.
-     * Details of each property that was modified in this provisioning action on this object.
+     * 
      */
     @SerializedName(value = "modifiedProperties", alternate = {"ModifiedProperties"})
     @Expose
@@ -96,7 +96,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Steps.
-     * Details of each step in provisioning.
+     * 
      */
     @SerializedName(value = "provisioningSteps", alternate = {"ProvisioningSteps"})
     @Expose
@@ -104,7 +104,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Service Principal.
-     * Represents the service principal used for provisioning.
+     * 
      */
     @SerializedName(value = "servicePrincipal", alternate = {"ServicePrincipal"})
     @Expose
@@ -112,7 +112,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Source Identity.
-     * Details of source object being provisioned.
+     * 
      */
     @SerializedName(value = "sourceIdentity", alternate = {"SourceIdentity"})
     @Expose
@@ -120,7 +120,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Source System.
-     * Details of source system of the object being provisioned.
+     * 
      */
     @SerializedName(value = "sourceSystem", alternate = {"SourceSystem"})
     @Expose
@@ -128,7 +128,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Status Info.
-     * Details of provisioning status.
+     * 
      */
     @SerializedName(value = "statusInfo", alternate = {"StatusInfo"})
     @Expose
@@ -136,7 +136,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Target Identity.
-     * Details of target object being provisioned.
+     * 
      */
     @SerializedName(value = "targetIdentity", alternate = {"TargetIdentity"})
     @Expose
@@ -144,7 +144,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Target System.
-     * Details of target system of the object being provisioned.
+     * 
      */
     @SerializedName(value = "targetSystem", alternate = {"TargetSystem"})
     @Expose
@@ -152,7 +152,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Tenant Id.
-     * Unique Azure AD tenant ID.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

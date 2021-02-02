@@ -28,7 +28,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The content type of the page.
+     * 
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose

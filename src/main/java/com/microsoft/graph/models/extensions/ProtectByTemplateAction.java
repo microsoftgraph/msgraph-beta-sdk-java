@@ -25,7 +25,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
 
     /**
      * The Template Id.
-     * The GUID of the Azure Information Protection template to apply to the information.
+     * 
      */
     @SerializedName(value = "templateId", alternate = {"TemplateId"})
     @Expose

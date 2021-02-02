@@ -27,7 +27,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Failed Sign In Count.
-     * Number of failed sign in on Active Directory Federation Service in the period specified.
+     * 
      */
     @SerializedName(value = "failedSignInCount", alternate = {"FailedSignInCount"})
     @Expose
@@ -35,7 +35,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Migration Status.
-     * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired.
+     * 
      */
     @SerializedName(value = "migrationStatus", alternate = {"MigrationStatus"})
     @Expose
@@ -43,7 +43,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Migration Validation Details.
-     * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. Possible result values are 0, 1, or 2. 0 when the validation check passed, 1 when the validation check failed and 2 when the validation check is a warning.
+     * 
      */
     @SerializedName(value = "migrationValidationDetails", alternate = {"MigrationValidationDetails"})
     @Expose
@@ -51,7 +51,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Relying Party Id.
-     * This identifier is used to identify the relying party to this Federation Service. It is used when issuing claims to the relying party.
+     * 
      */
     @SerializedName(value = "relyingPartyId", alternate = {"RelyingPartyId"})
     @Expose
@@ -59,7 +59,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Relying Party Name.
-     * Name of application or other entity on the internet that uses an identity provider to authenticate a user who wants to log in.
+     * 
      */
     @SerializedName(value = "relyingPartyName", alternate = {"RelyingPartyName"})
     @Expose
@@ -67,7 +67,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Reply Urls.
-     * Specifies where the relying party expects to receive the token.
+     * 
      */
     @SerializedName(value = "replyUrls", alternate = {"ReplyUrls"})
     @Expose
@@ -75,7 +75,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Service Id.
-     * Uniquely identifies the Active Directory forest.
+     * 
      */
     @SerializedName(value = "serviceId", alternate = {"ServiceId"})
     @Expose
@@ -83,7 +83,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Sign In Success Rate.
-     * Number of successful / (number of successful + number of failed sign ins) on Active Directory Federation Service in the period specified.
+     * 
      */
     @SerializedName(value = "signInSuccessRate", alternate = {"SignInSuccessRate"})
     @Expose
@@ -91,7 +91,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Successful Sign In Count.
-     * Number of successful sign ins on Active Directory Federation Service.
+     * 
      */
     @SerializedName(value = "successfulSignInCount", alternate = {"SuccessfulSignInCount"})
     @Expose
@@ -99,7 +99,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Total Sign In Count.
-     * Number of successful + failed sign ins failed sign ins on Active Directory Federation Service in the period specified.
+     * 
      */
     @SerializedName(value = "totalSignInCount", alternate = {"TotalSignInCount"})
     @Expose
@@ -107,7 +107,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Unique User Count.
-     * Number of unique users that have signed into the application.
+     * 
      */
     @SerializedName(value = "uniqueUserCount", alternate = {"UniqueUserCount"})
     @Expose

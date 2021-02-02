@@ -33,7 +33,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
 
     /**
      * The Certificate Store.
-     * Target store certificate. Possible values are: user, machine.
+     * Target store certificate
      */
     @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
@@ -41,7 +41,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
 
     /**
      * The Custom Subject Alternative Names.
-     * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: https://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
+     * Custom Subject Alternative Name Settings. The OnPremisesUserPrincipalName variable is support as well as others documented here: http://go.microsoft.com/fwlink/?LinkId=2027630. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "customSubjectAlternativeNames", alternate = {"CustomSubjectAlternativeNames"})
     @Expose
@@ -57,7 +57,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
 
     /**
      * The Key Size.
-     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * SCEP Key Size.
      */
     @SerializedName(value = "keySize", alternate = {"KeySize"})
     @Expose
@@ -65,7 +65,7 @@ public class IosScepCertificateProfile extends IosCertificateProfileBase impleme
 
     /**
      * The Key Usage.
-     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * SCEP Key Usage.
      */
     @SerializedName(value = "keyUsage", alternate = {"KeyUsage"})
     @Expose

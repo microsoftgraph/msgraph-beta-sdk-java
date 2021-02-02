@@ -26,7 +26,7 @@ public class ActivityStatistics extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * The type of activity for which statistics are returned. The possible values are: call, chat, email, focus, and meeting.
+     * 
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -34,7 +34,7 @@ public class ActivityStatistics extends Entity implements IJsonBackedObject {
 
     /**
      * The Duration.
-     * Total hours spent on the activity. The value is represented in ISO 8601 format for durations.
+     * 
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -42,7 +42,7 @@ public class ActivityStatistics extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date.
-     * Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
+     * 
      */
     @SerializedName(value = "endDate", alternate = {"EndDate"})
     @Expose
@@ -50,7 +50,7 @@ public class ActivityStatistics extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date.
-     * Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
+     * 
      */
     @SerializedName(value = "startDate", alternate = {"StartDate"})
     @Expose
@@ -58,7 +58,7 @@ public class ActivityStatistics extends Entity implements IJsonBackedObject {
 
     /**
      * The Time Zone Used.
-     * The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
+     * 
      */
     @SerializedName(value = "timeZoneUsed", alternate = {"TimeZoneUsed"})
     @Expose

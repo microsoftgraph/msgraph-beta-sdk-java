@@ -32,7 +32,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
 
     /**
      * The Authentication Method.
-     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -40,7 +40,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
 
     /**
      * The Eap Fast Configuration.
-     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
      */
     @SerializedName(value = "eapFastConfiguration", alternate = {"EapFastConfiguration"})
     @Expose
@@ -48,7 +48,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
 
     /**
      * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
     @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
@@ -56,7 +56,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
 
     /**
      * The Inner Authentication Protocol For Eap Ttls.
-     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
      */
     @SerializedName(value = "innerAuthenticationProtocolForEapTtls", alternate = {"InnerAuthenticationProtocolForEapTtls"})
     @Expose

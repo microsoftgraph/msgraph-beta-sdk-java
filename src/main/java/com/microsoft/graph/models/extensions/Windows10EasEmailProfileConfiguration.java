@@ -36,7 +36,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
 
     /**
      * The Duration Of Email To Sync.
-     * Duration of email to sync. Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Duration of email to sync.
      */
     @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
@@ -44,7 +44,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
 
     /**
      * The Email Address Source.
-     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Email attribute that is picked from AAD and injected into this profile before installing on the device.
      */
     @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
@@ -52,7 +52,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
 
     /**
      * The Email Sync Schedule.
-     * Email sync schedule. Possible values are: userDefined, asMessagesArrive, manual, fifteenMinutes, thirtyMinutes, sixtyMinutes, basedOnMyUsage.
+     * Email sync schedule.
      */
     @SerializedName(value = "emailSyncSchedule", alternate = {"EmailSyncSchedule"})
     @Expose

@@ -50,7 +50,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements IJsonBa
 
     /**
      * The State.
-     * Device state for an intent. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Device state for an intent
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

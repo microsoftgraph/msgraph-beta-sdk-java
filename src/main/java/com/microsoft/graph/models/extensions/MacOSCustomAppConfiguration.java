@@ -41,7 +41,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
 
     /**
      * The File Name.
-     * Configuration file name (.plist
+     * Configuration file name (*.plist | *.xml).
      */
     @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose

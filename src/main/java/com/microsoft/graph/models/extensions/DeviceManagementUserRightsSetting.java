@@ -44,7 +44,7 @@ public class DeviceManagementUserRightsSetting implements IJsonBackedObject {
 
     /**
      * The State.
-     * Representing the current state of this user rights setting. Possible values are: notConfigured, blocked, allowed.
+     * Representing the current state of this user rights setting
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

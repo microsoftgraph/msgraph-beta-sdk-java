@@ -25,7 +25,7 @@ public class BookingCurrency extends Entity implements IJsonBackedObject {
 
     /**
      * The Symbol.
-     * The currency symbol. For example, the currency symbol for the US dollar and for the Australian dollar is $.
+     * 
      */
     @SerializedName(value = "symbol", alternate = {"Symbol"})
     @Expose

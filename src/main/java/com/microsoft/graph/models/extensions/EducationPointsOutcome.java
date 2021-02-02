@@ -26,7 +26,7 @@ public class EducationPointsOutcome extends EducationOutcome implements IJsonBac
 
     /**
      * The Points.
-     * The numeric grade the teacher has given the student for this assignment.
+     * 
      */
     @SerializedName(value = "points", alternate = {"Points"})
     @Expose
@@ -34,7 +34,7 @@ public class EducationPointsOutcome extends EducationOutcome implements IJsonBac
 
     /**
      * The Published Points.
-     * A copy of the points property that is made when the grade is released to the student.
+     * 
      */
     @SerializedName(value = "publishedPoints", alternate = {"PublishedPoints"})
     @Expose

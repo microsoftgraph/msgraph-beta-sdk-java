@@ -39,7 +39,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
     /**
      * The App Action If Ios Device Model Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
      */
     @SerializedName(value = "appActionIfIosDeviceModelNotAllowed", alternate = {"AppActionIfIosDeviceModelNotAllowed"})
     @Expose
@@ -55,7 +55,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
     /**
      * The Custom Browser Protocol.
-     * A custom browser protocol to open weblink on iOS.
+     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      */
     @SerializedName(value = "customBrowserProtocol", alternate = {"CustomBrowserProtocol"})
     @Expose

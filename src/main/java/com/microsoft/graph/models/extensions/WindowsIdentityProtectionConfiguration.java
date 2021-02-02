@@ -42,7 +42,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
 
     /**
      * The Pin Lowercase Characters Usage.
-     * This value configures the use of lowercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * This value configures the use of lowercase characters in the Windows Hello for Business PIN.
      */
     @SerializedName(value = "pinLowercaseCharactersUsage", alternate = {"PinLowercaseCharactersUsage"})
     @Expose
@@ -82,7 +82,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
 
     /**
      * The Pin Special Characters Usage.
-     * Controls the ability to use special characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * Controls the ability to use special characters in the Windows Hello for Business PIN.
      */
     @SerializedName(value = "pinSpecialCharactersUsage", alternate = {"PinSpecialCharactersUsage"})
     @Expose
@@ -90,7 +90,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
 
     /**
      * The Pin Uppercase Characters Usage.
-     * This value configures the use of uppercase characters in the Windows Hello for Business PIN. Possible values are: blocked, required, allowed, notConfigured.
+     * This value configures the use of uppercase characters in the Windows Hello for Business PIN.
      */
     @SerializedName(value = "pinUppercaseCharactersUsage", alternate = {"PinUppercaseCharactersUsage"})
     @Expose

@@ -34,7 +34,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
 
     /**
      * The Calendar.
-     * The calendar to use, e.g., Gregorian Calendar.Returned by default.
+     * 
      */
     @SerializedName(value = "calendar", alternate = {"Calendar"})
     @Expose
@@ -42,7 +42,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
 
     /**
      * The First Day Of Week.
-     * The first day of the week to use, e.g., Sunday.Returned by default.
+     * 
      */
     @SerializedName(value = "firstDayOfWeek", alternate = {"FirstDayOfWeek"})
     @Expose
@@ -50,7 +50,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
 
     /**
      * The Long Date Format.
-     * The long date time format to be used for displaying dates.Returned by default.
+     * 
      */
     @SerializedName(value = "longDateFormat", alternate = {"LongDateFormat"})
     @Expose
@@ -58,7 +58,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
 
     /**
      * The Long Time Format.
-     * The long time format to be used for displaying time.Returned by default.
+     * 
      */
     @SerializedName(value = "longTimeFormat", alternate = {"LongTimeFormat"})
     @Expose
@@ -66,7 +66,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
 
     /**
      * The Short Date Format.
-     * The short date time format to be used for displaying dates.Returned by default.
+     * 
      */
     @SerializedName(value = "shortDateFormat", alternate = {"ShortDateFormat"})
     @Expose
@@ -74,7 +74,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
 
     /**
      * The Short Time Format.
-     * The short time format to be used for displaying time.Returned by default.
+     * 
      */
     @SerializedName(value = "shortTimeFormat", alternate = {"ShortTimeFormat"})
     @Expose
@@ -82,7 +82,7 @@ public class RegionalFormatOverrides implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-     * The timezone to be used for displaying time.Returned by default.
+     * 
      */
     @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose

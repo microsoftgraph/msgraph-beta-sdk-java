@@ -43,7 +43,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
 
     /**
      * The Derived Credential Provider.
-     * The Derived Credential Provider to use for this account. Possible values are: notConfigured, entrustDataCard, purebred, xTec, intercede.
+     * The Derived Credential Provider to use for this account.
      */
     @SerializedName(value = "derivedCredentialProvider", alternate = {"DerivedCredentialProvider"})
     @Expose
@@ -59,7 +59,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
 
     /**
      * The Device Compliance Checkin Threshold Days.
-     * The number of days a device is allowed to go without checking in to remain compliant.
+     * The number of days a device is allowed to go without checking in to remain compliant. Valid values 0 to 120
      */
     @SerializedName(value = "deviceComplianceCheckinThresholdDays", alternate = {"DeviceComplianceCheckinThresholdDays"})
     @Expose

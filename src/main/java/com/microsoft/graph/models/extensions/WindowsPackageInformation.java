@@ -36,7 +36,7 @@ public class WindowsPackageInformation implements IJsonBackedObject {
 
     /**
      * The Applicable Architecture.
-     * The Windows architecture for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * The Windows architecture for which this app can run on.
      */
     @SerializedName(value = "applicableArchitecture", alternate = {"ApplicableArchitecture"})
     @Expose

@@ -58,7 +58,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
 
     /**
      * The Start Menu Layout Xml.
-     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      */
     @SerializedName(value = "startMenuLayoutXml", alternate = {"StartMenuLayoutXml"})
     @Expose

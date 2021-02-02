@@ -26,7 +26,7 @@ public class PrinterCreateOperation extends PrintOperation implements IJsonBacke
 
     /**
      * The Certificate.
-     * The signed certificate created during the registration process. Read-only.
+     * 
      */
     @SerializedName(value = "certificate", alternate = {"Certificate"})
     @Expose

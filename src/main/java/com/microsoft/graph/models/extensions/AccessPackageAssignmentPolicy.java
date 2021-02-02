@@ -31,7 +31,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Package Id.
-     * ID of the access package.
+     * 
      */
     @SerializedName(value = "accessPackageId", alternate = {"AccessPackageId"})
     @Expose
@@ -39,7 +39,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Review Settings.
-     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
+     * 
      */
     @SerializedName(value = "accessReviewSettings", alternate = {"AccessReviewSettings"})
     @Expose
@@ -47,7 +47,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Can Extend.
-     * Indicates whether a user can extend the access package assignment duration after approval.
+     * 
      */
     @SerializedName(value = "canExtend", alternate = {"CanExtend"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Created By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -63,7 +63,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Created Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -71,7 +71,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Description.
-     * The description of the policy.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Display Name.
-     * The display name of the policy.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Duration In Days.
-     * The number of days in which assignments from this policy last until they are expired.
+     * 
      */
     @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
@@ -95,7 +95,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Expiration Date Time.
-     * The expiration date for assignments created in this policy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -103,7 +103,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Modified By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -111,7 +111,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Modified Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -119,7 +119,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Questions.
-     * Questions that are posed to the  requestor.
+     * 
      */
     @SerializedName(value = "questions", alternate = {"Questions"})
     @Expose
@@ -127,7 +127,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Request Approval Settings.
-     * Who must approve requests for access package in this policy.
+     * 
      */
     @SerializedName(value = "requestApprovalSettings", alternate = {"RequestApprovalSettings"})
     @Expose
@@ -135,7 +135,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Requestor Settings.
-     * Who can request this access package from this policy.
+     * 
      */
     @SerializedName(value = "requestorSettings", alternate = {"RequestorSettings"})
     @Expose
@@ -143,7 +143,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Package.
-     * The access package with this policy. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose

@@ -68,7 +68,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Platform Id.
-     * The client platform ID of the participant. Read-only.
+     * 
      */
     @SerializedName(value = "platformId", alternate = {"PlatformId"})
     @Expose
@@ -76,7 +76,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Region.
-     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
      */
     @SerializedName(value = "region", alternate = {"Region"})
     @Expose

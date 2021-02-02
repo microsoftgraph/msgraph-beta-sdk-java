@@ -27,7 +27,7 @@ public class Program extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description of the program.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -35,7 +35,7 @@ public class Program extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the program.  Required on create.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -43,7 +43,7 @@ public class Program extends Entity implements IJsonBackedObject {
 
     /**
      * The Controls.
-     * Controls associated with the program.
+     * 
      */
     @SerializedName(value = "controls", alternate = {"Controls"})
     @Expose

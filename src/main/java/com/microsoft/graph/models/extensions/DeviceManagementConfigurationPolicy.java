@@ -79,7 +79,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
     /**
      * The Platforms.
-     * Platforms for this policy. Possible values are: none, macOS, windows10X, windows10.
+     * Platforms for this policy
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
@@ -103,7 +103,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
     /**
      * The Technologies.
-     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager.
+     * Technologies for this policy
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

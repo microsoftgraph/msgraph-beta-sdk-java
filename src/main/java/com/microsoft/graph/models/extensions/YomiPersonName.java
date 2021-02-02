@@ -34,7 +34,7 @@ public class YomiPersonName implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Composite of first and last name pronunciation guides.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -42,7 +42,7 @@ public class YomiPersonName implements IJsonBackedObject {
 
     /**
      * The First.
-     * Pronunciation guide for the first name of the user.
+     * 
      */
     @SerializedName(value = "first", alternate = {"First"})
     @Expose
@@ -50,7 +50,7 @@ public class YomiPersonName implements IJsonBackedObject {
 
     /**
      * The Last.
-     * Pronunciation guide for the last name of the user.
+     * 
      */
     @SerializedName(value = "last", alternate = {"Last"})
     @Expose
@@ -58,7 +58,7 @@ public class YomiPersonName implements IJsonBackedObject {
 
     /**
      * The Maiden.
-     * Pronunciation guide for the maiden name of the user.
+     * 
      */
     @SerializedName(value = "maiden", alternate = {"Maiden"})
     @Expose
@@ -66,7 +66,7 @@ public class YomiPersonName implements IJsonBackedObject {
 
     /**
      * The Middle.
-     * Pronunciation guide for the middle name of the user.
+     * 
      */
     @SerializedName(value = "middle", alternate = {"Middle"})
     @Expose

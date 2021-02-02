@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
-import com.microsoft.graph.requests.extensions.IIdentityApiConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityApiConnectorRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityApiConnectorCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityApiConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cIdentityUserFlowCollectionRequestBuilder;
@@ -85,13 +81,6 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder implemen
      */
     public IConditionalAccessRootRequestBuilder conditionalAccess() {
         return new ConditionalAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("conditionalAccess"), getClient(), null);
-    }
-    public IIdentityApiConnectorCollectionRequestBuilder apiConnectors() {
-        return new IdentityApiConnectorCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors"), getClient(), null);
-    }
-
-    public IIdentityApiConnectorRequestBuilder apiConnectors(final String id) {
-        return new IdentityApiConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("apiConnectors") + "/" + id, getClient(), null);
     }
     public IB2cIdentityUserFlowCollectionRequestBuilder b2cUserFlows() {
         return new B2cIdentityUserFlowCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("b2cUserFlows"), getClient(), null);

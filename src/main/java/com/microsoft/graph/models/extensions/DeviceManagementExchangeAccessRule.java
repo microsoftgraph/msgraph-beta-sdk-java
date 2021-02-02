@@ -36,7 +36,7 @@ public class DeviceManagementExchangeAccessRule implements IJsonBackedObject {
 
     /**
      * The Access Level.
-     * Access Level for Exchange granted by this rule. Possible values are: none, allow, block, quarantine.
+     * Access Level for Exchange granted by this rule.
      */
     @SerializedName(value = "accessLevel", alternate = {"AccessLevel"})
     @Expose

@@ -34,7 +34,7 @@ public class Win32LobAppFileSystemRequirement extends Win32LobAppRequirement imp
 
     /**
      * The Detection Type.
-     * The file system detection type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
+     * The file system detection type
      */
     @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose

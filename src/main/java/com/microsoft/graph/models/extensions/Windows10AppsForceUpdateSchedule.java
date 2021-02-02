@@ -35,7 +35,7 @@ public class Windows10AppsForceUpdateSchedule implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * Recurrence schedule. Possible values are: none, daily, weekly, monthly.
+     * Recurrence schedule.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

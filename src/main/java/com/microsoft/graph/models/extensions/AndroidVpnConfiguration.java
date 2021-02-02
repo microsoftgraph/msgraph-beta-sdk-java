@@ -31,7 +31,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements IJso
 
     /**
      * The Authentication Method.
-     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Authentication method.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -47,7 +47,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements IJso
 
     /**
      * The Connection Type.
-     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, microsoftTunnel, netMotionMobility.
+     * Connection type.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose

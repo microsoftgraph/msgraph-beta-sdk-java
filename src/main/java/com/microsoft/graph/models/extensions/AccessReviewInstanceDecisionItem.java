@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Access Review Id.
-     * The identifier of the accessReviewInstance parent.
+     * 
      */
     @SerializedName(value = "accessReviewId", alternate = {"AccessReviewId"})
     @Expose
@@ -35,7 +35,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Applied By.
-     * The identifier of the user who applied the decision.
+     * 
      */
     @SerializedName(value = "appliedBy", alternate = {"AppliedBy"})
     @Expose
@@ -43,7 +43,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Applied Date Time.
-     * The DateTime when the approval decision was applied.
+     * 
      */
     @SerializedName(value = "appliedDateTime", alternate = {"AppliedDateTime"})
     @Expose
@@ -51,7 +51,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Apply Result.
-     * The result of applying the decision. Possible values: NotApplied, Success, Failed, NotFound, or NotSupported.
+     * 
      */
     @SerializedName(value = "applyResult", alternate = {"ApplyResult"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Decision.
-     * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow.
+     * 
      */
     @SerializedName(value = "decision", alternate = {"Decision"})
     @Expose
@@ -67,7 +67,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Justification.
-     * The review decision justification.
+     * 
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -75,7 +75,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Recommendation.
-     * A system-generated recommendation for the approval decision. Possible values: Approve, Deny, or NotAvailable.
+     * 
      */
     @SerializedName(value = "recommendation", alternate = {"Recommendation"})
     @Expose
@@ -83,7 +83,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Reviewed By.
-     * The identifier of the reviewer.
+     * 
      */
     @SerializedName(value = "reviewedBy", alternate = {"ReviewedBy"})
     @Expose
@@ -91,7 +91,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Reviewed Date Time.
-     * The DateTime when the review occurred.
+     * 
      */
     @SerializedName(value = "reviewedDateTime", alternate = {"ReviewedDateTime"})
     @Expose
@@ -99,7 +99,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Target.
-     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget.
+     * 
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

@@ -42,7 +42,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
 
     /**
      * The Product Version Operator.
-     * The operator to detect product version. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+     * The operator to detect product version.
      */
     @SerializedName(value = "productVersionOperator", alternate = {"ProductVersionOperator"})
     @Expose

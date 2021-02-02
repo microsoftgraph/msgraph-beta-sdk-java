@@ -27,7 +27,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
 
     /**
      * The Auth Method.
-     * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and  alternateMobileCall (only supported for registration).
+     * 
      */
     @SerializedName(value = "authMethod", alternate = {"AuthMethod"})
     @Expose
@@ -35,7 +35,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
 
     /**
      * The Failure Activity Count.
-     * Provides the count of failed resets or registration data.
+     * 
      */
     @SerializedName(value = "failureActivityCount", alternate = {"FailureActivityCount"})
     @Expose
@@ -43,7 +43,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
 
     /**
      * The Feature.
-     * Defines the feature to report. Possible values are: registration and reset.
+     * 
      */
     @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose
@@ -51,7 +51,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
 
     /**
      * The Successful Activity Count.
-     * Provides the count of successful registrations or resets.
+     * 
      */
     @SerializedName(value = "successfulActivityCount", alternate = {"SuccessfulActivityCount"})
     @Expose

@@ -30,7 +30,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Added By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "addedBy", alternate = {"AddedBy"})
     @Expose
@@ -38,7 +38,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Added On.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * 
      */
     @SerializedName(value = "addedOn", alternate = {"AddedOn"})
     @Expose
@@ -54,7 +54,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * A description for the resource.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -62,7 +62,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the resource, such as the application name, group name or site name.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -70,7 +70,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Pending Onboarding.
-     * True if the resource is not yet available for assignment.
+     * 
      */
     @SerializedName(value = "isPendingOnboarding", alternate = {"IsPendingOnboarding"})
     @Expose
@@ -78,7 +78,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Origin Id.
-     * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
+     * 
      */
     @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
@@ -86,7 +86,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Origin System.
-     * The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
+     * 
      */
     @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
@@ -94,7 +94,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Type.
-     * The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
+     * 
      */
     @SerializedName(value = "resourceType", alternate = {"ResourceType"})
     @Expose
@@ -102,7 +102,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Url.
-     * A unique resource locator for the resource, such as the URL for signing a user into an application.
+     * 
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose
@@ -110,7 +110,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resource Roles.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResourceRoles", alternate = {"AccessPackageResourceRoles"})
     @Expose
@@ -118,7 +118,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Package Resource Scopes.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResourceScopes", alternate = {"AccessPackageResourceScopes"})
     @Expose

@@ -34,7 +34,7 @@ public class ConditionalAccessDeviceStates implements IJsonBackedObject {
 
     /**
      * The Exclude States.
-     * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
+     * 
      */
     @SerializedName(value = "excludeStates", alternate = {"ExcludeStates"})
     @Expose
@@ -42,7 +42,7 @@ public class ConditionalAccessDeviceStates implements IJsonBackedObject {
 
     /**
      * The Include States.
-     * States in the scope of the policy. All is the only allowed value.
+     * 
      */
     @SerializedName(value = "includeStates", alternate = {"IncludeStates"})
     @Expose

@@ -28,7 +28,7 @@ public class FilterOperatorSchema extends Entity implements IJsonBackedObject {
 
     /**
      * The Arity.
-     * Arity of the operator. Possible values are: Binary, Unary. The default is Binary.
+     * 
      */
     @SerializedName(value = "arity", alternate = {"Arity"})
     @Expose
@@ -36,7 +36,7 @@ public class FilterOperatorSchema extends Entity implements IJsonBackedObject {
 
     /**
      * The Multivalued Comparison Type.
-     * Possible values are: All, Any. Applies only to multivalued attributes. All means that all values must satisfy the condition. Any means that at least one value has to satisfy the condition. The default is All.
+     * 
      */
     @SerializedName(value = "multivaluedComparisonType", alternate = {"MultivaluedComparisonType"})
     @Expose
@@ -44,7 +44,7 @@ public class FilterOperatorSchema extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Attribute Types.
-     * Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.
+     * 
      */
     @SerializedName(value = "supportedAttributeTypes", alternate = {"SupportedAttributeTypes"})
     @Expose

@@ -34,7 +34,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
 
     /**
      * The Association Type.
-     * Nullable. An app-defined type of association between the plannerPlan and the app. The app can use this information to track different kinds of relationships to the same plannerPlan.
+     * 
      */
     @SerializedName(value = "associationType", alternate = {"AssociationType"})
     @Expose
@@ -42,7 +42,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Read-only. The date and time when the plannerPlanContext was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
 
     /**
      * The Display Name Segments.
-     * The segments of the name of the external experience. Segments represent a hierarchical structure that allows other apps to display the relationship.
+     * 
      */
     @SerializedName(value = "displayNameSegments", alternate = {"DisplayNameSegments"})
     @Expose
@@ -58,7 +58,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
 
     /**
      * The Owner App Id.
-     * Read-only. ID of the app that created the plannerPlanContext.
+     * 
      */
     @SerializedName(value = "ownerAppId", alternate = {"OwnerAppId"})
     @Expose

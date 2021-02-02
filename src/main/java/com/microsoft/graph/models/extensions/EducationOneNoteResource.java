@@ -25,7 +25,7 @@ public class EducationOneNoteResource extends EducationResource implements IJson
 
     /**
      * The Page Url.
-     * The Microsoft Graph URL to the page in OneNote.
+     * 
      */
     @SerializedName(value = "pageUrl", alternate = {"PageUrl"})
     @Expose
@@ -33,7 +33,7 @@ public class EducationOneNoteResource extends EducationResource implements IJson
 
     /**
      * The Section Name.
-     * Section name that distributions should be copied into or were copied into.
+     * 
      */
     @SerializedName(value = "sectionName", alternate = {"SectionName"})
     @Expose

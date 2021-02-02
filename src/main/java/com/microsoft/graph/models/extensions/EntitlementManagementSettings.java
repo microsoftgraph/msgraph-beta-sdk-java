@@ -25,7 +25,7 @@ public class EntitlementManagementSettings extends Entity implements IJsonBacked
 
     /**
      * The Days Until External User Deleted After Blocked.
-     * If externalUserLifecycleAction is BlockSignInAndDelete, the number of days after an external user is blocked from sign in before their account is deleted.
+     * 
      */
     @SerializedName(value = "daysUntilExternalUserDeletedAfterBlocked", alternate = {"DaysUntilExternalUserDeletedAfterBlocked"})
     @Expose
@@ -33,7 +33,7 @@ public class EntitlementManagementSettings extends Entity implements IJsonBacked
 
     /**
      * The External User Lifecycle Action.
-     * One of None, BlockSignIn, or BlockSignInAndDelete.
+     * 
      */
     @SerializedName(value = "externalUserLifecycleAction", alternate = {"ExternalUserLifecycleAction"})
     @Expose

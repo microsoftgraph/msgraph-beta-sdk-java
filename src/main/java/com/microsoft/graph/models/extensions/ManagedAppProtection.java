@@ -83,7 +83,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The App Action If Device Compliance Required.
-     * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either block or wipe, when the device is either rooted or jailbroken, if DeviceComplianceRequired is set to true.
      */
     @SerializedName(value = "appActionIfDeviceComplianceRequired", alternate = {"AppActionIfDeviceComplianceRequired"})
     @Expose
@@ -91,7 +91,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The App Action If Maximum Pin Retries Exceeded.
-     * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either block or wipe, based on maximum number of incorrect pin retry attempts.
      */
     @SerializedName(value = "appActionIfMaximumPinRetriesExceeded", alternate = {"AppActionIfMaximumPinRetriesExceeded"})
     @Expose
@@ -99,7 +99,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The App Action If Unable To Authenticate User.
-     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Possible values are: block, wipe, warn.
+     * If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD.
      */
     @SerializedName(value = "appActionIfUnableToAuthenticateUser", alternate = {"AppActionIfUnableToAuthenticateUser"})
     @Expose
@@ -139,7 +139,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Dialer Restriction Level.
-     * The classes of dialer apps that are allowed to click-to-open a phone number. Possible values are: allApps, managedApps, customApp, blocked.
+     * The classes of dialer apps that are allowed to click-to-open a phone number.
      */
     @SerializedName(value = "dialerRestrictionLevel", alternate = {"DialerRestrictionLevel"})
     @Expose
@@ -179,7 +179,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Maximum Allowed Device Threat Level.
-     * Maximum allowed device threat level, as reported by the MTD app. Possible values are: notConfigured, secured, low, medium, high.
+     * Maximum allowed device threat level, as reported by the MTD app
      */
     @SerializedName(value = "maximumAllowedDeviceThreatLevel", alternate = {"MaximumAllowedDeviceThreatLevel"})
     @Expose
@@ -251,7 +251,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Mobile Threat Defense Remediation Action.
-     * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property. Possible values are: block, wipe, warn.
+     * Determines what action to take if the mobile threat defense threat threshold isn't met. Warn isn't a supported value for this property
      */
     @SerializedName(value = "mobileThreatDefenseRemediationAction", alternate = {"MobileThreatDefenseRemediationAction"})
     @Expose
@@ -259,7 +259,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
 
     /**
      * The Notification Restriction.
-     * Specify app notification restriction. Possible values are: allow, blockOrganizationalData, block.
+     * Specify app notification restriction
      */
     @SerializedName(value = "notificationRestriction", alternate = {"NotificationRestriction"})
     @Expose

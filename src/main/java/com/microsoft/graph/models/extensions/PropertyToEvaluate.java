@@ -34,7 +34,7 @@ public class PropertyToEvaluate implements IJsonBackedObject {
 
     /**
      * The Property Name.
-     * Provides the property name.
+     * 
      */
     @SerializedName(value = "propertyName", alternate = {"PropertyName"})
     @Expose
@@ -42,7 +42,7 @@ public class PropertyToEvaluate implements IJsonBackedObject {
 
     /**
      * The Property Value.
-     * Provides the property value.
+     * 
      */
     @SerializedName(value = "propertyValue", alternate = {"PropertyValue"})
     @Expose

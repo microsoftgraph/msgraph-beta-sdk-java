@@ -35,7 +35,7 @@ public class EducationSynchronizationLicenseAssignment implements IJsonBackedObj
 
     /**
      * The Applies To.
-     * The user role type to assign to license. Possible values are: student, teacher, faculty.
+     * 
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
@@ -43,7 +43,7 @@ public class EducationSynchronizationLicenseAssignment implements IJsonBackedObj
 
     /**
      * The Sku Ids.
-     * Represents the SKU identifiers of the licenses to assign.
+     * 
      */
     @SerializedName(value = "skuIds", alternate = {"SkuIds"})
     @Expose

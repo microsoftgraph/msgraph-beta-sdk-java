@@ -25,7 +25,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Descpription of the patent or filing.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -33,7 +33,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Title of the patent or filing.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -41,7 +41,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Is Pending.
-     * Indicates the patent is pending.
+     * 
      */
     @SerializedName(value = "isPending", alternate = {"IsPending"})
     @Expose
@@ -49,7 +49,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Issued Date.
-     * The date that the patent was granted.
+     * 
      */
     @SerializedName(value = "issuedDate", alternate = {"IssuedDate"})
     @Expose
@@ -57,7 +57,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Issuing Authority.
-     * Authority which granted the patent.
+     * 
      */
     @SerializedName(value = "issuingAuthority", alternate = {"IssuingAuthority"})
     @Expose
@@ -65,7 +65,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Number.
-     * The patent number.
+     * 
      */
     @SerializedName(value = "number", alternate = {"Number"})
     @Expose
@@ -73,7 +73,7 @@ public class ItemPatent extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * URL referencing the patent or filing.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

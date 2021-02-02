@@ -35,7 +35,7 @@ public class EducationIdentityDomain implements IJsonBackedObject {
 
     /**
      * The Applies To.
-     * The user role type to assign to the license. Possible values are: student, teacher, faculty.
+     * 
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
@@ -43,7 +43,7 @@ public class EducationIdentityDomain implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Represents the domain for the user account.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

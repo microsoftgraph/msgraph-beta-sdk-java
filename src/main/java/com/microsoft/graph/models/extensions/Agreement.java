@@ -31,7 +31,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the agreement. The display name is used for internal tracking of the agreement but is not shown to end users who view the agreement.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -39,7 +39,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Per Device Acceptance Required.
-     * This setting enables you to require end users to accept this agreement on every device that they are accessing it from. The end user will be required to register their device in Azure AD, if they haven't already done so.
+     * 
      */
     @SerializedName(value = "isPerDeviceAcceptanceRequired", alternate = {"IsPerDeviceAcceptanceRequired"})
     @Expose
@@ -47,7 +47,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Viewing Before Acceptance Required.
-     * Indicates whether the user has to expand the agreement before accepting.
+     * 
      */
     @SerializedName(value = "isViewingBeforeAcceptanceRequired", alternate = {"IsViewingBeforeAcceptanceRequired"})
     @Expose
@@ -55,7 +55,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Terms Expiration.
-     * Expiration schedule and frequency of agreement for all users.
+     * 
      */
     @SerializedName(value = "termsExpiration", alternate = {"TermsExpiration"})
     @Expose
@@ -63,7 +63,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The User Reaccept Required Frequency.
-     * The duration after which the user must re-accept the terms of use. The value is represented in ISO 8601 format for durations.
+     * 
      */
     @SerializedName(value = "userReacceptRequiredFrequency", alternate = {"UserReacceptRequiredFrequency"})
     @Expose
@@ -71,7 +71,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Acceptances.
-     * Read-only. Information about acceptances of this agreement.
+     * 
      */
     @SerializedName(value = "acceptances", alternate = {"Acceptances"})
     @Expose
@@ -79,7 +79,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The File.
-     * Default PDF linked to this agreement.
+     * 
      */
     @SerializedName(value = "file", alternate = {"File"})
     @Expose
@@ -87,7 +87,7 @@ public class Agreement extends Entity implements IJsonBackedObject {
 
     /**
      * The Files.
-     * PDFs linked to this agreement. Note: This property is in the process of being deprecated. Use the  file property instead.
+     * 
      */
     @SerializedName(value = "files", alternate = {"Files"})
     @Expose

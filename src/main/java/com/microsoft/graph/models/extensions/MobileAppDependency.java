@@ -26,7 +26,7 @@ public class MobileAppDependency extends MobileAppRelationship implements IJsonB
 
     /**
      * The Dependency Type.
-     * The type of dependency relationship between the parent and child apps. Possible values are: detect, autoInstall.
+     * The type of dependency relationship between the parent and child apps.
      */
     @SerializedName(value = "dependencyType", alternate = {"DependencyType"})
     @Expose

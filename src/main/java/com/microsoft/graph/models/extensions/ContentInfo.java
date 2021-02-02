@@ -37,7 +37,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The Format.
-     * Possible values are: default, email.
+     * 
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
@@ -45,7 +45,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The Identifier.
-     * Identifier used for Azure Information Protection Analytics.
+     * 
      */
     @SerializedName(value = "identifier", alternate = {"Identifier"})
     @Expose
@@ -53,7 +53,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The Metadata.
-     * Existing Microsoft Information Protection metadata is passed as key/value pairs, where the key is the MSIP_Label_GUID_PropName.
+     * 
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose
@@ -61,7 +61,7 @@ public class ContentInfo implements IJsonBackedObject {
 
     /**
      * The State.
-     * Possible values are: rest, motion, use.
+     * 
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

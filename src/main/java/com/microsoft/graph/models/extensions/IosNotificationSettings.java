@@ -76,7 +76,7 @@ public class IosNotificationSettings implements IJsonBackedObject {
 
     /**
      * The Preview Visibility.
-     * Overrides the notification preview policy set by the user on an iOS device. Possible values are: notConfigured, alwaysShow, hideWhenLocked, neverShow.
+     * Overrides the notification preview policy set by the user on an iOS device.
      */
     @SerializedName(value = "previewVisibility", alternate = {"PreviewVisibility"})
     @Expose

@@ -54,7 +54,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Read only. Timestamp at which the team was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Discovery Settings.
-     * Settings to configure team discoverability by others.
+     * 
      */
     @SerializedName(value = "discoverySettings", alternate = {"DiscoverySettings"})
     @Expose
@@ -118,7 +118,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Membership Limited To Owners.
-     * If set to true, the team is currently in the owner-only team membership state and not accessible by other team members, such as students.
+     * 
      */
     @SerializedName(value = "isMembershipLimitedToOwners", alternate = {"IsMembershipLimitedToOwners"})
     @Expose
@@ -214,13 +214,13 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.
+     * 
      */
     public UserCollectionPage owners;
 
     /**
      * The Photo.
-     * The team photo.
+     * 
      */
     @SerializedName(value = "photo", alternate = {"Photo"})
     @Expose

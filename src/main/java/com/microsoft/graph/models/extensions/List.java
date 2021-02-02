@@ -71,7 +71,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * The recent activities that took place within this list.
+     * 
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose

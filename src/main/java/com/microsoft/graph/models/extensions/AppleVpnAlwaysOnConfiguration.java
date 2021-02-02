@@ -37,7 +37,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
 
     /**
      * The Air Print Exception Action.
-     * Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Determine whether AirPrint service will be exempt from the always-on VPN connection
      */
     @SerializedName(value = "airPrintExceptionAction", alternate = {"AirPrintExceptionAction"})
     @Expose
@@ -69,7 +69,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
 
     /**
      * The Cellular Exception Action.
-     * Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Determine whether Cellular service will be exempt from the always-on VPN connection
      */
     @SerializedName(value = "cellularExceptionAction", alternate = {"CellularExceptionAction"})
     @Expose
@@ -93,7 +93,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
 
     /**
      * The Tunnel Configuration.
-     * Determines what connections the specific tunnel configuration applies to. Possible values are: wifiAndCellular, cellular, wifi.
+     * Determines what connections the specific tunnel configuration applies to
      */
     @SerializedName(value = "tunnelConfiguration", alternate = {"TunnelConfiguration"})
     @Expose
@@ -109,7 +109,7 @@ public class AppleVpnAlwaysOnConfiguration implements IJsonBackedObject {
 
     /**
      * The Voicemail Exception Action.
-     * Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Determine whether voicemail service will be exempt from the always-on VPN connection
      */
     @SerializedName(value = "voicemailExceptionAction", alternate = {"VoicemailExceptionAction"})
     @Expose

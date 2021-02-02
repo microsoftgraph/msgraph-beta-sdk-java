@@ -34,7 +34,7 @@ public class VisualProperties implements IJsonBackedObject {
 
     /**
      * The Body.
-     * The body of a visual user notification. Body is optional.
+     * 
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -42,7 +42,7 @@ public class VisualProperties implements IJsonBackedObject {
 
     /**
      * The Title.
-     * The title of a visual user notification. This field is required for visual notification payloads.
+     * 
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

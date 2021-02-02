@@ -27,7 +27,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
     /**
      * The Auth Method.
-     * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobileCall (supported only in registration).
+     * 
      */
     @SerializedName(value = "authMethod", alternate = {"AuthMethod"})
     @Expose
@@ -35,7 +35,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
     /**
      * The Event Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * 
      */
     @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
@@ -43,7 +43,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
     /**
      * The Failure Reason.
-     * Provides the failure reason for the corresponding reset or registration workflow.
+     * 
      */
     @SerializedName(value = "failureReason", alternate = {"FailureReason"})
     @Expose
@@ -51,7 +51,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
     /**
      * The Feature.
-     * Possible values are: registration and reset.
+     * 
      */
     @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose
@@ -59,7 +59,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
     /**
      * The Is Success.
-     * Indicates success or failure of the workflow.
+     * 
      */
     @SerializedName(value = "isSuccess", alternate = {"IsSuccess"})
     @Expose
@@ -67,7 +67,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
     /**
      * The User Display Name.
-     * User name of the user performing the reset or registration workflow.
+     * 
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -75,7 +75,7 @@ public class UserCredentialUsageDetails extends Entity implements IJsonBackedObj
 
     /**
      * The User Principal Name.
-     * User principal name of the user performing the reset or registration workflow.
+     * 
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

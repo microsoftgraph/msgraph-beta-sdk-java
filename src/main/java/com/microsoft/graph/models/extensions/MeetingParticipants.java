@@ -43,7 +43,7 @@ public class MeetingParticipants implements IJsonBackedObject {
 
     /**
      * The Contributors.
-     * For broadcast meeting only.
+     * 
      */
     @SerializedName(value = "contributors", alternate = {"Contributors"})
     @Expose
@@ -59,7 +59,7 @@ public class MeetingParticipants implements IJsonBackedObject {
 
     /**
      * The Producers.
-     * For broadcast meeting only.
+     * 
      */
     @SerializedName(value = "producers", alternate = {"Producers"})
     @Expose

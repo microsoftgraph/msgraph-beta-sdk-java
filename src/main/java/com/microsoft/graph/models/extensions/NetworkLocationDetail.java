@@ -35,7 +35,7 @@ public class NetworkLocationDetail implements IJsonBackedObject {
 
     /**
      * The Network Names.
-     * Provides the name of the network used when signing in.
+     * 
      */
     @SerializedName(value = "networkNames", alternate = {"NetworkNames"})
     @Expose
@@ -43,7 +43,7 @@ public class NetworkLocationDetail implements IJsonBackedObject {
 
     /**
      * The Network Type.
-     * Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "networkType", alternate = {"NetworkType"})
     @Expose

@@ -41,7 +41,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiry Time.
-     * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
+     * 
      */
     @SerializedName(value = "expiryTime", alternate = {"ExpiryTime"})
     @Expose
@@ -73,7 +73,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Time.
-     * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
+     * 
      */
     @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose

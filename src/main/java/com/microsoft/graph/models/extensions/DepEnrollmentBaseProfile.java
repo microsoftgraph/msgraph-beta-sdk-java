@@ -137,7 +137,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
 
     /**
      * The Supervised Mode Enabled.
-     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+     * Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      */
     @SerializedName(value = "supervisedModeEnabled", alternate = {"SupervisedModeEnabled"})
     @Expose

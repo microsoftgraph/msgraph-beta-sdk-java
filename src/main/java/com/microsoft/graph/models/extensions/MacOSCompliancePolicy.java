@@ -68,7 +68,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Gatekeeper Allowed App Source.
-     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
+     * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
      */
     @SerializedName(value = "gatekeeperAllowedAppSource", alternate = {"GatekeeperAllowedAppSource"})
     @Expose

@@ -35,7 +35,7 @@ public class AccessPackageLocalizedContent implements IJsonBackedObject {
 
     /**
      * The Default Text.
-     * The fallback string, which is used when a requested localization is not available. Required.
+     * 
      */
     @SerializedName(value = "defaultText", alternate = {"DefaultText"})
     @Expose
@@ -43,7 +43,7 @@ public class AccessPackageLocalizedContent implements IJsonBackedObject {
 
     /**
      * The Localized Texts.
-     * Content represented in a format for a specific locale.
+     * 
      */
     @SerializedName(value = "localizedTexts", alternate = {"LocalizedTexts"})
     @Expose
