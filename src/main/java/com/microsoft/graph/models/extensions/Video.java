@@ -90,7 +90,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Frame Rate.
-     * Frame rate of the video.
+     * 
      */
     @SerializedName(value = "frameRate", alternate = {"FrameRate"})
     @Expose

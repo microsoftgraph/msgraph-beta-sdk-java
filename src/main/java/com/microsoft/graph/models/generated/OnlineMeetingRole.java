@@ -20,13 +20,13 @@ public enum OnlineMeetingRole
     */
     PRESENTER,
     /**
-    * producer
-    */
-    PRODUCER,
-    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
+    /**
+    * producer
+    */
+    PRODUCER,
     /**
     * For OnlineMeetingRole values that were not expected from the service
     */

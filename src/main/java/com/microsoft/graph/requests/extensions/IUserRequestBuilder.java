@@ -28,6 +28,8 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedDeviceSummarizedAppState;
+import com.microsoft.graph.requests.extensions.IUsageRightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsageRightRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
@@ -141,6 +143,10 @@ public interface IUserRequestBuilder extends IRequestBuilder {
      * @return the IUserAnalyticsRequestBuilder instance
      */
     IUserAnalyticsRequestBuilder analytics();
+
+    IUsageRightCollectionRequestBuilder usageRights();
+
+    IUsageRightRequestBuilder usageRights(final String id);
 
     /**
      * Gets the request builder for InformationProtection

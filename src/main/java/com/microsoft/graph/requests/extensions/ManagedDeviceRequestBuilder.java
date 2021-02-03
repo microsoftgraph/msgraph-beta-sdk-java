@@ -17,14 +17,14 @@ import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionPar
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityBaselineStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.SecurityBaselineStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAssignmentFilterEvaluationStatusDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionRequestBuilder;
@@ -33,6 +33,10 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityBaselineStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.SecurityBaselineStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionRequestBuilder;
@@ -93,19 +97,19 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
     }
 
 
-    public ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
-        return new SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
-    }
-
-    public ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id) {
-        return new SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
-    }
     public IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
     }
 
     public IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id) {
         return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
+    }
+    public IAssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder assignmentFilterEvaluationStatusDetails() {
+        return new AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails"), getClient(), null);
+    }
+
+    public IAssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails(final String id) {
+        return new AssignmentFilterEvaluationStatusDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails") + "/" + id, getClient(), null);
     }
     public IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
         return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
@@ -120,6 +124,13 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder implements I
 
     public IManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(final String id) {
         return new ManagedDeviceMobileAppConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates") + "/" + id, getClient(), null);
+    }
+    public ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
+        return new SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
+    }
+
+    public ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id) {
+        return new SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
     }
     public IDetectedAppCollectionWithReferencesRequestBuilder detectedApps() {
         return new DetectedAppCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps"), getClient(), null);

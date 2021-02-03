@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagement;
+import com.microsoft.graph.models.extensions.AssignmentFilterStatusDetails;
 import com.microsoft.graph.models.extensions.RolePermission;
 import com.microsoft.graph.models.extensions.ComanagedDevicesSummary;
 import com.microsoft.graph.models.extensions.ComanagementEligibleDevicesSummary;
@@ -127,8 +128,12 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceSta
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceStartupProcessRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsResourcePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHistoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsMalwareInformationCollectionRequestBuilder;
@@ -169,6 +174,10 @@ import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFil
 import com.microsoft.graph.requests.extensions.IGroupPolicyUploadedDefinitionFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelHealthThresholdCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelHealthThresholdRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelServerLogCollectionResponseCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelServerLogCollectionResponseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftTunnelSiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftTunnelSiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationMessageTemplateCollectionRequestBuilder;
@@ -197,6 +206,10 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingE
 import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsFeatureUpdateProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsQualityUpdateProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsQualityUpdateProfileRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsUpdateCatalogItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsUpdateCatalogItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIntuneBrandingProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionAppLearningSummaryCollectionRequestBuilder;
@@ -565,6 +578,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder userExperienceAnalyticsDeviceStartupProcessPerformance(final String id);
 
+    IUserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionRequestBuilder userExperienceAnalyticsDevicesWithoutCloudIdentity();
+
+    IUserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder userExperienceAnalyticsDevicesWithoutCloudIdentity(final String id);
+
     IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsMetricHistory();
 
     IUserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory(final String id);
@@ -582,6 +599,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
      * @return the IUserExperienceAnalyticsRegressionSummaryRequestBuilder instance
      */
     IUserExperienceAnalyticsRegressionSummaryRequestBuilder userExperienceAnalyticsRegressionSummary();
+
+    IUserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder userExperienceAnalyticsResourcePerformance();
+
+    IUserExperienceAnalyticsResourcePerformanceRequestBuilder userExperienceAnalyticsResourcePerformance(final String id);
 
     IUserExperienceAnalyticsScoreHistoryCollectionRequestBuilder userExperienceAnalyticsScoreHistory();
 
@@ -670,6 +691,14 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IMicrosoftTunnelConfigurationRequestBuilder microsoftTunnelConfigurations(final String id);
 
+    IMicrosoftTunnelHealthThresholdCollectionRequestBuilder microsoftTunnelHealthThresholds();
+
+    IMicrosoftTunnelHealthThresholdRequestBuilder microsoftTunnelHealthThresholds(final String id);
+
+    IMicrosoftTunnelServerLogCollectionResponseCollectionRequestBuilder microsoftTunnelServerLogCollectionResponses();
+
+    IMicrosoftTunnelServerLogCollectionResponseRequestBuilder microsoftTunnelServerLogCollectionResponses(final String id);
+
     IMicrosoftTunnelSiteCollectionRequestBuilder microsoftTunnelSites();
 
     IMicrosoftTunnelSiteRequestBuilder microsoftTunnelSites(final String id);
@@ -733,6 +762,14 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IWindowsFeatureUpdateProfileRequestBuilder windowsFeatureUpdateProfiles(final String id);
 
+    IWindowsQualityUpdateProfileCollectionRequestBuilder windowsQualityUpdateProfiles();
+
+    IWindowsQualityUpdateProfileRequestBuilder windowsQualityUpdateProfiles(final String id);
+
+    IWindowsUpdateCatalogItemCollectionRequestBuilder windowsUpdateCatalogItems();
+
+    IWindowsUpdateCatalogItemRequestBuilder windowsUpdateCatalogItems(final String id);
+
     IIntuneBrandingProfileCollectionRequestBuilder intuneBrandingProfiles();
 
     IIntuneBrandingProfileRequestBuilder intuneBrandingProfiles(final String id);
@@ -748,6 +785,7 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
     IUserPFXCertificateCollectionRequestBuilder userPfxCertificates();
 
     IUserPFXCertificateRequestBuilder userPfxCertificates(final String id);
+    IDeviceManagementGetAssignmentFiltersStatusDetailsRequestBuilder getAssignmentFiltersStatusDetails(final String managedDeviceId, final String payloadId, final String userId, final java.util.List<String> assignmentFilterIds, final Integer top, final Integer skip);
     IDeviceManagementEnableAndroidDeviceAdministratorEnrollmentRequestBuilder enableAndroidDeviceAdministratorEnrollment();
     IDeviceManagementEnableLegacyPcManagementRequestBuilder enableLegacyPcManagement();
     IDeviceManagementEnableUnlicensedAdminstratorsRequestBuilder enableUnlicensedAdminstrators();

@@ -10,9 +10,11 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AlternativeSecurityId;
 import com.microsoft.graph.models.extensions.OnPremisesExtensionAttributes;
+import com.microsoft.graph.models.extensions.UsageRight;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.Command;
+import com.microsoft.graph.requests.extensions.UsageRightCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.CommandCollectionPage;
@@ -141,6 +143,14 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "extensionAttributes", alternate = {"ExtensionAttributes"})
     @Expose
     public OnPremisesExtensionAttributes extensionAttributes;
+
+    /**
+     * The Hostnames.
+     * 
+     */
+    @SerializedName(value = "hostnames", alternate = {"Hostnames"})
+    @Expose
+    public java.util.List<String> hostnames;
 
     /**
      * The Is Compliant.
@@ -295,8 +305,16 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     public String status;
 
     /**
+     * The Usage Rights.
+     * 
+     */
+    @SerializedName(value = "usageRights", alternate = {"UsageRights"})
+    @Expose
+    public UsageRightCollectionPage usageRights;
+
+    /**
      * The Member Of.
-     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+     * 
      */
     public DirectoryObjectCollectionPage memberOf;
 
@@ -373,6 +391,10 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("usageRights")) {
+            usageRights = serializer.deserializeObject(json.get("usageRights").toString(), UsageRightCollectionPage.class);
+        }
 
         if (json.has("memberOf")) {
             memberOf = serializer.deserializeObject(json.get("memberOf").toString(), DirectoryObjectCollectionPage.class);

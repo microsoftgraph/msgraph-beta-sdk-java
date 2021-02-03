@@ -80,14 +80,6 @@ public class Subscription extends Entity implements IJsonBackedObject {
     public java.util.Calendar expirationDateTime;
 
     /**
-     * The Include Properties.
-     * 
-     */
-    @SerializedName(value = "includeProperties", alternate = {"IncludeProperties"})
-    @Expose
-    public Boolean includeProperties;
-
-    /**
      * The Include Resource Data.
      * When set to true, change notifications include resource data (such as content of a chat message). Optional.
      */
@@ -110,6 +102,14 @@ public class Subscription extends Entity implements IJsonBackedObject {
     @SerializedName(value = "lifecycleNotificationUrl", alternate = {"LifecycleNotificationUrl"})
     @Expose
     public String lifecycleNotificationUrl;
+
+    /**
+     * The Notification Content Type.
+     * 
+     */
+    @SerializedName(value = "notificationContentType", alternate = {"NotificationContentType"})
+    @Expose
+    public String notificationContentType;
 
     /**
      * The Notification Query Options.

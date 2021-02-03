@@ -25,7 +25,7 @@ public class WorkbookFormatProtection extends Entity implements IJsonBackedObjec
 
     /**
      * The Formula Hidden.
-     * Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't have uniform formula hidden setting.
+     * 
      */
     @SerializedName(value = "formulaHidden", alternate = {"FormulaHidden"})
     @Expose
@@ -33,7 +33,7 @@ public class WorkbookFormatProtection extends Entity implements IJsonBackedObjec
 
     /**
      * The Locked.
-     * Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform lock setting.
+     * 
      */
     @SerializedName(value = "locked", alternate = {"Locked"})
     @Expose

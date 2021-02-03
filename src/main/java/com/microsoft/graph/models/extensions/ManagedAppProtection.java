@@ -194,6 +194,30 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     public Integer maximumPinRetries;
 
     /**
+     * The Maximum Required Os Version.
+     * Versions bigger than the specified version will block the managed app from accessing company data.
+     */
+    @SerializedName(value = "maximumRequiredOsVersion", alternate = {"MaximumRequiredOsVersion"})
+    @Expose
+    public String maximumRequiredOsVersion;
+
+    /**
+     * The Maximum Warning Os Version.
+     * Versions bigger than the specified version will block the managed app from accessing company data.
+     */
+    @SerializedName(value = "maximumWarningOsVersion", alternate = {"MaximumWarningOsVersion"})
+    @Expose
+    public String maximumWarningOsVersion;
+
+    /**
+     * The Maximum Wipe Os Version.
+     * Versions bigger than the specified version will block the managed app from accessing company data.
+     */
+    @SerializedName(value = "maximumWipeOsVersion", alternate = {"MaximumWipeOsVersion"})
+    @Expose
+    public String maximumWipeOsVersion;
+
+    /**
      * The Minimum Pin Length.
      * Minimum pin length required for an app-level pin if PinRequired is set to True
      */

@@ -60,7 +60,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Error Type.
-     * The type of error that occurred during this health check. Possible values are: DnsCheckFqdnNotFound, DnsCheckUnknownError, AdJoinCheckFqdnNotFound, AdJoinCheckIncorrectCredentials, AdJoinCheckOrganizationalUnitNotFound, AdJoinCheckOrganizationalUnitIncorrectFormat, AdJoinCheckUnknownError, EndpointConnectivityCheckUrlNotWhitelisted, EndpointConnectivityCheckUnknownError, AadConnectivityCheckUnknownError.
+     * The type of error that occurred during this health check.
      */
     @SerializedName(value = "errorType", alternate = {"ErrorType"})
     @Expose
@@ -84,7 +84,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Status.
-     * The status of the health check item. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+     * The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

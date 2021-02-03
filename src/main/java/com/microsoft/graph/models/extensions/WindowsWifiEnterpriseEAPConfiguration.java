@@ -217,7 +217,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The User Based Virtual Lan.
-     * Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
+     * Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled.
      */
     @SerializedName(value = "userBasedVirtualLan", alternate = {"UserBasedVirtualLan"})
     @Expose

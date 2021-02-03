@@ -36,6 +36,10 @@ import com.microsoft.graph.requests.extensions.IBookingCurrencyCollectionRequest
 import com.microsoft.graph.requests.extensions.IBookingCurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCurrencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
@@ -68,10 +72,6 @@ import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContractRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;

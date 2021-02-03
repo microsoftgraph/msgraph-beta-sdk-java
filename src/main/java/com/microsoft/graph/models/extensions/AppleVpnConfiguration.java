@@ -32,6 +32,14 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
 
 
     /**
+     * The Associated Domains.
+     * Associated Domains
+     */
+    @SerializedName(value = "associatedDomains", alternate = {"AssociatedDomains"})
+    @Expose
+    public java.util.List<String> associatedDomains;
+
+    /**
      * The Authentication Method.
      * Authentication method for this VPN connection. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
      */

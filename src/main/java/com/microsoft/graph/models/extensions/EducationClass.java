@@ -14,6 +14,7 @@ import com.microsoft.graph.models.generated.EducationExternalSource;
 import com.microsoft.graph.models.extensions.EducationTerm;
 import com.microsoft.graph.models.extensions.EducationCategory;
 import com.microsoft.graph.models.extensions.EducationAssignment;
+import com.microsoft.graph.models.extensions.EducationAssignmentSettings;
 import com.microsoft.graph.models.extensions.Group;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationSchool;
@@ -149,8 +150,16 @@ public class EducationClass extends Entity implements IJsonBackedObject {
     public EducationAssignmentCollectionPage assignments;
 
     /**
+     * The Assignment Settings.
+     * 
+     */
+    @SerializedName(value = "assignmentSettings", alternate = {"AssignmentSettings"})
+    @Expose
+    public EducationAssignmentSettings assignmentSettings;
+
+    /**
      * The Group.
-     * The directory group corresponding to this class.
+     * 
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose

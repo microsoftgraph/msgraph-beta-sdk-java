@@ -42,6 +42,14 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     public String displayName;
 
     /**
+     * The Error Code.
+     * The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
+     */
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
+    @Expose
+    public Integer errorCode;
+
+    /**
      * The Last Reported Date Time.
      * Timestamp of the reported policy status
      */

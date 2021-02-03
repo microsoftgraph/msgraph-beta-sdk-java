@@ -128,6 +128,14 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean appleNewsBlocked;
 
     /**
+     * The Apple Personalized Ads Blocked.
+     * Limits Apple personalized advertising when true. Available in iOS 14 and later.
+     */
+    @SerializedName(value = "applePersonalizedAdsBlocked", alternate = {"ApplePersonalizedAdsBlocked"})
+    @Expose
+    public Boolean applePersonalizedAdsBlocked;
+
+    /**
      * The Apple Watch Block Pairing.
      * Indicates whether or not to allow Apple Watch pairing when the device is in supervised mode (iOS 9.0 and later).
      */

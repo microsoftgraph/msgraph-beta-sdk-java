@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.Code;
+import com.microsoft.graph.models.generated.DeviceComplianceScriptRulesValidationError;
 
 
 import com.google.gson.JsonObject;
@@ -40,6 +41,14 @@ public class DeviceComplianceScriptError implements IJsonBackedObject {
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
     public Code code;
+
+    /**
+     * The Device Compliance Script Rules Validation Error.
+     * Error code.
+     */
+    @SerializedName(value = "deviceComplianceScriptRulesValidationError", alternate = {"DeviceComplianceScriptRulesValidationError"})
+    @Expose
+    public DeviceComplianceScriptRulesValidationError deviceComplianceScriptRulesValidationError;
 
     /**
      * The Message.

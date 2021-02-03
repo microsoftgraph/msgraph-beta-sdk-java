@@ -32,6 +32,14 @@ public enum WindowsAutopilotDeploymentState
     */
     SUCCESS_WITH_TIMEOUT,
     /**
+    * not Attempted
+    */
+    NOT_ATTEMPTED,
+    /**
+    * disabled
+    */
+    DISABLED,
+    /**
     * For WindowsAutopilotDeploymentState values that were not expected from the service
     */
     UNEXPECTED_VALUE

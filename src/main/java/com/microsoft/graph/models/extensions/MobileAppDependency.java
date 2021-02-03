@@ -40,6 +40,14 @@ public class MobileAppDependency extends MobileAppRelationship implements IJsonB
     @Expose
     public Integer dependentAppCount;
 
+    /**
+     * The Depends On App Count.
+     * The total number of apps the child app directly or indirectly depends on.
+     */
+    @SerializedName(value = "dependsOnAppCount", alternate = {"DependsOnAppCount"})
+    @Expose
+    public Integer dependsOnAppCount;
+
 
     /**
      * The raw representation of this class

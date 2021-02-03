@@ -81,6 +81,14 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     public Integer androidWorkProfileCount;
 
     /**
+     * The Aosp User Associated Count.
+     * Number of AOSP user-associated Android devices. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "aospUserAssociatedCount", alternate = {"AospUserAssociatedCount"})
+    @Expose
+    public Integer aospUserAssociatedCount;
+
+    /**
      * The Aosp Userless Count.
      * Number of AOSP dedicated Android devices. Valid values 0 to 2147483647
      */

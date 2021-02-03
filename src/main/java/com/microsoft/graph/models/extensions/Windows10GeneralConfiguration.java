@@ -100,7 +100,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The App Management Package Family Names To Launch After Log On.
-     * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
+     * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.
      */
     @SerializedName(value = "appManagementPackageFamilyNamesToLaunchAfterLogOn", alternate = {"AppManagementPackageFamilyNamesToLaunchAfterLogOn"})
     @Expose
@@ -1540,7 +1540,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Privacy Disable Launch Experience.
-     * This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
+     * This policy prevents the privacy experience from launching during user logon for new and upgraded users.
      */
     @SerializedName(value = "privacyDisableLaunchExperience", alternate = {"PrivacyDisableLaunchExperience"})
     @Expose

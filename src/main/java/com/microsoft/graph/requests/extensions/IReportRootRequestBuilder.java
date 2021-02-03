@@ -96,6 +96,7 @@ import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollec
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -125,6 +126,13 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
     IApplicationSignInDetailedSummaryCollectionRequestBuilder applicationSignInDetailedSummary();
 
     IApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary(final String id);
+
+    /**
+     * Gets the request builder for AuthenticationMethodsRoot
+     *
+     * @return the IAuthenticationMethodsRootRequestBuilder instance
+     */
+    IAuthenticationMethodsRootRequestBuilder authenticationMethods();
 
     ICredentialUserRegistrationDetailsCollectionRequestBuilder credentialUserRegistrationDetails();
 

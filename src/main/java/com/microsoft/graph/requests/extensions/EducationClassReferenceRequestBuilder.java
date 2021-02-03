@@ -26,6 +26,8 @@ import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequest
 import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationAssignmentSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;

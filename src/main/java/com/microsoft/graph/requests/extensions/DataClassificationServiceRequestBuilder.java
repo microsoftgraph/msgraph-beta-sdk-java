@@ -139,13 +139,6 @@ public class DataClassificationServiceRequestBuilder extends BaseRequestBuilder 
     public IJobResponseBaseRequestBuilder jobs(final String id) {
         return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("jobs") + "/" + id, getClient(), null);
     }
-    public IJobResponseBaseCollectionRequestBuilder labelsAndPoliciesEvaluationJobs() {
-        return new JobResponseBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("labelsAndPoliciesEvaluationJobs"), getClient(), null);
-    }
-
-    public IJobResponseBaseRequestBuilder labelsAndPoliciesEvaluationJobs(final String id) {
-        return new JobResponseBaseRequestBuilder(getRequestUrlWithAdditionalSegment("labelsAndPoliciesEvaluationJobs") + "/" + id, getClient(), null);
-    }
     public ISensitiveTypeCollectionRequestBuilder sensitiveTypes() {
         return new SensitiveTypeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sensitiveTypes"), getClient(), null);
     }

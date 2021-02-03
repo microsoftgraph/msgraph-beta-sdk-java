@@ -31,20 +31,22 @@ import com.microsoft.graph.models.generated.OwnerType;
 import com.microsoft.graph.models.generated.ManagedDevicePartnerReportedHealthState;
 import com.microsoft.graph.models.generated.ManagedDeviceArchitecture;
 import com.microsoft.graph.models.extensions.LoggedOnUser;
-import com.microsoft.graph.models.extensions.SecurityBaselineState;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicyState;
+import com.microsoft.graph.models.extensions.AssignmentFilterEvaluationStatusDetails;
 import com.microsoft.graph.models.extensions.DeviceConfigurationState;
 import com.microsoft.graph.models.extensions.ManagedDeviceMobileAppConfigurationState;
+import com.microsoft.graph.models.extensions.SecurityBaselineState;
 import com.microsoft.graph.models.extensions.DetectedApp;
 import com.microsoft.graph.models.extensions.DeviceCategory;
 import com.microsoft.graph.models.extensions.DeviceLogCollectionResponse;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.WindowsProtectionState;
 import com.microsoft.graph.models.extensions.Entity;
-import com.microsoft.graph.requests.extensions.SecurityBaselineStateCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCompliancePolicyStateCollectionPage;
+import com.microsoft.graph.requests.extensions.AssignmentFilterEvaluationStatusDetailsCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationStateCollectionPage;
 import com.microsoft.graph.requests.extensions.ManagedDeviceMobileAppConfigurationStateCollectionPage;
+import com.microsoft.graph.requests.extensions.SecurityBaselineStateCollectionPage;
 import com.microsoft.graph.requests.extensions.DetectedAppCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceLogCollectionResponseCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
@@ -671,20 +673,20 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public Integer windowsRemediatedMalwareCount;
 
     /**
-     * The Security Baseline States.
-     * Security baseline states for this device.
-     */
-    @SerializedName(value = "securityBaselineStates", alternate = {"SecurityBaselineStates"})
-    @Expose
-    public SecurityBaselineStateCollectionPage securityBaselineStates;
-
-    /**
      * The Device Compliance Policy States.
      * Device compliance policy states for this device.
      */
     @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
     @Expose
     public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
+
+    /**
+     * The Assignment Filter Evaluation Status Details.
+     * Managed device mobile app configuration states for this device.
+     */
+    @SerializedName(value = "assignmentFilterEvaluationStatusDetails", alternate = {"AssignmentFilterEvaluationStatusDetails"})
+    @Expose
+    public AssignmentFilterEvaluationStatusDetailsCollectionPage assignmentFilterEvaluationStatusDetails;
 
     /**
      * The Device Configuration States.
@@ -701,6 +703,14 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managedDeviceMobileAppConfigurationStates", alternate = {"ManagedDeviceMobileAppConfigurationStates"})
     @Expose
     public ManagedDeviceMobileAppConfigurationStateCollectionPage managedDeviceMobileAppConfigurationStates;
+
+    /**
+     * The Security Baseline States.
+     * Security baseline states for this device.
+     */
+    @SerializedName(value = "securityBaselineStates", alternate = {"SecurityBaselineStates"})
+    @Expose
+    public SecurityBaselineStateCollectionPage securityBaselineStates;
 
     /**
      * The Detected Apps.
@@ -780,12 +790,12 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("securityBaselineStates")) {
-            securityBaselineStates = serializer.deserializeObject(json.get("securityBaselineStates").toString(), SecurityBaselineStateCollectionPage.class);
-        }
-
         if (json.has("deviceCompliancePolicyStates")) {
             deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates").toString(), DeviceCompliancePolicyStateCollectionPage.class);
+        }
+
+        if (json.has("assignmentFilterEvaluationStatusDetails")) {
+            assignmentFilterEvaluationStatusDetails = serializer.deserializeObject(json.get("assignmentFilterEvaluationStatusDetails").toString(), AssignmentFilterEvaluationStatusDetailsCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationStates")) {
@@ -794,6 +804,10 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
         if (json.has("managedDeviceMobileAppConfigurationStates")) {
             managedDeviceMobileAppConfigurationStates = serializer.deserializeObject(json.get("managedDeviceMobileAppConfigurationStates").toString(), ManagedDeviceMobileAppConfigurationStateCollectionPage.class);
+        }
+
+        if (json.has("securityBaselineStates")) {
+            securityBaselineStates = serializer.deserializeObject(json.get("securityBaselineStates").toString(), SecurityBaselineStateCollectionPage.class);
         }
 
         if (json.has("detectedApps")) {
