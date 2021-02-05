@@ -102,14 +102,6 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     public JobResponseBaseCollectionPage jobs;
 
     /**
-     * The Labels And Policies Evaluation Jobs.
-     * 
-     */
-    @SerializedName(value = "labelsAndPoliciesEvaluationJobs", alternate = {"LabelsAndPoliciesEvaluationJobs"})
-    @Expose
-    public JobResponseBaseCollectionPage labelsAndPoliciesEvaluationJobs;
-
-    /**
      * The Sensitive Types.
      * 
      */
@@ -203,10 +195,6 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
 
         if (json.has("jobs")) {
             jobs = serializer.deserializeObject(json.get("jobs").toString(), JobResponseBaseCollectionPage.class);
-        }
-
-        if (json.has("labelsAndPoliciesEvaluationJobs")) {
-            labelsAndPoliciesEvaluationJobs = serializer.deserializeObject(json.get("labelsAndPoliciesEvaluationJobs").toString(), JobResponseBaseCollectionPage.class);
         }
 
         if (json.has("sensitiveTypes")) {

@@ -259,9 +259,9 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IOrgContactWithReferenceRequestBuilder transitiveMembersAsOrgContact(final String id);
 
-    IDirectoryObjectCollectionRequestBuilder acceptedSenders();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder acceptedSenders();
 
-    IDirectoryObjectRequestBuilder acceptedSenders(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder acceptedSenders(final String id);
 
     /**
      * Gets the request builder for Calendar
@@ -293,9 +293,9 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IProfilePhotoRequestBuilder photos(final String id);
 
-    IDirectoryObjectCollectionRequestBuilder rejectedSenders();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder rejectedSenders();
 
-    IDirectoryObjectRequestBuilder rejectedSenders(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder rejectedSenders(final String id);
 
     IConversationThreadCollectionRequestBuilder threads();
 

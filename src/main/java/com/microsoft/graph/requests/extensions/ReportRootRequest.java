@@ -106,6 +106,8 @@ import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectio
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

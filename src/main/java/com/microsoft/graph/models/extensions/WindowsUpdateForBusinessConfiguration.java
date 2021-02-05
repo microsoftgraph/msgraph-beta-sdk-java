@@ -300,7 +300,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The User Pause Access.
-     * Specifies whether to enable end user’s access to pause software updates. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether to enable end user?s access to pause software updates. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "userPauseAccess", alternate = {"UserPauseAccess"})
     @Expose
@@ -308,7 +308,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The User Windows Update Scan Access.
-     * Specifies whether to disable user’s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether to disable user?s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "userWindowsUpdateScanAccess", alternate = {"UserWindowsUpdateScanAccess"})
     @Expose

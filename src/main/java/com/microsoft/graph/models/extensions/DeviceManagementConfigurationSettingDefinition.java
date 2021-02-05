@@ -12,6 +12,7 @@ import com.microsoft.graph.models.generated.DeviceManagementConfigurationSetting
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingApplicability;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSettingOccurrence;
 import com.microsoft.graph.models.generated.DeviceManagementConfigurationSettingUsage;
+import com.microsoft.graph.models.generated.DeviceManagementConfigurationControlType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -138,6 +139,14 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
     @Expose
     public EnumSet<DeviceManagementConfigurationSettingUsage> settingUsage;
+
+    /**
+     * The Ux Behavior.
+     * Setting control type representation in the UX
+     */
+    @SerializedName(value = "uxBehavior", alternate = {"UxBehavior"})
+    @Expose
+    public DeviceManagementConfigurationControlType uxBehavior;
 
     /**
      * The Version.

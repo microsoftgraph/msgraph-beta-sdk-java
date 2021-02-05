@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Compliance;
-import com.microsoft.graph.requests.extensions.IEdiscoveryRequestBuilder;
-import com.microsoft.graph.requests.extensions.EdiscoveryRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.IEdiscoveryrootRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.EdiscoveryrootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -57,11 +57,11 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder implements ICom
 
 
     /**
-     * Gets the request builder for Ediscovery
+     * Gets the request builder for Ediscoveryroot
      *
-     * @return the IEdiscoveryRequestBuilder instance
+     * @return the IEdiscoveryrootRequestBuilder instance
      */
-    public IEdiscoveryRequestBuilder ediscovery() {
-        return new EdiscoveryRequestBuilder(getRequestUrlWithAdditionalSegment("ediscovery"), getClient(), null);
+    public IEdiscoveryrootRequestBuilder ediscovery() {
+        return new EdiscoveryrootRequestBuilder(getRequestUrlWithAdditionalSegment("ediscovery"), getClient(), null);
     }
 }

@@ -34,7 +34,7 @@ public class ImageInfo implements IJsonBackedObject {
 
     /**
      * The Add Image Query.
-     * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
+     * Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example ? a high contrast image
      */
     @SerializedName(value = "addImageQuery", alternate = {"AddImageQuery"})
     @Expose

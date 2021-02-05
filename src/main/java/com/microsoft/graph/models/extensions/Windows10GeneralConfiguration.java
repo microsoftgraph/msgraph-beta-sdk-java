@@ -100,7 +100,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The App Management Package Family Names To Launch After Log On.
-     * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
+     * List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.
      */
     @SerializedName(value = "appManagementPackageFamilyNamesToLaunchAfterLogOn", alternate = {"AppManagementPackageFamilyNamesToLaunchAfterLogOn"})
     @Expose
@@ -340,7 +340,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Detected Malware Actions.
-     * Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Gets or sets Defender?s actions to take on detected Malware per threat level.
      */
     @SerializedName(value = "defenderDetectedMalwareActions", alternate = {"DefenderDetectedMalwareActions"})
     @Expose
@@ -388,7 +388,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Potentially Unwanted App Action.
-     * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
+     * Gets or sets Defender?s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      */
     @SerializedName(value = "defenderPotentiallyUnwantedAppAction", alternate = {"DefenderPotentiallyUnwantedAppAction"})
     @Expose
@@ -396,7 +396,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Potentially Unwanted App Action Setting.
-     * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Gets or sets Defender?s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
      */
     @SerializedName(value = "defenderPotentiallyUnwantedAppActionSetting", alternate = {"DefenderPotentiallyUnwantedAppActionSetting"})
     @Expose
@@ -1260,7 +1260,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Network Proxy Apply Settings Device Wide.
-     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that?s enrolled into MDM.
      */
     @SerializedName(value = "networkProxyApplySettingsDeviceWide", alternate = {"NetworkProxyApplySettingsDeviceWide"})
     @Expose
@@ -1540,7 +1540,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Privacy Disable Launch Experience.
-     * This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
+     * This policy prevents the privacy experience from launching during user logon for new and upgraded users.
      */
     @SerializedName(value = "privacyDisableLaunchExperience", alternate = {"PrivacyDisableLaunchExperience"})
     @Expose
@@ -1644,7 +1644,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Search Enable Remote Queries.
-     * Indicates whether or not to block remote queries of this computer’s index.
+     * Indicates whether or not to block remote queries of this computer?s index.
      */
     @SerializedName(value = "searchEnableRemoteQueries", alternate = {"SearchEnableRemoteQueries"})
     @Expose
@@ -2228,7 +2228,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Windows Spotlight Block Tailored Experiences.
-     * Block personalized content in Windows spotlight based on user’s device usage.
+     * Block personalized content in Windows spotlight based on user?s device usage.
      */
     @SerializedName(value = "windowsSpotlightBlockTailoredExperiences", alternate = {"WindowsSpotlightBlockTailoredExperiences"})
     @Expose

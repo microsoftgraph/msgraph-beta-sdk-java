@@ -24,6 +24,14 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
 
 
     /**
+     * The Is Removable.
+     * Whether or not the app can be removed by the user.
+     */
+    @SerializedName(value = "isRemovable", alternate = {"IsRemovable"})
+    @Expose
+    public Boolean isRemovable;
+
+    /**
      * The Uninstall On Device Removal.
      * Whether or not to uninstall the app when device is removed from Intune.
      */

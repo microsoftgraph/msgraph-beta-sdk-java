@@ -43,7 +43,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Domain Username.
-     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: contoso@microsoft.com.
+     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
      */
     @SerializedName(value = "adDomainUsername", alternate = {"AdDomainUsername"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Health Check Status.
-     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "healthCheckStatus", alternate = {"HealthCheckStatus"})
     @Expose
@@ -75,7 +75,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The In Use.
-     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Read-only.
+     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that?s in use. Read-only.
      */
     @SerializedName(value = "inUse", alternate = {"InUse"})
     @Expose
@@ -83,7 +83,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Organizational Unit.
-     * The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * The organizational unit (OU) in which the computer account is created. If left null, the OU that?s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      */
     @SerializedName(value = "organizationalUnit", alternate = {"OrganizationalUnit"})
     @Expose
@@ -107,7 +107,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Subscription Id.
-     * The ID of the target Azure subscription that’s associated with your tenant.
+     * The ID of the target Azure subscription that?s associated with your tenant.
      */
     @SerializedName(value = "subscriptionId", alternate = {"SubscriptionId"})
     @Expose

@@ -61,7 +61,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Confidence.
-     * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
+     * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 ? 100 with 100 being the highest.
      */
     @SerializedName(value = "confidence", alternate = {"Confidence"})
     @Expose
@@ -173,7 +173,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+     * An identification number that ties the indicator back to the indicator provider?s system (e.g. a foreign key).
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -269,7 +269,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
+     * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ?False? to deactivate indicators in the system.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -277,7 +277,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Kill Chain.
-     * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
+     * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ?killChain values? below for exact values.
      */
     @SerializedName(value = "killChain", alternate = {"KillChain"})
     @Expose
@@ -429,7 +429,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Passive Only.
-     * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+     * Determines if the indicator should trigger an event that is visible to an end-user. When set to ?true,? security tools will not notify the end user that a ?hit? has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
      */
     @SerializedName(value = "passiveOnly", alternate = {"PassiveOnly"})
     @Expose
@@ -437,7 +437,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Severity.
-     * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+     * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 ? 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose

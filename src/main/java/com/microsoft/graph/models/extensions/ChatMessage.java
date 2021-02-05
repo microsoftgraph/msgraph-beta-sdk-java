@@ -38,7 +38,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * Attached files. Attachments are currently read-only – sending attachments is not supported.
+     * Attached files. Attachments are currently read-only ? sending attachments is not supported.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose

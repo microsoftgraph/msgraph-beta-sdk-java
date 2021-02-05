@@ -51,7 +51,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Id.
-     * The cloud PC’s Intune device ID.
+     * The cloud PC?s Intune device ID.
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Name.
-     * The cloud PC’s Intune device name.
+     * The cloud PC?s Intune device name.
      */
     @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose

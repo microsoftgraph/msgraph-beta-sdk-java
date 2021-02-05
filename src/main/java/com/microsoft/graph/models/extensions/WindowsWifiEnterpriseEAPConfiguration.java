@@ -57,7 +57,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Authentication Type.
-     * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you’re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
+     * Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you?re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      */
     @SerializedName(value = "authenticationType", alternate = {"AuthenticationType"})
     @Expose
@@ -65,7 +65,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Cache Credentials.
-     * Specify whether to cache user credentials on the device so that users don’t need to keep entering them each time they connect.
+     * Specify whether to cache user credentials on the device so that users don?t need to keep entering them each time they connect.
      */
     @SerializedName(value = "cacheCredentials", alternate = {"CacheCredentials"})
     @Expose
@@ -217,7 +217,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The User Based Virtual Lan.
-     * Specifiy whether to change the virtual LAN used by the device based on the user’s credentials. Cannot be used when NetworkSingleSignOnType is set to ​Disabled.
+     * Specifiy whether to change the virtual LAN used by the device based on the user?s credentials. Cannot be used when NetworkSingleSignOnType is set to Disabled.
      */
     @SerializedName(value = "userBasedVirtualLan", alternate = {"UserBasedVirtualLan"})
     @Expose

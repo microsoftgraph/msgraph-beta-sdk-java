@@ -99,7 +99,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Target.
-     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget.
+     * The target of this specific decision. Decision targets can be of different types ? each one with its own specific properties. See accessReviewInstanceDecisionItemTarget.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

@@ -9,6 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.DataType;
+import com.microsoft.graph.models.generated.DeviceComplianceScriptRuleDataType;
+import com.microsoft.graph.models.generated.DeviceComplianceScriptRulOperator;
 import com.microsoft.graph.models.generated.Operator;
 
 
@@ -41,6 +43,22 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
     @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose
     public DataType dataType;
+
+    /**
+     * The Device Compliance Script Rule Data Type.
+     * Data type specified in the rule.
+     */
+    @SerializedName(value = "deviceComplianceScriptRuleDataType", alternate = {"DeviceComplianceScriptRuleDataType"})
+    @Expose
+    public DeviceComplianceScriptRuleDataType deviceComplianceScriptRuleDataType;
+
+    /**
+     * The Device Compliance Script Rul Operator.
+     * Operator specified in the rule.
+     */
+    @SerializedName(value = "deviceComplianceScriptRulOperator", alternate = {"DeviceComplianceScriptRulOperator"})
+    @Expose
+    public DeviceComplianceScriptRulOperator deviceComplianceScriptRulOperator;
 
     /**
      * The Operand.

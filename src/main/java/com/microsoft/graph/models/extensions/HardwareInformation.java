@@ -38,7 +38,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Battery Charge Cycles.
-     * The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
+     * The number of charge cycles the device?s current battery has gone through. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryChargeCycles", alternate = {"BatteryChargeCycles"})
     @Expose
@@ -46,7 +46,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Battery Health Percentage.
-     * The device’s current battery’s health percentage. Valid values 0 to 100
+     * The device?s current battery?s health percentage. Valid values 0 to 100
      */
     @SerializedName(value = "batteryHealthPercentage", alternate = {"BatteryHealthPercentage"})
     @Expose
@@ -54,7 +54,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Battery Serial Number.
-     * The serial number of the device’s current battery
+     * The serial number of the device?s current battery
      */
     @SerializedName(value = "batterySerialNumber", alternate = {"BatterySerialNumber"})
     @Expose

@@ -28,7 +28,7 @@ public class Notification extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Time To Live.
-     * Sets how long (in seconds) this notification content will stay in each platform’s notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user’s Windows Action Center.
+     * Sets how long (in seconds) this notification content will stay in each platform?s notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user?s Windows Action Center.
      */
     @SerializedName(value = "displayTimeToLive", alternate = {"DisplayTimeToLive"})
     @Expose

@@ -27,7 +27,7 @@ public class CustomTimeZone extends TimeZoneBase implements IJsonBackedObject {
 
     /**
      * The Bias.
-     * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
+     * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes.?Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
      */
     @SerializedName(value = "bias", alternate = {"Bias"})
     @Expose

@@ -28,6 +28,10 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedDeviceSummarizedAppState;
+import com.microsoft.graph.requests.extensions.IUsageRightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsageRightRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsageRightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsageRightRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
@@ -242,6 +246,13 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      */
     public IUserAnalyticsRequestBuilder analytics() {
         return new UserAnalyticsRequestBuilder(getRequestUrlWithAdditionalSegment("analytics"), getClient(), null);
+    }
+    public IUsageRightCollectionRequestBuilder usageRights() {
+        return new UsageRightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("usageRights"), getClient(), null);
+    }
+
+    public IUsageRightRequestBuilder usageRights(final String id) {
+        return new UsageRightRequestBuilder(getRequestUrlWithAdditionalSegment("usageRights") + "/" + id, getClient(), null);
     }
 
     /**

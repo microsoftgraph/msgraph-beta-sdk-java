@@ -17,9 +17,9 @@ import com.microsoft.graph.models.generated.BitLockerRecoveryPasswordRotationTyp
 import com.microsoft.graph.models.extensions.BitLockerRemovableDrivePolicy;
 import com.microsoft.graph.models.extensions.BitLockerSystemDrivePolicy;
 import com.microsoft.graph.models.generated.DefenderProtectionType;
+import com.microsoft.graph.models.generated.DefenderAttackSurfaceType;
 import com.microsoft.graph.models.generated.DefenderCloudBlockLevelType;
 import com.microsoft.graph.models.extensions.DefenderDetectedMalwareActions;
-import com.microsoft.graph.models.generated.DefenderAttackSurfaceType;
 import com.microsoft.graph.models.generated.FolderProtectionType;
 import com.microsoft.graph.models.generated.DefenderRealtimeScanDirection;
 import com.microsoft.graph.models.generated.DefenderScanType;
@@ -61,6 +61,14 @@ import com.google.gson.annotations.Expose;
  */
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Application Guard Allow Camera Microphone Redirection.
+     * Gets or sets whether applications inside Microsoft Defender Application Guard can access the device?s camera and microphone.
+     */
+    @SerializedName(value = "applicationGuardAllowCameraMicrophoneRedirection", alternate = {"ApplicationGuardAllowCameraMicrophoneRedirection"})
+    @Expose
+    public Boolean applicationGuardAllowCameraMicrophoneRedirection;
 
     /**
      * The Application Guard Allow File Save On Host.
@@ -141,6 +149,14 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     @SerializedName(value = "applicationGuardBlockNonEnterpriseContent", alternate = {"ApplicationGuardBlockNonEnterpriseContent"})
     @Expose
     public Boolean applicationGuardBlockNonEnterpriseContent;
+
+    /**
+     * The Application Guard Certificate Thumbprints.
+     * Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
+     */
+    @SerializedName(value = "applicationGuardCertificateThumbprints", alternate = {"ApplicationGuardCertificateThumbprints"})
+    @Expose
+    public java.util.List<String> applicationGuardCertificateThumbprints;
 
     /**
      * The Application Guard Enabled.
@@ -365,6 +381,14 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     @SerializedName(value = "defenderBlockEndUserAccess", alternate = {"DefenderBlockEndUserAccess"})
     @Expose
     public Boolean defenderBlockEndUserAccess;
+
+    /**
+     * The Defender Block Persistence Through Wmi Type.
+     * Value indicating the behavior of Block persistence through WMI event subscription
+     */
+    @SerializedName(value = "defenderBlockPersistenceThroughWmiType", alternate = {"DefenderBlockPersistenceThroughWmiType"})
+    @Expose
+    public DefenderAttackSurfaceType defenderBlockPersistenceThroughWmiType;
 
     /**
      * The Defender Check For Signatures Before Running Scan.
@@ -632,7 +656,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Other Process Injection.
-     * Value indicating the behavior of  Office applications injecting into other processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Value indicating the behavior of? Office applications injecting into other processes. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
      */
     @SerializedName(value = "defenderOfficeAppsOtherProcessInjection", alternate = {"DefenderOfficeAppsOtherProcessInjection"})
     @Expose
@@ -640,7 +664,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Defender Office Apps Other Process Injection Type.
-     * Value indicating the behavior of Office applications injecting into other processes. Possible values are: userDefined, block, auditMode, warn, disable.
+     * Value indicating the behavior of?Office applications injecting into other processes. Possible values are: userDefined, block, auditMode, warn, disable.
      */
     @SerializedName(value = "defenderOfficeAppsOtherProcessInjectionType", alternate = {"DefenderOfficeAppsOtherProcessInjectionType"})
     @Expose
@@ -1384,7 +1408,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Do Not Store LANManager Hash Value On Next Password Change.
-     * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It?s not stored by default.
      */
     @SerializedName(value = "localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", alternate = {"LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange"})
     @Expose
@@ -1416,7 +1440,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Hide Username At Sign In.
-     * Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Do not display the username of the person signing in to this device after credentials are entered and before the device?s desktop is shown.
      */
     @SerializedName(value = "localSecurityOptionsHideUsernameAtSignIn", alternate = {"LocalSecurityOptionsHideUsernameAtSignIn"})
     @Expose
@@ -1456,7 +1480,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Machine Inactivity Limit.
-     * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Define maximum minutes of inactivity on the interactive desktop?s login screen until the screen saver runs. Valid values 0 to 9999
      */
     @SerializedName(value = "localSecurityOptionsMachineInactivityLimit", alternate = {"LocalSecurityOptionsMachineInactivityLimit"})
     @Expose
@@ -1464,7 +1488,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
 
     /**
      * The Local Security Options Machine Inactivity Limit In Minutes.
-     * Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Define maximum minutes of inactivity on the interactive desktop?s login screen until the screen saver runs. Valid values 0 to 9999
      */
     @SerializedName(value = "localSecurityOptionsMachineInactivityLimitInMinutes", alternate = {"LocalSecurityOptionsMachineInactivityLimitInMinutes"})
     @Expose

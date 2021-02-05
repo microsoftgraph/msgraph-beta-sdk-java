@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.PlannerPlanContainer;
 import com.microsoft.graph.models.extensions.PlannerPlanContextCollection;
 import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.PlannerBucket;
@@ -29,6 +30,14 @@ import com.google.gson.annotations.Expose;
  */
 public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
+
+    /**
+     * The Container.
+     * Identifies the container of the plan. After it is set, this property can?t be updated. Required.
+     */
+    @SerializedName(value = "container", alternate = {"Container"})
+    @Expose
+    public PlannerPlanContainer container;
 
     /**
      * The Contexts.
@@ -72,7 +81,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Buckets.
-     * Read-only. Nullable. Collection of buckets in the plan.
+     * Collection of buckets in the plan. Read-only. Nullable.
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
@@ -80,7 +89,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Details.
-     * Read-only. Nullable. Additional details about the plan.
+     * Additional details about the plan. Read-only. Nullable.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -88,7 +97,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * Read-only. Nullable. Collection of tasks in the plan.
+     * Collection of tasks in the plan. Read-only. Nullable.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

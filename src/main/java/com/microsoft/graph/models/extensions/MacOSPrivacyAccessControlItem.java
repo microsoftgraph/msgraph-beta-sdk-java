@@ -101,7 +101,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
 
     /**
      * The Code Requirement.
-     * Enter the code requirement, which can be obtained with the command 'codesign –display -r –' in the Terminal app. Include everything after '=&amp;gt;'.
+     * Enter the code requirement, which can be obtained with the command 'codesign ?display -r ?' in the Terminal app. Include everything after '=&amp;gt;'.
      */
     @SerializedName(value = "codeRequirement", alternate = {"CodeRequirement"})
     @Expose
@@ -117,7 +117,7 @@ public class MacOSPrivacyAccessControlItem implements IJsonBackedObject {
 
     /**
      * The File Provider Presence.
-     * Allow the app or process to access files managed by another app’s file provider extension. Requires macOS 10.15 or later. . Possible values are: notConfigured, enabled, disabled.
+     * Allow the app or process to access files managed by another app?s file provider extension. Requires macOS 10.15 or later. . Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "fileProviderPresence", alternate = {"FileProviderPresence"})
     @Expose

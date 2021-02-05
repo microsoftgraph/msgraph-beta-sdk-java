@@ -44,7 +44,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Image Display Name.
-     * The display name for the OS image you’re provisioning.
+     * The display name for the OS image you?re provisioning.
      */
     @SerializedName(value = "imageDisplayName", alternate = {"ImageDisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The On Premises Connection Id.
-     * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the cloud PC service.
+     * The ID of the cloudPcOnPremisesConnection. To ensure that cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that?s validated by the cloud PC service.
      */
     @SerializedName(value = "onPremisesConnectionId", alternate = {"OnPremisesConnectionId"})
     @Expose

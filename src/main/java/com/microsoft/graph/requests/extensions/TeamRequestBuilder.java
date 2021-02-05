@@ -37,6 +37,10 @@ import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamworkTagCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamworkTagRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamworkTagCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TeamworkTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.ScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
@@ -159,6 +163,13 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
      */
     public IChannelRequestBuilder primaryChannel() {
         return new ChannelRequestBuilder(getRequestUrlWithAdditionalSegment("primaryChannel"), getClient(), null);
+    }
+    public ITeamworkTagCollectionRequestBuilder tags() {
+        return new TeamworkTagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tags"), getClient(), null);
+    }
+
+    public ITeamworkTagRequestBuilder tags(final String id) {
+        return new TeamworkTagRequestBuilder(getRequestUrlWithAdditionalSegment("tags") + "/" + id, getClient(), null);
     }
 
     /**

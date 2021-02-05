@@ -37,6 +37,14 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
     public javax.xml.datatype.Duration accountSetupDuration;
 
     /**
+     * The Account Setup Status.
+     * Deployment status for the enrollment status page account setup phase.
+     */
+    @SerializedName(value = "accountSetupStatus", alternate = {"AccountSetupStatus"})
+    @Expose
+    public WindowsAutopilotDeploymentState accountSetupStatus;
+
+    /**
      * The Deployment Duration.
      * Autopilot deployment duration including enrollment.
      */
@@ -115,6 +123,14 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
     @SerializedName(value = "deviceSetupDuration", alternate = {"DeviceSetupDuration"})
     @Expose
     public javax.xml.datatype.Duration deviceSetupDuration;
+
+    /**
+     * The Device Setup Status.
+     * Deployment status for the enrollment status page device setup phase.
+     */
+    @SerializedName(value = "deviceSetupStatus", alternate = {"DeviceSetupStatus"})
+    @Expose
+    public WindowsAutopilotDeploymentState deviceSetupStatus;
 
     /**
      * The Enrollment Failure Details.
@@ -203,6 +219,14 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
     @SerializedName(value = "windows10EnrollmentCompletionPageConfigurationDisplayName", alternate = {"Windows10EnrollmentCompletionPageConfigurationDisplayName"})
     @Expose
     public String windows10EnrollmentCompletionPageConfigurationDisplayName;
+
+    /**
+     * The Windows10Enrollment Completion Page Configuration Id.
+     * Enrollment Status Page profile ID
+     */
+    @SerializedName(value = "windows10EnrollmentCompletionPageConfigurationId", alternate = {"Windows10EnrollmentCompletionPageConfigurationId"})
+    @Expose
+    public String windows10EnrollmentCompletionPageConfigurationId;
 
     /**
      * The Windows Autopilot Deployment Profile Display Name.

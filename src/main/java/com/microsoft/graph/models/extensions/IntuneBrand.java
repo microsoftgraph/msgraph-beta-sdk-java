@@ -86,7 +86,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Custom Cant See Privacy Message.
-     * The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * The custom privacy message used to explain what the organization can?t see or do on managed devices.
      */
     @SerializedName(value = "customCantSeePrivacyMessage", alternate = {"CustomCantSeePrivacyMessage"})
     @Expose
@@ -94,7 +94,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Custom Privacy Message.
-     * The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * The custom privacy message used to explain what the organization can?t see or do on managed devices.
      */
     @SerializedName(value = "customPrivacyMessage", alternate = {"CustomPrivacyMessage"})
     @Expose
@@ -166,7 +166,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Online Support Site Name.
-     * Display name of the company/organization’s IT helpdesk site.
+     * Display name of the company/organization?s IT helpdesk site.
      */
     @SerializedName(value = "onlineSupportSiteName", alternate = {"OnlineSupportSiteName"})
     @Expose
@@ -174,7 +174,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Online Support Site Url.
-     * URL to the company/organization’s IT helpdesk site.
+     * URL to the company/organization?s IT helpdesk site.
      */
     @SerializedName(value = "onlineSupportSiteUrl", alternate = {"OnlineSupportSiteUrl"})
     @Expose
@@ -182,7 +182,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Privacy Url.
-     * URL to the company/organization’s privacy policy.
+     * URL to the company/organization?s privacy policy.
      */
     @SerializedName(value = "privacyUrl", alternate = {"PrivacyUrl"})
     @Expose

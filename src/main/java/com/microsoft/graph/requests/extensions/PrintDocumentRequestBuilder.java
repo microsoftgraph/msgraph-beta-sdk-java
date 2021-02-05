@@ -56,6 +56,10 @@ public class PrintDocumentRequestBuilder extends BaseRequestBuilder implements I
 
 
 
+    public IPrintDocumentStreamRequestBuilder content() {
+        return new PrintDocumentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("$value"), getClient(), null);
+    }
+
     public IPrintDocumentCreateUploadSessionRequestBuilder createUploadSession(final PrintDocumentUploadProperties properties) {
         return new PrintDocumentCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, properties);
     }

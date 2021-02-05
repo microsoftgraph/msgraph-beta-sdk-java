@@ -41,6 +41,13 @@ public interface IUserExperienceAnalyticsBaselineRequestBuilder extends IRequest
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
+    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder appHealthMetrics();
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
     IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics();
 
     /**
@@ -56,5 +63,12 @@ public interface IUserExperienceAnalyticsBaselineRequestBuilder extends IRequest
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics();
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder resourcePerformanceMetrics();
 
 }
