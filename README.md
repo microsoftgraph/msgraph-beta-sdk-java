@@ -107,13 +107,11 @@ For a general overview of how the SDK is designed, see [overview](https://github
 
 For more detailed documentation, see:
 
-* [Overview](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Overview)
-* [Extending the library](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Extending-the-Library)
-* [Handling Open Types, PATCH support with `null` values](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Open-Types)
-* [Collections](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Working-with-Collections)
-* [Making custom requests](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Custom-Requests)
-* [Known issues](https://github.com/microsoftgraph/msgraph-sdk-java/wiki/Known-Issues)
-* [Contributions](https://github.com/microsoftgraph/msgraph-sdk-java/blob/master/CONTRIBUTING.md)
+* [Overview](https://docs.microsoft.com/graph/overview)
+* [Collections](https://docs.microsoft.com/graph/sdks/paging)
+* [Making requests](https://docs.microsoft.com/graph/sdks/create-requests)
+* [Known issues](https://github.com/MicrosoftGraph/msgraph-sdk-java/issues)
+* [Contributions](https://github.com/microsoftgraph/msgraph-beta-sdk-java/blob/master/CONTRIBUTING.md)
 
 ## 5. Issues
 
@@ -134,6 +132,3 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
-
-
-
