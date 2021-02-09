@@ -55,7 +55,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
 
     /**
      * The Cache Server Foreground Download Fallback To Http Delay In Seconds.
-     * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.​
+     * Specifies number of seconds to delay a fall back from cache servers to an HTTP source for a foreground download. Valid values 0 to 2592000.?
      */
     @SerializedName(value = "cacheServerForegroundDownloadFallbackToHttpDelayInSeconds", alternate = {"CacheServerForegroundDownloadFallbackToHttpDelayInSeconds"})
     @Expose

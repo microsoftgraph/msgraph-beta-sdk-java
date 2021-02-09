@@ -314,7 +314,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
+     * 
      */
     public DirectoryObjectCollectionPage memberOf;
 

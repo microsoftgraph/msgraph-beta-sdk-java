@@ -166,7 +166,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Onenote.
-     * Calls the OneNote service for notebook related operations.
+     * 
      */
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose

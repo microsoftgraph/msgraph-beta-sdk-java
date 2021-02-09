@@ -21,7 +21,6 @@ import com.microsoft.graph.models.extensions.SecureScore;
 import com.microsoft.graph.models.extensions.SecurityAction;
 import com.microsoft.graph.models.extensions.TiIndicator;
 import com.microsoft.graph.models.extensions.UserSecurityProfile;
-import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.AlertCollectionPage;
 import com.microsoft.graph.requests.extensions.CloudAppSecurityProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.DomainSecurityProfileCollectionPage;
@@ -45,8 +44,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Security.
  */
-public class Security extends Entity implements IJsonBackedObject {
+public class Security implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Provider Status.
@@ -58,7 +67,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose
