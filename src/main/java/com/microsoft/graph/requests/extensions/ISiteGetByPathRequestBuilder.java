@@ -83,6 +83,10 @@ public interface ISiteGetByPathRequestBuilder extends IRequestBuilder {
 
     ISitePageRequestBuilder pages(final String id);
 
+    IPermissionCollectionRequestBuilder permissions();
+
+    IPermissionRequestBuilder permissions(final String id);
+
     ISiteCollectionRequestBuilder sites();
 
     ISiteRequestBuilder sites(final String id);

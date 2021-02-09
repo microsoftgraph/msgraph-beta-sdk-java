@@ -49,8 +49,6 @@ import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequest
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequestBuilder;
@@ -118,15 +116,6 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      */
     public IB2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy() {
         return new B2cAuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("b2cAuthenticationMethodsPolicy"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for DeviceRegistrationPolicy
-     *
-     * @return the IDeviceRegistrationPolicyRequestBuilder instance
-     */
-    public IDeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
-        return new DeviceRegistrationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRegistrationPolicy"), getClient(), null);
     }
     public IActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
         return new ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies"), getClient(), null);

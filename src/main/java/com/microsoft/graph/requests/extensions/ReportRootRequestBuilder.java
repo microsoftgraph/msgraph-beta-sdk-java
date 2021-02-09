@@ -106,6 +106,8 @@ import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectio
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -156,6 +158,15 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
 
     public IApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary(final String id) {
         return new ApplicationSignInDetailedSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("applicationSignInDetailedSummary") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AuthenticationMethodsRoot
+     *
+     * @return the IAuthenticationMethodsRootRequestBuilder instance
+     */
+    public IAuthenticationMethodsRootRequestBuilder authenticationMethods() {
+        return new AuthenticationMethodsRootRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethods"), getClient(), null);
     }
     public ICredentialUserRegistrationDetailsCollectionRequestBuilder credentialUserRegistrationDetails() {
         return new CredentialUserRegistrationDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationDetails"), getClient(), null);

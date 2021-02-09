@@ -8,7 +8,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.PlannerUser;
+import com.microsoft.graph.models.extensions.PlannerRoster;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -39,7 +39,7 @@ public class PlannerPlanCollectionReferenceRequest extends BaseCollectionRequest
 
     public void post(final PlannerPlan newPlannerPlan, final ICallback<? super PlannerPlan> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/planner/recentPlans/" + newPlannerPlan.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/planner/plans/" + newPlannerPlan.id);
         new PlannerPlanWithReferenceRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getHeaders())
             .post(newPlannerPlan, body, callback);
@@ -47,7 +47,7 @@ public class PlannerPlanCollectionReferenceRequest extends BaseCollectionRequest
 
     public PlannerPlan post(final PlannerPlan newPlannerPlan) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
-        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/planner/recentPlans/" + newPlannerPlan.id);
+        final ReferenceRequestBody body = new ReferenceRequestBody(getBaseRequest().getClient().getServiceRoot() + "/planner/plans/" + newPlannerPlan.id);
         return new PlannerPlanWithReferenceRequestBuilder(requestUrl,getBaseRequest().getClient(), /* Options */ null)
                 .buildRequest(getBaseRequest().getHeaders())
                 .post(newPlannerPlan, body);

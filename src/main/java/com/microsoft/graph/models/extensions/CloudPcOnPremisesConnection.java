@@ -43,7 +43,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Domain Username.
-     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: contoso@microsoft.com.
+     * The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com.
      */
     @SerializedName(value = "adDomainUsername", alternate = {"AdDomainUsername"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Health Check Status.
-     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Read-only. Possible values are: Pending, Running, Passed, Failed, UnknownFutureValue.
+     * The status of the most recent health check done on the on-premises connection. For example, if status is 'passed', the on-premises connection has passed all checks run by the service. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "healthCheckStatus", alternate = {"HealthCheckStatus"})
     @Expose
@@ -67,7 +67,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Health Check Status Details.
-     * The details of the connection's health checks and the corresponding results. Returned only on $select. See an example of getting the healthCheckStatusDetails property.Read-only.
+     * The details of the connection's health checks and the corresponding results. Returned only on $select.For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
      */
     @SerializedName(value = "healthCheckStatusDetails", alternate = {"HealthCheckStatusDetails"})
     @Expose
@@ -75,7 +75,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The In Use.
-     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Read-only.
+     * When true, the on-premises connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an on-premises connection, including healthCheckStatusDetails. Read-only.
      */
     @SerializedName(value = "inUse", alternate = {"InUse"})
     @Expose

@@ -9,6 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Device;
+import com.microsoft.graph.requests.extensions.IUsageRightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsageRightRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsageRightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UsageRightRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
@@ -65,6 +69,13 @@ public class DeviceRequestBuilder extends BaseRequestBuilder implements IDeviceR
     }
 
 
+    public IUsageRightCollectionRequestBuilder usageRights() {
+        return new UsageRightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("usageRights"), getClient(), null);
+    }
+
+    public IUsageRightRequestBuilder usageRights(final String id) {
+        return new UsageRightRequestBuilder(getRequestUrlWithAdditionalSegment("usageRights") + "/" + id, getClient(), null);
+    }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder memberOf() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf"), getClient(), null);
     }

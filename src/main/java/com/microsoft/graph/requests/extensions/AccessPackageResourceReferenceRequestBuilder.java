@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollec
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceEnvironmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -17,6 +17,7 @@ import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

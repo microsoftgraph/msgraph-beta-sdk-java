@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PlannerAppliedCategories;
 import com.microsoft.graph.models.extensions.PlannerAssignments;
 import com.microsoft.graph.models.extensions.IdentitySet;
+import com.microsoft.graph.models.extensions.PlannerTaskCreation;
 import com.microsoft.graph.models.generated.PlannerPreviewType;
 import com.microsoft.graph.models.extensions.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.extensions.PlannerBucketTaskBoardTaskFormat;
@@ -118,6 +119,14 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
     public java.util.Calendar createdDateTime;
+
+    /**
+     * The Creation Source.
+     * Contains information about the origin of the task.
+     */
+    @SerializedName(value = "creationSource", alternate = {"CreationSource"})
+    @Expose
+    public PlannerTaskCreation creationSource;
 
     /**
      * The Due Date Time.

@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequest
 import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationAssignmentSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupRequestBuilder;
 import java.util.Arrays;
@@ -84,6 +86,15 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
 
     public IEducationAssignmentRequestBuilder assignments(final String id) {
         return new EducationAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EducationAssignmentSettings
+     *
+     * @return the IEducationAssignmentSettingsRequestBuilder instance
+     */
+    public IEducationAssignmentSettingsRequestBuilder assignmentSettings() {
+        return new EducationAssignmentSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentSettings"), getClient(), null);
     }
 
     /**

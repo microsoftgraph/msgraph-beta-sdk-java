@@ -35,7 +35,7 @@ public class MembershipRuleProcessingStatus implements IJsonBackedObject {
 
     /**
      * The Error Message.
-     * 
+     * Detailed error message if dynamic group processing ran into an error.  Optional. Read-only.
      */
     @SerializedName(value = "errorMessage", alternate = {"ErrorMessage"})
     @Expose
@@ -43,7 +43,7 @@ public class MembershipRuleProcessingStatus implements IJsonBackedObject {
 
     /**
      * The Last Membership Updated.
-     * 
+     * Most recent date and time when membership of a dynamic group was updated.  Optional. Read-only.
      */
     @SerializedName(value = "lastMembershipUpdated", alternate = {"LastMembershipUpdated"})
     @Expose
@@ -51,7 +51,7 @@ public class MembershipRuleProcessingStatus implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.   Required. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

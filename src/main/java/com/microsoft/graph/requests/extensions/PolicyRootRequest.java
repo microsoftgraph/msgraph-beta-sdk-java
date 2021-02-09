@@ -49,8 +49,6 @@ import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequest
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequestBuilder;

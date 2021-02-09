@@ -57,6 +57,14 @@ public class PlannerPlanContext implements IJsonBackedObject {
     public java.util.List<String> displayNameSegments;
 
     /**
+     * The Is Creation Context.
+     * 
+     */
+    @SerializedName(value = "isCreationContext", alternate = {"IsCreationContext"})
+    @Expose
+    public Boolean isCreationContext;
+
+    /**
      * The Owner App Id.
      * Read-only. ID of the app that created the plannerPlanContext.
      */

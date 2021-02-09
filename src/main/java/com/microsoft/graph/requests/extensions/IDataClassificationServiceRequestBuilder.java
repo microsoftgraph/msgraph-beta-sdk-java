@@ -83,10 +83,6 @@ public interface IDataClassificationServiceRequestBuilder extends IRequestBuilde
 
     IJobResponseBaseRequestBuilder jobs(final String id);
 
-    IJobResponseBaseCollectionRequestBuilder labelsAndPoliciesEvaluationJobs();
-
-    IJobResponseBaseRequestBuilder labelsAndPoliciesEvaluationJobs(final String id);
-
     ISensitiveTypeCollectionRequestBuilder sensitiveTypes();
 
     ISensitiveTypeRequestBuilder sensitiveTypes(final String id);

@@ -36,6 +36,8 @@ public interface IPrintDocumentRequestBuilder extends IRequestBuilder {
      */
     IPrintDocumentRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IPrintDocumentStreamRequestBuilder content();
     IPrintDocumentCreateUploadSessionRequestBuilder createUploadSession(final PrintDocumentUploadProperties properties);
     IPrintDocumentUploadDataRequestBuilder uploadData();
 

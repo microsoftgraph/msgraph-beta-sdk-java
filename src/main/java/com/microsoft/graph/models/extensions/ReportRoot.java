@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.ApplicationSignInDetailedSummary;
+import com.microsoft.graph.models.extensions.AuthenticationMethodsRoot;
 import com.microsoft.graph.models.extensions.CredentialUserRegistrationDetails;
 import com.microsoft.graph.models.extensions.UserCredentialUsageDetails;
 import com.microsoft.graph.models.extensions.PrintUsageSummaryByPrinter;
@@ -40,6 +41,14 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @SerializedName(value = "applicationSignInDetailedSummary", alternate = {"ApplicationSignInDetailedSummary"})
     @Expose
     public ApplicationSignInDetailedSummaryCollectionPage applicationSignInDetailedSummary;
+
+    /**
+     * The Authentication Methods.
+     * 
+     */
+    @SerializedName(value = "authenticationMethods", alternate = {"AuthenticationMethods"})
+    @Expose
+    public AuthenticationMethodsRoot authenticationMethods;
 
     /**
      * The Credential User Registration Details.

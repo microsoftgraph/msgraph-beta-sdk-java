@@ -13,6 +13,7 @@ import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollect
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -38,6 +39,13 @@ public interface IAccessPackageResourceRequestBuilder extends IRequestBuilder {
      */
     IAccessPackageResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for AccessPackageResourceEnvironment
+     *
+     * @return the IAccessPackageResourceEnvironmentWithReferenceRequestBuilder instance
+     */
+    IAccessPackageResourceEnvironmentWithReferenceRequestBuilder accessPackageResourceEnvironment();
 
     IAccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles();
 

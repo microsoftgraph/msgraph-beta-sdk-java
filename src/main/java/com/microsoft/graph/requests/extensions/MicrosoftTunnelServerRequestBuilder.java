@@ -9,6 +9,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftTunnelServer;
+import com.microsoft.graph.models.extensions.MicrosoftTunnelServerLogCollectionResponse;
+import com.microsoft.graph.models.extensions.KeyLongValuePair;
+import com.microsoft.graph.models.extensions.KeyValuePair;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -53,4 +56,16 @@ public class MicrosoftTunnelServerRequestBuilder extends BaseRequestBuilder impl
     }
 
 
+
+    public IMicrosoftTunnelServerCreateServerLogCollectionRequestRequestBuilder createServerLogCollectionRequest(final java.util.Calendar startDateTime, final java.util.Calendar endDateTime) {
+        return new MicrosoftTunnelServerCreateServerLogCollectionRequestRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createServerLogCollectionRequest"), getClient(), null, startDateTime, endDateTime);
+    }
+
+    public IMicrosoftTunnelServerGetHealthMetricsCollectionRequestBuilder getHealthMetrics(final java.util.List<String> metricNames) {
+        return new MicrosoftTunnelServerGetHealthMetricsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getHealthMetrics"), getClient(), null, metricNames);
+    }
+
+    public IMicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequestBuilder getHealthMetricTimeSeries(final String metricName, final java.util.Calendar startTime, final java.util.Calendar endTime) {
+        return new MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getHealthMetricTimeSeries"), getClient(), null, metricName, startTime, endTime);
+    }
 }

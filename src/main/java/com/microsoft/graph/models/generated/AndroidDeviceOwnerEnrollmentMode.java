@@ -24,10 +24,6 @@ public enum AndroidDeviceOwnerEnrollmentMode
     */
     CORPORATE_OWNED_WORK_PROFILE,
     /**
-    * corporate Owned AOSPUserless Device
-    */
-    CORPORATE_OWNED_AOSP_USERLESS_DEVICE,
-    /**
     * For AndroidDeviceOwnerEnrollmentMode values that were not expected from the service
     */
     UNEXPECTED_VALUE

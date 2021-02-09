@@ -13,6 +13,7 @@ import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollect
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -48,6 +48,10 @@ public enum AndroidWorkProfileVpnConnectionType
     */
     NET_MOTION_MOBILITY,
     /**
+    * microsoft Protect
+    */
+    MICROSOFT_PROTECT,
+    /**
     * For AndroidWorkProfileVpnConnectionType values that were not expected from the service
     */
     UNEXPECTED_VALUE

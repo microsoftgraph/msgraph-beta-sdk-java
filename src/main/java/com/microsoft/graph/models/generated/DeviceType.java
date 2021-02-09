@@ -100,6 +100,10 @@ public enum DeviceType
     */
     CLOUD_PC,
     /**
+    * linux
+    */
+    LINUX,
+    /**
     * blackberry
     */
     BLACKBERRY,

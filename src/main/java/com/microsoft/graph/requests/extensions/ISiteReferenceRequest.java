@@ -22,6 +22,8 @@ import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISitePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISitePageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;

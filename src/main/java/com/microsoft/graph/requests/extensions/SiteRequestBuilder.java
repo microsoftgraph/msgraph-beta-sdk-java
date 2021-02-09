@@ -34,6 +34,10 @@ import com.microsoft.graph.requests.extensions.ISitePageCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ISitePageRequestBuilder;
 import com.microsoft.graph.requests.extensions.SitePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SitePageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
@@ -163,6 +167,13 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
 
     public ISitePageRequestBuilder pages(final String id) {
         return new SitePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
+    }
+    public IPermissionCollectionRequestBuilder permissions() {
+        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
+    }
+
+    public IPermissionRequestBuilder permissions(final String id) {
+        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
     public ISiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);

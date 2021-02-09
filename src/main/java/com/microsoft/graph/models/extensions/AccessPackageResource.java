@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AccessPackageResourceAttribute;
+import com.microsoft.graph.models.extensions.AccessPackageResourceEnvironment;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRole;
 import com.microsoft.graph.models.extensions.AccessPackageResourceScope;
 import com.microsoft.graph.models.extensions.Entity;
@@ -107,6 +108,14 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose
     public String url;
+
+    /**
+     * The Access Package Resource Environment.
+     * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.
+     */
+    @SerializedName(value = "accessPackageResourceEnvironment", alternate = {"AccessPackageResourceEnvironment"})
+    @Expose
+    public AccessPackageResourceEnvironment accessPackageResourceEnvironment;
 
     /**
      * The Access Package Resource Roles.

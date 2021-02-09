@@ -22,6 +22,8 @@ import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISitePageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISitePageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPermissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
@@ -103,6 +105,10 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
     ISitePageCollectionRequestBuilder pages();
 
     ISitePageRequestBuilder pages(final String id);
+
+    IPermissionCollectionRequestBuilder permissions();
+
+    IPermissionRequestBuilder permissions(final String id);
 
     ISiteCollectionRequestBuilder sites();
 

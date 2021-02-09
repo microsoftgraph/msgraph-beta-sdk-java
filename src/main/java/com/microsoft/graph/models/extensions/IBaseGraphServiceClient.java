@@ -22,6 +22,8 @@ import com.microsoft.graph.requests.extensions.IBookingBusinessCollectionRequest
 import com.microsoft.graph.requests.extensions.IBookingBusinessRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingCurrencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingCurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdministrativeUnitCollectionRequestBuilder;
@@ -38,8 +40,6 @@ import com.microsoft.graph.requests.extensions.IOrgContactCollectionRequestBuild
 import com.microsoft.graph.requests.extensions.IOrgContactRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleCollectionRequestBuilder;
@@ -296,6 +296,21 @@ public interface IBaseGraphServiceClient extends IBaseClient {
     IBookingCurrencyRequestBuilder bookingCurrencies(final String id);
 
     /**
+     * Gets the collection of Devices objects
+     *
+     * @return the request builder for the collection of Devices objects
+     */
+    IDeviceCollectionRequestBuilder devices();
+
+    /**
+     * Gets a single Devices
+     *
+     * @param id the id of the Devices to retrieve
+     * @return the request builder for the Devices object
+     */
+    IDeviceRequestBuilder devices(final String id);
+
+    /**
      * Gets the collection of IdentityProviders objects
      *
      * @return the request builder for the collection of IdentityProviders objects
@@ -414,21 +429,6 @@ public interface IBaseGraphServiceClient extends IBaseClient {
      * @return the request builder for the Contracts object
      */
     IContractRequestBuilder contracts(final String id);
-
-    /**
-     * Gets the collection of Devices objects
-     *
-     * @return the request builder for the collection of Devices objects
-     */
-    IDeviceCollectionRequestBuilder devices();
-
-    /**
-     * Gets a single Devices
-     *
-     * @param id the id of the Devices to retrieve
-     * @return the request builder for the Devices object
-     */
-    IDeviceRequestBuilder devices(final String id);
 
     /**
      * Gets the collection of DirectoryObjects objects
