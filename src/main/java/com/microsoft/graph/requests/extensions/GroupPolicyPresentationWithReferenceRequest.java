@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.GroupPolicyPresentation;
-import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupPolicyDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

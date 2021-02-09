@@ -9,11 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrinterShare;
-import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrinterWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

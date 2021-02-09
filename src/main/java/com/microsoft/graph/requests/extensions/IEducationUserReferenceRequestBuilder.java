@@ -13,11 +13,11 @@ import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionReq
 import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRubricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -11,8 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerRoster;
 import com.microsoft.graph.requests.extensions.IPlannerRosterMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerRosterMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -27,13 +27,13 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurat
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDetectedAppCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDetectedAppWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsProtectionStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

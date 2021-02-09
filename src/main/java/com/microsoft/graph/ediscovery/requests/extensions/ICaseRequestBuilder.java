@@ -19,11 +19,11 @@ import com.microsoft.graph.ediscovery.requests.extensions.ICaseOperationCollecti
 import com.microsoft.graph.ediscovery.requests.extensions.ICaseOperationRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.IReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.IReviewSetRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.ISettingsRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ISourceCollectionCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ISourceCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ITagCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ITagRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.extensions.ISettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

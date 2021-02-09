@@ -28,6 +28,8 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusC
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationGroupAssignmentCollectionRequestBuilder;
@@ -36,8 +38,6 @@ import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusCol
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceConfigurationDeviceOverviewRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceConfigurationDeviceOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationUserOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceConfigurationUserOverviewRequestBuilder;
 import java.util.Arrays;

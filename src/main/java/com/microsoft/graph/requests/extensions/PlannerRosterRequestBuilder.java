@@ -13,10 +13,10 @@ import com.microsoft.graph.requests.extensions.IPlannerRosterMemberCollectionReq
 import com.microsoft.graph.requests.extensions.IPlannerRosterMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerRosterMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerRosterMemberRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

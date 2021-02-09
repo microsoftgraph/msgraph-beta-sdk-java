@@ -13,8 +13,8 @@ import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItem
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessReviewInstanceDecisionItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessReviewScheduleDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

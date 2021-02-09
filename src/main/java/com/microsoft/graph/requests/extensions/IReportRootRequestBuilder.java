@@ -88,6 +88,7 @@ import com.microsoft.graph.models.extensions.PrintUsageSummary;
 import com.microsoft.graph.models.extensions.UserPrintUsageSummary;
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsCollectionRequestBuilder;
@@ -96,7 +97,6 @@ import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollec
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

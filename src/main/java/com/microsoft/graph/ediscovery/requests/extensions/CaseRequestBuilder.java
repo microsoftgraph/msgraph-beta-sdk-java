@@ -29,6 +29,8 @@ import com.microsoft.graph.ediscovery.requests.extensions.IReviewSetCollectionRe
 import com.microsoft.graph.ediscovery.requests.extensions.IReviewSetRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ReviewSetRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.ISettingsRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.SettingsRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ISourceCollectionCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.ISourceCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.SourceCollectionCollectionRequestBuilder;
@@ -37,8 +39,6 @@ import com.microsoft.graph.ediscovery.requests.extensions.ITagCollectionRequestB
 import com.microsoft.graph.ediscovery.requests.extensions.ITagRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.TagCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.TagRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.extensions.ISettingsRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.extensions.SettingsRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

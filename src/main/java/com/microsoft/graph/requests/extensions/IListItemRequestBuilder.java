@@ -14,11 +14,11 @@ import com.microsoft.graph.models.extensions.Permission;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemActivityOLDRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IFieldValueSetRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemVersionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IListItemVersionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -9,9 +9,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserAppInstallStatus;
+import com.microsoft.graph.requests.extensions.IMobileAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

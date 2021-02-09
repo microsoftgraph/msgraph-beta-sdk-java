@@ -9,7 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetricHistory;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

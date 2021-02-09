@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessReviewInstance;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceDecisionItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessReviewScheduleDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

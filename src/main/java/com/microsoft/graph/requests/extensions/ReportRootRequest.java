@@ -90,6 +90,8 @@ import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummary
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionRequestBuilder;
@@ -106,8 +108,6 @@ import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectio
 import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.AuthenticationMethodsRootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

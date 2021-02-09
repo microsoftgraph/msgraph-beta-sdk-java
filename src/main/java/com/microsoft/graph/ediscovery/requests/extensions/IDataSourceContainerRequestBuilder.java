@@ -9,7 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.ediscovery.models.extensions.DataSourceContainer;
-import com.microsoft.graph.ediscovery.requests.extensions.ICaseIndexOperationRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.ICaseIndexOperationWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

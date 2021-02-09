@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Channel;
 import com.microsoft.graph.models.extensions.ChatMessage;
+import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionRequestBuilder;
@@ -22,8 +24,6 @@ import com.microsoft.graph.requests.extensions.ITeamsTabCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.ITeamsTabRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamsTabRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveItemRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveItemRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

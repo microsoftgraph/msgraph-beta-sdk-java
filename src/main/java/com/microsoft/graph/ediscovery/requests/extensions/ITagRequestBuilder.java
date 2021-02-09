@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.ediscovery.models.extensions.Tag;
-import com.microsoft.graph.ediscovery.requests.extensions.ITagCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.extensions.ITagRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.ITagCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.ITagWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

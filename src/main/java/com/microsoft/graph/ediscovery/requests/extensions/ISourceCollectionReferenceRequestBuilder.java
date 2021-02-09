@@ -11,8 +11,10 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.ediscovery.models.extensions.SourceCollection;
 import com.microsoft.graph.ediscovery.requests.extensions.IDataSourceCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.extensions.IDataSourceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.extensions.IAddToReviewSetOperationRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.extensions.IEstimateStatisticsOperationRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.IAddToReviewSetOperationWithReferenceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.IDataSourceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.IDataSourceWithReferenceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.extensions.IEstimateStatisticsOperationWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -9,15 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
+import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
