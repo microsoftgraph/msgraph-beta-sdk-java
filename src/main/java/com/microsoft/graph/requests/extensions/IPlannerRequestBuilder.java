@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.IPlannerBucketCollectionRequestBu
 import com.microsoft.graph.requests.extensions.IPlannerBucketRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRosterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRosterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import java.util.Arrays;
@@ -48,6 +50,10 @@ public interface IPlannerRequestBuilder extends IRequestBuilder {
     IPlannerPlanCollectionRequestBuilder plans();
 
     IPlannerPlanRequestBuilder plans(final String id);
+
+    IPlannerRosterCollectionRequestBuilder rosters();
+
+    IPlannerRosterRequestBuilder rosters(final String id);
 
     IPlannerTaskCollectionRequestBuilder tasks();
 

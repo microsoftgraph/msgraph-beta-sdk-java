@@ -61,6 +61,15 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
+    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder appHealthMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appHealthMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
     public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
     }
@@ -81,5 +90,14 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      */
     public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rebootAnalyticsMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder resourcePerformanceMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resourcePerformanceMetrics"), getClient(), null);
     }
 }

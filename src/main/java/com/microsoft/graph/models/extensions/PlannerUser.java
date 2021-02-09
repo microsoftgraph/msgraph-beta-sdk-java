@@ -75,6 +75,12 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
     public PlannerPlanCollectionPage recentPlans;
 
     /**
+     * The Roster Plans.
+     * 
+     */
+    public PlannerPlanCollectionPage rosterPlans;
+
+    /**
      * The Tasks.
      * Read-only. Nullable. Returns the plannerTasks assigned to the user.
      */
@@ -136,6 +142,10 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
         if (json.has("recentPlans")) {
             recentPlans = serializer.deserializeObject(json.get("recentPlans").toString(), PlannerPlanCollectionPage.class);
+        }
+
+        if (json.has("rosterPlans")) {
+            rosterPlans = serializer.deserializeObject(json.get("rosterPlans").toString(), PlannerPlanCollectionPage.class);
         }
 
         if (json.has("tasks")) {

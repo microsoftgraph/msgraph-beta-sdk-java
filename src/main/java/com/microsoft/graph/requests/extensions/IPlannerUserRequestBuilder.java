@@ -57,6 +57,10 @@ public interface IPlannerUserRequestBuilder extends IRequestBuilder {
 
     IPlannerPlanWithReferenceRequestBuilder recentPlans(final String id);
 
+    IPlannerPlanCollectionWithReferencesRequestBuilder rosterPlans();
+
+    IPlannerPlanWithReferenceRequestBuilder rosterPlans(final String id);
+
     IPlannerTaskCollectionRequestBuilder tasks();
 
     IPlannerTaskRequestBuilder tasks(final String id);

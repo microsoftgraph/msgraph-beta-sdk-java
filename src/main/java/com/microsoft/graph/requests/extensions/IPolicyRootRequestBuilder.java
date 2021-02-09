@@ -29,7 +29,6 @@ import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectio
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
@@ -72,13 +71,6 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
      * @return the IB2cAuthenticationMethodsPolicyRequestBuilder instance
      */
     IB2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy();
-
-    /**
-     * Gets the request builder for DeviceRegistrationPolicy
-     *
-     * @return the IDeviceRegistrationPolicyRequestBuilder instance
-     */
-    IDeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy();
 
     IActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies();
 

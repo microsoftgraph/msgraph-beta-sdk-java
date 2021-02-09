@@ -93,6 +93,13 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
     public IPlannerPlanWithReferenceRequestBuilder recentPlans(final String id) {
         return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("recentPlans") + "/" + id, getClient(), null);
     }
+    public IPlannerPlanCollectionWithReferencesRequestBuilder rosterPlans() {
+        return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("rosterPlans"), getClient(), null);
+    }
+
+    public IPlannerPlanWithReferenceRequestBuilder rosterPlans(final String id) {
+        return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rosterPlans") + "/" + id, getClient(), null);
+    }
     public IPlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
     }

@@ -33,12 +33,28 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
     }
 
     /**
+     * The Exclude Devices.
+     * 
+     */
+    @SerializedName(value = "excludeDevices", alternate = {"ExcludeDevices"})
+    @Expose
+    public java.util.List<String> excludeDevices;
+
+    /**
      * The Exclude Device States.
      * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
      */
     @SerializedName(value = "excludeDeviceStates", alternate = {"ExcludeDeviceStates"})
     @Expose
     public java.util.List<String> excludeDeviceStates;
+
+    /**
+     * The Include Devices.
+     * 
+     */
+    @SerializedName(value = "includeDevices", alternate = {"IncludeDevices"})
+    @Expose
+    public java.util.List<String> includeDevices;
 
     /**
      * The Include Device States.

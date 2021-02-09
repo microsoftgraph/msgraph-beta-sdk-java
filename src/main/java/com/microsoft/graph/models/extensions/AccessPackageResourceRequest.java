@@ -59,7 +59,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Justification.
-     * The requestor's justification for adding the resource.
+     * The requestor's justification for adding or removing the resource.
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -67,7 +67,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request State.
-     * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added. Read-Only.
+     * The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
      */
     @SerializedName(value = "requestState", alternate = {"RequestState"})
     @Expose
@@ -83,7 +83,7 @@ public class AccessPackageResourceRequest extends Entity implements IJsonBackedO
 
     /**
      * The Request Type.
-     * Use AdminAdd to add a resource, if the caller is an administrator or resource owner.
+     * Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose

@@ -29,6 +29,10 @@ import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRe
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceEnvironmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceEnvironmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionRequestBuilder;
@@ -129,6 +133,13 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
 
     public IAccessPackageCatalogRequestBuilder accessPackageCatalogs(final String id) {
         return new AccessPackageCatalogRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCatalogs") + "/" + id, getClient(), null);
+    }
+    public IAccessPackageResourceEnvironmentCollectionRequestBuilder accessPackageResourceEnvironments() {
+        return new AccessPackageResourceEnvironmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceEnvironments"), getClient(), null);
+    }
+
+    public IAccessPackageResourceEnvironmentRequestBuilder accessPackageResourceEnvironments(final String id) {
+        return new AccessPackageResourceEnvironmentRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceEnvironments") + "/" + id, getClient(), null);
     }
     public IAccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests() {
         return new AccessPackageResourceRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRequests"), getClient(), null);

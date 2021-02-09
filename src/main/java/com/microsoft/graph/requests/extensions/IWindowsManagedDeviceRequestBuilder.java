@@ -35,13 +35,13 @@ public interface IWindowsManagedDeviceRequestBuilder extends IRequestBuilder {
     IWindowsManagedDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates();
-
-    ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id);
-
     IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates();
 
     IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id);
+
+    IAssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder assignmentFilterEvaluationStatusDetails();
+
+    IAssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails(final String id);
 
     IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
 
@@ -50,6 +50,10 @@ public interface IWindowsManagedDeviceRequestBuilder extends IRequestBuilder {
     IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates();
 
     IManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(final String id);
+
+    ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates();
+
+    ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id);
 
     IDetectedAppCollectionWithReferencesRequestBuilder detectedApps();
 

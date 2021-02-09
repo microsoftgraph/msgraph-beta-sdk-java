@@ -28,7 +28,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Info.
-     * The participant of the participant.
+     * Information about the participant.
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose

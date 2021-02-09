@@ -33,6 +33,22 @@ public class AndroidMinimumOperatingSystem implements IJsonBackedObject {
     }
 
     /**
+     * The V10_0.
+     * Version 10.0 or later.
+     */
+    @SerializedName(value = "v10_0", alternate = {"V10_0"})
+    @Expose
+    public Boolean v10_0;
+
+    /**
+     * The V11_0.
+     * Version 11.0 or later.
+     */
+    @SerializedName(value = "v11_0", alternate = {"V11_0"})
+    @Expose
+    public Boolean v11_0;
+
+    /**
      * The V4_0.
      * Version 4.0 or later.
      */

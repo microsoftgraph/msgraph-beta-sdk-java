@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.LocaleInfo;
 import com.microsoft.graph.models.extensions.RegionalFormatOverrides;
+import com.microsoft.graph.models.extensions.TranslationPreferences;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -72,6 +73,14 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
     @SerializedName(value = "regionalFormatOverrides", alternate = {"RegionalFormatOverrides"})
     @Expose
     public RegionalFormatOverrides regionalFormatOverrides;
+
+    /**
+     * The Translation Preferences.
+     * 
+     */
+    @SerializedName(value = "translationPreferences", alternate = {"TranslationPreferences"})
+    @Expose
+    public TranslationPreferences translationPreferences;
 
 
     /**

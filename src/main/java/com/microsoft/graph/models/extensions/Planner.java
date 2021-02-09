@@ -10,10 +10,12 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.PlannerBucket;
 import com.microsoft.graph.models.extensions.PlannerPlan;
+import com.microsoft.graph.models.extensions.PlannerRoster;
 import com.microsoft.graph.models.extensions.PlannerTask;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.PlannerBucketCollectionPage;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionPage;
+import com.microsoft.graph.requests.extensions.PlannerRosterCollectionPage;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionPage;
 
 
@@ -44,6 +46,14 @@ public class Planner extends Entity implements IJsonBackedObject {
     @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
     public PlannerPlanCollectionPage plans;
+
+    /**
+     * The Rosters.
+     * 
+     */
+    @SerializedName(value = "rosters", alternate = {"Rosters"})
+    @Expose
+    public PlannerRosterCollectionPage rosters;
 
     /**
      * The Tasks.
@@ -99,6 +109,10 @@ public class Planner extends Entity implements IJsonBackedObject {
 
         if (json.has("plans")) {
             plans = serializer.deserializeObject(json.get("plans").toString(), PlannerPlanCollectionPage.class);
+        }
+
+        if (json.has("rosters")) {
+            rosters = serializer.deserializeObject(json.get("rosters").toString(), PlannerRosterCollectionPage.class);
         }
 
         if (json.has("tasks")) {

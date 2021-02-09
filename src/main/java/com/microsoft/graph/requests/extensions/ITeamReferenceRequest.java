@@ -27,6 +27,8 @@ import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationCollectionReq
 import com.microsoft.graph.requests.extensions.ITeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamworkTagCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamworkTagRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScheduleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;

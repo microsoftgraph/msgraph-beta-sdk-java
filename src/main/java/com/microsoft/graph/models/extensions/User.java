@@ -21,6 +21,7 @@ import com.microsoft.graph.models.extensions.PasswordProfile;
 import com.microsoft.graph.models.extensions.ProvisionedPlan;
 import com.microsoft.graph.models.extensions.MailboxSettings;
 import com.microsoft.graph.models.extensions.UserAnalytics;
+import com.microsoft.graph.models.extensions.UsageRight;
 import com.microsoft.graph.models.extensions.InformationProtection;
 import com.microsoft.graph.models.extensions.AppRoleAssignment;
 import com.microsoft.graph.models.extensions.DirectoryObject;
@@ -67,6 +68,7 @@ import com.microsoft.graph.models.extensions.Chat;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.models.extensions.UserTeamwork;
 import com.microsoft.graph.models.extensions.Todo;
+import com.microsoft.graph.requests.extensions.UsageRightCollectionPage;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.LicenseDetailsCollectionPage;
@@ -365,7 +367,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter.
+     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -597,7 +599,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter and $orderby.
+     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -714,6 +716,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "analytics", alternate = {"Analytics"})
     @Expose
     public UserAnalytics analytics;
+
+    /**
+     * The Usage Rights.
+     * 
+     */
+    @SerializedName(value = "usageRights", alternate = {"UsageRights"})
+    @Expose
+    public UsageRightCollectionPage usageRights;
 
     /**
      * The Information Protection.
@@ -1186,6 +1196,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         this.serializer = serializer;
         rawObject = json;
 
+
+        if (json.has("usageRights")) {
+            usageRights = serializer.deserializeObject(json.get("usageRights").toString(), UsageRightCollectionPage.class);
+        }
 
         if (json.has("appRoleAssignments")) {
             appRoleAssignments = serializer.deserializeObject(json.get("appRoleAssignments").toString(), AppRoleAssignmentCollectionPage.class);

@@ -9,10 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
-import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
-import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
-import com.microsoft.graph.models.extensions.TextClassificationRequest;
-import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionRequestBuilder;
@@ -122,9 +118,5 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
 
     public IThreatAssessmentRequestRequestBuilder threatAssessmentRequests(final String id) {
         return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
-    }
-
-    public IInformationProtectionEvaluateLabelsAndPoliciesRequestBuilder evaluateLabelsAndPolicies(final EvaluateSensitivityLabelsRequest evaluateSensitivityLabels, final DlpEvaluatePoliciesRequest evaluateDataLossPreventionPolicies, final TextClassificationRequest classifyText) {
-        return new InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateLabelsAndPolicies"), getClient(), null, evaluateSensitivityLabels, evaluateDataLossPreventionPolicies, classifyText);
     }
 }
