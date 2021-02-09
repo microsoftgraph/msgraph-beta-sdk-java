@@ -90,6 +90,8 @@ import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummary
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionRequestBuilder;
@@ -156,6 +158,15 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder implements IRep
 
     public IApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary(final String id) {
         return new ApplicationSignInDetailedSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("applicationSignInDetailedSummary") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AuthenticationMethodsRoot
+     *
+     * @return the IAuthenticationMethodsRootRequestBuilder instance
+     */
+    public IAuthenticationMethodsRootRequestBuilder authenticationMethods() {
+        return new AuthenticationMethodsRootRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethods"), getClient(), null);
     }
     public ICredentialUserRegistrationDetailsCollectionRequestBuilder credentialUserRegistrationDetails() {
         return new CredentialUserRegistrationDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationDetails"), getClient(), null);

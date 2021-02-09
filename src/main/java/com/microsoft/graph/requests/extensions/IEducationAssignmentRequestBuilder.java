@@ -13,9 +13,9 @@ import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionReque
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

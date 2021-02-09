@@ -9,12 +9,12 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DepOnboardingSetting;
+import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IImportedAppleDeviceIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepIOSEnrollmentProfileRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDepMacOSEnrollmentProfileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

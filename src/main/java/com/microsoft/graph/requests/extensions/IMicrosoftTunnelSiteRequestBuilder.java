@@ -9,9 +9,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.MicrosoftTunnelSite;
+import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftTunnelServerCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMicrosoftTunnelServerRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMicrosoftTunnelConfigurationRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

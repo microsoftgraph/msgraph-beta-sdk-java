@@ -139,6 +139,13 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
     public ISitePageRequestBuilder pages(final String id) {
         return new SitePageRequestBuilder(getRequestUrlWithAdditionalSegment("pages") + "/" + id, getClient(), null);
     }
+    public IPermissionCollectionRequestBuilder permissions() {
+        return new PermissionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions"), getClient(), null);
+    }
+
+    public IPermissionRequestBuilder permissions(final String id) {
+        return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
+    }
     public ISiteCollectionRequestBuilder sites() {
         return new SiteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sites"), getClient(), null);
     }

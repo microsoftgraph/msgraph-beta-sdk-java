@@ -13,12 +13,12 @@ import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionReq
 import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
+import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAgreementFileLocalizationRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AgreementFileLocalizationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementFileRequestBuilder;
-import com.microsoft.graph.requests.extensions.AgreementFileRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

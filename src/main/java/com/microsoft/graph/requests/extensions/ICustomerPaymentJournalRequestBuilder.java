@@ -9,9 +9,9 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.CustomerPaymentJournal;
+import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICustomerPaymentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccountRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

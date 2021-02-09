@@ -131,6 +131,14 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean vpnEnableAlwaysOnLockdownMode;
 
     /**
+     * The Work Profile Allow App Installs From Unknown Sources.
+     * Indicates whether to allow installation of apps from unknown sources.
+     */
+    @SerializedName(value = "workProfileAllowAppInstallsFromUnknownSources", alternate = {"WorkProfileAllowAppInstallsFromUnknownSources"})
+    @Expose
+    public Boolean workProfileAllowAppInstallsFromUnknownSources;
+
+    /**
      * The Work Profile Allow Widgets.
      * Allow widgets from work profile apps.
      */

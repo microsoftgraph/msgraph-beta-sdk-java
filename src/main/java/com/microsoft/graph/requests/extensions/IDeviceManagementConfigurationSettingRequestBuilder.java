@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceManagementConfigurationSetting;
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementConfigurationSettingDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

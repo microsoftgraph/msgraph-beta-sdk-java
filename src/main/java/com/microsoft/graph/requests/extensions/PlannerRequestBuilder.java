@@ -17,6 +17,10 @@ import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRosterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRosterRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerRosterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerRosterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;
@@ -78,6 +82,13 @@ public class PlannerRequestBuilder extends BaseRequestBuilder implements IPlanne
 
     public IPlannerPlanRequestBuilder plans(final String id) {
         return new PlannerPlanRequestBuilder(getRequestUrlWithAdditionalSegment("plans") + "/" + id, getClient(), null);
+    }
+    public IPlannerRosterCollectionRequestBuilder rosters() {
+        return new PlannerRosterCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rosters"), getClient(), null);
+    }
+
+    public IPlannerRosterRequestBuilder rosters(final String id) {
+        return new PlannerRosterRequestBuilder(getRequestUrlWithAdditionalSegment("rosters") + "/" + id, getClient(), null);
     }
     public IPlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);

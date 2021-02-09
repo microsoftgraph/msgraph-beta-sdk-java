@@ -428,7 +428,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Membership Rule Processing Status.
-     * 
+     * Describes the processing status for rules-based dynamic groups. The property is null for non-rule based dynamic groups or if the dynamic group processing has been paused. Returned only on $select. Supports $filter. Read-only.
      */
     @SerializedName(value = "membershipRuleProcessingStatus", alternate = {"MembershipRuleProcessingStatus"})
     @Expose
@@ -522,8 +522,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Accepted Senders.
      * The list of users or groups that are allowed to create post's or calendar events in this group. If this list is non-empty then only users or groups listed here are allowed to post.
      */
-    @SerializedName(value = "acceptedSenders", alternate = {"AcceptedSenders"})
-    @Expose
     public DirectoryObjectCollectionPage acceptedSenders;
 
     /**
@@ -578,8 +576,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
      * The Rejected Senders.
      * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
-    @SerializedName(value = "rejectedSenders", alternate = {"RejectedSenders"})
-    @Expose
     public DirectoryObjectCollectionPage rejectedSenders;
 
     /**

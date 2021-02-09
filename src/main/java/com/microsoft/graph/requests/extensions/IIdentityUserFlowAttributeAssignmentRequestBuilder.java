@@ -10,7 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityUserFlowAttributeAssignment;
 import com.microsoft.graph.models.extensions.AssignmentOrder;
-import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

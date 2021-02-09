@@ -9,7 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceHealthScriptDeviceState;
-import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedDeviceWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -99,6 +99,14 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
         return new DeviceManagementReportsGetDeviceInstallStatusReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDeviceInstallStatusReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
 
+    public IDeviceManagementReportsGetFailedMobileAppsReportRequestBuilder getFailedMobileAppsReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetFailedMobileAppsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFailedMobileAppsReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetFailedMobileAppsSummaryReportRequestBuilder getFailedMobileAppsSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetFailedMobileAppsSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFailedMobileAppsSummaryReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
     public IDeviceManagementReportsGetUserInstallStatusReportRequestBuilder getUserInstallStatusReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
         return new DeviceManagementReportsGetUserInstallStatusReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserInstallStatusReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
@@ -153,6 +161,30 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder im
 
     public IDeviceManagementReportsGetCachedReportRequestBuilder getCachedReport(final String id, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top) {
         return new DeviceManagementReportsGetCachedReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCachedReport"), getClient(), null, id, select, search, groupBy, orderBy, skip, top);
+    }
+
+    public IDeviceManagementReportsGetCompliancePolicyNonComplianceReportRequestBuilder getCompliancePolicyNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetCompliancePolicyNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCompliancePolicyNonComplianceReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetCompliancePolicyNonComplianceSummaryReportRequestBuilder getCompliancePolicyNonComplianceSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetCompliancePolicyNonComplianceSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCompliancePolicyNonComplianceSummaryReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetComplianceSettingNonComplianceReportRequestBuilder getComplianceSettingNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetComplianceSettingNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getComplianceSettingNonComplianceReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetConfigurationPolicyNonComplianceReportRequestBuilder getConfigurationPolicyNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationPolicyNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationPolicyNonComplianceReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetConfigurationPolicyNonComplianceSummaryReportRequestBuilder getConfigurationPolicyNonComplianceSummaryReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationPolicyNonComplianceSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationPolicyNonComplianceSummaryReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
+    }
+
+    public IDeviceManagementReportsGetConfigurationSettingNonComplianceReportRequestBuilder getConfigurationSettingNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {
+        return new DeviceManagementReportsGetConfigurationSettingNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationSettingNonComplianceReport"), getClient(), null, name, select, search, groupBy, orderBy, skip, top, sessionId, filter);
     }
 
     public IDeviceManagementReportsGetDeviceNonComplianceReportRequestBuilder getDeviceNonComplianceReport(final String name, final java.util.List<String> select, final String search, final java.util.List<String> groupBy, final java.util.List<String> orderBy, final Integer skip, final Integer top, final String sessionId, final String filter) {

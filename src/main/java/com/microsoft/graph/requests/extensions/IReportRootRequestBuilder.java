@@ -88,6 +88,7 @@ import com.microsoft.graph.models.extensions.PrintUsageSummary;
 import com.microsoft.graph.models.extensions.UserPrintUsageSummary;
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsCollectionRequestBuilder;
@@ -125,6 +126,13 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
     IApplicationSignInDetailedSummaryCollectionRequestBuilder applicationSignInDetailedSummary();
 
     IApplicationSignInDetailedSummaryRequestBuilder applicationSignInDetailedSummary(final String id);
+
+    /**
+     * Gets the request builder for AuthenticationMethodsRoot
+     *
+     * @return the IAuthenticationMethodsRootRequestBuilder instance
+     */
+    IAuthenticationMethodsRootRequestBuilder authenticationMethods();
 
     ICredentialUserRegistrationDetailsCollectionRequestBuilder credentialUserRegistrationDetails();
 

@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
+import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityApiConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityApiConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cIdentityUserFlowCollectionRequestBuilder;
@@ -19,7 +20,6 @@ import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeCollect
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContinuousAccessEvaluationPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

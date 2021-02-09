@@ -57,4 +57,8 @@ public class CloudPcOnPremisesConnectionRequestBuilder extends BaseRequestBuilde
     public ICloudPcOnPremisesConnectionRunHealthChecksRequestBuilder runHealthChecks() {
         return new CloudPcOnPremisesConnectionRunHealthChecksRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.runHealthChecks"), getClient(), null);
     }
+
+    public ICloudPcOnPremisesConnectionUpdateAdDomainPasswordRequestBuilder updateAdDomainPassword(final String adDomainPassword) {
+        return new CloudPcOnPremisesConnectionUpdateAdDomainPasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updateAdDomainPassword"), getClient(), null, adDomainPassword);
+    }
 }

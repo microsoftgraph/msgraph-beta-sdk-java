@@ -13,8 +13,8 @@ import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCol
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IosTrustedRootCertificateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

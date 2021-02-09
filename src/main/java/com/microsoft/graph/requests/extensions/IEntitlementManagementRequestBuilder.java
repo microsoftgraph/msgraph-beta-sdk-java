@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentCollectio
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
@@ -75,6 +77,10 @@ public interface IEntitlementManagementRequestBuilder extends IRequestBuilder {
     IAccessPackageCatalogCollectionRequestBuilder accessPackageCatalogs();
 
     IAccessPackageCatalogRequestBuilder accessPackageCatalogs(final String id);
+
+    IAccessPackageResourceEnvironmentCollectionRequestBuilder accessPackageResourceEnvironments();
+
+    IAccessPackageResourceEnvironmentRequestBuilder accessPackageResourceEnvironments(final String id);
 
     IAccessPackageResourceRequestCollectionRequestBuilder accessPackageResourceRequests();
 

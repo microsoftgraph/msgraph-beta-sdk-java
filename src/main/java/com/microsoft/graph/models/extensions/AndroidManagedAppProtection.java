@@ -65,7 +65,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Safety Net Apps Verification Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfAndroidSafetyNetAppsVerificationFailed", alternate = {"AppActionIfAndroidSafetyNetAppsVerificationFailed"})
     @Expose
@@ -73,7 +73,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Safety Net Device Attestation Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfAndroidSafetyNetDeviceAttestationFailed", alternate = {"AppActionIfAndroidSafetyNetDeviceAttestationFailed"})
     @Expose

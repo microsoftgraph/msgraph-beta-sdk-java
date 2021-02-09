@@ -35,7 +35,7 @@ public class BroadcastMeetingSettings implements IJsonBackedObject {
 
     /**
      * The Allowed Audience.
-     * 
+     * Defines who can join the live event. Possible values are listed in the following table.
      */
     @SerializedName(value = "allowedAudience", alternate = {"AllowedAudience"})
     @Expose
@@ -43,7 +43,7 @@ public class BroadcastMeetingSettings implements IJsonBackedObject {
 
     /**
      * The Is Attendee Report Enabled.
-     * 
+     * Indicates whether attendee report is enabled for this live event. Default value is false.
      */
     @SerializedName(value = "isAttendeeReportEnabled", alternate = {"IsAttendeeReportEnabled"})
     @Expose
@@ -51,7 +51,7 @@ public class BroadcastMeetingSettings implements IJsonBackedObject {
 
     /**
      * The Is Question And Answer Enabled.
-     * 
+     * Indicates whether Q&amp;A is enabled for this live event. Default value is false.
      */
     @SerializedName(value = "isQuestionAndAnswerEnabled", alternate = {"IsQuestionAndAnswerEnabled"})
     @Expose
@@ -59,7 +59,7 @@ public class BroadcastMeetingSettings implements IJsonBackedObject {
 
     /**
      * The Is Recording Enabled.
-     * 
+     * Indicates whether recording is enabled for this live event. Default value is false.
      */
     @SerializedName(value = "isRecordingEnabled", alternate = {"IsRecordingEnabled"})
     @Expose
@@ -67,7 +67,7 @@ public class BroadcastMeetingSettings implements IJsonBackedObject {
 
     /**
      * The Is Video On Demand Enabled.
-     * 
+     * Indicates whether video on demand is enabled for this live event. Default value is false.
      */
     @SerializedName(value = "isVideoOnDemandEnabled", alternate = {"IsVideoOnDemandEnabled"})
     @Expose

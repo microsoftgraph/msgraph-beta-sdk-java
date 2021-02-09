@@ -9,10 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.InformationProtection;
-import com.microsoft.graph.models.extensions.EvaluateSensitivityLabelsRequest;
-import com.microsoft.graph.models.extensions.DlpEvaluatePoliciesRequest;
-import com.microsoft.graph.models.extensions.TextClassificationRequest;
-import com.microsoft.graph.models.extensions.EvaluateLabelsAndPoliciesJobResponse;
+import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
+import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDataLossPreventionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DataLossPreventionPolicyCollectionRequestBuilder;
@@ -21,16 +19,14 @@ import com.microsoft.graph.requests.extensions.ISensitivityLabelCollectionReques
 import com.microsoft.graph.requests.extensions.ISensitivityLabelRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityLabelRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
-import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
-import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISensitivityPolicySettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.SensitivityPolicySettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IInformationProtectionPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.InformationProtectionPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IThreatAssessmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ThreatAssessmentRequestRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -122,9 +118,5 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder impl
 
     public IThreatAssessmentRequestRequestBuilder threatAssessmentRequests(final String id) {
         return new ThreatAssessmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("threatAssessmentRequests") + "/" + id, getClient(), null);
-    }
-
-    public IInformationProtectionEvaluateLabelsAndPoliciesRequestBuilder evaluateLabelsAndPolicies(final EvaluateSensitivityLabelsRequest evaluateSensitivityLabels, final DlpEvaluatePoliciesRequest evaluateDataLossPreventionPolicies, final TextClassificationRequest classifyText) {
-        return new InformationProtectionEvaluateLabelsAndPoliciesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateLabelsAndPolicies"), getClient(), null, evaluateSensitivityLabels, evaluateDataLossPreventionPolicies, classifyText);
     }
 }

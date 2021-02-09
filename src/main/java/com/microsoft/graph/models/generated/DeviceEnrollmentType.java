@@ -52,6 +52,10 @@ public enum DeviceEnrollmentType
     */
     WINDOWS_CO_MANAGEMENT,
     /**
+    * windows Azure ADJoin Using Device Auth
+    */
+    WINDOWS_AZURE_AD_JOIN_USING_DEVICE_AUTH,
+    /**
     * apple User Enrollment
     */
     APPLE_USER_ENROLLMENT,

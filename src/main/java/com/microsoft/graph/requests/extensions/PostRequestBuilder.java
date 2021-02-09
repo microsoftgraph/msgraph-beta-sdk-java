@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ExtensionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
+import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMentionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMentionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MentionCollectionRequestBuilder;
@@ -30,8 +32,6 @@ import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropert
 import com.microsoft.graph.requests.extensions.ISingleValueLegacyExtendedPropertyRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.SingleValueLegacyExtendedPropertyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPostRequestBuilder;
-import com.microsoft.graph.requests.extensions.PostRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

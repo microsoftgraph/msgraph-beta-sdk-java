@@ -17,12 +17,12 @@ import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceColle
 import com.microsoft.graph.requests.extensions.IEducationAssignmentResourceRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentResourceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSubmissionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationSubmissionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

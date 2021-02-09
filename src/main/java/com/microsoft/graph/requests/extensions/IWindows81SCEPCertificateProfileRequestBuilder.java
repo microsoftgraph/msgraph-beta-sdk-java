@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Windows81SCEPCertificateProfile;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindows81TrustedRootCertificateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -35,5 +35,6 @@ public interface ICloudPcOnPremisesConnectionRequestBuilder extends IRequestBuil
     ICloudPcOnPremisesConnectionRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
     ICloudPcOnPremisesConnectionRunHealthChecksRequestBuilder runHealthChecks();
+    ICloudPcOnPremisesConnectionUpdateAdDomainPasswordRequestBuilder updateAdDomainPassword(final String adDomainPassword);
 
 }

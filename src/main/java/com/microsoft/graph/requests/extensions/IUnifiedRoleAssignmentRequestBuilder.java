@@ -10,8 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
 import com.microsoft.graph.requests.extensions.IAppScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

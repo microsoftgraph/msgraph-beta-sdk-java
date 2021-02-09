@@ -18,16 +18,16 @@ import com.microsoft.graph.requests.extensions.IEducationRubricCollectionRequest
 import com.microsoft.graph.requests.extensions.IEducationRubricRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationRubricRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationClassCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationClassRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.EducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationClassWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationClassWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationSchoolWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
