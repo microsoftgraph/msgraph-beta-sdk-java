@@ -1,6 +1,6 @@
 # Microsoft Graph SDK for Java
 
-[![Download](https://api.bintray.com/packages/microsoftgraph/Maven/microsoft-graph-beta/images/download.svg) ](https://bintray.com/microsoftgraph/Maven/microsoft-graph/_latestVersion)
+[![Download](https://img.shields.io/nexus/s/https/oss.sonatype.org/com.microsoft.graph/microsoft-graph-beta.svg)](https://oss.sonatype.org/content/repositories/snapshots/com/microsoft/graph/microsoft-graph-beta/)
 
 Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft Graph API](https://developer.microsoft.com/en-us/graph/get-started/java) into your Java application!
 
@@ -14,10 +14,7 @@ Add the repository and a compile dependency for `microsoft-graph-beta` to your p
 
 ```gradle
 repositories {
-    jcenter()
-    	jcenter{
-        	url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
-	}
+  maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 
 dependencies {
