@@ -13,6 +13,7 @@ import com.microsoft.graph.models.extensions.AccessPackageAssignmentRequest;
 import com.microsoft.graph.models.extensions.AccessPackageAssignmentResourceRole;
 import com.microsoft.graph.models.extensions.AccessPackageAssignment;
 import com.microsoft.graph.models.extensions.AccessPackageCatalog;
+import com.microsoft.graph.models.extensions.AccessPackageResourceEnvironment;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRequest;
 import com.microsoft.graph.models.extensions.AccessPackageResourceRoleScope;
 import com.microsoft.graph.models.extensions.AccessPackageResource;
@@ -25,6 +26,7 @@ import com.microsoft.graph.requests.extensions.AccessPackageAssignmentRequestCol
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentResourceRoleCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionPage;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceEnvironmentCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionPage;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceCollectionPage;
@@ -83,6 +85,14 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "accessPackageCatalogs", alternate = {"AccessPackageCatalogs"})
     @Expose
     public AccessPackageCatalogCollectionPage accessPackageCatalogs;
+
+    /**
+     * The Access Package Resource Environments.
+     * 
+     */
+    @SerializedName(value = "accessPackageResourceEnvironments", alternate = {"AccessPackageResourceEnvironments"})
+    @Expose
+    public AccessPackageResourceEnvironmentCollectionPage accessPackageResourceEnvironments;
 
     /**
      * The Access Package Resource Requests.
@@ -190,6 +200,10 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("accessPackageCatalogs")) {
             accessPackageCatalogs = serializer.deserializeObject(json.get("accessPackageCatalogs").toString(), AccessPackageCatalogCollectionPage.class);
+        }
+
+        if (json.has("accessPackageResourceEnvironments")) {
+            accessPackageResourceEnvironments = serializer.deserializeObject(json.get("accessPackageResourceEnvironments").toString(), AccessPackageResourceEnvironmentCollectionPage.class);
         }
 
         if (json.has("accessPackageResourceRequests")) {

@@ -14,31 +14,37 @@ import com.microsoft.graph.models.extensions.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.extensions.EvaluateDynamicMembershipResult;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrgContactWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
@@ -259,9 +265,9 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IOrgContactWithReferenceRequestBuilder transitiveMembersAsOrgContact(final String id);
 
-    IDirectoryObjectCollectionRequestBuilder acceptedSenders();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder acceptedSenders();
 
-    IDirectoryObjectRequestBuilder acceptedSenders(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder acceptedSenders(final String id);
 
     /**
      * Gets the request builder for Calendar
@@ -293,9 +299,9 @@ public interface IGroupRequestBuilder extends IRequestBuilder {
 
     IProfilePhotoRequestBuilder photos(final String id);
 
-    IDirectoryObjectCollectionRequestBuilder rejectedSenders();
+    IDirectoryObjectCollectionWithReferencesRequestBuilder rejectedSenders();
 
-    IDirectoryObjectRequestBuilder rejectedSenders(final String id);
+    IDirectoryObjectWithReferenceRequestBuilder rejectedSenders(final String id);
 
     IConversationThreadCollectionRequestBuilder threads();
 

@@ -21,8 +21,10 @@ import com.microsoft.graph.models.generated.RiskDetail;
 import com.microsoft.graph.models.generated.RiskEventType;
 import com.microsoft.graph.models.generated.RiskLevel;
 import com.microsoft.graph.models.generated.RiskState;
+import com.microsoft.graph.models.generated.SignInIdentifierType;
 import com.microsoft.graph.models.extensions.SignInStatus;
 import com.microsoft.graph.models.generated.TokenIssuerType;
+import com.microsoft.graph.models.generated.SignInUserType;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -151,12 +153,36 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public DeviceDetail deviceDetail;
 
     /**
+     * The Flagged For Review.
+     * 
+     */
+    @SerializedName(value = "flaggedForReview", alternate = {"FlaggedForReview"})
+    @Expose
+    public Boolean flaggedForReview;
+
+    /**
+     * The Home Tenant Id.
+     * 
+     */
+    @SerializedName(value = "homeTenantId", alternate = {"HomeTenantId"})
+    @Expose
+    public String homeTenantId;
+
+    /**
      * The Ip Address.
      * The IP address of the client from where the sign-in occurred.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
     public String ipAddress;
+
+    /**
+     * The Ip Address From Resource Provider.
+     * 
+     */
+    @SerializedName(value = "ipAddressFromResourceProvider", alternate = {"IpAddressFromResourceProvider"})
+    @Expose
+    public String ipAddressFromResourceProvider;
 
     /**
      * The Is Interactive.
@@ -303,6 +329,22 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public java.util.List<String> signInEventTypes;
 
     /**
+     * The Sign In Identifier.
+     * 
+     */
+    @SerializedName(value = "signInIdentifier", alternate = {"SignInIdentifier"})
+    @Expose
+    public String signInIdentifier;
+
+    /**
+     * The Sign In Identifier Type.
+     * 
+     */
+    @SerializedName(value = "signInIdentifierType", alternate = {"SignInIdentifierType"})
+    @Expose
+    public SignInIdentifierType signInIdentifierType;
+
+    /**
      * The Status.
      * The sign-in status. Includes the error code and description of the error (in case of a sign-in failure).
      */
@@ -357,6 +399,14 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
     public String userPrincipalName;
+
+    /**
+     * The User Type.
+     * 
+     */
+    @SerializedName(value = "userType", alternate = {"UserType"})
+    @Expose
+    public SignInUserType userType;
 
 
     /**

@@ -11,7 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosScepCertificateProfile;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCertificateStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

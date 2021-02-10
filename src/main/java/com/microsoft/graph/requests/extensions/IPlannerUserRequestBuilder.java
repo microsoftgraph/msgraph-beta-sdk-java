@@ -11,6 +11,8 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PlannerUser;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
@@ -56,6 +58,10 @@ public interface IPlannerUserRequestBuilder extends IRequestBuilder {
     IPlannerPlanCollectionWithReferencesRequestBuilder recentPlans();
 
     IPlannerPlanWithReferenceRequestBuilder recentPlans(final String id);
+
+    IPlannerPlanCollectionWithReferencesRequestBuilder rosterPlans();
+
+    IPlannerPlanWithReferenceRequestBuilder rosterPlans(final String id);
 
     IPlannerTaskCollectionRequestBuilder tasks();
 

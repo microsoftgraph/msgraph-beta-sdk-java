@@ -62,7 +62,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Plans.
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * 
      */
     @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
@@ -73,6 +73,12 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
      * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
      */
     public PlannerPlanCollectionPage recentPlans;
+
+    /**
+     * The Roster Plans.
+     * 
+     */
+    public PlannerPlanCollectionPage rosterPlans;
 
     /**
      * The Tasks.
@@ -136,6 +142,10 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
         if (json.has("recentPlans")) {
             recentPlans = serializer.deserializeObject(json.get("recentPlans").toString(), PlannerPlanCollectionPage.class);
+        }
+
+        if (json.has("rosterPlans")) {
+            rosterPlans = serializer.deserializeObject(json.get("rosterPlans").toString(), PlannerPlanCollectionPage.class);
         }
 
         if (json.has("tasks")) {

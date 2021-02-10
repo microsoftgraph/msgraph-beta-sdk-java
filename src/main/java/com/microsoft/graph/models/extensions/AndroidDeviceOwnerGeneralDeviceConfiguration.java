@@ -14,9 +14,11 @@ import com.microsoft.graph.models.generated.AndroidDeviceOwnerEnrollmentProfileT
 import com.microsoft.graph.models.extensions.AndroidDeviceOwnerGlobalProxy;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskCustomizationStatusBar;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskCustomizationSystemNavigation;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerKioskModeAppPositionItem;
 import com.microsoft.graph.models.extensions.AppListItem;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeFolderIcon;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeIconSize;
+import com.microsoft.graph.models.extensions.AndroidDeviceOwnerKioskModeManagedFolder;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerKioskModeScreenOrientation;
 import com.microsoft.graph.models.generated.AndroidDeviceOwnerVirtualHomeButtonType;
 import com.microsoft.graph.models.generated.MicrosoftLauncherDockPresence;
@@ -218,12 +220,36 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerKioskCustomizationSystemNavigation kioskCustomizationSystemNavigation;
 
     /**
+     * The Kiosk Mode App Order Enabled.
+     * Whether or not to enable app ordering in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskModeAppOrderEnabled", alternate = {"KioskModeAppOrderEnabled"})
+    @Expose
+    public Boolean kioskModeAppOrderEnabled;
+
+    /**
+     * The Kiosk Mode App Positions.
+     * The ordering of items on Kiosk Mode Managed Home Screen. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "kioskModeAppPositions", alternate = {"KioskModeAppPositions"})
+    @Expose
+    public java.util.List<AndroidDeviceOwnerKioskModeAppPositionItem> kioskModeAppPositions;
+
+    /**
      * The Kiosk Mode Apps.
      * A list of managed apps that will be shown when the device is in Kiosk Mode. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "kioskModeApps", alternate = {"KioskModeApps"})
     @Expose
     public java.util.List<AppListItem> kioskModeApps;
+
+    /**
+     * The Kiosk Mode Apps In Folder Ordered By Name.
+     * Whether or not to alphabetize applications within a folder in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskModeAppsInFolderOrderedByName", alternate = {"KioskModeAppsInFolderOrderedByName"})
+    @Expose
+    public Boolean kioskModeAppsInFolderOrderedByName;
 
     /**
      * The Kiosk Mode Bluetooth Configuration Enabled.
@@ -266,12 +292,44 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public AndroidDeviceOwnerKioskModeFolderIcon kioskModeFolderIcon;
 
     /**
+     * The Kiosk Mode Grid Height.
+     * Number of rows for Managed Home Screen grid with app ordering enabled in Kiosk Mode. Valid values 1 to 9999999
+     */
+    @SerializedName(value = "kioskModeGridHeight", alternate = {"KioskModeGridHeight"})
+    @Expose
+    public Integer kioskModeGridHeight;
+
+    /**
+     * The Kiosk Mode Grid Width.
+     * Number of columns for Managed Home Screen grid with app ordering enabled in Kiosk Mode. Valid values 1 to 9999999
+     */
+    @SerializedName(value = "kioskModeGridWidth", alternate = {"KioskModeGridWidth"})
+    @Expose
+    public Integer kioskModeGridWidth;
+
+    /**
      * The Kiosk Mode Icon Size.
      * Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
      */
     @SerializedName(value = "kioskModeIconSize", alternate = {"KioskModeIconSize"})
     @Expose
     public AndroidDeviceOwnerKioskModeIconSize kioskModeIconSize;
+
+    /**
+     * The Kiosk Mode Lock Home Screen.
+     * Whether or not to lock home screen to the end user in Kiosk Mode.
+     */
+    @SerializedName(value = "kioskModeLockHomeScreen", alternate = {"KioskModeLockHomeScreen"})
+    @Expose
+    public Boolean kioskModeLockHomeScreen;
+
+    /**
+     * The Kiosk Mode Managed Folders.
+     * A list of managed folders for a device in Kiosk Mode. This collection can contain a maximum of 500 elements.
+     */
+    @SerializedName(value = "kioskModeManagedFolders", alternate = {"KioskModeManagedFolders"})
+    @Expose
+    public java.util.List<AndroidDeviceOwnerKioskModeManagedFolder> kioskModeManagedFolders;
 
     /**
      * The Kiosk Mode Managed Settings Entry Disabled.

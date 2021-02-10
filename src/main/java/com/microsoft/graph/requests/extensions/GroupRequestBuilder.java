@@ -16,14 +16,26 @@ import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionReque
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEndpointRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EndpointRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.GroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApplicationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ServicePrincipalWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrgContactWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.OrgContactWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCollectionRequestBuilder;
@@ -32,6 +44,8 @@ import com.microsoft.graph.requests.extensions.IDirectorySettingCollectionReques
 import com.microsoft.graph.requests.extensions.IDirectorySettingRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectorySettingRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
+import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.EventCollectionRequestBuilder;
@@ -40,18 +54,18 @@ import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
 import com.microsoft.graph.requests.extensions.SiteCollectionRequestBuilder;
@@ -64,8 +78,6 @@ import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyCollectionRe
 import com.microsoft.graph.requests.extensions.IGroupLifecyclePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
-import com.microsoft.graph.requests.extensions.CalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
@@ -447,12 +459,12 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IOrgContactWithReferenceRequestBuilder transitiveMembersAsOrgContact(final String id) {
         return new OrgContactWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMembers") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder acceptedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder acceptedSenders() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder acceptedSenders(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder acceptedSenders(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("acceptedSenders") + "/" + id, getClient(), null);
     }
 
     /**
@@ -500,12 +512,12 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IProfilePhotoRequestBuilder photos(final String id) {
         return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
-    public IDirectoryObjectCollectionRequestBuilder rejectedSenders() {
-        return new DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
+    public IDirectoryObjectCollectionWithReferencesRequestBuilder rejectedSenders() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
     }
 
-    public IDirectoryObjectRequestBuilder rejectedSenders(final String id) {
-        return new DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
+    public IDirectoryObjectWithReferenceRequestBuilder rejectedSenders(final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders") + "/" + id, getClient(), null);
     }
     public IConversationThreadCollectionRequestBuilder threads() {
         return new ConversationThreadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("threads"), getClient(), null);

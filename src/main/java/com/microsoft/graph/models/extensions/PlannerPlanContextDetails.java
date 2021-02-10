@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.generated.PlannerPlanContextType;
 
 
 import com.google.gson.JsonObject;
@@ -31,6 +32,22 @@ public class PlannerPlanContextDetails implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Custom Link Text.
+     * 
+     */
+    @SerializedName(value = "customLinkText", alternate = {"CustomLinkText"})
+    @Expose
+    public String customLinkText;
+
+    /**
+     * The Display Link Type.
+     * 
+     */
+    @SerializedName(value = "displayLinkType", alternate = {"DisplayLinkType"})
+    @Expose
+    public PlannerPlanContextType displayLinkType;
 
     /**
      * The Url.

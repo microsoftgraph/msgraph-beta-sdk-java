@@ -49,6 +49,14 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
     public Boolean isBuiltIn;
 
     /**
+     * The App Health Metrics.
+     * The user experience analytics app health metrics.
+     */
+    @SerializedName(value = "appHealthMetrics", alternate = {"AppHealthMetrics"})
+    @Expose
+    public UserExperienceAnalyticsCategory appHealthMetrics;
+
+    /**
      * The Best Practices Metrics.
      * The user experience analytics best practices metrics.
      */
@@ -71,6 +79,14 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
     @SerializedName(value = "rebootAnalyticsMetrics", alternate = {"RebootAnalyticsMetrics"})
     @Expose
     public UserExperienceAnalyticsCategory rebootAnalyticsMetrics;
+
+    /**
+     * The Resource Performance Metrics.
+     * The user experience analytics resource performance metrics.
+     */
+    @SerializedName(value = "resourcePerformanceMetrics", alternate = {"ResourcePerformanceMetrics"})
+    @Expose
+    public UserExperienceAnalyticsCategory resourcePerformanceMetrics;
 
 
     /**

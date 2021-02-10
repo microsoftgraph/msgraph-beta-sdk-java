@@ -8,7 +8,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.PlannerUser;
+import com.microsoft.graph.models.extensions.PlannerRoster;
 import com.microsoft.graph.models.extensions.PlannerPlan;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -24,7 +24,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class PlannerPlanCollectionReferenceRequestBuilder extends BaseRequestBuilder implements IPlannerPlanCollectionReferenceRequestBuilder {
 
     /**
-     * The request builder for this collection of PlannerUser
+     * The request builder for this collection of PlannerRoster
      *
      * @param requestUrl     the request URL
      * @param client         the service client

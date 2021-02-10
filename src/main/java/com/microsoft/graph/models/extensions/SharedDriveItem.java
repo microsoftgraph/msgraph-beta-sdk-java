@@ -80,7 +80,7 @@ public class SharedDriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Root.
-     * Used to access the underlying driveItem. Deprecated -- use driveItem instead.
+     * 
      */
     @SerializedName(value = "root", alternate = {"Root"})
     @Expose

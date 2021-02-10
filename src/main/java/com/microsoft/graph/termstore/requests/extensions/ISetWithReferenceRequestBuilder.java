@@ -11,9 +11,9 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Set;
 import com.microsoft.graph.termstore.requests.extensions.ITermCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
+import com.microsoft.graph.termstore.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IRelationCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IRelationRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.IGroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

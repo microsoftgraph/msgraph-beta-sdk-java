@@ -20,9 +20,9 @@ public enum AdvancedBitLockerState
     */
     NO_USER_CONSENT,
     /**
-    * os Volume Encryption Method Mismatch
+    * os Volume Unprotected
     */
-    OS_VOLUME_ENCRYPTION_METHOD_MISMATCH,
+    OS_VOLUME_UNPROTECTED,
     /**
     * os Volume Tpm Required
     */
@@ -44,9 +44,9 @@ public enum AdvancedBitLockerState
     */
     OS_VOLUME_TPM_PIN_STARTUP_KEY_REQUIRED,
     /**
-    * os Volume Unprotected
+    * os Volume Encryption Method Mismatch
     */
-    OS_VOLUME_UNPROTECTED,
+    OS_VOLUME_ENCRYPTION_METHOD_MISMATCH,
     /**
     * recovery Key Backup Failed
     */

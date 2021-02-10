@@ -90,6 +90,8 @@ import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummary
 import com.microsoft.graph.requests.extensions.IApplicationSignInDetailedSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionRequestBuilder;

@@ -17,6 +17,10 @@ import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRosterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerRosterRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerRosterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerRosterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerTaskCollectionRequestBuilder;

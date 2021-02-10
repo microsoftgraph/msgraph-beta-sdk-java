@@ -67,7 +67,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the image on cloud PC. Possible status include upload pending, failed to upload, or ready to use. Possible values are: pending, ready, failed.
+     * The status of the image on cloud PC. Possible values are: pending, ready, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

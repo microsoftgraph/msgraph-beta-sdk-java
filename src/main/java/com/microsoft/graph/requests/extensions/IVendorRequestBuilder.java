@@ -9,11 +9,11 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Vendor;
-import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPaymentTermRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPictureCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPictureRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

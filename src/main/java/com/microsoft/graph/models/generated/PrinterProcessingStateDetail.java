@@ -16,10 +16,6 @@ public enum PrinterProcessingStateDetail
     */
     PAUSED,
     /**
-    * disconnected
-    */
-    DISCONNECTED,
-    /**
     * media Jam
     */
     MEDIA_JAM,
@@ -44,10 +40,6 @@ public enum PrinterProcessingStateDetail
     */
     INTERLOCK_OPEN,
     /**
-    * queue Full
-    */
-    QUEUE_FULL,
-    /**
     * output Tray Missing
     */
     OUTPUT_TRAY_MISSING,
@@ -68,9 +60,9 @@ public enum PrinterProcessingStateDetail
     */
     INPUT_TRAY_MISSING,
     /**
-    * output Almost Full
+    * output Area Almost Full
     */
-    OUTPUT_ALMOST_FULL,
+    OUTPUT_AREA_ALMOST_FULL,
     /**
     * marker Waste Almost Full
     */
@@ -91,6 +83,70 @@ public enum PrinterProcessingStateDetail
     * other
     */
     OTHER,
+    /**
+    * none
+    */
+    NONE,
+    /**
+    * moving To Paused
+    */
+    MOVING_TO_PAUSED,
+    /**
+    * shutdown
+    */
+    SHUTDOWN,
+    /**
+    * connecting To Device
+    */
+    CONNECTING_TO_DEVICE,
+    /**
+    * timed Out
+    */
+    TIMED_OUT,
+    /**
+    * stopping
+    */
+    STOPPING,
+    /**
+    * stopped Partially
+    */
+    STOPPED_PARTIALLY,
+    /**
+    * toner Low
+    */
+    TONER_LOW,
+    /**
+    * toner Empty
+    */
+    TONER_EMPTY,
+    /**
+    * spool Area Full
+    */
+    SPOOL_AREA_FULL,
+    /**
+    * door Open
+    */
+    DOOR_OPEN,
+    /**
+    * optical Photo Conductor Near End Of Life
+    */
+    OPTICAL_PHOTO_CONDUCTOR_NEAR_END_OF_LIFE,
+    /**
+    * optical Photo Conductor Life Over
+    */
+    OPTICAL_PHOTO_CONDUCTOR_LIFE_OVER,
+    /**
+    * developer Low
+    */
+    DEVELOPER_LOW,
+    /**
+    * developer Empty
+    */
+    DEVELOPER_EMPTY,
+    /**
+    * interpreter Resource Unavailable
+    */
+    INTERPRETER_RESOURCE_UNAVAILABLE,
     /**
     * unknown Future Value
     */

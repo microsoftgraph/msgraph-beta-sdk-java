@@ -28,38 +28,52 @@ import com.microsoft.graph.models.extensions.ManagedDevice;
 import com.microsoft.graph.models.extensions.ManagedAppDiagnosticStatus;
 import com.microsoft.graph.models.extensions.ManagedAppPolicy;
 import com.microsoft.graph.models.extensions.ManagedDeviceSummarizedAppState;
+import com.microsoft.graph.requests.extensions.IUserAnalyticsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsageRightCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUsageRightRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDirectoryObjectWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IServicePrincipalWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOrgContactWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILicenseDetailsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApplicationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAppRoleAssignmentWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEndpointWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IScopedRoleMembershipRequestBuilder;
+import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICalendarCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ICalendarRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContactRequestBuilder;
+import com.microsoft.graph.requests.extensions.IInferenceClassificationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMailFolderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOutlookUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISiteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISiteWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IExtensionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppConsentRequestCollectionRequestBuilder;
@@ -68,16 +82,16 @@ import com.microsoft.graph.requests.extensions.IApprovalCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessReviewInstanceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAgreementAcceptanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAgreementAcceptanceWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceEnrollmentConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedAppRegistrationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppRegistrationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedAppRegistrationWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsInformationProtectionDeviceRegistrationWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementTroubleshootingEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppIntentAndStateCollectionRequestBuilder;
@@ -86,27 +100,23 @@ import com.microsoft.graph.requests.extensions.IMobileAppTroubleshootingEventCol
 import com.microsoft.graph.requests.extensions.IMobileAppTroubleshootingEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.INotificationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IItemInsightsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnlineMeetingRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserAnalyticsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInformationProtectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IInferenceClassificationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOutlookUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IItemInsightsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPresenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IChatRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITeamWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserTeamworkRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITodoRequestBuilder;
 import java.util.Arrays;
@@ -141,6 +151,10 @@ public interface IUserRequestBuilder extends IRequestBuilder {
      * @return the IUserAnalyticsRequestBuilder instance
      */
     IUserAnalyticsRequestBuilder analytics();
+
+    IUsageRightCollectionRequestBuilder usageRights();
+
+    IUsageRightRequestBuilder usageRights(final String id);
 
     /**
      * Gets the request builder for InformationProtection
@@ -513,6 +527,7 @@ public interface IUserRequestBuilder extends IRequestBuilder {
      * @return the ITodoRequestBuilder instance
      */
     ITodoRequestBuilder todo();
+    IUserActivateServicePlanRequestBuilder activateServicePlan(final java.util.UUID servicePlanId, final java.util.UUID skuId);
     IUserAssignLicenseRequestBuilder assignLicense(final java.util.List<AssignedLicense> addLicenses, final java.util.List<java.util.UUID> removeLicenses);
     IUserChangePasswordRequestBuilder changePassword(final String currentPassword, final String newPassword);
     IUserInvalidateAllRefreshTokensRequestBuilder invalidateAllRefreshTokens();

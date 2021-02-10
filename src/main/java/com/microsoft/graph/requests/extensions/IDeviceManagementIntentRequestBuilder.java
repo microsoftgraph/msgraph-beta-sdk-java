@@ -20,11 +20,11 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSett
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceSettingStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

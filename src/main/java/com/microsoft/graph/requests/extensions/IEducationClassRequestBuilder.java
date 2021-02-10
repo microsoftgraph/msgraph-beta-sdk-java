@@ -13,11 +13,12 @@ import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionReque
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
-import com.microsoft.graph.requests.extensions.IGroupRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentSettingsRequestBuilder;
+import com.microsoft.graph.requests.extensions.IGroupWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationSchoolWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -51,6 +52,13 @@ public interface IEducationClassRequestBuilder extends IRequestBuilder {
     IEducationAssignmentCollectionRequestBuilder assignments();
 
     IEducationAssignmentRequestBuilder assignments(final String id);
+
+    /**
+     * Gets the request builder for EducationAssignmentSettings
+     *
+     * @return the IEducationAssignmentSettingsRequestBuilder instance
+     */
+    IEducationAssignmentSettingsRequestBuilder assignmentSettings();
 
     /**
      * Gets the request builder for Group

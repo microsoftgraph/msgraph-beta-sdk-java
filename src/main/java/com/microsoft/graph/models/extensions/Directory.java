@@ -12,7 +12,6 @@ import com.microsoft.graph.models.extensions.AdministrativeUnit;
 import com.microsoft.graph.models.extensions.DirectoryObject;
 import com.microsoft.graph.models.extensions.SharedEmailDomain;
 import com.microsoft.graph.models.extensions.FeatureRolloutPolicy;
-import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.extensions.SharedEmailDomainCollectionPage;
@@ -28,8 +27,18 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Directory.
  */
-public class Directory extends Entity implements IJsonBackedObject {
+public class Directory implements IJsonBackedObject {
 
+    @SerializedName("@odata.type")
+    @Expose
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Administrative Units.
@@ -41,7 +50,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Items.
-     * Recently deleted items. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose

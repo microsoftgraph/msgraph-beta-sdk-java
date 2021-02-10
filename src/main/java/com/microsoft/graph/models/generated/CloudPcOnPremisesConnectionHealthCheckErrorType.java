@@ -56,9 +56,29 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     RESOURCE_AVAILABILITY_CHECK_NO_SUBNET_IP,
     /**
+    * resource Availability Check Subscription Disabled
+    */
+    RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_DISABLED,
+    /**
     * resource Availability Check Unknown Error
     */
     RESOURCE_AVAILABILITY_CHECK_UNKNOWN_ERROR,
+    /**
+    * permission Check No Subscription Reader Role
+    */
+    PERMISSION_CHECK_NO_SUBSCRIPTION_READER_ROLE,
+    /**
+    * permission Check No Resource Group Owner Role
+    */
+    PERMISSION_CHECK_NO_RESOURCE_GROUP_OWNER_ROLE,
+    /**
+    * permission Check No VNet Contributor Role
+    */
+    PERMISSION_CHECK_NO_V_NET_CONTRIBUTOR_ROLE,
+    /**
+    * permission Check Unknown Error
+    */
+    PERMISSION_CHECK_UNKNOWN_ERROR,
     /**
     * internal Server Unknown Error
     */

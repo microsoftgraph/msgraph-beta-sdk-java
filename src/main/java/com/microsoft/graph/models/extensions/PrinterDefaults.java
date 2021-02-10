@@ -115,6 +115,14 @@ public class PrinterDefaults implements IJsonBackedObject {
     public Boolean fitPdfToPage;
 
     /**
+     * The Input Bin.
+     * 
+     */
+    @SerializedName(value = "inputBin", alternate = {"InputBin"})
+    @Expose
+    public String inputBin;
+
+    /**
      * The Media Color.
      * The default media (such as paper) color to print the document on.
      */

@@ -12,13 +12,13 @@ import com.microsoft.graph.models.extensions.ManagedEBook;
 import com.microsoft.graph.models.extensions.ManagedEBookAssignment;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IManagedEBookCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedEBookCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceInstallStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserInstallStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEBookInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

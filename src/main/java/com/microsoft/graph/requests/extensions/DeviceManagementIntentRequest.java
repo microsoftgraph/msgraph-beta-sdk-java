@@ -28,6 +28,8 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStat
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementSettingInstanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementSettingInstanceCollectionRequestBuilder;
@@ -36,8 +38,6 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateC
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementIntentDeviceStateSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementIntentDeviceStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementIntentUserStateSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementIntentUserStateSummaryRequestBuilder;
 import java.util.Arrays;

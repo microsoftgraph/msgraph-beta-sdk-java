@@ -33,6 +33,12 @@ import com.microsoft.graph.requests.extensions.IMobileAppCollectionRequestBuilde
 import com.microsoft.graph.requests.extensions.IMobileAppRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.IManagedMobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ManagedMobileLobAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISymantecCodeSigningCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.SymantecCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedEBookRequestBuilder;
 import com.microsoft.graph.requests.extensions.ManagedEBookCollectionRequestBuilder;
@@ -49,6 +55,8 @@ import com.microsoft.graph.requests.extensions.IVppTokenCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IVppTokenRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.VppTokenRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsManagementAppWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsManagementAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAndroidManagedAppProtectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AndroidManagedAppProtectionCollectionRequestBuilder;
@@ -101,10 +109,6 @@ import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationContro
 import com.microsoft.graph.requests.extensions.IWindowsDefenderApplicationControlSupplementalPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsDefenderApplicationControlSupplementalPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISymantecCodeSigningCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.SymantecCodeSigningCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IWindowsManagementAppRequestBuilder;
-import com.microsoft.graph.requests.extensions.WindowsManagementAppRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

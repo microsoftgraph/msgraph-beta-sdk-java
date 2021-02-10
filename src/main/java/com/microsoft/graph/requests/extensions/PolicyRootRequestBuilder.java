@@ -9,6 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
+import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
@@ -41,20 +45,14 @@ import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyCollectionReq
 import com.microsoft.graph.requests.extensions.ITokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.TokenLifetimePolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.B2cAuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRegistrationPolicyRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceRegistrationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryRoleAccessReviewPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import java.util.Arrays;
@@ -118,15 +116,6 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      */
     public IB2cAuthenticationMethodsPolicyRequestBuilder b2cAuthenticationMethodsPolicy() {
         return new B2cAuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("b2cAuthenticationMethodsPolicy"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for DeviceRegistrationPolicy
-     *
-     * @return the IDeviceRegistrationPolicyRequestBuilder instance
-     */
-    public IDeviceRegistrationPolicyRequestBuilder deviceRegistrationPolicy() {
-        return new DeviceRegistrationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("deviceRegistrationPolicy"), getClient(), null);
     }
     public IActivityBasedTimeoutPolicyCollectionRequestBuilder activityBasedTimeoutPolicies() {
         return new ActivityBasedTimeoutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies"), getClient(), null);

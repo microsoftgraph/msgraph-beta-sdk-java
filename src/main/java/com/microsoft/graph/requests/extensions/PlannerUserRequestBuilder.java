@@ -13,6 +13,10 @@ import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;
@@ -92,6 +96,13 @@ public class PlannerUserRequestBuilder extends BaseRequestBuilder implements IPl
 
     public IPlannerPlanWithReferenceRequestBuilder recentPlans(final String id) {
         return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("recentPlans") + "/" + id, getClient(), null);
+    }
+    public IPlannerPlanCollectionWithReferencesRequestBuilder rosterPlans() {
+        return new PlannerPlanCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("rosterPlans"), getClient(), null);
+    }
+
+    public IPlannerPlanWithReferenceRequestBuilder rosterPlans(final String id) {
+        return new PlannerPlanWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rosterPlans") + "/" + id, getClient(), null);
     }
     public IPlannerTaskCollectionRequestBuilder tasks() {
         return new PlannerTaskCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);

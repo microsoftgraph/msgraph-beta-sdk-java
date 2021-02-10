@@ -13,6 +13,10 @@ import com.microsoft.graph.requests.extensions.IPlannerDeltaCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IPlannerDeltaRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerDeltaRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPlannerPlanWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.PlannerPlanWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPlannerPlanRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerPlanCollectionRequestBuilder;

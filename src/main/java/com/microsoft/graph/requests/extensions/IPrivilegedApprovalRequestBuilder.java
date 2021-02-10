@@ -9,7 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PrivilegedApproval;
-import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrivilegedRoleAssignmentRequestWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrivilegedRoleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
