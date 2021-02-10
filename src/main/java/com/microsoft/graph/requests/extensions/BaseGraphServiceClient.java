@@ -36,6 +36,10 @@ import com.microsoft.graph.requests.extensions.IBookingCurrencyCollectionRequest
 import com.microsoft.graph.requests.extensions.IBookingCurrencyRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCurrencyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingCurrencyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityProviderRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityProviderCollectionRequestBuilder;
@@ -68,10 +72,6 @@ import com.microsoft.graph.requests.extensions.IContractCollectionRequestBuilder
 import com.microsoft.graph.requests.extensions.IContractRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContractCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContractRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.extensions.DirectoryObjectCollectionRequestBuilder;
@@ -519,6 +519,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     }
 
     /**
+     * Gets the collection of Devices objects
+     *
+     * @return the request builder for the collection of Devices objects
+     */
+    public IDeviceCollectionRequestBuilder devices() {
+        return new DeviceCollectionRequestBuilder(getServiceRoot() + "/devices", this, null);
+    }
+
+    /**
+     * Gets a single Devices
+     *
+     * @param id the id of the Devices to retrieve
+     * @return the request builder for the Devices object
+     */
+    public IDeviceRequestBuilder devices(final String id) {
+        return new DeviceRequestBuilder(getServiceRoot() + "/devices/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of IdentityProviders objects
      *
      * @return the request builder for the collection of IdentityProviders objects
@@ -668,25 +687,6 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IContractRequestBuilder contracts(final String id) {
         return new ContractRequestBuilder(getServiceRoot() + "/contracts/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of Devices objects
-     *
-     * @return the request builder for the collection of Devices objects
-     */
-    public IDeviceCollectionRequestBuilder devices() {
-        return new DeviceCollectionRequestBuilder(getServiceRoot() + "/devices", this, null);
-    }
-
-    /**
-     * Gets a single Devices
-     *
-     * @param id the id of the Devices to retrieve
-     * @return the request builder for the Devices object
-     */
-    public IDeviceRequestBuilder devices(final String id) {
-        return new DeviceRequestBuilder(getServiceRoot() + "/devices/" + id, this, null);
     }
 
     /**

@@ -13,12 +13,12 @@ import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCol
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageCatalogWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageCatalogWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleScopeRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleScopeRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
-import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

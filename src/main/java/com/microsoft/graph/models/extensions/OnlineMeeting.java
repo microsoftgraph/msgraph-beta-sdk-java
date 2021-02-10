@@ -58,7 +58,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Broadcast Settings.
-     * 
+     * Settings related to a live event
      */
     @SerializedName(value = "broadcastSettings", alternate = {"BroadcastSettings"})
     @Expose
@@ -130,7 +130,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Broadcast.
-     * 
+     * Indicates if this is a live event.
      */
     @SerializedName(value = "isBroadcast", alternate = {"IsBroadcast"})
     @Expose

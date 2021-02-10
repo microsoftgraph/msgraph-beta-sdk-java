@@ -17,9 +17,9 @@ import com.microsoft.graph.models.generated.BitLockerRecoveryPasswordRotationTyp
 import com.microsoft.graph.models.extensions.BitLockerRemovableDrivePolicy;
 import com.microsoft.graph.models.extensions.BitLockerSystemDrivePolicy;
 import com.microsoft.graph.models.generated.DefenderProtectionType;
+import com.microsoft.graph.models.generated.DefenderAttackSurfaceType;
 import com.microsoft.graph.models.generated.DefenderCloudBlockLevelType;
 import com.microsoft.graph.models.extensions.DefenderDetectedMalwareActions;
-import com.microsoft.graph.models.generated.DefenderAttackSurfaceType;
 import com.microsoft.graph.models.generated.FolderProtectionType;
 import com.microsoft.graph.models.generated.DefenderRealtimeScanDirection;
 import com.microsoft.graph.models.generated.DefenderScanType;
@@ -61,6 +61,14 @@ import com.google.gson.annotations.Expose;
  */
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Application Guard Allow Camera Microphone Redirection.
+     * Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+     */
+    @SerializedName(value = "applicationGuardAllowCameraMicrophoneRedirection", alternate = {"ApplicationGuardAllowCameraMicrophoneRedirection"})
+    @Expose
+    public Boolean applicationGuardAllowCameraMicrophoneRedirection;
 
     /**
      * The Application Guard Allow File Save On Host.
@@ -141,6 +149,14 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     @SerializedName(value = "applicationGuardBlockNonEnterpriseContent", alternate = {"ApplicationGuardBlockNonEnterpriseContent"})
     @Expose
     public Boolean applicationGuardBlockNonEnterpriseContent;
+
+    /**
+     * The Application Guard Certificate Thumbprints.
+     * Allows certain device level Root Certificates to be shared with the Microsoft Defender Application Guard container.
+     */
+    @SerializedName(value = "applicationGuardCertificateThumbprints", alternate = {"ApplicationGuardCertificateThumbprints"})
+    @Expose
+    public java.util.List<String> applicationGuardCertificateThumbprints;
 
     /**
      * The Application Guard Enabled.
@@ -365,6 +381,14 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     @SerializedName(value = "defenderBlockEndUserAccess", alternate = {"DefenderBlockEndUserAccess"})
     @Expose
     public Boolean defenderBlockEndUserAccess;
+
+    /**
+     * The Defender Block Persistence Through Wmi Type.
+     * Value indicating the behavior of Block persistence through WMI event subscription. Possible values are: userDefined, block, auditMode, warn, disable.
+     */
+    @SerializedName(value = "defenderBlockPersistenceThroughWmiType", alternate = {"DefenderBlockPersistenceThroughWmiType"})
+    @Expose
+    public DefenderAttackSurfaceType defenderBlockPersistenceThroughWmiType;
 
     /**
      * The Defender Check For Signatures Before Running Scan.

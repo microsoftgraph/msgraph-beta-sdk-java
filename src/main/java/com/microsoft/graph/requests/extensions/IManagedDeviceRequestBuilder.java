@@ -17,21 +17,23 @@ import com.microsoft.graph.models.extensions.UpdateWindowsDeviceAccountActionPar
 import com.microsoft.graph.models.generated.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.extensions.BulkManagedDeviceActionResult;
 import com.microsoft.graph.models.extensions.DeviceCompliancePolicySettingState;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceCompliancePolicyStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAssignmentFilterEvaluationStatusDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IManagedDeviceMobileAppConfigurationStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDetectedAppRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ISecurityBaselineStateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDetectedAppCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDetectedAppWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceLogCollectionResponseRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsProtectionStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -59,13 +61,13 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
     IManagedDeviceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates();
-
-    ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id);
-
     IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates();
 
     IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id);
+
+    IAssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder assignmentFilterEvaluationStatusDetails();
+
+    IAssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails(final String id);
 
     IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates();
 
@@ -74,6 +76,10 @@ public interface IManagedDeviceRequestBuilder extends IRequestBuilder {
     IManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder managedDeviceMobileAppConfigurationStates();
 
     IManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(final String id);
+
+    ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates();
+
+    ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id);
 
     IDetectedAppCollectionWithReferencesRequestBuilder detectedApps();
 

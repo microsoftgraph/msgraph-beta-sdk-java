@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResource;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceEnvironmentWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRoleCollectionRequestBuilder;
@@ -61,6 +63,15 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder impl
     }
 
 
+
+    /**
+     * Gets the request builder for AccessPackageResourceEnvironment
+     *
+     * @return the IAccessPackageResourceEnvironmentWithReferenceRequestBuilder instance
+     */
+    public IAccessPackageResourceEnvironmentWithReferenceRequestBuilder accessPackageResourceEnvironment() {
+        return new AccessPackageResourceEnvironmentWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceEnvironment"), getClient(), null);
+    }
     public IAccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles() {
         return new AccessPackageResourceRoleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoles"), getClient(), null);
     }

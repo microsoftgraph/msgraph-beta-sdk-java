@@ -84,9 +84,11 @@ import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerfor
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupHistory;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupProcess;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupProcessPerformance;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceWithoutCloudIdentity;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetricHistory;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsOverview;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsRegressionSummary;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsResourcePerformance;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsScoreHistory;
 import com.microsoft.graph.models.extensions.WindowsMalwareInformation;
 import com.microsoft.graph.models.extensions.DeviceManagementDerivedCredentialSettings;
@@ -108,6 +110,8 @@ import com.microsoft.graph.models.extensions.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.extensions.GroupPolicyDefinition;
 import com.microsoft.graph.models.extensions.GroupPolicyUploadedDefinitionFile;
 import com.microsoft.graph.models.extensions.MicrosoftTunnelConfiguration;
+import com.microsoft.graph.models.extensions.MicrosoftTunnelHealthThreshold;
+import com.microsoft.graph.models.extensions.MicrosoftTunnelServerLogCollectionResponse;
 import com.microsoft.graph.models.extensions.MicrosoftTunnelSite;
 import com.microsoft.graph.models.extensions.NotificationMessageTemplate;
 import com.microsoft.graph.models.extensions.DeviceManagementDomainJoinConnector;
@@ -123,6 +127,8 @@ import com.microsoft.graph.models.extensions.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.extensions.DeviceManagementAutopilotEvent;
 import com.microsoft.graph.models.extensions.DeviceManagementTroubleshootingEvent;
 import com.microsoft.graph.models.extensions.WindowsFeatureUpdateProfile;
+import com.microsoft.graph.models.extensions.WindowsQualityUpdateProfile;
+import com.microsoft.graph.models.extensions.WindowsUpdateCatalogItem;
 import com.microsoft.graph.models.extensions.IntuneBrandingProfile;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionAppLearningSummary;
 import com.microsoft.graph.models.extensions.WindowsInformationProtectionNetworkLearningSummary;
@@ -184,7 +190,9 @@ import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDevicePerf
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsResourcePerformanceCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsScoreHistoryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsMalwareInformationCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementDerivedCredentialSettingsCollectionPage;
@@ -205,6 +213,8 @@ import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionFileCollecti
 import com.microsoft.graph.requests.extensions.GroupPolicyDefinitionCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupPolicyUploadedDefinitionFileCollectionPage;
 import com.microsoft.graph.requests.extensions.MicrosoftTunnelConfigurationCollectionPage;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelHealthThresholdCollectionPage;
+import com.microsoft.graph.requests.extensions.MicrosoftTunnelServerLogCollectionResponseCollectionPage;
 import com.microsoft.graph.requests.extensions.MicrosoftTunnelSiteCollectionPage;
 import com.microsoft.graph.requests.extensions.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementDomainJoinConnectorCollectionPage;
@@ -219,6 +229,8 @@ import com.microsoft.graph.requests.extensions.TelecomExpenseManagementPartnerCo
 import com.microsoft.graph.requests.extensions.DeviceManagementAutopilotEventCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsFeatureUpdateProfileCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsQualityUpdateProfileCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsUpdateCatalogItemCollectionPage;
 import com.microsoft.graph.requests.extensions.IntuneBrandingProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionAppLearningSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
@@ -926,6 +938,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage userExperienceAnalyticsDeviceStartupProcessPerformance;
 
     /**
+     * The User Experience Analytics Devices Without Cloud Identity.
+     * User experience analytics devices without cloud identity.
+     */
+    @SerializedName(value = "userExperienceAnalyticsDevicesWithoutCloudIdentity", alternate = {"UserExperienceAnalyticsDevicesWithoutCloudIdentity"})
+    @Expose
+    public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage userExperienceAnalyticsDevicesWithoutCloudIdentity;
+
+    /**
      * The User Experience Analytics Metric History.
      * User experience analytics metric history
      */
@@ -948,6 +968,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsRegressionSummary", alternate = {"UserExperienceAnalyticsRegressionSummary"})
     @Expose
     public UserExperienceAnalyticsRegressionSummary userExperienceAnalyticsRegressionSummary;
+
+    /**
+     * The User Experience Analytics Resource Performance.
+     * User experience analytics resource performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsResourcePerformance", alternate = {"UserExperienceAnalyticsResourcePerformance"})
+    @Expose
+    public UserExperienceAnalyticsResourcePerformanceCollectionPage userExperienceAnalyticsResourcePerformance;
 
     /**
      * The User Experience Analytics Score History.
@@ -1118,6 +1146,22 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public MicrosoftTunnelConfigurationCollectionPage microsoftTunnelConfigurations;
 
     /**
+     * The Microsoft Tunnel Health Thresholds.
+     * Collection of MicrosoftTunnelHealthThreshold settings associated with account.
+     */
+    @SerializedName(value = "microsoftTunnelHealthThresholds", alternate = {"MicrosoftTunnelHealthThresholds"})
+    @Expose
+    public MicrosoftTunnelHealthThresholdCollectionPage microsoftTunnelHealthThresholds;
+
+    /**
+     * The Microsoft Tunnel Server Log Collection Responses.
+     * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
+     */
+    @SerializedName(value = "microsoftTunnelServerLogCollectionResponses", alternate = {"MicrosoftTunnelServerLogCollectionResponses"})
+    @Expose
+    public MicrosoftTunnelServerLogCollectionResponseCollectionPage microsoftTunnelServerLogCollectionResponses;
+
+    /**
      * The Microsoft Tunnel Sites.
      * Collection of MicrosoftTunnelSite settings associated with account.
      */
@@ -1236,6 +1280,22 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "windowsFeatureUpdateProfiles", alternate = {"WindowsFeatureUpdateProfiles"})
     @Expose
     public WindowsFeatureUpdateProfileCollectionPage windowsFeatureUpdateProfiles;
+
+    /**
+     * The Windows Quality Update Profiles.
+     * A collection of windows quality update profiles
+     */
+    @SerializedName(value = "windowsQualityUpdateProfiles", alternate = {"WindowsQualityUpdateProfiles"})
+    @Expose
+    public WindowsQualityUpdateProfileCollectionPage windowsQualityUpdateProfiles;
+
+    /**
+     * The Windows Update Catalog Items.
+     * A collection of windows update catalog items (fetaure updates item , quality updates item)
+     */
+    @SerializedName(value = "windowsUpdateCatalogItems", alternate = {"WindowsUpdateCatalogItems"})
+    @Expose
+    public WindowsUpdateCatalogItemCollectionPage windowsUpdateCatalogItems;
 
     /**
      * The Intune Branding Profiles.
@@ -1537,8 +1597,16 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsDeviceStartupProcessPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupProcessPerformance").toString(), UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage.class);
         }
 
+        if (json.has("userExperienceAnalyticsDevicesWithoutCloudIdentity")) {
+            userExperienceAnalyticsDevicesWithoutCloudIdentity = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicesWithoutCloudIdentity").toString(), UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage.class);
+        }
+
         if (json.has("userExperienceAnalyticsMetricHistory")) {
             userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory").toString(), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsResourcePerformance")) {
+            userExperienceAnalyticsResourcePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsResourcePerformance").toString(), UserExperienceAnalyticsResourcePerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsScoreHistory")) {
@@ -1621,6 +1689,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             microsoftTunnelConfigurations = serializer.deserializeObject(json.get("microsoftTunnelConfigurations").toString(), MicrosoftTunnelConfigurationCollectionPage.class);
         }
 
+        if (json.has("microsoftTunnelHealthThresholds")) {
+            microsoftTunnelHealthThresholds = serializer.deserializeObject(json.get("microsoftTunnelHealthThresholds").toString(), MicrosoftTunnelHealthThresholdCollectionPage.class);
+        }
+
+        if (json.has("microsoftTunnelServerLogCollectionResponses")) {
+            microsoftTunnelServerLogCollectionResponses = serializer.deserializeObject(json.get("microsoftTunnelServerLogCollectionResponses").toString(), MicrosoftTunnelServerLogCollectionResponseCollectionPage.class);
+        }
+
         if (json.has("microsoftTunnelSites")) {
             microsoftTunnelSites = serializer.deserializeObject(json.get("microsoftTunnelSites").toString(), MicrosoftTunnelSiteCollectionPage.class);
         }
@@ -1675,6 +1751,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("windowsFeatureUpdateProfiles")) {
             windowsFeatureUpdateProfiles = serializer.deserializeObject(json.get("windowsFeatureUpdateProfiles").toString(), WindowsFeatureUpdateProfileCollectionPage.class);
+        }
+
+        if (json.has("windowsQualityUpdateProfiles")) {
+            windowsQualityUpdateProfiles = serializer.deserializeObject(json.get("windowsQualityUpdateProfiles").toString(), WindowsQualityUpdateProfileCollectionPage.class);
+        }
+
+        if (json.has("windowsUpdateCatalogItems")) {
+            windowsUpdateCatalogItems = serializer.deserializeObject(json.get("windowsUpdateCatalogItems").toString(), WindowsUpdateCatalogItemCollectionPage.class);
         }
 
         if (json.has("intuneBrandingProfiles")) {

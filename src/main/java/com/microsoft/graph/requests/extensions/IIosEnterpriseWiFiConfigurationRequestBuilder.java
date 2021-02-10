@@ -9,10 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IosEnterpriseWiFiConfiguration;
+import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIosTrustedRootCertificateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementDerivedCredentialSettingsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIosCertificateProfileBaseRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

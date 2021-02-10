@@ -23,6 +23,7 @@ import com.microsoft.graph.models.extensions.ConversationMember;
 import com.microsoft.graph.models.extensions.TeamsAsyncOperation;
 import com.microsoft.graph.models.extensions.User;
 import com.microsoft.graph.models.extensions.ProfilePhoto;
+import com.microsoft.graph.models.extensions.TeamworkTag;
 import com.microsoft.graph.models.extensions.TeamsTemplate;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ChannelCollectionPage;
@@ -30,6 +31,7 @@ import com.microsoft.graph.requests.extensions.TeamsAppInstallationCollectionPag
 import com.microsoft.graph.requests.extensions.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.extensions.TeamsAsyncOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCollectionPage;
+import com.microsoft.graph.requests.extensions.TeamworkTagCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -235,6 +237,14 @@ public class Team extends Entity implements IJsonBackedObject {
     public Channel primaryChannel;
 
     /**
+     * The Tags.
+     * 
+     */
+    @SerializedName(value = "tags", alternate = {"Tags"})
+    @Expose
+    public TeamworkTagCollectionPage tags;
+
+    /**
      * The Template.
      * The template this team was created from. See available templates.
      */
@@ -300,6 +310,10 @@ public class Team extends Entity implements IJsonBackedObject {
 
         if (json.has("owners")) {
             owners = serializer.deserializeObject(json.get("owners").toString(), UserCollectionPage.class);
+        }
+
+        if (json.has("tags")) {
+            tags = serializer.deserializeObject(json.get("tags").toString(), TeamworkTagCollectionPage.class);
         }
     }
 }

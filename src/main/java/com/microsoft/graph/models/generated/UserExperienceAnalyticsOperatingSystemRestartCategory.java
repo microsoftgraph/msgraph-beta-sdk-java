@@ -44,6 +44,10 @@ public enum UserExperienceAnalyticsOperatingSystemRestartCategory
     */
     BOOT_ERROR,
     /**
+    * update
+    */
+    UPDATE,
+    /**
     * For UserExperienceAnalyticsOperatingSystemRestartCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE

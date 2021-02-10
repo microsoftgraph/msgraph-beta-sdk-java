@@ -53,19 +53,19 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder imple
     }
 
 
-    public ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
-        return new SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
-    }
-
-    public ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id) {
-        return new SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
-    }
     public IDeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
     }
 
     public IDeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(final String id) {
         return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
+    }
+    public IAssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder assignmentFilterEvaluationStatusDetails() {
+        return new AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails"), getClient(), null);
+    }
+
+    public IAssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails(final String id) {
+        return new AssignmentFilterEvaluationStatusDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails") + "/" + id, getClient(), null);
     }
     public IDeviceConfigurationStateCollectionRequestBuilder deviceConfigurationStates() {
         return new DeviceConfigurationStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceConfigurationStates"), getClient(), null);
@@ -80,6 +80,13 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder imple
 
     public IManagedDeviceMobileAppConfigurationStateRequestBuilder managedDeviceMobileAppConfigurationStates(final String id) {
         return new ManagedDeviceMobileAppConfigurationStateRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceMobileAppConfigurationStates") + "/" + id, getClient(), null);
+    }
+    public ISecurityBaselineStateCollectionRequestBuilder securityBaselineStates() {
+        return new SecurityBaselineStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates"), getClient(), null);
+    }
+
+    public ISecurityBaselineStateRequestBuilder securityBaselineStates(final String id) {
+        return new SecurityBaselineStateRequestBuilder(getRequestUrlWithAdditionalSegment("securityBaselineStates") + "/" + id, getClient(), null);
     }
     public IDetectedAppCollectionWithReferencesRequestBuilder detectedApps() {
         return new DetectedAppCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("detectedApps"), getClient(), null);

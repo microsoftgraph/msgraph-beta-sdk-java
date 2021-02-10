@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.termstore.models.extensions.Relation;
-import com.microsoft.graph.termstore.requests.extensions.ITermRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
+import com.microsoft.graph.termstore.requests.extensions.ITermWithReferenceRequestBuilder;
+import com.microsoft.graph.termstore.requests.extensions.ISetWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

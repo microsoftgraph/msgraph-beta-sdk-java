@@ -18,9 +18,9 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStat
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptDeviceStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

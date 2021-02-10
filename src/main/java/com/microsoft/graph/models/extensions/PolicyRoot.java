@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.extensions.B2cAuthenticationMethodsPolicy;
-import com.microsoft.graph.models.extensions.DeviceRegistrationPolicy;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
 import com.microsoft.graph.models.extensions.AuthorizationPolicy;
 import com.microsoft.graph.models.extensions.ClaimsMappingPolicy;
@@ -71,14 +70,6 @@ public class PolicyRoot implements IJsonBackedObject {
     @SerializedName(value = "b2cAuthenticationMethodsPolicy", alternate = {"B2cAuthenticationMethodsPolicy"})
     @Expose
     public B2cAuthenticationMethodsPolicy b2cAuthenticationMethodsPolicy;
-
-    /**
-     * The Device Registration Policy.
-     * 
-     */
-    @SerializedName(value = "deviceRegistrationPolicy", alternate = {"DeviceRegistrationPolicy"})
-    @Expose
-    public DeviceRegistrationPolicy deviceRegistrationPolicy;
 
     /**
      * The Activity Based Timeout Policies.

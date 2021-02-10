@@ -92,7 +92,7 @@ public class SecureScoreControlProfile extends Entity implements IJsonBackedObje
 
     /**
      * The Last Modified Date Time.
-     * Time at which the control profile entity was last modified. The Timestamp type represents date and time
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

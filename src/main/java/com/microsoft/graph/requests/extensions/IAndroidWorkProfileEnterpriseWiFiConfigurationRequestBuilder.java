@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AndroidWorkProfileEnterpriseWiFiConfiguration;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseRequestBuilder;
-import com.microsoft.graph.requests.extensions.IAndroidWorkProfileTrustedRootCertificateRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidWorkProfileCertificateProfileBaseWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAndroidWorkProfileTrustedRootCertificateWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

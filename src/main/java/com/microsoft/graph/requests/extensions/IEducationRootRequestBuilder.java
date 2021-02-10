@@ -13,10 +13,10 @@ import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileC
 import com.microsoft.graph.requests.extensions.IEducationSynchronizationProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationClassRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSchoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationSchoolRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IEducationUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

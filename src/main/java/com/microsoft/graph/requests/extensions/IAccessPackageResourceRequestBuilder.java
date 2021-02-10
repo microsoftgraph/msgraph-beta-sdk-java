@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.AccessPackageResource;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRoleRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceScopeCollectionRequestBuilder;
@@ -38,6 +39,13 @@ public interface IAccessPackageResourceRequestBuilder extends IRequestBuilder {
      */
     IAccessPackageResourceRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for AccessPackageResourceEnvironment
+     *
+     * @return the IAccessPackageResourceEnvironmentWithReferenceRequestBuilder instance
+     */
+    IAccessPackageResourceEnvironmentWithReferenceRequestBuilder accessPackageResourceEnvironment();
 
     IAccessPackageResourceRoleCollectionRequestBuilder accessPackageResourceRoles();
 

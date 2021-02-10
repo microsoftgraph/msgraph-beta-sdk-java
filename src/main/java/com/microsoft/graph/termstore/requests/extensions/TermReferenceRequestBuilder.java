@@ -18,8 +18,8 @@ import com.microsoft.graph.termstore.requests.extensions.IRelationCollectionRequ
 import com.microsoft.graph.termstore.requests.extensions.IRelationRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationCollectionRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.RelationRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.ISetRequestBuilder;
-import com.microsoft.graph.termstore.requests.extensions.SetRequestBuilder;
+import com.microsoft.graph.termstore.requests.extensions.ISetWithReferenceRequestBuilder;
+import com.microsoft.graph.termstore.requests.extensions.SetWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

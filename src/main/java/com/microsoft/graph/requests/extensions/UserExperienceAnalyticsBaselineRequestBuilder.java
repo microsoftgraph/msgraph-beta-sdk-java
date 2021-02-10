@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsBaseline;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -61,6 +61,15 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
+    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder appHealthMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appHealthMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
     public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
     }
@@ -81,5 +90,14 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      */
     public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("rebootAnalyticsMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    public IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder resourcePerformanceMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resourcePerformanceMetrics"), getClient(), null);
     }
 }

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.OutOfOfficeSettings;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -25,7 +26,7 @@ public class Presence extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.
+     * The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -38,6 +39,14 @@ public class Presence extends Entity implements IJsonBackedObject {
     @SerializedName(value = "availability", alternate = {"Availability"})
     @Expose
     public String availability;
+
+    /**
+     * The Out Of Office Settings.
+     * The out of office settings for a user.
+     */
+    @SerializedName(value = "outOfOfficeSettings", alternate = {"OutOfOfficeSettings"})
+    @Expose
+    public OutOfOfficeSettings outOfOfficeSettings;
 
 
     /**

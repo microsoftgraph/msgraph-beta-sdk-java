@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.IdentityContainer;
+import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityApiConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityApiConnectorRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityApiConnectorCollectionRequestBuilder;
@@ -29,8 +31,6 @@ import com.microsoft.graph.requests.extensions.IIdentityUserFlowCollectionReques
 import com.microsoft.graph.requests.extensions.IIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityUserFlowRequestBuilder;
-import com.microsoft.graph.requests.extensions.IConditionalAccessRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.ConditionalAccessRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContinuousAccessEvaluationPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.ContinuousAccessEvaluationPolicyRequestBuilder;
 import java.util.Arrays;

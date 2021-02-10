@@ -9,8 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.DeviceAndAppManagementRoleAssignment;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IRoleScopeTagRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IRoleScopeTagWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

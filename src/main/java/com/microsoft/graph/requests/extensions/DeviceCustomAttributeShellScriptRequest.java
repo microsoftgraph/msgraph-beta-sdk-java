@@ -23,12 +23,12 @@ import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssig
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptGroupAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptGroupAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.DeviceManagementScriptRunSummaryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementScriptUserStateRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceManagementScriptUserStateRequestBuilder;
-import com.microsoft.graph.requests.extensions.IDeviceManagementScriptRunSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.DeviceManagementScriptRunSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

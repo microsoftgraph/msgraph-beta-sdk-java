@@ -94,7 +94,7 @@ public class PrinterLocation implements IJsonBackedObject {
      */
     @SerializedName(value = "latitude", alternate = {"Latitude"})
     @Expose
-    public float latitude;
+    public Double latitude;
 
     /**
      * The Longitude.
@@ -102,7 +102,7 @@ public class PrinterLocation implements IJsonBackedObject {
      */
     @SerializedName(value = "longitude", alternate = {"Longitude"})
     @Expose
-    public float longitude;
+    public Double longitude;
 
     /**
      * The Organization.

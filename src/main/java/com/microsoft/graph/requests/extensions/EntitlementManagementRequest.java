@@ -29,6 +29,10 @@ import com.microsoft.graph.requests.extensions.IAccessPackageCatalogCollectionRe
 import com.microsoft.graph.requests.extensions.IAccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageCatalogRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAccessPackageResourceEnvironmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceEnvironmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AccessPackageResourceEnvironmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageResourceRequestRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageResourceRequestCollectionRequestBuilder;

@@ -143,7 +143,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
 
     /**
      * The Mtu Size In Bytes.
-     * Maximum transmission unit. Valid values 1 to 65536
+     * Maximum transmission unit. Valid values 1280 to 1400
      */
     @SerializedName(value = "mtuSizeInBytes", alternate = {"MtuSizeInBytes"})
     @Expose

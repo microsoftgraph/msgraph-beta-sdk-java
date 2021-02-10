@@ -18,14 +18,16 @@ import com.microsoft.graph.requests.extensions.IMobileAppAssignmentCollectionReq
 import com.microsoft.graph.requests.extensions.IMobileAppAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppAssignmentRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppCategoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppCategoryWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppInstallStatusRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IMobileAppRelationshipRequestBuilder;
 import com.microsoft.graph.requests.extensions.MobileAppRelationshipCollectionRequestBuilder;
@@ -34,8 +36,6 @@ import com.microsoft.graph.requests.extensions.IUserAppInstallStatusCollectionRe
 import com.microsoft.graph.requests.extensions.IUserAppInstallStatusRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAppInstallStatusCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserAppInstallStatusRequestBuilder;
-import com.microsoft.graph.requests.extensions.IMobileAppInstallSummaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.MobileAppInstallSummaryRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 

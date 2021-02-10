@@ -9,7 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsBaseline;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -41,6 +41,13 @@ public interface IUserExperienceAnalyticsBaselineRequestBuilder extends IRequest
      *
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
+    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder appHealthMetrics();
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
     IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics();
 
     /**
@@ -56,5 +63,12 @@ public interface IUserExperienceAnalyticsBaselineRequestBuilder extends IRequest
      * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder rebootAnalyticsMetrics();
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    IUserExperienceAnalyticsCategoryWithReferenceRequestBuilder resourcePerformanceMetrics();
 
 }
