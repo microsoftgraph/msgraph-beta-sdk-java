@@ -11,18 +11,22 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.EmailAuthenticationMethod;
 import com.microsoft.graph.models.extensions.Fido2AuthenticationMethod;
 import com.microsoft.graph.models.extensions.AuthenticationMethod;
+import com.microsoft.graph.models.extensions.MicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.extensions.LongRunningOperation;
 import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.extensions.PasswordAuthenticationMethod;
 import com.microsoft.graph.models.extensions.PhoneAuthenticationMethod;
+import com.microsoft.graph.models.extensions.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.Fido2AuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.WindowsHelloForBusinessAuthenticationMethodCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -62,6 +66,14 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public AuthenticationMethodCollectionPage methods;
 
     /**
+     * The Microsoft Authenticator Methods.
+     * 
+     */
+    @SerializedName(value = "microsoftAuthenticatorMethods", alternate = {"MicrosoftAuthenticatorMethods"})
+    @Expose
+    public MicrosoftAuthenticatorAuthenticationMethodCollectionPage microsoftAuthenticatorMethods;
+
+    /**
      * The Operations.
      * 
      */
@@ -92,6 +104,14 @@ public class Authentication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "phoneMethods", alternate = {"PhoneMethods"})
     @Expose
     public PhoneAuthenticationMethodCollectionPage phoneMethods;
+
+    /**
+     * The Windows Hello For Business Methods.
+     * 
+     */
+    @SerializedName(value = "windowsHelloForBusinessMethods", alternate = {"WindowsHelloForBusinessMethods"})
+    @Expose
+    public WindowsHelloForBusinessAuthenticationMethodCollectionPage windowsHelloForBusinessMethods;
 
 
     /**
@@ -145,6 +165,10 @@ public class Authentication extends Entity implements IJsonBackedObject {
             methods = serializer.deserializeObject(json.get("methods").toString(), AuthenticationMethodCollectionPage.class);
         }
 
+        if (json.has("microsoftAuthenticatorMethods")) {
+            microsoftAuthenticatorMethods = serializer.deserializeObject(json.get("microsoftAuthenticatorMethods").toString(), MicrosoftAuthenticatorAuthenticationMethodCollectionPage.class);
+        }
+
         if (json.has("operations")) {
             operations = serializer.deserializeObject(json.get("operations").toString(), LongRunningOperationCollectionPage.class);
         }
@@ -159,6 +183,10 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("phoneMethods")) {
             phoneMethods = serializer.deserializeObject(json.get("phoneMethods").toString(), PhoneAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("windowsHelloForBusinessMethods")) {
+            windowsHelloForBusinessMethods = serializer.deserializeObject(json.get("windowsHelloForBusinessMethods").toString(), WindowsHelloForBusinessAuthenticationMethodCollectionPage.class);
         }
     }
 }

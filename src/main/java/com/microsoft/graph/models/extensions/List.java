@@ -55,7 +55,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-     * 
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
     @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
@@ -79,7 +79,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Columns.
-     * 
+     * The collection of field definitions for this list.
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
@@ -87,7 +87,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Types.
-     * 
+     * The collection of content types present in this list.
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose

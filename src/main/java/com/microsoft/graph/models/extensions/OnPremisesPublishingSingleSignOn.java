@@ -44,7 +44,7 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
 
     /**
      * The Single Sign On Mode.
-     * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, headerBased.
+     * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased.
      */
     @SerializedName(value = "singleSignOnMode", alternate = {"SingleSignOnMode"})
     @Expose

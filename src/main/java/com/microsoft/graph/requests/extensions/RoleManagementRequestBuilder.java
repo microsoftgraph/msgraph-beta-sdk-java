@@ -68,6 +68,15 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder implements 
     }
 
     /**
+     * Gets the request builder for RbacApplication
+     *
+     * @return the IRbacApplicationRequestBuilder instance
+     */
+    public IRbacApplicationRequestBuilder entitlementManagement() {
+        return new RbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("entitlementManagement"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for RbacApplicationMultiple
      *
      * @return the IRbacApplicationMultipleRequestBuilder instance

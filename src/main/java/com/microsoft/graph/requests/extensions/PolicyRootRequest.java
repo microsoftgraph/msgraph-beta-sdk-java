@@ -55,6 +55,14 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollection
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

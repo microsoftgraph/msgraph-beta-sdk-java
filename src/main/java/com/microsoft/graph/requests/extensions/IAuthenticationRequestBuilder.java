@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodCollect
 import com.microsoft.graph.requests.extensions.IFido2AuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
@@ -23,6 +25,8 @@ import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodColl
 import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -61,6 +65,10 @@ public interface IAuthenticationRequestBuilder extends IRequestBuilder {
 
     IAuthenticationMethodRequestBuilder methods(final String id);
 
+    IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder microsoftAuthenticatorMethods();
+
+    IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder microsoftAuthenticatorMethods(final String id);
+
     ILongRunningOperationCollectionRequestBuilder operations();
 
     ILongRunningOperationRequestBuilder operations(final String id);
@@ -76,5 +84,9 @@ public interface IAuthenticationRequestBuilder extends IRequestBuilder {
     IPhoneAuthenticationMethodCollectionRequestBuilder phoneMethods();
 
     IPhoneAuthenticationMethodRequestBuilder phoneMethods(final String id);
+
+    IWindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder windowsHelloForBusinessMethods();
+
+    IWindowsHelloForBusinessAuthenticationMethodRequestBuilder windowsHelloForBusinessMethods(final String id);
 
 }

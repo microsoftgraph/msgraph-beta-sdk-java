@@ -36,7 +36,7 @@ public class ItemActivity extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * 
+     * Details about when the activity took place. Read-only.
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose

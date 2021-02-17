@@ -61,6 +61,14 @@ public class UserTeamworkSendActivityNotificationBody {
     @Expose
     public java.util.List<KeyValuePair> templateParameters;
 
+    /**
+     * The teams App Id.
+     * 
+     */
+    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
+    @Expose
+    public String teamsAppId;
+
 
     /**
      * The raw representation of this class

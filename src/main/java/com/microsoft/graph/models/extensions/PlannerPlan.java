@@ -65,7 +65,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * 
+     * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
      */
     @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose

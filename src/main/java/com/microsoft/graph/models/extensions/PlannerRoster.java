@@ -29,7 +29,7 @@ public class PlannerRoster extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * Retrieves the members of the plannerRoster.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
@@ -37,7 +37,7 @@ public class PlannerRoster extends Entity implements IJsonBackedObject {
 
     /**
      * The Plans.
-     * 
+     * Retrieves the plans contained by the plannerRoster.
      */
     public PlannerPlanCollectionPage plans;
 

@@ -11,10 +11,22 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UnifiedRbacResourceNamespace;
 import com.microsoft.graph.models.extensions.UnifiedRoleAssignment;
 import com.microsoft.graph.models.extensions.UnifiedRoleDefinition;
+import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentRequest;
+import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentScheduleInstance;
+import com.microsoft.graph.models.extensions.UnifiedRoleAssignmentSchedule;
+import com.microsoft.graph.models.extensions.UnifiedRoleEligibilityRequest;
+import com.microsoft.graph.models.extensions.UnifiedRoleEligibilityScheduleInstance;
+import com.microsoft.graph.models.extensions.UnifiedRoleEligibilitySchedule;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceCollectionPage;
 import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionPage;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentScheduleInstanceCollectionPage;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentScheduleCollectionPage;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityRequestCollectionPage;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityScheduleInstanceCollectionPage;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityScheduleCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -52,6 +64,54 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
     public UnifiedRoleDefinitionCollectionPage roleDefinitions;
+
+    /**
+     * The Role Assignment Requests.
+     * 
+     */
+    @SerializedName(value = "roleAssignmentRequests", alternate = {"RoleAssignmentRequests"})
+    @Expose
+    public UnifiedRoleAssignmentRequestCollectionPage roleAssignmentRequests;
+
+    /**
+     * The Role Assignment Schedule Instances.
+     * 
+     */
+    @SerializedName(value = "roleAssignmentScheduleInstances", alternate = {"RoleAssignmentScheduleInstances"})
+    @Expose
+    public UnifiedRoleAssignmentScheduleInstanceCollectionPage roleAssignmentScheduleInstances;
+
+    /**
+     * The Role Assignment Schedules.
+     * 
+     */
+    @SerializedName(value = "roleAssignmentSchedules", alternate = {"RoleAssignmentSchedules"})
+    @Expose
+    public UnifiedRoleAssignmentScheduleCollectionPage roleAssignmentSchedules;
+
+    /**
+     * The Role Eligibility Requests.
+     * 
+     */
+    @SerializedName(value = "roleEligibilityRequests", alternate = {"RoleEligibilityRequests"})
+    @Expose
+    public UnifiedRoleEligibilityRequestCollectionPage roleEligibilityRequests;
+
+    /**
+     * The Role Eligibility Schedule Instances.
+     * 
+     */
+    @SerializedName(value = "roleEligibilityScheduleInstances", alternate = {"RoleEligibilityScheduleInstances"})
+    @Expose
+    public UnifiedRoleEligibilityScheduleInstanceCollectionPage roleEligibilityScheduleInstances;
+
+    /**
+     * The Role Eligibility Schedules.
+     * 
+     */
+    @SerializedName(value = "roleEligibilitySchedules", alternate = {"RoleEligibilitySchedules"})
+    @Expose
+    public UnifiedRoleEligibilityScheduleCollectionPage roleEligibilitySchedules;
 
 
     /**
@@ -103,6 +163,30 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
         if (json.has("roleDefinitions")) {
             roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions").toString(), UnifiedRoleDefinitionCollectionPage.class);
+        }
+
+        if (json.has("roleAssignmentRequests")) {
+            roleAssignmentRequests = serializer.deserializeObject(json.get("roleAssignmentRequests").toString(), UnifiedRoleAssignmentRequestCollectionPage.class);
+        }
+
+        if (json.has("roleAssignmentScheduleInstances")) {
+            roleAssignmentScheduleInstances = serializer.deserializeObject(json.get("roleAssignmentScheduleInstances").toString(), UnifiedRoleAssignmentScheduleInstanceCollectionPage.class);
+        }
+
+        if (json.has("roleAssignmentSchedules")) {
+            roleAssignmentSchedules = serializer.deserializeObject(json.get("roleAssignmentSchedules").toString(), UnifiedRoleAssignmentScheduleCollectionPage.class);
+        }
+
+        if (json.has("roleEligibilityRequests")) {
+            roleEligibilityRequests = serializer.deserializeObject(json.get("roleEligibilityRequests").toString(), UnifiedRoleEligibilityRequestCollectionPage.class);
+        }
+
+        if (json.has("roleEligibilityScheduleInstances")) {
+            roleEligibilityScheduleInstances = serializer.deserializeObject(json.get("roleEligibilityScheduleInstances").toString(), UnifiedRoleEligibilityScheduleInstanceCollectionPage.class);
+        }
+
+        if (json.has("roleEligibilitySchedules")) {
+            roleEligibilitySchedules = serializer.deserializeObject(json.get("roleEligibilitySchedules").toString(), UnifiedRoleEligibilityScheduleCollectionPage.class);
         }
     }
 }

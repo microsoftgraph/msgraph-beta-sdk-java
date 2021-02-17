@@ -58,7 +58,7 @@ public class PlannerPlanContext implements IJsonBackedObject {
 
     /**
      * The Is Creation Context.
-     * 
+     * Read-only. Indicates whether the plan is created from the specified context. Auto-generated based on whether the context is specified as part of plan creation.
      */
     @SerializedName(value = "isCreationContext", alternate = {"IsCreationContext"})
     @Expose

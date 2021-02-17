@@ -755,7 +755,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The License Details.
-     * 
+     * A collection of this user's license details. Read-only.
      */
     @SerializedName(value = "licenseDetails", alternate = {"LicenseDetails"})
     @Expose
@@ -1089,7 +1089,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * 
+     * The user's activities across devices. Read-only. Nullable.
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose

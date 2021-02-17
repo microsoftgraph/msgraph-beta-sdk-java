@@ -45,6 +45,13 @@ public interface IRoleManagementRequestBuilder extends IRequestBuilder {
     IRbacApplicationRequestBuilder directory();
 
     /**
+     * Gets the request builder for RbacApplication
+     *
+     * @return the IRbacApplicationRequestBuilder instance
+     */
+    IRbacApplicationRequestBuilder entitlementManagement();
+
+    /**
      * Gets the request builder for RbacApplicationMultiple
      *
      * @return the IRbacApplicationMultipleRequestBuilder instance

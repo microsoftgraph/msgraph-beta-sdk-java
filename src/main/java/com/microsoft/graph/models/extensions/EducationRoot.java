@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.EducationSynchronizationProfile;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.models.extensions.EducationUser;
 import com.microsoft.graph.models.extensions.EducationSchool;
+import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.EducationSynchronizationProfileCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationClassCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationSchoolCollectionPage;
@@ -27,18 +28,8 @@ import com.google.gson.annotations.Expose;
 /**
  * The class for the Education Root.
  */
-public class EducationRoot implements IJsonBackedObject {
+public class EducationRoot extends Entity implements IJsonBackedObject {
 
-    @SerializedName("@odata.type")
-    @Expose
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Synchronization Profiles.
@@ -50,7 +41,7 @@ public class EducationRoot implements IJsonBackedObject {
 
     /**
      * The Classes.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "classes", alternate = {"Classes"})
     @Expose
@@ -58,7 +49,7 @@ public class EducationRoot implements IJsonBackedObject {
 
     /**
      * The Me.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "me", alternate = {"Me"})
     @Expose
@@ -66,7 +57,7 @@ public class EducationRoot implements IJsonBackedObject {
 
     /**
      * The Schools.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "schools", alternate = {"Schools"})
     @Expose
@@ -74,7 +65,7 @@ public class EducationRoot implements IJsonBackedObject {
 
     /**
      * The Users.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "users", alternate = {"Users"})
     @Expose

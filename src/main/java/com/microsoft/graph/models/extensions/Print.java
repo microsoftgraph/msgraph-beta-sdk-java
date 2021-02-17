@@ -20,7 +20,6 @@ import com.microsoft.graph.requests.extensions.PrintConnectorCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintOperationCollectionPage;
 import com.microsoft.graph.requests.extensions.PrinterCollectionPage;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionPage;
-import com.microsoft.graph.requests.extensions.ReportRootCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintServiceCollectionPage;
 import com.microsoft.graph.requests.extensions.PrintTaskDefinitionCollectionPage;
 
@@ -93,7 +92,7 @@ public class Print implements IJsonBackedObject {
      */
     @SerializedName(value = "reports", alternate = {"Reports"})
     @Expose
-    public ReportRootCollectionPage reports;
+    public ReportRoot reports;
 
     /**
      * The Services.
@@ -173,10 +172,6 @@ public class Print implements IJsonBackedObject {
 
         if (json.has("printerShares")) {
             printerShares = serializer.deserializeObject(json.get("printerShares").toString(), PrinterShareCollectionPage.class);
-        }
-
-        if (json.has("reports")) {
-            reports = serializer.deserializeObject(json.get("reports").toString(), ReportRootCollectionPage.class);
         }
 
         if (json.has("services")) {

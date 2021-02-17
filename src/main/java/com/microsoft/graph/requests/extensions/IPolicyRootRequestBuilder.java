@@ -32,6 +32,10 @@ import com.microsoft.graph.requests.extensions.IDirectoryRoleAccessReviewPolicyR
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -128,5 +132,13 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
      * @return the IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder instance
      */
     IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy();
+
+    IUnifiedRoleManagementPolicyCollectionRequestBuilder roleManagementPolicies();
+
+    IUnifiedRoleManagementPolicyRequestBuilder roleManagementPolicies(final String id);
+
+    IUnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder roleManagementPolicyAssignments();
+
+    IUnifiedRoleManagementPolicyAssignmentRequestBuilder roleManagementPolicyAssignments(final String id);
 
 }

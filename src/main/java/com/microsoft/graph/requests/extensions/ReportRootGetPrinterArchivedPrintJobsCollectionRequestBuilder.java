@@ -33,19 +33,19 @@ public class ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder exten
      * @param client         the service client
      * @param requestOptions the options for this request
      * @param printerId the printerId
-     * @param periodStart the periodStart
-     * @param periodEnd the periodEnd
+     * @param startDateTime the startDateTime
+     * @param endDateTime the endDateTime
      */
-    public ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String printerId, final java.util.Calendar periodStart, final java.util.Calendar periodEnd) {
+    public ReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final String printerId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime) {
         super(requestUrl, client, requestOptions);
      	 if(printerId!=null){
 			functionOptions.add(new com.microsoft.graph.options.FunctionOption("printerId", printerId));
 		}
-       	 if(periodStart!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodStart", periodStart));
+       	 if(startDateTime!=null){
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
 		}
-       	 if(periodEnd!=null){
-			functionOptions.add(new com.microsoft.graph.options.FunctionOption("periodEnd", periodEnd));
+       	 if(endDateTime!=null){
+			functionOptions.add(new com.microsoft.graph.options.FunctionOption("endDateTime", endDateTime));
 		}
       }
     

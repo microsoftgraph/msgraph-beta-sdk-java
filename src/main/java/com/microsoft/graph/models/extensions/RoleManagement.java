@@ -43,6 +43,14 @@ public class RoleManagement implements IJsonBackedObject {
     public RbacApplication directory;
 
     /**
+     * The Entitlement Management.
+     * The RbacApplication for Entitlement Management
+     */
+    @SerializedName(value = "entitlementManagement", alternate = {"EntitlementManagement"})
+    @Expose
+    public RbacApplication entitlementManagement;
+
+    /**
      * The Device Management.
      * The RbacApplication for Device Management
      */

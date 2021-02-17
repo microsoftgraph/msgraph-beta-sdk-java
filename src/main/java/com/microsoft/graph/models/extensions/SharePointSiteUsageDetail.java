@@ -32,12 +32,44 @@ public class SharePointSiteUsageDetail extends Entity implements IJsonBackedObje
     public Long activeFileCount;
 
     /**
+     * The Anonymous Link Count.
+     * 
+     */
+    @SerializedName(value = "anonymousLinkCount", alternate = {"AnonymousLinkCount"})
+    @Expose
+    public Long anonymousLinkCount;
+
+    /**
+     * The Company Link Count.
+     * 
+     */
+    @SerializedName(value = "companyLinkCount", alternate = {"CompanyLinkCount"})
+    @Expose
+    public Long companyLinkCount;
+
+    /**
+     * The External Sharing.
+     * 
+     */
+    @SerializedName(value = "externalSharing", alternate = {"ExternalSharing"})
+    @Expose
+    public Boolean externalSharing;
+
+    /**
      * The File Count.
      * 
      */
     @SerializedName(value = "fileCount", alternate = {"FileCount"})
     @Expose
     public Long fileCount;
+
+    /**
+     * The Geolocation.
+     * 
+     */
+    @SerializedName(value = "geolocation", alternate = {"Geolocation"})
+    @Expose
+    public String geolocation;
 
     /**
      * The Is Deleted.
@@ -104,12 +136,36 @@ public class SharePointSiteUsageDetail extends Entity implements IJsonBackedObje
     public String rootWebTemplate;
 
     /**
+     * The Secure Link For Guest Count.
+     * 
+     */
+    @SerializedName(value = "secureLinkForGuestCount", alternate = {"SecureLinkForGuestCount"})
+    @Expose
+    public Long secureLinkForGuestCount;
+
+    /**
+     * The Secure Link For Member Count.
+     * 
+     */
+    @SerializedName(value = "secureLinkForMemberCount", alternate = {"SecureLinkForMemberCount"})
+    @Expose
+    public Long secureLinkForMemberCount;
+
+    /**
      * The Site Id.
      * 
      */
     @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose
     public java.util.UUID siteId;
+
+    /**
+     * The Site Sensitivity Label Id.
+     * 
+     */
+    @SerializedName(value = "siteSensitivityLabelId", alternate = {"SiteSensitivityLabelId"})
+    @Expose
+    public String siteSensitivityLabelId;
 
     /**
      * The Site Url.
@@ -134,6 +190,14 @@ public class SharePointSiteUsageDetail extends Entity implements IJsonBackedObje
     @SerializedName(value = "storageUsedInBytes", alternate = {"StorageUsedInBytes"})
     @Expose
     public Long storageUsedInBytes;
+
+    /**
+     * The Unmanaged Device Policy.
+     * 
+     */
+    @SerializedName(value = "unmanagedDevicePolicy", alternate = {"UnmanagedDevicePolicy"})
+    @Expose
+    public String unmanagedDevicePolicy;
 
     /**
      * The Visited Page Count.

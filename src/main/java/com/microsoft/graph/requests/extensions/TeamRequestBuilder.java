@@ -193,8 +193,8 @@ public class TeamRequestBuilder extends BaseRequestBuilder implements ITeamReque
         return new TeamCompleteMigrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeMigration"), getClient(), null);
     }
 
-    public ITeamSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient) {
-        return new TeamSendActivityNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendActivityNotification"), getClient(), null, topic, activityType, chainId, previewText, templateParameters, recipient);
+    public ITeamSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient, final String teamsAppId) {
+        return new TeamSendActivityNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendActivityNotification"), getClient(), null, topic, activityType, chainId, previewText, templateParameters, recipient, teamsAppId);
     }
 
     public ITeamUnarchiveRequestBuilder unarchive() {

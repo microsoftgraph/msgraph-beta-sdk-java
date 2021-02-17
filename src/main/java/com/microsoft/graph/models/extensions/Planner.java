@@ -49,7 +49,7 @@ public class Planner extends Entity implements IJsonBackedObject {
 
     /**
      * The Rosters.
-     * 
+     * Read-only. Nullable. Returns a collection of the specified rosters
      */
     @SerializedName(value = "rosters", alternate = {"Rosters"})
     @Expose

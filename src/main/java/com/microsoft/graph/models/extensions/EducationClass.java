@@ -159,7 +159,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Group.
-     * 
+     * The directory group corresponding to this class.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose

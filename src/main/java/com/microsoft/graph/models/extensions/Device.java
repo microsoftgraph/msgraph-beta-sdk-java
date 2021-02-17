@@ -66,7 +66,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Category.
-     * 
+     * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
      */
     @SerializedName(value = "deviceCategory", alternate = {"DeviceCategory"})
     @Expose
@@ -90,7 +90,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Ownership.
-     * 
+     * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
      */
     @SerializedName(value = "deviceOwnership", alternate = {"DeviceOwnership"})
     @Expose
@@ -114,7 +114,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Domain Name.
-     * 
+     * The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
      */
     @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
@@ -122,7 +122,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Enrollment Profile Name.
-     * 
+     * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
      */
     @SerializedName(value = "enrollmentProfileName", alternate = {"EnrollmentProfileName"})
     @Expose
@@ -130,7 +130,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Enrollment Type.
-     * 
+     * Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
      */
     @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose
@@ -170,7 +170,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Rooted.
-     * 
+     * true if device is rooted; false if device is jail-broken. This can only be updated by Intune.
      */
     @SerializedName(value = "isRooted", alternate = {"IsRooted"})
     @Expose
@@ -178,7 +178,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Management Type.
-     * 
+     * Management channel of the device.  This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      */
     @SerializedName(value = "managementType", alternate = {"ManagementType"})
     @Expose
@@ -234,7 +234,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Registration Date Time.
-     * 
+     * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
      */
     @SerializedName(value = "registrationDateTime", alternate = {"RegistrationDateTime"})
     @Expose
@@ -314,7 +314,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * 
+     * Groups that this group is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable.
      */
     public DirectoryObjectCollectionPage memberOf;
 

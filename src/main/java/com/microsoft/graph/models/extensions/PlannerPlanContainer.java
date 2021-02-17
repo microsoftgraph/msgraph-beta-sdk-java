@@ -43,7 +43,7 @@ public class PlannerPlanContainer implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, unknownFutureValue.
+     * The type of the resource that contains the plan. See the previous table for supported types. Possible values are: group, roster, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

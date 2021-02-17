@@ -93,10 +93,10 @@ import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetail
 import com.microsoft.graph.requests.extensions.ICredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserCredentialUsageDetailsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByPrinterRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPrintUsageSummaryByUserRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByPrinterCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByPrinterRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByUserCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPrintUsageByUserRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -142,21 +142,37 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
 
     IUserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails(final String id);
 
-    IPrintUsageSummaryByPrinterCollectionRequestBuilder dailyPrintUsageSummariesByPrinter();
+    IPrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageByPrinter();
 
-    IPrintUsageSummaryByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter(final String id);
+    IPrintUsageByPrinterRequestBuilder dailyPrintUsageByPrinter(final String id);
 
-    IPrintUsageSummaryByUserCollectionRequestBuilder dailyPrintUsageSummariesByUser();
+    IPrintUsageByUserCollectionRequestBuilder dailyPrintUsageByUser();
 
-    IPrintUsageSummaryByUserRequestBuilder dailyPrintUsageSummariesByUser(final String id);
+    IPrintUsageByUserRequestBuilder dailyPrintUsageByUser(final String id);
 
-    IPrintUsageSummaryByPrinterCollectionRequestBuilder monthlyPrintUsageSummariesByPrinter();
+    IPrintUsageByPrinterCollectionRequestBuilder dailyPrintUsageSummariesByPrinter();
 
-    IPrintUsageSummaryByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter(final String id);
+    IPrintUsageByPrinterRequestBuilder dailyPrintUsageSummariesByPrinter(final String id);
 
-    IPrintUsageSummaryByUserCollectionRequestBuilder monthlyPrintUsageSummariesByUser();
+    IPrintUsageByUserCollectionRequestBuilder dailyPrintUsageSummariesByUser();
 
-    IPrintUsageSummaryByUserRequestBuilder monthlyPrintUsageSummariesByUser(final String id);
+    IPrintUsageByUserRequestBuilder dailyPrintUsageSummariesByUser(final String id);
+
+    IPrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageByPrinter();
+
+    IPrintUsageByPrinterRequestBuilder monthlyPrintUsageByPrinter(final String id);
+
+    IPrintUsageByUserCollectionRequestBuilder monthlyPrintUsageByUser();
+
+    IPrintUsageByUserRequestBuilder monthlyPrintUsageByUser(final String id);
+
+    IPrintUsageByPrinterCollectionRequestBuilder monthlyPrintUsageSummariesByPrinter();
+
+    IPrintUsageByPrinterRequestBuilder monthlyPrintUsageSummariesByPrinter(final String id);
+
+    IPrintUsageByUserCollectionRequestBuilder monthlyPrintUsageSummariesByUser();
+
+    IPrintUsageByUserRequestBuilder monthlyPrintUsageSummariesByUser(final String id);
 
     IReportRootGetAzureADApplicationSignInSummaryCollectionRequestBuilder getAzureADApplicationSignInSummary(final String period);
 
@@ -350,6 +366,12 @@ public interface IReportRootRequestBuilder extends IRequestBuilder {
     IReportRootGetYammerGroupsActivityDetailCollectionRequestBuilder getYammerGroupsActivityDetail(final String period);
 
     IReportRootGetYammerGroupsActivityGroupCountsCollectionRequestBuilder getYammerGroupsActivityGroupCounts(final String period);
+
+    IReportRootGetGroupArchivedPrintJobsCollectionRequestBuilder getGroupArchivedPrintJobs(final String groupId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime);
+
+    IReportRootGetPrinterArchivedPrintJobsCollectionRequestBuilder getPrinterArchivedPrintJobs(final String printerId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime);
+
+    IReportRootGetUserArchivedPrintJobsCollectionRequestBuilder getUserArchivedPrintJobs(final String userId, final java.util.Calendar startDateTime, final java.util.Calendar endDateTime);
     IReportRootGetTenantSecureScoresRequestBuilder getTenantSecureScores(final Integer period);
 
 }
