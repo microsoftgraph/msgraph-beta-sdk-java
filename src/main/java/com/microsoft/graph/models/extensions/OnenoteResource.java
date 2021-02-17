@@ -25,7 +25,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements IJsonBack
 
     /**
      * The Content Url.
-     * 
+     * The URL for downloading the content
      */
     @SerializedName(value = "contentUrl", alternate = {"ContentUrl"})
     @Expose

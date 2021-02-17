@@ -27,7 +27,7 @@ public class WorkbookRangeView extends Entity implements IJsonBackedObject {
 
     /**
      * The Cell Addresses.
-     * 
+     * Represents the cell addresses
      */
     @SerializedName(value = "cellAddresses", alternate = {"CellAddresses"})
     @Expose

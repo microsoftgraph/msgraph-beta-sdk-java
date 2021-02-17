@@ -100,7 +100,7 @@ public class SecureScore extends Entity implements IJsonBackedObject {
 
     /**
      * The Vendor Information.
-     * 
+     * Complex type containing details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=SecureScore). Required.
      */
     @SerializedName(value = "vendorInformation", alternate = {"VendorInformation"})
     @Expose
