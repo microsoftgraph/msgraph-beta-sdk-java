@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.Approval;
+import com.microsoft.graph.models.extensions.IdentitySet;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -25,12 +25,52 @@ public class Request extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Approval.
+     * The Approval Id.
      * 
      */
-    @SerializedName(value = "approval", alternate = {"Approval"})
+    @SerializedName(value = "approvalId", alternate = {"ApprovalId"})
     @Expose
-    public Approval approval;
+    public String approvalId;
+
+    /**
+     * The Completed Date Time.
+     * 
+     */
+    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
+    @Expose
+    public java.util.Calendar completedDateTime;
+
+    /**
+     * The Created By.
+     * 
+     */
+    @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
+    @Expose
+    public IdentitySet createdBy;
+
+    /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+    public java.util.Calendar createdDateTime;
+
+    /**
+     * The Custom Data.
+     * 
+     */
+    @SerializedName(value = "customData", alternate = {"CustomData"})
+    @Expose
+    public String customData;
+
+    /**
+     * The Status.
+     * 
+     */
+    @SerializedName(value = "status", alternate = {"Status"})
+    @Expose
+    public String status;
 
 
     /**

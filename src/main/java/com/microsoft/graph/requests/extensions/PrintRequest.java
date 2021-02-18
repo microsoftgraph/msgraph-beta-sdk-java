@@ -25,9 +25,7 @@ import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;

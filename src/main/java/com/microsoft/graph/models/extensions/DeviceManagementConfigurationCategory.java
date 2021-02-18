@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.DeviceManagementConfigurationPlatforms;
+import com.microsoft.graph.models.generated.DeviceManagementConfigurationSettingUsage;
 import com.microsoft.graph.models.generated.DeviceManagementConfigurationTechnologies;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -24,6 +25,14 @@ import com.google.gson.annotations.Expose;
  */
 public class DeviceManagementConfigurationCategory extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Child Category Ids.
+     * List of child ids of the category.
+     */
+    @SerializedName(value = "childCategoryIds", alternate = {"ChildCategoryIds"})
+    @Expose
+    public java.util.List<String> childCategoryIds;
 
     /**
      * The Description.
@@ -58,12 +67,36 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
     public String name;
 
     /**
+     * The Parent Category Id.
+     * Parent id of the category.
+     */
+    @SerializedName(value = "parentCategoryId", alternate = {"ParentCategoryId"})
+    @Expose
+    public String parentCategoryId;
+
+    /**
      * The Platforms.
      * Platforms types, which settings in the category have. Possible values are: none, macOS, windows10X, windows10.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
     public EnumSet<DeviceManagementConfigurationPlatforms> platforms;
+
+    /**
+     * The Root Category Id.
+     * Root id of the category.
+     */
+    @SerializedName(value = "rootCategoryId", alternate = {"RootCategoryId"})
+    @Expose
+    public String rootCategoryId;
+
+    /**
+     * The Setting Usage.
+     * Indicates that the category contains settings that are used for Compliance or Configuration.
+     */
+    @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
+    @Expose
+    public EnumSet<DeviceManagementConfigurationSettingUsage> settingUsage;
 
     /**
      * The Technologies.

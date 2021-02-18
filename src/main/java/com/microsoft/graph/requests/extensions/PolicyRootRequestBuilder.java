@@ -55,6 +55,14 @@ import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyCollection
 import com.microsoft.graph.requests.extensions.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleManagementPolicyAssignmentRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleManagementPolicyAssignmentRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -206,5 +214,19 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
      */
     public IIdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
+    }
+    public IUnifiedRoleManagementPolicyCollectionRequestBuilder roleManagementPolicies() {
+        return new UnifiedRoleManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies"), getClient(), null);
+    }
+
+    public IUnifiedRoleManagementPolicyRequestBuilder roleManagementPolicies(final String id) {
+        return new UnifiedRoleManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicies") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder roleManagementPolicyAssignments() {
+        return new UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments"), getClient(), null);
+    }
+
+    public IUnifiedRoleManagementPolicyAssignmentRequestBuilder roleManagementPolicyAssignments(final String id) {
+        return new UnifiedRoleManagementPolicyAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementPolicyAssignments") + "/" + id, getClient(), null);
     }
 }

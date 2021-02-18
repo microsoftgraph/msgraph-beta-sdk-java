@@ -21,6 +21,10 @@ import com.microsoft.graph.requests.extensions.IAuthenticationMethodCollectionRe
 import com.microsoft.graph.requests.extensions.IAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IMicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.MicrosoftAuthenticatorAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ILongRunningOperationRequestBuilder;
 import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionRequestBuilder;
@@ -37,6 +41,10 @@ import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollect
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.WindowsHelloForBusinessAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;

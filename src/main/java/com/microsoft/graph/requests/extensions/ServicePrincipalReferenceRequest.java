@@ -11,6 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Credential;
 import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;
+import com.microsoft.graph.models.extensions.SelfSignedCertificate;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;

@@ -43,6 +43,6 @@ public interface IUserTeamworkRequestBuilder extends IRequestBuilder {
     IUserScopeTeamsAppInstallationCollectionRequestBuilder installedApps();
 
     IUserScopeTeamsAppInstallationRequestBuilder installedApps(final String id);
-    IUserTeamworkSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters);
+    IUserTeamworkSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final String teamsAppId);
 
 }

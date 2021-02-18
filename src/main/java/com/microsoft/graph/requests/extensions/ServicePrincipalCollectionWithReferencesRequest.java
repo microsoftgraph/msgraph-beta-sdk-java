@@ -12,6 +12,7 @@ import com.microsoft.graph.models.extensions.OrgContact;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Credential;
 import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;
+import com.microsoft.graph.models.extensions.SelfSignedCertificate;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -34,8 +34,9 @@ public class TeamSendActivityNotificationRequestBuilder extends BaseActionReques
      * @param previewText the previewText
      * @param templateParameters the templateParameters
      * @param recipient the recipient
+     * @param teamsAppId the teamsAppId
      */
-    public TeamSendActivityNotificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient) {
+    public TeamSendActivityNotificationRequestBuilder(final String requestUrl, final IBaseClient client, final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient, final String teamsAppId) {
         super(requestUrl, client, requestOptions);
         bodyParams.put("topic", topic);
         bodyParams.put("activityType", activityType);
@@ -43,6 +44,7 @@ public class TeamSendActivityNotificationRequestBuilder extends BaseActionReques
         bodyParams.put("previewText", previewText);
         bodyParams.put("templateParameters", templateParameters);
         bodyParams.put("recipient", recipient);
+        bodyParams.put("teamsAppId", teamsAppId);
     }
 
     /**
@@ -90,6 +92,10 @@ public class TeamSendActivityNotificationRequestBuilder extends BaseActionReques
 
         if (hasParameter("recipient")) {
             request.body.recipient = getParameter("recipient");
+        }
+
+        if (hasParameter("teamsAppId")) {
+            request.body.teamsAppId = getParameter("teamsAppId");
         }
 
         return request;

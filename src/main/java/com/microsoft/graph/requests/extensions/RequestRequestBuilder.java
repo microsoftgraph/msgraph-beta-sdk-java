@@ -9,8 +9,6 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Request;
-import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
-import com.microsoft.graph.requests.extensions.ApprovalRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -55,15 +53,6 @@ public class RequestRequestBuilder extends BaseRequestBuilder implements IReques
     }
 
 
-
-    /**
-     * Gets the request builder for Approval
-     *
-     * @return the IApprovalRequestBuilder instance
-     */
-    public IApprovalRequestBuilder approval() {
-        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("approval"), getClient(), null);
-    }
 
     public IRequestStopRequestBuilder stop() {
         return new RequestStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);

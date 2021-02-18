@@ -12,14 +12,14 @@ import com.microsoft.graph.models.extensions.ApplicationSignInDetailedSummary;
 import com.microsoft.graph.models.extensions.AuthenticationMethodsRoot;
 import com.microsoft.graph.models.extensions.CredentialUserRegistrationDetails;
 import com.microsoft.graph.models.extensions.UserCredentialUsageDetails;
-import com.microsoft.graph.models.extensions.PrintUsageSummaryByPrinter;
-import com.microsoft.graph.models.extensions.PrintUsageSummaryByUser;
+import com.microsoft.graph.models.extensions.PrintUsageByPrinter;
+import com.microsoft.graph.models.extensions.PrintUsageByUser;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.ApplicationSignInDetailedSummaryCollectionPage;
 import com.microsoft.graph.requests.extensions.CredentialUserRegistrationDetailsCollectionPage;
 import com.microsoft.graph.requests.extensions.UserCredentialUsageDetailsCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUsageSummaryByPrinterCollectionPage;
-import com.microsoft.graph.requests.extensions.PrintUsageSummaryByUserCollectionPage;
+import com.microsoft.graph.requests.extensions.PrintUsageByPrinterCollectionPage;
+import com.microsoft.graph.requests.extensions.PrintUsageByUserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -67,12 +67,28 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     public UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
 
     /**
+     * The Daily Print Usage By Printer.
+     * 
+     */
+    @SerializedName(value = "dailyPrintUsageByPrinter", alternate = {"DailyPrintUsageByPrinter"})
+    @Expose
+    public PrintUsageByPrinterCollectionPage dailyPrintUsageByPrinter;
+
+    /**
+     * The Daily Print Usage By User.
+     * 
+     */
+    @SerializedName(value = "dailyPrintUsageByUser", alternate = {"DailyPrintUsageByUser"})
+    @Expose
+    public PrintUsageByUserCollectionPage dailyPrintUsageByUser;
+
+    /**
      * The Daily Print Usage Summaries By Printer.
      * 
      */
     @SerializedName(value = "dailyPrintUsageSummariesByPrinter", alternate = {"DailyPrintUsageSummariesByPrinter"})
     @Expose
-    public PrintUsageSummaryByPrinterCollectionPage dailyPrintUsageSummariesByPrinter;
+    public PrintUsageByPrinterCollectionPage dailyPrintUsageSummariesByPrinter;
 
     /**
      * The Daily Print Usage Summaries By User.
@@ -80,7 +96,23 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "dailyPrintUsageSummariesByUser", alternate = {"DailyPrintUsageSummariesByUser"})
     @Expose
-    public PrintUsageSummaryByUserCollectionPage dailyPrintUsageSummariesByUser;
+    public PrintUsageByUserCollectionPage dailyPrintUsageSummariesByUser;
+
+    /**
+     * The Monthly Print Usage By Printer.
+     * 
+     */
+    @SerializedName(value = "monthlyPrintUsageByPrinter", alternate = {"MonthlyPrintUsageByPrinter"})
+    @Expose
+    public PrintUsageByPrinterCollectionPage monthlyPrintUsageByPrinter;
+
+    /**
+     * The Monthly Print Usage By User.
+     * 
+     */
+    @SerializedName(value = "monthlyPrintUsageByUser", alternate = {"MonthlyPrintUsageByUser"})
+    @Expose
+    public PrintUsageByUserCollectionPage monthlyPrintUsageByUser;
 
     /**
      * The Monthly Print Usage Summaries By Printer.
@@ -88,7 +120,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "monthlyPrintUsageSummariesByPrinter", alternate = {"MonthlyPrintUsageSummariesByPrinter"})
     @Expose
-    public PrintUsageSummaryByPrinterCollectionPage monthlyPrintUsageSummariesByPrinter;
+    public PrintUsageByPrinterCollectionPage monthlyPrintUsageSummariesByPrinter;
 
     /**
      * The Monthly Print Usage Summaries By User.
@@ -96,7 +128,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "monthlyPrintUsageSummariesByUser", alternate = {"MonthlyPrintUsageSummariesByUser"})
     @Expose
-    public PrintUsageSummaryByUserCollectionPage monthlyPrintUsageSummariesByUser;
+    public PrintUsageByUserCollectionPage monthlyPrintUsageSummariesByUser;
 
 
     /**
@@ -150,20 +182,36 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
             userCredentialUsageDetails = serializer.deserializeObject(json.get("userCredentialUsageDetails").toString(), UserCredentialUsageDetailsCollectionPage.class);
         }
 
+        if (json.has("dailyPrintUsageByPrinter")) {
+            dailyPrintUsageByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageByPrinter").toString(), PrintUsageByPrinterCollectionPage.class);
+        }
+
+        if (json.has("dailyPrintUsageByUser")) {
+            dailyPrintUsageByUser = serializer.deserializeObject(json.get("dailyPrintUsageByUser").toString(), PrintUsageByUserCollectionPage.class);
+        }
+
         if (json.has("dailyPrintUsageSummariesByPrinter")) {
-            dailyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByPrinter").toString(), PrintUsageSummaryByPrinterCollectionPage.class);
+            dailyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByPrinter").toString(), PrintUsageByPrinterCollectionPage.class);
         }
 
         if (json.has("dailyPrintUsageSummariesByUser")) {
-            dailyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser").toString(), PrintUsageSummaryByUserCollectionPage.class);
+            dailyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("dailyPrintUsageSummariesByUser").toString(), PrintUsageByUserCollectionPage.class);
+        }
+
+        if (json.has("monthlyPrintUsageByPrinter")) {
+            monthlyPrintUsageByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageByPrinter").toString(), PrintUsageByPrinterCollectionPage.class);
+        }
+
+        if (json.has("monthlyPrintUsageByUser")) {
+            monthlyPrintUsageByUser = serializer.deserializeObject(json.get("monthlyPrintUsageByUser").toString(), PrintUsageByUserCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageSummariesByPrinter")) {
-            monthlyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByPrinter").toString(), PrintUsageSummaryByPrinterCollectionPage.class);
+            monthlyPrintUsageSummariesByPrinter = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByPrinter").toString(), PrintUsageByPrinterCollectionPage.class);
         }
 
         if (json.has("monthlyPrintUsageSummariesByUser")) {
-            monthlyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser").toString(), PrintUsageSummaryByUserCollectionPage.class);
+            monthlyPrintUsageSummariesByUser = serializer.deserializeObject(json.get("monthlyPrintUsageSummariesByUser").toString(), PrintUsageByUserCollectionPage.class);
         }
     }
 }

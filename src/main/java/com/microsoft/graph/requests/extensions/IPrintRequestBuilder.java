@@ -17,7 +17,6 @@ import com.microsoft.graph.requests.extensions.IPrinterCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
@@ -65,9 +64,12 @@ public interface IPrintRequestBuilder extends IRequestBuilder {
 
     IPrinterShareRequestBuilder printerShares(final String id);
 
-    IReportRootCollectionRequestBuilder reports();
-
-    IReportRootRequestBuilder reports(final String id);
+    /**
+     * Gets the request builder for ReportRoot
+     *
+     * @return the IReportRootRequestBuilder instance
+     */
+    IReportRootRequestBuilder reports();
 
     IPrintServiceCollectionRequestBuilder services();
 

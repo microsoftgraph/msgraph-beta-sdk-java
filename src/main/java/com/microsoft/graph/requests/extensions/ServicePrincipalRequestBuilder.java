@@ -11,6 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ServicePrincipal;
 import com.microsoft.graph.models.extensions.Credential;
 import com.microsoft.graph.models.extensions.PasswordSingleSignOnCredentialSet;
+import com.microsoft.graph.models.extensions.SelfSignedCertificate;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionRequestBuilder;
@@ -396,5 +397,9 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder implement
 
     public IServicePrincipalUpdatePasswordSingleSignOnCredentialsRequestBuilder updatePasswordSingleSignOnCredentials(final String id, final java.util.List<Credential> credentials) {
         return new ServicePrincipalUpdatePasswordSingleSignOnCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.updatePasswordSingleSignOnCredentials"), getClient(), null, id, credentials);
+    }
+
+    public IServicePrincipalAddTokenSigningCertificateRequestBuilder addTokenSigningCertificate(final String displayName, final java.util.Calendar endDateTime) {
+        return new ServicePrincipalAddTokenSigningCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addTokenSigningCertificate"), getClient(), null, displayName, endDateTime);
     }
 }

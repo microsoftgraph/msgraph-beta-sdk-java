@@ -120,7 +120,7 @@ public interface ITeamRequestBuilder extends IRequestBuilder {
     ITeamArchiveRequestBuilder archive(final Boolean shouldSetSpoSiteReadOnlyForMembers);
     ITeamCloneRequestBuilder clone(final String displayName, final String description, final String mailNickname, final String classification, final TeamVisibilityType visibility, final EnumSet<ClonableTeamParts> partsToClone);
     ITeamCompleteMigrationRequestBuilder completeMigration();
-    ITeamSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient);
+    ITeamSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final TeamworkNotificationRecipient recipient, final String teamsAppId);
     ITeamUnarchiveRequestBuilder unarchive();
 
 }

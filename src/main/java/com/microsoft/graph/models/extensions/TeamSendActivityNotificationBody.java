@@ -70,6 +70,14 @@ public class TeamSendActivityNotificationBody {
     @Expose
     public TeamworkNotificationRecipient recipient;
 
+    /**
+     * The teams App Id.
+     * 
+     */
+    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
+    @Expose
+    public String teamsAppId;
+
 
     /**
      * The raw representation of this class

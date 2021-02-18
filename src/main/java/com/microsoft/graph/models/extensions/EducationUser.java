@@ -336,7 +336,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User.
-     * 
+     * The directory user corresponding to this user.
      */
     @SerializedName(value = "user", alternate = {"User"})
     @Expose

@@ -68,7 +68,7 @@ public class UserTeamworkRequestBuilder extends BaseRequestBuilder implements IU
         return new UserScopeTeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
     }
 
-    public IUserTeamworkSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters) {
-        return new UserTeamworkSendActivityNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendActivityNotification"), getClient(), null, topic, activityType, chainId, previewText, templateParameters);
+    public IUserTeamworkSendActivityNotificationRequestBuilder sendActivityNotification(final TeamworkActivityTopic topic, final String activityType, final Long chainId, final ItemBody previewText, final java.util.List<KeyValuePair> templateParameters, final String teamsAppId) {
+        return new UserTeamworkSendActivityNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendActivityNotification"), getClient(), null, topic, activityType, chainId, previewText, templateParameters, teamsAppId);
     }
 }

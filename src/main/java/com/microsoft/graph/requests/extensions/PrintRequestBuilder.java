@@ -25,9 +25,7 @@ import com.microsoft.graph.requests.extensions.IPrinterShareCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IPrinterShareRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PrinterShareRequestBuilder;
-import com.microsoft.graph.requests.extensions.IReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.ReportRootCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPrintServiceRequestBuilder;
@@ -109,12 +107,14 @@ public class PrintRequestBuilder extends BaseRequestBuilder implements IPrintReq
     public IPrinterShareRequestBuilder printerShares(final String id) {
         return new PrinterShareRequestBuilder(getRequestUrlWithAdditionalSegment("printerShares") + "/" + id, getClient(), null);
     }
-    public IReportRootCollectionRequestBuilder reports() {
-        return new ReportRootCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
-    }
 
-    public IReportRootRequestBuilder reports(final String id) {
-        return new ReportRootRequestBuilder(getRequestUrlWithAdditionalSegment("reports") + "/" + id, getClient(), null);
+    /**
+     * Gets the request builder for ReportRoot
+     *
+     * @return the IReportRootRequestBuilder instance
+     */
+    public IReportRootRequestBuilder reports() {
+        return new ReportRootRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
     }
     public IPrintServiceCollectionRequestBuilder services() {
         return new PrintServiceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("services"), getClient(), null);

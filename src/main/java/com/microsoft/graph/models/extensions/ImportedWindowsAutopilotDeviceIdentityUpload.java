@@ -36,7 +36,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
 
     /**
      * The Status.
-     * Upload status.
+     * Upload status. Possible values are: noUpload, pending, complete, error.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

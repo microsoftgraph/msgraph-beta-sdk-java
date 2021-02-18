@@ -113,7 +113,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * 
+     * The importance of the event. The possible values are: low, normal, high.
      */
     @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
@@ -121,7 +121,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is All Day.
-     * 
+     * Set to true if the event lasts all day.
      */
     @SerializedName(value = "isAllDay", alternate = {"IsAllDay"})
     @Expose
@@ -129,7 +129,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Cancelled.
-     * 
+     * Set to true if the event has been canceled.
      */
     @SerializedName(value = "isCancelled", alternate = {"IsCancelled"})
     @Expose
@@ -137,7 +137,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Draft.
-     * 
+     * Set to true if the user has updated the meeting in Outlook but has not sent the updates to attendees. Set to false if all changes have been sent, or if the event is an appointment without any attendees.
      */
     @SerializedName(value = "isDraft", alternate = {"IsDraft"})
     @Expose
@@ -145,7 +145,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Online Meeting.
-     * 
+     * True if this event has online meeting information, false otherwise. Default is false. Optional.
      */
     @SerializedName(value = "isOnlineMeeting", alternate = {"IsOnlineMeeting"})
     @Expose
@@ -153,7 +153,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Organizer.
-     * 
+     * Set to true if the calendar owner (specified by the owner property of the calendar) is the organizer of the event (specified by the organizer property of the event). This also applies if a delegate organized the event on behalf of the owner.
      */
     @SerializedName(value = "isOrganizer", alternate = {"IsOrganizer"})
     @Expose
@@ -161,7 +161,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Is Reminder On.
-     * 
+     * Set to true if an alert is set to remind the user of the event.
      */
     @SerializedName(value = "isReminderOn", alternate = {"IsReminderOn"})
     @Expose
@@ -169,7 +169,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Location.
-     * 
+     * The location of the event.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -177,7 +177,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Locations.
-     * 
+     * The locations where the event is held or attended from. The location and locations properties always correspond with each other. If you update the location property, any prior locations in the locations collection would be removed and replaced by the new location value.
      */
     @SerializedName(value = "locations", alternate = {"Locations"})
     @Expose
@@ -193,7 +193,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Online Meeting.
-     * 
+     * Details for an attendee to join the meeting online. Read-only.
      */
     @SerializedName(value = "onlineMeeting", alternate = {"OnlineMeeting"})
     @Expose
@@ -201,7 +201,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Online Meeting Provider.
-     * 
+     * Represents the online meeting service provider. The possible values are teamsForBusiness, skypeForBusiness, and skypeForConsumer. Optional.
      */
     @SerializedName(value = "onlineMeetingProvider", alternate = {"OnlineMeetingProvider"})
     @Expose
@@ -209,7 +209,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Online Meeting Url.
-     * 
+     * A URL for an online meeting. The property is set only when an organizer specifies an event as an online meeting such as a Skype meeting. Read-only.
      */
     @SerializedName(value = "onlineMeetingUrl", alternate = {"OnlineMeetingUrl"})
     @Expose
@@ -217,7 +217,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Organizer.
-     * 
+     * The organizer of the event.
      */
     @SerializedName(value = "organizer", alternate = {"Organizer"})
     @Expose
@@ -225,7 +225,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original End Time Zone.
-     * 
+     * The end time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
      */
     @SerializedName(value = "originalEndTimeZone", alternate = {"OriginalEndTimeZone"})
     @Expose
@@ -233,7 +233,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original Start.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "originalStart", alternate = {"OriginalStart"})
     @Expose
@@ -241,7 +241,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Original Start Time Zone.
-     * 
+     * The start time zone that was set when the event was created. A value of tzone://Microsoft/Custom indicates that a legacy custom time zone was set in desktop Outlook.
      */
     @SerializedName(value = "originalStartTimeZone", alternate = {"OriginalStartTimeZone"})
     @Expose
@@ -249,7 +249,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * 
+     * The recurrence pattern for the event.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
@@ -257,7 +257,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Reminder Minutes Before Start.
-     * 
+     * The number of minutes before the event start time that the reminder alert occurs.
      */
     @SerializedName(value = "reminderMinutesBeforeStart", alternate = {"ReminderMinutesBeforeStart"})
     @Expose
@@ -265,7 +265,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Requested.
-     * 
+     * Default is true, which represents the organizer would like an invitee to send a response to the event.
      */
     @SerializedName(value = "responseRequested", alternate = {"ResponseRequested"})
     @Expose
@@ -273,7 +273,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Response Status.
-     * 
+     * Indicates the type of response sent in response to an event message.
      */
     @SerializedName(value = "responseStatus", alternate = {"ResponseStatus"})
     @Expose
@@ -281,7 +281,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * 
+     * The possible values are: normal, personal, private, confidential.
      */
     @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
     @Expose
@@ -289,7 +289,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Series Master Id.
-     * 
+     * The ID for the recurring series master item, if this event is part of a recurring series.
      */
     @SerializedName(value = "seriesMasterId", alternate = {"SeriesMasterId"})
     @Expose
@@ -297,7 +297,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Show As.
-     * 
+     * The status to show. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      */
     @SerializedName(value = "showAs", alternate = {"ShowAs"})
     @Expose
@@ -305,7 +305,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Start.
-     * 
+     * The date, time, and time zone that the event starts. By default, the start time is in UTC.
      */
     @SerializedName(value = "start", alternate = {"Start"})
     @Expose
@@ -313,7 +313,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The text of the event's subject line.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -321,7 +321,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Transaction Id.
-     * 
+     * A custom identifier specified by a client app for the server to avoid redundant POST operations in case of client retries to create the same event. This is useful when low network connectivity causes the client to time out before receiving a response from the server for the client's prior create-event request. After you set transactionId when creating an event, you cannot change transactionId in a subsequent update. This property is only returned in a response payload if an app has set it. Optional.
      */
     @SerializedName(value = "transactionId", alternate = {"TransactionId"})
     @Expose
@@ -329,7 +329,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The event type. The possible values are: singleInstance, occurrence, exception, seriesMaster. Read-only.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -345,7 +345,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Web Link.
-     * 
+     * The URL to open the event in Outlook on the web.Outlook on the web opens the event in the browser if you are signed in to your mailbox. Otherwise, Outlook on the web prompts you to sign in.This URL cannot be accessed from within an iFrame.
      */
     @SerializedName(value = "webLink", alternate = {"WebLink"})
     @Expose

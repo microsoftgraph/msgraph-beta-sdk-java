@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.RbacApplication;
+import com.microsoft.graph.models.extensions.UnifiedRoleScheduleInstanceBase;
+import com.microsoft.graph.models.extensions.UnifiedRoleScheduleBase;
 import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUnifiedRbacResourceNamespaceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRbacResourceNamespaceCollectionRequestBuilder;
@@ -21,6 +23,30 @@ import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionCollectionR
 import com.microsoft.graph.requests.extensions.IUnifiedRoleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentScheduleInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentScheduleInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleAssignmentScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleAssignmentScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleEligibilityRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleEligibilityRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityRequestRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleEligibilityScheduleInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleEligibilityScheduleInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityScheduleInstanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityScheduleInstanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleEligibilityScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUnifiedRoleEligibilityScheduleRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityScheduleCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UnifiedRoleEligibilityScheduleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -85,5 +111,55 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder implements
 
     public IUnifiedRoleDefinitionRequestBuilder roleDefinitions(final String id) {
         return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleAssignmentRequestCollectionRequestBuilder roleAssignmentRequests() {
+        return new UnifiedRoleAssignmentRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests"), getClient(), null);
+    }
+
+    public IUnifiedRoleAssignmentRequestRequestBuilder roleAssignmentRequests(final String id) {
+        return new UnifiedRoleAssignmentRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentRequests") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder roleAssignmentScheduleInstances() {
+        return new UnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentScheduleInstances"), getClient(), null);
+    }
+
+    public IUnifiedRoleAssignmentScheduleInstanceRequestBuilder roleAssignmentScheduleInstances(final String id) {
+        return new UnifiedRoleAssignmentScheduleInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentScheduleInstances") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleAssignmentScheduleCollectionRequestBuilder roleAssignmentSchedules() {
+        return new UnifiedRoleAssignmentScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentSchedules"), getClient(), null);
+    }
+
+    public IUnifiedRoleAssignmentScheduleRequestBuilder roleAssignmentSchedules(final String id) {
+        return new UnifiedRoleAssignmentScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentSchedules") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleEligibilityRequestCollectionRequestBuilder roleEligibilityRequests() {
+        return new UnifiedRoleEligibilityRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityRequests"), getClient(), null);
+    }
+
+    public IUnifiedRoleEligibilityRequestRequestBuilder roleEligibilityRequests(final String id) {
+        return new UnifiedRoleEligibilityRequestRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityRequests") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleEligibilityScheduleInstanceCollectionRequestBuilder roleEligibilityScheduleInstances() {
+        return new UnifiedRoleEligibilityScheduleInstanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityScheduleInstances"), getClient(), null);
+    }
+
+    public IUnifiedRoleEligibilityScheduleInstanceRequestBuilder roleEligibilityScheduleInstances(final String id) {
+        return new UnifiedRoleEligibilityScheduleInstanceRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilityScheduleInstances") + "/" + id, getClient(), null);
+    }
+    public IUnifiedRoleEligibilityScheduleCollectionRequestBuilder roleEligibilitySchedules() {
+        return new UnifiedRoleEligibilityScheduleCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilitySchedules"), getClient(), null);
+    }
+
+    public IUnifiedRoleEligibilityScheduleRequestBuilder roleEligibilitySchedules(final String id) {
+        return new UnifiedRoleEligibilityScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("roleEligibilitySchedules") + "/" + id, getClient(), null);
+    }
+
+    public IRbacApplicationRoleScheduleInstancesCollectionRequestBuilder roleScheduleInstances(final String directoryScopeId, final String appScopeId, final String principalId, final String roleDefinitionId) {
+        return new RbacApplicationRoleScheduleInstancesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roleScheduleInstances"), getClient(), null, directoryScopeId, appScopeId, principalId, roleDefinitionId);
+    }
+
+    public IRbacApplicationRoleSchedulesCollectionRequestBuilder roleSchedules(final String directoryScopeId, final String appScopeId, final String principalId, final String roleDefinitionId) {
+        return new RbacApplicationRoleSchedulesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.roleSchedules"), getClient(), null, directoryScopeId, appScopeId, principalId, roleDefinitionId);
     }
 }
