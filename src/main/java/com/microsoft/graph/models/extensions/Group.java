@@ -444,7 +444,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Role Assignments.
-     * 
+     * Represents the app roles a group has been granted for an application.
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose

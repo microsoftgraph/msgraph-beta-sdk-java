@@ -33,7 +33,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Error Category.
-     * Categorizes the error code.
+     * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
      */
     @SerializedName(value = "errorCategory", alternate = {"ErrorCategory"})
     @Expose
@@ -41,7 +41,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Error Code.
-     * Unique error code if any occurred.
+     * Unique error code if any occurred. Learn more
      */
     @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
