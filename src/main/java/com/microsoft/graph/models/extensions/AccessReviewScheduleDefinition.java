@@ -79,7 +79,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Instance Enumeration Scope.
-     * In the case of an all groups review, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
+     * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
      */
     @SerializedName(value = "instanceEnumerationScope", alternate = {"InstanceEnumerationScope"})
     @Expose
@@ -103,7 +103,7 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
 
     /**
      * The Scope.
-     * Defines scope of users reviewed in a group. For supported scopes, see accessReviewScope. Required on create.
+     * Defines scope of users reviewed. For supported scopes, see accessReviewScope. Required on create.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose

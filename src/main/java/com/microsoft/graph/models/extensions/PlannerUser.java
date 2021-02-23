@@ -82,7 +82,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * Read-only. Nullable. Returns the plannerTasks assigned to the user.
+     * Read-only. Nullable. Returns the plannerPlans shared with the user.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose
