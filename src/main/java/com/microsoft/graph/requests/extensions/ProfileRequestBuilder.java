@@ -17,10 +17,10 @@ import com.microsoft.graph.requests.extensions.IItemAddressCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IItemAddressRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAddressCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAddressRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonAnniversaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonAnniversaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonAnniversaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonAnniversaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPersonAnnualEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPersonAnnualEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonAnnualEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonAnnualEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonAwardCollectionRequestBuilder;
@@ -143,12 +143,12 @@ public class ProfileRequestBuilder extends BaseRequestBuilder implements IProfil
     public IItemAddressRequestBuilder addresses(final String id) {
         return new ItemAddressRequestBuilder(getRequestUrlWithAdditionalSegment("addresses") + "/" + id, getClient(), null);
     }
-    public IPersonAnniversaryCollectionRequestBuilder anniversaries() {
-        return new PersonAnniversaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries"), getClient(), null);
+    public IPersonAnnualEventCollectionRequestBuilder anniversaries() {
+        return new PersonAnnualEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries"), getClient(), null);
     }
 
-    public IPersonAnniversaryRequestBuilder anniversaries(final String id) {
-        return new PersonAnniversaryRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries") + "/" + id, getClient(), null);
+    public IPersonAnnualEventRequestBuilder anniversaries(final String id) {
+        return new PersonAnnualEventRequestBuilder(getRequestUrlWithAdditionalSegment("anniversaries") + "/" + id, getClient(), null);
     }
     public IPersonAwardCollectionRequestBuilder awards() {
         return new PersonAwardCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("awards"), getClient(), null);

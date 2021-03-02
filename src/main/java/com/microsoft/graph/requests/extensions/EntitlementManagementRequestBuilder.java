@@ -9,6 +9,10 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
+import com.microsoft.graph.requests.extensions.IApprovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApprovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AccessPackageAssignmentPolicyCollectionRequestBuilder;
@@ -99,6 +103,13 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder impl
     }
 
 
+    public IApprovalCollectionRequestBuilder accessPackageAssignmentApprovals() {
+        return new ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals"), getClient(), null);
+    }
+
+    public IApprovalRequestBuilder accessPackageAssignmentApprovals(final String id) {
+        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentApprovals") + "/" + id, getClient(), null);
+    }
     public IAccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies() {
         return new AccessPackageAssignmentPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageAssignmentPolicies"), getClient(), null);
     }

@@ -49,6 +49,14 @@ public class WebAccount extends ItemFacet implements IJsonBackedObject {
     public String statusMessage;
 
     /**
+     * The Thumbnail Url.
+     * 
+     */
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
+    @Expose
+    public String thumbnailUrl;
+
+    /**
      * The User Id.
      * The user name  displayed for the webaccount.
      */

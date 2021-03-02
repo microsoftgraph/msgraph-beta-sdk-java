@@ -52,6 +52,10 @@ public enum Windows10VpnConnectionType
     */
     PALO_ALTO_GLOBAL_PROTECT,
     /**
+    * cisco Any Connect
+    */
+    CISCO_ANY_CONNECT,
+    /**
     * For Windows10VpnConnectionType values that were not expected from the service
     */
     UNEXPECTED_VALUE

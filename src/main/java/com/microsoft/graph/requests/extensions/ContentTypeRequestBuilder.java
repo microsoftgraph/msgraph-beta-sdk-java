@@ -9,10 +9,23 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContentType;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.requests.extensions.IContentTypeWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContentTypeWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContentTypeCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ContentTypeCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnLinkRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ColumnLinkRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -57,11 +70,61 @@ public class ContentTypeRequestBuilder extends BaseRequestBuilder implements ICo
     }
 
 
+
+    /**
+     * Gets the request builder for ContentType
+     *
+     * @return the IContentTypeWithReferenceRequestBuilder instance
+     */
+    public IContentTypeWithReferenceRequestBuilder base() {
+        return new ContentTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("base"), getClient(), null);
+    }
+    public IContentTypeCollectionWithReferencesRequestBuilder baseTypes() {
+        return new ContentTypeCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("baseTypes"), getClient(), null);
+    }
+
+    public IContentTypeWithReferenceRequestBuilder baseTypes(final String id) {
+        return new ContentTypeWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("baseTypes") + "/" + id, getClient(), null);
+    }
     public IColumnLinkCollectionRequestBuilder columnLinks() {
         return new ColumnLinkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks"), getClient(), null);
     }
 
     public IColumnLinkRequestBuilder columnLinks(final String id) {
         return new ColumnLinkRequestBuilder(getRequestUrlWithAdditionalSegment("columnLinks") + "/" + id, getClient(), null);
+    }
+    public IColumnDefinitionCollectionWithReferencesRequestBuilder columnPositions() {
+        return new ColumnDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("columnPositions"), getClient(), null);
+    }
+
+    public IColumnDefinitionWithReferenceRequestBuilder columnPositions(final String id) {
+        return new ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("columnPositions") + "/" + id, getClient(), null);
+    }
+    public IColumnDefinitionCollectionRequestBuilder columns() {
+        return new ColumnDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("columns"), getClient(), null);
+    }
+
+    public IColumnDefinitionRequestBuilder columns(final String id) {
+        return new ColumnDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("columns") + "/" + id, getClient(), null);
+    }
+
+    public IContentTypePublishRequestBuilder publish() {
+        return new ContentTypePublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.publish"), getClient(), null);
+    }
+
+    public IContentTypeUnpublishRequestBuilder unpublish() {
+        return new ContentTypeUnpublishRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unpublish"), getClient(), null);
+    }
+
+    public IContentTypeAssociateWithHubSitesRequestBuilder associateWithHubSites(final java.util.List<String> hubSiteUrls, final Boolean propagateToExistingLists) {
+        return new ContentTypeAssociateWithHubSitesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.associateWithHubSites"), getClient(), null, hubSiteUrls, propagateToExistingLists);
+    }
+
+    public IContentTypeCopyToDefaultContentLocationRequestBuilder copyToDefaultContentLocation(final ItemReference sourceFile, final String destinationFileName) {
+        return new ContentTypeCopyToDefaultContentLocationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.copyToDefaultContentLocation"), getClient(), null, sourceFile, destinationFileName);
+    }
+
+    public IContentTypeIsPublishedRequestBuilder isPublished() {
+        return new ContentTypeIsPublishedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isPublished"), getClient(), null);
     }
 }

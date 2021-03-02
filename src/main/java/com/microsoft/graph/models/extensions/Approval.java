@@ -26,20 +26,12 @@ public class Approval extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Completed Steps.
+     * The Steps.
      * 
      */
-    @SerializedName(value = "completedSteps", alternate = {"CompletedSteps"})
+    @SerializedName(value = "steps", alternate = {"Steps"})
     @Expose
-    public ApprovalStepCollectionPage completedSteps;
-
-    /**
-     * The Pending Steps.
-     * 
-     */
-    @SerializedName(value = "pendingSteps", alternate = {"PendingSteps"})
-    @Expose
-    public ApprovalStepCollectionPage pendingSteps;
+    public ApprovalStepCollectionPage steps;
 
 
     /**
@@ -81,12 +73,8 @@ public class Approval extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
-        if (json.has("completedSteps")) {
-            completedSteps = serializer.deserializeObject(json.get("completedSteps").toString(), ApprovalStepCollectionPage.class);
-        }
-
-        if (json.has("pendingSteps")) {
-            pendingSteps = serializer.deserializeObject(json.get("pendingSteps").toString(), ApprovalStepCollectionPage.class);
+        if (json.has("steps")) {
+            steps = serializer.deserializeObject(json.get("steps").toString(), ApprovalStepCollectionPage.class);
         }
     }
 }

@@ -9,8 +9,15 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ContentType;
+import com.microsoft.graph.models.extensions.ItemReference;
+import com.microsoft.graph.requests.extensions.IContentTypeWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IContentTypeCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnLinkCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnLinkRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 
@@ -37,8 +44,32 @@ public interface IContentTypeRequestBuilder extends IRequestBuilder {
     IContentTypeRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
+    /**
+     * Gets the request builder for ContentType
+     *
+     * @return the IContentTypeWithReferenceRequestBuilder instance
+     */
+    IContentTypeWithReferenceRequestBuilder base();
+
+    IContentTypeCollectionWithReferencesRequestBuilder baseTypes();
+
+    IContentTypeWithReferenceRequestBuilder baseTypes(final String id);
+
     IColumnLinkCollectionRequestBuilder columnLinks();
 
     IColumnLinkRequestBuilder columnLinks(final String id);
+
+    IColumnDefinitionCollectionWithReferencesRequestBuilder columnPositions();
+
+    IColumnDefinitionWithReferenceRequestBuilder columnPositions(final String id);
+
+    IColumnDefinitionCollectionRequestBuilder columns();
+
+    IColumnDefinitionRequestBuilder columns(final String id);
+    IContentTypePublishRequestBuilder publish();
+    IContentTypeUnpublishRequestBuilder unpublish();
+    IContentTypeAssociateWithHubSitesRequestBuilder associateWithHubSites(final java.util.List<String> hubSiteUrls, final Boolean propagateToExistingLists);
+    IContentTypeCopyToDefaultContentLocationRequestBuilder copyToDefaultContentLocation(final ItemReference sourceFile, final String destinationFileName);
+    IContentTypeIsPublishedRequestBuilder isPublished();
 
 }

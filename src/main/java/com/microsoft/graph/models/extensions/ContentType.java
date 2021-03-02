@@ -8,11 +8,17 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.DocumentSet;
+import com.microsoft.graph.models.extensions.DocumentSetContent;
 import com.microsoft.graph.models.extensions.ItemReference;
 import com.microsoft.graph.models.extensions.ContentTypeOrder;
+import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.models.extensions.ColumnLink;
+import com.microsoft.graph.models.extensions.ColumnDefinition;
 import com.microsoft.graph.models.extensions.Entity;
+import com.microsoft.graph.requests.extensions.ContentTypeCollectionPage;
 import com.microsoft.graph.requests.extensions.ColumnLinkCollectionPage;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -28,12 +34,36 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Associated Hubs Urls.
+     * 
+     */
+    @SerializedName(value = "associatedHubsUrls", alternate = {"AssociatedHubsUrls"})
+    @Expose
+    public java.util.List<String> associatedHubsUrls;
+
+    /**
      * The Description.
      * The descriptive text for the item.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
     public String description;
+
+    /**
+     * The Document Set.
+     * 
+     */
+    @SerializedName(value = "documentSet", alternate = {"DocumentSet"})
+    @Expose
+    public DocumentSet documentSet;
+
+    /**
+     * The Document Template.
+     * 
+     */
+    @SerializedName(value = "documentTemplate", alternate = {"DocumentTemplate"})
+    @Expose
+    public DocumentSetContent documentTemplate;
 
     /**
      * The Group.
@@ -60,6 +90,14 @@ public class ContentType extends Entity implements IJsonBackedObject {
     public ItemReference inheritedFrom;
 
     /**
+     * The Is Built In.
+     * 
+     */
+    @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
+    @Expose
+    public Boolean isBuiltIn;
+
+    /**
      * The Name.
      * The name of the content type.
      */
@@ -84,6 +122,14 @@ public class ContentType extends Entity implements IJsonBackedObject {
     public String parentId;
 
     /**
+     * The Propagate Changes.
+     * 
+     */
+    @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
+    @Expose
+    public Boolean propagateChanges;
+
+    /**
      * The Read Only.
      * If true, the content type cannot be modified unless this value is first set to false.
      */
@@ -100,12 +146,40 @@ public class ContentType extends Entity implements IJsonBackedObject {
     public Boolean sealed;
 
     /**
+     * The Base.
+     * 
+     */
+    @SerializedName(value = "base", alternate = {"Base"})
+    @Expose
+    public ContentType base;
+
+    /**
+     * The Base Types.
+     * 
+     */
+    public ContentTypeCollectionPage baseTypes;
+
+    /**
      * The Column Links.
      * The collection of columns that are required by this content type
      */
     @SerializedName(value = "columnLinks", alternate = {"ColumnLinks"})
     @Expose
     public ColumnLinkCollectionPage columnLinks;
+
+    /**
+     * The Column Positions.
+     * 
+     */
+    public ColumnDefinitionCollectionPage columnPositions;
+
+    /**
+     * The Columns.
+     * 
+     */
+    @SerializedName(value = "columns", alternate = {"Columns"})
+    @Expose
+    public ColumnDefinitionCollectionPage columns;
 
 
     /**
@@ -147,8 +221,20 @@ public class ContentType extends Entity implements IJsonBackedObject {
         rawObject = json;
 
 
+        if (json.has("baseTypes")) {
+            baseTypes = serializer.deserializeObject(json.get("baseTypes").toString(), ContentTypeCollectionPage.class);
+        }
+
         if (json.has("columnLinks")) {
             columnLinks = serializer.deserializeObject(json.get("columnLinks").toString(), ColumnLinkCollectionPage.class);
+        }
+
+        if (json.has("columnPositions")) {
+            columnPositions = serializer.deserializeObject(json.get("columnPositions").toString(), ColumnDefinitionCollectionPage.class);
+        }
+
+        if (json.has("columns")) {
+            columns = serializer.deserializeObject(json.get("columns").toString(), ColumnDefinitionCollectionPage.class);
         }
     }
 }

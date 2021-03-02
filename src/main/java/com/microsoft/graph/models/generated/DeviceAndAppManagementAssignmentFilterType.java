@@ -20,6 +20,10 @@ public enum DeviceAndAppManagementAssignmentFilterType
     */
     INCLUDE,
     /**
+    * exclude
+    */
+    EXCLUDE,
+    /**
     * For DeviceAndAppManagementAssignmentFilterType values that were not expected from the service
     */
     UNEXPECTED_VALUE

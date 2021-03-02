@@ -108,10 +108,6 @@ import com.microsoft.graph.requests.extensions.IPersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
@@ -180,6 +176,10 @@ import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.ProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
@@ -625,22 +625,6 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
     }
 
     /**
-     * Gets the request builder for ProfilePhoto
-     *
-     * @return the IProfilePhotoRequestBuilder instance
-     */
-    public IProfilePhotoRequestBuilder photo() {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
-    }
-    public IProfilePhotoCollectionRequestBuilder photos() {
-        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
-    }
-
-    public IProfilePhotoRequestBuilder photos(final String id) {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
-    }
-
-    /**
      * Gets the request builder for Drive
      *
      * @return the IDriveRequestBuilder instance
@@ -788,6 +772,22 @@ public class UserRequestBuilder extends BaseRequestBuilder implements IUserReque
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the IProfilePhotoRequestBuilder instance
+     */
+    public IProfilePhotoRequestBuilder photo() {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
+    }
+    public IProfilePhotoCollectionRequestBuilder photos() {
+        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
+    }
+
+    public IProfilePhotoRequestBuilder photos(final String id) {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
 
     /**

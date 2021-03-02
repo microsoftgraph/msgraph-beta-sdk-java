@@ -246,6 +246,10 @@ import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineCo
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder;
@@ -266,14 +270,18 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceWit
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsImpactingProcessCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsImpactingProcessRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsImpactingProcessCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsImpactingProcessRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRegressionSummaryRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsRegressionSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRemoteConnectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsRemoteConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsResourcePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder;
@@ -982,6 +990,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
     public IUserExperienceAnalyticsCategoryRequestBuilder userExperienceAnalyticsCategories(final String id) {
         return new UserExperienceAnalyticsCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsCategories") + "/" + id, getClient(), null);
     }
+    public IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsDeviceMetricHistory() {
+        return new UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceMetricHistory"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsDeviceMetricHistory(final String id) {
+        return new UserExperienceAnalyticsMetricHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceMetricHistory") + "/" + id, getClient(), null);
+    }
     public IUserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder userExperienceAnalyticsDevicePerformance() {
         return new UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicePerformance"), getClient(), null);
     }
@@ -1017,6 +1032,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
     public IUserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder userExperienceAnalyticsDevicesWithoutCloudIdentity(final String id) {
         return new UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicesWithoutCloudIdentity") + "/" + id, getClient(), null);
     }
+    public IUserExperienceAnalyticsImpactingProcessCollectionRequestBuilder userExperienceAnalyticsImpactingProcess() {
+        return new UserExperienceAnalyticsImpactingProcessCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsImpactingProcess"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsImpactingProcessRequestBuilder userExperienceAnalyticsImpactingProcess(final String id) {
+        return new UserExperienceAnalyticsImpactingProcessRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsImpactingProcess") + "/" + id, getClient(), null);
+    }
     public IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsMetricHistory() {
         return new UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetricHistory"), getClient(), null);
     }
@@ -1041,6 +1063,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder implement
      */
     public IUserExperienceAnalyticsRegressionSummaryRequestBuilder userExperienceAnalyticsRegressionSummary() {
         return new UserExperienceAnalyticsRegressionSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsRegressionSummary"), getClient(), null);
+    }
+    public IUserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder userExperienceAnalyticsRemoteConnection() {
+        return new UserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsRemoteConnection"), getClient(), null);
+    }
+
+    public IUserExperienceAnalyticsRemoteConnectionRequestBuilder userExperienceAnalyticsRemoteConnection(final String id) {
+        return new UserExperienceAnalyticsRemoteConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsRemoteConnection") + "/" + id, getClient(), null);
     }
     public IUserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder userExperienceAnalyticsResourcePerformance() {
         return new UserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsResourcePerformance"), getClient(), null);

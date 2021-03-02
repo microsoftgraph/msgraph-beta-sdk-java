@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IActivityBasedTimeoutPolicyCollectionRequestBuilder;
@@ -61,6 +62,13 @@ public interface IPolicyRootRequestBuilder extends IRequestBuilder {
      */
     IPolicyRootRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    /**
+     * Gets the request builder for AuthenticationMethodsPolicy
+     *
+     * @return the IAuthenticationMethodsPolicyRequestBuilder instance
+     */
+    IAuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy();
 
     /**
      * Gets the request builder for AuthenticationFlowsPolicy

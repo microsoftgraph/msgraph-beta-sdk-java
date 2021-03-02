@@ -48,6 +48,14 @@ public class PersonWebsite extends ItemFacet implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Thumbnail Url.
+     * 
+     */
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
+    @Expose
+    public String thumbnailUrl;
+
+    /**
      * The Web Url.
      * Contains a link to the website itself.
      */

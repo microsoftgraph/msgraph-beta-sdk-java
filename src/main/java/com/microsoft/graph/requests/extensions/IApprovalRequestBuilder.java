@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Approval;
+import com.microsoft.graph.models.generated.ApprovalFilterByCurrentUserOptions;
 import com.microsoft.graph.requests.extensions.IApprovalStepCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApprovalStepRequestBuilder;
 import java.util.Arrays;
@@ -37,12 +38,8 @@ public interface IApprovalRequestBuilder extends IRequestBuilder {
     IApprovalRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
 
-    IApprovalStepCollectionRequestBuilder completedSteps();
+    IApprovalStepCollectionRequestBuilder steps();
 
-    IApprovalStepRequestBuilder completedSteps(final String id);
-
-    IApprovalStepCollectionRequestBuilder pendingSteps();
-
-    IApprovalStepRequestBuilder pendingSteps(final String id);
+    IApprovalStepRequestBuilder steps(final String id);
 
 }

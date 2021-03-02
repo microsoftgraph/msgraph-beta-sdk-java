@@ -10,12 +10,14 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.List;
 import com.microsoft.graph.models.extensions.ContentType;
+import com.microsoft.graph.models.extensions.ItemReference;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequest;
+import com.microsoft.graph.requests.extensions.IContentTypeAddCopyRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -62,4 +64,8 @@ public class ContentTypeCollectionRequestBuilder extends BaseRequestBuilder impl
     }
 
 
+
+    public IContentTypeAddCopyRequestBuilder addCopy(final String contentType) {
+        return new ContentTypeAddCopyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addCopy"), getClient(), null, contentType);
+    }
 }

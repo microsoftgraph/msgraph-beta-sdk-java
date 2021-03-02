@@ -13,6 +13,8 @@ import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionReque
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentDefaultsRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationAssignmentDefaultsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionRequestBuilder;
@@ -79,6 +81,15 @@ public class EducationClassRequestBuilder extends BaseRequestBuilder implements 
 
     public IEducationCategoryRequestBuilder assignmentCategories(final String id) {
         return new EducationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentCategories") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for EducationAssignmentDefaults
+     *
+     * @return the IEducationAssignmentDefaultsRequestBuilder instance
+     */
+    public IEducationAssignmentDefaultsRequestBuilder assignmentDefaults() {
+        return new EducationAssignmentDefaultsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentDefaults"), getClient(), null);
     }
     public IEducationAssignmentCollectionRequestBuilder assignments() {
         return new EducationAssignmentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignments"), getClient(), null);

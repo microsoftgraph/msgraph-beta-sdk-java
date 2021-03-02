@@ -71,6 +71,10 @@ public interface ISiteGetByPathRequestBuilder extends IRequestBuilder {
 
     IDriveRequestBuilder drives(final String id);
 
+    IColumnDefinitionCollectionWithReferencesRequestBuilder externalColumns();
+
+    IColumnDefinitionWithReferenceRequestBuilder externalColumns(final String id);
+
     IBaseItemCollectionRequestBuilder items();
 
     IBaseItemRequestBuilder items(final String id);

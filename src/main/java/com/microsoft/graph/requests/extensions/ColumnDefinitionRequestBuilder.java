@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.ColumnDefinition;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import com.microsoft.graph.core.IBaseClient;
@@ -53,4 +55,13 @@ public class ColumnDefinitionRequestBuilder extends BaseRequestBuilder implement
     }
 
 
+
+    /**
+     * Gets the request builder for ColumnDefinition
+     *
+     * @return the IColumnDefinitionWithReferenceRequestBuilder instance
+     */
+    public IColumnDefinitionWithReferenceRequestBuilder sourceColumn() {
+        return new ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sourceColumn"), getClient(), null);
+    }
 }

@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.extensions.IApplicationTemplateCollectionReq
 import com.microsoft.graph.requests.extensions.IApplicationTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingBusinessCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingBusinessRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingCurrencyCollectionRequestBuilder;
@@ -152,6 +154,7 @@ import com.microsoft.graph.requests.extensions.ITeamsTemplateCollectionRequestBu
 import com.microsoft.graph.requests.extensions.ITeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IComplianceRequestBuilder;
@@ -166,8 +169,8 @@ import com.microsoft.graph.requests.extensions.IRoleManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationRootRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.IStoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISearchEntityRequestBuilder;

@@ -28,6 +28,10 @@ import com.microsoft.graph.requests.extensions.IServicePrincipalCollectionReques
 import com.microsoft.graph.requests.extensions.IServicePrincipalRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ServicePrincipalRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodConfigurationRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodConfigurationCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodConfigurationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingBusinessCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBookingBusinessRequestBuilder;
 import com.microsoft.graph.requests.extensions.BookingBusinessCollectionRequestBuilder;
@@ -296,6 +300,8 @@ import com.microsoft.graph.requests.extensions.IAuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IReportRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.ReportRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceManagementRequestBuilder;
@@ -324,10 +330,10 @@ import com.microsoft.graph.termstore.requests.extensions.IStoreRequestBuilder;
 import com.microsoft.graph.termstore.requests.extensions.StoreRequestBuilder;
 import com.microsoft.graph.requests.extensions.ICloudCommunicationsRequestBuilder;
 import com.microsoft.graph.requests.extensions.CloudCommunicationsRequestBuilder;
-import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBuilder;
-import com.microsoft.graph.requests.extensions.IdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IIdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IdentityGovernanceRequestBuilder;
+import com.microsoft.graph.requests.extensions.IIdentityProtectionRootRequestBuilder;
+import com.microsoft.graph.requests.extensions.IdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOfficeConfigurationRequestBuilder;
@@ -478,6 +484,25 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
      */
     public IServicePrincipalRequestBuilder servicePrincipals(final String id) {
         return new ServicePrincipalRequestBuilder(getServiceRoot() + "/servicePrincipals/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of AuthenticationMethodConfigurations objects
+     *
+     * @return the request builder for the collection of AuthenticationMethodConfigurations objects
+     */
+    public IAuthenticationMethodConfigurationCollectionRequestBuilder authenticationMethodConfigurations() {
+        return new AuthenticationMethodConfigurationCollectionRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations", this, null);
+    }
+
+    /**
+     * Gets a single AuthenticationMethodConfigurations
+     *
+     * @param id the id of the AuthenticationMethodConfigurations to retrieve
+     * @return the request builder for the AuthenticationMethodConfigurations object
+     */
+    public IAuthenticationMethodConfigurationRequestBuilder authenticationMethodConfigurations(final String id) {
+        return new AuthenticationMethodConfigurationRequestBuilder(getServiceRoot() + "/authenticationMethodConfigurations/" + id, this, null);
     }
 
     /**
@@ -1755,6 +1780,15 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the AuthenticationMethodsPolicy
+     */
+    public IAuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
+        return new AuthenticationMethodsPolicyRequestBuilder(getServiceRoot() + "/authenticationMethodsPolicy", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Bitlocker
      */
     public IBitlockerRequestBuilder bitlocker() {
@@ -1899,19 +1933,19 @@ public class BaseGraphServiceClient extends BaseClient implements IBaseGraphServ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the IdentityProtectionRoot
+     * @return the IdentityGovernance
      */
-    public IIdentityProtectionRootRequestBuilder identityProtection() {
-        return new IdentityProtectionRootRequestBuilder(getServiceRoot() + "/identityProtection", this, null);
+    public IIdentityGovernanceRequestBuilder identityGovernance() {
+        return new IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
     }
 
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the IdentityGovernance
+     * @return the IdentityProtectionRoot
      */
-    public IIdentityGovernanceRequestBuilder identityGovernance() {
-        return new IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
+    public IIdentityProtectionRootRequestBuilder identityProtection() {
+        return new IdentityProtectionRootRequestBuilder(getServiceRoot() + "/identityProtection", this, null);
     }
 
     /**

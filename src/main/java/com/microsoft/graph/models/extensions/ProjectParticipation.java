@@ -82,6 +82,14 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
     @Expose
     public java.util.List<RelatedPerson> sponsors;
 
+    /**
+     * The Thumbnail Url.
+     * 
+     */
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
+    @Expose
+    public String thumbnailUrl;
+
 
     /**
      * The raw representation of this class

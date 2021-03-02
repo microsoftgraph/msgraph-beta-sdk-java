@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.extensions.YomiPersonName;
+import com.microsoft.graph.models.extensions.PersonNamePronounciation;
 import com.microsoft.graph.models.extensions.ItemFacet;
 
 
@@ -94,7 +94,7 @@ public class PersonName extends ItemFacet implements IJsonBackedObject {
      */
     @SerializedName(value = "pronunciation", alternate = {"Pronunciation"})
     @Expose
-    public YomiPersonName pronunciation;
+    public PersonNamePronounciation pronunciation;
 
     /**
      * The Suffix.

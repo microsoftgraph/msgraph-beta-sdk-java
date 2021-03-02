@@ -13,8 +13,8 @@ import com.microsoft.graph.requests.extensions.IUserAccountInformationCollection
 import com.microsoft.graph.requests.extensions.IUserAccountInformationRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAddressCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemAddressRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonAnniversaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonAnniversaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPersonAnnualEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPersonAnnualEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCertificationCollectionRequestBuilder;
@@ -81,9 +81,9 @@ public interface IProfileRequestBuilder extends IRequestBuilder {
 
     IItemAddressRequestBuilder addresses(final String id);
 
-    IPersonAnniversaryCollectionRequestBuilder anniversaries();
+    IPersonAnnualEventCollectionRequestBuilder anniversaries();
 
-    IPersonAnniversaryRequestBuilder anniversaries(final String id);
+    IPersonAnnualEventRequestBuilder anniversaries(final String id);
 
     IPersonAwardCollectionRequestBuilder awards();
 

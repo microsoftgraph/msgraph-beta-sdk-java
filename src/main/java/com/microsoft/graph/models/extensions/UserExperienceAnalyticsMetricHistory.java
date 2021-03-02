@@ -25,6 +25,14 @@ public class UserExperienceAnalyticsMetricHistory extends Entity implements IJso
 
 
     /**
+     * The Device Id.
+     * The user experience analytics device id.
+     */
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
+    @Expose
+    public String deviceId;
+
+    /**
      * The Metric Date Time.
      * The user experience analytics metric date time.
      */

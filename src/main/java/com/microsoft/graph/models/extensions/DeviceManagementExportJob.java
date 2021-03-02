@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.generated.DeviceManagementReportFileFormat;
+import com.microsoft.graph.models.generated.DeviceManagementExportJobLocalizationType;
 import com.microsoft.graph.models.generated.DeviceManagementReportStatus;
 import com.microsoft.graph.models.extensions.Entity;
 
@@ -48,6 +49,14 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
     public DeviceManagementReportFileFormat format;
+
+    /**
+     * The Localization Type.
+     * Configures how the requested export job is localized
+     */
+    @SerializedName(value = "localizationType", alternate = {"LocalizationType"})
+    @Expose
+    public DeviceManagementExportJobLocalizationType localizationType;
 
     /**
      * The Report Name.

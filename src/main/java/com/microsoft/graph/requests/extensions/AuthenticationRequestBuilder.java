@@ -41,6 +41,10 @@ import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollect
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
@@ -144,6 +148,13 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder implements 
 
     public IPhoneAuthenticationMethodRequestBuilder phoneMethods(final String id) {
         return new PhoneAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods") + "/" + id, getClient(), null);
+    }
+    public ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder temporaryAccessPassMethods() {
+        return new TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods"), getClient(), null);
+    }
+
+    public ITemporaryAccessPassAuthenticationMethodRequestBuilder temporaryAccessPassMethods(final String id) {
+        return new TemporaryAccessPassAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("temporaryAccessPassMethods") + "/" + id, getClient(), null);
     }
     public IWindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder windowsHelloForBusinessMethods() {
         return new WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsHelloForBusinessMethods"), getClient(), null);

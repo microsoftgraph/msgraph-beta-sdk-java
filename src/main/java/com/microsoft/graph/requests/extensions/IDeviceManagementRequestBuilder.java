@@ -131,6 +131,8 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryR
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsBaselineCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsBaselineRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsCategoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDevicePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceStartupHistoryCollectionRequestBuilder;
@@ -141,10 +143,12 @@ import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceSta
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsMetricHistoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsImpactingProcessCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsImpactingProcessRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsOverviewRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRegressionSummaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsRemoteConnectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsResourcePerformanceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserExperienceAnalyticsScoreHistoryCollectionRequestBuilder;
@@ -562,6 +566,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IUserExperienceAnalyticsCategoryRequestBuilder userExperienceAnalyticsCategories(final String id);
 
+    IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsDeviceMetricHistory();
+
+    IUserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsDeviceMetricHistory(final String id);
+
     IUserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder userExperienceAnalyticsDevicePerformance();
 
     IUserExperienceAnalyticsDevicePerformanceRequestBuilder userExperienceAnalyticsDevicePerformance(final String id);
@@ -582,6 +590,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
 
     IUserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder userExperienceAnalyticsDevicesWithoutCloudIdentity(final String id);
 
+    IUserExperienceAnalyticsImpactingProcessCollectionRequestBuilder userExperienceAnalyticsImpactingProcess();
+
+    IUserExperienceAnalyticsImpactingProcessRequestBuilder userExperienceAnalyticsImpactingProcess(final String id);
+
     IUserExperienceAnalyticsMetricHistoryCollectionRequestBuilder userExperienceAnalyticsMetricHistory();
 
     IUserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory(final String id);
@@ -599,6 +611,10 @@ public interface IDeviceManagementRequestBuilder extends IRequestBuilder {
      * @return the IUserExperienceAnalyticsRegressionSummaryRequestBuilder instance
      */
     IUserExperienceAnalyticsRegressionSummaryRequestBuilder userExperienceAnalyticsRegressionSummary();
+
+    IUserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder userExperienceAnalyticsRemoteConnection();
+
+    IUserExperienceAnalyticsRemoteConnectionRequestBuilder userExperienceAnalyticsRemoteConnection(final String id);
 
     IUserExperienceAnalyticsResourcePerformanceCollectionRequestBuilder userExperienceAnalyticsResourcePerformance();
 

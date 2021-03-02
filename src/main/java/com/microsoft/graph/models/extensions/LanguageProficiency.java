@@ -65,6 +65,14 @@ public class LanguageProficiency extends ItemFacet implements IJsonBackedObject 
     public String tag;
 
     /**
+     * The Thumbnail Url.
+     * 
+     */
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
+    @Expose
+    public String thumbnailUrl;
+
+    /**
      * The Written.
      * Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      */

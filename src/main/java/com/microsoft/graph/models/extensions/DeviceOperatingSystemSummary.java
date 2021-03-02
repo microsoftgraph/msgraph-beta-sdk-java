@@ -113,6 +113,14 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     public Integer iosCount;
 
     /**
+     * The Linux Count.
+     * Number of Linux OS devices. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "linuxCount", alternate = {"LinuxCount"})
+    @Expose
+    public Integer linuxCount;
+
+    /**
      * The Mac OSCount.
      * Number of Mac OS X device count.
      */

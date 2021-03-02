@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EntitlementManagement;
+import com.microsoft.graph.requests.extensions.IApprovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAccessPackageAssignmentRequestCollectionRequestBuilder;
@@ -57,6 +59,10 @@ public interface IEntitlementManagementRequestBuilder extends IRequestBuilder {
      */
     IEntitlementManagementRequest buildRequest(final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions);
 
+
+    IApprovalCollectionRequestBuilder accessPackageAssignmentApprovals();
+
+    IApprovalRequestBuilder accessPackageAssignmentApprovals(final String id);
 
     IAccessPackageAssignmentPolicyCollectionRequestBuilder accessPackageAssignmentPolicies();
 
