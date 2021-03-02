@@ -57,6 +57,14 @@ public class SkillProficiency extends ItemFacet implements IJsonBackedObject {
     public SkillProficiencyLevel proficiency;
 
     /**
+     * The Thumbnail Url.
+     * 
+     */
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
+    @Expose
+    public String thumbnailUrl;
+
+    /**
      * The Web Url.
      * Contains a link to an information source about the skill.
      */

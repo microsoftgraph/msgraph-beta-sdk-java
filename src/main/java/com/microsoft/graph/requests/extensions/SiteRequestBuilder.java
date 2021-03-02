@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
@@ -24,6 +25,10 @@ import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.DriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.ColumnDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.BaseItemCollectionRequestBuilder;
@@ -147,6 +152,13 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
     public IDriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
+    public IColumnDefinitionCollectionWithReferencesRequestBuilder externalColumns() {
+        return new ColumnDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns"), getClient(), null);
+    }
+
+    public IColumnDefinitionWithReferenceRequestBuilder externalColumns(final String id) {
+        return new ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns") + "/" + id, getClient(), null);
+    }
     public IBaseItemCollectionRequestBuilder items() {
         return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }
@@ -194,6 +206,10 @@ public class SiteRequestBuilder extends BaseRequestBuilder implements ISiteReque
 
     public ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval) {
         return new SiteGetActivitiesByIntervalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getActivitiesByInterval"), getClient(), null, startDateTime, endDateTime, interval);
+    }
+
+    public ISiteGetApplicableContentTypesForListCollectionRequestBuilder getApplicableContentTypesForList(final String listId) {
+        return new SiteGetApplicableContentTypesForListCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getApplicableContentTypesForList"), getClient(), null, listId);
     }
 
     public ISiteGetByPathRequestBuilder getByPath(final String path) {

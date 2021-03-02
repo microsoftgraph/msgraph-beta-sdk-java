@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.PolicyRoot;
+import com.microsoft.graph.requests.extensions.IAuthenticationMethodsPolicyRequestBuilder;
+import com.microsoft.graph.requests.extensions.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IAuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.extensions.IB2cAuthenticationMethodsPolicyRequestBuilder;
@@ -107,6 +109,15 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder implements IPol
     }
 
 
+
+    /**
+     * Gets the request builder for AuthenticationMethodsPolicy
+     *
+     * @return the IAuthenticationMethodsPolicyRequestBuilder instance
+     */
+    public IAuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
+        return new AuthenticationMethodsPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationMethodsPolicy"), getClient(), null);
+    }
 
     /**
      * Gets the request builder for AuthenticationFlowsPolicy

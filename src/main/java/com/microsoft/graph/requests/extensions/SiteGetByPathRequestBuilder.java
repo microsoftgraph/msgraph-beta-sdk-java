@@ -118,6 +118,13 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder impl
     public IDriveRequestBuilder drives(final String id) {
         return new DriveRequestBuilder(getRequestUrlWithAdditionalSegment("drives") + "/" + id, getClient(), null);
     }
+    public IColumnDefinitionCollectionWithReferencesRequestBuilder externalColumns() {
+        return new ColumnDefinitionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns"), getClient(), null);
+    }
+
+    public IColumnDefinitionWithReferenceRequestBuilder externalColumns(final String id) {
+        return new ColumnDefinitionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("externalColumns") + "/" + id, getClient(), null);
+    }
     public IBaseItemCollectionRequestBuilder items() {
         return new BaseItemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("items"), getClient(), null);
     }

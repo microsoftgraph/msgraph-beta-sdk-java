@@ -38,7 +38,6 @@ import com.microsoft.graph.models.extensions.MailFolder;
 import com.microsoft.graph.models.extensions.Message;
 import com.microsoft.graph.models.extensions.OutlookUser;
 import com.microsoft.graph.models.extensions.Person;
-import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.Extension;
@@ -58,6 +57,7 @@ import com.microsoft.graph.models.extensions.PlannerUser;
 import com.microsoft.graph.models.extensions.ItemInsights;
 import com.microsoft.graph.models.extensions.UserSettings;
 import com.microsoft.graph.models.extensions.Onenote;
+import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.Profile;
 import com.microsoft.graph.models.extensions.UserActivity;
 import com.microsoft.graph.models.extensions.Device;
@@ -82,7 +82,6 @@ import com.microsoft.graph.requests.extensions.GroupCollectionPage;
 import com.microsoft.graph.requests.extensions.MailFolderCollectionPage;
 import com.microsoft.graph.requests.extensions.MessageCollectionPage;
 import com.microsoft.graph.requests.extensions.PersonCollectionPage;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
@@ -98,6 +97,7 @@ import com.microsoft.graph.requests.extensions.DeviceManagementTroubleshootingEv
 import com.microsoft.graph.requests.extensions.MobileAppIntentAndStateCollectionPage;
 import com.microsoft.graph.requests.extensions.MobileAppTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.extensions.NotificationCollectionPage;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.extensions.UserActivityCollectionPage;
 import com.microsoft.graph.requests.extensions.DeviceCollectionPage;
 import com.microsoft.graph.requests.extensions.OnlineMeetingCollectionPage;
@@ -343,7 +343,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Last Password Change Date Time.
-     * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+     * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
      */
     @SerializedName(value = "lastPasswordChangeDateTime", alternate = {"LastPasswordChangeDateTime"})
     @Expose
@@ -431,7 +431,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+     * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -639,7 +639,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Birthday.
-     * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z' Returned only on $select.
+     * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
      */
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
@@ -647,7 +647,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hire Date.
-     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
      */
     @SerializedName(value = "hireDate", alternate = {"HireDate"})
     @Expose
@@ -735,7 +735,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Role Assignments.
-     * 
+     * Represents the app roles a user has been granted for an application.
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
@@ -912,22 +912,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     public PersonCollectionPage people;
 
     /**
-     * The Photo.
-     * The user's profile photo. Read-only.
-     */
-    @SerializedName(value = "photo", alternate = {"Photo"})
-    @Expose
-    public ProfilePhoto photo;
-
-    /**
-     * The Photos.
-     * Read-only. Nullable.
-     */
-    @SerializedName(value = "photos", alternate = {"Photos"})
-    @Expose
-    public ProfilePhotoCollectionPage photos;
-
-    /**
      * The Drive.
      * The user's OneDrive. Read-only.
      */
@@ -1078,6 +1062,22 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose
     public Onenote onenote;
+
+    /**
+     * The Photo.
+     * The user's profile photo. Read-only.
+     */
+    @SerializedName(value = "photo", alternate = {"Photo"})
+    @Expose
+    public ProfilePhoto photo;
+
+    /**
+     * The Photos.
+     * Read-only. Nullable.
+     */
+    @SerializedName(value = "photos", alternate = {"Photos"})
+    @Expose
+    public ProfilePhotoCollectionPage photos;
 
     /**
      * The Profile.
@@ -1281,10 +1281,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
             people = serializer.deserializeObject(json.get("people").toString(), PersonCollectionPage.class);
         }
 
-        if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
-        }
-
         if (json.has("drives")) {
             drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
         }
@@ -1343,6 +1339,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("notifications")) {
             notifications = serializer.deserializeObject(json.get("notifications").toString(), NotificationCollectionPage.class);
+        }
+
+        if (json.has("photos")) {
+            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
         }
 
         if (json.has("activities")) {

@@ -22,7 +22,6 @@ import com.microsoft.graph.models.extensions.DirectorySetting;
 import com.microsoft.graph.models.extensions.Calendar;
 import com.microsoft.graph.models.extensions.Event;
 import com.microsoft.graph.models.extensions.Conversation;
-import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.ConversationThread;
 import com.microsoft.graph.models.extensions.Drive;
 import com.microsoft.graph.models.extensions.Site;
@@ -30,6 +29,7 @@ import com.microsoft.graph.models.extensions.Extension;
 import com.microsoft.graph.models.extensions.GroupLifecyclePolicy;
 import com.microsoft.graph.models.extensions.PlannerGroup;
 import com.microsoft.graph.models.extensions.Onenote;
+import com.microsoft.graph.models.extensions.ProfilePhoto;
 import com.microsoft.graph.models.extensions.Team;
 import com.microsoft.graph.requests.extensions.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.extensions.EndpointCollectionPage;
@@ -38,12 +38,12 @@ import com.microsoft.graph.requests.extensions.ResourceSpecificPermissionGrantCo
 import com.microsoft.graph.requests.extensions.DirectorySettingCollectionPage;
 import com.microsoft.graph.requests.extensions.EventCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationCollectionPage;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionPage;
 import com.microsoft.graph.requests.extensions.DriveCollectionPage;
 import com.microsoft.graph.requests.extensions.SiteCollectionPage;
 import com.microsoft.graph.requests.extensions.ExtensionCollectionPage;
 import com.microsoft.graph.requests.extensions.GroupLifecyclePolicyCollectionPage;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -444,7 +444,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Role Assignments.
-     * 
+     * Represents the app roles a group has been granted for an application.
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
@@ -557,22 +557,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public EventCollectionPage events;
 
     /**
-     * The Photo.
-     * The group's profile photo.
-     */
-    @SerializedName(value = "photo", alternate = {"Photo"})
-    @Expose
-    public ProfilePhoto photo;
-
-    /**
-     * The Photos.
-     * The profile photos owned by the group. Read-only. Nullable.
-     */
-    @SerializedName(value = "photos", alternate = {"Photos"})
-    @Expose
-    public ProfilePhotoCollectionPage photos;
-
-    /**
      * The Rejected Senders.
      * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
      */
@@ -641,6 +625,22 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose
     public Onenote onenote;
+
+    /**
+     * The Photo.
+     * The group's profile photo.
+     */
+    @SerializedName(value = "photo", alternate = {"Photo"})
+    @Expose
+    public ProfilePhoto photo;
+
+    /**
+     * The Photos.
+     * The profile photos owned by the group. Read-only. Nullable.
+     */
+    @SerializedName(value = "photos", alternate = {"Photos"})
+    @Expose
+    public ProfilePhotoCollectionPage photos;
 
     /**
      * The Team.
@@ -746,10 +746,6 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
             events = serializer.deserializeObject(json.get("events").toString(), EventCollectionPage.class);
         }
 
-        if (json.has("photos")) {
-            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
-        }
-
         if (json.has("rejectedSenders")) {
             rejectedSenders = serializer.deserializeObject(json.get("rejectedSenders").toString(), DirectoryObjectCollectionPage.class);
         }
@@ -772,6 +768,10 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("groupLifecyclePolicies")) {
             groupLifecyclePolicies = serializer.deserializeObject(json.get("groupLifecyclePolicies").toString(), GroupLifecyclePolicyCollectionPage.class);
+        }
+
+        if (json.has("photos")) {
+            photos = serializer.deserializeObject(json.get("photos").toString(), ProfilePhotoCollectionPage.class);
         }
     }
 }

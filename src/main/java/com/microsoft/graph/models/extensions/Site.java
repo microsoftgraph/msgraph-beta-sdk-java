@@ -125,6 +125,12 @@ public class Site extends BaseItem implements IJsonBackedObject {
     public DriveCollectionPage drives;
 
     /**
+     * The External Columns.
+     * 
+     */
+    public ColumnDefinitionCollectionPage externalColumns;
+
+    /**
      * The Items.
      * Used to address any item contained in this site. This collection cannot be enumerated.
      */
@@ -222,6 +228,10 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
         if (json.has("drives")) {
             drives = serializer.deserializeObject(json.get("drives").toString(), DriveCollectionPage.class);
+        }
+
+        if (json.has("externalColumns")) {
+            externalColumns = serializer.deserializeObject(json.get("externalColumns").toString(), ColumnDefinitionCollectionPage.class);
         }
 
         if (json.has("items")) {

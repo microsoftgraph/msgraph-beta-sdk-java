@@ -16,6 +16,7 @@ import com.microsoft.graph.models.extensions.LongRunningOperation;
 import com.microsoft.graph.models.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.extensions.PasswordAuthenticationMethod;
 import com.microsoft.graph.models.extensions.PhoneAuthenticationMethod;
+import com.microsoft.graph.models.extensions.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.extensions.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.EmailAuthenticationMethodCollectionPage;
@@ -26,6 +27,7 @@ import com.microsoft.graph.requests.extensions.LongRunningOperationCollectionPag
 import com.microsoft.graph.requests.extensions.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.PasswordAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.PhoneAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.extensions.TemporaryAccessPassAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsHelloForBusinessAuthenticationMethodCollectionPage;
 
 
@@ -106,6 +108,14 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public PhoneAuthenticationMethodCollectionPage phoneMethods;
 
     /**
+     * The Temporary Access Pass Methods.
+     * 
+     */
+    @SerializedName(value = "temporaryAccessPassMethods", alternate = {"TemporaryAccessPassMethods"})
+    @Expose
+    public TemporaryAccessPassAuthenticationMethodCollectionPage temporaryAccessPassMethods;
+
+    /**
      * The Windows Hello For Business Methods.
      * 
      */
@@ -183,6 +193,10 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("phoneMethods")) {
             phoneMethods = serializer.deserializeObject(json.get("phoneMethods").toString(), PhoneAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("temporaryAccessPassMethods")) {
+            temporaryAccessPassMethods = serializer.deserializeObject(json.get("temporaryAccessPassMethods").toString(), TemporaryAccessPassAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("windowsHelloForBusinessMethods")) {

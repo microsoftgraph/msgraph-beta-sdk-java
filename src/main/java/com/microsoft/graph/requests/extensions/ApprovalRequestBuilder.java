@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Approval;
+import com.microsoft.graph.models.generated.ApprovalFilterByCurrentUserOptions;
 import com.microsoft.graph.requests.extensions.IApprovalStepCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApprovalStepRequestBuilder;
 import com.microsoft.graph.requests.extensions.ApprovalStepCollectionRequestBuilder;
@@ -57,18 +58,11 @@ public class ApprovalRequestBuilder extends BaseRequestBuilder implements IAppro
     }
 
 
-    public IApprovalStepCollectionRequestBuilder completedSteps() {
-        return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("completedSteps"), getClient(), null);
+    public IApprovalStepCollectionRequestBuilder steps() {
+        return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("steps"), getClient(), null);
     }
 
-    public IApprovalStepRequestBuilder completedSteps(final String id) {
-        return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("completedSteps") + "/" + id, getClient(), null);
-    }
-    public IApprovalStepCollectionRequestBuilder pendingSteps() {
-        return new ApprovalStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps"), getClient(), null);
-    }
-
-    public IApprovalStepRequestBuilder pendingSteps(final String id) {
-        return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("pendingSteps") + "/" + id, getClient(), null);
+    public IApprovalStepRequestBuilder steps(final String id) {
+        return new ApprovalStepRequestBuilder(getRequestUrlWithAdditionalSegment("steps") + "/" + id, getClient(), null);
     }
 }

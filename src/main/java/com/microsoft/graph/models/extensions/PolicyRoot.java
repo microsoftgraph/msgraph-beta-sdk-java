@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.extensions.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.extensions.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.extensions.B2cAuthenticationMethodsPolicy;
 import com.microsoft.graph.models.extensions.ActivityBasedTimeoutPolicy;
@@ -58,6 +59,14 @@ public class PolicyRoot implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Authentication Methods Policy.
+     * 
+     */
+    @SerializedName(value = "authenticationMethodsPolicy", alternate = {"AuthenticationMethodsPolicy"})
+    @Expose
+    public AuthenticationMethodsPolicy authenticationMethodsPolicy;
 
     /**
      * The Authentication Flows Policy.

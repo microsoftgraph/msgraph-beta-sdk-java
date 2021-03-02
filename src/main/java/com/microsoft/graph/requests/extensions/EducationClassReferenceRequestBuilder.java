@@ -14,6 +14,8 @@ import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionReque
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentDefaultsRequestBuilder;
+import com.microsoft.graph.requests.extensions.EducationAssignmentDefaultsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.EducationAssignmentCollectionRequestBuilder;

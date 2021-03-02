@@ -60,6 +60,14 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
     public InferenceData inference;
 
     /**
+     * The Is Searchable.
+     * 
+     */
+    @SerializedName(value = "isSearchable", alternate = {"IsSearchable"})
+    @Expose
+    public Boolean isSearchable;
+
+    /**
      * The Last Modified By.
      * Provides the identifier of the user and/or application that last modified the entity.
      */

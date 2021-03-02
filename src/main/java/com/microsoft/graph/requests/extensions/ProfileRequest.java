@@ -17,10 +17,10 @@ import com.microsoft.graph.requests.extensions.IItemAddressCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IItemAddressRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAddressCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ItemAddressRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonAnniversaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.IPersonAnniversaryRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonAnniversaryCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.PersonAnniversaryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPersonAnnualEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IPersonAnnualEventRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonAnnualEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.PersonAnnualEventRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonAwardRequestBuilder;
 import com.microsoft.graph.requests.extensions.PersonAwardCollectionRequestBuilder;

@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.UserAccountInformation;
 import com.microsoft.graph.models.extensions.ItemAddress;
-import com.microsoft.graph.models.extensions.PersonAnniversary;
+import com.microsoft.graph.models.extensions.PersonAnnualEvent;
 import com.microsoft.graph.models.extensions.PersonAward;
 import com.microsoft.graph.models.extensions.PersonCertification;
 import com.microsoft.graph.models.extensions.EducationalActivity;
@@ -30,7 +30,7 @@ import com.microsoft.graph.models.extensions.PersonWebsite;
 import com.microsoft.graph.models.extensions.Entity;
 import com.microsoft.graph.requests.extensions.UserAccountInformationCollectionPage;
 import com.microsoft.graph.requests.extensions.ItemAddressCollectionPage;
-import com.microsoft.graph.requests.extensions.PersonAnniversaryCollectionPage;
+import com.microsoft.graph.requests.extensions.PersonAnnualEventCollectionPage;
 import com.microsoft.graph.requests.extensions.PersonAwardCollectionPage;
 import com.microsoft.graph.requests.extensions.PersonCertificationCollectionPage;
 import com.microsoft.graph.requests.extensions.EducationalActivityCollectionPage;
@@ -83,7 +83,7 @@ public class Profile extends Entity implements IJsonBackedObject {
      */
     @SerializedName(value = "anniversaries", alternate = {"Anniversaries"})
     @Expose
-    public PersonAnniversaryCollectionPage anniversaries;
+    public PersonAnnualEventCollectionPage anniversaries;
 
     /**
      * The Awards.
@@ -262,7 +262,7 @@ public class Profile extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("anniversaries")) {
-            anniversaries = serializer.deserializeObject(json.get("anniversaries").toString(), PersonAnniversaryCollectionPage.class);
+            anniversaries = serializer.deserializeObject(json.get("anniversaries").toString(), PersonAnnualEventCollectionPage.class);
         }
 
         if (json.has("awards")) {

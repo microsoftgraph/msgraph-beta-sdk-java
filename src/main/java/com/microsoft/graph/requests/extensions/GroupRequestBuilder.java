@@ -54,10 +54,6 @@ import com.microsoft.graph.requests.extensions.IConversationCollectionRequestBui
 import com.microsoft.graph.requests.extensions.IConversationRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
-import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IConversationThreadRequestBuilder;
 import com.microsoft.graph.requests.extensions.ConversationThreadCollectionRequestBuilder;
@@ -82,6 +78,10 @@ import com.microsoft.graph.requests.extensions.IPlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.PlannerGroupRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
 import com.microsoft.graph.requests.extensions.OnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ITeamRequestBuilder;
 import com.microsoft.graph.requests.extensions.TeamRequestBuilder;
 import java.util.Arrays;
@@ -496,22 +496,6 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
     public IEventRequestBuilder events(final String id) {
         return new EventRequestBuilder(getRequestUrlWithAdditionalSegment("events") + "/" + id, getClient(), null);
     }
-
-    /**
-     * Gets the request builder for ProfilePhoto
-     *
-     * @return the IProfilePhotoRequestBuilder instance
-     */
-    public IProfilePhotoRequestBuilder photo() {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
-    }
-    public IProfilePhotoCollectionRequestBuilder photos() {
-        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
-    }
-
-    public IProfilePhotoRequestBuilder photos(final String id) {
-        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
-    }
     public IDirectoryObjectCollectionWithReferencesRequestBuilder rejectedSenders() {
         return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("rejectedSenders"), getClient(), null);
     }
@@ -580,6 +564,22 @@ public class GroupRequestBuilder extends BaseRequestBuilder implements IGroupReq
      */
     public IOnenoteRequestBuilder onenote() {
         return new OnenoteRequestBuilder(getRequestUrlWithAdditionalSegment("onenote"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the IProfilePhotoRequestBuilder instance
+     */
+    public IProfilePhotoRequestBuilder photo() {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photo"), getClient(), null);
+    }
+    public IProfilePhotoCollectionRequestBuilder photos() {
+        return new ProfilePhotoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("photos"), getClient(), null);
+    }
+
+    public IProfilePhotoRequestBuilder photos(final String id) {
+        return new ProfilePhotoRequestBuilder(getRequestUrlWithAdditionalSegment("photos") + "/" + id, getClient(), null);
     }
 
     /**

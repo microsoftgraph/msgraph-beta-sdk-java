@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.models.extensions.ContentType;
 import java.util.Arrays;
 import java.util.EnumSet;
 

@@ -11,14 +11,21 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.extensions.BooleanColumn;
 import com.microsoft.graph.models.extensions.CalculatedColumn;
 import com.microsoft.graph.models.extensions.ChoiceColumn;
+import com.microsoft.graph.models.extensions.ContentApprovalStatusColumn;
 import com.microsoft.graph.models.extensions.CurrencyColumn;
 import com.microsoft.graph.models.extensions.DateTimeColumn;
 import com.microsoft.graph.models.extensions.DefaultColumnValue;
 import com.microsoft.graph.models.extensions.GeolocationColumn;
+import com.microsoft.graph.models.extensions.HyperlinkOrPictureColumn;
 import com.microsoft.graph.models.extensions.LookupColumn;
 import com.microsoft.graph.models.extensions.NumberColumn;
 import com.microsoft.graph.models.extensions.PersonOrGroupColumn;
+import com.microsoft.graph.models.extensions.TermColumn;
 import com.microsoft.graph.models.extensions.TextColumn;
+import com.microsoft.graph.models.extensions.ThumbnailColumn;
+import com.microsoft.graph.models.generated.ColumnTypes;
+import com.microsoft.graph.models.extensions.ColumnValidation;
+import com.microsoft.graph.models.extensions.ColumnDefinition;
 import com.microsoft.graph.models.extensions.Entity;
 
 
@@ -65,6 +72,14 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     @SerializedName(value = "columnGroup", alternate = {"ColumnGroup"})
     @Expose
     public String columnGroup;
+
+    /**
+     * The Content Approval Status.
+     * 
+     */
+    @SerializedName(value = "contentApprovalStatus", alternate = {"ContentApprovalStatus"})
+    @Expose
+    public ContentApprovalStatusColumn contentApprovalStatus;
 
     /**
      * The Currency.
@@ -131,12 +146,44 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     public Boolean hidden;
 
     /**
+     * The Hyperlink Or Picture.
+     * 
+     */
+    @SerializedName(value = "hyperlinkOrPicture", alternate = {"HyperlinkOrPicture"})
+    @Expose
+    public HyperlinkOrPictureColumn hyperlinkOrPicture;
+
+    /**
      * The Indexed.
      * Specifies whether the column values can used for sorting and searching.
      */
     @SerializedName(value = "indexed", alternate = {"Indexed"})
     @Expose
     public Boolean indexed;
+
+    /**
+     * The Is Deletable.
+     * 
+     */
+    @SerializedName(value = "isDeletable", alternate = {"IsDeletable"})
+    @Expose
+    public Boolean isDeletable;
+
+    /**
+     * The Is Reorderable.
+     * 
+     */
+    @SerializedName(value = "isReorderable", alternate = {"IsReorderable"})
+    @Expose
+    public Boolean isReorderable;
+
+    /**
+     * The Is Sealed.
+     * 
+     */
+    @SerializedName(value = "isSealed", alternate = {"IsSealed"})
+    @Expose
+    public Boolean isSealed;
 
     /**
      * The Lookup.
@@ -171,6 +218,14 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     public PersonOrGroupColumn personOrGroup;
 
     /**
+     * The Propagate Changes.
+     * 
+     */
+    @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
+    @Expose
+    public Boolean propagateChanges;
+
+    /**
      * The Read Only.
      * Specifies whether the column values can be modified.
      */
@@ -187,12 +242,52 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
     public Boolean required;
 
     /**
+     * The Term.
+     * 
+     */
+    @SerializedName(value = "term", alternate = {"Term"})
+    @Expose
+    public TermColumn term;
+
+    /**
      * The Text.
      * This column stores text values.
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose
     public TextColumn text;
+
+    /**
+     * The Thumbnail.
+     * 
+     */
+    @SerializedName(value = "thumbnail", alternate = {"Thumbnail"})
+    @Expose
+    public ThumbnailColumn thumbnail;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName(value = "type", alternate = {"Type"})
+    @Expose
+    public ColumnTypes type;
+
+    /**
+     * The Validation.
+     * 
+     */
+    @SerializedName(value = "validation", alternate = {"Validation"})
+    @Expose
+    public ColumnValidation validation;
+
+    /**
+     * The Source Column.
+     * 
+     */
+    @SerializedName(value = "sourceColumn", alternate = {"SourceColumn"})
+    @Expose
+    public ColumnDefinition sourceColumn;
 
 
     /**

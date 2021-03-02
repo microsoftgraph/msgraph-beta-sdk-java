@@ -25,6 +25,8 @@ import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodColl
 import com.microsoft.graph.requests.extensions.IPasswordAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.ITemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IWindowsHelloForBusinessAuthenticationMethodRequestBuilder;
 import java.util.Arrays;
@@ -84,6 +86,10 @@ public interface IAuthenticationRequestBuilder extends IRequestBuilder {
     IPhoneAuthenticationMethodCollectionRequestBuilder phoneMethods();
 
     IPhoneAuthenticationMethodRequestBuilder phoneMethods(final String id);
+
+    ITemporaryAccessPassAuthenticationMethodCollectionRequestBuilder temporaryAccessPassMethods();
+
+    ITemporaryAccessPassAuthenticationMethodRequestBuilder temporaryAccessPassMethods(final String id);
 
     IWindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder windowsHelloForBusinessMethods();
 

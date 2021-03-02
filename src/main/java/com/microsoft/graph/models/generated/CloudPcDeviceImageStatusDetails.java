@@ -20,6 +20,14 @@ public enum CloudPcDeviceImageStatusDetails
     */
     SOURCE_IMAGE_NOT_FOUND,
     /**
+    * os Version Not Supported
+    */
+    OS_VERSION_NOT_SUPPORTED,
+    /**
+    * source Image Invalid
+    */
+    SOURCE_IMAGE_INVALID,
+    /**
     * For CloudPcDeviceImageStatusDetails values that were not expected from the service
     */
     UNEXPECTED_VALUE

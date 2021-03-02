@@ -80,14 +80,16 @@ import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthDev
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsAppHealthOSVersionPerformance;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsCategory;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsBaseline;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetricHistory;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDevicePerformance;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupHistory;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupProcess;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceStartupProcessPerformance;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsDeviceWithoutCloudIdentity;
-import com.microsoft.graph.models.extensions.UserExperienceAnalyticsMetricHistory;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsImpactingProcess;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsOverview;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsRegressionSummary;
+import com.microsoft.graph.models.extensions.UserExperienceAnalyticsRemoteConnection;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsResourcePerformance;
 import com.microsoft.graph.models.extensions.UserExperienceAnalyticsScoreHistory;
 import com.microsoft.graph.models.extensions.WindowsMalwareInformation;
@@ -186,12 +188,14 @@ import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthD
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsBaselineCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsCategoryCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDevicePerformanceCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage;
-import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsMetricHistoryCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsImpactingProcessCollectionPage;
+import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsRemoteConnectionCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsResourcePerformanceCollectionPage;
 import com.microsoft.graph.requests.extensions.UserExperienceAnalyticsScoreHistoryCollectionPage;
 import com.microsoft.graph.requests.extensions.WindowsMalwareInformationCollectionPage;
@@ -906,6 +910,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsCategoryCollectionPage userExperienceAnalyticsCategories;
 
     /**
+     * The User Experience Analytics Device Metric History.
+     * User experience analytics device metric history
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceMetricHistory", alternate = {"UserExperienceAnalyticsDeviceMetricHistory"})
+    @Expose
+    public UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsDeviceMetricHistory;
+
+    /**
      * The User Experience Analytics Device Performance.
      * User experience analytics device performance
      */
@@ -946,6 +958,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage userExperienceAnalyticsDevicesWithoutCloudIdentity;
 
     /**
+     * The User Experience Analytics Impacting Process.
+     * User experience analytics impacting process
+     */
+    @SerializedName(value = "userExperienceAnalyticsImpactingProcess", alternate = {"UserExperienceAnalyticsImpactingProcess"})
+    @Expose
+    public UserExperienceAnalyticsImpactingProcessCollectionPage userExperienceAnalyticsImpactingProcess;
+
+    /**
      * The User Experience Analytics Metric History.
      * User experience analytics metric history
      */
@@ -968,6 +988,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "userExperienceAnalyticsRegressionSummary", alternate = {"UserExperienceAnalyticsRegressionSummary"})
     @Expose
     public UserExperienceAnalyticsRegressionSummary userExperienceAnalyticsRegressionSummary;
+
+    /**
+     * The User Experience Analytics Remote Connection.
+     * User experience analytics remote connection
+     */
+    @SerializedName(value = "userExperienceAnalyticsRemoteConnection", alternate = {"UserExperienceAnalyticsRemoteConnection"})
+    @Expose
+    public UserExperienceAnalyticsRemoteConnectionCollectionPage userExperienceAnalyticsRemoteConnection;
 
     /**
      * The User Experience Analytics Resource Performance.
@@ -1581,6 +1609,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsCategories = serializer.deserializeObject(json.get("userExperienceAnalyticsCategories").toString(), UserExperienceAnalyticsCategoryCollectionPage.class);
         }
 
+        if (json.has("userExperienceAnalyticsDeviceMetricHistory")) {
+            userExperienceAnalyticsDeviceMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceMetricHistory").toString(), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
+        }
+
         if (json.has("userExperienceAnalyticsDevicePerformance")) {
             userExperienceAnalyticsDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicePerformance").toString(), UserExperienceAnalyticsDevicePerformanceCollectionPage.class);
         }
@@ -1601,8 +1633,16 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsDevicesWithoutCloudIdentity = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicesWithoutCloudIdentity").toString(), UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage.class);
         }
 
+        if (json.has("userExperienceAnalyticsImpactingProcess")) {
+            userExperienceAnalyticsImpactingProcess = serializer.deserializeObject(json.get("userExperienceAnalyticsImpactingProcess").toString(), UserExperienceAnalyticsImpactingProcessCollectionPage.class);
+        }
+
         if (json.has("userExperienceAnalyticsMetricHistory")) {
             userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory").toString(), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsRemoteConnection")) {
+            userExperienceAnalyticsRemoteConnection = serializer.deserializeObject(json.get("userExperienceAnalyticsRemoteConnection").toString(), UserExperienceAnalyticsRemoteConnectionCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsResourcePerformance")) {

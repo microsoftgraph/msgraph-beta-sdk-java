@@ -8,14 +8,16 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
-import com.microsoft.graph.models.extensions.User;
+import com.microsoft.graph.models.extensions.EntitlementManagement;
 import com.microsoft.graph.models.extensions.Approval;
+import com.microsoft.graph.models.generated.ApprovalFilterByCurrentUserOptions;
 import java.util.Arrays;
 import java.util.EnumSet;
 
 import com.microsoft.graph.requests.extensions.IApprovalCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApprovalRequestBuilder;
 import com.microsoft.graph.requests.extensions.IApprovalCollectionRequest;
+import com.microsoft.graph.requests.extensions.IApprovalFilterByCurrentUserCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 
@@ -27,7 +29,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class ApprovalCollectionRequestBuilder extends BaseRequestBuilder implements IApprovalCollectionRequestBuilder {
 
     /**
-     * The request builder for this collection of User
+     * The request builder for this collection of EntitlementManagement
      *
      * @param requestUrl     the request URL
      * @param client         the service client
@@ -62,4 +64,8 @@ public class ApprovalCollectionRequestBuilder extends BaseRequestBuilder impleme
     }
 
 
+
+    public IApprovalFilterByCurrentUserCollectionRequestBuilder filterByCurrentUser(final ApprovalFilterByCurrentUserOptions on) {
+        return new ApprovalFilterByCurrentUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.filterByCurrentUser"), getClient(), null, on);
+    }
 }

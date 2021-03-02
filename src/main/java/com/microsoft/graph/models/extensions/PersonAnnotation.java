@@ -40,6 +40,14 @@ public class PersonAnnotation extends ItemFacet implements IJsonBackedObject {
     @Expose
     public String displayName;
 
+    /**
+     * The Thumbnail Url.
+     * 
+     */
+    @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
+    @Expose
+    public String thumbnailUrl;
+
 
     /**
      * The raw representation of this class

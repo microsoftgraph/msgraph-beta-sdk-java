@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.Site;
 import com.microsoft.graph.models.extensions.ItemActivityStat;
+import com.microsoft.graph.models.extensions.ContentType;
 import com.microsoft.graph.requests.extensions.IItemAnalyticsWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IColumnDefinitionRequestBuilder;
@@ -17,6 +18,8 @@ import com.microsoft.graph.requests.extensions.IContentTypeCollectionRequestBuil
 import com.microsoft.graph.requests.extensions.IContentTypeRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.extensions.IColumnDefinitionWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBaseItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IBaseItemRequestBuilder;
 import com.microsoft.graph.requests.extensions.IListCollectionRequestBuilder;
@@ -94,6 +97,10 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
 
     IDriveRequestBuilder drives(final String id);
 
+    IColumnDefinitionCollectionWithReferencesRequestBuilder externalColumns();
+
+    IColumnDefinitionWithReferenceRequestBuilder externalColumns(final String id);
+
     IBaseItemCollectionRequestBuilder items();
 
     IBaseItemRequestBuilder items(final String id);
@@ -122,6 +129,8 @@ public interface ISiteRequestBuilder extends IRequestBuilder {
     IOnenoteRequestBuilder onenote();
 
     ISiteGetActivitiesByIntervalCollectionRequestBuilder getActivitiesByInterval(final String startDateTime, final String endDateTime, final String interval);
+
+    ISiteGetApplicableContentTypesForListCollectionRequestBuilder getApplicableContentTypesForList(final String listId);
     ISiteGetByPathRequestBuilder getByPath(final String path);
 
 }

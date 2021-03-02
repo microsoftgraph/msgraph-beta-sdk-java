@@ -11,6 +11,7 @@ import com.microsoft.graph.concurrency.ICallback;
 import com.microsoft.graph.models.extensions.EducationClass;
 import com.microsoft.graph.requests.extensions.IEducationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationCategoryRequestBuilder;
+import com.microsoft.graph.requests.extensions.IEducationAssignmentDefaultsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentRequestBuilder;
 import com.microsoft.graph.requests.extensions.IEducationAssignmentSettingsRequestBuilder;

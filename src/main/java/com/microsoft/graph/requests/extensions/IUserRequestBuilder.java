@@ -68,8 +68,6 @@ import com.microsoft.graph.requests.extensions.IMessageRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOutlookUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IPersonRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
-import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveRequestBuilder;
 import com.microsoft.graph.requests.extensions.IDriveCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.ISiteCollectionWithReferencesRequestBuilder;
@@ -104,6 +102,8 @@ import com.microsoft.graph.requests.extensions.IPlannerUserRequestBuilder;
 import com.microsoft.graph.requests.extensions.IItemInsightsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserSettingsRequestBuilder;
 import com.microsoft.graph.requests.extensions.IOnenoteRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoRequestBuilder;
+import com.microsoft.graph.requests.extensions.IProfilePhotoCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IProfileRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityCollectionRequestBuilder;
 import com.microsoft.graph.requests.extensions.IUserActivityRequestBuilder;
@@ -368,17 +368,6 @@ public interface IUserRequestBuilder extends IRequestBuilder {
     IPersonRequestBuilder people(final String id);
 
     /**
-     * Gets the request builder for ProfilePhoto
-     *
-     * @return the IProfilePhotoRequestBuilder instance
-     */
-    IProfilePhotoRequestBuilder photo();
-
-    IProfilePhotoCollectionRequestBuilder photos();
-
-    IProfilePhotoRequestBuilder photos(final String id);
-
-    /**
      * Gets the request builder for Drive
      *
      * @return the IDriveRequestBuilder instance
@@ -472,6 +461,17 @@ public interface IUserRequestBuilder extends IRequestBuilder {
      * @return the IOnenoteRequestBuilder instance
      */
     IOnenoteRequestBuilder onenote();
+
+    /**
+     * Gets the request builder for ProfilePhoto
+     *
+     * @return the IProfilePhotoRequestBuilder instance
+     */
+    IProfilePhotoRequestBuilder photo();
+
+    IProfilePhotoCollectionRequestBuilder photos();
+
+    IProfilePhotoRequestBuilder photos(final String id);
 
     /**
      * Gets the request builder for Profile
