@@ -22,15 +22,16 @@ import java.util.ArrayList;
 public class GroupPolicyUploadedDefinitionFileUploadNewVersionParameterSet {
     /**
      * The content.
-     * 
+     *
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
+    @Nonnull
     public byte[] content;
 
     /**
      * The group Policy Uploaded Language Files.
-     * 
+     *
      */
     @SerializedName(value = "groupPolicyUploadedLanguageFiles", alternate = {"GroupPolicyUploadedLanguageFiles"})
     @Expose
