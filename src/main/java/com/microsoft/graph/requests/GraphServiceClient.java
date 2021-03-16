@@ -267,7 +267,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
          */
         @Nonnull
         @Override
-        public Builder<httpClientType, nativeRequestType> httpProvider(@Nonnull final IHttpProvider httpProvider) {
+        public Builder<httpClientType, nativeRequestType> httpProvider(@Nonnull final IHttpProvider<nativeRequestType> httpProvider) {
             super.httpProvider(httpProvider);
             return this;
         }
@@ -322,8 +322,8 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
          */
         @Nonnull
         @Override
-        public GraphServiceClient buildClient() throws ClientException {
-            return buildClient(new GraphServiceClient());
+        public GraphServiceClient<nativeRequestType> buildClient() throws ClientException {
+            return buildClient(new GraphServiceClient<>());
         }
     }
 
