@@ -22,11 +22,11 @@ import java.util.ArrayList;
 public class MobileAppValidateXmlParameterSet {
     /**
      * The office Configuration Xml.
-     *
+     * 
      */
     @SerializedName(value = "officeConfigurationXml", alternate = {"OfficeConfigurationXml"})
     @Expose
-    @Nonnull
+	@Nonnull
     public byte[] officeConfigurationXml;
 
 
