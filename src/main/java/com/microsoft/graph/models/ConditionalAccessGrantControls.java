@@ -41,7 +41,7 @@ public class ConditionalAccessGrantControls implements IJsonBackedObject {
 
     /**
      * The Built In Controls.
-     * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange.
+     * List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
      */
     @SerializedName(value = "builtInControls", alternate = {"BuiltInControls"})
     @Expose

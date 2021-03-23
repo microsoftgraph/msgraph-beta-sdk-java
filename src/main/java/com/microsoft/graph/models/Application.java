@@ -78,7 +78,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the application was registered. Read-only.
+     * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -114,7 +114,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Membership Claims.
-     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values:NoneSecurityGroup: For security groups and Azure AD rolesAll: This gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of.
+     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      */
     @SerializedName(value = "groupMembershipClaims", alternate = {"GroupMembershipClaims"})
     @Expose
@@ -168,7 +168,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * 
+     * Notes relevant for the management of the application.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -231,7 +231,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Audience.
-     * Specifies the Microsoft accounts that are supported for the current application. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+     * Specifies the Microsoft accounts that are supported for the current application. Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount. See more in the table below.
      */
     @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose

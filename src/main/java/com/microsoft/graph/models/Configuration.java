@@ -39,9 +39,20 @@ public class Configuration implements IJsonBackedObject {
     }
 
     /**
+     * The Authorized App Ids.
+     * 
+     */
+    @SerializedName(value = "authorizedAppIds", alternate = {"AuthorizedAppIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> authorizedAppIds;
+
+    /**
      * The Authorized Apps.
      * A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * @deprecated The property name 'authorizedApps' is being renamed to 'authorizedAppIds'. Please use the new property name, as 'authorizedApps' will be deprecated in Aug 2021.
      */
+    @Deprecated
     @SerializedName(value = "authorizedApps", alternate = {"AuthorizedApps"})
     @Expose
 	@Nullable

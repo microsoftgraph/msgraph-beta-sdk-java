@@ -47,7 +47,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements I
 
     /**
      * The Sms Sign In State.
-     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured.
+     * Whether a phone is ready to be used for SMS sign-in or not. Possible values are: notSupported, notAllowedByPolicy, notEnabled, phoneNumberNotUnique, ready, or notConfigured, unknownFutureValue.
      */
     @SerializedName(value = "smsSignInState", alternate = {"SmsSignInState"})
     @Expose

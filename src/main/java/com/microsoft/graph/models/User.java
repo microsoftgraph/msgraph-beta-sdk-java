@@ -27,6 +27,7 @@ import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.LicenseDetails;
+import com.microsoft.graph.models.OAuth2PermissionGrant;
 import com.microsoft.graph.models.ScopedRoleMembership;
 import com.microsoft.graph.models.Calendar;
 import com.microsoft.graph.models.CalendarGroup;
@@ -73,6 +74,7 @@ import com.microsoft.graph.requests.UsageRightCollectionPage;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
+import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage;
 import com.microsoft.graph.requests.CalendarGroupCollectionPage;
 import com.microsoft.graph.requests.CalendarCollectionPage;
@@ -149,7 +151,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Licenses.
-     * The licenses that are assigned to the user. Returned only on $select. Not nullable.
+     * The licenses that are assigned to the user. Not nullable. Supports $filter.
      */
     @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
@@ -185,7 +187,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 chararcters.Returned only on $select.
+     * The company name which the user is associated. This property can be useful for describing the company that an external user comes from. The maximum length of the company name is 64 characters.Returned only on $select.
      */
     @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
@@ -374,7 +376,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Last Password Change Date Time.
-     * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select. Read-only.
+     * The time when this Azure AD user last changed their password. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. Read-only.
      */
     @SerializedName(value = "lastPasswordChangeDateTime", alternate = {"LastPasswordChangeDateTime"})
     @Expose
@@ -473,7 +475,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select. Read-only.
+     * Indicates the last time at which the object was synced with the on-premises directory; for example: '2013-02-16T03:04:54Z'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select. Read-only.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -707,7 +709,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Birthday.
-     * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z' Returned only on $select.
+     * The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
      */
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
@@ -716,7 +718,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hire Date.
-     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is '2014-01-01T00:00:00Z'. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+     * The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
      */
     @SerializedName(value = "hireDate", alternate = {"HireDate"})
     @Expose
@@ -860,6 +862,13 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      */
 	@Nullable
     public DirectoryObjectCollectionPage memberOf;
+
+    /**
+     * The Oauth2Permission Grants.
+     * 
+     */
+	@Nullable
+    public OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
 
     /**
      * The Owned Devices.
@@ -1325,6 +1334,10 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("memberOf")) {
             memberOf = serializer.deserializeObject(json.get("memberOf"), DirectoryObjectCollectionPage.class);
+        }
+
+        if (json.has("oauth2PermissionGrants")) {
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), OAuth2PermissionGrantCollectionPage.class);
         }
 
         if (json.has("ownedDevices")) {

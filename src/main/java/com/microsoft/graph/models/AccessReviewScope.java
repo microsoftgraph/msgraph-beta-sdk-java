@@ -37,24 +37,6 @@ public class AccessReviewScope implements IJsonBackedObject {
         return additionalDataManager;
     }
 
-    /**
-     * The Query.
-     * The query specifying what will be reviewed. See table for examples.
-     */
-    @SerializedName(value = "query", alternate = {"Query"})
-    @Expose
-	@Nullable
-    public String query;
-
-    /**
-     * The Query Type.
-     * The type of query. Examples include MicrosoftGraph and ARM.
-     */
-    @SerializedName(value = "queryType", alternate = {"QueryType"})
-    @Expose
-	@Nullable
-    public String queryType;
-
 
     /**
      * Sets the raw JSON object

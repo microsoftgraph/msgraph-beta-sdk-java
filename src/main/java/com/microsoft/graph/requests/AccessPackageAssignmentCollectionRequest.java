@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignmentResourceRole;
 import com.microsoft.graph.models.AccessPackageAssignment;
+import com.microsoft.graph.models.AccessPackageAssignmentFilterByCurrentUserOptions;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

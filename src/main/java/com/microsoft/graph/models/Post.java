@@ -105,7 +105,7 @@ public class Post extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Received Date Time.
-     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "receivedDateTime", alternate = {"ReceivedDateTime"})
     @Expose

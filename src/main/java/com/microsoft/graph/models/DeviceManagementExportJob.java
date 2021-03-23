@@ -58,7 +58,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Localization Type.
-     * Configures how the requested export job is localized
+     * Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
      */
     @SerializedName(value = "localizationType", alternate = {"LocalizationType"})
     @Expose

@@ -57,7 +57,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Edit.
-     * True if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access, through an Outlook client or the corresponding calendarPermission resource. Read-only.
      */
     @SerializedName(value = "canEdit", alternate = {"CanEdit"})
     @Expose
@@ -66,7 +66,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Share.
-     * True if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
+     * true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it. Read-only.
      */
     @SerializedName(value = "canShare", alternate = {"CanShare"})
     @Expose
@@ -75,7 +75,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can View Private Items.
-     * True if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
+     * true if the user can read calendar items that have been marked private, false otherwise. This property is set through an Outlook client or the corresponding calendarPermission resource. Read-only.
      */
     @SerializedName(value = "canViewPrivateItems", alternate = {"CanViewPrivateItems"})
     @Expose
@@ -93,7 +93,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: LightBlue=0, LightGreen=1, LightOrange=2, LightGray=3, LightYellow=4, LightTeal=5, LightPink=6, LightBrown=7, LightRed=8, MaxColor=9, Auto=-1
+     * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
@@ -111,7 +111,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Hex Color.
-     * The calendar color, expressed in a hex color code of three hexidecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
+     * The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is  empty.
      */
     @SerializedName(value = "hexColor", alternate = {"HexColor"})
     @Expose
@@ -120,7 +120,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default Calendar.
-     * True if this is the default calendar where new events are created by default, false otherwise.
+     * true if this is the default calendar where new events are created by default, false otherwise.
      */
     @SerializedName(value = "isDefaultCalendar", alternate = {"IsDefaultCalendar"})
     @Expose
@@ -138,7 +138,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Shared.
-     * True if the user has shared the calendar with other users, false otherwise. Since only the user who created the calendar can share it, isShared and isSharedWithMe cannot be true for the same user. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
+     * true if the user has shared the calendar with other users, false otherwise. Since only the user who created the calendar can share it, isShared and isSharedWithMe cannot be true for the same user. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
      */
     @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
@@ -147,7 +147,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Shared With Me.
-     * True if the user has been shared this calendar, false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
+     * true if the user has been shared this calendar, false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
      */
     @SerializedName(value = "isSharedWithMe", alternate = {"IsSharedWithMe"})
     @Expose

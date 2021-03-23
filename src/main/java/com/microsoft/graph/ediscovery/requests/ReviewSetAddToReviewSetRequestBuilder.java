@@ -7,7 +7,7 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.ediscovery.requests.ReviewSetAddToReviewSetRequest;
 import com.microsoft.graph.ediscovery.models.ReviewSet;
 import com.microsoft.graph.ediscovery.models.SourceCollection;
-import com.microsoft.graph.ediscovery.models.DataCollectionScope;
+import com.microsoft.graph.ediscovery.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.ediscovery.models.ReviewSetAddToReviewSetParameterSet;

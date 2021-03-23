@@ -35,7 +35,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Query.
-     * 
+     * The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery.  You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016
      */
     @SerializedName(value = "contentQuery", alternate = {"ContentQuery"})
     @Expose
@@ -44,7 +44,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The user who created the sourceCollection.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -53,7 +53,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time the sourceCollection was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -71,7 +71,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of the sourceCollection
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -80,7 +80,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the sourceCollection
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -89,7 +89,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * The last user who modified the sourceCollection.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -98,7 +98,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The last date and time the sourceCollection was modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -107,7 +107,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Sources.
-     * 
+     * When specified, the collection will span across a service for an entire workload. Possible values are: allMailboxes, allSites.
      */
     @SerializedName(value = "tenantSources", alternate = {"TenantSources"})
     @Expose
@@ -116,7 +116,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Additional Sources.
-     * 
+     * Adds an additional source to the sourceCollection.
      */
     @SerializedName(value = "additionalSources", alternate = {"AdditionalSources"})
     @Expose
@@ -125,7 +125,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Add To Review Set Operation.
-     * 
+     * Adds the results of the sourceCollection to the specified reviewSet.
      */
     @SerializedName(value = "addToReviewSetOperation", alternate = {"AddToReviewSetOperation"})
     @Expose
@@ -134,14 +134,14 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Custodian Sources.
-     * 
+     * Custodian sources that are included in the sourceCollection.
      */
 	@Nullable
     public DataSourceCollectionPage custodianSources;
 
     /**
      * The Last Estimate Statistics Operation.
-     * 
+     * The last estimate operation associated with the sourceCollection.
      */
     @SerializedName(value = "lastEstimateStatisticsOperation", alternate = {"LastEstimateStatisticsOperation"})
     @Expose

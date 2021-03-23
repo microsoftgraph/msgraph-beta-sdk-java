@@ -69,6 +69,7 @@ import com.microsoft.graph.models.TeamsDeviceUsageDistributionUserCounts;
 import com.microsoft.graph.models.TeamsDeviceUsageUserCounts;
 import com.microsoft.graph.models.TeamsDeviceUsageUserDetail;
 import com.microsoft.graph.models.TeamsUserActivityCounts;
+import com.microsoft.graph.models.TeamsUserActivityDistributionUserCounts;
 import com.microsoft.graph.models.TeamsUserActivityUserCounts;
 import com.microsoft.graph.models.TeamsUserActivityUserDetail;
 import com.microsoft.graph.models.YammerActivitySummary;

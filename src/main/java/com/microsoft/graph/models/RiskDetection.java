@@ -44,7 +44,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * Date and time that the risky activity occurred.
+     * Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -71,7 +71,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Detected Date Time.
-     * Date and time that the risk was detected.
+     * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "detectedDateTime", alternate = {"DetectedDateTime"})
     @Expose
@@ -134,7 +134,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Event Type.
-     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, genericadminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
+     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue.
      */
     @SerializedName(value = "riskEventType", alternate = {"RiskEventType"})
     @Expose
@@ -161,7 +161,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Type.
-     * List of risk event types.Note: This property is deprecated. Use riskEventTypes instead.
+     * List of risk event types.Note: This property is deprecated. Use riskEventType instead.
      */
     @SerializedName(value = "riskType", alternate = {"RiskType"})
     @Expose
@@ -170,7 +170,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * Source of the risk detection. For example, 'activeDirectory'.
+     * Source of the risk detection. For example, activeDirectory.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -197,7 +197,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Unique ID of the user.
+     * Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

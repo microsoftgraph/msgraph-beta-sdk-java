@@ -12,6 +12,7 @@ import com.microsoft.graph.models.AssignmentFilterStatusDetails;
 import com.microsoft.graph.models.RolePermission;
 import com.microsoft.graph.models.ComanagedDevicesSummary;
 import com.microsoft.graph.models.ComanagementEligibleDevicesSummary;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevicesSummary;
 import com.microsoft.graph.models.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignedRoleDetails;
 import com.microsoft.graph.models.RoleScopeTag;
@@ -144,6 +145,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIde
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsRegressionSummaryRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder;

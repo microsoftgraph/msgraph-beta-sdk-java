@@ -45,6 +45,8 @@ import com.microsoft.graph.requests.LicenseDetailsRequestBuilder;
 import com.microsoft.graph.requests.GroupRequestBuilder;
 import com.microsoft.graph.requests.ApplicationRequestBuilder;
 import com.microsoft.graph.requests.DeviceRequestBuilder;
+import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.OAuth2PermissionGrantWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EndpointRequestBuilder;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.ScopedRoleMembershipRequestBuilder;

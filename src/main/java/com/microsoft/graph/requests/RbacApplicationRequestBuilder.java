@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.UnifiedRoleAssignmentCollectionRequestBuilde
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.ApprovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder;
@@ -137,6 +139,26 @@ public class RbacApplicationRequestBuilder extends BaseRequestBuilder<RbacApplic
     @Nonnull
     public UnifiedRoleDefinitionRequestBuilder roleDefinitions(@Nonnull final String id) {
         return new UnifiedRoleDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("roleDefinitions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Approval collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ApprovalCollectionRequestBuilder roleAssignmentApprovals() {
+        return new ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentApprovals"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Approval item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ApprovalRequestBuilder roleAssignmentApprovals(@Nonnull final String id) {
+        return new ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("roleAssignmentApprovals") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleAssignmentRequest collection

@@ -27,6 +27,8 @@ import com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyRequestBuilder;
+import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.FeatureRolloutPolicyRequestBuilder;
 import com.microsoft.graph.requests.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
@@ -273,6 +275,26 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public TokenLifetimePolicyRequestBuilder tokenLifetimePolicies(@Nonnull final String id) {
         return new TokenLifetimePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("tokenLifetimePolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the FeatureRolloutPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public FeatureRolloutPolicyCollectionRequestBuilder featureRolloutPolicies() {
+        return new FeatureRolloutPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the FeatureRolloutPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public FeatureRolloutPolicyRequestBuilder featureRolloutPolicies(@Nonnull final String id) {
+        return new FeatureRolloutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies") + "/" + id, getClient(), null);
     }
 
     /**

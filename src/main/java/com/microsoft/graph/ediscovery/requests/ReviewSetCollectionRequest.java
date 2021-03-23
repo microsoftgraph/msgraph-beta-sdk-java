@@ -10,7 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.Case;
 import com.microsoft.graph.ediscovery.models.ReviewSet;
 import com.microsoft.graph.ediscovery.models.SourceCollection;
-import com.microsoft.graph.ediscovery.models.DataCollectionScope;
+import com.microsoft.graph.ediscovery.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.microsoft.graph.ediscovery.models.ExportOptions;
 import com.microsoft.graph.ediscovery.models.ExportFileStructure;

@@ -24,13 +24,13 @@ public enum ProvisioningResult
     */
     SKIPPED,
     /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
     * warning
     */
     WARNING,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For ProvisioningResult values that were not expected from the service
     */

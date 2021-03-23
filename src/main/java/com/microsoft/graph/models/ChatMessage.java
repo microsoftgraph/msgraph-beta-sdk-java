@@ -59,7 +59,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Channel Identity.
-     * 
+     * The identity of the channel in which the message was posted.
      */
     @SerializedName(value = "channelIdentity", alternate = {"ChannelIdentity"})
     @Expose
@@ -68,7 +68,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Id.
-     * 
+     * The identity of the chat in which the message was posted.
      */
     @SerializedName(value = "chatId", alternate = {"ChatId"})
     @Expose

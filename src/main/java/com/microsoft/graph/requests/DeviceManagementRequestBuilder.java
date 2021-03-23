@@ -12,6 +12,7 @@ import com.microsoft.graph.models.AssignmentFilterStatusDetails;
 import com.microsoft.graph.models.RolePermission;
 import com.microsoft.graph.models.ComanagedDevicesSummary;
 import com.microsoft.graph.models.ComanagementEligibleDevicesSummary;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereDevicesSummary;
 import com.microsoft.graph.models.SuggestedEnrollmentLimit;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignedRoleDetails;
 import com.microsoft.graph.models.RoleScopeTag;
@@ -144,6 +145,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIde
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsRegressionSummaryRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionRequestBuilder;
@@ -1642,6 +1645,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public UserExperienceAnalyticsMetricHistoryRequestBuilder userExperienceAnalyticsMetricHistory(@Nonnull final String id) {
         return new UserExperienceAnalyticsMetricHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetricHistory") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsNotAutopilotReadyDevice collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionRequestBuilder userExperienceAnalyticsNotAutopilotReadyDevice() {
+        return new UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsNotAutopilotReadyDevice"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsNotAutopilotReadyDevice item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder userExperienceAnalyticsNotAutopilotReadyDevice(@Nonnull final String id) {
+        return new UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsNotAutopilotReadyDevice") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for UserExperienceAnalyticsOverview
@@ -2655,6 +2678,15 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceManagementGetComanagementEligibleDevicesSummaryRequestBuilder getComanagementEligibleDevicesSummary() {
         return new DeviceManagementGetComanagementEligibleDevicesSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getComanagementEligibleDevicesSummary"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public DeviceManagementUserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder userExperienceAnalyticsSummarizeWorkFromAnywhereDevices() {
+        return new DeviceManagementUserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.userExperienceAnalyticsSummarizeWorkFromAnywhereDevices"), getClient(), null);
     }
 
     /**

@@ -44,6 +44,15 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
     public Boolean isDeleted;
 
     /**
+     * The Is Licensed.
+     * 
+     */
+    @SerializedName(value = "isLicensed", alternate = {"IsLicensed"})
+    @Expose
+	@Nullable
+    public Boolean isLicensed;
+
+    /**
      * The Last Activity Date.
      * 
      */
@@ -80,6 +89,15 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
     public Boolean usedAndroidPhone;
 
     /**
+     * The Used Chrome OS.
+     * 
+     */
+    @SerializedName(value = "usedChromeOS", alternate = {"UsedChromeOS"})
+    @Expose
+	@Nullable
+    public Boolean usedChromeOS;
+
+    /**
      * The Usedi OS.
      * 
      */
@@ -87,6 +105,15 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
     @Expose
 	@Nullable
     public Boolean usediOS;
+
+    /**
+     * The Used Linux.
+     * 
+     */
+    @SerializedName(value = "usedLinux", alternate = {"UsedLinux"})
+    @Expose
+	@Nullable
+    public Boolean usedLinux;
 
     /**
      * The Used Mac.

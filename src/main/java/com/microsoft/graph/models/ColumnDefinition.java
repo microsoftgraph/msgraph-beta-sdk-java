@@ -81,7 +81,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Approval Status.
-     * 
+     * This column stores content approval status.
      */
     @SerializedName(value = "contentApprovalStatus", alternate = {"ContentApprovalStatus"})
     @Expose
@@ -162,7 +162,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Hyperlink Or Picture.
-     * 
+     * This column stores hyperlink or picture values.
      */
     @SerializedName(value = "hyperlinkOrPicture", alternate = {"HyperlinkOrPicture"})
     @Expose
@@ -180,7 +180,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Deletable.
-     * 
+     * Indicates whether this column can be deleted.
      */
     @SerializedName(value = "isDeletable", alternate = {"IsDeletable"})
     @Expose
@@ -189,7 +189,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Reorderable.
-     * 
+     * Indicates whether values in the column can be reordered. Read-only.
      */
     @SerializedName(value = "isReorderable", alternate = {"IsReorderable"})
     @Expose
@@ -198,7 +198,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Sealed.
-     * 
+     * Specifies whether column can be changed.
      */
     @SerializedName(value = "isSealed", alternate = {"IsSealed"})
     @Expose
@@ -243,7 +243,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Propagate Changes.
-     * 
+     * If 'True' changes to this column will be propagated to lists that implement the column.
      */
     @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
     @Expose
@@ -270,7 +270,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Term.
-     * 
+     * This column stores taxonomy terms.
      */
     @SerializedName(value = "term", alternate = {"Term"})
     @Expose
@@ -288,7 +288,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Thumbnail.
-     * 
+     * This column stores thumbnail values.
      */
     @SerializedName(value = "thumbnail", alternate = {"Thumbnail"})
     @Expose
@@ -297,7 +297,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * For site columns, the type of column. Read-only
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -306,7 +306,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Validation.
-     * 
+     * This column stores validation formula and message for the column.
      */
     @SerializedName(value = "validation", alternate = {"Validation"})
     @Expose
@@ -315,7 +315,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Source Column.
-     * 
+     * The source column for content type column.
      */
     @SerializedName(value = "sourceColumn", alternate = {"SourceColumn"})
     @Expose

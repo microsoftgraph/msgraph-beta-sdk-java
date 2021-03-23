@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the External Group Member Collection Request Builder.
+ * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
  */
+@Deprecated
 public class ExternalGroupMemberCollectionRequestBuilder extends BaseCollectionRequestBuilder<ExternalGroupMember, ExternalGroupMemberRequestBuilder, ExternalGroupMemberCollectionResponse, ExternalGroupMemberCollectionPage, ExternalGroupMemberCollectionRequest> {
 
     /**

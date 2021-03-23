@@ -8,8 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DevicePlatformType;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilterType;
+import com.microsoft.graph.models.AssignmentFilterTypeAndEvaluationResult;
 import com.microsoft.graph.models.AssignmentFilterEvaluationResult;
 
 
@@ -84,6 +86,15 @@ public class AssignmentFilterEvaluationSummary implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceAndAppManagementAssignmentFilterType assignmentFilterType;
+
+    /**
+     * The Assignment Filter Type And Evaluation Results.
+     * A collection of filter types and their corresponding evaluation results.
+     */
+    @SerializedName(value = "assignmentFilterTypeAndEvaluationResults", alternate = {"AssignmentFilterTypeAndEvaluationResults"})
+    @Expose
+	@Nullable
+    public java.util.List<AssignmentFilterTypeAndEvaluationResult> assignmentFilterTypeAndEvaluationResults;
 
     /**
      * The Evaluation Date Time.

@@ -295,6 +295,16 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
     }
 
     /**
+     * Gets the request builder for Store
+     *
+     * @return the StoreRequestBuilder instance
+     */
+    @Nonnull
+    public StoreRequestBuilder termStore() {
+        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStore"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for Onenote
      *
      * @return the OnenoteRequestBuilder instance

@@ -29,7 +29,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
 
     /**
      * The Auth Method.
-     * Represents the authentication method that the user used. Possible values are: email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and  alternateMobileCall (only supported for registration).
+     * Represents the authentication method that the user used. Possible values are:email, mobileSMS, mobileCall, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, alternateMobileCall (supported only in registration), fido, appPassword, unknownFutureValue.
      */
     @SerializedName(value = "authMethod", alternate = {"AuthMethod"})
     @Expose
@@ -47,7 +47,7 @@ public class CredentialUsageSummary extends Entity implements IJsonBackedObject 
 
     /**
      * The Feature.
-     * Defines the feature to report. Possible values are: registration and reset.
+     * Defines the feature to report. Possible values are: registration, reset, unknownFutureValue.
      */
     @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose

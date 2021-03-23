@@ -57,6 +57,15 @@ public class Group extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Parent Site Id.
+     * 
+     */
+    @SerializedName(value = "parentSiteId", alternate = {"ParentSiteId"})
+    @Expose
+	@Nullable
+    public String parentSiteId;
+
+    /**
      * The Scope.
      * Returns type of group. Possible values are 'global', 'system' and 'siteCollection'.
      */

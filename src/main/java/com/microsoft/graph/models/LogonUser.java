@@ -69,7 +69,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The First Seen Date Time.
-     * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
@@ -78,7 +78,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The Last Seen Date Time.
-     * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose

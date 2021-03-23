@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsAutopilotDeploymentProfile;
 import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
+import com.microsoft.graph.models.DeletedWindowsAutopilotDeviceState;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

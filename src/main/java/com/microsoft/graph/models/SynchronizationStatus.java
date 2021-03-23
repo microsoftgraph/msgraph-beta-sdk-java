@@ -117,7 +117,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Steady State First Achieved Time.
-     * The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "steadyStateFirstAchievedTime", alternate = {"SteadyStateFirstAchievedTime"})
     @Expose
@@ -126,7 +126,7 @@ public class SynchronizationStatus implements IJsonBackedObject {
 
     /**
      * The Steady State Last Achieved Time.
-     * The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "steadyStateLastAchievedTime", alternate = {"SteadyStateLastAchievedTime"})
     @Expose

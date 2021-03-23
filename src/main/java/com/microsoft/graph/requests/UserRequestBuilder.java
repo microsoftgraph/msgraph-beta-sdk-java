@@ -44,6 +44,8 @@ import com.microsoft.graph.requests.LicenseDetailsRequestBuilder;
 import com.microsoft.graph.requests.GroupRequestBuilder;
 import com.microsoft.graph.requests.ApplicationRequestBuilder;
 import com.microsoft.graph.requests.DeviceRequestBuilder;
+import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.OAuth2PermissionGrantWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.EndpointRequestBuilder;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionRequestBuilder;
 import com.microsoft.graph.requests.ScopedRoleMembershipRequestBuilder;
@@ -510,6 +512,26 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public OrgContactRequestBuilder memberOfAsOrgContact(@Nonnull final String id) {
         return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("memberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the OAuth2PermissionGrant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OAuth2PermissionGrantCollectionWithReferencesRequestBuilder oauth2PermissionGrants() {
+        return new OAuth2PermissionGrantCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OAuth2PermissionGrant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OAuth2PermissionGrantWithReferenceRequestBuilder oauth2PermissionGrants(@Nonnull final String id) {
+        return new OAuth2PermissionGrantWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("oauth2PermissionGrants") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DirectoryObject collection

@@ -67,15 +67,6 @@ public class UserTeamworkSendActivityNotificationParameterSet {
 	@Nullable
     public java.util.List<KeyValuePair> templateParameters;
 
-    /**
-     * The teams App Id.
-     * 
-     */
-    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
-    @Expose
-	@Nullable
-    public String teamsAppId;
-
 
     /**
      * Instiaciates a new UserTeamworkSendActivityNotificationParameterSet
@@ -91,7 +82,6 @@ public class UserTeamworkSendActivityNotificationParameterSet {
         this.chainId = builder.chainId;
         this.previewText = builder.previewText;
         this.templateParameters = builder.templateParameters;
-        this.teamsAppId = builder.teamsAppId;
     }
     /**
      * Gets a new builder for the body
@@ -181,21 +171,6 @@ public class UserTeamworkSendActivityNotificationParameterSet {
             return this;
         }
         /**
-         * The teamsAppId parameter value
-         */
-        @Nullable
-        protected String teamsAppId;
-        /**
-         * Sets the TeamsAppId
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public UserTeamworkSendActivityNotificationParameterSetBuilder withTeamsAppId(@Nullable final String val) {
-            this.teamsAppId = val;
-            return this;
-        }
-        /**
          * Instanciates a new UserTeamworkSendActivityNotificationParameterSetBuilder
          */
         @Nullable
@@ -230,9 +205,6 @@ public class UserTeamworkSendActivityNotificationParameterSet {
         }
         if(this.templateParameters != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("templateParameters", templateParameters));
-        }
-        if(this.teamsAppId != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("teamsAppId", teamsAppId));
         }
         return result;
     }

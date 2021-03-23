@@ -6,7 +6,7 @@
 package com.microsoft.graph.ediscovery.models;
 
 import com.microsoft.graph.ediscovery.models.SourceCollection;
-import com.microsoft.graph.ediscovery.models.DataCollectionScope;
+import com.microsoft.graph.ediscovery.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -38,7 +38,7 @@ public class ReviewSetAddToReviewSetParameterSet {
     @SerializedName(value = "additionalData", alternate = {"AdditionalData"})
     @Expose
 	@Nullable
-    public EnumSet<DataCollectionScope> additionalData;
+    public EnumSet<AdditionalDataOptions> additionalData;
 
 
     /**
@@ -84,14 +84,14 @@ public class ReviewSetAddToReviewSetParameterSet {
          * The additionalData parameter value
          */
         @Nullable
-        protected EnumSet<DataCollectionScope> additionalData;
+        protected EnumSet<AdditionalDataOptions> additionalData;
         /**
          * Sets the AdditionalData
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public ReviewSetAddToReviewSetParameterSetBuilder withAdditionalData(@Nullable final EnumSet<DataCollectionScope> val) {
+        public ReviewSetAddToReviewSetParameterSetBuilder withAdditionalData(@Nullable final EnumSet<AdditionalDataOptions> val) {
             this.additionalData = val;
             return this;
         }

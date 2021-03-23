@@ -39,7 +39,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Migration Status.
-     * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired.
+     * Indication of whether the application can be moved to Azure AD or require more investigation. Possible values are: ready, needsReview, additionalStepsRequired, unknownFutureValue.
      */
     @SerializedName(value = "migrationStatus", alternate = {"MigrationStatus"})
     @Expose
@@ -48,7 +48,7 @@ public class RelyingPartyDetailedSummary extends Entity implements IJsonBackedOb
 
     /**
      * The Migration Validation Details.
-     * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD. Possible names are: AdditionalWSFedEndpointCheckResult,  AllowedAuthenticationClassReferencesCheckResult, AlwaysRequireAuthenticationCheckResult,   AutoUpdateEnabledCheckResult, ClaimsProviderNameCheckResult, EncryptClaimsCheckResult,  EncryptedNameIdRequiredCheckResult, MonitoringEnabledCheckResult,NotBeforeSkewCheckResult,  RequestMFAFromClaimsProvidersCheckResult, SignedSamlRequestsRequiredCheckResult, AdditionalAuthenticationRulesCheckResult, TokenLifetimeCheckResult,  DelegationAuthorizationRulesCheckResult, IssuanceAuthorizationRulesCheckResult, IssuanceTransformRulesCheckResult. Possible result values are 0, 1, or 2. 0 when the validation check passed, 1 when the validation check failed and 2 when the validation check is a warning.
+     * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
      */
     @SerializedName(value = "migrationValidationDetails", alternate = {"MigrationValidationDetails"})
     @Expose

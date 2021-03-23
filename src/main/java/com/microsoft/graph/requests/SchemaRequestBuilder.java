@@ -19,7 +19,9 @@ import com.microsoft.graph.http.BaseRequestBuilder;
 
 /**
  * The class for the Schema Request Builder.
+ * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
  */
+@Deprecated
 public class SchemaRequestBuilder extends BaseRequestBuilder<Schema> {
 
     /**
