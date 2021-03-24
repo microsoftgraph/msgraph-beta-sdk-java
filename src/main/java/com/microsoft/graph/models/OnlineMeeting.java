@@ -46,7 +46,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -82,7 +82,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Capabilities.
-     * The list of meeting capabilities. Possible values are: questionAndAnswer.
+     * The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
      */
     @SerializedName(value = "capabilities", alternate = {"Capabilities"})
     @Expose
@@ -172,7 +172,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Information.
-     * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
     @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
@@ -190,7 +190,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * Specifies which participants can bypass the meeting lobby.
+     * Specifies which participants can bypass the meeting   lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose

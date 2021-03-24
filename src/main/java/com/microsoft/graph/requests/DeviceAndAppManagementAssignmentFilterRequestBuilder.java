@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
 import com.microsoft.graph.models.AssignmentFilterValidationResult;
+import com.microsoft.graph.models.AssignmentFilterState;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

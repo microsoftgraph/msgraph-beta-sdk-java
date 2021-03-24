@@ -40,6 +40,15 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Deployable Content Display Name.
+     * Friendly display name of the quality update profile deployable content
+     */
+    @SerializedName(value = "deployableContentDisplayName", alternate = {"DeployableContentDisplayName"})
+    @Expose
+	@Nullable
+    public String deployableContentDisplayName;
+
+    /**
      * The Description.
      * The description of the profile which is specified by the user.
      */

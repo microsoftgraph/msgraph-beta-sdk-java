@@ -53,7 +53,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Released Date Time.
-     * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "releasedDateTime", alternate = {"ReleasedDateTime"})
     @Expose
@@ -80,7 +80,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Returned Date Time.
-     * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Moment in time when the submission was returned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "returnedDateTime", alternate = {"ReturnedDateTime"})
     @Expose
@@ -107,7 +107,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Submitted Date Time.
-     * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Moment in time when the submission was moved into the submitted state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "submittedDateTime", alternate = {"SubmittedDateTime"})
     @Expose
@@ -125,7 +125,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Unsubmitted Date Time.
-     * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Moment in time when the submission was moved from submitted into the working state. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "unsubmittedDateTime", alternate = {"UnsubmittedDateTime"})
     @Expose

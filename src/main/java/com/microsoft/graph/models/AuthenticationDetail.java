@@ -39,7 +39,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Method.
-     * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token.
+     * The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token, Previously satisfied.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -57,7 +57,7 @@ public class AuthenticationDetail implements IJsonBackedObject {
 
     /**
      * The Authentication Step Date Time.
-     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
+     * Represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "authenticationStepDateTime", alternate = {"AuthenticationStepDateTime"})
     @Expose

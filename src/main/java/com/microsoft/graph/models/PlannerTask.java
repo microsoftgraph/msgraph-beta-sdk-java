@@ -99,7 +99,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -126,7 +126,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -144,7 +144,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Due Date Time.
-     * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
@@ -189,7 +189,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Preview Type.
-     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
+     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      */
     @SerializedName(value = "previewType", alternate = {"PreviewType"})
     @Expose
@@ -216,7 +216,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
+     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

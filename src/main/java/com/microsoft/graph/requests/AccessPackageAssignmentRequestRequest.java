@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackageAssignmentRequest;
+import com.microsoft.graph.models.AccessPackageAssignmentRequestFilterByCurrentUserOptions;
 import com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageSubjectRequestBuilder;

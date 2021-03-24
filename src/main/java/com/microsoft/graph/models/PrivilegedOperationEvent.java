@@ -45,7 +45,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Expiration Date Time.
-     * This is only used when the requestType is 'Activate', and it indicates the expiration time for the role activation.
+     * This is only used when the requestType is Activate, and it indicates the expiration time for the role activation.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -90,7 +90,7 @@ public class PrivilegedOperationEvent extends Entity implements IJsonBackedObjec
 
     /**
      * The Request Type.
-     * The request operation type. The requestType value can be: Assign (role assignment), Activate (role activation), Unassign (remove role assignment), Deactivate (role deactivation), ScanAlersNow (scan security alerts), DismissAlert (dismiss security alert), FixAlertItem (fix a security alert issue), AccessReview_Review (review an Access Review), AccessReview_Create (create an Access Review), AccessReview_Update (update an Access Review), and AccessReview_Delete (delete an Access Review).
+     * The request operation type. The requestType value can be: Assign (role assignment), Activate (role activation), Unassign (remove role assignment), Deactivate (role deactivation), ScanAlertsNow (scan security alerts), DismissAlert (dismiss security alert), FixAlertItem (fix a security alert issue),  AccessReview_Review (review an Access Review), AccessReview_Create (create an Access Review) , AccessReview_Update (update an Access Review), AccessReview_Delete (delete an Access Review).
      */
     @SerializedName(value = "requestType", alternate = {"RequestType"})
     @Expose

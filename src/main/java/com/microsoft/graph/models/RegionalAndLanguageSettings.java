@@ -85,7 +85,7 @@ public class RegionalAndLanguageSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Translation Preferences.
-     * 
+     * The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
      */
     @SerializedName(value = "translationPreferences", alternate = {"TranslationPreferences"})
     @Expose

@@ -144,7 +144,7 @@ public class AttributeDefinition implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean. Default is String.
+     * Attribute value type. Possible values are: String, Integer, Reference, Binary, Boolean,DateTime. Default is String.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

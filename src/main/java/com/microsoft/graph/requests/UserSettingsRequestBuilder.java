@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.UserSettings;
+import com.microsoft.graph.requests.UserInsightsSettingsRequestBuilder;
 import com.microsoft.graph.requests.RegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.requests.ShiftPreferencesRequestBuilder;
 import java.util.Arrays;
@@ -58,6 +59,16 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder<UserSettings>
     }
 
 
+
+    /**
+     * Gets the request builder for UserInsightsSettings
+     *
+     * @return the UserInsightsSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public UserInsightsSettingsRequestBuilder itemInsights() {
+        return new UserInsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
+    }
 
     /**
      * Gets the request builder for RegionalAndLanguageSettings

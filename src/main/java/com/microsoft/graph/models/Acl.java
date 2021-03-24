@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.AccessType;
+import com.microsoft.graph.models.IdentitySourceType;
 import com.microsoft.graph.models.AclType;
 
 
@@ -55,7 +56,7 @@ public class Acl implements IJsonBackedObject {
     @SerializedName(value = "identitySource", alternate = {"IdentitySource"})
     @Expose
 	@Nullable
-    public String identitySource;
+    public IdentitySourceType identitySource;
 
     /**
      * The Type.

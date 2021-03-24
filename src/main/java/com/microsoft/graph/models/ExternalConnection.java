@@ -31,7 +31,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the External Connection.
+ * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
  */
+@Deprecated
 public class ExternalConnection extends Entity implements IJsonBackedObject {
 
 
@@ -74,7 +76,9 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     /**
      * The Groups.
      * 
+     * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
+    @Deprecated
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
 	@Nullable
@@ -83,7 +87,9 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     /**
      * The Items.
      * Read-only. Nullable.
+     * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
+    @Deprecated
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
 	@Nullable
@@ -92,7 +98,9 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     /**
      * The Operations.
      * Read-only. Nullable.
+     * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
+    @Deprecated
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
 	@Nullable
@@ -101,7 +109,9 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     /**
      * The Schema.
      * Read-only. Nullable.
+     * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
+    @Deprecated
     @SerializedName(value = "schema", alternate = {"Schema"})
     @Expose
 	@Nullable

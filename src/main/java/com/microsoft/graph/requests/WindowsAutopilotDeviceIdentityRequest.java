@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.WindowsAutopilotDeviceIdentity;
+import com.microsoft.graph.models.DeletedWindowsAutopilotDeviceState;
 import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

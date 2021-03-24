@@ -20,6 +20,7 @@ import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.models.PrivateLinkResourcePolicy;
 import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicy;
+import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.DirectoryRoleAccessReviewPolicy;
 import com.microsoft.graph.models.ConditionalAccessPolicy;
@@ -34,6 +35,7 @@ import com.microsoft.graph.requests.PermissionGrantPolicyCollectionPage;
 import com.microsoft.graph.requests.PrivateLinkResourcePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
+import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionPage;
@@ -166,6 +168,15 @@ public class PolicyRoot implements IJsonBackedObject {
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
+     * The Feature Rollout Policies.
+     * 
+     */
+    @SerializedName(value = "featureRolloutPolicies", alternate = {"FeatureRolloutPolicies"})
+    @Expose
+	@Nullable
+    public FeatureRolloutPolicyCollectionPage featureRolloutPolicies;
+
+    /**
      * The Admin Consent Request Policy.
      * 
      */
@@ -259,6 +270,10 @@ public class PolicyRoot implements IJsonBackedObject {
 
         if (json.has("tokenLifetimePolicies")) {
             tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), TokenLifetimePolicyCollectionPage.class);
+        }
+
+        if (json.has("featureRolloutPolicies")) {
+            featureRolloutPolicies = serializer.deserializeObject(json.get("featureRolloutPolicies"), FeatureRolloutPolicyCollectionPage.class);
         }
 
         if (json.has("conditionalAccessPolicies")) {

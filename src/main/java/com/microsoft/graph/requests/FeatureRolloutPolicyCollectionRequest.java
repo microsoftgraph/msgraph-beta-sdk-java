@@ -25,7 +25,9 @@ import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequest;
 
 /**
  * The class for the Feature Rollout Policy Collection Request.
+ * @deprecated Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
  */
+@Deprecated
 public class FeatureRolloutPolicyCollectionRequest extends BaseEntityCollectionRequest<FeatureRolloutPolicy, FeatureRolloutPolicyCollectionResponse, FeatureRolloutPolicyCollectionPage> {
 
     /**

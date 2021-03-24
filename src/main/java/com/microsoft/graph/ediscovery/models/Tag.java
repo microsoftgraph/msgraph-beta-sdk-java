@@ -32,7 +32,7 @@ public class Tag extends Entity implements IJsonBackedObject {
 
     /**
      * The Child Selectability.
-     * 
+     * Indicates whether a single or multiple child tags can be associated with a document. Possible values are: One, Many.  This value controls whether the UX presents the tags as checkboxes or a radio button group.
      */
     @SerializedName(value = "childSelectability", alternate = {"ChildSelectability"})
     @Expose
@@ -41,7 +41,7 @@ public class Tag extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The user who created the tag.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -50,7 +50,7 @@ public class Tag extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description for the tag.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -59,7 +59,7 @@ public class Tag extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the tag.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class Tag extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time the tag was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -77,14 +77,14 @@ public class Tag extends Entity implements IJsonBackedObject {
 
     /**
      * The Child Tags.
-     * 
+     * Returns the tags that are a child of a tag.
      */
 	@Nullable
     public TagCollectionPage childTags;
 
     /**
      * The Parent.
-     * 
+     * Returns the parent tag of the specified tag.
      */
     @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose

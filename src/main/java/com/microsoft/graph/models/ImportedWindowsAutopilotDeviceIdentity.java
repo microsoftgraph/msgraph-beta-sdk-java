@@ -63,15 +63,6 @@ public class ImportedWindowsAutopilotDeviceIdentity extends Entity implements IJ
     public String importId;
 
     /**
-     * The Order Identifier.
-     * Order Id of the Windows autopilot device. - Deprecate
-     */
-    @SerializedName(value = "orderIdentifier", alternate = {"OrderIdentifier"})
-    @Expose
-	@Nullable
-    public String orderIdentifier;
-
-    /**
      * The Product Key.
      * Product Key of the Windows autopilot device.
      */

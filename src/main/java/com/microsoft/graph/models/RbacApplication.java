@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
 import com.microsoft.graph.models.UnifiedRoleAssignment;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
+import com.microsoft.graph.models.Approval;
 import com.microsoft.graph.models.UnifiedRoleAssignmentRequest;
 import com.microsoft.graph.models.UnifiedRoleAssignmentScheduleInstance;
 import com.microsoft.graph.models.UnifiedRoleAssignmentSchedule;
@@ -22,6 +23,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UnifiedRbacResourceNamespaceCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage;
+import com.microsoft.graph.requests.ApprovalCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleInstanceCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleCollectionPage;
@@ -70,6 +72,15 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public UnifiedRoleDefinitionCollectionPage roleDefinitions;
+
+    /**
+     * The Role Assignment Approvals.
+     * 
+     */
+    @SerializedName(value = "roleAssignmentApprovals", alternate = {"RoleAssignmentApprovals"})
+    @Expose
+	@Nullable
+    public ApprovalCollectionPage roleAssignmentApprovals;
 
     /**
      * The Role Assignment Requests.
@@ -145,6 +156,10 @@ public class RbacApplication extends Entity implements IJsonBackedObject {
 
         if (json.has("roleDefinitions")) {
             roleDefinitions = serializer.deserializeObject(json.get("roleDefinitions"), UnifiedRoleDefinitionCollectionPage.class);
+        }
+
+        if (json.has("roleAssignmentApprovals")) {
+            roleAssignmentApprovals = serializer.deserializeObject(json.get("roleAssignmentApprovals"), ApprovalCollectionPage.class);
         }
 
         if (json.has("roleAssignmentRequests")) {

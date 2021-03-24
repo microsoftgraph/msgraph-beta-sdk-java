@@ -32,7 +32,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * DateTime when review instance is scheduled to end.
+     * DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * DateTime when review instance is scheduled to start. May be in the future.
+     * DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

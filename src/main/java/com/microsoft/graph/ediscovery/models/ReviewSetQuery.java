@@ -28,7 +28,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The user who created the query.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -37,7 +37,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The time and date when the query was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the query.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -55,7 +55,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * The user who last modified the query.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -64,7 +64,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time the query was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -73,7 +73,7 @@ public class ReviewSetQuery extends Entity implements IJsonBackedObject {
 
     /**
      * The Query.
-     * 
+     * The query string in KQL (Keyword Query Language) query. For details, see Document metadata fields in Advanced eDiscovery.  This field maps directly to the keywords condition.  You can refine searches by using fields listed in the searchable field name paired with values; for example, subject:'Quarterly Financials' AND Date&amp;gt;=06/01/2016 AND Date&amp;lt;=07/01/2016.
      */
     @SerializedName(value = "query", alternate = {"Query"})
     @Expose

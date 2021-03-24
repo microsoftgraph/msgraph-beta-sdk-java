@@ -88,6 +88,7 @@ import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcess;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcessPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceWithoutCloudIdentity;
 import com.microsoft.graph.models.UserExperienceAnalyticsImpactingProcess;
+import com.microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDevice;
 import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
 import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
@@ -196,6 +197,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessC
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage;
@@ -375,7 +377,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscription State.
-     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
      */
     @SerializedName(value = "subscriptionState", alternate = {"SubscriptionState"})
     @Expose
@@ -1067,6 +1069,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsMetricHistory;
 
     /**
+     * The User Experience Analytics Not Autopilot Ready Device.
+     * User experience analytics devices not Windows Autopilot ready.
+     */
+    @SerializedName(value = "userExperienceAnalyticsNotAutopilotReadyDevice", alternate = {"UserExperienceAnalyticsNotAutopilotReadyDevice"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage userExperienceAnalyticsNotAutopilotReadyDevice;
+
+    /**
      * The User Experience Analytics Overview.
      * User experience analytics overview
      */
@@ -1750,6 +1761,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("userExperienceAnalyticsMetricHistory")) {
             userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory"), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsNotAutopilotReadyDevice")) {
+            userExperienceAnalyticsNotAutopilotReadyDevice = serializer.deserializeObject(json.get("userExperienceAnalyticsNotAutopilotReadyDevice"), UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsRemoteConnection")) {

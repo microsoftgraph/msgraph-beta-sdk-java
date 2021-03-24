@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserInsightsSettings;
 import com.microsoft.graph.models.RegionalAndLanguageSettings;
 import com.microsoft.graph.models.ShiftPreferences;
 import com.microsoft.graph.models.Entity;
@@ -44,6 +45,15 @@ public class UserSettings extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean contributionToContentDiscoveryDisabled;
+
+    /**
+     * The Item Insights.
+     * 
+     */
+    @SerializedName(value = "itemInsights", alternate = {"ItemInsights"})
+    @Expose
+	@Nullable
+    public UserInsightsSettings itemInsights;
 
     /**
      * The Regional And Language Settings.

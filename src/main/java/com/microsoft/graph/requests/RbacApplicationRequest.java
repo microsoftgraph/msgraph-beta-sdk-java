@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.UnifiedRoleAssignmentCollectionRequestBuilde
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionRequestBuilder;
+import com.microsoft.graph.requests.ApprovalCollectionRequestBuilder;
+import com.microsoft.graph.requests.ApprovalRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentRequestRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleAssignmentScheduleInstanceCollectionRequestBuilder;

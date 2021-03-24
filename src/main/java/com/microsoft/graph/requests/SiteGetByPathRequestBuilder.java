@@ -5,6 +5,7 @@
 
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.SiteGetByPathRequest;
+import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
 import com.microsoft.graph.models.Site;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.SiteGetByPathParameterSet;
@@ -292,6 +293,16 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
     @Nonnull
     public SiteRequestBuilder sites(@Nonnull final String id) {
         return new SiteRequestBuilder(getRequestUrlWithAdditionalSegment("sites") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Store
+     *
+     * @return the StoreRequestBuilder instance
+     */
+    @Nonnull
+    public StoreRequestBuilder termStore() {
+        return new StoreRequestBuilder(getRequestUrlWithAdditionalSegment("termStore"), getClient(), null);
     }
 
     /**

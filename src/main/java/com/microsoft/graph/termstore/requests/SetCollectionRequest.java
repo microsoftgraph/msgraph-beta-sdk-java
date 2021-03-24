@@ -7,7 +7,7 @@ package com.microsoft.graph.termstore.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.termstore.models.Store;
+import com.microsoft.graph.termstore.models.Group;
 import com.microsoft.graph.termstore.models.Set;
 import java.util.Arrays;
 import java.util.EnumSet;

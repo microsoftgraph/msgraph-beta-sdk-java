@@ -23,7 +23,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the External Group Member.
+ * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
  */
+@Deprecated
 public class ExternalGroupMember extends Entity implements IJsonBackedObject {
 
 

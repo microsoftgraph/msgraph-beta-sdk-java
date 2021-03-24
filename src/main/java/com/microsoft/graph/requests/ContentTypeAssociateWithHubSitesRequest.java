@@ -20,7 +20,7 @@ import com.microsoft.graph.models.ContentTypeAssociateWithHubSitesParameterSet;
 /**
  * The class for the Content Type Associate With Hub Sites Request.
  */
-public class ContentTypeAssociateWithHubSitesRequest extends BaseRequest<ContentType> {
+public class ContentTypeAssociateWithHubSitesRequest extends BaseRequest<Void> {
     /**
      * The request for this ContentTypeAssociateWithHubSites
      *
@@ -29,53 +29,28 @@ public class ContentTypeAssociateWithHubSitesRequest extends BaseRequest<Content
      * @param requestOptions the options for this request
      */
     public ContentTypeAssociateWithHubSitesRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContentType.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
 	/** The body for the method */
     @Nullable
     public ContentTypeAssociateWithHubSitesParameterSet body;
     /**
-     * Invokes the method and returns a future with the result
-     * @return a future with the result
+     * Creates the ContentTypeAssociateWithHubSites
+     *
+     * @return a future for the operation
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> postAsync() {
-        return sendAsync(HttpMethod.POST, body);
+    public java.util.concurrent.CompletableFuture<Void> postAsync() {
+        return this.sendAsync(HttpMethod.POST, body);
     }
 
     /**
-     * Invokes the method and returns the result
-     * @return result of the method invocation
+     * Creates the ContentTypeAssociateWithHubSites
+     *
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    @Nullable
-    public ContentType post() throws ClientException {
-       return send(HttpMethod.POST, body);
+    public void post() throws ClientException {
+        this.send(HttpMethod.POST, body);
     }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    @Nonnull
-    public ContentTypeAssociateWithHubSitesRequest select(@Nonnull final String value) {
-        addSelectOption(value);
-        return this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    @Nonnull
-    public ContentTypeAssociateWithHubSitesRequest expand(@Nonnull final String value) {
-        addExpandOption(value);
-        return this;
-    }
-
 }

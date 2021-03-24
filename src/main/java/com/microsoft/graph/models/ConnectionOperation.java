@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.ErrorDetail;
+import com.microsoft.graph.models.PublicError;
 import com.microsoft.graph.models.ConnectionOperationStatus;
 import com.microsoft.graph.models.Entity;
 
@@ -23,7 +23,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Connection Operation.
+ * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
  */
+@Deprecated
 public class ConnectionOperation extends Entity implements IJsonBackedObject {
 
 
@@ -34,7 +36,7 @@ public class ConnectionOperation extends Entity implements IJsonBackedObject {
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
 	@Nullable
-    public ErrorDetail error;
+    public PublicError error;
 
     /**
      * The Status.
