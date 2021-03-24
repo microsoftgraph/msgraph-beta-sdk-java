@@ -50,15 +50,6 @@ public class Property implements IJsonBackedObject {
     public java.util.List<String> aliases;
 
     /**
-     * The Is Content.
-     * 
-     */
-    @SerializedName(value = "isContent", alternate = {"IsContent"})
-    @Expose
-	@Nullable
-    public Boolean isContent;
-
-    /**
      * The Is Queryable.
      * Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
      */

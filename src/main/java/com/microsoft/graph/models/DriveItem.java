@@ -17,6 +17,7 @@ import com.microsoft.graph.models.FileSystemInfo;
 import com.microsoft.graph.models.Folder;
 import com.microsoft.graph.models.Image;
 import com.microsoft.graph.models.GeoCoordinates;
+import com.microsoft.graph.models.Media;
 import com.microsoft.graph.models.PendingOperations;
 import com.microsoft.graph.models.Photo;
 import com.microsoft.graph.models.PublicationFacet;
@@ -25,6 +26,7 @@ import com.microsoft.graph.models.Root;
 import com.microsoft.graph.models.SearchResult;
 import com.microsoft.graph.models.Shared;
 import com.microsoft.graph.models.SharepointIds;
+import com.microsoft.graph.models.DriveItemSource;
 import com.microsoft.graph.models.SpecialFolder;
 import com.microsoft.graph.models.Video;
 import com.microsoft.graph.models.Workbook;
@@ -141,6 +143,15 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     public GeoCoordinates location;
 
     /**
+     * The Media.
+     * 
+     */
+    @SerializedName(value = "media", alternate = {"Media"})
+    @Expose
+	@Nullable
+    public Media media;
+
+    /**
      * The Package.
      * If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only.
      */
@@ -151,7 +162,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Pending Operations.
-     * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      */
     @SerializedName(value = "pendingOperations", alternate = {"PendingOperations"})
     @Expose
@@ -229,6 +240,15 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Long size;
+
+    /**
+     * The Source.
+     * 
+     */
+    @SerializedName(value = "source", alternate = {"Source"})
+    @Expose
+	@Nullable
+    public DriveItemSource source;
 
     /**
      * The Special Folder.

@@ -40,7 +40,7 @@ public class DocumentSetContent implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * 
+     * Content type information of the file.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -49,7 +49,7 @@ public class DocumentSetContent implements IJsonBackedObject {
 
     /**
      * The File Name.
-     * 
+     * Name of the file in resource folder that should be added as a default content or a template in the document set
      */
     @SerializedName(value = "fileName", alternate = {"FileName"})
     @Expose
@@ -58,7 +58,7 @@ public class DocumentSetContent implements IJsonBackedObject {
 
     /**
      * The Folder Name.
-     * 
+     * Folder name in which the file will be placed when a new document set is created in the library.
      */
     @SerializedName(value = "folderName", alternate = {"FolderName"})
     @Expose

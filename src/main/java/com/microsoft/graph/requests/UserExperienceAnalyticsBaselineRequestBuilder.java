@@ -107,4 +107,14 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
     public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder resourcePerformanceMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("resourcePerformanceMetrics"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder workFromAnywhereMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("workFromAnywhereMetrics"), getClient(), null);
+    }
 }

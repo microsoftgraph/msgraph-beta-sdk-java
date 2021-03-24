@@ -29,7 +29,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Auth Methods.
-     * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone, securityQuestion (only used for self-service password reset), appNotification, appCode, and alternateMobilePhone (supported only in registration).
+     * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
      */
     @SerializedName(value = "authMethods", alternate = {"AuthMethods"})
     @Expose
@@ -47,7 +47,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Is Enabled.
-     * Indiciates whether the user enabled to perform self-service password reset.
+     * Indicates whether the user enabled to perform self-service password reset.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -56,7 +56,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Is Mfa Registered.
-     * Indiciates whether the user is registered for MFA.
+     * Indicates whether the user is registered for MFA.
      */
     @SerializedName(value = "isMfaRegistered", alternate = {"IsMfaRegistered"})
     @Expose

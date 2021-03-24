@@ -49,7 +49,7 @@ public class FeatureRolloutPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Feature.
-     * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, unknownFutureValue.
+     * Possible values are: passthroughAuthentication, seamlessSso, passwordHashSync, emailAsAlternateId, unknownFutureValue.
      */
     @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose

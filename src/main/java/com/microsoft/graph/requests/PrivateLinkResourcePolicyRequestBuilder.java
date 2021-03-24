@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.PrivateLinkResourcePolicy;
+import com.microsoft.graph.requests.PrivateEndpointConnectionCollectionRequestBuilder;
+import com.microsoft.graph.requests.PrivateEndpointConnectionRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -56,4 +58,24 @@ public class PrivateLinkResourcePolicyRequestBuilder extends BaseRequestBuilder<
     }
 
 
+    /**
+     *  Gets a request builder for the PrivateEndpointConnection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public PrivateEndpointConnectionCollectionRequestBuilder privateEndpointConnections() {
+        return new PrivateEndpointConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privateEndpointConnections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PrivateEndpointConnection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public PrivateEndpointConnectionRequestBuilder privateEndpointConnections(@Nonnull final String id) {
+        return new PrivateEndpointConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("privateEndpointConnections") + "/" + id, getClient(), null);
+    }
 }

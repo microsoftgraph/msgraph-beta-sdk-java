@@ -54,7 +54,7 @@ public class Term extends Entity implements IJsonBackedObject {
 
     /**
      * The Labels.
-     * 
+     * Label metadata for a term
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose

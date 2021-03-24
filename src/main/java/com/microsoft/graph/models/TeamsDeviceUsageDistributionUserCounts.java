@@ -35,6 +35,15 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
     public Long androidPhone;
 
     /**
+     * The Chrome OS.
+     * 
+     */
+    @SerializedName(value = "chromeOS", alternate = {"ChromeOS"})
+    @Expose
+	@Nullable
+    public Long chromeOS;
+
+    /**
      * The Ios.
      * 
      */
@@ -42,6 +51,15 @@ public class TeamsDeviceUsageDistributionUserCounts extends Entity implements IJ
     @Expose
 	@Nullable
     public Long ios;
+
+    /**
+     * The Linux.
+     * 
+     */
+    @SerializedName(value = "linux", alternate = {"Linux"})
+    @Expose
+	@Nullable
+    public Long linux;
 
     /**
      * The Mac.

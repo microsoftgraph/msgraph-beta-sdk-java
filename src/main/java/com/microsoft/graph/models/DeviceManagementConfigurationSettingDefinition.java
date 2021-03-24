@@ -14,6 +14,7 @@ import com.microsoft.graph.models.DeviceManagementConfigurationSettingApplicabil
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingOccurrence;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingUsage;
 import com.microsoft.graph.models.DeviceManagementConfigurationControlType;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingVisibility;
 import com.microsoft.graph.models.Entity;
 
 
@@ -174,6 +175,15 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     @Expose
 	@Nullable
     public String version;
+
+    /**
+     * The Visibility.
+     * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
+     */
+    @SerializedName(value = "visibility", alternate = {"Visibility"})
+    @Expose
+	@Nullable
+    public EnumSet<DeviceManagementConfigurationSettingVisibility> visibility;
 
 
     /**

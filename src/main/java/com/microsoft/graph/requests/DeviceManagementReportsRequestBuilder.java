@@ -52,6 +52,8 @@ import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceR
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetReportFiltersParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetSettingNonComplianceReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetWindowsQualityUpdateAlertSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetWindowsUpdateAlertsPerPolicyPerDeviceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetWindowsUpdateAlertSummaryReportParameterSet;
 
@@ -475,6 +477,26 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetSettingNonComplianceReportRequestBuilder getSettingNonComplianceReport(@Nonnull final DeviceManagementReportsGetSettingNonComplianceReportParameterSet parameters) {
         return new DeviceManagementReportsGetSettingNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSettingNonComplianceReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport(@Nonnull final DeviceManagementReportsGetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportParameterSet parameters) {
+        return new DeviceManagementReportsGetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetWindowsQualityUpdateAlertSummaryReportRequestBuilder getWindowsQualityUpdateAlertSummaryReport(@Nonnull final DeviceManagementReportsGetWindowsQualityUpdateAlertSummaryReportParameterSet parameters) {
+        return new DeviceManagementReportsGetWindowsQualityUpdateAlertSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getWindowsQualityUpdateAlertSummaryReport"), getClient(), null, parameters);
     }
 
     /**

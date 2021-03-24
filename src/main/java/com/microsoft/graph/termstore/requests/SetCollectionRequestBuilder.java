@@ -7,7 +7,7 @@ package com.microsoft.graph.termstore.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.termstore.models.Store;
+import com.microsoft.graph.termstore.models.Group;
 import com.microsoft.graph.termstore.models.Set;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class SetCollectionRequestBuilder extends BaseCollectionRequestBuilder<Set, SetRequestBuilder, SetCollectionResponse, SetCollectionPage, SetCollectionRequest> {
 
     /**
-     * The request builder for this collection of Store
+     * The request builder for this collection of Group
      *
      * @param requestUrl     the request URL
      * @param client         the service client

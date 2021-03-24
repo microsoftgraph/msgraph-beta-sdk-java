@@ -24,13 +24,13 @@ public enum StagedFeatureName
     */
     PASSWORD_HASH_SYNC,
     /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
-    /**
     * email As Alternate Id
     */
     EMAIL_AS_ALTERNATE_ID,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For StagedFeatureName values that were not expected from the service
     */

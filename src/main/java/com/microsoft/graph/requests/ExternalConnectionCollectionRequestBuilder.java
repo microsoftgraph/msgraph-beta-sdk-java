@@ -7,6 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.models.External;
 import com.microsoft.graph.models.ExternalConnection;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -23,11 +24,13 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the External Connection Collection Request Builder.
+ * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
  */
+@Deprecated
 public class ExternalConnectionCollectionRequestBuilder extends BaseCollectionRequestBuilder<ExternalConnection, ExternalConnectionRequestBuilder, ExternalConnectionCollectionResponse, ExternalConnectionCollectionPage, ExternalConnectionCollectionRequest> {
 
     /**
-     * The request builder for this collection of ExternalConnection
+     * The request builder for this collection of External
      *
      * @param requestUrl     the request URL
      * @param client         the service client

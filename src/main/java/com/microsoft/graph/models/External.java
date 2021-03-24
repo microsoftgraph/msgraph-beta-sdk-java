@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ExternalConnection;
+import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ExternalConnectionCollectionPage;
 
 
@@ -23,27 +24,18 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the External.
+ * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
  */
-public class External implements IJsonBackedObject {
+@Deprecated
+public class External extends Entity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Connections.
      * 
+     * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
+    @Deprecated
     @SerializedName(value = "connections", alternate = {"Connections"})
     @Expose
 	@Nullable

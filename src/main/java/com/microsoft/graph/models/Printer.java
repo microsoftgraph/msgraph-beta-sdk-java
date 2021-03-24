@@ -61,7 +61,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Last Seen Date Time.
-     * 
+     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
      */
     @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose

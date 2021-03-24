@@ -96,9 +96,9 @@ public enum DeviceType
     */
     ANDROIDN_GMS,
     /**
-    * cloud PC
+    * chrome OS
     */
-    CLOUD_PC,
+    CHROME_OS,
     /**
     * linux
     */
@@ -115,6 +115,10 @@ public enum DeviceType
     * unknown
     */
     UNKNOWN,
+    /**
+    * cloud PC
+    */
+    CLOUD_PC,
     /**
     * For DeviceType values that were not expected from the service
     */

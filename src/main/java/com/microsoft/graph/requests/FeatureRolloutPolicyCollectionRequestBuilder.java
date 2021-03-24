@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Feature Rollout Policy Collection Request Builder.
+ * @deprecated Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
  */
+@Deprecated
 public class FeatureRolloutPolicyCollectionRequestBuilder extends BaseCollectionRequestBuilder<FeatureRolloutPolicy, FeatureRolloutPolicyRequestBuilder, FeatureRolloutPolicyCollectionResponse, FeatureRolloutPolicyCollectionPage, FeatureRolloutPolicyCollectionRequest> {
 
     /**

@@ -67,7 +67,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Client App Types.
-     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other.
+     * Client application types included in the policy. Possible values are: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other. Required.
      */
     @SerializedName(value = "clientAppTypes", alternate = {"ClientAppTypes"})
     @Expose
@@ -112,7 +112,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The Sign In Risk Levels.
-     * Sign-in risk levels included in the policy. Possible values are: low, medium, high, none.
+     * Sign-in risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      */
     @SerializedName(value = "signInRiskLevels", alternate = {"SignInRiskLevels"})
     @Expose
@@ -121,7 +121,7 @@ public class ConditionalAccessConditionSet implements IJsonBackedObject {
 
     /**
      * The User Risk Levels.
-     * User risk levels included in the policy. Possible values are: low, medium, high, none.
+     * User risk levels included in the policy. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Required.
      */
     @SerializedName(value = "userRiskLevels", alternate = {"UserRiskLevels"})
     @Expose

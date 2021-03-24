@@ -85,7 +85,7 @@ public class RelatedContact implements IJsonBackedObject {
 
     /**
      * The Relationship.
-     * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other.
+     * Relationship to the user. Possible values are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue.
      */
     @SerializedName(value = "relationship", alternate = {"Relationship"})
     @Expose

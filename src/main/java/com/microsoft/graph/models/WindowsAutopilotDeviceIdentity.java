@@ -40,12 +40,21 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
     /**
      * The Azure Active Directory Device Id.
-     * AAD Device ID
+     * AAD Device ID - to be deprecated
      */
     @SerializedName(value = "azureActiveDirectoryDeviceId", alternate = {"AzureActiveDirectoryDeviceId"})
     @Expose
 	@Nullable
     public String azureActiveDirectoryDeviceId;
+
+    /**
+     * The Azure Ad Device Id.
+     * AAD Device ID
+     */
+    @SerializedName(value = "azureAdDeviceId", alternate = {"AzureAdDeviceId"})
+    @Expose
+	@Nullable
+    public String azureAdDeviceId;
 
     /**
      * The Deployment Profile Assigned Date Time.
@@ -136,15 +145,6 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
     @Expose
 	@Nullable
     public String model;
-
-    /**
-     * The Order Identifier.
-     * Order Identifier of the Windows autopilot device - Deprecated
-     */
-    @SerializedName(value = "orderIdentifier", alternate = {"OrderIdentifier"})
-    @Expose
-	@Nullable
-    public String orderIdentifier;
 
     /**
      * The Product Key.

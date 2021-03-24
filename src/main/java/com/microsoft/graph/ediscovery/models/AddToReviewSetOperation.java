@@ -29,7 +29,7 @@ public class AddToReviewSetOperation extends CaseOperation implements IJsonBacke
 
     /**
      * The Review Set.
-     * 
+     * The review set to which items matching the source collection query are added to.
      */
     @SerializedName(value = "reviewSet", alternate = {"ReviewSet"})
     @Expose
@@ -38,7 +38,7 @@ public class AddToReviewSetOperation extends CaseOperation implements IJsonBacke
 
     /**
      * The Source Collection.
-     * 
+     * The sourceCollection that items are being added from.
      */
     @SerializedName(value = "sourceCollection", alternate = {"SourceCollection"})
     @Expose

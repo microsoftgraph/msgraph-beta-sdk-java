@@ -9,8 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.TenantApprovals;
+import com.microsoft.graph.models.PrivateEndpointConnection;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.PrivateEndpointConnectionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -28,6 +29,24 @@ public class PrivateLinkResourcePolicy extends Entity implements IJsonBackedObje
 
 
     /**
+     * The Allowed Tenant Ids.
+     * 
+     */
+    @SerializedName(value = "allowedTenantIds", alternate = {"AllowedTenantIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> allowedTenantIds;
+
+    /**
+     * The Display Name.
+     * 
+     */
+    @SerializedName(value = "displayName", alternate = {"DisplayName"})
+    @Expose
+	@Nullable
+    public String displayName;
+
+    /**
      * The External Private Link Id.
      * 
      */
@@ -37,13 +56,13 @@ public class PrivateLinkResourcePolicy extends Entity implements IJsonBackedObje
     public String externalPrivateLinkId;
 
     /**
-     * The Tenant Approvals.
+     * The Private Endpoint Connections.
      * 
      */
-    @SerializedName(value = "tenantApprovals", alternate = {"TenantApprovals"})
+    @SerializedName(value = "privateEndpointConnections", alternate = {"PrivateEndpointConnections"})
     @Expose
 	@Nullable
-    public java.util.List<TenantApprovals> tenantApprovals;
+    public PrivateEndpointConnectionCollectionPage privateEndpointConnections;
 
 
     /**
@@ -54,5 +73,9 @@ public class PrivateLinkResourcePolicy extends Entity implements IJsonBackedObje
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("privateEndpointConnections")) {
+            privateEndpointConnections = serializer.deserializeObject(json.get("privateEndpointConnections"), PrivateEndpointConnectionCollectionPage.class);
+        }
     }
 }

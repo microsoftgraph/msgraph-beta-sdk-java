@@ -103,7 +103,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Setting Usage.
-     * Indicates that the category contains settings that are used for Compliance or Configuration.
+     * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration.
      */
     @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
     @Expose

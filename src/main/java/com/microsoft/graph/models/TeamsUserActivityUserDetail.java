@@ -27,6 +27,24 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
 
     /**
+     * The Ad Hoc Meetings Attended Count.
+     * 
+     */
+    @SerializedName(value = "adHocMeetingsAttendedCount", alternate = {"AdHocMeetingsAttendedCount"})
+    @Expose
+	@Nullable
+    public Long adHocMeetingsAttendedCount;
+
+    /**
+     * The Ad Hoc Meetings Organized Count.
+     * 
+     */
+    @SerializedName(value = "adHocMeetingsOrganizedCount", alternate = {"AdHocMeetingsOrganizedCount"})
+    @Expose
+	@Nullable
+    public Long adHocMeetingsOrganizedCount;
+
+    /**
      * The Assigned Products.
      * 
      */
@@ -34,6 +52,15 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public java.util.List<String> assignedProducts;
+
+    /**
+     * The Audio Duration.
+     * 
+     */
+    @SerializedName(value = "audioDuration", alternate = {"AudioDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration audioDuration;
 
     /**
      * The Call Count.
@@ -72,6 +99,15 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
     public Boolean isDeleted;
 
     /**
+     * The Is Licensed.
+     * 
+     */
+    @SerializedName(value = "isLicensed", alternate = {"IsLicensed"})
+    @Expose
+	@Nullable
+    public Boolean isLicensed;
+
+    /**
      * The Last Activity Date.
      * 
      */
@@ -88,6 +124,24 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public Long meetingCount;
+
+    /**
+     * The Meetings Attended Count.
+     * 
+     */
+    @SerializedName(value = "meetingsAttendedCount", alternate = {"MeetingsAttendedCount"})
+    @Expose
+	@Nullable
+    public Long meetingsAttendedCount;
+
+    /**
+     * The Meetings Organized Count.
+     * 
+     */
+    @SerializedName(value = "meetingsOrganizedCount", alternate = {"MeetingsOrganizedCount"})
+    @Expose
+	@Nullable
+    public Long meetingsOrganizedCount;
 
     /**
      * The Private Chat Message Count.
@@ -117,6 +171,51 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
     public com.microsoft.graph.core.DateOnly reportRefreshDate;
 
     /**
+     * The Scheduled One Time Meetings Attended Count.
+     * 
+     */
+    @SerializedName(value = "scheduledOneTimeMeetingsAttendedCount", alternate = {"ScheduledOneTimeMeetingsAttendedCount"})
+    @Expose
+	@Nullable
+    public Long scheduledOneTimeMeetingsAttendedCount;
+
+    /**
+     * The Scheduled One Time Meetings Organized Count.
+     * 
+     */
+    @SerializedName(value = "scheduledOneTimeMeetingsOrganizedCount", alternate = {"ScheduledOneTimeMeetingsOrganizedCount"})
+    @Expose
+	@Nullable
+    public Long scheduledOneTimeMeetingsOrganizedCount;
+
+    /**
+     * The Scheduled Recurring Meetings Attended Count.
+     * 
+     */
+    @SerializedName(value = "scheduledRecurringMeetingsAttendedCount", alternate = {"ScheduledRecurringMeetingsAttendedCount"})
+    @Expose
+	@Nullable
+    public Long scheduledRecurringMeetingsAttendedCount;
+
+    /**
+     * The Scheduled Recurring Meetings Organized Count.
+     * 
+     */
+    @SerializedName(value = "scheduledRecurringMeetingsOrganizedCount", alternate = {"ScheduledRecurringMeetingsOrganizedCount"})
+    @Expose
+	@Nullable
+    public Long scheduledRecurringMeetingsOrganizedCount;
+
+    /**
+     * The Screen Share Duration.
+     * 
+     */
+    @SerializedName(value = "screenShareDuration", alternate = {"ScreenShareDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration screenShareDuration;
+
+    /**
      * The Team Chat Message Count.
      * 
      */
@@ -133,6 +232,15 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public String userPrincipalName;
+
+    /**
+     * The Video Duration.
+     * 
+     */
+    @SerializedName(value = "videoDuration", alternate = {"VideoDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration videoDuration;
 
 
     /**

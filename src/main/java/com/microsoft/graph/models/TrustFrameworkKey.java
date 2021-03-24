@@ -103,7 +103,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Kty.
-     * The 'kty' (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
+     * The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
      */
     @SerializedName(value = "kty", alternate = {"Kty"})
     @Expose
@@ -157,7 +157,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Use.
-     * The 'use' (public key use) parameter identifies the intended use of the public key.  The 'use' parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are    1. 'sig' (signature)    2.  'enc' (encryption)
+     * The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
      */
     @SerializedName(value = "use", alternate = {"Use"})
     @Expose
@@ -166,7 +166,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The X5c.
-     * The 'x5c' (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
+     * The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
      */
     @SerializedName(value = "x5c", alternate = {"X5c"})
     @Expose
@@ -175,7 +175,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The X5t.
-     * The 'x5t' (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
      */
     @SerializedName(value = "x5t", alternate = {"X5t"})
     @Expose

@@ -12,39 +12,39 @@ package com.microsoft.graph.models;
 public enum PropertyType
 {
     /**
-    * String
+    * string
     */
     STRING,
     /**
-    * Int64
+    * int64
     */
     INT64,
     /**
-    * Double
+    * double
     */
     DOUBLE,
     /**
-    * Date Time
+    * date Time
     */
     DATE_TIME,
     /**
-    * Boolean
+    * boolean
     */
     BOOLEAN,
     /**
-    * String Collection
+    * string Collection
     */
     STRING_COLLECTION,
     /**
-    * Int64Collection
+    * int64Collection
     */
     INT64_COLLECTION,
     /**
-    * Double Collection
+    * double Collection
     */
     DOUBLE_COLLECTION,
     /**
-    * Date Time Collection
+    * date Time Collection
     */
     DATE_TIME_COLLECTION,
     /**

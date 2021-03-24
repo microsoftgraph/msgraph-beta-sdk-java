@@ -77,15 +77,6 @@ public class ChatSendActivityNotificationParameterSet {
 	@Nullable
     public TeamworkNotificationRecipient recipient;
 
-    /**
-     * The teams App Id.
-     * 
-     */
-    @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
-    @Expose
-	@Nullable
-    public String teamsAppId;
-
 
     /**
      * Instiaciates a new ChatSendActivityNotificationParameterSet
@@ -102,7 +93,6 @@ public class ChatSendActivityNotificationParameterSet {
         this.previewText = builder.previewText;
         this.templateParameters = builder.templateParameters;
         this.recipient = builder.recipient;
-        this.teamsAppId = builder.teamsAppId;
     }
     /**
      * Gets a new builder for the body
@@ -207,21 +197,6 @@ public class ChatSendActivityNotificationParameterSet {
             return this;
         }
         /**
-         * The teamsAppId parameter value
-         */
-        @Nullable
-        protected String teamsAppId;
-        /**
-         * Sets the TeamsAppId
-         * @param val the value to set it to
-         * @return the current builder object
-         */
-        @Nonnull
-        public ChatSendActivityNotificationParameterSetBuilder withTeamsAppId(@Nullable final String val) {
-            this.teamsAppId = val;
-            return this;
-        }
-        /**
          * Instanciates a new ChatSendActivityNotificationParameterSetBuilder
          */
         @Nullable
@@ -259,9 +234,6 @@ public class ChatSendActivityNotificationParameterSet {
         }
         if(this.recipient != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("recipient", recipient));
-        }
-        if(this.teamsAppId != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("teamsAppId", teamsAppId));
         }
         return result;
     }

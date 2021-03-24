@@ -9,6 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.UserIdentity;
+import com.microsoft.graph.models.Identity;
+import com.microsoft.graph.models.AccessReviewInstanceDecisionItemResource;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemTarget;
 import com.microsoft.graph.models.Entity;
 
@@ -47,7 +49,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Applied Date Time.
-     * The DateTime when the approval decision was applied.
+     * The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "appliedDateTime", alternate = {"AppliedDateTime"})
     @Expose
@@ -82,6 +84,24 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
     public String justification;
 
     /**
+     * The Principal.
+     * 
+     */
+    @SerializedName(value = "principal", alternate = {"Principal"})
+    @Expose
+	@Nullable
+    public Identity principal;
+
+    /**
+     * The Principal Link.
+     * 
+     */
+    @SerializedName(value = "principalLink", alternate = {"PrincipalLink"})
+    @Expose
+	@Nullable
+    public String principalLink;
+
+    /**
      * The Recommendation.
      * A system-generated recommendation for the approval decision. Possible values: Approve, Deny, or NotAvailable.
      */
@@ -89,6 +109,24 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
     @Expose
 	@Nullable
     public String recommendation;
+
+    /**
+     * The Resource.
+     * 
+     */
+    @SerializedName(value = "resource", alternate = {"Resource"})
+    @Expose
+	@Nullable
+    public AccessReviewInstanceDecisionItemResource resource;
+
+    /**
+     * The Resource Link.
+     * 
+     */
+    @SerializedName(value = "resourceLink", alternate = {"ResourceLink"})
+    @Expose
+	@Nullable
+    public String resourceLink;
 
     /**
      * The Reviewed By.
@@ -101,7 +139,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Reviewed Date Time.
-     * The DateTime when the review occurred.
+     * The timestamp when the review occurred.
      */
     @SerializedName(value = "reviewedDateTime", alternate = {"ReviewedDateTime"})
     @Expose

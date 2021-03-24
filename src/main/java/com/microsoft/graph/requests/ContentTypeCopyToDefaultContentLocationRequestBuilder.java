@@ -5,8 +5,8 @@
 
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ContentTypeCopyToDefaultContentLocationRequest;
-import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.models.ContentType;
+import com.microsoft.graph.models.ItemReference;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.models.ContentTypeCopyToDefaultContentLocationParameterSet;
 import com.microsoft.graph.core.IBaseClient;

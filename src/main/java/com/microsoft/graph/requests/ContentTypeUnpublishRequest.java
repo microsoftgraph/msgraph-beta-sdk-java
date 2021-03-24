@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Content Type Unpublish Request.
  */
-public class ContentTypeUnpublishRequest extends BaseRequest<ContentType> {
+public class ContentTypeUnpublishRequest extends BaseRequest<Void> {
     /**
      * The request for this ContentTypeUnpublish
      *
@@ -28,50 +28,25 @@ public class ContentTypeUnpublishRequest extends BaseRequest<ContentType> {
      * @param requestOptions the options for this request
      */
     public ContentTypeUnpublishRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, ContentType.class);
+        super(requestUrl, client, requestOptions, Void.class);
     }
 
     /**
-     * Invokes the method and returns a future with the result
-     * @return a future with the result
+     * Creates the ContentTypeUnpublish
+     *
+     * @return a future for the operation
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<ContentType> postAsync() {
-        return sendAsync(HttpMethod.POST, null);
+    public java.util.concurrent.CompletableFuture<Void> postAsync() {
+        return this.sendAsync(HttpMethod.POST, null);
     }
 
     /**
-     * Invokes the method and returns the result
-     * @return result of the method invocation
+     * Creates the ContentTypeUnpublish
+     *
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
-    @Nullable
-    public ContentType post() throws ClientException {
-       return send(HttpMethod.POST, null);
+    public void post() throws ClientException {
+        this.send(HttpMethod.POST, null);
     }
-
-    /**
-     * Sets the select clause for the request
-     *
-     * @param value the select clause
-     * @return the updated request
-     */
-    @Nonnull
-    public ContentTypeUnpublishRequest select(@Nonnull final String value) {
-        addSelectOption(value);
-        return this;
-    }
-
-    /**
-     * Sets the expand clause for the request
-     *
-     * @param value the expand clause
-     * @return the updated request
-     */
-    @Nonnull
-    public ContentTypeUnpublishRequest expand(@Nonnull final String value) {
-        addExpandOption(value);
-        return this;
-    }
-
 }

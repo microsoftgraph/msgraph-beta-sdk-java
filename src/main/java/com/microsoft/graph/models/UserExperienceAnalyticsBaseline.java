@@ -98,6 +98,15 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
 	@Nullable
     public UserExperienceAnalyticsCategory resourcePerformanceMetrics;
 
+    /**
+     * The Work From Anywhere Metrics.
+     * The user experience analytics work from anywhere metrics.
+     */
+    @SerializedName(value = "workFromAnywhereMetrics", alternate = {"WorkFromAnywhereMetrics"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsCategory workFromAnywhereMetrics;
+
 
     /**
      * Sets the raw JSON object

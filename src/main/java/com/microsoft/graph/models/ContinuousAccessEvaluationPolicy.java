@@ -37,7 +37,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Display Name.
-     * The value is always 'Continuous Access Evaluation'. Read-only.
+     * The value is always Continuous Access Evaluation. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

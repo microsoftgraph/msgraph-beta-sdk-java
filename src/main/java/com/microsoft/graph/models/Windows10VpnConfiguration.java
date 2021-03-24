@@ -57,7 +57,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
 
     /**
      * The Connection Type.
-     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect.
+     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose

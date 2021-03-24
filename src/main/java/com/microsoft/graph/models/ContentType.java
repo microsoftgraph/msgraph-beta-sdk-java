@@ -38,7 +38,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Associated Hubs Urls.
-     * 
+     * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      */
     @SerializedName(value = "associatedHubsUrls", alternate = {"AssociatedHubsUrls"})
     @Expose
@@ -56,7 +56,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Document Set.
-     * 
+     * Document Set metadata.
      */
     @SerializedName(value = "documentSet", alternate = {"DocumentSet"})
     @Expose
@@ -65,7 +65,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Document Template.
-     * 
+     * Document template metadata. To make sure that documents have consistent content across a site and its subsites, you can associate a Word, Excel, or PowerPoint template with a site content type.
      */
     @SerializedName(value = "documentTemplate", alternate = {"DocumentTemplate"})
     @Expose
@@ -101,7 +101,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Built In.
-     * 
+     * Specifies if a content type is a built-in content type.
      */
     @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose
@@ -137,7 +137,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Propagate Changes.
-     * 
+     * If true, any changes made to the content type will be pushed to inherited content types and lists that implement the content type.
      */
     @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
     @Expose
@@ -164,7 +164,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Base.
-     * 
+     * Parent contentType from which this content type is derived.
      */
     @SerializedName(value = "base", alternate = {"Base"})
     @Expose
@@ -173,7 +173,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Base Types.
-     * 
+     * The collection of content types that are ancestors of this content type.
      */
 	@Nullable
     public ContentTypeCollectionPage baseTypes;
@@ -189,14 +189,14 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Column Positions.
-     * 
+     * Column order information in a content type.
      */
 	@Nullable
     public ColumnDefinitionCollectionPage columnPositions;
 
     /**
      * The Columns.
-     * 
+     * The collection of column definitions for this contentType.
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose

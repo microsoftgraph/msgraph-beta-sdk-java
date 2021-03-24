@@ -57,7 +57,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements IJsonBacked
 
     /**
      * The Last Sync Date Time.
-     * The last time that Intune Management Extension synced with Intune
+     * The last time that Intune Managment Extension synced with Intune
      */
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose

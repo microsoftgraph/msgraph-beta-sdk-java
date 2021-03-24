@@ -22,6 +22,7 @@ import com.microsoft.graph.models.List;
 import com.microsoft.graph.models.SitePage;
 import com.microsoft.graph.models.Permission;
 import com.microsoft.graph.models.Site;
+import com.microsoft.graph.termstore.models.Store;
 import com.microsoft.graph.models.Onenote;
 import com.microsoft.graph.requests.ColumnDefinitionCollectionPage;
 import com.microsoft.graph.requests.ContentTypeCollectionPage;
@@ -139,7 +140,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The External Columns.
-     * 
+     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
      */
 	@Nullable
     public ColumnDefinitionCollectionPage externalColumns;
@@ -188,6 +189,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SiteCollectionPage sites;
+
+    /**
+     * The Term Store.
+     * 
+     */
+    @SerializedName(value = "termStore", alternate = {"TermStore"})
+    @Expose
+	@Nullable
+    public Store termStore;
 
     /**
      * The Onenote.
