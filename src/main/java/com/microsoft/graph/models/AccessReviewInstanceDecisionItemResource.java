@@ -39,7 +39,7 @@ public class AccessReviewInstanceDecisionItemResource implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * 
+     * Display name of the resource
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class AccessReviewInstanceDecisionItemResource implements IJsonBackedObje
 
     /**
      * The Id.
-     * 
+     * Resource ID
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -57,7 +57,7 @@ public class AccessReviewInstanceDecisionItemResource implements IJsonBackedObje
 
     /**
      * The Type.
-     * 
+     * Type of resource. Types include: Group, ServicePrincipal, DirectoryRole, AzureRole, AccessPackageAssignmentPolicy.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

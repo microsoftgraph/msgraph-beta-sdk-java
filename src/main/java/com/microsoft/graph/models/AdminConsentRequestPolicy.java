@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.AccessReviewScope;
+import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.Entity;
 
 
@@ -65,12 +65,12 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Reviewers.
-     * Required.
+     * The list of reviewers for the admin consent. Required.
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
 	@Nullable
-    public java.util.List<AccessReviewScope> reviewers;
+    public java.util.List<AccessReviewReviewerScope> reviewers;
 
     /**
      * The Version.
