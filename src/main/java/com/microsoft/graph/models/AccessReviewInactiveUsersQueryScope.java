@@ -27,7 +27,7 @@ public class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope 
 
     /**
      * The Inactive Duration.
-     * 
+     * Defines the length of the duration period of inactivity. Inactivity is based on the last sign in date of the user.
      */
     @SerializedName(value = "inactiveDuration", alternate = {"InactiveDuration"})
     @Expose
