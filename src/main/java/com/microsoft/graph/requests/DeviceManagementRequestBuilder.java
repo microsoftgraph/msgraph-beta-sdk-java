@@ -31,6 +31,8 @@ import com.microsoft.graph.requests.AuditEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.AuditEventRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterRequestBuilder;
+import com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionRequestBuilder;
+import com.microsoft.graph.requests.ChromeOSOnboardingSettingsRequestBuilder;
 import com.microsoft.graph.requests.TermsAndConditionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.TermsAndConditionsRequestBuilder;
 import com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder;
@@ -444,6 +446,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceAndAppManagementAssignmentFilterRequestBuilder assignmentFilters(@Nonnull final String id) {
         return new DeviceAndAppManagementAssignmentFilterRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilters") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ChromeOSOnboardingSettings collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ChromeOSOnboardingSettingsCollectionRequestBuilder chromeOSOnboardingSettings() {
+        return new ChromeOSOnboardingSettingsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("chromeOSOnboardingSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ChromeOSOnboardingSettings item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ChromeOSOnboardingSettingsRequestBuilder chromeOSOnboardingSettings(@Nonnull final String id) {
+        return new ChromeOSOnboardingSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("chromeOSOnboardingSettings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TermsAndConditions collection

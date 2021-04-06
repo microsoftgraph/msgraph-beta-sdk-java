@@ -31,6 +31,8 @@ import com.microsoft.graph.requests.AuditEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.AuditEventRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterRequestBuilder;
+import com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionRequestBuilder;
+import com.microsoft.graph.requests.ChromeOSOnboardingSettingsRequestBuilder;
 import com.microsoft.graph.requests.TermsAndConditionsCollectionRequestBuilder;
 import com.microsoft.graph.requests.TermsAndConditionsRequestBuilder;
 import com.microsoft.graph.requests.AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder;

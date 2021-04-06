@@ -3,28 +3,32 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.ediscovery.models;
+package com.microsoft.graph.models;
 
 
 /**
- * The Enum Tenant Sources.
+ * The Enum Onboarding Status.
 */
-public enum TenantSources
+public enum OnboardingStatus
 {
     /**
-    * all Mailboxes
+    * unknown
     */
-    ALL_MAILBOXES,
+    UNKNOWN,
     /**
-    * all Sites
+    * inprogress
     */
-    ALL_SITES,
+    INPROGRESS,
     /**
-    * unknown Future Value
+    * onboarded
     */
-    UNKNOWN_FUTURE_VALUE,
+    ONBOARDED,
     /**
-    * For TenantSources values that were not expected from the service
+    * failed
+    */
+    FAILED,
+    /**
+    * For OnboardingStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

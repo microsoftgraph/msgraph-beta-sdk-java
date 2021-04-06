@@ -11,7 +11,6 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.ediscovery.models.DataSourceScopes;
-import com.microsoft.graph.ediscovery.models.TenantSources;
 import com.microsoft.graph.ediscovery.models.DataSource;
 import com.microsoft.graph.ediscovery.models.AddToReviewSetOperation;
 import com.microsoft.graph.ediscovery.models.EstimateStatisticsOperation;
@@ -104,15 +103,6 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastModifiedDateTime;
-
-    /**
-     * The Tenant Sources.
-     * When specified, the collection will span across a service for an entire workload. Possible values are: allMailboxes, allSites.
-     */
-    @SerializedName(value = "tenantSources", alternate = {"TenantSources"})
-    @Expose
-	@Nullable
-    public EnumSet<TenantSources> tenantSources;
 
     /**
      * The Additional Sources.

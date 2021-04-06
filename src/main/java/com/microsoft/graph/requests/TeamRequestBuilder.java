@@ -16,7 +16,6 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.ChatMessage;
-import com.microsoft.graph.requests.ScheduleRequestBuilder;
 import com.microsoft.graph.requests.ChannelCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChannelRequestBuilder;
 import com.microsoft.graph.requests.GroupWithReferenceRequestBuilder;
@@ -32,6 +31,7 @@ import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.TeamworkTagCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamworkTagRequestBuilder;
 import com.microsoft.graph.requests.TeamsTemplateWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.ScheduleRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -83,16 +83,6 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     }
 
 
-
-    /**
-     * Gets the request builder for Schedule
-     *
-     * @return the ScheduleRequestBuilder instance
-     */
-    @Nonnull
-    public ScheduleRequestBuilder schedule() {
-        return new ScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("schedule"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the Channel collection
      *
@@ -252,6 +242,16 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     @Nonnull
     public TeamsTemplateWithReferenceRequestBuilder template() {
         return new TeamsTemplateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("template"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for Schedule
+     *
+     * @return the ScheduleRequestBuilder instance
+     */
+    @Nonnull
+    public ScheduleRequestBuilder schedule() {
+        return new ScheduleRequestBuilder(getRequestUrlWithAdditionalSegment("schedule"), getClient(), null);
     }
 
     /**
