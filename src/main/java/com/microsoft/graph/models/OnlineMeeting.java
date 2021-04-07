@@ -18,6 +18,7 @@ import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.Entity;
 
 
@@ -46,7 +47,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
+     * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -172,7 +173,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Information.
-     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
+     * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
      */
     @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
@@ -190,7 +191,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * Specifies which participants can bypass the meeting   lobby.
+     * Specifies which participants can bypass the meeting lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose
@@ -232,6 +233,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String videoTeleconferenceId;
+
+    /**
+     * The Meeting Attendance Report.
+     * 
+     */
+    @SerializedName(value = "meetingAttendanceReport", alternate = {"MeetingAttendanceReport"})
+    @Expose
+	@Nullable
+    public MeetingAttendanceReport meetingAttendanceReport;
 
 
     /**

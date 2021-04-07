@@ -192,7 +192,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Term Store.
-     * 
+     * The termStore under this site.
      */
     @SerializedName(value = "termStore", alternate = {"TermStore"})
     @Expose

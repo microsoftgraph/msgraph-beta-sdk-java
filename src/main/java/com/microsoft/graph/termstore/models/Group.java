@@ -58,7 +58,7 @@ public class Group extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Site Id.
-     * 
+     * Id of the parent site of this group.
      */
     @SerializedName(value = "parentSiteId", alternate = {"ParentSiteId"})
     @Expose

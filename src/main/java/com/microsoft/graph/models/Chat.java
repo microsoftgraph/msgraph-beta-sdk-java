@@ -13,11 +13,13 @@ import com.microsoft.graph.models.ChatType;
 import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.ChatMessage;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.TeamsTab;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.ChatMessageCollectionPage;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage;
 import com.microsoft.graph.requests.TeamsTabCollectionPage;
 
 
@@ -99,6 +101,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     public ChatMessageCollectionPage messages;
 
     /**
+     * The Permission Grants.
+     * A collection of permissions granted to apps for the chat.
+     */
+    @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
+    @Expose
+	@Nullable
+    public ResourceSpecificPermissionGrantCollectionPage permissionGrants;
+
+    /**
      * The Tabs.
      * 
      */
@@ -127,6 +138,10 @@ public class Chat extends Entity implements IJsonBackedObject {
 
         if (json.has("messages")) {
             messages = serializer.deserializeObject(json.get("messages"), ChatMessageCollectionPage.class);
+        }
+
+        if (json.has("permissionGrants")) {
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("tabs")) {

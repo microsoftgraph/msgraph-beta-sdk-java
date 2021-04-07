@@ -28,7 +28,7 @@ public class IdentityApiConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Configuration.
-     * The object which describes the authentication configuration details for calling the API. Only Basic authentication is supported at this time.
+     * The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
      */
     @SerializedName(value = "authenticationConfiguration", alternate = {"AuthenticationConfiguration"})
     @Expose

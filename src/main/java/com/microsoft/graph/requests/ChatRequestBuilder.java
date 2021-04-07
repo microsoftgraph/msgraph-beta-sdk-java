@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageRequestBuilder;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabRequestBuilder;
 import java.util.Arrays;
@@ -129,6 +131,26 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
     @Nonnull
     public ChatMessageRequestBuilder messages(@Nonnull final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ResourceSpecificPermissionGrant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ResourceSpecificPermissionGrant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
+        return new ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TeamsTab collection

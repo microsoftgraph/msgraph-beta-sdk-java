@@ -37,7 +37,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Account Enabled.
-     * true if the account is enabled; otherwise, false. Required.
+     * true if the account is enabled; otherwise, false. default is true.
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -82,7 +82,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * Unique identifier set by Azure Device Registration Service at the time of registration.
+     * Identifier set by Azure Device Registration Service at the time of registration.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -235,7 +235,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-     * The version of the operating system on the device. Required.
+     * Operating system version of the device. Required.
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose
@@ -280,7 +280,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
      */
     @SerializedName(value = "trustType", alternate = {"TrustType"})
     @Expose

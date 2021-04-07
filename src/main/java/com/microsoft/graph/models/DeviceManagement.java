@@ -27,6 +27,7 @@ import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettings;
 import com.microsoft.graph.models.AndroidManagedStoreAppConfigurationSchema;
 import com.microsoft.graph.models.AuditEvent;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
+import com.microsoft.graph.models.ChromeOSOnboardingSettings;
 import com.microsoft.graph.models.TermsAndConditions;
 import com.microsoft.graph.models.AdvancedThreatProtectionOnboardingStateSummary;
 import com.microsoft.graph.models.CartToClassAssociation;
@@ -144,6 +145,7 @@ import com.microsoft.graph.requests.AndroidForWorkEnrollmentProfileCollectionPag
 import com.microsoft.graph.requests.AndroidManagedStoreAppConfigurationSchemaCollectionPage;
 import com.microsoft.graph.requests.AuditEventCollectionPage;
 import com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterCollectionPage;
+import com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionPage;
 import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
 import com.microsoft.graph.requests.CartToClassAssociationCollectionPage;
 import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage;
@@ -377,7 +379,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Subscription State.
-     * Tenant mobile device management subscription state. The possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
+     * Tenant mobile device management subscription state. Possible values are: pending, active, warning, disabled, deleted, blocked, lockedOut.
      */
     @SerializedName(value = "subscriptionState", alternate = {"SubscriptionState"})
     @Expose
@@ -482,6 +484,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceAndAppManagementAssignmentFilterCollectionPage assignmentFilters;
+
+    /**
+     * The Chrome OSOnboarding Settings.
+     * Collection of ChromeOSOnboardingSettings settings associated with account.
+     */
+    @SerializedName(value = "chromeOSOnboardingSettings", alternate = {"ChromeOSOnboardingSettings"})
+    @Expose
+	@Nullable
+    public ChromeOSOnboardingSettingsCollectionPage chromeOSOnboardingSettings;
 
     /**
      * The Terms And Conditions.
@@ -1541,6 +1552,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("assignmentFilters")) {
             assignmentFilters = serializer.deserializeObject(json.get("assignmentFilters"), DeviceAndAppManagementAssignmentFilterCollectionPage.class);
+        }
+
+        if (json.has("chromeOSOnboardingSettings")) {
+            chromeOSOnboardingSettings = serializer.deserializeObject(json.get("chromeOSOnboardingSettings"), ChromeOSOnboardingSettingsCollectionPage.class);
         }
 
         if (json.has("termsAndConditions")) {
