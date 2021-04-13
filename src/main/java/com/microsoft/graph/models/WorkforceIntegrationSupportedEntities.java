@@ -44,6 +44,22 @@ public enum WorkforceIntegrationSupportedEntities
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * time Card
+    */
+    TIME_CARD,
+    /**
+    * time Off Reason
+    */
+    TIME_OFF_REASON,
+    /**
+    * time Off
+    */
+    TIME_OFF,
+    /**
+    * time Off Request
+    */
+    TIME_OFF_REQUEST,
+    /**
     * For WorkforceIntegrationSupportedEntities values that were not expected from the service
     */
     UNEXPECTED_VALUE

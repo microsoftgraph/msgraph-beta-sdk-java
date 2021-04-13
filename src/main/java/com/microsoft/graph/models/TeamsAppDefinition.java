@@ -12,6 +12,7 @@ import com.microsoft.graph.models.TeamsAppInstallationScopes;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.TeamsAppPublishingState;
 import com.microsoft.graph.models.TeamworkBot;
+import com.microsoft.graph.models.TeamsAppIcon;
 import com.microsoft.graph.models.Entity;
 
 
@@ -31,7 +32,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Installation Scopes.
-     * 
+     * A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      */
     @SerializedName(value = "allowedInstallationScopes", alternate = {"AllowedInstallationScopes"})
     @Expose
@@ -121,12 +122,30 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Bot.
-     * The details of the bot specified in the Teams App manifest.
+     * The details of the bot specified in the Teams app manifest.
      */
     @SerializedName(value = "bot", alternate = {"Bot"})
     @Expose
 	@Nullable
     public TeamworkBot bot;
+
+    /**
+     * The Color Icon.
+     * 
+     */
+    @SerializedName(value = "colorIcon", alternate = {"ColorIcon"})
+    @Expose
+	@Nullable
+    public TeamsAppIcon colorIcon;
+
+    /**
+     * The Outline Icon.
+     * 
+     */
+    @SerializedName(value = "outlineIcon", alternate = {"OutlineIcon"})
+    @Expose
+	@Nullable
+    public TeamsAppIcon outlineIcon;
 
 
     /**

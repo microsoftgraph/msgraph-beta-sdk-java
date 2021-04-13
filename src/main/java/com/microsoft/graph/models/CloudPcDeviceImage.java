@@ -83,7 +83,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status Details.
-     * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound.
+     * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, and sourceImageInvalid.
      */
     @SerializedName(value = "statusDetails", alternate = {"StatusDetails"})
     @Expose
