@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.TeamsAppDefinition;
 import com.microsoft.graph.requests.TeamworkBotRequestBuilder;
+import com.microsoft.graph.requests.TeamsAppIconRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

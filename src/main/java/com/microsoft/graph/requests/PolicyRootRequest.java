@@ -21,8 +21,6 @@ import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBui
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.PermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.PermissionGrantPolicyRequestBuilder;
-import com.microsoft.graph.requests.PrivateLinkResourcePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrivateLinkResourcePolicyRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;

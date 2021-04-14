@@ -17,7 +17,6 @@ import com.microsoft.graph.models.AuthorizationPolicy;
 import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.PermissionGrantPolicy;
-import com.microsoft.graph.models.PrivateLinkResourcePolicy;
 import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
@@ -32,7 +31,6 @@ import com.microsoft.graph.requests.AuthorizationPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.PermissionGrantPolicyCollectionPage;
-import com.microsoft.graph.requests.PrivateLinkResourcePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
@@ -139,15 +137,6 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
-
-    /**
-     * The Private Link Resource Policies.
-     * 
-     */
-    @SerializedName(value = "privateLinkResourcePolicies", alternate = {"PrivateLinkResourcePolicies"})
-    @Expose
-	@Nullable
-    public PrivateLinkResourcePolicyCollectionPage privateLinkResourcePolicies;
 
     /**
      * The Token Issuance Policies.
@@ -258,10 +247,6 @@ public class PolicyRoot implements IJsonBackedObject {
 
         if (json.has("permissionGrantPolicies")) {
             permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies"), PermissionGrantPolicyCollectionPage.class);
-        }
-
-        if (json.has("privateLinkResourcePolicies")) {
-            privateLinkResourcePolicies = serializer.deserializeObject(json.get("privateLinkResourcePolicies"), PrivateLinkResourcePolicyCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {

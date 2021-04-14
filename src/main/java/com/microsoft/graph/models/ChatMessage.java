@@ -158,7 +158,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Message Type.
-     * The type of chat message. The possible values are: message.
+     * The type of chat message. The possible value is: message.
      */
     @SerializedName(value = "messageType", alternate = {"MessageType"})
     @Expose
@@ -221,7 +221,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Hosted Contents.
-     * Content in a message hosted by Microsoft Teams e.g. images, code snippets etc.
+     * Content in a message hosted by Microsoft Teams e.g., images, code snippets etc.
      */
     @SerializedName(value = "hostedContents", alternate = {"HostedContents"})
     @Expose

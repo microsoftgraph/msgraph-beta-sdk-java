@@ -9,9 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ExactDataMatchStoreColumn;
 import com.microsoft.graph.models.ExactMatchSession;
-import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.models.ExactMatchDataStoreBase;
 import com.microsoft.graph.requests.ExactMatchSessionCollectionPage;
 
 
@@ -26,44 +25,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Exact Match Data Store.
  */
-public class ExactMatchDataStore extends Entity implements IJsonBackedObject {
+public class ExactMatchDataStore extends ExactMatchDataStoreBase implements IJsonBackedObject {
 
-
-    /**
-     * The Columns.
-     * 
-     */
-    @SerializedName(value = "columns", alternate = {"Columns"})
-    @Expose
-	@Nullable
-    public java.util.List<ExactDataMatchStoreColumn> columns;
-
-    /**
-     * The Data Last Updated Date Time.
-     * 
-     */
-    @SerializedName(value = "dataLastUpdatedDateTime", alternate = {"DataLastUpdatedDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime dataLastUpdatedDateTime;
-
-    /**
-     * The Description.
-     * 
-     */
-    @SerializedName(value = "description", alternate = {"Description"})
-    @Expose
-	@Nullable
-    public String description;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName(value = "displayName", alternate = {"DisplayName"})
-    @Expose
-	@Nullable
-    public String displayName;
 
     /**
      * The Sessions.

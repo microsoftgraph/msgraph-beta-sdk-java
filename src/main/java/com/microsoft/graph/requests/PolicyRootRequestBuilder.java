@@ -21,8 +21,6 @@ import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBui
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.PermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.PermissionGrantPolicyRequestBuilder;
-import com.microsoft.graph.requests.PrivateLinkResourcePolicyCollectionRequestBuilder;
-import com.microsoft.graph.requests.PrivateLinkResourcePolicyRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;
@@ -215,26 +213,6 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public PermissionGrantPolicyRequestBuilder permissionGrantPolicies(@Nonnull final String id) {
         return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the PrivateLinkResourcePolicy collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public PrivateLinkResourcePolicyCollectionRequestBuilder privateLinkResourcePolicies() {
-        return new PrivateLinkResourcePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the PrivateLinkResourcePolicy item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public PrivateLinkResourcePolicyRequestBuilder privateLinkResourcePolicies(@Nonnull final String id) {
-        return new PrivateLinkResourcePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("privateLinkResourcePolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TokenIssuancePolicy collection

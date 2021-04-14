@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ExactMatchUploadAgent;
-import com.microsoft.graph.models.ExactMatchJobBase;
+import com.microsoft.graph.models.ExactMatchSessionBase;
 
 
 import com.google.gson.JsonObject;
@@ -24,7 +24,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Exact Match Session.
  */
-public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedObject {
+public class ExactMatchSession extends ExactMatchSessionBase implements IJsonBackedObject {
 
 
     /**
@@ -35,15 +35,6 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     @Expose
 	@Nullable
     public String checksum;
-
-    /**
-     * The Datastore Id.
-     * 
-     */
-    @SerializedName(value = "datastoreId", alternate = {"DatastoreId"})
-    @Expose
-	@Nullable
-    public String datastoreId;
 
     /**
      * The Data Upload URI.
@@ -73,33 +64,6 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     public String fileName;
 
     /**
-     * The Processing Completion Date Time.
-     * 
-     */
-    @SerializedName(value = "processingCompletionDateTime", alternate = {"ProcessingCompletionDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime processingCompletionDateTime;
-
-    /**
-     * The Remaining Block Count.
-     * 
-     */
-    @SerializedName(value = "remainingBlockCount", alternate = {"RemainingBlockCount"})
-    @Expose
-	@Nullable
-    public Integer remainingBlockCount;
-
-    /**
-     * The Remaining Job Count.
-     * 
-     */
-    @SerializedName(value = "remainingJobCount", alternate = {"RemainingJobCount"})
-    @Expose
-	@Nullable
-    public Integer remainingJobCount;
-
-    /**
      * The Rows Per Block.
      * 
      */
@@ -118,33 +82,6 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     public String salt;
 
     /**
-     * The State.
-     * 
-     */
-    @SerializedName(value = "state", alternate = {"State"})
-    @Expose
-	@Nullable
-    public String state;
-
-    /**
-     * The Total Block Count.
-     * 
-     */
-    @SerializedName(value = "totalBlockCount", alternate = {"TotalBlockCount"})
-    @Expose
-	@Nullable
-    public Integer totalBlockCount;
-
-    /**
-     * The Total Job Count.
-     * 
-     */
-    @SerializedName(value = "totalJobCount", alternate = {"TotalJobCount"})
-    @Expose
-	@Nullable
-    public Integer totalJobCount;
-
-    /**
      * The Upload Agent Id.
      * 
      */
@@ -152,15 +89,6 @@ public class ExactMatchSession extends ExactMatchJobBase implements IJsonBackedO
     @Expose
 	@Nullable
     public String uploadAgentId;
-
-    /**
-     * The Upload Completion Date Time.
-     * 
-     */
-    @SerializedName(value = "uploadCompletionDateTime", alternate = {"UploadCompletionDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime uploadCompletionDateTime;
 
     /**
      * The Upload Agent.
