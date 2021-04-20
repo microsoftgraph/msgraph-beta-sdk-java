@@ -36,6 +36,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     AD_JOIN_CHECK_ORGANIZATIONAL_UNIT_INCORRECT_FORMAT,
     /**
+    * ad Join Check Computer Object Already Exists
+    */
+    AD_JOIN_CHECK_COMPUTER_OBJECT_ALREADY_EXISTS,
+    /**
     * ad Join Check Unknown Error
     */
     AD_JOIN_CHECK_UNKNOWN_ERROR,

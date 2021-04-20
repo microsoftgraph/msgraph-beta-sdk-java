@@ -13,10 +13,12 @@ import com.microsoft.graph.models.UserFlowApiConnectorConfiguration;
 import com.microsoft.graph.models.IdentityProvider;
 import com.microsoft.graph.models.UserFlowLanguageConfiguration;
 import com.microsoft.graph.models.IdentityUserFlowAttributeAssignment;
+import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.IdentityUserFlow;
 import com.microsoft.graph.requests.IdentityProviderCollectionPage;
 import com.microsoft.graph.requests.UserFlowLanguageConfigurationCollectionPage;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeAssignmentCollectionPage;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,7 +37,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Api Connector Configuration.
-     * Configuration for enabling an API connector for use as part of the self-service sign up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
+     * Configuration for enabling an API connector for use as part of the self-service sign-up user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      */
     @SerializedName(value = "apiConnectorConfiguration", alternate = {"ApiConnectorConfiguration"})
     @Expose
@@ -51,7 +53,7 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Languages.
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign up user flow. You cannot create custom languages in self-service sign up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You cannot create custom languages in self-service sign-up user flows.
      */
     @SerializedName(value = "languages", alternate = {"Languages"})
     @Expose
@@ -66,6 +68,13 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
     @Expose
 	@Nullable
     public IdentityUserFlowAttributeAssignmentCollectionPage userAttributeAssignments;
+
+    /**
+     * The User Flow Identity Providers.
+     * 
+     */
+	@Nullable
+    public IdentityProviderBaseCollectionPage userFlowIdentityProviders;
 
 
     /**
@@ -87,6 +96,10 @@ public class B2xIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
         if (json.has("userAttributeAssignments")) {
             userAttributeAssignments = serializer.deserializeObject(json.get("userAttributeAssignments"), IdentityUserFlowAttributeAssignmentCollectionPage.class);
+        }
+
+        if (json.has("userFlowIdentityProviders")) {
+            userFlowIdentityProviders = serializer.deserializeObject(json.get("userFlowIdentityProviders"), IdentityProviderBaseCollectionPage.class);
         }
     }
 }

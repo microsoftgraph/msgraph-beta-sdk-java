@@ -3,20 +3,28 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.models;
+package com.microsoft.graph.windowsupdates.models;
 
 
 /**
- * The Enum Channel Creation Mode.
+ * The Enum Update Category.
 */
-public enum ChannelCreationMode
+public enum UpdateCategory
 {
     /**
-    * migration
+    * feature
     */
-    MIGRATION,
+    FEATURE,
     /**
-    * For ChannelCreationMode values that were not expected from the service
+    * quality
+    */
+    QUALITY,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
+    * For UpdateCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

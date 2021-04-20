@@ -21,7 +21,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User Purpose.
+ * @deprecated The UserPurpose API is deprecated and will stop returning data on April 27, 2021. Please use the UserPurposeV2 API.
  */
+@Deprecated
 public class UserPurpose implements IJsonBackedObject {
 
     /** the OData type of the object as returned by the service */

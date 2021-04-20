@@ -28,7 +28,7 @@ public class OfficeClientConfigurationAssignment extends Entity implements IJson
 
     /**
      * The Target.
-     * The target assignment defined by the admin.
+     * 
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

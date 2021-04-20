@@ -7,16 +7,28 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Team Creation Mode.
+ * The Enum Provisioning Status Error Category.
 */
-public enum TeamCreationMode
+public enum ProvisioningStatusErrorCategory
 {
     /**
-    * migration
+    * failure
     */
-    MIGRATION,
+    FAILURE,
     /**
-    * For TeamCreationMode values that were not expected from the service
+    * non Service Failure
+    */
+    NON_SERVICE_FAILURE,
+    /**
+    * success
+    */
+    SUCCESS,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
+    * For ProvisioningStatusErrorCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

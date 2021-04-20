@@ -11,10 +11,12 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Initiator;
 import com.microsoft.graph.models.ModifiedProperty;
+import com.microsoft.graph.models.ProvisioningAction;
+import com.microsoft.graph.models.ProvisioningStatusInfo;
 import com.microsoft.graph.models.ProvisioningStep;
 import com.microsoft.graph.models.ProvisioningServicePrincipal;
 import com.microsoft.graph.models.ProvisionedIdentity;
-import com.microsoft.graph.models.ProvisioningSystemDetails;
+import com.microsoft.graph.models.ProvisioningSystem;
 import com.microsoft.graph.models.StatusBase;
 import com.microsoft.graph.models.Entity;
 
@@ -36,7 +38,9 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     /**
      * The Action.
      * Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Azure AD activity list.
+     * @deprecated The action property is deprecated. The provisioningAction holds the same information as this. This only exists in the beta api.
      */
+    @Deprecated
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
 	@Nullable
@@ -106,6 +110,24 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     public java.util.List<ModifiedProperty> modifiedProperties;
 
     /**
+     * The Provisioning Action.
+     * 
+     */
+    @SerializedName(value = "provisioningAction", alternate = {"ProvisioningAction"})
+    @Expose
+	@Nullable
+    public ProvisioningAction provisioningAction;
+
+    /**
+     * The Provisioning Status Info.
+     * 
+     */
+    @SerializedName(value = "provisioningStatusInfo", alternate = {"ProvisioningStatusInfo"})
+    @Expose
+	@Nullable
+    public ProvisioningStatusInfo provisioningStatusInfo;
+
+    /**
      * The Provisioning Steps.
      * Details of each step in provisioning.
      */
@@ -139,12 +161,14 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     @SerializedName(value = "sourceSystem", alternate = {"SourceSystem"})
     @Expose
 	@Nullable
-    public ProvisioningSystemDetails sourceSystem;
+    public ProvisioningSystem sourceSystem;
 
     /**
      * The Status Info.
      * Details of provisioning status.
+     * @deprecated The statusBase complex type is deprecated. The provisioningStatusInfo holds the same information as this. This only exists in the beta api.
      */
+    @Deprecated
     @SerializedName(value = "statusInfo", alternate = {"StatusInfo"})
     @Expose
 	@Nullable
@@ -166,7 +190,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
     @SerializedName(value = "targetSystem", alternate = {"TargetSystem"})
     @Expose
 	@Nullable
-    public ProvisioningSystemDetails targetSystem;
+    public ProvisioningSystem targetSystem;
 
     /**
      * The Tenant Id.

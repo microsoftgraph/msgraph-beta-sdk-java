@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.B2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.B2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowCollectionRequestBuilder;
@@ -137,6 +139,26 @@ public class IdentityContainerRequestBuilder extends BaseRequestBuilder<Identity
     @Nonnull
     public B2xIdentityUserFlowRequestBuilder b2xUserFlows(@Nonnull final String id) {
         return new B2xIdentityUserFlowRequestBuilder(getRequestUrlWithAdditionalSegment("b2xUserFlows") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IdentityProviderBase collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IdentityProviderBaseCollectionRequestBuilder identityProviders() {
+        return new IdentityProviderBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IdentityProviderBase item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IdentityProviderBaseRequestBuilder identityProviders(@Nonnull final String id) {
+        return new IdentityProviderBaseRequestBuilder(getRequestUrlWithAdditionalSegment("identityProviders") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the IdentityUserFlowAttribute collection

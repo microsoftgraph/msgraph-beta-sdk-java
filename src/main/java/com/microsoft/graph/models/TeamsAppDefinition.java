@@ -41,7 +41,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Azure ADApp Id.
-     * The WebApplicationInfo.id from the Teams App manifest.
+     * The WebApplicationInfo.Id from the Teams app manifest.
      */
     @SerializedName(value = "azureADAppId", alternate = {"AzureADAppId"})
     @Expose
@@ -104,7 +104,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App Id.
-     * The id from the Teams App manifest.
+     * The ID from the Teams app manifest.
      */
     @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose
@@ -131,7 +131,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Color Icon.
-     * 
+     * The color version of the Teams app's icon.
      */
     @SerializedName(value = "colorIcon", alternate = {"ColorIcon"})
     @Expose
@@ -140,7 +140,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Outline Icon.
-     * 
+     * The outline version of the Teams app's icon.
      */
     @SerializedName(value = "outlineIcon", alternate = {"OutlineIcon"})
     @Expose

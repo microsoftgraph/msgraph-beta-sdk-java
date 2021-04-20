@@ -46,7 +46,7 @@ public class ChromeOSOnboardingSettings extends Entity implements IJsonBackedObj
 
     /**
      * The Onboarding Status.
-     * The ChromebookTenant's OnboardingStatus. Possible values are: unknown, inprogress, onboarded, failed.
+     * The ChromebookTenant's OnboardingStatus
      */
     @SerializedName(value = "onboardingStatus", alternate = {"OnboardingStatus"})
     @Expose

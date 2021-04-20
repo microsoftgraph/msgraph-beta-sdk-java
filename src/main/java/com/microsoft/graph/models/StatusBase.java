@@ -21,7 +21,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Status Base.
+ * @deprecated The statusBase complex type is deprecated. The provisioningStatusInfo holds the same information as this. This only exists in the beta api.
  */
+@Deprecated
 public class StatusBase implements IJsonBackedObject {
 
     /** the OData type of the object as returned by the service */

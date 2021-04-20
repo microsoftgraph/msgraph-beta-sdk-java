@@ -39,7 +39,7 @@ public class OfficeUserCheckinSummary implements IJsonBackedObject {
 
     /**
      * The Failed User Count.
-     * Total failed user check ins for the last 3 months.
+     * 
      */
     @SerializedName(value = "failedUserCount", alternate = {"FailedUserCount"})
     @Expose
@@ -48,7 +48,7 @@ public class OfficeUserCheckinSummary implements IJsonBackedObject {
 
     /**
      * The Succeeded User Count.
-     * Total successful user check ins for the last 3 months.
+     * 
      */
     @SerializedName(value = "succeededUserCount", alternate = {"SucceededUserCount"})
     @Expose

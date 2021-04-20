@@ -27,7 +27,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Android Phone.
-     * 
+     * The number of users who were active on the Teams mobile client for Android.
      */
     @SerializedName(value = "androidPhone", alternate = {"AndroidPhone"})
     @Expose
@@ -36,7 +36,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Chrome OS.
-     * 
+     * The number of users who were active in the Teams desktop client on a ChromeOS computer.
      */
     @SerializedName(value = "chromeOS", alternate = {"ChromeOS"})
     @Expose
@@ -45,7 +45,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Ios.
-     * 
+     * The number of users who were active on the Teams mobile client for iOS.
      */
     @SerializedName(value = "ios", alternate = {"Ios"})
     @Expose
@@ -54,7 +54,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Linux.
-     * 
+     * The number of users who were active in the Teams desktop client on a Linux computer.
      */
     @SerializedName(value = "linux", alternate = {"Linux"})
     @Expose
@@ -63,7 +63,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Mac.
-     * 
+     * The number of users who were active in the Teams desktop client on a macOS computer.
      */
     @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
@@ -72,7 +72,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Report Date.
-     * 
+     * The date on which the users performed the activities.
      */
     @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
@@ -81,7 +81,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Report Period.
-     * 
+     * The number of days the report covers.
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -90,7 +90,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -99,7 +99,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Web.
-     * 
+     * The number of users who were active in the Teams web client on devices.
      */
     @SerializedName(value = "web", alternate = {"Web"})
     @Expose
@@ -108,7 +108,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Windows.
-     * 
+     * The number of users who were active in the Teams desktop client on a Windows-based computer.
      */
     @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
@@ -117,7 +117,7 @@ public class TeamsDeviceUsageUserCounts extends Entity implements IJsonBackedObj
 
     /**
      * The Windows Phone.
-     * 
+     * The number of users who were active on the Teams mobile client for Windows phone.
      */
     @SerializedName(value = "windowsPhone", alternate = {"WindowsPhone"})
     @Expose
