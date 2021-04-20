@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.DetailsInfo;
+import com.microsoft.graph.models.Identity;
 
 
 import com.google.gson.JsonObject;
@@ -22,21 +23,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Provisioned Identity.
  */
-public class ProvisionedIdentity implements IJsonBackedObject {
+public class ProvisionedIdentity extends Identity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Details.
@@ -46,24 +34,6 @@ public class ProvisionedIdentity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DetailsInfo details;
-
-    /**
-     * The Display Name.
-     * Display name of the identity.
-     */
-    @SerializedName(value = "displayName", alternate = {"DisplayName"})
-    @Expose
-	@Nullable
-    public String displayName;
-
-    /**
-     * The Id.
-     * Uniquely identifies the identity.
-     */
-    @SerializedName(value = "id", alternate = {"Id"})
-    @Expose
-	@Nullable
-    public String id;
 
     /**
      * The Identity Type.

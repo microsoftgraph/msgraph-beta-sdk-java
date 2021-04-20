@@ -14,6 +14,8 @@ import com.microsoft.graph.ediscovery.requests.AddToReviewSetOperationWithRefere
 import com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceWithReferenceRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.EstimateStatisticsOperationWithReferenceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -123,24 +125,24 @@ public class SourceCollectionRequestBuilder extends BaseRequestBuilder<SourceCol
         return new EstimateStatisticsOperationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastEstimateStatisticsOperation"), getClient(), null);
     }
     /**
-     *  Gets a request builder for the DataSource collection
+     *  Gets a request builder for the NoncustodialDataSource collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public DataSourceCollectionWithReferencesRequestBuilder noncustodialSources() {
-        return new DataSourceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources"), getClient(), null);
+    public NoncustodialDataSourceCollectionWithReferencesRequestBuilder noncustodialSources() {
+        return new NoncustodialDataSourceCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the DataSource item
+     * Gets a request builder for the NoncustodialDataSource item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public DataSourceWithReferenceRequestBuilder noncustodialSources(@Nonnull final String id) {
-        return new DataSourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources") + "/" + id, getClient(), null);
+    public NoncustodialDataSourceWithReferenceRequestBuilder noncustodialSources(@Nonnull final String id) {
+        return new NoncustodialDataSourceWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("noncustodialSources") + "/" + id, getClient(), null);
     }
 
     /**

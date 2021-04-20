@@ -16,9 +16,9 @@ public enum InitiatorType
     */
     USER,
     /**
-    * app
+    * application
     */
-    APP,
+    APPLICATION,
     /**
     * system
     */

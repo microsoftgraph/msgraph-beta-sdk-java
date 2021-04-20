@@ -42,7 +42,7 @@ public class AttendanceRecord implements IJsonBackedObject {
 
     /**
      * The Attendance Intervals.
-     * 
+     * List of time periods between joining and leaving.
      */
     @SerializedName(value = "attendanceIntervals", alternate = {"AttendanceIntervals"})
     @Expose
@@ -51,7 +51,7 @@ public class AttendanceRecord implements IJsonBackedObject {
 
     /**
      * The Email Address.
-     * 
+     * Email address.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
@@ -60,7 +60,7 @@ public class AttendanceRecord implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * 
+     * Identifier, such as display name.
      */
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
@@ -69,7 +69,7 @@ public class AttendanceRecord implements IJsonBackedObject {
 
     /**
      * The Role.
-     * 
+     * Role of the attendee. Possible values are None, Attendee, Presenter, and Organizer.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose
@@ -78,7 +78,7 @@ public class AttendanceRecord implements IJsonBackedObject {
 
     /**
      * The Total Attendance In Seconds.
-     * 
+     * Total duration of the attendances in seconds.
      */
     @SerializedName(value = "totalAttendanceInSeconds", alternate = {"TotalAttendanceInSeconds"})
     @Expose

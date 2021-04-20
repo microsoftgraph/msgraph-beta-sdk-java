@@ -54,7 +54,7 @@ public class ResourceSpecificPermissionGrant extends DirectoryObject implements 
 
     /**
      * The Permission Type.
-     * The type of permission. Possible values are: Application,Delegated. Read-only.
+     * The type of permission. Possible values are: Application, Delegated. Read-only.
      */
     @SerializedName(value = "permissionType", alternate = {"PermissionType"})
     @Expose

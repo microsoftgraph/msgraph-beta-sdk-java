@@ -27,7 +27,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Deleted Date.
-     * 
+     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
      */
     @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
@@ -36,7 +36,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Is Deleted.
-     * 
+     * Whether this user has been deleted or soft deleted.
      */
     @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
@@ -45,7 +45,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Is Licensed.
-     * 
+     * Whether the user has been assigned a Teams license.
      */
     @SerializedName(value = "isLicensed", alternate = {"IsLicensed"})
     @Expose
@@ -54,7 +54,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Last Activity Date.
-     * 
+     * The last date that the user participated in a Microsoft Teams activity.
      */
     @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
@@ -63,7 +63,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Report Period.
-     * 
+     * The number of days the report covers.
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -72,7 +72,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -81,7 +81,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Used Android Phone.
-     * 
+     * Whether the user was active on the Teams mobile client for Android.
      */
     @SerializedName(value = "usedAndroidPhone", alternate = {"UsedAndroidPhone"})
     @Expose
@@ -90,7 +90,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Used Chrome OS.
-     * 
+     * Whether the user was active in the Teams desktop client on a ChromeOS computer.
      */
     @SerializedName(value = "usedChromeOS", alternate = {"UsedChromeOS"})
     @Expose
@@ -99,7 +99,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Usedi OS.
-     * 
+     * Whether the user was active on the Teams mobile client for iOS.
      */
     @SerializedName(value = "usediOS", alternate = {"UsediOS"})
     @Expose
@@ -108,7 +108,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Used Linux.
-     * 
+     * Whether the user was active in the Teams desktop client on a Linux computer.
      */
     @SerializedName(value = "usedLinux", alternate = {"UsedLinux"})
     @Expose
@@ -117,7 +117,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Used Mac.
-     * 
+     * Whether the user was active in the Teams desktop client on a macOS computer.
      */
     @SerializedName(value = "usedMac", alternate = {"UsedMac"})
     @Expose
@@ -126,7 +126,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Used Web.
-     * 
+     * Whether the user was active in the Teams web client on devices.
      */
     @SerializedName(value = "usedWeb", alternate = {"UsedWeb"})
     @Expose
@@ -135,7 +135,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Used Windows.
-     * 
+     * Whether the user was active in the Teams desktop client on a Windows-based computer.
      */
     @SerializedName(value = "usedWindows", alternate = {"UsedWindows"})
     @Expose
@@ -144,7 +144,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The Used Windows Phone.
-     * 
+     * Whether the user was active on the Teams mobile client for Windows phone.
      */
     @SerializedName(value = "usedWindowsPhone", alternate = {"UsedWindowsPhone"})
     @Expose
@@ -153,7 +153,7 @@ public class TeamsDeviceUsageUserDetail extends Entity implements IJsonBackedObj
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

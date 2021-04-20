@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.B2cIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.B2cIdentityUserFlowRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionRequestBuilder;
 import com.microsoft.graph.requests.B2xIdentityUserFlowRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeRequestBuilder;
 import com.microsoft.graph.requests.IdentityUserFlowCollectionRequestBuilder;

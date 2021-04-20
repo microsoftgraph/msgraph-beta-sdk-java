@@ -14,8 +14,10 @@ import com.microsoft.graph.ediscovery.models.DataSourceScopes;
 import com.microsoft.graph.ediscovery.models.DataSource;
 import com.microsoft.graph.ediscovery.models.AddToReviewSetOperation;
 import com.microsoft.graph.ediscovery.models.EstimateStatisticsOperation;
+import com.microsoft.graph.ediscovery.models.NoncustodialDataSource;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage;
+import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -143,7 +145,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public DataSourceCollectionPage noncustodialSources;
+    public NoncustodialDataSourceCollectionPage noncustodialSources;
 
 
     /**
@@ -164,7 +166,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("noncustodialSources")) {
-            noncustodialSources = serializer.deserializeObject(json.get("noncustodialSources"), DataSourceCollectionPage.class);
+            noncustodialSources = serializer.deserializeObject(json.get("noncustodialSources"), NoncustodialDataSourceCollectionPage.class);
         }
     }
 }

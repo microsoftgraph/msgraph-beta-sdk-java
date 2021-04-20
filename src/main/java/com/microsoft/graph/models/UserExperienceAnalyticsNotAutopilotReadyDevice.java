@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
 
     /**
      * The Azure Ad Registered.
-     * The intune device's azureAdRegistered. Possible values are: no, yes, unknown.
+     * The intune device's azureAdRegistered.
      */
     @SerializedName(value = "azureAdRegistered", alternate = {"AzureAdRegistered"})
     @Expose

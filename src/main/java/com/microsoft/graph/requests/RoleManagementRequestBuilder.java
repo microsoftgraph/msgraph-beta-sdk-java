@@ -70,6 +70,16 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
     }
 
     /**
+     * Gets the request builder for RbacApplicationMultiple
+     *
+     * @return the RbacApplicationMultipleRequestBuilder instance
+     */
+    @Nonnull
+    public RbacApplicationMultipleRequestBuilder cloudPC() {
+        return new RbacApplicationMultipleRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPC"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for RbacApplication
      *
      * @return the RbacApplicationRequestBuilder instance

@@ -75,7 +75,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements IJsonBackedOb
 
     /**
      * The Is Supervised.
-     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/HT202837
+     * Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
      */
     @SerializedName(value = "isSupervised", alternate = {"IsSupervised"})
     @Expose

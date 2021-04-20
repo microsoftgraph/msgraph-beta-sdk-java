@@ -156,6 +156,7 @@ import com.microsoft.graph.requests.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
+import com.microsoft.graph.requests.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.ComplianceRequestBuilder;
 import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.TrustFrameworkRequestBuilder;
@@ -164,7 +165,6 @@ import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.PolicyRootRequestBuilder;
-import com.microsoft.graph.requests.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.EducationRootRequestBuilder;
 import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
 import com.microsoft.graph.requests.CloudCommunicationsRequestBuilder;
@@ -181,6 +181,7 @@ import com.microsoft.graph.requests.CommsApplicationRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
+import com.microsoft.graph.windowsupdates.requests.AdminRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -1892,6 +1893,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the RoleManagement
+     */
+    @Nonnull
+    public RoleManagementRequestBuilder roleManagement() {
+        return new RoleManagementRequestBuilder(getServiceRoot() + "/roleManagement", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Compliance
      */
     @Nonnull
@@ -1977,16 +1988,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public PolicyRootRequestBuilder policies() {
         return new PolicyRootRequestBuilder(getServiceRoot() + "/policies", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the RoleManagement
-     */
-    @Nonnull
-    public RoleManagementRequestBuilder roleManagement() {
-        return new RoleManagementRequestBuilder(getServiceRoot() + "/roleManagement", this, null);
     }
 
     /**
@@ -2157,5 +2158,15 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(getServiceRoot() + "/teamwork", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the Admin
+     */
+    @Nonnull
+    public AdminRequestBuilder admin() {
+        return new AdminRequestBuilder(getServiceRoot() + "/admin", this, null);
     }
 }

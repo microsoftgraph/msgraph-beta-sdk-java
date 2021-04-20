@@ -13,12 +13,14 @@ import com.microsoft.graph.models.ConditionalAccessRoot;
 import com.microsoft.graph.models.IdentityApiConnector;
 import com.microsoft.graph.models.B2cIdentityUserFlow;
 import com.microsoft.graph.models.B2xIdentityUserFlow;
+import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.IdentityUserFlowAttribute;
 import com.microsoft.graph.models.IdentityUserFlow;
 import com.microsoft.graph.models.ContinuousAccessEvaluationPolicy;
 import com.microsoft.graph.requests.IdentityApiConnectorCollectionPage;
 import com.microsoft.graph.requests.B2cIdentityUserFlowCollectionPage;
 import com.microsoft.graph.requests.B2xIdentityUserFlowCollectionPage;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
 import com.microsoft.graph.requests.IdentityUserFlowAttributeCollectionPage;
 import com.microsoft.graph.requests.IdentityUserFlowCollectionPage;
 
@@ -87,6 +89,15 @@ public class IdentityContainer implements IJsonBackedObject {
     public B2xIdentityUserFlowCollectionPage b2xUserFlows;
 
     /**
+     * The Identity Providers.
+     * 
+     */
+    @SerializedName(value = "identityProviders", alternate = {"IdentityProviders"})
+    @Expose
+	@Nullable
+    public IdentityProviderBaseCollectionPage identityProviders;
+
+    /**
      * The User Flow Attributes.
      * 
      */
@@ -133,6 +144,10 @@ public class IdentityContainer implements IJsonBackedObject {
 
         if (json.has("b2xUserFlows")) {
             b2xUserFlows = serializer.deserializeObject(json.get("b2xUserFlows"), B2xIdentityUserFlowCollectionPage.class);
+        }
+
+        if (json.has("identityProviders")) {
+            identityProviders = serializer.deserializeObject(json.get("identityProviders"), IdentityProviderBaseCollectionPage.class);
         }
 
         if (json.has("userFlowAttributes")) {
