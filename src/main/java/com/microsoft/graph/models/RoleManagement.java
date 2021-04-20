@@ -49,6 +49,15 @@ public class RoleManagement implements IJsonBackedObject {
     public RbacApplication directory;
 
     /**
+     * The Cloud PC.
+     * 
+     */
+    @SerializedName(value = "cloudPC", alternate = {"CloudPC"})
+    @Expose
+	@Nullable
+    public RbacApplicationMultiple cloudPC;
+
+    /**
      * The Entitlement Management.
      * The RbacApplication for Entitlement Management
      */

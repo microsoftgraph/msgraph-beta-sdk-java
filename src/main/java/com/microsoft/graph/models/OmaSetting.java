@@ -57,7 +57,7 @@ public class OmaSetting implements IJsonBackedObject {
 
     /**
      * The Is Encrypted.
-     * Indicates whether the value field is encrypted.
+     * Indicates whether the value field is encrypted. This property is read-only.
      */
     @SerializedName(value = "isEncrypted", alternate = {"IsEncrypted"})
     @Expose

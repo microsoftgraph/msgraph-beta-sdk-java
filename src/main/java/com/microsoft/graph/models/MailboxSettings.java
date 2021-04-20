@@ -45,7 +45,7 @@ public class MailboxSettings implements IJsonBackedObject {
 
     /**
      * The Archive Folder.
-     * Folder ID of an archive folder for the user. Read only.
+     * Folder ID of an archive folder for the user.
      */
     @SerializedName(value = "archiveFolder", alternate = {"ArchiveFolder"})
     @Expose
@@ -72,7 +72,7 @@ public class MailboxSettings implements IJsonBackedObject {
 
     /**
      * The Delegate Meeting Message Delivery Options.
-     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly. The default is sendToDelegateOnly.
+     * If the user has a calendar delegate, this specifies whether the delegate, mailbox owner, or both receive meeting messages and meeting responses. Possible values are: sendToDelegateAndInformationToPrincipal, sendToDelegateAndPrincipal, sendToDelegateOnly.
      */
     @SerializedName(value = "delegateMeetingMessageDeliveryOptions", alternate = {"DelegateMeetingMessageDeliveryOptions"})
     @Expose
@@ -109,7 +109,9 @@ public class MailboxSettings implements IJsonBackedObject {
     /**
      * The User Purpose.
      * The purpose of the mailbox. Used to differentiate a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Read only.
+     * @deprecated The UserPurpose API is deprecated and will stop returning data on April 27, 2021. Please use the UserPurposeV2 API.
      */
+    @Deprecated
     @SerializedName(value = "userPurpose", alternate = {"UserPurpose"})
     @Expose
 	@Nullable

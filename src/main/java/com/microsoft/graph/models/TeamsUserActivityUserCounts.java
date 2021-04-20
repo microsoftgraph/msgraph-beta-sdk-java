@@ -27,7 +27,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Calls.
-     * 
+     * The number of users who participated in 1:1 calls.
      */
     @SerializedName(value = "calls", alternate = {"Calls"})
     @Expose
@@ -36,7 +36,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Meetings.
-     * 
+     * The number of users who participated in online meetings.
      */
     @SerializedName(value = "meetings", alternate = {"Meetings"})
     @Expose
@@ -45,7 +45,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Other Actions.
-     * 
+     * The number of users who were active but performed other activities than exposed action types offered in the report (sending or replying to channel messages and chat messages, scheduling or participating in 1:1 calls and meetings). Examples actions are when a user changes the Teams status or the Teams status message or opens a Channel Message post but does not reply.
      */
     @SerializedName(value = "otherActions", alternate = {"OtherActions"})
     @Expose
@@ -54,7 +54,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Private Chat Messages.
-     * 
+     * The number of users who posted message in a private chat.
      */
     @SerializedName(value = "privateChatMessages", alternate = {"PrivateChatMessages"})
     @Expose
@@ -63,7 +63,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Report Date.
-     * 
+     * The date on which the users performed the activities.
      */
     @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
@@ -72,7 +72,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Report Period.
-     * 
+     * The number of days the report covers.
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -81,7 +81,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -90,7 +90,7 @@ public class TeamsUserActivityUserCounts extends Entity implements IJsonBackedOb
 
     /**
      * The Team Chat Messages.
-     * 
+     * The number of users who posted message in a team chat.
      */
     @SerializedName(value = "teamChatMessages", alternate = {"TeamChatMessages"})
     @Expose

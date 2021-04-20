@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.ProvisioningStatusErrorCategory;
 import com.microsoft.graph.models.StatusBase;
 
 
@@ -21,7 +22,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Status Details.
+ * @deprecated The statusDetails complex type is deprecated. The provisioningStatusInfo and provisioningStatusInfo's provisioningErrorInfo holds the same information as this. This only exists in the beta api.
  */
+@Deprecated
 public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
 
@@ -41,7 +44,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
     @SerializedName(value = "errorCategory", alternate = {"ErrorCategory"})
     @Expose
 	@Nullable
-    public String errorCategory;
+    public ProvisioningStatusErrorCategory errorCategory;
 
     /**
      * The Error Code.

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.InitiatorType;
+import com.microsoft.graph.models.Identity;
 
 
 import com.google.gson.JsonObject;
@@ -22,39 +23,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Initiator.
  */
-public class Initiator implements IJsonBackedObject {
+public class Initiator extends Identity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
-
-    /**
-     * The Display Name.
-     * Name of the person or service that initiated the provisioning event.
-     */
-    @SerializedName(value = "displayName", alternate = {"DisplayName"})
-    @Expose
-	@Nullable
-    public String displayName;
-
-    /**
-     * The Id.
-     * Uniquely identifies the person or service that initiated the provisioning event.
-     */
-    @SerializedName(value = "id", alternate = {"Id"})
-    @Expose
-	@Nullable
-    public String id;
 
     /**
      * The Initiator Type.

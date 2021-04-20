@@ -14,6 +14,8 @@ import com.microsoft.graph.ediscovery.requests.AddToReviewSetOperationWithRefere
 import com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.DataSourceWithReferenceRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.EstimateStatisticsOperationWithReferenceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
