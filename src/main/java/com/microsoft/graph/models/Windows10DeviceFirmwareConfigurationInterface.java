@@ -82,6 +82,15 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     public Enablement radios;
 
     /**
+     * The Simultaneous Multi Threading.
+     * Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
+     */
+    @SerializedName(value = "simultaneousMultiThreading", alternate = {"SimultaneousMultiThreading"})
+    @Expose
+	@Nullable
+    public Enablement simultaneousMultiThreading;
+
+    /**
      * The Virtualization Of Cpu And IO.
      * Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
      */
@@ -89,6 +98,15 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
     @Expose
 	@Nullable
     public Enablement virtualizationOfCpuAndIO;
+
+    /**
+     * The Windows Platform Binary Table.
+     * Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
+     */
+    @SerializedName(value = "windowsPlatformBinaryTable", alternate = {"WindowsPlatformBinaryTable"})
+    @Expose
+	@Nullable
+    public Enablement windowsPlatformBinaryTable;
 
 
     /**

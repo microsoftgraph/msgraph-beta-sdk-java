@@ -25,10 +25,12 @@ import com.microsoft.graph.models.DeviceManagementReportsGetAppStatusOverviewRep
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceInstallStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetFailedMobileAppsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetFailedMobileAppsSummaryReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetRelatedAppsStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetUserInstallStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPoliciesReportForDeviceParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyDevicesReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyDeviceSummaryReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicySettingsDeviceSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingDetailsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetActiveMalwareReportParameterSet;
@@ -37,7 +39,9 @@ import com.microsoft.graph.models.DeviceManagementReportsGetMalwareSummaryReport
 import com.microsoft.graph.models.DeviceManagementReportsGetUnhealthyDefenderAgentsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetUnhealthyFirewallReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetUnhealthyFirewallSummaryReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetAllCertificatesReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCertificatesReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCachedReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCompliancePolicyNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCompliancePolicyNonComplianceSummaryReportParameterSet;
@@ -45,6 +49,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetComplianceSettingNon
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyNonComplianceSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingNonComplianceReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetDeviceManagementIntentSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetHistoricalReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetPolicyNonComplianceMetadataParameterSet;
@@ -215,6 +220,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public DeviceManagementReportsGetRelatedAppsStatusReportRequestBuilder getRelatedAppsStatusReport(@Nonnull final DeviceManagementReportsGetRelatedAppsStatusReportParameterSet parameters) {
+        return new DeviceManagementReportsGetRelatedAppsStatusReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRelatedAppsStatusReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public DeviceManagementReportsGetUserInstallStatusReportRequestBuilder getUserInstallStatusReport(@Nonnull final DeviceManagementReportsGetUserInstallStatusReportParameterSet parameters) {
         return new DeviceManagementReportsGetUserInstallStatusReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserInstallStatusReport"), getClient(), null, parameters);
     }
@@ -247,6 +262,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetConfigurationPolicyDeviceSummaryReportRequestBuilder getConfigurationPolicyDeviceSummaryReport(@Nonnull final DeviceManagementReportsGetConfigurationPolicyDeviceSummaryReportParameterSet parameters) {
         return new DeviceManagementReportsGetConfigurationPolicyDeviceSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationPolicyDeviceSummaryReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetConfigurationPolicySettingsDeviceSummaryReportRequestBuilder getConfigurationPolicySettingsDeviceSummaryReport(@Nonnull final DeviceManagementReportsGetConfigurationPolicySettingsDeviceSummaryReportParameterSet parameters) {
+        return new DeviceManagementReportsGetConfigurationPolicySettingsDeviceSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationPolicySettingsDeviceSummaryReport"), getClient(), null, parameters);
     }
 
     /**
@@ -335,8 +360,28 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public DeviceManagementReportsGetAllCertificatesReportRequestBuilder getAllCertificatesReport(@Nonnull final DeviceManagementReportsGetAllCertificatesReportParameterSet parameters) {
+        return new DeviceManagementReportsGetAllCertificatesReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAllCertificatesReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public DeviceManagementReportsGetCertificatesReportRequestBuilder getCertificatesReport(@Nonnull final DeviceManagementReportsGetCertificatesReportParameterSet parameters) {
         return new DeviceManagementReportsGetCertificatesReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCertificatesReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportRequestBuilder getConfigManagerDevicePolicyStatusReport(@Nonnull final DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet parameters) {
+        return new DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigManagerDevicePolicyStatusReport"), getClient(), null, parameters);
     }
 
     /**
@@ -407,6 +452,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetConfigurationSettingNonComplianceReportRequestBuilder getConfigurationSettingNonComplianceReport(@Nonnull final DeviceManagementReportsGetConfigurationSettingNonComplianceReportParameterSet parameters) {
         return new DeviceManagementReportsGetConfigurationSettingNonComplianceReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationSettingNonComplianceReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetDeviceManagementIntentSettingsReportRequestBuilder getDeviceManagementIntentSettingsReport(@Nonnull final DeviceManagementReportsGetDeviceManagementIntentSettingsReportParameterSet parameters) {
+        return new DeviceManagementReportsGetDeviceManagementIntentSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDeviceManagementIntentSettingsReport"), getClient(), null, parameters);
     }
 
     /**

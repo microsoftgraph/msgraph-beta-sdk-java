@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ExactMatchSensitiveContentLocation;
+import com.microsoft.graph.models.SensitiveContentLocation;
 import com.microsoft.graph.models.DetectedSensitiveContentBase;
 
 
@@ -34,7 +34,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     @SerializedName(value = "matches", alternate = {"Matches"})
     @Expose
 	@Nullable
-    public java.util.List<ExactMatchSensitiveContentLocation> matches;
+    public java.util.List<SensitiveContentLocation> matches;
 
 
     /**

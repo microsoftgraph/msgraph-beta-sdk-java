@@ -110,6 +110,15 @@ public class DeviceOperatingSystemSummary implements IJsonBackedObject {
     public Integer aospUserlessCount;
 
     /**
+     * The Chrome OSCount.
+     * Number of Chrome OS devices. Valid values 0 to 2147483647
+     */
+    @SerializedName(value = "chromeOSCount", alternate = {"ChromeOSCount"})
+    @Expose
+	@Nullable
+    public Integer chromeOSCount;
+
+    /**
      * The Config Mgr Device Count.
      * Number of ConfigMgr managed devices.
      */

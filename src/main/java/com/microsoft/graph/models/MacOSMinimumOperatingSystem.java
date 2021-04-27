@@ -118,6 +118,15 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 	@Nullable
     public Boolean v10_9;
 
+    /**
+     * The V11_0.
+     * Mac OS 11.0 or later.
+     */
+    @SerializedName(value = "v11_0", alternate = {"V11_0"})
+    @Expose
+	@Nullable
+    public Boolean v11_0;
+
 
     /**
      * Sets the raw JSON object

@@ -27,6 +27,15 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Agent Image Digest.
+     * The digest of the current agent image running on this server 
+     */
+    @SerializedName(value = "agentImageDigest", alternate = {"AgentImageDigest"})
+    @Expose
+	@Nullable
+    public String agentImageDigest;
+
+    /**
      * The Display Name.
      * The MicrosoftTunnelServer's display name
      */
@@ -43,6 +52,15 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastCheckinDateTime;
+
+    /**
+     * The Server Image Digest.
+     * The digest of the current server image running on this server 
+     */
+    @SerializedName(value = "serverImageDigest", alternate = {"ServerImageDigest"})
+    @Expose
+	@Nullable
+    public String serverImageDigest;
 
     /**
      * The Tunnel Server Health Status.

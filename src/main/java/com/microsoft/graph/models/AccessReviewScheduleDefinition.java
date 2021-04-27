@@ -87,6 +87,15 @@ public class AccessReviewScheduleDefinition extends Entity implements IJsonBacke
     public String displayName;
 
     /**
+     * The Fallback Reviewers.
+     * 
+     */
+    @SerializedName(value = "fallbackReviewers", alternate = {"FallbackReviewers"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewReviewerScope> fallbackReviewers;
+
+    /**
      * The Instance Enumeration Scope.
      * In the case of a review of guest users across all Microsoft 365 groups, this determines the scope of which groups will be reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope.
      */

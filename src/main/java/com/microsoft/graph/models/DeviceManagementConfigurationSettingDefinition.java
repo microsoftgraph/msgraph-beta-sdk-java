@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingAccessTypes;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingApplicability;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingOccurrence;
+import com.microsoft.graph.models.DeviceManagementConfigurationReferredSettingInformation;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingUsage;
 import com.microsoft.graph.models.DeviceManagementConfigurationControlType;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingVisibility;
@@ -139,6 +140,15 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     @Expose
 	@Nullable
     public String offsetUri;
+
+    /**
+     * The Referred Setting Information List.
+     * List of referred setting information.
+     */
+    @SerializedName(value = "referredSettingInformationList", alternate = {"ReferredSettingInformationList"})
+    @Expose
+	@Nullable
+    public java.util.List<DeviceManagementConfigurationReferredSettingInformation> referredSettingInformationList;
 
     /**
      * The Root Definition Id.

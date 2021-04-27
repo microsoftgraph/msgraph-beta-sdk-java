@@ -98,6 +98,24 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements IJsonB
     public Boolean disableOnDemandUserOverride;
 
     /**
+     * The Disconnect On Idle.
+     * Whether to disconnect after on-demand connection idles
+     */
+    @SerializedName(value = "disconnectOnIdle", alternate = {"DisconnectOnIdle"})
+    @Expose
+	@Nullable
+    public Boolean disconnectOnIdle;
+
+    /**
+     * The Disconnect On Idle Timer In Seconds.
+     * The length of time in seconds to wait before disconnecting an on-demand connection. Valid values 0 to 65535
+     */
+    @SerializedName(value = "disconnectOnIdleTimerInSeconds", alternate = {"DisconnectOnIdleTimerInSeconds"})
+    @Expose
+	@Nullable
+    public Integer disconnectOnIdleTimerInSeconds;
+
+    /**
      * The Enable Per App.
      * Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
      */

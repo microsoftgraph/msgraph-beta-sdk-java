@@ -67,6 +67,15 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
     public String displayName;
 
     /**
+     * The End Of Support Date.
+     * The last supported date for a feature update
+     */
+    @SerializedName(value = "endOfSupportDate", alternate = {"EndOfSupportDate"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime endOfSupportDate;
+
+    /**
      * The Feature Update Version.
      * The feature update version that will be deployed to the devices targeted by this profile. The version could be any supported version for example 1709, 1803 or 1809 and so on.
      */

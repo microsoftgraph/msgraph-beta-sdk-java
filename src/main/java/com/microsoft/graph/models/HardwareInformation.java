@@ -115,6 +115,15 @@ public class HardwareInformation implements IJsonBackedObject {
     public DeviceGuardVirtualizationBasedSecurityState deviceGuardVirtualizationBasedSecurityState;
 
     /**
+     * The Esim Identifier.
+     * eSIM identifier
+     */
+    @SerializedName(value = "esimIdentifier", alternate = {"EsimIdentifier"})
+    @Expose
+	@Nullable
+    public String esimIdentifier;
+
+    /**
      * The Free Storage Space.
      * Free storage space of the device.
      */
