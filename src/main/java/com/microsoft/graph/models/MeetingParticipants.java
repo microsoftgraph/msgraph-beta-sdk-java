@@ -41,7 +41,7 @@ public class MeetingParticipants implements IJsonBackedObject {
 
     /**
      * The Attendees.
-     * 
+     * Information of the meeting attendees.
      */
     @SerializedName(value = "attendees", alternate = {"Attendees"})
     @Expose
@@ -50,7 +50,7 @@ public class MeetingParticipants implements IJsonBackedObject {
 
     /**
      * The Contributors.
-     * For broadcast meeting only.
+     * 
      */
     @SerializedName(value = "contributors", alternate = {"Contributors"})
     @Expose
@@ -59,7 +59,7 @@ public class MeetingParticipants implements IJsonBackedObject {
 
     /**
      * The Organizer.
-     * 
+     * Information of the meeting organizer.
      */
     @SerializedName(value = "organizer", alternate = {"Organizer"})
     @Expose
@@ -68,7 +68,7 @@ public class MeetingParticipants implements IJsonBackedObject {
 
     /**
      * The Producers.
-     * For broadcast meeting only.
+     * 
      */
     @SerializedName(value = "producers", alternate = {"Producers"})
     @Expose

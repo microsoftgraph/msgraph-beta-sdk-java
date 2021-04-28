@@ -83,7 +83,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Capabilities.
-     * The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
+     * 
      */
     @SerializedName(value = "capabilities", alternate = {"Capabilities"})
     @Expose

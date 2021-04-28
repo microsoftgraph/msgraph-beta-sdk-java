@@ -89,4 +89,13 @@ public class MicrosoftTunnelSiteRequestBuilder extends BaseRequestBuilder<Micros
     public MicrosoftTunnelServerRequestBuilder microsoftTunnelServers(@Nonnull final String id) {
         return new MicrosoftTunnelServerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoftTunnelServers") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public MicrosoftTunnelSiteRequestUpgradeRequestBuilder requestUpgrade() {
+        return new MicrosoftTunnelSiteRequestUpgradeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.requestUpgrade"), getClient(), null);
+    }
 }

@@ -36,7 +36,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements IJsonBacke
 
     /**
      * The Is Phone One Time Password Authentication Enabled.
-     * 
+     * The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
      */
     @SerializedName(value = "isPhoneOneTimePasswordAuthenticationEnabled", alternate = {"IsPhoneOneTimePasswordAuthenticationEnabled"})
     @Expose

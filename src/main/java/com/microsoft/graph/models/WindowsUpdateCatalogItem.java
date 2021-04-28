@@ -35,6 +35,15 @@ public class WindowsUpdateCatalogItem extends Entity implements IJsonBackedObjec
     public String displayName;
 
     /**
+     * The End Of Support Date.
+     * The last supported date for a catalog item
+     */
+    @SerializedName(value = "endOfSupportDate", alternate = {"EndOfSupportDate"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime endOfSupportDate;
+
+    /**
      * The Release Date Time.
      * The date the catalog item was released
      */

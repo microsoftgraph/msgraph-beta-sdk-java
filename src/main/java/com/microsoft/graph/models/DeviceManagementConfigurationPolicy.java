@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationPlatforms;
 import com.microsoft.graph.models.DeviceManagementConfigurationTechnologies;
+import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplateReference;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicyAssignment;
 import com.microsoft.graph.models.DeviceManagementConfigurationSetting;
 import com.microsoft.graph.models.Entity;
@@ -121,6 +122,15 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
     @Expose
 	@Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> technologies;
+
+    /**
+     * The Template Reference.
+     * Template reference information
+     */
+    @SerializedName(value = "templateReference", alternate = {"TemplateReference"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationPolicyTemplateReference templateReference;
 
     /**
      * The Assignments.

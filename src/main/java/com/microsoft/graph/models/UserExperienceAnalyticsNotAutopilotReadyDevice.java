@@ -8,7 +8,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.AzureAdRegisteredState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -60,7 +59,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     @SerializedName(value = "azureAdRegistered", alternate = {"AzureAdRegistered"})
     @Expose
 	@Nullable
-    public AzureAdRegisteredState azureAdRegistered;
+    public Boolean azureAdRegistered;
 
     /**
      * The Device Name.

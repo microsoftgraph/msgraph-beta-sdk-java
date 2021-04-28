@@ -48,6 +48,7 @@ import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
 import com.microsoft.graph.models.DeviceManagementConfigurationCategory;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
+import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
 import com.microsoft.graph.models.ComplianceManagementPartner;
 import com.microsoft.graph.models.OnPremisesConditionalAccessSettings;
 import com.microsoft.graph.models.DeviceCategory;
@@ -84,6 +85,7 @@ import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
 import com.microsoft.graph.models.UserExperienceAnalyticsBaseline;
 import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
 import com.microsoft.graph.models.UserExperienceAnalyticsDevicePerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScores;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupHistory;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcess;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcessPerformance;
@@ -95,6 +97,7 @@ import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
 import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsScoreHistory;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
 import com.microsoft.graph.models.WindowsMalwareInformation;
 import com.microsoft.graph.models.DeviceManagementDerivedCredentialSettings;
 import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
@@ -161,6 +164,7 @@ import com.microsoft.graph.requests.NdesConnectorCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
+import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage;
 import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.DeviceCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage;
@@ -194,6 +198,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPag
 import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
@@ -203,6 +208,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDevi
 import com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage;
 import com.microsoft.graph.requests.WindowsMalwareInformationCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementDerivedCredentialSettingsCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementResourceAccessProfileBaseCollectionPage;
@@ -675,6 +681,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public DeviceManagementConfigurationSettingDefinitionCollectionPage configurationSettings;
 
     /**
+     * The Reusable Policy Settings.
+     * List of all reusable settings that can be referred in a policy
+     */
+    @SerializedName(value = "reusablePolicySettings", alternate = {"ReusablePolicySettings"})
+    @Expose
+	@Nullable
+    public DeviceManagementReusablePolicySettingCollectionPage reusablePolicySettings;
+
+    /**
+     * The Reusable Settings.
+     * List of all reusable settings
+     */
+    @SerializedName(value = "reusableSettings", alternate = {"ReusableSettings"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationSettingDefinitionCollectionPage reusableSettings;
+
+    /**
      * The Compliance Management Partners.
      * The list of Compliance Management Partners configured by the tenant.
      */
@@ -1026,6 +1050,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsDevicePerformanceCollectionPage userExperienceAnalyticsDevicePerformance;
 
     /**
+     * The User Experience Analytics Device Scores.
+     * User experience analytics device scores
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceScores", alternate = {"UserExperienceAnalyticsDeviceScores"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsDeviceScoresCollectionPage userExperienceAnalyticsDeviceScores;
+
+    /**
      * The User Experience Analytics Device Startup History.
      * User experience analytics device Startup History
      */
@@ -1132,6 +1165,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public UserExperienceAnalyticsScoreHistoryCollectionPage userExperienceAnalyticsScoreHistory;
+
+    /**
+     * The User Experience Analytics Work From Anywhere Metrics.
+     * User experience analytics work from anywhere metrics.
+     */
+    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereMetrics", alternate = {"UserExperienceAnalyticsWorkFromAnywhereMetrics"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage userExperienceAnalyticsWorkFromAnywhereMetrics;
 
     /**
      * The Windows Malware Information.
@@ -1618,6 +1660,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             configurationSettings = serializer.deserializeObject(json.get("configurationSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
 
+        if (json.has("reusablePolicySettings")) {
+            reusablePolicySettings = serializer.deserializeObject(json.get("reusablePolicySettings"), DeviceManagementReusablePolicySettingCollectionPage.class);
+        }
+
+        if (json.has("reusableSettings")) {
+            reusableSettings = serializer.deserializeObject(json.get("reusableSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+        }
+
         if (json.has("complianceManagementPartners")) {
             complianceManagementPartners = serializer.deserializeObject(json.get("complianceManagementPartners"), ComplianceManagementPartnerCollectionPage.class);
         }
@@ -1754,6 +1804,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicePerformance"), UserExperienceAnalyticsDevicePerformanceCollectionPage.class);
         }
 
+        if (json.has("userExperienceAnalyticsDeviceScores")) {
+            userExperienceAnalyticsDeviceScores = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceScores"), UserExperienceAnalyticsDeviceScoresCollectionPage.class);
+        }
+
         if (json.has("userExperienceAnalyticsDeviceStartupHistory")) {
             userExperienceAnalyticsDeviceStartupHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceStartupHistory"), UserExperienceAnalyticsDeviceStartupHistoryCollectionPage.class);
         }
@@ -1792,6 +1846,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("userExperienceAnalyticsScoreHistory")) {
             userExperienceAnalyticsScoreHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsScoreHistory"), UserExperienceAnalyticsScoreHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsWorkFromAnywhereMetrics")) {
+            userExperienceAnalyticsWorkFromAnywhereMetrics = serializer.deserializeObject(json.get("userExperienceAnalyticsWorkFromAnywhereMetrics"), UserExperienceAnalyticsWorkFromAnywhereMetricCollectionPage.class);
         }
 
         if (json.has("windowsMalwareInformation")) {

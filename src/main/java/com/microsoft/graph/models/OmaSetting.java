@@ -73,6 +73,15 @@ public class OmaSetting implements IJsonBackedObject {
 	@Nullable
     public String omaUri;
 
+    /**
+     * The Secret Reference Value Id.
+     * ReferenceId for looking up secret for decryption. This property is read-only.
+     */
+    @SerializedName(value = "secretReferenceValueId", alternate = {"SecretReferenceValueId"})
+    @Expose
+	@Nullable
+    public String secretReferenceValueId;
+
 
     /**
      * Sets the raw JSON object

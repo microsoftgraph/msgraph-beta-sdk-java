@@ -68,6 +68,8 @@ import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectio
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingRequestBuilder;
 import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.ComplianceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.OnPremisesConditionalAccessSettingsRequestBuilder;
@@ -137,6 +139,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollecti
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceScoresRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionRequestBuilder;
@@ -157,6 +161,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCo
 import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder;
 import com.microsoft.graph.requests.WindowsMalwareInformationCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsMalwareInformationRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementDerivedCredentialSettingsCollectionRequestBuilder;
@@ -816,6 +822,46 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceManagementConfigurationSettingDefinitionRequestBuilder configurationSettings(@Nonnull final String id) {
         return new DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("configurationSettings") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceManagementReusablePolicySetting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementReusablePolicySettingCollectionRequestBuilder reusablePolicySettings() {
+        return new DeviceManagementReusablePolicySettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reusablePolicySettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementReusablePolicySetting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementReusablePolicySettingRequestBuilder reusablePolicySettings(@Nonnull final String id) {
+        return new DeviceManagementReusablePolicySettingRequestBuilder(getRequestUrlWithAdditionalSegment("reusablePolicySettings") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceManagementConfigurationSettingDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder reusableSettings() {
+        return new DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("reusableSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementConfigurationSettingDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementConfigurationSettingDefinitionRequestBuilder reusableSettings(@Nonnull final String id) {
+        return new DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("reusableSettings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ComplianceManagementPartner collection
@@ -1548,6 +1594,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new UserExperienceAnalyticsDevicePerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicePerformance") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the UserExperienceAnalyticsDeviceScores collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsDeviceScoresCollectionRequestBuilder userExperienceAnalyticsDeviceScores() {
+        return new UserExperienceAnalyticsDeviceScoresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceScores"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsDeviceScores item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsDeviceScoresRequestBuilder userExperienceAnalyticsDeviceScores(@Nonnull final String id) {
+        return new UserExperienceAnalyticsDeviceScoresRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceScores") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the UserExperienceAnalyticsDeviceStartupHistory collection
      *
      * @return the collection request builder
@@ -1766,6 +1832,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public UserExperienceAnalyticsScoreHistoryRequestBuilder userExperienceAnalyticsScoreHistory(@Nonnull final String id) {
         return new UserExperienceAnalyticsScoreHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsScoreHistory") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereMetric collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereMetricCollectionRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics() {
+        return new UserExperienceAnalyticsWorkFromAnywhereMetricCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereMetric item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereMetrics(@Nonnull final String id) {
+        return new UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereMetrics") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsMalwareInformation collection

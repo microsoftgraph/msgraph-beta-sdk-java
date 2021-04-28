@@ -42,6 +42,7 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceOverrideComplianceStateParameterSet;
+import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
@@ -292,6 +293,16 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public ManagedDeviceOverrideComplianceStateRequestBuilder overrideComplianceState(@Nonnull final ManagedDeviceOverrideComplianceStateParameterSet parameters) {
         return new ManagedDeviceOverrideComplianceStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.overrideComplianceState"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceActivateDeviceEsimRequestBuilder activateDeviceEsim(@Nonnull final ManagedDeviceActivateDeviceEsimParameterSet parameters) {
+        return new ManagedDeviceActivateDeviceEsimRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activateDeviceEsim"), getClient(), null, parameters);
     }
 
     /**
