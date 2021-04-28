@@ -550,7 +550,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Permission Grants.
-     * 
+     * The permission that has been granted for a group to a specific application.
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose

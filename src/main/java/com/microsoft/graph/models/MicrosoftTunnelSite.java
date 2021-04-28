@@ -66,6 +66,51 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
     public java.util.List<String> roleScopeTagIds;
 
     /**
+     * The Upgrade Automatically.
+     * The site's automatic upgrade setting. True for automatic upgrades, false for manual control
+     */
+    @SerializedName(value = "upgradeAutomatically", alternate = {"UpgradeAutomatically"})
+    @Expose
+	@Nullable
+    public Boolean upgradeAutomatically;
+
+    /**
+     * The Upgrade Available.
+     * True if an upgrade is available
+     */
+    @SerializedName(value = "upgradeAvailable", alternate = {"UpgradeAvailable"})
+    @Expose
+	@Nullable
+    public Boolean upgradeAvailable;
+
+    /**
+     * The Upgrade Window End Time.
+     * The site's upgrade window end time of day
+     */
+    @SerializedName(value = "upgradeWindowEndTime", alternate = {"UpgradeWindowEndTime"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.core.TimeOfDay upgradeWindowEndTime;
+
+    /**
+     * The Upgrade Window Start Time.
+     * The site's upgrade window start time of day
+     */
+    @SerializedName(value = "upgradeWindowStartTime", alternate = {"UpgradeWindowStartTime"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.core.TimeOfDay upgradeWindowStartTime;
+
+    /**
+     * The Upgrade Window Utc Offset In Minutes.
+     * The site's timezone represented as a minute offset from UTC
+     */
+    @SerializedName(value = "upgradeWindowUtcOffsetInMinutes", alternate = {"UpgradeWindowUtcOffsetInMinutes"})
+    @Expose
+	@Nullable
+    public Integer upgradeWindowUtcOffsetInMinutes;
+
+    /**
      * The Microsoft Tunnel Configuration.
      * The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
      */

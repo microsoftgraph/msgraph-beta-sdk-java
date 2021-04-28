@@ -104,6 +104,10 @@ public enum RemoteAction
     */
     SET_DEVICE_NAME,
     /**
+    * activate Device Esim
+    */
+    ACTIVATE_DEVICE_ESIM,
+    /**
     * For RemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

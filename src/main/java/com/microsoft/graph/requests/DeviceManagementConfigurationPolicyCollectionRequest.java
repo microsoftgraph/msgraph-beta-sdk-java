@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.DeviceManagement;
+import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicyAssignment;
 import java.util.Arrays;

@@ -27,6 +27,15 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
 
 
     /**
+     * The Is Default Recipients Enabled.
+     * 
+     */
+    @SerializedName(value = "isDefaultRecipientsEnabled", alternate = {"IsDefaultRecipientsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isDefaultRecipientsEnabled;
+
+    /**
      * The Notification Level.
      * 
      */

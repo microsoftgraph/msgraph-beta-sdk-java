@@ -29,6 +29,15 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
 
     /**
+     * The Advanced Threat Protection Required Security Level.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     */
+    @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
+    @Expose
+	@Nullable
+    public DeviceThreatProtectionLevel advancedThreatProtectionRequiredSecurityLevel;
+
+    /**
      * The Device Threat Protection Enabled.
      * Require that devices have enabled device threat protection.
      */

@@ -1258,6 +1258,15 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public java.util.List<IosNetworkUsageRule> networkUsageRules;
 
     /**
+     * The Nfc Blocked.
+     * Disable NFC to prevent devices from pairing with other NFC-enabled devices. Available for iOS/iPadOS devices running 14.2 and later.
+     */
+    @SerializedName(value = "nfcBlocked", alternate = {"NfcBlocked"})
+    @Expose
+	@Nullable
+    public Boolean nfcBlocked;
+
+    /**
      * The Notifications Block Settings Modification.
      * Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
      */

@@ -119,6 +119,15 @@ public class WindowsMinimumOperatingSystem implements IJsonBackedObject {
     public Boolean v10_2004;
 
     /**
+     * The V10_2H20.
+     * Windows 10 2H20 or later.
+     */
+    @SerializedName(value = "v10_2H20", alternate = {"V10_2H20"})
+    @Expose
+	@Nullable
+    public Boolean v10_2H20;
+
+    /**
      * The V8_0.
      * Windows version 8.0 or later.
      */
