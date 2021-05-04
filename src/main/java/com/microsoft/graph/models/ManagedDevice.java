@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.ChassisType;
 import com.microsoft.graph.models.ChromeOSDeviceProperty;
 import com.microsoft.graph.models.ComplianceState;
@@ -33,8 +34,8 @@ import com.microsoft.graph.models.OwnerType;
 import com.microsoft.graph.models.ManagedDevicePartnerReportedHealthState;
 import com.microsoft.graph.models.ManagedDeviceArchitecture;
 import com.microsoft.graph.models.LoggedOnUser;
-import com.microsoft.graph.models.DeviceCompliancePolicyState;
 import com.microsoft.graph.models.AssignmentFilterEvaluationStatusDetails;
+import com.microsoft.graph.models.DeviceCompliancePolicyState;
 import com.microsoft.graph.models.DeviceConfigurationState;
 import com.microsoft.graph.models.ManagedDeviceMobileAppConfigurationState;
 import com.microsoft.graph.models.SecurityBaselineState;
@@ -44,8 +45,8 @@ import com.microsoft.graph.models.DeviceLogCollectionResponse;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.WindowsProtectionState;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionPage;
+import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionPage;
 import com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionPage;
 import com.microsoft.graph.requests.SecurityBaselineStateCollectionPage;
@@ -67,6 +68,15 @@ import javax.annotation.Nonnull;
  */
 public class ManagedDevice extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Cloud Pc Remote Action Results.
+     * 
+     */
+    @SerializedName(value = "cloudPcRemoteActionResults", alternate = {"CloudPcRemoteActionResults"})
+    @Expose
+	@Nullable
+    public java.util.List<CloudPcRemoteActionResult> cloudPcRemoteActionResults;
 
     /**
      * The Aad Registered.
@@ -762,15 +772,6 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public Integer windowsRemediatedMalwareCount;
 
     /**
-     * The Device Compliance Policy States.
-     * Device compliance policy states for this device.
-     */
-    @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
-    @Expose
-	@Nullable
-    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
-
-    /**
      * The Assignment Filter Evaluation Status Details.
      * Managed device mobile app configuration states for this device.
      */
@@ -778,6 +779,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AssignmentFilterEvaluationStatusDetailsCollectionPage assignmentFilterEvaluationStatusDetails;
+
+    /**
+     * The Device Compliance Policy States.
+     * Device compliance policy states for this device.
+     */
+    @SerializedName(value = "deviceCompliancePolicyStates", alternate = {"DeviceCompliancePolicyStates"})
+    @Expose
+	@Nullable
+    public DeviceCompliancePolicyStateCollectionPage deviceCompliancePolicyStates;
 
     /**
      * The Device Configuration States.
@@ -859,12 +869,12 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
 
-        if (json.has("deviceCompliancePolicyStates")) {
-            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates"), DeviceCompliancePolicyStateCollectionPage.class);
-        }
-
         if (json.has("assignmentFilterEvaluationStatusDetails")) {
             assignmentFilterEvaluationStatusDetails = serializer.deserializeObject(json.get("assignmentFilterEvaluationStatusDetails"), AssignmentFilterEvaluationStatusDetailsCollectionPage.class);
+        }
+
+        if (json.has("deviceCompliancePolicyStates")) {
+            deviceCompliancePolicyStates = serializer.deserializeObject(json.get("deviceCompliancePolicyStates"), DeviceCompliancePolicyStateCollectionPage.class);
         }
 
         if (json.has("deviceConfigurationStates")) {

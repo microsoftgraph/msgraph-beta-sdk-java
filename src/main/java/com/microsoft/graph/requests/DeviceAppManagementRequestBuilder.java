@@ -628,7 +628,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
     }
 
     /**
-     * Gets a builder to execute the method
+     * Syncs Intune account with Microsoft Store For Business
      * @return the request builder
      */
     @Nonnull

@@ -253,8 +253,8 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.models.DeviceManagementGetAssignmentFiltersStatusDetailsParameterSet;
 import com.microsoft.graph.models.DeviceManagementSendCustomNotificationToCompanyPortalParameterSet;
+import com.microsoft.graph.models.DeviceManagementGetAssignmentFiltersStatusDetailsParameterSet;
 import com.microsoft.graph.models.DeviceManagementGetEffectivePermissionsParameterSet;
 import com.microsoft.graph.models.DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet;
 import com.microsoft.graph.models.DeviceManagementGetSuggestedEnrollmentLimitParameterSet;
@@ -2700,6 +2700,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(@Nonnull final DeviceManagementSendCustomNotificationToCompanyPortalParameterSet parameters) {
+        return new DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public DeviceManagementGetAssignmentFiltersStatusDetailsRequestBuilder getAssignmentFiltersStatusDetails(@Nonnull final DeviceManagementGetAssignmentFiltersStatusDetailsParameterSet parameters) {
         return new DeviceManagementGetAssignmentFiltersStatusDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAssignmentFiltersStatusDetails"), getClient(), null, parameters);
     }
@@ -2723,22 +2733,12 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     }
 
     /**
-     * Gets a builder to execute the method
+     * Upon enabling, users assigned as administrators via Role Assignment Memberships will no longer require an assigned Intune license. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators will continue to function as-is in that transitive memberships apply and are not subject to the 350 member limit.
      * @return the request builder
      */
     @Nonnull
     public DeviceManagementEnableUnlicensedAdminstratorsRequestBuilder enableUnlicensedAdminstrators() {
         return new DeviceManagementEnableUnlicensedAdminstratorsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.enableUnlicensedAdminstrators"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(@Nonnull final DeviceManagementSendCustomNotificationToCompanyPortalParameterSet parameters) {
-        return new DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, parameters);
     }
 
     /**
@@ -2808,7 +2808,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retrieves the assigned role definitions and role assignments of the currently authenticated user.
      * @return the request builder
      */
     @Nonnull

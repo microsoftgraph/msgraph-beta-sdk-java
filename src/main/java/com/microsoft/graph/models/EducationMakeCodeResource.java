@@ -21,7 +21,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Education Make Code Resource.
+ * @deprecated The educationMakeCodeResource type is deprecated and will stop supporting it from May 17, 2021.
  */
+@Deprecated
 public class EducationMakeCodeResource extends EducationResource implements IJsonBackedObject {
 
 

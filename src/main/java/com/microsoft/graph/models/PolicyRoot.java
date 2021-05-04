@@ -20,6 +20,7 @@ import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
+import com.microsoft.graph.models.AccessReviewPolicy;
 import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.DirectoryRoleAccessReviewPolicy;
 import com.microsoft.graph.models.ConditionalAccessPolicy;
@@ -164,6 +165,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public FeatureRolloutPolicyCollectionPage featureRolloutPolicies;
+
+    /**
+     * The Access Review Policy.
+     * 
+     */
+    @SerializedName(value = "accessReviewPolicy", alternate = {"AccessReviewPolicy"})
+    @Expose
+	@Nullable
+    public AccessReviewPolicy accessReviewPolicy;
 
     /**
      * The Admin Consent Request Policy.

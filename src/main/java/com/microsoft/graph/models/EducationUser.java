@@ -338,7 +338,9 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     /**
      * The Assignments.
      * List of assignments for the user. Nullable.
+     * @deprecated The me/assignments endpoint is being deprecated and will stop returning data on April 30, 2022.
      */
+    @Deprecated
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
 	@Nullable

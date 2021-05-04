@@ -40,7 +40,7 @@ public class DeploymentStateReason implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Specifies a reason for the deployment state. Possible values are: scheduledByOfferWindow, offeringByRequest, pausedByRequest, pausedByMonitoring. Read-only.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

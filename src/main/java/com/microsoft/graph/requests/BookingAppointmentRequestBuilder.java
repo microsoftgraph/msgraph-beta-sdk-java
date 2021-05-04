@@ -59,7 +59,7 @@ public class BookingAppointmentRequestBuilder extends BaseRequestBuilder<Booking
 
 
     /**
-     * Gets a builder to execute the method
+     * Cancels the giving booking appointment, sending a message to the involved parties.
      * @return the request builder
      * @param parameters the parameters for the service method
      */

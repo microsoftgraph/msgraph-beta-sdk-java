@@ -82,7 +82,7 @@ public class SecurityConfigurationTaskRequestBuilder extends BaseRequestBuilder<
     }
 
     /**
-     * Gets a builder to execute the method
+     * Set the task's status and attach a note.
      * @return the request builder
      * @param parameters the parameters for the service method
      */

@@ -83,7 +83,7 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Gets a builder to execute the method
+     * Assigns resource account to Autopilot devices.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -93,7 +93,7 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Gets a builder to execute the method
+     * Assigns user to Autopilot devices.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -103,7 +103,7 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Gets a builder to execute the method
+     * Unassigns the resource account from an Autopilot device.
      * @return the request builder
      */
     @Nonnull
@@ -112,7 +112,7 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Gets a builder to execute the method
+     * Unassigns the user from an Autopilot device.
      * @return the request builder
      */
     @Nonnull
@@ -121,7 +121,7 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Gets a builder to execute the method
+     * Updates properties on Autopilot devices.
      * @return the request builder
      * @param parameters the parameters for the service method
      */

@@ -193,6 +193,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     public String notificationChannelUrl;
 
     /**
+     * The Resources Folder Url.
+     * Folder URL where all the file resources for this assignment are stored.
+     */
+    @SerializedName(value = "resourcesFolderUrl", alternate = {"ResourcesFolderUrl"})
+    @Expose
+	@Nullable
+    public String resourcesFolderUrl;
+
+    /**
      * The Status.
      * Status of the Assignment.  You can not PATCH this value.  Possible values are: draft, scheduled, published, assigned.
      */
@@ -200,6 +209,15 @@ public class EducationAssignment extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public EducationAssignmentStatus status;
+
+    /**
+     * The Web Url.
+     * The deep link URL for the given assignment.
+     */
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
+    @Expose
+	@Nullable
+    public String webUrl;
 
     /**
      * The Categories.

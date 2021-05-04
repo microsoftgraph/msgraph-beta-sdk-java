@@ -211,7 +211,7 @@ public class WindowsUpdateForBusinessConfigurationRequestBuilder extends BaseReq
     }
 
     /**
-     * Gets a builder to execute the method
+     * Extend Feature Updates Pause for a Windows Update for Business ring.
      * @return the request builder
      */
     @Nonnull
@@ -220,7 +220,7 @@ public class WindowsUpdateForBusinessConfigurationRequestBuilder extends BaseReq
     }
 
     /**
-     * Gets a builder to execute the method
+     * Extend Quality Updates Pause for a Windows Update for Business ring.
      * @return the request builder
      */
     @Nonnull

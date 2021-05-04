@@ -12,7 +12,9 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Education Assignment Collection Response.
+ * @deprecated The me/assignments endpoint is being deprecated and will stop returning data on April 30, 2022.
  */
+@Deprecated
 public class EducationAssignmentCollectionResponse extends BaseCollectionResponse<EducationAssignment> {
 
 }

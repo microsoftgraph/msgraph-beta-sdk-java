@@ -166,7 +166,7 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
     }
 
     /**
-     * Gets a builder to execute the method
+     * Makes the scheduling page of this business available to the general public.
      * @return the request builder
      */
     @Nonnull
@@ -175,7 +175,7 @@ public class BookingBusinessRequestBuilder extends BaseRequestBuilder<BookingBus
     }
 
     /**
-     * Gets a builder to execute the method
+     * Prevents the general public from seeing the scheduling page of this business.
      * @return the request builder
      */
     @Nonnull

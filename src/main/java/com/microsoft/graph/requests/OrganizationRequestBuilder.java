@@ -21,6 +21,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.OrganizationActivateServiceParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberObjectsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectGetMemberGroupsParameterSet;
@@ -130,6 +131,16 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
 
     /**
      * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public OrganizationActivateServiceRequestBuilder activateService(@Nonnull final OrganizationActivateServiceParameterSet parameters) {
+        return new OrganizationActivateServiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activateService"), getClient(), null, parameters);
+    }
+
+    /**
+     * Set mobile device management authority
      * @return the request builder
      */
     @Nonnull

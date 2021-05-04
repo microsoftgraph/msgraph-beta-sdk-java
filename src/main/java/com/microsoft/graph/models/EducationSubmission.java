@@ -44,8 +44,10 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Released By.
-     * User who moved the status of this submission to released.
+     * 
+     * @deprecated The releasedBy property is deprecated and will stop returning data on May 17, 2021.
      */
+    @Deprecated
     @SerializedName(value = "releasedBy", alternate = {"ReleasedBy"})
     @Expose
 	@Nullable
@@ -53,8 +55,10 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Released Date Time.
-     * Moment in time when the submission was released. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
+     * @deprecated The releasedDateTime property is deprecated and will stop returning data on May 17, 2021.
      */
+    @Deprecated
     @SerializedName(value = "releasedDateTime", alternate = {"ReleasedDateTime"})
     @Expose
 	@Nullable

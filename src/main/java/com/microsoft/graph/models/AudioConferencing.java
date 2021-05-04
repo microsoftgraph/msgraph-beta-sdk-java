@@ -67,7 +67,7 @@ public class AudioConferencing implements IJsonBackedObject {
 
     /**
      * The Toll Free Numbers.
-     * 
+     * List of toll-free numbers that are displayed in the meeting invite.
      */
     @SerializedName(value = "tollFreeNumbers", alternate = {"TollFreeNumbers"})
     @Expose
@@ -85,7 +85,7 @@ public class AudioConferencing implements IJsonBackedObject {
 
     /**
      * The Toll Numbers.
-     * 
+     * List of toll numbers that are displayed in the meeting invite.
      */
     @SerializedName(value = "tollNumbers", alternate = {"TollNumbers"})
     @Expose

@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Education Assignment Collection Request Builder.
+ * @deprecated The me/assignments endpoint is being deprecated and will stop returning data on April 30, 2022.
  */
+@Deprecated
 public class EducationAssignmentCollectionRequestBuilder extends BaseCollectionRequestBuilder<EducationAssignment, EducationAssignmentRequestBuilder, EducationAssignmentCollectionResponse, EducationAssignmentCollectionPage, EducationAssignmentCollectionRequest> {
 
     /**

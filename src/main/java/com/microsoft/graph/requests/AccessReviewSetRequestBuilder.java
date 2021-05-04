@@ -12,6 +12,7 @@ import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequ
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -99,5 +100,15 @@ public class AccessReviewSetRequestBuilder extends BaseRequestBuilder<AccessRevi
     @Nonnull
     public AccessReviewHistoryDefinitionRequestBuilder historyDefinitions(@Nonnull final String id) {
         return new AccessReviewHistoryDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("historyDefinitions") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AccessReviewPolicy
+     *
+     * @return the AccessReviewPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public AccessReviewPolicyRequestBuilder policy() {
+        return new AccessReviewPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("policy"), getClient(), null);
     }
 }
