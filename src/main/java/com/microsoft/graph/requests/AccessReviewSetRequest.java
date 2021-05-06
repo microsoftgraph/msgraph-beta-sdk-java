@@ -12,6 +12,7 @@ import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionRequ
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewPolicyRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -83,7 +83,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     }
 
     /**
-     * Gets a builder to execute the method
+     * Generates a web token that is used in an embeddable component.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -103,7 +103,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     }
 
     /**
-     * Gets a builder to execute the method
+     * Sets the AndroidManagedStoreAccountEnterpriseSettings AndroidDeviceOwnerFullyManagedEnrollmentEnabled to the given value.
      * @return the request builder
      * @param parameters the parameters for the service method
      */

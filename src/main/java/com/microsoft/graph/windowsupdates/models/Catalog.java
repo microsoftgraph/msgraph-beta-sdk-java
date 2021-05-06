@@ -30,7 +30,7 @@ public class Catalog extends Entity implements IJsonBackedObject {
 
     /**
      * The Entries.
-     * 
+     * Lists the content that you can approve for deployment. Read-only.
      */
     @SerializedName(value = "entries", alternate = {"Entries"})
     @Expose

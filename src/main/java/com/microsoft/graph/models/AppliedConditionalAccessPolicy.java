@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConditionalAccessConditions;
+import com.microsoft.graph.models.ConditionalAccessRuleSatisfied;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicyResult;
 
 
@@ -86,6 +87,15 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     public java.util.List<String> enforcedSessionControls;
 
     /**
+     * The Exclude Rules Satisfied.
+     * 
+     */
+    @SerializedName(value = "excludeRulesSatisfied", alternate = {"ExcludeRulesSatisfied"})
+    @Expose
+	@Nullable
+    public java.util.List<ConditionalAccessRuleSatisfied> excludeRulesSatisfied;
+
+    /**
      * The Id.
      * An identifier of the conditional access policy.
      */
@@ -93,6 +103,15 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String id;
+
+    /**
+     * The Include Rules Satisfied.
+     * 
+     */
+    @SerializedName(value = "includeRulesSatisfied", alternate = {"IncludeRulesSatisfied"})
+    @Expose
+	@Nullable
+    public java.util.List<ConditionalAccessRuleSatisfied> includeRulesSatisfied;
 
     /**
      * The Result.

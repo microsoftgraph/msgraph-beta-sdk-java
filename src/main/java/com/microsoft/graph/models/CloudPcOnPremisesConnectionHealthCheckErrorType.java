@@ -40,13 +40,25 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     AD_JOIN_CHECK_COMPUTER_OBJECT_ALREADY_EXISTS,
     /**
+    * ad Join Check Access Denied
+    */
+    AD_JOIN_CHECK_ACCESS_DENIED,
+    /**
     * ad Join Check Unknown Error
     */
     AD_JOIN_CHECK_UNKNOWN_ERROR,
     /**
-    * endpoint Connectivity Check Url Not Whitelisted
+    * endpoint Connectivity Check Cloud Pc Url Not Allow Listed
     */
-    ENDPOINT_CONNECTIVITY_CHECK_URL_NOT_WHITELISTED,
+    ENDPOINT_CONNECTIVITY_CHECK_CLOUD_PC_URL_NOT_ALLOW_LISTED,
+    /**
+    * endpoint Connectivity Check WVDUrl Not Allow Listed
+    */
+    ENDPOINT_CONNECTIVITY_CHECK_WVD_URL_NOT_ALLOW_LISTED,
+    /**
+    * endpoint Connectivity Check Intune Url Not Allow Listed
+    */
+    ENDPOINT_CONNECTIVITY_CHECK_INTUNE_URL_NOT_ALLOW_LISTED,
     /**
     * endpoint Connectivity Check Unknown Error
     */
@@ -63,6 +75,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * resource Availability Check Subscription Disabled
     */
     RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_DISABLED,
+    /**
+    * resource Availability Check Unsupported VNet Region
+    */
+    RESOURCE_AVAILABILITY_CHECK_UNSUPPORTED_V_NET_REGION,
     /**
     * resource Availability Check Unknown Error
     */

@@ -78,7 +78,7 @@ public class DepEnrollmentBaseProfileRequestBuilder extends BaseRequestBuilder<D
     }
 
     /**
-     * Gets a builder to execute the method
+     * Exports the mobile configuration
      * @return the request builder
      */
     @Nonnull

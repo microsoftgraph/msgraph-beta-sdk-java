@@ -78,7 +78,7 @@ public class EnrollmentProfileRequestBuilder extends BaseRequestBuilder<Enrollme
     }
 
     /**
-     * Gets a builder to execute the method
+     * Exports the mobile configuration
      * @return the request builder
      */
     @Nonnull

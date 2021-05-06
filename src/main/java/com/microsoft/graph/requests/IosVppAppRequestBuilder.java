@@ -201,7 +201,7 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder<IosVppApp> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Revoke all assigned iOS VPP licenses for given app.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -211,7 +211,7 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder<IosVppApp> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Revoke assigned iOS VPP device license for given app.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -221,7 +221,7 @@ public class IosVppAppRequestBuilder extends BaseRequestBuilder<IosVppApp> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Revoke assigned iOS VPP user license for given app.
      * @return the request builder
      * @param parameters the parameters for the service method
      */

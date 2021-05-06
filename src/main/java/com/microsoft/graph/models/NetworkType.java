@@ -32,6 +32,10 @@ public enum NetworkType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * trusted Named Location
+    */
+    TRUSTED_NAMED_LOCATION,
+    /**
     * For NetworkType values that were not expected from the service
     */
     UNEXPECTED_VALUE

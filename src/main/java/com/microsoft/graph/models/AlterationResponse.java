@@ -41,7 +41,7 @@ public class AlterationResponse implements IJsonBackedObject {
 
     /**
      * The Original Query String.
-     * 
+     * Defines the original user query string.
      */
     @SerializedName(value = "originalQueryString", alternate = {"OriginalQueryString"})
     @Expose
@@ -50,7 +50,7 @@ public class AlterationResponse implements IJsonBackedObject {
 
     /**
      * The Query Alteration.
-     * 
+     * Defines the details of alteration information for the spelling correction.
      */
     @SerializedName(value = "queryAlteration", alternate = {"QueryAlteration"})
     @Expose
@@ -59,7 +59,7 @@ public class AlterationResponse implements IJsonBackedObject {
 
     /**
      * The Query Alteration Type.
-     * 
+     * Defines the type of the spelling correction. Possible values are suggestion, modification.
      */
     @SerializedName(value = "queryAlterationType", alternate = {"QueryAlterationType"})
     @Expose
