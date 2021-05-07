@@ -214,7 +214,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The created date of the user object.
+     * The created date of the user object. Supports $filter with the eq, lt, and ge operators.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -403,7 +403,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mail.
-     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'. Returned by default. Supports $filter and endsWith.
+     * The SMTP address for the user, for example, 'jeff@contoso.onmicrosoft.com'.NOTE: While this property can contain accent characters, using them can cause access issues with other Microsoft applications for the user. Returned by default. Supports $filter and endsWith.
      */
     @SerializedName(value = "mail", alternate = {"Mail"})
     @Expose
@@ -529,7 +529,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. Supports $filter.
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com']. NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user.  Supports $filter.
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -664,7 +664,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization. Returned by default. Supports $filter, $orderby, and endsWith.
+     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user. Returned by default. Supports $filter, $orderby, and endsWith.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

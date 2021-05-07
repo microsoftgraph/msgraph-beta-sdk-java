@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.AccessReviewHistoryDefinition;
+import com.microsoft.graph.models.AccessReviewPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AccessReviewScheduleDefinitionCollectionPage;
 import com.microsoft.graph.requests.AccessReviewHistoryDefinitionCollectionPage;
@@ -47,6 +48,15 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AccessReviewHistoryDefinitionCollectionPage historyDefinitions;
+
+    /**
+     * The Policy.
+     * 
+     */
+    @SerializedName(value = "policy", alternate = {"Policy"})
+    @Expose
+	@Nullable
+    public AccessReviewPolicy policy;
 
 
     /**

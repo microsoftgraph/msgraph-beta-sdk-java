@@ -1792,7 +1792,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retire all devices from management for this user
      * @return the request builder
      */
     @Nonnull
@@ -1801,7 +1801,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Unblocks the managed app user from app check-in.
      * @return the request builder
      */
     @Nonnull
@@ -1810,7 +1810,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Blocks the managed app user from app check-in.
      * @return the request builder
      */
     @Nonnull
@@ -1819,7 +1819,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Issues a wipe operation on an app registration with specified device tag.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -1829,7 +1829,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Issues a wipe operation on an app registration with specified device tag.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -1924,7 +1924,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Gets diagnostics validation status for a given user.
      * @return the request builder collection
      */
     @Nonnull
@@ -1933,7 +1933,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Gets app restrictions for a given user.
      * @return the request builder collection
      */
     @Nonnull
@@ -1942,7 +1942,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Gets the blocked state of a managed app user.
      * @return the request builder
      */
     @Nonnull
@@ -1951,7 +1951,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retrieves the list of devices with failed apps
      * @return the request builder collection
      */
     @Nonnull
@@ -1960,7 +1960,7 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retrieves the list of devices with failed or pending apps
      * @return the request builder collection
      */
     @Nonnull

@@ -15,6 +15,7 @@ import com.microsoft.graph.models.ConfigurationManagerAction;
 import com.microsoft.graph.models.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.BulkManagedDeviceActionResult;
+import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingState;
 import java.util.Arrays;
 import java.util.EnumSet;

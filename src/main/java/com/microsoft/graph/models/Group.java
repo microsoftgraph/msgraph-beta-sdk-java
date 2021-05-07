@@ -63,7 +63,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Labels.
-     * The list of sensitivity label pairs (label ID, label name) associated with an Microsoft 365 group. Returned only on $select. Read-only.
+     * The list of sensitivity label pairs (label ID, label name) associated with a Microsoft 365 group. Returned only on $select. Read-only.
      */
     @SerializedName(value = "assignedLabels", alternate = {"AssignedLabels"})
     @Expose
@@ -306,7 +306,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * The preferred language for an Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
+     * The preferred language for a Microsoft 365 group. Should follow ISO 639-1 Code; for example 'en-US'. Returned by default.
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -369,7 +369,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Theme.
-     * Specifies an Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
+     * Specifies a Microsoft 365 group's color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.
      */
     @SerializedName(value = "theme", alternate = {"Theme"})
     @Expose

@@ -27,7 +27,7 @@ public class CatalogEntry extends Entity implements IJsonBackedObject {
 
     /**
      * The Deployable Until Date Time.
-     * 
+     * The date on which the content is no longer available to deploy using the service. Read-only.
      */
     @SerializedName(value = "deployableUntilDateTime", alternate = {"DeployableUntilDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class CatalogEntry extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the content. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class CatalogEntry extends Entity implements IJsonBackedObject {
 
     /**
      * The Release Date Time.
-     * 
+     * The release date for the content. Read-only.
      */
     @SerializedName(value = "releaseDateTime", alternate = {"ReleaseDateTime"})
     @Expose

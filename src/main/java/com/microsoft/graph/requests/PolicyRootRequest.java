@@ -27,6 +27,7 @@ import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;

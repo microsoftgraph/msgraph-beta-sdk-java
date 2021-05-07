@@ -15,11 +15,12 @@ import com.microsoft.graph.models.ConfigurationManagerAction;
 import com.microsoft.graph.models.UpdateWindowsDeviceAccountActionParameter;
 import com.microsoft.graph.models.ManagedDeviceRemoteAction;
 import com.microsoft.graph.models.BulkManagedDeviceActionResult;
+import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.DeviceCompliancePolicySettingState;
-import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsCollectionRequestBuilder;
 import com.microsoft.graph.requests.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
+import com.microsoft.graph.requests.DeviceCompliancePolicyStateCollectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceCompliancePolicyStateRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationStateCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceConfigurationStateRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionRequestBuilder;
@@ -40,13 +41,13 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceOverrideComplianceStateParameterSet;
 import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
+import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
 import com.microsoft.graph.models.ManagedDeviceTriggerConfigurationManagerActionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceUpdateWindowsDeviceAccountParameterSet;
@@ -95,26 +96,6 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
 
 
     /**
-     *  Gets a request builder for the DeviceCompliancePolicyState collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public DeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
-        return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the DeviceCompliancePolicyState item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public DeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(@Nonnull final String id) {
-        return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
-    }
-    /**
      *  Gets a request builder for the AssignmentFilterEvaluationStatusDetails collection
      *
      * @return the collection request builder
@@ -133,6 +114,26 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public AssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails(@Nonnull final String id) {
         return new AssignmentFilterEvaluationStatusDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentFilterEvaluationStatusDetails") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceCompliancePolicyState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceCompliancePolicyStateCollectionRequestBuilder deviceCompliancePolicyStates() {
+        return new DeviceCompliancePolicyStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceCompliancePolicyState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceCompliancePolicyStateRequestBuilder deviceCompliancePolicyStates(@Nonnull final String id) {
+        return new DeviceCompliancePolicyStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicyStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceConfigurationState collection
@@ -278,11 +279,10 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     /**
      * Gets a builder to execute the method
      * @return the request builder
-     * @param parameters the parameters for the service method
      */
     @Nonnull
-    public ManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(@Nonnull final ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet parameters) {
-        return new ManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, parameters);
+    public ManagedDeviceReprovisionCloudPcRequestBuilder reprovisionCloudPc() {
+        return new ManagedDeviceReprovisionCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprovisionCloudPc"), getClient(), null);
     }
 
     /**
@@ -296,7 +296,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Activate eSIM on the device.
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -306,7 +306,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Bypass activation lock
      * @return the request builder
      */
     @Nonnull
@@ -315,7 +315,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Clean Windows device
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -335,7 +335,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Delete user from shared Apple device
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -345,7 +345,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Disable lost mode
      * @return the request builder
      */
     @Nonnull
@@ -354,7 +354,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Enable lost mode
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -364,7 +364,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Locate a device
      * @return the request builder
      */
     @Nonnull
@@ -373,7 +373,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Logout shared Apple device active user
      * @return the request builder
      */
     @Nonnull
@@ -382,7 +382,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Remote lock
      * @return the request builder
      */
     @Nonnull
@@ -391,7 +391,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Reboot device
      * @return the request builder
      */
     @Nonnull
@@ -400,7 +400,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Recover passcode
      * @return the request builder
      */
     @Nonnull
@@ -409,7 +409,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Remote lock
      * @return the request builder
      */
     @Nonnull
@@ -418,7 +418,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Request remote assistance
      * @return the request builder
      */
     @Nonnull
@@ -427,7 +427,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Reset passcode
      * @return the request builder
      */
     @Nonnull
@@ -436,7 +436,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Retire a device
      * @return the request builder
      */
     @Nonnull
@@ -445,7 +445,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Revoke all Apple Vpp licenses for a device
      * @return the request builder
      */
     @Nonnull
@@ -454,7 +454,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Rotate BitLockerKeys
      * @return the request builder
      */
     @Nonnull
@@ -477,12 +477,22 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public ManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(@Nonnull final ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet parameters) {
+        return new ManagedDeviceSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, parameters);
+    }
+
+    /**
+     * Set device name of the device.
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public ManagedDeviceSetDeviceNameRequestBuilder setDeviceName(@Nonnull final ManagedDeviceSetDeviceNameParameterSet parameters) {
         return new ManagedDeviceSetDeviceNameRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setDeviceName"), getClient(), null, parameters);
     }
 
     /**
-     * Gets a builder to execute the method
+     * Shut down device
      * @return the request builder
      */
     @Nonnull
@@ -500,7 +510,7 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Trigger action on ConfigurationManager client
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -539,13 +549,22 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
-     * Gets a builder to execute the method
+     * Wipe a device
      * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull
     public ManagedDeviceWipeRequestBuilder wipe(@Nonnull final ManagedDeviceWipeParameterSet parameters) {
         return new ManagedDeviceWipeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipe"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public ManagedDeviceGetCloudPcRemoteActionResultsCollectionRequestBuilder getCloudPcRemoteActionResults() {
+        return new ManagedDeviceGetCloudPcRemoteActionResultsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCloudPcRemoteActionResults"), getClient(), null);
     }
 
     /**

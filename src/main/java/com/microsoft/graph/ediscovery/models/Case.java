@@ -126,7 +126,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Custodians.
-     * 
+     * Returns a list of case custodian objects for this case.  Nullable.
      */
     @SerializedName(value = "custodians", alternate = {"Custodians"})
     @Expose
@@ -135,7 +135,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Legal Holds.
-     * 
+     * Returns a list of case legalHold objects for this case.  Nullable.
      */
     @SerializedName(value = "legalHolds", alternate = {"LegalHolds"})
     @Expose
@@ -144,7 +144,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Noncustodial Data Sources.
-     * 
+     * Returns a list of case noncustodialDataSource objects for this case.  Nullable.
      */
     @SerializedName(value = "noncustodialDataSources", alternate = {"NoncustodialDataSources"})
     @Expose
@@ -153,7 +153,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * Returns a list of case operation objects for this case. Nullable.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -162,7 +162,7 @@ public class Case extends Entity implements IJsonBackedObject {
 
     /**
      * The Review Sets.
-     * 
+     * Returns a list of reviewSet objects in the case. Read-only. Nullable.
      */
     @SerializedName(value = "reviewSets", alternate = {"ReviewSets"})
     @Expose

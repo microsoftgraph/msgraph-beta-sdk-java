@@ -129,7 +129,7 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
     }
 
     /**
-     * Gets a builder to execute the method
+     * Update the Proprietary Device Health Script
      * @return the request builder
      */
     @Nonnull
@@ -138,7 +138,7 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
     }
 
     /**
-     * Gets a builder to execute the method
+     * Update the Proprietary Device Health Script
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -148,7 +148,7 @@ public class DeviceHealthScriptRequestBuilder extends BaseRequestBuilder<DeviceH
     }
 
     /**
-     * Gets a builder to execute the method
+     * Function to get the number of remediations by a device health scripts
      * @return the request builder
      */
     @Nonnull

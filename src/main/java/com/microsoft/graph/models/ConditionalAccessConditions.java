@@ -56,6 +56,18 @@ public enum ConditionalAccessConditions
     */
     CLIENT,
     /**
+    * ip Address Seen By Azure AD
+    */
+    IP_ADDRESS_SEEN_BY_AZURE_AD,
+    /**
+    * ip Address Seen By Resource Provider
+    */
+    IP_ADDRESS_SEEN_BY_RESOURCE_PROVIDER,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For ConditionalAccessConditions values that were not expected from the service
     */
     UNEXPECTED_VALUE

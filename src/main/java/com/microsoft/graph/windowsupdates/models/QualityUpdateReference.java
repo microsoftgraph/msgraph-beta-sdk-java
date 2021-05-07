@@ -28,7 +28,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements IJ
 
     /**
      * The Classification.
-     * 
+     * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security.
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
@@ -37,7 +37,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements IJ
 
     /**
      * The Release Date Time.
-     * 
+     * Specifies a quality update in the given servicingChannel with the given classification by date (i.e. the last update published on the specified date). Default value is security.
      */
     @SerializedName(value = "releaseDateTime", alternate = {"ReleaseDateTime"})
     @Expose

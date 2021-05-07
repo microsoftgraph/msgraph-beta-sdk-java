@@ -40,7 +40,7 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The Windows.
-     * 
+     * Entity that acts as a container for functionality. Read-only.
      */
     @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose

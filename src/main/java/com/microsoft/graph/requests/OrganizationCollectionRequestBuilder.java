@@ -23,6 +23,7 @@ import com.microsoft.graph.requests.DirectoryObjectGetUserOwnedObjectsRequestBui
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
+import com.microsoft.graph.models.OrganizationActivateServiceParameterSet;
 import com.microsoft.graph.models.DirectoryObjectValidatePropertiesParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberObjectsParameterSet;

@@ -27,6 +27,7 @@ import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyRequestBuilder;
+import com.microsoft.graph.requests.AccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.AdminConsentRequestPolicyRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRoleAccessReviewPolicyRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
@@ -273,6 +274,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public FeatureRolloutPolicyRequestBuilder featureRolloutPolicies(@Nonnull final String id) {
         return new FeatureRolloutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("featureRolloutPolicies") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AccessReviewPolicy
+     *
+     * @return the AccessReviewPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public AccessReviewPolicyRequestBuilder accessReviewPolicy() {
+        return new AccessReviewPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("accessReviewPolicy"), getClient(), null);
     }
 
     /**

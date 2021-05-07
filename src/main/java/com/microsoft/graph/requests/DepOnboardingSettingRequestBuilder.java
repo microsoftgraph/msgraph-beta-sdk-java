@@ -125,7 +125,7 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
     }
 
     /**
-     * Gets a builder to execute the method
+     * Generate a public key to use to encrypt the Apple device enrollment program token
      * @return the request builder
      */
     @Nonnull
@@ -143,7 +143,7 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
     }
 
     /**
-     * Gets a builder to execute the method
+     * Synchronizes between Apple Device Enrollment Program and Intune
      * @return the request builder
      */
     @Nonnull
@@ -161,7 +161,7 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
     }
 
     /**
-     * Gets a builder to execute the method
+     * Uploads a new Device Enrollment Program token
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -171,7 +171,7 @@ public class DepOnboardingSettingRequestBuilder extends BaseRequestBuilder<DepOn
     }
 
     /**
-     * Gets a builder to execute the method
+     * Get a public key to use to encrypt the Apple device enrollment program token
      * @return the request builder
      */
     @Nonnull

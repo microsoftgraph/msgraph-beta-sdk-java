@@ -60,7 +60,7 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder<VppToken> {
 
 
     /**
-     * Gets a builder to execute the method
+     * Revoke licenses associated with a specific appleVolumePurchaseProgramToken
      * @return the request builder
      * @param parameters the parameters for the service method
      */
@@ -70,7 +70,7 @@ public class VppTokenRequestBuilder extends BaseRequestBuilder<VppToken> {
     }
 
     /**
-     * Gets a builder to execute the method
+     * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
      * @return the request builder
      */
     @Nonnull
