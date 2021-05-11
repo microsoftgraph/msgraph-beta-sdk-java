@@ -27,7 +27,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
 
     /**
      * The End Date Time.
-     * 
+     * Time that the roleEligibilityScheduleInstance will expire
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
 
     /**
      * The Member Type.
-     * 
+     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -45,7 +45,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
 
     /**
      * The Role Eligibility Schedule Id.
-     * 
+     * ID of the parent roleEligibilitySchedule for this instance
      */
     @SerializedName(value = "roleEligibilityScheduleId", alternate = {"RoleEligibilityScheduleId"})
     @Expose
@@ -54,7 +54,7 @@ public class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleI
 
     /**
      * The Start Date Time.
-     * 
+     * Time that the roleEligibilityScheduleInstance will start
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
