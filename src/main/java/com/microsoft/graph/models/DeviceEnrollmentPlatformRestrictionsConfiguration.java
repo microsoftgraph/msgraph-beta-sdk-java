@@ -37,7 +37,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
 
     /**
      * The Android Restriction.
-     * Not yet documented
+     * Android restrictions based on platform, platform operating system version, and device ownership
      */
     @SerializedName(value = "androidRestriction", alternate = {"AndroidRestriction"})
     @Expose
@@ -55,7 +55,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
 
     /**
      * The Ios Restriction.
-     * Not yet documented
+     * Ios restrictions based on platform, platform operating system version, and device ownership
      */
     @SerializedName(value = "iosRestriction", alternate = {"IosRestriction"})
     @Expose
@@ -64,7 +64,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
 
     /**
      * The Mac OSRestriction.
-     * Not yet documented
+     * Mac restrictions based on platform, platform operating system version, and device ownership
      */
     @SerializedName(value = "macOSRestriction", alternate = {"MacOSRestriction"})
     @Expose
@@ -91,7 +91,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
 
     /**
      * The Windows Mobile Restriction.
-     * Not yet documented
+     * Windows mobile restrictions based on platform, platform operating system version, and device ownership
      */
     @SerializedName(value = "windowsMobileRestriction", alternate = {"WindowsMobileRestriction"})
     @Expose
@@ -100,7 +100,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
 
     /**
      * The Windows Restriction.
-     * Not yet documented
+     * Windows restrictions based on platform, platform operating system version, and device ownership
      */
     @SerializedName(value = "windowsRestriction", alternate = {"WindowsRestriction"})
     @Expose

@@ -106,7 +106,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source.
-     * How this class was created. The possible values are: sis, manual, unknownFutureValue.
+     * The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
      */
     @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
@@ -142,7 +142,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Term.
-     * Term for this class.
+     * Term for the class.
      */
     @SerializedName(value = "term", alternate = {"Term"})
     @Expose
@@ -187,7 +187,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Group.
-     * The directory group corresponding to this class.
+     * The underlying Microsoft 365 group object.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose

@@ -37,7 +37,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Action.
-     * Indicates the activity name or the operation name (for example, Create user, Add member to group). For a list of activities logged, refer to Azure AD activity list.
+     * 
      * @deprecated The action property is deprecated. The provisioningAction holds the same information as this. This only exists in the beta api.
      */
     @Deprecated
@@ -111,7 +111,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Action.
-     * 
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
      */
     @SerializedName(value = "provisioningAction", alternate = {"ProvisioningAction"})
     @Expose
@@ -120,7 +120,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Status Info.
-     * 
+     * Details of provisioning status.
      */
     @SerializedName(value = "provisioningStatusInfo", alternate = {"ProvisioningStatusInfo"})
     @Expose
@@ -165,7 +165,7 @@ public class ProvisioningObjectSummary extends Entity implements IJsonBackedObje
 
     /**
      * The Status Info.
-     * Details of provisioning status.
+     * 
      * @deprecated The statusBase complex type is deprecated. The provisioningStatusInfo holds the same information as this. This only exists in the beta api.
      */
     @Deprecated

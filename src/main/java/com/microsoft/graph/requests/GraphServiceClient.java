@@ -154,7 +154,6 @@ import com.microsoft.graph.requests.TeamsTemplateRequestBuilder;
 import com.microsoft.graph.requests.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
-import com.microsoft.graph.requests.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.RoleManagementRequestBuilder;
 import com.microsoft.graph.requests.ComplianceRequestBuilder;
@@ -1868,16 +1867,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public AuthenticationMethodsPolicyRequestBuilder authenticationMethodsPolicy() {
         return new AuthenticationMethodsPolicyRequestBuilder(getServiceRoot() + "/authenticationMethodsPolicy", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the Bitlocker
-     */
-    @Nonnull
-    public BitlockerRequestBuilder bitlocker() {
-        return new BitlockerRequestBuilder(getServiceRoot() + "/bitlocker", this, null);
     }
 
     /**

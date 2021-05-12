@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
 
     /**
      * The Is Default Recipients Enabled.
-     * 
+     * Whether default recipient is receiving the email or not.
      */
     @SerializedName(value = "isDefaultRecipientsEnabled", alternate = {"IsDefaultRecipientsEnabled"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
 
     /**
      * The Notification Level.
-     * 
+     * The level of notification. One of None, Critical, All.
      */
     @SerializedName(value = "notificationLevel", alternate = {"NotificationLevel"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
 
     /**
      * The Notification Recipients.
-     * 
+     * The list of notification recepients like email.
      */
     @SerializedName(value = "notificationRecipients", alternate = {"NotificationRecipients"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
 
     /**
      * The Notification Type.
-     * 
+     * The type of notification. One of Email.
      */
     @SerializedName(value = "notificationType", alternate = {"NotificationType"})
     @Expose
@@ -64,7 +64,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
 
     /**
      * The Recipient Type.
-     * 
+     * The type of recipient. One of Requestor, Approver, Admin.
      */
     @SerializedName(value = "recipientType", alternate = {"RecipientType"})
     @Expose

@@ -123,7 +123,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Access Package.
-     * 
+     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose

@@ -33,7 +33,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The App Scope Ids.
-     * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
+     * Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
      */
     @SerializedName(value = "appScopeIds", alternate = {"AppScopeIds"})
     @Expose
@@ -78,7 +78,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Principal Ids.
-     * Objectids of the principals to which the assignment is granted.
+     * Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
      */
     @SerializedName(value = "principalIds", alternate = {"PrincipalIds"})
     @Expose
@@ -87,7 +87,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Role Definition Id.
-     * ID of the unifiedRoleDefinition the assignment is for.
+     * Identifier of the unifiedRoleDefinition the assignment is for.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -96,7 +96,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The App Scopes.
-     * 
+     * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      */
     @SerializedName(value = "appScopes", alternate = {"AppScopes"})
     @Expose
@@ -105,21 +105,21 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
 
     /**
      * The Directory Scopes.
-     * 
+     * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage directoryScopes;
 
     /**
      * The Principals.
-     * 
+     * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage principals;
 
     /**
      * The Role Definition.
-     * 
+     * Property indicating the roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. Read-only. Supports $filter (eq operator on id, isBuiltIn, and displayName, and startsWith operator on displayName)  and $expand.
      */
     @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose
