@@ -186,6 +186,13 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 	@Nullable
     public DirectoryObjectCollectionPage transitiveMemberOf;
 
+    /**
+     * The Transitive Reports.
+     * 
+     */
+	@Nullable
+    public DirectoryObjectCollectionPage transitiveReports;
+
 
     /**
      * Sets the raw JSON object
@@ -206,6 +213,10 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("transitiveMemberOf")) {
             transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), DirectoryObjectCollectionPage.class);
+        }
+
+        if (json.has("transitiveReports")) {
+            transitiveReports = serializer.deserializeObject(json.get("transitiveReports"), DirectoryObjectCollectionPage.class);
         }
     }
 }

@@ -147,4 +147,13 @@ public class EducationSubmissionRequestBuilder extends BaseRequestBuilder<Educat
     public EducationSubmissionUnsubmitRequestBuilder unsubmit() {
         return new EducationSubmissionUnsubmitRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsubmit"), getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public EducationSubmissionSetUpResourcesFolderRequestBuilder setUpResourcesFolder() {
+        return new EducationSubmissionSetUpResourcesFolderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setUpResourcesFolder"), getClient(), null);
+    }
 }
