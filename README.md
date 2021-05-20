@@ -33,6 +33,7 @@ Add the dependency in `dependencies` in pom.xml
 
 ```xml
 <dependency>
+  <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph-beta</artifactId>
   <version>0.15.0-SNAPSHOT</version>
