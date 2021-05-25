@@ -419,6 +419,26 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder<OrgContact> {
     public OrgContactRequestBuilder transitiveMemberOfAsOrgContact(@Nonnull final String id) {
         return new OrgContactRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveMemberOf") + "/" + id + "/microsoft.graph.orgContact", getClient(), null);
     }
+    /**
+     *  Gets a request builder for the DirectoryObject collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DirectoryObjectCollectionWithReferencesRequestBuilder transitiveReports() {
+        return new DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveReports"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DirectoryObject item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DirectoryObjectWithReferenceRequestBuilder transitiveReports(@Nonnull final String id) {
+        return new DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("transitiveReports") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

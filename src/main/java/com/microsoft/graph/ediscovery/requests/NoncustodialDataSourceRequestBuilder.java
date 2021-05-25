@@ -84,7 +84,7 @@ public class NoncustodialDataSourceRequestBuilder extends BaseRequestBuilder<Non
      */
     @Nonnull
     public NoncustodialDataSourceReleaseRequestBuilder release() {
-        return new NoncustodialDataSourceReleaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.Release"), getClient(), null);
+        return new NoncustodialDataSourceReleaseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.release"), getClient(), null);
     }
 
     /**
@@ -93,6 +93,6 @@ public class NoncustodialDataSourceRequestBuilder extends BaseRequestBuilder<Non
      */
     @Nonnull
     public NoncustodialDataSourceUpdateIndexRequestBuilder updateIndex() {
-        return new NoncustodialDataSourceUpdateIndexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.UpdateIndex"), getClient(), null);
+        return new NoncustodialDataSourceUpdateIndexRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.ediscovery.updateIndex"), getClient(), null);
     }
 }

@@ -60,7 +60,7 @@ public class UnifiedRoleEligibilityScheduleRequest extends Request implements IJ
 
     /**
      * The Is Validation Only.
-     * Boolean
+     * A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
      */
     @SerializedName(value = "isValidationOnly", alternate = {"IsValidationOnly"})
     @Expose
