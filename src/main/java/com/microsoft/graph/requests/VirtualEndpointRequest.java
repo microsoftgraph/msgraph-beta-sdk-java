@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequest
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
+import com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcUserSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

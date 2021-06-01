@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingInstanceTemplateReference;
 
 
 import com.google.gson.JsonObject;
@@ -45,6 +46,15 @@ public class DeviceManagementConfigurationSettingInstance implements IJsonBacked
     @Expose
 	@Nullable
     public String settingDefinitionId;
+
+    /**
+     * The Setting Instance Template Reference.
+     * Setting Instance Template Reference
+     */
+    @SerializedName(value = "settingInstanceTemplateReference", alternate = {"SettingInstanceTemplateReference"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationSettingInstanceTemplateReference settingInstanceTemplateReference;
 
 
     /**

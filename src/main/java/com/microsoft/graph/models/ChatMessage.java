@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatMessageAttachment;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.ChannelIdentity;
+import com.microsoft.graph.models.EventMessageDetail;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.ChatMessageImportance;
 import com.microsoft.graph.models.ChatMessageMention;
@@ -101,6 +102,15 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String etag;
+
+    /**
+     * The Event Detail.
+     * 
+     */
+    @SerializedName(value = "eventDetail", alternate = {"EventDetail"})
+    @Expose
+	@Nullable
+    public EventMessageDetail eventDetail;
 
     /**
      * The From.

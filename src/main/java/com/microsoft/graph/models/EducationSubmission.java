@@ -43,28 +43,6 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
     public EducationSubmissionRecipient recipient;
 
     /**
-     * The Released By.
-     * 
-     * @deprecated The releasedBy property is deprecated and will stop returning data on May 17, 2021.
-     */
-    @Deprecated
-    @SerializedName(value = "releasedBy", alternate = {"ReleasedBy"})
-    @Expose
-	@Nullable
-    public IdentitySet releasedBy;
-
-    /**
-     * The Released Date Time.
-     * 
-     * @deprecated The releasedDateTime property is deprecated and will stop returning data on May 17, 2021.
-     */
-    @Deprecated
-    @SerializedName(value = "releasedDateTime", alternate = {"ReleasedDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime releasedDateTime;
-
-    /**
      * The Resources Folder Url.
      * Folder where all file resources for this submission need to be stored.
      */

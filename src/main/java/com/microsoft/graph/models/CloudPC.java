@@ -37,6 +37,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Grace Period End Date Time.
+     * 
+     */
+    @SerializedName(value = "gracePeriodEndDateTime", alternate = {"GracePeriodEndDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime gracePeriodEndDateTime;
+
+    /**
      * The Image Display Name.
      * Name of the OS image that's on the cloud PC.
      */
@@ -73,6 +82,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     public String managedDeviceName;
 
     /**
+     * The On Premises Connection Name.
+     * 
+     */
+    @SerializedName(value = "onPremisesConnectionName", alternate = {"OnPremisesConnectionName"})
+    @Expose
+	@Nullable
+    public String onPremisesConnectionName;
+
+    /**
      * The Provisioning Policy Id.
      * The cloud PC's provisioning policy ID.
      */
@@ -80,6 +98,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String provisioningPolicyId;
+
+    /**
+     * The Provisioning Policy Name.
+     * 
+     */
+    @SerializedName(value = "provisioningPolicyName", alternate = {"ProvisioningPolicyName"})
+    @Expose
+	@Nullable
+    public String provisioningPolicyName;
 
     /**
      * The Service Plan Id.

@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingValueTemplateReference;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,15 @@ public class DeviceManagementConfigurationSettingValue implements IJsonBackedObj
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Setting Value Template Reference.
+     * Setting value template reference
+     */
+    @SerializedName(value = "settingValueTemplateReference", alternate = {"SettingValueTemplateReference"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationSettingValueTemplateReference settingValueTemplateReference;
 
 
     /**

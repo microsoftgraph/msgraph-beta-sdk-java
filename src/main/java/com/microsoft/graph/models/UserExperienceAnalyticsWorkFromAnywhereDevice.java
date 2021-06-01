@@ -107,6 +107,24 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     public String model;
 
     /**
+     * The Os Description.
+     * The user experience work from anywhere device's OS Description.
+     */
+    @SerializedName(value = "osDescription", alternate = {"OsDescription"})
+    @Expose
+	@Nullable
+    public String osDescription;
+
+    /**
+     * The Os Version.
+     * The user experience work from anywhere device's OS Version.
+     */
+    @SerializedName(value = "osVersion", alternate = {"OsVersion"})
+    @Expose
+	@Nullable
+    public String osVersion;
+
+    /**
      * The Ownership.
      * The user experience work from anywhere device's ownership.
      */

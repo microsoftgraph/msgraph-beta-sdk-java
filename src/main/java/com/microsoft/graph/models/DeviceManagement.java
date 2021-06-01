@@ -47,8 +47,10 @@ import com.microsoft.graph.models.NdesConnector;
 import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
 import com.microsoft.graph.models.DeviceManagementConfigurationCategory;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
+import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplate;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
 import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
 import com.microsoft.graph.models.ComplianceManagementPartner;
 import com.microsoft.graph.models.OnPremisesConditionalAccessSettings;
 import com.microsoft.graph.models.DeviceCategory;
@@ -62,6 +64,7 @@ import com.microsoft.graph.models.DeviceManagementIntent;
 import com.microsoft.graph.models.DeviceManagementSettingDefinition;
 import com.microsoft.graph.models.DeviceManagementTemplate;
 import com.microsoft.graph.models.ApplePushNotificationCertificate;
+import com.microsoft.graph.models.CloudPCConnectivityIssue;
 import com.microsoft.graph.models.ManagedDevice;
 import com.microsoft.graph.models.ComanagementEligibleDevice;
 import com.microsoft.graph.models.DataSharingConsent;
@@ -163,8 +166,10 @@ import com.microsoft.graph.requests.ManagedDeviceEncryptionStateCollectionPage;
 import com.microsoft.graph.requests.NdesConnectorCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage;
+import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage;
 import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.DeviceCategoryCollectionPage;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage;
@@ -176,6 +181,7 @@ import com.microsoft.graph.requests.DeviceManagementSettingCategoryCollectionPag
 import com.microsoft.graph.requests.DeviceManagementIntentCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementSettingDefinitionCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementTemplateCollectionPage;
+import com.microsoft.graph.requests.CloudPCConnectivityIssueCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
 import com.microsoft.graph.requests.ComanagementEligibleDeviceCollectionPage;
 import com.microsoft.graph.requests.DataSharingConsentCollectionPage;
@@ -672,6 +678,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public DeviceManagementConfigurationPolicyCollectionPage configurationPolicies;
 
     /**
+     * The Configuration Policy Templates.
+     * List of all templates
+     */
+    @SerializedName(value = "configurationPolicyTemplates", alternate = {"ConfigurationPolicyTemplates"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationPolicyTemplateCollectionPage configurationPolicyTemplates;
+
+    /**
      * The Configuration Settings.
      * List of all ConfigurationSettings
      */
@@ -697,6 +712,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceManagementConfigurationSettingDefinitionCollectionPage reusableSettings;
+
+    /**
+     * The Template Settings.
+     * List of all TemplateSettings
+     */
+    @SerializedName(value = "templateSettings", alternate = {"TemplateSettings"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationSettingTemplateCollectionPage templateSettings;
 
     /**
      * The Compliance Management Partners.
@@ -823,6 +847,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ApplePushNotificationCertificate applePushNotificationCertificate;
+
+    /**
+     * The Cloud PCConnectivity Issues.
+     * The list of CloudPC Connectivity Issue.
+     */
+    @SerializedName(value = "cloudPCConnectivityIssues", alternate = {"CloudPCConnectivityIssues"})
+    @Expose
+	@Nullable
+    public CloudPCConnectivityIssueCollectionPage cloudPCConnectivityIssues;
 
     /**
      * The Comanaged Devices.
@@ -1656,6 +1689,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             configurationPolicies = serializer.deserializeObject(json.get("configurationPolicies"), DeviceManagementConfigurationPolicyCollectionPage.class);
         }
 
+        if (json.has("configurationPolicyTemplates")) {
+            configurationPolicyTemplates = serializer.deserializeObject(json.get("configurationPolicyTemplates"), DeviceManagementConfigurationPolicyTemplateCollectionPage.class);
+        }
+
         if (json.has("configurationSettings")) {
             configurationSettings = serializer.deserializeObject(json.get("configurationSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
         }
@@ -1666,6 +1703,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("reusableSettings")) {
             reusableSettings = serializer.deserializeObject(json.get("reusableSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+        }
+
+        if (json.has("templateSettings")) {
+            templateSettings = serializer.deserializeObject(json.get("templateSettings"), DeviceManagementConfigurationSettingTemplateCollectionPage.class);
         }
 
         if (json.has("complianceManagementPartners")) {
@@ -1710,6 +1751,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("templates")) {
             templates = serializer.deserializeObject(json.get("templates"), DeviceManagementTemplateCollectionPage.class);
+        }
+
+        if (json.has("cloudPCConnectivityIssues")) {
+            cloudPCConnectivityIssues = serializer.deserializeObject(json.get("cloudPCConnectivityIssues"), CloudPCConnectivityIssueCollectionPage.class);
         }
 
         if (json.has("comanagedDevices")) {

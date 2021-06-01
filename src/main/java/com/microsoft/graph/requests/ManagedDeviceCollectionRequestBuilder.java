@@ -33,6 +33,7 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceBulkReprovisionCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceExecuteActionParameterSet;
+import com.microsoft.graph.models.ManagedDeviceResizeCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceOverrideComplianceStateParameterSet;
 import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;

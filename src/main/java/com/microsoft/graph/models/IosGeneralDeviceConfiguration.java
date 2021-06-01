@@ -259,6 +259,15 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean autoFillForceAuthentication;
 
     /**
+     * The Auto Unlock Blocked.
+     * Blocks users from unlocking their device with Apple Watch. Available for devices running iOS and iPadOS versions 14.5 and later.
+     */
+    @SerializedName(value = "autoUnlockBlocked", alternate = {"AutoUnlockBlocked"})
+    @Expose
+	@Nullable
+    public Boolean autoUnlockBlocked;
+
+    /**
      * The Block System App Removal.
      * Indicates whether or not the removal of system apps from the device is blocked on a supervised device (iOS 11.0 and later).
      */
@@ -1276,6 +1285,15 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean notificationsBlockSettingsModification;
 
     /**
+     * The On Device Only Dictation Forced.
+     * Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
+     */
+    @SerializedName(value = "onDeviceOnlyDictationForced", alternate = {"OnDeviceOnlyDictationForced"})
+    @Expose
+	@Nullable
+    public Boolean onDeviceOnlyDictationForced;
+
+    /**
      * The Passcode Block Fingerprint Modification.
      * Block modification of registered Touch ID fingerprints when in supervised mode.
      */
@@ -1609,6 +1627,15 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean spotlightBlockInternetResults;
 
     /**
+     * The Unpaired External Boot To Recovery Allowed.
+     * Allow users to boot devices into recovery mode with unpaired devices. Available for devices running iOS and iPadOS versions 14.5 and later.
+     */
+    @SerializedName(value = "unpairedExternalBootToRecoveryAllowed", alternate = {"UnpairedExternalBootToRecoveryAllowed"})
+    @Expose
+	@Nullable
+    public Boolean unpairedExternalBootToRecoveryAllowed;
+
+    /**
      * The Usb Restricted Mode Blocked.
      * Indicates if connecting to USB accessories while the device is locked is allowed (iOS 11.4.1 and later).
      */
@@ -1646,7 +1673,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Wi Fi Connect Only To Configured Networks.
-     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode.
+     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
      */
     @SerializedName(value = "wiFiConnectOnlyToConfiguredNetworks", alternate = {"WiFiConnectOnlyToConfiguredNetworks"})
     @Expose

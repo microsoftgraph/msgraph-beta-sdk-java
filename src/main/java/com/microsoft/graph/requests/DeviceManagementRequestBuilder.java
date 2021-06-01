@@ -66,10 +66,14 @@ import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollect
 import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateRequestBuilder;
 import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.ComplianceManagementPartnerRequestBuilder;
 import com.microsoft.graph.requests.OnPremisesConditionalAccessSettingsRequestBuilder;
@@ -94,6 +98,8 @@ import com.microsoft.graph.requests.DeviceManagementSettingDefinitionRequestBuil
 import com.microsoft.graph.requests.DeviceManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementTemplateRequestBuilder;
 import com.microsoft.graph.requests.ApplePushNotificationCertificateRequestBuilder;
+import com.microsoft.graph.requests.CloudPCConnectivityIssueCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPCConnectivityIssueRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.ComanagementEligibleDeviceCollectionRequestBuilder;
@@ -804,6 +810,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new DeviceManagementConfigurationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("configurationPolicies") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the DeviceManagementConfigurationPolicyTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementConfigurationPolicyTemplateCollectionRequestBuilder configurationPolicyTemplates() {
+        return new DeviceManagementConfigurationPolicyTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configurationPolicyTemplates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementConfigurationPolicyTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementConfigurationPolicyTemplateRequestBuilder configurationPolicyTemplates(@Nonnull final String id) {
+        return new DeviceManagementConfigurationPolicyTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("configurationPolicyTemplates") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the DeviceManagementConfigurationSettingDefinition collection
      *
      * @return the collection request builder
@@ -862,6 +888,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceManagementConfigurationSettingDefinitionRequestBuilder reusableSettings(@Nonnull final String id) {
         return new DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("reusableSettings") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceManagementConfigurationSettingTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder templateSettings() {
+        return new DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("templateSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementConfigurationSettingTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementConfigurationSettingTemplateRequestBuilder templateSettings(@Nonnull final String id) {
+        return new DeviceManagementConfigurationSettingTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("templateSettings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ComplianceManagementPartner collection
@@ -1112,6 +1158,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public ApplePushNotificationCertificateRequestBuilder applePushNotificationCertificate() {
         return new ApplePushNotificationCertificateRequestBuilder(getRequestUrlWithAdditionalSegment("applePushNotificationCertificate"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CloudPCConnectivityIssue collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPCConnectivityIssueCollectionRequestBuilder cloudPCConnectivityIssues() {
+        return new CloudPCConnectivityIssueCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCConnectivityIssues"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPCConnectivityIssue item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPCConnectivityIssueRequestBuilder cloudPCConnectivityIssues(@Nonnull final String id) {
+        return new CloudPCConnectivityIssueRequestBuilder(getRequestUrlWithAdditionalSegment("cloudPCConnectivityIssues") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDevice collection

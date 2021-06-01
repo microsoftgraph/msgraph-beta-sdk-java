@@ -28,6 +28,10 @@ public enum DeviceManagementConfigurationTechnologies
     */
     CONFIG_MANAGER,
     /**
+    * microsoft Sense
+    */
+    MICROSOFT_SENSE,
+    /**
     * For DeviceManagementConfigurationTechnologies values that were not expected from the service
     */
     UNEXPECTED_VALUE

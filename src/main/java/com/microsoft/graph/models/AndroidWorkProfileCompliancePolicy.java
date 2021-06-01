@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.DeviceThreatProtectionLevel;
 import com.microsoft.graph.models.AndroidRequiredPasswordType;
+import com.microsoft.graph.models.AndroidSafetyNetEvaluationType;
 import com.microsoft.graph.models.DeviceCompliancePolicy;
 
 
@@ -179,6 +180,15 @@ public class AndroidWorkProfileCompliancePolicy extends DeviceCompliancePolicy i
     @Expose
 	@Nullable
     public Boolean securityRequireCompanyPortalAppIntegrity;
+
+    /**
+     * The Security Required Android Safety Net Evaluation Type.
+     * Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked.
+     */
+    @SerializedName(value = "securityRequiredAndroidSafetyNetEvaluationType", alternate = {"SecurityRequiredAndroidSafetyNetEvaluationType"})
+    @Expose
+	@Nullable
+    public AndroidSafetyNetEvaluationType securityRequiredAndroidSafetyNetEvaluationType;
 
     /**
      * The Security Require Google Play Services.

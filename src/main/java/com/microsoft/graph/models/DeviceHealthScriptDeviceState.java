@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.RunState;
 import com.microsoft.graph.models.RemediationState;
 import com.microsoft.graph.models.ManagedDevice;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class DeviceHealthScriptDeviceState extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Assignment Filter Ids.
+     * A list of the assignment filter ids used for health script applicability evaluation
+     */
+    @SerializedName(value = "assignmentFilterIds", alternate = {"AssignmentFilterIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> assignmentFilterIds;
 
     /**
      * The Detection State.

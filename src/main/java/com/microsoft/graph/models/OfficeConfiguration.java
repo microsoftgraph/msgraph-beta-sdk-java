@@ -44,7 +44,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
 
     /**
      * The Tenant Checkin Statuses.
-     * 
+     * List of office Client check-in status.
      */
     @SerializedName(value = "tenantCheckinStatuses", alternate = {"TenantCheckinStatuses"})
     @Expose
@@ -53,7 +53,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
 
     /**
      * The Tenant User Checkin Summary.
-     * 
+     * Entity that describes tenant check-in statues
      */
     @SerializedName(value = "tenantUserCheckinSummary", alternate = {"TenantUserCheckinSummary"})
     @Expose
@@ -62,7 +62,7 @@ public class OfficeConfiguration implements IJsonBackedObject {
 
     /**
      * The Client Configurations.
-     * 
+     * List of office Client configuration.
      */
     @SerializedName(value = "clientConfigurations", alternate = {"ClientConfigurations"})
     @Expose

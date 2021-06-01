@@ -24,10 +24,6 @@ public enum CloudPcStatus
     */
     PROVISIONED,
     /**
-    * upgrading
-    */
-    UPGRADING,
-    /**
     * in Grace Period
     */
     IN_GRACE_PERIOD,
@@ -39,6 +35,18 @@ public enum CloudPcStatus
     * failed
     */
     FAILED,
+    /**
+    * provisioned With Warnings
+    */
+    PROVISIONED_WITH_WARNINGS,
+    /**
+    * resizing
+    */
+    RESIZING,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For CloudPcStatus values that were not expected from the service
     */

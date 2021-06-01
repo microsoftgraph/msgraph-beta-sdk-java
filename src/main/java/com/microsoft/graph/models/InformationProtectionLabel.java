@@ -64,7 +64,7 @@ public class InformationProtectionLabel extends Entity implements IJsonBackedObj
 
     /**
      * The Parent.
-     * 
+     * The parent label associated with a child label. Null if label has no parent.
      */
     @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose

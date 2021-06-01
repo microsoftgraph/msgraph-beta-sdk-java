@@ -48,7 +48,7 @@ public class LocalizedLabel implements IJsonBackedObject {
 
     /**
      * The Language Tag.
-     * The anguage tag for the label.
+     * The language tag for the label.
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose

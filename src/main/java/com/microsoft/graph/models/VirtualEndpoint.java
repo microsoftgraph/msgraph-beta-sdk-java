@@ -13,11 +13,13 @@ import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcDeviceImage;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
+import com.microsoft.graph.models.CloudPcUserSetting;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
+import com.microsoft.graph.requests.CloudPcUserSettingCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -70,6 +72,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 	@Nullable
     public CloudPcProvisioningPolicyCollectionPage provisioningPolicies;
 
+    /**
+     * The User Settings.
+     * 
+     */
+    @SerializedName(value = "userSettings", alternate = {"UserSettings"})
+    @Expose
+	@Nullable
+    public CloudPcUserSettingCollectionPage userSettings;
+
 
     /**
      * Sets the raw JSON object
@@ -94,6 +105,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("provisioningPolicies")) {
             provisioningPolicies = serializer.deserializeObject(json.get("provisioningPolicies"), CloudPcProvisioningPolicyCollectionPage.class);
+        }
+
+        if (json.has("userSettings")) {
+            userSettings = serializer.deserializeObject(json.get("userSettings"), CloudPcUserSettingCollectionPage.class);
         }
     }
 }
