@@ -40,7 +40,7 @@ public class ParentLabelDetails implements IJsonBackedObject {
 
     /**
      * The Color.
-     * 
+     * The color that the user interface should display for the label, if configured.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
@@ -49,7 +49,7 @@ public class ParentLabelDetails implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The admin-defined description for the label.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class ParentLabelDetails implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The label ID is a globally unique identifier (GUID).
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -67,7 +67,7 @@ public class ParentLabelDetails implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * 
+     * Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -76,7 +76,7 @@ public class ParentLabelDetails implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The plaintext name of the label.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -94,7 +94,7 @@ public class ParentLabelDetails implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * 
+     * The sensitivity value of the label, where lower is less sensitive.
      */
     @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
     @Expose
@@ -103,7 +103,7 @@ public class ParentLabelDetails implements IJsonBackedObject {
 
     /**
      * The Tooltip.
-     * 
+     * The tooltip that should be displayed for the label in a user interface.
      */
     @SerializedName(value = "tooltip", alternate = {"Tooltip"})
     @Expose

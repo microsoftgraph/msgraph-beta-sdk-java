@@ -172,6 +172,7 @@ import com.microsoft.graph.requests.IdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.OfficeConfigurationRequestBuilder;
 import com.microsoft.graph.requests.SearchEntityRequestBuilder;
+import com.microsoft.graph.requests.TenantRelationshipRequestBuilder;
 import com.microsoft.graph.requests.FinancialsRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
@@ -180,7 +181,7 @@ import com.microsoft.graph.requests.CommsApplicationRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalRequestBuilder;
 import com.microsoft.graph.requests.AppCatalogsRequestBuilder;
 import com.microsoft.graph.requests.TeamworkRequestBuilder;
-import com.microsoft.graph.windowsupdates.requests.AdminRequestBuilder;
+import com.microsoft.graph.requests.AdminRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -2067,6 +2068,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public SearchEntityRequestBuilder search() {
         return new SearchEntityRequestBuilder(getServiceRoot() + "/search", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the TenantRelationship
+     */
+    @Nonnull
+    public TenantRelationshipRequestBuilder tenantRelationships() {
+        return new TenantRelationshipRequestBuilder(getServiceRoot() + "/tenantRelationships", this, null);
     }
 
     /**

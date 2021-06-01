@@ -27,7 +27,7 @@ public class OfficeConfigurationGroupAssignmentTarget extends OfficeConfiguratio
 
     /**
      * The Group Id.
-     * 
+     * The Id of the AAD group we are targeting the device configuration to.
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose

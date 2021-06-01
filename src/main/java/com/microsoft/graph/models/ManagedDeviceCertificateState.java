@@ -224,7 +224,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Device Platform.
-     * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
      */
     @SerializedName(value = "devicePlatform", alternate = {"DevicePlatform"})
     @Expose

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ManagedInstallerStatus;
 import com.microsoft.graph.models.WindowsManagementAppHealthState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsManagementAppHealthStateCollectionPage;
@@ -36,6 +37,24 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String availableVersion;
+
+    /**
+     * The Managed Installer.
+     * Managed Installer Status. Possible values are: disabled, enabled.
+     */
+    @SerializedName(value = "managedInstaller", alternate = {"ManagedInstaller"})
+    @Expose
+	@Nullable
+    public ManagedInstallerStatus managedInstaller;
+
+    /**
+     * The Managed Installer Configured Date Time.
+     * Managed Installer Configured Date Time
+     */
+    @SerializedName(value = "managedInstallerConfiguredDateTime", alternate = {"ManagedInstallerConfiguredDateTime"})
+    @Expose
+	@Nullable
+    public String managedInstallerConfiguredDateTime;
 
     /**
      * The Health States.

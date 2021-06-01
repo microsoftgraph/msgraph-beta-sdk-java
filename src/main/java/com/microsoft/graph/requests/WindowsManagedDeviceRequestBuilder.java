@@ -23,6 +23,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.ManagedDeviceResizeCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceOverrideComplianceStateParameterSet;
 import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
@@ -265,6 +266,16 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     @Nonnull
     public ManagedDeviceReprovisionCloudPcRequestBuilder reprovisionCloudPc() {
         return new ManagedDeviceReprovisionCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprovisionCloudPc"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceResizeCloudPcRequestBuilder resizeCloudPc(@Nonnull final ManagedDeviceResizeCloudPcParameterSet parameters) {
+        return new ManagedDeviceResizeCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizeCloudPc"), getClient(), null, parameters);
     }
 
     /**

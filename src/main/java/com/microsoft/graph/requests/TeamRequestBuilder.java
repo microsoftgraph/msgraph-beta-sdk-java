@@ -279,6 +279,15 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
      * @return the request builder
      */
     @Nonnull
+    public TeamUnarchiveRequestBuilder unarchive() {
+        return new TeamUnarchiveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unarchive"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public TeamCompleteMigrationRequestBuilder completeMigration() {
         return new TeamCompleteMigrationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.completeMigration"), getClient(), null);
     }
@@ -291,14 +300,5 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     @Nonnull
     public TeamSendActivityNotificationRequestBuilder sendActivityNotification(@Nonnull final TeamSendActivityNotificationParameterSet parameters) {
         return new TeamSendActivityNotificationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendActivityNotification"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public TeamUnarchiveRequestBuilder unarchive() {
-        return new TeamUnarchiveRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unarchive"), getClient(), null);
     }
 }

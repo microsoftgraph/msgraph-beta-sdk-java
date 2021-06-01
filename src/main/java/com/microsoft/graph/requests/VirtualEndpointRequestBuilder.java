@@ -16,6 +16,8 @@ import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequest
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
+import com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcUserSettingRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -143,6 +145,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     @Nonnull
     public CloudPcProvisioningPolicyRequestBuilder provisioningPolicies(@Nonnull final String id) {
         return new CloudPcProvisioningPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CloudPcUserSetting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcUserSettingCollectionRequestBuilder userSettings() {
+        return new CloudPcUserSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcUserSetting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcUserSettingRequestBuilder userSettings(@Nonnull final String id) {
+        return new CloudPcUserSettingRequestBuilder(getRequestUrlWithAdditionalSegment("userSettings") + "/" + id, getClient(), null);
     }
 
     /**

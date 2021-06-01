@@ -28,9 +28,9 @@ public enum DeviceManagementConfigurationTemplateFamily
     */
     ENDPOINT_SECURITY_FIREWALL,
     /**
-    * endpoint Security Endpoint Dection And Response
+    * endpoint Security Endpoint Detection And Response
     */
-    ENDPOINT_SECURITY_ENDPOINT_DECTION_AND_RESPONSE,
+    ENDPOINT_SECURITY_ENDPOINT_DETECTION_AND_RESPONSE,
     /**
     * endpoint Security Attack Surface Reduction
     */

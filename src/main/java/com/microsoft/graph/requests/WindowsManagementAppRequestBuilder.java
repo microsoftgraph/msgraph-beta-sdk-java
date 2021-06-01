@@ -78,4 +78,13 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder<Windo
     public WindowsManagementAppHealthStateRequestBuilder healthStates(@Nonnull final String id) {
         return new WindowsManagementAppHealthStateRequestBuilder(getRequestUrlWithAdditionalSegment("healthStates") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Set the Managed Installer status for the caller tenant
+     * @return the request builder
+     */
+    @Nonnull
+    public WindowsManagementAppSetAsManagedInstallerRequestBuilder setAsManagedInstaller() {
+        return new WindowsManagementAppSetAsManagedInstallerRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setAsManagedInstaller"), getClient(), null);
+    }
 }

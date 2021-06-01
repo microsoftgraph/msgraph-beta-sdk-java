@@ -79,7 +79,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
 
     /**
      * The Lifecycle State.
-     * Indicate current lifecycle state of template
+     * Indicate current lifecycle state of template. Possible values are: invalid, draft, active, superseded, deprecated, retired.
      */
     @SerializedName(value = "lifecycleState", alternate = {"LifecycleState"})
     @Expose
@@ -88,7 +88,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
 
     /**
      * The Platforms.
-     * Platforms for this template
+     * Platforms for this template. Possible values are: none, macOS, windows10X, windows10.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
@@ -106,7 +106,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
 
     /**
      * The Technologies.
-     * Technologies for this template
+     * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose
@@ -115,7 +115,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
 
     /**
      * The Template Family.
-     * TemplateFamily for this template
+     * TemplateFamily for this template. Possible values are: none, endpointSecurityAntivirus, endpointSecurityDiskEncryption, endpointSecurityFirewall, endpointSecurityEndpointDetectionAndResponse, endpointSecurityAttackSurfaceReduction, endpointSecurityAccountProtection, endpointSecurityApplicationControl.
      */
     @SerializedName(value = "templateFamily", alternate = {"TemplateFamily"})
     @Expose

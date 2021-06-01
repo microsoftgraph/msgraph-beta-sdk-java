@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 /**
  * The class for the Education Submission Set Up Resources Folder Request.
  */
-public class EducationSubmissionSetUpResourcesFolderRequest extends BaseRequest<String> {
+public class EducationSubmissionSetUpResourcesFolderRequest extends BaseRequest<EducationSubmission> {
     /**
      * The request for this EducationSubmissionSetUpResourcesFolder
      *
@@ -28,27 +28,27 @@ public class EducationSubmissionSetUpResourcesFolderRequest extends BaseRequest<
      * @param requestOptions the options for this request
      */
     public EducationSubmissionSetUpResourcesFolderRequest(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
-        super(requestUrl, client, requestOptions, String.class);
+        super(requestUrl, client, requestOptions, EducationSubmission.class);
     }
 
     /**
-     * Gets the String
+     * Gets the EducationSubmission
      *
      * @return a future with the result
      */
     @Nonnull
-    public java.util.concurrent.CompletableFuture<String> getAsync() {
+    public java.util.concurrent.CompletableFuture<EducationSubmission> getAsync() {
         return sendAsync(HttpMethod.GET, null);
     }
 
     /**
-     * Gets the String
+     * Gets the EducationSubmission
      *
-     * @return the String
+     * @return the EducationSubmission
      * @throws ClientException an exception occurs if there was an error while the request was sent
      */
     @Nullable
-    public String get() throws ClientException {
+    public EducationSubmission get() throws ClientException {
        return send(HttpMethod.GET, null);
     }
 

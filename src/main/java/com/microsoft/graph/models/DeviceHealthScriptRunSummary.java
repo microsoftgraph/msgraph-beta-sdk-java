@@ -35,6 +35,15 @@ public class DeviceHealthScriptRunSummary extends Entity implements IJsonBackedO
     public Integer detectionScriptErrorDeviceCount;
 
     /**
+     * The Detection Script Not Applicable Device Count.
+     * Number of devices for which the detection script was not applicable
+     */
+    @SerializedName(value = "detectionScriptNotApplicableDeviceCount", alternate = {"DetectionScriptNotApplicableDeviceCount"})
+    @Expose
+	@Nullable
+    public Integer detectionScriptNotApplicableDeviceCount;
+
+    /**
      * The Detection Script Pending Device Count.
      * Number of devices which have not yet run the latest version of the device health script
      */
