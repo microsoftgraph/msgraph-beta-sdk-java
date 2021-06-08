@@ -9,12 +9,14 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CloudPcAuditEvent;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcDeviceImage;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.models.CloudPcUserSetting;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.CloudPcAuditEventCollectionPage;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
@@ -35,6 +37,15 @@ import javax.annotation.Nonnull;
  */
 public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Audit Events.
+     * 
+     */
+    @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
+    @Expose
+	@Nullable
+    public CloudPcAuditEventCollectionPage auditEvents;
 
     /**
      * The Cloud PCs.
@@ -90,6 +101,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("auditEvents")) {
+            auditEvents = serializer.deserializeObject(json.get("auditEvents"), CloudPcAuditEventCollectionPage.class);
+        }
 
         if (json.has("cloudPCs")) {
             cloudPCs = serializer.deserializeObject(json.get("cloudPCs"), CloudPCCollectionPage.class);

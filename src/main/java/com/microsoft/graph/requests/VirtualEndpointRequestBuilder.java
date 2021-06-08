@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.VirtualEndpoint;
+import com.microsoft.graph.requests.CloudPcAuditEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcAuditEventRequestBuilder;
 import com.microsoft.graph.requests.CloudPCCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionRequestBuilder;
@@ -66,6 +68,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     }
 
 
+    /**
+     *  Gets a request builder for the CloudPcAuditEvent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcAuditEventCollectionRequestBuilder auditEvents() {
+        return new CloudPcAuditEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcAuditEvent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcAuditEventRequestBuilder auditEvents(@Nonnull final String id) {
+        return new CloudPcAuditEventRequestBuilder(getRequestUrlWithAdditionalSegment("auditEvents") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the CloudPC collection
      *

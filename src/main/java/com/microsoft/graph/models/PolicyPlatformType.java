@@ -48,6 +48,10 @@ public enum PolicyPlatformType
     */
     WINDOWS10_X_PROFILE,
     /**
+    * android AOSP
+    */
+    ANDROID_AOSP,
+    /**
     * all
     */
     ALL,

@@ -64,6 +64,10 @@ public enum ManagementAgentType
     */
     WINDOWS_MANAGEMENT_CLOUD_API,
     /**
+    * intune Aosp
+    */
+    INTUNE_AOSP,
+    /**
     * For ManagementAgentType values that were not expected from the service
     */
     UNEXPECTED_VALUE

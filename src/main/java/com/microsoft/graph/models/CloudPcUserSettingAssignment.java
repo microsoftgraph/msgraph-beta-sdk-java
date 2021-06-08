@@ -27,6 +27,15 @@ public class CloudPcUserSettingAssignment extends Entity implements IJsonBackedO
 
 
     /**
+     * The Created Date Time.
+     * 
+     */
+    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime createdDateTime;
+
+    /**
      * The Target.
      * 
      */

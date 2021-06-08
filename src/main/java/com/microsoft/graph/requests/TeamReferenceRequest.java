@@ -27,6 +27,8 @@ import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.UserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.TeamworkTagCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamworkTagRequestBuilder;

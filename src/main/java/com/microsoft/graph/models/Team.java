@@ -22,6 +22,7 @@ import com.microsoft.graph.models.TeamsAppInstallation;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.TeamsAsyncOperation;
 import com.microsoft.graph.models.User;
+import com.microsoft.graph.models.ResourceSpecificPermissionGrant;
 import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.TeamworkTag;
 import com.microsoft.graph.models.TeamsTemplate;
@@ -32,6 +33,7 @@ import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage;
 import com.microsoft.graph.requests.UserCollectionPage;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage;
 import com.microsoft.graph.requests.TeamworkTagCollectionPage;
 
 
@@ -237,6 +239,15 @@ public class Team extends Entity implements IJsonBackedObject {
     public UserCollectionPage owners;
 
     /**
+     * The Permission Grants.
+     * 
+     */
+    @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
+    @Expose
+	@Nullable
+    public ResourceSpecificPermissionGrantCollectionPage permissionGrants;
+
+    /**
      * The Photo.
      * The team photo.
      */
@@ -309,6 +320,10 @@ public class Team extends Entity implements IJsonBackedObject {
 
         if (json.has("owners")) {
             owners = serializer.deserializeObject(json.get("owners"), UserCollectionPage.class);
+        }
+
+        if (json.has("permissionGrants")) {
+            permissionGrants = serializer.deserializeObject(json.get("permissionGrants"), ResourceSpecificPermissionGrantCollectionPage.class);
         }
 
         if (json.has("tags")) {

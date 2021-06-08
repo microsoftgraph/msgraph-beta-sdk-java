@@ -27,6 +27,8 @@ import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder;
 import com.microsoft.graph.requests.UserWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
+import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.ProfilePhotoRequestBuilder;
 import com.microsoft.graph.requests.TeamworkTagCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamworkTagRequestBuilder;
@@ -192,6 +194,26 @@ public class TeamRequestBuilder extends BaseRequestBuilder<Team> {
     @Nonnull
     public UserWithReferenceRequestBuilder owners(@Nonnull final String id) {
         return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("owners") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ResourceSpecificPermissionGrant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ResourceSpecificPermissionGrantCollectionRequestBuilder permissionGrants() {
+        return new ResourceSpecificPermissionGrantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ResourceSpecificPermissionGrant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ResourceSpecificPermissionGrantRequestBuilder permissionGrants(@Nonnull final String id) {
+        return new ResourceSpecificPermissionGrantRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrants") + "/" + id, getClient(), null);
     }
 
     /**

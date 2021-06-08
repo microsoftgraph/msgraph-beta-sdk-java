@@ -64,9 +64,17 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     ENDPOINT_CONNECTIVITY_CHECK_UNKNOWN_ERROR,
     /**
-    * aad Connectivity Check Unknown Error
+    * azure Ad Device Sync Check Device Not Found
     */
-    AAD_CONNECTIVITY_CHECK_UNKNOWN_ERROR,
+    AZURE_AD_DEVICE_SYNC_CHECK_DEVICE_NOT_FOUND,
+    /**
+    * azure Ad Device Sync Check Long Sync Circle
+    */
+    AZURE_AD_DEVICE_SYNC_CHECK_LONG_SYNC_CIRCLE,
+    /**
+    * azure Ad Device Sync Check Unknown Error
+    */
+    AZURE_AD_DEVICE_SYNC_CHECK_UNKNOWN_ERROR,
     /**
     * resource Availability Check No Subnet IP
     */
@@ -75,6 +83,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * resource Availability Check Subscription Disabled
     */
     RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_DISABLED,
+    /**
+    * resource Availability Check Azure Policy Violation
+    */
+    RESOURCE_AVAILABILITY_CHECK_AZURE_POLICY_VIOLATION,
     /**
     * resource Availability Check Unsupported VNet Region
     */
@@ -99,6 +111,18 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * permission Check Unknown Error
     */
     PERMISSION_CHECK_UNKNOWN_ERROR,
+    /**
+    * internal Server Error Deployment Canceled
+    */
+    INTERNAL_SERVER_ERROR_DEPLOYMENT_CANCELED,
+    /**
+    * internal Server Error Allocate Resource Failed
+    */
+    INTERNAL_SERVER_ERROR_ALLOCATE_RESOURCE_FAILED,
+    /**
+    * internal Server Error VMDeployment Timeout
+    */
+    INTERNAL_SERVER_ERROR_VM_DEPLOYMENT_TIMEOUT,
     /**
     * internal Server Unknown Error
     */

@@ -76,7 +76,9 @@ public class Authentication extends Entity implements IJsonBackedObject {
     /**
      * The Microsoft Authenticator Methods.
      * 
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "microsoftAuthenticatorMethods", alternate = {"MicrosoftAuthenticatorMethods"})
     @Expose
 	@Nullable

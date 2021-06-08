@@ -19,6 +19,8 @@ import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageRequestBuilder;
+import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;
@@ -131,6 +133,26 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
     @Nonnull
     public ChatMessageRequestBuilder messages(@Nonnull final String id) {
         return new ChatMessageRequestBuilder(getRequestUrlWithAdditionalSegment("messages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TeamsAsyncOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TeamsAsyncOperationCollectionRequestBuilder operations() {
+        return new TeamsAsyncOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TeamsAsyncOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TeamsAsyncOperationRequestBuilder operations(@Nonnull final String id) {
+        return new TeamsAsyncOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ResourceSpecificPermissionGrant collection

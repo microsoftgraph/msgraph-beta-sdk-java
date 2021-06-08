@@ -44,6 +44,10 @@ public enum TeamsAsyncOperationType
     */
     CREATE_CHANNEL,
     /**
+    * create Chat
+    */
+    CREATE_CHAT,
+    /**
     * For TeamsAsyncOperationType values that were not expected from the service
     */
     UNEXPECTED_VALUE

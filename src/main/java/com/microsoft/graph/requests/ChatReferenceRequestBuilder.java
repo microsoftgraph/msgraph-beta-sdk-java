@@ -20,6 +20,8 @@ import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageRequestBuilder;
+import com.microsoft.graph.requests.TeamsAsyncOperationCollectionRequestBuilder;
+import com.microsoft.graph.requests.TeamsAsyncOperationRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantRequestBuilder;
 import com.microsoft.graph.requests.TeamsTabCollectionRequestBuilder;

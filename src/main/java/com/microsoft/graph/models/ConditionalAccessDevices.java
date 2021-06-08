@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ConditionalAccessFilter;
 
 
 import com.google.gson.JsonObject;
@@ -37,6 +38,15 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Device Filter.
+     * 
+     */
+    @SerializedName(value = "deviceFilter", alternate = {"DeviceFilter"})
+    @Expose
+	@Nullable
+    public ConditionalAccessFilter deviceFilter;
 
     /**
      * The Exclude Devices.
