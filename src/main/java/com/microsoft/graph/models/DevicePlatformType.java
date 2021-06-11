@@ -48,6 +48,10 @@ public enum DevicePlatformType
     */
     UNKNOWN,
     /**
+    * android AOSP
+    */
+    ANDROID_AOSP,
+    /**
     * For DevicePlatformType values that were not expected from the service
     */
     UNEXPECTED_VALUE

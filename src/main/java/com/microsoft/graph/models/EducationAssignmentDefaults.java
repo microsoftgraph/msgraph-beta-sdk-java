@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.EducationAddedStudentAction;
+import com.microsoft.graph.models.EducationAddToCalendarOptions;
 import com.microsoft.graph.models.Entity;
 
 
@@ -34,6 +35,15 @@ public class EducationAssignmentDefaults extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public EducationAddedStudentAction addedStudentAction;
+
+    /**
+     * The Add To Calendar Action.
+     * Optional field to control the asfor adding assignments to students' and teachers' calendars when the assignment is published. Possible values are: studentsAndPublisher, studentsAndTeamOwners, none. Default value is none.
+     */
+    @SerializedName(value = "addToCalendarAction", alternate = {"AddToCalendarAction"})
+    @Expose
+	@Nullable
+    public EducationAddToCalendarOptions addToCalendarAction;
 
     /**
      * The Due Time.

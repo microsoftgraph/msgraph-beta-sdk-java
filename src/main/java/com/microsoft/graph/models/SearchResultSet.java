@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SearchHitsContainer;
+import com.microsoft.graph.models.ResultTemplateDictionary;
 
 
 import com.google.gson.JsonObject;
@@ -47,6 +48,15 @@ public class SearchResultSet implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<SearchHitsContainer> hitsContainers;
+
+    /**
+     * The Result Templates.
+     * 
+     */
+    @SerializedName(value = "resultTemplates", alternate = {"ResultTemplates"})
+    @Expose
+	@Nullable
+    public ResultTemplateDictionary resultTemplates;
 
     /**
      * The Search Terms.

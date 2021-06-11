@@ -97,6 +97,15 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     public String internalUrl;
 
     /**
+     * The Is Backend Certificate Validation Enabled.
+     * 
+     */
+    @SerializedName(value = "isBackendCertificateValidationEnabled", alternate = {"IsBackendCertificateValidationEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isBackendCertificateValidationEnabled;
+
+    /**
      * The Is Http Only Cookie Enabled.
      * Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
      */

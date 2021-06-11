@@ -47,6 +47,15 @@ public class PresenceSetPresenceParameterSet {
 	@Nullable
     public String activity;
 
+    /**
+     * The expiration Duration.
+     * 
+     */
+    @SerializedName(value = "expirationDuration", alternate = {"ExpirationDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration expirationDuration;
+
 
     /**
      * Instiaciates a new PresenceSetPresenceParameterSet
@@ -60,6 +69,7 @@ public class PresenceSetPresenceParameterSet {
         this.sessionId = builder.sessionId;
         this.availability = builder.availability;
         this.activity = builder.activity;
+        this.expirationDuration = builder.expirationDuration;
     }
     /**
      * Gets a new builder for the body
@@ -119,6 +129,21 @@ public class PresenceSetPresenceParameterSet {
             return this;
         }
         /**
+         * The expirationDuration parameter value
+         */
+        @Nullable
+        protected javax.xml.datatype.Duration expirationDuration;
+        /**
+         * Sets the ExpirationDuration
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public PresenceSetPresenceParameterSetBuilder withExpirationDuration(@Nullable final javax.xml.datatype.Duration val) {
+            this.expirationDuration = val;
+            return this;
+        }
+        /**
          * Instanciates a new PresenceSetPresenceParameterSetBuilder
          */
         @Nullable
@@ -147,6 +172,9 @@ public class PresenceSetPresenceParameterSet {
         }
         if(this.activity != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("activity", activity));
+        }
+        if(this.expirationDuration != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("expirationDuration", expirationDuration));
         }
         return result;
     }
