@@ -26,8 +26,26 @@ import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollec
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementActionCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementActionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.RiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.RiskyUserRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantDetailedInformationCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantDetailedInformationRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantTagCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.TenantTagRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.WindowsProtectionStateCollectionRequestBuilder;
@@ -261,6 +279,86 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new ManagedDeviceComplianceTrendRequestBuilder(getRequestUrlWithAdditionalSegment("managedDeviceComplianceTrends") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ManagementAction collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementActionCollectionRequestBuilder managementActions() {
+        return new ManagementActionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementAction item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementActionRequestBuilder managementActions(@Nonnull final String id) {
+        return new ManagementActionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActions") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagementActionTenantDeploymentStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementActionTenantDeploymentStatusCollectionRequestBuilder managementActionTenantDeploymentStatuses() {
+        return new ManagementActionTenantDeploymentStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementActionTenantDeploymentStatuses"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementActionTenantDeploymentStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementActionTenantDeploymentStatusRequestBuilder managementActionTenantDeploymentStatuses(@Nonnull final String id) {
+        return new ManagementActionTenantDeploymentStatusRequestBuilder(getRequestUrlWithAdditionalSegment("managementActionTenantDeploymentStatuses") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagementIntent collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementIntentCollectionRequestBuilder managementIntents() {
+        return new ManagementIntentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementIntent item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementIntentRequestBuilder managementIntents(@Nonnull final String id) {
+        return new ManagementIntentRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagementTemplate collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementTemplateCollectionRequestBuilder managementTemplates() {
+        return new ManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementTemplate item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementTemplateRequestBuilder managementTemplates(@Nonnull final String id) {
+        return new ManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the RiskyUser collection
      *
      * @return the collection request builder
@@ -279,6 +377,106 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
     @Nonnull
     public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
         return new RiskyUserRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TenantGroup collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TenantGroupCollectionRequestBuilder tenantGroups() {
+        return new TenantGroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantGroups"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TenantGroup item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TenantGroupRequestBuilder tenantGroups(@Nonnull final String id) {
+        return new TenantGroupRequestBuilder(getRequestUrlWithAdditionalSegment("tenantGroups") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Tenant collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TenantCollectionRequestBuilder tenants() {
+        return new TenantCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenants"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Tenant item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TenantRequestBuilder tenants(@Nonnull final String id) {
+        return new TenantRequestBuilder(getRequestUrlWithAdditionalSegment("tenants") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TenantCustomizedInformation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TenantCustomizedInformationCollectionRequestBuilder tenantsCustomizedInformation() {
+        return new TenantCustomizedInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsCustomizedInformation"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TenantCustomizedInformation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TenantCustomizedInformationRequestBuilder tenantsCustomizedInformation(@Nonnull final String id) {
+        return new TenantCustomizedInformationRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsCustomizedInformation") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TenantDetailedInformation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TenantDetailedInformationCollectionRequestBuilder tenantsDetailedInformation() {
+        return new TenantDetailedInformationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsDetailedInformation"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TenantDetailedInformation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TenantDetailedInformationRequestBuilder tenantsDetailedInformation(@Nonnull final String id) {
+        return new TenantDetailedInformationRequestBuilder(getRequestUrlWithAdditionalSegment("tenantsDetailedInformation") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the TenantTag collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public TenantTagCollectionRequestBuilder tenantTags() {
+        return new TenantTagCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("tenantTags"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the TenantTag item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public TenantTagRequestBuilder tenantTags(@Nonnull final String id) {
+        return new TenantTagRequestBuilder(getRequestUrlWithAdditionalSegment("tenantTags") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsDeviceMalwareState collection

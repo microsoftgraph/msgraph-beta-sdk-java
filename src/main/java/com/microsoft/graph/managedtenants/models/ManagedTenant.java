@@ -18,7 +18,16 @@ import com.microsoft.graph.managedtenants.models.CredentialUserRegistrationsSumm
 import com.microsoft.graph.managedtenants.models.DeviceCompliancePolicySettingStateSummary;
 import com.microsoft.graph.managedtenants.models.ManagedDeviceCompliance;
 import com.microsoft.graph.managedtenants.models.ManagedDeviceComplianceTrend;
+import com.microsoft.graph.managedtenants.models.ManagementAction;
+import com.microsoft.graph.managedtenants.models.ManagementActionTenantDeploymentStatus;
+import com.microsoft.graph.managedtenants.models.ManagementIntent;
+import com.microsoft.graph.managedtenants.models.ManagementTemplate;
 import com.microsoft.graph.managedtenants.models.RiskyUser;
+import com.microsoft.graph.managedtenants.models.TenantGroup;
+import com.microsoft.graph.managedtenants.models.Tenant;
+import com.microsoft.graph.managedtenants.models.TenantCustomizedInformation;
+import com.microsoft.graph.managedtenants.models.TenantDetailedInformation;
+import com.microsoft.graph.managedtenants.models.TenantTag;
 import com.microsoft.graph.managedtenants.models.WindowsDeviceMalwareState;
 import com.microsoft.graph.managedtenants.models.WindowsProtectionState;
 import com.microsoft.graph.models.Entity;
@@ -31,7 +40,16 @@ import com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSu
 import com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementActionCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage;
 import com.microsoft.graph.managedtenants.requests.RiskyUserCollectionPage;
+import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionPage;
+import com.microsoft.graph.managedtenants.requests.TenantCollectionPage;
+import com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionPage;
+import com.microsoft.graph.managedtenants.requests.TenantDetailedInformationCollectionPage;
+import com.microsoft.graph.managedtenants.requests.TenantTagCollectionPage;
 import com.microsoft.graph.managedtenants.requests.WindowsDeviceMalwareStateCollectionPage;
 import com.microsoft.graph.managedtenants.requests.WindowsProtectionStateCollectionPage;
 
@@ -132,6 +150,42 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     public ManagedDeviceComplianceTrendCollectionPage managedDeviceComplianceTrends;
 
     /**
+     * The Management Actions.
+     * 
+     */
+    @SerializedName(value = "managementActions", alternate = {"ManagementActions"})
+    @Expose
+	@Nullable
+    public ManagementActionCollectionPage managementActions;
+
+    /**
+     * The Management Action Tenant Deployment Statuses.
+     * 
+     */
+    @SerializedName(value = "managementActionTenantDeploymentStatuses", alternate = {"ManagementActionTenantDeploymentStatuses"})
+    @Expose
+	@Nullable
+    public ManagementActionTenantDeploymentStatusCollectionPage managementActionTenantDeploymentStatuses;
+
+    /**
+     * The Management Intents.
+     * 
+     */
+    @SerializedName(value = "managementIntents", alternate = {"ManagementIntents"})
+    @Expose
+	@Nullable
+    public ManagementIntentCollectionPage managementIntents;
+
+    /**
+     * The Management Templates.
+     * 
+     */
+    @SerializedName(value = "managementTemplates", alternate = {"ManagementTemplates"})
+    @Expose
+	@Nullable
+    public ManagementTemplateCollectionPage managementTemplates;
+
+    /**
      * The Risky Users.
      * 
      */
@@ -139,6 +193,51 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RiskyUserCollectionPage riskyUsers;
+
+    /**
+     * The Tenant Groups.
+     * 
+     */
+    @SerializedName(value = "tenantGroups", alternate = {"TenantGroups"})
+    @Expose
+	@Nullable
+    public TenantGroupCollectionPage tenantGroups;
+
+    /**
+     * The Tenants.
+     * 
+     */
+    @SerializedName(value = "tenants", alternate = {"Tenants"})
+    @Expose
+	@Nullable
+    public TenantCollectionPage tenants;
+
+    /**
+     * The Tenants Customized Information.
+     * 
+     */
+    @SerializedName(value = "tenantsCustomizedInformation", alternate = {"TenantsCustomizedInformation"})
+    @Expose
+	@Nullable
+    public TenantCustomizedInformationCollectionPage tenantsCustomizedInformation;
+
+    /**
+     * The Tenants Detailed Information.
+     * 
+     */
+    @SerializedName(value = "tenantsDetailedInformation", alternate = {"TenantsDetailedInformation"})
+    @Expose
+	@Nullable
+    public TenantDetailedInformationCollectionPage tenantsDetailedInformation;
+
+    /**
+     * The Tenant Tags.
+     * 
+     */
+    @SerializedName(value = "tenantTags", alternate = {"TenantTags"})
+    @Expose
+	@Nullable
+    public TenantTagCollectionPage tenantTags;
 
     /**
      * The Windows Device Malware States.
@@ -204,8 +303,44 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
             managedDeviceComplianceTrends = serializer.deserializeObject(json.get("managedDeviceComplianceTrends"), ManagedDeviceComplianceTrendCollectionPage.class);
         }
 
+        if (json.has("managementActions")) {
+            managementActions = serializer.deserializeObject(json.get("managementActions"), ManagementActionCollectionPage.class);
+        }
+
+        if (json.has("managementActionTenantDeploymentStatuses")) {
+            managementActionTenantDeploymentStatuses = serializer.deserializeObject(json.get("managementActionTenantDeploymentStatuses"), ManagementActionTenantDeploymentStatusCollectionPage.class);
+        }
+
+        if (json.has("managementIntents")) {
+            managementIntents = serializer.deserializeObject(json.get("managementIntents"), ManagementIntentCollectionPage.class);
+        }
+
+        if (json.has("managementTemplates")) {
+            managementTemplates = serializer.deserializeObject(json.get("managementTemplates"), ManagementTemplateCollectionPage.class);
+        }
+
         if (json.has("riskyUsers")) {
             riskyUsers = serializer.deserializeObject(json.get("riskyUsers"), RiskyUserCollectionPage.class);
+        }
+
+        if (json.has("tenantGroups")) {
+            tenantGroups = serializer.deserializeObject(json.get("tenantGroups"), TenantGroupCollectionPage.class);
+        }
+
+        if (json.has("tenants")) {
+            tenants = serializer.deserializeObject(json.get("tenants"), TenantCollectionPage.class);
+        }
+
+        if (json.has("tenantsCustomizedInformation")) {
+            tenantsCustomizedInformation = serializer.deserializeObject(json.get("tenantsCustomizedInformation"), TenantCustomizedInformationCollectionPage.class);
+        }
+
+        if (json.has("tenantsDetailedInformation")) {
+            tenantsDetailedInformation = serializer.deserializeObject(json.get("tenantsDetailedInformation"), TenantDetailedInformationCollectionPage.class);
+        }
+
+        if (json.has("tenantTags")) {
+            tenantTags = serializer.deserializeObject(json.get("tenantTags"), TenantTagCollectionPage.class);
         }
 
         if (json.has("windowsDeviceMalwareStates")) {

@@ -66,6 +66,15 @@ public class SearchHit implements IJsonBackedObject {
     public Integer rank;
 
     /**
+     * The Result Template Id.
+     * 
+     */
+    @SerializedName(value = "resultTemplateId", alternate = {"ResultTemplateId"})
+    @Expose
+	@Nullable
+    public String resultTemplateId;
+
+    /**
      * The Summary.
      * A summary of the result, if a summary is available.
      */

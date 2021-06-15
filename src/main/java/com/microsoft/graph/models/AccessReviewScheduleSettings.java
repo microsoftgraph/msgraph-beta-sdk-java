@@ -104,6 +104,15 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     public Boolean mailNotificationsEnabled;
 
     /**
+     * The Recommendation Look Back Duration.
+     * 
+     */
+    @SerializedName(value = "recommendationLookBackDuration", alternate = {"RecommendationLookBackDuration"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration recommendationLookBackDuration;
+
+    /**
      * The Recommendations Enabled.
      * Indicates whether decision recommendations are enabled/disabled.
      */
