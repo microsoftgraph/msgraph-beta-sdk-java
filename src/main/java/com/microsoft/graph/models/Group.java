@@ -162,7 +162,7 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Assignable To Role.
-     * Indicates whether this group can be assigned to an Azure Active Directory role or not.This property can only be set while creating the group and is immutable. Only Global Administrator and Privileged Role Administrator roles can set this property. For more information, see Using a group to manage Azure AD role assignmentsReturned by default.
+     * Indicates whether this group can be assigned to an Azure Active Directory role.This property can only be set while creating the group and is immutable. If set to true, the securityEnabled property must also be set to true and the group cannot be a dynamic group (that is, groupTypes cannot contain DynamicMembership).Only callers in Global Administrator and Privileged Role Administrator roles can set this property. For more, see Using a group to manage Azure AD role assignmentsReturned by default.
      */
     @SerializedName(value = "isAssignableToRole", alternate = {"IsAssignableToRole"})
     @Expose

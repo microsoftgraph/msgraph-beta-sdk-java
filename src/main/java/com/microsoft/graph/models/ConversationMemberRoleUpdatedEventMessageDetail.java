@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EventMessageDetail;
 
@@ -28,15 +29,6 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
 
 
     /**
-     * The Conversation Member Id.
-     * 
-     */
-    @SerializedName(value = "conversationMemberId", alternate = {"ConversationMemberId"})
-    @Expose
-	@Nullable
-    public String conversationMemberId;
-
-    /**
      * The Conversation Member Roles.
      * 
      */
@@ -44,6 +36,15 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     @Expose
 	@Nullable
     public java.util.List<String> conversationMemberRoles;
+
+    /**
+     * The Conversation Member User.
+     * 
+     */
+    @SerializedName(value = "conversationMemberUser", alternate = {"ConversationMemberUser"})
+    @Expose
+	@Nullable
+    public Identity conversationMemberUser;
 
     /**
      * The Initiator.

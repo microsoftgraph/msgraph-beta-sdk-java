@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessLevel;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
+import com.microsoft.graph.models.MeetingChatMode;
 import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
 import com.microsoft.graph.models.MeetingCapabilities;
@@ -46,6 +47,24 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public AccessLevel accessLevel;
 
     /**
+     * The Allow Attendee To Enable Camera.
+     * Indicates whether attendees can turn on their camera.
+     */
+    @SerializedName(value = "allowAttendeeToEnableCamera", alternate = {"AllowAttendeeToEnableCamera"})
+    @Expose
+	@Nullable
+    public Boolean allowAttendeeToEnableCamera;
+
+    /**
+     * The Allow Attendee To Enable Mic.
+     * Indicates whether attendees can turn on their microphone.
+     */
+    @SerializedName(value = "allowAttendeeToEnableMic", alternate = {"AllowAttendeeToEnableMic"})
+    @Expose
+	@Nullable
+    public Boolean allowAttendeeToEnableMic;
+
+    /**
      * The Allowed Presenters.
      * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
      */
@@ -53,6 +72,24 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OnlineMeetingPresenters allowedPresenters;
+
+    /**
+     * The Allow Meeting Chat.
+     * Specifies the mode of meeting chat.
+     */
+    @SerializedName(value = "allowMeetingChat", alternate = {"AllowMeetingChat"})
+    @Expose
+	@Nullable
+    public MeetingChatMode allowMeetingChat;
+
+    /**
+     * The Allow Teamwork Reactions.
+     * Indicates if Teams reactions are enabled for the meeting.
+     */
+    @SerializedName(value = "allowTeamworkReactions", alternate = {"AllowTeamworkReactions"})
+    @Expose
+	@Nullable
+    public Boolean allowTeamworkReactions;
 
     /**
      * The Audio Conferencing.
@@ -146,7 +183,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Broadcast.
-     * Indicates if this is a live event.
+     * Indicates whether this is a live event.
      */
     @SerializedName(value = "isBroadcast", alternate = {"IsBroadcast"})
     @Expose
@@ -164,7 +201,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Entry Exit Announced.
-     * Whether or not to announce when callers join or leave.
+     * Indicates whether to announce when callers join or leave.
      */
     @SerializedName(value = "isEntryExitAnnounced", alternate = {"IsEntryExitAnnounced"})
     @Expose
