@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Credential Usage Summary Collection Response.
  */
 public class ReportRootGetCredentialUsageSummaryCollectionResponse extends BaseCollectionResponse<CredentialUsageSummary> {
-
 }

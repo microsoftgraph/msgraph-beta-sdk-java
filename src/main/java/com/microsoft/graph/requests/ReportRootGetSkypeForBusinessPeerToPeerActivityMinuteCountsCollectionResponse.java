@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Skype For Business Peer To Peer Activity Minute Counts Collection Response.
  */
 public class ReportRootGetSkypeForBusinessPeerToPeerActivityMinuteCountsCollectionResponse extends BaseCollectionResponse<SkypeForBusinessPeerToPeerActivityMinuteCounts> {
-
 }

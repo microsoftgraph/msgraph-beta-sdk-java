@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Experience Analytics Device Performance Summarize Device Performance Devices Collection Response.
  */
 public class UserExperienceAnalyticsDevicePerformanceSummarizeDevicePerformanceDevicesCollectionResponse extends BaseCollectionResponse<UserExperienceAnalyticsDevicePerformance> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Site Get Applicable Content Types For List Collection Response.
  */
 public class SiteGetApplicableContentTypesForListCollectionResponse extends BaseCollectionResponse<ContentType> {
-
 }

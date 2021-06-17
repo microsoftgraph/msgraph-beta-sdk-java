@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Management Intent Compare Collection Response.
  */
 public class DeviceManagementIntentCompareCollectionResponse extends BaseCollectionResponse<DeviceManagementSettingComparison> {
-
 }

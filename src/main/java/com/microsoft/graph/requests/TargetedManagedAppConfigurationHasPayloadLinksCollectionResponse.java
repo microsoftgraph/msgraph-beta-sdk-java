@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Targeted Managed App Configuration Has Payload Links Collection Response.
  */
 public class TargetedManagedAppConfigurationHasPayloadLinksCollectionResponse extends BaseCollectionResponse<HasPayloadLinkResultItem> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Mdm Windows Information Protection Policy Has Payload Links Collection Response.
  */
 public class MdmWindowsInformationProtectionPolicyHasPayloadLinksCollectionResponse extends BaseCollectionResponse<HasPayloadLinkResultItem> {
-
 }

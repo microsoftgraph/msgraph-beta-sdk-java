@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Planner Delta Delta Collection Response.
  */
 public class PlannerDeltaDeltaCollectionResponse extends BaseCollectionResponse<PlannerDelta> {
-
 }

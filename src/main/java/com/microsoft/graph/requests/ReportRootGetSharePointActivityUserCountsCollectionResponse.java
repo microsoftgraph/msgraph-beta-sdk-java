@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Share Point Activity User Counts Collection Response.
  */
 public class ReportRootGetSharePointActivityUserCountsCollectionResponse extends BaseCollectionResponse<SharePointActivityUserCounts> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Alert Update Alerts Collection Response.
  */
 public class AlertUpdateAlertsCollectionResponse extends BaseCollectionResponse<Alert> {
-
 }

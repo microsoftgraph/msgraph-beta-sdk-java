@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Cloud Pc Device Image Get Source Images Collection Response.
  */
 public class CloudPcDeviceImageGetSourceImagesCollectionResponse extends BaseCollectionResponse<CloudPcSourceDeviceImage> {
-
 }

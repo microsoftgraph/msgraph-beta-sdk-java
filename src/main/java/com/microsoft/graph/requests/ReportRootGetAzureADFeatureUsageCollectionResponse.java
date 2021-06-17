@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Azure ADFeature Usage Collection Response.
  */
 public class ReportRootGetAzureADFeatureUsageCollectionResponse extends BaseCollectionResponse<AzureADFeatureUsage> {
-
 }

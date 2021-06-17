@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Management Resource Access Profile Base Assign Collection Response.
  */
 public class DeviceManagementResourceAccessProfileBaseAssignCollectionResponse extends BaseCollectionResponse<DeviceManagementResourceAccessProfileAssignment> {
-
 }

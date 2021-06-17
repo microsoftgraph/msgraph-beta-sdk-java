@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Management Get Role Scope Tags By Resource Collection Response.
  */
 public class DeviceManagementGetRoleScopeTagsByResourceCollectionResponse extends BaseCollectionResponse<RoleScopeTag> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Skype For Business Device Usage User Detail Collection Response.
  */
 public class ReportRootGetSkypeForBusinessDeviceUsageUserDetailCollectionResponse extends BaseCollectionResponse<SkypeForBusinessDeviceUsageUserDetail> {
-
 }

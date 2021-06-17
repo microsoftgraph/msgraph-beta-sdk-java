@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Yammer Groups Activity Detail Collection Response.
  */
 public class ReportRootGetYammerGroupsActivityDetailCollectionResponse extends BaseCollectionResponse<YammerGroupsActivityDetail> {
-
 }

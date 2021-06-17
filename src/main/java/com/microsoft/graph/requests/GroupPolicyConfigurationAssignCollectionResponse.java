@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Group Policy Configuration Assign Collection Response.
  */
 public class GroupPolicyConfigurationAssignCollectionResponse extends BaseCollectionResponse<GroupPolicyConfigurationAssignment> {
-
 }

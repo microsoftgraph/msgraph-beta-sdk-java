@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Get Logged On Managed Devices Collection Response.
  */
 public class UserGetLoggedOnManagedDevicesCollectionResponse extends BaseCollectionResponse<ManagedDevice> {
-
 }

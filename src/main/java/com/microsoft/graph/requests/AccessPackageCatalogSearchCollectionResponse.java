@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Access Package Catalog Search Collection Response.
  */
 public class AccessPackageCatalogSearchCollectionResponse extends BaseCollectionResponse<AccessPackageCatalog> {
-
 }

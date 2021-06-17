@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Rbac Application Role Schedule Instances Collection Response.
  */
 public class RbacApplicationRoleScheduleInstancesCollectionResponse extends BaseCollectionResponse<UnifiedRoleScheduleInstanceBase> {
-
 }

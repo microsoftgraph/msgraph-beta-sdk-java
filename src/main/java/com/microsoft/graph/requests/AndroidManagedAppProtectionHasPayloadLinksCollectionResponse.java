@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Android Managed App Protection Has Payload Links Collection Response.
  */
 public class AndroidManagedAppProtectionHasPayloadLinksCollectionResponse extends BaseCollectionResponse<HasPayloadLinkResultItem> {
-
 }

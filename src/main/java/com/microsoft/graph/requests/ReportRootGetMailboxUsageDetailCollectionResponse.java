@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Mailbox Usage Detail Collection Response.
  */
 public class ReportRootGetMailboxUsageDetailCollectionResponse extends BaseCollectionResponse<MailboxUsageDetail> {
-
 }

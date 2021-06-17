@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Role Scope Tag Get Role Scope Tags By Id Collection Response.
  */
 public class RoleScopeTagGetRoleScopeTagsByIdCollectionResponse extends BaseCollectionResponse<RoleScopeTag> {
-
 }

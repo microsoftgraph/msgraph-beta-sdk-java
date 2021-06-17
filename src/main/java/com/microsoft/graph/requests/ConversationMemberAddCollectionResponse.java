@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Conversation Member Add Collection Response.
  */
 public class ConversationMemberAddCollectionResponse extends BaseCollectionResponse<ActionResultPart> {
-
 }

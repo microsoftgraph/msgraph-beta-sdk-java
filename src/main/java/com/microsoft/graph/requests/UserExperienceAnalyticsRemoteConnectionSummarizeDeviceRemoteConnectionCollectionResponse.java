@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Experience Analytics Remote Connection Summarize Device Remote Connection Collection Response.
  */
 public class UserExperienceAnalyticsRemoteConnectionSummarizeDeviceRemoteConnectionCollectionResponse extends BaseCollectionResponse<UserExperienceAnalyticsRemoteConnection> {
-
 }

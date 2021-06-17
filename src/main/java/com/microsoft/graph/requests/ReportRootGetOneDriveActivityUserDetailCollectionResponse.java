@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get One Drive Activity User Detail Collection Response.
  */
 public class ReportRootGetOneDriveActivityUserDetailCollectionResponse extends BaseCollectionResponse<OneDriveActivityUserDetail> {
-
 }

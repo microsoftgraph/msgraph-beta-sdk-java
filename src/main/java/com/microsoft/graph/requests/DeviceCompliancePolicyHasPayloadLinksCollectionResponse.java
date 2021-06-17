@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Compliance Policy Has Payload Links Collection Response.
  */
 public class DeviceCompliancePolicyHasPayloadLinksCollectionResponse extends BaseCollectionResponse<HasPayloadLinkResultItem> {
-
 }

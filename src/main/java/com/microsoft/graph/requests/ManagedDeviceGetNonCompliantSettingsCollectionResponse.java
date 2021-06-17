@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Managed Device Get Non Compliant Settings Collection Response.
  */
 public class ManagedDeviceGetNonCompliantSettingsCollectionResponse extends BaseCollectionResponse<DeviceCompliancePolicySettingState> {
-
 }

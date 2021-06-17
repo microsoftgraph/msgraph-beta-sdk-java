@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Office365Groups Activity Group Counts Collection Response.
  */
 public class ReportRootGetOffice365GroupsActivityGroupCountsCollectionResponse extends BaseCollectionResponse<Office365GroupsActivityGroupCounts> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Enrollment Configuration Has Payload Links Collection Response.
  */
 public class DeviceEnrollmentConfigurationHasPayloadLinksCollectionResponse extends BaseCollectionResponse<HasPayloadLinkResultItem> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Role Scope Tag Assign Collection Response.
  */
 public class RoleScopeTagAssignCollectionResponse extends BaseCollectionResponse<RoleScopeTagAutoAssignment> {
-
 }

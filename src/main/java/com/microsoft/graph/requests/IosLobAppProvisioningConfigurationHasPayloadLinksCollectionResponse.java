@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Ios Lob App Provisioning Configuration Has Payload Links Collection Response.
  */
 public class IosLobAppProvisioningConfigurationHasPayloadLinksCollectionResponse extends BaseCollectionResponse<HasPayloadLinkResultItem> {
-
 }

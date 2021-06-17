@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Management Template Compare Collection Response.
  */
 public class DeviceManagementTemplateCompareCollectionResponse extends BaseCollectionResponse<DeviceManagementSettingComparison> {
-
 }

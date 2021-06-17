@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Office365Active User Counts Collection Response.
  */
 public class ReportRootGetOffice365ActiveUserCountsCollectionResponse extends BaseCollectionResponse<Office365ActiveUserCounts> {
-
 }

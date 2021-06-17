@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Share Point Site Usage File Counts Collection Response.
  */
 public class ReportRootGetSharePointSiteUsageFileCountsCollectionResponse extends BaseCollectionResponse<SharePointSiteUsageFileCounts> {
-
 }

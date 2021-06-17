@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Privileged Role Assignment Request My Collection Response.
  */
 public class PrivilegedRoleAssignmentRequestMyCollectionResponse extends BaseCollectionResponse<PrivilegedRoleAssignmentRequest> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Managed Device Get Cloud Pc Remote Action Results Collection Response.
  */
 public class ManagedDeviceGetCloudPcRemoteActionResultsCollectionResponse extends BaseCollectionResponse<CloudPcRemoteActionResult> {
-
 }

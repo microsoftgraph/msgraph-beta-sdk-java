@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Unified Role Eligibility Schedule Request Filter By Current User Collection Response.
  */
 public class UnifiedRoleEligibilityScheduleRequestFilterByCurrentUserCollectionResponse extends BaseCollectionResponse<UnifiedRoleEligibilityScheduleRequest> {
-
 }

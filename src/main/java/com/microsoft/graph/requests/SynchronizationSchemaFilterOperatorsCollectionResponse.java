@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Synchronization Schema Filter Operators Collection Response.
  */
 public class SynchronizationSchemaFilterOperatorsCollectionResponse extends BaseCollectionResponse<FilterOperatorSchema> {
-
 }

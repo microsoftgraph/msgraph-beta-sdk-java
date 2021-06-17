@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Ti Indicator Delete Ti Indicators By External Id Collection Response.
  */
 public class TiIndicatorDeleteTiIndicatorsByExternalIdCollectionResponse extends BaseCollectionResponse<ResultInfo> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Configuration Get Ios Available Update Versions Collection Response.
  */
 public class DeviceConfigurationGetIosAvailableUpdateVersionsCollectionResponse extends BaseCollectionResponse<IosAvailableUpdateVersion> {
-
 }

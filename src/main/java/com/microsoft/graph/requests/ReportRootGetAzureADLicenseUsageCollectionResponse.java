@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Azure ADLicense Usage Collection Response.
  */
 public class ReportRootGetAzureADLicenseUsageCollectionResponse extends BaseCollectionResponse<AzureADLicenseUsage> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Get Effective Device Enrollment Configurations Collection Response.
  */
 public class UserGetEffectiveDeviceEnrollmentConfigurationsCollectionResponse extends BaseCollectionResponse<DeviceEnrollmentConfiguration> {
-
 }

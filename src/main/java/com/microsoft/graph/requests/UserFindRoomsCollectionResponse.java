@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Find Rooms Collection Response.
  */
 public class UserFindRoomsCollectionResponse extends BaseCollectionResponse<EmailAddress> {
-
 }
