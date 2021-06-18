@@ -18,14 +18,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Get Managed App Blocked Users Collection Response.
  */
 public class UserGetManagedAppBlockedUsersCollectionResponse extends BaseCollectionResponse<String> {
-
-    /**
-     * Sets the raw JSON object
-     *
-     * @param serializer the serializer
-     * @param json the JSON object to set this object to
-     */
-    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-
-    }
 }

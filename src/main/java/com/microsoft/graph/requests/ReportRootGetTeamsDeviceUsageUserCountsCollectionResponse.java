@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Teams Device Usage User Counts Collection Response.
  */
 public class ReportRootGetTeamsDeviceUsageUserCountsCollectionResponse extends BaseCollectionResponse<TeamsDeviceUsageUserCounts> {
-
 }

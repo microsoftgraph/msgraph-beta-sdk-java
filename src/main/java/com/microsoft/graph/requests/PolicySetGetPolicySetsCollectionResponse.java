@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Policy Set Get Policy Sets Collection Response.
  */
 public class PolicySetGetPolicySetsCollectionResponse extends BaseCollectionResponse<PolicySet> {
-
 }

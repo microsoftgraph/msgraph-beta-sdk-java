@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Imported Device Identity Search Existing Identities Collection Response.
  */
 public class ImportedDeviceIdentitySearchExistingIdentitiesCollectionResponse extends BaseCollectionResponse<ImportedDeviceIdentity> {
-
 }

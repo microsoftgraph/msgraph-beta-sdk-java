@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Ti Indicator Update Ti Indicators Collection Response.
  */
 public class TiIndicatorUpdateTiIndicatorsCollectionResponse extends BaseCollectionResponse<TiIndicator> {
-
 }

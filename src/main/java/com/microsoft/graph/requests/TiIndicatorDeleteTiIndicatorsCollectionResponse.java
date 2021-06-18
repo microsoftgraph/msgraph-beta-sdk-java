@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Ti Indicator Delete Ti Indicators Collection Response.
  */
 public class TiIndicatorDeleteTiIndicatorsCollectionResponse extends BaseCollectionResponse<ResultInfo> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Management Condition Get Management Conditions For Platform Collection Response.
  */
 public class ManagementConditionGetManagementConditionsForPlatformCollectionResponse extends BaseCollectionResponse<ManagementCondition> {
-
 }

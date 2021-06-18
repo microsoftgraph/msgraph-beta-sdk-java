@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Office365Activations User Detail Collection Response.
  */
 public class ReportRootGetOffice365ActivationsUserDetailCollectionResponse extends BaseCollectionResponse<Office365ActivationsUserDetail> {
-
 }

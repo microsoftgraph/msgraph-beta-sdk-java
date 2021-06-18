@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Tag As Hierarchy Collection Response.
  */
 public class TagAsHierarchyCollectionResponse extends BaseCollectionResponse<Tag> {
-
 }

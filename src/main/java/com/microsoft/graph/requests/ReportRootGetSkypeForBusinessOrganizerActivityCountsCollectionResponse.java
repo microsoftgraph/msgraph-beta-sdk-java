@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Skype For Business Organizer Activity Counts Collection Response.
  */
 public class ReportRootGetSkypeForBusinessOrganizerActivityCountsCollectionResponse extends BaseCollectionResponse<SkypeForBusinessOrganizerActivityCounts> {
-
 }

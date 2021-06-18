@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Mobile App Get Top Mobile Apps Collection Response.
  */
 public class MobileAppGetTopMobileAppsCollectionResponse extends BaseCollectionResponse<MobileApp> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Vpp Token Get Licenses For App Collection Response.
  */
 public class VppTokenGetLicensesForAppCollectionResponse extends BaseCollectionResponse<VppTokenLicenseSummary> {
-
 }

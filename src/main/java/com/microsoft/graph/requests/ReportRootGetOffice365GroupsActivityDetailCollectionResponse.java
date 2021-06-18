@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Office365Groups Activity Detail Collection Response.
  */
 public class ReportRootGetOffice365GroupsActivityDetailCollectionResponse extends BaseCollectionResponse<Office365GroupsActivityDetail> {
-
 }

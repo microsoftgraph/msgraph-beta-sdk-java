@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Access Package Assignment Filter By Current User Collection Response.
  */
 public class AccessPackageAssignmentFilterByCurrentUserCollectionResponse extends BaseCollectionResponse<AccessPackageAssignment> {
-
 }

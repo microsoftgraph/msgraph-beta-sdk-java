@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Relying Party Detailed Summary Collection Response.
  */
 public class ReportRootGetRelyingPartyDetailedSummaryCollectionResponse extends BaseCollectionResponse<RelyingPartyDetailedSummary> {
-
 }

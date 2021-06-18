@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Tenant Group Tenant Search Collection Response.
  */
 public class TenantGroupTenantSearchCollectionResponse extends BaseCollectionResponse<TenantGroup> {
-
 }

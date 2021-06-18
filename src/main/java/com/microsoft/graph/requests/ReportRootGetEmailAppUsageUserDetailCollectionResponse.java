@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Email App Usage User Detail Collection Response.
  */
 public class ReportRootGetEmailAppUsageUserDetailCollectionResponse extends BaseCollectionResponse<EmailAppUsageUserDetail> {
-
 }

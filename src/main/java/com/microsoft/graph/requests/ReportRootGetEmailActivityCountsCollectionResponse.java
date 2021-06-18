@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Email Activity Counts Collection Response.
  */
 public class ReportRootGetEmailActivityCountsCollectionResponse extends BaseCollectionResponse<EmailActivitySummary> {
-
 }

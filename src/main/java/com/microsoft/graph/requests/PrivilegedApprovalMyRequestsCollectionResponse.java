@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Privileged Approval My Requests Collection Response.
  */
 public class PrivilegedApprovalMyRequestsCollectionResponse extends BaseCollectionResponse<PrivilegedApproval> {
-
 }

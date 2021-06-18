@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Configuration Get Targeted Users And Devices Collection Response.
  */
 public class DeviceConfigurationGetTargetedUsersAndDevicesCollectionResponse extends BaseCollectionResponse<DeviceConfigurationTargetedUserAndDevice> {
-
 }

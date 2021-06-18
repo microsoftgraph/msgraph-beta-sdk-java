@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Education Synchronization Profile Start Collection Response.
  */
 public class EducationSynchronizationProfileStartCollectionResponse extends BaseCollectionResponse<EducationFileSynchronizationVerificationMessage> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the User Get Managed Devices With Failed Or Pending Apps Collection Response.
  */
 public class UserGetManagedDevicesWithFailedOrPendingAppsCollectionResponse extends BaseCollectionResponse<ManagedDeviceSummarizedAppState> {
-
 }

@@ -18,14 +18,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Audit Event Get Audit Activity Types Collection Response.
  */
 public class AuditEventGetAuditActivityTypesCollectionResponse extends BaseCollectionResponse<String> {
-
-    /**
-     * Sets the raw JSON object
-     *
-     * @param serializer the serializer
-     * @param json the JSON object to set this object to
-     */
-    public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
-
-    }
 }

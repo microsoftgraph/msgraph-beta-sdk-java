@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Access Package Assignment Resource Role My Collection Response.
  */
 public class AccessPackageAssignmentResourceRoleMyCollectionResponse extends BaseCollectionResponse<AccessPackageAssignmentResourceRole> {
-
 }

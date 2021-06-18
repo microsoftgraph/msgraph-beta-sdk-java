@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Mobile App Get Related App States Collection Response.
  */
 public class MobileAppGetRelatedAppStatesCollectionResponse extends BaseCollectionResponse<MobileAppRelationshipState> {
-
 }

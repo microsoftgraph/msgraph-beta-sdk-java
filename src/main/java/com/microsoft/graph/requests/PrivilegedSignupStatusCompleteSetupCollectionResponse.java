@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Privileged Signup Status Complete Setup Collection Response.
  */
 public class PrivilegedSignupStatusCompleteSetupCollectionResponse extends BaseCollectionResponse<RoleSuccessStatistics> {
-
 }

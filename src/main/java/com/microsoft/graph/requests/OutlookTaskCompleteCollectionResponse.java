@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Outlook Task Complete Collection Response.
  */
 public class OutlookTaskCompleteCollectionResponse extends BaseCollectionResponse<OutlookTask> {
-
 }

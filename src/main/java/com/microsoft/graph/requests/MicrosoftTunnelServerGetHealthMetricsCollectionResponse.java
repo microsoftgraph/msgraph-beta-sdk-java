@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Microsoft Tunnel Server Get Health Metrics Collection Response.
  */
 public class MicrosoftTunnelServerGetHealthMetricsCollectionResponse extends BaseCollectionResponse<KeyLongValuePair> {
-
 }

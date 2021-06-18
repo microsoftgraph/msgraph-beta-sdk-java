@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get One Drive Usage Storage Collection Response.
  */
 public class ReportRootGetOneDriveUsageStorageCollectionResponse extends BaseCollectionResponse<SiteUsageStorage> {
-
 }

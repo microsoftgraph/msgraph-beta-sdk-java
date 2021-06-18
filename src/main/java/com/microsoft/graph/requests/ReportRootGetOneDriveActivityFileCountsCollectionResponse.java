@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get One Drive Activity File Counts Collection Response.
  */
 public class ReportRootGetOneDriveActivityFileCountsCollectionResponse extends BaseCollectionResponse<SiteActivitySummary> {
-
 }

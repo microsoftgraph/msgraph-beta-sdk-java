@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Embedded SIMActivation Code Pool Assign Collection Response.
  */
 public class EmbeddedSIMActivationCodePoolAssignCollectionResponse extends BaseCollectionResponse<EmbeddedSIMActivationCodePoolAssignment> {
-
 }

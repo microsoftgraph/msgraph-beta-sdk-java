@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Management Template Import Office365Device Configuration Policies Collection Response.
  */
 public class DeviceManagementTemplateImportOffice365DeviceConfigurationPoliciesCollectionResponse extends BaseCollectionResponse<DeviceManagementIntent> {
-
 }

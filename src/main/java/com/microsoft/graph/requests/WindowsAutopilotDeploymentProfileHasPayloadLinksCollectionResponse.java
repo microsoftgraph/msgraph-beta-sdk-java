@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Windows Autopilot Deployment Profile Has Payload Links Collection Response.
  */
 public class WindowsAutopilotDeploymentProfileHasPayloadLinksCollectionResponse extends BaseCollectionResponse<HasPayloadLinkResultItem> {
-
 }

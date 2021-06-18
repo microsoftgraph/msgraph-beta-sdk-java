@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Mailbox Usage Quota Status Mailbox Counts Collection Response.
  */
 public class ReportRootGetMailboxUsageQuotaStatusMailboxCountsCollectionResponse extends BaseCollectionResponse<MailboxUsageQuotaStatusMailboxCounts> {
-
 }

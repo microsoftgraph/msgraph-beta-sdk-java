@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get One Drive Usage Account Counts Collection Response.
  */
 public class ReportRootGetOneDriveUsageAccountCountsCollectionResponse extends BaseCollectionResponse<OneDriveUsageAccountCounts> {
-
 }

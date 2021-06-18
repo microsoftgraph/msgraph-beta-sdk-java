@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Information Protection Label Evaluate Removal Collection Response.
  */
 public class InformationProtectionLabelEvaluateRemovalCollectionResponse extends BaseCollectionResponse<InformationProtectionAction> {
-
 }

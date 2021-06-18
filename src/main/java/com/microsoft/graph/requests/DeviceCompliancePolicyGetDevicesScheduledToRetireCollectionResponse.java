@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Device Compliance Policy Get Devices Scheduled To Retire Collection Response.
  */
 public class DeviceCompliancePolicyGetDevicesScheduledToRetireCollectionResponse extends BaseCollectionResponse<RetireScheduledManagedDevice> {
-
 }

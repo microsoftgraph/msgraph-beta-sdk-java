@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Yammer Device Usage User Counts Collection Response.
  */
 public class ReportRootGetYammerDeviceUsageUserCountsCollectionResponse extends BaseCollectionResponse<YammerDeviceUsageUserCounts> {
-
 }

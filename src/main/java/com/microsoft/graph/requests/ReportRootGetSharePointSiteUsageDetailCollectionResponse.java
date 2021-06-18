@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Share Point Site Usage Detail Collection Response.
  */
 public class ReportRootGetSharePointSiteUsageDetailCollectionResponse extends BaseCollectionResponse<SharePointSiteUsageDetail> {
-
 }

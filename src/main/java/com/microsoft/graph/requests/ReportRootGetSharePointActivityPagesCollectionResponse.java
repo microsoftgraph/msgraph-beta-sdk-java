@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Share Point Activity Pages Collection Response.
  */
 public class ReportRootGetSharePointActivityPagesCollectionResponse extends BaseCollectionResponse<SharePointActivityPages> {
-
 }

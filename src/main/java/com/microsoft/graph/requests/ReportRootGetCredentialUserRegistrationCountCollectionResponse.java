@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Credential User Registration Count Collection Response.
  */
 public class ReportRootGetCredentialUserRegistrationCountCollectionResponse extends BaseCollectionResponse<CredentialUserRegistrationCount> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Teams User Activity Total User Counts Collection Response.
  */
 public class ReportRootGetTeamsUserActivityTotalUserCountsCollectionResponse extends BaseCollectionResponse<TeamsUserActivityUserCounts> {
-
 }

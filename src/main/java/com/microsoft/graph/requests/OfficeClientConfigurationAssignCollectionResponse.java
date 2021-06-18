@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Office Client Configuration Assign Collection Response.
  */
 public class OfficeClientConfigurationAssignCollectionResponse extends BaseCollectionResponse<OfficeClientConfigurationAssignment> {
-
 }

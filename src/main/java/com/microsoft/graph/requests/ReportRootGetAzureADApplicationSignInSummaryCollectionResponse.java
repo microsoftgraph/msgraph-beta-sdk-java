@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Azure ADApplication Sign In Summary Collection Response.
  */
 public class ReportRootGetAzureADApplicationSignInSummaryCollectionResponse extends BaseCollectionResponse<ApplicationSignInSummary> {
-
 }

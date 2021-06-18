@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Synchronization Schema Functions Collection Response.
  */
 public class SynchronizationSchemaFunctionsCollectionResponse extends BaseCollectionResponse<AttributeMappingFunctionSchema> {
-
 }

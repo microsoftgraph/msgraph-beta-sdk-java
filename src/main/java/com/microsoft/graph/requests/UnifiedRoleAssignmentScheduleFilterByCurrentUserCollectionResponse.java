@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Unified Role Assignment Schedule Filter By Current User Collection Response.
  */
 public class UnifiedRoleAssignmentScheduleFilterByCurrentUserCollectionResponse extends BaseCollectionResponse<UnifiedRoleAssignmentSchedule> {
-
 }

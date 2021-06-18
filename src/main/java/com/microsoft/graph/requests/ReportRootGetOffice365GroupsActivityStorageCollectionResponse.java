@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Office365Groups Activity Storage Collection Response.
  */
 public class ReportRootGetOffice365GroupsActivityStorageCollectionResponse extends BaseCollectionResponse<Office365GroupsActivityStorage> {
-
 }

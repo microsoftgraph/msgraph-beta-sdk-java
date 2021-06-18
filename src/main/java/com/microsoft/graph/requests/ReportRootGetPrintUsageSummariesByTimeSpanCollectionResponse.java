@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Print Usage Summaries By Time Span Collection Response.
  */
 public class ReportRootGetPrintUsageSummariesByTimeSpanCollectionResponse extends BaseCollectionResponse<PrintUsageSummary> {
-
 }

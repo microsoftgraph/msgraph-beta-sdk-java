@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Report Root Get Office365Services User Counts Collection Response.
  */
 public class ReportRootGetOffice365ServicesUserCountsCollectionResponse extends BaseCollectionResponse<Office365ServicesUserCounts> {
-
 }

@@ -17,5 +17,4 @@ import com.microsoft.graph.http.BaseCollectionResponse;
  * The class for the Imported Apple Device Identity Import Apple Device Identity List Collection Response.
  */
 public class ImportedAppleDeviceIdentityImportAppleDeviceIdentityListCollectionResponse extends BaseCollectionResponse<ImportedAppleDeviceIdentityResult> {
-
 }
