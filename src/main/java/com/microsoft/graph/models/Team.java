@@ -240,7 +240,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Permission Grants.
-     * 
+     * A collection of permissions granted to apps to access the team.
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose
@@ -267,7 +267,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * The tags associated with the team.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose

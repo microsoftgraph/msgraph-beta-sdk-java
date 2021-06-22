@@ -88,6 +88,18 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     RESOURCE_AVAILABILITY_CHECK_AZURE_POLICY_VIOLATION,
     /**
+    * resource Availability Check Subscription Not Found
+    */
+    RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_NOT_FOUND,
+    /**
+    * resource Availability Check Subscription Transferred
+    */
+    RESOURCE_AVAILABILITY_CHECK_SUBSCRIPTION_TRANSFERRED,
+    /**
+    * resource Availability Check General Subscription Error
+    */
+    RESOURCE_AVAILABILITY_CHECK_GENERAL_SUBSCRIPTION_ERROR,
+    /**
     * resource Availability Check Unsupported VNet Region
     */
     RESOURCE_AVAILABILITY_CHECK_UNSUPPORTED_V_NET_REGION,
@@ -123,6 +135,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * internal Server Error VMDeployment Timeout
     */
     INTERNAL_SERVER_ERROR_VM_DEPLOYMENT_TIMEOUT,
+    /**
+    * internal Server Error Unable To Run Dsc Script
+    */
+    INTERNAL_SERVER_ERROR_UNABLE_TO_RUN_DSC_SCRIPT,
     /**
     * internal Server Unknown Error
     */

@@ -30,7 +30,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time the setting was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The setting name displayed in the user interface.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Local Admin Enabled.
-     * 
+     * Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true.
      */
     @SerializedName(value = "localAdminEnabled", alternate = {"LocalAdminEnabled"})
     @Expose
@@ -66,7 +66,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Self Service Enabled.
-     * 
+     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.
      */
     @SerializedName(value = "selfServiceEnabled", alternate = {"SelfServiceEnabled"})
     @Expose
@@ -75,7 +75,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * 
+     * Office 365 and security groups in Azure AD can have a set of user settings assigned.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
