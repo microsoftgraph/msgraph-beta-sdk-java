@@ -15,6 +15,7 @@ import com.microsoft.graph.models.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.ChatMessageInfoRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;
@@ -93,6 +94,16 @@ public class ChatRequestBuilder extends BaseRequestBuilder<Chat> {
     @Nonnull
     public TeamsAppInstallationRequestBuilder installedApps(@Nonnull final String id) {
         return new TeamsAppInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("installedApps") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for ChatMessageInfo
+     *
+     * @return the ChatMessageInfoRequestBuilder instance
+     */
+    @Nonnull
+    public ChatMessageInfoRequestBuilder lastMessagePreview() {
+        return new ChatMessageInfoRequestBuilder(getRequestUrlWithAdditionalSegment("lastMessagePreview"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ConversationMember collection

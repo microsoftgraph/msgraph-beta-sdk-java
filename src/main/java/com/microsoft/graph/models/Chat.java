@@ -10,7 +10,9 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChatType;
+import com.microsoft.graph.models.ChatViewpoint;
 import com.microsoft.graph.models.TeamsAppInstallation;
+import com.microsoft.graph.models.ChatMessageInfo;
 import com.microsoft.graph.models.ConversationMember;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.models.TeamsAsyncOperation;
@@ -76,6 +78,24 @@ public class Chat extends Entity implements IJsonBackedObject {
     public String topic;
 
     /**
+     * The Viewpoint.
+     * 
+     */
+    @SerializedName(value = "viewpoint", alternate = {"Viewpoint"})
+    @Expose
+	@Nullable
+    public ChatViewpoint viewpoint;
+
+    /**
+     * The Web Url.
+     * A hyperlink that will go to the chat in Microsoft Teams. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     */
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
+    @Expose
+	@Nullable
+    public String webUrl;
+
+    /**
      * The Installed Apps.
      * A collection of all the apps in the chat. Nullable.
      */
@@ -83,6 +103,15 @@ public class Chat extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TeamsAppInstallationCollectionPage installedApps;
+
+    /**
+     * The Last Message Preview.
+     * 
+     */
+    @SerializedName(value = "lastMessagePreview", alternate = {"LastMessagePreview"})
+    @Expose
+	@Nullable
+    public ChatMessageInfo lastMessagePreview;
 
     /**
      * The Members.
@@ -104,7 +133,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * 
+     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

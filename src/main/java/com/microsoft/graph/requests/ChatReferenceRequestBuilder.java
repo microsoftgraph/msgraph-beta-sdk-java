@@ -16,6 +16,7 @@ import com.microsoft.graph.models.TeamworkNotificationRecipient;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder;
+import com.microsoft.graph.requests.ChatMessageInfoRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConversationMemberRequestBuilder;
 import com.microsoft.graph.requests.ChatMessageCollectionRequestBuilder;

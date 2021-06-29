@@ -28,6 +28,10 @@ public enum AclType
     */
     EVERYONE_EXCEPT_GUESTS,
     /**
+    * external Group
+    */
+    EXTERNAL_GROUP,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

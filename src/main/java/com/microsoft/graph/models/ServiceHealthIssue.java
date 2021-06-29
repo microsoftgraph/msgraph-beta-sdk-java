@@ -32,7 +32,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Classification.
-     * 
+     * The type of service health issue. Possible values are: advisory, incident, unknownFutureValue.
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
@@ -41,7 +41,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Feature.
-     * 
+     * The feature name of the service issue.
      */
     @SerializedName(value = "feature", alternate = {"Feature"})
     @Expose
@@ -50,7 +50,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Feature Group.
-     * 
+     * The feature group name of the service issue.
      */
     @SerializedName(value = "featureGroup", alternate = {"FeatureGroup"})
     @Expose
@@ -59,7 +59,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Impact Description.
-     * 
+     * The description of the service issue impact.
      */
     @SerializedName(value = "impactDescription", alternate = {"ImpactDescription"})
     @Expose
@@ -68,7 +68,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Is Resolved.
-     * 
+     * Indicates whether the issue is resolved.
      */
     @SerializedName(value = "isResolved", alternate = {"IsResolved"})
     @Expose
@@ -77,7 +77,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Origin.
-     * 
+     * Indicates the origin of the service issue. Possible values are: microsoft, thirdParty, customer, unknownFutureValue.
      */
     @SerializedName(value = "origin", alternate = {"Origin"})
     @Expose
@@ -86,7 +86,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Posts.
-     * 
+     * Collection of historical posts for the service issue.
      */
     @SerializedName(value = "posts", alternate = {"Posts"})
     @Expose
@@ -95,7 +95,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Service.
-     * 
+     * Indicates the service affected by the issue.
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose
@@ -104,7 +104,7 @@ public class ServiceHealthIssue extends ServiceAnnouncementBase implements IJson
 
     /**
      * The Status.
-     * 
+     * The status of the service issue. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

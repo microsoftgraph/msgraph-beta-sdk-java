@@ -7,9 +7,9 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Conversation Identity Type.
+ * The Enum Teamwork Conversation Identity Type.
 */
-public enum ConversationIdentityType
+public enum TeamworkConversationIdentityType
 {
     /**
     * team
@@ -20,7 +20,15 @@ public enum ConversationIdentityType
     */
     CHANNEL,
     /**
-    * For ConversationIdentityType values that were not expected from the service
+    * chat
+    */
+    CHAT,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
+    * For TeamworkConversationIdentityType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }
