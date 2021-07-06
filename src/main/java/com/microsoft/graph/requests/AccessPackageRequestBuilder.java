@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessPackage;
+import com.microsoft.graph.models.AccessPackageAssignmentRequestRequirements;
 import com.microsoft.graph.models.AccessPackageFilterByCurrentUserOptions;
 import com.microsoft.graph.requests.AccessPackageAssignmentPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
@@ -111,5 +112,14 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder<AccessPackag
     @Nonnull
     public AccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(@Nonnull final String id) {
         return new AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public AccessPackageGetApplicablePolicyRequirementsCollectionRequestBuilder getApplicablePolicyRequirements() {
+        return new AccessPackageGetApplicablePolicyRequirementsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getApplicablePolicyRequirements"), getClient(), null);
     }
 }

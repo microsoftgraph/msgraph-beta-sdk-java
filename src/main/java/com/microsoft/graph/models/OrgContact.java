@@ -188,7 +188,7 @@ public class OrgContact extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Transitive Reports.
-     * 
+     * The transitive reports for a contact. Read-only.
      */
 	@Nullable
     public DirectoryObjectCollectionPage transitiveReports;

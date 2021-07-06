@@ -98,7 +98,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Is Backend Certificate Validation Enabled.
-     * 
+     * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
      */
     @SerializedName(value = "isBackendCertificateValidationEnabled", alternate = {"IsBackendCertificateValidationEnabled"})
     @Expose

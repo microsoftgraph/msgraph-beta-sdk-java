@@ -30,7 +30,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time the setting was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The setting name displayed in the user interface.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Local Admin Enabled.
-     * 
+     * Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the cloud PC device.
      */
     @SerializedName(value = "localAdminEnabled", alternate = {"LocalAdminEnabled"})
     @Expose
@@ -66,7 +66,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Self Service Enabled.
-     * 
+     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the cloud PC through the end user portal.
      */
     @SerializedName(value = "selfServiceEnabled", alternate = {"SelfServiceEnabled"})
     @Expose
@@ -75,7 +75,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * 
+     * Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

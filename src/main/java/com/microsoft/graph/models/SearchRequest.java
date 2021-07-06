@@ -117,7 +117,7 @@ public class SearchRequest implements IJsonBackedObject {
 
     /**
      * The Result Template Options.
-     * 
+     * Provides the search result templates options for rendering connectors search results.
      */
     @SerializedName(value = "resultTemplateOptions", alternate = {"ResultTemplateOptions"})
     @Expose

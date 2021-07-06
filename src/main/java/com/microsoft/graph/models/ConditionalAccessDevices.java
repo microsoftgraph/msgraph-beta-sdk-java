@@ -41,7 +41,7 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
 
     /**
      * The Device Filter.
-     * 
+     * Filter defining the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
      */
     @SerializedName(value = "deviceFilter", alternate = {"DeviceFilter"})
     @Expose
@@ -50,7 +50,7 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
 
     /**
      * The Exclude Devices.
-     * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined.
+     * States excluded from the scope of the policy. Possible values: Compliant, DomainJoined. Cannot be set if deviceFIlter is set.
      */
     @SerializedName(value = "excludeDevices", alternate = {"ExcludeDevices"})
     @Expose
@@ -68,7 +68,7 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
 
     /**
      * The Include Devices.
-     * States in the scope of the policy. All is the only allowed value.
+     * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set.
      */
     @SerializedName(value = "includeDevices", alternate = {"IncludeDevices"})
     @Expose
