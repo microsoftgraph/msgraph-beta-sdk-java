@@ -85,7 +85,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Assignments.
-     * A defined collection of provisioning policy assignments. Returned only on $expand. See an example of getting the assignments relationship.
+     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

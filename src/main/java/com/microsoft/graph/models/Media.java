@@ -40,7 +40,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Is Transcription Shown.
-     * 
+     * If a file has a transcript, this setting controls if the closed captions / transcription for the media file should be shown to people during viewing. Read-Write.
      */
     @SerializedName(value = "isTranscriptionShown", alternate = {"IsTranscriptionShown"})
     @Expose
@@ -49,7 +49,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Media Source.
-     * 
+     * Information about the source of media. Read-only.
      */
     @SerializedName(value = "mediaSource", alternate = {"MediaSource"})
     @Expose

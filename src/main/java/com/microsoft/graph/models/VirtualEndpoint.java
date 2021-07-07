@@ -40,7 +40,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Audit Events.
-     * 
+     * Cloud PC audit event.
      */
     @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
     @Expose
@@ -76,7 +76,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Provisioning Policies.
-     * cloud PC provisioning policy.
+     * Cloud PC provisioning policy.
      */
     @SerializedName(value = "provisioningPolicies", alternate = {"ProvisioningPolicies"})
     @Expose
@@ -85,7 +85,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The User Settings.
-     * 
+     * Cloud PC user settings.
      */
     @SerializedName(value = "userSettings", alternate = {"UserSettings"})
     @Expose

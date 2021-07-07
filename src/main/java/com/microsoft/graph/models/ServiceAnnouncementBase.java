@@ -29,7 +29,7 @@ public class ServiceAnnouncementBase extends Entity implements IJsonBackedObject
 
     /**
      * The Details.
-     * 
+     * Additional details about service event. This property doesn't support filters.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -38,7 +38,7 @@ public class ServiceAnnouncementBase extends Entity implements IJsonBackedObject
 
     /**
      * The End Date Time.
-     * 
+     * The end time of the service event.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class ServiceAnnouncementBase extends Entity implements IJsonBackedObject
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The last modified time of the service event.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class ServiceAnnouncementBase extends Entity implements IJsonBackedObject
 
     /**
      * The Start Date Time.
-     * 
+     * The start time of the service event.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class ServiceAnnouncementBase extends Entity implements IJsonBackedObject
 
     /**
      * The Title.
-     * 
+     * The title of the service event.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

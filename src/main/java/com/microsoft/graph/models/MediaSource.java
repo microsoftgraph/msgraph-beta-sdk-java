@@ -40,7 +40,7 @@ public class MediaSource implements IJsonBackedObject {
 
     /**
      * The Content Category.
-     * 
+     * Enumeration value that indicates the media content category.
      */
     @SerializedName(value = "contentCategory", alternate = {"ContentCategory"})
     @Expose

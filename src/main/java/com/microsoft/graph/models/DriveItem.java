@@ -144,7 +144,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Media.
-     * 
+     * Information about the media (audio or video) item. Read-write. Only on OneDrive for Business and SharePoint.
      */
     @SerializedName(value = "media", alternate = {"Media"})
     @Expose
@@ -243,7 +243,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * Information about the drive item source. Read-only. Only on OneDrive for Business and SharePoint.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

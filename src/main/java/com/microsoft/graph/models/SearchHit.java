@@ -67,7 +67,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Result Template Id.
-     * 
+     * ID of the result template for rendering the search result. This ID must map to a display layout in the resultTemplates dictionary, included in the searchresponse as well.
      */
     @SerializedName(value = "resultTemplateId", alternate = {"ResultTemplateId"})
     @Expose

@@ -32,7 +32,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Action Required By Date Time.
-     * 
+     * The expected deadline of the action for the message.
      */
     @SerializedName(value = "actionRequiredByDateTime", alternate = {"ActionRequiredByDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Body.
-     * 
+     * The content type and content of the service message body.
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -50,7 +50,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Category.
-     * 
+     * The service message category. Possible values are: preventOrFixIssue, planForChange, stayInformed, unknownFutureValue.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -59,7 +59,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Is Major Change.
-     * 
+     * Indicates whether the message describes a major update for the service.
      */
     @SerializedName(value = "isMajorChange", alternate = {"IsMajorChange"})
     @Expose
@@ -68,7 +68,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Services.
-     * 
+     * The affected services by the service message.
      */
     @SerializedName(value = "services", alternate = {"Services"})
     @Expose
@@ -77,7 +77,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Severity.
-     * 
+     * The severity of the service message. Possible values are: normal, high, critical, unknownFutureValue.
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
@@ -86,7 +86,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The Tags.
-     * 
+     * A collection of tags for the service message.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -95,7 +95,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements IJs
 
     /**
      * The View Point.
-     * 
+     * Represents user view points data of the service message.
      */
     @SerializedName(value = "viewPoint", alternate = {"ViewPoint"})
     @Expose

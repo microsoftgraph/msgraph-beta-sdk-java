@@ -39,7 +39,7 @@ public class ServiceUpdateMessageViewpoint implements IJsonBackedObject {
 
     /**
      * The Is Archived.
-     * 
+     * Indicates whether the user archived the message.
      */
     @SerializedName(value = "isArchived", alternate = {"IsArchived"})
     @Expose
@@ -48,7 +48,7 @@ public class ServiceUpdateMessageViewpoint implements IJsonBackedObject {
 
     /**
      * The Is Favorited.
-     * 
+     * Indicates whether the user marked the message as favorite.
      */
     @SerializedName(value = "isFavorited", alternate = {"IsFavorited"})
     @Expose
@@ -57,7 +57,7 @@ public class ServiceUpdateMessageViewpoint implements IJsonBackedObject {
 
     /**
      * The Is Read.
-     * 
+     * Indicates whether the user read the message.
      */
     @SerializedName(value = "isRead", alternate = {"IsRead"})
     @Expose

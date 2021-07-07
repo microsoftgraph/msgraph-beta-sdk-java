@@ -7,36 +7,36 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum User Identity Type.
+ * The Enum Teamwork Application Identity Type.
 */
-public enum UserIdentityType
+public enum TeamworkApplicationIdentityType
 {
     /**
-    * aad User
+    * aad Application
     */
-    AAD_USER,
+    AAD_APPLICATION,
     /**
-    * on Premise Aad User
+    * bot
     */
-    ON_PREMISE_AAD_USER,
+    BOT,
     /**
-    * anonymous Guest
+    * tenant Bot
     */
-    ANONYMOUS_GUEST,
+    TENANT_BOT,
     /**
-    * federated User
+    * office365Connector
     */
-    FEDERATED_USER,
+    OFFICE365_CONNECTOR,
     /**
-    * personal Microsoft Account User
+    * outgoing Webhook
     */
-    PERSONAL_MICROSOFT_ACCOUNT_USER,
+    OUTGOING_WEBHOOK,
     /**
-    * skype User
+    * unknown Future Value
     */
-    SKYPE_USER,
+    UNKNOWN_FUTURE_VALUE,
     /**
-    * For UserIdentityType values that were not expected from the service
+    * For TeamworkApplicationIdentityType values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }
