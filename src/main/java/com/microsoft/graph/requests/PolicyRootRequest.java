@@ -33,6 +33,8 @@ import com.microsoft.graph.requests.DirectoryRoleAccessReviewPolicyRequestBuilde
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;

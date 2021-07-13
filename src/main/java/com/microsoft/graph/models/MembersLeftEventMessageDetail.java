@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.IdentitySet;
-import com.microsoft.graph.models.Identity;
+import com.microsoft.graph.models.TeamworkUserIdentity;
 import com.microsoft.graph.models.EventMessageDetail;
 
 
@@ -44,7 +44,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
 	@Nullable
-    public java.util.List<Identity> members;
+    public java.util.List<TeamworkUserIdentity> members;
 
 
     /**

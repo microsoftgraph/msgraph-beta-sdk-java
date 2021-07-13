@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.Identity;
+import com.microsoft.graph.models.TeamworkUserIdentity;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EventMessageDetail;
 
@@ -44,7 +44,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
     @SerializedName(value = "conversationMemberUser", alternate = {"ConversationMemberUser"})
     @Expose
 	@Nullable
-    public Identity conversationMemberUser;
+    public TeamworkUserIdentity conversationMemberUser;
 
     /**
      * The Initiator.

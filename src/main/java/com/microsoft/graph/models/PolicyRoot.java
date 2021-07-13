@@ -25,6 +25,7 @@ import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.DirectoryRoleAccessReviewPolicy;
 import com.microsoft.graph.models.ConditionalAccessPolicy;
 import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
+import com.microsoft.graph.models.MobilityManagementPolicy;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage;
@@ -36,6 +37,7 @@ import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage;
+import com.microsoft.graph.requests.MobilityManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionPage;
 
@@ -212,6 +214,24 @@ public class PolicyRoot implements IJsonBackedObject {
     public IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
 
     /**
+     * The Mobile App Management Policies.
+     * 
+     */
+    @SerializedName(value = "mobileAppManagementPolicies", alternate = {"MobileAppManagementPolicies"})
+    @Expose
+	@Nullable
+    public MobilityManagementPolicyCollectionPage mobileAppManagementPolicies;
+
+    /**
+     * The Mobile Device Management Policies.
+     * 
+     */
+    @SerializedName(value = "mobileDeviceManagementPolicies", alternate = {"MobileDeviceManagementPolicies"})
+    @Expose
+	@Nullable
+    public MobilityManagementPolicyCollectionPage mobileDeviceManagementPolicies;
+
+    /**
      * The Role Management Policies.
      * 
      */
@@ -273,6 +293,14 @@ public class PolicyRoot implements IJsonBackedObject {
 
         if (json.has("conditionalAccessPolicies")) {
             conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies"), ConditionalAccessPolicyCollectionPage.class);
+        }
+
+        if (json.has("mobileAppManagementPolicies")) {
+            mobileAppManagementPolicies = serializer.deserializeObject(json.get("mobileAppManagementPolicies"), MobilityManagementPolicyCollectionPage.class);
+        }
+
+        if (json.has("mobileDeviceManagementPolicies")) {
+            mobileDeviceManagementPolicies = serializer.deserializeObject(json.get("mobileDeviceManagementPolicies"), MobilityManagementPolicyCollectionPage.class);
         }
 
         if (json.has("roleManagementPolicies")) {

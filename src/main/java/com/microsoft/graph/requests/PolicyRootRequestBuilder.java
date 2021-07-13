@@ -33,6 +33,8 @@ import com.microsoft.graph.requests.DirectoryRoleAccessReviewPolicyRequestBuilde
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
@@ -334,6 +336,46 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MobilityManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobilityManagementPolicyCollectionRequestBuilder mobileAppManagementPolicies() {
+        return new MobilityManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MobilityManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobilityManagementPolicyRequestBuilder mobileAppManagementPolicies(@Nonnull final String id) {
+        return new MobilityManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppManagementPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MobilityManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobilityManagementPolicyCollectionRequestBuilder mobileDeviceManagementPolicies() {
+        return new MobilityManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileDeviceManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MobilityManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobilityManagementPolicyRequestBuilder mobileDeviceManagementPolicies(@Nonnull final String id) {
+        return new MobilityManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mobileDeviceManagementPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleManagementPolicy collection

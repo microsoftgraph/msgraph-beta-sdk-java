@@ -109,6 +109,8 @@ import com.microsoft.graph.requests.RiskDetectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.RiskDetectionRequestBuilder;
 import com.microsoft.graph.requests.RiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.RiskyUserRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.GovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.GovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
@@ -1397,6 +1399,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
         return new RiskyUserRequestBuilder(getServiceRoot() + "/riskyUsers/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of MobilityManagementPolicies objects
+     *
+     * @return the request builder for the collection of MobilityManagementPolicies objects
+     */
+    @Nonnull
+    public MobilityManagementPolicyCollectionRequestBuilder mobilityManagementPolicies() {
+        return new MobilityManagementPolicyCollectionRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies", this, null);
+    }
+
+    /**
+     * Gets a single MobilityManagementPolicies
+     *
+     * @param id the id of the MobilityManagementPolicies to retrieve
+     * @return the request builder for the MobilityManagementPolicies object
+     */
+    @Nonnull
+    public MobilityManagementPolicyRequestBuilder mobilityManagementPolicies(@Nonnull final String id) {
+        return new MobilityManagementPolicyRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies/" + id, this, null);
     }
 
     /**

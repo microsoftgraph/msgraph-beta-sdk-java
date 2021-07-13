@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.TeamworkCallEventType;
 import com.microsoft.graph.models.CallParticipantInfo;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EventMessageDetail;
@@ -36,6 +37,15 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
     @Expose
 	@Nullable
     public javax.xml.datatype.Duration callDuration;
+
+    /**
+     * The Call Event Type.
+     * 
+     */
+    @SerializedName(value = "callEventType", alternate = {"CallEventType"})
+    @Expose
+	@Nullable
+    public TeamworkCallEventType callEventType;
 
     /**
      * The Call Id.

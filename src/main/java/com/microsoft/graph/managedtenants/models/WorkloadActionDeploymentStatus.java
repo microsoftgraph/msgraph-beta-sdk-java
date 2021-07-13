@@ -41,7 +41,7 @@ public class WorkloadActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Action Id.
-     * 
+     * The unique identifier for the workload action. Required. Read-only.
      */
     @SerializedName(value = "actionId", alternate = {"ActionId"})
     @Expose
@@ -50,7 +50,7 @@ public class WorkloadActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Deployed Policy Id.
-     * 
+     * The identifier of any policy that was created by applying the workload action. Optional. Read-only.
      */
     @SerializedName(value = "deployedPolicyId", alternate = {"DeployedPolicyId"})
     @Expose
@@ -59,7 +59,7 @@ public class WorkloadActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Error.
-     * 
+     * The detailed information for exceptions that occur when deploying the workload action. Optional. Required.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -68,7 +68,7 @@ public class WorkloadActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Last Deployment Date Time.
-     * 
+     * The date and time the workload action was last deployed. Optional.
      */
     @SerializedName(value = "lastDeploymentDateTime", alternate = {"LastDeploymentDateTime"})
     @Expose
@@ -77,7 +77,7 @@ public class WorkloadActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the workload action deployment. Possible values are: toAddress, completed, error, timeOut, inProgress, unknownFutureValue. Required. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

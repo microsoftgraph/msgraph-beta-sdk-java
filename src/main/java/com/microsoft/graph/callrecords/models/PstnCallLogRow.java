@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.callrecords.models.PstnCallDurationSource;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,15 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Call Duration Source.
+     * 
+     */
+    @SerializedName(value = "callDurationSource", alternate = {"CallDurationSource"})
+    @Expose
+	@Nullable
+    public PstnCallDurationSource callDurationSource;
 
     /**
      * The Callee Number.
@@ -171,6 +181,15 @@ public class PstnCallLogRow implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String licenseCapability;
+
+    /**
+     * The Operator.
+     * 
+     */
+    @SerializedName(value = "operator", alternate = {"Operator"})
+    @Expose
+	@Nullable
+    public String operator;
 
     /**
      * The Start Date Time.

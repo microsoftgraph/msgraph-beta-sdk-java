@@ -64,7 +64,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Identity Providers.
-     * The identity providers included in the user flow.
+     * 
      */
 	@Nullable
     public IdentityProviderCollectionPage identityProviders;

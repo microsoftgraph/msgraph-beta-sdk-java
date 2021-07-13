@@ -39,7 +39,7 @@ public class ManagedTenantOperationError implements IJsonBackedObject {
 
     /**
      * The Error.
-     * 
+     * The error message for the exception.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -48,7 +48,7 @@ public class ManagedTenantOperationError implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

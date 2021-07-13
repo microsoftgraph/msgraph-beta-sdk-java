@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.TeamworkCallEventType;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EventMessageDetail;
 
@@ -25,6 +26,15 @@ import javax.annotation.Nonnull;
  */
 public class CallStartedEventMessageDetail extends EventMessageDetail implements IJsonBackedObject {
 
+
+    /**
+     * The Call Event Type.
+     * 
+     */
+    @SerializedName(value = "callEventType", alternate = {"CallEventType"})
+    @Expose
+	@Nullable
+    public TeamworkCallEventType callEventType;
 
     /**
      * The Call Id.

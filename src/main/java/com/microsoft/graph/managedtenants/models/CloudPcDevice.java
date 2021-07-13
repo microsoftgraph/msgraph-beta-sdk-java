@@ -27,7 +27,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Status.
-     * 
+     * The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
      */
     @SerializedName(value = "cloudPcStatus", alternate = {"CloudPcStatus"})
     @Expose
@@ -36,7 +36,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the cloud PC. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -54,7 +54,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Id.
-     * 
+     * The managed device identifier for the cloud PC. Optional. Read-only.
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -63,7 +63,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Name.
-     * 
+     * The managed device display name for the cloud PC. Optional. Read-only.
      */
     @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose
@@ -72,7 +72,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Provisioning Policy Id.
-     * 
+     * The provisioning policy identifier for the cloud PC. Required. Read-only.
      */
     @SerializedName(value = "provisioningPolicyId", alternate = {"ProvisioningPolicyId"})
     @Expose
@@ -81,7 +81,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plan Name.
-     * 
+     * The service plan name for the cloud PC. Required. Read-only.
      */
     @SerializedName(value = "servicePlanName", alternate = {"ServicePlanName"})
     @Expose
@@ -90,7 +90,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -99,7 +99,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -108,7 +108,7 @@ public class CloudPcDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (UPN) of the user assigned to the cloud PC. Required. Read-only.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

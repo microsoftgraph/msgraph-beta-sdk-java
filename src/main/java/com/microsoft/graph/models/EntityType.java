@@ -48,6 +48,10 @@ public enum EntityType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * person
+    */
+    PERSON,
+    /**
     * For EntityType values that were not expected from the service
     */
     UNEXPECTED_VALUE

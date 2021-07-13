@@ -120,6 +120,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     PERMISSION_CHECK_NO_V_NET_CONTRIBUTOR_ROLE,
     /**
+    * permission Check No Resource Group Network Contributor Role
+    */
+    PERMISSION_CHECK_NO_RESOURCE_GROUP_NETWORK_CONTRIBUTOR_ROLE,
+    /**
     * permission Check Unknown Error
     */
     PERMISSION_CHECK_UNKNOWN_ERROR,

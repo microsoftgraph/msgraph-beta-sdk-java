@@ -14,10 +14,12 @@ import com.microsoft.graph.models.AuthenticationDetail;
 import com.microsoft.graph.models.KeyValue;
 import com.microsoft.graph.models.AuthenticationRequirementPolicy;
 import com.microsoft.graph.models.ConditionalAccessStatus;
+import com.microsoft.graph.models.SignInAccessType;
 import com.microsoft.graph.models.DeviceDetail;
 import com.microsoft.graph.models.SignInLocation;
 import com.microsoft.graph.models.MfaDetail;
 import com.microsoft.graph.models.NetworkLocationDetail;
+import com.microsoft.graph.models.PrivateLinkDetails;
 import com.microsoft.graph.models.RiskDetail;
 import com.microsoft.graph.models.RiskEventType;
 import com.microsoft.graph.models.RiskLevel;
@@ -125,6 +127,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public java.util.List<AuthenticationRequirementPolicy> authenticationRequirementPolicies;
 
     /**
+     * The Autonomous System Number.
+     * 
+     */
+    @SerializedName(value = "autonomousSystemNumber", alternate = {"AutonomousSystemNumber"})
+    @Expose
+	@Nullable
+    public Integer autonomousSystemNumber;
+
+    /**
      * The Client App Used.
      * The legacy client used for sign-in activity. For example: Browser, Exchange Active Sync, Modern clients, IMAP, MAPI, SMTP, or POP. Supports $filter (eq operator only).
      */
@@ -159,6 +170,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime createdDateTime;
+
+    /**
+     * The Cross Tenant Access Type.
+     * 
+     */
+    @SerializedName(value = "crossTenantAccessType", alternate = {"CrossTenantAccessType"})
+    @Expose
+	@Nullable
+    public EnumSet<SignInAccessType> crossTenantAccessType;
 
     /**
      * The Device Detail.
@@ -215,6 +235,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public Boolean isInteractive;
 
     /**
+     * The Is Tenant Restricted.
+     * 
+     */
+    @SerializedName(value = "isTenantRestricted", alternate = {"IsTenantRestricted"})
+    @Expose
+	@Nullable
+    public Boolean isTenantRestricted;
+
+    /**
      * The Location.
      * The city, state, and 2 letter country code from where the sign-in occurred. Supports $filter (eq and startsWith operators only) on city, state, and countryOrRegion properties.
      */
@@ -249,6 +278,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String originalRequestId;
+
+    /**
+     * The Private Link Details.
+     * 
+     */
+    @SerializedName(value = "privateLinkDetails", alternate = {"PrivateLinkDetails"})
+    @Expose
+	@Nullable
+    public PrivateLinkDetails privateLinkDetails;
 
     /**
      * The Processing Time In Milliseconds.
@@ -339,6 +377,24 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RiskState riskState;
+
+    /**
+     * The Service Principal Credential Key Id.
+     * 
+     */
+    @SerializedName(value = "servicePrincipalCredentialKeyId", alternate = {"ServicePrincipalCredentialKeyId"})
+    @Expose
+	@Nullable
+    public String servicePrincipalCredentialKeyId;
+
+    /**
+     * The Service Principal Credential Thumbprint.
+     * 
+     */
+    @SerializedName(value = "servicePrincipalCredentialThumbprint", alternate = {"ServicePrincipalCredentialThumbprint"})
+    @Expose
+	@Nullable
+    public String servicePrincipalCredentialThumbprint;
 
     /**
      * The Service Principal Id.

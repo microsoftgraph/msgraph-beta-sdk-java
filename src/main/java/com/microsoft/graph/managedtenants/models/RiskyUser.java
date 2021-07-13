@@ -27,7 +27,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Deleted.
-     * 
+     * A flag indicating whether the account has been deleted. Optional. Read-only.
      */
     @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
@@ -36,7 +36,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * 
+     * The risk details for the account flagged for risk. Optional. Read-only.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -54,7 +54,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Last Updated Date Time.
-     * 
+     * The date and time when the risk information was last updated. Optional. Read-only.
      */
     @SerializedName(value = "riskLastUpdatedDateTime", alternate = {"RiskLastUpdatedDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level.
-     * 
+     * The level of risk that was detected. Possible values are: low, medium, high, hidden, none, unknownFutureValue. Optional. Read-only.
      */
     @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose
@@ -72,7 +72,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk State.
-     * 
+     * The state of risk that was detected. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue. Optional. Read-only.
      */
     @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
@@ -81,7 +81,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -90,7 +90,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -99,7 +99,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * The display name for the account where risk was detected. Optional. Read-only.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -108,7 +108,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * The identifier for the user account where risk was detected. Required. Read-only.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -117,7 +117,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (UPN) for the account where risk was detected. Optional. Read-only.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
