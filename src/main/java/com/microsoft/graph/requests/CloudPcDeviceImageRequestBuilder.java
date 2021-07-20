@@ -57,4 +57,13 @@ public class CloudPcDeviceImageRequestBuilder extends BaseRequestBuilder<CloudPc
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CloudPcDeviceImageReuploadRequestBuilder reupload() {
+        return new CloudPcDeviceImageReuploadRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reupload"), getClient(), null);
+    }
 }

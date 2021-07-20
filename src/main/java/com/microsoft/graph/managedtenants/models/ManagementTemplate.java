@@ -31,7 +31,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -40,7 +40,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description for the management template. Optional. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the management template. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Parameters.
-     * 
+     * The collection of parameters used by the management template. Optional. Read-only.
      */
     @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
@@ -67,7 +67,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Workload Actions.
-     * 
+     * The collection of workload actions associated with the management template. Optional. Read-only.
      */
     @SerializedName(value = "workloadActions", alternate = {"WorkloadActions"})
     @Expose

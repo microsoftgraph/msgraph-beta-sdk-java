@@ -12,6 +12,8 @@ import com.microsoft.graph.models.Credential;
 import com.microsoft.graph.models.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.models.SelfSignedCertificate;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AppManagementPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;

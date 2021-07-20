@@ -40,7 +40,7 @@ public class TenantRelationship implements IJsonBackedObject {
 
     /**
      * The Managed Tenants.
-     * 
+     * The operations available to interact with the multi-tenant management platform.
      */
     @SerializedName(value = "managedTenants", alternate = {"ManagedTenants"})
     @Expose

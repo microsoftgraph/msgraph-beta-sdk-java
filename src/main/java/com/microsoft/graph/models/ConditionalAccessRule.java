@@ -96,6 +96,14 @@ public enum ConditionalAccessRule
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * device Filter Include Rule Not Matched
+    */
+    DEVICE_FILTER_INCLUDE_RULE_NOT_MATCHED,
+    /**
+    * all Device States
+    */
+    ALL_DEVICE_STATES,
+    /**
     * For ConditionalAccessRule values that were not expected from the service
     */
     UNEXPECTED_VALUE

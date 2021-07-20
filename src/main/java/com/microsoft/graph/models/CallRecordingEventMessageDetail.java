@@ -29,7 +29,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Call Id.
-     * 
+     * Unique identifier of the call.
      */
     @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
@@ -38,7 +38,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Call Recording Display Name.
-     * 
+     * Display name for the call recording.
      */
     @SerializedName(value = "callRecordingDisplayName", alternate = {"CallRecordingDisplayName"})
     @Expose
@@ -47,7 +47,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Call Recording Duration.
-     * 
+     * Duration of the call recording.
      */
     @SerializedName(value = "callRecordingDuration", alternate = {"CallRecordingDuration"})
     @Expose
@@ -56,7 +56,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Call Recording Status.
-     * 
+     * Status of the call recording. Possible values are: success, failure, initial, chunkFinished, unknownFutureValue.
      */
     @SerializedName(value = "callRecordingStatus", alternate = {"CallRecordingStatus"})
     @Expose
@@ -65,7 +65,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Call Recording Url.
-     * 
+     * Call recording URL.
      */
     @SerializedName(value = "callRecordingUrl", alternate = {"CallRecordingUrl"})
     @Expose
@@ -74,7 +74,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -83,7 +83,7 @@ public class CallRecordingEventMessageDetail extends EventMessageDetail implemen
 
     /**
      * The Meeting Organizer.
-     * 
+     * Organizer of the meeting.
      */
     @SerializedName(value = "meetingOrganizer", alternate = {"MeetingOrganizer"})
     @Expose

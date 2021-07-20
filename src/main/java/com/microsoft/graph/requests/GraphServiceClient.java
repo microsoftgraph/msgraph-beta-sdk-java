@@ -67,8 +67,6 @@ import com.microsoft.graph.requests.DirectorySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectorySettingRequestBuilder;
 import com.microsoft.graph.requests.SubscribedSkuCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscribedSkuRequestBuilder;
-import com.microsoft.graph.requests.DriveItemCollectionRequestBuilder;
-import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.PlaceCollectionRequestBuilder;
 import com.microsoft.graph.requests.PlaceRequestBuilder;
 import com.microsoft.graph.requests.DriveCollectionRequestBuilder;
@@ -109,6 +107,8 @@ import com.microsoft.graph.requests.RiskDetectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.RiskDetectionRequestBuilder;
 import com.microsoft.graph.requests.RiskyUserCollectionRequestBuilder;
 import com.microsoft.graph.requests.RiskyUserRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.GovernanceResourceCollectionRequestBuilder;
 import com.microsoft.graph.requests.GovernanceResourceRequestBuilder;
 import com.microsoft.graph.requests.GovernanceRoleAssignmentRequestCollectionRequestBuilder;
@@ -959,27 +959,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
-     * Gets the collection of Workbooks objects
-     *
-     * @return the request builder for the collection of Workbooks objects
-     */
-    @Nonnull
-    public DriveItemCollectionRequestBuilder workbooks() {
-        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
-    }
-
-    /**
-     * Gets a single Workbooks
-     *
-     * @param id the id of the Workbooks to retrieve
-     * @return the request builder for the Workbooks object
-     */
-    @Nonnull
-    public DriveItemRequestBuilder workbooks(@Nonnull final String id) {
-        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
-    }
-
-    /**
      * Gets the collection of Places objects
      *
      * @return the request builder for the collection of Places objects
@@ -1397,6 +1376,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
         return new RiskyUserRequestBuilder(getServiceRoot() + "/riskyUsers/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of MobilityManagementPolicies objects
+     *
+     * @return the request builder for the collection of MobilityManagementPolicies objects
+     */
+    @Nonnull
+    public MobilityManagementPolicyCollectionRequestBuilder mobilityManagementPolicies() {
+        return new MobilityManagementPolicyCollectionRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies", this, null);
+    }
+
+    /**
+     * Gets a single MobilityManagementPolicies
+     *
+     * @param id the id of the MobilityManagementPolicies to retrieve
+     * @return the request builder for the MobilityManagementPolicies object
+     */
+    @Nonnull
+    public MobilityManagementPolicyRequestBuilder mobilityManagementPolicies(@Nonnull final String id) {
+        return new MobilityManagementPolicyRequestBuilder(getServiceRoot() + "/mobilityManagementPolicies/" + id, this, null);
     }
 
     /**

@@ -39,7 +39,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Configuration.
-     * Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
+     * 
      */
     @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
@@ -48,7 +48,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the connection displayed in the Microsoft 365 admin center. Optional.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -57,7 +57,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -66,7 +66,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Indicates the current state of the connection. Possible values are draft, ready, obsolete, and limitExceeded. Required.
+     * 
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -86,7 +86,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Items.
-     * Read-only. Nullable.
+     * 
      * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
     @Deprecated
@@ -97,7 +97,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * Read-only. Nullable.
+     * 
      * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
     @Deprecated
@@ -108,7 +108,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Schema.
-     * Read-only. Nullable.
+     * 
      * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
     @Deprecated

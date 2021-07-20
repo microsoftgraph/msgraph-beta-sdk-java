@@ -15,6 +15,10 @@ import com.microsoft.graph.requests.AccessPackageAssignmentPolicyRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageCatalogWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageResourceRoleScopeCollectionRequestBuilder;
 import com.microsoft.graph.requests.AccessPackageResourceRoleScopeRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AccessPackageWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.GroupCollectionRequestBuilder;
+import com.microsoft.graph.requests.GroupRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -112,6 +116,66 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder<AccessPackag
     @Nonnull
     public AccessPackageResourceRoleScopeRequestBuilder accessPackageResourceRoleScopes(@Nonnull final String id) {
         return new AccessPackageResourceRoleScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceRoleScopes") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageCollectionWithReferencesRequestBuilder accessPackagesIncompatibleWith() {
+        return new AccessPackageCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackagesIncompatibleWith"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageWithReferenceRequestBuilder accessPackagesIncompatibleWith(@Nonnull final String id) {
+        return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackagesIncompatibleWith") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AccessPackage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AccessPackageCollectionWithReferencesRequestBuilder incompatibleAccessPackages() {
+        return new AccessPackageCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleAccessPackages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AccessPackage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AccessPackageWithReferenceRequestBuilder incompatibleAccessPackages(@Nonnull final String id) {
+        return new AccessPackageWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleAccessPackages") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Group collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GroupCollectionRequestBuilder incompatibleGroups() {
+        return new GroupCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleGroups"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Group item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GroupRequestBuilder incompatibleGroups(@Nonnull final String id) {
+        return new GroupRequestBuilder(getRequestUrlWithAdditionalSegment("incompatibleGroups") + "/" + id, getClient(), null);
     }
 
     /**

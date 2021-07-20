@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.TeamworkCallEventType;
 import com.microsoft.graph.models.CallParticipantInfo;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EventMessageDetail;
@@ -30,7 +31,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Call Duration.
-     * 
+     * Duration of the call.
      */
     @SerializedName(value = "callDuration", alternate = {"CallDuration"})
     @Expose
@@ -38,8 +39,17 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
     public javax.xml.datatype.Duration callDuration;
 
     /**
+     * The Call Event Type.
+     * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     */
+    @SerializedName(value = "callEventType", alternate = {"CallEventType"})
+    @Expose
+	@Nullable
+    public TeamworkCallEventType callEventType;
+
+    /**
      * The Call Id.
-     * 
+     * Unique identifier of the call.
      */
     @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
@@ -48,7 +58,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Call Participants.
-     * 
+     * List of call participants.
      */
     @SerializedName(value = "callParticipants", alternate = {"CallParticipants"})
     @Expose
@@ -57,7 +67,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements I
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

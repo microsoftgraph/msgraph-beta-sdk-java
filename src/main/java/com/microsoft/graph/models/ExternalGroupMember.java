@@ -31,8 +31,10 @@ public class ExternalGroupMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Identity Source.
-     * The identity source that the member belongs to. Possible values are: azureActiveDirectory, external.
+     * 
+     * @deprecated The property named 'IdentitySource' will be deprecated in September 2021, please see the updated aclType usage.
      */
+    @Deprecated
     @SerializedName(value = "identitySource", alternate = {"IdentitySource"})
     @Expose
 	@Nullable
@@ -40,7 +42,7 @@ public class ExternalGroupMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of member added to the external group. Possible values are: user or group when the identitySource is azureActiveDirectory and just group when the identitySource is external.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

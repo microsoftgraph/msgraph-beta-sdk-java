@@ -32,7 +32,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description of the external group. Optional.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -41,7 +41,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The friendly name of the external group. Optional.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -50,7 +50,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * 
      * @deprecated The OData type annotation for this entity is being deprecated by Aug 2021. Please strip the @odata.type annotations for this specific entity from your request payloads before the deprecation date.
      */
     @Deprecated

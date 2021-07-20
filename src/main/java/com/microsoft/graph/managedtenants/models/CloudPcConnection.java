@@ -27,7 +27,7 @@ public class CloudPcConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the cloud PC connection. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class CloudPcConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Health Check Status.
-     * 
+     * The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
      */
     @SerializedName(value = "healthCheckStatus", alternate = {"HealthCheckStatus"})
     @Expose
@@ -45,7 +45,7 @@ public class CloudPcConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Required. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -54,7 +54,7 @@ public class CloudPcConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -63,7 +63,7 @@ public class CloudPcConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

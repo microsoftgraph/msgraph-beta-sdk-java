@@ -230,6 +230,7 @@ import com.microsoft.graph.requests.RoleScopeTagCollectionRequestBuilder;
 import com.microsoft.graph.requests.RoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerRequestBuilder;
+import com.microsoft.graph.requests.RemoteAssistanceSettingsRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolRequestBuilder;

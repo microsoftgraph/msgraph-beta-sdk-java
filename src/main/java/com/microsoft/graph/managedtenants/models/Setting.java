@@ -40,7 +40,7 @@ public class Setting implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the setting. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class Setting implements IJsonBackedObject {
 
     /**
      * The Json Value.
-     * 
+     * The value for the setting serialized as string of JSON. Required. Read-only.
      */
     @SerializedName(value = "jsonValue", alternate = {"JsonValue"})
     @Expose
@@ -58,7 +58,7 @@ public class Setting implements IJsonBackedObject {
 
     /**
      * The Overwrite Allowed.
-     * 
+     * A flag indicating whether the setting can be override existing configurations when applied. Required. Read-only.
      */
     @SerializedName(value = "overwriteAllowed", alternate = {"OverwriteAllowed"})
     @Expose
@@ -67,7 +67,7 @@ public class Setting implements IJsonBackedObject {
 
     /**
      * The Value Type.
-     * 
+     * The data type for the setting. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
      */
     @SerializedName(value = "valueType", alternate = {"ValueType"})
     @Expose

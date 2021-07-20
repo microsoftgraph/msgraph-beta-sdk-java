@@ -42,7 +42,7 @@ public class Acl implements IJsonBackedObject {
 
     /**
      * The Access Type.
-     * The access granted to the identity. Possible values are: grant, deny.
+     * 
      */
     @SerializedName(value = "accessType", alternate = {"AccessType"})
     @Expose
@@ -51,8 +51,10 @@ public class Acl implements IJsonBackedObject {
 
     /**
      * The Identity Source.
-     * The source of identity. Possible values are azureActiveDirectory or external.
+     * 
+     * @deprecated The property named 'IdentitySource' will be deprecated in September 2021, please see the updated aclType usage.
      */
+    @Deprecated
     @SerializedName(value = "identitySource", alternate = {"IdentitySource"})
     @Expose
 	@Nullable
@@ -60,7 +62,7 @@ public class Acl implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of identity. Possible values are: user, group, everyone, everyoneExceptGuests if the identitySource is azureActiveDirectory and just group if the identitySource is external.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -69,7 +71,7 @@ public class Acl implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

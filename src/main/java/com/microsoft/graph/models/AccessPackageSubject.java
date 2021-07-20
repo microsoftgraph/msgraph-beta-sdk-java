@@ -37,7 +37,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Connected Organization Id.
-     * 
+     * The identifier of the connected organization of the subject.
      */
     @SerializedName(value = "connectedOrganizationId", alternate = {"ConnectedOrganizationId"})
     @Expose
@@ -64,7 +64,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Object Id.
-     * The object ID of the subject.
+     * The object identifier of the subject. null if the subject is not yet a user in the tenant.
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
@@ -100,7 +100,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Connected Organization.
-     * 
+     * The connected organization of the subject. Read-only. Nullable.
      */
     @SerializedName(value = "connectedOrganization", alternate = {"ConnectedOrganization"})
     @Expose

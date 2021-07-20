@@ -40,7 +40,7 @@ public class CallParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Participant.
-     * 
+     * Identity of the call participant.
      */
     @SerializedName(value = "participant", alternate = {"Participant"})
     @Expose

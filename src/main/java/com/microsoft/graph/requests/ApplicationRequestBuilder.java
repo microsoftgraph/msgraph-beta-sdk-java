@@ -11,6 +11,8 @@ import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AppManagementPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ExtensionPropertyRequestBuilder;
@@ -33,6 +35,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.ApplicationSetVerifiedPublisherParameterSet;
 import com.microsoft.graph.models.ApplicationAddKeyParameterSet;
 import com.microsoft.graph.models.ApplicationAddPasswordParameterSet;
 import com.microsoft.graph.models.ApplicationRemoveKeyParameterSet;
@@ -83,6 +86,26 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
     }
 
 
+    /**
+     *  Gets a request builder for the AppManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppManagementPolicyCollectionWithReferencesRequestBuilder appManagementPolicies() {
+        return new AppManagementPolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AppManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppManagementPolicyWithReferenceRequestBuilder appManagementPolicies(@Nonnull final String id) {
+        return new AppManagementPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for DirectoryObject
@@ -302,6 +325,25 @@ public class ApplicationRequestBuilder extends BaseRequestBuilder<Application> {
     @Nonnull
     public ApplicationLogoStreamRequestBuilder logo() {
         return new ApplicationLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("logo"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ApplicationSetVerifiedPublisherRequestBuilder setVerifiedPublisher(@Nonnull final ApplicationSetVerifiedPublisherParameterSet parameters) {
+        return new ApplicationSetVerifiedPublisherRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.setVerifiedPublisher"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ApplicationUnsetVerifiedPublisherRequestBuilder unsetVerifiedPublisher() {
+        return new ApplicationUnsetVerifiedPublisherRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unsetVerifiedPublisher"), getClient(), null);
     }
 
     /**
