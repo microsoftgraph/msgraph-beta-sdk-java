@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.TeamworkCallEventType;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.EventMessageDetail;
 
@@ -27,8 +28,17 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
 
 
     /**
+     * The Call Event Type.
+     * Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
+     */
+    @SerializedName(value = "callEventType", alternate = {"CallEventType"})
+    @Expose
+	@Nullable
+    public TeamworkCallEventType callEventType;
+
+    /**
      * The Call Id.
-     * 
+     * Unique identifier of the call.
      */
     @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
@@ -37,7 +47,7 @@ public class CallStartedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

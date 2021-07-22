@@ -31,7 +31,7 @@ public class Schema extends Entity implements IJsonBackedObject {
 
     /**
      * The Base Type.
-     * Must be set to microsoft.graph.externalItem. Required.
+     * 
      */
     @SerializedName(value = "baseType", alternate = {"BaseType"})
     @Expose
@@ -40,7 +40,7 @@ public class Schema extends Entity implements IJsonBackedObject {
 
     /**
      * The Properties.
-     * The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
+     * 
      */
     @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose

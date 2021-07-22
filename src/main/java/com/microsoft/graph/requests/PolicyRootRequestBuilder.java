@@ -13,10 +13,13 @@ import com.microsoft.graph.requests.AuthenticationFlowsPolicyRequestBuilder;
 import com.microsoft.graph.requests.B2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyRequestBuilder;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.AppManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.AuthorizationPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyRequestBuilder;
+import com.microsoft.graph.requests.TenantAppManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.PermissionGrantPolicyCollectionRequestBuilder;
@@ -33,6 +36,8 @@ import com.microsoft.graph.requests.DirectoryRoleAccessReviewPolicyRequestBuilde
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ConditionalAccessPolicyRequestBuilder;
 import com.microsoft.graph.requests.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.MobilityManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyRequestBuilder;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionRequestBuilder;
@@ -136,6 +141,26 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
         return new ActivityBasedTimeoutPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("activityBasedTimeoutPolicies") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the AppManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppManagementPolicyCollectionRequestBuilder appManagementPolicies() {
+        return new AppManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AppManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppManagementPolicyRequestBuilder appManagementPolicies(@Nonnull final String id) {
+        return new AppManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AuthorizationPolicy collection
      *
      * @return the collection request builder
@@ -174,6 +199,16 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public ClaimsMappingPolicyRequestBuilder claimsMappingPolicies(@Nonnull final String id) {
         return new ClaimsMappingPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("claimsMappingPolicies") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for TenantAppManagementPolicy
+     *
+     * @return the TenantAppManagementPolicyRequestBuilder instance
+     */
+    @Nonnull
+    public TenantAppManagementPolicyRequestBuilder defaultAppManagementPolicy() {
+        return new TenantAppManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("defaultAppManagementPolicy"), getClient(), null);
     }
     /**
      *  Gets a request builder for the HomeRealmDiscoveryPolicy collection
@@ -334,6 +369,46 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public IdentitySecurityDefaultsEnforcementPolicyRequestBuilder identitySecurityDefaultsEnforcementPolicy() {
         return new IdentitySecurityDefaultsEnforcementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("identitySecurityDefaultsEnforcementPolicy"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MobilityManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobilityManagementPolicyCollectionRequestBuilder mobileAppManagementPolicies() {
+        return new MobilityManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MobilityManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobilityManagementPolicyRequestBuilder mobileAppManagementPolicies(@Nonnull final String id) {
+        return new MobilityManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mobileAppManagementPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MobilityManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public MobilityManagementPolicyCollectionRequestBuilder mobileDeviceManagementPolicies() {
+        return new MobilityManagementPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileDeviceManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MobilityManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public MobilityManagementPolicyRequestBuilder mobileDeviceManagementPolicies(@Nonnull final String id) {
+        return new MobilityManagementPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("mobileDeviceManagementPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UnifiedRoleManagementPolicy collection

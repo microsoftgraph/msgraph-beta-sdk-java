@@ -46,7 +46,7 @@ public class AccessPackageResourceRole extends Entity implements IJsonBackedObje
 
     /**
      * The Origin Id.
-     * The unique identifier of the resource role in the origin system.
+     * The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
      */
     @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose

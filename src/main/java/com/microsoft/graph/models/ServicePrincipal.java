@@ -17,6 +17,7 @@ import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PermissionScope;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
+import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.AppRoleAssignment;
 import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.DirectoryObject;
@@ -28,6 +29,7 @@ import com.microsoft.graph.models.OAuth2PermissionGrant;
 import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.Synchronization;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
@@ -65,7 +67,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Account Enabled.
-     * true if the service principal account is enabled; otherwise, false.
+     * true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, NOT, in).
      */
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
@@ -83,7 +85,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Alternative Names.
-     * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+     * Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "alternativeNames", alternate = {"AlternativeNames"})
     @Expose
@@ -119,7 +121,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Application Template Id.
-     * Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only.
+     * Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).
      */
     @SerializedName(value = "applicationTemplateId", alternate = {"ApplicationTemplateId"})
     @Expose
@@ -128,7 +130,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Owner Organization Id.
-     * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.
+     * Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
      */
     @SerializedName(value = "appOwnerOrganizationId", alternate = {"AppOwnerOrganizationId"})
     @Expose
@@ -137,7 +139,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Role Assignment Required.
-     * Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable.
+     * Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).
      */
     @SerializedName(value = "appRoleAssignmentRequired", alternate = {"AppRoleAssignmentRequired"})
     @Expose
@@ -155,7 +157,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Description.
-     * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters.
+     * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -164,7 +166,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Disabled By Microsoft Status.
-     * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+     * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, NOT).
      */
     @SerializedName(value = "disabledByMicrosoftStatus", alternate = {"DisabledByMicrosoftStatus"})
     @Expose
@@ -173,7 +175,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * The display name for the service principal.
+     * The display name for the service principal. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -200,7 +202,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Info.
-     * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps.
+     * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -209,7 +211,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Key Credentials.
-     * The collection of key credentials associated with the service principal. Not nullable.
+     * The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, NOT, ge, le).
      */
     @SerializedName(value = "keyCredentials", alternate = {"KeyCredentials"})
     @Expose
@@ -335,7 +337,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Service Principal Names.
-     * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.
+     * Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "servicePrincipalNames", alternate = {"ServicePrincipalNames"})
     @Expose
@@ -362,7 +364,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Tags.
-     * Custom strings that can be used to categorize and identify the service principal. Not nullable.
+     * Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, NOT, ge, le, startsWith).
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -379,8 +381,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public java.util.UUID tokenEncryptionKeyId;
 
     /**
+     * The App Management Policies.
+     * 
+     */
+	@Nullable
+    public AppManagementPolicyCollectionPage appManagementPolicies;
+
+    /**
      * The App Role Assigned To.
-     * App role assignments for this app or service, granted to users, groups, and other service principals.
+     * App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
      */
     @SerializedName(value = "appRoleAssignedTo", alternate = {"AppRoleAssignedTo"})
     @Expose
@@ -389,7 +398,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Role Assignments.
-     * App role assignment for another app or service, granted to this service principal.
+     * App role assignment for another app or service, granted to this service principal. Supports $expand.
      */
     @SerializedName(value = "appRoleAssignments", alternate = {"AppRoleAssignments"})
     @Expose
@@ -398,7 +407,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Claims Mapping Policies.
-     * The claimsMappingPolicies assigned to this service principal.
+     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
     public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
@@ -412,7 +421,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Delegated Permission Classifications.
-     * The permission classifications for delegated permissions exposed by the app that this service principal represents.
+     * The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
      */
     @SerializedName(value = "delegatedPermissionClassifications", alternate = {"DelegatedPermissionClassifications"})
     @Expose
@@ -430,7 +439,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Home Realm Discovery Policies.
-     * The homeRealmDiscoveryPolicies assigned to this service principal.
+     * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
     public HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
@@ -446,7 +455,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Member Of.
-     * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable.
+     * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage memberOf;
@@ -460,28 +469,28 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by this service principal. Read-only. Nullable.
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Owners.
-     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.
+     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage owners;
 
     /**
      * The Token Issuance Policies.
-     * The tokenIssuancePolicies assigned to this service principal.
+     * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
     public TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
-     * The tokenLifetimePolicies assigned to this service principal.
+     * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
@@ -511,6 +520,10 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("appManagementPolicies")) {
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), AppManagementPolicyCollectionPage.class);
+        }
 
         if (json.has("appRoleAssignedTo")) {
             appRoleAssignedTo = serializer.deserializeObject(json.get("appRoleAssignedTo"), AppRoleAssignmentCollectionPage.class);

@@ -30,7 +30,7 @@ public class TenantGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The All Tenants Included.
-     * 
+     * A flag indicating whether all managed tenant are included in the tenant group. Required. Read-only.
      */
     @SerializedName(value = "allTenantsIncluded", alternate = {"AllTenantsIncluded"})
     @Expose
@@ -39,7 +39,7 @@ public class TenantGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the tenant group. Optional. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class TenantGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Actions.
-     * 
+     * The collection of management action associated with the tenant group. Optional. Read-only.
      */
     @SerializedName(value = "managementActions", alternate = {"ManagementActions"})
     @Expose
@@ -57,7 +57,7 @@ public class TenantGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Intents.
-     * 
+     * The collection of management intents associated with the tenant group. Optional. Read-only.
      */
     @SerializedName(value = "managementIntents", alternate = {"ManagementIntents"})
     @Expose
@@ -66,7 +66,7 @@ public class TenantGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Ids.
-     * 
+     * The collection of managed tenant identifiers include in the tenant group. Optional. Read-only.
      */
     @SerializedName(value = "tenantIds", alternate = {"TenantIds"})
     @Expose

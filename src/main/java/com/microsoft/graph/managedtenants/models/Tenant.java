@@ -29,7 +29,7 @@ public class Tenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Contract.
-     * 
+     * The relationship details for the tenant with the managing entity.
      */
     @SerializedName(value = "contract", alternate = {"Contract"})
     @Expose
@@ -38,7 +38,7 @@ public class Tenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time the tenant was created in the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class Tenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the tenant. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class Tenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * 
+     * The date and time the tenant was last updated within the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class Tenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -74,7 +74,7 @@ public class Tenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Status Information.
-     * 
+     * The onboarding status information for the tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantStatusInformation", alternate = {"TenantStatusInformation"})
     @Expose

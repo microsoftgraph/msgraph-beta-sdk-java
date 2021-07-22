@@ -28,7 +28,7 @@ public class TeamUnarchivedEventMessageDetail extends EventMessageDetail impleme
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -37,7 +37,7 @@ public class TeamUnarchivedEventMessageDetail extends EventMessageDetail impleme
 
     /**
      * The Team Id.
-     * 
+     * Unique identifier of the team.
      */
     @SerializedName(value = "teamId", alternate = {"TeamId"})
     @Expose

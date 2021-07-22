@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ImplicitGrantSettings;
+import com.microsoft.graph.models.RedirectUriSettings;
 
 
 import com.google.gson.JsonObject;
@@ -83,6 +84,15 @@ public class WebApplication implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<String> redirectUris;
+
+    /**
+     * The Redirect Uri Settings.
+     * 
+     */
+    @SerializedName(value = "redirectUriSettings", alternate = {"RedirectUriSettings"})
+    @Expose
+	@Nullable
+    public java.util.List<RedirectUriSettings> redirectUriSettings;
 
 
     /**

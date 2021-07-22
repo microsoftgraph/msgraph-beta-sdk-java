@@ -13,8 +13,10 @@ import com.microsoft.graph.models.AuthenticationMethodsPolicy;
 import com.microsoft.graph.models.AuthenticationFlowsPolicy;
 import com.microsoft.graph.models.B2cAuthenticationMethodsPolicy;
 import com.microsoft.graph.models.ActivityBasedTimeoutPolicy;
+import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.AuthorizationPolicy;
 import com.microsoft.graph.models.ClaimsMappingPolicy;
+import com.microsoft.graph.models.TenantAppManagementPolicy;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.PermissionGrantPolicy;
 import com.microsoft.graph.models.TokenIssuancePolicy;
@@ -25,9 +27,11 @@ import com.microsoft.graph.models.AdminConsentRequestPolicy;
 import com.microsoft.graph.models.DirectoryRoleAccessReviewPolicy;
 import com.microsoft.graph.models.ConditionalAccessPolicy;
 import com.microsoft.graph.models.IdentitySecurityDefaultsEnforcementPolicy;
+import com.microsoft.graph.models.MobilityManagementPolicy;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicy;
 import com.microsoft.graph.models.UnifiedRoleManagementPolicyAssignment;
 import com.microsoft.graph.requests.ActivityBasedTimeoutPolicyCollectionPage;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.AuthorizationPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
@@ -36,6 +40,7 @@ import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 import com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage;
+import com.microsoft.graph.requests.MobilityManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.UnifiedRoleManagementPolicyAssignmentCollectionPage;
 
@@ -104,6 +109,15 @@ public class PolicyRoot implements IJsonBackedObject {
     public ActivityBasedTimeoutPolicyCollectionPage activityBasedTimeoutPolicies;
 
     /**
+     * The App Management Policies.
+     * 
+     */
+    @SerializedName(value = "appManagementPolicies", alternate = {"AppManagementPolicies"})
+    @Expose
+	@Nullable
+    public AppManagementPolicyCollectionPage appManagementPolicies;
+
+    /**
      * The Authorization Policy.
      * 
      */
@@ -120,6 +134,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+
+    /**
+     * The Default App Management Policy.
+     * 
+     */
+    @SerializedName(value = "defaultAppManagementPolicy", alternate = {"DefaultAppManagementPolicy"})
+    @Expose
+	@Nullable
+    public TenantAppManagementPolicy defaultAppManagementPolicy;
 
     /**
      * The Home Realm Discovery Policies.
@@ -212,6 +235,24 @@ public class PolicyRoot implements IJsonBackedObject {
     public IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
 
     /**
+     * The Mobile App Management Policies.
+     * 
+     */
+    @SerializedName(value = "mobileAppManagementPolicies", alternate = {"MobileAppManagementPolicies"})
+    @Expose
+	@Nullable
+    public MobilityManagementPolicyCollectionPage mobileAppManagementPolicies;
+
+    /**
+     * The Mobile Device Management Policies.
+     * 
+     */
+    @SerializedName(value = "mobileDeviceManagementPolicies", alternate = {"MobileDeviceManagementPolicies"})
+    @Expose
+	@Nullable
+    public MobilityManagementPolicyCollectionPage mobileDeviceManagementPolicies;
+
+    /**
      * The Role Management Policies.
      * 
      */
@@ -241,6 +282,10 @@ public class PolicyRoot implements IJsonBackedObject {
 
         if (json.has("activityBasedTimeoutPolicies")) {
             activityBasedTimeoutPolicies = serializer.deserializeObject(json.get("activityBasedTimeoutPolicies"), ActivityBasedTimeoutPolicyCollectionPage.class);
+        }
+
+        if (json.has("appManagementPolicies")) {
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), AppManagementPolicyCollectionPage.class);
         }
 
         if (json.has("authorizationPolicy")) {
@@ -273,6 +318,14 @@ public class PolicyRoot implements IJsonBackedObject {
 
         if (json.has("conditionalAccessPolicies")) {
             conditionalAccessPolicies = serializer.deserializeObject(json.get("conditionalAccessPolicies"), ConditionalAccessPolicyCollectionPage.class);
+        }
+
+        if (json.has("mobileAppManagementPolicies")) {
+            mobileAppManagementPolicies = serializer.deserializeObject(json.get("mobileAppManagementPolicies"), MobilityManagementPolicyCollectionPage.class);
+        }
+
+        if (json.has("mobileDeviceManagementPolicies")) {
+            mobileDeviceManagementPolicies = serializer.deserializeObject(json.get("mobileDeviceManagementPolicies"), MobilityManagementPolicyCollectionPage.class);
         }
 
         if (json.has("roleManagementPolicies")) {

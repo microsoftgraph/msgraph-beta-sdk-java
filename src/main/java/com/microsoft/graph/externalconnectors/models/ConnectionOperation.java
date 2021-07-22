@@ -29,7 +29,7 @@ public class ConnectionOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Error.
-     * 
+     * If status is failed, provides more information about the error that caused the failure.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -38,7 +38,7 @@ public class ConnectionOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Indicates the status of the asynchronous operation. Possible values are: unspecified, inprogress, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -198,7 +198,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Sealed.
-     * Specifies whether column can be changed.
+     * Specifies whether the column can be changed.
      */
     @SerializedName(value = "isSealed", alternate = {"IsSealed"})
     @Expose
@@ -243,7 +243,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Propagate Changes.
-     * If 'True' changes to this column will be propagated to lists that implement the column.
+     * If true, changes to this column will be propagated to lists that implement the column.
      */
     @SerializedName(value = "propagateChanges", alternate = {"PropagateChanges"})
     @Expose
@@ -261,7 +261,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Required.
-     * Specifies whether the column value is not optional.
+     * Specifies whether the column value isn't optional.
      */
     @SerializedName(value = "required", alternate = {"Required"})
     @Expose
@@ -297,7 +297,7 @@ public class ColumnDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * For site columns, the type of column. Read-only
+     * For site columns, the type of column. Read-only.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

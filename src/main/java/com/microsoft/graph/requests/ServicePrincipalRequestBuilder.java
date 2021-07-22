@@ -12,6 +12,8 @@ import com.microsoft.graph.models.Credential;
 import com.microsoft.graph.models.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.models.SelfSignedCertificate;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.AppManagementPolicyWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.AppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionWithReferencesRequestBuilder;
@@ -96,6 +98,26 @@ public class ServicePrincipalRequestBuilder extends BaseRequestBuilder<ServicePr
     }
 
 
+    /**
+     *  Gets a request builder for the AppManagementPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AppManagementPolicyCollectionWithReferencesRequestBuilder appManagementPolicies() {
+        return new AppManagementPolicyCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AppManagementPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AppManagementPolicyWithReferenceRequestBuilder appManagementPolicies(@Nonnull final String id) {
+        return new AppManagementPolicyWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("appManagementPolicies") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the AppRoleAssignment collection
      *

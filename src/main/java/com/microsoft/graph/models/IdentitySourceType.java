@@ -8,7 +8,9 @@ package com.microsoft.graph.models;
 
 /**
  * The Enum Identity Source Type.
+ * @deprecated The property named 'IdentitySource' will be deprecated in September 2021, please see the updated aclType usage.
 */
+@Deprecated
 public enum IdentitySourceType
 {
     /**

@@ -28,7 +28,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -37,7 +37,7 @@ public class TabUpdatedEventMessageDetail extends EventMessageDetail implements 
 
     /**
      * The Tab Id.
-     * 
+     * Unique identifier of the tab.
      */
     @SerializedName(value = "tabId", alternate = {"TabId"})
     @Expose

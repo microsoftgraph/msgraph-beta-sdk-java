@@ -70,7 +70,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Aggregated Policy Compliances.
-     * 
+     * Aggregate view of device compliance policies across managed tenants.
      */
     @SerializedName(value = "aggregatedPolicyCompliances", alternate = {"AggregatedPolicyCompliances"})
     @Expose
@@ -79,7 +79,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Connections.
-     * 
+     * The collection of cloud PC connections across managed tenants.
      */
     @SerializedName(value = "cloudPcConnections", alternate = {"CloudPcConnections"})
     @Expose
@@ -88,7 +88,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Devices.
-     * 
+     * The collection of cloud PC devices across managed tenants.
      */
     @SerializedName(value = "cloudPcDevices", alternate = {"CloudPcDevices"})
     @Expose
@@ -97,7 +97,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Cloud Pcs Overview.
-     * 
+     * Overview of cloud PC information across managed tenants.
      */
     @SerializedName(value = "cloudPcsOverview", alternate = {"CloudPcsOverview"})
     @Expose
@@ -106,7 +106,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Conditional Access Policy Coverages.
-     * 
+     * Aggregate view of conditional access policy coverage across managed tenants.
      */
     @SerializedName(value = "conditionalAccessPolicyCoverages", alternate = {"ConditionalAccessPolicyCoverages"})
     @Expose
@@ -115,7 +115,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Credential User Registrations Summaries.
-     * 
+     * Summary information for user registration for multi-factor authentication and self service password reset across managed tenants.
      */
     @SerializedName(value = "credentialUserRegistrationsSummaries", alternate = {"CredentialUserRegistrationsSummaries"})
     @Expose
@@ -124,7 +124,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Compliance Policy Setting State Summaries.
-     * 
+     * Summary information for device compliance policy setting states across managed tenants.
      */
     @SerializedName(value = "deviceCompliancePolicySettingStateSummaries", alternate = {"DeviceCompliancePolicySettingStateSummaries"})
     @Expose
@@ -133,7 +133,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Compliances.
-     * 
+     * The collection of compliance for managed devices across managed tenants.
      */
     @SerializedName(value = "managedDeviceCompliances", alternate = {"ManagedDeviceCompliances"})
     @Expose
@@ -142,7 +142,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Device Compliance Trends.
-     * 
+     * Trend insights for device compliance across managed tenants.
      */
     @SerializedName(value = "managedDeviceComplianceTrends", alternate = {"ManagedDeviceComplianceTrends"})
     @Expose
@@ -151,7 +151,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Actions.
-     * 
+     * The collection of baseline management actions across managed tenants.
      */
     @SerializedName(value = "managementActions", alternate = {"ManagementActions"})
     @Expose
@@ -160,7 +160,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Action Tenant Deployment Statuses.
-     * 
+     * The tenant level status of management actions across managed tenants.
      */
     @SerializedName(value = "managementActionTenantDeploymentStatuses", alternate = {"ManagementActionTenantDeploymentStatuses"})
     @Expose
@@ -169,7 +169,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Intents.
-     * 
+     * The collection of baseline management intents across managed tenants.
      */
     @SerializedName(value = "managementIntents", alternate = {"ManagementIntents"})
     @Expose
@@ -178,7 +178,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Templates.
-     * 
+     * The collection of baseline management templates across managed tenants.
      */
     @SerializedName(value = "managementTemplates", alternate = {"ManagementTemplates"})
     @Expose
@@ -187,7 +187,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Risky Users.
-     * 
+     * The collection of users flagged for risk across managed tenants.
      */
     @SerializedName(value = "riskyUsers", alternate = {"RiskyUsers"})
     @Expose
@@ -196,7 +196,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Groups.
-     * 
+     * The collection of a logical grouping of managed tenants used by the multi-tenant management platform.
      */
     @SerializedName(value = "tenantGroups", alternate = {"TenantGroups"})
     @Expose
@@ -205,7 +205,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenants.
-     * 
+     * The collection of tenants associated with the managing entity.
      */
     @SerializedName(value = "tenants", alternate = {"Tenants"})
     @Expose
@@ -214,7 +214,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenants Customized Information.
-     * 
+     * The collection of tenant level customized information across managed tenants.
      */
     @SerializedName(value = "tenantsCustomizedInformation", alternate = {"TenantsCustomizedInformation"})
     @Expose
@@ -223,7 +223,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenants Detailed Information.
-     * 
+     * The collection tenant level detailed information across managed tenants.
      */
     @SerializedName(value = "tenantsDetailedInformation", alternate = {"TenantsDetailedInformation"})
     @Expose
@@ -232,7 +232,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Tags.
-     * 
+     * The collection of tenant tags across managed tenants.
      */
     @SerializedName(value = "tenantTags", alternate = {"TenantTags"})
     @Expose
@@ -241,7 +241,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Windows Device Malware States.
-     * 
+     * The state of malware for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      */
     @SerializedName(value = "windowsDeviceMalwareStates", alternate = {"WindowsDeviceMalwareStates"})
     @Expose
@@ -250,7 +250,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
 
     /**
      * The Windows Protection States.
-     * 
+     * The protection state for Windows devices, registered with Microsoft Endpoint Manager, across managed tenants.
      */
     @SerializedName(value = "windowsProtectionStates", alternate = {"WindowsProtectionStates"})
     @Expose
