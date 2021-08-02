@@ -1,0 +1,18 @@
+trigger:
+  branches:
+    include: 
+      - dev 
+      - main
+  
+pr: none 
+
+pool: 
+  vmImage: ubuntu-latest
+
+steps: 
+  - template: templates/secure-files.yml
+  - template: templates/build-and-coverage.yml
+  - template: templates/publish-artifacts.yml
+  - template: templates/alert-failure.yml
+  
+  
