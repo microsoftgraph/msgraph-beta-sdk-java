@@ -103,6 +103,15 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
+     * The Managed Google Play Initial Scope Tag Ids.
+     * Initial scope tags for MGP apps
+     */
+    @SerializedName(value = "managedGooglePlayInitialScopeTagIds", alternate = {"ManagedGooglePlayInitialScopeTagIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> managedGooglePlayInitialScopeTagIds;
+
+    /**
      * The Owner Organization Name.
      * Organization name used when onboarding Android Enterprise
      */

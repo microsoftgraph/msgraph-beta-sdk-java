@@ -52,6 +52,22 @@ public enum ManagedDeviceRemoteAction
     */
     SYNC_DEVICE,
     /**
+    * deprovision
+    */
+    DEPROVISION,
+    /**
+    * disable
+    */
+    DISABLE,
+    /**
+    * reenable
+    */
+    REENABLE,
+    /**
+    * move Device To Organizational Unit
+    */
+    MOVE_DEVICE_TO_ORGANIZATIONAL_UNIT,
+    /**
     * For ManagedDeviceRemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

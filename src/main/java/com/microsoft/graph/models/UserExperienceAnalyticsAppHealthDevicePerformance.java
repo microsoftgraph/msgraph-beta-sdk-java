@@ -115,6 +115,15 @@ public class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity im
 	@Nullable
     public Integer meanTimeToFailureInMinutes;
 
+    /**
+     * The Processed Date Time.
+     * The date and time when the statistics were last computed.
+     */
+    @SerializedName(value = "processedDateTime", alternate = {"ProcessedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime processedDateTime;
+
 
     /**
      * Sets the raw JSON object

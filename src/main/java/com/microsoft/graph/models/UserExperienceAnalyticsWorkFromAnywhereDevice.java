@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.OperatingSystemUpgradeEligibility;
 import com.microsoft.graph.models.Entity;
 
 
@@ -71,6 +72,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     public Boolean azureAdRegistered;
 
     /**
+     * The Compliance Policy Set To Intune.
+     * The user experience work from anywhere device's compliancePolicySetToIntune.
+     */
+    @SerializedName(value = "compliancePolicySetToIntune", alternate = {"CompliancePolicySetToIntune"})
+    @Expose
+	@Nullable
+    public Boolean compliancePolicySetToIntune;
+
+    /**
      * The Device Name.
      * The work from anywhere device's name.
      */
@@ -107,6 +117,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     public String model;
 
     /**
+     * The Os Check Failed.
+     * The user experience work from anywhere device, Is OS check failed for device to upgrade to the latest version of windows.
+     */
+    @SerializedName(value = "osCheckFailed", alternate = {"OsCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean osCheckFailed;
+
+    /**
      * The Os Description.
      * The user experience work from anywhere device's OS Description.
      */
@@ -125,6 +144,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     public String osVersion;
 
     /**
+     * The Other Workloads Set To Intune.
+     * The user experience work from anywhere device's otherWorkloadsSetToIntune.
+     */
+    @SerializedName(value = "otherWorkloadsSetToIntune", alternate = {"OtherWorkloadsSetToIntune"})
+    @Expose
+	@Nullable
+    public Boolean otherWorkloadsSetToIntune;
+
+    /**
      * The Ownership.
      * The user experience work from anywhere device's ownership.
      */
@@ -134,6 +162,60 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     public String ownership;
 
     /**
+     * The Processor64Bit Check Failed.
+     * The user experience work from anywhere device, Is processor hardware 64-bit architecture check failed for device to upgrade to the latest version of windows.
+     */
+    @SerializedName(value = "processor64BitCheckFailed", alternate = {"Processor64BitCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean processor64BitCheckFailed;
+
+    /**
+     * The Processor Core Count Check Failed.
+     * The user experience work from anywhere device, Is processor hardware core count check failed for device to upgrade to the latest version of windows.
+     */
+    @SerializedName(value = "processorCoreCountCheckFailed", alternate = {"ProcessorCoreCountCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean processorCoreCountCheckFailed;
+
+    /**
+     * The Processor Family Check Failed.
+     * The user experience work from anywhere device, Is processor hardware family check failed for device to upgrade to the latest version of windows.
+     */
+    @SerializedName(value = "processorFamilyCheckFailed", alternate = {"ProcessorFamilyCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean processorFamilyCheckFailed;
+
+    /**
+     * The Processor Speed Check Failed.
+     * The user experience work from anywhere device, Is processor hardware speed check failed for device to upgrade to the latest version of windows.
+     */
+    @SerializedName(value = "processorSpeedCheckFailed", alternate = {"ProcessorSpeedCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean processorSpeedCheckFailed;
+
+    /**
+     * The Ram Check Failed.
+     * Is the user experience analytics work from anywhere device RAM hardware check failed for device to upgrade to the latest version of windows
+     */
+    @SerializedName(value = "ramCheckFailed", alternate = {"RamCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean ramCheckFailed;
+
+    /**
+     * The Secure Boot Check Failed.
+     * The user experience work from anywhere device, Is secure boot hardware check failed for device to upgrade to the latest version of windows.
+     */
+    @SerializedName(value = "secureBootCheckFailed", alternate = {"SecureBootCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean secureBootCheckFailed;
+
+    /**
      * The Serial Number.
      * The user experience work from anywhere device's serial number.
      */
@@ -141,6 +223,42 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     @Expose
 	@Nullable
     public String serialNumber;
+
+    /**
+     * The Storage Check Failed.
+     * The user experience work from anywhere device, Is storage hardware check failed for device to upgrade to the latest version of windows.
+     */
+    @SerializedName(value = "storageCheckFailed", alternate = {"StorageCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean storageCheckFailed;
+
+    /**
+     * The Tenant Attached.
+     * The user experience work from anywhere device's tenantAttached.
+     */
+    @SerializedName(value = "tenantAttached", alternate = {"TenantAttached"})
+    @Expose
+	@Nullable
+    public Boolean tenantAttached;
+
+    /**
+     * The Tpm Check Failed.
+     * The user experience work from anywhere device, Is Trusted Platform Module (TPM) hardware check failed for device to the latest version of upgrade to windows.
+     */
+    @SerializedName(value = "tpmCheckFailed", alternate = {"TpmCheckFailed"})
+    @Expose
+	@Nullable
+    public Boolean tpmCheckFailed;
+
+    /**
+     * The Upgrade Eligibility.
+     * The user experience work from anywhere windows upgrade eligibility status of device.
+     */
+    @SerializedName(value = "upgradeEligibility", alternate = {"UpgradeEligibility"})
+    @Expose
+	@Nullable
+    public OperatingSystemUpgradeEligibility upgradeEligibility;
 
 
     /**

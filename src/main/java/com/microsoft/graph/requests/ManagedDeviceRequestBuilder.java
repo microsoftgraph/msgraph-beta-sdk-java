@@ -32,8 +32,8 @@ import com.microsoft.graph.requests.DetectedAppWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DeviceCategoryRequestBuilder;
 import com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceLogCollectionResponseRequestBuilder;
-import com.microsoft.graph.requests.UserCollectionRequestBuilder;
-import com.microsoft.graph.requests.UserRequestBuilder;
+import com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder;
+import com.microsoft.graph.requests.UserWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.WindowsProtectionStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -47,6 +47,7 @@ import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
+import com.microsoft.graph.models.ManagedDeviceDeprovisionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
@@ -252,8 +253,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @return the collection request builder
      */
     @Nonnull
-    public UserCollectionRequestBuilder users() {
-        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
+    public UserCollectionWithReferencesRequestBuilder users() {
+        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
     /**
@@ -263,8 +264,8 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * @param id the item identifier
      */
     @Nonnull
-    public UserRequestBuilder users(@Nonnull final String id) {
-        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    public UserWithReferenceRequestBuilder users(@Nonnull final String id) {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 
     /**
@@ -356,6 +357,25 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     }
 
     /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceDeprovisionRequestBuilder deprovision(@Nonnull final ManagedDeviceDeprovisionParameterSet parameters) {
+        return new ManagedDeviceDeprovisionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deprovision"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceDisableRequestBuilder disable() {
+        return new ManagedDeviceDisableRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disable"), getClient(), null);
+    }
+
+    /**
      * Disable lost mode
      * @return the request builder
      */
@@ -417,6 +437,15 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public ManagedDeviceRecoverPasscodeRequestBuilder recoverPasscode() {
         return new ManagedDeviceRecoverPasscodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recoverPasscode"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceReenableRequestBuilder reenable() {
+        return new ManagedDeviceReenableRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reenable"), getClient(), null);
     }
 
     /**

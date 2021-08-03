@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Identity User Flow Collection Request Builder.
+ * @deprecated The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs.
  */
+@Deprecated
 public class IdentityUserFlowCollectionRequestBuilder extends BaseCollectionRequestBuilder<IdentityUserFlow, IdentityUserFlowRequestBuilder, IdentityUserFlowCollectionResponse, IdentityUserFlowCollectionPage, IdentityUserFlowCollectionRequest> {
 
     /**

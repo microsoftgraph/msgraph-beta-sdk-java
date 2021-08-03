@@ -109,7 +109,9 @@ public class IdentityContainer implements IJsonBackedObject {
     /**
      * The User Flows.
      * 
+     * @deprecated The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs.
      */
+    @Deprecated
     @SerializedName(value = "userFlows", alternate = {"UserFlows"})
     @Expose
 	@Nullable

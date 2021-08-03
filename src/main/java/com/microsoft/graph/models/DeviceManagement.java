@@ -79,6 +79,8 @@ import com.microsoft.graph.models.MobileAppTroubleshootingEvent;
 import com.microsoft.graph.models.RemoteActionAudit;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthApplicationPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion;
+import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails;
+import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDeviceModelPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerformance;
@@ -100,6 +102,7 @@ import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsRemoteConnection;
 import com.microsoft.graph.models.UserExperienceAnalyticsResourcePerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsScoreHistory;
+import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
 import com.microsoft.graph.models.UserExperienceAnalyticsWorkFromAnywhereMetric;
 import com.microsoft.graph.models.WindowsMalwareInformation;
 import com.microsoft.graph.models.DeviceManagementDerivedCredentialSettings;
@@ -196,6 +199,8 @@ import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceCollectionPage;
@@ -994,6 +999,24 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion;
 
     /**
+     * The User Experience Analytics App Health Application Performance By App Version Details.
+     * User experience analytics appHealth Application Performance by App Version details
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails;
+
+    /**
+     * The User Experience Analytics App Health Application Performance By App Version Device Id.
+     * User experience analytics appHealth Application Performance by App Version Device Id
+     */
+    @SerializedName(value = "userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", alternate = {"UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId;
+
+    /**
      * The User Experience Analytics App Health Application Performance By OSVersion.
      * User experience analytics appHealth Application Performance by OS Version
      */
@@ -1199,6 +1222,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public UserExperienceAnalyticsScoreHistoryCollectionPage userExperienceAnalyticsScoreHistory;
+
+    /**
+     * The User Experience Analytics Work From Anywhere Hardware Readiness Metric.
+     * User experience analytics work from anywhere hardware readiness metrics.
+     */
+    @SerializedName(value = "userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", alternate = {"UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric;
 
     /**
      * The User Experience Analytics Work From Anywhere Metrics.
@@ -1821,6 +1853,14 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion")) {
             userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails")) {
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId")) {
+            userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = serializer.deserializeObject(json.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"), UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion")) {

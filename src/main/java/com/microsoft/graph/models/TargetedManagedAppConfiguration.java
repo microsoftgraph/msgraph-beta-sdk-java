@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.TargetedManagedAppGroupType;
 import com.microsoft.graph.models.ManagedMobileApp;
 import com.microsoft.graph.models.TargetedManagedAppPolicyAssignment;
 import com.microsoft.graph.models.ManagedAppPolicyDeploymentSummary;
@@ -30,6 +31,15 @@ import javax.annotation.Nonnull;
  */
 public class TargetedManagedAppConfiguration extends ManagedAppConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The App Group Type.
+     * Public Apps selection: group or individual
+     */
+    @SerializedName(value = "appGroupType", alternate = {"AppGroupType"})
+    @Expose
+	@Nullable
+    public TargetedManagedAppGroupType appGroupType;
 
     /**
      * The Deployed App Count.

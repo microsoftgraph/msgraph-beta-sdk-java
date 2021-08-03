@@ -65,6 +65,15 @@ public class UnifiedRoleAssignment extends Entity implements IJsonBackedObject {
     public String principalId;
 
     /**
+     * The Principal Organization Id.
+     * 
+     */
+    @SerializedName(value = "principalOrganizationId", alternate = {"PrincipalOrganizationId"})
+    @Expose
+	@Nullable
+    public String principalOrganizationId;
+
+    /**
      * The Resource Scope.
      * The scope at which the unifiedRoleAssignment applies. This is / for service-wide. DO NOT USE. This property will be deprecated soon.
      */

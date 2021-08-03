@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserExperienceAnalyticsHealthState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -51,6 +52,15 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
     @Expose
 	@Nullable
     public Double endpointAnalyticsScore;
+
+    /**
+     * The Health Status.
+     * The health state of the user experience analytics device.
+     */
+    @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsHealthState healthStatus;
 
     /**
      * The Manufacturer.

@@ -315,7 +315,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Management Policies.
-     * 
+     * The appManagementPolicy applied to this application.
      */
 	@Nullable
     public AppManagementPolicyCollectionPage appManagementPolicies;

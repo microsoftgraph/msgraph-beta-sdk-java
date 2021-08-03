@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
 import com.microsoft.graph.models.AssignmentFilterValidationResult;
+import com.microsoft.graph.models.DevicePlatformType;
+import com.microsoft.graph.models.AssignmentFilterSupportedProperty;
 import com.microsoft.graph.models.AssignmentFilterState;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -58,4 +60,13 @@ public class DeviceAndAppManagementAssignmentFilterRequestBuilder extends BaseRe
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public DeviceAndAppManagementAssignmentFilterGetSupportedPropertiesCollectionRequestBuilder getSupportedProperties() {
+        return new DeviceAndAppManagementAssignmentFilterGetSupportedPropertiesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSupportedProperties"), getClient(), null);
+    }
 }

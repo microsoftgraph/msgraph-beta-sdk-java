@@ -42,15 +42,6 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
     }
 
     /**
-     * The Allow Custom Assignment Schedule.
-     * 
-     */
-    @SerializedName(value = "allowCustomAssignmentSchedule", alternate = {"AllowCustomAssignmentSchedule"})
-    @Expose
-	@Nullable
-    public Boolean allowCustomAssignmentSchedule;
-
-    /**
      * The Existing Answers.
      * 
      */
@@ -60,22 +51,40 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
     public java.util.List<AccessPackageAnswer> existingAnswers;
 
     /**
-     * The Is Approval Required For Add.
+     * The Is Approval Required.
      * 
      */
-    @SerializedName(value = "isApprovalRequiredForAdd", alternate = {"IsApprovalRequiredForAdd"})
+    @SerializedName(value = "isApprovalRequired", alternate = {"IsApprovalRequired"})
     @Expose
 	@Nullable
-    public Boolean isApprovalRequiredForAdd;
+    public Boolean isApprovalRequired;
 
     /**
-     * The Is Approval Required For Update.
+     * The Is Approval Required For Extension.
      * 
      */
-    @SerializedName(value = "isApprovalRequiredForUpdate", alternate = {"IsApprovalRequiredForUpdate"})
+    @SerializedName(value = "isApprovalRequiredForExtension", alternate = {"IsApprovalRequiredForExtension"})
     @Expose
 	@Nullable
-    public Boolean isApprovalRequiredForUpdate;
+    public Boolean isApprovalRequiredForExtension;
+
+    /**
+     * The Is Custom Assignment Schedule Allowed.
+     * 
+     */
+    @SerializedName(value = "isCustomAssignmentScheduleAllowed", alternate = {"IsCustomAssignmentScheduleAllowed"})
+    @Expose
+	@Nullable
+    public Boolean isCustomAssignmentScheduleAllowed;
+
+    /**
+     * The Is Requestor Justification Required.
+     * 
+     */
+    @SerializedName(value = "isRequestorJustificationRequired", alternate = {"IsRequestorJustificationRequired"})
+    @Expose
+	@Nullable
+    public Boolean isRequestorJustificationRequired;
 
     /**
      * The Policy Description.

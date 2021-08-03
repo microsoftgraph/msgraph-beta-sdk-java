@@ -1681,6 +1681,15 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     public Boolean wiFiConnectOnlyToConfiguredNetworks;
 
     /**
+     * The Wi Fi Connect To Allowed Networks Only Forced.
+     * Require devices to use Wi-Fi networks set up via configuration profiles. Available for devices running iOS and iPadOS versions 14.5 and later.
+     */
+    @SerializedName(value = "wiFiConnectToAllowedNetworksOnlyForced", alternate = {"WiFiConnectToAllowedNetworksOnlyForced"})
+    @Expose
+	@Nullable
+    public Boolean wiFiConnectToAllowedNetworksOnlyForced;
+
+    /**
      * The Wifi Power On Forced.
      * Indicates whether or not Wi-Fi remains on, even when device is in airplane mode. Available for devices running iOS and iPadOS, versions 13.0 and later.
      */

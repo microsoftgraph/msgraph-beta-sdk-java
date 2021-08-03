@@ -32,6 +32,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
 
     /**
+     * The Adding Game Center Friends Blocked.
+     * Yes prevents users from adding friends to Game Center. Available for devices running macOS versions 10.13 and later.
+     */
+    @SerializedName(value = "addingGameCenterFriendsBlocked", alternate = {"AddingGameCenterFriendsBlocked"})
+    @Expose
+	@Nullable
+    public Boolean addingGameCenterFriendsBlocked;
+
+    /**
      * The Air Drop Blocked.
      * Indicates whether or not to allow AirDrop.
      */
@@ -39,33 +48,6 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @Expose
 	@Nullable
     public Boolean airDropBlocked;
-
-    /**
-     * The Air Print Blocked.
-     * Indicates whether or not AirPrint is blocked (macOS 10.12 and later).
-     */
-    @SerializedName(value = "airPrintBlocked", alternate = {"AirPrintBlocked"})
-    @Expose
-	@Nullable
-    public Boolean airPrintBlocked;
-
-    /**
-     * The Air Print Blocki Beacon Discovery.
-     * Indicates whether or not iBeacon discovery of AirPrint printers is blocked. This prevents spurious AirPrint Bluetooth beacons from phishing for network traffic (macOS 10.3 and later).
-     */
-    @SerializedName(value = "airPrintBlockiBeaconDiscovery", alternate = {"AirPrintBlockiBeaconDiscovery"})
-    @Expose
-	@Nullable
-    public Boolean airPrintBlockiBeaconDiscovery;
-
-    /**
-     * The Air Print Force Trusted TLS.
-     * Indicates if trusted certificates are required for TLS printing communication (macOS 10.13 and later).
-     */
-    @SerializedName(value = "airPrintForceTrustedTLS", alternate = {"AirPrintForceTrustedTLS"})
-    @Expose
-	@Nullable
-    public Boolean airPrintForceTrustedTLS;
 
     /**
      * The Apple Watch Block Auto Unlock.
@@ -174,6 +156,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @Expose
 	@Nullable
     public java.util.List<String> emailInDomainSuffixes;
+
+    /**
+     * The Game Center Blocked.
+     * Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later.
+     */
+    @SerializedName(value = "gameCenterBlocked", alternate = {"GameCenterBlocked"})
+    @Expose
+	@Nullable
+    public Boolean gameCenterBlocked;
 
     /**
      * The ICloud Block Activity Continuation.
@@ -291,6 +282,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @Expose
 	@Nullable
     public Boolean keychainBlockCloudSync;
+
+    /**
+     * The Multiplayer Gaming Blocked.
+     * Yes prevents multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.
+     */
+    @SerializedName(value = "multiplayerGamingBlocked", alternate = {"MultiplayerGamingBlocked"})
+    @Expose
+	@Nullable
+    public Boolean multiplayerGamingBlocked;
 
     /**
      * The Password Block Air Drop Sharing.
@@ -489,6 +489,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @Expose
 	@Nullable
     public EnumSet<MacOSSoftwareUpdateDelayPolicy> updateDelayPolicy;
+
+    /**
+     * The Wallpaper Modification Blocked.
+     * Yes prevents the wallpaper from being changed. Available for devices running macOS versions 10.13 and later.
+     */
+    @SerializedName(value = "wallpaperModificationBlocked", alternate = {"WallpaperModificationBlocked"})
+    @Expose
+	@Nullable
+    public Boolean wallpaperModificationBlocked;
 
 
     /**

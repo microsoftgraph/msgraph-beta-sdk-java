@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.DeviceAndAppManagementAssignmentSource;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.Entity;
 
@@ -25,6 +26,24 @@ import javax.annotation.Nonnull;
  */
 public class DeviceManagementConfigurationPolicyAssignment extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Source.
+     * The assignment source for the device compliance policy, direct or parcel/policySet.
+     */
+    @SerializedName(value = "source", alternate = {"Source"})
+    @Expose
+	@Nullable
+    public DeviceAndAppManagementAssignmentSource source;
+
+    /**
+     * The Source Id.
+     * The identifier of the source of the assignment.
+     */
+    @SerializedName(value = "sourceId", alternate = {"SourceId"})
+    @Expose
+	@Nullable
+    public String sourceId;
 
     /**
      * The Target.

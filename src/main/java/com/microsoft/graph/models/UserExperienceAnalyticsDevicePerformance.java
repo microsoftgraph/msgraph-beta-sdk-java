@@ -189,6 +189,15 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
 	@Nullable
     public Integer restartCount;
 
+    /**
+     * The Startup Performance Score.
+     * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "startupPerformanceScore", alternate = {"StartupPerformanceScore"})
+    @Expose
+	@Nullable
+    public Double startupPerformanceScore;
+
 
     /**
      * Sets the raw JSON object

@@ -44,6 +44,10 @@ public enum VpnEncryptionAlgorithmType
     */
     AES192_GCM,
     /**
+    * cha Cha20Poly1305
+    */
+    CHA_CHA20_POLY1305,
+    /**
     * For VpnEncryptionAlgorithmType values that were not expected from the service
     */
     UNEXPECTED_VALUE

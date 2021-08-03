@@ -296,6 +296,15 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     public Boolean onPremisesSyncEnabled;
 
     /**
+     * The Organization Id.
+     * 
+     */
+    @SerializedName(value = "organizationId", alternate = {"OrganizationId"})
+    @Expose
+	@Nullable
+    public String organizationId;
+
+    /**
      * The Preferred Data Location.
      * The preferred data location for the group. For more information, see  OneDrive Online Multi-Geo. Returned by default.
      */

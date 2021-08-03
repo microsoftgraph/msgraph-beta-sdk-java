@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AppleDeploymentChannel;
 import com.microsoft.graph.models.DeviceConfiguration;
 
 
@@ -24,6 +25,15 @@ import javax.annotation.Nonnull;
  */
 public class MacOSCustomConfiguration extends DeviceConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Deployment Channel.
+     * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel.
+     */
+    @SerializedName(value = "deploymentChannel", alternate = {"DeploymentChannel"})
+    @Expose
+	@Nullable
+    public AppleDeploymentChannel deploymentChannel;
 
     /**
      * The Payload.

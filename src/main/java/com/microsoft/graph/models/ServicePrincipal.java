@@ -382,7 +382,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Management Policies.
-     * 
+     * The appManagementPolicy applied to this service principal.
      */
 	@Nullable
     public AppManagementPolicyCollectionPage appManagementPolicies;

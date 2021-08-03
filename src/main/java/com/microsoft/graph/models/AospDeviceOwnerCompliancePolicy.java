@@ -90,6 +90,15 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
     public AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
 
     /**
+     * The Security Block Jailbroken Devices.
+     * Devices must not be jailbroken or rooted.
+     */
+    @SerializedName(value = "securityBlockJailbrokenDevices", alternate = {"SecurityBlockJailbrokenDevices"})
+    @Expose
+	@Nullable
+    public Boolean securityBlockJailbrokenDevices;
+
+    /**
      * The Storage Require Encryption.
      * Require encryption on Android devices.
      */
