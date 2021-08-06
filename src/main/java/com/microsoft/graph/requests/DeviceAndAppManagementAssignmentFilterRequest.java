@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
 import com.microsoft.graph.models.AssignmentFilterValidationResult;
+import com.microsoft.graph.models.DevicePlatformType;
+import com.microsoft.graph.models.AssignmentFilterSupportedProperty;
 import com.microsoft.graph.models.AssignmentFilterState;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,6 +27,21 @@ import com.microsoft.graph.http.HttpMethod;
  */
 public class DeviceAndAppManagementAssignmentFilterRequest extends BaseRequest<DeviceAndAppManagementAssignmentFilter> {
 	
+    /**
+     * The request for the DeviceAndAppManagementAssignmentFilter
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param responseClass  the class of the response
+     */
+    public DeviceAndAppManagementAssignmentFilterRequest(@Nonnull final String requestUrl,
+            @Nonnull final IBaseClient<?> client,
+            @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions,
+            @Nonnull final Class<? extends DeviceAndAppManagementAssignmentFilter> responseClass) {
+        super(requestUrl, client, requestOptions, responseClass);
+    }
+
     /**
      * The request for the DeviceAndAppManagementAssignmentFilter
      *

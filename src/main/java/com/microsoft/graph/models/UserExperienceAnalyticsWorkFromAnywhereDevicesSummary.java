@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.UserExperienceAnalyticsAutopilotDevicesSummary;
+import com.microsoft.graph.models.UserExperienceAnalyticsCloudIdentityDevicesSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsCloudManagementDevicesSummary;
 import com.microsoft.graph.models.UserExperienceAnalyticsWindows10DevicesSummary;
 
@@ -48,6 +49,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements IJ
     @Expose
 	@Nullable
     public UserExperienceAnalyticsAutopilotDevicesSummary autopilotDevicesSummary;
+
+    /**
+     * The Cloud Identity Devices Summary.
+     * The user experience analytics work from anywhere Cloud Identity devices summary.
+     */
+    @SerializedName(value = "cloudIdentityDevicesSummary", alternate = {"CloudIdentityDevicesSummary"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsCloudIdentityDevicesSummary cloudIdentityDevicesSummary;
 
     /**
      * The Cloud Management Devices Summary.

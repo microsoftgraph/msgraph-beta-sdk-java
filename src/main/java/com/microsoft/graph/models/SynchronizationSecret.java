@@ -148,6 +148,18 @@ public enum SynchronizationSecret
     */
     APPLICATION_TEMPLATE_IDENTIFIER,
     /**
+    * Oauth2Token Exchange Uri
+    */
+    OAUTH2_TOKEN_EXCHANGE_URI,
+    /**
+    * Oauth2Authorization Uri
+    */
+    OAUTH2_AUTHORIZATION_URI,
+    /**
+    * Authentication Type
+    */
+    AUTHENTICATION_TYPE,
+    /**
     * Server
     */
     SERVER,
@@ -175,6 +187,10 @@ public enum SynchronizationSecret
     * Test References
     */
     TEST_REFERENCES,
+    /**
+    * Connection String
+    */
+    CONNECTION_STRING,
     /**
     * For SynchronizationSecret values that were not expected from the service
     */

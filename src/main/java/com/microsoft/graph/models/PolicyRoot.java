@@ -74,7 +74,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Authentication Methods Policy.
-     * 
+     * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
      */
     @SerializedName(value = "authenticationMethodsPolicy", alternate = {"AuthenticationMethodsPolicy"})
     @Expose
@@ -83,7 +83,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Authentication Flows Policy.
-     * 
+     * The policy configuration of the self-service sign-up experience of external users.
      */
     @SerializedName(value = "authenticationFlowsPolicy", alternate = {"AuthenticationFlowsPolicy"})
     @Expose
@@ -92,7 +92,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The B2c Authentication Methods Policy.
-     * 
+     * The Azure AD B2C policies that define how end users register via local accounts.
      */
     @SerializedName(value = "b2cAuthenticationMethodsPolicy", alternate = {"B2cAuthenticationMethodsPolicy"})
     @Expose
@@ -101,7 +101,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Activity Based Timeout Policies.
-     * 
+     * The policy that controls the idle time out for web sessions for applications.
      */
     @SerializedName(value = "activityBasedTimeoutPolicies", alternate = {"ActivityBasedTimeoutPolicies"})
     @Expose
@@ -119,7 +119,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Authorization Policy.
-     * 
+     * The policy that controls Azure AD authorization settings.
      */
     @SerializedName(value = "authorizationPolicy", alternate = {"AuthorizationPolicy"})
     @Expose
@@ -128,7 +128,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Claims Mapping Policies.
-     * 
+     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      */
     @SerializedName(value = "claimsMappingPolicies", alternate = {"ClaimsMappingPolicies"})
     @Expose
@@ -146,7 +146,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Home Realm Discovery Policies.
-     * 
+     * The policy to control Azure AD authentication behavior for federated users.
      */
     @SerializedName(value = "homeRealmDiscoveryPolicies", alternate = {"HomeRealmDiscoveryPolicies"})
     @Expose
@@ -155,7 +155,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Permission Grant Policies.
-     * 
+     * The policy that specifies the conditions under which consent can be granted.
      */
     @SerializedName(value = "permissionGrantPolicies", alternate = {"PermissionGrantPolicies"})
     @Expose
@@ -164,7 +164,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Token Issuance Policies.
-     * 
+     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
      */
     @SerializedName(value = "tokenIssuancePolicies", alternate = {"TokenIssuancePolicies"})
     @Expose
@@ -173,7 +173,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Token Lifetime Policies.
-     * 
+     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
      */
     @SerializedName(value = "tokenLifetimePolicies", alternate = {"TokenLifetimePolicies"})
     @Expose
@@ -182,7 +182,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Feature Rollout Policies.
-     * 
+     * The feature rollout policy associated with a directory object.
      */
     @SerializedName(value = "featureRolloutPolicies", alternate = {"FeatureRolloutPolicies"})
     @Expose
@@ -191,7 +191,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Access Review Policy.
-     * 
+     * The policy that contains directory-level access review settings.
      */
     @SerializedName(value = "accessReviewPolicy", alternate = {"AccessReviewPolicy"})
     @Expose
@@ -200,7 +200,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Admin Consent Request Policy.
-     * 
+     * The policy by which consent requests are created and managed for the entire tenant.
      */
     @SerializedName(value = "adminConsentRequestPolicy", alternate = {"AdminConsentRequestPolicy"})
     @Expose
@@ -218,7 +218,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Conditional Access Policies.
-     * 
+     * The custom rules that define an access scenario.
      */
     @SerializedName(value = "conditionalAccessPolicies", alternate = {"ConditionalAccessPolicies"})
     @Expose
@@ -227,7 +227,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Identity Security Defaults Enforcement Policy.
-     * 
+     * The policy that represents the security defaults that protect against common attacks.
      */
     @SerializedName(value = "identitySecurityDefaultsEnforcementPolicy", alternate = {"IdentitySecurityDefaultsEnforcementPolicy"})
     @Expose
@@ -236,7 +236,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Mobile App Management Policies.
-     * 
+     * The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
      */
     @SerializedName(value = "mobileAppManagementPolicies", alternate = {"MobileAppManagementPolicies"})
     @Expose
@@ -254,7 +254,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Role Management Policies.
-     * 
+     * Represents the role management policies.
      */
     @SerializedName(value = "roleManagementPolicies", alternate = {"RoleManagementPolicies"})
     @Expose
@@ -263,7 +263,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Role Management Policy Assignments.
-     * 
+     * Represents the role management policy assignments.
      */
     @SerializedName(value = "roleManagementPolicyAssignments", alternate = {"RoleManagementPolicyAssignments"})
     @Expose

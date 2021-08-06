@@ -190,6 +190,15 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     public AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
 
     /**
+     * The Security Require Intune App Integrity.
+     * If setting is set to true, checks that the Intune app installed on fully managed, dedicated, or corporate-owned work profile Android Enterprise enrolled devices, is the one provided by Microsoft from the Managed Google Playstore. If the check fails, the device will be reported as non-compliant.
+     */
+    @SerializedName(value = "securityRequireIntuneAppIntegrity", alternate = {"SecurityRequireIntuneAppIntegrity"})
+    @Expose
+	@Nullable
+    public Boolean securityRequireIntuneAppIntegrity;
+
+    /**
      * The Security Require Safety Net Attestation Basic Integrity.
      * Require the device to pass the SafetyNet basic integrity check.
      */

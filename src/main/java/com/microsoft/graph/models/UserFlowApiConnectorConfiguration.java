@@ -56,6 +56,15 @@ public class UserFlowApiConnectorConfiguration implements IJsonBackedObject {
 	@Nullable
     public IdentityApiConnector postFederationSignup;
 
+    /**
+     * The Pre Token Issuance.
+     * 
+     */
+    @SerializedName(value = "preTokenIssuance", alternate = {"PreTokenIssuance"})
+    @Expose
+	@Nullable
+    public IdentityApiConnector preTokenIssuance;
+
 
     /**
      * Sets the raw JSON object

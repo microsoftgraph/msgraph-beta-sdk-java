@@ -41,7 +41,7 @@ public class AppManagementConfiguration implements IJsonBackedObject {
 
     /**
      * The Password Credentials.
-     * 
+     * Collection of password restrictions settings to be applied to an application or service principal
      */
     @SerializedName(value = "passwordCredentials", alternate = {"PasswordCredentials"})
     @Expose

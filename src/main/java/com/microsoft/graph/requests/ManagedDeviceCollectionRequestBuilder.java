@@ -28,17 +28,20 @@ import com.microsoft.graph.requests.ManagedDeviceRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceCollectionRequest;
 import com.microsoft.graph.requests.ManagedDeviceBulkReprovisionCloudPcRequestBuilder;
 import com.microsoft.graph.requests.ManagedDeviceExecuteActionRequestBuilder;
+import com.microsoft.graph.requests.ManagedDeviceMoveDevicesToOURequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
 import com.microsoft.graph.models.ManagedDeviceBulkReprovisionCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceExecuteActionParameterSet;
+import com.microsoft.graph.models.ManagedDeviceMoveDevicesToOUParameterSet;
 import com.microsoft.graph.models.ManagedDeviceResizeCloudPcParameterSet;
 import com.microsoft.graph.models.ManagedDeviceOverrideComplianceStateParameterSet;
 import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
+import com.microsoft.graph.models.ManagedDeviceDeprovisionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
@@ -84,6 +87,16 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseCollectionRequest
     @Nonnull
     public ManagedDeviceExecuteActionRequestBuilder executeAction(@Nonnull final ManagedDeviceExecuteActionParameterSet parameters) {
         return new ManagedDeviceExecuteActionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.executeAction"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceMoveDevicesToOURequestBuilder moveDevicesToOU(@Nonnull final ManagedDeviceMoveDevicesToOUParameterSet parameters) {
+        return new ManagedDeviceMoveDevicesToOURequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.moveDevicesToOU"), getClient(), null, parameters);
     }
 
     /**

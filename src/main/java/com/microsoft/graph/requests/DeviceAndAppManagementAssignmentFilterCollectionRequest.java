@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentFilter;
 import com.microsoft.graph.models.AssignmentFilterValidationResult;
+import com.microsoft.graph.models.DevicePlatformType;
+import com.microsoft.graph.models.AssignmentFilterSupportedProperty;
 import com.microsoft.graph.models.AssignmentFilterState;
 import java.util.Arrays;
 import java.util.EnumSet;

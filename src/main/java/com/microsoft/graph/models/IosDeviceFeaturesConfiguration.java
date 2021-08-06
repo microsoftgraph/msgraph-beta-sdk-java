@@ -64,6 +64,24 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
     public java.util.List<IosHomeScreenItem> homeScreenDockIcons;
 
     /**
+     * The Home Screen Grid Height.
+     * Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
+     */
+    @SerializedName(value = "homeScreenGridHeight", alternate = {"HomeScreenGridHeight"})
+    @Expose
+	@Nullable
+    public Integer homeScreenGridHeight;
+
+    /**
+     * The Home Screen Grid Width.
+     * Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
+     */
+    @SerializedName(value = "homeScreenGridWidth", alternate = {"HomeScreenGridWidth"})
+    @Expose
+	@Nullable
+    public Integer homeScreenGridWidth;
+
+    /**
      * The Home Screen Pages.
      * A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      */

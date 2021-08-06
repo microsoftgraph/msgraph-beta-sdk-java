@@ -47,6 +47,15 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean awaitDeviceConfiguredConfirmation;
 
     /**
+     * The Carrier Activation Url.
+     * Carrier URL for activating device eSIM.
+     */
+    @SerializedName(value = "carrierActivationUrl", alternate = {"CarrierActivationUrl"})
+    @Expose
+	@Nullable
+    public String carrierActivationUrl;
+
+    /**
      * The Company Portal Vpp Token Id.
      * If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
      */
@@ -90,6 +99,15 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     @Expose
 	@Nullable
     public Boolean expressLanguageScreenDisabled;
+
+    /**
+     * The Force Temporary Session.
+     * Indicates if temporary sessions is enabled
+     */
+    @SerializedName(value = "forceTemporarySession", alternate = {"ForceTemporarySession"})
+    @Expose
+	@Nullable
+    public Boolean forceTemporarySession;
 
     /**
      * The Home Button Screen Disabled.
@@ -146,6 +164,15 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean passCodeDisabled;
 
     /**
+     * The Passcode Lock Grace Period In Seconds.
+     * Indicates timeout before locked screen requires the user to enter the device passocde to unlock it
+     */
+    @SerializedName(value = "passcodeLockGracePeriodInSeconds", alternate = {"PasscodeLockGracePeriodInSeconds"})
+    @Expose
+	@Nullable
+    public Integer passcodeLockGracePeriodInSeconds;
+
+    /**
      * The Preferred Language Screen Disabled.
      * Indicates if Preferred language screen is disabled
      */
@@ -200,6 +227,15 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     public Boolean softwareUpdateScreenDisabled;
 
     /**
+     * The Temporary Session Timeout In Seconds.
+     * Indicates timeout of temporary session
+     */
+    @SerializedName(value = "temporarySessionTimeoutInSeconds", alternate = {"TemporarySessionTimeoutInSeconds"})
+    @Expose
+	@Nullable
+    public Integer temporarySessionTimeoutInSeconds;
+
+    /**
      * The Update Complete Screen Disabled.
      * Indicates if Weclome screen is disabled
      */
@@ -207,6 +243,15 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
     @Expose
 	@Nullable
     public Boolean updateCompleteScreenDisabled;
+
+    /**
+     * The User Session Timeout In Seconds.
+     * Indicates timeout of temporary session
+     */
+    @SerializedName(value = "userSessionTimeoutInSeconds", alternate = {"UserSessionTimeoutInSeconds"})
+    @Expose
+	@Nullable
+    public Integer userSessionTimeoutInSeconds;
 
     /**
      * The Watch Migration Screen Disabled.

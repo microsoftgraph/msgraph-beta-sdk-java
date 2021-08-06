@@ -35,6 +35,24 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     public String appDisplayName;
 
     /**
+     * The App Publisher.
+     * The publisher of the application.
+     */
+    @SerializedName(value = "appPublisher", alternate = {"AppPublisher"})
+    @Expose
+	@Nullable
+    public String appPublisher;
+
+    /**
+     * The App Version.
+     * The version of the application.
+     */
+    @SerializedName(value = "appVersion", alternate = {"AppVersion"})
+    @Expose
+	@Nullable
+    public String appVersion;
+
+    /**
      * The Device Display Name.
      * The name of the device.
      */

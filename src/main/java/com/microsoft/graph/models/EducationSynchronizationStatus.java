@@ -40,6 +40,14 @@ public enum EducationSynchronizationStatus
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * extracting
+    */
+    EXTRACTING,
+    /**
+    * validating
+    */
+    VALIDATING,
+    /**
     * For EducationSynchronizationStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

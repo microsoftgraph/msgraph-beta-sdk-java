@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.BufferDecryptionResult;
 import com.microsoft.graph.models.BufferEncryptionResult;
+import com.microsoft.graph.models.SigningResult;
+import com.microsoft.graph.models.VerificationResult;
 import com.microsoft.graph.requests.BitlockerRequestBuilder;
 import com.microsoft.graph.requests.DataLossPreventionPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.DataLossPreventionPolicyRequestBuilder;

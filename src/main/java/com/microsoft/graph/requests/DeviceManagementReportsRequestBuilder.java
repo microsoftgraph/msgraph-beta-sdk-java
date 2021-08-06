@@ -33,6 +33,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyD
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicySettingsDeviceSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingDetailsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingsReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetActiveMalwareReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetActiveMalwareSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetMalwareSummaryReportParameterSet;
@@ -292,6 +293,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetConfigurationSettingsReportRequestBuilder getConfigurationSettingsReport(@Nonnull final DeviceManagementReportsGetConfigurationSettingsReportParameterSet parameters) {
         return new DeviceManagementReportsGetConfigurationSettingsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigurationSettingsReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceRequestBuilder getEnrollmentConfigurationPoliciesByDevice(@Nonnull final DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceParameterSet parameters) {
+        return new DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEnrollmentConfigurationPoliciesByDevice"), getClient(), null, parameters);
     }
 
     /**

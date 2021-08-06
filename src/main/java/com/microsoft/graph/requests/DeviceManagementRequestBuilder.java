@@ -127,6 +127,10 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationP
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthAppPerformanceByOSVersionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDeviceModelPerformanceCollectionRequestBuilder;
@@ -167,6 +171,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCo
 import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsScoreHistoryRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsWorkFromAnywhereMetricRequestBuilder;
 import com.microsoft.graph.requests.WindowsMalwareInformationCollectionRequestBuilder;
@@ -1471,6 +1476,46 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
+        return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@Nonnull final String id) {
+        return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
+        return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@Nonnull final String id) {
+        return new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceIdRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion collection
      *
      * @return the collection request builder
@@ -1899,6 +1944,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public UserExperienceAnalyticsScoreHistoryRequestBuilder userExperienceAnalyticsScoreHistory(@Nonnull final String id) {
         return new UserExperienceAnalyticsScoreHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsScoreHistory") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     *
+     * @return the UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder instance
+     */
+    @Nonnull
+    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
+        return new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"), getClient(), null);
     }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsWorkFromAnywhereMetric collection

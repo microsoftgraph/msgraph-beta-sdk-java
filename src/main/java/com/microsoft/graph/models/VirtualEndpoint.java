@@ -58,7 +58,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Images.
-     * The image resource on cloud PC.
+     * The image resource on Cloud PC.
      */
     @SerializedName(value = "deviceImages", alternate = {"DeviceImages"})
     @Expose
@@ -67,7 +67,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Connections.
-     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for cloud PCs.
+     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
      */
     @SerializedName(value = "onPremisesConnections", alternate = {"OnPremisesConnections"})
     @Expose

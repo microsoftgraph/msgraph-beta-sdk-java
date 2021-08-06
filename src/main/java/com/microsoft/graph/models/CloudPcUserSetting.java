@@ -57,7 +57,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Local Admin Enabled.
-     * Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the cloud PC device.
+     * Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
      */
     @SerializedName(value = "localAdminEnabled", alternate = {"LocalAdminEnabled"})
     @Expose
@@ -66,7 +66,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Self Service Enabled.
-     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the cloud PC through the end user portal.
+     * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
      */
     @SerializedName(value = "selfServiceEnabled", alternate = {"SelfServiceEnabled"})
     @Expose

@@ -36,6 +36,15 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
 
 
     /**
+     * The Allow All Apps Access.
+     * AllowAllAppsAccess setting
+     */
+    @SerializedName(value = "allowAllAppsAccess", alternate = {"AllowAllAppsAccess"})
+    @Expose
+	@Nullable
+    public Boolean allowAllAppsAccess;
+
+    /**
      * The Certificate Store.
      * Target store certificate. Possible values are: user, machine.
      */

@@ -11,9 +11,11 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.AccessReviewScope;
+import com.microsoft.graph.models.AccessReviewReviewer;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.AccessReviewScheduleDefinition;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AccessReviewReviewerCollectionPage;
 import com.microsoft.graph.requests.AccessReviewInstanceDecisionItemCollectionPage;
 
 
@@ -86,6 +88,15 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     public String status;
 
     /**
+     * The Contacted Reviewers.
+     * 
+     */
+    @SerializedName(value = "contactedReviewers", alternate = {"ContactedReviewers"})
+    @Expose
+	@Nullable
+    public AccessReviewReviewerCollectionPage contactedReviewers;
+
+    /**
      * The Decisions.
      * Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
      */
@@ -112,6 +123,10 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("contactedReviewers")) {
+            contactedReviewers = serializer.deserializeObject(json.get("contactedReviewers"), AccessReviewReviewerCollectionPage.class);
+        }
 
         if (json.has("decisions")) {
             decisions = serializer.deserializeObject(json.get("decisions"), AccessReviewInstanceDecisionItemCollectionPage.class);

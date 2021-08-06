@@ -26,6 +26,15 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
 
 
     /**
+     * The Average Spike Time Score.
+     * AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100
+     */
+    @SerializedName(value = "averageSpikeTimeScore", alternate = {"AverageSpikeTimeScore"})
+    @Expose
+	@Nullable
+    public Integer averageSpikeTimeScore;
+
+    /**
      * The Cpu Spike Time Percentage.
      * CPU spike time in percentage. Valid values 0 to 100
      */

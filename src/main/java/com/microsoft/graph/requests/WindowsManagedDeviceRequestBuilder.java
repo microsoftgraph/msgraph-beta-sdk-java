@@ -29,6 +29,7 @@ import com.microsoft.graph.models.ManagedDeviceActivateDeviceEsimParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCleanWindowsDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
+import com.microsoft.graph.models.ManagedDeviceDeprovisionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
@@ -234,8 +235,8 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
      * @return the collection request builder
      */
     @Nonnull
-    public UserCollectionRequestBuilder users() {
-        return new UserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
+    public UserCollectionWithReferencesRequestBuilder users() {
+        return new UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("users"), getClient(), null);
     }
 
     /**
@@ -245,8 +246,8 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
      * @param id the item identifier
      */
     @Nonnull
-    public UserRequestBuilder users(@Nonnull final String id) {
-        return new UserRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
+    public UserWithReferenceRequestBuilder users(@Nonnull final String id) {
+        return new UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("users") + "/" + id, getClient(), null);
     }
 
     /**
@@ -338,6 +339,25 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     }
 
     /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceDeprovisionRequestBuilder deprovision(@Nonnull final ManagedDeviceDeprovisionParameterSet parameters) {
+        return new ManagedDeviceDeprovisionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deprovision"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceDisableRequestBuilder disable() {
+        return new ManagedDeviceDisableRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.disable"), getClient(), null);
+    }
+
+    /**
      * Disable lost mode
      * @return the request builder
      */
@@ -399,6 +419,15 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     @Nonnull
     public ManagedDeviceRecoverPasscodeRequestBuilder recoverPasscode() {
         return new ManagedDeviceRecoverPasscodeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.recoverPasscode"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public ManagedDeviceReenableRequestBuilder reenable() {
+        return new ManagedDeviceReenableRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reenable"), getClient(), null);
     }
 
     /**

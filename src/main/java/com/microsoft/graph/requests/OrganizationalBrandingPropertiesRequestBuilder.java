@@ -78,6 +78,16 @@ public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestB
     }
 
     /**
+     * Gets the request builder for favicon
+     *
+     * @return the OrganizationalBrandingPropertiesFaviconStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingPropertiesFaviconStreamRequestBuilder favicon() {
+        return new OrganizationalBrandingPropertiesFaviconStreamRequestBuilder(getRequestUrlWithAdditionalSegment("favicon"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for squareLogo
      *
      * @return the OrganizationalBrandingPropertiesSquareLogoStreamRequestBuilder instance

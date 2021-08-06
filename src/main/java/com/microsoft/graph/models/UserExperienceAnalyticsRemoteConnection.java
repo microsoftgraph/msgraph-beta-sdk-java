@@ -98,6 +98,15 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements I
     public String deviceName;
 
     /**
+     * The Manufacturer.
+     * The user experience analytics manufacturer.
+     */
+    @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
+    @Expose
+	@Nullable
+    public String manufacturer;
+
+    /**
      * The Model.
      * The user experience analytics device model.
      */
@@ -114,6 +123,15 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements I
     @Expose
 	@Nullable
     public Double remoteSignInTime;
+
+    /**
+     * The User Principal Name.
+     * The user experience analytics userPrincipalName.
+     */
+    @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
+    @Expose
+	@Nullable
+    public String userPrincipalName;
 
     /**
      * The Virtual Network.

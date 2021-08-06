@@ -313,6 +313,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime enrolledDateTime;
 
     /**
+     * The Enrollment Profile Name.
+     * Name of the enrollment profile assigned to the device. Default value is empty string, indicating no enrollment profile was assgined. This property is read-only.
+     */
+    @SerializedName(value = "enrollmentProfileName", alternate = {"EnrollmentProfileName"})
+    @Expose
+	@Nullable
+    public String enrollmentProfileName;
+
+    /**
      * The Ethernet Mac Address.
      * Ethernet MAC. This property is read-only.
      */
@@ -845,8 +854,6 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
      * The Users.
      * The primary users associated with the managed device.
      */
-    @SerializedName(value = "users", alternate = {"Users"})
-    @Expose
 	@Nullable
     public UserCollectionPage users;
 
