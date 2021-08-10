@@ -110,7 +110,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The App Management Policies.
-     * 
+     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      */
     @SerializedName(value = "appManagementPolicies", alternate = {"AppManagementPolicies"})
     @Expose
@@ -137,7 +137,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Default App Management Policy.
-     * 
+     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      */
     @SerializedName(value = "defaultAppManagementPolicy", alternate = {"DefaultAppManagementPolicy"})
     @Expose

@@ -124,6 +124,15 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
+     * The Management Service App Id.
+     * AzureAD management app ID used during client device-based enrollment discovery
+     */
+    @SerializedName(value = "managementServiceAppId", alternate = {"ManagementServiceAppId"})
+    @Expose
+	@Nullable
+    public String managementServiceAppId;
+
+    /**
      * The Out Of Box Experience Settings.
      * Out of box experience setting
      */

@@ -87,7 +87,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Request State.
-     * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, Submitted or Scheduled. Read-only.
+     * One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only.
      */
     @SerializedName(value = "requestState", alternate = {"RequestState"})
     @Expose
