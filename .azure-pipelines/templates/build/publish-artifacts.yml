@@ -18,4 +18,3 @@ steps:
 - publish: $(Build.ArtifactStagingDirectory)
   artifact: Drop 
   displayName: Publish Build Artifact
-

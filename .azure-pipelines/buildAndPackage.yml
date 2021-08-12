@@ -47,4 +47,3 @@ stages:
         steps: 
         - template: templates/github-release/version-and-release.yml
         - template: templates/alert-failure.yml
-  
