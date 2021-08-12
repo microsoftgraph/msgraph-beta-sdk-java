@@ -9,7 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.ItemBody;
+import com.microsoft.graph.models.EventMessageDetail;
 import com.microsoft.graph.models.ChatMessageFromIdentitySet;
+import com.microsoft.graph.models.ChatMessageType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -46,6 +48,15 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Event Detail.
+     * 
+     */
+    @SerializedName(value = "eventDetail", alternate = {"EventDetail"})
+    @Expose
+	@Nullable
+    public EventMessageDetail eventDetail;
+
+    /**
      * The From.
      * Information about the sender of the message.
      */
@@ -62,6 +73,15 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isDeleted;
+
+    /**
+     * The Message Type.
+     * 
+     */
+    @SerializedName(value = "messageType", alternate = {"MessageType"})
+    @Expose
+	@Nullable
+    public ChatMessageType messageType;
 
 
     /**
