@@ -1,18 +1,50 @@
 trigger:
   branches:
     include: 
-      - dev 
-      - main
+      - dev
   
-pr: none 
+pr: 
+- dev
 
 pool: 
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
-steps: 
-  - template: templates/secure-files.yml
-  - template: templates/build-and-coverage.yml
-  - template: templates/publish-artifacts.yml
-  - template: templates/alert-failure.yml
-  
+stages: 
+- stage: Build 
+  jobs: 
+  - job: 
+    steps: 
+    - template: templates/build/checkout-and-credscan.yml
+    - template: templates/build/install-java.yml
+    - template: templates/build/secure-files.yml
+    - template: templates/build/build-and-coverage.yml
+    - template: templates/build/publish-artifacts.yml
+    - template: templates/alert-failure.yml
+
+- stage: Maven-Preview-And-Github-Release
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/dev'))
+  jobs: 
+  - deployment: Maven-Preview
+    enviornment: 'MSGraph SDK Development - Java'
+    pool: 
+      vmImage: windows-latest
+    strategy: 
+     runOnce: 
+      deploy: 
+        steps: 
+        - template: templates/maven-preview/secure-files.yml 
+        - template: templates/maven-preview/copy-and-build.yml
+        - template: templates/alert-failure.yml
+
+  - deployment: Github-Release
+    dependsOn: Maven-Preview
+    enviornment: 'MsGraph SDK Development - Java'
+    pool: 
+      vmImage: windows-latest
+    strategy:
+     runOnce:
+      deploy:   
+        steps: 
+        - template: templates/github-release/version-and-release.yml
+        - template: templates/alert-failure.yml
   
