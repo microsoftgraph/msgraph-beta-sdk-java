@@ -55,7 +55,7 @@ stages:
       deploy: 
         steps: 
         - template: templates/secure-files.yml 
-        - template: templates/maven-preview/copy-and-build.yml
+        - template: templates/copy-and-build.yml
         - template: templates/alert-failure.yml
 
   - deployment: Github-Release
