@@ -2,6 +2,21 @@ trigger:
   branches:
     include: 
       - dev
+  paths:
+    include:
+      - src/*
+    exclude:
+      - .gradle/wrapper
+      - .gitignore
+      - CONTRIBUTING.md
+      - LICENSE
+      - THIRD PARTY NOTICES
+      - gradle.properties
+      - gradlew
+      - gradlew.bat
+      - readme.md
+      - settings.gradle
+      - Scripts/*
   
 pr: 
 - dev
