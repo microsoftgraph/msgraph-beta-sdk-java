@@ -36,7 +36,9 @@ stages:
     steps: 
     - template: templates/build/checkout-and-credscan.yml
     - template: templates/build/install-java.yml
-    - template: templates/build/secure-files.yml
+    - template: templates/secure-files.yml
+      parameters: 
+        stageID: 'build'
     - template: templates/build/build-and-coverage.yml
     - template: templates/build/publish-artifacts.yml
     - template: templates/alert-failure.yml
@@ -52,7 +54,7 @@ stages:
      runOnce: 
       deploy: 
         steps: 
-        - template: templates/maven-preview/secure-files.yml 
+        - template: templates/secure-files.yml 
         - template: templates/maven-preview/copy-and-build.yml
         - template: templates/alert-failure.yml
 
