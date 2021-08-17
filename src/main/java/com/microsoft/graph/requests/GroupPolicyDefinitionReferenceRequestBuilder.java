@@ -11,6 +11,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyDefinition;
 import com.microsoft.graph.requests.GroupPolicyCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyDefinitionFileWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.GroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyPresentationCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyPresentationRequestBuilder;
 import java.util.Arrays;

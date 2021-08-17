@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics device.
+     * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

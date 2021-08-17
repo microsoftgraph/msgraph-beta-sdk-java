@@ -38,6 +38,24 @@ public class SignInActivity implements IJsonBackedObject {
     }
 
     /**
+     * The Last Non Interactive Sign In Date Time.
+     * 
+     */
+    @SerializedName(value = "lastNonInteractiveSignInDateTime", alternate = {"LastNonInteractiveSignInDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime lastNonInteractiveSignInDateTime;
+
+    /**
+     * The Last Non Interactive Sign In Request Id.
+     * 
+     */
+    @SerializedName(value = "lastNonInteractiveSignInRequestId", alternate = {"LastNonInteractiveSignInRequestId"})
+    @Expose
+	@Nullable
+    public String lastNonInteractiveSignInRequestId;
+
+    /**
      * The Last Sign In Date Time.
      * The last interactive sign-in date for a specific user. You can use this field to calculate the last time a user signed in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
      */

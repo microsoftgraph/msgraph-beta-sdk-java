@@ -32,7 +32,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
 
     /**
      * The App Group Type.
-     * Public Apps selection: group or individual
+     * Public Apps selection: group or individual. Possible values are: selectedPublicApps, allCoreMicrosoftApps, allMicrosoftApps, allApps.
      */
     @SerializedName(value = "appGroupType", alternate = {"AppGroupType"})
     @Expose

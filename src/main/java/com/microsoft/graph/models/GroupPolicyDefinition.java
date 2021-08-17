@@ -13,6 +13,7 @@ import com.microsoft.graph.models.GroupPolicyDefinitionClassType;
 import com.microsoft.graph.models.GroupPolicyType;
 import com.microsoft.graph.models.GroupPolicyCategory;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
+import com.microsoft.graph.models.GroupPolicyDefinition;
 import com.microsoft.graph.models.GroupPolicyPresentation;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.GroupPolicyPresentationCollectionPage;
@@ -78,6 +79,15 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     public java.util.UUID groupPolicyCategoryId;
 
     /**
+     * The Has Related Definitions.
+     * Signifies whether or not there are related definitions to this definition
+     */
+    @SerializedName(value = "hasRelatedDefinitions", alternate = {"HasRelatedDefinitions"})
+    @Expose
+	@Nullable
+    public Boolean hasRelatedDefinitions;
+
+    /**
      * The Last Modified Date Time.
      * The date and time the entity was last modified.
      */
@@ -85,6 +95,24 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastModifiedDateTime;
+
+    /**
+     * The Min Device Csp Version.
+     * Minimum required CSP version for device configuration in this definition
+     */
+    @SerializedName(value = "minDeviceCspVersion", alternate = {"MinDeviceCspVersion"})
+    @Expose
+	@Nullable
+    public String minDeviceCspVersion;
+
+    /**
+     * The Min User Csp Version.
+     * Minimum required CSP version for user configuration in this definition
+     */
+    @SerializedName(value = "minUserCspVersion", alternate = {"MinUserCspVersion"})
+    @Expose
+	@Nullable
+    public String minUserCspVersion;
 
     /**
      * The Policy Type.
@@ -105,6 +133,15 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     public String supportedOn;
 
     /**
+     * The Version.
+     * Setting definition version
+     */
+    @SerializedName(value = "version", alternate = {"Version"})
+    @Expose
+	@Nullable
+    public String version;
+
+    /**
      * The Category.
      * The group policy category associated with the definition.
      */
@@ -123,6 +160,15 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     public GroupPolicyDefinitionFile definitionFile;
 
     /**
+     * The Next Version Definition.
+     * Definition of the next version of this definition
+     */
+    @SerializedName(value = "nextVersionDefinition", alternate = {"NextVersionDefinition"})
+    @Expose
+	@Nullable
+    public GroupPolicyDefinition nextVersionDefinition;
+
+    /**
      * The Presentations.
      * The group policy presentations associated with the definition.
      */
@@ -130,6 +176,15 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public GroupPolicyPresentationCollectionPage presentations;
+
+    /**
+     * The Previous Version Definition.
+     * Definition of the previous version of this definition
+     */
+    @SerializedName(value = "previousVersionDefinition", alternate = {"PreviousVersionDefinition"})
+    @Expose
+	@Nullable
+    public GroupPolicyDefinition previousVersionDefinition;
 
 
     /**

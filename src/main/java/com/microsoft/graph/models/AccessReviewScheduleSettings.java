@@ -105,7 +105,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recommendation Look Back Duration.
-     * 
+     * Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. Supported durations are 30, 60, or 90 days.
      */
     @SerializedName(value = "recommendationLookBackDuration", alternate = {"RecommendationLookBackDuration"})
     @Expose

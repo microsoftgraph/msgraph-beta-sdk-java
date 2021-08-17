@@ -32,7 +32,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
 
     /**
      * The Checkin Statuses.
-     * List of office Client check-in status.
+     * 
      */
     @SerializedName(value = "checkinStatuses", alternate = {"CheckinStatuses"})
     @Expose
@@ -41,7 +41,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -50,7 +50,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * Admin provided description of the office client configuration policy.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -59,7 +59,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
 
     /**
      * The Priority.
-     * Priority value should be unique value for each policy under a tenant and will be used for conflict resolution, lower values mean priority is high.
+     * 
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -68,7 +68,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
 
     /**
      * The User Checkin Summary.
-     * User check-in summary for the policy.
+     * 
      */
     @SerializedName(value = "userCheckinSummary", alternate = {"UserCheckinSummary"})
     @Expose
@@ -77,7 +77,7 @@ public class OfficeClientConfiguration extends Entity implements IJsonBackedObje
 
     /**
      * The Assignments.
-     * The list of group assignments for the policy.
+     * 
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
