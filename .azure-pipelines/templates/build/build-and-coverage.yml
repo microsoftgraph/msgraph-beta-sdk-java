@@ -7,3 +7,10 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo'
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/build/reports/jacoco/test/jacocoTestReport.xml
+    pathToSources: $(System.DefaultWorkingDirectory)/src/main/java
+    failIfCoverageEmpty: true
