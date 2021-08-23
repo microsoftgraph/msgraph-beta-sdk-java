@@ -29,6 +29,9 @@ pr:
 pool: 
   vmImage: windows-latest
 
+variables: 
+  DROP_PATH: '$(Agent.BuildDirectory)/Drop'
+
 stages: 
 - stage: Build 
   jobs: 
@@ -54,9 +57,13 @@ stages:
       deploy: 
         steps: 
         - template: templates/download-artifacts.yml
+          parameters: 
+            directoryPath: $(DROP_PATH)
         - template: templates/install-java.yml
         - template: templates/secure-files.yml 
         - template: templates/copy-and-build.yml
+          parameters: 
+            directoryPath: $(DROP_PATH)
 
   - deployment: Github_Release
     dependsOn: Maven_Preview
@@ -68,6 +75,9 @@ stages:
       deploy:   
         steps: 
         - template: templates/download-artifacts.yml
+          parameters: 
+            directoryPath: $(DROP_PATH)
         - template: templates/version-and-release.yml
           parameters:
             gitConnection: 'microsoftgraphrelease'
+            directoryPath: $(DROP_PATH)
