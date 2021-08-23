@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.GroupPolicyDefinition;
 import com.microsoft.graph.requests.GroupPolicyCategoryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyDefinitionFileWithReferenceRequestBuilder;
+import com.microsoft.graph.requests.GroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyPresentationCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyPresentationRequestBuilder;
 import java.util.Arrays;
@@ -80,6 +81,16 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder<Grou
     public GroupPolicyDefinitionFileWithReferenceRequestBuilder definitionFile() {
         return new GroupPolicyDefinitionFileWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("definitionFile"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for GroupPolicyDefinition
+     *
+     * @return the GroupPolicyDefinitionRequestBuilder instance
+     */
+    @Nonnull
+    public GroupPolicyDefinitionRequestBuilder nextVersionDefinition() {
+        return new GroupPolicyDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("nextVersionDefinition"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the GroupPolicyPresentation collection
      *
@@ -99,5 +110,15 @@ public class GroupPolicyDefinitionRequestBuilder extends BaseRequestBuilder<Grou
     @Nonnull
     public GroupPolicyPresentationRequestBuilder presentations(@Nonnull final String id) {
         return new GroupPolicyPresentationRequestBuilder(getRequestUrlWithAdditionalSegment("presentations") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for GroupPolicyDefinition
+     *
+     * @return the GroupPolicyDefinitionRequestBuilder instance
+     */
+    @Nonnull
+    public GroupPolicyDefinitionRequestBuilder previousVersionDefinition() {
+        return new GroupPolicyDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("previousVersionDefinition"), getClient(), null);
     }
 }

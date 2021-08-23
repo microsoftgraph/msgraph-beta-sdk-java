@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.externalconnectors.models.Configuration;
+import com.microsoft.graph.externalconnectors.models.SearchSettings;
 import com.microsoft.graph.externalconnectors.models.ConnectionState;
 import com.microsoft.graph.externalconnectors.models.ExternalGroup;
 import com.microsoft.graph.externalconnectors.models.ExternalItem;
@@ -45,6 +46,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     public Configuration configuration;
 
     /**
+     * The Connector Id.
+     * 
+     */
+    @SerializedName(value = "connectorId", alternate = {"ConnectorId"})
+    @Expose
+	@Nullable
+    public String connectorId;
+
+    /**
      * The Description.
      * Description of the connection displayed in the Microsoft 365 admin center. Optional.
      */
@@ -61,6 +71,15 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String name;
+
+    /**
+     * The Search Settings.
+     * 
+     */
+    @SerializedName(value = "searchSettings", alternate = {"SearchSettings"})
+    @Expose
+	@Nullable
+    public SearchSettings searchSettings;
 
     /**
      * The State.

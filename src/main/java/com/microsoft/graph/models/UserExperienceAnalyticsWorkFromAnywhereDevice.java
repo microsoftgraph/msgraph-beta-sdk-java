@@ -253,7 +253,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Upgrade Eligibility.
-     * The user experience work from anywhere windows upgrade eligibility status of device.
+     * The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
      */
     @SerializedName(value = "upgradeEligibility", alternate = {"UpgradeEligibility"})
     @Expose

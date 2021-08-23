@@ -53,7 +53,7 @@ public class CryptographySuite implements IJsonBackedObject {
 
     /**
      * The Cipher Transform Constants.
-     * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+     * Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      */
     @SerializedName(value = "cipherTransformConstants", alternate = {"CipherTransformConstants"})
     @Expose
@@ -71,7 +71,7 @@ public class CryptographySuite implements IJsonBackedObject {
 
     /**
      * The Encryption Method.
-     * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+     * Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      */
     @SerializedName(value = "encryptionMethod", alternate = {"EncryptionMethod"})
     @Expose

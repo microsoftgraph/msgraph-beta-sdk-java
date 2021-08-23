@@ -59,7 +59,7 @@ public class IosVpnSecurityAssociationParameters implements IJsonBackedObject {
 
     /**
      * The Security Encryption Algorithm.
-     * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm.
+     * Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      */
     @SerializedName(value = "securityEncryptionAlgorithm", alternate = {"SecurityEncryptionAlgorithm"})
     @Expose
