@@ -7,4 +7,4 @@ steps:
     itemPattern: |
       **
       *
-    targetPath: '$(Agent.BuildDirectory)/Drop/'
+    targetPath: '$(DROP_PATH)/'
