@@ -123,7 +123,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Access Package.
-     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.
+     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable.  Supports $expand.
      */
     @SerializedName(value = "accessPackage", alternate = {"AccessPackage"})
     @Expose
@@ -132,7 +132,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Access Package Assignment.
-     * 
+     * For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      */
     @SerializedName(value = "accessPackageAssignment", alternate = {"AccessPackageAssignment"})
     @Expose
@@ -141,7 +141,7 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
 
     /**
      * The Requestor.
-     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable.
+     * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      */
     @SerializedName(value = "requestor", alternate = {"Requestor"})
     @Expose

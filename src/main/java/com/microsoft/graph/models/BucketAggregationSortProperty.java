@@ -24,6 +24,10 @@ public enum BucketAggregationSortProperty
     */
     KEY_AS_NUMBER,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For BucketAggregationSortProperty values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessReviewError;
 import com.microsoft.graph.models.AccessReviewReviewerScope;
 import com.microsoft.graph.models.AccessReviewScope;
 import com.microsoft.graph.models.AccessReviewReviewer;
@@ -41,6 +42,15 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime endDateTime;
+
+    /**
+     * The Errors.
+     * Collection of errors in an access review instance lifecycle. Read-only.
+     */
+    @SerializedName(value = "errors", alternate = {"Errors"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewError> errors;
 
     /**
      * The Fallback Reviewers.

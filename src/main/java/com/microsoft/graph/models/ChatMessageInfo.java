@@ -49,7 +49,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Event Detail.
-     * 
+     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
      */
     @SerializedName(value = "eventDetail", alternate = {"EventDetail"})
     @Expose
@@ -76,7 +76,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Message Type.
-     * 
+     * The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
      */
     @SerializedName(value = "messageType", alternate = {"MessageType"})
     @Expose

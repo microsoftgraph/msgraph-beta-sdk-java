@@ -48,6 +48,15 @@ public class MicrosoftTunnelSite extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Internal Network Probe Url.
+     * The MicrosoftTunnelSite's Internal Network Access Probe URL
+     */
+    @SerializedName(value = "internalNetworkProbeUrl", alternate = {"InternalNetworkProbeUrl"})
+    @Expose
+	@Nullable
+    public String internalNetworkProbeUrl;
+
+    /**
      * The Public Address.
      * The MicrosoftTunnelSite's public domain name or IP address
      */

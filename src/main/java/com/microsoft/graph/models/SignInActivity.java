@@ -39,7 +39,7 @@ public class SignInActivity implements IJsonBackedObject {
 
     /**
      * The Last Non Interactive Sign In Date Time.
-     * 
+     * The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
      */
     @SerializedName(value = "lastNonInteractiveSignInDateTime", alternate = {"LastNonInteractiveSignInDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class SignInActivity implements IJsonBackedObject {
 
     /**
      * The Last Non Interactive Sign In Request Id.
-     * 
+     * Request identifier of the last non-interactive sign-in performed by this user.
      */
     @SerializedName(value = "lastNonInteractiveSignInRequestId", alternate = {"LastNonInteractiveSignInRequestId"})
     @Expose
@@ -66,7 +66,7 @@ public class SignInActivity implements IJsonBackedObject {
 
     /**
      * The Last Sign In Request Id.
-     * Request ID of the last sign-in performed by this user.
+     * Request identifier of the last interactive sign-in performed by this user.
      */
     @SerializedName(value = "lastSignInRequestId", alternate = {"LastSignInRequestId"})
     @Expose

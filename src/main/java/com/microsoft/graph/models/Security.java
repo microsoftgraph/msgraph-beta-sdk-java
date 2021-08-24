@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SecurityProviderStatus;
+import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.Alert;
 import com.microsoft.graph.models.CloudAppSecurityProfile;
 import com.microsoft.graph.models.DomainSecurityProfile;
@@ -59,6 +60,15 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<SecurityProviderStatus> providerStatus;
+
+    /**
+     * The Attack Simulation.
+     * 
+     */
+    @SerializedName(value = "attackSimulation", alternate = {"AttackSimulation"})
+    @Expose
+	@Nullable
+    public AttackSimulationRoot attackSimulation;
 
     /**
      * The Alerts.

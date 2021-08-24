@@ -11,7 +11,7 @@ import com.microsoft.graph.models.MicrosoftTunnelSite;
 import com.microsoft.graph.models.MicrosoftTunnelServer;
 import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
 import com.microsoft.graph.models.KeyLongValuePair;
-import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.MetricTimeSeriesDataPoint;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

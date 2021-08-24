@@ -30,7 +30,7 @@ public class UnifiedRoleScheduleBase extends Entity implements IJsonBackedObject
 
     /**
      * The App Scope Id.
-     * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
+     * Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units or all users.
      */
     @SerializedName(value = "appScopeId", alternate = {"AppScopeId"})
     @Expose
@@ -48,7 +48,7 @@ public class UnifiedRoleScheduleBase extends Entity implements IJsonBackedObject
 
     /**
      * The Created Using.
-     * ID of the roleAssignmentScheduleRequest that created this schedule.
+     * Identifier of the roleAssignmentScheduleRequest that created this schedule.
      */
     @SerializedName(value = "createdUsing", alternate = {"CreatedUsing"})
     @Expose
@@ -57,7 +57,7 @@ public class UnifiedRoleScheduleBase extends Entity implements IJsonBackedObject
 
     /**
      * The Directory Scope Id.
-     * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
      */
     @SerializedName(value = "directoryScopeId", alternate = {"DirectoryScopeId"})
     @Expose
@@ -75,7 +75,7 @@ public class UnifiedRoleScheduleBase extends Entity implements IJsonBackedObject
 
     /**
      * The Principal Id.
-     * Objectid of the principal to which the assignment is being granted to.
+     * Identifier of the principal to which the assignment is being granted to. Supports $filter (eq).
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -84,7 +84,7 @@ public class UnifiedRoleScheduleBase extends Entity implements IJsonBackedObject
 
     /**
      * The Role Definition Id.
-     * ID of the unifiedRoleDefinition the assignment is for. Read only.
+     * Identifier of the unifiedRoleDefinition the assignment is for. Read only. Supports $filter (eq).
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -93,7 +93,7 @@ public class UnifiedRoleScheduleBase extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval.
+     * Status for the roleAssignmentSchedule. It can include state related messages like Provisioned, Revoked, Pending Provisioning, and Pending Approval. Supports $filter (eq).
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
