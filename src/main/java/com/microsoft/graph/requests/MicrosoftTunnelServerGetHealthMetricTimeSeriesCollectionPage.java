@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.MetricTimeSeriesDataPoint;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -23,10 +23,10 @@ import com.microsoft.graph.requests.MicrosoftTunnelServerGetHealthMetricTimeSeri
 /**
  * The class for the Microsoft Tunnel Server Get Health Metric Time Series Collection Page.
  */
-public class MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionPage extends BaseCollectionPage<KeyValuePair, MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequestBuilder> {
+public class MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionPage extends BaseCollectionPage<MetricTimeSeriesDataPoint, MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequestBuilder> {
 
     /**
-     * A collection page for KeyValuePair.
+     * A collection page for MetricTimeSeriesDataPoint.
      *
      * @param response The serialized MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionResponse from the service
      * @param builder The request builder for the next collection page
@@ -41,7 +41,7 @@ public class MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionPage extend
      * @param pageContents       the contents of this page
      * @param nextRequestBuilder the request builder for the next page
      */
-    public MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionPage(@Nonnull final java.util.List<KeyValuePair> pageContents, @Nullable final MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequestBuilder nextRequestBuilder) {
+    public MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionPage(@Nonnull final java.util.List<MetricTimeSeriesDataPoint> pageContents, @Nullable final MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequestBuilder nextRequestBuilder) {
         super(pageContents, nextRequestBuilder);
     }
 }

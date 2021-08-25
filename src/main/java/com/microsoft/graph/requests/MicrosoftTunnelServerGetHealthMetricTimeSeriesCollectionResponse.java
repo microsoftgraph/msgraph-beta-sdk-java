@@ -4,7 +4,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.requests;
-import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.MetricTimeSeriesDataPoint;
 
 
 import javax.annotation.Nullable;
@@ -16,5 +16,5 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 /**
  * The class for the Microsoft Tunnel Server Get Health Metric Time Series Collection Response.
  */
-public class MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionResponse extends BaseCollectionResponse<KeyValuePair> {
+public class MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionResponse extends BaseCollectionResponse<MetricTimeSeriesDataPoint> {
 }

@@ -34,7 +34,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements IJs
 
     /**
      * The Action.
-     * Representing the type of the operation on the role assignment. The value can be AdminAdd: Administrators assign users/groups to roles;UserAdd: Users activate eligible assignments; AdminUpdate: Administrators change existing role assignmentsAdminRemove: Administrators remove users/groups from roles;UserRemove: Users deactivate active assignments;UserExtend: Users request to extend their expiring assignments;AdminExtend: Administrators extend expiring assignments.UserRenew: Users request to renew their expired assignments;AdminRenew: Administrators extend expiring assignments.
+     * Represents the type of the operation on the role assignment. The possible values are: AdminAssign: For administrators to assign roles to users or groups.AdminRemove: For administrators to remove users or groups from roles. AdminUpdate: For administrators to change existing role assignments.AdminExtend: For administrators to extend expiring assignments.AdminRenew: For administrators to renew expired assignments.SelfActivate: For users to activate their assignments.SelfDeactivate: For users to deactivate their active assignments.SelfExtend: For users to request to extend their expiring assignments.SelfRenew: For users to request to renew their expired assignments.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -43,7 +43,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements IJs
 
     /**
      * The App Scope Id.
-     * Id of the app specific scope when the assignment scope is app specific. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use '/' for tenant-wide scope. App scopes are scopes that are defined and understood by this application only.
+     * Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
      */
     @SerializedName(value = "appScopeId", alternate = {"AppScopeId"})
     @Expose
@@ -52,7 +52,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements IJs
 
     /**
      * The Directory Scope Id.
-     * Id of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. App scopes are scopes that are defined and understood by this application only.
+     * Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
      */
     @SerializedName(value = "directoryScopeId", alternate = {"DirectoryScopeId"})
     @Expose
@@ -79,7 +79,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements IJs
 
     /**
      * The Principal Id.
-     * Objectid of the principal to which the assignment is being granted to.
+     * Identifier of the principal to which the assignment is being granted to.
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -88,7 +88,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements IJs
 
     /**
      * The Role Definition Id.
-     * ID of the unifiedRoleDefinition the assignment is for. Read only.
+     * Identifier of the unifiedRoleDefinition the assignment is for. Read only.
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -106,7 +106,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements IJs
 
     /**
      * The Target Schedule Id.
-     * ID of the schedule object attached to the assignment.
+     * Identifier of the schedule object attached to the assignment.
      */
     @SerializedName(value = "targetScheduleId", alternate = {"TargetScheduleId"})
     @Expose
@@ -169,7 +169,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements IJs
 
     /**
      * The Target Schedule.
-     * 
+     * Property indicating the schedule for an eligible role assignment.
      */
     @SerializedName(value = "targetSchedule", alternate = {"TargetSchedule"})
     @Expose

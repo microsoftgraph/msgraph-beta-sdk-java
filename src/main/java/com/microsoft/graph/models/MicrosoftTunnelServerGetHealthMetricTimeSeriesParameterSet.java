@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.MetricTimeSeriesDataPoint;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -30,22 +30,22 @@ public class MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSet {
     public String metricName;
 
     /**
-     * The start Time.
+     * The start Date Time.
      * 
      */
-    @SerializedName(value = "startTime", alternate = {"StartTime"})
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
 	@Nullable
-    public java.time.OffsetDateTime startTime;
+    public java.time.OffsetDateTime startDateTime;
 
     /**
-     * The end Time.
+     * The end Date Time.
      * 
      */
-    @SerializedName(value = "endTime", alternate = {"EndTime"})
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
 	@Nullable
-    public java.time.OffsetDateTime endTime;
+    public java.time.OffsetDateTime endDateTime;
 
 
     /**
@@ -58,8 +58,8 @@ public class MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSet {
      */
     protected MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSet(@Nonnull final MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSetBuilder builder) {
         this.metricName = builder.metricName;
-        this.startTime = builder.startTime;
-        this.endTime = builder.endTime;
+        this.startDateTime = builder.startDateTime;
+        this.endDateTime = builder.endDateTime;
     }
     /**
      * Gets a new builder for the body
@@ -89,33 +89,33 @@ public class MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSet {
             return this;
         }
         /**
-         * The startTime parameter value
+         * The startDateTime parameter value
          */
         @Nullable
-        protected java.time.OffsetDateTime startTime;
+        protected java.time.OffsetDateTime startDateTime;
         /**
-         * Sets the StartTime
+         * Sets the StartDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSetBuilder withStartTime(@Nullable final java.time.OffsetDateTime val) {
-            this.startTime = val;
+        public MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSetBuilder withStartDateTime(@Nullable final java.time.OffsetDateTime val) {
+            this.startDateTime = val;
             return this;
         }
         /**
-         * The endTime parameter value
+         * The endDateTime parameter value
          */
         @Nullable
-        protected java.time.OffsetDateTime endTime;
+        protected java.time.OffsetDateTime endDateTime;
         /**
-         * Sets the EndTime
+         * Sets the EndDateTime
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSetBuilder withEndTime(@Nullable final java.time.OffsetDateTime val) {
-            this.endTime = val;
+        public MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSetBuilder withEndDateTime(@Nullable final java.time.OffsetDateTime val) {
+            this.endDateTime = val;
             return this;
         }
         /**
@@ -142,11 +142,11 @@ public class MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSet {
         if(this.metricName != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("metricName", metricName));
         }
-        if(this.startTime != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("startTime", startTime));
+        if(this.startDateTime != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("startDateTime", startDateTime));
         }
-        if(this.endTime != null) {
-            result.add(new com.microsoft.graph.options.FunctionOption("endTime", endTime));
+        if(this.endDateTime != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("endDateTime", endDateTime));
         }
         return result;
     }

@@ -28,6 +28,10 @@ public enum SensitivityLabelTarget
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * teamwork
+    */
+    TEAMWORK,
+    /**
     * For SensitivityLabelTarget values that were not expected from the service
     */
     UNEXPECTED_VALUE

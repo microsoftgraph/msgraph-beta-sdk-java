@@ -20,6 +20,10 @@ public enum SearchAlterationType
     */
     MODIFICATION,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For SearchAlterationType values that were not expected from the service
     */
     UNEXPECTED_VALUE

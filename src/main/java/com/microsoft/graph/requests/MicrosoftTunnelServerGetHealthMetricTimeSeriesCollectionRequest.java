@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.MetricTimeSeriesDataPoint;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ import javax.annotation.Nonnull;
 
 import com.microsoft.graph.requests.MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionResponse;
-import com.microsoft.graph.models.KeyValuePair;
+import com.microsoft.graph.models.MetricTimeSeriesDataPoint;
 import com.microsoft.graph.models.MicrosoftTunnelServerGetHealthMetricTimeSeriesParameterSet;
 import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.core.IBaseClient;
@@ -26,7 +26,7 @@ import com.microsoft.graph.http.BaseActionCollectionRequest;
 /**
  * The class for the Microsoft Tunnel Server Get Health Metric Time Series Collection Request.
  */
-public class MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequest extends BaseActionCollectionRequest<KeyValuePair, MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionResponse, MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionPage> {
+public class MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionRequest extends BaseActionCollectionRequest<MetricTimeSeriesDataPoint, MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionResponse, MicrosoftTunnelServerGetHealthMetricTimeSeriesCollectionPage> {
 
 
     /** The body for the method */

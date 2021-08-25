@@ -81,6 +81,9 @@ import com.microsoft.graph.models.YammerGroupsActivityCounts;
 import com.microsoft.graph.models.YammerGroupsActivityDetail;
 import com.microsoft.graph.models.YammerGroupsActivityGroupCounts;
 import com.microsoft.graph.models.ArchivedPrintJob;
+import com.microsoft.graph.models.AttackSimulationRepeatOffender;
+import com.microsoft.graph.models.AttackSimulationSimulationUserCoverage;
+import com.microsoft.graph.models.AttackSimulationTrainingUserCoverage;
 import com.microsoft.graph.models.GroupPrintUsageSummary;
 import com.microsoft.graph.models.OverallPrintUsageSummary;
 import com.microsoft.graph.models.PrinterUsageSummary;
@@ -1421,5 +1424,32 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public ReportRootGetTenantSecureScoresRequestBuilder getTenantSecureScores(@Nonnull final ReportRootGetTenantSecureScoresParameterSet parameters) {
         return new ReportRootGetTenantSecureScoresRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getTenantSecureScores"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public ReportRootGetAttackSimulationRepeatOffendersCollectionRequestBuilder getAttackSimulationRepeatOffenders() {
+        return new ReportRootGetAttackSimulationRepeatOffendersCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationRepeatOffenders"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public ReportRootGetAttackSimulationSimulationUserCoverageCollectionRequestBuilder getAttackSimulationSimulationUserCoverage() {
+        return new ReportRootGetAttackSimulationSimulationUserCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationSimulationUserCoverage"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public ReportRootGetAttackSimulationTrainingUserCoverageCollectionRequestBuilder getAttackSimulationTrainingUserCoverage() {
+        return new ReportRootGetAttackSimulationTrainingUserCoverageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAttackSimulationTrainingUserCoverage"), getClient(), null);
     }
 }
