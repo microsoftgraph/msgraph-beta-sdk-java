@@ -39,7 +39,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
 
     /**
      * The Client Id.
-     * The client ID for the application obtained when registering the application with the identity provider. Required.
+     * The client identifier for the application obtained when registering the application with the identity provider. Required.
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose

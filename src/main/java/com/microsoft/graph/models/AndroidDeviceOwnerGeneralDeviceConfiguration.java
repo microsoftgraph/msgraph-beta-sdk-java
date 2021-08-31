@@ -20,6 +20,7 @@ import com.microsoft.graph.models.AppListItem;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeFolderIcon;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeIconSize;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeManagedFolder;
+import com.microsoft.graph.models.KioskModeManagedHomeScreenPinComplexity;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskModeScreenOrientation;
 import com.microsoft.graph.models.AndroidDeviceOwnerVirtualHomeButtonType;
 import com.microsoft.graph.models.MicrosoftLauncherDockPresence;
@@ -369,6 +370,87 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public java.util.List<AndroidDeviceOwnerKioskModeManagedFolder> kioskModeManagedFolders;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Auto Signout.
+     * Whether or not to automatically sign-out of MHS and Shared device mode applications after inactive for Managed Home Screen.
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenAutoSignout", alternate = {"KioskModeManagedHomeScreenAutoSignout"})
+    @Expose
+	@Nullable
+    public Boolean kioskModeManagedHomeScreenAutoSignout;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Inactive Sign Out Delay In Seconds.
+     * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds", alternate = {"KioskModeManagedHomeScreenInactiveSignOutDelayInSeconds"})
+    @Expose
+	@Nullable
+    public Integer kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Inactive Sign Out Notice In Seconds.
+     * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds", alternate = {"KioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds"})
+    @Expose
+	@Nullable
+    public Integer kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Pin Complexity.
+     * Complexity of PIN for sign-in session for Managed Home Screen. Possible values are: notConfigured, simple, complex.
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenPinComplexity", alternate = {"KioskModeManagedHomeScreenPinComplexity"})
+    @Expose
+	@Nullable
+    public KioskModeManagedHomeScreenPinComplexity kioskModeManagedHomeScreenPinComplexity;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Pin Required.
+     * Whether or not require user to set a PIN for sign-in session for Managed Home Screen.
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenPinRequired", alternate = {"KioskModeManagedHomeScreenPinRequired"})
+    @Expose
+	@Nullable
+    public Boolean kioskModeManagedHomeScreenPinRequired;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Pin Required To Resume.
+     * Whether or not required user to enter session PIN if screensaver has appeared for Managed Home Screen.
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenPinRequiredToResume", alternate = {"KioskModeManagedHomeScreenPinRequiredToResume"})
+    @Expose
+	@Nullable
+    public Boolean kioskModeManagedHomeScreenPinRequiredToResume;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Sign In Background.
+     * Custom URL background for sign-in screen for Managed Home Screen.
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenSignInBackground", alternate = {"KioskModeManagedHomeScreenSignInBackground"})
+    @Expose
+	@Nullable
+    public String kioskModeManagedHomeScreenSignInBackground;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Sign In Branding Logo.
+     * Custom URL branding logo for sign-in screen and session pin page for Managed Home Screen.
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenSignInBrandingLogo", alternate = {"KioskModeManagedHomeScreenSignInBrandingLogo"})
+    @Expose
+	@Nullable
+    public String kioskModeManagedHomeScreenSignInBrandingLogo;
+
+    /**
+     * The Kiosk Mode Managed Home Screen Sign In Enabled.
+     * Whether or not show sign-in screen for Managed Home Screen.
+     */
+    @SerializedName(value = "kioskModeManagedHomeScreenSignInEnabled", alternate = {"KioskModeManagedHomeScreenSignInEnabled"})
+    @Expose
+	@Nullable
+    public Boolean kioskModeManagedHomeScreenSignInEnabled;
 
     /**
      * The Kiosk Mode Managed Settings Entry Disabled.

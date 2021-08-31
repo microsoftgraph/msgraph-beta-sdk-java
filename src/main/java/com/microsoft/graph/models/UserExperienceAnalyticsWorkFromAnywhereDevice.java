@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.UserExperienceAnalyticsHealthState;
 import com.microsoft.graph.models.OperatingSystemUpgradeEligibility;
 import com.microsoft.graph.models.Entity;
 
@@ -72,6 +73,33 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     public Boolean azureAdRegistered;
 
     /**
+     * The Cloud Identity Score.
+     * The user experience work from anywhere per device cloud identity score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "cloudIdentityScore", alternate = {"CloudIdentityScore"})
+    @Expose
+	@Nullable
+    public Double cloudIdentityScore;
+
+    /**
+     * The Cloud Management Score.
+     * The user experience work from anywhere per device cloud management score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "cloudManagementScore", alternate = {"CloudManagementScore"})
+    @Expose
+	@Nullable
+    public Double cloudManagementScore;
+
+    /**
+     * The Cloud Provisioning Score.
+     * The user experience work from anywhere per device cloud provisioning score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "cloudProvisioningScore", alternate = {"CloudProvisioningScore"})
+    @Expose
+	@Nullable
+    public Double cloudProvisioningScore;
+
+    /**
      * The Compliance Policy Set To Intune.
      * The user experience work from anywhere device's compliancePolicySetToIntune.
      */
@@ -88,6 +116,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     @Expose
 	@Nullable
     public String deviceName;
+
+    /**
+     * The Health Status.
+     * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     */
+    @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsHealthState healthStatus;
 
     /**
      * The Managed By.
@@ -259,6 +296,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     @Expose
 	@Nullable
     public OperatingSystemUpgradeEligibility upgradeEligibility;
+
+    /**
+     * The Windows Score.
+     * The user experience work from anywhere per device windows score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "windowsScore", alternate = {"WindowsScore"})
+    @Expose
+	@Nullable
+    public Double windowsScore;
 
 
     /**

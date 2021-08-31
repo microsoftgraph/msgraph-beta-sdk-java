@@ -11,8 +11,6 @@ import com.microsoft.graph.models.WindowsFeatureUpdateProfile;
 import com.microsoft.graph.models.WindowsFeatureUpdateProfileAssignment;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentRequestBuilder;
-import com.microsoft.graph.requests.WindowsUpdateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsUpdateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

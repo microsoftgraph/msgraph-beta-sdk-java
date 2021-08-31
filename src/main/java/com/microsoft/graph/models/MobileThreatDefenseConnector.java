@@ -117,6 +117,15 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
     public Boolean macEnabled;
 
     /**
+     * The Microsoft Defender For Endpoint Attach Enabled.
+     * When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled.
+     */
+    @SerializedName(value = "microsoftDefenderForEndpointAttachEnabled", alternate = {"MicrosoftDefenderForEndpointAttachEnabled"})
+    @Expose
+	@Nullable
+    public Boolean microsoftDefenderForEndpointAttachEnabled;
+
+    /**
      * The Partner State.
      * Data Sync Partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
      */

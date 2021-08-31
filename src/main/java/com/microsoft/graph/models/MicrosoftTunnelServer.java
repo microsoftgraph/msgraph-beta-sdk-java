@@ -28,7 +28,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
 
     /**
      * The Agent Image Digest.
-     * The digest of the current agent image running on this server 
+     * The digest of the current agent image running on this server
      */
     @SerializedName(value = "agentImageDigest", alternate = {"AgentImageDigest"})
     @Expose
@@ -55,7 +55,7 @@ public class MicrosoftTunnelServer extends Entity implements IJsonBackedObject {
 
     /**
      * The Server Image Digest.
-     * The digest of the current server image running on this server 
+     * The digest of the current server image running on this server
      */
     @SerializedName(value = "serverImageDigest", alternate = {"ServerImageDigest"})
     @Expose

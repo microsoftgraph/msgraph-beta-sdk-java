@@ -52,6 +52,10 @@ public enum ResultantAppStateDetail
     */
     POWER_SHELL_SCRIPT_REQUIREMENT_NOT_MET,
     /**
+    * superseding Apps Not Applicable
+    */
+    SUPERSEDING_APPS_NOT_APPLICABLE,
+    /**
     * no Additional Details
     */
     NO_ADDITIONAL_DETAILS,
@@ -72,6 +76,18 @@ public enum ResultantAppStateDetail
     */
     DEPENDENCY_WITH_AUTO_INSTALL_DISABLED,
     /**
+    * superseded App Uninstall Failed
+    */
+    SUPERSEDED_APP_UNINSTALL_FAILED,
+    /**
+    * superseded App Uninstall Pending Reboot
+    */
+    SUPERSEDED_APP_UNINSTALL_PENDING_REBOOT,
+    /**
+    * removing Superseded Apps
+    */
+    REMOVING_SUPERSEDED_APPS,
+    /**
     * ios App Store Update Failed To Install
     */
     IOS_APP_STORE_UPDATE_FAILED_TO_INSTALL,
@@ -83,6 +99,18 @@ public enum ResultantAppStateDetail
     * user Rejected Update
     */
     USER_REJECTED_UPDATE,
+    /**
+    * uninstall Pending Reboot
+    */
+    UNINSTALL_PENDING_REBOOT,
+    /**
+    * superseding Apps Detected
+    */
+    SUPERSEDING_APPS_DETECTED,
+    /**
+    * superseded Apps Detected
+    */
+    SUPERSEDED_APPS_DETECTED,
     /**
     * see Install Error Code
     */
@@ -103,6 +131,14 @@ public enum ResultantAppStateDetail
     * user Is Not Logged Into App Store
     */
     USER_IS_NOT_LOGGED_INTO_APP_STORE,
+    /**
+    * untargeted Superseding Apps Detected
+    */
+    UNTARGETED_SUPERSEDING_APPS_DETECTED,
+    /**
+    * app Removed By Supersedence
+    */
+    APP_REMOVED_BY_SUPERSEDENCE,
     /**
     * see Uninstall Error Code
     */

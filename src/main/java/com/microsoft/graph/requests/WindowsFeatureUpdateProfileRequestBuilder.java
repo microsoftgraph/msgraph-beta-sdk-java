@@ -11,8 +11,6 @@ import com.microsoft.graph.models.WindowsFeatureUpdateProfile;
 import com.microsoft.graph.models.WindowsFeatureUpdateProfileAssignment;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentRequestBuilder;
-import com.microsoft.graph.requests.WindowsUpdateStateCollectionRequestBuilder;
-import com.microsoft.graph.requests.WindowsUpdateStateRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -81,26 +79,6 @@ public class WindowsFeatureUpdateProfileRequestBuilder extends BaseRequestBuilde
     @Nonnull
     public WindowsFeatureUpdateProfileAssignmentRequestBuilder assignments(@Nonnull final String id) {
         return new WindowsFeatureUpdateProfileAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("assignments") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the WindowsUpdateState collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public WindowsUpdateStateCollectionRequestBuilder deviceUpdateStates() {
-        return new WindowsUpdateStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceUpdateStates"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the WindowsUpdateState item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public WindowsUpdateStateRequestBuilder deviceUpdateStates(@Nonnull final String id) {
-        return new WindowsUpdateStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceUpdateStates") + "/" + id, getClient(), null);
     }
 
     /**

@@ -28,7 +28,7 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements IJs
 
     /**
      * The Target.
-     * The assignment target that the feature update profile is assigned to.
+     * The assignment target that the quality update profile is assigned to.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

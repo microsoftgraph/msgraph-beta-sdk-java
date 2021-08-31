@@ -10,6 +10,7 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagement;
 import com.microsoft.graph.models.DeviceManagementResourceAccessProfileBase;
 import com.microsoft.graph.models.DeviceManagementResourceAccessProfileAssignment;
+import com.microsoft.graph.models.PolicyPlatformType;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

@@ -48,7 +48,7 @@ public class RoleScopeTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Built In.
-     * Description of the Role Scope Tag.
+     * Description of the Role Scope Tag. This property is read-only.
      */
     @SerializedName(value = "isBuiltIn", alternate = {"IsBuiltIn"})
     @Expose

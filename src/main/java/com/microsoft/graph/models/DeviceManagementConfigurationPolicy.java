@@ -116,7 +116,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements IJson
 
     /**
      * The Technologies.
-     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
+     * Technologies for this policy. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

@@ -24,6 +24,14 @@ public enum MacOSSoftwareUpdateDelayPolicy
     */
     DELAY_APP_UPDATE_VISIBILITY,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
+    * delay Major Os Update Visibility
+    */
+    DELAY_MAJOR_OS_UPDATE_VISIBILITY,
+    /**
     * For MacOSSoftwareUpdateDelayPolicy values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -55,6 +55,15 @@ public class UserExperienceAnalyticsAutopilotDevicesSummary implements IJsonBack
 	@Nullable
     public Integer devicesWithoutAutopilotProfileAssigned;
 
+    /**
+     * The Total Windows10Devices Without Tenant Attached.
+     * The count of windows 10 devices that are Intune and Comanaged.
+     */
+    @SerializedName(value = "totalWindows10DevicesWithoutTenantAttached", alternate = {"TotalWindows10DevicesWithoutTenantAttached"})
+    @Expose
+	@Nullable
+    public Integer totalWindows10DevicesWithoutTenantAttached;
+
 
     /**
      * Sets the raw JSON object

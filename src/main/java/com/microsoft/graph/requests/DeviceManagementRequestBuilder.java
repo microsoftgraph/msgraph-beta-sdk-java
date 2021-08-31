@@ -161,6 +161,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIde
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder;
@@ -211,6 +213,7 @@ import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionRequestBuilde
 import com.microsoft.graph.requests.GroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelHealthThresholdCollectionRequestBuilder;
@@ -236,7 +239,6 @@ import com.microsoft.graph.requests.RoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistanceSettingsRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionRequestBuilder;
@@ -245,6 +247,8 @@ import com.microsoft.graph.requests.DeviceManagementAutopilotEventCollectionRequ
 import com.microsoft.graph.requests.DeviceManagementAutopilotEventRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventRequestBuilder;
+import com.microsoft.graph.requests.WindowsDriverUpdateProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.WindowsDriverUpdateProfileRequestBuilder;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileRequestBuilder;
 import com.microsoft.graph.requests.WindowsQualityUpdateProfileCollectionRequestBuilder;
@@ -1846,6 +1850,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new UserExperienceAnalyticsMetricHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsMetricHistory") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the UserExperienceAnalyticsModelScores collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsModelScoresCollectionRequestBuilder userExperienceAnalyticsModelScores() {
+        return new UserExperienceAnalyticsModelScoresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsModelScores"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsModelScores item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsModelScoresRequestBuilder userExperienceAnalyticsModelScores(@Nonnull final String id) {
+        return new UserExperienceAnalyticsModelScoresRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsModelScores") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the UserExperienceAnalyticsNotAutopilotReadyDevice collection
      *
      * @return the collection request builder
@@ -2345,6 +2369,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public GroupPolicyUploadedDefinitionFileRequestBuilder groupPolicyUploadedDefinitionFiles(@Nonnull final String id) {
         return new GroupPolicyUploadedDefinitionFileRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyUploadedDefinitionFiles") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for DeviceManagementReports
+     *
+     * @return the DeviceManagementReportsRequestBuilder instance
+     */
+    @Nonnull
+    public DeviceManagementReportsRequestBuilder reports() {
+        return new DeviceManagementReportsRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the MicrosoftTunnelConfiguration collection
      *
@@ -2595,16 +2629,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public RemoteAssistanceSettingsRequestBuilder remoteAssistanceSettings() {
         return new RemoteAssistanceSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("remoteAssistanceSettings"), getClient(), null);
     }
-
-    /**
-     * Gets the request builder for DeviceManagementReports
-     *
-     * @return the DeviceManagementReportsRequestBuilder instance
-     */
-    @Nonnull
-    public DeviceManagementReportsRequestBuilder reports() {
-        return new DeviceManagementReportsRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the EmbeddedSIMActivationCodePool collection
      *
@@ -2684,6 +2708,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceManagementTroubleshootingEventRequestBuilder troubleshootingEvents(@Nonnull final String id) {
         return new DeviceManagementTroubleshootingEventRequestBuilder(getRequestUrlWithAdditionalSegment("troubleshootingEvents") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsDriverUpdateProfile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public WindowsDriverUpdateProfileCollectionRequestBuilder windowsDriverUpdateProfiles() {
+        return new WindowsDriverUpdateProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("windowsDriverUpdateProfiles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsDriverUpdateProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public WindowsDriverUpdateProfileRequestBuilder windowsDriverUpdateProfiles(@Nonnull final String id) {
+        return new WindowsDriverUpdateProfileRequestBuilder(getRequestUrlWithAdditionalSegment("windowsDriverUpdateProfiles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the WindowsFeatureUpdateProfile collection

@@ -163,6 +163,15 @@ public class UserExperienceAnalyticsDevicePerformance extends Entity implements 
     public String model;
 
     /**
+     * The Model Startup Performance Score.
+     * The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "modelStartupPerformanceScore", alternate = {"ModelStartupPerformanceScore"})
+    @Expose
+	@Nullable
+    public Double modelStartupPerformanceScore;
+
+    /**
      * The Operating System Version.
      * The user experience analytics device Operating System version.
      */

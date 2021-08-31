@@ -40,7 +40,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements IJsonBackedObj
 
     /**
      * The Role Assignment Ids.
-     * Role Assignment IDs for the specifc Role Assignments assigned to a user.
+     * Role Assignment IDs for the specifc Role Assignments assigned to a user. This property is read-only.
      */
     @SerializedName(value = "roleAssignmentIds", alternate = {"RoleAssignmentIds"})
     @Expose
@@ -49,7 +49,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements IJsonBackedObj
 
     /**
      * The Role Definition Ids.
-     * Role Definition IDs for the specifc Role Definitions assigned to a user.
+     * Role Definition IDs for the specifc Role Definitions assigned to a user. This property is read-only.
      */
     @SerializedName(value = "roleDefinitionIds", alternate = {"RoleDefinitionIds"})
     @Expose

@@ -161,6 +161,8 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIde
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsOverviewRequestBuilder;
@@ -211,6 +213,7 @@ import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionRequestBuilde
 import com.microsoft.graph.requests.GroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelHealthThresholdCollectionRequestBuilder;
@@ -236,7 +239,6 @@ import com.microsoft.graph.requests.RoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistanceSettingsRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionRequestBuilder;
@@ -245,6 +247,8 @@ import com.microsoft.graph.requests.DeviceManagementAutopilotEventCollectionRequ
 import com.microsoft.graph.requests.DeviceManagementAutopilotEventRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventRequestBuilder;
+import com.microsoft.graph.requests.WindowsDriverUpdateProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.WindowsDriverUpdateProfileRequestBuilder;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileRequestBuilder;
 import com.microsoft.graph.requests.WindowsQualityUpdateProfileCollectionRequestBuilder;
