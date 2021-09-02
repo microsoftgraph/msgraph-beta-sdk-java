@@ -12,6 +12,7 @@ Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft 
 
 Add the repository and a compile dependency for `microsoft-graph-beta` to your project's `build.gradle`:
 
+
 ```Groovy
 repositories {
   maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
