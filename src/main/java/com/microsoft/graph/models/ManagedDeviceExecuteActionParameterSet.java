@@ -84,6 +84,33 @@ public class ManagedDeviceExecuteActionParameterSet {
 	@Nullable
     public String deviceName;
 
+    /**
+     * The carrier Url.
+     * 
+     */
+    @SerializedName(value = "carrierUrl", alternate = {"CarrierUrl"})
+    @Expose
+	@Nullable
+    public String carrierUrl;
+
+    /**
+     * The deprovision Reason.
+     * 
+     */
+    @SerializedName(value = "deprovisionReason", alternate = {"DeprovisionReason"})
+    @Expose
+	@Nullable
+    public String deprovisionReason;
+
+    /**
+     * The organizational Unit Path.
+     * 
+     */
+    @SerializedName(value = "organizationalUnitPath", alternate = {"OrganizationalUnitPath"})
+    @Expose
+	@Nullable
+    public String organizationalUnitPath;
+
 
     /**
      * Instiaciates a new ManagedDeviceExecuteActionParameterSet
@@ -101,6 +128,9 @@ public class ManagedDeviceExecuteActionParameterSet {
         this.notificationTitle = builder.notificationTitle;
         this.notificationBody = builder.notificationBody;
         this.deviceName = builder.deviceName;
+        this.carrierUrl = builder.carrierUrl;
+        this.deprovisionReason = builder.deprovisionReason;
+        this.organizationalUnitPath = builder.organizationalUnitPath;
     }
     /**
      * Gets a new builder for the body
@@ -220,6 +250,51 @@ public class ManagedDeviceExecuteActionParameterSet {
             return this;
         }
         /**
+         * The carrierUrl parameter value
+         */
+        @Nullable
+        protected String carrierUrl;
+        /**
+         * Sets the CarrierUrl
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagedDeviceExecuteActionParameterSetBuilder withCarrierUrl(@Nullable final String val) {
+            this.carrierUrl = val;
+            return this;
+        }
+        /**
+         * The deprovisionReason parameter value
+         */
+        @Nullable
+        protected String deprovisionReason;
+        /**
+         * Sets the DeprovisionReason
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagedDeviceExecuteActionParameterSetBuilder withDeprovisionReason(@Nullable final String val) {
+            this.deprovisionReason = val;
+            return this;
+        }
+        /**
+         * The organizationalUnitPath parameter value
+         */
+        @Nullable
+        protected String organizationalUnitPath;
+        /**
+         * Sets the OrganizationalUnitPath
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagedDeviceExecuteActionParameterSetBuilder withOrganizationalUnitPath(@Nullable final String val) {
+            this.organizationalUnitPath = val;
+            return this;
+        }
+        /**
          * Instanciates a new ManagedDeviceExecuteActionParameterSetBuilder
          */
         @Nullable
@@ -260,6 +335,15 @@ public class ManagedDeviceExecuteActionParameterSet {
         }
         if(this.deviceName != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("deviceName", deviceName));
+        }
+        if(this.carrierUrl != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("carrierUrl", carrierUrl));
+        }
+        if(this.deprovisionReason != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("deprovisionReason", deprovisionReason));
+        }
+        if(this.organizationalUnitPath != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("organizationalUnitPath", organizationalUnitPath));
         }
         return result;
     }

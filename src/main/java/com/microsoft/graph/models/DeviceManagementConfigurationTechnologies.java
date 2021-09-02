@@ -32,6 +32,10 @@ public enum DeviceManagementConfigurationTechnologies
     */
     MICROSOFT_SENSE,
     /**
+    * exchange Online
+    */
+    EXCHANGE_ONLINE,
+    /**
     * For DeviceManagementConfigurationTechnologies values that were not expected from the service
     */
     UNEXPECTED_VALUE

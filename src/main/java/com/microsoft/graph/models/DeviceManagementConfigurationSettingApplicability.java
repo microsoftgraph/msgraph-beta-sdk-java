@@ -69,7 +69,7 @@ public class DeviceManagementConfigurationSettingApplicability implements IJsonB
 
     /**
      * The Technologies.
-     * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
+     * Which technology channels this setting can be deployed through. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

@@ -68,6 +68,14 @@ public enum ManagedDeviceRemoteAction
     */
     MOVE_DEVICE_TO_ORGANIZATIONAL_UNIT,
     /**
+    * activate Device Esim
+    */
+    ACTIVATE_DEVICE_ESIM,
+    /**
+    * collect Diagnostics
+    */
+    COLLECT_DIAGNOSTICS,
+    /**
     * For ManagedDeviceRemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

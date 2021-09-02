@@ -141,10 +141,6 @@ import com.microsoft.graph.requests.PayloadResponseCollectionRequestBuilder;
 import com.microsoft.graph.requests.PayloadResponseRequestBuilder;
 import com.microsoft.graph.requests.DataPolicyOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.DataPolicyOperationRequestBuilder;
-import com.microsoft.graph.requests.BookmarkCollectionRequestBuilder;
-import com.microsoft.graph.requests.BookmarkRequestBuilder;
-import com.microsoft.graph.requests.QnaCollectionRequestBuilder;
-import com.microsoft.graph.requests.QnaRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SubscriptionRequestBuilder;
 import com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionRequestBuilder;
@@ -1737,48 +1733,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public DataPolicyOperationRequestBuilder dataPolicyOperations(@Nonnull final String id) {
         return new DataPolicyOperationRequestBuilder(getServiceRoot() + "/dataPolicyOperations/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of Bookmarks objects
-     *
-     * @return the request builder for the collection of Bookmarks objects
-     */
-    @Nonnull
-    public BookmarkCollectionRequestBuilder bookmarks() {
-        return new BookmarkCollectionRequestBuilder(getServiceRoot() + "/bookmarks", this, null);
-    }
-
-    /**
-     * Gets a single Bookmarks
-     *
-     * @param id the id of the Bookmarks to retrieve
-     * @return the request builder for the Bookmarks object
-     */
-    @Nonnull
-    public BookmarkRequestBuilder bookmarks(@Nonnull final String id) {
-        return new BookmarkRequestBuilder(getServiceRoot() + "/bookmarks/" + id, this, null);
-    }
-
-    /**
-     * Gets the collection of Qnas objects
-     *
-     * @return the request builder for the collection of Qnas objects
-     */
-    @Nonnull
-    public QnaCollectionRequestBuilder qnas() {
-        return new QnaCollectionRequestBuilder(getServiceRoot() + "/qnas", this, null);
-    }
-
-    /**
-     * Gets a single Qnas
-     *
-     * @param id the id of the Qnas to retrieve
-     * @return the request builder for the Qnas object
-     */
-    @Nonnull
-    public QnaRequestBuilder qnas(@Nonnull final String id) {
-        return new QnaRequestBuilder(getServiceRoot() + "/qnas/" + id, this, null);
     }
 
     /**

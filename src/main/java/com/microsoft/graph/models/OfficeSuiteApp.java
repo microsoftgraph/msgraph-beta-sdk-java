@@ -60,7 +60,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
 
     /**
      * The Locales To Install.
-     * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/library/cc179219(v=office.16).aspx
+     * The property to represent the locales which are installed when the apps from Office365 is installed. It uses standard RFC 6033. Ref: https://technet.microsoft.com/en-us/library/cc179219(v=office.16).aspx
      */
     @SerializedName(value = "localesToInstall", alternate = {"LocalesToInstall"})
     @Expose

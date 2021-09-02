@@ -10,10 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.WindowsFeatureUpdateProfileAssignment;
-import com.microsoft.graph.models.WindowsUpdateState;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentCollectionPage;
-import com.microsoft.graph.requests.WindowsUpdateStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -111,15 +109,6 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
 	@Nullable
     public WindowsFeatureUpdateProfileAssignmentCollectionPage assignments;
 
-    /**
-     * The Device Update States.
-     * The list of device states this profile targeted to
-     */
-    @SerializedName(value = "deviceUpdateStates", alternate = {"DeviceUpdateStates"})
-    @Expose
-	@Nullable
-    public WindowsUpdateStateCollectionPage deviceUpdateStates;
-
 
     /**
      * Sets the raw JSON object
@@ -132,10 +121,6 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
 
         if (json.has("assignments")) {
             assignments = serializer.deserializeObject(json.get("assignments"), WindowsFeatureUpdateProfileAssignmentCollectionPage.class);
-        }
-
-        if (json.has("deviceUpdateStates")) {
-            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates"), WindowsUpdateStateCollectionPage.class);
         }
     }
 }

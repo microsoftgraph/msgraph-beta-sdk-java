@@ -96,6 +96,7 @@ import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcess;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceStartupProcessPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceWithoutCloudIdentity;
 import com.microsoft.graph.models.UserExperienceAnalyticsImpactingProcess;
+import com.microsoft.graph.models.UserExperienceAnalyticsModelScores;
 import com.microsoft.graph.models.UserExperienceAnalyticsNotAutopilotReadyDevice;
 import com.microsoft.graph.models.UserExperienceAnalyticsOverview;
 import com.microsoft.graph.models.UserExperienceAnalyticsRegressionSummary;
@@ -123,6 +124,7 @@ import com.microsoft.graph.models.GroupPolicyConfiguration;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.GroupPolicyDefinition;
 import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
+import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.MicrosoftTunnelConfiguration;
 import com.microsoft.graph.models.MicrosoftTunnelHealthThreshold;
 import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
@@ -136,11 +138,11 @@ import com.microsoft.graph.models.RoleDefinition;
 import com.microsoft.graph.models.RoleScopeTag;
 import com.microsoft.graph.models.RemoteAssistancePartner;
 import com.microsoft.graph.models.RemoteAssistanceSettings;
-import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.EmbeddedSIMActivationCodePool;
 import com.microsoft.graph.models.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
 import com.microsoft.graph.models.DeviceManagementTroubleshootingEvent;
+import com.microsoft.graph.models.WindowsDriverUpdateProfile;
 import com.microsoft.graph.models.WindowsFeatureUpdateProfile;
 import com.microsoft.graph.models.WindowsQualityUpdateProfile;
 import com.microsoft.graph.models.WindowsUpdateCatalogItem;
@@ -216,6 +218,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessC
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsRemoteConnectionCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsResourcePerformanceCollectionPage;
@@ -255,6 +258,7 @@ import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionPage;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementAutopilotEventCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage;
+import com.microsoft.graph.requests.WindowsDriverUpdateProfileCollectionPage;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileCollectionPage;
 import com.microsoft.graph.requests.WindowsQualityUpdateProfileCollectionPage;
 import com.microsoft.graph.requests.WindowsUpdateCatalogItemCollectionPage;
@@ -1170,6 +1174,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public UserExperienceAnalyticsMetricHistoryCollectionPage userExperienceAnalyticsMetricHistory;
 
     /**
+     * The User Experience Analytics Model Scores.
+     * User experience analytics model scores
+     */
+    @SerializedName(value = "userExperienceAnalyticsModelScores", alternate = {"UserExperienceAnalyticsModelScores"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsModelScoresCollectionPage userExperienceAnalyticsModelScores;
+
+    /**
      * The User Experience Analytics Not Autopilot Ready Device.
      * User experience analytics devices not Windows Autopilot ready.
      */
@@ -1413,6 +1426,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public GroupPolicyUploadedDefinitionFileCollectionPage groupPolicyUploadedDefinitionFiles;
 
     /**
+     * The Reports.
+     * Reports singleton
+     */
+    @SerializedName(value = "reports", alternate = {"Reports"})
+    @Expose
+	@Nullable
+    public DeviceManagementReports reports;
+
+    /**
      * The Microsoft Tunnel Configurations.
      * Collection of MicrosoftTunnelConfiguration settings associated with account.
      */
@@ -1530,15 +1552,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public RemoteAssistanceSettings remoteAssistanceSettings;
 
     /**
-     * The Reports.
-     * Reports singleton
-     */
-    @SerializedName(value = "reports", alternate = {"Reports"})
-    @Expose
-	@Nullable
-    public DeviceManagementReports reports;
-
-    /**
      * The Embedded SIMActivation Code Pools.
      * The embedded SIM activation code pools created by this account.
      */
@@ -1573,6 +1586,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceManagementTroubleshootingEventCollectionPage troubleshootingEvents;
+
+    /**
+     * The Windows Driver Update Profiles.
+     * A collection of windows driver update profiles
+     */
+    @SerializedName(value = "windowsDriverUpdateProfiles", alternate = {"WindowsDriverUpdateProfiles"})
+    @Expose
+	@Nullable
+    public WindowsDriverUpdateProfileCollectionPage windowsDriverUpdateProfiles;
 
     /**
      * The Windows Feature Update Profiles.
@@ -1927,6 +1949,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsMetricHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsMetricHistory"), UserExperienceAnalyticsMetricHistoryCollectionPage.class);
         }
 
+        if (json.has("userExperienceAnalyticsModelScores")) {
+            userExperienceAnalyticsModelScores = serializer.deserializeObject(json.get("userExperienceAnalyticsModelScores"), UserExperienceAnalyticsModelScoresCollectionPage.class);
+        }
+
         if (json.has("userExperienceAnalyticsNotAutopilotReadyDevice")) {
             userExperienceAnalyticsNotAutopilotReadyDevice = serializer.deserializeObject(json.get("userExperienceAnalyticsNotAutopilotReadyDevice"), UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage.class);
         }
@@ -2081,6 +2107,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("troubleshootingEvents")) {
             troubleshootingEvents = serializer.deserializeObject(json.get("troubleshootingEvents"), DeviceManagementTroubleshootingEventCollectionPage.class);
+        }
+
+        if (json.has("windowsDriverUpdateProfiles")) {
+            windowsDriverUpdateProfiles = serializer.deserializeObject(json.get("windowsDriverUpdateProfiles"), WindowsDriverUpdateProfileCollectionPage.class);
         }
 
         if (json.has("windowsFeatureUpdateProfiles")) {

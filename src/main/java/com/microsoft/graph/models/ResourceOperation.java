@@ -45,7 +45,7 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Enabled For Scope Validation.
-     * Determines whether the Permission is validated for Scopes defined per Role Assignment.
+     * Determines whether the Permission is validated for Scopes defined per Role Assignment. This property is read-only.
      */
     @SerializedName(value = "enabledForScopeValidation", alternate = {"EnabledForScopeValidation"})
     @Expose
@@ -54,7 +54,7 @@ public class ResourceOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Resource category to which this Operation belongs.
+     * Resource category to which this Operation belongs. This property is read-only.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose

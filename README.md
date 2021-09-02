@@ -12,6 +12,7 @@ Get started with the Microsoft Graph SDK for Java by integrating the [Microsoft 
 
 Add the repository and a compile dependency for `microsoft-graph-beta` to your project's `build.gradle`:
 
+
 ```Groovy
 repositories {
   maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
@@ -19,7 +20,7 @@ repositories {
 
 dependencies {
     // Include the sdk as a dependency
-    implementation 'com.microsoft.graph:microsoft-graph-beta:0.25.0-SNAPSHOT'
+    implementation 'com.microsoft.graph:microsoft-graph-beta:0.26.0-SNAPSHOT'
     // Uncomment the line below if you are building an android application
     //implementation 'com.google.guava:guava:30.1.1-android'
     // This dependency is only needed if you are using the TokenCrendentialAuthProvider
@@ -36,7 +37,7 @@ Add the dependency in `dependencies` in pom.xml
   <!-- Include the sdk as a dependency -->
   <groupId>com.microsoft.graph</groupId>
   <artifactId>microsoft-graph-beta</artifactId>
-  <version>0.25.0-SNAPSHOT</version>
+  <version>0.26.0-SNAPSHOT</version>
 </dependency>
 <dependency>
   <!-- This dependency is only needed if you are using the TokenCrendentialAuthProvider -->
@@ -146,6 +147,7 @@ Copyright (c) Microsoft Corporation. All Rights Reserved. Licensed under the [MI
 ## 9. Third-party notices
 
 [Third-party notices](THIRD%20PARTY%20NOTICES)
+
 
 
 

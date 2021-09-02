@@ -11,6 +11,12 @@ import com.microsoft.graph.models.SearchEntity;
 import com.microsoft.graph.models.SearchRequest;
 import com.microsoft.graph.models.SearchAlterationOptions;
 import com.microsoft.graph.models.SearchResponse;
+import com.microsoft.graph.search.requests.AcronymCollectionRequestBuilder;
+import com.microsoft.graph.search.requests.AcronymRequestBuilder;
+import com.microsoft.graph.search.requests.BookmarkCollectionRequestBuilder;
+import com.microsoft.graph.search.requests.BookmarkRequestBuilder;
+import com.microsoft.graph.search.requests.QnaCollectionRequestBuilder;
+import com.microsoft.graph.search.requests.QnaRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -60,6 +66,66 @@ public class SearchEntityRequestBuilder extends BaseRequestBuilder<SearchEntity>
     }
 
 
+    /**
+     *  Gets a request builder for the Acronym collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AcronymCollectionRequestBuilder acronyms() {
+        return new AcronymCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("acronyms"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Acronym item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AcronymRequestBuilder acronyms(@Nonnull final String id) {
+        return new AcronymRequestBuilder(getRequestUrlWithAdditionalSegment("acronyms") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Bookmark collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public BookmarkCollectionRequestBuilder bookmarks() {
+        return new BookmarkCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("bookmarks"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Bookmark item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public BookmarkRequestBuilder bookmarks(@Nonnull final String id) {
+        return new BookmarkRequestBuilder(getRequestUrlWithAdditionalSegment("bookmarks") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Qna collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public QnaCollectionRequestBuilder qnas() {
+        return new QnaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("qnas"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Qna item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public QnaRequestBuilder qnas(@Nonnull final String id) {
+        return new QnaRequestBuilder(getRequestUrlWithAdditionalSegment("qnas") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

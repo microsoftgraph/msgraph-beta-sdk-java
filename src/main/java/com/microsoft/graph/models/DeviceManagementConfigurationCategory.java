@@ -112,7 +112,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Technologies.
-     * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense.
+     * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, microsoftSense, exchangeOnline.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

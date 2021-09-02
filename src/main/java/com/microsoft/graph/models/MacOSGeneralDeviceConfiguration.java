@@ -158,6 +158,15 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public java.util.List<String> emailInDomainSuffixes;
 
     /**
+     * The Erase Content And Settings Blocked.
+     * TRUE disables the reset option on supervised devices. FALSE enables the reset option on supervised devices. Available for devices running macOS versions 12.0 and later.
+     */
+    @SerializedName(value = "eraseContentAndSettingsBlocked", alternate = {"EraseContentAndSettingsBlocked"})
+    @Expose
+	@Nullable
+    public Boolean eraseContentAndSettingsBlocked;
+
+    /**
      * The Game Center Blocked.
      * Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later.
      */
@@ -285,7 +294,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
     /**
      * The Multiplayer Gaming Blocked.
-     * Yes prevents multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.
+     * TRUE prevents multiplayer gaming when using Game Center. FALSE allows multiplayer gaming when using Game Center. Available for devices running macOS versions 10.13 and later.
      */
     @SerializedName(value = "multiplayerGamingBlocked", alternate = {"MultiplayerGamingBlocked"})
     @Expose
@@ -464,6 +473,33 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     public Boolean screenCaptureBlocked;
 
     /**
+     * The Software Update Major OSDeferred Install Delay In Days.
+     * Specify the number of days (1-90) to delay visibility of major OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
+     */
+    @SerializedName(value = "softwareUpdateMajorOSDeferredInstallDelayInDays", alternate = {"SoftwareUpdateMajorOSDeferredInstallDelayInDays"})
+    @Expose
+	@Nullable
+    public Integer softwareUpdateMajorOSDeferredInstallDelayInDays;
+
+    /**
+     * The Software Update Minor OSDeferred Install Delay In Days.
+     * Specify the number of days (1-90) to delay visibility of minor OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
+     */
+    @SerializedName(value = "softwareUpdateMinorOSDeferredInstallDelayInDays", alternate = {"SoftwareUpdateMinorOSDeferredInstallDelayInDays"})
+    @Expose
+	@Nullable
+    public Integer softwareUpdateMinorOSDeferredInstallDelayInDays;
+
+    /**
+     * The Software Update Non OSDeferred Install Delay In Days.
+     * Specify the number of days (1-90) to delay visibility of non-OS software updates. Available for devices running macOS versions 11.3 and later. Valid values 0 to 90
+     */
+    @SerializedName(value = "softwareUpdateNonOSDeferredInstallDelayInDays", alternate = {"SoftwareUpdateNonOSDeferredInstallDelayInDays"})
+    @Expose
+	@Nullable
+    public Integer softwareUpdateNonOSDeferredInstallDelayInDays;
+
+    /**
      * The Software Updates Enforced Delay In Days.
      * Sets how many days a software update will be delyed for a supervised device. Valid values 0 to 90
      */
@@ -483,7 +519,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
     /**
      * The Update Delay Policy.
-     * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility.
+     * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
      */
     @SerializedName(value = "updateDelayPolicy", alternate = {"UpdateDelayPolicy"})
     @Expose
@@ -492,7 +528,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
     /**
      * The Wallpaper Modification Blocked.
-     * Yes prevents the wallpaper from being changed. Available for devices running macOS versions 10.13 and later.
+     * TRUE prevents the wallpaper from being changed. FALSE allows the wallpaper to be changed. Available for devices running macOS versions 10.13 and later.
      */
     @SerializedName(value = "wallpaperModificationBlocked", alternate = {"WallpaperModificationBlocked"})
     @Expose

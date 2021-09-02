@@ -89,6 +89,15 @@ public class UserExperienceAnalyticsDeviceScores extends Entity implements IJson
 	@Nullable
     public Double startupPerformanceScore;
 
+    /**
+     * The Work From Anywhere Score.
+     * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "workFromAnywhereScore", alternate = {"WorkFromAnywhereScore"})
+    @Expose
+	@Nullable
+    public Double workFromAnywhereScore;
+
 
     /**
      * Sets the raw JSON object

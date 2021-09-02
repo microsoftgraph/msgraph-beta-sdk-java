@@ -125,6 +125,15 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     public Integer blockAfterCompanyPortalUpdateDeferralInDays;
 
     /**
+     * The Connect To Vpn On Launch.
+     * Whether the app should connect to the configured VPN on launch.
+     */
+    @SerializedName(value = "connectToVpnOnLaunch", alternate = {"ConnectToVpnOnLaunch"})
+    @Expose
+	@Nullable
+    public Boolean connectToVpnOnLaunch;
+
+    /**
      * The Custom Browser Display Name.
      * Friendly name of the preferred custom browser to open weblink on Android.
      */

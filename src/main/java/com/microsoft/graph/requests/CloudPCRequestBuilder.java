@@ -62,6 +62,15 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
      * @return the request builder
      */
     @Nonnull
+    public CloudPCEndGracePeriodRequestBuilder endGracePeriod() {
+        return new CloudPCEndGracePeriodRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.endGracePeriod"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public CloudPCReprovisionRequestBuilder reprovision() {
         return new CloudPCReprovisionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprovision"), getClient(), null);
     }
