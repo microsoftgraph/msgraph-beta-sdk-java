@@ -17,6 +17,7 @@ import com.microsoft.graph.models.FileSystemInfo;
 import com.microsoft.graph.models.Folder;
 import com.microsoft.graph.models.Image;
 import com.microsoft.graph.models.GeoCoordinates;
+import com.microsoft.graph.models.Malware;
 import com.microsoft.graph.models.Media;
 import com.microsoft.graph.models.PendingOperations;
 import com.microsoft.graph.models.Photo;
@@ -143,6 +144,15 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     public GeoCoordinates location;
 
     /**
+     * The Malware.
+     * 
+     */
+    @SerializedName(value = "malware", alternate = {"Malware"})
+    @Expose
+	@Nullable
+    public Malware malware;
+
+    /**
      * The Media.
      * Information about the media (audio or video) item. Read-write. Only on OneDrive for Business and SharePoint.
      */
@@ -162,7 +172,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Pending Operations.
-     * If present, indicates that indicates that one or more operations that may affect the state of the driveItem are pending completion. Read-only.
+     * If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only.
      */
     @SerializedName(value = "pendingOperations", alternate = {"PendingOperations"})
     @Expose

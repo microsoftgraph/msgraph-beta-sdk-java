@@ -40,7 +40,7 @@ public class TeamworkOnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Calendar Event Id.
-     * 
+     * The identifier of the calendar event associated with the meeting.
      */
     @SerializedName(value = "calendarEventId", alternate = {"CalendarEventId"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamworkOnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Join Web Url.
-     * 
+     * The URL which can be clicked on to join or uniquely identify the meeting.
      */
     @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose
@@ -58,7 +58,7 @@ public class TeamworkOnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Organizer.
-     * 
+     * The organizer of the meeting.
      */
     @SerializedName(value = "organizer", alternate = {"Organizer"})
     @Expose

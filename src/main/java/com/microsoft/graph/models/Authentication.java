@@ -17,6 +17,7 @@ import com.microsoft.graph.models.LongRunningOperation;
 import com.microsoft.graph.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethod;
 import com.microsoft.graph.models.PasswordAuthenticationMethod;
 import com.microsoft.graph.models.PhoneAuthenticationMethod;
+import com.microsoft.graph.models.SoftwareOathAuthenticationMethod;
 import com.microsoft.graph.models.TemporaryAccessPassAuthenticationMethod;
 import com.microsoft.graph.models.WindowsHelloForBusinessAuthenticationMethod;
 import com.microsoft.graph.models.Entity;
@@ -28,6 +29,7 @@ import com.microsoft.graph.requests.LongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionPage;
 
@@ -121,6 +123,15 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public PhoneAuthenticationMethodCollectionPage phoneMethods;
 
     /**
+     * The Software Oath Methods.
+     * 
+     */
+    @SerializedName(value = "softwareOathMethods", alternate = {"SoftwareOathMethods"})
+    @Expose
+	@Nullable
+    public SoftwareOathAuthenticationMethodCollectionPage softwareOathMethods;
+
+    /**
      * The Temporary Access Pass Methods.
      * 
      */
@@ -178,6 +189,10 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("phoneMethods")) {
             phoneMethods = serializer.deserializeObject(json.get("phoneMethods"), PhoneAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("softwareOathMethods")) {
+            softwareOathMethods = serializer.deserializeObject(json.get("softwareOathMethods"), SoftwareOathAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("temporaryAccessPassMethods")) {

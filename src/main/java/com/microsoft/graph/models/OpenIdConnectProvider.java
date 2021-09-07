@@ -24,7 +24,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Open Id Connect Provider.
+ * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
  */
+@Deprecated
 public class OpenIdConnectProvider extends IdentityProvider implements IJsonBackedObject {
 
 

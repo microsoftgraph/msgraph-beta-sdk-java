@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Security;
+import com.microsoft.graph.requests.IncidentCollectionRequestBuilder;
+import com.microsoft.graph.requests.IncidentRequestBuilder;
 import com.microsoft.graph.requests.AttackSimulationRootRequestBuilder;
 import com.microsoft.graph.requests.AlertCollectionRequestBuilder;
 import com.microsoft.graph.requests.AlertRequestBuilder;
@@ -81,6 +83,26 @@ public class SecurityRequestBuilder extends BaseRequestBuilder<Security> {
     }
 
 
+    /**
+     *  Gets a request builder for the Incident collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IncidentCollectionRequestBuilder incidents() {
+        return new IncidentCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("incidents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Incident item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IncidentRequestBuilder incidents(@Nonnull final String id) {
+        return new IncidentRequestBuilder(getRequestUrlWithAdditionalSegment("incidents") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for AttackSimulationRoot

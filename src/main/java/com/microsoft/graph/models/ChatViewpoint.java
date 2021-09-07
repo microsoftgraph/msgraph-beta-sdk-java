@@ -38,6 +38,15 @@ public class ChatViewpoint implements IJsonBackedObject {
     }
 
     /**
+     * The Is Hidden.
+     * 
+     */
+    @SerializedName(value = "isHidden", alternate = {"IsHidden"})
+    @Expose
+	@Nullable
+    public Boolean isHidden;
+
+    /**
      * The Last Message Read Date Time.
      * Represents the dateTime up until which the calling user has read chatMessages in a specific chat.
      */

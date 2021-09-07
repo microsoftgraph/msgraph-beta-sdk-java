@@ -66,7 +66,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * Specifies who can be a presenter in a meeting. Possible values are everyone, organization, roleIsPresenter, organizer, and unknownFutureValue.
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -84,7 +84,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Teamwork Reactions.
-     * Indicates if Teams reactions are enabled for the meeting.
+     * Indicates whether Teams reactions are enabled for the meeting.
      */
     @SerializedName(value = "allowTeamworkReactions", alternate = {"AllowTeamworkReactions"})
     @Expose
@@ -102,7 +102,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Broadcast Settings.
-     * Settings related to a live event
+     * Settings related to a live event.
      */
     @SerializedName(value = "broadcastSettings", alternate = {"BroadcastSettings"})
     @Expose
@@ -183,7 +183,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Broadcast.
-     * Indicates whether this is a live event.
+     * Indicates if this is a live event.
      */
     @SerializedName(value = "isBroadcast", alternate = {"IsBroadcast"})
     @Expose
@@ -210,7 +210,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Information.
-     * The join information in the language and locale variant specified in 'Accept-Language' request HTTP header. Read-only
+     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
     @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
@@ -228,7 +228,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * Specifies which participants can bypass the meeting lobby.
+     * Specifies which participants can bypass the meeting   lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose
@@ -237,7 +237,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * The participants associated with the online meeting. This includes the organizer and the attendees.
+     * The participants associated with the online meeting.  This includes the organizer and the attendees.
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose

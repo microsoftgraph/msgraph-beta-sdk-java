@@ -11,7 +11,9 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AllowInvitesFrom;
 import com.microsoft.graph.models.DefaultUserRolePermissions;
+import com.microsoft.graph.models.DefaultUserRoleOverride;
 import com.microsoft.graph.models.PolicyBase;
+import com.microsoft.graph.requests.DefaultUserRoleOverrideCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -93,7 +95,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Guest User Role Id.
-     * Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      */
     @SerializedName(value = "guestUserRoleId", alternate = {"GuestUserRoleId"})
     @Expose
@@ -109,6 +111,15 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 	@Nullable
     public java.util.List<String> permissionGrantPolicyIdsAssignedToDefaultUserRole;
 
+    /**
+     * The Default User Role Overrides.
+     * 
+     */
+    @SerializedName(value = "defaultUserRoleOverrides", alternate = {"DefaultUserRoleOverrides"})
+    @Expose
+	@Nullable
+    public DefaultUserRoleOverrideCollectionPage defaultUserRoleOverrides;
+
 
     /**
      * Sets the raw JSON object
@@ -118,5 +129,9 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("defaultUserRoleOverrides")) {
+            defaultUserRoleOverrides = serializer.deserializeObject(json.get("defaultUserRoleOverrides"), DefaultUserRoleOverrideCollectionPage.class);
+        }
     }
 }

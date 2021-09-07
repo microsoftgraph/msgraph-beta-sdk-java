@@ -54,7 +54,7 @@ public class IdentityContainer implements IJsonBackedObject {
 
     /**
      * The Conditional Access.
-     * 
+     * the entry point for the Conditional Access (CA) object model.
      */
     @SerializedName(value = "conditionalAccess", alternate = {"ConditionalAccess"})
     @Expose
@@ -81,7 +81,7 @@ public class IdentityContainer implements IJsonBackedObject {
 
     /**
      * The B2x User Flows.
-     * Represents entry point for B2X and self-service sign-up identity userflows.
+     * Represents entry point for B2X/self-service sign-up identity userflows.
      */
     @SerializedName(value = "b2xUserFlows", alternate = {"B2xUserFlows"})
     @Expose
