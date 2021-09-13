@@ -24,6 +24,8 @@ import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionReques
 import com.microsoft.graph.requests.PasswordAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.PhoneAuthenticationMethodRequestBuilder;
+import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionRequestBuilder;
+import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionRequestBuilder;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodRequestBuilder;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionRequestBuilder;
@@ -235,6 +237,26 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
     @Nonnull
     public PhoneAuthenticationMethodRequestBuilder phoneMethods(@Nonnull final String id) {
         return new PhoneAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the SoftwareOathAuthenticationMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SoftwareOathAuthenticationMethodCollectionRequestBuilder softwareOathMethods() {
+        return new SoftwareOathAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the SoftwareOathAuthenticationMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SoftwareOathAuthenticationMethodRequestBuilder softwareOathMethods(@Nonnull final String id) {
+        return new SoftwareOathAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("softwareOathMethods") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TemporaryAccessPassAuthenticationMethod collection

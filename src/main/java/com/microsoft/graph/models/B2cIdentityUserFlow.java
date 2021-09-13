@@ -65,7 +65,9 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
     /**
      * The Identity Providers.
      * 
+     * @deprecated The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
      */
+    @Deprecated
 	@Nullable
     public IdentityProviderCollectionPage identityProviders;
 

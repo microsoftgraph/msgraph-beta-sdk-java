@@ -71,7 +71,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Online Meeting Info.
-     * 
+     * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
      */
     @SerializedName(value = "onlineMeetingInfo", alternate = {"OnlineMeetingInfo"})
     @Expose
@@ -80,7 +80,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * 
+     * The identifier of the tenant in which the chat was created. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

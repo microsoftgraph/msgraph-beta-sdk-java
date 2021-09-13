@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.SecurityProviderStatus;
+import com.microsoft.graph.models.Incident;
 import com.microsoft.graph.models.AttackSimulationRoot;
 import com.microsoft.graph.models.Alert;
 import com.microsoft.graph.models.CloudAppSecurityProfile;
@@ -24,6 +25,7 @@ import com.microsoft.graph.models.SecurityAction;
 import com.microsoft.graph.models.TiIndicator;
 import com.microsoft.graph.models.UserSecurityProfile;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.IncidentCollectionPage;
 import com.microsoft.graph.requests.AlertCollectionPage;
 import com.microsoft.graph.requests.CloudAppSecurityProfileCollectionPage;
 import com.microsoft.graph.requests.DomainSecurityProfileCollectionPage;
@@ -60,6 +62,15 @@ public class Security extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<SecurityProviderStatus> providerStatus;
+
+    /**
+     * The Incidents.
+     * 
+     */
+    @SerializedName(value = "incidents", alternate = {"Incidents"})
+    @Expose
+	@Nullable
+    public IncidentCollectionPage incidents;
 
     /**
      * The Attack Simulation.
@@ -187,6 +198,10 @@ public class Security extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("incidents")) {
+            incidents = serializer.deserializeObject(json.get("incidents"), IncidentCollectionPage.class);
+        }
 
         if (json.has("alerts")) {
             alerts = serializer.deserializeObject(json.get("alerts"), AlertCollectionPage.class);

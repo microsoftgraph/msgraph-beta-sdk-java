@@ -12,6 +12,7 @@ import com.microsoft.graph.models.TeamworkActivityTopic;
 import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.TeamworkNotificationRecipient;
+import com.microsoft.graph.models.TeamworkUserIdentity;
 import com.microsoft.graph.models.ChatMessage;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsAppInstallationRequestBuilder;
