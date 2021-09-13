@@ -24,6 +24,8 @@ import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionRequestBui
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyRequestBuilder;
 import com.microsoft.graph.requests.PermissionGrantPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.PermissionGrantPolicyRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalCreationPolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.ServicePrincipalCreationPolicyRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.TokenIssuancePolicyRequestBuilder;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionRequestBuilder;
@@ -249,6 +251,26 @@ public class PolicyRootRequestBuilder extends BaseRequestBuilder<PolicyRoot> {
     @Nonnull
     public PermissionGrantPolicyRequestBuilder permissionGrantPolicies(@Nonnull final String id) {
         return new PermissionGrantPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("permissionGrantPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ServicePrincipalCreationPolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ServicePrincipalCreationPolicyCollectionRequestBuilder servicePrincipalCreationPolicies() {
+        return new ServicePrincipalCreationPolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("servicePrincipalCreationPolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServicePrincipalCreationPolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ServicePrincipalCreationPolicyRequestBuilder servicePrincipalCreationPolicies(@Nonnull final String id) {
+        return new ServicePrincipalCreationPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("servicePrincipalCreationPolicies") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TokenIssuancePolicy collection

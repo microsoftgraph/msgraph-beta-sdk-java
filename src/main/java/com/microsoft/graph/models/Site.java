@@ -147,7 +147,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Items.
-     * Used to address any item contained in this site. This collection cannot be enumerated.
+     * Used to address any item contained in this site. This collection can't be enumerated.
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -192,7 +192,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Term Store.
-     * The termStore under this site.
+     * The default termStore under this site.
      */
     @SerializedName(value = "termStore", alternate = {"TermStore"})
     @Expose

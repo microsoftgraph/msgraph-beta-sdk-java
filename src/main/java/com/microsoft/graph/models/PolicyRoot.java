@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.TenantAppManagementPolicy;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.PermissionGrantPolicy;
+import com.microsoft.graph.models.ServicePrincipalCreationPolicy;
 import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicy;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
@@ -36,6 +37,7 @@ import com.microsoft.graph.requests.AuthorizationPolicyCollectionPage;
 import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.PermissionGrantPolicyCollectionPage;
+import com.microsoft.graph.requests.ServicePrincipalCreationPolicyCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
 import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
@@ -161,6 +163,15 @@ public class PolicyRoot implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PermissionGrantPolicyCollectionPage permissionGrantPolicies;
+
+    /**
+     * The Service Principal Creation Policies.
+     * 
+     */
+    @SerializedName(value = "servicePrincipalCreationPolicies", alternate = {"ServicePrincipalCreationPolicies"})
+    @Expose
+	@Nullable
+    public ServicePrincipalCreationPolicyCollectionPage servicePrincipalCreationPolicies;
 
     /**
      * The Token Issuance Policies.
@@ -302,6 +313,10 @@ public class PolicyRoot implements IJsonBackedObject {
 
         if (json.has("permissionGrantPolicies")) {
             permissionGrantPolicies = serializer.deserializeObject(json.get("permissionGrantPolicies"), PermissionGrantPolicyCollectionPage.class);
+        }
+
+        if (json.has("servicePrincipalCreationPolicies")) {
+            servicePrincipalCreationPolicies = serializer.deserializeObject(json.get("servicePrincipalCreationPolicies"), ServicePrincipalCreationPolicyCollectionPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
