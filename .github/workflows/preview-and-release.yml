@@ -53,7 +53,7 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: UnitTests
+          name: tests
           path: |
             build/reports/tests/test/**
             build/test-results/**
