@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-gradle
 
-name: Build and Preview 
+name: Maven Preview and Github Release
 
 on:
   push:
@@ -49,13 +49,20 @@ jobs:
     needs: maven_Preview
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Download Build Artifact
         uses: actions/download-artifact@v2.0.10
         with: 
           name: drop
           path: drop        
-      - name: GitHub Releases
-        uses: fnkr/github-action-ghr@v1.3
+      - name: Github Release
+        uses: anton-yurchenko/git-release@v4.1
         env:
-          GHR_PATH: current/working/directory/drop/
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+          DRAFT_RELEASE: "false"
+          PRE_RELEASE: "false"
+          CHANGELOG_FILE: "CHANGELOG.md"
+          ALLOW_EMPTY_CHANGELOG: "true"
+        with:
+          args: |
+            drop/**
