@@ -22,6 +22,7 @@ env:
 
 jobs:
   maven_Preview:
+    if: ${{ github.ref == 'refs/heads/dev' }}
     environment: 
       name: maven_central_snapshot
     runs-on: ubuntu-latest
