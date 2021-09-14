@@ -14,6 +14,7 @@ import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcDeviceImage;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
+import com.microsoft.graph.models.CloudPcSupportedRegion;
 import com.microsoft.graph.models.CloudPcUserSetting;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcAuditEventCollectionPage;
@@ -21,6 +22,7 @@ import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
+import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionPage;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionPage;
 
 
@@ -84,6 +86,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     public CloudPcProvisioningPolicyCollectionPage provisioningPolicies;
 
     /**
+     * The Supported Regions.
+     * 
+     */
+    @SerializedName(value = "supportedRegions", alternate = {"SupportedRegions"})
+    @Expose
+	@Nullable
+    public CloudPcSupportedRegionCollectionPage supportedRegions;
+
+    /**
      * The User Settings.
      * Cloud PC user settings.
      */
@@ -120,6 +131,10 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
         if (json.has("provisioningPolicies")) {
             provisioningPolicies = serializer.deserializeObject(json.get("provisioningPolicies"), CloudPcProvisioningPolicyCollectionPage.class);
+        }
+
+        if (json.has("supportedRegions")) {
+            supportedRegions = serializer.deserializeObject(json.get("supportedRegions"), CloudPcSupportedRegionCollectionPage.class);
         }
 
         if (json.has("userSettings")) {

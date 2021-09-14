@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
 import com.microsoft.graph.requests.GroupRequestBuilder;
 import com.microsoft.graph.requests.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;
@@ -166,6 +168,26 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     @Nonnull
     public ApplicationRequestBuilder deletedItemsAsApplication(@Nonnull final String id) {
         return new ApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id + "/microsoft.graph.application", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IdentityProviderBase collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public IdentityProviderBaseCollectionRequestBuilder federationConfigurations() {
+        return new IdentityProviderBaseCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfigurations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IdentityProviderBase item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public IdentityProviderBaseRequestBuilder federationConfigurations(@Nonnull final String id) {
+        return new IdentityProviderBaseRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfigurations") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SharedEmailDomain collection

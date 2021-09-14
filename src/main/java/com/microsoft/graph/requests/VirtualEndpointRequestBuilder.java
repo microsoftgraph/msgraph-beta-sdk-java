@@ -18,6 +18,8 @@ import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequest
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
+import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcSupportedRegionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcUserSettingRequestBuilder;
 import java.util.Arrays;
@@ -167,6 +169,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     @Nonnull
     public CloudPcProvisioningPolicyRequestBuilder provisioningPolicies(@Nonnull final String id) {
         return new CloudPcProvisioningPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CloudPcSupportedRegion collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcSupportedRegionCollectionRequestBuilder supportedRegions() {
+        return new CloudPcSupportedRegionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("supportedRegions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcSupportedRegion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcSupportedRegionRequestBuilder supportedRegions(@Nonnull final String id) {
+        return new CloudPcSupportedRegionRequestBuilder(getRequestUrlWithAdditionalSegment("supportedRegions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcUserSetting collection

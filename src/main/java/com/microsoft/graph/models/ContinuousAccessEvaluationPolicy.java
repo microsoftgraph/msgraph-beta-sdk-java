@@ -63,6 +63,15 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
     public Boolean isEnabled;
 
     /**
+     * The Migrate.
+     * 
+     */
+    @SerializedName(value = "migrate", alternate = {"Migrate"})
+    @Expose
+	@Nullable
+    public Boolean migrate;
+
+    /**
      * The Users.
      * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty.
      */
