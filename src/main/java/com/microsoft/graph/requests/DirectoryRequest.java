@@ -15,6 +15,8 @@ import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
 import com.microsoft.graph.requests.GroupRequestBuilder;
 import com.microsoft.graph.requests.ApplicationRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
+import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;

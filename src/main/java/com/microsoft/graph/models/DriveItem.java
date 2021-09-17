@@ -145,7 +145,7 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Malware.
-     * 
+     * Malware metadata, if the item was detected to contain malware. Read-only.
      */
     @SerializedName(value = "malware", alternate = {"Malware"})
     @Expose

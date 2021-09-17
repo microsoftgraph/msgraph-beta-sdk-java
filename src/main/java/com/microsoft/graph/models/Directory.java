@@ -11,11 +11,13 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.SharedEmailDomain;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 
@@ -53,6 +55,15 @@ public class Directory extends Entity implements IJsonBackedObject {
     public DirectoryObjectCollectionPage deletedItems;
 
     /**
+     * The Federation Configurations.
+     * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
+     */
+    @SerializedName(value = "federationConfigurations", alternate = {"FederationConfigurations"})
+    @Expose
+	@Nullable
+    public IdentityProviderBaseCollectionPage federationConfigurations;
+
+    /**
      * The Shared Email Domains.
      * 
      */
@@ -88,6 +99,10 @@ public class Directory extends Entity implements IJsonBackedObject {
 
         if (json.has("deletedItems")) {
             deletedItems = serializer.deserializeObject(json.get("deletedItems"), DirectoryObjectCollectionPage.class);
+        }
+
+        if (json.has("federationConfigurations")) {
+            federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), IdentityProviderBaseCollectionPage.class);
         }
 
         if (json.has("sharedEmailDomains")) {
