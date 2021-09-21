@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.EducationSubmissionRecipient;
 import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.EducationSubmissionRecipient;
 import com.microsoft.graph.models.EducationSubmissionStatus;
 import com.microsoft.graph.models.EducationOutcome;
 import com.microsoft.graph.models.EducationSubmissionResource;
@@ -32,6 +32,24 @@ import javax.annotation.Nonnull;
  */
 public class EducationSubmission extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Reassigned By.
+     * 
+     */
+    @SerializedName(value = "reassignedBy", alternate = {"ReassignedBy"})
+    @Expose
+	@Nullable
+    public IdentitySet reassignedBy;
+
+    /**
+     * The Reassigned Date Time.
+     * 
+     */
+    @SerializedName(value = "reassignedDateTime", alternate = {"ReassignedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime reassignedDateTime;
 
     /**
      * The Recipient.
