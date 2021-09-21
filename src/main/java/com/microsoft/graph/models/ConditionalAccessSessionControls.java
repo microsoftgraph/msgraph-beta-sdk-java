@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.ApplicationEnforcedRestrictionsSessionControl;
 import com.microsoft.graph.models.CloudAppSecuritySessionControl;
+import com.microsoft.graph.models.ContinuousAccessEvaluationSessionControl;
 import com.microsoft.graph.models.PersistentBrowserSessionControl;
 import com.microsoft.graph.models.SignInFrequencySessionControl;
 
@@ -58,6 +59,15 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CloudAppSecuritySessionControl cloudAppSecurity;
+
+    /**
+     * The Continuous Access Evaluation.
+     * 
+     */
+    @SerializedName(value = "continuousAccessEvaluation", alternate = {"ContinuousAccessEvaluation"})
+    @Expose
+	@Nullable
+    public ContinuousAccessEvaluationSessionControl continuousAccessEvaluation;
 
     /**
      * The Disable Resilience Defaults.

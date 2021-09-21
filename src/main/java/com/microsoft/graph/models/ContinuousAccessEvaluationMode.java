@@ -7,32 +7,24 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Education Add To Calendar Options.
+ * The Enum Continuous Access Evaluation Mode.
 */
-public enum EducationAddToCalendarOptions
+public enum ContinuousAccessEvaluationMode
 {
     /**
-    * none
+    * strict Enforcement
     */
-    NONE,
+    STRICT_ENFORCEMENT,
     /**
-    * students And Publisher
+    * disabled
     */
-    STUDENTS_AND_PUBLISHER,
-    /**
-    * students And Team Owners
-    */
-    STUDENTS_AND_TEAM_OWNERS,
+    DISABLED,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * students Only
-    */
-    STUDENTS_ONLY,
-    /**
-    * For EducationAddToCalendarOptions values that were not expected from the service
+    * For ContinuousAccessEvaluationMode values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }
