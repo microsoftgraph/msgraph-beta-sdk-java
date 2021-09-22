@@ -93,15 +93,3 @@ jobs:
           name: diff
           path: |
               ./pkgdiff_reports/**
-      
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: ./
-      
-      
-            
-            
-        
-          
-          
-        
