@@ -56,8 +56,8 @@ jobs:
     needs: build 
     runs-on: ubuntu-latest
     env: 
-      CURRENT_PKG_DIFF: ./artifacts/current/drop/build/libs/msgraph-beta-sdk-java.jar 
-      PRIOR_PKG_DIFF: ./artifacts/previous/drop/build/libs/msgraph-beta-sdk-java.jar
+      CURRENT_PKG_DIFF: ./artifacts/current/build/libs/msgraph-beta-sdk-java.jar 
+      PRIOR_PKG_DIFF: ./artifacts/previous/build/libs/msgraph-beta-sdk-java.jar
     steps: 
       - uses: actions/checkout@v2
       - name: Set up JDK
@@ -83,16 +83,20 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: artifacts/
-#      - name: Run PKG Diff 
-#        run: |
-#            sudo apt install pkgdiff 
-#            pkgdiff ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
-#      - name: Upload Diff Artifact
-#        uses: actions/upload-artifact@v2.2.4
-#        with:
-#          name: diff
-#          path: |
-              
+      - name: Run PKG Diff 
+        run: |
+            sudo apt install pkgdiff 
+            pkgdiff ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
+      - name: Upload Diff Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: diff
+          path: |
+              ./pkgdiff_reports/**
+      
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: ./
       
       
             
