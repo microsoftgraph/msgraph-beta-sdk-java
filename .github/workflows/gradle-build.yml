@@ -60,6 +60,12 @@ jobs:
       PRIOR_PKG_DIFF: ./artifacts/previous/drop/build/libs/msgraph-beta-sdk-java.jar
     steps: 
       - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '16'
+          distribution: 'adopt'
+          cache: gradle
       - name: Download Current Build
         uses: actions/download-artifact@v2
         with: 
@@ -74,10 +80,21 @@ jobs:
           event: push
           name: drop
           path: artifacts/previous/
-      - name: Run PKG Diff 
-        run: |
-            sudo apt install pkgdiff 
-            pkgdiff ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: artifacts/
+#      - name: Run PKG Diff 
+#        run: |
+#            sudo apt install pkgdiff 
+#            pkgdiff ${{ env.CURRENT_PKG_DIFF }} ${{ env.PRIOR_PKG_DIFF }}
+#      - name: Upload Diff Artifact
+#        uses: actions/upload-artifact@v2.2.4
+#        with:
+#          name: diff
+#          path: |
+              
+      
+      
             
             
         
