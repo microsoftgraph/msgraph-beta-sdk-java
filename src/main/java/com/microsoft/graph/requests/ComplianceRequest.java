@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Compliance;
+import com.microsoft.graph.requests.SubjectRightsRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.SubjectRightsRequestRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.EdiscoveryrootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;

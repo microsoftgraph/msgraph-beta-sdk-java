@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Compliance;
+import com.microsoft.graph.requests.SubjectRightsRequestCollectionRequestBuilder;
+import com.microsoft.graph.requests.SubjectRightsRequestRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.EdiscoveryrootRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -57,6 +59,26 @@ public class ComplianceRequestBuilder extends BaseRequestBuilder<Compliance> {
     }
 
 
+    /**
+     *  Gets a request builder for the SubjectRightsRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public SubjectRightsRequestCollectionRequestBuilder subjectRightsRequests() {
+        return new SubjectRightsRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("subjectRightsRequests"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the SubjectRightsRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public SubjectRightsRequestRequestBuilder subjectRightsRequests(@Nonnull final String id) {
+        return new SubjectRightsRequestRequestBuilder(getRequestUrlWithAdditionalSegment("subjectRightsRequests") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for Ediscoveryroot

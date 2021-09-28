@@ -148,7 +148,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Im Addresses.
-     * The contact's instant messaging (IM) addresses.
+     * 
      */
     @SerializedName(value = "imAddresses", alternate = {"ImAddresses"})
     @Expose
@@ -157,7 +157,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Initials.
-     * The contact's initials.
+     * 
      */
     @SerializedName(value = "initials", alternate = {"Initials"})
     @Expose
@@ -175,7 +175,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The contact’s job title.
+     * 
      */
     @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
@@ -184,7 +184,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Manager.
-     * The name of the contact's manager.
+     * 
      */
     @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose
@@ -193,7 +193,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Middle Name.
-     * The contact's middle name.
+     * 
      */
     @SerializedName(value = "middleName", alternate = {"MiddleName"})
     @Expose
@@ -202,7 +202,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Nick Name.
-     * The contact's nickname.
+     * 
      */
     @SerializedName(value = "nickName", alternate = {"NickName"})
     @Expose
@@ -211,7 +211,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Office Location.
-     * The location of the contact's office.
+     * 
      */
     @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
@@ -220,7 +220,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
-     * The ID of the contact's parent folder.
+     * 
      */
     @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
@@ -229,7 +229,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Personal Notes.
-     * The user's notes about the contact.
+     * 
      */
     @SerializedName(value = "personalNotes", alternate = {"PersonalNotes"})
     @Expose
@@ -256,7 +256,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Profession.
-     * The contact's profession.
+     * 
      */
     @SerializedName(value = "profession", alternate = {"Profession"})
     @Expose
@@ -265,7 +265,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Spouse Name.
-     * The name of the contact's spouse/partner.
+     * 
      */
     @SerializedName(value = "spouseName", alternate = {"SpouseName"})
     @Expose
@@ -274,7 +274,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Surname.
-     * The contact's surname.
+     * 
      */
     @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
@@ -283,7 +283,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Title.
-     * The contact's title.
+     * 
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -310,7 +310,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Yomi Company Name.
-     * The phonetic Japanese company name of the contact.
+     * 
      */
     @SerializedName(value = "yomiCompanyName", alternate = {"YomiCompanyName"})
     @Expose
@@ -319,7 +319,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Yomi Given Name.
-     * The phonetic Japanese given name (first name) of the contact.
+     * 
      */
     @SerializedName(value = "yomiGivenName", alternate = {"YomiGivenName"})
     @Expose
@@ -328,7 +328,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Yomi Surname.
-     * The phonetic Japanese surname (last name)  of the contact.
+     * 
      */
     @SerializedName(value = "yomiSurname", alternate = {"YomiSurname"})
     @Expose

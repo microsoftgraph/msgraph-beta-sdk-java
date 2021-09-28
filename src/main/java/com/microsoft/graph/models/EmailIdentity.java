@@ -27,7 +27,7 @@ public class EmailIdentity extends Identity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * Email address of the user.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose

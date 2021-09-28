@@ -42,7 +42,7 @@ public class AttackSimulationTrainingUserCoverage implements IJsonBackedObject {
 
     /**
      * The Attack Simulation User.
-     * 
+     * User in an attack simulation and training campaign.
      */
     @SerializedName(value = "attackSimulationUser", alternate = {"AttackSimulationUser"})
     @Expose
@@ -51,7 +51,7 @@ public class AttackSimulationTrainingUserCoverage implements IJsonBackedObject {
 
     /**
      * The User Trainings.
-     * 
+     * List of assigned trainings' and their statuses for the user.
      */
     @SerializedName(value = "userTrainings", alternate = {"UserTrainings"})
     @Expose

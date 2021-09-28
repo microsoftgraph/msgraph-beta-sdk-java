@@ -7,24 +7,40 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Authenticator App Context Type.
+ * The Enum Subject Rights Request Stage.
 */
-public enum AuthenticatorAppContextType
+public enum SubjectRightsRequestStage
 {
     /**
-    * location
+    * content Retrieval
     */
-    LOCATION,
+    CONTENT_RETRIEVAL,
     /**
-    * app
+    * content Review
     */
-    APP,
+    CONTENT_REVIEW,
+    /**
+    * generate Report
+    */
+    GENERATE_REPORT,
+    /**
+    * content Deletion
+    */
+    CONTENT_DELETION,
+    /**
+    * case Resolved
+    */
+    CASE_RESOLVED,
+    /**
+    * content Estimate
+    */
+    CONTENT_ESTIMATE,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For AuthenticatorAppContextType values that were not expected from the service
+    * For SubjectRightsRequestStage values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }
