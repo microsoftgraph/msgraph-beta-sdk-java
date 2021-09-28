@@ -92,7 +92,7 @@ jobs:
       - name: Run PKG Diff 
         run: |
             sudo apt install pkgdiff 
-            pkgdiff -hide-unchanged ${{ env.PRIOR_PKG_DIFF }} ${{ env.CURRENT_PKG_DIFF }} 
+            pkgdiff -hide-unchanged ${{ env.PRIOR_PKG_DIFF }} ${{ env.CURRENT_PKG_DIFF }} 2> /dev/null
       - name: Upload Diff Artifact
         if: ${{ always() }}
         uses: actions/upload-artifact@v2.2.4
