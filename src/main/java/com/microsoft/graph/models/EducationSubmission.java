@@ -35,7 +35,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Reassigned By.
-     * 
+     * User who moved the status of this submission to reassigned.
      */
     @SerializedName(value = "reassignedBy", alternate = {"ReassignedBy"})
     @Expose
@@ -44,7 +44,7 @@ public class EducationSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Reassigned Date Time.
-     * 
+     * Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "reassignedDateTime", alternate = {"ReassignedDateTime"})
     @Expose

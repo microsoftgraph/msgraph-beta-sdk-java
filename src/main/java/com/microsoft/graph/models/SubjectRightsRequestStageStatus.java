@@ -7,16 +7,32 @@ package com.microsoft.graph.models;
 
 
 /**
- * The Enum Authenticator App Feature Settings.
+ * The Enum Subject Rights Request Stage Status.
 */
-public enum AuthenticatorAppFeatureSettings
+public enum SubjectRightsRequestStageStatus
 {
     /**
-    * require Number Matching
+    * not Started
     */
-    REQUIRE_NUMBER_MATCHING,
+    NOT_STARTED,
     /**
-    * For AuthenticatorAppFeatureSettings values that were not expected from the service
+    * current
+    */
+    CURRENT,
+    /**
+    * completed
+    */
+    COMPLETED,
+    /**
+    * failed
+    */
+    FAILED,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
+    * For SubjectRightsRequestStageStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMode;
-import com.microsoft.graph.models.AuthenticatorAppFeatureSettings;
+import com.microsoft.graph.models.AdvancedConfigState;
 import com.microsoft.graph.models.AuthenticationMethodTarget;
 
 
@@ -37,13 +37,31 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
     public MicrosoftAuthenticatorAuthenticationMode authenticationMode;
 
     /**
-     * The Feature Settings.
-     * Determines what additional settings should be applied to Microsoft Authenticator. Possible values are: null, requireNumberMatching (Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications).
+     * The Display App Information Required State.
+     * 
      */
-    @SerializedName(value = "featureSettings", alternate = {"FeatureSettings"})
+    @SerializedName(value = "displayAppInformationRequiredState", alternate = {"DisplayAppInformationRequiredState"})
     @Expose
 	@Nullable
-    public EnumSet<AuthenticatorAppFeatureSettings> featureSettings;
+    public AdvancedConfigState displayAppInformationRequiredState;
+
+    /**
+     * The Display Location Information Required State.
+     * 
+     */
+    @SerializedName(value = "displayLocationInformationRequiredState", alternate = {"DisplayLocationInformationRequiredState"})
+    @Expose
+	@Nullable
+    public AdvancedConfigState displayLocationInformationRequiredState;
+
+    /**
+     * The Number Matching Required State.
+     * 
+     */
+    @SerializedName(value = "numberMatchingRequiredState", alternate = {"NumberMatchingRequiredState"})
+    @Expose
+	@Nullable
+    public AdvancedConfigState numberMatchingRequiredState;
 
 
     /**
