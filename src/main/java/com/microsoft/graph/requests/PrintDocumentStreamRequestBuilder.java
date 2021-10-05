@@ -70,13 +70,4 @@ public class PrintDocumentStreamRequestBuilder extends BaseRequestBuilder<InputS
     public PrintDocumentCreateUploadSessionRequestBuilder createUploadSession(@Nonnull final PrintDocumentCreateUploadSessionParameterSet parameters) {
         return new PrintDocumentCreateUploadSessionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createUploadSession"), getClient(), null, parameters);
     }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public PrintDocumentUploadDataRequestBuilder uploadData() {
-        return new PrintDocumentUploadDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.uploadData"), getClient(), null);
-    }
 }

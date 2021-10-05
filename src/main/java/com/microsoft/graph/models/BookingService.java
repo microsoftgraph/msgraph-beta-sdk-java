@@ -148,6 +148,15 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
     public BookingSchedulingPolicy schedulingPolicy;
 
     /**
+     * The Sms Notifications Enabled.
+     * 
+     */
+    @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean smsNotificationsEnabled;
+
+    /**
      * The Staff Member Ids.
      * Represents those staff members who provide this service.
      */
@@ -155,6 +164,15 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
     @Expose
 	@Nullable
     public java.util.List<String> staffMemberIds;
+
+    /**
+     * The Web Url.
+     * The URL of the booking service.
+     */
+    @SerializedName(value = "webUrl", alternate = {"WebUrl"})
+    @Expose
+	@Nullable
+    public String webUrl;
 
 
     /**

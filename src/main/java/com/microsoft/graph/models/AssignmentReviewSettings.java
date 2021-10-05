@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AccessReviewTimeoutBehavior;
 import com.microsoft.graph.models.UserSet;
 
 
@@ -40,6 +41,15 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
     }
 
     /**
+     * The Access Review Timeout Behavior.
+     * 
+     */
+    @SerializedName(value = "accessReviewTimeoutBehavior", alternate = {"AccessReviewTimeoutBehavior"})
+    @Expose
+	@Nullable
+    public AccessReviewTimeoutBehavior accessReviewTimeoutBehavior;
+
+    /**
      * The Duration In Days.
      * The number of days to allow input from reviewers.
      */
@@ -47,6 +57,24 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer durationInDays;
+
+    /**
+     * The Is Access Recommendation Enabled.
+     * 
+     */
+    @SerializedName(value = "isAccessRecommendationEnabled", alternate = {"IsAccessRecommendationEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isAccessRecommendationEnabled;
+
+    /**
+     * The Is Approval Justification Required.
+     * 
+     */
+    @SerializedName(value = "isApprovalJustificationRequired", alternate = {"IsApprovalJustificationRequired"})
+    @Expose
+	@Nullable
+    public Boolean isApprovalJustificationRequired;
 
     /**
      * The Is Enabled.

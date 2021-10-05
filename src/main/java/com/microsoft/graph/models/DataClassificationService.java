@@ -10,17 +10,13 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ExactMatchDataStore;
-import com.microsoft.graph.models.FileClassificationRequest;
 import com.microsoft.graph.models.JobResponseBase;
-import com.microsoft.graph.models.TextClassificationRequest;
 import com.microsoft.graph.models.SensitiveType;
 import com.microsoft.graph.models.SensitivityLabel;
 import com.microsoft.graph.models.ExactMatchUploadAgent;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ExactMatchDataStoreCollectionPage;
-import com.microsoft.graph.requests.FileClassificationRequestCollectionPage;
 import com.microsoft.graph.requests.JobResponseBaseCollectionPage;
-import com.microsoft.graph.requests.TextClassificationRequestCollectionPage;
 import com.microsoft.graph.requests.SensitiveTypeCollectionPage;
 import com.microsoft.graph.requests.SensitivityLabelCollectionPage;
 import com.microsoft.graph.requests.ExactMatchUploadAgentCollectionPage;
@@ -50,15 +46,6 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     public ExactMatchDataStoreCollectionPage exactMatchDataStores;
 
     /**
-     * The Classify File.
-     * 
-     */
-    @SerializedName(value = "classifyFile", alternate = {"ClassifyFile"})
-    @Expose
-	@Nullable
-    public FileClassificationRequestCollectionPage classifyFile;
-
-    /**
      * The Classify File Jobs.
      * 
      */
@@ -66,15 +53,6 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
     @Expose
 	@Nullable
     public JobResponseBaseCollectionPage classifyFileJobs;
-
-    /**
-     * The Classify Text.
-     * 
-     */
-    @SerializedName(value = "classifyText", alternate = {"ClassifyText"})
-    @Expose
-	@Nullable
-    public TextClassificationRequestCollectionPage classifyText;
 
     /**
      * The Classify Text Jobs.
@@ -153,16 +131,8 @@ public class DataClassificationService extends Entity implements IJsonBackedObje
             exactMatchDataStores = serializer.deserializeObject(json.get("exactMatchDataStores"), ExactMatchDataStoreCollectionPage.class);
         }
 
-        if (json.has("classifyFile")) {
-            classifyFile = serializer.deserializeObject(json.get("classifyFile"), FileClassificationRequestCollectionPage.class);
-        }
-
         if (json.has("classifyFileJobs")) {
             classifyFileJobs = serializer.deserializeObject(json.get("classifyFileJobs"), JobResponseBaseCollectionPage.class);
-        }
-
-        if (json.has("classifyText")) {
-            classifyText = serializer.deserializeObject(json.get("classifyText"), TextClassificationRequestCollectionPage.class);
         }
 
         if (json.has("classifyTextJobs")) {
