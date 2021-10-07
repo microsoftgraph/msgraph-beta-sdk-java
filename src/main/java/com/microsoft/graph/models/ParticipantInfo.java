@@ -76,6 +76,15 @@ public class ParticipantInfo implements IJsonBackedObject {
     public String languageId;
 
     /**
+     * The Participant Id.
+     * 
+     */
+    @SerializedName(value = "participantId", alternate = {"ParticipantId"})
+    @Expose
+	@Nullable
+    public String participantId;
+
+    /**
      * The Platform Id.
      * The client platform ID of the participant. Read-only.
      */

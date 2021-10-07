@@ -87,7 +87,7 @@ public class WebApplication implements IJsonBackedObject {
 
     /**
      * The Redirect Uri Settings.
-     * 
+     * Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
      */
     @SerializedName(value = "redirectUriSettings", alternate = {"RedirectUriSettings"})
     @Expose

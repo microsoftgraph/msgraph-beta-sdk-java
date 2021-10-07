@@ -75,6 +75,24 @@ public class AccessPackageResourceAttribute implements IJsonBackedObject {
 	@Nullable
     public String id;
 
+    /**
+     * The Is Editable.
+     * 
+     */
+    @SerializedName(value = "isEditable", alternate = {"IsEditable"})
+    @Expose
+	@Nullable
+    public Boolean isEditable;
+
+    /**
+     * The Is Persisted On Assignment Removal.
+     * 
+     */
+    @SerializedName(value = "isPersistedOnAssignmentRemoval", alternate = {"IsPersistedOnAssignmentRemoval"})
+    @Expose
+	@Nullable
+    public Boolean isPersistedOnAssignmentRemoval;
+
 
     /**
      * Sets the raw JSON object

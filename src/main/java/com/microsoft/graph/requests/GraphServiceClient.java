@@ -75,6 +75,12 @@ import com.microsoft.graph.requests.SharedDriveItemCollectionRequestBuilder;
 import com.microsoft.graph.requests.SharedDriveItemRequestBuilder;
 import com.microsoft.graph.requests.SiteCollectionRequestBuilder;
 import com.microsoft.graph.requests.SiteRequestBuilder;
+import com.microsoft.graph.requests.MessageEventCollectionRequestBuilder;
+import com.microsoft.graph.requests.MessageEventRequestBuilder;
+import com.microsoft.graph.requests.MessageRecipientCollectionRequestBuilder;
+import com.microsoft.graph.requests.MessageRecipientRequestBuilder;
+import com.microsoft.graph.requests.MessageTraceCollectionRequestBuilder;
+import com.microsoft.graph.requests.MessageTraceRequestBuilder;
 import com.microsoft.graph.requests.SchemaExtensionCollectionRequestBuilder;
 import com.microsoft.graph.requests.SchemaExtensionRequestBuilder;
 import com.microsoft.graph.requests.OnPremisesPublishingProfileCollectionRequestBuilder;
@@ -1044,6 +1050,69 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public SiteRequestBuilder sites(@Nonnull final String id) {
         return new SiteRequestBuilder(getServiceRoot() + "/sites/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of MessageEvents objects
+     *
+     * @return the request builder for the collection of MessageEvents objects
+     */
+    @Nonnull
+    public MessageEventCollectionRequestBuilder messageEvents() {
+        return new MessageEventCollectionRequestBuilder(getServiceRoot() + "/messageEvents", this, null);
+    }
+
+    /**
+     * Gets a single MessageEvents
+     *
+     * @param id the id of the MessageEvents to retrieve
+     * @return the request builder for the MessageEvents object
+     */
+    @Nonnull
+    public MessageEventRequestBuilder messageEvents(@Nonnull final String id) {
+        return new MessageEventRequestBuilder(getServiceRoot() + "/messageEvents/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of MessageRecipients objects
+     *
+     * @return the request builder for the collection of MessageRecipients objects
+     */
+    @Nonnull
+    public MessageRecipientCollectionRequestBuilder messageRecipients() {
+        return new MessageRecipientCollectionRequestBuilder(getServiceRoot() + "/messageRecipients", this, null);
+    }
+
+    /**
+     * Gets a single MessageRecipients
+     *
+     * @param id the id of the MessageRecipients to retrieve
+     * @return the request builder for the MessageRecipients object
+     */
+    @Nonnull
+    public MessageRecipientRequestBuilder messageRecipients(@Nonnull final String id) {
+        return new MessageRecipientRequestBuilder(getServiceRoot() + "/messageRecipients/" + id, this, null);
+    }
+
+    /**
+     * Gets the collection of MessageTraces objects
+     *
+     * @return the request builder for the collection of MessageTraces objects
+     */
+    @Nonnull
+    public MessageTraceCollectionRequestBuilder messageTraces() {
+        return new MessageTraceCollectionRequestBuilder(getServiceRoot() + "/messageTraces", this, null);
+    }
+
+    /**
+     * Gets a single MessageTraces
+     *
+     * @param id the id of the MessageTraces to retrieve
+     * @return the request builder for the MessageTraces object
+     */
+    @Nonnull
+    public MessageTraceRequestBuilder messageTraces(@Nonnull final String id) {
+        return new MessageTraceRequestBuilder(getServiceRoot() + "/messageTraces/" + id, this, null);
     }
 
     /**

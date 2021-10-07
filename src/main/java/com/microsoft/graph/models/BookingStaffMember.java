@@ -56,6 +56,15 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
     public BookingStaffRole role;
 
     /**
+     * The Time Zone.
+     * 
+     */
+    @SerializedName(value = "timeZone", alternate = {"TimeZone"})
+    @Expose
+	@Nullable
+    public String timeZone;
+
+    /**
      * The Use Business Hours.
      * True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
      */

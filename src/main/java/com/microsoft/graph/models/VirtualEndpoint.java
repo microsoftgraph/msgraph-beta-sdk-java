@@ -87,7 +87,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Regions.
-     * 
+     * Cloud PC supported regions.
      */
     @SerializedName(value = "supportedRegions", alternate = {"SupportedRegions"})
     @Expose

@@ -38,7 +38,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
 
     /**
      * The Display App Information Required State.
-     * 
+     * Determines whether the app the user is signing into should be shown to the user in the body of the notification. Possible values are: enabled, disabled, default.
      */
     @SerializedName(value = "displayAppInformationRequiredState", alternate = {"DisplayAppInformationRequiredState"})
     @Expose
@@ -47,7 +47,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
 
     /**
      * The Display Location Information Required State.
-     * 
+     * Determines whether the location of the sign-in should be shown to the user in the body of the notification. Possible values are: enabled, disabled, default.
      */
     @SerializedName(value = "displayLocationInformationRequiredState", alternate = {"DisplayLocationInformationRequiredState"})
     @Expose
@@ -56,7 +56,7 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
 
     /**
      * The Number Matching Required State.
-     * 
+     * Requires number matching for MFA notifications. Value is ignored for phone sign-in notifications. Possible values are: enabled, disabled, default.
      */
     @SerializedName(value = "numberMatchingRequiredState", alternate = {"NumberMatchingRequiredState"})
     @Expose

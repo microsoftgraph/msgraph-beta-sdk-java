@@ -95,6 +95,15 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     public String customerPhone;
 
     /**
+     * The Customer Time Zone.
+     * 
+     */
+    @SerializedName(value = "customerTimeZone", alternate = {"CustomerTimeZone"})
+    @Expose
+	@Nullable
+    public String customerTimeZone;
+
+    /**
      * The Duration.
      * The length of the appointment, denoted in ISO8601 format.
      */
@@ -165,6 +174,15 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean isLocationOnline;
+
+    /**
+     * The Join Web Url.
+     * 
+     */
+    @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
+    @Expose
+	@Nullable
+    public String joinWebUrl;
 
     /**
      * The Online Meeting Url.
@@ -273,6 +291,15 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String serviceNotes;
+
+    /**
+     * The Sms Notifications Enabled.
+     * 
+     */
+    @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean smsNotificationsEnabled;
 
     /**
      * The Staff Member Ids.

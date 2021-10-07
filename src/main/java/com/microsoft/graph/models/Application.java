@@ -90,7 +90,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Default Redirect Uri.
-     * 
+     * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
      */
     @SerializedName(value = "defaultRedirectUri", alternate = {"DefaultRedirectUri"})
     @Expose
