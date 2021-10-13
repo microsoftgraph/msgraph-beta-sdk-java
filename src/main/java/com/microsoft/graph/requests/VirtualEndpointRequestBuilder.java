@@ -14,10 +14,14 @@ import com.microsoft.graph.requests.CloudPCCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPCRequestBuilder;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcDeviceImageRequestBuilder;
+import com.microsoft.graph.requests.CloudPcGalleryImageCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcGalleryImageRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyRequestBuilder;
+import com.microsoft.graph.requests.CloudPcServicePlanCollectionRequestBuilder;
+import com.microsoft.graph.requests.CloudPcServicePlanRequestBuilder;
 import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcSupportedRegionRequestBuilder;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionRequestBuilder;
@@ -131,6 +135,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
         return new CloudPcDeviceImageRequestBuilder(getRequestUrlWithAdditionalSegment("deviceImages") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the CloudPcGalleryImage collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcGalleryImageCollectionRequestBuilder galleryImages() {
+        return new CloudPcGalleryImageCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("galleryImages"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcGalleryImage item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcGalleryImageRequestBuilder galleryImages(@Nonnull final String id) {
+        return new CloudPcGalleryImageRequestBuilder(getRequestUrlWithAdditionalSegment("galleryImages") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the CloudPcOnPremisesConnection collection
      *
      * @return the collection request builder
@@ -169,6 +193,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     @Nonnull
     public CloudPcProvisioningPolicyRequestBuilder provisioningPolicies(@Nonnull final String id) {
         return new CloudPcProvisioningPolicyRequestBuilder(getRequestUrlWithAdditionalSegment("provisioningPolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CloudPcServicePlan collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CloudPcServicePlanCollectionRequestBuilder servicePlans() {
+        return new CloudPcServicePlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcServicePlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CloudPcServicePlanRequestBuilder servicePlans(@Nonnull final String id) {
+        return new CloudPcServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the CloudPcSupportedRegion collection

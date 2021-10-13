@@ -7,6 +7,8 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
+import com.microsoft.graph.requests.DriveItemCollectionRequestBuilder;
+import com.microsoft.graph.requests.DriveItemRequestBuilder;
 import com.microsoft.graph.requests.InvitationCollectionRequestBuilder;
 import com.microsoft.graph.requests.InvitationRequestBuilder;
 import com.microsoft.graph.requests.UserCollectionRequestBuilder;
@@ -162,6 +164,7 @@ import com.microsoft.graph.requests.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementRequestBuilder;
 import com.microsoft.graph.requests.RoleManagementRequestBuilder;
+import com.microsoft.graph.requests.PrivacyRequestBuilder;
 import com.microsoft.graph.requests.ComplianceRequestBuilder;
 import com.microsoft.graph.requests.IdentityContainerRequestBuilder;
 import com.microsoft.graph.requests.TrustFrameworkRequestBuilder;
@@ -335,6 +338,27 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     }
 
     /**
+     * Gets the collection of Workbooks objects
+     *
+     * @return the request builder for the collection of Workbooks objects
+     */
+    @Nonnull
+    public DriveItemCollectionRequestBuilder workbooks() {
+        return new DriveItemCollectionRequestBuilder(getServiceRoot() + "/workbooks", this, null);
+    }
+
+    /**
+     * Gets a single Workbooks
+     *
+     * @param id the id of the Workbooks to retrieve
+     * @return the request builder for the Workbooks object
+     */
+    @Nonnull
+    public DriveItemRequestBuilder workbooks(@Nonnull final String id) {
+        return new DriveItemRequestBuilder(getServiceRoot() + "/workbooks/" + id, this, null);
+    }
+
+    /**
      * Gets the collection of Invitations objects
      *
      * @return the request builder for the collection of Invitations objects
@@ -359,7 +383,9 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * Gets the collection of Users objects
      *
      * @return the request builder for the collection of Users objects
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserCollectionRequestBuilder users() {
         return new UserCollectionRequestBuilder(getServiceRoot() + "/users", this, null);
@@ -370,7 +396,9 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      *
      * @param id the id of the Users to retrieve
      * @return the request builder for the Users object
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserRequestBuilder users(@Nonnull final String id) {
         return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
@@ -1966,6 +1994,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the Privacy
+     */
+    @Nonnull
+    public PrivacyRequestBuilder privacy() {
+        return new PrivacyRequestBuilder(getServiceRoot() + "/privacy", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the Compliance
      */
     @Nonnull
@@ -2037,7 +2075,9 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserRequestBuilder me() {
         return new UserRequestBuilder(getServiceRoot() + "/me", this, null);

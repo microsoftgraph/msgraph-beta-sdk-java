@@ -853,7 +853,9 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     /**
      * The Users.
      * The primary users associated with the managed device.
+     * @deprecated 
      */
+    @Deprecated
 	@Nullable
     public UserCollectionPage users;
 

@@ -47,7 +47,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Connector Id.
-     * 
+     * The Teams App ID. Optional.
      */
     @SerializedName(value = "connectorId", alternate = {"ConnectorId"})
     @Expose
@@ -74,7 +74,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Search Settings.
-     * 
+     * The settings configuring the search experience for content in this connection, such as the display templates for search results.
      */
     @SerializedName(value = "searchSettings", alternate = {"SearchSettings"})
     @Expose
@@ -92,7 +92,7 @@ public class ExternalConnection extends Entity implements IJsonBackedObject {
 
     /**
      * The Groups.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose

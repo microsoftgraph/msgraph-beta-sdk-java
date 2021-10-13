@@ -68,6 +68,14 @@ public enum ConditionalAccessConditions
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * service Principals
+    */
+    SERVICE_PRINCIPALS,
+    /**
+    * service Principal Risk
+    */
+    SERVICE_PRINCIPAL_RISK,
+    /**
     * For ConditionalAccessConditions values that were not expected from the service
     */
     UNEXPECTED_VALUE

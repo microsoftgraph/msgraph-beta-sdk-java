@@ -36,6 +36,9 @@ import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyD
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicySettingsDeviceSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingDetailsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingsReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetQuietTimePolicyUserSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetActiveMalwareReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetActiveMalwareSummaryReportParameterSet;
@@ -47,9 +50,6 @@ import com.microsoft.graph.models.DeviceManagementReportsGetAllCertificatesRepor
 import com.microsoft.graph.models.DeviceManagementReportsGetCertificatesReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetGroupPolicySettingsDeviceSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
-import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceMonitorActiveSessionsReportParameterSet;
-import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceMonitorAvgSessionTimeReportParameterSet;
-import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceMonitorTotalSessionsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCachedReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCompliancePolicyNonComplianceReportParameterSet;
@@ -340,6 +340,36 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
      * @param parameters the parameters for the service method
      */
     @Nonnull
+    public DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder getDeviceConfigurationPolicySettingsSummaryReport(@Nonnull final DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportParameterSet parameters) {
+        return new DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDeviceConfigurationPolicySettingsSummaryReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetQuietTimePolicyUsersReportRequestBuilder getQuietTimePolicyUsersReport(@Nonnull final DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet parameters) {
+        return new DeviceManagementReportsGetQuietTimePolicyUsersReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getQuietTimePolicyUsersReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetQuietTimePolicyUserSummaryReportRequestBuilder getQuietTimePolicyUserSummaryReport(@Nonnull final DeviceManagementReportsGetQuietTimePolicyUserSummaryReportParameterSet parameters) {
+        return new DeviceManagementReportsGetQuietTimePolicyUserSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getQuietTimePolicyUserSummaryReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
     public DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceRequestBuilder getEnrollmentConfigurationPoliciesByDevice(@Nonnull final DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceParameterSet parameters) {
         return new DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEnrollmentConfigurationPoliciesByDevice"), getClient(), null, parameters);
     }
@@ -442,36 +472,6 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportRequestBuilder getConfigManagerDevicePolicyStatusReport(@Nonnull final DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet parameters) {
         return new DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getConfigManagerDevicePolicyStatusReport"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementReportsGetRemoteAssistanceMonitorActiveSessionsReportRequestBuilder getRemoteAssistanceMonitorActiveSessionsReport(@Nonnull final DeviceManagementReportsGetRemoteAssistanceMonitorActiveSessionsReportParameterSet parameters) {
-        return new DeviceManagementReportsGetRemoteAssistanceMonitorActiveSessionsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRemoteAssistanceMonitorActiveSessionsReport"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementReportsGetRemoteAssistanceMonitorAvgSessionTimeReportRequestBuilder getRemoteAssistanceMonitorAvgSessionTimeReport(@Nonnull final DeviceManagementReportsGetRemoteAssistanceMonitorAvgSessionTimeReportParameterSet parameters) {
-        return new DeviceManagementReportsGetRemoteAssistanceMonitorAvgSessionTimeReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRemoteAssistanceMonitorAvgSessionTimeReport"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementReportsGetRemoteAssistanceMonitorTotalSessionsReportRequestBuilder getRemoteAssistanceMonitorTotalSessionsReport(@Nonnull final DeviceManagementReportsGetRemoteAssistanceMonitorTotalSessionsReportParameterSet parameters) {
-        return new DeviceManagementReportsGetRemoteAssistanceMonitorTotalSessionsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRemoteAssistanceMonitorTotalSessionsReport"), getClient(), null, parameters);
     }
 
     /**

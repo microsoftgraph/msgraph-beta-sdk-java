@@ -77,7 +77,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Participant Id.
-     * 
+     * The participant ID of the participant. Read-only.
      */
     @SerializedName(value = "participantId", alternate = {"ParticipantId"})
     @Expose

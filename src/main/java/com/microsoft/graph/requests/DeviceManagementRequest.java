@@ -213,7 +213,6 @@ import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionRequestBuilde
 import com.microsoft.graph.requests.GroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelHealthThresholdCollectionRequestBuilder;
@@ -239,6 +238,7 @@ import com.microsoft.graph.requests.RoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistanceSettingsRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionRequestBuilder;
@@ -261,6 +261,8 @@ import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSumma
 import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
+import com.microsoft.graph.requests.CertificateConnectorDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.CertificateConnectorDetailsRequestBuilder;
 import com.microsoft.graph.requests.UserPFXCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserPFXCertificateRequestBuilder;
 import java.util.Arrays;

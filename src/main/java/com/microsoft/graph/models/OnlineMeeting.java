@@ -20,6 +20,7 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
 import com.microsoft.graph.models.MeetingAttendanceReport;
+import com.microsoft.graph.models.MeetingRegistration;
 import com.microsoft.graph.models.Entity;
 
 
@@ -288,6 +289,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public MeetingAttendanceReport meetingAttendanceReport;
+
+    /**
+     * The Registration.
+     * 
+     */
+    @SerializedName(value = "registration", alternate = {"Registration"})
+    @Expose
+	@Nullable
+    public MeetingRegistration registration;
 
 
     /**

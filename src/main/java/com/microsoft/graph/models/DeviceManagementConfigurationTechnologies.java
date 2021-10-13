@@ -36,6 +36,14 @@ public enum DeviceManagementConfigurationTechnologies
     */
     EXCHANGE_ONLINE,
     /**
+    * linux Mdm
+    */
+    LINUX_MDM,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementConfigurationTechnologies values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -18,7 +18,7 @@ import com.microsoft.graph.ediscovery.requests.CaseOperationCollectionRequestBui
 import com.microsoft.graph.ediscovery.requests.CaseOperationRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.ReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.ReviewSetRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SettingsRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.CaseSettingsRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.SourceCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.TagCollectionRequestBuilder;

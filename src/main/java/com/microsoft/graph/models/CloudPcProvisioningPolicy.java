@@ -9,7 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CloudPcDomainJoinConfiguration;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyImageType;
+import com.microsoft.graph.models.MicrosoftManagedDesktop;
 import com.microsoft.graph.models.CloudPcProvisioningPolicyAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyAssignmentCollectionPage;
@@ -48,6 +50,15 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     public String displayName;
 
     /**
+     * The Domain Join Configuration.
+     * 
+     */
+    @SerializedName(value = "domainJoinConfiguration", alternate = {"DomainJoinConfiguration"})
+    @Expose
+	@Nullable
+    public CloudPcDomainJoinConfiguration domainJoinConfiguration;
+
+    /**
      * The Image Display Name.
      * The display name for the OS image you’re provisioning.
      */
@@ -73,6 +84,15 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     @Expose
 	@Nullable
     public CloudPcProvisioningPolicyImageType imageType;
+
+    /**
+     * The Microsoft Managed Desktop.
+     * 
+     */
+    @SerializedName(value = "microsoftManagedDesktop", alternate = {"MicrosoftManagedDesktop"})
+    @Expose
+	@Nullable
+    public MicrosoftManagedDesktop microsoftManagedDesktop;
 
     /**
      * The On Premises Connection Id.

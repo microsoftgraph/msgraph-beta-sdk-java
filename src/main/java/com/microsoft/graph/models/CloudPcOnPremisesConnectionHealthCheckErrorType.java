@@ -72,6 +72,18 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     AZURE_AD_DEVICE_SYNC_CHECK_LONG_SYNC_CIRCLE,
     /**
+    * azure Ad Device Sync Check Connect Disabled
+    */
+    AZURE_AD_DEVICE_SYNC_CHECK_CONNECT_DISABLED,
+    /**
+    * azure Ad Device Sync Check Duration Exceeded
+    */
+    AZURE_AD_DEVICE_SYNC_CHECK_DURATION_EXCEEDED,
+    /**
+    * azure Ad Device Sync Check Transient Service Error
+    */
+    AZURE_AD_DEVICE_SYNC_CHECK_TRANSIENT_SERVICE_ERROR,
+    /**
     * azure Ad Device Sync Check Unknown Error
     */
     AZURE_AD_DEVICE_SYNC_CHECK_UNKNOWN_ERROR,
@@ -104,6 +116,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     RESOURCE_AVAILABILITY_CHECK_UNSUPPORTED_V_NET_REGION,
     /**
+    * resource Availability Check Transient Service Error
+    */
+    RESOURCE_AVAILABILITY_CHECK_TRANSIENT_SERVICE_ERROR,
+    /**
     * resource Availability Check Unknown Error
     */
     RESOURCE_AVAILABILITY_CHECK_UNKNOWN_ERROR,
@@ -123,6 +139,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * permission Check No Resource Group Network Contributor Role
     */
     PERMISSION_CHECK_NO_RESOURCE_GROUP_NETWORK_CONTRIBUTOR_ROLE,
+    /**
+    * permission Check Transient Service Error
+    */
+    PERMISSION_CHECK_TRANSIENT_SERVICE_ERROR,
     /**
     * permission Check Unknown Error
     */

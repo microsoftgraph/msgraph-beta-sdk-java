@@ -46,7 +46,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
 
     /**
      * The Profile Name.
-     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      */
     @SerializedName(value = "profileName", alternate = {"ProfileName"})
     @Expose
@@ -64,7 +64,7 @@ public class WindowsAssignedAccessProfile extends Entity implements IJsonBackedO
 
     /**
      * The Start Menu Layout Xml.
-     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      */
     @SerializedName(value = "startMenuLayoutXml", alternate = {"StartMenuLayoutXml"})
     @Expose

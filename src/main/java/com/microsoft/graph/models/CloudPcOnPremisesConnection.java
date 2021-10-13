@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.CloudPcOnPremisesConnectionStatus;
 import com.microsoft.graph.models.CloudPcOnPremisesConnectionStatusDetails;
+import com.microsoft.graph.models.CloudPcOnPremisesConnectionType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -134,6 +135,15 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public String subscriptionName;
+
+    /**
+     * The Type.
+     * 
+     */
+    @SerializedName(value = "type", alternate = {"Type"})
+    @Expose
+	@Nullable
+    public CloudPcOnPremisesConnectionType type;
 
     /**
      * The Virtual Network Id.

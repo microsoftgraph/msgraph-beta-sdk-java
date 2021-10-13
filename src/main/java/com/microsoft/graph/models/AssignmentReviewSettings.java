@@ -42,7 +42,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Access Review Timeout Behavior.
-     * 
+     * The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
      */
     @SerializedName(value = "accessReviewTimeoutBehavior", alternate = {"AccessReviewTimeoutBehavior"})
     @Expose
@@ -51,7 +51,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Duration In Days.
-     * The number of days to allow input from reviewers.
+     * The number of days within which reviewers should provide input.
      */
     @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
@@ -60,7 +60,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Is Access Recommendation Enabled.
-     * 
+     * Specifies whether to display recommendations to the reviewer. The default value is true
      */
     @SerializedName(value = "isAccessRecommendationEnabled", alternate = {"IsAccessRecommendationEnabled"})
     @Expose
@@ -69,7 +69,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Is Approval Justification Required.
-     * 
+     * Specifies whether the reviewer must provide justification for the approval. The default value is true.
      */
     @SerializedName(value = "isApprovalJustificationRequired", alternate = {"IsApprovalJustificationRequired"})
     @Expose

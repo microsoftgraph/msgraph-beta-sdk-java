@@ -56,7 +56,9 @@ public class AadUserConversationMember extends ConversationMember implements IJs
     /**
      * The User.
      * 
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
 	@Nullable

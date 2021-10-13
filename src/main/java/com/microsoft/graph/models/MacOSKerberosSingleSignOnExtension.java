@@ -72,6 +72,15 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     public java.util.List<String> credentialBundleIdAccessControlList;
 
     /**
+     * The Credentials Cache Monitored.
+     * When set to True, the credential is requested on the next matching Kerberos challenge or network state change. When the credential is expired or missing, a new credential is created. Available for devices running macOS versions 12 and later.
+     */
+    @SerializedName(value = "credentialsCacheMonitored", alternate = {"CredentialsCacheMonitored"})
+    @Expose
+	@Nullable
+    public Boolean credentialsCacheMonitored;
+
+    /**
      * The Domain Realms.
      * Gets or sets a list of realms for custom domain-realm mapping. Realms are case sensitive.
      */
@@ -97,6 +106,33 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     @Expose
 	@Nullable
     public Boolean isDefaultRealm;
+
+    /**
+     * The Kerberos Apps In Bundle Id ACLIncluded.
+     * When set to True, the Kerberos extension allows any apps entered with the app bundle ID, managed apps, and standard Kerberos utilities, such as TicketViewer and klist, to access and use the credential. Available for devices running macOS versions 12 and later.
+     */
+    @SerializedName(value = "kerberosAppsInBundleIdACLIncluded", alternate = {"KerberosAppsInBundleIdACLIncluded"})
+    @Expose
+	@Nullable
+    public Boolean kerberosAppsInBundleIdACLIncluded;
+
+    /**
+     * The Managed Apps In Bundle Id ACLIncluded.
+     * When set to True, the Kerberos extension allows managed apps, and any apps entered with the app bundle ID to access the credential. When set to False, the Kerberos extension allows all apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later.
+     */
+    @SerializedName(value = "managedAppsInBundleIdACLIncluded", alternate = {"ManagedAppsInBundleIdACLIncluded"})
+    @Expose
+	@Nullable
+    public Boolean managedAppsInBundleIdACLIncluded;
+
+    /**
+     * The Mode Credential Used.
+     * Select how other processes use the Kerberos Extension credential.
+     */
+    @SerializedName(value = "modeCredentialUsed", alternate = {"ModeCredentialUsed"})
+    @Expose
+	@Nullable
+    public String modeCredentialUsed;
 
     /**
      * The Password Block Modification.
@@ -207,6 +243,42 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     public Boolean requireUserPresence;
 
     /**
+     * The Sign In Help Text.
+     * Text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later.
+     */
+    @SerializedName(value = "signInHelpText", alternate = {"SignInHelpText"})
+    @Expose
+	@Nullable
+    public String signInHelpText;
+
+    /**
+     * The Single Sign On Extension Preferred KDCs.
+     * Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+     */
+    @SerializedName(value = "singleSignOnExtensionPreferredKDCs", alternate = {"SingleSignOnExtensionPreferredKDCs"})
+    @Expose
+	@Nullable
+    public java.util.List<String> singleSignOnExtensionPreferredKDCs;
+
+    /**
+     * The Tls For LDAPRequired.
+     * When set to True, LDAP connections are required to use Transport Layer Security (TLS). Available for devices running macOS versions 11 and later.
+     */
+    @SerializedName(value = "tlsForLDAPRequired", alternate = {"TlsForLDAPRequired"})
+    @Expose
+	@Nullable
+    public Boolean tlsForLDAPRequired;
+
+    /**
+     * The Username Lable Custom.
+     * This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.
+     */
+    @SerializedName(value = "usernameLableCustom", alternate = {"UsernameLableCustom"})
+    @Expose
+	@Nullable
+    public String usernameLableCustom;
+
+    /**
      * The User Principal Name.
      * Gets or sets the principle user name to use for this profile. The realm name does not need to be included.
      */
@@ -214,6 +286,15 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     @Expose
 	@Nullable
     public String userPrincipalName;
+
+    /**
+     * The User Setup Delayed.
+     * When set to True, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
+     */
+    @SerializedName(value = "userSetupDelayed", alternate = {"UserSetupDelayed"})
+    @Expose
+	@Nullable
+    public Boolean userSetupDelayed;
 
 
     /**

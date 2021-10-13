@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.KeyCredentialConfiguration;
 import com.microsoft.graph.models.PasswordCredentialConfiguration;
 
 
@@ -38,6 +39,15 @@ public class AppManagementConfiguration implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Key Credentials.
+     * 
+     */
+    @SerializedName(value = "keyCredentials", alternate = {"KeyCredentials"})
+    @Expose
+	@Nullable
+    public java.util.List<KeyCredentialConfiguration> keyCredentials;
 
     /**
      * The Password Credentials.

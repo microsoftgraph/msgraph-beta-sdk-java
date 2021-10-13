@@ -24,6 +24,10 @@ public enum TokenIssuerType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * Azure ADBackup Auth
+    */
+    AZURE_AD_BACKUP_AUTH,
+    /**
     * For TokenIssuerType values that were not expected from the service
     */
     UNEXPECTED_VALUE

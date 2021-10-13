@@ -16,6 +16,14 @@ public enum DeviceManagementConfigurationPlatforms
     */
     NONE,
     /**
+    * android
+    */
+    ANDROID,
+    /**
+    * i OS
+    */
+    I_OS,
+    /**
     * mac OS
     */
     MAC_OS,

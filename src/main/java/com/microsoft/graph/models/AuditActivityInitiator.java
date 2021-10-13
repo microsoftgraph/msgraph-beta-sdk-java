@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.AppIdentity;
-import com.microsoft.graph.models.UserIdentity;
+import com.microsoft.graph.models.AuditUserIdentity;
 
 
 import com.google.gson.JsonObject;
@@ -55,7 +55,7 @@ public class AuditActivityInitiator implements IJsonBackedObject {
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
 	@Nullable
-    public UserIdentity user;
+    public AuditUserIdentity user;
 
 
     /**

@@ -42,7 +42,7 @@ public class PropertyRule implements IJsonBackedObject {
 
     /**
      * The Operation.
-     * 
+     * Specifies the operations to be performed during evaluation of a single propertyRule, where property and a string from the values collection are the respective operands. Possible values are: null, equals, notEquals, contains, notContains, lessThan, greaterThan, startsWith, unknownFutureValue. Required.
      */
     @SerializedName(value = "operation", alternate = {"Operation"})
     @Expose
@@ -51,7 +51,7 @@ public class PropertyRule implements IJsonBackedObject {
 
     /**
      * The Property.
-     * 
+     * The property from the externalItem schema. Required.
      */
     @SerializedName(value = "property", alternate = {"Property"})
     @Expose
@@ -60,7 +60,7 @@ public class PropertyRule implements IJsonBackedObject {
 
     /**
      * The Values.
-     * 
+     * A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose
@@ -69,7 +69,7 @@ public class PropertyRule implements IJsonBackedObject {
 
     /**
      * The Values Joined By.
-     * 
+     * The join operator for evaluating multiple propertyRules. For example, if and is specified, then all propertyRules must be true for the propertyRule to be true. Possible values are: or, and. Required.
      */
     @SerializedName(value = "valuesJoinedBy", alternate = {"ValuesJoinedBy"})
     @Expose

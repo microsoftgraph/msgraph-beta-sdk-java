@@ -52,7 +52,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Allow New Time Proposals.
-     * True if the meeting organizer allows invitees to propose a new time when responding, false otherwise. Optional. Default is true.
+     * true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
      */
     @SerializedName(value = "allowNewTimeProposals", alternate = {"AllowNewTimeProposals"})
     @Expose

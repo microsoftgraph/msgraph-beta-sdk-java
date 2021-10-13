@@ -69,6 +69,87 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements IJ
     public UserExperienceAnalyticsCloudManagementDevicesSummary cloudManagementDevicesSummary;
 
     /**
+     * The Co Managed Devices.
+     * Total number of co-managed devices. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "coManagedDevices", alternate = {"CoManagedDevices"})
+    @Expose
+	@Nullable
+    public Integer coManagedDevices;
+
+    /**
+     * The Devices Not Autopilot Registered.
+     * The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "devicesNotAutopilotRegistered", alternate = {"DevicesNotAutopilotRegistered"})
+    @Expose
+	@Nullable
+    public Integer devicesNotAutopilotRegistered;
+
+    /**
+     * The Devices Without Autopilot Profile Assigned.
+     * The count of intune devices not autopilot profile assigned. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "devicesWithoutAutopilotProfileAssigned", alternate = {"DevicesWithoutAutopilotProfileAssigned"})
+    @Expose
+	@Nullable
+    public Integer devicesWithoutAutopilotProfileAssigned;
+
+    /**
+     * The Devices Without Cloud Identity.
+     * The count of devices that are not cloud identity. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "devicesWithoutCloudIdentity", alternate = {"DevicesWithoutCloudIdentity"})
+    @Expose
+	@Nullable
+    public Integer devicesWithoutCloudIdentity;
+
+    /**
+     * The Intune Devices.
+     * The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "intuneDevices", alternate = {"IntuneDevices"})
+    @Expose
+	@Nullable
+    public Integer intuneDevices;
+
+    /**
+     * The Tenant Attach Devices.
+     * Total count of tenant attach devices. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "tenantAttachDevices", alternate = {"TenantAttachDevices"})
+    @Expose
+	@Nullable
+    public Integer tenantAttachDevices;
+
+    /**
+     * The Total Devices.
+     * The total count of devices. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "totalDevices", alternate = {"TotalDevices"})
+    @Expose
+	@Nullable
+    public Integer totalDevices;
+
+    /**
+     * The Unsupported OSversion Devices.
+     * The count of Windows 10 devices that have unsupported OS versions. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "unsupportedOSversionDevices", alternate = {"UnsupportedOSversionDevices"})
+    @Expose
+	@Nullable
+    public Integer unsupportedOSversionDevices;
+
+    /**
+     * The Windows10Devices.
+     * The count of windows 10 devices. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "windows10Devices", alternate = {"Windows10Devices"})
+    @Expose
+	@Nullable
+    public Integer windows10Devices;
+
+    /**
      * The Windows10Devices Summary.
      * The user experience analytics work from anywhere Windows 10 devices summary.
      */
@@ -76,6 +157,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements IJ
     @Expose
 	@Nullable
     public UserExperienceAnalyticsWindows10DevicesSummary windows10DevicesSummary;
+
+    /**
+     * The Windows10Devices Without Tenant Attach.
+     * The count of windows 10 devices that are Intune and Comanaged. Valid values -2147483648 to 2147483647
+     */
+    @SerializedName(value = "windows10DevicesWithoutTenantAttach", alternate = {"Windows10DevicesWithoutTenantAttach"})
+    @Expose
+	@Nullable
+    public Integer windows10DevicesWithoutTenantAttach;
 
 
     /**

@@ -99,6 +99,15 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     public Boolean isDefaultRealm;
 
     /**
+     * The Managed Apps In Bundle Id ACLIncluded.
+     * When set to True, the Kerberos extension allows managed apps, and any apps entered with the app bundle ID to access the credential. When set to False, the Kerberos extension allows all apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later.
+     */
+    @SerializedName(value = "managedAppsInBundleIdACLIncluded", alternate = {"ManagedAppsInBundleIdACLIncluded"})
+    @Expose
+	@Nullable
+    public Boolean managedAppsInBundleIdACLIncluded;
+
+    /**
      * The Password Block Modification.
      * Enables or disables password changes.
      */
@@ -205,6 +214,15 @@ public class IosKerberosSingleSignOnExtension extends IosSingleSignOnExtension i
     @Expose
 	@Nullable
     public Boolean requireUserPresence;
+
+    /**
+     * The Sign In Help Text.
+     * Text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later.
+     */
+    @SerializedName(value = "signInHelpText", alternate = {"SignInHelpText"})
+    @Expose
+	@Nullable
+    public String signInHelpText;
 
     /**
      * The User Principal Name.

@@ -18,7 +18,7 @@ import com.microsoft.graph.ediscovery.requests.CaseOperationCollectionRequestBui
 import com.microsoft.graph.ediscovery.requests.CaseOperationRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.ReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.ReviewSetRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SettingsRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.CaseSettingsRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.SourceCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.TagCollectionRequestBuilder;
@@ -173,13 +173,13 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
     }
 
     /**
-     * Gets the request builder for Settings
+     * Gets the request builder for CaseSettings
      *
-     * @return the SettingsRequestBuilder instance
+     * @return the CaseSettingsRequestBuilder instance
      */
     @Nonnull
-    public SettingsRequestBuilder settings() {
-        return new SettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public CaseSettingsRequestBuilder settings() {
+        return new CaseSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
     /**
      *  Gets a request builder for the SourceCollection collection
