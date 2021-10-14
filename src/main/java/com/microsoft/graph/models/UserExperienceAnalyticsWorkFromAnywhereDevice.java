@@ -109,6 +109,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     public Boolean compliancePolicySetToIntune;
 
     /**
+     * The Device Id.
+     * The user experience work from anywhere device Id.
+     */
+    @SerializedName(value = "deviceId", alternate = {"DeviceId"})
+    @Expose
+	@Nullable
+    public String deviceId;
+
+    /**
      * The Device Name.
      * The work from anywhere device's name.
      */
@@ -125,6 +134,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     @Expose
 	@Nullable
     public UserExperienceAnalyticsHealthState healthStatus;
+
+    /**
+     * The Is Cloud Managed Gateway Enabled.
+     * The user experience work from anywhere device's Cloud Management Gateway for Configuration Manager is enabled.
+     */
+    @SerializedName(value = "isCloudManagedGatewayEnabled", alternate = {"IsCloudManagedGatewayEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isCloudManagedGatewayEnabled;
 
     /**
      * The Managed By.
@@ -305,6 +323,15 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     @Expose
 	@Nullable
     public Double windowsScore;
+
+    /**
+     * The Work From Anywhere Score.
+     * The user experience work from anywhere per device overall score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "workFromAnywhereScore", alternate = {"WorkFromAnywhereScore"})
+    @Expose
+	@Nullable
+    public Double workFromAnywhereScore;
 
 
     /**

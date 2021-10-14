@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Security;
+import com.microsoft.graph.models.HuntingQueryResults;
 import com.microsoft.graph.requests.IncidentCollectionRequestBuilder;
 import com.microsoft.graph.requests.IncidentRequestBuilder;
 import com.microsoft.graph.requests.AttackSimulationRootRequestBuilder;

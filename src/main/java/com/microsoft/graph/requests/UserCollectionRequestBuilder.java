@@ -87,7 +87,9 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserDeltaCollectionRequestBuilder delta() {
         return new UserDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
@@ -96,7 +98,9 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetManagedAppBlockedUsersCollectionRequestBuilder getManagedAppBlockedUsers() {
         return new UserGetManagedAppBlockedUsersCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppBlockedUsers"), getClient(), null);

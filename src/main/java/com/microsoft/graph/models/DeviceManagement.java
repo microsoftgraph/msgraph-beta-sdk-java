@@ -124,7 +124,6 @@ import com.microsoft.graph.models.GroupPolicyConfiguration;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.GroupPolicyDefinition;
 import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
-import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.MicrosoftTunnelConfiguration;
 import com.microsoft.graph.models.MicrosoftTunnelHealthThreshold;
 import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
@@ -138,6 +137,7 @@ import com.microsoft.graph.models.RoleDefinition;
 import com.microsoft.graph.models.RoleScopeTag;
 import com.microsoft.graph.models.RemoteAssistancePartner;
 import com.microsoft.graph.models.RemoteAssistanceSettings;
+import com.microsoft.graph.models.DeviceManagementReports;
 import com.microsoft.graph.models.EmbeddedSIMActivationCodePool;
 import com.microsoft.graph.models.TelecomExpenseManagementPartner;
 import com.microsoft.graph.models.DeviceManagementAutopilotEvent;
@@ -149,6 +149,7 @@ import com.microsoft.graph.models.WindowsUpdateCatalogItem;
 import com.microsoft.graph.models.IntuneBrandingProfile;
 import com.microsoft.graph.models.WindowsInformationProtectionAppLearningSummary;
 import com.microsoft.graph.models.WindowsInformationProtectionNetworkLearningSummary;
+import com.microsoft.graph.models.CertificateConnectorDetails;
 import com.microsoft.graph.models.UserPFXCertificate;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AndroidDeviceOwnerEnrollmentProfileCollectionPage;
@@ -265,6 +266,7 @@ import com.microsoft.graph.requests.WindowsUpdateCatalogItemCollectionPage;
 import com.microsoft.graph.requests.IntuneBrandingProfileCollectionPage;
 import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryCollectionPage;
 import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionPage;
+import com.microsoft.graph.requests.CertificateConnectorDetailsCollectionPage;
 import com.microsoft.graph.requests.UserPFXCertificateCollectionPage;
 
 
@@ -1426,15 +1428,6 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public GroupPolicyUploadedDefinitionFileCollectionPage groupPolicyUploadedDefinitionFiles;
 
     /**
-     * The Reports.
-     * Reports singleton
-     */
-    @SerializedName(value = "reports", alternate = {"Reports"})
-    @Expose
-	@Nullable
-    public DeviceManagementReports reports;
-
-    /**
      * The Microsoft Tunnel Configurations.
      * Collection of MicrosoftTunnelConfiguration settings associated with account.
      */
@@ -1552,6 +1545,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public RemoteAssistanceSettings remoteAssistanceSettings;
 
     /**
+     * The Reports.
+     * Reports singleton
+     */
+    @SerializedName(value = "reports", alternate = {"Reports"})
+    @Expose
+	@Nullable
+    public DeviceManagementReports reports;
+
+    /**
      * The Embedded SIMActivation Code Pools.
      * The embedded SIM activation code pools created by this account.
      */
@@ -1649,6 +1651,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public WindowsInformationProtectionNetworkLearningSummaryCollectionPage windowsInformationProtectionNetworkLearningSummaries;
+
+    /**
+     * The Certificate Connector Details.
+     * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
+     */
+    @SerializedName(value = "certificateConnectorDetails", alternate = {"CertificateConnectorDetails"})
+    @Expose
+	@Nullable
+    public CertificateConnectorDetailsCollectionPage certificateConnectorDetails;
 
     /**
      * The User Pfx Certificates.
@@ -2135,6 +2146,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("windowsInformationProtectionNetworkLearningSummaries")) {
             windowsInformationProtectionNetworkLearningSummaries = serializer.deserializeObject(json.get("windowsInformationProtectionNetworkLearningSummaries"), WindowsInformationProtectionNetworkLearningSummaryCollectionPage.class);
+        }
+
+        if (json.has("certificateConnectorDetails")) {
+            certificateConnectorDetails = serializer.deserializeObject(json.get("certificateConnectorDetails"), CertificateConnectorDetailsCollectionPage.class);
         }
 
         if (json.has("userPfxCertificates")) {

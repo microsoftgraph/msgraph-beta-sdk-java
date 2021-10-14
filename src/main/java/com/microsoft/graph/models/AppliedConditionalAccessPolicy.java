@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AuthenticationStrength;
 import com.microsoft.graph.models.ConditionalAccessConditions;
 import com.microsoft.graph.models.ConditionalAccessRuleSatisfied;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicyResult;
@@ -40,6 +41,15 @@ public class AppliedConditionalAccessPolicy implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Authentication Strength.
+     * 
+     */
+    @SerializedName(value = "authenticationStrength", alternate = {"AuthenticationStrength"})
+    @Expose
+	@Nullable
+    public AuthenticationStrength authenticationStrength;
 
     /**
      * The Conditions Not Satisfied.

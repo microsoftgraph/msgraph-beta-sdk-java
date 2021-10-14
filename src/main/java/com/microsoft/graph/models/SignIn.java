@@ -12,16 +12,17 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AppliedConditionalAccessPolicy;
 import com.microsoft.graph.models.AuthenticationDetail;
 import com.microsoft.graph.models.KeyValue;
+import com.microsoft.graph.models.ProtocolType;
 import com.microsoft.graph.models.AuthenticationRequirementPolicy;
 import com.microsoft.graph.models.ConditionalAccessStatus;
 import com.microsoft.graph.models.SignInAccessType;
 import com.microsoft.graph.models.DeviceDetail;
+import com.microsoft.graph.models.IncomingTokenType;
 import com.microsoft.graph.models.SignInLocation;
 import com.microsoft.graph.models.MfaDetail;
 import com.microsoft.graph.models.NetworkLocationDetail;
 import com.microsoft.graph.models.PrivateLinkDetails;
 import com.microsoft.graph.models.RiskDetail;
-import com.microsoft.graph.models.RiskEventType;
 import com.microsoft.graph.models.RiskLevel;
 import com.microsoft.graph.models.RiskState;
 import com.microsoft.graph.models.SignInIdentifierType;
@@ -44,15 +45,6 @@ import javax.annotation.Nonnull;
  */
 public class SignIn extends Entity implements IJsonBackedObject {
 
-
-    /**
-     * The Alternate Sign In Name.
-     * The alternate sign-in identity whenever you use phone number to sign-in. Supports $filter (eq and startsWith operators only).
-     */
-    @SerializedName(value = "alternateSignInName", alternate = {"AlternateSignInName"})
-    @Expose
-	@Nullable
-    public String alternateSignInName;
 
     /**
      * The App Display Name.
@@ -107,6 +99,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<KeyValue> authenticationProcessingDetails;
+
+    /**
+     * The Authentication Protocol.
+     * 
+     */
+    @SerializedName(value = "authenticationProtocol", alternate = {"AuthenticationProtocol"})
+    @Expose
+	@Nullable
+    public EnumSet<ProtocolType> authenticationProtocol;
 
     /**
      * The Authentication Requirement.
@@ -206,6 +207,24 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String homeTenantId;
+
+    /**
+     * The Home Tenant Name.
+     * 
+     */
+    @SerializedName(value = "homeTenantName", alternate = {"HomeTenantName"})
+    @Expose
+	@Nullable
+    public String homeTenantName;
+
+    /**
+     * The Incoming Token Type.
+     * 
+     */
+    @SerializedName(value = "incomingTokenType", alternate = {"IncomingTokenType"})
+    @Expose
+	@Nullable
+    public EnumSet<IncomingTokenType> incomingTokenType;
 
     /**
      * The Ip Address.
@@ -334,15 +353,6 @@ public class SignIn extends Entity implements IJsonBackedObject {
     public RiskDetail riskDetail;
 
     /**
-     * The Risk Event Types.
-     * Risk event types associated with the sign-in. The possible values are: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, and unknownFutureValue. Supports $filter (eq operator only).
-     */
-    @SerializedName(value = "riskEventTypes", alternate = {"RiskEventTypes"})
-    @Expose
-	@Nullable
-    public java.util.List<RiskEventType> riskEventTypes;
-
-    /**
      * The Risk Event Types_v2.
      * The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
      */
@@ -467,6 +477,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TokenIssuerType tokenIssuerType;
+
+    /**
+     * The Unique Token Identifier.
+     * 
+     */
+    @SerializedName(value = "uniqueTokenIdentifier", alternate = {"UniqueTokenIdentifier"})
+    @Expose
+	@Nullable
+    public String uniqueTokenIdentifier;
 
     /**
      * The User Agent.

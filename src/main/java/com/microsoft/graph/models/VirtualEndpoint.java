@@ -12,16 +12,20 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CloudPcAuditEvent;
 import com.microsoft.graph.models.CloudPC;
 import com.microsoft.graph.models.CloudPcDeviceImage;
+import com.microsoft.graph.models.CloudPcGalleryImage;
 import com.microsoft.graph.models.CloudPcOnPremisesConnection;
 import com.microsoft.graph.models.CloudPcProvisioningPolicy;
+import com.microsoft.graph.models.CloudPcServicePlan;
 import com.microsoft.graph.models.CloudPcSupportedRegion;
 import com.microsoft.graph.models.CloudPcUserSetting;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CloudPcAuditEventCollectionPage;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.CloudPcDeviceImageCollectionPage;
+import com.microsoft.graph.requests.CloudPcGalleryImageCollectionPage;
 import com.microsoft.graph.requests.CloudPcOnPremisesConnectionCollectionPage;
 import com.microsoft.graph.requests.CloudPcProvisioningPolicyCollectionPage;
+import com.microsoft.graph.requests.CloudPcServicePlanCollectionPage;
 import com.microsoft.graph.requests.CloudPcSupportedRegionCollectionPage;
 import com.microsoft.graph.requests.CloudPcUserSettingCollectionPage;
 
@@ -68,6 +72,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     public CloudPcDeviceImageCollectionPage deviceImages;
 
     /**
+     * The Gallery Images.
+     * 
+     */
+    @SerializedName(value = "galleryImages", alternate = {"GalleryImages"})
+    @Expose
+	@Nullable
+    public CloudPcGalleryImageCollectionPage galleryImages;
+
+    /**
      * The On Premises Connections.
      * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
      */
@@ -84,6 +97,15 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CloudPcProvisioningPolicyCollectionPage provisioningPolicies;
+
+    /**
+     * The Service Plans.
+     * 
+     */
+    @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
+    @Expose
+	@Nullable
+    public CloudPcServicePlanCollectionPage servicePlans;
 
     /**
      * The Supported Regions.
@@ -125,12 +147,20 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
             deviceImages = serializer.deserializeObject(json.get("deviceImages"), CloudPcDeviceImageCollectionPage.class);
         }
 
+        if (json.has("galleryImages")) {
+            galleryImages = serializer.deserializeObject(json.get("galleryImages"), CloudPcGalleryImageCollectionPage.class);
+        }
+
         if (json.has("onPremisesConnections")) {
             onPremisesConnections = serializer.deserializeObject(json.get("onPremisesConnections"), CloudPcOnPremisesConnectionCollectionPage.class);
         }
 
         if (json.has("provisioningPolicies")) {
             provisioningPolicies = serializer.deserializeObject(json.get("provisioningPolicies"), CloudPcProvisioningPolicyCollectionPage.class);
+        }
+
+        if (json.has("servicePlans")) {
+            servicePlans = serializer.deserializeObject(json.get("servicePlans"), CloudPcServicePlanCollectionPage.class);
         }
 
         if (json.has("supportedRegions")) {

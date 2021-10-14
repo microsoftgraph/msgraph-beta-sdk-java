@@ -112,7 +112,9 @@ public class BaseItem extends Entity implements IJsonBackedObject {
     /**
      * The Created By User.
      * Identity of the user who created the item. Read-only.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "createdByUser", alternate = {"CreatedByUser"})
     @Expose
 	@Nullable
@@ -121,7 +123,9 @@ public class BaseItem extends Entity implements IJsonBackedObject {
     /**
      * The Last Modified By User.
      * Identity of the user who last modified the item. Read-only.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "lastModifiedByUser", alternate = {"LastModifiedByUser"})
     @Expose
 	@Nullable

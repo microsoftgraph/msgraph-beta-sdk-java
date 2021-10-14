@@ -885,6 +885,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean securityAllowDebuggingFeatures;
 
     /**
+     * The Security Developer Settings Enabled.
+     * Indicates whether or not the user is allowed to access developer settings like developer options and safe boot on the device.
+     */
+    @SerializedName(value = "securityDeveloperSettingsEnabled", alternate = {"SecurityDeveloperSettingsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean securityDeveloperSettingsEnabled;
+
+    /**
      * The Security Require Verify Apps.
      * Indicates whether or not verify apps is required.
      */

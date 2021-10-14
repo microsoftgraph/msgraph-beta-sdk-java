@@ -1718,7 +1718,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserActivateServicePlanRequestBuilder activateServicePlan(@Nonnull final UserActivateServicePlanParameterSet parameters) {
         return new UserActivateServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activateServicePlan"), getClient(), null, parameters);
@@ -1728,7 +1730,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserAssignLicenseRequestBuilder assignLicense(@Nonnull final UserAssignLicenseParameterSet parameters) {
         return new UserAssignLicenseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.assignLicense"), getClient(), null, parameters);
@@ -1738,7 +1742,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserChangePasswordRequestBuilder changePassword(@Nonnull final UserChangePasswordParameterSet parameters) {
         return new UserChangePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.changePassword"), getClient(), null, parameters);
@@ -1747,7 +1753,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserInvalidateAllRefreshTokensRequestBuilder invalidateAllRefreshTokens() {
         return new UserInvalidateAllRefreshTokensRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.invalidateAllRefreshTokens"), getClient(), null);
@@ -1756,7 +1764,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserReprocessLicenseAssignmentRequestBuilder reprocessLicenseAssignment() {
         return new UserReprocessLicenseAssignmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprocessLicenseAssignment"), getClient(), null);
@@ -1765,7 +1775,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
         return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
@@ -1775,7 +1787,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserFindMeetingTimesRequestBuilder findMeetingTimes(@Nonnull final UserFindMeetingTimesParameterSet parameters) {
         return new UserFindMeetingTimesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findMeetingTimes"), getClient(), null, parameters);
@@ -1785,7 +1799,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetMailTipsCollectionRequestBuilder getMailTips(@Nonnull final UserGetMailTipsParameterSet parameters) {
         return new UserGetMailTipsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getMailTips"), getClient(), null, parameters);
@@ -1795,7 +1811,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserSendMailRequestBuilder sendMail(@Nonnull final UserSendMailParameterSet parameters) {
         return new UserSendMailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendMail"), getClient(), null, parameters);
@@ -1805,7 +1823,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserTranslateExchangeIdsCollectionRequestBuilder translateExchangeIds(@Nonnull final UserTranslateExchangeIdsParameterSet parameters) {
         return new UserTranslateExchangeIdsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.translateExchangeIds"), getClient(), null, parameters);
@@ -1814,7 +1834,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Retire all devices from management for this user
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserRemoveAllDevicesFromManagementRequestBuilder removeAllDevicesFromManagement() {
         return new UserRemoveAllDevicesFromManagementRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.removeAllDevicesFromManagement"), getClient(), null);
@@ -1823,7 +1845,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Unblocks the managed app user from app check-in.
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserUnblockManagedAppsRequestBuilder unblockManagedApps() {
         return new UserUnblockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.unblockManagedApps"), getClient(), null);
@@ -1832,7 +1856,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Blocks the managed app user from app check-in.
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserWipeAndBlockManagedAppsRequestBuilder wipeAndBlockManagedApps() {
         return new UserWipeAndBlockManagedAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeAndBlockManagedApps"), getClient(), null);
@@ -1842,7 +1868,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Issues a wipe operation on an app registration with specified device tag.
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserWipeManagedAppRegistrationByDeviceTagRequestBuilder wipeManagedAppRegistrationByDeviceTag(@Nonnull final UserWipeManagedAppRegistrationByDeviceTagParameterSet parameters) {
         return new UserWipeManagedAppRegistrationByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationByDeviceTag"), getClient(), null, parameters);
@@ -1852,7 +1880,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Issues a wipe operation on an app registration with specified device tag.
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder wipeManagedAppRegistrationsByDeviceTag(@Nonnull final UserWipeManagedAppRegistrationsByDeviceTagParameterSet parameters) {
         return new UserWipeManagedAppRegistrationsByDeviceTagRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.wipeManagedAppRegistrationsByDeviceTag"), getClient(), null, parameters);
@@ -1862,7 +1892,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserExportPersonalDataRequestBuilder exportPersonalData(@Nonnull final UserExportPersonalDataParameterSet parameters) {
         return new UserExportPersonalDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportPersonalData"), getClient(), null, parameters);
@@ -1871,7 +1903,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserFindRoomListsCollectionRequestBuilder findRoomLists() {
         return new UserFindRoomListsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRoomLists"), getClient(), null);
@@ -1880,7 +1914,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserFindRoomsCollectionRequestBuilder findRooms() {
         return new UserFindRoomsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRooms"), getClient(), null);
@@ -1890,7 +1926,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserFindRoomsCollectionRequestBuilder findRooms(@Nonnull final UserFindRoomsParameterSet parameters) {
         return new UserFindRoomsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findRooms"), getClient(), null, parameters);
@@ -1900,7 +1938,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserReminderViewCollectionRequestBuilder reminderView(@Nonnull final UserReminderViewParameterSet parameters) {
         return new UserReminderViewCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reminderView"), getClient(), null, parameters);
@@ -1909,7 +1949,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData() {
         return new UserExportDeviceAndAppManagementDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportDeviceAndAppManagementData"), getClient(), null);
@@ -1919,7 +1961,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserExportDeviceAndAppManagementDataRequestBuilder exportDeviceAndAppManagementData(@Nonnull final UserExportDeviceAndAppManagementDataParameterSet parameters) {
         return new UserExportDeviceAndAppManagementDataRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.exportDeviceAndAppManagementData"), getClient(), null, parameters);
@@ -1928,7 +1972,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequestBuilder getEffectiveDeviceEnrollmentConfigurations() {
         return new UserGetEffectiveDeviceEnrollmentConfigurationsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectiveDeviceEnrollmentConfigurations"), getClient(), null);
@@ -1937,7 +1983,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetLoggedOnManagedDevicesCollectionRequestBuilder getLoggedOnManagedDevices() {
         return new UserGetLoggedOnManagedDevicesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getLoggedOnManagedDevices"), getClient(), null);
@@ -1946,7 +1994,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets diagnostics validation status for a given user.
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder getManagedAppDiagnosticStatuses() {
         return new UserGetManagedAppDiagnosticStatusesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppDiagnosticStatuses"), getClient(), null);
@@ -1955,7 +2005,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets app restrictions for a given user.
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetManagedAppPoliciesCollectionRequestBuilder getManagedAppPolicies() {
         return new UserGetManagedAppPoliciesCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedAppPolicies"), getClient(), null);
@@ -1964,7 +2016,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Gets the blocked state of a managed app user.
      * @return the request builder
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserIsManagedAppUserBlockedRequestBuilder isManagedAppUserBlocked() {
         return new UserIsManagedAppUserBlockedRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.isManagedAppUserBlocked"), getClient(), null);
@@ -1973,7 +2027,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Retrieves the list of devices with failed apps
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetManagedDevicesWithAppFailuresCollectionRequestBuilder getManagedDevicesWithAppFailures() {
         return new UserGetManagedDevicesWithAppFailuresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedDevicesWithAppFailures"), getClient(), null);
@@ -1982,7 +2038,9 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     /**
      * Retrieves the list of devices with failed or pending apps
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder getManagedDevicesWithFailedOrPendingApps() {
         return new UserGetManagedDevicesWithFailedOrPendingAppsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getManagedDevicesWithFailedOrPendingApps"), getClient(), null);

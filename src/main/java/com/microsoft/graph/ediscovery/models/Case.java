@@ -16,7 +16,7 @@ import com.microsoft.graph.ediscovery.models.LegalHold;
 import com.microsoft.graph.ediscovery.models.NoncustodialDataSource;
 import com.microsoft.graph.ediscovery.models.CaseOperation;
 import com.microsoft.graph.ediscovery.models.ReviewSet;
-import com.microsoft.graph.ediscovery.models.Settings;
+import com.microsoft.graph.ediscovery.models.CaseSettings;
 import com.microsoft.graph.ediscovery.models.SourceCollection;
 import com.microsoft.graph.ediscovery.models.Tag;
 import com.microsoft.graph.models.Entity;
@@ -176,7 +176,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable
-    public Settings settings;
+    public CaseSettings settings;
 
     /**
      * The Source Collections.

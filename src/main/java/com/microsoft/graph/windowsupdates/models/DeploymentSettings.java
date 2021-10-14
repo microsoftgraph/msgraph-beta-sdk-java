@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.windowsupdates.models.MonitoringSettings;
 import com.microsoft.graph.windowsupdates.models.RolloutSettings;
+import com.microsoft.graph.windowsupdates.models.SafeguardSettings;
 
 
 import com.google.gson.JsonObject;
@@ -56,6 +57,15 @@ public class DeploymentSettings implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RolloutSettings rollout;
+
+    /**
+     * The Safeguard.
+     * 
+     */
+    @SerializedName(value = "safeguard", alternate = {"Safeguard"})
+    @Expose
+	@Nullable
+    public SafeguardSettings safeguard;
 
 
     /**

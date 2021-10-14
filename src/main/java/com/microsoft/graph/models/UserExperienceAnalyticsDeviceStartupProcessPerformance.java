@@ -44,6 +44,15 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     public Integer medianImpactInMs;
 
     /**
+     * The Median Impact In Ms2.
+     * User experience analytics device startup process median impact in milliseconds.
+     */
+    @SerializedName(value = "medianImpactInMs2", alternate = {"MedianImpactInMs2"})
+    @Expose
+	@Nullable
+    public Long medianImpactInMs2;
+
+    /**
      * The Process Name.
      * User experience analytics device startup process name.
      */
@@ -78,6 +87,15 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @Expose
 	@Nullable
     public Integer totalImpactInMs;
+
+    /**
+     * The Total Impact In Ms2.
+     * User experience analytics device startup process total impact in milliseconds.
+     */
+    @SerializedName(value = "totalImpactInMs2", alternate = {"TotalImpactInMs2"})
+    @Expose
+	@Nullable
+    public Long totalImpactInMs2;
 
 
     /**

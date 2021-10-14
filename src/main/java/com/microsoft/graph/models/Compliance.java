@@ -8,10 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.SubjectRightsRequest;
 import com.microsoft.graph.ediscovery.models.Ediscoveryroot;
-import com.microsoft.graph.requests.SubjectRightsRequestCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,15 +39,6 @@ public class Compliance implements IJsonBackedObject {
     }
 
     /**
-     * The Subject Rights Requests.
-     * 
-     */
-    @SerializedName(value = "subjectRightsRequests", alternate = {"SubjectRightsRequests"})
-    @Expose
-	@Nullable
-    public SubjectRightsRequestCollectionPage subjectRightsRequests;
-
-    /**
      * The Ediscovery.
      * 
      */
@@ -68,9 +56,5 @@ public class Compliance implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
-
-        if (json.has("subjectRightsRequests")) {
-            subjectRightsRequests = serializer.deserializeObject(json.get("subjectRightsRequests"), SubjectRightsRequestCollectionPage.class);
-        }
     }
 }

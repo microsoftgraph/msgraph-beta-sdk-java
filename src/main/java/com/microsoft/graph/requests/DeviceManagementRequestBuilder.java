@@ -213,7 +213,6 @@ import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionRequestBuilde
 import com.microsoft.graph.requests.GroupPolicyDefinitionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupPolicyUploadedDefinitionFileRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationCollectionRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelConfigurationRequestBuilder;
 import com.microsoft.graph.requests.MicrosoftTunnelHealthThresholdCollectionRequestBuilder;
@@ -239,6 +238,7 @@ import com.microsoft.graph.requests.RoleScopeTagRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerCollectionRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistancePartnerRequestBuilder;
 import com.microsoft.graph.requests.RemoteAssistanceSettingsRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementReportsRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolCollectionRequestBuilder;
 import com.microsoft.graph.requests.EmbeddedSIMActivationCodePoolRequestBuilder;
 import com.microsoft.graph.requests.TelecomExpenseManagementPartnerCollectionRequestBuilder;
@@ -261,6 +261,8 @@ import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSumma
 import com.microsoft.graph.requests.WindowsInformationProtectionAppLearningSummaryRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryCollectionRequestBuilder;
 import com.microsoft.graph.requests.WindowsInformationProtectionNetworkLearningSummaryRequestBuilder;
+import com.microsoft.graph.requests.CertificateConnectorDetailsCollectionRequestBuilder;
+import com.microsoft.graph.requests.CertificateConnectorDetailsRequestBuilder;
 import com.microsoft.graph.requests.UserPFXCertificateCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserPFXCertificateRequestBuilder;
 import java.util.Arrays;
@@ -2369,16 +2371,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public GroupPolicyUploadedDefinitionFileRequestBuilder groupPolicyUploadedDefinitionFiles(@Nonnull final String id) {
         return new GroupPolicyUploadedDefinitionFileRequestBuilder(getRequestUrlWithAdditionalSegment("groupPolicyUploadedDefinitionFiles") + "/" + id, getClient(), null);
     }
-
-    /**
-     * Gets the request builder for DeviceManagementReports
-     *
-     * @return the DeviceManagementReportsRequestBuilder instance
-     */
-    @Nonnull
-    public DeviceManagementReportsRequestBuilder reports() {
-        return new DeviceManagementReportsRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the MicrosoftTunnelConfiguration collection
      *
@@ -2629,6 +2621,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public RemoteAssistanceSettingsRequestBuilder remoteAssistanceSettings() {
         return new RemoteAssistanceSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("remoteAssistanceSettings"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for DeviceManagementReports
+     *
+     * @return the DeviceManagementReportsRequestBuilder instance
+     */
+    @Nonnull
+    public DeviceManagementReportsRequestBuilder reports() {
+        return new DeviceManagementReportsRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the EmbeddedSIMActivationCodePool collection
      *
@@ -2848,6 +2850,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public WindowsInformationProtectionNetworkLearningSummaryRequestBuilder windowsInformationProtectionNetworkLearningSummaries(@Nonnull final String id) {
         return new WindowsInformationProtectionNetworkLearningSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("windowsInformationProtectionNetworkLearningSummaries") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CertificateConnectorDetails collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CertificateConnectorDetailsCollectionRequestBuilder certificateConnectorDetails() {
+        return new CertificateConnectorDetailsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("certificateConnectorDetails"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CertificateConnectorDetails item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CertificateConnectorDetailsRequestBuilder certificateConnectorDetails(@Nonnull final String id) {
+        return new CertificateConnectorDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("certificateConnectorDetails") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserPFXCertificate collection

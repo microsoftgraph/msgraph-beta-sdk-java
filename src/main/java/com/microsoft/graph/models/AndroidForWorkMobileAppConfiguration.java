@@ -29,6 +29,15 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
 
 
     /**
+     * The Connected Apps Enabled.
+     * Setting to specify whether to allow ConnectedApps experience for this app.
+     */
+    @SerializedName(value = "connectedAppsEnabled", alternate = {"ConnectedAppsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean connectedAppsEnabled;
+
+    /**
      * The Package Id.
      * Android For Work app configuration package id.
      */

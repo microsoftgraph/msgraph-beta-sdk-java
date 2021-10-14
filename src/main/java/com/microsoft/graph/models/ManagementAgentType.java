@@ -60,9 +60,9 @@ public enum ManagementAgentType
     */
     MICROSOFT365_MANAGED_MDM,
     /**
-    * windows Management Cloud Api
+    * ms Sense
     */
-    WINDOWS_MANAGEMENT_CLOUD_API,
+    MS_SENSE,
     /**
     * intune Aosp
     */

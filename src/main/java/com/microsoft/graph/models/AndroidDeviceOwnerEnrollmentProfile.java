@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentTokenType;
 import com.microsoft.graph.models.MimeContent;
+import com.microsoft.graph.models.AospWifiSecurityType;
 import com.microsoft.graph.models.Entity;
 
 
@@ -93,6 +94,15 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     public AndroidDeviceOwnerEnrollmentTokenType enrollmentTokenType;
 
     /**
+     * The Enrollment Token Usage Count.
+     * Total number of AOSP devices that have enrolled using the current token.
+     */
+    @SerializedName(value = "enrollmentTokenUsageCount", alternate = {"EnrollmentTokenUsageCount"})
+    @Expose
+	@Nullable
+    public Integer enrollmentTokenUsageCount;
+
+    /**
      * The Last Modified Date Time.
      * Date time the enrollment profile was last modified.
      */
@@ -154,6 +164,42 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     @Expose
 	@Nullable
     public String tokenValue;
+
+    /**
+     * The Wifi Hidden.
+     * Boolean that indicates if hidden wifi networks are enabled
+     */
+    @SerializedName(value = "wifiHidden", alternate = {"WifiHidden"})
+    @Expose
+	@Nullable
+    public Boolean wifiHidden;
+
+    /**
+     * The Wifi Password.
+     * String that contains the wi-fi login password
+     */
+    @SerializedName(value = "wifiPassword", alternate = {"WifiPassword"})
+    @Expose
+	@Nullable
+    public String wifiPassword;
+
+    /**
+     * The Wifi Security Type.
+     * String that contains the wi-fi security type
+     */
+    @SerializedName(value = "wifiSecurityType", alternate = {"WifiSecurityType"})
+    @Expose
+	@Nullable
+    public AospWifiSecurityType wifiSecurityType;
+
+    /**
+     * The Wifi Ssid.
+     * String that contains the wi-fi login ssid
+     */
+    @SerializedName(value = "wifiSsid", alternate = {"WifiSsid"})
+    @Expose
+	@Nullable
+    public String wifiSsid;
 
 
     /**

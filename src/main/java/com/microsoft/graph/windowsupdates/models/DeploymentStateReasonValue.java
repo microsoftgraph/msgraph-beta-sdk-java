@@ -32,6 +32,10 @@ public enum DeploymentStateReasonValue
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * faulted By Content Outdated
+    */
+    FAULTED_BY_CONTENT_OUTDATED,
+    /**
     * For DeploymentStateReasonValue values that were not expected from the service
     */
     UNEXPECTED_VALUE
