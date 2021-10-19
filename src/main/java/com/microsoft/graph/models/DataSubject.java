@@ -39,7 +39,7 @@ public class DataSubject implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * Email of the data subject.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -48,7 +48,7 @@ public class DataSubject implements IJsonBackedObject {
 
     /**
      * The First Name.
-     * 
+     * First name of the data subject.
      */
     @SerializedName(value = "firstName", alternate = {"FirstName"})
     @Expose
@@ -57,7 +57,7 @@ public class DataSubject implements IJsonBackedObject {
 
     /**
      * The Last Name.
-     * 
+     * Last Name of the data subject.
      */
     @SerializedName(value = "lastName", alternate = {"LastName"})
     @Expose
@@ -66,7 +66,7 @@ public class DataSubject implements IJsonBackedObject {
 
     /**
      * The Residency.
-     * 
+     * The country/region of residency. The residency information is uesed only for internal reporting but not for the content search.
      */
     @SerializedName(value = "residency", alternate = {"Residency"})
     @Expose

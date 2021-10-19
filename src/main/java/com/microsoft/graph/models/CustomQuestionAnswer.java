@@ -39,7 +39,7 @@ public class CustomQuestionAnswer implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the custom registration question. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class CustomQuestionAnswer implements IJsonBackedObject {
 
     /**
      * The Question Id.
-     * 
+     * ID the custom registration question. Read-only.
      */
     @SerializedName(value = "questionId", alternate = {"QuestionId"})
     @Expose
@@ -57,7 +57,7 @@ public class CustomQuestionAnswer implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Answer to the custom registration question.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose
