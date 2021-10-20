@@ -674,7 +674,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Number.
-     * Device sku number, see also: https://docs.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+     * Device sku number, see also: https://docs.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
      */
     @SerializedName(value = "skuNumber", alternate = {"SkuNumber"})
     @Expose
