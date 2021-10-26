@@ -19,6 +19,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.ExchangeIdFormat;
 import com.microsoft.graph.models.ConvertIdResult;
+import com.microsoft.graph.models.PasswordValidationInformation;
 import com.microsoft.graph.models.EmailAddress;
 import com.microsoft.graph.models.Reminder;
 import com.microsoft.graph.models.DeviceAndAppManagementData;
@@ -36,6 +37,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.UserCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
 import com.microsoft.graph.requests.UserCollectionRequest;
+import com.microsoft.graph.requests.UserValidatePasswordRequestBuilder;
 import com.microsoft.graph.requests.UserDeltaCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserGetManagedAppBlockedUsersCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectValidatePropertiesRequestBuilder;
@@ -54,6 +56,7 @@ import com.microsoft.graph.models.UserTranslateExchangeIdsParameterSet;
 import com.microsoft.graph.models.UserWipeManagedAppRegistrationByDeviceTagParameterSet;
 import com.microsoft.graph.models.UserWipeManagedAppRegistrationsByDeviceTagParameterSet;
 import com.microsoft.graph.models.UserExportPersonalDataParameterSet;
+import com.microsoft.graph.models.UserValidatePasswordParameterSet;
 import com.microsoft.graph.models.UserFindRoomsParameterSet;
 import com.microsoft.graph.models.UserReminderViewParameterSet;
 import com.microsoft.graph.models.UserExportDeviceAndAppManagementDataParameterSet;
@@ -83,6 +86,18 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     * @deprecated 
+     */
+    @Deprecated
+    @Nonnull
+    public UserValidatePasswordRequestBuilder validatePassword(@Nonnull final UserValidatePasswordParameterSet parameters) {
+        return new UserValidatePasswordRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validatePassword"), getClient(), null, parameters);
+    }
 
     /**
      * Gets a builder to execute the method

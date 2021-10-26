@@ -41,7 +41,7 @@ public class SubjectRightsRequestDetail implements IJsonBackedObject {
 
     /**
      * The Excluded Item Count.
-     * 
+     * Count of items that are excluded from the request.
      */
     @SerializedName(value = "excludedItemCount", alternate = {"ExcludedItemCount"})
     @Expose
@@ -50,7 +50,7 @@ public class SubjectRightsRequestDetail implements IJsonBackedObject {
 
     /**
      * The Insight Counts.
-     * 
+     * Count of items per insight.
      */
     @SerializedName(value = "insightCounts", alternate = {"InsightCounts"})
     @Expose
@@ -59,7 +59,7 @@ public class SubjectRightsRequestDetail implements IJsonBackedObject {
 
     /**
      * The Item Count.
-     * 
+     * Count of items found.
      */
     @SerializedName(value = "itemCount", alternate = {"ItemCount"})
     @Expose
@@ -68,7 +68,7 @@ public class SubjectRightsRequestDetail implements IJsonBackedObject {
 
     /**
      * The Item Need Review.
-     * 
+     * Count of item that need review.
      */
     @SerializedName(value = "itemNeedReview", alternate = {"ItemNeedReview"})
     @Expose
@@ -77,7 +77,7 @@ public class SubjectRightsRequestDetail implements IJsonBackedObject {
 
     /**
      * The Product Item Counts.
-     * 
+     * Count of items per product, such as Exchange, SharePoint, OneDrive, and Teams.
      */
     @SerializedName(value = "productItemCounts", alternate = {"ProductItemCounts"})
     @Expose
@@ -86,7 +86,7 @@ public class SubjectRightsRequestDetail implements IJsonBackedObject {
 
     /**
      * The Signed Off Item Count.
-     * 
+     * Count of items signed off by the administrator.
      */
     @SerializedName(value = "signedOffItemCount", alternate = {"SignedOffItemCount"})
     @Expose
@@ -95,7 +95,7 @@ public class SubjectRightsRequestDetail implements IJsonBackedObject {
 
     /**
      * The Total Item Size.
-     * 
+     * Total item size in bytes.
      */
     @SerializedName(value = "totalItemSize", alternate = {"TotalItemSize"})
     @Expose

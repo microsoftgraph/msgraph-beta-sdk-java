@@ -28,7 +28,7 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name for the service plan. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Ram In GB.
-     * 
+     * The size of the RAM in GB. Read-only.
      */
     @SerializedName(value = "ramInGB", alternate = {"RamInGB"})
     @Expose
@@ -46,7 +46,7 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Storage In GB.
-     * 
+     * The size of the OS Disk in GB. Read-only.
      */
     @SerializedName(value = "storageInGB", alternate = {"StorageInGB"})
     @Expose
@@ -55,7 +55,7 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -64,7 +64,7 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
 
     /**
      * The User Profile In GB.
-     * 
+     * The size of the user profile disk in GB. Read-only.
      */
     @SerializedName(value = "userProfileInGB", alternate = {"UserProfileInGB"})
     @Expose
@@ -73,7 +73,7 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
 
     /**
      * The VCpu Count.
-     * 
+     * The number of vCPUs. Read-only.
      */
     @SerializedName(value = "vCpuCount", alternate = {"VCpuCount"})
     @Expose

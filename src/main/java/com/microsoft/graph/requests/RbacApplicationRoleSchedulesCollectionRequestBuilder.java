@@ -62,9 +62,11 @@ public class RbacApplicationRoleSchedulesCollectionRequestBuilder extends BaseFu
     @Nonnull
     public RbacApplicationRoleSchedulesCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final RbacApplicationRoleSchedulesCollectionRequest request = super.buildRequest(requestOptions);
-          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }

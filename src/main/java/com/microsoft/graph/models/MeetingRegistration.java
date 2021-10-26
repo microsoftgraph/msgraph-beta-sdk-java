@@ -34,7 +34,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Registrant.
-     * 
+     * Specifies who can register for the meeting.
      */
     @SerializedName(value = "allowedRegistrant", alternate = {"AllowedRegistrant"})
     @Expose
@@ -43,7 +43,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of the meeting.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -52,7 +52,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The meeting end time in UTC.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -61,7 +61,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Registration Page View Count.
-     * 
+     * The number of times the registration page has been visited. Read-only.
      */
     @SerializedName(value = "registrationPageViewCount", alternate = {"RegistrationPageViewCount"})
     @Expose
@@ -70,7 +70,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Registration Page Web Url.
-     * 
+     * The URL of the registration page. Read-only.
      */
     @SerializedName(value = "registrationPageWebUrl", alternate = {"RegistrationPageWebUrl"})
     @Expose
@@ -79,7 +79,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Speakers.
-     * 
+     * The meeting speaker's information.
      */
     @SerializedName(value = "speakers", alternate = {"Speakers"})
     @Expose
@@ -88,7 +88,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The meeting start time in UTC.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -97,7 +97,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The subject of the meeting.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -106,7 +106,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Custom Questions.
-     * 
+     * Custom registration questions.
      */
     @SerializedName(value = "customQuestions", alternate = {"CustomQuestions"})
     @Expose
@@ -115,7 +115,7 @@ public class MeetingRegistration extends Entity implements IJsonBackedObject {
 
     /**
      * The Registrants.
-     * 
+     * Registrants of the online meeting.
      */
     @SerializedName(value = "registrants", alternate = {"Registrants"})
     @Expose

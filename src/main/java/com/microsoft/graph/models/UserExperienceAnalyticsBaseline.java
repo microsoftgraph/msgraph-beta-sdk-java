@@ -63,6 +63,15 @@ public class UserExperienceAnalyticsBaseline extends Entity implements IJsonBack
     public UserExperienceAnalyticsCategory appHealthMetrics;
 
     /**
+     * The Battery Health Metrics.
+     * The user experience analytics battery health metrics.
+     */
+    @SerializedName(value = "batteryHealthMetrics", alternate = {"BatteryHealthMetrics"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsCategory batteryHealthMetrics;
+
+    /**
      * The Best Practices Metrics.
      * The user experience analytics best practices metrics.
      */
