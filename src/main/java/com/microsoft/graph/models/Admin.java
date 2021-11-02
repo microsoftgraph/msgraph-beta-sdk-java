@@ -41,7 +41,7 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The Service Announcement.
-     * 
+     * A container for service communications resources. Read-only.
      */
     @SerializedName(value = "serviceAnnouncement", alternate = {"ServiceAnnouncement"})
     @Expose
@@ -50,7 +50,7 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The Windows.
-     * 
+     * A container for all Windows Update for Business deployment service functionality. Read-only.
      */
     @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose

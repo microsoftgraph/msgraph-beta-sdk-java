@@ -49,7 +49,7 @@ public class KeyCredentialConfiguration implements IJsonBackedObject {
 
     /**
      * The Restrict For Apps Created After Date Time.
-     * 
+     * Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
      */
     @SerializedName(value = "restrictForAppsCreatedAfterDateTime", alternate = {"RestrictForAppsCreatedAfterDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class KeyCredentialConfiguration implements IJsonBackedObject {
 
     /**
      * The Restriction Type.
-     * 
+     * The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      */
     @SerializedName(value = "restrictionType", alternate = {"RestrictionType"})
     @Expose

@@ -20,6 +20,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.Message;
 import com.microsoft.graph.models.ExchangeIdFormat;
 import com.microsoft.graph.models.ConvertIdResult;
+import com.microsoft.graph.models.PasswordValidationInformation;
 import com.microsoft.graph.models.EmailAddress;
 import com.microsoft.graph.models.Reminder;
 import com.microsoft.graph.models.DeviceAndAppManagementData;

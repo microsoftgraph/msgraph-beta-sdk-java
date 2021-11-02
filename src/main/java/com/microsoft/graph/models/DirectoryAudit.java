@@ -129,6 +129,15 @@ public class DirectoryAudit extends Entity implements IJsonBackedObject {
 	@Nullable
     public java.util.List<TargetResource> targetResources;
 
+    /**
+     * The User Agent.
+     * 
+     */
+    @SerializedName(value = "userAgent", alternate = {"UserAgent"})
+    @Expose
+	@Nullable
+    public String userAgent;
+
 
     /**
      * Sets the raw JSON object

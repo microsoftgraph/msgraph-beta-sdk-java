@@ -270,7 +270,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
 
     /**
      * The Root Certificates For Server Validation.
-     * Specify root certificate for server validation.
+     * Specify root certificate for server validation. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "rootCertificatesForServerValidation", alternate = {"RootCertificatesForServerValidation"})
     @Expose
