@@ -41,7 +41,7 @@ public class SafeguardSettings implements IJsonBackedObject {
 
     /**
      * The Disabled Safeguard Profiles.
-     * 
+     * List of safeguards to ignore per device.
      */
     @SerializedName(value = "disabledSafeguardProfiles", alternate = {"DisabledSafeguardProfiles"})
     @Expose

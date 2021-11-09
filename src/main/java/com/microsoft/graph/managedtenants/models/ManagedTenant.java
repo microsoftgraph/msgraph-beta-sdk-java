@@ -21,8 +21,10 @@ import com.microsoft.graph.managedtenants.models.ManagedDeviceComplianceTrend;
 import com.microsoft.graph.managedtenants.models.ManagementAction;
 import com.microsoft.graph.managedtenants.models.ManagementActionTenantDeploymentStatus;
 import com.microsoft.graph.managedtenants.models.ManagementIntent;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateCollection;
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
-import com.microsoft.graph.managedtenants.models.RiskyUser;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
 import com.microsoft.graph.managedtenants.models.TenantGroup;
 import com.microsoft.graph.managedtenants.models.Tenant;
 import com.microsoft.graph.managedtenants.models.TenantCustomizedInformation;
@@ -43,8 +45,10 @@ import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendC
 import com.microsoft.graph.managedtenants.requests.ManagementActionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage;
-import com.microsoft.graph.managedtenants.requests.RiskyUserCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionPage;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionPage;
 import com.microsoft.graph.managedtenants.requests.TenantCustomizedInformationCollectionPage;
@@ -177,6 +181,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     public ManagementIntentCollectionPage managementIntents;
 
     /**
+     * The Management Template Collections.
+     * 
+     */
+    @SerializedName(value = "managementTemplateCollections", alternate = {"ManagementTemplateCollections"})
+    @Expose
+	@Nullable
+    public ManagementTemplateCollectionCollectionPage managementTemplateCollections;
+
+    /**
      * The Management Templates.
      * The collection of baseline management templates across managed tenants.
      */
@@ -186,13 +199,22 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     public ManagementTemplateCollectionPage managementTemplates;
 
     /**
-     * The Risky Users.
-     * The collection of users flagged for risk across managed tenants.
+     * The Management Template Steps.
+     * 
      */
-    @SerializedName(value = "riskyUsers", alternate = {"RiskyUsers"})
+    @SerializedName(value = "managementTemplateSteps", alternate = {"ManagementTemplateSteps"})
     @Expose
 	@Nullable
-    public RiskyUserCollectionPage riskyUsers;
+    public ManagementTemplateStepCollectionPage managementTemplateSteps;
+
+    /**
+     * The Management Template Step Versions.
+     * 
+     */
+    @SerializedName(value = "managementTemplateStepVersions", alternate = {"ManagementTemplateStepVersions"})
+    @Expose
+	@Nullable
+    public ManagementTemplateStepVersionCollectionPage managementTemplateStepVersions;
 
     /**
      * The Tenant Groups.
@@ -315,12 +337,20 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
             managementIntents = serializer.deserializeObject(json.get("managementIntents"), ManagementIntentCollectionPage.class);
         }
 
+        if (json.has("managementTemplateCollections")) {
+            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionCollectionPage.class);
+        }
+
         if (json.has("managementTemplates")) {
             managementTemplates = serializer.deserializeObject(json.get("managementTemplates"), ManagementTemplateCollectionPage.class);
         }
 
-        if (json.has("riskyUsers")) {
-            riskyUsers = serializer.deserializeObject(json.get("riskyUsers"), RiskyUserCollectionPage.class);
+        if (json.has("managementTemplateSteps")) {
+            managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), ManagementTemplateStepCollectionPage.class);
+        }
+
+        if (json.has("managementTemplateStepVersions")) {
+            managementTemplateStepVersions = serializer.deserializeObject(json.get("managementTemplateStepVersions"), ManagementTemplateStepVersionCollectionPage.class);
         }
 
         if (json.has("tenantGroups")) {

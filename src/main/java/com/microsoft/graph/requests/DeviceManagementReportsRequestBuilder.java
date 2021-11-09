@@ -37,6 +37,7 @@ import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationPolicyS
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingDetailsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigurationSettingsReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportParameterSet;
+import com.microsoft.graph.models.DeviceManagementReportsGetDeviceConfigurationPolicyStatusSummaryParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetQuietTimePolicyUsersReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetQuietTimePolicyUserSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetEnrollmentConfigurationPoliciesByDeviceParameterSet;
@@ -342,6 +343,16 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder getDeviceConfigurationPolicySettingsSummaryReport(@Nonnull final DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportParameterSet parameters) {
         return new DeviceManagementReportsGetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDeviceConfigurationPolicySettingsSummaryReport"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementReportsGetDeviceConfigurationPolicyStatusSummaryRequestBuilder getDeviceConfigurationPolicyStatusSummary(@Nonnull final DeviceManagementReportsGetDeviceConfigurationPolicyStatusSummaryParameterSet parameters) {
+        return new DeviceManagementReportsGetDeviceConfigurationPolicyStatusSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getDeviceConfigurationPolicyStatusSummary"), getClient(), null, parameters);
     }
 
     /**

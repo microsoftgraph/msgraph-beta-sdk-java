@@ -62,7 +62,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Continuous Access Evaluation.
-     * 
+     * Session control for continuous access evaluation settings.
      */
     @SerializedName(value = "continuousAccessEvaluation", alternate = {"ContinuousAccessEvaluation"})
     @Expose

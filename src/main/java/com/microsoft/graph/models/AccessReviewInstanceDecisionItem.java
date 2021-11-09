@@ -8,11 +8,14 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemResource;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemTarget;
+import com.microsoft.graph.models.GovernanceInsight;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.GovernanceInsightCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -155,6 +158,15 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 	@Nullable
     public AccessReviewInstanceDecisionItemTarget target;
 
+    /**
+     * The Insights.
+     * 
+     */
+    @SerializedName(value = "insights", alternate = {"Insights"})
+    @Expose
+	@Nullable
+    public GovernanceInsightCollectionPage insights;
+
 
     /**
      * Sets the raw JSON object
@@ -164,5 +176,9 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("insights")) {
+            insights = serializer.deserializeObject(json.get("insights"), GovernanceInsightCollectionPage.class);
+        }
     }
 }

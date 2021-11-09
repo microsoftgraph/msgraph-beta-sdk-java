@@ -59,6 +59,15 @@ public class ManagementActionDeploymentStatus implements IJsonBackedObject {
     public String managementTemplateId;
 
     /**
+     * The Management Template Version.
+     * 
+     */
+    @SerializedName(value = "managementTemplateVersion", alternate = {"ManagementTemplateVersion"})
+    @Expose
+	@Nullable
+    public Integer managementTemplateVersion;
+
+    /**
      * The Status.
      * The status of the management action. Possible values are: toAddress, completed, error, timeOut, inProgress, planned, resolvedBy3rdParty, resolvedThroughAlternateMitigation, riskAccepted, unknownFutureValue. Required.
      */

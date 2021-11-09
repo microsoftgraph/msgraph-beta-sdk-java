@@ -65,6 +65,15 @@ public class ManagementAction extends Entity implements IJsonBackedObject {
     public String referenceTemplateId;
 
     /**
+     * The Reference Template Version.
+     * 
+     */
+    @SerializedName(value = "referenceTemplateVersion", alternate = {"ReferenceTemplateVersion"})
+    @Expose
+	@Nullable
+    public Integer referenceTemplateVersion;
+
+    /**
      * The Workload Actions.
      * The collection of workload actions associated with the management action. Required. Read-only.
      */

@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.TeamsDeviceUsageUserDetail;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;

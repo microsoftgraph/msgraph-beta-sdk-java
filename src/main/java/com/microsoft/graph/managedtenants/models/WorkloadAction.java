@@ -77,6 +77,15 @@ public class WorkloadAction implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Licenses.
+     * 
+     */
+    @SerializedName(value = "licenses", alternate = {"Licenses"})
+    @Expose
+	@Nullable
+    public java.util.List<String> licenses;
+
+    /**
      * The Service.
      * The service associated with workload action. Optional. Read-only.
      */

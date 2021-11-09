@@ -51,7 +51,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Domain Join Configuration.
-     * 
+     * Specifies how Cloud PCs will join Azure Active Directory.
      */
     @SerializedName(value = "domainJoinConfiguration", alternate = {"DomainJoinConfiguration"})
     @Expose

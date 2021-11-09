@@ -30,7 +30,7 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Custom Question Answers.
-     * 
+     * The registrant's answer to custom questions.
      */
     @SerializedName(value = "customQuestionAnswers", alternate = {"CustomQuestionAnswers"})
     @Expose
@@ -39,7 +39,7 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * The email address of the registrant.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -48,7 +48,7 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
 
     /**
      * The First Name.
-     * 
+     * The first name of the registrant.
      */
     @SerializedName(value = "firstName", alternate = {"FirstName"})
     @Expose
@@ -57,7 +57,7 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Web Url.
-     * 
+     * A unique web URL for the registrant to join the meeting. Read-only.
      */
     @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose
@@ -66,7 +66,7 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Name.
-     * 
+     * The last name of the registrant.
      */
     @SerializedName(value = "lastName", alternate = {"LastName"})
     @Expose
@@ -75,7 +75,7 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Registration Date Time.
-     * 
+     * Time in UTC when the registrant registers for the meeting. Read-only.
      */
     @SerializedName(value = "registrationDateTime", alternate = {"RegistrationDateTime"})
     @Expose
@@ -84,7 +84,7 @@ public class MeetingRegistrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The registration status of the registrant. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
