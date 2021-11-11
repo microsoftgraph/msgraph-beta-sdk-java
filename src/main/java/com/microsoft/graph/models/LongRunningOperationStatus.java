@@ -12,9 +12,9 @@ package com.microsoft.graph.models;
 public enum LongRunningOperationStatus
 {
     /**
-    * notstarted
+    * not Started
     */
-    NOTSTARTED,
+    NOT_STARTED,
     /**
     * running
     */
@@ -27,6 +27,10 @@ public enum LongRunningOperationStatus
     * failed
     */
     FAILED,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For LongRunningOperationStatus values that were not expected from the service
     */

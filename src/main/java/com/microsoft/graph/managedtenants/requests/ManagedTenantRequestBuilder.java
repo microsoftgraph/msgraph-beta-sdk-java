@@ -32,10 +32,13 @@ import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploym
 import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;
@@ -339,6 +342,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new ManagementIntentRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ManagementTemplateCollection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementTemplateCollectionCollectionRequestBuilder managementTemplateCollections() {
+        return new ManagementTemplateCollectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementTemplateCollection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementTemplateCollectionRequestBuilder managementTemplateCollections(@Nonnull final String id) {
+        return new ManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ManagementTemplate collection
      *
      * @return the collection request builder
@@ -359,24 +382,44 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new ManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the RiskyUser collection
+     *  Gets a request builder for the ManagementTemplateStep collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public RiskyUserCollectionRequestBuilder riskyUsers() {
-        return new RiskyUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers"), getClient(), null);
+    public ManagementTemplateStepCollectionRequestBuilder managementTemplateSteps() {
+        return new ManagementTemplateStepCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the RiskyUser item
+     * Gets a request builder for the ManagementTemplateStep item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
-        return new RiskyUserRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers") + "/" + id, getClient(), null);
+    public ManagementTemplateStepRequestBuilder managementTemplateSteps(@Nonnull final String id) {
+        return new ManagementTemplateStepRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagementTemplateStepVersion collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public ManagementTemplateStepVersionCollectionRequestBuilder managementTemplateStepVersions() {
+        return new ManagementTemplateStepVersionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepVersions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementTemplateStepVersion item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public ManagementTemplateStepVersionRequestBuilder managementTemplateStepVersions(@Nonnull final String id) {
+        return new ManagementTemplateStepVersionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepVersions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TenantGroup collection

@@ -57,7 +57,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
 
     /**
      * The Connection Type.
-     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect.
+     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect, unknownFutureValue, microsoftTunnel.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
@@ -153,6 +153,15 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     @Expose
 	@Nullable
     public Boolean enableSplitTunneling;
+
+    /**
+     * The Microsoft Tunnel Site Id.
+     * ID of the Microsoft Tunnel site associated with the VPN profile.
+     */
+    @SerializedName(value = "microsoftTunnelSiteId", alternate = {"MicrosoftTunnelSiteId"})
+    @Expose
+	@Nullable
+    public String microsoftTunnelSiteId;
 
     /**
      * The Only Associated Apps Can Use Connection.

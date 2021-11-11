@@ -10,6 +10,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Directory;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.AdministrativeUnitRequestBuilder;
+import com.microsoft.graph.requests.AttributeSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.AttributeSetRequestBuilder;
+import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
@@ -88,6 +92,46 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     @Nonnull
     public AdministrativeUnitRequestBuilder administrativeUnits(@Nonnull final String id) {
         return new AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AttributeSet collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AttributeSetCollectionRequestBuilder attributeSets() {
+        return new AttributeSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AttributeSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AttributeSetRequestBuilder attributeSets(@Nonnull final String id) {
+        return new AttributeSetRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CustomSecurityAttributeDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomSecurityAttributeDefinitionCollectionRequestBuilder customSecurityAttributeDefinitions() {
+        return new CustomSecurityAttributeDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customSecurityAttributeDefinitions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomSecurityAttributeDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomSecurityAttributeDefinitionRequestBuilder customSecurityAttributeDefinitions(@Nonnull final String id) {
+        return new CustomSecurityAttributeDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("customSecurityAttributeDefinitions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DirectoryObject collection

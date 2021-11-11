@@ -66,6 +66,15 @@ public class Setting implements IJsonBackedObject {
     public Boolean overwriteAllowed;
 
     /**
+     * The Setting Id.
+     * 
+     */
+    @SerializedName(value = "settingId", alternate = {"SettingId"})
+    @Expose
+	@Nullable
+    public String settingId;
+
+    /**
      * The Value Type.
      * The data type for the setting. Possible values are: string, integer, boolean, guid, stringCollection, integerCollection, booleanCollection, guidCollection, unknownFutureValue. Required. Read-only.
      */

@@ -28,7 +28,7 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
 
     /**
      * The Update Category.
-     * The category of updates that the service manages. Supports a subset of the values for updateCategory. Possible values are: feature.
+     * The category of updates that the service manages. Supports a subset of the values for updateCategory. Possible values are: feature, unknownFutureValue.
      */
     @SerializedName(value = "updateCategory", alternate = {"UpdateCategory"})
     @Expose

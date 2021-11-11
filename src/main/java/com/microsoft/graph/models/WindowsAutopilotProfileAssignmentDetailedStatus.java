@@ -32,6 +32,14 @@ public enum WindowsAutopilotProfileAssignmentDetailedStatus
     */
     WINDOWS_PC_PROFILE_NOT_SUPPORTED,
     /**
+    * surface Hub2SProfile Not Supported
+    */
+    SURFACE_HUB2_S_PROFILE_NOT_SUPPORTED,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For WindowsAutopilotProfileAssignmentDetailedStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE

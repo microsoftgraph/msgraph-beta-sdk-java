@@ -382,7 +382,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Mode Managed Home Screen Inactive Sign Out Delay In Seconds.
-     * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 1 to 9999999
+     * Number of seconds to give user notice before automatically signing them out for Managed Home Screen. Valid values 0 to 9999999
      */
     @SerializedName(value = "kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds", alternate = {"KioskModeManagedHomeScreenInactiveSignOutDelayInSeconds"})
     @Expose
@@ -391,7 +391,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
 
     /**
      * The Kiosk Mode Managed Home Screen Inactive Sign Out Notice In Seconds.
-     * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 1 to 9999999
+     * Number of seconds device is inactive before automatically signing user out for Managed Home Screen. Valid values 0 to 9999999
      */
     @SerializedName(value = "kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds", alternate = {"KioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds"})
     @Expose

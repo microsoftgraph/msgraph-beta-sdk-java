@@ -60,7 +60,7 @@ public class DeploymentSettings implements IJsonBackedObject {
 
     /**
      * The Safeguard.
-     * 
+     * Settings governing safeguard holds on offering content.
      */
     @SerializedName(value = "safeguard", alternate = {"Safeguard"})
     @Expose

@@ -65,6 +65,15 @@ public class ManagementTemplateDetailedInfo implements IJsonBackedObject {
 	@Nullable
     public String managementTemplateId;
 
+    /**
+     * The Version.
+     * 
+     */
+    @SerializedName(value = "version", alternate = {"Version"})
+    @Expose
+	@Nullable
+    public Integer version;
+
 
     /**
      * Sets the raw JSON object
