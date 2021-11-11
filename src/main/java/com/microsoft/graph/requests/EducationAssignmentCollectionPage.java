@@ -15,9 +15,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 
 /**
  * The class for the Education Assignment Collection Page.
- * @deprecated The me/assignments endpoint is being deprecated and will stop returning data on April 30, 2022.
  */
-@Deprecated
 public class EducationAssignmentCollectionPage extends BaseCollectionPage<EducationAssignment, EducationAssignmentCollectionRequestBuilder> {
 
     /**

@@ -159,6 +159,7 @@ import com.microsoft.graph.requests.TeamCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamRequestBuilder;
 import com.microsoft.graph.requests.TeamsTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.TeamsTemplateRequestBuilder;
+import com.microsoft.graph.requests.IdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.AuditLogRootRequestBuilder;
 import com.microsoft.graph.requests.ReportRootRequestBuilder;
 import com.microsoft.graph.requests.AuthenticationMethodsPolicyRequestBuilder;
@@ -173,15 +174,14 @@ import com.microsoft.graph.requests.InformationProtectionRequestBuilder;
 import com.microsoft.graph.requests.OrganizationalBrandingRequestBuilder;
 import com.microsoft.graph.requests.DirectoryRequestBuilder;
 import com.microsoft.graph.requests.PolicyRootRequestBuilder;
+import com.microsoft.graph.requests.TenantRelationshipRequestBuilder;
 import com.microsoft.graph.requests.EducationRootRequestBuilder;
 import com.microsoft.graph.termstore.requests.StoreRequestBuilder;
 import com.microsoft.graph.requests.CloudCommunicationsRequestBuilder;
-import com.microsoft.graph.requests.IdentityGovernanceRequestBuilder;
 import com.microsoft.graph.requests.IdentityProtectionRootRequestBuilder;
 import com.microsoft.graph.requests.DeviceAppManagementRequestBuilder;
 import com.microsoft.graph.requests.OfficeConfigurationRequestBuilder;
 import com.microsoft.graph.requests.SearchEntityRequestBuilder;
-import com.microsoft.graph.requests.TenantRelationshipRequestBuilder;
 import com.microsoft.graph.requests.FinancialsRequestBuilder;
 import com.microsoft.graph.requests.PlannerRequestBuilder;
 import com.microsoft.graph.requests.PrintRequestBuilder;
@@ -383,9 +383,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * Gets the collection of Users objects
      *
      * @return the request builder for the collection of Users objects
-     * @deprecated 
      */
-    @Deprecated
     @Nonnull
     public UserCollectionRequestBuilder users() {
         return new UserCollectionRequestBuilder(getServiceRoot() + "/users", this, null);
@@ -396,9 +394,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      *
      * @param id the id of the Users to retrieve
      * @return the request builder for the Users object
-     * @deprecated 
      */
-    @Deprecated
     @Nonnull
     public UserRequestBuilder users(@Nonnull final String id) {
         return new UserRequestBuilder(getServiceRoot() + "/users/" + id, this, null);
@@ -1944,6 +1940,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
+     * @return the IdentityGovernance
+     */
+    @Nonnull
+    public IdentityGovernanceRequestBuilder identityGovernance() {
+        return new IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
      * @return the AuditLogRoot
      */
     @Nonnull
@@ -2075,9 +2081,7 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
      * Gets the GraphServiceRequestBuilder
      *
      * @return the User
-     * @deprecated 
      */
-    @Deprecated
     @Nonnull
     public UserRequestBuilder me() {
         return new UserRequestBuilder(getServiceRoot() + "/me", this, null);
@@ -2091,6 +2095,16 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public PolicyRootRequestBuilder policies() {
         return new PolicyRootRequestBuilder(getServiceRoot() + "/policies", this, null);
+    }
+
+    /**
+     * Gets the GraphServiceRequestBuilder
+     *
+     * @return the TenantRelationship
+     */
+    @Nonnull
+    public TenantRelationshipRequestBuilder tenantRelationships() {
+        return new TenantRelationshipRequestBuilder(getServiceRoot() + "/tenantRelationships", this, null);
     }
 
     /**
@@ -2136,16 +2150,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the IdentityGovernance
-     */
-    @Nonnull
-    public IdentityGovernanceRequestBuilder identityGovernance() {
-        return new IdentityGovernanceRequestBuilder(getServiceRoot() + "/identityGovernance", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the IdentityProtectionRoot
      */
     @Nonnull
@@ -2181,16 +2185,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     @Nonnull
     public SearchEntityRequestBuilder search() {
         return new SearchEntityRequestBuilder(getServiceRoot() + "/search", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
-     * @return the TenantRelationship
-     */
-    @Nonnull
-    public TenantRelationshipRequestBuilder tenantRelationships() {
-        return new TenantRelationshipRequestBuilder(getServiceRoot() + "/tenantRelationships", this, null);
     }
 
     /**

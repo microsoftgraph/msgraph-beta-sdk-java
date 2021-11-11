@@ -20,6 +20,10 @@ public enum DeviceManagementConfigurationSettingUsage
     */
     CONFIGURATION,
     /**
+    * compliance
+    */
+    COMPLIANCE,
+    /**
     * For DeviceManagementConfigurationSettingUsage values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -70,7 +70,7 @@ public class DeviceManagementConfigurationSettingDefinitionReferenceRequest exte
     @Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinition> putAsync(@Nonnull final DeviceManagementConfigurationSettingDefinition srcDeviceManagementConfigurationSettingDefinition) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/configurationSettings/" + srcDeviceManagementConfigurationSettingDefinition.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/complianceSettings/" + srcDeviceManagementConfigurationSettingDefinition.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -84,7 +84,7 @@ public class DeviceManagementConfigurationSettingDefinitionReferenceRequest exte
     @Nullable
     public DeviceManagementConfigurationSettingDefinition put(@Nonnull final DeviceManagementConfigurationSettingDefinition srcDeviceManagementConfigurationSettingDefinition) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/configurationSettings/" + srcDeviceManagementConfigurationSettingDefinition.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/deviceManagement/complianceSettings/" + srcDeviceManagementConfigurationSettingDefinition.id));
         return send(HttpMethod.PUT, payload);
     }
 }

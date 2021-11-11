@@ -58,7 +58,7 @@ public class PasswordCredentialConfiguration implements IJsonBackedObject {
 
     /**
      * The Restriction Type.
-     * The type of restriction being applied. Possible values are passwordAddition or passwordLifetime. Each value of restrictionType can be used only once per policy.
+     * The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      */
     @SerializedName(value = "restrictionType", alternate = {"RestrictionType"})
     @Expose

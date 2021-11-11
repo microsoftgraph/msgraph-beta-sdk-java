@@ -24,6 +24,18 @@ public enum WindowsAutopilotDeviceType
     */
     HOLO_LENS,
     /**
+    * surface Hub2S
+    */
+    SURFACE_HUB2_S,
+    /**
+    * virtual Machine
+    */
+    VIRTUAL_MACHINE,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For WindowsAutopilotDeviceType values that were not expected from the service
     */
     UNEXPECTED_VALUE

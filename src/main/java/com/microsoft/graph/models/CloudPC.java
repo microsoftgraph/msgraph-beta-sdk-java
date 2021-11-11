@@ -8,6 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcLoginResult;
+import com.microsoft.graph.models.CloudPcRemoteActionResult;
+import com.microsoft.graph.models.CloudPcServicePlanType;
 import com.microsoft.graph.models.CloudPcStatus;
 import com.microsoft.graph.models.CloudPcStatusDetails;
 import com.microsoft.graph.models.Entity;
@@ -26,6 +29,15 @@ import javax.annotation.Nonnull;
  */
 public class CloudPC extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Aad Device Id.
+     * 
+     */
+    @SerializedName(value = "aadDeviceId", alternate = {"AadDeviceId"})
+    @Expose
+	@Nullable
+    public String aadDeviceId;
 
     /**
      * The Display Name.
@@ -55,6 +67,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     public String imageDisplayName;
 
     /**
+     * The Last Login Result.
+     * 
+     */
+    @SerializedName(value = "lastLoginResult", alternate = {"LastLoginResult"})
+    @Expose
+	@Nullable
+    public CloudPcLoginResult lastLoginResult;
+
+    /**
      * The Last Modified Date Time.
      * The Cloud PC's last modified date and time. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
@@ -62,6 +83,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastModifiedDateTime;
+
+    /**
+     * The Last Remote Action Result.
+     * 
+     */
+    @SerializedName(value = "lastRemoteActionResult", alternate = {"LastRemoteActionResult"})
+    @Expose
+	@Nullable
+    public CloudPcRemoteActionResult lastRemoteActionResult;
 
     /**
      * The Managed Device Id.
@@ -125,6 +155,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String servicePlanName;
+
+    /**
+     * The Service Plan Type.
+     * 
+     */
+    @SerializedName(value = "servicePlanType", alternate = {"ServicePlanType"})
+    @Expose
+	@Nullable
+    public CloudPcServicePlanType servicePlanType;
 
     /**
      * The Status.

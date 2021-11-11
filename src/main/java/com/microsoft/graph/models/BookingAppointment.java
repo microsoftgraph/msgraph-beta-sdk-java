@@ -96,7 +96,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Customer Time Zone.
-     * 
+     * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      */
     @SerializedName(value = "customerTimeZone", alternate = {"CustomerTimeZone"})
     @Expose
@@ -168,7 +168,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Location Online.
-     * 
+     * True indicates that the appointment will be held online. Default value is false.
      */
     @SerializedName(value = "isLocationOnline", alternate = {"IsLocationOnline"})
     @Expose
@@ -177,7 +177,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Web Url.
-     * 
+     * The URL of the online meeting for the appointment.
      */
     @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose
@@ -294,7 +294,7 @@ public class BookingAppointment extends Entity implements IJsonBackedObject {
 
     /**
      * The Sms Notifications Enabled.
-     * 
+     * True indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
      */
     @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
     @Expose

@@ -37,7 +37,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
 
     /**
      * The Quality Update Classification.
-     * The classification on the quality update. Supports a subset of the values for qualityUpdateClassification. Possible values are: all, security, nonSecurity. Read-only.
+     * The classification on the quality update. Possible values are: all, security, nonSecurity, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "qualityUpdateClassification", alternate = {"QualityUpdateClassification"})
     @Expose

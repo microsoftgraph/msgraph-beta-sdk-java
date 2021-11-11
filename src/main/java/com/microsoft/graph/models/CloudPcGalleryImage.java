@@ -28,7 +28,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The official display name of the gallery image. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date.
-     * 
+     * The date in which this image is no longer within long-term support. The Cloud PC will continue to provide short-term support. Read-only.
      */
     @SerializedName(value = "endDate", alternate = {"EndDate"})
     @Expose
@@ -46,7 +46,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date.
-     * 
+     * The date when the image is no longer available. Read-only.
      */
     @SerializedName(value = "expirationDate", alternate = {"ExpirationDate"})
     @Expose
@@ -55,7 +55,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Offer.
-     * 
+     * The offer name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
      */
     @SerializedName(value = "offer", alternate = {"Offer"})
     @Expose
@@ -64,7 +64,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Offer Display Name.
-     * 
+     * The official display offer name of the gallery image. For example, Windows 10 Enterprise + OS Optimizations. Read-only.
      */
     @SerializedName(value = "offerDisplayName", alternate = {"OfferDisplayName"})
     @Expose
@@ -73,7 +73,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Publisher.
-     * 
+     * The publisher name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
      */
     @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
@@ -82,7 +82,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Recommended Sku.
-     * 
+     * Recommended Cloud PC SKU for this gallery image. Read-only.
      */
     @SerializedName(value = "recommendedSku", alternate = {"RecommendedSku"})
     @Expose
@@ -91,7 +91,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Size In GB.
-     * 
+     * The size of this image in gigabytes. Read-only.
      */
     @SerializedName(value = "sizeInGB", alternate = {"SizeInGB"})
     @Expose
@@ -100,7 +100,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku.
-     * 
+     * The SKU name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
      */
     @SerializedName(value = "sku", alternate = {"Sku"})
     @Expose
@@ -109,7 +109,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Display Name.
-     * 
+     * The official display stock keeping unit (SKU) name of this gallery image. For example, 2004. Read-only.
      */
     @SerializedName(value = "skuDisplayName", alternate = {"SkuDisplayName"})
     @Expose
@@ -118,7 +118,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date.
-     * 
+     * The date when the image becomes available. Read-only.
      */
     @SerializedName(value = "startDate", alternate = {"StartDate"})
     @Expose
@@ -127,7 +127,7 @@ public class CloudPcGalleryImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

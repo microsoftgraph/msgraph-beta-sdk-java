@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.GenericError;
 import com.microsoft.graph.managedtenants.models.WorkloadActionStatus;
 
@@ -65,6 +66,33 @@ public class WorkloadActionDeploymentStatus implements IJsonBackedObject {
     @Expose
 	@Nullable
     public GenericError error;
+
+    /**
+     * The Exclude Groups.
+     * 
+     */
+    @SerializedName(value = "excludeGroups", alternate = {"ExcludeGroups"})
+    @Expose
+	@Nullable
+    public java.util.List<String> excludeGroups;
+
+    /**
+     * The Include All Users.
+     * 
+     */
+    @SerializedName(value = "includeAllUsers", alternate = {"IncludeAllUsers"})
+    @Expose
+	@Nullable
+    public Boolean includeAllUsers;
+
+    /**
+     * The Include Groups.
+     * 
+     */
+    @SerializedName(value = "includeGroups", alternate = {"IncludeGroups"})
+    @Expose
+	@Nullable
+    public java.util.List<String> includeGroups;
 
     /**
      * The Last Deployment Date Time.
