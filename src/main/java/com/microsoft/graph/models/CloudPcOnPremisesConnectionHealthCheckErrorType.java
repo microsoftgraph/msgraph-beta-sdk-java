@@ -44,6 +44,18 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     AD_JOIN_CHECK_ACCESS_DENIED,
     /**
+    * ad Join Check Credentials Expired
+    */
+    AD_JOIN_CHECK_CREDENTIALS_EXPIRED,
+    /**
+    * ad Join Check Account Locked Or Disabled
+    */
+    AD_JOIN_CHECK_ACCOUNT_LOCKED_OR_DISABLED,
+    /**
+    * ad Join Check Account Quota Exceeded
+    */
+    AD_JOIN_CHECK_ACCOUNT_QUOTA_EXCEEDED,
+    /**
     * ad Join Check Unknown Error
     */
     AD_JOIN_CHECK_UNKNOWN_ERROR,
@@ -116,6 +128,42 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     RESOURCE_AVAILABILITY_CHECK_UNSUPPORTED_V_NET_REGION,
     /**
+    * resource Availability Check Resource Group Invalid
+    */
+    RESOURCE_AVAILABILITY_CHECK_RESOURCE_GROUP_INVALID,
+    /**
+    * resource Availability Check VNet Invalid
+    */
+    RESOURCE_AVAILABILITY_CHECK_V_NET_INVALID,
+    /**
+    * resource Availability Check Subnet Invalid
+    */
+    RESOURCE_AVAILABILITY_CHECK_SUBNET_INVALID,
+    /**
+    * resource Availability Check Resource Group Being Deleted
+    */
+    RESOURCE_AVAILABILITY_CHECK_RESOURCE_GROUP_BEING_DELETED,
+    /**
+    * resource Availability Check VNet Being Moved
+    */
+    RESOURCE_AVAILABILITY_CHECK_V_NET_BEING_MOVED,
+    /**
+    * resource Availability Check Subnet Delegation Failed
+    */
+    RESOURCE_AVAILABILITY_CHECK_SUBNET_DELEGATION_FAILED,
+    /**
+    * resource Availability Check Subnet With External Resources
+    */
+    RESOURCE_AVAILABILITY_CHECK_SUBNET_WITH_EXTERNAL_RESOURCES,
+    /**
+    * resource Availability Check Resource Group Locked For Readonly
+    */
+    RESOURCE_AVAILABILITY_CHECK_RESOURCE_GROUP_LOCKED_FOR_READONLY,
+    /**
+    * resource Availability Check Resource Group Locked For Delete
+    */
+    RESOURCE_AVAILABILITY_CHECK_RESOURCE_GROUP_LOCKED_FOR_DELETE,
+    /**
     * resource Availability Check Transient Service Error
     */
     RESOURCE_AVAILABILITY_CHECK_TRANSIENT_SERVICE_ERROR,
@@ -167,6 +215,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * internal Server Unknown Error
     */
     INTERNAL_SERVER_UNKNOWN_ERROR,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
     /**
     * For CloudPcOnPremisesConnectionHealthCheckErrorType values that were not expected from the service
     */

@@ -40,7 +40,7 @@ public class SafeguardProfile implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * Specifies the category of safeguards. The possible values are: likelyIssues, unknownFutureValue.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose

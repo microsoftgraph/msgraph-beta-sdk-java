@@ -59,9 +59,7 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
     /**
      * The Allowed Users.
      * The users who have access to print using the printer.
-     * @deprecated 
      */
-    @Deprecated
 	@Nullable
     public UserCollectionPage allowedUsers;
 

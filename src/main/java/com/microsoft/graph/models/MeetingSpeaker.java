@@ -39,7 +39,7 @@ public class MeetingSpeaker implements IJsonBackedObject {
 
     /**
      * The Bio.
-     * 
+     * Bio of the speaker.
      */
     @SerializedName(value = "bio", alternate = {"Bio"})
     @Expose
@@ -48,7 +48,7 @@ public class MeetingSpeaker implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the speaker.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

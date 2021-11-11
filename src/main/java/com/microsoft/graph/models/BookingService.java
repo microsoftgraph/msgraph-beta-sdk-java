@@ -104,7 +104,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Is Location Online.
-     * 
+     * True indicates that the appointments for the service will be held online. Default value is false.
      */
     @SerializedName(value = "isLocationOnline", alternate = {"IsLocationOnline"})
     @Expose
@@ -149,7 +149,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Sms Notifications Enabled.
-     * 
+     * True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false.
      */
     @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
     @Expose
@@ -167,7 +167,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Web Url.
-     * The URL of the booking service.
+     * The URL a customer uses to access the service.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

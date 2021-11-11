@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcDeviceImageOsStatus;
 import com.microsoft.graph.models.CloudPcDeviceImageStatus;
 import com.microsoft.graph.models.CloudPcDeviceImageStatusDetails;
 import com.microsoft.graph.models.Entity;
@@ -37,6 +38,15 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Expiration Date.
+     * 
+     */
+    @SerializedName(value = "expirationDate", alternate = {"ExpirationDate"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.core.DateOnly expirationDate;
+
+    /**
      * The Last Modified Date Time.
      * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
      */
@@ -62,6 +72,15 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String osBuildNumber;
+
+    /**
+     * The Os Status.
+     * 
+     */
+    @SerializedName(value = "osStatus", alternate = {"OsStatus"})
+    @Expose
+	@Nullable
+    public CloudPcDeviceImageOsStatus osStatus;
 
     /**
      * The Source Image Resource Id.

@@ -111,9 +111,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
     /**
      * The Invited User.
      * The user created as part of the invitation creation. Read-Only
-     * @deprecated 
      */
-    @Deprecated
     @SerializedName(value = "invitedUser", alternate = {"InvitedUser"})
     @Expose
 	@Nullable

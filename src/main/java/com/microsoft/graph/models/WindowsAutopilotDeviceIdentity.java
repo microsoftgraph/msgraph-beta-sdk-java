@@ -67,7 +67,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
     /**
      * The Deployment Profile Assignment Detailed Status.
-     * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported.
+     * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported, surfaceHub2SProfileNotSupported, unknownFutureValue.
      */
     @SerializedName(value = "deploymentProfileAssignmentDetailedStatus", alternate = {"DeploymentProfileAssignmentDetailedStatus"})
     @Expose

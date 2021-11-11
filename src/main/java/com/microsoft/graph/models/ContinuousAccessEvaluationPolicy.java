@@ -46,7 +46,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Groups.
-     * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty.
+     * The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
@@ -55,7 +55,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Is Enabled.
-     * true to indicate whether continuous access evaluation should be performed; otherwise false.
+     * true to indicate whether continuous access evaluation should be performed; otherwise false. Read-only.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -64,7 +64,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Migrate.
-     * 
+     * true to indicate that the continuous access evaluation policy settings should be or has been migrated to the conditional access policy.
      */
     @SerializedName(value = "migrate", alternate = {"Migrate"})
     @Expose
@@ -73,7 +73,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements IJsonBac
 
     /**
      * The Users.
-     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty.
+     * The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only.
      */
     @SerializedName(value = "users", alternate = {"Users"})
     @Expose

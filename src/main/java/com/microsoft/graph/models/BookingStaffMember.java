@@ -57,7 +57,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Time Zone.
-     * 
+     * The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
      */
     @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose

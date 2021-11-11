@@ -24,6 +24,10 @@ public enum ManagementCategory
     */
     IDENTITY,
     /**
+    * data
+    */
+    DATA,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

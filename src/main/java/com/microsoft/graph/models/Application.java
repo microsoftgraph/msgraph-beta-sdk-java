@@ -25,6 +25,7 @@ import com.microsoft.graph.models.OnPremisesPublishing;
 import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.ExtensionProperty;
+import com.microsoft.graph.models.FederatedIdentityCredential;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.TokenIssuancePolicy;
 import com.microsoft.graph.models.TokenLifetimePolicy;
@@ -32,6 +33,7 @@ import com.microsoft.graph.models.ConnectorGroup;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
 import com.microsoft.graph.requests.ExtensionPropertyCollectionPage;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
@@ -135,7 +137,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Identifier Uris.
-     * The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant. For more information see Application Objects and Service Principal Objects. The any operator is required for filter expressions on multi-valued properties. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      */
     @SerializedName(value = "identifierUris", alternate = {"IdentifierUris"})
     @Expose
@@ -339,6 +341,15 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
     public ExtensionPropertyCollectionPage extensionProperties;
 
     /**
+     * The Federated Identity Credentials.
+     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
+     */
+    @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
+    @Expose
+	@Nullable
+    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+
+    /**
      * The Home Realm Discovery Policies.
      * 
      */
@@ -400,6 +411,10 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
         if (json.has("extensionProperties")) {
             extensionProperties = serializer.deserializeObject(json.get("extensionProperties"), ExtensionPropertyCollectionPage.class);
+        }
+
+        if (json.has("federatedIdentityCredentials")) {
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
