@@ -30,7 +30,7 @@ public class BookingCustomer extends BookingPerson implements IJsonBackedObject 
 
     /**
      * The Addresses.
-     * 
+     * Addresses associated with the customer, including home, business and other addresses.
      */
     @SerializedName(value = "addresses", alternate = {"Addresses"})
     @Expose
@@ -39,7 +39,7 @@ public class BookingCustomer extends BookingPerson implements IJsonBackedObject 
 
     /**
      * The Phones.
-     * 
+     * Phone numbers associated with the customer, including home, business and mobile numbers.
      */
     @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose

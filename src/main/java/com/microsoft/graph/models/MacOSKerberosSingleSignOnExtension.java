@@ -225,6 +225,15 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     public String passwordRequirementsDescription;
 
     /**
+     * The Preferred KDCs.
+     * Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+     */
+    @SerializedName(value = "preferredKDCs", alternate = {"PreferredKDCs"})
+    @Expose
+	@Nullable
+    public java.util.List<String> preferredKDCs;
+
+    /**
      * The Realm.
      * Gets or sets the case-sensitive realm name for this profile.
      */
@@ -253,7 +262,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
 
     /**
      * The Single Sign On Extension Preferred KDCs.
-     * Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+     * Soon to be deprecated.
      */
     @SerializedName(value = "singleSignOnExtensionPreferredKDCs", alternate = {"SingleSignOnExtensionPreferredKDCs"})
     @Expose
@@ -270,8 +279,17 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     public Boolean tlsForLDAPRequired;
 
     /**
-     * The Username Lable Custom.
+     * The Username Label Custom.
      * This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.
+     */
+    @SerializedName(value = "usernameLabelCustom", alternate = {"UsernameLabelCustom"})
+    @Expose
+	@Nullable
+    public String usernameLabelCustom;
+
+    /**
+     * The Username Lable Custom.
+     * Soon to be deprecated.
      */
     @SerializedName(value = "usernameLableCustom", alternate = {"UsernameLableCustom"})
     @Expose

@@ -12,7 +12,11 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagementCategory;
 import com.microsoft.graph.managedtenants.models.TemplateParameter;
 import com.microsoft.graph.managedtenants.models.WorkloadAction;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateCollection;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -66,6 +70,15 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
     public java.util.List<TemplateParameter> parameters;
 
     /**
+     * The Version.
+     * 
+     */
+    @SerializedName(value = "version", alternate = {"Version"})
+    @Expose
+	@Nullable
+    public Integer version;
+
+    /**
      * The Workload Actions.
      * The collection of workload actions associated with the management template. Optional. Read-only.
      */
@@ -73,6 +86,20 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<WorkloadAction> workloadActions;
+
+    /**
+     * The Management Template Collections.
+     * 
+     */
+	@Nullable
+    public ManagementTemplateCollectionCollectionPage managementTemplateCollections;
+
+    /**
+     * The Management Template Steps.
+     * 
+     */
+	@Nullable
+    public ManagementTemplateStepCollectionPage managementTemplateSteps;
 
 
     /**
@@ -83,5 +110,13 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("managementTemplateCollections")) {
+            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionCollectionPage.class);
+        }
+
+        if (json.has("managementTemplateSteps")) {
+            managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), ManagementTemplateStepCollectionPage.class);
+        }
     }
 }

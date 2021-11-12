@@ -52,7 +52,7 @@ public class DeploymentState implements IJsonBackedObject {
 
     /**
      * The Requested Value.
-     * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused.
+     * Specifies the requested state of the deployment. Supports a subset of the values for requestedDeploymentStateValue. Possible values are: none, paused, unknownFutureValue.
      */
     @SerializedName(value = "requestedValue", alternate = {"RequestedValue"})
     @Expose
@@ -61,7 +61,7 @@ public class DeploymentState implements IJsonBackedObject {
 
     /**
      * The Value.
-     * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused. Read-only.
+     * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.DeviceManagement;
+import com.microsoft.graph.models.AssignmentFilterEvaluateRequest;
 import com.microsoft.graph.models.AssignmentFilterStatusDetails;
 import com.microsoft.graph.models.RolePermission;
 import com.microsoft.graph.models.ComanagedDevicesSummary;
@@ -64,12 +65,14 @@ import com.microsoft.graph.requests.NdesConnectorRequestBuilder;
 import com.microsoft.graph.requests.SoftwareUpdateStatusSummaryWithReferenceRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementCompliancePolicyCollectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementCompliancePolicyRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionRequestBuilder;
@@ -144,6 +147,20 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPer
 import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsBaselineRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthAppImpactCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthAppImpactRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionRequestBuilder;
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryRequestBuilder;
@@ -272,6 +289,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.DeviceManagementSendCustomNotificationToCompanyPortalParameterSet;
+import com.microsoft.graph.models.DeviceManagementEvaluateAssignmentFilterParameterSet;
 import com.microsoft.graph.models.DeviceManagementGetAssignmentFiltersStatusDetailsParameterSet;
 import com.microsoft.graph.models.DeviceManagementGetEffectivePermissionsParameterSet;
 import com.microsoft.graph.models.DeviceManagementVerifyWindowsEnrollmentAutoDiscoveryParameterSet;
@@ -780,6 +798,66 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public SoftwareUpdateStatusSummaryWithReferenceRequestBuilder softwareUpdateStatusSummary() {
         return new SoftwareUpdateStatusSummaryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("softwareUpdateStatusSummary"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceManagementConfigurationCategory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementConfigurationCategoryCollectionRequestBuilder complianceCategories() {
+        return new DeviceManagementConfigurationCategoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("complianceCategories"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementConfigurationCategory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementConfigurationCategoryRequestBuilder complianceCategories(@Nonnull final String id) {
+        return new DeviceManagementConfigurationCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("complianceCategories") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceManagementCompliancePolicy collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementCompliancePolicyCollectionRequestBuilder compliancePolicies() {
+        return new DeviceManagementCompliancePolicyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("compliancePolicies"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementCompliancePolicy item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementCompliancePolicyRequestBuilder compliancePolicies(@Nonnull final String id) {
+        return new DeviceManagementCompliancePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("compliancePolicies") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceManagementConfigurationSettingDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder complianceSettings() {
+        return new DeviceManagementConfigurationSettingDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("complianceSettings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementConfigurationSettingDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public DeviceManagementConfigurationSettingDefinitionRequestBuilder complianceSettings(@Nonnull final String id) {
+        return new DeviceManagementConfigurationSettingDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("complianceSettings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceManagementConfigurationCategory collection
@@ -1650,6 +1728,146 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public UserExperienceAnalyticsBaselineRequestBuilder userExperienceAnalyticsBaselines(@Nonnull final String id) {
         return new UserExperienceAnalyticsBaselineRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBaselines") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsBatteryHealthAppImpact collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthAppImpactCollectionRequestBuilder userExperienceAnalyticsBatteryHealthAppImpact() {
+        return new UserExperienceAnalyticsBatteryHealthAppImpactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthAppImpact"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsBatteryHealthAppImpact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthAppImpactRequestBuilder userExperienceAnalyticsBatteryHealthAppImpact(@Nonnull final String id) {
+        return new UserExperienceAnalyticsBatteryHealthAppImpactRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthAppImpact") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsBatteryHealthCapacityDetails
+     *
+     * @return the UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder instance
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder userExperienceAnalyticsBatteryHealthCapacityDetails() {
+        return new UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthCapacityDetails"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsBatteryHealthDeviceAppImpact collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionRequestBuilder userExperienceAnalyticsBatteryHealthDeviceAppImpact() {
+        return new UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthDeviceAppImpact"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsBatteryHealthDeviceAppImpact item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder userExperienceAnalyticsBatteryHealthDeviceAppImpact(@Nonnull final String id) {
+        return new UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthDeviceAppImpact") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsBatteryHealthDevicePerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionRequestBuilder userExperienceAnalyticsBatteryHealthDevicePerformance() {
+        return new UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthDevicePerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsBatteryHealthDevicePerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder userExperienceAnalyticsBatteryHealthDevicePerformance(@Nonnull final String id) {
+        return new UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthDevicePerformance") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionRequestBuilder userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
+        return new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory(@Nonnull final String id) {
+        return new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsBatteryHealthModelPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionRequestBuilder userExperienceAnalyticsBatteryHealthModelPerformance() {
+        return new UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthModelPerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsBatteryHealthModelPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder userExperienceAnalyticsBatteryHealthModelPerformance(@Nonnull final String id) {
+        return new UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthModelPerformance") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the UserExperienceAnalyticsBatteryHealthOsPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionRequestBuilder userExperienceAnalyticsBatteryHealthOsPerformance() {
+        return new UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthOsPerformance"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsBatteryHealthOsPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder userExperienceAnalyticsBatteryHealthOsPerformance(@Nonnull final String id) {
+        return new UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthOsPerformance") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsBatteryHealthRuntimeDetails
+     *
+     * @return the UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder instance
+     */
+    @Nonnull
+    public UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder userExperienceAnalyticsBatteryHealthRuntimeDetails() {
+        return new UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsBatteryHealthRuntimeDetails"), getClient(), null);
     }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsCategory collection
@@ -2900,6 +3118,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     @Nonnull
     public DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal(@Nonnull final DeviceManagementSendCustomNotificationToCompanyPortalParameterSet parameters) {
         return new DeviceManagementSendCustomNotificationToCompanyPortalRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.sendCustomNotificationToCompanyPortal"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DeviceManagementEvaluateAssignmentFilterRequestBuilder evaluateAssignmentFilter(@Nonnull final DeviceManagementEvaluateAssignmentFilterParameterSet parameters) {
+        return new DeviceManagementEvaluateAssignmentFilterRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateAssignmentFilter"), getClient(), null, parameters);
     }
 
     /**

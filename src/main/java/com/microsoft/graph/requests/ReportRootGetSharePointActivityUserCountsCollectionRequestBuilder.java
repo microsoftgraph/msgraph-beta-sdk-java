@@ -62,9 +62,11 @@ public class ReportRootGetSharePointActivityUserCountsCollectionRequestBuilder e
     @Nonnull
     public ReportRootGetSharePointActivityUserCountsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final ReportRootGetSharePointActivityUserCountsCollectionRequest request = super.buildRequest(requestOptions);
-          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }

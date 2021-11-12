@@ -32,10 +32,13 @@ import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploym
 import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;

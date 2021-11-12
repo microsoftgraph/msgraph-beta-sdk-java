@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.DelegatedPrivilegeStatus;
 import com.microsoft.graph.managedtenants.models.TenantOnboardingStatus;
+import com.microsoft.graph.managedtenants.models.TenantOnboardingEligibilityReason;
 import com.microsoft.graph.managedtenants.models.WorkloadStatus;
 
 
@@ -103,6 +104,15 @@ public class TenantStatusInformation implements IJsonBackedObject {
     @Expose
 	@Nullable
     public TenantOnboardingStatus onboardingStatus;
+
+    /**
+     * The Tenant Onboarding Eligibility Reason.
+     * 
+     */
+    @SerializedName(value = "tenantOnboardingEligibilityReason", alternate = {"TenantOnboardingEligibilityReason"})
+    @Expose
+	@Nullable
+    public TenantOnboardingEligibilityReason tenantOnboardingEligibilityReason;
 
     /**
      * The Workload Statuses.

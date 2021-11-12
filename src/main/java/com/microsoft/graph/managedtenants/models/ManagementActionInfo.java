@@ -55,6 +55,15 @@ public class ManagementActionInfo implements IJsonBackedObject {
 	@Nullable
     public String managementTemplateId;
 
+    /**
+     * The Management Template Version.
+     * 
+     */
+    @SerializedName(value = "managementTemplateVersion", alternate = {"ManagementTemplateVersion"})
+    @Expose
+	@Nullable
+    public Integer managementTemplateVersion;
+
 
     /**
      * Sets the raw JSON object

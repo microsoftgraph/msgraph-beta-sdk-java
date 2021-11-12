@@ -10,12 +10,16 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AdministrativeUnit;
+import com.microsoft.graph.models.AttributeSet;
+import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.IdentityProviderBase;
 import com.microsoft.graph.models.SharedEmailDomain;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
+import com.microsoft.graph.requests.AttributeSetCollectionPage;
+import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionPage;
@@ -44,6 +48,24 @@ public class Directory extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public AdministrativeUnitCollectionPage administrativeUnits;
+
+    /**
+     * The Attribute Sets.
+     * 
+     */
+    @SerializedName(value = "attributeSets", alternate = {"AttributeSets"})
+    @Expose
+	@Nullable
+    public AttributeSetCollectionPage attributeSets;
+
+    /**
+     * The Custom Security Attribute Definitions.
+     * 
+     */
+    @SerializedName(value = "customSecurityAttributeDefinitions", alternate = {"CustomSecurityAttributeDefinitions"})
+    @Expose
+	@Nullable
+    public CustomSecurityAttributeDefinitionCollectionPage customSecurityAttributeDefinitions;
 
     /**
      * The Deleted Items.
@@ -95,6 +117,14 @@ public class Directory extends Entity implements IJsonBackedObject {
 
         if (json.has("administrativeUnits")) {
             administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), AdministrativeUnitCollectionPage.class);
+        }
+
+        if (json.has("attributeSets")) {
+            attributeSets = serializer.deserializeObject(json.get("attributeSets"), AttributeSetCollectionPage.class);
+        }
+
+        if (json.has("customSecurityAttributeDefinitions")) {
+            customSecurityAttributeDefinitions = serializer.deserializeObject(json.get("customSecurityAttributeDefinitions"), CustomSecurityAttributeDefinitionCollectionPage.class);
         }
 
         if (json.has("deletedItems")) {

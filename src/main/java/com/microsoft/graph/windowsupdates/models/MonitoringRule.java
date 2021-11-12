@@ -41,7 +41,7 @@ public class MonitoringRule implements IJsonBackedObject {
 
     /**
      * The Action.
-     * The action triggered when the threshold for the given signal is met. Possible values are: alertError, pauseDeployment.
+     * The action triggered when the threshold for the given signal is met. Possible values are: alertError, pauseDeployment, unknownFutureValue.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -50,7 +50,7 @@ public class MonitoringRule implements IJsonBackedObject {
 
     /**
      * The Signal.
-     * The signal to monitor. Possible values are: rollback.
+     * The signal to monitor. Possible values are: rollback, unknownFutureValue.
      */
     @SerializedName(value = "signal", alternate = {"Signal"})
     @Expose
