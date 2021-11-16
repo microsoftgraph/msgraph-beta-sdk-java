@@ -161,7 +161,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
 
     /**
      * The Setting Usage.
-     * Setting type, for example, configuration and compliance. Possible values are: none, configuration.
+     * Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
      */
     @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
     @Expose

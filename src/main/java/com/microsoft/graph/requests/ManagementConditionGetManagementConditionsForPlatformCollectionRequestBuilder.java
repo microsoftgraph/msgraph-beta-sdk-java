@@ -63,9 +63,11 @@ public class ManagementConditionGetManagementConditionsForPlatformCollectionRequ
     @Nonnull
     public ManagementConditionGetManagementConditionsForPlatformCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final ManagementConditionGetManagementConditionsForPlatformCollectionRequest request = super.buildRequest(requestOptions);
-          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }

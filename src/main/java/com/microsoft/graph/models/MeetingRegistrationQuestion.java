@@ -29,7 +29,7 @@ public class MeetingRegistrationQuestion extends Entity implements IJsonBackedOb
 
     /**
      * The Answer Input Type.
-     * 
+     * Answer input type of the custom registration question.
      */
     @SerializedName(value = "answerInputType", alternate = {"AnswerInputType"})
     @Expose
@@ -38,7 +38,7 @@ public class MeetingRegistrationQuestion extends Entity implements IJsonBackedOb
 
     /**
      * The Answer Options.
-     * 
+     * Answer options when answerInputType is radioButton.
      */
     @SerializedName(value = "answerOptions", alternate = {"AnswerOptions"})
     @Expose
@@ -47,7 +47,7 @@ public class MeetingRegistrationQuestion extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * 
+     * Display name of the custom registration question.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class MeetingRegistrationQuestion extends Entity implements IJsonBackedOb
 
     /**
      * The Is Required.
-     * 
+     * Indicates whether the question is required. Default value is false.
      */
     @SerializedName(value = "isRequired", alternate = {"IsRequired"})
     @Expose

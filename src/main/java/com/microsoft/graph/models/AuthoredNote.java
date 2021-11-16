@@ -29,7 +29,7 @@ public class AuthoredNote extends Entity implements IJsonBackedObject {
 
     /**
      * The Author.
-     * 
+     * Identity information about the note's author.
      */
     @SerializedName(value = "author", alternate = {"Author"})
     @Expose
@@ -38,7 +38,7 @@ public class AuthoredNote extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * 
+     * The content of the note.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -47,7 +47,7 @@ public class AuthoredNote extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose

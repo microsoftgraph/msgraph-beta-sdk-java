@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PasswordSingleSignOnSettings;
 import com.microsoft.graph.models.AddIn;
 import com.microsoft.graph.models.AppRole;
+import com.microsoft.graph.models.CustomSecurityAttributeValue;
 import com.microsoft.graph.models.InformationalUrl;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
@@ -23,6 +24,7 @@ import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.DelegatedPermissionClassification;
 import com.microsoft.graph.models.Endpoint;
+import com.microsoft.graph.models.FederatedIdentityCredential;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.LicenseDetails;
 import com.microsoft.graph.models.OAuth2PermissionGrant;
@@ -35,6 +37,7 @@ import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionPage;
 import com.microsoft.graph.requests.EndpointCollectionPage;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
 import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
@@ -156,6 +159,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public java.util.List<AppRole> appRoles;
 
     /**
+     * The Custom Security Attributes.
+     * 
+     */
+    @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
+    @Expose
+	@Nullable
+    public CustomSecurityAttributeValue customSecurityAttributes;
+
+    /**
      * The Description.
      * Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
      */
@@ -175,7 +187,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * The display name for the service principal. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
+     * The display name for the service principal. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -202,7 +214,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Info.
-     * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le).
+     * Basic profile information of the acquired application such as app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, NOT, ge, le, and eq on null values).
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -438,6 +450,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public EndpointCollectionPage endpoints;
 
     /**
+     * The Federated Identity Credentials.
+     * 
+     */
+    @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
+    @Expose
+	@Nullable
+    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+
+    /**
      * The Home Realm Discovery Policies.
      * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      */
@@ -547,6 +568,10 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
         if (json.has("endpoints")) {
             endpoints = serializer.deserializeObject(json.get("endpoints"), EndpointCollectionPage.class);
+        }
+
+        if (json.has("federatedIdentityCredentials")) {
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {

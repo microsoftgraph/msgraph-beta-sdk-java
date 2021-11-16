@@ -10,6 +10,10 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Directory;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.AdministrativeUnitRequestBuilder;
+import com.microsoft.graph.requests.AttributeSetCollectionRequestBuilder;
+import com.microsoft.graph.requests.AttributeSetRequestBuilder;
+import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionRequestBuilder;
+import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectRequestBuilder;
 import com.microsoft.graph.requests.UserRequestBuilder;
@@ -17,6 +21,10 @@ import com.microsoft.graph.requests.GroupRequestBuilder;
 import com.microsoft.graph.requests.ApplicationRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
+import com.microsoft.graph.requests.InboundSharedUserProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.InboundSharedUserProfileRequestBuilder;
+import com.microsoft.graph.requests.OutboundSharedUserProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.OutboundSharedUserProfileRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;
@@ -88,6 +96,46 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     @Nonnull
     public AdministrativeUnitRequestBuilder administrativeUnits(@Nonnull final String id) {
         return new AdministrativeUnitRequestBuilder(getRequestUrlWithAdditionalSegment("administrativeUnits") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AttributeSet collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public AttributeSetCollectionRequestBuilder attributeSets() {
+        return new AttributeSetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AttributeSet item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public AttributeSetRequestBuilder attributeSets(@Nonnull final String id) {
+        return new AttributeSetRequestBuilder(getRequestUrlWithAdditionalSegment("attributeSets") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the CustomSecurityAttributeDefinition collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public CustomSecurityAttributeDefinitionCollectionRequestBuilder customSecurityAttributeDefinitions() {
+        return new CustomSecurityAttributeDefinitionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("customSecurityAttributeDefinitions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomSecurityAttributeDefinition item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public CustomSecurityAttributeDefinitionRequestBuilder customSecurityAttributeDefinitions(@Nonnull final String id) {
+        return new CustomSecurityAttributeDefinitionRequestBuilder(getRequestUrlWithAdditionalSegment("customSecurityAttributeDefinitions") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DirectoryObject collection
@@ -188,6 +236,46 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     @Nonnull
     public IdentityProviderBaseRequestBuilder federationConfigurations(@Nonnull final String id) {
         return new IdentityProviderBaseRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfigurations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the InboundSharedUserProfile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public InboundSharedUserProfileCollectionRequestBuilder inboundSharedUserProfiles() {
+        return new InboundSharedUserProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("inboundSharedUserProfiles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the InboundSharedUserProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public InboundSharedUserProfileRequestBuilder inboundSharedUserProfiles(@Nonnull final String id) {
+        return new InboundSharedUserProfileRequestBuilder(getRequestUrlWithAdditionalSegment("inboundSharedUserProfiles") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the OutboundSharedUserProfile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OutboundSharedUserProfileCollectionRequestBuilder outboundSharedUserProfiles() {
+        return new OutboundSharedUserProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("outboundSharedUserProfiles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OutboundSharedUserProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OutboundSharedUserProfileRequestBuilder outboundSharedUserProfiles(@Nonnull final String id) {
+        return new OutboundSharedUserProfileRequestBuilder(getRequestUrlWithAdditionalSegment("outboundSharedUserProfiles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SharedEmailDomain collection

@@ -37,7 +37,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
 
     /**
      * The Teams App Display Name.
-     * Display name of the teamApp.
+     * Display name of the teamsApp.
      */
     @SerializedName(value = "teamsAppDisplayName", alternate = {"TeamsAppDisplayName"})
     @Expose

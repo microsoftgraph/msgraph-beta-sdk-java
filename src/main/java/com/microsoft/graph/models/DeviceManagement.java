@@ -46,9 +46,10 @@ import com.microsoft.graph.models.ManagedDeviceEncryptionState;
 import com.microsoft.graph.models.NdesConnector;
 import com.microsoft.graph.models.SoftwareUpdateStatusSummary;
 import com.microsoft.graph.models.DeviceManagementConfigurationCategory;
+import com.microsoft.graph.models.DeviceManagementCompliancePolicy;
+import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.models.DeviceManagementConfigurationPolicyTemplate;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingDefinition;
 import com.microsoft.graph.models.DeviceManagementReusablePolicySetting;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingTemplate;
 import com.microsoft.graph.models.ComplianceManagementPartner;
@@ -88,6 +89,14 @@ import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthDevicePerforma
 import com.microsoft.graph.models.UserExperienceAnalyticsAppHealthOSVersionPerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsCategory;
 import com.microsoft.graph.models.UserExperienceAnalyticsBaseline;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthAppImpact;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthCapacityDetails;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceAppImpact;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDevicePerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthModelPerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthOsPerformance;
+import com.microsoft.graph.models.UserExperienceAnalyticsBatteryHealthRuntimeDetails;
 import com.microsoft.graph.models.UserExperienceAnalyticsMetricHistory;
 import com.microsoft.graph.models.UserExperienceAnalyticsDevicePerformance;
 import com.microsoft.graph.models.UserExperienceAnalyticsDeviceScores;
@@ -172,9 +181,10 @@ import com.microsoft.graph.requests.MacOSSoftwareUpdateAccountSummaryCollectionP
 import com.microsoft.graph.requests.ManagedDeviceEncryptionStateCollectionPage;
 import com.microsoft.graph.requests.NdesConnectorCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationCategoryCollectionPage;
+import com.microsoft.graph.requests.DeviceManagementCompliancePolicyCollectionPage;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationPolicyTemplateCollectionPage;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementReusablePolicySettingCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementConfigurationSettingTemplateCollectionPage;
 import com.microsoft.graph.requests.ComplianceManagementPartnerCollectionPage;
@@ -210,6 +220,12 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerfor
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAppHealthOSVersionPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsBaselineCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsCategoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsMetricHistoryCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDevicePerformanceCollectionPage;
@@ -672,6 +688,33 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public SoftwareUpdateStatusSummary softwareUpdateStatusSummary;
 
     /**
+     * The Compliance Categories.
+     * List of all compliance categories
+     */
+    @SerializedName(value = "complianceCategories", alternate = {"ComplianceCategories"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationCategoryCollectionPage complianceCategories;
+
+    /**
+     * The Compliance Policies.
+     * List of all compliance policies
+     */
+    @SerializedName(value = "compliancePolicies", alternate = {"CompliancePolicies"})
+    @Expose
+	@Nullable
+    public DeviceManagementCompliancePolicyCollectionPage compliancePolicies;
+
+    /**
+     * The Compliance Settings.
+     * List of all ComplianceSettings
+     */
+    @SerializedName(value = "complianceSettings", alternate = {"ComplianceSettings"})
+    @Expose
+	@Nullable
+    public DeviceManagementConfigurationSettingDefinitionCollectionPage complianceSettings;
+
+    /**
      * The Configuration Categories.
      * List of all Configuration Categories
      */
@@ -1084,6 +1127,78 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public UserExperienceAnalyticsBaselineCollectionPage userExperienceAnalyticsBaselines;
+
+    /**
+     * The User Experience Analytics Battery Health App Impact.
+     * User Experience Analytics Battery Health App Impact
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthAppImpact", alternate = {"UserExperienceAnalyticsBatteryHealthAppImpact"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage userExperienceAnalyticsBatteryHealthAppImpact;
+
+    /**
+     * The User Experience Analytics Battery Health Capacity Details.
+     * User Experience Analytics Battery Health Capacity Details
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthCapacityDetails", alternate = {"UserExperienceAnalyticsBatteryHealthCapacityDetails"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthCapacityDetails userExperienceAnalyticsBatteryHealthCapacityDetails;
+
+    /**
+     * The User Experience Analytics Battery Health Device App Impact.
+     * User Experience Analytics Battery Health Device App Impact
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthDeviceAppImpact", alternate = {"UserExperienceAnalyticsBatteryHealthDeviceAppImpact"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage userExperienceAnalyticsBatteryHealthDeviceAppImpact;
+
+    /**
+     * The User Experience Analytics Battery Health Device Performance.
+     * User Experience Analytics Battery Health Device Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthDevicePerformance", alternate = {"UserExperienceAnalyticsBatteryHealthDevicePerformance"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage userExperienceAnalyticsBatteryHealthDevicePerformance;
+
+    /**
+     * The User Experience Analytics Battery Health Device Runtime History.
+     * User Experience Analytics Battery Health Device Runtime History
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", alternate = {"UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory;
+
+    /**
+     * The User Experience Analytics Battery Health Model Performance.
+     * User Experience Analytics Battery Health Model Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthModelPerformance", alternate = {"UserExperienceAnalyticsBatteryHealthModelPerformance"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage userExperienceAnalyticsBatteryHealthModelPerformance;
+
+    /**
+     * The User Experience Analytics Battery Health Os Performance.
+     * User Experience Analytics Battery Health Os Performance
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthOsPerformance", alternate = {"UserExperienceAnalyticsBatteryHealthOsPerformance"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage userExperienceAnalyticsBatteryHealthOsPerformance;
+
+    /**
+     * The User Experience Analytics Battery Health Runtime Details.
+     * User Experience Analytics Battery Health Runtime Details
+     */
+    @SerializedName(value = "userExperienceAnalyticsBatteryHealthRuntimeDetails", alternate = {"UserExperienceAnalyticsBatteryHealthRuntimeDetails"})
+    @Expose
+	@Nullable
+    public UserExperienceAnalyticsBatteryHealthRuntimeDetails userExperienceAnalyticsBatteryHealthRuntimeDetails;
 
     /**
      * The User Experience Analytics Categories.
@@ -1756,6 +1871,18 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             ndesConnectors = serializer.deserializeObject(json.get("ndesConnectors"), NdesConnectorCollectionPage.class);
         }
 
+        if (json.has("complianceCategories")) {
+            complianceCategories = serializer.deserializeObject(json.get("complianceCategories"), DeviceManagementConfigurationCategoryCollectionPage.class);
+        }
+
+        if (json.has("compliancePolicies")) {
+            compliancePolicies = serializer.deserializeObject(json.get("compliancePolicies"), DeviceManagementCompliancePolicyCollectionPage.class);
+        }
+
+        if (json.has("complianceSettings")) {
+            complianceSettings = serializer.deserializeObject(json.get("complianceSettings"), DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+        }
+
         if (json.has("configurationCategories")) {
             configurationCategories = serializer.deserializeObject(json.get("configurationCategories"), DeviceManagementConfigurationCategoryCollectionPage.class);
         }
@@ -1918,6 +2045,30 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("userExperienceAnalyticsBaselines")) {
             userExperienceAnalyticsBaselines = serializer.deserializeObject(json.get("userExperienceAnalyticsBaselines"), UserExperienceAnalyticsBaselineCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsBatteryHealthAppImpact")) {
+            userExperienceAnalyticsBatteryHealthAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthAppImpact"), UserExperienceAnalyticsBatteryHealthAppImpactCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsBatteryHealthDeviceAppImpact")) {
+            userExperienceAnalyticsBatteryHealthDeviceAppImpact = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceAppImpact"), UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsBatteryHealthDevicePerformance")) {
+            userExperienceAnalyticsBatteryHealthDevicePerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDevicePerformance"), UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory")) {
+            userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory"), UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsBatteryHealthModelPerformance")) {
+            userExperienceAnalyticsBatteryHealthModelPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthModelPerformance"), UserExperienceAnalyticsBatteryHealthModelPerformanceCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsBatteryHealthOsPerformance")) {
+            userExperienceAnalyticsBatteryHealthOsPerformance = serializer.deserializeObject(json.get("userExperienceAnalyticsBatteryHealthOsPerformance"), UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsCategories")) {

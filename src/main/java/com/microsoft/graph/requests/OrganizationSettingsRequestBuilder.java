@@ -8,7 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OrganizationSettings;
-import com.microsoft.graph.requests.ItemInsightsSettingsRequestBuilder;
+import com.microsoft.graph.requests.InsightsSettingsRequestBuilder;
 import com.microsoft.graph.requests.ProfileCardPropertyCollectionRequestBuilder;
 import com.microsoft.graph.requests.ProfileCardPropertyRequestBuilder;
 import java.util.Arrays;
@@ -61,13 +61,23 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder<Organ
 
 
     /**
-     * Gets the request builder for ItemInsightsSettings
+     * Gets the request builder for InsightsSettings
      *
-     * @return the ItemInsightsSettingsRequestBuilder instance
+     * @return the InsightsSettingsRequestBuilder instance
      */
     @Nonnull
-    public ItemInsightsSettingsRequestBuilder itemInsights() {
-        return new ItemInsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
+    public InsightsSettingsRequestBuilder itemInsights() {
+        return new InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("itemInsights"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for InsightsSettings
+     *
+     * @return the InsightsSettingsRequestBuilder instance
+     */
+    @Nonnull
+    public InsightsSettingsRequestBuilder peopleInsights() {
+        return new InsightsSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("peopleInsights"), getClient(), null);
     }
     /**
      *  Gets a request builder for the ProfileCardProperty collection

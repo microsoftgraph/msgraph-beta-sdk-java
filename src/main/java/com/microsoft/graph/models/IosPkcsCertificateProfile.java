@@ -95,7 +95,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
 
     /**
      * The Managed Device Certificate States.
-     * Certificate state for devices
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose

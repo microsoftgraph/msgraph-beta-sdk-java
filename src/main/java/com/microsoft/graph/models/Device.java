@@ -55,7 +55,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Approximate Last Sign In Date Time.
-     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, NOT, ge, le) and $orderBy.
+     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, NOT, ge, le, and eq on null values) and $orderBy.
      */
     @SerializedName(value = "approximateLastSignInDateTime", alternate = {"ApproximateLastSignInDateTime"})
     @Expose
@@ -118,7 +118,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the device. Required. Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
+     * The display name for the device. Required. Supports $filter (eq, ne, NOT, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -154,7 +154,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Attributes.
-     * 
+     * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, NOT, startsWith, and eq on null values).
      */
     @SerializedName(value = "extensionAttributes", alternate = {"ExtensionAttributes"})
     @Expose
@@ -217,7 +217,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, NOT, in).
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, NOT, in, and eq on null values).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -226,7 +226,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System.
-     * The type of operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
+     * The type of operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith, and eq on null values).
      */
     @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
@@ -235,7 +235,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Operating System Version.
-     * The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith).
+     * The version of the operating system on the device. Required. Supports $filter (eq, ne, NOT, ge, le, startsWith, and eq on null values).
      */
     @SerializedName(value = "operatingSystemVersion", alternate = {"OperatingSystemVersion"})
     @Expose

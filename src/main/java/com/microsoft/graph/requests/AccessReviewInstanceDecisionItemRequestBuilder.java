@@ -9,6 +9,8 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItem;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemFilterByCurrentUserOptions;
+import com.microsoft.graph.requests.GovernanceInsightCollectionRequestBuilder;
+import com.microsoft.graph.requests.GovernanceInsightRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -57,4 +59,24 @@ public class AccessReviewInstanceDecisionItemRequestBuilder extends BaseRequestB
     }
 
 
+    /**
+     *  Gets a request builder for the GovernanceInsight collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public GovernanceInsightCollectionRequestBuilder insights() {
+        return new GovernanceInsightCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("insights"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the GovernanceInsight item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public GovernanceInsightRequestBuilder insights(@Nonnull final String id) {
+        return new GovernanceInsightRequestBuilder(getRequestUrlWithAdditionalSegment("insights") + "/" + id, getClient(), null);
+    }
 }

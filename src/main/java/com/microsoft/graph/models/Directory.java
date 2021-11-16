@@ -10,14 +10,22 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AdministrativeUnit;
+import com.microsoft.graph.models.AttributeSet;
+import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.IdentityProviderBase;
+import com.microsoft.graph.models.InboundSharedUserProfile;
+import com.microsoft.graph.models.OutboundSharedUserProfile;
 import com.microsoft.graph.models.SharedEmailDomain;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
+import com.microsoft.graph.requests.AttributeSetCollectionPage;
+import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
+import com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage;
+import com.microsoft.graph.requests.OutboundSharedUserProfileCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 
@@ -46,6 +54,24 @@ public class Directory extends Entity implements IJsonBackedObject {
     public AdministrativeUnitCollectionPage administrativeUnits;
 
     /**
+     * The Attribute Sets.
+     * 
+     */
+    @SerializedName(value = "attributeSets", alternate = {"AttributeSets"})
+    @Expose
+	@Nullable
+    public AttributeSetCollectionPage attributeSets;
+
+    /**
+     * The Custom Security Attribute Definitions.
+     * 
+     */
+    @SerializedName(value = "customSecurityAttributeDefinitions", alternate = {"CustomSecurityAttributeDefinitions"})
+    @Expose
+	@Nullable
+    public CustomSecurityAttributeDefinitionCollectionPage customSecurityAttributeDefinitions;
+
+    /**
      * The Deleted Items.
      * Recently deleted items. Read-only. Nullable.
      */
@@ -62,6 +88,24 @@ public class Directory extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public IdentityProviderBaseCollectionPage federationConfigurations;
+
+    /**
+     * The Inbound Shared User Profiles.
+     * 
+     */
+    @SerializedName(value = "inboundSharedUserProfiles", alternate = {"InboundSharedUserProfiles"})
+    @Expose
+	@Nullable
+    public InboundSharedUserProfileCollectionPage inboundSharedUserProfiles;
+
+    /**
+     * The Outbound Shared User Profiles.
+     * 
+     */
+    @SerializedName(value = "outboundSharedUserProfiles", alternate = {"OutboundSharedUserProfiles"})
+    @Expose
+	@Nullable
+    public OutboundSharedUserProfileCollectionPage outboundSharedUserProfiles;
 
     /**
      * The Shared Email Domains.
@@ -97,12 +141,28 @@ public class Directory extends Entity implements IJsonBackedObject {
             administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), AdministrativeUnitCollectionPage.class);
         }
 
+        if (json.has("attributeSets")) {
+            attributeSets = serializer.deserializeObject(json.get("attributeSets"), AttributeSetCollectionPage.class);
+        }
+
+        if (json.has("customSecurityAttributeDefinitions")) {
+            customSecurityAttributeDefinitions = serializer.deserializeObject(json.get("customSecurityAttributeDefinitions"), CustomSecurityAttributeDefinitionCollectionPage.class);
+        }
+
         if (json.has("deletedItems")) {
             deletedItems = serializer.deserializeObject(json.get("deletedItems"), DirectoryObjectCollectionPage.class);
         }
 
         if (json.has("federationConfigurations")) {
             federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), IdentityProviderBaseCollectionPage.class);
+        }
+
+        if (json.has("inboundSharedUserProfiles")) {
+            inboundSharedUserProfiles = serializer.deserializeObject(json.get("inboundSharedUserProfiles"), InboundSharedUserProfileCollectionPage.class);
+        }
+
+        if (json.has("outboundSharedUserProfiles")) {
+            outboundSharedUserProfiles = serializer.deserializeObject(json.get("outboundSharedUserProfiles"), OutboundSharedUserProfileCollectionPage.class);
         }
 
         if (json.has("sharedEmailDomains")) {

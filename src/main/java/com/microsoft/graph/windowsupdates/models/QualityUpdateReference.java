@@ -28,7 +28,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements IJ
 
     /**
      * The Classification.
-     * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security.
+     * Specifies the classification of the referenced content. Supports a subset of the values for qualityUpdateClassification. Possible values are: security, unknownFutureValue.
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
