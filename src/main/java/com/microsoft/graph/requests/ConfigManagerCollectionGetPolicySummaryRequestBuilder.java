@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.requests;
 import com.microsoft.graph.requests.ConfigManagerCollectionGetPolicySummaryRequest;
-import com.microsoft.graph.models.ConfigManagerCollection;
+import com.microsoft.graph.models.ConfigManagerCollectionObject;
 import com.microsoft.graph.models.ConfigManagerPolicySummary;
 import com.microsoft.graph.http.BaseFunctionRequestBuilder;
 import com.microsoft.graph.models.ConfigManagerCollectionGetPolicySummaryParameterSet;

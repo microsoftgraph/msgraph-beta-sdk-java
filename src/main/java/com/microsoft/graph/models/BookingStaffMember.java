@@ -48,7 +48,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Role.
-     * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest. Required.
+     * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, scheduler, and member. Required.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose

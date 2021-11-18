@@ -7,7 +7,7 @@ package com.microsoft.graph.ediscovery.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 import com.microsoft.graph.ediscovery.models.DataSource;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class DataSourceCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<DataSource, DataSourceWithReferenceRequest, DataSourceReferenceRequestBuilder, DataSourceWithReferenceRequestBuilder, DataSourceCollectionResponse, DataSourceCollectionWithReferencesPage, DataSourceCollectionReferenceRequest, DataSourceCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of SourceCollection
+     * The request builder for this collection of SourceCollectionObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client

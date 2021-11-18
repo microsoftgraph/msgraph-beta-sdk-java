@@ -19,8 +19,8 @@ import com.microsoft.graph.ediscovery.requests.CaseOperationRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.ReviewSetCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.ReviewSetRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.CaseSettingsRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.SourceCollectionObjectCollectionRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.SourceCollectionObjectRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.TagCollectionRequestBuilder;
 import com.microsoft.graph.ediscovery.requests.TagRequestBuilder;
 import java.util.Arrays;
@@ -182,24 +182,24 @@ public class CaseRequestBuilder extends BaseRequestBuilder<Case> {
         return new CaseSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
     /**
-     *  Gets a request builder for the SourceCollection collection
+     *  Gets a request builder for the SourceCollectionObject collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public SourceCollectionCollectionRequestBuilder sourceCollections() {
-        return new SourceCollectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections"), getClient(), null);
+    public SourceCollectionObjectCollectionRequestBuilder sourceCollections() {
+        return new SourceCollectionObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the SourceCollection item
+     * Gets a request builder for the SourceCollectionObject item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public SourceCollectionRequestBuilder sourceCollections(@Nonnull final String id) {
-        return new SourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections") + "/" + id, getClient(), null);
+    public SourceCollectionObjectRequestBuilder sourceCollections(@Nonnull final String id) {
+        return new SourceCollectionObjectRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Tag collection

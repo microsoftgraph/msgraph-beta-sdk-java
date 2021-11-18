@@ -139,7 +139,7 @@ import com.microsoft.graph.models.MicrosoftTunnelServerLogCollectionResponse;
 import com.microsoft.graph.models.MicrosoftTunnelSite;
 import com.microsoft.graph.models.NotificationMessageTemplate;
 import com.microsoft.graph.models.DeviceManagementDomainJoinConnector;
-import com.microsoft.graph.models.ConfigManagerCollection;
+import com.microsoft.graph.models.ConfigManagerCollectionObject;
 import com.microsoft.graph.models.ResourceOperation;
 import com.microsoft.graph.models.DeviceAndAppManagementRoleAssignment;
 import com.microsoft.graph.models.RoleDefinition;
@@ -265,7 +265,7 @@ import com.microsoft.graph.requests.MicrosoftTunnelServerLogCollectionResponseCo
 import com.microsoft.graph.requests.MicrosoftTunnelSiteCollectionPage;
 import com.microsoft.graph.requests.NotificationMessageTemplateCollectionPage;
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectionPage;
-import com.microsoft.graph.requests.ConfigManagerCollectionCollectionPage;
+import com.microsoft.graph.requests.ConfigManagerCollectionObjectCollectionPage;
 import com.microsoft.graph.requests.ResourceOperationCollectionPage;
 import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionPage;
 import com.microsoft.graph.requests.RoleDefinitionCollectionPage;
@@ -1603,7 +1603,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @SerializedName(value = "configManagerCollections", alternate = {"ConfigManagerCollections"})
     @Expose
 	@Nullable
-    public ConfigManagerCollectionCollectionPage configManagerCollections;
+    public ConfigManagerCollectionObjectCollectionPage configManagerCollections;
 
     /**
      * The Resource Operations.
@@ -2232,7 +2232,7 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("configManagerCollections")) {
-            configManagerCollections = serializer.deserializeObject(json.get("configManagerCollections"), ConfigManagerCollectionCollectionPage.class);
+            configManagerCollections = serializer.deserializeObject(json.get("configManagerCollections"), ConfigManagerCollectionObjectCollectionPage.class);
         }
 
         if (json.has("resourceOperations")) {

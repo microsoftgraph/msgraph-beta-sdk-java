@@ -21,7 +21,7 @@ import com.microsoft.graph.managedtenants.models.ManagedDeviceComplianceTrend;
 import com.microsoft.graph.managedtenants.models.ManagementAction;
 import com.microsoft.graph.managedtenants.models.ManagementActionTenantDeploymentStatus;
 import com.microsoft.graph.managedtenants.models.ManagementIntent;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateCollection;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObject;
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStepVersion;
@@ -45,7 +45,7 @@ import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendC
 import com.microsoft.graph.managedtenants.requests.ManagementActionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionPage;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage;
@@ -187,7 +187,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @SerializedName(value = "managementTemplateCollections", alternate = {"ManagementTemplateCollections"})
     @Expose
 	@Nullable
-    public ManagementTemplateCollectionCollectionPage managementTemplateCollections;
+    public ManagementTemplateCollectionObjectCollectionPage managementTemplateCollections;
 
     /**
      * The Management Templates.
@@ -338,7 +338,7 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("managementTemplateCollections")) {
-            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionCollectionPage.class);
+            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionObjectCollectionPage.class);
         }
 
         if (json.has("managementTemplates")) {

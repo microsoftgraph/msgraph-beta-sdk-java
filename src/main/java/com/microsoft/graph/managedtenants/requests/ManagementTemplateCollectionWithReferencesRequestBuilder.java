@@ -7,7 +7,7 @@ package com.microsoft.graph.managedtenants.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateCollection;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObject;
 import com.microsoft.graph.managedtenants.models.ManagementTemplate;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,7 +25,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class ManagementTemplateCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<ManagementTemplate, ManagementTemplateWithReferenceRequest, ManagementTemplateReferenceRequestBuilder, ManagementTemplateWithReferenceRequestBuilder, ManagementTemplateCollectionResponse, ManagementTemplateCollectionWithReferencesPage, ManagementTemplateCollectionReferenceRequest, ManagementTemplateCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of ManagementTemplateCollection
+     * The request builder for this collection of ManagementTemplateCollectionObject
      *
      * @param requestUrl     the request URL
      * @param client         the service client

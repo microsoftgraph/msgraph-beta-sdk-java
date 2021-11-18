@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.ediscovery.models.ReviewSet;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 import com.microsoft.graph.ediscovery.models.CaseOperation;
 
 
@@ -43,7 +43,7 @@ public class AddToReviewSetOperation extends CaseOperation implements IJsonBacke
     @SerializedName(value = "sourceCollection", alternate = {"SourceCollection"})
     @Expose
 	@Nullable
-    public SourceCollection sourceCollection;
+    public SourceCollectionObject sourceCollection;
 
 
     /**

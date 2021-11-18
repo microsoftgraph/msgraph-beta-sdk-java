@@ -17,7 +17,7 @@ import com.microsoft.graph.ediscovery.models.NoncustodialDataSource;
 import com.microsoft.graph.ediscovery.models.CaseOperation;
 import com.microsoft.graph.ediscovery.models.ReviewSet;
 import com.microsoft.graph.ediscovery.models.CaseSettings;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 import com.microsoft.graph.ediscovery.models.Tag;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.ediscovery.requests.CustodianCollectionPage;
@@ -25,7 +25,7 @@ import com.microsoft.graph.ediscovery.requests.LegalHoldCollectionPage;
 import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage;
 import com.microsoft.graph.ediscovery.requests.CaseOperationCollectionPage;
 import com.microsoft.graph.ediscovery.requests.ReviewSetCollectionPage;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionCollectionPage;
+import com.microsoft.graph.ediscovery.requests.SourceCollectionObjectCollectionPage;
 import com.microsoft.graph.ediscovery.requests.TagCollectionPage;
 
 
@@ -185,7 +185,7 @@ public class Case extends Entity implements IJsonBackedObject {
     @SerializedName(value = "sourceCollections", alternate = {"SourceCollections"})
     @Expose
 	@Nullable
-    public SourceCollectionCollectionPage sourceCollections;
+    public SourceCollectionObjectCollectionPage sourceCollections;
 
     /**
      * The Tags.
@@ -227,7 +227,7 @@ public class Case extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("sourceCollections")) {
-            sourceCollections = serializer.deserializeObject(json.get("sourceCollections"), SourceCollectionCollectionPage.class);
+            sourceCollections = serializer.deserializeObject(json.get("sourceCollections"), SourceCollectionObjectCollectionPage.class);
         }
 
         if (json.has("tags")) {

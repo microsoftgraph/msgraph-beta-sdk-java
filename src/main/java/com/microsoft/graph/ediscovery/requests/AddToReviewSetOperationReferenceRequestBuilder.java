@@ -10,7 +10,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.AddToReviewSetOperation;
 import com.microsoft.graph.ediscovery.requests.ReviewSetWithReferenceRequestBuilder;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionWithReferenceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.SourceCollectionObjectWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

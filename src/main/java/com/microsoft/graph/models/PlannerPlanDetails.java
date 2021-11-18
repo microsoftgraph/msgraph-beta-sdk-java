@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.PlannerCategoryDescriptions;
-import com.microsoft.graph.models.PlannerPlanContextDetailsCollection;
+import com.microsoft.graph.models.PlannerPlanContextDetailsCollectionObject;
 import com.microsoft.graph.models.PlannerUserIds;
 import com.microsoft.graph.models.PlannerDelta;
 
@@ -44,7 +44,7 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
     @SerializedName(value = "contextDetails", alternate = {"ContextDetails"})
     @Expose
 	@Nullable
-    public PlannerPlanContextDetailsCollection contextDetails;
+    public PlannerPlanContextDetailsCollectionObject contextDetails;
 
     /**
      * The Shared With.

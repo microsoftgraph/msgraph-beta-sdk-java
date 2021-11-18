@@ -8,7 +8,7 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.EstimateStatisticsOperation;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionWithReferenceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.SourceCollectionObjectWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -59,12 +59,12 @@ public class EstimateStatisticsOperationRequestBuilder extends BaseRequestBuilde
 
 
     /**
-     * Gets the request builder for SourceCollection
+     * Gets the request builder for SourceCollectionObject
      *
-     * @return the SourceCollectionWithReferenceRequestBuilder instance
+     * @return the SourceCollectionObjectWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public SourceCollectionWithReferenceRequestBuilder sourceCollection() {
-        return new SourceCollectionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollection"), getClient(), null);
+    public SourceCollectionObjectWithReferenceRequestBuilder sourceCollection() {
+        return new SourceCollectionObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sourceCollection"), getClient(), null);
     }
 }
