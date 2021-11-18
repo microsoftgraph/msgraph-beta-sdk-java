@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PlannerPlanContainer;
-import com.microsoft.graph.models.PlannerPlanContextCollection;
+import com.microsoft.graph.models.PlannerPlanContextCollectionObject;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.PlannerBucket;
 import com.microsoft.graph.models.PlannerPlanDetails;
@@ -50,7 +50,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
     @SerializedName(value = "contexts", alternate = {"Contexts"})
     @Expose
 	@Nullable
-    public PlannerPlanContextCollection contexts;
+    public PlannerPlanContextCollectionObject contexts;
 
     /**
      * The Created By.

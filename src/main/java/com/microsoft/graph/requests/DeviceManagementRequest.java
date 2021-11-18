@@ -242,8 +242,8 @@ import com.microsoft.graph.requests.NotificationMessageTemplateCollectionRequest
 import com.microsoft.graph.requests.NotificationMessageTemplateRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorRequestBuilder;
-import com.microsoft.graph.requests.ConfigManagerCollectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConfigManagerCollectionRequestBuilder;
+import com.microsoft.graph.requests.ConfigManagerCollectionObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.ConfigManagerCollectionObjectRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;

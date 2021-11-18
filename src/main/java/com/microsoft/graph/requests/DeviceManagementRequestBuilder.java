@@ -242,8 +242,8 @@ import com.microsoft.graph.requests.NotificationMessageTemplateCollectionRequest
 import com.microsoft.graph.requests.NotificationMessageTemplateRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorCollectionRequestBuilder;
 import com.microsoft.graph.requests.DeviceManagementDomainJoinConnectorRequestBuilder;
-import com.microsoft.graph.requests.ConfigManagerCollectionCollectionRequestBuilder;
-import com.microsoft.graph.requests.ConfigManagerCollectionRequestBuilder;
+import com.microsoft.graph.requests.ConfigManagerCollectionObjectCollectionRequestBuilder;
+import com.microsoft.graph.requests.ConfigManagerCollectionObjectRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationCollectionRequestBuilder;
 import com.microsoft.graph.requests.ResourceOperationRequestBuilder;
 import com.microsoft.graph.requests.DeviceAndAppManagementRoleAssignmentCollectionRequestBuilder;
@@ -2710,24 +2710,24 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new DeviceManagementDomainJoinConnectorRequestBuilder(getRequestUrlWithAdditionalSegment("domainJoinConnectors") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the ConfigManagerCollection collection
+     *  Gets a request builder for the ConfigManagerCollectionObject collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public ConfigManagerCollectionCollectionRequestBuilder configManagerCollections() {
-        return new ConfigManagerCollectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections"), getClient(), null);
+    public ConfigManagerCollectionObjectCollectionRequestBuilder configManagerCollections() {
+        return new ConfigManagerCollectionObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the ConfigManagerCollection item
+     * Gets a request builder for the ConfigManagerCollectionObject item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public ConfigManagerCollectionRequestBuilder configManagerCollections(@Nonnull final String id) {
-        return new ConfigManagerCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections") + "/" + id, getClient(), null);
+    public ConfigManagerCollectionObjectRequestBuilder configManagerCollections(@Nonnull final String id) {
+        return new ConfigManagerCollectionObjectRequestBuilder(getRequestUrlWithAdditionalSegment("configManagerCollections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ResourceOperation collection

@@ -9,8 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.PlannerFavoritePlanReferenceCollection;
-import com.microsoft.graph.models.PlannerRecentPlanReferenceCollection;
+import com.microsoft.graph.models.PlannerFavoritePlanReferenceCollectionObject;
+import com.microsoft.graph.models.PlannerRecentPlanReferenceCollectionObject;
 import com.microsoft.graph.models.PlannerDelta;
 import com.microsoft.graph.models.PlannerPlan;
 import com.microsoft.graph.models.PlannerTask;
@@ -40,7 +40,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
     @SerializedName(value = "favoritePlanReferences", alternate = {"FavoritePlanReferences"})
     @Expose
 	@Nullable
-    public PlannerFavoritePlanReferenceCollection favoritePlanReferences;
+    public PlannerFavoritePlanReferenceCollectionObject favoritePlanReferences;
 
     /**
      * The Recent Plan References.
@@ -49,7 +49,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
     @SerializedName(value = "recentPlanReferences", alternate = {"RecentPlanReferences"})
     @Expose
 	@Nullable
-    public PlannerRecentPlanReferenceCollection recentPlanReferences;
+    public PlannerRecentPlanReferenceCollectionObject recentPlanReferences;
 
     /**
      * The All.

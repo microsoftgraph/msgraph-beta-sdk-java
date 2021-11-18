@@ -4,7 +4,7 @@
 // ------------------------------------------------------------------------------
 
 package com.microsoft.graph.ediscovery.requests;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 import com.microsoft.graph.ediscovery.requests.SourceCollectionEstimateStatisticsRequest;
 
 import javax.annotation.Nullable;

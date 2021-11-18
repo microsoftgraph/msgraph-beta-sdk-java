@@ -8,7 +8,7 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.ReviewSet;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 import com.microsoft.graph.ediscovery.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.microsoft.graph.ediscovery.models.ExportOptions;

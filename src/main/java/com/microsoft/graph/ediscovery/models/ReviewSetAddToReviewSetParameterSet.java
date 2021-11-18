@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.ediscovery.models;
 
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 import com.microsoft.graph.ediscovery.models.AdditionalDataOptions;
 import java.util.EnumSet;
 import com.google.gson.annotations.Expose;
@@ -29,7 +29,7 @@ public class ReviewSetAddToReviewSetParameterSet {
     @SerializedName(value = "sourceCollection", alternate = {"SourceCollection"})
     @Expose
 	@Nullable
-    public SourceCollection sourceCollection;
+    public SourceCollectionObject sourceCollection;
 
     /**
      * The additional Data.
@@ -69,14 +69,14 @@ public class ReviewSetAddToReviewSetParameterSet {
          * The sourceCollection parameter value
          */
         @Nullable
-        protected SourceCollection sourceCollection;
+        protected SourceCollectionObject sourceCollection;
         /**
          * Sets the SourceCollection
          * @param val the value to set it to
          * @return the current builder object
          */
         @Nonnull
-        public ReviewSetAddToReviewSetParameterSetBuilder withSourceCollection(@Nullable final SourceCollection val) {
+        public ReviewSetAddToReviewSetParameterSetBuilder withSourceCollection(@Nullable final SourceCollectionObject val) {
             this.sourceCollection = val;
             return this;
         }

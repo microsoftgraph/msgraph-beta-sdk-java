@@ -32,7 +32,8 @@ import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploym
 import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionRequestBuilder;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionRequestBuilder;
@@ -342,24 +343,24 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new ManagementIntentRequestBuilder(getRequestUrlWithAdditionalSegment("managementIntents") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the ManagementTemplateCollection collection
+     *  Gets a request builder for the ManagementTemplateCollectionObject collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public ManagementTemplateCollectionCollectionRequestBuilder managementTemplateCollections() {
-        return new ManagementTemplateCollectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
+    public ManagementTemplateCollectionObjectCollectionRequestBuilder managementTemplateCollections() {
+        return new ManagementTemplateCollectionObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the ManagementTemplateCollection item
+     * Gets a request builder for the ManagementTemplateCollectionObject item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public ManagementTemplateCollectionRequestBuilder managementTemplateCollections(@Nonnull final String id) {
-        return new ManagementTemplateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
+    public ManagementTemplateCollectionObjectRequestBuilder managementTemplateCollections(@Nonnull final String id) {
+        return new ManagementTemplateCollectionObjectRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplate collection

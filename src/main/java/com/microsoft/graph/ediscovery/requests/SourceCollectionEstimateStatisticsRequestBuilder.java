@@ -5,7 +5,7 @@
 
 package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.ediscovery.requests.SourceCollectionEstimateStatisticsRequest;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Source Collection Estimate Statistics Request Builder.
  */
-public class SourceCollectionEstimateStatisticsRequestBuilder extends BaseActionRequestBuilder<SourceCollection> {
+public class SourceCollectionEstimateStatisticsRequestBuilder extends BaseActionRequestBuilder<SourceCollectionObject> {
 
     /**
      * The request builder for this SourceCollectionEstimateStatistics

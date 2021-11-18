@@ -9,7 +9,7 @@ package com.microsoft.graph.ediscovery.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.ediscovery.models.EstimateStatisticsOperation;
-import com.microsoft.graph.ediscovery.requests.SourceCollectionWithReferenceRequestBuilder;
+import com.microsoft.graph.ediscovery.requests.SourceCollectionObjectWithReferenceRequestBuilder;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

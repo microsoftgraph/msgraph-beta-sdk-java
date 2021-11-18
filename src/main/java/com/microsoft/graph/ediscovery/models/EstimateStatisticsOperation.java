@@ -8,7 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.ediscovery.models.SourceCollection;
+import com.microsoft.graph.ediscovery.models.SourceCollectionObject;
 import com.microsoft.graph.ediscovery.models.CaseOperation;
 
 
@@ -87,7 +87,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements IJsonB
     @SerializedName(value = "sourceCollection", alternate = {"SourceCollection"})
     @Expose
 	@Nullable
-    public SourceCollection sourceCollection;
+    public SourceCollectionObject sourceCollection;
 
 
     /**

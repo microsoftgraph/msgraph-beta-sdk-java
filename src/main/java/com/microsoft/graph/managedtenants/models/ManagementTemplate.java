@@ -12,10 +12,10 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagementCategory;
 import com.microsoft.graph.managedtenants.models.TemplateParameter;
 import com.microsoft.graph.managedtenants.models.WorkloadAction;
-import com.microsoft.graph.managedtenants.models.ManagementTemplateCollection;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObject;
 import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
 
 
@@ -92,7 +92,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public ManagementTemplateCollectionCollectionPage managementTemplateCollections;
+    public ManagementTemplateCollectionObjectCollectionPage managementTemplateCollections;
 
     /**
      * The Management Template Steps.
@@ -112,7 +112,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managementTemplateCollections")) {
-            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionCollectionPage.class);
+            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionObjectCollectionPage.class);
         }
 
         if (json.has("managementTemplateSteps")) {
