@@ -29,7 +29,7 @@ public class UpdatableAssetGroup extends UpdatableAsset implements IJsonBackedOb
 
     /**
      * The Members.
-     * Members of the group. Read-only.
+     * 
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

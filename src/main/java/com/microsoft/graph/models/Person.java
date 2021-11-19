@@ -33,7 +33,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Birthday.
-     * The person's birthday.
+     * 
      */
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
@@ -42,7 +42,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The name of the person's company.
+     * 
      */
     @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
@@ -51,7 +51,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Department.
-     * The person's department.
+     * 
      */
     @SerializedName(value = "department", alternate = {"Department"})
     @Expose
@@ -60,7 +60,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The person's display name.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -69,7 +69,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Email Addresses.
-     * The person's email addresses.
+     * 
      */
     @SerializedName(value = "emailAddresses", alternate = {"EmailAddresses"})
     @Expose
@@ -78,7 +78,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Given Name.
-     * The person's given name.
+     * 
      */
     @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
@@ -87,7 +87,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Favorite.
-     * true if the user has flagged this person as a favorite.
+     * 
      */
     @SerializedName(value = "isFavorite", alternate = {"IsFavorite"})
     @Expose
@@ -96,7 +96,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Mailbox Type.
-     * The type of mailbox that is represented by the person's email address.
+     * 
      */
     @SerializedName(value = "mailboxType", alternate = {"MailboxType"})
     @Expose
@@ -105,7 +105,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Office Location.
-     * The location of the person's office.
+     * 
      */
     @SerializedName(value = "officeLocation", alternate = {"OfficeLocation"})
     @Expose
@@ -114,7 +114,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Person Notes.
-     * Free-form notes that the user has taken about this person.
+     * 
      */
     @SerializedName(value = "personNotes", alternate = {"PersonNotes"})
     @Expose
@@ -123,7 +123,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Person Type.
-     * The type of person.
+     * 
      */
     @SerializedName(value = "personType", alternate = {"PersonType"})
     @Expose
@@ -132,7 +132,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Phones.
-     * The person's phone numbers.
+     * 
      */
     @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
@@ -141,7 +141,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Postal Addresses.
-     * The person's addresses.
+     * 
      */
     @SerializedName(value = "postalAddresses", alternate = {"PostalAddresses"})
     @Expose
@@ -150,7 +150,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Profession.
-     * The person's profession.
+     * 
      */
     @SerializedName(value = "profession", alternate = {"Profession"})
     @Expose
@@ -159,7 +159,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Sources.
-     * The sources the user data comes from, for example Directory or Outlook Contacts.
+     * 
      */
     @SerializedName(value = "sources", alternate = {"Sources"})
     @Expose
@@ -168,7 +168,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Surname.
-     * The person's surname.
+     * 
      */
     @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose
@@ -177,7 +177,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Title.
-     * The person's title.
+     * 
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -186,7 +186,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
+     * 
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -195,7 +195,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Websites.
-     * The person's websites.
+     * 
      */
     @SerializedName(value = "websites", alternate = {"Websites"})
     @Expose
@@ -204,7 +204,7 @@ public class Person extends Entity implements IJsonBackedObject {
 
     /**
      * The Yomi Company.
-     * The phonetic Japanese name of the person's company.
+     * 
      */
     @SerializedName(value = "yomiCompany", alternate = {"YomiCompany"})
     @Expose

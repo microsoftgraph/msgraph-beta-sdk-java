@@ -34,7 +34,7 @@ public class Custodian extends DataSourceContainer implements IJsonBackedObject 
 
     /**
      * The Acknowledged Date Time.
-     * Date and time the custodian acknowledged a hold notification.
+     * 
      */
     @SerializedName(value = "acknowledgedDateTime", alternate = {"AcknowledgedDateTime"})
     @Expose
@@ -43,7 +43,7 @@ public class Custodian extends DataSourceContainer implements IJsonBackedObject 
 
     /**
      * The Apply Hold To Sources.
-     * Identifies whether a custodian's sources were placed on hold during creation.
+     * 
      */
     @SerializedName(value = "applyHoldToSources", alternate = {"ApplyHoldToSources"})
     @Expose
@@ -52,7 +52,7 @@ public class Custodian extends DataSourceContainer implements IJsonBackedObject 
 
     /**
      * The Email.
-     * Email address of the custodian.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -61,7 +61,7 @@ public class Custodian extends DataSourceContainer implements IJsonBackedObject 
 
     /**
      * The Site Sources.
-     * Data source entity for SharePoint sites associated with the custodian.
+     * 
      */
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
@@ -70,7 +70,7 @@ public class Custodian extends DataSourceContainer implements IJsonBackedObject 
 
     /**
      * The Unified Group Sources.
-     * Data source entity for groups associated with the custodian.
+     * 
      */
     @SerializedName(value = "unifiedGroupSources", alternate = {"UnifiedGroupSources"})
     @Expose
@@ -79,7 +79,7 @@ public class Custodian extends DataSourceContainer implements IJsonBackedObject 
 
     /**
      * The User Sources.
-     * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+     * 
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose

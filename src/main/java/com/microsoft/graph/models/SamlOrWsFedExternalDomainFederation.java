@@ -30,7 +30,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
 
     /**
      * The Domains.
-     * Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
+     * 
      */
     @SerializedName(value = "domains", alternate = {"Domains"})
     @Expose

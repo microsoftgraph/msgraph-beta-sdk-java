@@ -41,7 +41,7 @@ public class RequestorSettings implements IJsonBackedObject {
 
     /**
      * The Accept Requests.
-     * Indicates whether new requests are accepted on this policy.
+     * 
      */
     @SerializedName(value = "acceptRequests", alternate = {"AcceptRequests"})
     @Expose
@@ -50,7 +50,7 @@ public class RequestorSettings implements IJsonBackedObject {
 
     /**
      * The Allowed Requestors.
-     * The users who are allowed to request on this policy, which can be singleUser, groupMembers, and connectedOrganizationMembers.
+     * 
      */
     @SerializedName(value = "allowedRequestors", alternate = {"AllowedRequestors"})
     @Expose
@@ -59,7 +59,7 @@ public class RequestorSettings implements IJsonBackedObject {
 
     /**
      * The Scope Type.
-     * Who can request. One of NoSubjects, SpecificDirectorySubjects, SpecificConnectedOrganizationSubjects, AllConfiguredConnectedOrganizationSubjects, AllExistingConnectedOrganizationSubjects, AllExistingDirectoryMemberUsers, AllExistingDirectorySubjects or AllExternalSubjects.
+     * 
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose

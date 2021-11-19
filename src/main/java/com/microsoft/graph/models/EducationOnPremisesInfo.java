@@ -39,7 +39,7 @@ public class EducationOnPremisesInfo implements IJsonBackedObject {
 
     /**
      * The Immutable Id.
-     * Unique identifier for the user object in Active Directory.
+     * 
      */
     @SerializedName(value = "immutableId", alternate = {"ImmutableId"})
     @Expose

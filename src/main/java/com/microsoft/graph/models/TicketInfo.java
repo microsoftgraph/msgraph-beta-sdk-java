@@ -39,7 +39,7 @@ public class TicketInfo implements IJsonBackedObject {
 
     /**
      * The Ticket Number.
-     * Ticket number meta data
+     * 
      */
     @SerializedName(value = "ticketNumber", alternate = {"TicketNumber"})
     @Expose
@@ -48,7 +48,7 @@ public class TicketInfo implements IJsonBackedObject {
 
     /**
      * The Ticket System.
-     * Ticket system meta data
+     * 
      */
     @SerializedName(value = "ticketSystem", alternate = {"TicketSystem"})
     @Expose

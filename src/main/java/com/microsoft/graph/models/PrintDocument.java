@@ -37,7 +37,7 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The document's content (MIME) type. Read-only.
+     * 
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -46,7 +46,7 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The document's name. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -55,7 +55,7 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
-     * The document's size in bytes. Read-only.
+     * 
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

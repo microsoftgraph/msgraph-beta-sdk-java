@@ -37,7 +37,7 @@ public class WindowsInformationProtectionAppLearningSummary extends Entity imple
 
     /**
      * The Application Type.
-     * Application Type. Possible values are: universal, desktop.
+     * Application Type
      */
     @SerializedName(value = "applicationType", alternate = {"ApplicationType"})
     @Expose

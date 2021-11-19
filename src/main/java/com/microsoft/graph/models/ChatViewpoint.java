@@ -48,7 +48,7 @@ public class ChatViewpoint implements IJsonBackedObject {
 
     /**
      * The Last Message Read Date Time.
-     * Represents the dateTime up until which the calling user has read chatMessages in a specific chat.
+     * 
      */
     @SerializedName(value = "lastMessageReadDateTime", alternate = {"LastMessageReadDateTime"})
     @Expose

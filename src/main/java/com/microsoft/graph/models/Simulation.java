@@ -37,7 +37,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Attack Technique.
-     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * 
      */
     @SerializedName(value = "attackTechnique", alternate = {"AttackTechnique"})
     @Expose
@@ -46,7 +46,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Attack Type.
-     * Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "attackType", alternate = {"AttackType"})
     @Expose
@@ -55,7 +55,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Cleanup Artifacts.
-     * Flag representing if artifacts were cleaned up in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "cleanupArtifacts", alternate = {"CleanupArtifacts"})
     @Expose
@@ -64,7 +64,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Completion Date Time.
-     * Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
+     * 
      */
     @SerializedName(value = "completionDateTime", alternate = {"CompletionDateTime"})
     @Expose
@@ -73,7 +73,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Identity of the user who created the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -82,7 +82,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time of creation of the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -91,7 +91,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -100,7 +100,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the attack simulation and training campaign. Supports $filter and $orderby.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -109,7 +109,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Enable Region Timezone Delivery.
-     * Flag representing whether to enable or disable timezone-aware delivery of phishing payload in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "enableRegionTimezoneDelivery", alternate = {"EnableRegionTimezoneDelivery"})
     @Expose
@@ -118,7 +118,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Include All Account Targets.
-     * Flag representing inclusion of all the users of a tenant in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "includeAllAccountTargets", alternate = {"IncludeAllAccountTargets"})
     @Expose
@@ -127,7 +127,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Automated.
-     * Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
+     * 
      */
     @SerializedName(value = "isAutomated", alternate = {"IsAutomated"})
     @Expose
@@ -136,7 +136,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * Identity of the user who most recently modified the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -145,7 +145,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Date and time of the most recent modification of the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -154,7 +154,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Launch Date Time.
-     * Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
+     * 
      */
     @SerializedName(value = "launchDateTime", alternate = {"LaunchDateTime"})
     @Expose
@@ -163,7 +163,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Mode.
-     * Mode of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: real, preview, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "mode", alternate = {"Mode"})
     @Expose
@@ -172,7 +172,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Payload Delivery Platform.
-     * Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "payloadDeliveryPlatform", alternate = {"PayloadDeliveryPlatform"})
     @Expose
@@ -181,7 +181,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Payload Source.
-     * Source of phishing payload in the attack simulation and training campaign. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "payloadSource", alternate = {"PayloadSource"})
     @Expose
@@ -190,7 +190,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Report.
-     * Report of the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "report", alternate = {"Report"})
     @Expose
@@ -199,7 +199,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, inProgress, scheduled, completed, partiallyCompleted, failed, cancelled, excluded, deleted, included, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -208,7 +208,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Training Assignment Preference.
-     * Preference of the tenant admin to assign training to users in the attack simulation and training campaign. Possible values are: unknown, auto, manual, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "trainingAssignmentPreference", alternate = {"TrainingAssignmentPreference"})
     @Expose
@@ -217,7 +217,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Training Content Preference.
-     * Preference of the tenant admin for the source of training content to assign to users in the attack simulation and training campaign. Possible values are: unknown, microsoft, custom, noTraining, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "trainingContentPreference", alternate = {"TrainingContentPreference"})
     @Expose
@@ -226,7 +226,7 @@ public class Simulation extends Entity implements IJsonBackedObject {
 
     /**
      * The Training Due Date Time.
-     * Date and time before which the trainings need to be completed by users in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "trainingDueDateTime", alternate = {"TrainingDueDateTime"})
     @Expose

@@ -31,7 +31,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Audiences.
-     * The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "allowedAudiences", alternate = {"AllowedAudiences"})
     @Expose
@@ -40,7 +40,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Provides the identifier of the user and/or application that created the entity.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -49,7 +49,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Provides the dateTimeOffset for when the entity was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
 
     /**
      * The Inference.
-     * Contains inference detail if the entity is inferred by the creating or modifying application.
+     * 
      */
     @SerializedName(value = "inference", alternate = {"Inference"})
     @Expose
@@ -76,7 +76,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * Provides the identifier of the user and/or application that last modified the entity.
+     * 
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -85,7 +85,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Provides the dateTimeOffset for when the entity was created.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -94,7 +94,7 @@ public class ItemFacet extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * Where the values within an entity originated if synced from another service.
+     * 
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

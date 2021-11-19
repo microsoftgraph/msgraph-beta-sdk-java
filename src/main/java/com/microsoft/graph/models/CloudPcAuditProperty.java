@@ -39,7 +39,7 @@ public class CloudPcAuditProperty implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcAuditProperty implements IJsonBackedObject {
 
     /**
      * The New Value.
-     * New value.
+     * 
      */
     @SerializedName(value = "newValue", alternate = {"NewValue"})
     @Expose
@@ -57,7 +57,7 @@ public class CloudPcAuditProperty implements IJsonBackedObject {
 
     /**
      * The Old Value.
-     * Old value.
+     * 
      */
     @SerializedName(value = "oldValue", alternate = {"OldValue"})
     @Expose

@@ -32,7 +32,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
 
     /**
      * The Advanced Threat Protection Required Security Level.
-     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -59,7 +59,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
 
     /**
      * The Device Threat Protection Required Security Level.
-     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -140,7 +140,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
 
     /**
      * The Password Required Type.
-     * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
+     * Type of characters in password
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -158,7 +158,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements I
 
     /**
      * The Required Password Complexity.
-     * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+. Possible values are: none, low, medium, high.
+     * Indicates the required password complexity on Android. One of: NONE, LOW, MEDIUM, HIGH. This is a new API targeted to Android 11+.
      */
     @SerializedName(value = "requiredPasswordComplexity", alternate = {"RequiredPasswordComplexity"})
     @Expose

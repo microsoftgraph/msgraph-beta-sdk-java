@@ -242,7 +242,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Apps Visibility List Type.
-     * Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * Type of list that is in the AppsVisibilityList.
      */
     @SerializedName(value = "appsVisibilityListType", alternate = {"AppsVisibilityListType"})
     @Expose
@@ -413,7 +413,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Compliant App List Type.
-     * List that is in the AppComplianceList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
+     * List that is in the AppComplianceList.
      */
     @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
@@ -467,7 +467,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Date And Time Force Set Automatically.
-     * Indicates whether or not the Date and Time 'Set Automatically' feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
+     * Indicates whether or not the Date and Time "Set Automatically" feature is enabled and cannot be turned off by the user (iOS 12.0 and later).
      */
     @SerializedName(value = "dateAndTimeForceSetAutomatically", alternate = {"DateAndTimeForceSetAutomatically"})
     @Expose
@@ -989,7 +989,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Kiosk Mode App Type.
-     * Type of app to run in kiosk mode. Possible values are: notConfigured, appStoreApp, managedApp, builtInApp.
+     * Type of app to run in kiosk mode.
      */
     @SerializedName(value = "kioskModeAppType", alternate = {"KioskModeAppType"})
     @Expose
@@ -1160,7 +1160,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Managed Pasteboard Required.
-     * Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured Block viewing corporate documents in unmanaged apps  and  Block viewing non-corporate documents in corporate apps.
+     * Open-in management controls how people share data between unmanaged and managed apps. Setting this to true enforces copy/paste restrictions based on how you configured &amp;lt;b&amp;gt;Block viewing corporate documents in unmanaged apps &amp;lt;/b&amp;gt; and &amp;lt;b&amp;gt; Block viewing non-corporate documents in corporate apps.&amp;lt;/b&amp;gt;
      */
     @SerializedName(value = "managedPasteboardRequired", alternate = {"ManagedPasteboardRequired"})
     @Expose
@@ -1169,7 +1169,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Media Content Rating Apps.
-     * Media content rating settings for Apps. Possible values are: allAllowed, allBlocked, agesAbove4, agesAbove9, agesAbove12, agesAbove17.
+     * Media content rating settings for Apps
      */
     @SerializedName(value = "mediaContentRatingApps", alternate = {"MediaContentRatingApps"})
     @Expose
@@ -1412,7 +1412,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Passcode Required Type.
-     * Type of passcode that is required. Possible values are: deviceDefault, alphanumeric, numeric.
+     * Type of passcode that is required.
      */
     @SerializedName(value = "passcodeRequiredType", alternate = {"PasscodeRequiredType"})
     @Expose
@@ -1529,7 +1529,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Safari Cookie Settings.
-     * Cookie settings for Safari. Possible values are: browserDefault, blockAlways, allowCurrentWebSite, allowFromWebsitesVisited, allowAlways.
+     * Cookie settings for Safari.
      */
     @SerializedName(value = "safariCookieSettings", alternate = {"SafariCookieSettings"})
     @Expose
@@ -1691,7 +1691,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
 
     /**
      * The Wi Fi Connect Only To Configured Networks.
-     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, 'WiFiConnectToAllowedNetworksOnlyForced.
+     * Indicates whether or not to force the device to use only Wi-Fi networks from configuration profiles when the device is in supervised mode. Available for devices running iOS and iPadOS versions 14.4 and earlier. Devices running 14.5+ should use the setting, “WiFiConnectToAllowedNetworksOnlyForced.
      */
     @SerializedName(value = "wiFiConnectOnlyToConfiguredNetworks", alternate = {"WiFiConnectOnlyToConfiguredNetworks"})
     @Expose

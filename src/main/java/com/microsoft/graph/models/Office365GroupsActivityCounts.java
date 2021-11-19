@@ -27,7 +27,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Exchange Emails Received.
-     * The number of emails received by Group mailboxes.
+     * 
      */
     @SerializedName(value = "exchangeEmailsReceived", alternate = {"ExchangeEmailsReceived"})
     @Expose
@@ -36,7 +36,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Report Date.
-     * The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
+     * 
      */
     @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
@@ -45,7 +45,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Report Period.
-     * The number of days the report covers.
+     * 
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -54,7 +54,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Report Refresh Date.
-     * The latest date of the content.
+     * 
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -63,7 +63,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Yammer Messages Liked.
-     * The number of messages liked in Yammer groups.
+     * 
      */
     @SerializedName(value = "yammerMessagesLiked", alternate = {"YammerMessagesLiked"})
     @Expose
@@ -72,7 +72,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Yammer Messages Posted.
-     * The number of messages posted to Yammer groups.
+     * 
      */
     @SerializedName(value = "yammerMessagesPosted", alternate = {"YammerMessagesPosted"})
     @Expose
@@ -81,7 +81,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Yammer Messages Read.
-     * The number of messages read in Yammer groups.
+     * 
      */
     @SerializedName(value = "yammerMessagesRead", alternate = {"YammerMessagesRead"})
     @Expose

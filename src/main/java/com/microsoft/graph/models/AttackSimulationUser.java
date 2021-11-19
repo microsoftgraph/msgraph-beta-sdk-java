@@ -39,7 +39,7 @@ public class AttackSimulationUser implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the user.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class AttackSimulationUser implements IJsonBackedObject {
 
     /**
      * The Email.
-     * Email address of the user.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -57,7 +57,7 @@ public class AttackSimulationUser implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * This is the id property value of the user resource that represents the user in the Azure AD tenant.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

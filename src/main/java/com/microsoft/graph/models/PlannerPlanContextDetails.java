@@ -40,7 +40,7 @@ public class PlannerPlanContextDetails implements IJsonBackedObject {
 
     /**
      * The Custom Link Text.
-     * Nullable. Specifies the text to use in a user experience to display a link the the associated plannerPlanContext. If null, applications should display the link with a custom text based on the displayLinkType property.
+     * 
      */
     @SerializedName(value = "customLinkText", alternate = {"CustomLinkText"})
     @Expose
@@ -49,7 +49,7 @@ public class PlannerPlanContextDetails implements IJsonBackedObject {
 
     /**
      * The Display Link Type.
-     * Specifies how an application should display the link to the associated plannerPlanContext. Applications may choose to provide customized text, description, icons, or other experiences based on the type of the link. Possible values are: teamsTab, sharePointPage, meetingNotes, other, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "displayLinkType", alternate = {"DisplayLinkType"})
     @Expose
@@ -58,7 +58,7 @@ public class PlannerPlanContextDetails implements IJsonBackedObject {
 
     /**
      * The Url.
-     * URL of the user experience represented by the associated plannerPlanContext.
+     * 
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

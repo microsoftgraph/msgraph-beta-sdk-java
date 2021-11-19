@@ -27,7 +27,7 @@ public class EducationPowerPointResource extends EducationResource implements IJ
 
     /**
      * The File Url.
-     * Location of the file on disk.
+     * 
      */
     @SerializedName(value = "fileUrl", alternate = {"FileUrl"})
     @Expose

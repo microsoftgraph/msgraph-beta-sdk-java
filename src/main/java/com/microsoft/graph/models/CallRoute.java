@@ -41,7 +41,7 @@ public class CallRoute implements IJsonBackedObject {
 
     /**
      * The Final.
-     * The identity that was resolved to in the call.
+     * 
      */
     @SerializedName(value = "final", alternate = {"Final"})
     @Expose
@@ -50,7 +50,7 @@ public class CallRoute implements IJsonBackedObject {
 
     /**
      * The Original.
-     * The identity that was originally used in the call.
+     * 
      */
     @SerializedName(value = "original", alternate = {"Original"})
     @Expose
@@ -59,7 +59,7 @@ public class CallRoute implements IJsonBackedObject {
 
     /**
      * The Routing Type.
-     * Possible values are: forwarded, lookup, selfFork.
+     * 
      */
     @SerializedName(value = "routingType", alternate = {"RoutingType"})
     @Expose

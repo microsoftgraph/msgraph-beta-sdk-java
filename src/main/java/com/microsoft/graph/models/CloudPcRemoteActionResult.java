@@ -41,7 +41,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Action Name.
-     * The specified action. Supported values: Reprovision, Resize.
+     * 
      */
     @SerializedName(value = "actionName", alternate = {"ActionName"})
     @Expose
@@ -50,7 +50,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Action State.
-     * State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
+     * 
      */
     @SerializedName(value = "actionState", alternate = {"ActionState"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Id.
-     * The ID of the Cloud PC device on which the remote action is performed. Read-only.
+     * 
      */
     @SerializedName(value = "cloudPcId", alternate = {"CloudPcId"})
     @Expose
@@ -68,7 +68,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
+     * 
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -77,7 +77,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Managed Device Id.
-     * The ID of the Intune managed device on which the remote action is performed. Read-only.
+     * 
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -86,7 +86,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class CloudPcRemoteActionResult implements IJsonBackedObject {
 
     /**
      * The Status Details.
-     * The details of the Cloud PC status.
+     * 
      */
     @SerializedName(value = "statusDetails", alternate = {"StatusDetails"})
     @Expose

@@ -27,7 +27,7 @@ public class ChatMembersNotificationRecipient extends TeamworkNotificationRecipi
 
     /**
      * The Chat Id.
-     * The chat's identifier.
+     * 
      */
     @SerializedName(value = "chatId", alternate = {"ChatId"})
     @Expose

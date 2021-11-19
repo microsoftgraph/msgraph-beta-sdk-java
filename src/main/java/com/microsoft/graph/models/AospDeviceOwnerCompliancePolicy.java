@@ -82,7 +82,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
 
     /**
      * The Password Required Type.
-     * Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Type of characters in password
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose

@@ -30,7 +30,7 @@ public class UsedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Used.
-     * Information about when the item was last viewed or modified by the user. Read only.
+     * 
      */
     @SerializedName(value = "lastUsed", alternate = {"LastUsed"})
     @Expose
@@ -39,7 +39,7 @@ public class UsedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Reference.
-     * Reference properties of the used document, such as the url and type of the document. Read-only
+     * 
      */
     @SerializedName(value = "resourceReference", alternate = {"ResourceReference"})
     @Expose
@@ -48,7 +48,7 @@ public class UsedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Visualization.
-     * Properties that you can use to visualize the document in your experience. Read-only
+     * 
      */
     @SerializedName(value = "resourceVisualization", alternate = {"ResourceVisualization"})
     @Expose
@@ -57,7 +57,7 @@ public class UsedInsight extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Used for navigating to the item that was used. For file attachments, the type is fileAttachment. For linked attachments, the type is driveItem.
+     * 
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose

@@ -28,7 +28,7 @@ public class ConversationMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the user.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class ConversationMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * The roles for that user.
+     * 
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
@@ -46,7 +46,7 @@ public class ConversationMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Visible History Start Date Time.
-     * The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+     * 
      */
     @SerializedName(value = "visibleHistoryStartDateTime", alternate = {"VisibleHistoryStartDateTime"})
     @Expose

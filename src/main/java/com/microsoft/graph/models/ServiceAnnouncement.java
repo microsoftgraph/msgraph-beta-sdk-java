@@ -34,7 +34,7 @@ public class ServiceAnnouncement extends Entity implements IJsonBackedObject {
 
     /**
      * The Health Overviews.
-     * A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * 
      */
     @SerializedName(value = "healthOverviews", alternate = {"HealthOverviews"})
     @Expose
@@ -43,7 +43,7 @@ public class ServiceAnnouncement extends Entity implements IJsonBackedObject {
 
     /**
      * The Issues.
-     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * 
      */
     @SerializedName(value = "issues", alternate = {"Issues"})
     @Expose
@@ -52,7 +52,7 @@ public class ServiceAnnouncement extends Entity implements IJsonBackedObject {
 
     /**
      * The Messages.
-     * A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * 
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose

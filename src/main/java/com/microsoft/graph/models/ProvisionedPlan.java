@@ -39,7 +39,7 @@ public class ProvisionedPlan implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * For example, 'Enabled'.
+     * 
      */
     @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose
@@ -48,7 +48,7 @@ public class ProvisionedPlan implements IJsonBackedObject {
 
     /**
      * The Provisioning Status.
-     * For example, 'Success'.
+     * 
      */
     @SerializedName(value = "provisioningStatus", alternate = {"ProvisioningStatus"})
     @Expose
@@ -57,7 +57,7 @@ public class ProvisionedPlan implements IJsonBackedObject {
 
     /**
      * The Service.
-     * The name of the service; for example, 'AccessControlS2S'
+     * 
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose

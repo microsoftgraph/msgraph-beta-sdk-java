@@ -39,7 +39,7 @@ public class Credential implements IJsonBackedObject {
 
     /**
      * The Field Id.
-     * The name of the field for this credential. e.g, username or password or phoneNumber. This is defined by the application. Must match what is in the html field on singleSignOnSettings/password object.
+     * 
      */
     @SerializedName(value = "fieldId", alternate = {"FieldId"})
     @Expose
@@ -48,7 +48,7 @@ public class Credential implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type for this credential. Valid values: username, password, or other.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -57,7 +57,7 @@ public class Credential implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The value for this credential. e.g, mysuperhiddenpassword. Note the value for passwords is write-only, the value can never be read back.
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

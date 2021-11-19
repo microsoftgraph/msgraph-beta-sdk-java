@@ -41,7 +41,7 @@ public class CloudPcAuditResource implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The resource entity display name.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -50,7 +50,7 @@ public class CloudPcAuditResource implements IJsonBackedObject {
 
     /**
      * The Modified Properties.
-     * A list of modified properties.
+     * 
      */
     @SerializedName(value = "modifiedProperties", alternate = {"ModifiedProperties"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcAuditResource implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * The ID of the audit resource.
+     * 
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -68,7 +68,7 @@ public class CloudPcAuditResource implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of the audit resource.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

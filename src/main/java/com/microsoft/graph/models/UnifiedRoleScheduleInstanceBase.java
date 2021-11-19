@@ -30,7 +30,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The App Scope Id.
-     * Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
+     * 
      */
     @SerializedName(value = "appScopeId", alternate = {"AppScopeId"})
     @Expose
@@ -39,7 +39,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The Directory Scope Id.
-     * Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
+     * 
      */
     @SerializedName(value = "directoryScopeId", alternate = {"DirectoryScopeId"})
     @Expose
@@ -48,7 +48,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The Principal Id.
-     * Identifier of the principal to which the assignment is being granted to. Can be a group or a user.
+     * 
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -57,7 +57,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The Role Definition Id.
-     * Identifier of the unifiedRoleDefinition the assignment is for. Read only.  Supports $filter (eq).
+     * 
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -66,7 +66,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The App Scope.
-     * Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity.
+     * 
      */
     @SerializedName(value = "appScope", alternate = {"AppScope"})
     @Expose
@@ -75,7 +75,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The Directory Scope.
-     * The directory object that is the scope of the assignment. Enables the retrieval of the directory object using $expand at the same time as getting the role assignment. Read-only.
+     * 
      */
     @SerializedName(value = "directoryScope", alternate = {"DirectoryScope"})
     @Expose
@@ -84,7 +84,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The Principal.
-     * The principal that is getting a role assignment through the request. Enables the retrieval of the principal using $expand at the same time as getting the role assignment. Read-only.
+     * 
      */
     @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose
@@ -93,7 +93,7 @@ public class UnifiedRoleScheduleInstanceBase extends Entity implements IJsonBack
 
     /**
      * The Role Definition.
-     * The roleDefinition for the assignment. Enables the retrieval of the role definition using $expand at the same time as getting the role assignment. The roleDefinition.Id is automatically expanded.
+     * 
      */
     @SerializedName(value = "roleDefinition", alternate = {"RoleDefinition"})
     @Expose

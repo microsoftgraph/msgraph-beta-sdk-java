@@ -39,7 +39,7 @@ public class AssignedTrainingInfo implements IJsonBackedObject {
 
     /**
      * The Assigned User Count.
-     * Number of users who were assigned the training in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "assignedUserCount", alternate = {"AssignedUserCount"})
     @Expose
@@ -48,7 +48,7 @@ public class AssignedTrainingInfo implements IJsonBackedObject {
 
     /**
      * The Completed User Count.
-     * Number of users who completed the training in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "completedUserCount", alternate = {"CompletedUserCount"})
     @Expose
@@ -57,7 +57,7 @@ public class AssignedTrainingInfo implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the training in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

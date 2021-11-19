@@ -27,7 +27,7 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
 
     /**
      * The Carrier Url.
-     * Carrier Url to activate the device eSIM
+     * Carrier Url to activate the device eSIM 
      */
     @SerializedName(value = "carrierUrl", alternate = {"CarrierUrl"})
     @Expose

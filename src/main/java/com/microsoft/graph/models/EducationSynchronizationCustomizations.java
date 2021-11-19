@@ -28,7 +28,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
 
     /**
      * The School.
-     * Customizations for School entities.
+     * 
      */
     @SerializedName(value = "school", alternate = {"School"})
     @Expose
@@ -37,7 +37,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
 
     /**
      * The Section.
-     * Customizations for Section entities.
+     * 
      */
     @SerializedName(value = "section", alternate = {"Section"})
     @Expose
@@ -46,7 +46,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
 
     /**
      * The Student.
-     * Customizations for Student entities.
+     * 
      */
     @SerializedName(value = "student", alternate = {"Student"})
     @Expose
@@ -55,7 +55,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
 
     /**
      * The Student Enrollment.
-     * Customizations for Student Enrollments.
+     * 
      */
     @SerializedName(value = "studentEnrollment", alternate = {"StudentEnrollment"})
     @Expose
@@ -64,7 +64,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
 
     /**
      * The Teacher.
-     * Customizations for Teacher entities.
+     * 
      */
     @SerializedName(value = "teacher", alternate = {"Teacher"})
     @Expose
@@ -73,7 +73,7 @@ public class EducationSynchronizationCustomizations extends EducationSynchroniza
 
     /**
      * The Teacher Roster.
-     * Customizations for Teacher Rosters.
+     * 
      */
     @SerializedName(value = "teacherRoster", alternate = {"TeacherRoster"})
     @Expose

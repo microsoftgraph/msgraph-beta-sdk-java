@@ -40,7 +40,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Allowed Member Types.
-     * Specifies whether this app role can be assigned to users and groups (by setting to ['User']), to other application's (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment to other applications' service principals are also known as application permissions. The 'Application' value is only supported for app roles defined on application entities.
+     * 
      */
     @SerializedName(value = "allowedMemberTypes", alternate = {"AllowedMemberTypes"})
     @Expose
@@ -49,7 +49,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description for the app role. This is displayed when the app role is being assigned and, if the app role functions as an application permission, during  consent experiences.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name for the permission that appears in the app role assignment and consent experiences.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -67,7 +67,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique role identifier inside the appRoles collection. When creating a new app role, a new Guid identifier must be provided.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -76,7 +76,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -85,7 +85,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Origin.
-     * Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.
+     * 
      */
     @SerializedName(value = "origin", alternate = {"Origin"})
     @Expose
@@ -94,7 +94,7 @@ public class AppRole implements IJsonBackedObject {
 
     /**
      * The Value.
-     * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

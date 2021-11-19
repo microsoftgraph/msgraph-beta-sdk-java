@@ -32,7 +32,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
 
     /**
      * The External Ip.
-     * The external IP address as detected by the service for the agent machine. Read-only
+     * 
      */
     @SerializedName(value = "externalIp", alternate = {"ExternalIp"})
     @Expose
@@ -41,7 +41,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
 
     /**
      * The Machine Name.
-     * The name of the machine that the aggent is running on. Read-only
+     * 
      */
     @SerializedName(value = "machineName", alternate = {"MachineName"})
     @Expose
@@ -50,7 +50,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Possible values are: active, inactive.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -68,7 +68,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
 
     /**
      * The Agent Groups.
-     * List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose

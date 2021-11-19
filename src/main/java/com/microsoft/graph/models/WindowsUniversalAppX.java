@@ -33,7 +33,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Applicable Architectures.
-     * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral.
+     * The Windows architecture(s) for which this app can run on.
      */
     @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose
@@ -42,7 +42,7 @@ public class WindowsUniversalAppX extends MobileLobApp implements IJsonBackedObj
 
     /**
      * The Applicable Device Types.
-     * The Windows device type(s) for which this app can run on. Possible values are: none, desktop, mobile, holographic, team.
+     * The Windows device type(s) for which this app can run on.
      */
     @SerializedName(value = "applicableDeviceTypes", alternate = {"ApplicableDeviceTypes"})
     @Expose

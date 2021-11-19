@@ -41,7 +41,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * Identity information of the participant.
+     * 
      */
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
@@ -50,7 +50,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Role.
-     * Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
+     * 
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose
@@ -59,7 +59,7 @@ public class MeetingParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Upn.
-     * User principal name of the participant.
+     * 
      */
     @SerializedName(value = "upn", alternate = {"Upn"})
     @Expose

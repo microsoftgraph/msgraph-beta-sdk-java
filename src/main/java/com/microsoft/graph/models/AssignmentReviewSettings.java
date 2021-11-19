@@ -42,7 +42,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Access Review Timeout Behavior.
-     * The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
+     * 
      */
     @SerializedName(value = "accessReviewTimeoutBehavior", alternate = {"AccessReviewTimeoutBehavior"})
     @Expose
@@ -51,7 +51,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Duration In Days.
-     * The number of days within which reviewers should provide input.
+     * 
      */
     @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
@@ -60,7 +60,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Is Access Recommendation Enabled.
-     * Specifies whether to display recommendations to the reviewer. The default value is true
+     * 
      */
     @SerializedName(value = "isAccessRecommendationEnabled", alternate = {"IsAccessRecommendationEnabled"})
     @Expose
@@ -69,7 +69,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Is Approval Justification Required.
-     * Specifies whether the reviewer must provide justification for the approval. The default value is true.
+     * 
      */
     @SerializedName(value = "isApprovalJustificationRequired", alternate = {"IsApprovalJustificationRequired"})
     @Expose
@@ -78,7 +78,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * If true, access reviews are required for assignments from this policy.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -87,7 +87,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence Type.
-     * The interval for recurrence, such as monthly or quarterly.
+     * 
      */
     @SerializedName(value = "recurrenceType", alternate = {"RecurrenceType"})
     @Expose
@@ -96,7 +96,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Reviewers.
-     * If the reviewerType is Reviewers, this collection specifies the users who will be reviewers, either by ID or as members of a group, using a collection of singleUser and groupMembers.
+     * 
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
@@ -105,7 +105,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Reviewer Type.
-     * Who should be asked to do the review, either Self or Reviewers.
+     * 
      */
     @SerializedName(value = "reviewerType", alternate = {"ReviewerType"})
     @Expose
@@ -114,7 +114,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * When the first review should start.
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

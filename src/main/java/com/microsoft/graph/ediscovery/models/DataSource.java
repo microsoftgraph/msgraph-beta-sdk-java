@@ -28,7 +28,7 @@ public class DataSource extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * The user who created the dataSource.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -37,7 +37,7 @@ public class DataSource extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the dataSource was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class DataSource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the dataSource. This will be the name of the SharePoint site.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

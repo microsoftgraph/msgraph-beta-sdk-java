@@ -28,7 +28,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements IJsonBackedObj
 
     /**
      * The Channel.
-     * The channel to install on target devices. Possible values are: dev, beta, stable.
+     * The channel to install on target devices.
      */
     @SerializedName(value = "channel", alternate = {"Channel"})
     @Expose

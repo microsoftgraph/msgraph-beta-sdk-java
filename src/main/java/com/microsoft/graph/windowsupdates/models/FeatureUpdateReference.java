@@ -27,7 +27,7 @@ public class FeatureUpdateReference extends WindowsUpdateReference implements IJ
 
     /**
      * The Version.
-     * Specifies a feature update by version.
+     * 
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

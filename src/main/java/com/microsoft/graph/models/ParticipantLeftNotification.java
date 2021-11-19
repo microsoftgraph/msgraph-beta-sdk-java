@@ -28,7 +28,7 @@ public class ParticipantLeftNotification extends Entity implements IJsonBackedOb
 
     /**
      * The Participant Id.
-     * ID of the participant under the policy who has left the meeting.
+     * 
      */
     @SerializedName(value = "participantId", alternate = {"ParticipantId"})
     @Expose

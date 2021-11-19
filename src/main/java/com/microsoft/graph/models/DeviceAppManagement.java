@@ -86,7 +86,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Microsoft Store For Business Language.
-     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -&amp;lt;country/regioncode2&amp;gt;, where  is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
+     * The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is &amp;lt;languagecode2&amp;gt;-&amp;lt;country/regioncode2&amp;gt;, where &amp;lt;languagecode2&amp;gt; is a lowercase two-letter code derived from ISO 639-1 and &amp;lt;country/regioncode2&amp;gt; is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
      */
     @SerializedName(value = "microsoftStoreForBusinessLanguage", alternate = {"MicrosoftStoreForBusinessLanguage"})
     @Expose
@@ -113,7 +113,7 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Microsoft Store For Business Portal Selection.
-     * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']. Possible values are: none, companyPortal, privateStore.
+     * The end user portal information is used to sync applications from the Microsoft Store for Business to Intune Company Portal. There are three options to pick from ['Company portal only', 'Company portal and private store', 'Private store only']
      */
     @SerializedName(value = "microsoftStoreForBusinessPortalSelection", alternate = {"MicrosoftStoreForBusinessPortalSelection"})
     @Expose

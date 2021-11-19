@@ -37,7 +37,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Read only. Timestamp at which the channel was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Optional textual description for the channel.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -55,7 +55,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Channel name as it will appear to the user in Microsoft Teams.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -64,7 +64,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * The email address for sending messages to the channel. Read-only.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -73,7 +73,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Favorite By Default.
-     * Indicates whether the channel should automatically be marked 'favorite' for all members of the team. Can only be set programmatically with Create team. Default: false.
+     * 
      */
     @SerializedName(value = "isFavoriteByDefault", alternate = {"IsFavoriteByDefault"})
     @Expose
@@ -82,7 +82,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Membership Type.
-     * The type of the channel. Can be set during creation and can't be changed. Possible values are: standard - Channel inherits the list of members of the parent team; private - Channel can have members that are a subset of all the members on the parent team.
+     * 
      */
     @SerializedName(value = "membershipType", alternate = {"MembershipType"})
     @Expose
@@ -91,7 +91,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Moderation Settings.
-     * Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
+     * 
      */
     @SerializedName(value = "moderationSettings", alternate = {"ModerationSettings"})
     @Expose
@@ -100,7 +100,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -109,7 +109,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Files Folder.
-     * Metadata for the location where the channel's files are stored.
+     * 
      */
     @SerializedName(value = "filesFolder", alternate = {"FilesFolder"})
     @Expose
@@ -118,7 +118,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * A collection of membership records associated with the channel.
+     * 
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
@@ -127,7 +127,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Messages.
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * 
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
@@ -136,7 +136,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Tabs.
-     * A collection of all the tabs in the channel. A navigation property.
+     * 
      */
     @SerializedName(value = "tabs", alternate = {"Tabs"})
     @Expose

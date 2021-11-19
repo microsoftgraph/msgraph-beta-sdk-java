@@ -31,7 +31,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Service.
-     * The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
+     * 
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose
@@ -40,7 +40,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Show the overral service health status. Possible values are: serviceOperational, investigating, restoringService, verifyingService, serviceRestored, postIncidentReviewPublished, serviceDegradation, serviceInterruption, extendedRecovery, falsePositive, investigationSuspended, resolved, mitigatedExternal, mitigated, resolvedExternal, confirmed, reported, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -49,7 +49,7 @@ public class ServiceHealth extends Entity implements IJsonBackedObject {
 
     /**
      * The Issues.
-     * A collection of issues happened on the service, with detailed information for each issue.
+     * 
      */
     @SerializedName(value = "issues", alternate = {"Issues"})
     @Expose

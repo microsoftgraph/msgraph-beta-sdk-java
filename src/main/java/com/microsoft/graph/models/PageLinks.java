@@ -40,7 +40,7 @@ public class PageLinks implements IJsonBackedObject {
 
     /**
      * The One Note Client Url.
-     * Opens the page in the OneNote native client if it's installed.
+     * 
      */
     @SerializedName(value = "oneNoteClientUrl", alternate = {"OneNoteClientUrl"})
     @Expose
@@ -49,7 +49,7 @@ public class PageLinks implements IJsonBackedObject {
 
     /**
      * The One Note Web Url.
-     * Opens the page in OneNote on the web.
+     * 
      */
     @SerializedName(value = "oneNoteWebUrl", alternate = {"OneNoteWebUrl"})
     @Expose

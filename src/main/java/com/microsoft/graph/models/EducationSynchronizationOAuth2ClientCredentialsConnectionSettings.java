@@ -27,7 +27,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
 
     /**
      * The Scope.
-     * The scope of the access request (see RFC6749).
+     * 
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -36,7 +36,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
 
     /**
      * The Token Url.
-     * The URL to get access tokens for the data provider.
+     * 
      */
     @SerializedName(value = "tokenUrl", alternate = {"TokenUrl"})
     @Expose

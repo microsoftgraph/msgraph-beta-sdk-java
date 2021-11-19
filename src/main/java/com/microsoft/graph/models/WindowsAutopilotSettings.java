@@ -46,7 +46,7 @@ public class WindowsAutopilotSettings extends Entity implements IJsonBackedObjec
 
     /**
      * The Sync Status.
-     * Indicates the status of sync with Device data sync (DDS) service. Possible values are: unknown, inProgress, completed, failed.
+     * Indicates the status of sync with Device data sync (DDS) service.
      */
     @SerializedName(value = "syncStatus", alternate = {"SyncStatus"})
     @Expose

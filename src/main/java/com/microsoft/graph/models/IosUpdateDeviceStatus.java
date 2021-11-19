@@ -65,7 +65,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
 
     /**
      * The Install Status.
-     * The installation status of the policy report. Possible values are: success, available, idle, unknown, downloading, downloadFailed, downloadRequiresComputer, downloadInsufficientSpace, downloadInsufficientPower, downloadInsufficientNetwork, installing, installInsufficientSpace, installInsufficientPower, installPhoneCallInProgress, installFailed, notSupportedOperation, sharedDeviceUserLoggedInError, deviceOsHigherThanDesiredOsVersion.
+     * The installation status of the policy report.
      */
     @SerializedName(value = "installStatus", alternate = {"InstallStatus"})
     @Expose
@@ -101,7 +101,7 @@ public class IosUpdateDeviceStatus extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Compliance status of the policy report.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

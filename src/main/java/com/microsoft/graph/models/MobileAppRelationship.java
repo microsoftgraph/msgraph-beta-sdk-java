@@ -64,7 +64,7 @@ public class MobileAppRelationship extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Type.
-     * The type of relationship indicating whether the target is a parent or child. Possible values are: child, parent.
+     * The type of relationship indicating whether the target is a parent or child.
      */
     @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose

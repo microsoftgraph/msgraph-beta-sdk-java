@@ -39,7 +39,7 @@ public class TenantContract implements IJsonBackedObject {
 
     /**
      * The Contract Type.
-     * The type of relationship that exists between the managing entity and tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "contractType", alternate = {"ContractType"})
     @Expose
@@ -48,7 +48,7 @@ public class TenantContract implements IJsonBackedObject {
 
     /**
      * The Default Domain Name.
-     * The default domain name for the tenant. Required. Read-only.
+     * 
      */
     @SerializedName(value = "defaultDomainName", alternate = {"DefaultDomainName"})
     @Expose
@@ -57,7 +57,7 @@ public class TenantContract implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

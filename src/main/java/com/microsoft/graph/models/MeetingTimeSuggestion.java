@@ -44,7 +44,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Attendee Availability.
-     * An array that shows the availability status of each attendee for this meeting suggestion.
+     * 
      */
     @SerializedName(value = "attendeeAvailability", alternate = {"AttendeeAvailability"})
     @Expose
@@ -53,7 +53,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Confidence.
-     * A percentage that represents the likelhood of all the attendees attending.
+     * 
      */
     @SerializedName(value = "confidence", alternate = {"Confidence"})
     @Expose
@@ -62,7 +62,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Locations.
-     * An array that specifies the name and geographic location of each meeting location for this meeting suggestion.
+     * 
      */
     @SerializedName(value = "locations", alternate = {"Locations"})
     @Expose
@@ -71,7 +71,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Meeting Time Slot.
-     * A time period suggested for the meeting.
+     * 
      */
     @SerializedName(value = "meetingTimeSlot", alternate = {"MeetingTimeSlot"})
     @Expose
@@ -80,7 +80,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Order.
-     * Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence.
+     * 
      */
     @SerializedName(value = "order", alternate = {"Order"})
     @Expose
@@ -89,7 +89,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Organizer Availability.
-     * Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * 
      */
     @SerializedName(value = "organizerAvailability", alternate = {"OrganizerAvailability"})
     @Expose
@@ -98,7 +98,7 @@ public class MeetingTimeSuggestion implements IJsonBackedObject {
 
     /**
      * The Suggestion Reason.
-     * Reason for suggesting the meeting time.
+     * 
      */
     @SerializedName(value = "suggestionReason", alternate = {"SuggestionReason"})
     @Expose

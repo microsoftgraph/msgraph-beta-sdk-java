@@ -67,7 +67,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
 
     /**
      * The Partner App Type.
-     * Partner App type. Possible values are: unknown, singleTenantApp, multiTenantApp.
+     * Partner App type
      */
     @SerializedName(value = "partnerAppType", alternate = {"PartnerAppType"})
     @Expose
@@ -76,7 +76,7 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
 
     /**
      * The Partner State.
-     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+     * Partner state of this tenant
      */
     @SerializedName(value = "partnerState", alternate = {"PartnerState"})
     @Expose

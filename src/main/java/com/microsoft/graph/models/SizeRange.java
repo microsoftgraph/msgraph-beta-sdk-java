@@ -39,7 +39,7 @@ public class SizeRange implements IJsonBackedObject {
 
     /**
      * The Maximum Size.
-     * The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
+     * 
      */
     @SerializedName(value = "maximumSize", alternate = {"MaximumSize"})
     @Expose
@@ -48,7 +48,7 @@ public class SizeRange implements IJsonBackedObject {
 
     /**
      * The Minimum Size.
-     * The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
+     * 
      */
     @SerializedName(value = "minimumSize", alternate = {"MinimumSize"})
     @Expose

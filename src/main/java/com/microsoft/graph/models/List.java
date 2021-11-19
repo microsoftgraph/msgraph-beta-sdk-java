@@ -42,7 +42,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The displayable title of the list.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -51,7 +51,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List.
-     * Provides additional details about the list.
+     * 
      */
     @SerializedName(value = "list", alternate = {"List"})
     @Expose
@@ -60,7 +60,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * 
      */
     @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
@@ -69,7 +69,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The System.
-     * If present, indicates that this is a system-managed list. Read-only.
+     * 
      */
     @SerializedName(value = "system", alternate = {"System"})
     @Expose
@@ -78,7 +78,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * The recent activities that took place within this list.
+     * 
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
@@ -87,7 +87,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Columns.
-     * The collection of field definitions for this list.
+     * 
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
@@ -96,7 +96,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Types.
-     * The collection of content types present in this list.
+     * 
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
@@ -105,7 +105,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive.
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * 
      */
     @SerializedName(value = "drive", alternate = {"Drive"})
     @Expose
@@ -114,7 +114,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Items.
-     * All items contained in the list.
+     * 
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -123,7 +123,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Subscriptions.
-     * The set of subscriptions on the list.
+     * 
      */
     @SerializedName(value = "subscriptions", alternate = {"Subscriptions"})
     @Expose

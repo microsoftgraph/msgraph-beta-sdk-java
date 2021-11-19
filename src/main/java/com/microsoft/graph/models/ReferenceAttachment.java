@@ -29,7 +29,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
 
     /**
      * The Is Folder.
-     * Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
+     * 
      */
     @SerializedName(value = "isFolder", alternate = {"IsFolder"})
     @Expose
@@ -38,7 +38,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
 
     /**
      * The Permission.
-     * Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
+     * 
      */
     @SerializedName(value = "permission", alternate = {"Permission"})
     @Expose
@@ -47,7 +47,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
 
     /**
      * The Preview Url.
-     * Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
+     * 
      */
     @SerializedName(value = "previewUrl", alternate = {"PreviewUrl"})
     @Expose
@@ -56,7 +56,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
 
     /**
      * The Provider Type.
-     * The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
+     * 
      */
     @SerializedName(value = "providerType", alternate = {"ProviderType"})
     @Expose
@@ -65,7 +65,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
 
     /**
      * The Source Url.
-     * URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
+     * 
      */
     @SerializedName(value = "sourceUrl", alternate = {"SourceUrl"})
     @Expose
@@ -74,7 +74,7 @@ public class ReferenceAttachment extends Attachment implements IJsonBackedObject
 
     /**
      * The Thumbnail Url.
-     * Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
+     * 
      */
     @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose

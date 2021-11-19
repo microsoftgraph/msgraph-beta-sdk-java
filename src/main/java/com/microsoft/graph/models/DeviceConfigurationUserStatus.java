@@ -46,7 +46,7 @@ public class DeviceConfigurationUserStatus extends Entity implements IJsonBacked
 
     /**
      * The Status.
-     * Compliance status of the policy report. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * Compliance status of the policy report.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

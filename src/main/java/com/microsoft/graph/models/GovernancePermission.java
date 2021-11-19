@@ -39,7 +39,7 @@ public class GovernancePermission implements IJsonBackedObject {
 
     /**
      * The Access Level.
-     * The access level. Valid values: None, UserRead, AdminRead, and AdminReadWrite.
+     * 
      */
     @SerializedName(value = "accessLevel", alternate = {"AccessLevel"})
     @Expose
@@ -48,7 +48,7 @@ public class GovernancePermission implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * Indicate if the requestor has any active role assignment for the access level.
+     * 
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -57,7 +57,7 @@ public class GovernancePermission implements IJsonBackedObject {
 
     /**
      * The Is Eligible.
-     * Indicate if the requestor has any eligible role assignment for the access level.
+     * 
      */
     @SerializedName(value = "isEligible", alternate = {"IsEligible"})
     @Expose

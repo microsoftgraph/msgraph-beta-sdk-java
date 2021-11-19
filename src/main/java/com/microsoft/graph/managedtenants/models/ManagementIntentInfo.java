@@ -41,7 +41,7 @@ public class ManagementIntentInfo implements IJsonBackedObject {
 
     /**
      * The Management Intent Display Name.
-     * The display name for the management intent. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "managementIntentDisplayName", alternate = {"ManagementIntentDisplayName"})
     @Expose
@@ -50,7 +50,7 @@ public class ManagementIntentInfo implements IJsonBackedObject {
 
     /**
      * The Management Intent Id.
-     * The identifier for the management intent. Required. Read-only.
+     * 
      */
     @SerializedName(value = "managementIntentId", alternate = {"ManagementIntentId"})
     @Expose
@@ -59,7 +59,7 @@ public class ManagementIntentInfo implements IJsonBackedObject {
 
     /**
      * The Management Templates.
-     * The collection of management template information associated with the management intent. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "managementTemplates", alternate = {"ManagementTemplates"})
     @Expose

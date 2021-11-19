@@ -42,7 +42,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Application Display Name.
-     * Name of the application.
+     * 
      */
     @SerializedName(value = "applicationDisplayName", alternate = {"ApplicationDisplayName"})
     @Expose
@@ -51,7 +51,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Application Id.
-     * Azure AD application ID.
+     * 
      */
     @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
@@ -60,7 +60,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * IP address.
+     * 
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -69,7 +69,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Remote Tenant Id.
-     * The delegated partner tenant ID.
+     * 
      */
     @SerializedName(value = "remoteTenantId", alternate = {"RemoteTenantId"})
     @Expose
@@ -78,7 +78,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Remote User Id.
-     * The delegated partner user ID.
+     * 
      */
     @SerializedName(value = "remoteUserId", alternate = {"RemoteUserId"})
     @Expose
@@ -87,7 +87,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Service Principal Name.
-     * Service Principal Name (SPN).
+     * 
      */
     @SerializedName(value = "servicePrincipalName", alternate = {"ServicePrincipalName"})
     @Expose
@@ -96,7 +96,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The actor type. Possible values include ItPro, Application, Partner and Unknown.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -105,7 +105,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Azure AD user ID.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -114,7 +114,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The User Permissions.
-     * List of user permissions and application permissions when the audit event was performed.
+     * 
      */
     @SerializedName(value = "userPermissions", alternate = {"UserPermissions"})
     @Expose
@@ -123,7 +123,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * User Principal Name (UPN).
+     * 
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -132,7 +132,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The User Role Scope Tags.
-     * List of role scope tags.
+     * 
      */
     @SerializedName(value = "userRoleScopeTags", alternate = {"UserRoleScopeTags"})
     @Expose

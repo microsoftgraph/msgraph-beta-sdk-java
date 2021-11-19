@@ -28,7 +28,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements I
 
     /**
      * The Font Color.
-     * Color of the font to use for the watermark.
+     * 
      */
     @SerializedName(value = "fontColor", alternate = {"FontColor"})
     @Expose
@@ -37,7 +37,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements I
 
     /**
      * The Font Name.
-     * Name of the font to use for the watermark.
+     * 
      */
     @SerializedName(value = "fontName", alternate = {"FontName"})
     @Expose
@@ -46,7 +46,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements I
 
     /**
      * The Font Size.
-     * Font size to use for the watermark.
+     * 
      */
     @SerializedName(value = "fontSize", alternate = {"FontSize"})
     @Expose
@@ -55,7 +55,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements I
 
     /**
      * The Layout.
-     * Possible values are: horizontal, diagonal.
+     * 
      */
     @SerializedName(value = "layout", alternate = {"Layout"})
     @Expose
@@ -64,7 +64,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements I
 
     /**
      * The Text.
-     * The contents of the watermark itself.
+     * 
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose
@@ -73,7 +73,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements I
 
     /**
      * The Ui Element Name.
-     * The name of the UI element where the watermark should be placed.
+     * 
      */
     @SerializedName(value = "uiElementName", alternate = {"UiElementName"})
     @Expose

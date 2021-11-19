@@ -30,7 +30,7 @@ public class AzureADDevice extends UpdatableAsset implements IJsonBackedObject {
 
     /**
      * The Enrollments.
-     * Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
+     * 
      */
     @SerializedName(value = "enrollments", alternate = {"Enrollments"})
     @Expose
@@ -39,7 +39,7 @@ public class AzureADDevice extends UpdatableAsset implements IJsonBackedObject {
 
     /**
      * The Errors.
-     * Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
+     * 
      */
     @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose

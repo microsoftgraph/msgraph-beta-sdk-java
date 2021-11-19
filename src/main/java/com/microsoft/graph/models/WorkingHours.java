@@ -42,7 +42,7 @@ public class WorkingHours implements IJsonBackedObject {
 
     /**
      * The Days Of Week.
-     * The days of the week on which the user works.
+     * 
      */
     @SerializedName(value = "daysOfWeek", alternate = {"DaysOfWeek"})
     @Expose
@@ -51,7 +51,7 @@ public class WorkingHours implements IJsonBackedObject {
 
     /**
      * The End Time.
-     * The time of the day that the user stops working.
+     * 
      */
     @SerializedName(value = "endTime", alternate = {"EndTime"})
     @Expose
@@ -60,7 +60,7 @@ public class WorkingHours implements IJsonBackedObject {
 
     /**
      * The Start Time.
-     * The time of the day that the user starts working.
+     * 
      */
     @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose
@@ -69,7 +69,7 @@ public class WorkingHours implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-     * The time zone to which the working hours apply.
+     * 
      */
     @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose

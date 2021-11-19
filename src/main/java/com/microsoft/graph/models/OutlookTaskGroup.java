@@ -30,7 +30,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
-     * The version of the task group.
+     * 
      */
     @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose
@@ -39,7 +39,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Group Key.
-     * The unique GUID identifier for the task group.
+     * 
      */
     @SerializedName(value = "groupKey", alternate = {"GroupKey"})
     @Expose
@@ -48,7 +48,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default Group.
-     * True if the task group is the default task group.
+     * 
      */
     @SerializedName(value = "isDefaultGroup", alternate = {"IsDefaultGroup"})
     @Expose
@@ -57,7 +57,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the task group.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -66,7 +66,7 @@ public class OutlookTaskGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Task Folders.
-     * The collection of task folders in the task group. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "taskFolders", alternate = {"TaskFolders"})
     @Expose

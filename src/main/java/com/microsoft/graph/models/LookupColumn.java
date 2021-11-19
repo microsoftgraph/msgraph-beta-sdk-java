@@ -39,7 +39,7 @@ public class LookupColumn implements IJsonBackedObject {
 
     /**
      * The Allow Multiple Values.
-     * Indicates whether multiple values can be selected from the source.
+     * 
      */
     @SerializedName(value = "allowMultipleValues", alternate = {"AllowMultipleValues"})
     @Expose
@@ -48,7 +48,7 @@ public class LookupColumn implements IJsonBackedObject {
 
     /**
      * The Allow Unlimited Length.
-     * Indicates whether values in the column should be able to exceed the standard limit of 255 characters.
+     * 
      */
     @SerializedName(value = "allowUnlimitedLength", alternate = {"AllowUnlimitedLength"})
     @Expose
@@ -57,7 +57,7 @@ public class LookupColumn implements IJsonBackedObject {
 
     /**
      * The Column Name.
-     * The name of the lookup source column.
+     * 
      */
     @SerializedName(value = "columnName", alternate = {"ColumnName"})
     @Expose
@@ -66,7 +66,7 @@ public class LookupColumn implements IJsonBackedObject {
 
     /**
      * The List Id.
-     * The unique identifier of the lookup source list.
+     * 
      */
     @SerializedName(value = "listId", alternate = {"ListId"})
     @Expose
@@ -75,7 +75,7 @@ public class LookupColumn implements IJsonBackedObject {
 
     /**
      * The Primary Lookup Column Id.
-     * If specified, this column is a secondary lookup, pulling an additional field from the list item looked up by the primary lookup. Use the list item looked up by the primary as the source for the column named here.
+     * 
      */
     @SerializedName(value = "primaryLookupColumnId", alternate = {"PrimaryLookupColumnId"})
     @Expose

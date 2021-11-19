@@ -167,7 +167,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
     /**
      * The Publishing State.
-     * The publishing state for the app. The app cannot be assigned unless the app is published. Possible values are: notPublished, processing, published.
+     * The publishing state for the app. The app cannot be assigned unless the app is published.
      */
     @SerializedName(value = "publishingState", alternate = {"PublishingState"})
     @Expose
@@ -203,7 +203,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
     /**
      * The Upload State.
-     * The upload state.
+     * The upload state. Possible values are: 0 - `Not Ready`, 1 - `Ready`, 2 - `Processing`.
      */
     @SerializedName(value = "uploadState", alternate = {"UploadState"})
     @Expose
@@ -246,7 +246,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
 
     /**
      * The Relationships.
-     * List of relationships for this mobile app.
+     * The set of direct relationships for this app.
      */
     @SerializedName(value = "relationships", alternate = {"Relationships"})
     @Expose

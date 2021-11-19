@@ -40,7 +40,7 @@ public class PlannerTaskCreation implements IJsonBackedObject {
 
     /**
      * The Teams Publication Info.
-     * Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
+     * 
      */
     @SerializedName(value = "teamsPublicationInfo", alternate = {"TeamsPublicationInfo"})
     @Expose

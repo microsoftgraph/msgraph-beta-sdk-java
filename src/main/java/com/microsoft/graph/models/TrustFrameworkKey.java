@@ -40,7 +40,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The D.
-     * RSA Key - private exponent. Field cannot be read back.
+     * 
      */
     @SerializedName(value = "d", alternate = {"D"})
     @Expose
@@ -49,7 +49,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Dp.
-     * RSA Key - first exponent. Field cannot be read back.
+     * 
      */
     @SerializedName(value = "dp", alternate = {"Dp"})
     @Expose
@@ -58,7 +58,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Dq.
-     * RSA Key - second exponent. Field cannot be read back.
+     * 
      */
     @SerializedName(value = "dq", alternate = {"Dq"})
     @Expose
@@ -67,7 +67,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The E.
-     * RSA Key - public exponent
+     * 
      */
     @SerializedName(value = "e", alternate = {"E"})
     @Expose
@@ -76,7 +76,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Exp.
-     * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * 
      */
     @SerializedName(value = "exp", alternate = {"Exp"})
     @Expose
@@ -85,7 +85,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The K.
-     * Symmetric Key for oct key type. Field cannot be read back.
+     * 
      */
     @SerializedName(value = "k", alternate = {"K"})
     @Expose
@@ -94,7 +94,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Kid.
-     * The unique identifier for the key.
+     * 
      */
     @SerializedName(value = "kid", alternate = {"Kid"})
     @Expose
@@ -103,7 +103,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Kty.
-     * The kty (key type) parameter identifies the cryptographic algorithm family used with the key, The valid values are rsa, oct.
+     * 
      */
     @SerializedName(value = "kty", alternate = {"Kty"})
     @Expose
@@ -112,7 +112,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The N.
-     * RSA Key - modulus
+     * 
      */
     @SerializedName(value = "n", alternate = {"N"})
     @Expose
@@ -121,7 +121,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Nbf.
-     * This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
+     * 
      */
     @SerializedName(value = "nbf", alternate = {"Nbf"})
     @Expose
@@ -130,7 +130,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The P.
-     * RSA Key - first prime. Field cannot be read back.
+     * 
      */
     @SerializedName(value = "p", alternate = {"P"})
     @Expose
@@ -139,7 +139,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Q.
-     * RSA Key - second prime. Field cannot be read back.
+     * 
      */
     @SerializedName(value = "q", alternate = {"Q"})
     @Expose
@@ -148,7 +148,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Qi.
-     * RSA Key - Coefficient. Field cannot be read back.
+     * 
      */
     @SerializedName(value = "qi", alternate = {"Qi"})
     @Expose
@@ -157,7 +157,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Use.
-     * The use (public key use) parameter identifies the intended use of the public key.  The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption)
+     * 
      */
     @SerializedName(value = "use", alternate = {"Use"})
     @Expose
@@ -166,7 +166,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The X5c.
-     * The x5c (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates RFC 5280.
+     * 
      */
     @SerializedName(value = "x5c", alternate = {"X5c"})
     @Expose
@@ -175,7 +175,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The X5t.
-     * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * 
      */
     @SerializedName(value = "x5t", alternate = {"X5t"})
     @Expose

@@ -30,7 +30,7 @@ public class ManagementAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * The category for the management action. Possible values are: custom, devices, identity, unknownFutureValue. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -39,7 +39,7 @@ public class ManagementAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description for the management action. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -48,7 +48,7 @@ public class ManagementAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the management action. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class ManagementAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Reference Template Id.
-     * The reference for the management template used to generate the management action. Required. Read-only.
+     * 
      */
     @SerializedName(value = "referenceTemplateId", alternate = {"ReferenceTemplateId"})
     @Expose
@@ -66,7 +66,7 @@ public class ManagementAction extends Entity implements IJsonBackedObject {
 
     /**
      * The Workload Actions.
-     * The collection of workload actions associated with the management action. Required. Read-only.
+     * 
      */
     @SerializedName(value = "workloadActions", alternate = {"WorkloadActions"})
     @Expose

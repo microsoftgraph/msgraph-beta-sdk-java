@@ -53,7 +53,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Classification.
-     * An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * 
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
@@ -62,7 +62,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Timestamp at which the team was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -71,7 +71,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * An optional description for the team. Maximum length: 1024 characters.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -80,7 +80,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Discovery Settings.
-     * Settings to configure team discoverability by others.
+     * 
      */
     @SerializedName(value = "discoverySettings", alternate = {"DiscoverySettings"})
     @Expose
@@ -89,7 +89,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the team.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -98,7 +98,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Fun Settings.
-     * Settings to configure use of Giphy, memes, and stickers in the team.
+     * 
      */
     @SerializedName(value = "funSettings", alternate = {"FunSettings"})
     @Expose
@@ -107,7 +107,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Guest Settings.
-     * Settings to configure whether guests can create, update, or delete channels in the team.
+     * 
      */
     @SerializedName(value = "guestSettings", alternate = {"GuestSettings"})
     @Expose
@@ -116,7 +116,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Internal Id.
-     * A unique ID for the team that has been used in a few places such as the audit log/Office 365 Management Activity API.
+     * 
      */
     @SerializedName(value = "internalId", alternate = {"InternalId"})
     @Expose
@@ -125,7 +125,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Archived.
-     * Whether this team is in read-only mode.
+     * 
      */
     @SerializedName(value = "isArchived", alternate = {"IsArchived"})
     @Expose
@@ -134,7 +134,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Membership Limited To Owners.
-     * If set to true, the team is currently in the owner-only team membership state and not accessible by other team members, such as students.
+     * 
      */
     @SerializedName(value = "isMembershipLimitedToOwners", alternate = {"IsMembershipLimitedToOwners"})
     @Expose
@@ -143,7 +143,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Member Settings.
-     * Settings to configure whether members can perform certain actions, for example, create channels and add bots, in the team.
+     * 
      */
     @SerializedName(value = "memberSettings", alternate = {"MemberSettings"})
     @Expose
@@ -152,7 +152,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Messaging Settings.
-     * Settings to configure messaging and mentions in the team.
+     * 
      */
     @SerializedName(value = "messagingSettings", alternate = {"MessagingSettings"})
     @Expose
@@ -161,7 +161,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Specialization.
-     * Optional. Indicates whether the team is intended for a particular use case.  Each team specialization has access to unique behaviors and experiences targeted to its use case.
+     * 
      */
     @SerializedName(value = "specialization", alternate = {"Specialization"})
     @Expose
@@ -170,7 +170,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * The visibility of the group and team. Defaults to Public.
+     * 
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -179,7 +179,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * A hyperlink that will go to the team in the Microsoft Teams client. This is the URL that you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -188,7 +188,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Channels.
-     * The collection of channels &amp; messages associated with the team.
+     * 
      */
     @SerializedName(value = "channels", alternate = {"Channels"})
     @Expose
@@ -206,7 +206,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Installed Apps.
-     * The apps installed in this team.
+     * 
      */
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
@@ -215,7 +215,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * Members and owners of the team.
+     * 
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
@@ -224,7 +224,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * The async operations that ran or are running on this team.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -233,16 +233,14 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.
-     * @deprecated 
+     * 
      */
-    @Deprecated
 	@Nullable
     public UserCollectionPage owners;
 
     /**
      * The Permission Grants.
-     * A collection of permissions granted to apps to access the team.
+     * 
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose
@@ -251,7 +249,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Photo.
-     * The team photo.
+     * 
      */
     @SerializedName(value = "photo", alternate = {"Photo"})
     @Expose
@@ -260,7 +258,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Primary Channel.
-     * The general channel for the team.
+     * 
      */
     @SerializedName(value = "primaryChannel", alternate = {"PrimaryChannel"})
     @Expose
@@ -269,7 +267,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * The tags associated with the team.
+     * 
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -278,7 +276,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Template.
-     * The template this team was created from. See available templates.
+     * 
      */
     @SerializedName(value = "template", alternate = {"Template"})
     @Expose
@@ -287,7 +285,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Schedule.
-     * The schedule of shifts for this team.
+     * 
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose

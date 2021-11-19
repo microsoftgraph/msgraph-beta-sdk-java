@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.DeviceConfigAssignmentIntent;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentSource;
 import com.microsoft.graph.models.DeviceAndAppManagementAssignmentTarget;
 import com.microsoft.graph.models.Entity;
@@ -28,8 +29,17 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
 
 
     /**
+     * The Intent.
+     * The admin intent to apply or remove the profile. This property is read-only.
+     */
+    @SerializedName(value = "intent", alternate = {"Intent"})
+    @Expose
+	@Nullable
+    public DeviceConfigAssignmentIntent intent;
+
+    /**
      * The Source.
-     * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
+     * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

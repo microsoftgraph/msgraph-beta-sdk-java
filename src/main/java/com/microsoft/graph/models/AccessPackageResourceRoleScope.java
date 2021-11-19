@@ -29,7 +29,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Created By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -38,7 +38,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Created Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Modified By.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -56,7 +56,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Modified Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Access Package Resource Role.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResourceRole", alternate = {"AccessPackageResourceRole"})
     @Expose
@@ -74,7 +74,7 @@ public class AccessPackageResourceRoleScope extends Entity implements IJsonBacke
 
     /**
      * The Access Package Resource Scope.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "accessPackageResourceScope", alternate = {"AccessPackageResourceScope"})
     @Expose

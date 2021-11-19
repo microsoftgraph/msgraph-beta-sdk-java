@@ -40,7 +40,7 @@ public class SiteCollection implements IJsonBackedObject {
 
     /**
      * The Data Location Code.
-     * The geographic region code for where this site collection resides. Read-only.
+     * 
      */
     @SerializedName(value = "dataLocationCode", alternate = {"DataLocationCode"})
     @Expose
@@ -49,7 +49,7 @@ public class SiteCollection implements IJsonBackedObject {
 
     /**
      * The Hostname.
-     * The hostname for the site collection. Read-only.
+     * 
      */
     @SerializedName(value = "hostname", alternate = {"Hostname"})
     @Expose
@@ -58,7 +58,7 @@ public class SiteCollection implements IJsonBackedObject {
 
     /**
      * The Root.
-     * If present, indicates that this is a root site collection in SharePoint. Read-only.
+     * 
      */
     @SerializedName(value = "root", alternate = {"Root"})
     @Expose

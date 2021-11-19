@@ -57,7 +57,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
 
     /**
      * The Format.
-     * Format of the scheduled report. Possible values are: csv, pdf.
+     * Format of the scheduled report
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
@@ -75,7 +75,7 @@ public class DeviceManagementReportSchedule extends Entity implements IJsonBacke
 
     /**
      * The Recurrence.
-     * Frequency of scheduled report delivery. Possible values are: none, daily, weekly, monthly.
+     * Frequency of scheduled report delivery
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

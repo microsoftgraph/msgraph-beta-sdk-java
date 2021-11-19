@@ -39,7 +39,7 @@ public class DriveRecipient implements IJsonBackedObject {
 
     /**
      * The Alias.
-     * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
+     * 
      */
     @SerializedName(value = "alias", alternate = {"Alias"})
     @Expose
@@ -48,7 +48,7 @@ public class DriveRecipient implements IJsonBackedObject {
 
     /**
      * The Email.
-     * The email address for the recipient, if the recipient has an associated email address.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -57,7 +57,7 @@ public class DriveRecipient implements IJsonBackedObject {
 
     /**
      * The Object Id.
-     * The unique identifier for the recipient in the directory.
+     * 
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose

@@ -28,7 +28,7 @@ public class UserConsentRequest extends Request implements IJsonBackedObject {
 
     /**
      * The Reason.
-     * The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
+     * 
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
@@ -37,7 +37,7 @@ public class UserConsentRequest extends Request implements IJsonBackedObject {
 
     /**
      * The Approval.
-     * Approval decisions associated with a request.
+     * 
      */
     @SerializedName(value = "approval", alternate = {"Approval"})
     @Expose

@@ -39,7 +39,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection &amp;lt;#&amp;gt;, etc.).
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -48,7 +48,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Ip V4Address.
-     * Last IPv4 address associated with this NIC.
+     * 
      */
     @SerializedName(value = "ipV4Address", alternate = {"IpV4Address"})
     @Expose
@@ -57,7 +57,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Ip V6Address.
-     * Last Public (aka global) IPv6 address associated with this NIC.
+     * 
      */
     @SerializedName(value = "ipV6Address", alternate = {"IpV6Address"})
     @Expose
@@ -66,7 +66,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Local Ip V6Address.
-     * Last local (link-local or site-local) IPv6 address associated with this NIC.
+     * 
      */
     @SerializedName(value = "localIpV6Address", alternate = {"LocalIpV6Address"})
     @Expose
@@ -75,7 +75,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Mac Address.
-     * MAC address of the NIC on this host.
+     * 
      */
     @SerializedName(value = "macAddress", alternate = {"MacAddress"})
     @Expose

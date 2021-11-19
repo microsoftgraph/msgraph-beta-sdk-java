@@ -28,7 +28,7 @@ public class Operation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The start time of the operation.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class Operation extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Action Date Time.
-     * The time of the last action of the operation.
+     * 
      */
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class Operation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The current status of the operation: notStarted, running, completed, failed
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

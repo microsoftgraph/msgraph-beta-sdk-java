@@ -27,7 +27,7 @@ public class AppRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The App Role Id.
-     * The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
+     * 
      */
     @SerializedName(value = "appRoleId", alternate = {"AppRoleId"})
     @Expose
@@ -36,7 +36,7 @@ public class AppRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Creation Timestamp.
-     * The time when the app role assignment was created.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * 
      */
     @SerializedName(value = "creationTimestamp", alternate = {"CreationTimestamp"})
     @Expose
@@ -45,7 +45,7 @@ public class AppRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal Display Name.
-     * The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
+     * 
      */
     @SerializedName(value = "principalDisplayName", alternate = {"PrincipalDisplayName"})
     @Expose
@@ -54,7 +54,7 @@ public class AppRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal Id.
-     * The unique identifier (id) for the user, group or service principal being granted the app role. Required on create.
+     * 
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -63,7 +63,7 @@ public class AppRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal Type.
-     * The type of the assigned principal. This can either be User, Group or ServicePrincipal. Read-only.
+     * 
      */
     @SerializedName(value = "principalType", alternate = {"PrincipalType"})
     @Expose
@@ -72,7 +72,7 @@ public class AppRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Display Name.
-     * The display name of the resource app's service principal to which the assignment is made.
+     * 
      */
     @SerializedName(value = "resourceDisplayName", alternate = {"ResourceDisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class AppRoleAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
+     * 
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose

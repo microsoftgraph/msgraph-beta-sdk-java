@@ -33,7 +33,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Section Groups Url.
-     * The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
+     * 
      */
     @SerializedName(value = "sectionGroupsUrl", alternate = {"SectionGroupsUrl"})
     @Expose
@@ -42,7 +42,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Sections Url.
-     * The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
+     * 
      */
     @SerializedName(value = "sectionsUrl", alternate = {"SectionsUrl"})
     @Expose
@@ -51,7 +51,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Parent Notebook.
-     * The notebook that contains the section group. Read-only.
+     * 
      */
     @SerializedName(value = "parentNotebook", alternate = {"ParentNotebook"})
     @Expose
@@ -60,7 +60,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Parent Section Group.
-     * The section group that contains the section group. Read-only.
+     * 
      */
     @SerializedName(value = "parentSectionGroup", alternate = {"ParentSectionGroup"})
     @Expose
@@ -69,7 +69,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Section Groups.
-     * The section groups in the section. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
@@ -78,7 +78,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements IJsonBa
 
     /**
      * The Sections.
-     * The sections in the section group. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose

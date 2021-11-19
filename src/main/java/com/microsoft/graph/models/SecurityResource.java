@@ -40,7 +40,7 @@ public class SecurityResource implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * Name of the resource that is related to current alert. Required.
+     * 
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
@@ -49,7 +49,7 @@ public class SecurityResource implements IJsonBackedObject {
 
     /**
      * The Resource Type.
-     * Represents type of security resources related to an alert. Possible values are: attacked, related.
+     * 
      */
     @SerializedName(value = "resourceType", alternate = {"ResourceType"})
     @Expose

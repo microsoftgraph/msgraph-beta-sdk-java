@@ -31,7 +31,7 @@ public class Deployment extends Entity implements IJsonBackedObject {
 
     /**
      * The Content.
-     * Specifies what content to deploy. Cannot be changed. Returned by default.
+     * 
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -40,7 +40,7 @@ public class Deployment extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the deployment was created. Returned by default. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class Deployment extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The date and time the deployment was last modified. Returned by default. Read-only.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class Deployment extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Settings specified on the specific deployment governing how to deploy content. Returned by default.
+     * 
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -67,7 +67,7 @@ public class Deployment extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Execution status of the deployment. Returned by default.
+     * 
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -76,7 +76,7 @@ public class Deployment extends Entity implements IJsonBackedObject {
 
     /**
      * The Audience.
-     * Specifies the audience to which content is deployed.
+     * 
      */
     @SerializedName(value = "audience", alternate = {"Audience"})
     @Expose

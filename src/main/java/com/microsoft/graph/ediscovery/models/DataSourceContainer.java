@@ -29,7 +29,7 @@ public class DataSourceContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Created date and time of the dataSourceContainer entity.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -38,7 +38,7 @@ public class DataSourceContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the dataSourceContainer entity.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -47,7 +47,7 @@ public class DataSourceContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Last modified date and time of the dataSourceContainer.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class DataSourceContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Released Date Time.
-     * Date and time that the dataSourceContainer was released from the case.
+     * 
      */
     @SerializedName(value = "releasedDateTime", alternate = {"ReleasedDateTime"})
     @Expose
@@ -65,7 +65,7 @@ public class DataSourceContainer extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Latest status of the dataSourceContainer. Possible values are: Active, Released.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

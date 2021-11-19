@@ -38,7 +38,7 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Operation Status.
-     * The group policy operation status. Possible values are: unknown, inProgress, success, failed.
+     * The group policy operation status.
      */
     @SerializedName(value = "operationStatus", alternate = {"OperationStatus"})
     @Expose
@@ -47,7 +47,7 @@ public class GroupPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Operation Type.
-     * The type of group policy operation. Possible values are: none, upload, uploadNewVersion, addLanguageFiles, removeLanguageFiles, updateLanguageFiles, remove.
+     * The type of group policy operation.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose

@@ -30,7 +30,7 @@ public class PlannerBucket extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Name of the bucket.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -39,7 +39,7 @@ public class PlannerBucket extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Order Hint.
-     * Hint used to order items of this type in a list view. The format is defined as outlined here.
+     * 
      */
     @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
@@ -48,7 +48,7 @@ public class PlannerBucket extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Plan Id.
-     * Plan ID to which the bucket belongs.
+     * 
      */
     @SerializedName(value = "planId", alternate = {"PlanId"})
     @Expose
@@ -57,7 +57,7 @@ public class PlannerBucket extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * Read-only. Nullable. The collection of tasks in the bucket.
+     * 
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

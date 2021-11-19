@@ -28,7 +28,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Hoc Meetings Attended Count.
-     * The number of ad hoc meetings a user participated in.
+     * 
      */
     @SerializedName(value = "adHocMeetingsAttendedCount", alternate = {"AdHocMeetingsAttendedCount"})
     @Expose
@@ -37,7 +37,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Ad Hoc Meetings Organized Count.
-     * The number of ad hoc meetings a user organized.
+     * 
      */
     @SerializedName(value = "adHocMeetingsOrganizedCount", alternate = {"AdHocMeetingsOrganizedCount"})
     @Expose
@@ -46,7 +46,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Assigned Products.
-     * Products the user assigned with.
+     * 
      */
     @SerializedName(value = "assignedProducts", alternate = {"AssignedProducts"})
     @Expose
@@ -55,7 +55,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Audio Duration.
-     * Audio duration the user participated in.
+     * 
      */
     @SerializedName(value = "audioDuration", alternate = {"AudioDuration"})
     @Expose
@@ -64,7 +64,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Call Count.
-     * The number of 1:1 calls that the user participated in.
+     * 
      */
     @SerializedName(value = "callCount", alternate = {"CallCount"})
     @Expose
@@ -73,7 +73,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Deleted Date.
-     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+     * 
      */
     @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
@@ -82,7 +82,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Has Other Action.
-     * The User is active but has performed other activities than exposed action types offered in the report (sending or replying to channel messages and chat messages, scheduling or participating in 1:1 calls and meetings). Examples actions are when a user changes the Teams status or the Teams status message or opens a Channel Message post but does not reply.
+     * 
      */
     @SerializedName(value = "hasOtherAction", alternate = {"HasOtherAction"})
     @Expose
@@ -91,7 +91,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Is Deleted.
-     * Whether this user has been deleted or soft deleted.
+     * 
      */
     @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
@@ -100,7 +100,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Is Licensed.
-     * Whether the user has been assigned a Teams license.
+     * 
      */
     @SerializedName(value = "isLicensed", alternate = {"IsLicensed"})
     @Expose
@@ -109,7 +109,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Last Activity Date.
-     * The last date that the user participated in a Microsoft Teams activity.
+     * 
      */
     @SerializedName(value = "lastActivityDate", alternate = {"LastActivityDate"})
     @Expose
@@ -118,7 +118,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Meeting Count.
-     * The number of online meetings that the user participated in.
+     * 
      */
     @SerializedName(value = "meetingCount", alternate = {"MeetingCount"})
     @Expose
@@ -127,7 +127,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Meetings Attended Count.
-     * The sum of the one-time scheduled, recurring, ad hoc and unclassified meetings a user participated in.
+     * 
      */
     @SerializedName(value = "meetingsAttendedCount", alternate = {"MeetingsAttendedCount"})
     @Expose
@@ -136,7 +136,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Meetings Organized Count.
-     * The sum of one-time scheduled, Recurring, ad hoc and unclassified meetings a user organized.
+     * 
      */
     @SerializedName(value = "meetingsOrganizedCount", alternate = {"MeetingsOrganizedCount"})
     @Expose
@@ -145,7 +145,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Private Chat Message Count.
-     * The number of unique messages that the user posted in a private chat.
+     * 
      */
     @SerializedName(value = "privateChatMessageCount", alternate = {"PrivateChatMessageCount"})
     @Expose
@@ -154,7 +154,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Report Period.
-     * The number of days the report covers.
+     * 
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -163,7 +163,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Report Refresh Date.
-     * The latest date of the content.
+     * 
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -172,7 +172,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Scheduled One Time Meetings Attended Count.
-     * The number of the one-time scheduled meetings a user participated in.
+     * 
      */
     @SerializedName(value = "scheduledOneTimeMeetingsAttendedCount", alternate = {"ScheduledOneTimeMeetingsAttendedCount"})
     @Expose
@@ -181,7 +181,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Scheduled One Time Meetings Organized Count.
-     * The number of one-time scheduled meetings a user organized.
+     * 
      */
     @SerializedName(value = "scheduledOneTimeMeetingsOrganizedCount", alternate = {"ScheduledOneTimeMeetingsOrganizedCount"})
     @Expose
@@ -190,7 +190,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Scheduled Recurring Meetings Attended Count.
-     * The number of the recurring meetings a user participated in.
+     * 
      */
     @SerializedName(value = "scheduledRecurringMeetingsAttendedCount", alternate = {"ScheduledRecurringMeetingsAttendedCount"})
     @Expose
@@ -199,7 +199,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Scheduled Recurring Meetings Organized Count.
-     * The number of recurring meetings a user organized.
+     * 
      */
     @SerializedName(value = "scheduledRecurringMeetingsOrganizedCount", alternate = {"ScheduledRecurringMeetingsOrganizedCount"})
     @Expose
@@ -208,7 +208,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Screen Share Duration.
-     * Screen sharing duration the user participated in.
+     * 
      */
     @SerializedName(value = "screenShareDuration", alternate = {"ScreenShareDuration"})
     @Expose
@@ -217,7 +217,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Team Chat Message Count.
-     * The number of unique messages that the user posted in a team chat.
+     * 
      */
     @SerializedName(value = "teamChatMessageCount", alternate = {"TeamChatMessageCount"})
     @Expose
@@ -226,7 +226,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The User Principal Name.
-     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
+     * 
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -235,7 +235,7 @@ public class TeamsUserActivityUserDetail extends Entity implements IJsonBackedOb
 
     /**
      * The Video Duration.
-     * Video duration the user participated in.
+     * 
      */
     @SerializedName(value = "videoDuration", alternate = {"VideoDuration"})
     @Expose

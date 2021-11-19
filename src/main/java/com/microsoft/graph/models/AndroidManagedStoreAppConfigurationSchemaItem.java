@@ -42,7 +42,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements IJsonBacke
 
     /**
      * The Data Type.
-     * The type of value this item describes. Possible values are: bool, integer, string, choice, multiselect, bundle, bundleArray, hidden.
+     * The type of value this item describes
      */
     @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose

@@ -39,7 +39,7 @@ public class PublicationFacet implements IJsonBackedObject {
 
     /**
      * The Level.
-     * The state of publication for this document. Either published or checkout. Read-only.
+     * 
      */
     @SerializedName(value = "level", alternate = {"Level"})
     @Expose
@@ -48,7 +48,7 @@ public class PublicationFacet implements IJsonBackedObject {
 
     /**
      * The Version Id.
-     * The unique identifier for the version that is visible to the current caller. Read-only.
+     * 
      */
     @SerializedName(value = "versionId", alternate = {"VersionId"})
     @Expose

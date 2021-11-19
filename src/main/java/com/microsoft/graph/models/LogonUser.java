@@ -42,7 +42,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The Account Domain.
-     * Domain of user account used to logon.
+     * 
      */
     @SerializedName(value = "accountDomain", alternate = {"AccountDomain"})
     @Expose
@@ -51,7 +51,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The Account Name.
-     * Account name of user account used to logon.
+     * 
      */
     @SerializedName(value = "accountName", alternate = {"AccountName"})
     @Expose
@@ -60,7 +60,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The Account Type.
-     * User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
+     * 
      */
     @SerializedName(value = "accountType", alternate = {"AccountType"})
     @Expose
@@ -69,7 +69,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The First Seen Date Time.
-     * DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
@@ -78,7 +78,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The Last Seen Date Time.
-     * DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
@@ -87,7 +87,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The Logon Id.
-     * User logon ID.
+     * 
      */
     @SerializedName(value = "logonId", alternate = {"LogonId"})
     @Expose
@@ -96,7 +96,7 @@ public class LogonUser implements IJsonBackedObject {
 
     /**
      * The Logon Types.
-     * Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+     * 
      */
     @SerializedName(value = "logonTypes", alternate = {"LogonTypes"})
     @Expose

@@ -39,7 +39,7 @@ public class RedirectUriSettings implements IJsonBackedObject {
 
     /**
      * The Index.
-     * Identifies the specific URI within the redirectURIs collection in SAML SSO flows. Defaults to null. The index is unique across all the redirectUris for the application.
+     * 
      */
     @SerializedName(value = "index", alternate = {"Index"})
     @Expose
@@ -48,7 +48,7 @@ public class RedirectUriSettings implements IJsonBackedObject {
 
     /**
      * The Uri.
-     * Specifies the URI that tokens are sent to.
+     * 
      */
     @SerializedName(value = "uri", alternate = {"Uri"})
     @Expose

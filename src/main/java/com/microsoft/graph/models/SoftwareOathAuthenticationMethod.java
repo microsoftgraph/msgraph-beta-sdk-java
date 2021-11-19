@@ -27,7 +27,7 @@ public class SoftwareOathAuthenticationMethod extends AuthenticationMethod imple
 
     /**
      * The Secret Key.
-     * The secret key of the method. Always returns null.
+     * 
      */
     @SerializedName(value = "secretKey", alternate = {"SecretKey"})
     @Expose

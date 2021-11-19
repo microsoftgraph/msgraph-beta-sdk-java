@@ -27,7 +27,7 @@ public class ManagedTenantExecutionError extends ManagedTenantOperationError imp
 
     /**
      * The Error Details.
-     * Additional error information for the exception. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "errorDetails", alternate = {"ErrorDetails"})
     @Expose
@@ -36,7 +36,7 @@ public class ManagedTenantExecutionError extends ManagedTenantOperationError imp
 
     /**
      * The Node Id.
-     * The node identifier where the exception occurred. Required. Read-only.
+     * 
      */
     @SerializedName(value = "nodeId", alternate = {"NodeId"})
     @Expose
@@ -45,7 +45,7 @@ public class ManagedTenantExecutionError extends ManagedTenantOperationError imp
 
     /**
      * The Raw Token.
-     * The token for the exception. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "rawToken", alternate = {"RawToken"})
     @Expose
@@ -54,7 +54,7 @@ public class ManagedTenantExecutionError extends ManagedTenantOperationError imp
 
     /**
      * The Statement Index.
-     * The statement index for the exception. Required. Read-only.
+     * 
      */
     @SerializedName(value = "statementIndex", alternate = {"StatementIndex"})
     @Expose

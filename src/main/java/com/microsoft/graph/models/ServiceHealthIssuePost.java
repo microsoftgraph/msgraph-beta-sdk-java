@@ -41,7 +41,7 @@ public class ServiceHealthIssuePost implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The published time of the post.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class ServiceHealthIssuePost implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The content of the service issue post.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -59,7 +59,7 @@ public class ServiceHealthIssuePost implements IJsonBackedObject {
 
     /**
      * The Post Type.
-     * The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "postType", alternate = {"PostType"})
     @Expose

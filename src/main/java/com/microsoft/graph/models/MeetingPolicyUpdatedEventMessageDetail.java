@@ -28,7 +28,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
 
     /**
      * The Initiator.
-     * Initiator of the event.
+     * 
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -37,7 +37,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
 
     /**
      * The Meeting Chat Enabled.
-     * Represents whether the meeting chat is enabled or not.
+     * 
      */
     @SerializedName(value = "meetingChatEnabled", alternate = {"MeetingChatEnabled"})
     @Expose
@@ -46,7 +46,7 @@ public class MeetingPolicyUpdatedEventMessageDetail extends EventMessageDetail i
 
     /**
      * The Meeting Chat Id.
-     * Unique identifier of the meeting chat.
+     * 
      */
     @SerializedName(value = "meetingChatId", alternate = {"MeetingChatId"})
     @Expose

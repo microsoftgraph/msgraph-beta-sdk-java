@@ -36,7 +36,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * DateTime when review instance is scheduled to end.The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
+     * 
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Errors.
-     * Collection of errors in an access review instance lifecycle. Read-only.
+     * 
      */
     @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
@@ -54,7 +54,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Fallback Reviewers.
-     * This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner does not exist, or manager is specified as reviewer but a user's manager does not exist. Supports $select.
+     * 
      */
     @SerializedName(value = "fallbackReviewers", alternate = {"FallbackReviewers"})
     @Expose
@@ -63,7 +63,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Reviewers.
-     * This collection of access review scopes is used to define who the reviewers are. Supports $select. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
+     * 
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
@@ -72,7 +72,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * Created based on scope and instanceEnumerationScope at the accessReviewScheduleDefinition level. Defines the scope of users reviewed in a group. Supports $select and $filter (contains only). Read-only.
+     * 
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -81,7 +81,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * DateTime when review instance is scheduled to start. May be in the future. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $select. Read-only.
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -90,7 +90,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Specifies the status of an accessReview. Possible values: Initializing, NotStarted, Starting, InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. Supports $select, $orderby, and $filter (eq only). Read-only.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -99,7 +99,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Contacted Reviewers.
-     * Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.
+     * 
      */
     @SerializedName(value = "contactedReviewers", alternate = {"ContactedReviewers"})
     @Expose
@@ -108,7 +108,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Decisions.
-     * Each principal reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.
+     * 
      */
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
@@ -117,7 +117,7 @@ public class AccessReviewInstance extends Entity implements IJsonBackedObject {
 
     /**
      * The Definition.
-     * There is exactly one accessReviewScheduleDefinition associated with each instance. It is the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
+     * 
      */
     @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose

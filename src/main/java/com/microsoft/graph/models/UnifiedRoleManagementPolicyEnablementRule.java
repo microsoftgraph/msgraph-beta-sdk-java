@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyEnablementRule extends UnifiedRoleManage
 
     /**
      * The Enabled Rules.
-     * The rules which are enabled. Allowed values are MultifactorAuthentication, Justification, Ticketing.
+     * 
      */
     @SerializedName(value = "enabledRules", alternate = {"EnabledRules"})
     @Expose

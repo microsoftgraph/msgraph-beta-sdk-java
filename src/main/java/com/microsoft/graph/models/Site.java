@@ -59,7 +59,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The full title for the site. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Root.
-     * If present, indicates that this is the root site in the site collection. Read-only.
+     * 
      */
     @SerializedName(value = "root", alternate = {"Root"})
     @Expose
@@ -77,7 +77,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * 
      */
     @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
@@ -86,7 +86,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Site Collection.
-     * Provides details about the site's site collection. Available only on the root site. Read-only.
+     * 
      */
     @SerializedName(value = "siteCollection", alternate = {"SiteCollection"})
     @Expose
@@ -95,7 +95,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Analytics.
-     * Analytics about the view activities that took place in this site.
+     * 
      */
     @SerializedName(value = "analytics", alternate = {"Analytics"})
     @Expose
@@ -104,7 +104,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Columns.
-     * The collection of column definitions reusable across lists under this site.
+     * 
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
@@ -113,7 +113,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Types.
-     * The collection of content types defined for this site.
+     * 
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
@@ -122,7 +122,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive.
-     * The default drive (document library) for this site.
+     * 
      */
     @SerializedName(value = "drive", alternate = {"Drive"})
     @Expose
@@ -131,7 +131,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drives.
-     * The collection of drives (document libraries) under this site.
+     * 
      */
     @SerializedName(value = "drives", alternate = {"Drives"})
     @Expose
@@ -140,14 +140,14 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The External Columns.
-     * The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+     * 
      */
 	@Nullable
     public ColumnDefinitionCollectionPage externalColumns;
 
     /**
      * The Items.
-     * Used to address any item contained in this site. This collection can't be enumerated.
+     * 
      */
     @SerializedName(value = "items", alternate = {"Items"})
     @Expose
@@ -156,7 +156,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Lists.
-     * The collection of lists under this site.
+     * 
      */
     @SerializedName(value = "lists", alternate = {"Lists"})
     @Expose
@@ -165,7 +165,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Pages.
-     * The collection of pages in the SitePages list in this site.
+     * 
      */
     @SerializedName(value = "pages", alternate = {"Pages"})
     @Expose
@@ -174,7 +174,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Permissions.
-     * The permissions associated with the site. Nullable.
+     * 
      */
     @SerializedName(value = "permissions", alternate = {"Permissions"})
     @Expose
@@ -183,7 +183,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sites.
-     * The collection of the sub-sites under this site.
+     * 
      */
     @SerializedName(value = "sites", alternate = {"Sites"})
     @Expose
@@ -192,7 +192,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Term Store.
-     * The default termStore under this site.
+     * 
      */
     @SerializedName(value = "termStore", alternate = {"TermStore"})
     @Expose
@@ -201,7 +201,7 @@ public class Site extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Onenote.
-     * Calls the OneNote service for notebook related operations.
+     * 
      */
     @SerializedName(value = "onenote", alternate = {"Onenote"})
     @Expose

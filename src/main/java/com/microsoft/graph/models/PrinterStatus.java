@@ -43,7 +43,7 @@ public class PrinterStatus implements IJsonBackedObject {
 
     /**
      * The Description.
-     * A human-readable description of the printer's current processing state. Read-only.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -52,7 +52,7 @@ public class PrinterStatus implements IJsonBackedObject {
 
     /**
      * The Details.
-     * The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
+     * 
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -88,7 +88,7 @@ public class PrinterStatus implements IJsonBackedObject {
 
     /**
      * The State.
-     * The current processing state. Valid values are described in the following table. Read-only.
+     * 
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

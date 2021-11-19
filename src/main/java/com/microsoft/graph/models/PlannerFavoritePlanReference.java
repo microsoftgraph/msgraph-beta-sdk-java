@@ -39,7 +39,7 @@ public class PlannerFavoritePlanReference implements IJsonBackedObject {
 
     /**
      * The Order Hint.
-     * Hint used to order items of this type in a list view. The format is defined in Using order hints in Planner.
+     * 
      */
     @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
@@ -48,7 +48,7 @@ public class PlannerFavoritePlanReference implements IJsonBackedObject {
 
     /**
      * The Plan Title.
-     * Title of the plan at the time the user marked it as a favorite.
+     * 
      */
     @SerializedName(value = "planTitle", alternate = {"PlanTitle"})
     @Expose

@@ -103,7 +103,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements IJs
 
     /**
      * The Referencing Configuration Policies.
-     * configuration policies referencing the current reusable setting
+     * configuration policies referencing the current reusable setting. This property is read-only.
      */
     @SerializedName(value = "referencingConfigurationPolicies", alternate = {"ReferencingConfigurationPolicies"})
     @Expose

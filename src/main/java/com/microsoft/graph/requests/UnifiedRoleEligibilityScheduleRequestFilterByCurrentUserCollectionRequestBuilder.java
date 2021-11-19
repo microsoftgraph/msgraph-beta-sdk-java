@@ -63,9 +63,11 @@ public class UnifiedRoleEligibilityScheduleRequestFilterByCurrentUserCollectionR
     @Nonnull
     public UnifiedRoleEligibilityScheduleRequestFilterByCurrentUserCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final UnifiedRoleEligibilityScheduleRequestFilterByCurrentUserCollectionRequest request = super.buildRequest(requestOptions);
-          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }

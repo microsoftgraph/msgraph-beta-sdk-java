@@ -27,7 +27,7 @@ public class IdentityProviderBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the identity provider.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

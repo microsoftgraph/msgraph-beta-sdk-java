@@ -28,7 +28,7 @@ public class PrintOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The DateTimeOffset when the operation was created. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class PrintOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the operation. Read-only.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

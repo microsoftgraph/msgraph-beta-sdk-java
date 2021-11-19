@@ -52,7 +52,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Allow New Time Proposals.
-     * true if the meeting organizer allows invitees to propose a new time when responding; otherwise, false. Optional. Default is true.
+     * 
      */
     @SerializedName(value = "allowNewTimeProposals", alternate = {"AllowNewTimeProposals"})
     @Expose
@@ -61,7 +61,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attendees.
-     * The collection of attendees for the event.
+     * 
      */
     @SerializedName(value = "attendees", alternate = {"Attendees"})
     @Expose
@@ -70,7 +70,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body.
-     * The body of the message associated with the event. It can be in HTML or text format.
+     * 
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -79,7 +79,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Body Preview.
-     * The preview of the message associated with the event. It is in text format.
+     * 
      */
     @SerializedName(value = "bodyPreview", alternate = {"BodyPreview"})
     @Expose
@@ -88,7 +88,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Cancelled Occurrences.
-     * Contains occurrenceId property values of cancelled instances in a recurring series, if the event is the series master. Instances in a recurring series that are cancelled are called cancelledOccurences.Returned only on $select in a Get operation which specifies the id of a series master event (that is, the seriesMasterId property value).
+     * 
      */
     @SerializedName(value = "cancelledOccurrences", alternate = {"CancelledOccurrences"})
     @Expose
@@ -97,7 +97,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The End.
-     * The date, time, and time zone that the event ends. By default, the end time is in UTC.
+     * 
      */
     @SerializedName(value = "end", alternate = {"End"})
     @Expose
@@ -106,7 +106,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * Set to true if the event has attachments.
+     * 
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -115,7 +115,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Hide Attendees.
-     * When set to true, each attendee only sees themselves in the meeting request and meeting Tracking list. Default is false.
+     * 
      */
     @SerializedName(value = "hideAttendees", alternate = {"HideAttendees"})
     @Expose
@@ -394,7 +394,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * The collection of FileAttachment, ItemAttachment, and referenceAttachment attachments for the event. Navigation property. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
@@ -403,7 +403,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Calendar.
-     * The calendar that contains the event. Navigation property. Read-only.
+     * 
      */
     @SerializedName(value = "calendar", alternate = {"Calendar"})
     @Expose
@@ -421,7 +421,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the event. Nullable.
+     * 
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -430,7 +430,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Instances.
-     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but does not include occurrences that have been cancelled from the series. Navigation property. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "instances", alternate = {"Instances"})
     @Expose
@@ -439,7 +439,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Multi Value Extended Properties.
-     * The collection of multi-value extended properties defined for the event. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
@@ -448,7 +448,7 @@ public class Event extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the event. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose

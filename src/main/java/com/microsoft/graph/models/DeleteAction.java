@@ -39,7 +39,7 @@ public class DeleteAction implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the item that was deleted.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -48,7 +48,7 @@ public class DeleteAction implements IJsonBackedObject {
 
     /**
      * The Object Type.
-     * File or Folder, depending on the type of the deleted item.
+     * 
      */
     @SerializedName(value = "objectType", alternate = {"ObjectType"})
     @Expose

@@ -27,7 +27,7 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements IJson
 
     /**
      * The Description.
-     * Provides the reason why the DomainDnsUnavailableRecord entity is returned.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

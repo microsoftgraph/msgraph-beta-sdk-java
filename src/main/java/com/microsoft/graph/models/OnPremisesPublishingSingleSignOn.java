@@ -41,7 +41,7 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
 
     /**
      * The Kerberos Sign On Settings.
-     * The Kerberos Constrained Delegation settings for applications that use Integrated Window Authentication.
+     * 
      */
     @SerializedName(value = "kerberosSignOnSettings", alternate = {"KerberosSignOnSettings"})
     @Expose
@@ -50,7 +50,7 @@ public class OnPremisesPublishingSingleSignOn implements IJsonBackedObject {
 
     /**
      * The Single Sign On Mode.
-     * The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased.
+     * 
      */
     @SerializedName(value = "singleSignOnMode", alternate = {"SingleSignOnMode"})
     @Expose

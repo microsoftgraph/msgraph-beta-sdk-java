@@ -31,7 +31,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
 
     /**
      * The Bind Status.
-     * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
+     * Bind status of the tenant with the Google EMM API
      */
     @SerializedName(value = "bindStatus", alternate = {"BindStatus"})
     @Expose
@@ -49,7 +49,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
 
     /**
      * The Enrollment Target.
-     * Indicates which users can enroll devices in Android for Work device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
+     * Indicates which users can enroll devices in Android for Work device management
      */
     @SerializedName(value = "enrollmentTarget", alternate = {"EnrollmentTarget"})
     @Expose
@@ -67,7 +67,7 @@ public class AndroidForWorkSettings extends Entity implements IJsonBackedObject 
 
     /**
      * The Last App Sync Status.
-     * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
+     * Last application sync result
      */
     @SerializedName(value = "lastAppSyncStatus", alternate = {"LastAppSyncStatus"})
     @Expose

@@ -41,7 +41,7 @@ public class DisplayTemplate implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The text identifier for the display template; for example, contosoTickets.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -50,7 +50,7 @@ public class DisplayTemplate implements IJsonBackedObject {
 
     /**
      * The Layout.
-     * The definition of the content's appearance, represented by an Adaptive Card, which is a JSON-serialized card object model.
+     * 
      */
     @SerializedName(value = "layout", alternate = {"Layout"})
     @Expose
@@ -59,7 +59,7 @@ public class DisplayTemplate implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported.
+     * 
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -68,7 +68,7 @@ public class DisplayTemplate implements IJsonBackedObject {
 
     /**
      * The Rules.
-     * Specifies additional rules for selecting this display template based on the item schema. Optional.
+     * 
      */
     @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose

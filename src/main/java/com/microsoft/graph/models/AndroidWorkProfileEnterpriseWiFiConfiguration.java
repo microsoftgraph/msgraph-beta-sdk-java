@@ -35,7 +35,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
 
     /**
      * The Authentication Method.
-     * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -44,7 +44,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
 
     /**
      * The Eap Type.
-     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, eapTtls, peap.
+     * Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
     @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
@@ -53,7 +53,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
 
     /**
      * The Inner Authentication Protocol For Eap Ttls.
-     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
      */
     @SerializedName(value = "innerAuthenticationProtocolForEapTtls", alternate = {"InnerAuthenticationProtocolForEapTtls"})
     @Expose
@@ -62,7 +62,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
 
     /**
      * The Inner Authentication Protocol For Peap.
-     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
+     * Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password.
      */
     @SerializedName(value = "innerAuthenticationProtocolForPeap", alternate = {"InnerAuthenticationProtocolForPeap"})
     @Expose
@@ -89,7 +89,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
 
     /**
      * The Proxy Settings.
-     * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+     * Proxy Type for this Wi-Fi connection
      */
     @SerializedName(value = "proxySettings", alternate = {"ProxySettings"})
     @Expose

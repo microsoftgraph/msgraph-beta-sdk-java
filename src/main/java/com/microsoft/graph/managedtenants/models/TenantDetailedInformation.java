@@ -27,7 +27,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The City.
-     * The city where the managed tenant is located. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "city", alternate = {"City"})
     @Expose
@@ -36,7 +36,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Country Code.
-     * The code for the country where the managed tenant is located. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "countryCode", alternate = {"CountryCode"})
     @Expose
@@ -45,7 +45,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Country Name.
-     * The name for the country where the managed tenant is located. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "countryName", alternate = {"CountryName"})
     @Expose
@@ -54,7 +54,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Default Domain Name.
-     * The default domain name for the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "defaultDomainName", alternate = {"DefaultDomainName"})
     @Expose
@@ -63,7 +63,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * The display name for the managed tenant.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -72,7 +72,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Industry Name.
-     * The business industry associated with the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "industryName", alternate = {"IndustryName"})
     @Expose
@@ -81,7 +81,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Region.
-     * The region where the managed tenant is located. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "region", alternate = {"Region"})
     @Expose
@@ -90,7 +90,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Segment Name.
-     * The business segment associated with the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "segmentName", alternate = {"SegmentName"})
     @Expose
@@ -99,7 +99,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant identifier for the managed tenant.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -108,7 +108,7 @@ public class TenantDetailedInformation extends Entity implements IJsonBackedObje
 
     /**
      * The Vertical Name.
-     * The vertical associated with the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "verticalName", alternate = {"VerticalName"})
     @Expose

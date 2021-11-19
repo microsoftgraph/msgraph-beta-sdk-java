@@ -41,7 +41,7 @@ public class ColumnValidation implements IJsonBackedObject {
 
     /**
      * The Default Language.
-     * Default BCP 47 language tag for the description.
+     * 
      */
     @SerializedName(value = "defaultLanguage", alternate = {"DefaultLanguage"})
     @Expose
@@ -50,7 +50,7 @@ public class ColumnValidation implements IJsonBackedObject {
 
     /**
      * The Descriptions.
-     * Localized messages that explain what is needed for this column's value to be considered valid. User will be prompted with this message if validation fails.
+     * 
      */
     @SerializedName(value = "descriptions", alternate = {"Descriptions"})
     @Expose
@@ -59,7 +59,7 @@ public class ColumnValidation implements IJsonBackedObject {
 
     /**
      * The Formula.
-     * The formula to validate column value. For examples, see Examples of common formulas in lists.
+     * 
      */
     @SerializedName(value = "formula", alternate = {"Formula"})
     @Expose

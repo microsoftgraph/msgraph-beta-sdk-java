@@ -41,7 +41,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Approval Mode.
-     * One of NoApproval, SingleStage or Serial. The NoApproval is used when isApprovalRequired is false.
+     * 
      */
     @SerializedName(value = "approvalMode", alternate = {"ApprovalMode"})
     @Expose
@@ -50,7 +50,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Approval Stages.
-     * If approval is required, the one or two elements of this collection define each of the stages of approval. An empty array if no approval is required.
+     * 
      */
     @SerializedName(value = "approvalStages", alternate = {"ApprovalStages"})
     @Expose
@@ -59,7 +59,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Is Approval Required.
-     * If false, then approval is not required for requests in this policy.
+     * 
      */
     @SerializedName(value = "isApprovalRequired", alternate = {"IsApprovalRequired"})
     @Expose
@@ -68,7 +68,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Is Approval Required For Extension.
-     * If false, then approval is not required for a user who already has an assignment to extend their assignment.
+     * 
      */
     @SerializedName(value = "isApprovalRequiredForExtension", alternate = {"IsApprovalRequiredForExtension"})
     @Expose
@@ -77,7 +77,7 @@ public class ApprovalSettings implements IJsonBackedObject {
 
     /**
      * The Is Requestor Justification Required.
-     * Indicates whether the requestor is required to supply a justification in their request.
+     * 
      */
     @SerializedName(value = "isRequestorJustificationRequired", alternate = {"IsRequestorJustificationRequired"})
     @Expose

@@ -30,7 +30,7 @@ public class DeploymentAudience extends Entity implements IJsonBackedObject {
 
     /**
      * The Exclusions.
-     * Specifies the assets to exclude from the audience.
+     * 
      */
     @SerializedName(value = "exclusions", alternate = {"Exclusions"})
     @Expose
@@ -39,7 +39,7 @@ public class DeploymentAudience extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * Specifies the assets to include in the audience.
+     * 
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

@@ -49,7 +49,7 @@ public class CustomSubjectAlternativeName implements IJsonBackedObject {
 
     /**
      * The San Type.
-     * Custom SAN Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Custom SAN Type.
      */
     @SerializedName(value = "sanType", alternate = {"SanType"})
     @Expose

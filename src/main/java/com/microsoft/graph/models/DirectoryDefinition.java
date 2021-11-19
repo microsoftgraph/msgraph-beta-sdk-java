@@ -30,7 +30,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Discoverabilities.
-     * Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue.
+     * 
      */
     @SerializedName(value = "discoverabilities", alternate = {"Discoverabilities"})
     @Expose
@@ -39,7 +39,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Discovery Date Time.
-     * Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "discoveryDateTime", alternate = {"DiscoveryDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Name of the directory. Must be unique within the synchronization schema. Not nullable.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -57,7 +57,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Objects.
-     * Collection of objects supported by the directory.
+     * 
      */
     @SerializedName(value = "objects", alternate = {"Objects"})
     @Expose
@@ -75,7 +75,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Read only value that indicates version discovered. null if discovery has not yet occurred.
+     * 
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

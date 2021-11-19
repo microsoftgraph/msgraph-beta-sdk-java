@@ -39,7 +39,7 @@ public class AppConsentRequestScope implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the scope.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

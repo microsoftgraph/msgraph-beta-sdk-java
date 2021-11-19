@@ -42,7 +42,7 @@ public class RubricQuality implements IJsonBackedObject {
 
     /**
      * The Criteria.
-     * The collection of criteria for this rubric quality.
+     * 
      */
     @SerializedName(value = "criteria", alternate = {"Criteria"})
     @Expose
@@ -51,7 +51,7 @@ public class RubricQuality implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description of this rubric quality.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -60,7 +60,7 @@ public class RubricQuality implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of this rubric quality.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -69,7 +69,7 @@ public class RubricQuality implements IJsonBackedObject {
 
     /**
      * The Quality Id.
-     * The ID of this resource.
+     * 
      */
     @SerializedName(value = "qualityId", alternate = {"QualityId"})
     @Expose
@@ -78,7 +78,7 @@ public class RubricQuality implements IJsonBackedObject {
 
     /**
      * The Weight.
-     * If present, a numerical weight for this quality.  Weights must add up to 100.
+     * 
      */
     @SerializedName(value = "weight", alternate = {"Weight"})
     @Expose

@@ -28,7 +28,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
 
     /**
      * The Classification.
-     * Classification of the quality update. Possible values are: all, security, nonSecurity.
+     * Classification of the quality update
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose

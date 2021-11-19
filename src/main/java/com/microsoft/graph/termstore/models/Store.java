@@ -32,7 +32,7 @@ public class Store extends Entity implements IJsonBackedObject {
 
     /**
      * The Default Language Tag.
-     * Default language of the term store.
+     * 
      */
     @SerializedName(value = "defaultLanguageTag", alternate = {"DefaultLanguageTag"})
     @Expose
@@ -41,7 +41,7 @@ public class Store extends Entity implements IJsonBackedObject {
 
     /**
      * The Language Tags.
-     * List of languages for the term store.
+     * 
      */
     @SerializedName(value = "languageTags", alternate = {"LanguageTags"})
     @Expose
@@ -50,7 +50,7 @@ public class Store extends Entity implements IJsonBackedObject {
 
     /**
      * The Groups.
-     * Collection of all groups available in the term store.
+     * 
      */
     @SerializedName(value = "groups", alternate = {"Groups"})
     @Expose
@@ -59,7 +59,7 @@ public class Store extends Entity implements IJsonBackedObject {
 
     /**
      * The Sets.
-     * Collection of all sets available in the term store.
+     * 
      */
     @SerializedName(value = "sets", alternate = {"Sets"})
     @Expose

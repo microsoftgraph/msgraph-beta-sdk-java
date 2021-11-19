@@ -28,7 +28,7 @@ public class ExpeditedQualityUpdateReference extends QualityUpdateReference impl
 
     /**
      * The Equivalent Content.
-     * Specifies other content to consider as equivalent. Supports a subset of the values for equivalentContentOption. Default value is latestSecurity. Possible values are: latestSecurity.
+     * 
      */
     @SerializedName(value = "equivalentContent", alternate = {"EquivalentContent"})
     @Expose

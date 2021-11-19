@@ -27,7 +27,7 @@ public class ServicePrincipalIdentity extends Identity implements IJsonBackedObj
 
     /**
      * The App Id.
-     * The application identifier of the service principal.
+     * 
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose

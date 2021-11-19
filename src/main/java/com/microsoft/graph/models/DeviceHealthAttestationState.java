@@ -102,7 +102,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
 
     /**
      * The Code Integrity.
-     * When code integrity is enabled, code execution is restricted to integrity verified code
+     *  When code integrity is enabled, code execution is restricted to integrity verified code
      */
     @SerializedName(value = "codeIntegrity", alternate = {"CodeIntegrity"})
     @Expose
@@ -147,7 +147,7 @@ public class DeviceHealthAttestationState implements IJsonBackedObject {
 
     /**
      * The Data Excution Policy.
-     * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
+     * DEP Policy defines a set of hardware and software technologies that perform additional checks on memory 
      */
     @SerializedName(value = "dataExcutionPolicy", alternate = {"DataExcutionPolicy"})
     @Expose

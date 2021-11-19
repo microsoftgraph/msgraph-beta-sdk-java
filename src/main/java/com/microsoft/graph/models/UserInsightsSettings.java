@@ -27,7 +27,7 @@ public class UserInsightsSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * true if user's itemInsights and meeting hours insights are enabled; false if user's itemInsights and meeting hours insights are disabled. Default is true. Optional.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

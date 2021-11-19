@@ -40,7 +40,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Drive Id.
-     * Unique identifier of the drive instance that contains the item. Read-only.
+     * 
      */
     @SerializedName(value = "driveId", alternate = {"DriveId"})
     @Expose
@@ -49,7 +49,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Drive Type.
-     * Identifies the type of drive. See [drive][] resource for values.
+     * 
      */
     @SerializedName(value = "driveType", alternate = {"DriveType"})
     @Expose
@@ -58,7 +58,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique identifier of the item in the drive. Read-only.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -67,7 +67,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the item being referenced. Read-only.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -76,7 +76,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Path.
-     * Path that can be used to navigate to the item. Read-only.
+     * 
      */
     @SerializedName(value = "path", alternate = {"Path"})
     @Expose
@@ -85,7 +85,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Share Id.
-     * A unique identifier for a shared resource that can be accessed via the [Shares][] API.
+     * 
      */
     @SerializedName(value = "shareId", alternate = {"ShareId"})
     @Expose
@@ -94,7 +94,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * 
      */
     @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
@@ -103,7 +103,7 @@ public class ItemReference implements IJsonBackedObject {
 
     /**
      * The Site Id.
-     * For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource. The value is the same as the id property of that [site][] resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
+     * 
      */
     @SerializedName(value = "siteId", alternate = {"SiteId"})
     @Expose

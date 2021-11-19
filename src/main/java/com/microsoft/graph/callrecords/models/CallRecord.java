@@ -33,7 +33,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -42,7 +42,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Web Url.
-     * Meeting URL associated to the call. May not be available for a peerToPeer call record type.
+     * 
      */
     @SerializedName(value = "joinWebUrl", alternate = {"JoinWebUrl"})
     @Expose
@@ -51,7 +51,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -60,7 +60,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Modalities.
-     * List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "modalities", alternate = {"Modalities"})
     @Expose
@@ -69,7 +69,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Organizer.
-     * The organizing party's identity.
+     * 
      */
     @SerializedName(value = "organizer", alternate = {"Organizer"})
     @Expose
@@ -78,7 +78,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * List of distinct identities involved in the call.
+     * 
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
@@ -87,7 +87,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -96,7 +96,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Indicates the type of the call. Possible values are: unknown, groupCall, peerToPeer, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -105,7 +105,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
+     * 
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -114,7 +114,7 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Sessions.
-     * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "sessions", alternate = {"Sessions"})
     @Expose

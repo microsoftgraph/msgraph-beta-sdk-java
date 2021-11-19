@@ -39,7 +39,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Average Inbound Jitter.
-     * The average inbound stream network jitter.
+     * 
      */
     @SerializedName(value = "averageInboundJitter", alternate = {"AverageInboundJitter"})
     @Expose
@@ -48,7 +48,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Average Inbound Packet Loss Rate In Percentage.
-     * The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     * 
      */
     @SerializedName(value = "averageInboundPacketLossRateInPercentage", alternate = {"AverageInboundPacketLossRateInPercentage"})
     @Expose
@@ -57,7 +57,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Average Inbound Round Trip Delay.
-     * The average inbound stream network round trip delay.
+     * 
      */
     @SerializedName(value = "averageInboundRoundTripDelay", alternate = {"AverageInboundRoundTripDelay"})
     @Expose
@@ -66,7 +66,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Average Outbound Jitter.
-     * The average outbound stream network jitter.
+     * 
      */
     @SerializedName(value = "averageOutboundJitter", alternate = {"AverageOutboundJitter"})
     @Expose
@@ -75,7 +75,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Average Outbound Packet Loss Rate In Percentage.
-     * The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     * 
      */
     @SerializedName(value = "averageOutboundPacketLossRateInPercentage", alternate = {"AverageOutboundPacketLossRateInPercentage"})
     @Expose
@@ -84,7 +84,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Average Outbound Round Trip Delay.
-     * The average outbound stream network round trip delay.
+     * 
      */
     @SerializedName(value = "averageOutboundRoundTripDelay", alternate = {"AverageOutboundRoundTripDelay"})
     @Expose
@@ -93,7 +93,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Channel Index.
-     * The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
+     * 
      */
     @SerializedName(value = "channelIndex", alternate = {"ChannelIndex"})
     @Expose
@@ -102,7 +102,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Inbound Packets.
-     * The total number of the inbound packets.
+     * 
      */
     @SerializedName(value = "inboundPackets", alternate = {"InboundPackets"})
     @Expose
@@ -111,7 +111,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Local IPAddress.
-     * the local IP address for the media session.
+     * 
      */
     @SerializedName(value = "localIPAddress", alternate = {"LocalIPAddress"})
     @Expose
@@ -120,7 +120,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Local Port.
-     * The local media port.
+     * 
      */
     @SerializedName(value = "localPort", alternate = {"LocalPort"})
     @Expose
@@ -129,7 +129,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Maximum Inbound Jitter.
-     * The maximum inbound stream network jitter.
+     * 
      */
     @SerializedName(value = "maximumInboundJitter", alternate = {"MaximumInboundJitter"})
     @Expose
@@ -138,7 +138,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Maximum Inbound Packet Loss Rate In Percentage.
-     * The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     * 
      */
     @SerializedName(value = "maximumInboundPacketLossRateInPercentage", alternate = {"MaximumInboundPacketLossRateInPercentage"})
     @Expose
@@ -147,7 +147,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Maximum Inbound Round Trip Delay.
-     * The maximum inbound stream network round trip delay.
+     * 
      */
     @SerializedName(value = "maximumInboundRoundTripDelay", alternate = {"MaximumInboundRoundTripDelay"})
     @Expose
@@ -156,7 +156,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Maximum Outbound Jitter.
-     * The maximum outbound stream network jitter.
+     * 
      */
     @SerializedName(value = "maximumOutboundJitter", alternate = {"MaximumOutboundJitter"})
     @Expose
@@ -165,7 +165,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Maximum Outbound Packet Loss Rate In Percentage.
-     * The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
+     * 
      */
     @SerializedName(value = "maximumOutboundPacketLossRateInPercentage", alternate = {"MaximumOutboundPacketLossRateInPercentage"})
     @Expose
@@ -174,7 +174,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Maximum Outbound Round Trip Delay.
-     * The maximum outbound stream network round trip delay.
+     * 
      */
     @SerializedName(value = "maximumOutboundRoundTripDelay", alternate = {"MaximumOutboundRoundTripDelay"})
     @Expose
@@ -183,7 +183,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Media Duration.
-     * The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
+     * 
      */
     @SerializedName(value = "mediaDuration", alternate = {"MediaDuration"})
     @Expose
@@ -192,7 +192,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Network Link Speed In Bytes.
-     * The network link speed in bytes
+     * 
      */
     @SerializedName(value = "networkLinkSpeedInBytes", alternate = {"NetworkLinkSpeedInBytes"})
     @Expose
@@ -201,7 +201,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Outbound Packets.
-     * The total number of the outbound packets.
+     * 
      */
     @SerializedName(value = "outboundPackets", alternate = {"OutboundPackets"})
     @Expose
@@ -210,7 +210,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Remote IPAddress.
-     * The remote IP address for the media session.
+     * 
      */
     @SerializedName(value = "remoteIPAddress", alternate = {"RemoteIPAddress"})
     @Expose
@@ -219,7 +219,7 @@ public class TeleconferenceDeviceMediaQuality implements IJsonBackedObject {
 
     /**
      * The Remote Port.
-     * The remote media port.
+     * 
      */
     @SerializedName(value = "remotePort", alternate = {"RemotePort"})
     @Expose

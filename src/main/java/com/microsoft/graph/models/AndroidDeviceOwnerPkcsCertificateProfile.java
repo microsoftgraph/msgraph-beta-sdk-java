@@ -33,7 +33,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
 
     /**
      * The Certificate Store.
-     * Target store certificate. Possible values are: user, machine.
+     * Target store certificate
      */
     @SerializedName(value = "certificateStore", alternate = {"CertificateStore"})
     @Expose
@@ -69,7 +69,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
 
     /**
      * The Certification Authority Type.
-     * Certification authority type. Possible values are: notConfigured, microsoft, digiCert.
+     * Certification authority type
      */
     @SerializedName(value = "certificationAuthorityType", alternate = {"CertificationAuthorityType"})
     @Expose
@@ -105,7 +105,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
 
     /**
      * The Managed Device Certificate States.
-     * Certificate state for devices
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose

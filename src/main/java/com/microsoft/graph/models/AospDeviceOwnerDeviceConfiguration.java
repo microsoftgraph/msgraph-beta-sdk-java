@@ -118,7 +118,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
 
     /**
      * The Password Required Type.
-     * Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Indicates the minimum password quality required on the device.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose

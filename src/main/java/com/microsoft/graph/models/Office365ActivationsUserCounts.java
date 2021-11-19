@@ -27,7 +27,7 @@ public class Office365ActivationsUserCounts extends Entity implements IJsonBacke
 
     /**
      * The Activated.
-     * The number of users who have activated the product.
+     * 
      */
     @SerializedName(value = "activated", alternate = {"Activated"})
     @Expose
@@ -36,7 +36,7 @@ public class Office365ActivationsUserCounts extends Entity implements IJsonBacke
 
     /**
      * The Assigned.
-     * The number of users have been assigned for the product license.
+     * 
      */
     @SerializedName(value = "assigned", alternate = {"Assigned"})
     @Expose
@@ -45,7 +45,7 @@ public class Office365ActivationsUserCounts extends Entity implements IJsonBacke
 
     /**
      * The Product Type.
-     * The product type such as 'Microsoft 365 ProPlus' or 'Project Client'.
+     * 
      */
     @SerializedName(value = "productType", alternate = {"ProductType"})
     @Expose
@@ -54,7 +54,7 @@ public class Office365ActivationsUserCounts extends Entity implements IJsonBacke
 
     /**
      * The Report Refresh Date.
-     * The latest date of the content.
+     * 
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -63,7 +63,7 @@ public class Office365ActivationsUserCounts extends Entity implements IJsonBacke
 
     /**
      * The Shared Computer Activation.
-     * The number of users who have used the product on a shared computer.
+     * 
      */
     @SerializedName(value = "sharedComputerActivation", alternate = {"SharedComputerActivation"})
     @Expose

@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsModelScores extends Entity implements IJsonB
 
     /**
      * The Health Status.
-     * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
+     * The health state of the user experience analytics model.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose

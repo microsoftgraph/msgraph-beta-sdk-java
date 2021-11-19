@@ -30,7 +30,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
 
     /**
      * The Conversation Member Roles.
-     * Roles for the coversation member user.
+     * 
      */
     @SerializedName(value = "conversationMemberRoles", alternate = {"ConversationMemberRoles"})
     @Expose
@@ -39,7 +39,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
 
     /**
      * The Conversation Member User.
-     * Identity of the conversation member user.
+     * 
      */
     @SerializedName(value = "conversationMemberUser", alternate = {"ConversationMemberUser"})
     @Expose
@@ -48,7 +48,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
 
     /**
      * The Initiator.
-     * Initiator of the event.
+     * 
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

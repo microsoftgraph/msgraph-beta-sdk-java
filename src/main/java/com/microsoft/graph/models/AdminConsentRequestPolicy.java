@@ -29,7 +29,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Is Enabled.
-     * Specifies whether the admin consent request feature is enabled or disabled. Required.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -38,7 +38,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Notify Reviewers.
-     * Specifies whether reviewers will receive notifications. Required.
+     * 
      */
     @SerializedName(value = "notifyReviewers", alternate = {"NotifyReviewers"})
     @Expose
@@ -47,7 +47,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Reminders Enabled.
-     * Specifies whether reviewers will receive reminder emails. Required.
+     * 
      */
     @SerializedName(value = "remindersEnabled", alternate = {"RemindersEnabled"})
     @Expose
@@ -56,7 +56,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Request Duration In Days.
-     * Specifies the duration the request is active before it automatically expires if no decision is applied.
+     * 
      */
     @SerializedName(value = "requestDurationInDays", alternate = {"RequestDurationInDays"})
     @Expose
@@ -65,7 +65,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Reviewers.
-     * The list of reviewers for the admin consent. Required.
+     * 
      */
     @SerializedName(value = "reviewers", alternate = {"Reviewers"})
     @Expose
@@ -74,7 +74,7 @@ public class AdminConsentRequestPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Version.
-     * Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
+     * 
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

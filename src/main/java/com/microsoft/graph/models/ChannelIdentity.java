@@ -39,7 +39,7 @@ public class ChannelIdentity implements IJsonBackedObject {
 
     /**
      * The Channel Id.
-     * The identity of the channel in which the message was posted.
+     * 
      */
     @SerializedName(value = "channelId", alternate = {"ChannelId"})
     @Expose
@@ -48,7 +48,7 @@ public class ChannelIdentity implements IJsonBackedObject {
 
     /**
      * The Team Id.
-     * The identity of the team in which the message was posted.
+     * 
      */
     @SerializedName(value = "teamId", alternate = {"TeamId"})
     @Expose

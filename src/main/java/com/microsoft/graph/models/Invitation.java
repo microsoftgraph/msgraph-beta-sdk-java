@@ -29,7 +29,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Display Name.
-     * The display name of the user being invited.
+     * 
      */
     @SerializedName(value = "invitedUserDisplayName", alternate = {"InvitedUserDisplayName"})
     @Expose
@@ -38,7 +38,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Email Address.
-     * The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&amp;)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (&amp;lt; &amp;gt;)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
+     * 
      */
     @SerializedName(value = "invitedUserEmailAddress", alternate = {"InvitedUserEmailAddress"})
     @Expose
@@ -47,7 +47,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Message Info.
-     * Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
+     * 
      */
     @SerializedName(value = "invitedUserMessageInfo", alternate = {"InvitedUserMessageInfo"})
     @Expose
@@ -56,7 +56,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User Type.
-     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
+     * 
      */
     @SerializedName(value = "invitedUserType", alternate = {"InvitedUserType"})
     @Expose
@@ -65,7 +65,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redeem Url.
-     * The URL the user can use to redeem their invitation. Read-only.
+     * 
      */
     @SerializedName(value = "inviteRedeemUrl", alternate = {"InviteRedeemUrl"})
     @Expose
@@ -74,7 +74,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invite Redirect Url.
-     * The URL the user should be redirected to once the invitation is redeemed. Required.
+     * 
      */
     @SerializedName(value = "inviteRedirectUrl", alternate = {"InviteRedirectUrl"})
     @Expose
@@ -83,7 +83,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Reset Redemption.
-     * Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview).
+     * 
      */
     @SerializedName(value = "resetRedemption", alternate = {"ResetRedemption"})
     @Expose
@@ -92,7 +92,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Send Invitation Message.
-     * Indicates whether an email should be sent to the user being invited. The default is false.
+     * 
      */
     @SerializedName(value = "sendInvitationMessage", alternate = {"SendInvitationMessage"})
     @Expose
@@ -101,7 +101,7 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -110,10 +110,8 @@ public class Invitation extends Entity implements IJsonBackedObject {
 
     /**
      * The Invited User.
-     * The user created as part of the invitation creation. Read-Only
-     * @deprecated 
+     * 
      */
-    @Deprecated
     @SerializedName(value = "invitedUser", alternate = {"InvitedUser"})
     @Expose
 	@Nullable

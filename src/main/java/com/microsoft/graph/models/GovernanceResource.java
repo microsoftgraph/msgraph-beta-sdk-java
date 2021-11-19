@@ -37,7 +37,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the resource.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
+     * 
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -55,7 +55,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Registered Date Time.
-     * Represents the date time when the resource is registered in PIM.
+     * 
      */
     @SerializedName(value = "registeredDateTime", alternate = {"RegisteredDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Registered Root.
-     * The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
+     * 
      */
     @SerializedName(value = "registeredRoot", alternate = {"RegisteredRoot"})
     @Expose
@@ -73,7 +73,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of a given resource. For example, it could represent whether the resource is locked or not (values: Active/Locked). Note: This property may be extended in the future to support more scenarios.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -82,7 +82,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -91,7 +91,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent.
-     * Read-only. The parent resource. for pimforazurerbac scenario, it can represent the subscription the resource belongs to.
+     * 
      */
     @SerializedName(value = "parent", alternate = {"Parent"})
     @Expose
@@ -100,7 +100,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignment Requests.
-     * The collection of role assignment requests for the resource.
+     * 
      */
     @SerializedName(value = "roleAssignmentRequests", alternate = {"RoleAssignmentRequests"})
     @Expose
@@ -109,7 +109,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Assignments.
-     * The collection of role assignments for the resource.
+     * 
      */
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
@@ -118,7 +118,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definitions.
-     * The collection of role defintions for the resource.
+     * 
      */
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
@@ -127,7 +127,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Settings.
-     * The collection of role settings for the resource.
+     * 
      */
     @SerializedName(value = "roleSettings", alternate = {"RoleSettings"})
     @Expose

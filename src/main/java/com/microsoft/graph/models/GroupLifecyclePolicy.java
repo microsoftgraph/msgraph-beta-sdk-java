@@ -27,7 +27,7 @@ public class GroupLifecyclePolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Alternate Notification Emails.
-     * List of email address to send notifications for groups without owners. Multiple email address can be defined by separating email address with a semicolon.
+     * 
      */
     @SerializedName(value = "alternateNotificationEmails", alternate = {"AlternateNotificationEmails"})
     @Expose
@@ -36,7 +36,7 @@ public class GroupLifecyclePolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Group Lifetime In Days.
-     * Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
+     * 
      */
     @SerializedName(value = "groupLifetimeInDays", alternate = {"GroupLifetimeInDays"})
     @Expose
@@ -45,7 +45,7 @@ public class GroupLifecyclePolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Group Types.
-     * The group type for which the expiration policy applies. Possible values are All, Selected or None.
+     * 
      */
     @SerializedName(value = "managedGroupTypes", alternate = {"ManagedGroupTypes"})
     @Expose

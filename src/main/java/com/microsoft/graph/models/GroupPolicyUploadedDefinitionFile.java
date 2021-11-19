@@ -68,7 +68,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
 
     /**
      * The Status.
-     * The upload status of the uploaded ADMX file. Possible values are: none, uploadInProgress, available, assigned, removalInProgress, uploadFailed, removalFailed.
+     * The upload status of the uploaded ADMX file.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

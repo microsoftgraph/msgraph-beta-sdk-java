@@ -42,7 +42,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Application Name.
-     * Name of the application managing the network connection (for example, Facebook or SMTP).
+     * 
      */
     @SerializedName(value = "applicationName", alternate = {"ApplicationName"})
     @Expose
@@ -51,7 +51,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Destination Address.
-     * Destination IP address (of the network connection).
+     * 
      */
     @SerializedName(value = "destinationAddress", alternate = {"DestinationAddress"})
     @Expose
@@ -60,7 +60,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Destination Domain.
-     * Destination domain portion of the destination URL. (for example 'www.contoso.com').
+     * 
      */
     @SerializedName(value = "destinationDomain", alternate = {"DestinationDomain"})
     @Expose
@@ -69,7 +69,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Destination Location.
-     * Location (by IP address mapping) associated with the destination of a network connection.
+     * 
      */
     @SerializedName(value = "destinationLocation", alternate = {"DestinationLocation"})
     @Expose
@@ -78,7 +78,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Destination Port.
-     * Destination port (of the network connection).
+     * 
      */
     @SerializedName(value = "destinationPort", alternate = {"DestinationPort"})
     @Expose
@@ -87,7 +87,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Destination Url.
-     * Network connection URL/URI string - excluding parameters. (for example 'www.contoso.com/products/default.html')
+     * 
      */
     @SerializedName(value = "destinationUrl", alternate = {"DestinationUrl"})
     @Expose
@@ -96,7 +96,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Direction.
-     * Network connection direction. Possible values are: unknown, inbound, outbound.
+     * 
      */
     @SerializedName(value = "direction", alternate = {"Direction"})
     @Expose
@@ -105,7 +105,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Domain Registered Date Time.
-     * Date when the destination domain was registered. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "domainRegisteredDateTime", alternate = {"DomainRegisteredDateTime"})
     @Expose
@@ -114,7 +114,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Local Dns Name.
-     * The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
+     * 
      */
     @SerializedName(value = "localDnsName", alternate = {"LocalDnsName"})
     @Expose
@@ -123,7 +123,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Nat Destination Address.
-     * Network Address Translation destination IP address.
+     * 
      */
     @SerializedName(value = "natDestinationAddress", alternate = {"NatDestinationAddress"})
     @Expose
@@ -132,7 +132,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Nat Destination Port.
-     * Network Address Translation destination port.
+     * 
      */
     @SerializedName(value = "natDestinationPort", alternate = {"NatDestinationPort"})
     @Expose
@@ -141,7 +141,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Nat Source Address.
-     * Network Address Translation source IP address.
+     * 
      */
     @SerializedName(value = "natSourceAddress", alternate = {"NatSourceAddress"})
     @Expose
@@ -150,7 +150,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Nat Source Port.
-     * Network Address Translation source port.
+     * 
      */
     @SerializedName(value = "natSourcePort", alternate = {"NatSourcePort"})
     @Expose
@@ -159,7 +159,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Protocol.
-     * Network protocol. Possible values are: unknown, ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII.
+     * 
      */
     @SerializedName(value = "protocol", alternate = {"Protocol"})
     @Expose
@@ -168,7 +168,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Risk Score.
-     * Provider generated/calculated risk score of the network connection. Recommended value range of 0-1, which equates to a percentage.
+     * 
      */
     @SerializedName(value = "riskScore", alternate = {"RiskScore"})
     @Expose
@@ -177,7 +177,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Source Address.
-     * Source (i.e. origin) IP address (of the network connection).
+     * 
      */
     @SerializedName(value = "sourceAddress", alternate = {"SourceAddress"})
     @Expose
@@ -186,7 +186,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Source Location.
-     * Location (by IP address mapping) associated with the source of a network connection.
+     * 
      */
     @SerializedName(value = "sourceLocation", alternate = {"SourceLocation"})
     @Expose
@@ -195,7 +195,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Source Port.
-     * Source (i.e. origin) IP port (of the network connection).
+     * 
      */
     @SerializedName(value = "sourcePort", alternate = {"SourcePort"})
     @Expose
@@ -204,7 +204,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Network connection status. Possible values are: unknown, attempted, succeeded, blocked, failed.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -213,7 +213,7 @@ public class NetworkConnection implements IJsonBackedObject {
 
     /**
      * The Url Parameters.
-     * Parameters (suffix) of the destination URL.
+     * 
      */
     @SerializedName(value = "urlParameters", alternate = {"UrlParameters"})
     @Expose

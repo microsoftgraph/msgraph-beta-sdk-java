@@ -43,7 +43,7 @@ public class SimulationReportOverview implements IJsonBackedObject {
 
     /**
      * The Recommended Actions.
-     * List of recommended actions for a tenant to improve its security posture based on the attack simulation and training campaign attack type.
+     * 
      */
     @SerializedName(value = "recommendedActions", alternate = {"RecommendedActions"})
     @Expose
@@ -52,7 +52,7 @@ public class SimulationReportOverview implements IJsonBackedObject {
 
     /**
      * The Resolved Targets Count.
-     * Number of valid users in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "resolvedTargetsCount", alternate = {"ResolvedTargetsCount"})
     @Expose
@@ -61,7 +61,7 @@ public class SimulationReportOverview implements IJsonBackedObject {
 
     /**
      * The Simulation Events Content.
-     * Summary of simulation events in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "simulationEventsContent", alternate = {"SimulationEventsContent"})
     @Expose
@@ -70,7 +70,7 @@ public class SimulationReportOverview implements IJsonBackedObject {
 
     /**
      * The Training Events Content.
-     * Summary of assigned trainings in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "trainingEventsContent", alternate = {"TrainingEventsContent"})
     @Expose

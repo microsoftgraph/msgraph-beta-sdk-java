@@ -40,7 +40,7 @@ public class ShiftActivity implements IJsonBackedObject {
 
     /**
      * The Code.
-     * Customer defined code for the shiftActivity. Required.
+     * 
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -49,7 +49,7 @@ public class ShiftActivity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the shiftActivity. Required.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class ShiftActivity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * The end date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     * 
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class ShiftActivity implements IJsonBackedObject {
 
     /**
      * The Is Paid.
-     * Indicates whether the microsoft.graph.user should be paid for the activity during their shift. Required.
+     * 
      */
     @SerializedName(value = "isPaid", alternate = {"IsPaid"})
     @Expose
@@ -76,7 +76,7 @@ public class ShiftActivity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * The start date and time for the shiftActivity. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

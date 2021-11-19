@@ -39,7 +39,7 @@ public class TeamDiscoverySettings implements IJsonBackedObject {
 
     /**
      * The Show In Teams Search And Suggestions.
-     * If set to true, the team is visible via search and suggestions from the Teams client.
+     * 
      */
     @SerializedName(value = "showInTeamsSearchAndSuggestions", alternate = {"ShowInTeamsSearchAndSuggestions"})
     @Expose

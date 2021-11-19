@@ -39,7 +39,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Camera Make.
-     * Camera manufacturer. Read-only.
+     * 
      */
     @SerializedName(value = "cameraMake", alternate = {"CameraMake"})
     @Expose
@@ -48,7 +48,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Camera Model.
-     * Camera model. Read-only.
+     * 
      */
     @SerializedName(value = "cameraModel", alternate = {"CameraModel"})
     @Expose
@@ -57,7 +57,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Exposure Denominator.
-     * The denominator for the exposure time fraction from the camera. Read-only.
+     * 
      */
     @SerializedName(value = "exposureDenominator", alternate = {"ExposureDenominator"})
     @Expose
@@ -66,7 +66,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Exposure Numerator.
-     * The numerator for the exposure time fraction from the camera. Read-only.
+     * 
      */
     @SerializedName(value = "exposureNumerator", alternate = {"ExposureNumerator"})
     @Expose
@@ -75,7 +75,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The FNumber.
-     * The F-stop value from the camera. Read-only.
+     * 
      */
     @SerializedName(value = "fNumber", alternate = {"FNumber"})
     @Expose
@@ -84,7 +84,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Focal Length.
-     * The focal length from the camera. Read-only.
+     * 
      */
     @SerializedName(value = "focalLength", alternate = {"FocalLength"})
     @Expose
@@ -93,7 +93,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Iso.
-     * The ISO value from the camera. Read-only.
+     * 
      */
     @SerializedName(value = "iso", alternate = {"Iso"})
     @Expose
@@ -102,7 +102,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Orientation.
-     * The orientation value from the camera. Writable on OneDrive Personal.
+     * 
      */
     @SerializedName(value = "orientation", alternate = {"Orientation"})
     @Expose
@@ -111,7 +111,7 @@ public class Photo implements IJsonBackedObject {
 
     /**
      * The Taken Date Time.
-     * Represents the date and time the photo was taken. Read-only.
+     * 
      */
     @SerializedName(value = "takenDateTime", alternate = {"TakenDateTime"})
     @Expose

@@ -32,7 +32,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Created By.
-     * User who created this review history definition.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -41,7 +41,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Created Date Time.
-     * Timestamp when the access review definition was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Decisions.
-     * Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
+     * 
      */
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose
@@ -59,7 +59,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Display Name.
-     * Name for the access review history data collection. Required.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -68,7 +68,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Download Uri.
-     * Uri which can be used to retrieve review history data. This URI will be active for 24 hours after being generated.
+     * 
      */
     @SerializedName(value = "downloadUri", alternate = {"DownloadUri"})
     @Expose
@@ -77,7 +77,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Fulfilled Date Time.
-     * Timestamp when all of the available data for this definition was collected. This will be set after this definition's status is set to done.
+     * 
      */
     @SerializedName(value = "fulfilledDateTime", alternate = {"FulfilledDateTime"})
     @Expose
@@ -86,7 +86,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Review History Period End Date Time.
-     * Timestamp, reviews starting on or after this date will be included in the fetched history data. Required.
+     * 
      */
     @SerializedName(value = "reviewHistoryPeriodEndDateTime", alternate = {"ReviewHistoryPeriodEndDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Review History Period Start Date Time.
-     * Timestamp, reviews starting on or before this date will be included in the fetched history data. Required.
+     * 
      */
     @SerializedName(value = "reviewHistoryPeriodStartDateTime", alternate = {"ReviewHistoryPeriodStartDateTime"})
     @Expose
@@ -104,7 +104,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Scopes.
-     * Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. See accessreviewqueryscope. Required.
+     * 
      */
     @SerializedName(value = "scopes", alternate = {"Scopes"})
     @Expose
@@ -113,7 +113,7 @@ public class AccessReviewHistoryDefinition extends Entity implements IJsonBacked
 
     /**
      * The Status.
-     * Represents the status of the review history data collection. Possible values are: done, inprogress, error, requested.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

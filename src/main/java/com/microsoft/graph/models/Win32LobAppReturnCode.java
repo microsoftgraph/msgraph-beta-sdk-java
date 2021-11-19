@@ -49,7 +49,7 @@ public class Win32LobAppReturnCode implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of return code. Possible values are: failed, success, softReboot, hardReboot, retry.
+     * The type of return code.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

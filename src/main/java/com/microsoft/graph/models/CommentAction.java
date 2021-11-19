@@ -41,7 +41,7 @@ public class CommentAction implements IJsonBackedObject {
 
     /**
      * The Is Reply.
-     * If true, this activity was a reply to an existing comment thread.
+     * 
      */
     @SerializedName(value = "isReply", alternate = {"IsReply"})
     @Expose
@@ -50,7 +50,7 @@ public class CommentAction implements IJsonBackedObject {
 
     /**
      * The Parent Author.
-     * The identity of the user who started the comment thread.
+     * 
      */
     @SerializedName(value = "parentAuthor", alternate = {"ParentAuthor"})
     @Expose
@@ -59,7 +59,7 @@ public class CommentAction implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * The identities of the users participating in this comment thread.
+     * 
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose

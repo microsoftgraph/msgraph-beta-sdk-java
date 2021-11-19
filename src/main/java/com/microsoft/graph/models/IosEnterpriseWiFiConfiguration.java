@@ -36,7 +36,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
     /**
      * The Authentication Method.
-     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Authentication Method when EAP Type is configured to PEAP or EAP-TTLS.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -45,7 +45,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
     /**
      * The Eap Fast Configuration.
-     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type.
      */
     @SerializedName(value = "eapFastConfiguration", alternate = {"EapFastConfiguration"})
     @Expose
@@ -54,7 +54,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
     /**
      * The Eap Type.
-     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router). Possible values are: eapTls, leap, eapSim, eapTtls, peap, eapFast.
+     * Extensible Authentication Protocol (EAP). Indicates the type of EAP protocol set on the Wi-Fi endpoint (router).
      */
     @SerializedName(value = "eapType", alternate = {"EapType"})
     @Expose
@@ -63,7 +63,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
     /**
      * The Inner Authentication Protocol For Eap Ttls.
-     * Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password.
      */
     @SerializedName(value = "innerAuthenticationProtocolForEapTtls", alternate = {"InnerAuthenticationProtocolForEapTtls"})
     @Expose
@@ -126,7 +126,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
 
     /**
      * The Root Certificates For Server Validation.
-     * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa.
+     * Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "rootCertificatesForServerValidation", alternate = {"RootCertificatesForServerValidation"})
     @Expose

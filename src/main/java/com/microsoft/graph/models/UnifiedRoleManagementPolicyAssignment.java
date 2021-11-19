@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Policy Id.
-     * The id of the policy.
+     * 
      */
     @SerializedName(value = "policyId", alternate = {"PolicyId"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Role Definition Id.
-     * The id of the role definition where the policy applies. If not specified, the policy applies to all roles.
+     * 
      */
     @SerializedName(value = "roleDefinitionId", alternate = {"RoleDefinitionId"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Scope Id.
-     * The id of the scope where the policy is assigned. E.g. '/', groupId, etc.
+     * 
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Scope Type.
-     * The type of the scope where the policy is assigned. One of Directory, DirectoryRole, Group.
+     * 
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
@@ -64,7 +64,7 @@ public class UnifiedRoleManagementPolicyAssignment extends Entity implements IJs
 
     /**
      * The Policy.
-     * The policy for the assignment.
+     * 
      */
     @SerializedName(value = "policy", alternate = {"Policy"})
     @Expose

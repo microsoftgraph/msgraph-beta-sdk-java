@@ -51,7 +51,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
 
     /**
      * The Install Progress Display Level.
-     * To specify the level of display for the Installation Progress Setup UI on the Device. Possible values are: none, full.
+     * To specify the level of display for the Installation Progress Setup UI on the Device.
      */
     @SerializedName(value = "installProgressDisplayLevel", alternate = {"InstallProgressDisplayLevel"})
     @Expose
@@ -78,7 +78,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
 
     /**
      * The Office Platform Architecture.
-     * The property to represent the Office365 app suite version. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * The property to represent the Office365 app suite version.
      */
     @SerializedName(value = "officePlatformArchitecture", alternate = {"OfficePlatformArchitecture"})
     @Expose
@@ -114,7 +114,7 @@ public class OfficeSuiteApp extends MobileApp implements IJsonBackedObject {
 
     /**
      * The Update Channel.
-     * The property to represent the Office365 Update Channel. Possible values are: none, current, deferred, firstReleaseCurrent, firstReleaseDeferred, monthlyEnterprise.
+     * The property to represent the Office365 Update Channel.
      */
     @SerializedName(value = "updateChannel", alternate = {"UpdateChannel"})
     @Expose

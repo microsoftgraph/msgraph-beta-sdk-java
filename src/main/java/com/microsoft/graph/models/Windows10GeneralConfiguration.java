@@ -72,7 +72,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Activate Apps With Voice.
-     * Specifies if Windows apps can be activated by voice. Possible values are: notConfigured, enabled, disabled.
+     * Specifies if Windows apps can be activated by voice.
      */
     @SerializedName(value = "activateAppsWithVoice", alternate = {"ActivateAppsWithVoice"})
     @Expose
@@ -117,7 +117,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Apps Allow Trusted Apps Sideloading.
-     * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded. Possible values are: notConfigured, blocked, allowed.
+     * Indicates whether apps from AppX packages signed with a trusted certificate can be side loaded.
      */
     @SerializedName(value = "appsAllowTrustedAppsSideloading", alternate = {"AppsAllowTrustedAppsSideloading"})
     @Expose
@@ -153,7 +153,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Authentication Web Sign In.
-     * Indicates whether or not Web Credential Provider will be enabled. Possible values are: notConfigured, enabled, disabled.
+     * Indicates whether or not Web Credential Provider will be enabled.
      */
     @SerializedName(value = "authenticationWebSignIn", alternate = {"AuthenticationWebSignIn"})
     @Expose
@@ -252,7 +252,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Cellular Data.
-     * Whether or not to allow the cellular data channel on the device. If not configured, the cellular data channel is allowed and the user can turn it off. Possible values are: blocked, required, allowed, notConfigured.
+     * Whether or not to allow the cellular data channel on the device. If not configured, the cellular data channel is allowed and the user can turn it off.
      */
     @SerializedName(value = "cellularData", alternate = {"CellularData"})
     @Expose
@@ -342,7 +342,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Cloud Block Level.
-     * Specifies the level of cloud-delivered protection. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Specifies the level of cloud-delivered protection.
      */
     @SerializedName(value = "defenderCloudBlockLevel", alternate = {"DefenderCloudBlockLevel"})
     @Expose
@@ -423,7 +423,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Monitor File Activity.
-     * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Value for monitoring file activity.
      */
     @SerializedName(value = "defenderMonitorFileActivity", alternate = {"DefenderMonitorFileActivity"})
     @Expose
@@ -432,7 +432,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Potentially Unwanted App Action.
-     * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
+     * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
      */
     @SerializedName(value = "defenderPotentiallyUnwantedAppAction", alternate = {"DefenderPotentiallyUnwantedAppAction"})
     @Expose
@@ -441,7 +441,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Potentially Unwanted App Action Setting.
-     * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop.
      */
     @SerializedName(value = "defenderPotentiallyUnwantedAppActionSetting", alternate = {"DefenderPotentiallyUnwantedAppActionSetting"})
     @Expose
@@ -459,7 +459,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Prompt For Sample Submission.
-     * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt, promptBeforeSendingPersonalData, neverSendData, sendAllDataWithoutPrompting.
+     * The configuration for how to prompt user for sample submission.
      */
     @SerializedName(value = "defenderPromptForSampleSubmission", alternate = {"DefenderPromptForSampleSubmission"})
     @Expose
@@ -576,7 +576,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Scan Type.
-     * The defender system scan type. Possible values are: userDefined, disabled, quick, full.
+     * The defender system scan type.
      */
     @SerializedName(value = "defenderScanType", alternate = {"DefenderScanType"})
     @Expose
@@ -621,7 +621,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender Submit Samples Consent Type.
-     * Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
+     * Checks for the user consent level in Windows Defender to send data.
      */
     @SerializedName(value = "defenderSubmitSamplesConsentType", alternate = {"DefenderSubmitSamplesConsentType"})
     @Expose
@@ -630,7 +630,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Defender System Scan Schedule.
-     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Defender day of the week for the system scan.
      */
     @SerializedName(value = "defenderSystemScanSchedule", alternate = {"DefenderSystemScanSchedule"})
     @Expose
@@ -639,7 +639,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Developer Unlock Setting.
-     * Indicates whether or not to allow developer unlock. Possible values are: notConfigured, blocked, allowed.
+     * Indicates whether or not to allow developer unlock.
      */
     @SerializedName(value = "developerUnlockSetting", alternate = {"DeveloperUnlockSetting"})
     @Expose
@@ -666,7 +666,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Diagnostics Data Submission Mode.
-     * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson. Possible values are: userDefined, none, basic, enhanced, full.
+     * Gets or sets a value allowing the device to send diagnostic and usage telemetry data, such as Watson.
      */
     @SerializedName(value = "diagnosticsDataSubmissionMode", alternate = {"DiagnosticsDataSubmissionMode"})
     @Expose
@@ -927,7 +927,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Cookie Policy.
-     * Indicates which cookies to block in the Edge browser. Possible values are: userDefined, allow, blockThirdParty, blockAll.
+     * Indicates which cookies to block in the Edge browser.
      */
     @SerializedName(value = "edgeCookiePolicy", alternate = {"EdgeCookiePolicy"})
     @Expose
@@ -954,7 +954,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Favorites Bar Visibility.
-     * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page. Possible values are: notConfigured, hide, show.
+     * Get or set a value that specifies whether to set the favorites bar to always be visible or hidden on any page.
      */
     @SerializedName(value = "edgeFavoritesBarVisibility", alternate = {"EdgeFavoritesBarVisibility"})
     @Expose
@@ -1008,7 +1008,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Kiosk Mode Restriction.
-     * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode. Possible values are: notConfigured, digitalSignage, normalMode, publicBrowsingSingleApp, publicBrowsingMultiApp.
+     * Controls how the Microsoft Edge settings are restricted based on the configure kiosk mode.
      */
     @SerializedName(value = "edgeKioskModeRestriction", alternate = {"EdgeKioskModeRestriction"})
     @Expose
@@ -1035,7 +1035,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Opens With.
-     * Specify what kind of pages are open at start. Possible values are: notConfigured, startPage, newTabPage, previousPages, specificPages.
+     * Specify what kind of pages are open at start.
      */
     @SerializedName(value = "edgeOpensWith", alternate = {"EdgeOpensWith"})
     @Expose
@@ -1089,7 +1089,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Show Message When Opening Internet Explorer Sites.
-     * Controls the message displayed by Edge before switching to Internet Explorer. Possible values are: notConfigured, disabled, enabled, keepGoing.
+     * Controls the message displayed by Edge before switching to Internet Explorer.
      */
     @SerializedName(value = "edgeShowMessageWhenOpeningInternetExplorerSites", alternate = {"EdgeShowMessageWhenOpeningInternetExplorerSites"})
     @Expose
@@ -1107,7 +1107,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Edge Telemetry For Microsoft365Analytics.
-     * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics. Possible values are: notConfigured, intranet, internet, intranetAndInternet.
+     * Specifies what type of telemetry data (none, intranet, internet, both) is sent to Microsoft 365 Analytics
      */
     @SerializedName(value = "edgeTelemetryForMicrosoft365Analytics", alternate = {"EdgeTelemetryForMicrosoft365Analytics"})
     @Expose
@@ -1224,7 +1224,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Experience Do Not Sync Browser Settings.
-     * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override. Possible values are: notConfigured, blockedWithUserOverride, blocked.
+     * Allow or prevent the syncing of Microsoft Edge Browser settings. Option for IT admins to prevent syncing across devices, but allow user override.
      */
     @SerializedName(value = "experienceDoNotSyncBrowserSettings", alternate = {"ExperienceDoNotSyncBrowserSettings"})
     @Expose
@@ -1233,7 +1233,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Find My Files.
-     * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access. Possible values are: notConfigured, enabled, disabled.
+     * Controls if the user can configure search to Find My Files mode, which searches files in secondary hard drives and also outside of the user profile. Find My Files does not allow users to search files or locations to which they do not have access.
      */
     @SerializedName(value = "findMyFiles", alternate = {"FindMyFiles"})
     @Expose
@@ -1251,7 +1251,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Ink Workspace Access.
-     * Controls the user access to the ink workspace, from the desktop and from above the lock screen. Possible values are: notConfigured, enabled, disabled.
+     * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
      */
     @SerializedName(value = "inkWorkspaceAccess", alternate = {"InkWorkspaceAccess"})
     @Expose
@@ -1260,7 +1260,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Ink Workspace Access State.
-     * Controls the user access to the ink workspace, from the desktop and from above the lock screen. Possible values are: notConfigured, blocked, allowed.
+     * Controls the user access to the ink workspace, from the desktop and from above the lock screen.
      */
     @SerializedName(value = "inkWorkspaceAccessState", alternate = {"InkWorkspaceAccessState"})
     @Expose
@@ -1296,7 +1296,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Lock Screen Activate Apps With Voice.
-     * This policy setting specifies whether Windows apps can be activated by voice while the system is locked. Possible values are: notConfigured, enabled, disabled.
+     * This policy setting specifies whether Windows apps can be activated by voice while the system is locked.
      */
     @SerializedName(value = "lockScreenActivateAppsWithVoice", alternate = {"LockScreenActivateAppsWithVoice"})
     @Expose
@@ -1404,7 +1404,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Microsoft Account Sign In Assistant Settings.
-     * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service. Possible values are: notConfigured, disabled.
+     * Controls the Microsoft Account Sign-In Assistant (wlidsvc) NT service.
      */
     @SerializedName(value = "microsoftAccountSignInAssistantSettings", alternate = {"MicrosoftAccountSignInAssistantSettings"})
     @Expose
@@ -1467,7 +1467,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Password Block Simple.
-     * Specify whether PINs or passwords such as '1111' or '1234' are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
+     * Specify whether PINs or passwords such as "1111" or "1234" are allowed. For Windows 10 desktops, it also controls the use of picture passwords.
      */
     @SerializedName(value = "passwordBlockSimple", alternate = {"PasswordBlockSimple"})
     @Expose
@@ -1539,7 +1539,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Password Required Type.
-     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * The required password type.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -1584,7 +1584,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Button Action On Battery.
-     * This setting specifies the action that Windows takes when a user presses the Power button while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
+     * This setting specifies the action that Windows takes when a user presses the Power button while on battery.
      */
     @SerializedName(value = "powerButtonActionOnBattery", alternate = {"PowerButtonActionOnBattery"})
     @Expose
@@ -1593,7 +1593,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Button Action Plugged In.
-     * This setting specifies the action that Windows takes when a user presses the Power button while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
+     * This setting specifies the action that Windows takes when a user presses the Power button while plugged in.
      */
     @SerializedName(value = "powerButtonActionPluggedIn", alternate = {"PowerButtonActionPluggedIn"})
     @Expose
@@ -1602,7 +1602,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Hybrid Sleep On Battery.
-     * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting. Possible values are: notConfigured, enabled, disabled.
+     * This setting allows you to turn off hybrid sleep while on battery. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
      */
     @SerializedName(value = "powerHybridSleepOnBattery", alternate = {"PowerHybridSleepOnBattery"})
     @Expose
@@ -1611,7 +1611,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Hybrid Sleep Plugged In.
-     * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting. Possible values are: notConfigured, enabled, disabled.
+     * This setting allows you to turn off hybrid sleep while plugged in. If you set this setting to disable, a hiberfile is not generated when the system transitions to sleep (Stand By). If you set this setting to enable or do not configure this policy setting, users control this setting.
      */
     @SerializedName(value = "powerHybridSleepPluggedIn", alternate = {"PowerHybridSleepPluggedIn"})
     @Expose
@@ -1620,7 +1620,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Lid Close Action On Battery.
-     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
+     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while on battery.
      */
     @SerializedName(value = "powerLidCloseActionOnBattery", alternate = {"PowerLidCloseActionOnBattery"})
     @Expose
@@ -1629,7 +1629,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Lid Close Action Plugged In.
-     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
+     * This setting specifies the action that Windows takes when a user closes the lid on a mobile PC while plugged in.
      */
     @SerializedName(value = "powerLidCloseActionPluggedIn", alternate = {"PowerLidCloseActionPluggedIn"})
     @Expose
@@ -1638,7 +1638,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Sleep Button Action On Battery.
-     * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
+     * This setting specifies the action that Windows takes when a user presses the Sleep button while on battery.
      */
     @SerializedName(value = "powerSleepButtonActionOnBattery", alternate = {"PowerSleepButtonActionOnBattery"})
     @Expose
@@ -1647,7 +1647,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Power Sleep Button Action Plugged In.
-     * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in. Possible values are: notConfigured, noAction, sleep, hibernate, shutdown.
+     * This setting specifies the action that Windows takes when a user presses the Sleep button while plugged in.
      */
     @SerializedName(value = "powerSleepButtonActionPluggedIn", alternate = {"PowerSleepButtonActionPluggedIn"})
     @Expose
@@ -1683,7 +1683,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Privacy Advertising Id.
-     * Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured, blocked, allowed.
+     * Enables or disables the use of advertising ID. Added in Windows 10, version 1607.
      */
     @SerializedName(value = "privacyAdvertisingId", alternate = {"PrivacyAdvertisingId"})
     @Expose
@@ -1746,7 +1746,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Safe Search Filter.
-     * Specifies what filter level of safe search is required. Possible values are: userDefined, strict, moderate.
+     * Specifies what filter level of safe search is required.
      */
     @SerializedName(value = "safeSearchFilter", alternate = {"SafeSearchFilter"})
     @Expose
@@ -2043,7 +2043,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Smart Screen App Install Control.
-     * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store. Possible values are: notConfigured, anywhere, storeOnly, recommendations, preferStore.
+     * Added in Windows 10, version 1703. Allows IT Admins to control whether users are allowed to install apps from places other than the Store.
      */
     @SerializedName(value = "smartScreenAppInstallControl", alternate = {"SmartScreenAppInstallControl"})
     @Expose
@@ -2088,7 +2088,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu App List Visibility.
-     * Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app. Possible values are: userDefined, collapse, remove, disableSettingsApp.
+     * Setting the value of this collapses the app list, removes the app list entirely, or disables the corresponding toggle in the Settings app.
      */
     @SerializedName(value = "startMenuAppListVisibility", alternate = {"StartMenuAppListVisibility"})
     @Expose
@@ -2160,7 +2160,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Hide Restart Options.
-     * Enabling this policy hides 'Restart/Update and Restart' from appearing in the power button in the start menu.
+     * Enabling this policy hides “Restart/Update and Restart” from appearing in the power button in the start menu.
      */
     @SerializedName(value = "startMenuHideRestartOptions", alternate = {"StartMenuHideRestartOptions"})
     @Expose
@@ -2232,7 +2232,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Mode.
-     * Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
+     * Allows admins to decide how the Start menu is displayed.
      */
     @SerializedName(value = "startMenuMode", alternate = {"StartMenuMode"})
     @Expose
@@ -2241,7 +2241,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Documents.
-     * Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the Documents folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderDocuments", alternate = {"StartMenuPinnedFolderDocuments"})
     @Expose
@@ -2250,7 +2250,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Downloads.
-     * Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the Downloads folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderDownloads", alternate = {"StartMenuPinnedFolderDownloads"})
     @Expose
@@ -2259,7 +2259,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder File Explorer.
-     * Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the FileExplorer shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderFileExplorer", alternate = {"StartMenuPinnedFolderFileExplorer"})
     @Expose
@@ -2268,7 +2268,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Home Group.
-     * Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the HomeGroup folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderHomeGroup", alternate = {"StartMenuPinnedFolderHomeGroup"})
     @Expose
@@ -2277,7 +2277,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Music.
-     * Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the Music folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderMusic", alternate = {"StartMenuPinnedFolderMusic"})
     @Expose
@@ -2286,7 +2286,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Network.
-     * Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the Network folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderNetwork", alternate = {"StartMenuPinnedFolderNetwork"})
     @Expose
@@ -2295,7 +2295,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Personal Folder.
-     * Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the PersonalFolder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderPersonalFolder", alternate = {"StartMenuPinnedFolderPersonalFolder"})
     @Expose
@@ -2304,7 +2304,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Pictures.
-     * Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the Pictures folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderPictures", alternate = {"StartMenuPinnedFolderPictures"})
     @Expose
@@ -2313,7 +2313,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Settings.
-     * Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the Settings folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderSettings", alternate = {"StartMenuPinnedFolderSettings"})
     @Expose
@@ -2322,7 +2322,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Start Menu Pinned Folder Videos.
-     * Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu. Possible values are: notConfigured, hide, show.
+     * Enforces the visibility (Show/Hide) of the Videos folder shortcut on the Start menu.
      */
     @SerializedName(value = "startMenuPinnedFolderVideos", alternate = {"StartMenuPinnedFolderVideos"})
     @Expose
@@ -2538,7 +2538,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Windows Spotlight Configure On Lock Screen.
-     * Specifies the type of Spotlight. Possible values are: notConfigured, disabled, enabled.
+     * Specifies the type of Spotlight
      */
     @SerializedName(value = "windowsSpotlightConfigureOnLockScreen", alternate = {"WindowsSpotlightConfigureOnLockScreen"})
     @Expose
@@ -2601,7 +2601,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Privacy Access Controls.
-     * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category.
+     * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "privacyAccessControls", alternate = {"PrivacyAccessControls"})
     @Expose

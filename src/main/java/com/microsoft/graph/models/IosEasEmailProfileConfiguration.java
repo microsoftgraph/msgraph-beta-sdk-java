@@ -44,7 +44,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
 
     /**
      * The Authentication Method.
-     * Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Authentication method for this Email profile.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -80,7 +80,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
 
     /**
      * The Duration Of Email To Sync.
-     * Duration of time email should be synced back to. . Possible values are: userDefined, oneDay, threeDays, oneWeek, twoWeeks, oneMonth, unlimited.
+     * Duration of time email should be synced back to. 
      */
     @SerializedName(value = "durationOfEmailToSync", alternate = {"DurationOfEmailToSync"})
     @Expose
@@ -89,7 +89,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
 
     /**
      * The Eas Services.
-     * Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
+     * Exchange data to sync.
      */
     @SerializedName(value = "easServices", alternate = {"EasServices"})
     @Expose
@@ -107,7 +107,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
 
     /**
      * The Email Address Source.
-     * Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
+     * Email attribute that is picked from AAD and injected into this profile before installing on the device.
      */
     @SerializedName(value = "emailAddressSource", alternate = {"EmailAddressSource"})
     @Expose
@@ -116,7 +116,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
 
     /**
      * The Encryption Certificate Type.
-     * Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     * Encryption Certificate type for this Email profile.
      */
     @SerializedName(value = "encryptionCertificateType", alternate = {"EncryptionCertificateType"})
     @Expose
@@ -161,7 +161,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
 
     /**
      * The Signing Certificate Type.
-     * Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     * Signing Certificate type for this Email profile.
      */
     @SerializedName(value = "signingCertificateType", alternate = {"SigningCertificateType"})
     @Expose
@@ -197,7 +197,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
 
     /**
      * The Smime Encryption Certificate User Override Enabled.
-     * If set to true the user can select the S/MIME encryption identity.
+     * If set to true the user can select the S/MIME encryption identity. 
      */
     @SerializedName(value = "smimeEncryptionCertificateUserOverrideEnabled", alternate = {"SmimeEncryptionCertificateUserOverrideEnabled"})
     @Expose

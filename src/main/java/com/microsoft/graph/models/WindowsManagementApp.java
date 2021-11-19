@@ -40,7 +40,7 @@ public class WindowsManagementApp extends Entity implements IJsonBackedObject {
 
     /**
      * The Managed Installer.
-     * Managed Installer Status. Possible values are: disabled, enabled.
+     * Managed Installer Status
      */
     @SerializedName(value = "managedInstaller", alternate = {"ManagedInstaller"})
     @Expose

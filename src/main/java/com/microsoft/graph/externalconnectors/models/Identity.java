@@ -40,7 +40,7 @@ public class Identity implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The unique ID of the identity. It would be the objectId property in case of Azure Active Directory (Azure AD) users or groups and the id property of the externalGroup in the case of external groups.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -49,7 +49,7 @@ public class Identity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of identity. Possible values are: user or group for Azure AD identities and externalgroup for groups in an external system.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

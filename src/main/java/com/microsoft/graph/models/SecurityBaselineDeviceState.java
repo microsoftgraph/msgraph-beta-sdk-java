@@ -55,7 +55,7 @@ public class SecurityBaselineDeviceState extends Entity implements IJsonBackedOb
 
     /**
      * The State.
-     * Security baseline compliance state. Possible values are: unknown, secure, notApplicable, notSecure, error, conflict.
+     * Security baseline compliance state
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

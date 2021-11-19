@@ -36,7 +36,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Content Query.
-     * KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
+     * 
      */
     @SerializedName(value = "contentQuery", alternate = {"ContentQuery"})
     @Expose
@@ -45,7 +45,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * The user who created the legal hold.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -54,7 +54,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the legal hold was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The legal hold description.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -72,7 +72,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the legal hold.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -81,7 +81,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Errors.
-     * Lists any errors that happened while placing the hold.
+     * 
      */
     @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
@@ -90,7 +90,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * Indicates whether the hold is enabled and actively holding content.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -99,7 +99,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * the user who last modified the legal hold.
+     * 
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -108,7 +108,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The date and time the legal hold was last modified.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -117,7 +117,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -126,7 +126,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The Site Sources.
-     * Data source entity for SharePoint sites associated with the legal hold.
+     * 
      */
     @SerializedName(value = "siteSources", alternate = {"SiteSources"})
     @Expose
@@ -144,7 +144,7 @@ public class LegalHold extends Entity implements IJsonBackedObject {
 
     /**
      * The User Sources.
-     * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
+     * 
      */
     @SerializedName(value = "userSources", alternate = {"UserSources"})
     @Expose

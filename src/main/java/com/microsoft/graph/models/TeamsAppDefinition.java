@@ -32,7 +32,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Installation Scopes.
-     * A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+     * 
      */
     @SerializedName(value = "allowedInstallationScopes", alternate = {"AllowedInstallationScopes"})
     @Expose
@@ -41,7 +41,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Azure ADApp Id.
-     * The WebApplicationInfo.Id from the Teams app manifest.
+     * 
      */
     @SerializedName(value = "azureADAppId", alternate = {"AzureADAppId"})
     @Expose
@@ -59,7 +59,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Verbose description of the application.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -68,7 +68,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name of the app provided by the app developer.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -86,7 +86,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Publishing State.
-     * The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     * 
      */
     @SerializedName(value = "publishingState", alternate = {"PublishingState"})
     @Expose
@@ -104,7 +104,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App Id.
-     * The ID from the Teams app manifest.
+     * 
      */
     @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose
@@ -113,7 +113,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * The version number of the application.
+     * 
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -122,7 +122,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Bot.
-     * The details of the bot specified in the Teams app manifest.
+     * 
      */
     @SerializedName(value = "bot", alternate = {"Bot"})
     @Expose
@@ -131,7 +131,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Color Icon.
-     * The color version of the Teams app's icon.
+     * 
      */
     @SerializedName(value = "colorIcon", alternate = {"ColorIcon"})
     @Expose
@@ -140,7 +140,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Outline Icon.
-     * The outline version of the Teams app's icon.
+     * 
      */
     @SerializedName(value = "outlineIcon", alternate = {"OutlineIcon"})
     @Expose

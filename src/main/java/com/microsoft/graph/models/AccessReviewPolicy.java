@@ -27,7 +27,7 @@ public class AccessReviewPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description for this policy. Read-only.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class AccessReviewPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name for this policy. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class AccessReviewPolicy extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Group Owner Management Enabled.
-     * If true, group owners can create and manage access reviews on groups they own.
+     * 
      */
     @SerializedName(value = "isGroupOwnerManagementEnabled", alternate = {"IsGroupOwnerManagementEnabled"})
     @Expose

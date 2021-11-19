@@ -40,7 +40,7 @@ public class DeviceManagementSettingComparison implements IJsonBackedObject {
 
     /**
      * The Comparison Result.
-     * Setting comparison result. Possible values are: unknown, equal, notEqual, added, removed.
+     * Setting comparison result
      */
     @SerializedName(value = "comparisonResult", alternate = {"ComparisonResult"})
     @Expose

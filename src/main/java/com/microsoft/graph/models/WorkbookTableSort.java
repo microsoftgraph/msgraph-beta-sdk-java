@@ -29,7 +29,7 @@ public class WorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Fields.
-     * Represents the current conditions used to last sort the table. Read-only.
+     * 
      */
     @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
@@ -38,7 +38,7 @@ public class WorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Match Case.
-     * Represents whether the casing impacted the last sort of the table. Read-only.
+     * 
      */
     @SerializedName(value = "matchCase", alternate = {"MatchCase"})
     @Expose
@@ -47,7 +47,7 @@ public class WorkbookTableSort extends Entity implements IJsonBackedObject {
 
     /**
      * The Method.
-     * Represents Chinese character ordering method last used to sort the table. The possible values are: PinYin, StrokeCount. Read-only.
+     * 
      */
     @SerializedName(value = "method", alternate = {"Method"})
     @Expose

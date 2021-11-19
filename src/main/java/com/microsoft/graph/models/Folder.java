@@ -40,7 +40,7 @@ public class Folder implements IJsonBackedObject {
 
     /**
      * The Child Count.
-     * Number of children contained immediately within this container.
+     * 
      */
     @SerializedName(value = "childCount", alternate = {"ChildCount"})
     @Expose
@@ -49,7 +49,7 @@ public class Folder implements IJsonBackedObject {
 
     /**
      * The View.
-     * A collection of properties defining the recommended view for the folder.
+     * 
      */
     @SerializedName(value = "view", alternate = {"View"})
     @Expose

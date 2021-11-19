@@ -41,7 +41,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Direction.
-     * The direction. The possible values are inactive, sendOnly, receiveOnly, sendReceive.
+     * 
      */
     @SerializedName(value = "direction", alternate = {"Direction"})
     @Expose
@@ -50,7 +50,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Label.
-     * The media stream label.
+     * 
      */
     @SerializedName(value = "label", alternate = {"Label"})
     @Expose
@@ -59,7 +59,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * 
      */
     @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
@@ -68,7 +68,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Server Muted.
-     * If the media is muted by the server.
+     * 
      */
     @SerializedName(value = "serverMuted", alternate = {"ServerMuted"})
     @Expose
@@ -77,7 +77,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Source Id.
-     * The source ID.
+     * 
      */
     @SerializedName(value = "sourceId", alternate = {"SourceId"})
     @Expose

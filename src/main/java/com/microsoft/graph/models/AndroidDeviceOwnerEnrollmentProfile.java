@@ -77,7 +77,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
 
     /**
      * The Enrollment Mode.
-     * The enrollment mode of devices that use this enrollment profile. Possible values are: corporateOwnedDedicatedDevice, corporateOwnedFullyManaged, corporateOwnedWorkProfile.
+     * The enrollment mode of devices that use this enrollment profile.
      */
     @SerializedName(value = "enrollmentMode", alternate = {"EnrollmentMode"})
     @Expose
@@ -86,7 +86,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
 
     /**
      * The Enrollment Token Type.
-     * The enrollment token type for an enrollment profile. Possible values are: default, corporateOwnedDedicatedDeviceWithAzureADSharedMode.
+     * The enrollment token type for an enrollment profile.
      */
     @SerializedName(value = "enrollmentTokenType", alternate = {"EnrollmentTokenType"})
     @Expose

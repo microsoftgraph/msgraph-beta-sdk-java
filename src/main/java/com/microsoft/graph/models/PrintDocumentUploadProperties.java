@@ -39,7 +39,7 @@ public class PrintDocumentUploadProperties implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The document's content (MIME) type.
+     * 
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -48,7 +48,7 @@ public class PrintDocumentUploadProperties implements IJsonBackedObject {
 
     /**
      * The Document Name.
-     * The document's name.
+     * 
      */
     @SerializedName(value = "documentName", alternate = {"DocumentName"})
     @Expose
@@ -57,7 +57,7 @@ public class PrintDocumentUploadProperties implements IJsonBackedObject {
 
     /**
      * The Size.
-     * The document's size in bytes.
+     * 
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

@@ -42,7 +42,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Account Setup Status.
-     * Deployment status for the enrollment status page account setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Deployment status for the enrollment status page account setup phase.
      */
     @SerializedName(value = "accountSetupStatus", alternate = {"AccountSetupStatus"})
     @Expose
@@ -78,7 +78,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Deployment State.
-     * Deployment state like Success, Failure, InProgress, SuccessWithTimeout. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Deployment state like Success, Failure, InProgress, SuccessWithTimeout.
      */
     @SerializedName(value = "deploymentState", alternate = {"DeploymentState"})
     @Expose
@@ -141,7 +141,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Device Setup Status.
-     * Deployment status for the enrollment status page device setup phase. Possible values are: unknown, success, inProgress, failure, successWithTimeout, notAttempted, disabled.
+     * Deployment status for the enrollment status page device setup phase.
      */
     @SerializedName(value = "deviceSetupStatus", alternate = {"DeviceSetupStatus"})
     @Expose
@@ -168,7 +168,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Enrollment State.
-     * Enrollment state like Enrolled, Failed. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
+     * Enrollment state like Enrolled, Failed.
      */
     @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
@@ -177,7 +177,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements IJsonBacke
 
     /**
      * The Enrollment Type.
-     * Enrollment type. Possible values are: unknown, azureADJoinedWithAutopilotProfile, offlineDomainJoined, azureADJoinedUsingDeviceAuthWithAutopilotProfile, azureADJoinedUsingDeviceAuthWithoutAutopilotProfile, azureADJoinedWithOfflineAutopilotProfile, azureADJoinedWithWhiteGlove, offlineDomainJoinedWithWhiteGlove, offlineDomainJoinedWithOfflineAutopilotProfile.
+     * Enrollment type.
      */
     @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose

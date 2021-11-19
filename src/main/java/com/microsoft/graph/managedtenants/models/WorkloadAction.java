@@ -42,7 +42,7 @@ public class WorkloadAction implements IJsonBackedObject {
 
     /**
      * The Action Id.
-     * The unique identifier for the workload action. Required. Read-only.
+     * 
      */
     @SerializedName(value = "actionId", alternate = {"ActionId"})
     @Expose
@@ -51,7 +51,7 @@ public class WorkloadAction implements IJsonBackedObject {
 
     /**
      * The Category.
-     * The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -60,7 +60,7 @@ public class WorkloadAction implements IJsonBackedObject {
 
     /**
      * The Description.
-     * The description for the workload action. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -69,7 +69,7 @@ public class WorkloadAction implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the workload action. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -78,7 +78,7 @@ public class WorkloadAction implements IJsonBackedObject {
 
     /**
      * The Service.
-     * The service associated with workload action. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "service", alternate = {"Service"})
     @Expose
@@ -87,7 +87,7 @@ public class WorkloadAction implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * The collection of settings associated with the workload action. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
