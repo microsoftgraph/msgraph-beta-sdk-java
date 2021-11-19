@@ -62,9 +62,11 @@ public class ReportRootGetOffice365ServicesUserCountsCollectionRequestBuilder ex
     @Nonnull
     public ReportRootGetOffice365ServicesUserCountsCollectionRequest buildRequest(@Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         final ReportRootGetOffice365ServicesUserCountsCollectionRequest request = super.buildRequest(requestOptions);
-          for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
-            request.addFunctionOption(option);
-      }
+        if(functionOptions != null) {    
+            for (com.microsoft.graph.options.FunctionOption option : functionOptions) {
+                request.addFunctionOption(option);
+            }
+        }
         return request;
     }
 }

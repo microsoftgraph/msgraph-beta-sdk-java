@@ -181,6 +181,15 @@ public class ManagedAppProtection extends ManagedAppPolicy implements IJsonBacke
     public Boolean fingerprintBlocked;
 
     /**
+     * The Grace Period To Block Apps During Off Clock Hours.
+     * A grace period before blocking app access during off clock hours.
+     */
+    @SerializedName(value = "gracePeriodToBlockAppsDuringOffClockHours", alternate = {"GracePeriodToBlockAppsDuringOffClockHours"})
+    @Expose
+	@Nullable
+    public javax.xml.datatype.Duration gracePeriodToBlockAppsDuringOffClockHours;
+
+    /**
      * The Managed Browser.
      * Indicates in which managed browser(s) that internet links should be opened. When this property is configured, ManagedBrowserToOpenLinksRequired should be true. Possible values are: notConfigured, microsoftEdge.
      */

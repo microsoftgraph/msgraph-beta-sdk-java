@@ -74,6 +74,16 @@ public class UserExperienceAnalyticsBaselineRequestBuilder extends BaseRequestBu
      * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
      */
     @Nonnull
+    public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder batteryHealthMetrics() {
+        return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("batteryHealthMetrics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for UserExperienceAnalyticsCategory
+     *
+     * @return the UserExperienceAnalyticsCategoryWithReferenceRequestBuilder instance
+     */
+    @Nonnull
     public UserExperienceAnalyticsCategoryWithReferenceRequestBuilder bestPracticesMetrics() {
         return new UserExperienceAnalyticsCategoryWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("bestPracticesMetrics"), getClient(), null);
     }

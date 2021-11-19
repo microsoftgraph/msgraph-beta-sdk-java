@@ -100,7 +100,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plans.
-     * 
+     * Cloud PC service plans.
      */
     @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
     @Expose

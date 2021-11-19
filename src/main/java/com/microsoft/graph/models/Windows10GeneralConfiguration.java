@@ -2601,7 +2601,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
 
     /**
      * The Privacy Access Controls.
-     * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category.
+     * Indicates a list of applications with their access control levels over privacy data categories, and/or the default access levels per category. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "privacyAccessControls", alternate = {"PrivacyAccessControls"})
     @Expose

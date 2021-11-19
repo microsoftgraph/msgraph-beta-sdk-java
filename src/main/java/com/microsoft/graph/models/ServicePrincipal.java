@@ -23,6 +23,7 @@ import com.microsoft.graph.models.ClaimsMappingPolicy;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.DelegatedPermissionClassification;
 import com.microsoft.graph.models.Endpoint;
+import com.microsoft.graph.models.FederatedIdentityCredential;
 import com.microsoft.graph.models.HomeRealmDiscoveryPolicy;
 import com.microsoft.graph.models.LicenseDetails;
 import com.microsoft.graph.models.OAuth2PermissionGrant;
@@ -35,6 +36,7 @@ import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionPage;
 import com.microsoft.graph.requests.EndpointCollectionPage;
+import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
 import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
 import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
@@ -438,6 +440,15 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
     public EndpointCollectionPage endpoints;
 
     /**
+     * The Federated Identity Credentials.
+     * 
+     */
+    @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
+    @Expose
+	@Nullable
+    public FederatedIdentityCredentialCollectionPage federatedIdentityCredentials;
+
+    /**
      * The Home Realm Discovery Policies.
      * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      */
@@ -547,6 +558,10 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
         if (json.has("endpoints")) {
             endpoints = serializer.deserializeObject(json.get("endpoints"), EndpointCollectionPage.class);
+        }
+
+        if (json.has("federatedIdentityCredentials")) {
+            federatedIdentityCredentials = serializer.deserializeObject(json.get("federatedIdentityCredentials"), FederatedIdentityCredentialCollectionPage.class);
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {

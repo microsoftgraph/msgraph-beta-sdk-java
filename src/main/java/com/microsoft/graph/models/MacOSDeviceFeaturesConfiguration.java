@@ -129,7 +129,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Console Access Disabled.
-     * Whether the Other user will disregard use of the `&amp;gt;console&amp;gt; special user name.
+     * Whether the Other user will disregard use of the console special user name.
      */
     @SerializedName(value = "consoleAccessDisabled", alternate = {"ConsoleAccessDisabled"})
     @Expose
