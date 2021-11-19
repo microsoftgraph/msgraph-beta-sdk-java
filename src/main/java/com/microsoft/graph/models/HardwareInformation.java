@@ -80,7 +80,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Full Qualified Domain Name.
-     * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string.
+     * Returns the fully qualified domain name of the device (if any). If the device is not domain-joined, it returns an empty string. 
      */
     @SerializedName(value = "deviceFullQualifiedDomainName", alternate = {"DeviceFullQualifiedDomainName"})
     @Expose
@@ -89,7 +89,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Guard Local System Authority Credential Guard State.
-     * Local System Authority (LSA) credential guard status. . Possible values are: running, rebootRequired, notLicensed, notConfigured, virtualizationBasedSecurityNotRunning.
+     * Local System Authority (LSA) credential guard status. 
      */
     @SerializedName(value = "deviceGuardLocalSystemAuthorityCredentialGuardState", alternate = {"DeviceGuardLocalSystemAuthorityCredentialGuardState"})
     @Expose
@@ -98,7 +98,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Guard Virtualization Based Security Hardware Requirement State.
-     * Virtualization-based security hardware requirement status. Possible values are: meetHardwareRequirements, secureBootRequired, dmaProtectionRequired, hyperVNotSupportedForGuestVM, hyperVNotAvailable.
+     * Virtualization-based security hardware requirement status.
      */
     @SerializedName(value = "deviceGuardVirtualizationBasedSecurityHardwareRequirementState", alternate = {"DeviceGuardVirtualizationBasedSecurityHardwareRequirementState"})
     @Expose
@@ -107,7 +107,7 @@ public class HardwareInformation implements IJsonBackedObject {
 
     /**
      * The Device Guard Virtualization Based Security State.
-     * Virtualization-based security status. . Possible values are: running, rebootRequired, require64BitArchitecture, notLicensed, notConfigured, doesNotMeetHardwareRequirements, other.
+     * Virtualization-based security status. 
      */
     @SerializedName(value = "deviceGuardVirtualizationBasedSecurityState", alternate = {"DeviceGuardVirtualizationBasedSecurityState"})
     @Expose

@@ -29,7 +29,7 @@ public class EducationAssignmentDefaults extends Entity implements IJsonBackedOb
 
     /**
      * The Added Student Action.
-     * Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
+     * 
      */
     @SerializedName(value = "addedStudentAction", alternate = {"AddedStudentAction"})
     @Expose
@@ -38,7 +38,7 @@ public class EducationAssignmentDefaults extends Entity implements IJsonBackedOb
 
     /**
      * The Add To Calendar Action.
-     * Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
+     * 
      */
     @SerializedName(value = "addToCalendarAction", alternate = {"AddToCalendarAction"})
     @Expose
@@ -47,7 +47,7 @@ public class EducationAssignmentDefaults extends Entity implements IJsonBackedOb
 
     /**
      * The Due Time.
-     * Class-level default value for due time field. Default value is 23:59:00.
+     * 
      */
     @SerializedName(value = "dueTime", alternate = {"DueTime"})
     @Expose
@@ -56,7 +56,7 @@ public class EducationAssignmentDefaults extends Entity implements IJsonBackedOb
 
     /**
      * The Notification Channel Url.
-     * Default Teams channel to which notifications will be sent. Default value is null.
+     * 
      */
     @SerializedName(value = "notificationChannelUrl", alternate = {"NotificationChannelUrl"})
     @Expose

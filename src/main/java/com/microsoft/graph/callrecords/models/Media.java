@@ -43,7 +43,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Callee Device.
-     * Device information associated with the callee endpoint of this media.
+     * 
      */
     @SerializedName(value = "calleeDevice", alternate = {"CalleeDevice"})
     @Expose
@@ -52,7 +52,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Callee Network.
-     * Network information associated with the callee endpoint of this media.
+     * 
      */
     @SerializedName(value = "calleeNetwork", alternate = {"CalleeNetwork"})
     @Expose
@@ -61,7 +61,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Caller Device.
-     * Device information associated with the caller endpoint of this media.
+     * 
      */
     @SerializedName(value = "callerDevice", alternate = {"CallerDevice"})
     @Expose
@@ -70,7 +70,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Caller Network.
-     * Network information associated with the caller endpoint of this media.
+     * 
      */
     @SerializedName(value = "callerNetwork", alternate = {"CallerNetwork"})
     @Expose
@@ -79,7 +79,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Label.
-     * How the media was identified during media negotiation stage.
+     * 
      */
     @SerializedName(value = "label", alternate = {"Label"})
     @Expose
@@ -88,7 +88,7 @@ public class Media implements IJsonBackedObject {
 
     /**
      * The Streams.
-     * Network streams associated with this media.
+     * 
      */
     @SerializedName(value = "streams", alternate = {"Streams"})
     @Expose

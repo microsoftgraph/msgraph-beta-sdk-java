@@ -33,7 +33,7 @@ public class Updates extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog.
-     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * 
      */
     @SerializedName(value = "catalog", alternate = {"Catalog"})
     @Expose
@@ -42,7 +42,7 @@ public class Updates extends Entity implements IJsonBackedObject {
 
     /**
      * The Deployments.
-     * Deployments created using the deployment service. Read-only.
+     * 
      */
     @SerializedName(value = "deployments", alternate = {"Deployments"})
     @Expose
@@ -51,7 +51,7 @@ public class Updates extends Entity implements IJsonBackedObject {
 
     /**
      * The Updatable Assets.
-     * Assets registered with the deployment service that can receive updates. Read-only.
+     * 
      */
     @SerializedName(value = "updatableAssets", alternate = {"UpdatableAssets"})
     @Expose

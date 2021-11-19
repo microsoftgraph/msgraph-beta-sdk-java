@@ -28,7 +28,7 @@ public class UsageRight extends Entity implements IJsonBackedObject {
 
     /**
      * The Catalog Id.
-     * Product id corresponding to the usage right.
+     * 
      */
     @SerializedName(value = "catalogId", alternate = {"CatalogId"})
     @Expose
@@ -37,7 +37,7 @@ public class UsageRight extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Identifier.
-     * Identifier of the service corresponding to the usage right.
+     * 
      */
     @SerializedName(value = "serviceIdentifier", alternate = {"ServiceIdentifier"})
     @Expose
@@ -46,7 +46,7 @@ public class UsageRight extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * The state of the usage right. Possible values are: active, inactive, warning, suspended.
+     * 
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

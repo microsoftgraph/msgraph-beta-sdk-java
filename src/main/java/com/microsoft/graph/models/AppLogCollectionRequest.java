@@ -38,7 +38,7 @@ public class AppLogCollectionRequest extends Entity implements IJsonBackedObject
 
     /**
      * The Custom Log Folders.
-     * List of log folders.
+     * List of log folders. 
      */
     @SerializedName(value = "customLogFolders", alternate = {"CustomLogFolders"})
     @Expose
@@ -56,7 +56,7 @@ public class AppLogCollectionRequest extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * Log upload status. Possible values are: pending, completed, failed.
+     * Log upload status
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

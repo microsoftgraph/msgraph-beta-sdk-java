@@ -36,7 +36,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Container.
-     * Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * 
      */
     @SerializedName(value = "container", alternate = {"Container"})
     @Expose
@@ -45,7 +45,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Contexts.
-     * Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
+     * 
      */
     @SerializedName(value = "contexts", alternate = {"Contexts"})
     @Expose
@@ -54,7 +54,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Read-only. The user who created the plan.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -63,7 +63,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -72,7 +72,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * ID of the Group that owns the plan. A valid group must exist before this field can be set. After it is set, this property can’t be updated.
+     * 
      * @deprecated Owner property is deprecated and will be removed in January 2023. Please use the container property instead.
      */
     @Deprecated
@@ -83,7 +83,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Title.
-     * Required. Title of the plan.
+     * 
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -92,7 +92,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Buckets.
-     * Read-only. Nullable. Collection of buckets in the plan.
+     * 
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
@@ -101,7 +101,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Details.
-     * Read-only. Nullable. Additional details about the plan.
+     * 
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -110,7 +110,7 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * Read-only. Nullable. Collection of tasks in the plan.
+     * 
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

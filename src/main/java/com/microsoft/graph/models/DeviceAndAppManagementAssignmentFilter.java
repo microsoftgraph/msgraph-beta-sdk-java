@@ -65,7 +65,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Platform.
-     * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * Platform type of the devices on which the Assignment Filter will be applicable.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose

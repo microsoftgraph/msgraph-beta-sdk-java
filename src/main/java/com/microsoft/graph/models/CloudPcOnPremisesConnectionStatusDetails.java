@@ -41,7 +41,7 @@ public class CloudPcOnPremisesConnectionStatusDetails implements IJsonBackedObje
 
     /**
      * The End Date Time.
-     * The end time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class CloudPcOnPremisesConnectionStatusDetails implements IJsonBackedObje
 
     /**
      * The Health Checks.
-     * All checks that are done on the connection.
+     * 
      */
     @SerializedName(value = "healthChecks", alternate = {"HealthChecks"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcOnPremisesConnectionStatusDetails implements IJsonBackedObje
 
     /**
      * The Start Date Time.
-     * The start time of the connection health check. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

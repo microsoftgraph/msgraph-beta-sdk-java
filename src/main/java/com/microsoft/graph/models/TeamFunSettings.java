@@ -40,7 +40,7 @@ public class TeamFunSettings implements IJsonBackedObject {
 
     /**
      * The Allow Custom Memes.
-     * If set to true, enables users to include custom memes.
+     * 
      */
     @SerializedName(value = "allowCustomMemes", alternate = {"AllowCustomMemes"})
     @Expose
@@ -49,7 +49,7 @@ public class TeamFunSettings implements IJsonBackedObject {
 
     /**
      * The Allow Giphy.
-     * If set to true, enables Giphy use.
+     * 
      */
     @SerializedName(value = "allowGiphy", alternate = {"AllowGiphy"})
     @Expose
@@ -58,7 +58,7 @@ public class TeamFunSettings implements IJsonBackedObject {
 
     /**
      * The Allow Stickers And Memes.
-     * If set to true, enables users to include stickers and memes.
+     * 
      */
     @SerializedName(value = "allowStickersAndMemes", alternate = {"AllowStickersAndMemes"})
     @Expose
@@ -67,7 +67,7 @@ public class TeamFunSettings implements IJsonBackedObject {
 
     /**
      * The Giphy Content Rating.
-     * Giphy content rating. Possible values are: moderate, strict.
+     * 
      */
     @SerializedName(value = "giphyContentRating", alternate = {"GiphyContentRating"})
     @Expose

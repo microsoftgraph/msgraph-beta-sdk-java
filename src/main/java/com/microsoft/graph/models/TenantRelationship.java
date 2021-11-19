@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.managedtenants.models.ManagedTenant;
+import com.microsoft.graph.models.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,25 +23,12 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Tenant Relationship.
  */
-public class TenantRelationship implements IJsonBackedObject {
+public class TenantRelationship extends Entity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Managed Tenants.
-     * The operations available to interact with the multi-tenant management platform.
+     * 
      */
     @SerializedName(value = "managedTenants", alternate = {"ManagedTenants"})
     @Expose

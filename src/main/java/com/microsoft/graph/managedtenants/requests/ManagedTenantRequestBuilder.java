@@ -34,8 +34,6 @@ import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionReq
 import com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;
@@ -357,26 +355,6 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
     @Nonnull
     public ManagementTemplateRequestBuilder managementTemplates(@Nonnull final String id) {
         return new ManagementTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplates") + "/" + id, getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the RiskyUser collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public RiskyUserCollectionRequestBuilder riskyUsers() {
-        return new RiskyUserCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the RiskyUser item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public RiskyUserRequestBuilder riskyUsers(@Nonnull final String id) {
-        return new RiskyUserRequestBuilder(getRequestUrlWithAdditionalSegment("riskyUsers") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the TenantGroup collection

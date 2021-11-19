@@ -51,7 +51,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Active Modalities.
-     * The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
+     * 
      */
     @SerializedName(value = "activeModalities", alternate = {"ActiveModalities"})
     @Expose
@@ -60,7 +60,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Answered By.
-     * The participant that answered the call. Read-only.
+     * 
      */
     @SerializedName(value = "answeredBy", alternate = {"AnsweredBy"})
     @Expose
@@ -69,7 +69,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Callback Uri.
-     * The callback URL on which callbacks will be delivered. Must be https.
+     * 
      */
     @SerializedName(value = "callbackUri", alternate = {"CallbackUri"})
     @Expose
@@ -78,7 +78,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Call Chain Id.
-     * A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
+     * 
      */
     @SerializedName(value = "callChainId", alternate = {"CallChainId"})
     @Expose
@@ -96,7 +96,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Call Routes.
-     * The routing information on how the call was retargeted. Read-only.
+     * 
      */
     @SerializedName(value = "callRoutes", alternate = {"CallRoutes"})
     @Expose
@@ -105,7 +105,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Info.
-     * The chat information. Required information for joining a meeting.
+     * 
      */
     @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
@@ -114,7 +114,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Direction.
-     * The direction of the call. The possible value are incoming or outgoing. Read-only.
+     * 
      */
     @SerializedName(value = "direction", alternate = {"Direction"})
     @Expose
@@ -123,7 +123,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Incoming Context.
-     * The context associated with an incoming call. Read-only. Server generated.
+     * 
      */
     @SerializedName(value = "incomingContext", alternate = {"IncomingContext"})
     @Expose
@@ -132,7 +132,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media Config.
-     * The media configuration. Required.
+     * 
      */
     @SerializedName(value = "mediaConfig", alternate = {"MediaConfig"})
     @Expose
@@ -141,7 +141,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Media State.
-     * Read-only. The call media state.
+     * 
      */
     @SerializedName(value = "mediaState", alternate = {"MediaState"})
     @Expose
@@ -150,7 +150,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Capability.
-     * Contains the capabilities of a meeting. Read-only.
+     * 
      */
     @SerializedName(value = "meetingCapability", alternate = {"MeetingCapability"})
     @Expose
@@ -159,7 +159,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Info.
-     * The meeting information that's required for joining a meeting.
+     * 
      */
     @SerializedName(value = "meetingInfo", alternate = {"MeetingInfo"})
     @Expose
@@ -276,7 +276,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Transcription.
-     * The transcription information for the call. Read-only.
+     * 
      */
     @SerializedName(value = "transcription", alternate = {"Transcription"})
     @Expose
@@ -285,7 +285,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Audio Routing Groups.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "audioRoutingGroups", alternate = {"AudioRoutingGroups"})
     @Expose
@@ -294,7 +294,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -303,7 +303,7 @@ public class Call extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose

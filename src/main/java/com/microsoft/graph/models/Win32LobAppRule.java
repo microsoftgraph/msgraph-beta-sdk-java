@@ -40,7 +40,7 @@ public class Win32LobAppRule implements IJsonBackedObject {
 
     /**
      * The Rule Type.
-     * The rule type indicating the purpose of the rule. Possible values are: detection, requirement.
+     * The rule type indicating the purpose of the rule.
      */
     @SerializedName(value = "ruleType", alternate = {"RuleType"})
     @Expose

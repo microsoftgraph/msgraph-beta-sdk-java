@@ -29,7 +29,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Configuration.
-     * Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
+     * 
      */
     @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
@@ -38,7 +38,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Name of the tab.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Sort Order Index.
-     * Index of the order used for sorting tabs.
+     * 
      */
     @SerializedName(value = "sortOrderIndex", alternate = {"SortOrderIndex"})
     @Expose
@@ -74,7 +74,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * Deep link URL of the tab instance. Read only.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -83,7 +83,7 @@ public class TeamsTab extends Entity implements IJsonBackedObject {
 
     /**
      * The Teams App.
-     * The application that is linked to the tab. This cannot be changed after tab creation.
+     * 
      */
     @SerializedName(value = "teamsApp", alternate = {"TeamsApp"})
     @Expose

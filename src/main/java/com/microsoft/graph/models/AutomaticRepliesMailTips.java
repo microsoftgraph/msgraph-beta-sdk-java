@@ -41,7 +41,7 @@ public class AutomaticRepliesMailTips implements IJsonBackedObject {
 
     /**
      * The Message.
-     * The automatic reply message.
+     * 
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -50,7 +50,7 @@ public class AutomaticRepliesMailTips implements IJsonBackedObject {
 
     /**
      * The Message Language.
-     * The language that the automatic reply message is in.
+     * 
      */
     @SerializedName(value = "messageLanguage", alternate = {"MessageLanguage"})
     @Expose
@@ -59,7 +59,7 @@ public class AutomaticRepliesMailTips implements IJsonBackedObject {
 
     /**
      * The Scheduled End Time.
-     * The date and time that automatic replies are set to end.
+     * 
      */
     @SerializedName(value = "scheduledEndTime", alternate = {"ScheduledEndTime"})
     @Expose
@@ -68,7 +68,7 @@ public class AutomaticRepliesMailTips implements IJsonBackedObject {
 
     /**
      * The Scheduled Start Time.
-     * The date and time that automatic replies are set to begin.
+     * 
      */
     @SerializedName(value = "scheduledStartTime", alternate = {"ScheduledStartTime"})
     @Expose

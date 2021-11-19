@@ -39,7 +39,7 @@ public class IntegerRange implements IJsonBackedObject {
 
     /**
      * The End.
-     * The inclusive upper bound of the integer range.
+     * 
      */
     @SerializedName(value = "end", alternate = {"End"})
     @Expose
@@ -66,7 +66,7 @@ public class IntegerRange implements IJsonBackedObject {
 
     /**
      * The Start.
-     * The inclusive lower bound of the integer range.
+     * 
      */
     @SerializedName(value = "start", alternate = {"Start"})
     @Expose

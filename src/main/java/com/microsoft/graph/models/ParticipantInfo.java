@@ -41,7 +41,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Country Code.
-     * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
+     * 
      */
     @SerializedName(value = "countryCode", alternate = {"CountryCode"})
     @Expose
@@ -50,7 +50,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Endpoint Type.
-     * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or skypeForBusinessVoipPhone. Read-only.
+     * 
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose
@@ -59,7 +59,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * The identitySet associated with this participant. Read-only.
+     * 
      */
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
@@ -68,7 +68,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Language Id.
-     * The language culture string. Read-only.
+     * 
      */
     @SerializedName(value = "languageId", alternate = {"LanguageId"})
     @Expose
@@ -77,7 +77,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Participant Id.
-     * The participant ID of the participant. Read-only.
+     * 
      */
     @SerializedName(value = "participantId", alternate = {"ParticipantId"})
     @Expose
@@ -86,7 +86,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Platform Id.
-     * The client platform ID of the participant. Read-only.
+     * 
      */
     @SerializedName(value = "platformId", alternate = {"PlatformId"})
     @Expose
@@ -95,7 +95,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Region.
-     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location. Read-only.
+     * 
      */
     @SerializedName(value = "region", alternate = {"Region"})
     @Expose

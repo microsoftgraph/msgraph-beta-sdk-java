@@ -41,7 +41,7 @@ public class CommsNotifications implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The notification of a change in the resource.
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

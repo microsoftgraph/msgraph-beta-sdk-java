@@ -28,7 +28,7 @@ public class Windows extends Entity implements IJsonBackedObject {
 
     /**
      * The Updates.
-     * Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only.
+     * 
      */
     @SerializedName(value = "updates", alternate = {"Updates"})
     @Expose

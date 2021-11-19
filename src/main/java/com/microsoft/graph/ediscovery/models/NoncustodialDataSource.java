@@ -28,7 +28,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements IJson
 
     /**
      * The Apply Hold To Source.
-     * Indicates if hold is applied to non-custodial data source (such as mailbox or site).
+     * 
      */
     @SerializedName(value = "applyHoldToSource", alternate = {"ApplyHoldToSource"})
     @Expose
@@ -37,7 +37,7 @@ public class NoncustodialDataSource extends DataSourceContainer implements IJson
 
     /**
      * The Data Source.
-     * User source or SharePoint site data source as non-custodial data source.
+     * 
      */
     @SerializedName(value = "dataSource", alternate = {"DataSource"})
     @Expose

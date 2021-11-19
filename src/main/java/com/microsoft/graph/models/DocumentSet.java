@@ -44,7 +44,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Allowed Content Types.
-     * Content types allowed in document set.
+     * 
      */
     @SerializedName(value = "allowedContentTypes", alternate = {"AllowedContentTypes"})
     @Expose
@@ -53,7 +53,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Default Contents.
-     * Default contents of document set.
+     * 
      */
     @SerializedName(value = "defaultContents", alternate = {"DefaultContents"})
     @Expose
@@ -62,7 +62,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Propagate Welcome Page Changes.
-     * Specifies whether to push welcome page changes to inherited content types.
+     * 
      */
     @SerializedName(value = "propagateWelcomePageChanges", alternate = {"PropagateWelcomePageChanges"})
     @Expose
@@ -71,7 +71,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Should Prefix Name To File.
-     * Add the name of the document set to each file name.
+     * 
      */
     @SerializedName(value = "shouldPrefixNameToFile", alternate = {"ShouldPrefixNameToFile"})
     @Expose
@@ -80,7 +80,7 @@ public class DocumentSet implements IJsonBackedObject {
 
     /**
      * The Welcome Page Url.
-     * Welcome page absolute URL.
+     * 
      */
     @SerializedName(value = "welcomePageUrl", alternate = {"WelcomePageUrl"})
     @Expose

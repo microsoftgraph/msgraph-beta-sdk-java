@@ -37,7 +37,7 @@ public class BinaryManagementConditionExpression extends ManagementConditionExpr
 
     /**
      * The Operator.
-     * The operator used in the evaluation of the binary operation. Possible values are: or, and.
+     * The operator used in the evaluation of the binary operation.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

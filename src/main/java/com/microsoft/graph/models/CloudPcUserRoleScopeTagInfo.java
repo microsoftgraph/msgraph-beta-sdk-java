@@ -39,7 +39,7 @@ public class CloudPcUserRoleScopeTagInfo implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Scope tag display name.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcUserRoleScopeTagInfo implements IJsonBackedObject {
 
     /**
      * The Role Scope Tag Id.
-     * Scope tag ID.
+     * 
      */
     @SerializedName(value = "roleScopeTagId", alternate = {"RoleScopeTagId"})
     @Expose

@@ -41,7 +41,7 @@ public class UserTrainingEventInfo implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the training.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -50,7 +50,7 @@ public class UserTrainingEventInfo implements IJsonBackedObject {
 
     /**
      * The Latest Training Status.
-     * Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, notCompleted, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "latestTrainingStatus", alternate = {"LatestTrainingStatus"})
     @Expose
@@ -59,7 +59,7 @@ public class UserTrainingEventInfo implements IJsonBackedObject {
 
     /**
      * The Training Assigned Properties.
-     * Event details of the training when it was assigned to the user.
+     * 
      */
     @SerializedName(value = "trainingAssignedProperties", alternate = {"TrainingAssignedProperties"})
     @Expose
@@ -68,7 +68,7 @@ public class UserTrainingEventInfo implements IJsonBackedObject {
 
     /**
      * The Training Completed Properties.
-     * Event details of the training when it was completed by the user.
+     * 
      */
     @SerializedName(value = "trainingCompletedProperties", alternate = {"TrainingCompletedProperties"})
     @Expose
@@ -77,7 +77,7 @@ public class UserTrainingEventInfo implements IJsonBackedObject {
 
     /**
      * The Training Updated Properties.
-     * Event details of the training when it was updated/in-progress by the user.
+     * 
      */
     @SerializedName(value = "trainingUpdatedProperties", alternate = {"TrainingUpdatedProperties"})
     @Expose

@@ -40,7 +40,7 @@ public class Windows10AssociatedApps implements IJsonBackedObject {
 
     /**
      * The App Type.
-     * Application type. Possible values are: desktop, universal.
+     * Application type.
      */
     @SerializedName(value = "appType", alternate = {"AppType"})
     @Expose

@@ -28,7 +28,7 @@ public class TimeOff extends ChangeTrackedEntity implements IJsonBackedObject {
 
     /**
      * The Draft Time Off.
-     * The draft version of this timeOff that is viewable by managers. Required.
+     * 
      */
     @SerializedName(value = "draftTimeOff", alternate = {"DraftTimeOff"})
     @Expose
@@ -46,7 +46,7 @@ public class TimeOff extends ChangeTrackedEntity implements IJsonBackedObject {
 
     /**
      * The Shared Time Off.
-     * The shared version of this timeOff that is viewable by both employees and managers. Required.
+     * 
      */
     @SerializedName(value = "sharedTimeOff", alternate = {"SharedTimeOff"})
     @Expose
@@ -55,7 +55,7 @@ public class TimeOff extends ChangeTrackedEntity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * ID of the user assigned to the timeOff. Required.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

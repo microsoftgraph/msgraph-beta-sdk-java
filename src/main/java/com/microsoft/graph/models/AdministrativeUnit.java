@@ -33,7 +33,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Description.
-     * An optional description for the administrative unit.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -42,7 +42,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * Display name for the administrative unit.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -51,7 +51,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Visibility.
-     * Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.
+     * 
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -60,14 +60,14 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Members.
-     * Users and groups that are members of this Adminsitrative Unit. HTTP Methods: GET (list members), POST (add members), DELETE (remove members).
+     * 
      */
 	@Nullable
     public DirectoryObjectCollectionPage members;
 
     /**
      * The Scoped Role Members.
-     * Scoped-role members of this Administrative Unit.  HTTP Methods: GET (list scopedRoleMemberships), POST (add scopedRoleMembership), DELETE (remove scopedRoleMembership).
+     * 
      */
     @SerializedName(value = "scopedRoleMembers", alternate = {"ScopedRoleMembers"})
     @Expose
@@ -76,7 +76,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for this Administrative Unit. Nullable.
+     * 
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose

@@ -55,7 +55,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements IJsonBa
 
     /**
      * The Edge Kiosk Type.
-     * Edge kiosk type for Edge kiosk mode. Possible values are: publicBrowsing, fullScreen.
+     * Edge kiosk type for Edge kiosk mode
      */
     @SerializedName(value = "edgeKioskType", alternate = {"EdgeKioskType"})
     @Expose

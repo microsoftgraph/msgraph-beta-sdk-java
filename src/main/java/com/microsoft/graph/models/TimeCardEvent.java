@@ -40,7 +40,7 @@ public class TimeCardEvent implements IJsonBackedObject {
 
     /**
      * The At Approved Location.
-     * Indicates whether the entry was recorded at the approved location.
+     * 
      */
     @SerializedName(value = "atApprovedLocation", alternate = {"AtApprovedLocation"})
     @Expose
@@ -49,7 +49,7 @@ public class TimeCardEvent implements IJsonBackedObject {
 
     /**
      * The Date Time.
-     * The time the entry is recorded.
+     * 
      */
     @SerializedName(value = "dateTime", alternate = {"DateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class TimeCardEvent implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * Notes about the timeCardEvent.
+     * 
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose

@@ -51,7 +51,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
 
     /**
      * The Default Enrollment Type.
-     * The default profile enrollment type. Possible values are: unknown, device, user.
+     * The default profile enrollment type.
      */
     @SerializedName(value = "defaultEnrollmentType", alternate = {"DefaultEnrollmentType"})
     @Expose
@@ -87,7 +87,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
 
     /**
      * The Platform.
-     * The platform of the Device. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * The platform of the Device.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose

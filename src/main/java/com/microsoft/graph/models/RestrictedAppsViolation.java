@@ -67,7 +67,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
 
     /**
      * The Platform Type.
-     * Platform type. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, androidAOSP, all.
+     * Platform type
      */
     @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
@@ -85,7 +85,7 @@ public class RestrictedAppsViolation extends Entity implements IJsonBackedObject
 
     /**
      * The Restricted Apps State.
-     * Restricted apps state. Possible values are: prohibitedApps, notApprovedApps.
+     * Restricted apps state
      */
     @SerializedName(value = "restrictedAppsState", alternate = {"RestrictedAppsState"})
     @Expose

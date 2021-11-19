@@ -30,7 +30,7 @@ public class PlannerTaskDetails extends PlannerDelta implements IJsonBackedObjec
 
     /**
      * The Checklist.
-     * The collection of checklist items on the task.
+     * 
      */
     @SerializedName(value = "checklist", alternate = {"Checklist"})
     @Expose
@@ -39,7 +39,7 @@ public class PlannerTaskDetails extends PlannerDelta implements IJsonBackedObjec
 
     /**
      * The Description.
-     * Description of the task
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -48,7 +48,7 @@ public class PlannerTaskDetails extends PlannerDelta implements IJsonBackedObjec
 
     /**
      * The Preview Type.
-     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * 
      */
     @SerializedName(value = "previewType", alternate = {"PreviewType"})
     @Expose
@@ -57,7 +57,7 @@ public class PlannerTaskDetails extends PlannerDelta implements IJsonBackedObjec
 
     /**
      * The References.
-     * The collection of references on the task.
+     * 
      */
     @SerializedName(value = "references", alternate = {"References"})
     @Expose

@@ -54,7 +54,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Bottom Margins.
-     * A list of supported bottom margins(in microns) for the printer.
+     * 
      */
     @SerializedName(value = "bottomMargins", alternate = {"BottomMargins"})
     @Expose
@@ -63,7 +63,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Collation.
-     * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
+     * 
      */
     @SerializedName(value = "collation", alternate = {"Collation"})
     @Expose
@@ -72,7 +72,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Color Modes.
-     * The color modes supported by the printer. Valid values are described in the following table.
+     * 
      */
     @SerializedName(value = "colorModes", alternate = {"ColorModes"})
     @Expose
@@ -81,7 +81,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Content Types.
-     * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
+     * 
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
@@ -90,7 +90,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Copies Per Job.
-     * The range of copies per job supported by the printer.
+     * 
      */
     @SerializedName(value = "copiesPerJob", alternate = {"CopiesPerJob"})
     @Expose
@@ -99,7 +99,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Dpis.
-     * The list of print resolutions in DPI that are supported by the printer.
+     * 
      */
     @SerializedName(value = "dpis", alternate = {"Dpis"})
     @Expose
@@ -108,7 +108,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Duplex Modes.
-     * The list of duplex modes that are supported by the printer. Valid values are described in the following table.
+     * 
      */
     @SerializedName(value = "duplexModes", alternate = {"DuplexModes"})
     @Expose
@@ -126,7 +126,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Feed Orientations.
-     * The list of feed orientations that are supported by the printer.
+     * 
      */
     @SerializedName(value = "feedOrientations", alternate = {"FeedOrientations"})
     @Expose
@@ -135,7 +135,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Finishings.
-     * Finishing processes the printer supports for a printed document.
+     * 
      */
     @SerializedName(value = "finishings", alternate = {"Finishings"})
     @Expose
@@ -144,7 +144,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Input Bins.
-     * Supported input bins for the printer.
+     * 
      */
     @SerializedName(value = "inputBins", alternate = {"InputBins"})
     @Expose
@@ -153,7 +153,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Is Color Printing Supported.
-     * True if color printing is supported by the printer; false otherwise. Read-only.
+     * 
      */
     @SerializedName(value = "isColorPrintingSupported", alternate = {"IsColorPrintingSupported"})
     @Expose
@@ -162,7 +162,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Is Page Range Supported.
-     * True if the printer supports printing by page ranges; false otherwise.
+     * 
      */
     @SerializedName(value = "isPageRangeSupported", alternate = {"IsPageRangeSupported"})
     @Expose
@@ -171,7 +171,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Left Margins.
-     * A list of supported left margins(in microns) for the printer.
+     * 
      */
     @SerializedName(value = "leftMargins", alternate = {"LeftMargins"})
     @Expose
@@ -180,7 +180,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Media Colors.
-     * The media (i.e., paper) colors supported by the printer.
+     * 
      */
     @SerializedName(value = "mediaColors", alternate = {"MediaColors"})
     @Expose
@@ -189,7 +189,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Media Sizes.
-     * The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
+     * 
      */
     @SerializedName(value = "mediaSizes", alternate = {"MediaSizes"})
     @Expose
@@ -198,7 +198,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Media Types.
-     * The media types supported by the printer.
+     * 
      */
     @SerializedName(value = "mediaTypes", alternate = {"MediaTypes"})
     @Expose
@@ -207,7 +207,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Multipage Layouts.
-     * The presentation directions supported by the printer. Supported values are described in the following table.
+     * 
      */
     @SerializedName(value = "multipageLayouts", alternate = {"MultipageLayouts"})
     @Expose
@@ -216,7 +216,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Orientations.
-     * The print orientations supported by the printer. Valid values are described in the following table.
+     * 
      */
     @SerializedName(value = "orientations", alternate = {"Orientations"})
     @Expose
@@ -225,7 +225,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Output Bins.
-     * The printer's supported output bins (trays).
+     * 
      */
     @SerializedName(value = "outputBins", alternate = {"OutputBins"})
     @Expose
@@ -234,7 +234,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Pages Per Sheet.
-     * Supported number of Input Pages to impose upon a single Impression.
+     * 
      */
     @SerializedName(value = "pagesPerSheet", alternate = {"PagesPerSheet"})
     @Expose
@@ -243,7 +243,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Qualities.
-     * The print qualities supported by the printer.
+     * 
      */
     @SerializedName(value = "qualities", alternate = {"Qualities"})
     @Expose
@@ -252,7 +252,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Right Margins.
-     * A list of supported right margins(in microns) for the printer.
+     * 
      */
     @SerializedName(value = "rightMargins", alternate = {"RightMargins"})
     @Expose
@@ -261,7 +261,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Scalings.
-     * Supported print scalings.
+     * 
      */
     @SerializedName(value = "scalings", alternate = {"Scalings"})
     @Expose
@@ -387,7 +387,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Supports Fit Pdf To Page.
-     * True if the printer supports scaling PDF pages to match the print media size; false otherwise.
+     * 
      */
     @SerializedName(value = "supportsFitPdfToPage", alternate = {"SupportsFitPdfToPage"})
     @Expose
@@ -396,7 +396,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Top Margins.
-     * A list of supported top margins(in microns) for the printer.
+     * 
      */
     @SerializedName(value = "topMargins", alternate = {"TopMargins"})
     @Expose

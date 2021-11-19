@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.33.0] - 2021-11-19
+
+### Added
+
+### Changed
+
+- Generated beta models and request builders using Typewriter using Metadata update from 11/2.
+- Due to changes in certain naming conventions in the beta-metadata casuing the latest updates to fail, this is the latest working version at the moment. 
+
 ## [0.32.0] - 2021-10-14
 
 ### Added

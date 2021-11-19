@@ -39,7 +39,7 @@ public class SimulationEvent implements IJsonBackedObject {
 
     /**
      * The Count.
-     * Count of occurence of the simulation event in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "count", alternate = {"Count"})
     @Expose
@@ -48,7 +48,7 @@ public class SimulationEvent implements IJsonBackedObject {
 
     /**
      * The Event Name.
-     * Name of the simulation event in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "eventName", alternate = {"EventName"})
     @Expose

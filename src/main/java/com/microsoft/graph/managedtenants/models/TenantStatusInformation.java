@@ -43,7 +43,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Delegated Privilege Status.
-     * The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "delegatedPrivilegeStatus", alternate = {"DelegatedPrivilegeStatus"})
     @Expose
@@ -52,7 +52,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Last Delegated Privilege Refresh Date Time.
-     * The date and time the delegated admin privileges status was updated. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "lastDelegatedPrivilegeRefreshDateTime", alternate = {"LastDelegatedPrivilegeRefreshDateTime"})
     @Expose
@@ -61,7 +61,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Offboarded By User Id.
-     * The identifier for the account that offboarded the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "offboardedByUserId", alternate = {"OffboardedByUserId"})
     @Expose
@@ -70,7 +70,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Offboarded Date Time.
-     * The date and time when the managed tenant was offboarded. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "offboardedDateTime", alternate = {"OffboardedDateTime"})
     @Expose
@@ -79,7 +79,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Onboarded By User Id.
-     * The identifier for the account that onboarded the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "onboardedByUserId", alternate = {"OnboardedByUserId"})
     @Expose
@@ -88,7 +88,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Onboarded Date Time.
-     * The date and time when the managed tenant was onboarded. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "onboardedDateTime", alternate = {"OnboardedDateTime"})
     @Expose
@@ -97,7 +97,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Onboarding Status.
-     * The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "onboardingStatus", alternate = {"OnboardingStatus"})
     @Expose
@@ -106,7 +106,7 @@ public class TenantStatusInformation implements IJsonBackedObject {
 
     /**
      * The Workload Statuses.
-     * The collection of workload statues for the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "workloadStatuses", alternate = {"WorkloadStatuses"})
     @Expose

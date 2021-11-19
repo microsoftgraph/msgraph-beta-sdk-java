@@ -49,7 +49,7 @@ public class AppConfigurationSettingItem implements IJsonBackedObject {
 
     /**
      * The App Config Key Type.
-     * app configuration key type. Possible values are: stringType, integerType, realType, booleanType, tokenType.
+     * app configuration key type.
      */
     @SerializedName(value = "appConfigKeyType", alternate = {"AppConfigKeyType"})
     @Expose

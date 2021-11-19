@@ -39,7 +39,7 @@ public class OutOfOfficeSettings implements IJsonBackedObject {
 
     /**
      * The Is Out Of Office.
-     * True if either:It is currently in the out of office time window configured on the Outlook or Teams client.There is currently an event on the user's calendar that's marked as Show as Out of OfficeOtherwise, false.
+     * 
      */
     @SerializedName(value = "isOutOfOffice", alternate = {"IsOutOfOffice"})
     @Expose
@@ -48,7 +48,7 @@ public class OutOfOfficeSettings implements IJsonBackedObject {
 
     /**
      * The Message.
-     * The out of office message that the user configured on Outlook client (Automatic Replies (Out of Office)) or the Teams client (Schedule out of office).
+     * 
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose

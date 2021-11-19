@@ -39,7 +39,7 @@ public class TermColumn implements IJsonBackedObject {
 
     /**
      * The Allow Multiple Values.
-     * Specifies whether the column will allow more than one value.
+     * 
      */
     @SerializedName(value = "allowMultipleValues", alternate = {"AllowMultipleValues"})
     @Expose
@@ -48,7 +48,7 @@ public class TermColumn implements IJsonBackedObject {
 
     /**
      * The Show Fully Qualified Name.
-     * Specifies whether to display the entire term path or only the term label.
+     * 
      */
     @SerializedName(value = "showFullyQualifiedName", alternate = {"ShowFullyQualifiedName"})
     @Expose

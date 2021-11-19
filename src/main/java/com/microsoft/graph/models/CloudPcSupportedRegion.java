@@ -27,7 +27,7 @@ public class CloudPcSupportedRegion extends Entity implements IJsonBackedObject 
 
     /**
      * The Display Name.
-     * The name for the supported region. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

@@ -39,7 +39,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
 
     /**
      * The Allow Staff Selection.
-     * True if to allow customers to choose a specific person for the booking.
+     * Allow customers to choose a specific person for the booking.
      */
     @SerializedName(value = "allowStaffSelection", alternate = {"AllowStaffSelection"})
     @Expose
@@ -48,7 +48,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
 
     /**
      * The Maximum Advance.
-     * Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
+     * Maximum number of days in advance that a booking can be made.
      */
     @SerializedName(value = "maximumAdvance", alternate = {"MaximumAdvance"})
     @Expose
@@ -57,7 +57,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
 
     /**
      * The Minimum Lead Time.
-     * The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
+     * Minimum lead time for bookings and cancellations.
      */
     @SerializedName(value = "minimumLeadTime", alternate = {"MinimumLeadTime"})
     @Expose
@@ -66,7 +66,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
 
     /**
      * The Send Confirmations To Owner.
-     * True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
+     * Notify the business via email when a booking is created or changed.
      */
     @SerializedName(value = "sendConfirmationsToOwner", alternate = {"SendConfirmationsToOwner"})
     @Expose
@@ -75,7 +75,7 @@ public class BookingSchedulingPolicy implements IJsonBackedObject {
 
     /**
      * The Time Slot Interval.
-     * Duration of each time slot, denoted in ISO 8601 format.
+     * Duration of each time slot.
      */
     @SerializedName(value = "timeSlotInterval", alternate = {"TimeSlotInterval"})
     @Expose

@@ -29,7 +29,7 @@ public class ClientUserAgent extends UserAgent implements IJsonBackedObject {
 
     /**
      * The Platform.
-     * Identifies the platform used by this endpoint. Possible values are: unknown, windows, macOS, iOS, android, web, ipPhone, roomSystem, surfaceHub, holoLens, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
@@ -38,7 +38,7 @@ public class ClientUserAgent extends UserAgent implements IJsonBackedObject {
 
     /**
      * The Product Family.
-     * Identifies the family of application software used by this endpoint. Possible values are: unknown, teams, skypeForBusiness, lync, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "productFamily", alternate = {"ProductFamily"})
     @Expose

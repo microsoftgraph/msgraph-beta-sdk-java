@@ -39,7 +39,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Audio Bits Per Sample.
-     * Number of audio bits per sample.
+     * 
      */
     @SerializedName(value = "audioBitsPerSample", alternate = {"AudioBitsPerSample"})
     @Expose
@@ -48,7 +48,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Audio Channels.
-     * Number of audio channels.
+     * 
      */
     @SerializedName(value = "audioChannels", alternate = {"AudioChannels"})
     @Expose
@@ -57,7 +57,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Audio Format.
-     * Name of the audio format (AAC, MP3, etc.).
+     * 
      */
     @SerializedName(value = "audioFormat", alternate = {"AudioFormat"})
     @Expose
@@ -66,7 +66,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Audio Samples Per Second.
-     * Number of audio samples per second.
+     * 
      */
     @SerializedName(value = "audioSamplesPerSecond", alternate = {"AudioSamplesPerSecond"})
     @Expose
@@ -75,7 +75,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Bitrate.
-     * Bit rate of the video in bits per second.
+     * 
      */
     @SerializedName(value = "bitrate", alternate = {"Bitrate"})
     @Expose
@@ -84,7 +84,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Duration.
-     * Duration of the file in milliseconds.
+     * 
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -93,7 +93,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Four CC.
-     * 'Four character code' name of the video format.
+     * 
      */
     @SerializedName(value = "fourCC", alternate = {"FourCC"})
     @Expose
@@ -102,7 +102,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Frame Rate.
-     * Frame rate of the video.
+     * 
      */
     @SerializedName(value = "frameRate", alternate = {"FrameRate"})
     @Expose
@@ -111,7 +111,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Height.
-     * Height of the video, in pixels.
+     * 
      */
     @SerializedName(value = "height", alternate = {"Height"})
     @Expose
@@ -120,7 +120,7 @@ public class Video implements IJsonBackedObject {
 
     /**
      * The Width.
-     * Width of the video, in pixels.
+     * 
      */
     @SerializedName(value = "width", alternate = {"Width"})
     @Expose

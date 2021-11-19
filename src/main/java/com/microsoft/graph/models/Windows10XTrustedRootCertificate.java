@@ -37,7 +37,7 @@ public class Windows10XTrustedRootCertificate extends DeviceManagementResourceAc
 
     /**
      * The Destination Store.
-     * Destination store location for the Trusted Root Certificate. Possible values are: computerCertStoreRoot, computerCertStoreIntermediate, userCertStoreIntermediate.
+     * Destination store location for the Trusted Root Certificate.
      */
     @SerializedName(value = "destinationStore", alternate = {"DestinationStore"})
     @Expose

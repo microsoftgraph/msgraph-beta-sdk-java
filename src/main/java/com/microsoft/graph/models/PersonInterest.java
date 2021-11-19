@@ -28,7 +28,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * Contains categories a user has associated with the interest (for example, personal, recipies).
+     * 
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -37,7 +37,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Collaboration Tags.
-     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
+     * 
      */
     @SerializedName(value = "collaborationTags", alternate = {"CollaborationTags"})
     @Expose
@@ -46,7 +46,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Contains a description of the interest.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -55,7 +55,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Contains a friendly name for the interest.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -73,7 +73,7 @@ public class PersonInterest extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * Contains a link to a web page or resource about the interest.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

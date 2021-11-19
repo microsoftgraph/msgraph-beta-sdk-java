@@ -40,7 +40,7 @@ public class ResponseStatus implements IJsonBackedObject {
 
     /**
      * The Response.
-     * The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded: as an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
+     * 
      */
     @SerializedName(value = "response", alternate = {"Response"})
     @Expose
@@ -49,7 +49,7 @@ public class ResponseStatus implements IJsonBackedObject {
 
     /**
      * The Time.
-     * The date and time that the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "time", alternate = {"Time"})
     @Expose

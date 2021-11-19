@@ -28,7 +28,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
 
     /**
      * The Completion Reason.
-     * Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
+     * 
      */
     @SerializedName(value = "completionReason", alternate = {"CompletionReason"})
     @Expose
@@ -37,7 +37,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
 
     /**
      * The Recording Access Token.
-     * The access token required to retrieve the recording.
+     * 
      */
     @SerializedName(value = "recordingAccessToken", alternate = {"RecordingAccessToken"})
     @Expose
@@ -46,7 +46,7 @@ public class RecordOperation extends CommsOperation implements IJsonBackedObject
 
     /**
      * The Recording Location.
-     * The location where the recording is located.
+     * 
      */
     @SerializedName(value = "recordingLocation", alternate = {"RecordingLocation"})
     @Expose

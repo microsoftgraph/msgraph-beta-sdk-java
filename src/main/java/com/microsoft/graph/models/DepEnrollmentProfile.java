@@ -93,7 +93,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements IJsonBack
 
     /**
      * The ITunes Pairing Mode.
-     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
+     * Indicates the iTunes pairing mode
      */
     @SerializedName(value = "iTunesPairingMode", alternate = {"ITunesPairingMode"})
     @Expose

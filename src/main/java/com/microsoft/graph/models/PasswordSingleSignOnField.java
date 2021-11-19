@@ -39,7 +39,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
 
     /**
      * The Customized Label.
-     * Title/label override for customization.
+     * 
      */
     @SerializedName(value = "customizedLabel", alternate = {"CustomizedLabel"})
     @Expose
@@ -48,7 +48,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
 
     /**
      * The Default Label.
-     * Label that would be used if no customizedLabel is provided. Read only.
+     * 
      */
     @SerializedName(value = "defaultLabel", alternate = {"DefaultLabel"})
     @Expose
@@ -57,7 +57,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
 
     /**
      * The Field Id.
-     * Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
+     * 
      */
     @SerializedName(value = "fieldId", alternate = {"FieldId"})
     @Expose
@@ -66,7 +66,7 @@ public class PasswordSingleSignOnField implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Type of the credential. The values can be text, password.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

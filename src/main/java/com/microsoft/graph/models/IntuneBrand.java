@@ -143,7 +143,7 @@ public class IntuneBrand implements IJsonBackedObject {
 
     /**
      * The Enrollment Availability.
-     * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
+     * Customized device enrollment flow displayed to the end user 
      */
     @SerializedName(value = "enrollmentAvailability", alternate = {"EnrollmentAvailability"})
     @Expose

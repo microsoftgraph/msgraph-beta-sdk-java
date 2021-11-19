@@ -39,7 +39,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Allowed Accounts.
-     * Indicates which type of accounts are allowed to use on a shared PC. Possible values are: guest, domain.
+     * Indicates which type of accounts are allowed to use on a shared PC.
      */
     @SerializedName(value = "allowedAccounts", alternate = {"AllowedAccounts"})
     @Expose
@@ -102,7 +102,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Fast First Sign In.
-     * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether to auto connect new non-admin Azure AD accounts to pre-configured candidate local accounts
      */
     @SerializedName(value = "fastFirstSignIn", alternate = {"FastFirstSignIn"})
     @Expose
@@ -138,7 +138,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Local Storage.
-     * Specifies whether local storage is allowed on a shared PC. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether local storage is allowed on a shared PC.
      */
     @SerializedName(value = "localStorage", alternate = {"LocalStorage"})
     @Expose
@@ -156,7 +156,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Set Account Manager.
-     * Disables the account manager for shared PC mode. Possible values are: notConfigured, enabled, disabled.
+     * Disables the account manager for shared PC mode.
      */
     @SerializedName(value = "setAccountManager", alternate = {"SetAccountManager"})
     @Expose
@@ -165,7 +165,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Set Edu Policies.
-     * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether the default shared PC education environment policies should be enabled/disabled/not configured. For Windows 10 RS2 and later, this policy will be applied without setting Enabled to true.
      */
     @SerializedName(value = "setEduPolicies", alternate = {"SetEduPolicies"})
     @Expose
@@ -174,7 +174,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Set Power Policies.
-     * Specifies whether the default shared PC power policies should be enabled/disabled. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether the default shared PC power policies should be enabled/disabled.
      */
     @SerializedName(value = "setPowerPolicies", alternate = {"SetPowerPolicies"})
     @Expose
@@ -183,7 +183,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements IJsonB
 
     /**
      * The Sign In On Resume.
-     * Specifies the requirement to sign in whenever the device wakes up from sleep mode. Possible values are: notConfigured, enabled, disabled.
+     * Specifies the requirement to sign in whenever the device wakes up from sleep mode.
      */
     @SerializedName(value = "signInOnResume", alternate = {"SignInOnResume"})
     @Expose

@@ -31,7 +31,7 @@ public class Segment extends Entity implements IJsonBackedObject {
 
     /**
      * The Callee.
-     * Endpoint that answered this segment.
+     * 
      */
     @SerializedName(value = "callee", alternate = {"Callee"})
     @Expose
@@ -40,7 +40,7 @@ public class Segment extends Entity implements IJsonBackedObject {
 
     /**
      * The Caller.
-     * Endpoint that initiated this segment.
+     * 
      */
     @SerializedName(value = "caller", alternate = {"Caller"})
     @Expose
@@ -49,7 +49,7 @@ public class Segment extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class Segment extends Entity implements IJsonBackedObject {
 
     /**
      * The Failure Info.
-     * Failure information associated with the segment if it failed.
+     * 
      */
     @SerializedName(value = "failureInfo", alternate = {"FailureInfo"})
     @Expose
@@ -67,7 +67,7 @@ public class Segment extends Entity implements IJsonBackedObject {
 
     /**
      * The Media.
-     * Media associated with this segment.
+     * 
      */
     @SerializedName(value = "media", alternate = {"Media"})
     @Expose
@@ -76,7 +76,7 @@ public class Segment extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

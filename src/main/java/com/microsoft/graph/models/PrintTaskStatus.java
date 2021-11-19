@@ -40,7 +40,7 @@ public class PrintTaskStatus implements IJsonBackedObject {
 
     /**
      * The Description.
-     * A human-readable description of the current processing state of the printTask.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class PrintTaskStatus implements IJsonBackedObject {
 
     /**
      * The State.
-     * The current processing state of the printTask. Valid values are described in the following table.
+     * 
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

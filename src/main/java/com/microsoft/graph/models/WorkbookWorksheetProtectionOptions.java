@@ -39,7 +39,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Auto Filter.
-     * Represents the worksheet protection option of allowing using auto filter feature.
+     * 
      */
     @SerializedName(value = "allowAutoFilter", alternate = {"AllowAutoFilter"})
     @Expose
@@ -48,7 +48,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Delete Columns.
-     * Represents the worksheet protection option of allowing deleting columns.
+     * 
      */
     @SerializedName(value = "allowDeleteColumns", alternate = {"AllowDeleteColumns"})
     @Expose
@@ -57,7 +57,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Delete Rows.
-     * Represents the worksheet protection option of allowing deleting rows.
+     * 
      */
     @SerializedName(value = "allowDeleteRows", alternate = {"AllowDeleteRows"})
     @Expose
@@ -66,7 +66,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Format Cells.
-     * Represents the worksheet protection option of allowing formatting cells.
+     * 
      */
     @SerializedName(value = "allowFormatCells", alternate = {"AllowFormatCells"})
     @Expose
@@ -75,7 +75,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Format Columns.
-     * Represents the worksheet protection option of allowing formatting columns.
+     * 
      */
     @SerializedName(value = "allowFormatColumns", alternate = {"AllowFormatColumns"})
     @Expose
@@ -84,7 +84,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Format Rows.
-     * Represents the worksheet protection option of allowing formatting rows.
+     * 
      */
     @SerializedName(value = "allowFormatRows", alternate = {"AllowFormatRows"})
     @Expose
@@ -93,7 +93,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Insert Columns.
-     * Represents the worksheet protection option of allowing inserting columns.
+     * 
      */
     @SerializedName(value = "allowInsertColumns", alternate = {"AllowInsertColumns"})
     @Expose
@@ -102,7 +102,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Insert Hyperlinks.
-     * Represents the worksheet protection option of allowing inserting hyperlinks.
+     * 
      */
     @SerializedName(value = "allowInsertHyperlinks", alternate = {"AllowInsertHyperlinks"})
     @Expose
@@ -111,7 +111,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Insert Rows.
-     * Represents the worksheet protection option of allowing inserting rows.
+     * 
      */
     @SerializedName(value = "allowInsertRows", alternate = {"AllowInsertRows"})
     @Expose
@@ -120,7 +120,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Pivot Tables.
-     * Represents the worksheet protection option of allowing using pivot table feature.
+     * 
      */
     @SerializedName(value = "allowPivotTables", alternate = {"AllowPivotTables"})
     @Expose
@@ -129,7 +129,7 @@ public class WorkbookWorksheetProtectionOptions implements IJsonBackedObject {
 
     /**
      * The Allow Sort.
-     * Represents the worksheet protection option of allowing using sort feature.
+     * 
      */
     @SerializedName(value = "allowSort", alternate = {"AllowSort"})
     @Expose

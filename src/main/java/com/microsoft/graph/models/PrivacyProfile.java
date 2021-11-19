@@ -39,7 +39,7 @@ public class PrivacyProfile implements IJsonBackedObject {
 
     /**
      * The Contact Email.
-     * A valid smtp email address for the privacy statement contact. Not required.
+     * 
      */
     @SerializedName(value = "contactEmail", alternate = {"ContactEmail"})
     @Expose
@@ -48,7 +48,7 @@ public class PrivacyProfile implements IJsonBackedObject {
 
     /**
      * The Statement Url.
-     * A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
+     * 
      */
     @SerializedName(value = "statementUrl", alternate = {"StatementUrl"})
     @Expose

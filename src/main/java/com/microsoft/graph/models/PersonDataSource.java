@@ -39,7 +39,7 @@ public class PersonDataSource implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of data source.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

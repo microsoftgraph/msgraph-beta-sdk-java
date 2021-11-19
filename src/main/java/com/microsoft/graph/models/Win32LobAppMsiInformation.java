@@ -40,7 +40,7 @@ public class Win32LobAppMsiInformation implements IJsonBackedObject {
 
     /**
      * The Package Type.
-     * The MSI package type. Possible values are: perMachine, perUser, dualPurpose.
+     * The MSI package type.
      */
     @SerializedName(value = "packageType", alternate = {"PackageType"})
     @Expose

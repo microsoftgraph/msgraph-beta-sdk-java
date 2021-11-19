@@ -27,7 +27,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements IJsonBackedObj
 
     /**
      * The Mail Exchange.
-     * Value used when configuring the answer/destination/value of the MX record at the DNS host.
+     * 
      */
     @SerializedName(value = "mailExchange", alternate = {"MailExchange"})
     @Expose
@@ -36,7 +36,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements IJsonBackedObj
 
     /**
      * The Preference.
-     * Value used when configuring the Preference/Priority property of the MX record at the DNS host.
+     * 
      */
     @SerializedName(value = "preference", alternate = {"Preference"})
     @Expose

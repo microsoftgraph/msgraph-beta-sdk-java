@@ -28,7 +28,7 @@ public class TeamsAppIcon extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * The web URL that can be used for downloading the image.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -37,7 +37,7 @@ public class TeamsAppIcon extends Entity implements IJsonBackedObject {
 
     /**
      * The Hosted Content.
-     * The contents of the app icon if the icon is hosted within the Teams infrastructure.
+     * 
      */
     @SerializedName(value = "hostedContent", alternate = {"HostedContent"})
     @Expose

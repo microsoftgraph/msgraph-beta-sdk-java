@@ -70,7 +70,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
     /**
      * The Device Manufacturer.
-     * The device manufacturer for the current app registration
+     * The device manufacturer for the current app registration 
      */
     @SerializedName(value = "deviceManufacturer", alternate = {"DeviceManufacturer"})
     @Expose
@@ -79,7 +79,7 @@ public class ManagedAppRegistration extends Entity implements IJsonBackedObject 
 
     /**
      * The Device Model.
-     * The device model for the current app registration
+     * The device model for the current app registration 
      */
     @SerializedName(value = "deviceModel", alternate = {"DeviceModel"})
     @Expose

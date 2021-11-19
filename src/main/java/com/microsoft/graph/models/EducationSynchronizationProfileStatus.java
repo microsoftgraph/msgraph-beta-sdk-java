@@ -28,7 +28,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Error Count.
-     * Number of errors during synchronization.
+     * 
      */
     @SerializedName(value = "errorCount", alternate = {"ErrorCount"})
     @Expose
@@ -37,7 +37,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Last Activity Date Time.
-     * Represents the time when most recent changes were observed in profile.
+     * 
      */
     @SerializedName(value = "lastActivityDateTime", alternate = {"LastActivityDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Last Synchronization Date Time.
-     * Represents the time of the most recent successful  synchronization.
+     * 
      */
     @SerializedName(value = "lastSynchronizationDateTime", alternate = {"LastSynchronizationDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Status.
-     * The status of a sync. The possible values are: paused, inProgress, success, error, validationError, quarantined, unknownFutureValue, extracting, validating. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: extracting, validating.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -64,7 +64,7 @@ public class EducationSynchronizationProfileStatus extends Entity implements IJs
 
     /**
      * The Status Message.
-     * Status message for the current profile's synchronization stage.
+     * 
      */
     @SerializedName(value = "statusMessage", alternate = {"StatusMessage"})
     @Expose

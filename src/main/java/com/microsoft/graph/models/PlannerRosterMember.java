@@ -28,7 +28,7 @@ public class PlannerRosterMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster.
+     * 
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
@@ -37,7 +37,7 @@ public class PlannerRosterMember extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * Identifier of the tenant the user belongs to. Currently only the users from the same tenant can be added to a plannerRoster.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -46,7 +46,7 @@ public class PlannerRosterMember extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Identifier of the user.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

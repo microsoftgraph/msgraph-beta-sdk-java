@@ -37,7 +37,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Connected Organization Id.
-     * The identifier of the connected organization of the subject.
+     * 
      */
     @SerializedName(value = "connectedOrganizationId", alternate = {"ConnectedOrganizationId"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the subject.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -55,7 +55,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * The email address of the subject.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -64,7 +64,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Object Id.
-     * The object identifier of the subject. null if the subject is not yet a user in the tenant.
+     * 
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
@@ -82,7 +82,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal Name.
-     * The principal name, if known, of the subject.
+     * 
      */
     @SerializedName(value = "principalName", alternate = {"PrincipalName"})
     @Expose
@@ -91,7 +91,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The resource type of the subject.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -100,7 +100,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Connected Organization.
-     * The connected organization of the subject. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "connectedOrganization", alternate = {"ConnectedOrganization"})
     @Expose

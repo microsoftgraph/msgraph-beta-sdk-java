@@ -39,7 +39,7 @@ public class Identity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The identity's display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won't show up as having changed when using delta.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class Identity implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique identifier for the identity.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

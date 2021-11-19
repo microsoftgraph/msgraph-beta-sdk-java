@@ -31,7 +31,7 @@ public class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertific
 
     /**
      * The Intended Purpose.
-     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
+     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
      */
     @SerializedName(value = "intendedPurpose", alternate = {"IntendedPurpose"})
     @Expose
@@ -40,7 +40,7 @@ public class WindowsPhone81ImportedPFXCertificateProfile extends WindowsCertific
 
     /**
      * The Managed Device Certificate States.
-     * Certificate state for devices
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose

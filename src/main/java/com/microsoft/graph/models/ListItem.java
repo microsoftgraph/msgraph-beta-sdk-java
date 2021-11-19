@@ -37,7 +37,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The content type of this list item
+     * 
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -46,7 +46,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
+     * 
      */
     @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
@@ -55,7 +55,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * The list of recent activities that took place on this item.
+     * 
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
@@ -64,7 +64,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Analytics.
-     * Analytics about the view activities that took place on this item.
+     * 
      */
     @SerializedName(value = "analytics", alternate = {"Analytics"})
     @Expose
@@ -73,7 +73,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive Item.
-     * For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
+     * 
      */
     @SerializedName(value = "driveItem", alternate = {"DriveItem"})
     @Expose
@@ -82,7 +82,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Fields.
-     * The values of the columns set on this list item.
+     * 
      */
     @SerializedName(value = "fields", alternate = {"Fields"})
     @Expose
@@ -91,7 +91,7 @@ public class ListItem extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Versions.
-     * The list of previous versions of the list item.
+     * 
      */
     @SerializedName(value = "versions", alternate = {"Versions"})
     @Expose

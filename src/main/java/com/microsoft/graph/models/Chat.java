@@ -44,7 +44,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Type.
-     * Specifies the type of chat. Possible values are:group, oneOnOne and meeting.
+     * 
      */
     @SerializedName(value = "chatType", alternate = {"ChatType"})
     @Expose
@@ -53,7 +53,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time at which the chat was created. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -62,7 +62,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * Date and time at which the chat was renamed or list of members were last changed. Read-only.
+     * 
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -71,7 +71,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Online Meeting Info.
-     * Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
+     * 
      */
     @SerializedName(value = "onlineMeetingInfo", alternate = {"OnlineMeetingInfo"})
     @Expose
@@ -80,7 +80,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The identifier of the tenant in which the chat was created. Read-only.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -89,7 +89,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Topic.
-     * (Optional) Subject or topic for the chat. Only available for group chats.
+     * 
      */
     @SerializedName(value = "topic", alternate = {"Topic"})
     @Expose
@@ -98,7 +98,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Viewpoint.
-     * Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
+     * 
      */
     @SerializedName(value = "viewpoint", alternate = {"Viewpoint"})
     @Expose
@@ -107,7 +107,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * A hyperlink that will go to the chat in Microsoft Teams. This URL should be treated as an opaque blob, and not parsed. Read-only.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -116,7 +116,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Installed Apps.
-     * A collection of all the apps in the chat. Nullable.
+     * 
      */
     @SerializedName(value = "installedApps", alternate = {"InstalledApps"})
     @Expose
@@ -125,7 +125,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Message Preview.
-     * Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
+     * 
      */
     @SerializedName(value = "lastMessagePreview", alternate = {"LastMessagePreview"})
     @Expose
@@ -134,7 +134,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * A collection of all the members in the chat. Nullable.
+     * 
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
@@ -143,7 +143,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Messages.
-     * A collection of all the messages in the chat. Nullable.
+     * 
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
@@ -152,7 +152,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * A collection of all the Teams async operations that ran or are running on the chat. Nullable.
+     * 
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose
@@ -161,7 +161,7 @@ public class Chat extends Entity implements IJsonBackedObject {
 
     /**
      * The Permission Grants.
-     * A collection of permissions granted to apps for the chat.
+     * 
      */
     @SerializedName(value = "permissionGrants", alternate = {"PermissionGrants"})
     @Expose

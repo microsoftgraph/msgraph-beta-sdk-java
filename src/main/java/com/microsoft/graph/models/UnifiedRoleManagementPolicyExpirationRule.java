@@ -27,7 +27,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
 
     /**
      * The Is Expiration Required.
-     * Indicates if expiration is required for eligibility or assignment.
+     * 
      */
     @SerializedName(value = "isExpirationRequired", alternate = {"IsExpirationRequired"})
     @Expose
@@ -36,7 +36,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
 
     /**
      * The Maximum Duration.
-     * The maximum duration allowed for eligiblity or assignment which is not permanent.
+     * 
      */
     @SerializedName(value = "maximumDuration", alternate = {"MaximumDuration"})
     @Expose

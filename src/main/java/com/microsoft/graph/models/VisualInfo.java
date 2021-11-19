@@ -40,7 +40,7 @@ public class VisualInfo implements IJsonBackedObject {
 
     /**
      * The Attribution.
-     * Optional. JSON object used to represent an icon which represents the application used to generate the activity
+     * 
      */
     @SerializedName(value = "attribution", alternate = {"Attribution"})
     @Expose
@@ -49,7 +49,7 @@ public class VisualInfo implements IJsonBackedObject {
 
     /**
      * The Background Color.
-     * Optional. Background color used to render the activity in the UI - brand color for the application source of the activity. Must be a valid hex color
+     * 
      */
     @SerializedName(value = "backgroundColor", alternate = {"BackgroundColor"})
     @Expose
@@ -58,7 +58,7 @@ public class VisualInfo implements IJsonBackedObject {
 
     /**
      * The Content.
-     * Optional. Custom piece of data - JSON object used to provide custom content to render the activity in the Windows Shell UI
+     * 
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -67,7 +67,7 @@ public class VisualInfo implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Optional. Longer text description of the user's unique activity (example: document name, first sentence, and/or metadata)
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -76,7 +76,7 @@ public class VisualInfo implements IJsonBackedObject {
 
     /**
      * The Display Text.
-     * Required. Short text description of the user's unique activity (for example, document name in cases where an activity refers to document creation)
+     * 
      */
     @SerializedName(value = "displayText", alternate = {"DisplayText"})
     @Expose

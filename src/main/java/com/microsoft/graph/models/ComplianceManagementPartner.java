@@ -102,7 +102,7 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
 
     /**
      * The Partner State.
-     * Partner state of this tenant. Possible values are: unknown, unavailable, enabled, terminated, rejected, unresponsive.
+     * Partner state of this tenant
      */
     @SerializedName(value = "partnerState", alternate = {"PartnerState"})
     @Expose

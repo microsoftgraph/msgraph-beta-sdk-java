@@ -38,7 +38,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
 
     /**
      * The Enrollment Type.
-     * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth, appleUserEnrollment, appleUserEnrollmentWithServiceAccount.
+     * Type of the enrollment.
      */
     @SerializedName(value = "enrollmentType", alternate = {"EnrollmentType"})
     @Expose
@@ -47,7 +47,7 @@ public class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshoot
 
     /**
      * The Failure Category.
-     * Highlevel failure category. Possible values are: unknown, authentication, authorization, accountValidation, userValidation, deviceNotSupported, inMaintenance, badRequest, featureNotSupported, enrollmentRestrictionsEnforced, clientDisconnected, userAbandonment.
+     * Highlevel failure category.
      */
     @SerializedName(value = "failureCategory", alternate = {"FailureCategory"})
     @Expose

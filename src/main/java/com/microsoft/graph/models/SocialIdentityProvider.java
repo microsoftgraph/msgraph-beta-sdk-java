@@ -27,7 +27,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements IJso
 
     /**
      * The Client Id.
-     * The identifier for the client application obtained when registering the application with the identity provider. Required.
+     * 
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
@@ -36,7 +36,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements IJso
 
     /**
      * The Client Secret.
-     * The client secret for the application that is obtained when the application is registered with the identity provider. This is write-only. A read operation returns ****. Required.
+     * 
      */
     @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose
@@ -45,7 +45,7 @@ public class SocialIdentityProvider extends IdentityProviderBase implements IJso
 
     /**
      * The Identity Provider Type.
-     * For a B2B scenario, possible values: Google, Facebook. For a B2C scenario, possible values: Microsoft, Google, Amazon, LinkedIn, Facebook, GitHub, Twitter, Weibo, QQ, WeChat. Required.
+     * 
      */
     @SerializedName(value = "identityProviderType", alternate = {"IdentityProviderType"})
     @Expose

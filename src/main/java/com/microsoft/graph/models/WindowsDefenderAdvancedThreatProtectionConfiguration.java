@@ -72,7 +72,7 @@ public class WindowsDefenderAdvancedThreatProtectionConfiguration extends Device
 
     /**
      * The Allow Sample Sharing.
-     * Windows Defender AdvancedThreatProtection 'Allow Sample Sharing' Rule
+     * Windows Defender AdvancedThreatProtection "Allow Sample Sharing" Rule
      */
     @SerializedName(value = "allowSampleSharing", alternate = {"AllowSampleSharing"})
     @Expose

@@ -27,7 +27,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements IJsonBack
 
     /**
      * The Conditional Access Policy State.
-     * The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
+     * 
      */
     @SerializedName(value = "conditionalAccessPolicyState", alternate = {"ConditionalAccessPolicyState"})
     @Expose
@@ -36,7 +36,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements IJsonBack
 
     /**
      * The Latest Policy Modified Date Time.
-     * The date and time the conditional access policy was last modified. Required. Read-only.
+     * 
      */
     @SerializedName(value = "latestPolicyModifiedDateTime", alternate = {"LatestPolicyModifiedDateTime"})
     @Expose
@@ -45,7 +45,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements IJsonBack
 
     /**
      * The Requires Device Compliance.
-     * A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
+     * 
      */
     @SerializedName(value = "requiresDeviceCompliance", alternate = {"RequiresDeviceCompliance"})
     @Expose
@@ -54,7 +54,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements IJsonBack
 
     /**
      * The Tenant Display Name.
-     * The display name for the managed tenant. Required. Read-only.
+     * 
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose

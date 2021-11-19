@@ -40,7 +40,7 @@ public class DriveItemSource implements IJsonBackedObject {
 
     /**
      * The Application.
-     * Enumeration value that indicates the source application where the file was created.
+     * 
      */
     @SerializedName(value = "application", alternate = {"Application"})
     @Expose
@@ -49,7 +49,7 @@ public class DriveItemSource implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * The external identifier for the drive item from the source.
+     * 
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose

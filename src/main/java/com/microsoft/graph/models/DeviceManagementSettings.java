@@ -49,7 +49,7 @@ public class DeviceManagementSettings implements IJsonBackedObject {
 
     /**
      * The Derived Credential Provider.
-     * The Derived Credential Provider to use for this account. Possible values are: notConfigured, entrustDataCard, purebred, xTec, intercede.
+     * The Derived Credential Provider to use for this account.
      */
     @SerializedName(value = "derivedCredentialProvider", alternate = {"DerivedCredentialProvider"})
     @Expose

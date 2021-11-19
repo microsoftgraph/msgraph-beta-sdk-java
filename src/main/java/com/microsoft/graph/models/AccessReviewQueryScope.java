@@ -27,7 +27,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements IJsonBa
 
     /**
      * The Query.
-     * The query representing what will be reviewed in an access review.
+     * 
      */
     @SerializedName(value = "query", alternate = {"Query"})
     @Expose
@@ -36,7 +36,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements IJsonBa
 
     /**
      * The Query Root.
-     * In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query is specified. For example, ./manager.
+     * 
      */
     @SerializedName(value = "queryRoot", alternate = {"QueryRoot"})
     @Expose
@@ -45,7 +45,7 @@ public class AccessReviewQueryScope extends AccessReviewScope implements IJsonBa
 
     /**
      * The Query Type.
-     * Indicates the type of query. Types include MicrosoftGraph and ARM.
+     * 
      */
     @SerializedName(value = "queryType", alternate = {"QueryType"})
     @Expose

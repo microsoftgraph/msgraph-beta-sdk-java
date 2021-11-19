@@ -39,7 +39,7 @@ public class PrintMargin implements IJsonBackedObject {
 
     /**
      * The Bottom.
-     * The margin in microns from the bottom edge.
+     * 
      */
     @SerializedName(value = "bottom", alternate = {"Bottom"})
     @Expose
@@ -48,7 +48,7 @@ public class PrintMargin implements IJsonBackedObject {
 
     /**
      * The Left.
-     * The margin in microns from the left edge.
+     * 
      */
     @SerializedName(value = "left", alternate = {"Left"})
     @Expose
@@ -57,7 +57,7 @@ public class PrintMargin implements IJsonBackedObject {
 
     /**
      * The Right.
-     * The margin in microns from the right edge.
+     * 
      */
     @SerializedName(value = "right", alternate = {"Right"})
     @Expose
@@ -66,7 +66,7 @@ public class PrintMargin implements IJsonBackedObject {
 
     /**
      * The Top.
-     * The margin in microns from the top edge.
+     * 
      */
     @SerializedName(value = "top", alternate = {"Top"})
     @Expose

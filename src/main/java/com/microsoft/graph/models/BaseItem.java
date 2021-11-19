@@ -30,7 +30,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Identity of the user, device, or application which created the item. Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -39,7 +39,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time of item creation. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Provides a user-visible description of the item. Optional.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -57,7 +57,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The ETag.
-     * ETag for the item. Read-only.
+     * 
      */
     @SerializedName(value = "eTag", alternate = {"ETag"})
     @Expose
@@ -66,7 +66,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * Identity of the user, device, and application which last modified the item. Read-only.
+     * 
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -75,7 +75,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Date and time the item was last modified. Read-only.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -84,7 +84,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the item. Read-write.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -93,7 +93,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Reference.
-     * Parent information, if the item has a parent. Read-write.
+     * 
      */
     @SerializedName(value = "parentReference", alternate = {"ParentReference"})
     @Expose
@@ -102,7 +102,7 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * URL that displays the resource in the browser. Read-only.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -111,10 +111,8 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By User.
-     * Identity of the user who created the item. Read-only.
-     * @deprecated 
+     * 
      */
-    @Deprecated
     @SerializedName(value = "createdByUser", alternate = {"CreatedByUser"})
     @Expose
 	@Nullable
@@ -122,10 +120,8 @@ public class BaseItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By User.
-     * Identity of the user who last modified the item. Read-only.
-     * @deprecated 
+     * 
      */
-    @Deprecated
     @SerializedName(value = "lastModifiedByUser", alternate = {"LastModifiedByUser"})
     @Expose
 	@Nullable

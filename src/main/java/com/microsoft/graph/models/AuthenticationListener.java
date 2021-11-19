@@ -28,7 +28,7 @@ public class AuthenticationListener extends Entity implements IJsonBackedObject 
 
     /**
      * The Priority.
-     * The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
+     * 
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -37,7 +37,7 @@ public class AuthenticationListener extends Entity implements IJsonBackedObject 
 
     /**
      * The Source Filter.
-     * Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
+     * 
      */
     @SerializedName(value = "sourceFilter", alternate = {"SourceFilter"})
     @Expose

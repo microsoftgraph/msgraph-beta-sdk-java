@@ -40,7 +40,7 @@ public class SharingLink implements IJsonBackedObject {
 
     /**
      * The Application.
-     * The app the link is associated with.
+     * 
      */
     @SerializedName(value = "application", alternate = {"Application"})
     @Expose
@@ -58,7 +58,7 @@ public class SharingLink implements IJsonBackedObject {
 
     /**
      * The Prevents Download.
-     * If true then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item. Only for OneDrive for Business and SharePoint.
+     * 
      */
     @SerializedName(value = "preventsDownload", alternate = {"PreventsDownload"})
     @Expose
@@ -67,7 +67,7 @@ public class SharingLink implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * The scope of the link represented by this permission. Value anonymous indicates the link is usable by anyone, organization indicates the link is only usable for users signed into the same tenant.
+     * 
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -76,7 +76,7 @@ public class SharingLink implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of the link created.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -85,7 +85,7 @@ public class SharingLink implements IJsonBackedObject {
 
     /**
      * The Web Html.
-     * For embed links, this property contains the HTML code for an &amp;lt;iframe&amp;gt; element that will embed the item in a webpage.
+     * 
      */
     @SerializedName(value = "webHtml", alternate = {"WebHtml"})
     @Expose
@@ -94,7 +94,7 @@ public class SharingLink implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * A URL that opens the item in the browser on the OneDrive website.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

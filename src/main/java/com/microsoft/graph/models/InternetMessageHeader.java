@@ -39,7 +39,7 @@ public class InternetMessageHeader implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Represents the key in a key-value pair.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -48,7 +48,7 @@ public class InternetMessageHeader implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The value in a key-value pair.
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

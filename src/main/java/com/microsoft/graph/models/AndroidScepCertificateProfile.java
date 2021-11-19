@@ -33,7 +33,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 
     /**
      * The Hash Algorithm.
-     * SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * SCEP Hash Algorithm
      */
     @SerializedName(value = "hashAlgorithm", alternate = {"HashAlgorithm"})
     @Expose
@@ -42,7 +42,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 
     /**
      * The Key Size.
-     * SCEP Key Size. Possible values are: size1024, size2048, size4096.
+     * SCEP Key Size
      */
     @SerializedName(value = "keySize", alternate = {"KeySize"})
     @Expose
@@ -51,7 +51,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 
     /**
      * The Key Usage.
-     * SCEP Key Usage. Possible values are: keyEncipherment, digitalSignature.
+     * SCEP Key Usage
      */
     @SerializedName(value = "keyUsage", alternate = {"KeyUsage"})
     @Expose
@@ -87,7 +87,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
 
     /**
      * The Managed Device Certificate States.
-     * Certificate state for devices
+     * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
     @SerializedName(value = "managedDeviceCertificateStates", alternate = {"ManagedDeviceCertificateStates"})
     @Expose

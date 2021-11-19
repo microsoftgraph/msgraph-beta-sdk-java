@@ -56,7 +56,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
 
     /**
      * The Operation Type.
-     * The file system operation type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB.
+     * The file system operation type.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
@@ -65,7 +65,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements IJsonB
 
     /**
      * The Operator.
-     * The operator for file or folder detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
+     * The operator for file or folder detection.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

@@ -103,7 +103,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
 
     /**
      * The Mdm Supported State.
-     * Indicates if the setting is supported in Mdm or not. Possible values are: unknown, supported, unsupported, deprecated.
+     * Indicates if the setting is supported in Mdm or not
      */
     @SerializedName(value = "mdmSupportedState", alternate = {"MdmSupportedState"})
     @Expose
@@ -166,7 +166,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
 
     /**
      * The Setting Scope.
-     * The scope of the setting. Possible values are: unknown, device, user.
+     * The scope of the setting
      */
     @SerializedName(value = "settingScope", alternate = {"SettingScope"})
     @Expose
@@ -175,7 +175,7 @@ public class GroupPolicySettingMapping extends Entity implements IJsonBackedObje
 
     /**
      * The Setting Type.
-     * The setting type (security or admx) of the Group Policy. Possible values are: unknown, policy, account, securityOptions, userRightsAssignment, auditSetting, windowsFirewallSettings.
+     * The setting type (security or admx) of the Group Policy.
      */
     @SerializedName(value = "settingType", alternate = {"SettingType"})
     @Expose

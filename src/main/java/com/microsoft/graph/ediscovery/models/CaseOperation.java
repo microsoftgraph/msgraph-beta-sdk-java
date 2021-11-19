@@ -31,7 +31,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Action.
-     * The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics
+     * 
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -40,7 +40,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * The date and time the operation was completed.
+     * 
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * The user that created the operation.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -58,7 +58,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time the operation was created.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Percent Progress.
-     * The progress of the operation.
+     * 
      */
     @SerializedName(value = "percentProgress", alternate = {"PercentProgress"})
     @Expose
@@ -76,7 +76,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Result Info.
-     * Contains success and failure-specific result information.
+     * 
      */
     @SerializedName(value = "resultInfo", alternate = {"ResultInfo"})
     @Expose
@@ -85,7 +85,7 @@ public class CaseOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -73,7 +73,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
 
     /**
      * The Platform Type.
-     * The template's platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, windows10XProfile, all.
+     * The template's platform.
      */
     @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
@@ -91,7 +91,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
 
     /**
      * The Template Subtype.
-     * The template's subtype. Possible values are: none, firewall, diskEncryption, attackSurfaceReduction, endpointDetectionReponse, accountProtection, antivirus, firewallSharedAppList, firewallSharedIpList, firewallSharedPortlist.
+     * The template's subtype.
      */
     @SerializedName(value = "templateSubtype", alternate = {"TemplateSubtype"})
     @Expose
@@ -100,7 +100,7 @@ public class DeviceManagementTemplate extends Entity implements IJsonBackedObjec
 
     /**
      * The Template Type.
-     * The template's type. Possible values are: securityBaseline, specializedDevices, advancedThreatProtectionSecurityBaseline, deviceConfiguration, custom, securityTemplate, microsoftEdgeSecurityBaseline, microsoftOffice365ProPlusSecurityBaseline, deviceCompliance, deviceConfigurationForOffice365, cloudPC, firewallSharedSettings.
+     * The template's type.
      */
     @SerializedName(value = "templateType", alternate = {"TemplateType"})
     @Expose

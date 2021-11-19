@@ -29,7 +29,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Actions.
-     * Actions to be taken on a message when the corresponding conditions are fulfilled.
+     * 
      */
     @SerializedName(value = "actions", alternate = {"Actions"})
     @Expose
@@ -38,7 +38,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Conditions.
-     * Conditions that when fulfilled, will trigger the corresponding actions for that rule.
+     * 
      */
     @SerializedName(value = "conditions", alternate = {"Conditions"})
     @Expose
@@ -47,7 +47,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the rule.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -56,7 +56,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Exceptions.
-     * Exception conditions for the rule.
+     * 
      */
     @SerializedName(value = "exceptions", alternate = {"Exceptions"})
     @Expose
@@ -65,7 +65,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Error.
-     * Indicates whether the rule is in an error condition. Read-only.
+     * 
      */
     @SerializedName(value = "hasError", alternate = {"HasError"})
     @Expose
@@ -74,7 +74,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * Indicates whether the rule is enabled to be applied to messages.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -83,7 +83,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Read Only.
-     * Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API.
+     * 
      */
     @SerializedName(value = "isReadOnly", alternate = {"IsReadOnly"})
     @Expose
@@ -92,7 +92,7 @@ public class MessageRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Sequence.
-     * Indicates the order in which the rule is executed, among other rules.
+     * 
      */
     @SerializedName(value = "sequence", alternate = {"Sequence"})
     @Expose

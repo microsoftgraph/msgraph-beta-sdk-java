@@ -29,7 +29,7 @@ public class ManagementIntent extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the management intent. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -38,7 +38,7 @@ public class ManagementIntent extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Global.
-     * A flag indicating whether the management intent is global. Required. Read-only.
+     * 
      */
     @SerializedName(value = "isGlobal", alternate = {"IsGlobal"})
     @Expose
@@ -47,7 +47,7 @@ public class ManagementIntent extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Templates.
-     * The collection of management templates associated with the management intent. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "managementTemplates", alternate = {"ManagementTemplates"})
     @Expose

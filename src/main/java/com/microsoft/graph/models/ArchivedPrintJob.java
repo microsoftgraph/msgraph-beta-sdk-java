@@ -41,7 +41,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Acquired By Printer.
-     * True if the job was acquired by a printer; false otherwise. Read-only.
+     * 
      */
     @SerializedName(value = "acquiredByPrinter", alternate = {"AcquiredByPrinter"})
     @Expose
@@ -50,7 +50,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Acquired Date Time.
-     * The dateTimeOffset when the job was acquired by the printer, if any. Read-only.
+     * 
      */
     @SerializedName(value = "acquiredDateTime", alternate = {"AcquiredDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Black And White Page Count.
-     * The number of black and white pages that were printed. Read-only.
+     * 
      */
     @SerializedName(value = "blackAndWhitePageCount", alternate = {"BlackAndWhitePageCount"})
     @Expose
@@ -68,7 +68,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Color Page Count.
-     * The number of color pages that were printed. Read-only.
+     * 
      */
     @SerializedName(value = "colorPageCount", alternate = {"ColorPageCount"})
     @Expose
@@ -77,7 +77,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Completion Date Time.
-     * The dateTimeOffset when the job was completed, canceled or aborted. Read-only.
+     * 
      */
     @SerializedName(value = "completionDateTime", alternate = {"CompletionDateTime"})
     @Expose
@@ -86,7 +86,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Copies Printed.
-     * The number of copies that were printed. Read-only.
+     * 
      */
     @SerializedName(value = "copiesPrinted", alternate = {"CopiesPrinted"})
     @Expose
@@ -95,7 +95,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * The user who created the print job. Read-only.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -104,7 +104,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The dateTimeOffset when the job was created. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -113,7 +113,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Duplex Page Count.
-     * The number of duplex (double-sided) pages that were printed. Read-only.
+     * 
      */
     @SerializedName(value = "duplexPageCount", alternate = {"DuplexPageCount"})
     @Expose
@@ -122,7 +122,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The archived print job's GUID. Read-only.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -131,7 +131,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Page Count.
-     * The total number of pages that were printed. Read-only.
+     * 
      */
     @SerializedName(value = "pageCount", alternate = {"PageCount"})
     @Expose
@@ -140,7 +140,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Printer Id.
-     * The printer ID that the job was queued for. Read-only.
+     * 
      */
     @SerializedName(value = "printerId", alternate = {"PrinterId"})
     @Expose
@@ -149,7 +149,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Processing State.
-     * The print job's final processing state. Read-only.
+     * 
      */
     @SerializedName(value = "processingState", alternate = {"ProcessingState"})
     @Expose
@@ -158,7 +158,7 @@ public class ArchivedPrintJob implements IJsonBackedObject {
 
     /**
      * The Simplex Page Count.
-     * The number of simplex (single-sided) pages that were printed. Read-only.
+     * 
      */
     @SerializedName(value = "simplexPageCount", alternate = {"SimplexPageCount"})
     @Expose

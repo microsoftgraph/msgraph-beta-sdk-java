@@ -29,7 +29,7 @@ public class MeetingAttendanceReport extends Entity implements IJsonBackedObject
 
     /**
      * The Attendance Records.
-     * The list of attendance records.
+     * 
      */
     @SerializedName(value = "attendanceRecords", alternate = {"AttendanceRecords"})
     @Expose
@@ -38,7 +38,7 @@ public class MeetingAttendanceReport extends Entity implements IJsonBackedObject
 
     /**
      * The Total Participant Count.
-     * Total number of participants.
+     * 
      */
     @SerializedName(value = "totalParticipantCount", alternate = {"TotalParticipantCount"})
     @Expose

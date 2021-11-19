@@ -30,7 +30,7 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
 
     /**
      * The Definition.
-     * A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
+     * 
      */
     @SerializedName(value = "definition", alternate = {"Definition"})
     @Expose
@@ -39,7 +39,7 @@ public class StsPolicy extends PolicyBase implements IJsonBackedObject {
 
     /**
      * The Is Organization Default.
-     * If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
+     * 
      */
     @SerializedName(value = "isOrganizationDefault", alternate = {"IsOrganizationDefault"})
     @Expose

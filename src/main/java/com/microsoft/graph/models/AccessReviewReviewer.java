@@ -27,7 +27,7 @@ public class AccessReviewReviewer extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date when the reviewer was added for the access review.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class AccessReviewReviewer extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Name of reviewer.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class AccessReviewReviewer extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * User principal name of the user.
+     * 
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

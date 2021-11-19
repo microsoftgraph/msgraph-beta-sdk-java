@@ -71,7 +71,7 @@ public class AssignmentFilterEvaluationSummary implements IJsonBackedObject {
 
     /**
      * The Assignment Filter Platform.
-     * The platform for which this assignment filter is created. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+     * The platform for which this assignment filter is created.
      */
     @SerializedName(value = "assignmentFilterPlatform", alternate = {"AssignmentFilterPlatform"})
     @Expose
@@ -80,7 +80,7 @@ public class AssignmentFilterEvaluationSummary implements IJsonBackedObject {
 
     /**
      * The Assignment Filter Type.
-     * Indicate filter type either include or exclude. Possible values are: none, include, exclude.
+     * Indicate filter type either include or exclude.
      */
     @SerializedName(value = "assignmentFilterType", alternate = {"AssignmentFilterType"})
     @Expose
@@ -107,7 +107,7 @@ public class AssignmentFilterEvaluationSummary implements IJsonBackedObject {
 
     /**
      * The Evaluation Result.
-     * Assignment filter evaluation result. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated.
+     * Assignment filter evaluation result.
      */
     @SerializedName(value = "evaluationResult", alternate = {"EvaluationResult"})
     @Expose

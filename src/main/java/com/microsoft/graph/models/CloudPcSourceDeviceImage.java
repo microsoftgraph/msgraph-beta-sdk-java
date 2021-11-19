@@ -39,7 +39,7 @@ public class CloudPcSourceDeviceImage implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the source image.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcSourceDeviceImage implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The ID of the source image.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

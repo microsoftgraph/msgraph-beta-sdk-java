@@ -27,7 +27,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name of the subject.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * The email address of the user subject. If the subject is in other types, it is empty.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -45,7 +45,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal Name.
-     * The principal name of the user subject. If the subject is in other types, it is empty.
+     * 
      */
     @SerializedName(value = "principalName", alternate = {"PrincipalName"})
     @Expose
@@ -54,7 +54,7 @@ public class GovernanceSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * The type of the subject. The value can be User, Group, and ServicePrincipal.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

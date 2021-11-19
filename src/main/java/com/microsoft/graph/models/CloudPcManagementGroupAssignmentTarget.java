@@ -27,7 +27,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
 
     /**
      * The Group Id.
-     * The id of the assignment's target group
+     * 
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose

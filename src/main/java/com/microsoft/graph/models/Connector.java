@@ -31,7 +31,7 @@ public class Connector extends Entity implements IJsonBackedObject {
 
     /**
      * The External Ip.
-     * The external IP address as detected by the the connector server. Read-only.
+     * 
      */
     @SerializedName(value = "externalIp", alternate = {"ExternalIp"})
     @Expose
@@ -40,7 +40,7 @@ public class Connector extends Entity implements IJsonBackedObject {
 
     /**
      * The Machine Name.
-     * The machine name the connector is installed and running on.
+     * 
      */
     @SerializedName(value = "machineName", alternate = {"MachineName"})
     @Expose
@@ -49,7 +49,7 @@ public class Connector extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Indicates the status of the connector. Possible values are: active, inactive. Read-only.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -58,7 +58,7 @@ public class Connector extends Entity implements IJsonBackedObject {
 
     /**
      * The Member Of.
-     * The connectorGroup that the connector is a member of. Read-only.
+     * 
      */
     @SerializedName(value = "memberOf", alternate = {"MemberOf"})
     @Expose

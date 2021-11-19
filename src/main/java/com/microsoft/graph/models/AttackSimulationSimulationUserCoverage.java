@@ -40,7 +40,7 @@ public class AttackSimulationSimulationUserCoverage implements IJsonBackedObject
 
     /**
      * The Attack Simulation User.
-     * User in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "attackSimulationUser", alternate = {"AttackSimulationUser"})
     @Expose
@@ -49,7 +49,7 @@ public class AttackSimulationSimulationUserCoverage implements IJsonBackedObject
 
     /**
      * The Click Count.
-     * Number of link clicks in the received payloads by the user in attack simulation and training campaigns.
+     * 
      */
     @SerializedName(value = "clickCount", alternate = {"ClickCount"})
     @Expose
@@ -58,7 +58,7 @@ public class AttackSimulationSimulationUserCoverage implements IJsonBackedObject
 
     /**
      * The Compromised Count.
-     * Number of compromising actions by the user in attack simulation and training campaigns.
+     * 
      */
     @SerializedName(value = "compromisedCount", alternate = {"CompromisedCount"})
     @Expose
@@ -67,7 +67,7 @@ public class AttackSimulationSimulationUserCoverage implements IJsonBackedObject
 
     /**
      * The Latest Simulation Date Time.
-     * Date and time of latest attack simulation and training campaign that the user was included in.
+     * 
      */
     @SerializedName(value = "latestSimulationDateTime", alternate = {"LatestSimulationDateTime"})
     @Expose
@@ -76,7 +76,7 @@ public class AttackSimulationSimulationUserCoverage implements IJsonBackedObject
 
     /**
      * The Simulation Count.
-     * Number of attack simulation and training campaigns that the user was included in.
+     * 
      */
     @SerializedName(value = "simulationCount", alternate = {"SimulationCount"})
     @Expose

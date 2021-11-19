@@ -41,7 +41,7 @@ public class ShareAction implements IJsonBackedObject {
 
     /**
      * The Recipients.
-     * The identities the item was shared with in this action.
+     * 
      */
     @SerializedName(value = "recipients", alternate = {"Recipients"})
     @Expose

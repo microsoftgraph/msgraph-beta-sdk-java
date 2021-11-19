@@ -39,7 +39,7 @@ public class AlteredQueryToken implements IJsonBackedObject {
 
     /**
      * The Length.
-     * Defines the length of a changed segment.
+     * 
      */
     @SerializedName(value = "length", alternate = {"Length"})
     @Expose
@@ -48,7 +48,7 @@ public class AlteredQueryToken implements IJsonBackedObject {
 
     /**
      * The Offset.
-     * Defines the offset of a changed segment.
+     * 
      */
     @SerializedName(value = "offset", alternate = {"Offset"})
     @Expose
@@ -57,7 +57,7 @@ public class AlteredQueryToken implements IJsonBackedObject {
 
     /**
      * The Suggestion.
-     * Represents the corrected segment string.
+     * 
      */
     @SerializedName(value = "suggestion", alternate = {"Suggestion"})
     @Expose

@@ -29,7 +29,7 @@ public class CustomTimeZone extends TimeZoneBase implements IJsonBackedObject {
 
     /**
      * The Bias.
-     * The time offset of the time zone from Coordinated Universal Time (UTC). This value is in minutes. Time zones that are ahead of UTC have a positive offset; time zones that are behind UTC have a negative offset.
+     * 
      */
     @SerializedName(value = "bias", alternate = {"Bias"})
     @Expose
@@ -38,7 +38,7 @@ public class CustomTimeZone extends TimeZoneBase implements IJsonBackedObject {
 
     /**
      * The Daylight Offset.
-     * Specifies when the time zone switches from standard time to daylight saving time.
+     * 
      */
     @SerializedName(value = "daylightOffset", alternate = {"DaylightOffset"})
     @Expose
@@ -47,7 +47,7 @@ public class CustomTimeZone extends TimeZoneBase implements IJsonBackedObject {
 
     /**
      * The Standard Offset.
-     * Specifies when the time zone switches from daylight saving time to standard time.
+     * 
      */
     @SerializedName(value = "standardOffset", alternate = {"StandardOffset"})
     @Expose

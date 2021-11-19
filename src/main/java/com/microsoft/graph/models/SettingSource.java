@@ -40,7 +40,7 @@ public class SettingSource implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class SettingSource implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -58,7 +58,7 @@ public class SettingSource implements IJsonBackedObject {
 
     /**
      * The Source Type.
-     * Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+     * 
      */
     @SerializedName(value = "sourceType", alternate = {"SourceType"})
     @Expose

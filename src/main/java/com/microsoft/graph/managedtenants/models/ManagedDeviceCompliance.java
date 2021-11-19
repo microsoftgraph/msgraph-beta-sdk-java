@@ -27,7 +27,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Compliance Status.
-     * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "complianceStatus", alternate = {"ComplianceStatus"})
     @Expose
@@ -36,7 +36,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Device Type.
-     * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
+     * 
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
@@ -45,7 +45,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The In Grace Period Until Date Time.
-     * The date and time when the grace period will expire. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "inGracePeriodUntilDateTime", alternate = {"InGracePeriodUntilDateTime"})
     @Expose
@@ -54,7 +54,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Last Refreshed Date Time.
-     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Last Sync Date Time.
-     * The date and time that the device last completed a successful sync with Microsoft Endpoint Manager. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
@@ -72,7 +72,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Managed Device Id.
-     * The identifier for the managed device in Microsoft Endpoint Manager. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -81,7 +81,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Managed Device Name.
-     * The display name for the managed device. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose
@@ -90,7 +90,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Manufacturer.
-     * The manufacture for the device. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
@@ -99,7 +99,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Model.
-     * The model for the device. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose
@@ -108,7 +108,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Os Description.
-     * The description of the operating system for the managed device. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "osDescription", alternate = {"OsDescription"})
     @Expose
@@ -117,7 +117,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Os Version.
-     * The version of the operating system for the managed device. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "osVersion", alternate = {"OsVersion"})
     @Expose
@@ -126,7 +126,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Owner Type.
-     * The type of owner for the managed device. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
@@ -135,7 +135,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Tenant Display Name.
-     * The display name for the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -144,7 +144,7 @@ public class ManagedDeviceCompliance extends Entity implements IJsonBackedObject
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

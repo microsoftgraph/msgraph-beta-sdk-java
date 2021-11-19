@@ -54,7 +54,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Device Manufacturer Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed.
      */
     @SerializedName(value = "appActionIfAndroidDeviceManufacturerNotAllowed", alternate = {"AppActionIfAndroidDeviceManufacturerNotAllowed"})
     @Expose
@@ -72,7 +72,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Safety Net Apps Verification Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirment fails. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either warn or block, if the specified Android App Verification requirement fails.
      */
     @SerializedName(value = "appActionIfAndroidSafetyNetAppsVerificationFailed", alternate = {"AppActionIfAndroidSafetyNetAppsVerificationFailed"})
     @Expose
@@ -81,7 +81,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The App Action If Android Safety Net Device Attestation Failed.
-     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirment fails. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either warn or block, if the specified Android SafetyNet Attestation requirement fails.
      */
     @SerializedName(value = "appActionIfAndroidSafetyNetDeviceAttestationFailed", alternate = {"AppActionIfAndroidSafetyNetDeviceAttestationFailed"})
     @Expose
@@ -279,7 +279,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Required Android Safety Net Apps Verification Type.
-     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work. Possible values are: none, enabled.
+     * Defines the Android SafetyNet Apps Verification requirement for a managed app to work.
      */
     @SerializedName(value = "requiredAndroidSafetyNetAppsVerificationType", alternate = {"RequiredAndroidSafetyNetAppsVerificationType"})
     @Expose
@@ -288,7 +288,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
 
     /**
      * The Required Android Safety Net Device Attestation Type.
-     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work. Possible values are: none, basicIntegrity, basicIntegrityAndDeviceCertification.
+     * Defines the Android SafetyNet Device Attestation requirement for a managed app to work.
      */
     @SerializedName(value = "requiredAndroidSafetyNetDeviceAttestationType", alternate = {"RequiredAndroidSafetyNetDeviceAttestationType"})
     @Expose

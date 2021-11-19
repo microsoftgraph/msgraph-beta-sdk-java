@@ -39,7 +39,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Online Meeting Providers.
-     * Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * 
      */
     @SerializedName(value = "allowedOnlineMeetingProviders", alternate = {"AllowedOnlineMeetingProviders"})
     @Expose
@@ -48,7 +48,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Calendar Group Id.
-     * The calendarGroup in which to create the calendar. If the user has never explicitly set a group for the calendar, this property is  null.
+     * 
      */
     @SerializedName(value = "calendarGroupId", alternate = {"CalendarGroupId"})
     @Expose
@@ -57,7 +57,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Edit.
-     * true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
+     * 
      */
     @SerializedName(value = "canEdit", alternate = {"CanEdit"})
     @Expose
@@ -66,7 +66,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can Share.
-     * true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
+     * 
      */
     @SerializedName(value = "canShare", alternate = {"CanShare"})
     @Expose
@@ -75,7 +75,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Can View Private Items.
-     * true if the user can read calendar items that have been marked private, false otherwise.
+     * 
      */
     @SerializedName(value = "canViewPrivateItems", alternate = {"CanViewPrivateItems"})
     @Expose
@@ -84,7 +84,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
-     * Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
+     * 
      */
     @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose
@@ -93,7 +93,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
+     * 
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
@@ -102,7 +102,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Default Online Meeting Provider.
-     * The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
+     * 
      */
     @SerializedName(value = "defaultOnlineMeetingProvider", alternate = {"DefaultOnlineMeetingProvider"})
     @Expose
@@ -111,7 +111,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Hex Color.
-     * The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
+     * 
      */
     @SerializedName(value = "hexColor", alternate = {"HexColor"})
     @Expose
@@ -120,7 +120,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default Calendar.
-     * true if this is the default calendar where new events are created by default, false otherwise.
+     * 
      */
     @SerializedName(value = "isDefaultCalendar", alternate = {"IsDefaultCalendar"})
     @Expose
@@ -129,7 +129,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Removable.
-     * Indicates whether this user calendar can be deleted from the user mailbox.
+     * 
      */
     @SerializedName(value = "isRemovable", alternate = {"IsRemovable"})
     @Expose
@@ -138,7 +138,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Shared.
-     * true if the user has shared the calendar with other users, false otherwise. Since only the user who created the calendar can share it, isShared and isSharedWithMe cannot be true for the same user. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
+     * 
      */
     @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
@@ -147,7 +147,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Shared With Me.
-     * true if the user has been shared this calendar, false otherwise. This property is always false for a calendar owner. This property is set when sharing is initiated in an Outlook client, and can be reset when the sharing is cancelled through the client or the corresponding calendarPermission resource. Read-only.
+     * 
      */
     @SerializedName(value = "isSharedWithMe", alternate = {"IsSharedWithMe"})
     @Expose
@@ -156,7 +156,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Tallying Responses.
-     * Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
+     * 
      */
     @SerializedName(value = "isTallyingResponses", alternate = {"IsTallyingResponses"})
     @Expose
@@ -165,7 +165,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The calendar name.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -174,7 +174,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
+     * 
      */
     @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
@@ -183,7 +183,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Calendar Permissions.
-     * The permissions of the users with whom the calendar is shared.
+     * 
      */
     @SerializedName(value = "calendarPermissions", alternate = {"CalendarPermissions"})
     @Expose
@@ -192,7 +192,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Calendar View.
-     * The calendar view for the calendar. Navigation property. Read-only.
+     * 
      */
     @SerializedName(value = "calendarView", alternate = {"CalendarView"})
     @Expose
@@ -201,7 +201,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Events.
-     * The events in the calendar. Navigation property. Read-only.
+     * 
      */
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose
@@ -210,7 +210,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Multi Value Extended Properties.
-     * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
@@ -219,7 +219,7 @@ public class Calendar extends Entity implements IJsonBackedObject {
 
     /**
      * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose

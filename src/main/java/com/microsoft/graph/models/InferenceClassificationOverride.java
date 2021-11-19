@@ -29,7 +29,7 @@ public class InferenceClassificationOverride extends Entity implements IJsonBack
 
     /**
      * The Classify As.
-     * Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
+     * 
      */
     @SerializedName(value = "classifyAs", alternate = {"ClassifyAs"})
     @Expose
@@ -38,7 +38,7 @@ public class InferenceClassificationOverride extends Entity implements IJsonBack
 
     /**
      * The Sender Email Address.
-     * The email address information of the sender for whom the override is created.
+     * 
      */
     @SerializedName(value = "senderEmailAddress", alternate = {"SenderEmailAddress"})
     @Expose

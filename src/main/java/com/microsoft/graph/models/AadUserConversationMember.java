@@ -28,7 +28,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
     /**
      * The Email.
-     * The email address of the user.
+     * 
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -37,7 +37,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
     /**
      * The Tenant Id.
-     * TenantId which the Azure AD user belongs to.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -46,7 +46,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
 
     /**
      * The User Id.
-     * The guid of the user.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -56,9 +56,7 @@ public class AadUserConversationMember extends ConversationMember implements IJs
     /**
      * The User.
      * 
-     * @deprecated 
      */
-    @Deprecated
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
 	@Nullable

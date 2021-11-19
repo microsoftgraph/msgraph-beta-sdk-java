@@ -30,7 +30,7 @@ public class MembersDeletedEventMessageDetail extends EventMessageDetail impleme
 
     /**
      * The Initiator.
-     * Initiator of the event.
+     * 
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -39,7 +39,7 @@ public class MembersDeletedEventMessageDetail extends EventMessageDetail impleme
 
     /**
      * The Members.
-     * List of members deleted.
+     * 
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

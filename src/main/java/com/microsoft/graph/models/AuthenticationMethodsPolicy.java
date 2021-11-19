@@ -31,7 +31,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Description.
-     * A description of the policy. Read-only.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -40,7 +40,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * The name of the policy. Read-only.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Last Modified Date Time.
-     * The date and time of the last update to the policy. Read-only.
+     * 
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Policy Version.
-     * The version of the policy in use. Read-only.
+     * 
      */
     @SerializedName(value = "policyVersion", alternate = {"PolicyVersion"})
     @Expose
@@ -76,7 +76,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Registration Enforcement.
-     * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+     * 
      */
     @SerializedName(value = "registrationEnforcement", alternate = {"RegistrationEnforcement"})
     @Expose
@@ -85,7 +85,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Authentication Method Configurations.
-     * Represents the settings for each authentication method.
+     * 
      */
     @SerializedName(value = "authenticationMethodConfigurations", alternate = {"AuthenticationMethodConfigurations"})
     @Expose

@@ -39,7 +39,7 @@ public class RolloutSettings implements IJsonBackedObject {
 
     /**
      * The Devices Per Offer.
-     * Specifies the number of devices that are offered at the same time. Has no effect when endDateTime is set. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
+     * 
      */
     @SerializedName(value = "devicesPerOffer", alternate = {"DevicesPerOffer"})
     @Expose
@@ -48,7 +48,7 @@ public class RolloutSettings implements IJsonBackedObject {
 
     /**
      * The Duration Between Offers.
-     * Specifies duration between each set of devices being offered the update. Has an effect when endDateTime or devicesPerOffer are defined. Default value is P1D (1 day).
+     * 
      */
     @SerializedName(value = "durationBetweenOffers", alternate = {"DurationBetweenOffers"})
     @Expose
@@ -57,7 +57,7 @@ public class RolloutSettings implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When endDateTime and devicesPerOffer are both not set, all devices in the deployment are offered content at the same time.
+     * 
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class RolloutSettings implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * Date on which devices in the deployment start receiving the update. When not set, the deployment starts as soon as devices are assigned.
+     * 
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

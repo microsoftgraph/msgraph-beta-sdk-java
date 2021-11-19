@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationPolicyAssignment extends Entity implem
 
     /**
      * The Source.
-     * The assignment source for the device compliance policy, direct or parcel/policySet. Possible values are: direct, policySets.
+     * The assignment source for the device compliance policy, direct or parcel/policySet.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

@@ -39,7 +39,7 @@ public class ResultInfo implements IJsonBackedObject {
 
     /**
      * The Code.
-     * The result code.
+     * 
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -48,7 +48,7 @@ public class ResultInfo implements IJsonBackedObject {
 
     /**
      * The Message.
-     * The message.
+     * 
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -57,7 +57,7 @@ public class ResultInfo implements IJsonBackedObject {
 
     /**
      * The Subcode.
-     * The result sub-code.
+     * 
      */
     @SerializedName(value = "subcode", alternate = {"Subcode"})
     @Expose

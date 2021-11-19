@@ -28,7 +28,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
 
     /**
      * The Action Failure Reason.
-     * The reason for the revoke licenses action failure. Possible values are: none, appleFailure, internalError, expiredVppToken, expiredApplePushNotificationCertificate.
+     * The reason for the revoke licenses action failure.
      */
     @SerializedName(value = "actionFailureReason", alternate = {"ActionFailureReason"})
     @Expose

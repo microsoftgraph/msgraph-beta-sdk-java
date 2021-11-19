@@ -39,7 +39,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Hybrid Agent Updater Configuration.
-     * Represents a hybridAgentUpdaterConfiguration object.
+     * 
      */
     @SerializedName(value = "hybridAgentUpdaterConfiguration", alternate = {"HybridAgentUpdaterConfiguration"})
     @Expose
@@ -48,7 +48,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Is Enabled.
-     * Represents if Azure AD Application Proxy is enabled for the tenant.
+     * 
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -57,7 +57,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Agent Groups.
-     * List of existing onPremisesAgentGroup objects. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "agentGroups", alternate = {"AgentGroups"})
     @Expose
@@ -66,7 +66,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Agents.
-     * List of existing onPremisesAgent objects. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "agents", alternate = {"Agents"})
     @Expose
@@ -75,7 +75,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Connector Groups.
-     * List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "connectorGroups", alternate = {"ConnectorGroups"})
     @Expose
@@ -84,7 +84,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Connectors.
-     * List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "connectors", alternate = {"Connectors"})
     @Expose
@@ -93,7 +93,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Published Resources.
-     * List of existing publishedResource objects. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "publishedResources", alternate = {"PublishedResources"})
     @Expose

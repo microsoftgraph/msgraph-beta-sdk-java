@@ -39,7 +39,7 @@ public class LocalizedLabel implements IJsonBackedObject {
 
     /**
      * The Is Default.
-     * Indicates whether the label is the default label.
+     * 
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -48,7 +48,7 @@ public class LocalizedLabel implements IJsonBackedObject {
 
     /**
      * The Language Tag.
-     * The language tag for the label.
+     * 
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
@@ -57,7 +57,7 @@ public class LocalizedLabel implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the label.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

@@ -40,7 +40,7 @@ public class PrintOperationStatus implements IJsonBackedObject {
 
     /**
      * The Description.
-     * A human-readable description of the printOperation's current processing state. Read-only.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class PrintOperationStatus implements IJsonBackedObject {
 
     /**
      * The State.
-     * The printOperation's current processing state. Valid values are described in the following table. Read-only.
+     * 
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

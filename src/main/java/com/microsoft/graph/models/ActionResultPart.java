@@ -40,7 +40,7 @@ public class ActionResultPart implements IJsonBackedObject {
 
     /**
      * The Error.
-     * The error that occurred, if any, during the course of the bulk operation.
+     * 
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose

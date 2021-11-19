@@ -40,7 +40,7 @@ public class TranslationLanguageOverride implements IJsonBackedObject {
 
     /**
      * The Language Tag.
-     * The language to apply the override.Returned by default. Not nullable.
+     * 
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
@@ -49,7 +49,7 @@ public class TranslationLanguageOverride implements IJsonBackedObject {
 
     /**
      * The Translation Behavior.
-     * The translation override behavior for the language, if any.Returned by default. Not nullable.
+     * 
      */
     @SerializedName(value = "translationBehavior", alternate = {"TranslationBehavior"})
     @Expose

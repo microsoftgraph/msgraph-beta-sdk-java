@@ -39,7 +39,7 @@ public class ResultTemplate implements IJsonBackedObject {
 
     /**
      * The Body.
-     * JSON schema of the result template.
+     * 
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -48,7 +48,7 @@ public class ResultTemplate implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Name of the result template.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

@@ -42,7 +42,7 @@ public class RiskUserActivity implements IJsonBackedObject {
 
     /**
      * The Detail.
-     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -51,7 +51,7 @@ public class RiskUserActivity implements IJsonBackedObject {
 
     /**
      * The Event Types.
-     * List of risk event types. Deprecated. Use riskEventType instead.
+     * 
      */
     @SerializedName(value = "eventTypes", alternate = {"EventTypes"})
     @Expose
@@ -60,7 +60,7 @@ public class RiskUserActivity implements IJsonBackedObject {
 
     /**
      * The Risk Event Types.
-     * The type of risk event detected.
+     * 
      */
     @SerializedName(value = "riskEventTypes", alternate = {"RiskEventTypes"})
     @Expose

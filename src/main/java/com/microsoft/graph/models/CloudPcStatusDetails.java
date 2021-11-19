@@ -41,7 +41,7 @@ public class CloudPcStatusDetails implements IJsonBackedObject {
 
     /**
      * The Additional Information.
-     * Any additional information about the cloud PC status.
+     * 
      */
     @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
@@ -50,7 +50,7 @@ public class CloudPcStatusDetails implements IJsonBackedObject {
 
     /**
      * The Code.
-     * The code associated with the cloud PC status.
+     * 
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcStatusDetails implements IJsonBackedObject {
 
     /**
      * The Message.
-     * The status message.
+     * 
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose

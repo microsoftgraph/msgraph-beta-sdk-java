@@ -76,7 +76,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Platform Type.
-     * Setting platform. Possible values are: android, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, all.
+     * Setting platform
      */
     @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
@@ -121,7 +121,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Device Compliance Setting States.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "deviceComplianceSettingStates", alternate = {"DeviceComplianceSettingStates"})
     @Expose

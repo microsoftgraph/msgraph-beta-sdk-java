@@ -28,7 +28,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
 
     /**
      * The Days Without Contact Before Unenroll.
-     * Offline interval before app data is wiped (days)
+     * Offline interval before app data is wiped (days) 
      */
     @SerializedName(value = "daysWithoutContactBeforeUnenroll", alternate = {"DaysWithoutContactBeforeUnenroll"})
     @Expose
@@ -82,7 +82,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
 
     /**
      * The Pin Lowercase Letters.
-     * Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * Integer value that configures the use of lowercase letters in the Windows Hello for Business PIN. Default is NotAllow.
      */
     @SerializedName(value = "pinLowercaseLetters", alternate = {"PinLowercaseLetters"})
     @Expose
@@ -100,7 +100,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
 
     /**
      * The Pin Special Characters.
-     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! ' # $ % &amp; ' ( )  + , - . / : ; &amp;lt; = &amp;gt; ? @ [ / ] ^  ` {
+     * Integer value that configures the use of special characters in the Windows Hello for Business PIN. Valid special characters for Windows Hello for Business PIN gestures include: ! " # $ % &amp; ' ( ) * + , - . / : ; &amp;lt; = &amp;gt; ? @ [ &#92; ] ^ _ ` { | } ~. Default is NotAllow.
      */
     @SerializedName(value = "pinSpecialCharacters", alternate = {"PinSpecialCharacters"})
     @Expose
@@ -109,7 +109,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
 
     /**
      * The Pin Uppercase Letters.
-     * Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow. Possible values are: notAllow, requireAtLeastOne, allow.
+     * Integer value that configures the use of uppercase letters in the Windows Hello for Business PIN. Default is NotAllow.
      */
     @SerializedName(value = "pinUppercaseLetters", alternate = {"PinUppercaseLetters"})
     @Expose

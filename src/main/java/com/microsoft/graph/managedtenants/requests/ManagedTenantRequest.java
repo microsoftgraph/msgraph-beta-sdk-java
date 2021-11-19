@@ -34,8 +34,6 @@ import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionReq
 import com.microsoft.graph.managedtenants.requests.ManagementIntentRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserCollectionRequestBuilder;
-import com.microsoft.graph.managedtenants.requests.RiskyUserRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantGroupRequestBuilder;
 import com.microsoft.graph.managedtenants.requests.TenantCollectionRequestBuilder;

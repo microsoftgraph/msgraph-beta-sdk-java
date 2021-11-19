@@ -41,7 +41,7 @@ public class ScheduleItem implements IJsonBackedObject {
 
     /**
      * The End.
-     * The date, time, and time zone that the corresponding event ends.
+     * 
      */
     @SerializedName(value = "end", alternate = {"End"})
     @Expose
@@ -50,7 +50,7 @@ public class ScheduleItem implements IJsonBackedObject {
 
     /**
      * The Is Private.
-     * The sensitivity of the corresponding event. True if the event is marked private, false otherwise. Optional.
+     * 
      */
     @SerializedName(value = "isPrivate", alternate = {"IsPrivate"})
     @Expose
@@ -59,7 +59,7 @@ public class ScheduleItem implements IJsonBackedObject {
 
     /**
      * The Location.
-     * The location where the corresponding event is held or attended from. Optional.
+     * 
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -68,7 +68,7 @@ public class ScheduleItem implements IJsonBackedObject {
 
     /**
      * The Start.
-     * The date, time, and time zone that the corresponding event starts.
+     * 
      */
     @SerializedName(value = "start", alternate = {"Start"})
     @Expose
@@ -77,7 +77,7 @@ public class ScheduleItem implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The availability status of the user or resource during the corresponding event. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -86,7 +86,7 @@ public class ScheduleItem implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * The corresponding event's subject line. Optional.
+     * 
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose

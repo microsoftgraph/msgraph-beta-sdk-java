@@ -49,7 +49,7 @@ public class DeviceAndAppManagementAssignmentTarget implements IJsonBackedObject
 
     /**
      * The Device And App Management Assignment Filter Type.
-     * The type of filter of the target assignment i.e. Exclude or Include. Possible values are: none, include, exclude.
+     * The type of filter of the target assignment i.e. Exclude or Include.
      */
     @SerializedName(value = "deviceAndAppManagementAssignmentFilterType", alternate = {"DeviceAndAppManagementAssignmentFilterType"})
     @Expose

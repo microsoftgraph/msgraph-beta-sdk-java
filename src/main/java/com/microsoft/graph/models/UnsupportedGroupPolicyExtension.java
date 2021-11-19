@@ -55,7 +55,7 @@ public class UnsupportedGroupPolicyExtension extends Entity implements IJsonBack
 
     /**
      * The Setting Scope.
-     * Setting Scope of the unsupported extension. Possible values are: unknown, device, user.
+     * Setting Scope of the unsupported extension.
      */
     @SerializedName(value = "settingScope", alternate = {"SettingScope"})
     @Expose

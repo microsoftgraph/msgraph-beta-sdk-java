@@ -28,7 +28,7 @@ public class WindowsDeploymentSettings extends DeploymentSettings implements IJs
 
     /**
      * The User Experience.
-     * Settings governing the user's update experience on a device.
+     * 
      */
     @SerializedName(value = "userExperience", alternate = {"UserExperience"})
     @Expose

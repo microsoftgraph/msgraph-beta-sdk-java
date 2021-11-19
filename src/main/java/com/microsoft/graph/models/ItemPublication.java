@@ -27,7 +27,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the publication.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Title of the publication.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -45,7 +45,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Published Date.
-     * The date that the publication was published.
+     * 
      */
     @SerializedName(value = "publishedDate", alternate = {"PublishedDate"})
     @Expose
@@ -54,7 +54,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Publisher.
-     * Publication or publisher for the publication.
+     * 
      */
     @SerializedName(value = "publisher", alternate = {"Publisher"})
     @Expose
@@ -63,7 +63,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Thumbnail Url.
-     * URL referencing a thumbnail of the publication.
+     * 
      */
     @SerializedName(value = "thumbnailUrl", alternate = {"ThumbnailUrl"})
     @Expose
@@ -72,7 +72,7 @@ public class ItemPublication extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * URL referencing the publication.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

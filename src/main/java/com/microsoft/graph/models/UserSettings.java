@@ -30,7 +30,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Contribution To Content Discovery As Organization Disabled.
-     * Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * 
      */
     @SerializedName(value = "contributionToContentDiscoveryAsOrganizationDisabled", alternate = {"ContributionToContentDiscoveryAsOrganizationDisabled"})
     @Expose
@@ -39,7 +39,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Contribution To Content Discovery Disabled.
-     * When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * 
      */
     @SerializedName(value = "contributionToContentDiscoveryDisabled", alternate = {"ContributionToContentDiscoveryDisabled"})
     @Expose
@@ -48,7 +48,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Item Insights.
-     * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
+     * 
      */
     @SerializedName(value = "itemInsights", alternate = {"ItemInsights"})
     @Expose
@@ -57,7 +57,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Regional And Language Settings.
-     * The user's preferences for languages, regional locale and date/time formatting.
+     * 
      */
     @SerializedName(value = "regionalAndLanguageSettings", alternate = {"RegionalAndLanguageSettings"})
     @Expose
@@ -66,7 +66,7 @@ public class UserSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Shift Preferences.
-     * The shift preferences for the user.
+     * 
      */
     @SerializedName(value = "shiftPreferences", alternate = {"ShiftPreferences"})
     @Expose

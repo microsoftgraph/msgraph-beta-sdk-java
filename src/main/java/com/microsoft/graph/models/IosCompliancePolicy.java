@@ -31,7 +31,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
 
     /**
      * The Advanced Threat Protection Required Security Level.
-     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -49,7 +49,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
 
     /**
      * The Device Threat Protection Required Security Level.
-     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -175,7 +175,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements IJson
 
     /**
      * The Passcode Required Type.
-     * The required passcode type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * The required passcode type.
      */
     @SerializedName(value = "passcodeRequiredType", alternate = {"PasscodeRequiredType"})
     @Expose

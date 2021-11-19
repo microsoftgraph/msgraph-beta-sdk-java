@@ -79,7 +79,7 @@ public class WindowsDeliveryOptimizationConfiguration extends DeviceConfiguratio
 
     /**
      * The Delivery Optimization Mode.
-     * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Specifies the download method that delivery optimization can use to manage network bandwidth consumption for large content distribution scenarios.
      */
     @SerializedName(value = "deliveryOptimizationMode", alternate = {"DeliveryOptimizationMode"})
     @Expose

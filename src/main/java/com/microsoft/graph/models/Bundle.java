@@ -40,7 +40,7 @@ public class Bundle implements IJsonBackedObject {
 
     /**
      * The Album.
-     * If the bundle is an [album][], then the album property is included
+     * 
      */
     @SerializedName(value = "album", alternate = {"Album"})
     @Expose
@@ -49,7 +49,7 @@ public class Bundle implements IJsonBackedObject {
 
     /**
      * The Child Count.
-     * Number of children contained immediately within this container.
+     * 
      */
     @SerializedName(value = "childCount", alternate = {"ChildCount"})
     @Expose

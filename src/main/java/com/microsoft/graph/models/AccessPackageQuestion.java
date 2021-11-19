@@ -40,7 +40,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
 
     /**
      * The Id.
-     * ID of the question.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
 
     /**
      * The Is Required.
-     * Whether the requestor is required to supply an answer or not.
+     * 
      */
     @SerializedName(value = "isRequired", alternate = {"IsRequired"})
     @Expose
@@ -67,7 +67,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
 
     /**
      * The Sequence.
-     * Relative position of this question when displaying a list of questions to the requestor.
+     * 
      */
     @SerializedName(value = "sequence", alternate = {"Sequence"})
     @Expose
@@ -76,7 +76,7 @@ public class AccessPackageQuestion implements IJsonBackedObject {
 
     /**
      * The Text.
-     * The text of the question to show to the requestor.
+     * 
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose

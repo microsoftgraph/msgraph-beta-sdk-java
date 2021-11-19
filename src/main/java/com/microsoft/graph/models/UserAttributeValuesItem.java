@@ -39,7 +39,7 @@ public class UserAttributeValuesItem implements IJsonBackedObject {
 
     /**
      * The Is Default.
-     * Determines whether the value is set as the default.
+     * 
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -48,7 +48,7 @@ public class UserAttributeValuesItem implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The display name of the property displayed to the user in the user flow.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -57,7 +57,7 @@ public class UserAttributeValuesItem implements IJsonBackedObject {
 
     /**
      * The Value.
-     * The value that is set when this item is selected.
+     * 
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

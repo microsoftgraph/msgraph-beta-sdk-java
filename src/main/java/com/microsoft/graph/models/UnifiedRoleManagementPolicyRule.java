@@ -28,7 +28,7 @@ public class UnifiedRoleManagementPolicyRule extends Entity implements IJsonBack
 
     /**
      * The Target.
-     * The target for the policy rule.
+     * 
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

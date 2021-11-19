@@ -28,7 +28,7 @@ public class CloudPcUserSettingAssignment extends Entity implements IJsonBackedO
 
     /**
      * The Created Date Time.
-     * The date and time this assignment was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class CloudPcUserSettingAssignment extends Entity implements IJsonBackedO
 
     /**
      * The Target.
-     * The assignment target for the user setting. Currently, the only target supported for this user setting is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
+     * 
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

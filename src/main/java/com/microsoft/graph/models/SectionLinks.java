@@ -40,7 +40,7 @@ public class SectionLinks implements IJsonBackedObject {
 
     /**
      * The One Note Client Url.
-     * Opens the section in the OneNote native client if it's installed.
+     * 
      */
     @SerializedName(value = "oneNoteClientUrl", alternate = {"OneNoteClientUrl"})
     @Expose
@@ -49,7 +49,7 @@ public class SectionLinks implements IJsonBackedObject {
 
     /**
      * The One Note Web Url.
-     * Opens the section in OneNote on the web.
+     * 
      */
     @SerializedName(value = "oneNoteWebUrl", alternate = {"OneNoteWebUrl"})
     @Expose

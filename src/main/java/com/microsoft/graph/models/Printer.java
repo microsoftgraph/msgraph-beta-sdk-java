@@ -43,7 +43,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Has Physical Device.
-     * True if the printer has a physical device for printing. Read-only.
+     * 
      */
     @SerializedName(value = "hasPhysicalDevice", alternate = {"HasPhysicalDevice"})
     @Expose
@@ -52,7 +52,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Is Shared.
-     * True if the printer is shared; false otherwise. Read-only.
+     * 
      */
     @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
@@ -61,7 +61,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Last Seen Date Time.
-     * The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
+     * 
      */
     @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Registered Date Time.
-     * The DateTimeOffset when the printer was registered. Read-only.
+     * 
      */
     @SerializedName(value = "registeredDateTime", alternate = {"RegisteredDateTime"})
     @Expose
@@ -79,7 +79,7 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Connectors.
-     * The connectors that are associated with the printer.
+     * 
      */
 	@Nullable
     public PrintConnectorCollectionPage connectors;
@@ -95,14 +95,14 @@ public class Printer extends PrinterBase implements IJsonBackedObject {
 
     /**
      * The Shares.
-     * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
+     * 
      */
 	@Nullable
     public PrinterShareCollectionPage shares;
 
     /**
      * The Task Triggers.
-     * A list of task triggers that are associated with the printer.
+     * 
      */
     @SerializedName(value = "taskTriggers", alternate = {"TaskTriggers"})
     @Expose

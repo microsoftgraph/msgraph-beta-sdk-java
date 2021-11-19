@@ -54,7 +54,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
 
     /**
      * The Authentication Method.
-     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
+     * Authentication method.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -72,7 +72,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
 
     /**
      * The Connection Type.
-     * Connection type. Possible values are: ciscoAnyConnect, pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, citrix, paloAltoGlobalProtect, microsoftTunnel, netMotionMobility, microsoftProtect.
+     * Connection type.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose

@@ -27,7 +27,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Id.
-     * The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
+     * 
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
@@ -36,7 +36,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Consent Type.
-     * Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
+     * 
      */
     @SerializedName(value = "consentType", alternate = {"ConsentType"})
     @Expose
@@ -45,7 +45,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiry Time.
-     * Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
+     * 
      */
     @SerializedName(value = "expiryTime", alternate = {"ExpiryTime"})
     @Expose
@@ -54,7 +54,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Principal Id.
-     * The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal.
+     * 
      */
     @SerializedName(value = "principalId", alternate = {"PrincipalId"})
     @Expose
@@ -63,7 +63,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Id.
-     * The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user.
+     * 
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose
@@ -72,7 +72,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the publishedPermissionScopes property of the resource service principal.
+     * 
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose
@@ -81,7 +81,7 @@ public class OAuth2PermissionGrant extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Time.
-     * Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.
+     * 
      */
     @SerializedName(value = "startTime", alternate = {"StartTime"})
     @Expose

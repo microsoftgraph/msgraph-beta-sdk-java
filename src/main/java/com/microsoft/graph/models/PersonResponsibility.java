@@ -28,7 +28,7 @@ public class PersonResponsibility extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Collaboration Tags.
-     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
+     * 
      */
     @SerializedName(value = "collaborationTags", alternate = {"CollaborationTags"})
     @Expose
@@ -37,7 +37,7 @@ public class PersonResponsibility extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Description.
-     * Description of the responsibility.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -46,7 +46,7 @@ public class PersonResponsibility extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Display Name.
-     * Contains a friendly name for the responsibility.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -64,7 +64,7 @@ public class PersonResponsibility extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Web Url.
-     * Contains a link to a web page or resource about the responsibility.
+     * 
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

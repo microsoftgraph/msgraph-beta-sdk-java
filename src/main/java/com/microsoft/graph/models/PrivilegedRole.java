@@ -32,7 +32,7 @@ public class PrivilegedRole extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Role name.
+     * 
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -41,14 +41,14 @@ public class PrivilegedRole extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * The assignments for this role. Read-only. Nullable.
+     * 
      */
 	@Nullable
     public PrivilegedRoleAssignmentCollectionPage assignments;
 
     /**
      * The Settings.
-     * The settings for this role. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
@@ -57,7 +57,7 @@ public class PrivilegedRole extends Entity implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * The summary information for this role. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose

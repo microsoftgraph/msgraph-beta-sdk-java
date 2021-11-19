@@ -43,7 +43,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Assigned Trainings Count.
-     * Number of trainings assigned to a user in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "assignedTrainingsCount", alternate = {"AssignedTrainingsCount"})
     @Expose
@@ -52,7 +52,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Completed Trainings Count.
-     * Number of trainings completed by a user in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "completedTrainingsCount", alternate = {"CompletedTrainingsCount"})
     @Expose
@@ -61,7 +61,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Compromised Date Time.
-     * Date and time of the compromising online action by a user in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "compromisedDateTime", alternate = {"CompromisedDateTime"})
     @Expose
@@ -70,7 +70,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The In Progress Trainings Count.
-     * Number of trainings in progress by a user in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "inProgressTrainingsCount", alternate = {"InProgressTrainingsCount"})
     @Expose
@@ -79,7 +79,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Is Compromised.
-     * Flag representing if user was compromised in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "isCompromised", alternate = {"IsCompromised"})
     @Expose
@@ -88,7 +88,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Reported Phish Date Time.
-     * Date and time when user reported delivered payload as phish in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "reportedPhishDateTime", alternate = {"ReportedPhishDateTime"})
     @Expose
@@ -97,7 +97,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Simulation Events.
-     * List of simulation events of a user in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "simulationEvents", alternate = {"SimulationEvents"})
     @Expose
@@ -106,7 +106,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Simulation User.
-     * User in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "simulationUser", alternate = {"SimulationUser"})
     @Expose
@@ -115,7 +115,7 @@ public class UserSimulationDetails implements IJsonBackedObject {
 
     /**
      * The Training Events.
-     * List of training events of a user in the attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "trainingEvents", alternate = {"TrainingEvents"})
     @Expose

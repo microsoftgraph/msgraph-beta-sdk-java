@@ -29,7 +29,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
 
     /**
      * The Detection Type.
-     * The detection type for script output. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
+     * The detection type for script output
      */
     @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose
@@ -65,7 +65,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
 
     /**
      * The Run As Account.
-     * Indicates the type of execution context the script runs in. Possible values are: system, user.
+     * Indicates the type of execution context the script runs in.
      */
     @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose

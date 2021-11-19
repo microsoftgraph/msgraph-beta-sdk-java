@@ -41,7 +41,7 @@ public class EducationFeedback implements IJsonBackedObject {
 
     /**
      * The Feedback By.
-     * User who created the feedback.
+     * 
      */
     @SerializedName(value = "feedbackBy", alternate = {"FeedbackBy"})
     @Expose
@@ -50,7 +50,7 @@ public class EducationFeedback implements IJsonBackedObject {
 
     /**
      * The Feedback Date Time.
-     * Moment in time when the feedback was given. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "feedbackDateTime", alternate = {"FeedbackDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class EducationFeedback implements IJsonBackedObject {
 
     /**
      * The Text.
-     * Feedback.
+     * 
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose

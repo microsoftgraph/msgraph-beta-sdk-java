@@ -109,7 +109,7 @@ public class Windows81CompliancePolicy extends DeviceCompliancePolicy implements
 
     /**
      * The Password Required Type.
-     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * The required password type.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose

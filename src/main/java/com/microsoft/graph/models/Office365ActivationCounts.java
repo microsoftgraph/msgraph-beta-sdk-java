@@ -27,7 +27,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Android.
-     * The activation count on an Android device.
+     * 
      */
     @SerializedName(value = "android", alternate = {"Android"})
     @Expose
@@ -36,7 +36,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Ios.
-     * The activation count on iOS.
+     * 
      */
     @SerializedName(value = "ios", alternate = {"Ios"})
     @Expose
@@ -45,7 +45,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Mac.
-     * The activation count on Mac OS.
+     * 
      */
     @SerializedName(value = "mac", alternate = {"Mac"})
     @Expose
@@ -54,7 +54,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Product Type.
-     * The product type, such as 'Microsoft 365 ProPlus' or 'Project Client'.
+     * 
      */
     @SerializedName(value = "productType", alternate = {"ProductType"})
     @Expose
@@ -63,7 +63,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Report Refresh Date.
-     * The latest date of the content.
+     * 
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -72,7 +72,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Windows.
-     * The activation count on Windows. This number includes every activation on any Windows computer.
+     * 
      */
     @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
@@ -81,7 +81,7 @@ public class Office365ActivationCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Windows10Mobile.
-     * The activation count on Windows 10 mobile.
+     * 
      */
     @SerializedName(value = "windows10Mobile", alternate = {"Windows10Mobile"})
     @Expose

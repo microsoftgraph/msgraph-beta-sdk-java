@@ -31,7 +31,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The App Display Name.
-     * The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
+     * 
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -40,7 +40,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * The identifier of the application. Required. Supports $filter (eq only) and $orderby.
+     * 
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -49,7 +49,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Consent Type.
-     * The consent type of the request. Possible values are: Static and Dynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
+     * 
      */
     @SerializedName(value = "consentType", alternate = {"ConsentType"})
     @Expose
@@ -58,7 +58,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Pending Scopes.
-     * A list of pending scopes waiting for approval. Required.
+     * 
      */
     @SerializedName(value = "pendingScopes", alternate = {"PendingScopes"})
     @Expose
@@ -67,7 +67,7 @@ public class AppConsentRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The User Consent Requests.
-     * A list of pending user consent requests.
+     * 
      */
     @SerializedName(value = "userConsentRequests", alternate = {"UserConsentRequests"})
     @Expose

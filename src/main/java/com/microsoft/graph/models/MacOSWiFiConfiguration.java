@@ -92,7 +92,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
 
     /**
      * The Proxy Settings.
-     * Proxy Type for this Wi-Fi connection. Possible values are: none, manual, automatic.
+     * Proxy Type for this Wi-Fi connection
      */
     @SerializedName(value = "proxySettings", alternate = {"ProxySettings"})
     @Expose
@@ -110,7 +110,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements IJson
 
     /**
      * The Wi Fi Security Type.
-     * Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+     * Indicates whether Wi-Fi endpoint uses an EAP based security type.
      */
     @SerializedName(value = "wiFiSecurityType", alternate = {"WiFiSecurityType"})
     @Expose

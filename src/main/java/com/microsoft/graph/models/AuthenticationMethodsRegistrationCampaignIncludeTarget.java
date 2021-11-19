@@ -40,7 +40,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements I
 
     /**
      * The Id.
-     * The object identifier of an Azure AD user or group.
+     * 
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -49,7 +49,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements I
 
     /**
      * The Targeted Authentication Method.
-     * The authentication method that the user is prompted to register. The value must be microsoftAuthenticator.
+     * 
      */
     @SerializedName(value = "targetedAuthenticationMethod", alternate = {"TargetedAuthenticationMethod"})
     @Expose
@@ -58,7 +58,7 @@ public class AuthenticationMethodsRegistrationCampaignIncludeTarget implements I
 
     /**
      * The Target Type.
-     * The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose

@@ -33,7 +33,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
 
     /**
      * The Certificate Validity Period Scale.
-     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
+     * Scale for the Certificate Validity Period.
      */
     @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose
@@ -60,7 +60,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
 
     /**
      * The Key Storage Provider.
-     * Key Storage Provider (KSP). Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
+     * Key Storage Provider (KSP).
      */
     @SerializedName(value = "keyStorageProvider", alternate = {"KeyStorageProvider"})
     @Expose
@@ -78,7 +78,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
 
     /**
      * The Subject Alternative Name Type.
-     * Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Certificate Subject Alternative Name Type.
      */
     @SerializedName(value = "subjectAlternativeNameType", alternate = {"SubjectAlternativeNameType"})
     @Expose
@@ -87,7 +87,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
 
     /**
      * The Subject Name Format.
-     * Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
+     * Certificate Subject Name Format.
      */
     @SerializedName(value = "subjectNameFormat", alternate = {"SubjectNameFormat"})
     @Expose

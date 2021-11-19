@@ -39,7 +39,7 @@ public class SearchBucket implements IJsonBackedObject {
 
     /**
      * The Aggregation Filter Token.
-     * A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format '{field}:/'{aggregationFilterToken}/''. See an example.
+     * 
      */
     @SerializedName(value = "aggregationFilterToken", alternate = {"AggregationFilterToken"})
     @Expose
@@ -48,7 +48,7 @@ public class SearchBucket implements IJsonBackedObject {
 
     /**
      * The Count.
-     * The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
+     * 
      */
     @SerializedName(value = "count", alternate = {"Count"})
     @Expose
@@ -57,7 +57,7 @@ public class SearchBucket implements IJsonBackedObject {
 
     /**
      * The Key.
-     * The discrete value of the field that an aggregation was computed on.
+     * 
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose

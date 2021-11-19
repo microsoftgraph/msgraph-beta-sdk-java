@@ -40,7 +40,7 @@ public class UserTrainingStatusInfo implements IJsonBackedObject {
 
     /**
      * The Assigned Date Time.
-     * Date and time of assignment of the training to the user.
+     * 
      */
     @SerializedName(value = "assignedDateTime", alternate = {"AssignedDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class UserTrainingStatusInfo implements IJsonBackedObject {
 
     /**
      * The Completion Date Time.
-     * Date and time of completion of the training by the user.
+     * 
      */
     @SerializedName(value = "completionDateTime", alternate = {"CompletionDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class UserTrainingStatusInfo implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Display name of the assigned training.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -67,7 +67,7 @@ public class UserTrainingStatusInfo implements IJsonBackedObject {
 
     /**
      * The Training Status.
-     * Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, notCompleted, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "trainingStatus", alternate = {"TrainingStatus"})
     @Expose

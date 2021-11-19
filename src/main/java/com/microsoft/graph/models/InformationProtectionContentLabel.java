@@ -41,7 +41,7 @@ public class InformationProtectionContentLabel implements IJsonBackedObject {
 
     /**
      * The Assignment Method.
-     * Possible values are: standard, privileged, auto.
+     * 
      */
     @SerializedName(value = "assignmentMethod", alternate = {"AssignmentMethod"})
     @Expose
@@ -50,7 +50,7 @@ public class InformationProtectionContentLabel implements IJsonBackedObject {
 
     /**
      * The Creation Date Time.
-     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class InformationProtectionContentLabel implements IJsonBackedObject {
 
     /**
      * The Label.
-     * Details on the label that is currently applied to the file.
+     * 
      */
     @SerializedName(value = "label", alternate = {"Label"})
     @Expose

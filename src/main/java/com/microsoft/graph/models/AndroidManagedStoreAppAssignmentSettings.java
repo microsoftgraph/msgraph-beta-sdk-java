@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AndroidManagedStoreAutoUpdateMode;
 import com.microsoft.graph.models.MobileAppAssignmentSettings;
 
 
@@ -34,6 +35,15 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
     @Expose
 	@Nullable
     public java.util.List<String> androidManagedStoreAppTrackIds;
+
+    /**
+     * The Auto Update Mode.
+     * The prioritization of automatic updates for this app assignment.
+     */
+    @SerializedName(value = "autoUpdateMode", alternate = {"AutoUpdateMode"})
+    @Expose
+	@Nullable
+    public AndroidManagedStoreAutoUpdateMode autoUpdateMode;
 
 
     /**

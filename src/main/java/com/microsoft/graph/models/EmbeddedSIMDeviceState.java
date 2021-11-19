@@ -64,7 +64,7 @@ public class EmbeddedSIMDeviceState extends Entity implements IJsonBackedObject 
 
     /**
      * The State.
-     * The state of the profile operation applied to the device. Possible values are: notEvaluated, failed, installing, installed, deleting, error, deleted, removedByUser.
+     * The state of the profile operation applied to the device.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

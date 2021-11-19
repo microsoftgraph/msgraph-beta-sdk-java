@@ -32,7 +32,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Action.
-     * The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
+     * 
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -41,7 +41,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Group Names.
-     * The cyber threat intelligence name(s) for the parties responsible for the malicious activity covered by the threat indicator.
+     * 
      */
     @SerializedName(value = "activityGroupNames", alternate = {"ActivityGroupNames"})
     @Expose
@@ -50,7 +50,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Additional Information.
-     * A catchall area into which extra data from the indicator not covered by the other tiIndicator properties may be placed. Data placed into additionalInformation will typically not be utilized by the targetProduct security tool.
+     * 
      */
     @SerializedName(value = "additionalInformation", alternate = {"AdditionalInformation"})
     @Expose
@@ -59,7 +59,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Azure Tenant Id.
-     * Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required.
+     * 
      */
     @SerializedName(value = "azureTenantId", alternate = {"AzureTenantId"})
     @Expose
@@ -68,7 +68,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Confidence.
-     * An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
+     * 
      */
     @SerializedName(value = "confidence", alternate = {"Confidence"})
     @Expose
@@ -77,7 +77,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Brief description (100 characters or less) of the threat represented by the indicator. Required.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -86,7 +86,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Diamond Model.
-     * The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
+     * 
      */
     @SerializedName(value = "diamondModel", alternate = {"DiamondModel"})
     @Expose
@@ -185,7 +185,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.
+     * 
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -194,7 +194,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+     * 
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -293,7 +293,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Ingested Date Time.
-     * Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "ingestedDateTime", alternate = {"IngestedDateTime"})
     @Expose
@@ -302,7 +302,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
+     * 
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -311,7 +311,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Kill Chain.
-     * A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
+     * 
      */
     @SerializedName(value = "killChain", alternate = {"KillChain"})
     @Expose
@@ -320,7 +320,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Known False Positives.
-     * Scenarios in which the indicator may cause false positives. This should be human-readable text.
+     * 
      */
     @SerializedName(value = "knownFalsePositives", alternate = {"KnownFalsePositives"})
     @Expose
@@ -329,7 +329,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Reported Date Time.
-     * The last time the indicator was seen. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
@@ -338,7 +338,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Malware Family Names.
-     * The malware family name associated with an indicator if it exists. Microsoft prefers the Microsoft malware family name if at all possible which can be found via the Windows Defender Security Intelligence threat encyclopedia.
+     * 
      */
     @SerializedName(value = "malwareFamilyNames", alternate = {"MalwareFamilyNames"})
     @Expose
@@ -482,7 +482,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Passive Only.
-     * Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+     * 
      */
     @SerializedName(value = "passiveOnly", alternate = {"PassiveOnly"})
     @Expose
@@ -491,7 +491,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Severity.
-     * An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+     * 
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
@@ -500,7 +500,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * A JSON array of strings that stores arbitrary tags/keywords.
+     * 
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -509,7 +509,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Target Product.
-     * A string value representing a single security product to which the indicator should be applied. Acceptable values are: Azure Sentinel, Microsoft Defender ATP. Required
+     * 
      */
     @SerializedName(value = "targetProduct", alternate = {"TargetProduct"})
     @Expose
@@ -518,7 +518,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Threat Type.
-     * Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
+     * 
      */
     @SerializedName(value = "threatType", alternate = {"ThreatType"})
     @Expose
@@ -527,7 +527,7 @@ public class TiIndicator extends Entity implements IJsonBackedObject {
 
     /**
      * The Tlp Level.
-     * Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
+     * 
      */
     @SerializedName(value = "tlpLevel", alternate = {"TlpLevel"})
     @Expose

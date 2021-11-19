@@ -40,7 +40,7 @@ public class EducationStudent implements IJsonBackedObject {
 
     /**
      * The Birth Date.
-     * Birth date of the student.
+     * 
      */
     @SerializedName(value = "birthDate", alternate = {"BirthDate"})
     @Expose
@@ -49,7 +49,7 @@ public class EducationStudent implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * ID of the student in the source system.
+     * 
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -58,7 +58,7 @@ public class EducationStudent implements IJsonBackedObject {
 
     /**
      * The Gender.
-     * The possible values are: female, male, other, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "gender", alternate = {"Gender"})
     @Expose
@@ -67,7 +67,7 @@ public class EducationStudent implements IJsonBackedObject {
 
     /**
      * The Grade.
-     * Current grade level of the student.
+     * 
      */
     @SerializedName(value = "grade", alternate = {"Grade"})
     @Expose
@@ -76,7 +76,7 @@ public class EducationStudent implements IJsonBackedObject {
 
     /**
      * The Graduation Year.
-     * Year the student is graduating from the school.
+     * 
      */
     @SerializedName(value = "graduationYear", alternate = {"GraduationYear"})
     @Expose
@@ -85,7 +85,7 @@ public class EducationStudent implements IJsonBackedObject {
 
     /**
      * The Student Number.
-     * Student Number.
+     * 
      */
     @SerializedName(value = "studentNumber", alternate = {"StudentNumber"})
     @Expose

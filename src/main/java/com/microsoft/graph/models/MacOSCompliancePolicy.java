@@ -30,7 +30,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Advanced Threat Protection Required Security Level.
-     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * MDATP Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "advancedThreatProtectionRequiredSecurityLevel", alternate = {"AdvancedThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -48,7 +48,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Device Threat Protection Required Security Level.
-     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
+     * Require Mobile Threat Protection minimum risk level to report noncompliance.
      */
     @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -57,7 +57,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Firewall Block All Incoming.
-     * Corresponds to the 'Block all incoming connections' option.
+     * Corresponds to the “Block all incoming connections” option.
      */
     @SerializedName(value = "firewallBlockAllIncoming", alternate = {"FirewallBlockAllIncoming"})
     @Expose
@@ -75,7 +75,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Firewall Enable Stealth Mode.
-     * Corresponds to 'Enable stealth mode.'
+     * Corresponds to “Enable stealth mode.”
      */
     @SerializedName(value = "firewallEnableStealthMode", alternate = {"FirewallEnableStealthMode"})
     @Expose
@@ -84,7 +84,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Gatekeeper Allowed App Source.
-     * System and Privacy setting that determines which download locations apps can be run from on a macOS device. Possible values are: notConfigured, macAppStore, macAppStoreAndIdentifiedDevelopers, anywhere.
+     * System and Privacy setting that determines which download locations apps can be run from on a macOS device.
      */
     @SerializedName(value = "gatekeeperAllowedAppSource", alternate = {"GatekeeperAllowedAppSource"})
     @Expose
@@ -192,7 +192,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements IJs
 
     /**
      * The Password Required Type.
-     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
+     * The required password type.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose

@@ -28,7 +28,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
 
     /**
      * The Format.
-     * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
+     * Pre-defined format of the string
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose

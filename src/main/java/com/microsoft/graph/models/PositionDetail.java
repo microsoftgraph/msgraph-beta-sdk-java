@@ -40,7 +40,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The Company.
-     * Detail about the company or employer.
+     * 
      */
     @SerializedName(value = "company", alternate = {"Company"})
     @Expose
@@ -49,7 +49,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the position in question.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The End Month Year.
-     * When the position ended.
+     * 
      */
     @SerializedName(value = "endMonthYear", alternate = {"EndMonthYear"})
     @Expose
@@ -67,7 +67,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The Job Title.
-     * The title held when in that position.
+     * 
      */
     @SerializedName(value = "jobTitle", alternate = {"JobTitle"})
     @Expose
@@ -76,7 +76,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The Role.
-     * The role the position entailed.
+     * 
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose
@@ -85,7 +85,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The Start Month Year.
-     * The start month and year of the position.
+     * 
      */
     @SerializedName(value = "startMonthYear", alternate = {"StartMonthYear"})
     @Expose
@@ -94,7 +94,7 @@ public class PositionDetail implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * Short summary of the position.
+     * 
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose

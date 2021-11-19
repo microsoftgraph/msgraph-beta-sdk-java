@@ -65,7 +65,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
 
     /**
      * The Network Access Configurations.
-     * Reference to device configurations required for network connectivity
+     * Reference to device configurations required for network connectivity. This collection can contain a maximum of 2 elements.
      */
 	@Nullable
     public DeviceConfigurationCollectionPage networkAccessConfigurations;

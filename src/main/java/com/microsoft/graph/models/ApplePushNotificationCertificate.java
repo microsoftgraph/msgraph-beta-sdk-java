@@ -36,7 +36,7 @@ public class ApplePushNotificationCertificate extends Entity implements IJsonBac
 
     /**
      * The Certificate.
-     * Not yet documented
+     * 
      */
     @SerializedName(value = "certificate", alternate = {"Certificate"})
     @Expose

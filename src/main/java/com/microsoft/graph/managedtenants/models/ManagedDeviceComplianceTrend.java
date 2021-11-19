@@ -27,7 +27,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Compliant Device Count.
-     * The number of devices with a compliant status. Required. Read-only.
+     * 
      */
     @SerializedName(value = "compliantDeviceCount", alternate = {"CompliantDeviceCount"})
     @Expose
@@ -36,7 +36,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Config Manager Device Count.
-     * The number of devices manged by Configuration Manager. Required. Read-only.
+     * 
      */
     @SerializedName(value = "configManagerDeviceCount", alternate = {"ConfigManagerDeviceCount"})
     @Expose
@@ -45,7 +45,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Count Date Time.
-     * The date and time compliance snapshot was performed. Required. Read-only.
+     * 
      */
     @SerializedName(value = "countDateTime", alternate = {"CountDateTime"})
     @Expose
@@ -54,7 +54,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Error Device Count.
-     * The number of devices with an error status. Required. Read-only.
+     * 
      */
     @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
@@ -63,7 +63,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The In Grace Period Device Count.
-     * The number of devices that are in a grace period status. Required. Read-only.
+     * 
      */
     @SerializedName(value = "inGracePeriodDeviceCount", alternate = {"InGracePeriodDeviceCount"})
     @Expose
@@ -72,7 +72,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Noncompliant Device Count.
-     * The number of devices that are in a non-compliant status. Required. Read-only.
+     * 
      */
     @SerializedName(value = "noncompliantDeviceCount", alternate = {"NoncompliantDeviceCount"})
     @Expose
@@ -81,7 +81,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Tenant Display Name.
-     * The display name for the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -90,7 +90,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * 
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -99,7 +99,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Unknown Device Count.
-     * The number of devices in an unknown status. Required. Read-only.
+     * 
      */
     @SerializedName(value = "unknownDeviceCount", alternate = {"UnknownDeviceCount"})
     @Expose

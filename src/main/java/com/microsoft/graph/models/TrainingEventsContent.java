@@ -41,7 +41,7 @@ public class TrainingEventsContent implements IJsonBackedObject {
 
     /**
      * The Assigned Trainings Infos.
-     * List of assigned trainings and their information in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "assignedTrainingsInfos", alternate = {"AssignedTrainingsInfos"})
     @Expose
@@ -50,7 +50,7 @@ public class TrainingEventsContent implements IJsonBackedObject {
 
     /**
      * The Trainings Assigned User Count.
-     * Number of users who were assigned trainings in an attack simulation and training campaign.
+     * 
      */
     @SerializedName(value = "trainingsAssignedUserCount", alternate = {"TrainingsAssignedUserCount"})
     @Expose

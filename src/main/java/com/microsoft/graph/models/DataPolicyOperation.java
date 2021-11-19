@@ -28,7 +28,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
+     * 
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -37,7 +37,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Progress.
-     * Specifies the progress of an operation.
+     * 
      */
     @SerializedName(value = "progress", alternate = {"Progress"})
     @Expose
@@ -46,7 +46,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Possible values are: notStarted, running, complete, failed, unknownFutureValue.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -55,7 +55,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Storage Location.
-     * The URL location to where data is being exported for export requests.
+     * 
      */
     @SerializedName(value = "storageLocation", alternate = {"StorageLocation"})
     @Expose
@@ -64,7 +64,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Submitted Date Time.
-     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "submittedDateTime", alternate = {"SubmittedDateTime"})
     @Expose
@@ -73,7 +73,7 @@ public class DataPolicyOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The id for the user on whom the operation is performed.
+     * 
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

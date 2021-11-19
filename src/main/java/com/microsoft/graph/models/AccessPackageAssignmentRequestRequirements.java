@@ -43,7 +43,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Existing Answers.
-     * Answers that have already been provided.
+     * 
      */
     @SerializedName(value = "existingAnswers", alternate = {"ExistingAnswers"})
     @Expose
@@ -52,7 +52,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Is Approval Required.
-     * Indicates whether a request must be approved by an approver.
+     * 
      */
     @SerializedName(value = "isApprovalRequired", alternate = {"IsApprovalRequired"})
     @Expose
@@ -61,7 +61,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Is Approval Required For Extension.
-     * Indicates whether approval is required when a user tries to extend their access.
+     * 
      */
     @SerializedName(value = "isApprovalRequiredForExtension", alternate = {"IsApprovalRequiredForExtension"})
     @Expose
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Is Custom Assignment Schedule Allowed.
-     * Indicates whether the requestor is allowed to set a custom schedule.
+     * 
      */
     @SerializedName(value = "isCustomAssignmentScheduleAllowed", alternate = {"IsCustomAssignmentScheduleAllowed"})
     @Expose
@@ -79,7 +79,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Is Requestor Justification Required.
-     * Indicates whether a requestor must supply justification when submitting an assignment request.
+     * 
      */
     @SerializedName(value = "isRequestorJustificationRequired", alternate = {"IsRequestorJustificationRequired"})
     @Expose
@@ -88,7 +88,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Policy Description.
-     * The description of the policy that the user is trying to request access using.
+     * 
      */
     @SerializedName(value = "policyDescription", alternate = {"PolicyDescription"})
     @Expose
@@ -97,7 +97,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Policy Display Name.
-     * The display name of the policy that the user is trying to request access using.
+     * 
      */
     @SerializedName(value = "policyDisplayName", alternate = {"PolicyDisplayName"})
     @Expose
@@ -106,7 +106,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Policy Id.
-     * The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
+     * 
      */
     @SerializedName(value = "policyId", alternate = {"PolicyId"})
     @Expose
@@ -115,7 +115,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Questions.
-     * Questions that are configured on the policy. The questions can be required or optional; callers can determine whether a question is required or optional based on the isRequired property on accessPackageQuestion.
+     * 
      */
     @SerializedName(value = "questions", alternate = {"Questions"})
     @Expose
@@ -124,7 +124,7 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
 
     /**
      * The Schedule.
-     * Schedule restrictions enforced, if any.
+     * 
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose

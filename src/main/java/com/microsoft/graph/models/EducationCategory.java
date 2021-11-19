@@ -27,7 +27,7 @@ public class EducationCategory extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Unique identifier for the category.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

@@ -40,7 +40,7 @@ public class PlannerAssignment implements IJsonBackedObject {
 
     /**
      * The Assigned By.
-     * The identity of the user that performed the assignment of the task, i.e. the assignor.
+     * 
      */
     @SerializedName(value = "assignedBy", alternate = {"AssignedBy"})
     @Expose
@@ -49,7 +49,7 @@ public class PlannerAssignment implements IJsonBackedObject {
 
     /**
      * The Assigned Date Time.
-     * The time at which the task was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "assignedDateTime", alternate = {"AssignedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class PlannerAssignment implements IJsonBackedObject {
 
     /**
      * The Order Hint.
-     * Hint used to order assignees in a task. The format is defined as outlined here.
+     * 
      */
     @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose

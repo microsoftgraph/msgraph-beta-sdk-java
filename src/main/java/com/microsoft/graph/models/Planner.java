@@ -13,7 +13,6 @@ import com.microsoft.graph.models.PlannerBucket;
 import com.microsoft.graph.models.PlannerPlan;
 import com.microsoft.graph.models.PlannerRoster;
 import com.microsoft.graph.models.PlannerTask;
-import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PlannerBucketCollectionPage;
 import com.microsoft.graph.requests.PlannerPlanCollectionPage;
 import com.microsoft.graph.requests.PlannerRosterCollectionPage;
@@ -31,12 +30,25 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Planner.
  */
-public class Planner extends Entity implements IJsonBackedObject {
+public class Planner implements IJsonBackedObject {
 
+    /** the OData type of the object as returned by the service */
+    @SerializedName("@odata.type")
+    @Expose
+    @Nullable
+    public String oDataType;
+
+    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
+
+    @Override
+    @Nonnull
+    public final AdditionalDataManager additionalDataManager() {
+        return additionalDataManager;
+    }
 
     /**
      * The Buckets.
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * 
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
@@ -45,7 +57,7 @@ public class Planner extends Entity implements IJsonBackedObject {
 
     /**
      * The Plans.
-     * Read-only. Nullable. Returns a collection of the specified plans
+     * 
      */
     @SerializedName(value = "plans", alternate = {"Plans"})
     @Expose
@@ -54,7 +66,7 @@ public class Planner extends Entity implements IJsonBackedObject {
 
     /**
      * The Rosters.
-     * Read-only. Nullable. Returns a collection of the specified rosters
+     * 
      */
     @SerializedName(value = "rosters", alternate = {"Rosters"})
     @Expose
@@ -63,7 +75,7 @@ public class Planner extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * Read-only. Nullable. Returns a collection of the specified tasks
+     * 
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

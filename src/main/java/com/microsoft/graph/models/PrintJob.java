@@ -35,7 +35,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Configuration.
-     * A group of settings that a printer should use to print a job.
+     * 
      */
     @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
@@ -44,7 +44,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -53,7 +53,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The DateTimeOffset when the job was created. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -62,7 +62,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Fetchable.
-     * If true, document can be fetched by printer.
+     * 
      */
     @SerializedName(value = "isFetchable", alternate = {"IsFetchable"})
     @Expose
@@ -71,7 +71,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Redirected From.
-     * Contains the source job URL, if the job has been redirected from another printer.
+     * 
      */
     @SerializedName(value = "redirectedFrom", alternate = {"RedirectedFrom"})
     @Expose
@@ -80,7 +80,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Redirected To.
-     * Contains the destination job URL, if the job has been redirected to another printer.
+     * 
      */
     @SerializedName(value = "redirectedTo", alternate = {"RedirectedTo"})
     @Expose
@@ -89,7 +89,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the print job. Read-only.
+     * 
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -98,7 +98,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Documents.
-     * Read-only.
+     * 
      */
     @SerializedName(value = "documents", alternate = {"Documents"})
     @Expose
@@ -107,7 +107,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * A list of printTasks that were triggered by this print job.
+     * 
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

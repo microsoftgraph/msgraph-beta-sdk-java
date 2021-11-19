@@ -40,7 +40,7 @@ public class CustomUpdateTimeWindow implements IJsonBackedObject {
 
     /**
      * The End Day.
-     * End day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * End day of the time window
      */
     @SerializedName(value = "endDay", alternate = {"EndDay"})
     @Expose
@@ -58,7 +58,7 @@ public class CustomUpdateTimeWindow implements IJsonBackedObject {
 
     /**
      * The Start Day.
-     * Start day of the time window. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
+     * Start day of the time window
      */
     @SerializedName(value = "startDay", alternate = {"StartDay"})
     @Expose

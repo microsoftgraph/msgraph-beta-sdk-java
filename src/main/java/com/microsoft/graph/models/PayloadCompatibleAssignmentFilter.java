@@ -28,7 +28,7 @@ public class PayloadCompatibleAssignmentFilter extends DeviceAndAppManagementAss
 
     /**
      * The Payload Type.
-     * PayloadType of the Assignment Filter. Possible values are: notSet, enrollmentRestrictions.
+     * PayloadType of the Assignment Filter.
      */
     @SerializedName(value = "payloadType", alternate = {"PayloadType"})
     @Expose

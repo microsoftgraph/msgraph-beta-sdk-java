@@ -37,7 +37,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements IJ
 
     /**
      * The Status.
-     * Wipe action status. Possible values are: none, pending, canceled, active, done, failed, notSupported.
+     * Wipe action status.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -35,7 +35,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time of set creation. Read-only.
+     * 
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -44,7 +44,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description that gives details on the term usage.
+     * 
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -53,7 +53,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Localized Names.
-     * Name of the set for each languageTag.
+     * 
      */
     @SerializedName(value = "localizedNames", alternate = {"LocalizedNames"})
     @Expose
@@ -62,7 +62,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Properties.
-     * Custom properties for the set.
+     * 
      */
     @SerializedName(value = "properties", alternate = {"Properties"})
     @Expose
@@ -71,7 +71,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Children.
-     * Children terms of set in term [store].
+     * 
      */
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
@@ -80,7 +80,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Group.
-     * The parent [group] that contains the set.
+     * 
      */
     @SerializedName(value = "parentGroup", alternate = {"ParentGroup"})
     @Expose
@@ -89,7 +89,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Relations.
-     * Indicates which terms have been pinned or reused directly under the set.
+     * 
      */
     @SerializedName(value = "relations", alternate = {"Relations"})
     @Expose
@@ -98,7 +98,7 @@ public class Set extends Entity implements IJsonBackedObject {
 
     /**
      * The Terms.
-     * All the terms under the set.
+     * 
      */
     @SerializedName(value = "terms", alternate = {"Terms"})
     @Expose

@@ -38,8 +38,17 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
     /**
+     * The Allow Windows11Upgrade.
+     * Allow eligible Windows 10 devices to upgrade to the latest version of Windows 11.
+     */
+    @SerializedName(value = "allowWindows11Upgrade", alternate = {"AllowWindows11Upgrade"})
+    @Expose
+	@Nullable
+    public Boolean allowWindows11Upgrade;
+
+    /**
      * The Automatic Update Mode.
-     * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
+     * Automatic update mode.
      */
     @SerializedName(value = "automaticUpdateMode", alternate = {"AutomaticUpdateMode"})
     @Expose
@@ -48,7 +57,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Auto Restart Notification Dismissal.
-     * Specify the method by which the auto-restart required notification is dismissed. Possible values are: notConfigured, automatic, user.
+     * Specify the method by which the auto-restart required notification is dismissed
      */
     @SerializedName(value = "autoRestartNotificationDismissal", alternate = {"AutoRestartNotificationDismissal"})
     @Expose
@@ -57,7 +66,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Business Ready Updates Only.
-     * Determines which branch devices will receive their updates from. Possible values are: userDefined, all, businessReadyOnly, windowsInsiderBuildFast, windowsInsiderBuildSlow, windowsInsiderBuildRelease.
+     * Determines which branch devices will receive their updates from
      */
     @SerializedName(value = "businessReadyUpdatesOnly", alternate = {"BusinessReadyUpdatesOnly"})
     @Expose
@@ -93,7 +102,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Delivery Optimization Mode.
-     * Delivery Optimization Mode. Possible values are: userDefined, httpOnly, httpWithPeeringNat, httpWithPeeringPrivateGroup, httpWithInternetPeering, simpleDownload, bypassMode.
+     * Delivery Optimization Mode
      */
     @SerializedName(value = "deliveryOptimizationMode", alternate = {"DeliveryOptimizationMode"})
     @Expose
@@ -228,7 +237,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Prerelease Features.
-     * The pre-release features. Possible values are: userDefined, settingsOnly, settingsAndExperimentations, notAllowed.
+     * The pre-release features.
      */
     @SerializedName(value = "prereleaseFeatures", alternate = {"PrereleaseFeatures"})
     @Expose
@@ -309,7 +318,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Skip Checks Before Restart.
-     * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.
+     * Set to skip all check before restart: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc. 
      */
     @SerializedName(value = "skipChecksBeforeRestart", alternate = {"SkipChecksBeforeRestart"})
     @Expose
@@ -318,7 +327,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Update Notification Level.
-     * Specifies what Windows Update notifications users see. Possible values are: notConfigured, defaultNotifications, restartWarningsOnly, disableAllNotifications.
+     * Specifies what Windows Update notifications users see.
      */
     @SerializedName(value = "updateNotificationLevel", alternate = {"UpdateNotificationLevel"})
     @Expose
@@ -327,7 +336,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Update Weeks.
-     * Scheduled the update installation on the weeks of the month. Possible values are: userDefined, firstWeek, secondWeek, thirdWeek, fourthWeek, everyWeek.
+     * Scheduled the update installation on the weeks of the month
      */
     @SerializedName(value = "updateWeeks", alternate = {"UpdateWeeks"})
     @Expose
@@ -336,7 +345,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The User Pause Access.
-     * Specifies whether to enable end user’s access to pause software updates. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether to enable end user’s access to pause software updates.
      */
     @SerializedName(value = "userPauseAccess", alternate = {"UserPauseAccess"})
     @Expose
@@ -345,7 +354,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The User Windows Update Scan Access.
-     * Specifies whether to disable user’s access to scan Windows Update. Possible values are: notConfigured, enabled, disabled.
+     * Specifies whether to disable user’s access to scan Windows Update.
      */
     @SerializedName(value = "userWindowsUpdateScanAccess", alternate = {"UserWindowsUpdateScanAccess"})
     @Expose
@@ -354,7 +363,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Device Update States.
-     * Windows update for business configuration device states.
+     * Windows update for business configuration device states. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "deviceUpdateStates", alternate = {"DeviceUpdateStates"})
     @Expose

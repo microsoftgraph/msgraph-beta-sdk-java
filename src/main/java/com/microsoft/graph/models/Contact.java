@@ -40,7 +40,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Assistant Name.
-     * The name of the contact's assistant.
+     * 
      */
     @SerializedName(value = "assistantName", alternate = {"AssistantName"})
     @Expose
@@ -49,7 +49,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Birthday.
-     * The contact's birthday. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * 
      */
     @SerializedName(value = "birthday", alternate = {"Birthday"})
     @Expose
@@ -58,7 +58,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Children.
-     * The names of the contact's children.
+     * 
      */
     @SerializedName(value = "children", alternate = {"Children"})
     @Expose
@@ -67,7 +67,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Company Name.
-     * The name of the contact's company.
+     * 
      */
     @SerializedName(value = "companyName", alternate = {"CompanyName"})
     @Expose
@@ -76,7 +76,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Department.
-     * The contact's department.
+     * 
      */
     @SerializedName(value = "department", alternate = {"Department"})
     @Expose
@@ -85,7 +85,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
+     * 
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -94,7 +94,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Email Addresses.
-     * The contact's email addresses.
+     * 
      */
     @SerializedName(value = "emailAddresses", alternate = {"EmailAddresses"})
     @Expose
@@ -103,7 +103,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The File As.
-     * The name the contact is filed under.
+     * 
      */
     @SerializedName(value = "fileAs", alternate = {"FileAs"})
     @Expose
@@ -112,7 +112,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Flag.
-     * The flag value that indicates the status, start date, due date, or completion date for the contact.
+     * 
      */
     @SerializedName(value = "flag", alternate = {"Flag"})
     @Expose
@@ -121,7 +121,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Gender.
-     * The contact's gender.
+     * 
      */
     @SerializedName(value = "gender", alternate = {"Gender"})
     @Expose
@@ -130,7 +130,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Generation.
-     * The contact's generation.
+     * 
      */
     @SerializedName(value = "generation", alternate = {"Generation"})
     @Expose
@@ -139,7 +139,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Given Name.
-     * The contact's given name.
+     * 
      */
     @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
@@ -337,7 +337,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Extensions.
-     * The collection of open extensions defined for the contact. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -346,7 +346,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Multi Value Extended Properties.
-     * The collection of multi-value extended properties defined for the contact. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
@@ -355,7 +355,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Photo.
-     * Optional contact picture. You can get or set a photo for a contact.
+     * 
      */
     @SerializedName(value = "photo", alternate = {"Photo"})
     @Expose
@@ -364,7 +364,7 @@ public class Contact extends OutlookItem implements IJsonBackedObject {
 
     /**
      * The Single Value Extended Properties.
-     * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
+     * 
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose

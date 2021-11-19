@@ -42,7 +42,7 @@ public class RecordingInfo implements IJsonBackedObject {
 
     /**
      * The Initiated By.
-     * The participant who initiated the recording.
+     * 
      */
     @SerializedName(value = "initiatedBy", alternate = {"InitiatedBy"})
     @Expose
@@ -51,7 +51,7 @@ public class RecordingInfo implements IJsonBackedObject {
 
     /**
      * The Initiator.
-     * The identities of the recording initiator.
+     * 
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -60,7 +60,7 @@ public class RecordingInfo implements IJsonBackedObject {
 
     /**
      * The Recording Status.
-     * Possible values are: unknown, notRecording, recording, or failed.
+     * 
      */
     @SerializedName(value = "recordingStatus", alternate = {"RecordingStatus"})
     @Expose

@@ -39,7 +39,7 @@ public class InformationalUrl implements IJsonBackedObject {
 
     /**
      * The Logo Url.
-     * CDN URL to the application's logo, Read-only.
+     * 
      */
     @SerializedName(value = "logoUrl", alternate = {"LogoUrl"})
     @Expose
@@ -48,7 +48,7 @@ public class InformationalUrl implements IJsonBackedObject {
 
     /**
      * The Marketing Url.
-     * Link to the application's marketing page. For example, https://www.contoso.com/app/marketing
+     * 
      */
     @SerializedName(value = "marketingUrl", alternate = {"MarketingUrl"})
     @Expose
@@ -57,7 +57,7 @@ public class InformationalUrl implements IJsonBackedObject {
 
     /**
      * The Privacy Statement Url.
-     * Link to the application's privacy statement. For example, https://www.contoso.com/app/privacy
+     * 
      */
     @SerializedName(value = "privacyStatementUrl", alternate = {"PrivacyStatementUrl"})
     @Expose
@@ -66,7 +66,7 @@ public class InformationalUrl implements IJsonBackedObject {
 
     /**
      * The Support Url.
-     * Link to the application's support page. For example, https://www.contoso.com/app/support
+     * 
      */
     @SerializedName(value = "supportUrl", alternate = {"SupportUrl"})
     @Expose
@@ -75,7 +75,7 @@ public class InformationalUrl implements IJsonBackedObject {
 
     /**
      * The Terms Of Service Url.
-     * Link to the application's terms of service statement. For example, https://www.contoso.com/app/termsofservice
+     * 
      */
     @SerializedName(value = "termsOfServiceUrl", alternate = {"TermsOfServiceUrl"})
     @Expose

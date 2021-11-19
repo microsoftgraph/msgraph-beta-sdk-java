@@ -27,7 +27,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements IJsonBacke
 
     /**
      * The Is Email Password Authentication Enabled.
-     * The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
+     * 
      */
     @SerializedName(value = "isEmailPasswordAuthenticationEnabled", alternate = {"IsEmailPasswordAuthenticationEnabled"})
     @Expose
@@ -36,7 +36,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements IJsonBacke
 
     /**
      * The Is Phone One Time Password Authentication Enabled.
-     * The tenant admin can configure local accounts using phone number if the phone number and one-time password authentication method is enabled.
+     * 
      */
     @SerializedName(value = "isPhoneOneTimePasswordAuthenticationEnabled", alternate = {"IsPhoneOneTimePasswordAuthenticationEnabled"})
     @Expose
@@ -45,7 +45,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements IJsonBacke
 
     /**
      * The Is User Name Authentication Enabled.
-     * The tenant admin can configure local accounts using username if the username and password authentication method is enabled.
+     * 
      */
     @SerializedName(value = "isUserNameAuthenticationEnabled", alternate = {"IsUserNameAuthenticationEnabled"})
     @Expose

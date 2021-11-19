@@ -43,7 +43,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
     /**
      * The App Action If Ios Device Model Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. Possible values are: block, wipe, warn.
+     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
      */
     @SerializedName(value = "appActionIfIosDeviceModelNotAllowed", alternate = {"AppActionIfIosDeviceModelNotAllowed"})
     @Expose
@@ -52,7 +52,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
     /**
      * The App Data Encryption Type.
-     * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
+     * Type of encryption which should be used for data in a managed app.
      */
     @SerializedName(value = "appDataEncryptionType", alternate = {"AppDataEncryptionType"})
     @Expose
@@ -105,6 +105,15 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public java.util.List<KeyValuePair> exemptedAppProtocols;
 
     /**
+     * The Exempted Universal Links.
+     * A list of custom urls that are allowed to invocate an unmanaged app
+     */
+    @SerializedName(value = "exemptedUniversalLinks", alternate = {"ExemptedUniversalLinks"})
+    @Expose
+	@Nullable
+    public java.util.List<String> exemptedUniversalLinks;
+
+    /**
      * The Face Id Blocked.
      * Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
      */
@@ -121,6 +130,15 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     @Expose
 	@Nullable
     public Boolean filterOpenInToOnlyManagedApps;
+
+    /**
+     * The Managed Universal Links.
+     * A list of custom urls that are allowed to invocate a managed app
+     */
+    @SerializedName(value = "managedUniversalLinks", alternate = {"ManagedUniversalLinks"})
+    @Expose
+	@Nullable
+    public java.util.List<String> managedUniversalLinks;
 
     /**
      * The Minimum Required Sdk Version.

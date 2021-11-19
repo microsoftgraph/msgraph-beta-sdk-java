@@ -41,7 +41,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Device State.
-     * Computer's state (like clean or pending full scan or pending reboot etc). Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
+     * Computer's state (like clean or pending full scan or pending reboot etc)
      */
     @SerializedName(value = "deviceState", alternate = {"DeviceState"})
     @Expose
@@ -149,7 +149,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Product Status.
-     * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
+     * Product Status of Windows Defender Antivirus
      */
     @SerializedName(value = "productStatus", alternate = {"ProductStatus"})
     @Expose

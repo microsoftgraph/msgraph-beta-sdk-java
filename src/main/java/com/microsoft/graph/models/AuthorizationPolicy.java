@@ -32,7 +32,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Sign Up Email Based Subscriptions.
-     * Indicates whether users can sign up for email based subscriptions.
+     * 
      */
     @SerializedName(value = "allowedToSignUpEmailBasedSubscriptions", alternate = {"AllowedToSignUpEmailBasedSubscriptions"})
     @Expose
@@ -41,7 +41,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allowed To Use SSPR.
-     * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
+     * 
      */
     @SerializedName(value = "allowedToUseSSPR", alternate = {"AllowedToUseSSPR"})
     @Expose
@@ -50,7 +50,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow Email Verified Users To Join Organization.
-     * Indicates whether a user can join the tenant by email validation.
+     * 
      */
     @SerializedName(value = "allowEmailVerifiedUsersToJoinOrganization", alternate = {"AllowEmailVerifiedUsersToJoinOrganization"})
     @Expose
@@ -59,7 +59,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Allow Invites From.
-     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone.  everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * 
      */
     @SerializedName(value = "allowInvitesFrom", alternate = {"AllowInvitesFrom"})
     @Expose
@@ -68,7 +68,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Block Msol Power Shell.
-     * To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
+     * 
      */
     @SerializedName(value = "blockMsolPowerShell", alternate = {"BlockMsolPowerShell"})
     @Expose
@@ -77,7 +77,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Default User Role Permissions.
-     * Specifies certain customizable permissions for default user role.
+     * 
      */
     @SerializedName(value = "defaultUserRolePermissions", alternate = {"DefaultUserRolePermissions"})
     @Expose
@@ -86,7 +86,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Enabled Preview Features.
-     * List of features enabled for private preview on the tenant.
+     * 
      */
     @SerializedName(value = "enabledPreviewFeatures", alternate = {"EnabledPreviewFeatures"})
     @Expose
@@ -95,7 +95,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Guest User Role Id.
-     * Represents role templateId for the role that should be granted to guest user. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * 
      */
     @SerializedName(value = "guestUserRoleId", alternate = {"GuestUserRoleId"})
     @Expose
@@ -104,7 +104,7 @@ public class AuthorizationPolicy extends PolicyBase implements IJsonBackedObject
 
     /**
      * The Permission Grant Policy Ids Assigned To Default User Role.
-     * Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
+     * 
      */
     @SerializedName(value = "permissionGrantPolicyIdsAssignedToDefaultUserRole", alternate = {"PermissionGrantPolicyIdsAssignedToDefaultUserRole"})
     @Expose

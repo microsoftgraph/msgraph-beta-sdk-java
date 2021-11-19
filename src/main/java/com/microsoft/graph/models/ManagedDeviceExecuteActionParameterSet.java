@@ -49,6 +49,15 @@ public class ManagedDeviceExecuteActionParameterSet {
     public Boolean keepUserData;
 
     /**
+     * The persist Esim Data Plan.
+     * 
+     */
+    @SerializedName(value = "persistEsimDataPlan", alternate = {"PersistEsimDataPlan"})
+    @Expose
+	@Nullable
+    public Boolean persistEsimDataPlan;
+
+    /**
      * The device Ids.
      * 
      */
@@ -124,6 +133,7 @@ public class ManagedDeviceExecuteActionParameterSet {
         this.actionName = builder.actionName;
         this.keepEnrollmentData = builder.keepEnrollmentData;
         this.keepUserData = builder.keepUserData;
+        this.persistEsimDataPlan = builder.persistEsimDataPlan;
         this.deviceIds = builder.deviceIds;
         this.notificationTitle = builder.notificationTitle;
         this.notificationBody = builder.notificationBody;
@@ -187,6 +197,21 @@ public class ManagedDeviceExecuteActionParameterSet {
         @Nonnull
         public ManagedDeviceExecuteActionParameterSetBuilder withKeepUserData(@Nullable final Boolean val) {
             this.keepUserData = val;
+            return this;
+        }
+        /**
+         * The persistEsimDataPlan parameter value
+         */
+        @Nullable
+        protected Boolean persistEsimDataPlan;
+        /**
+         * Sets the PersistEsimDataPlan
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagedDeviceExecuteActionParameterSetBuilder withPersistEsimDataPlan(@Nullable final Boolean val) {
+            this.persistEsimDataPlan = val;
             return this;
         }
         /**
@@ -323,6 +348,9 @@ public class ManagedDeviceExecuteActionParameterSet {
         }
         if(this.keepUserData != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("keepUserData", keepUserData));
+        }
+        if(this.persistEsimDataPlan != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("persistEsimDataPlan", persistEsimDataPlan));
         }
         if(this.deviceIds != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("deviceIds", deviceIds));

@@ -39,7 +39,7 @@ public class PersonOrGroupColumn implements IJsonBackedObject {
 
     /**
      * The Allow Multiple Selection.
-     * Indicates whether multiple values can be selected from the source.
+     * 
      */
     @SerializedName(value = "allowMultipleSelection", alternate = {"AllowMultipleSelection"})
     @Expose
@@ -48,7 +48,7 @@ public class PersonOrGroupColumn implements IJsonBackedObject {
 
     /**
      * The Choose From Type.
-     * Whether to allow selection of people only, or people and groups. Must be one of peopleAndGroups or peopleOnly.
+     * 
      */
     @SerializedName(value = "chooseFromType", alternate = {"ChooseFromType"})
     @Expose
@@ -57,7 +57,7 @@ public class PersonOrGroupColumn implements IJsonBackedObject {
 
     /**
      * The Display As.
-     * How to display the information about the person or group chosen. See below.
+     * 
      */
     @SerializedName(value = "displayAs", alternate = {"DisplayAs"})
     @Expose

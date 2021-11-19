@@ -40,7 +40,7 @@ public class ChoiceColumn implements IJsonBackedObject {
 
     /**
      * The Allow Text Entry.
-     * If true, allows custom values that aren't in the configured choices.
+     * 
      */
     @SerializedName(value = "allowTextEntry", alternate = {"AllowTextEntry"})
     @Expose
@@ -49,7 +49,7 @@ public class ChoiceColumn implements IJsonBackedObject {
 
     /**
      * The Choices.
-     * The list of values available for this column.
+     * 
      */
     @SerializedName(value = "choices", alternate = {"Choices"})
     @Expose
@@ -58,7 +58,7 @@ public class ChoiceColumn implements IJsonBackedObject {
 
     /**
      * The Display As.
-     * How the choices are to be presented in the UX. Must be one of checkBoxes, dropDownMenu, or radioButtons
+     * 
      */
     @SerializedName(value = "displayAs", alternate = {"DisplayAs"})
     @Expose

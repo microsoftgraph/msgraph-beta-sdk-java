@@ -30,7 +30,7 @@ public class EducationRubricOutcome extends EducationOutcome implements IJsonBac
 
     /**
      * The Published Rubric Quality Feedback.
-     * A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
+     * 
      */
     @SerializedName(value = "publishedRubricQualityFeedback", alternate = {"PublishedRubricQualityFeedback"})
     @Expose
@@ -39,7 +39,7 @@ public class EducationRubricOutcome extends EducationOutcome implements IJsonBac
 
     /**
      * The Published Rubric Quality Selected Levels.
-     * A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
+     * 
      */
     @SerializedName(value = "publishedRubricQualitySelectedLevels", alternate = {"PublishedRubricQualitySelectedLevels"})
     @Expose
@@ -48,7 +48,7 @@ public class EducationRubricOutcome extends EducationOutcome implements IJsonBac
 
     /**
      * The Rubric Quality Feedback.
-     * A collection of specific feedback for each quality of this rubric.
+     * 
      */
     @SerializedName(value = "rubricQualityFeedback", alternate = {"RubricQualityFeedback"})
     @Expose
@@ -57,7 +57,7 @@ public class EducationRubricOutcome extends EducationOutcome implements IJsonBac
 
     /**
      * The Rubric Quality Selected Levels.
-     * The level that the teacher has selected for each quality while grading this assignment.
+     * 
      */
     @SerializedName(value = "rubricQualitySelectedLevels", alternate = {"RubricQualitySelectedLevels"})
     @Expose

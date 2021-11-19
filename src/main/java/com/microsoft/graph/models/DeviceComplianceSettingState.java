@@ -65,7 +65,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
 
     /**
      * The Platform Type.
-     * Device platform type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, cloudPC, blackberry, palm, unknown.
+     * Device platform type
      */
     @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
@@ -92,7 +92,7 @@ public class DeviceComplianceSettingState extends Entity implements IJsonBackedO
 
     /**
      * The State.
-     * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
+     * The compliance state of the setting
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

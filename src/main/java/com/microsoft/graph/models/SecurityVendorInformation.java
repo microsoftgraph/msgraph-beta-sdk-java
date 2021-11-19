@@ -39,7 +39,7 @@ public class SecurityVendorInformation implements IJsonBackedObject {
 
     /**
      * The Provider.
-     * Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
+     * 
      */
     @SerializedName(value = "provider", alternate = {"Provider"})
     @Expose
@@ -48,7 +48,7 @@ public class SecurityVendorInformation implements IJsonBackedObject {
 
     /**
      * The Provider Version.
-     * Version of the provider or subprovider, if it exists, that generated the alert. Required
+     * 
      */
     @SerializedName(value = "providerVersion", alternate = {"ProviderVersion"})
     @Expose
@@ -57,7 +57,7 @@ public class SecurityVendorInformation implements IJsonBackedObject {
 
     /**
      * The Sub Provider.
-     * Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
+     * 
      */
     @SerializedName(value = "subProvider", alternate = {"SubProvider"})
     @Expose
@@ -66,7 +66,7 @@ public class SecurityVendorInformation implements IJsonBackedObject {
 
     /**
      * The Vendor.
-     * Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
+     * 
      */
     @SerializedName(value = "vendor", alternate = {"Vendor"})
     @Expose
