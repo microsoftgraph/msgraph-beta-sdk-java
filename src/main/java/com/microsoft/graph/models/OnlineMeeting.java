@@ -283,7 +283,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Meeting Attendance Report.
-     * 
+     * The attendance report of an online meeting. Read-only.
      */
     @SerializedName(value = "meetingAttendanceReport", alternate = {"MeetingAttendanceReport"})
     @Expose
@@ -292,7 +292,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Registration.
-     * 
+     * The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
      */
     @SerializedName(value = "registration", alternate = {"Registration"})
     @Expose

@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.WindowsUpdateRolloutSettings;
 import com.microsoft.graph.models.WindowsFeatureUpdateProfileAssignment;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.WindowsFeatureUpdateProfileAssignmentCollectionPage;
@@ -99,6 +100,15 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public java.util.List<String> roleScopeTagIds;
+
+    /**
+     * The Rollout Settings.
+     * The windows update rollout settings, including offer start date time, offer end date time, and days between each set of offers.
+     */
+    @SerializedName(value = "rolloutSettings", alternate = {"RolloutSettings"})
+    @Expose
+	@Nullable
+    public WindowsUpdateRolloutSettings rolloutSettings;
 
     /**
      * The Assignments.
