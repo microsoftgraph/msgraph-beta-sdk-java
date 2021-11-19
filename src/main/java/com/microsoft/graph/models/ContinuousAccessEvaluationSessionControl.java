@@ -40,7 +40,7 @@ public class ContinuousAccessEvaluationSessionControl implements IJsonBackedObje
 
     /**
      * The Mode.
-     * 
+     * Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue.
      */
     @SerializedName(value = "mode", alternate = {"Mode"})
     @Expose

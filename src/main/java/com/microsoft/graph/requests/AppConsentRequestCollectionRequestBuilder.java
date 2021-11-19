@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.AppConsentApprovalRoute;
+import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.AppConsentRequest;
 import com.microsoft.graph.models.ConsentRequestFilterByCurrentUserOptions;
 import java.util.Arrays;
@@ -31,7 +31,7 @@ import com.microsoft.graph.models.AppConsentRequestFilterByCurrentUserParameterS
 public class AppConsentRequestCollectionRequestBuilder extends BaseCollectionRequestBuilder<AppConsentRequest, AppConsentRequestRequestBuilder, AppConsentRequestCollectionResponse, AppConsentRequestCollectionPage, AppConsentRequestCollectionRequest> {
 
     /**
-     * The request builder for this collection of AppConsentApprovalRoute
+     * The request builder for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client

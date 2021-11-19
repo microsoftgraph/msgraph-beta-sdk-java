@@ -44,6 +44,10 @@ public enum DeviceManagementConfigurationTemplateFamily
     */
     ENDPOINT_SECURITY_APPLICATION_CONTROL,
     /**
+    * baseline
+    */
+    BASELINE,
+    /**
     * For DeviceManagementConfigurationTemplateFamily values that were not expected from the service
     */
     UNEXPECTED_VALUE

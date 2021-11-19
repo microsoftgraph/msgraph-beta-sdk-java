@@ -56,6 +56,14 @@ public enum Windows10VpnConnectionType
     */
     CISCO_ANY_CONNECT,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
+    * microsoft Tunnel
+    */
+    MICROSOFT_TUNNEL,
+    /**
     * For Windows10VpnConnectionType values that were not expected from the service
     */
     UNEXPECTED_VALUE

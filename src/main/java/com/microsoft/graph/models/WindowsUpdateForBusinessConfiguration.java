@@ -38,6 +38,15 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
 
     /**
+     * The Allow Windows11Upgrade.
+     * Allow eligible Windows 10 devices to upgrade to the latest version of Windows 11.
+     */
+    @SerializedName(value = "allowWindows11Upgrade", alternate = {"AllowWindows11Upgrade"})
+    @Expose
+	@Nullable
+    public Boolean allowWindows11Upgrade;
+
+    /**
      * The Automatic Update Mode.
      * Automatic update mode. Possible values are: userDefined, notifyDownload, autoInstallAtMaintenanceTime, autoInstallAndRebootAtMaintenanceTime, autoInstallAndRebootAtScheduledTime, autoInstallAndRebootWithoutEndUserControl.
      */
@@ -354,7 +363,7 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 
     /**
      * The Device Update States.
-     * Windows update for business configuration device states.
+     * Windows update for business configuration device states. This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "deviceUpdateStates", alternate = {"DeviceUpdateStates"})
     @Expose
