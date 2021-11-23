@@ -29,7 +29,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Audio Device Name.
-     * 
+     * Specifies the name of the audio device in the room.
      */
     @SerializedName(value = "audioDeviceName", alternate = {"AudioDeviceName"})
     @Expose
@@ -38,7 +38,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Booking Type.
-     * 
+     * Type of room. Possible values are standard, and reserved.
      */
     @SerializedName(value = "bookingType", alternate = {"BookingType"})
     @Expose
@@ -47,7 +47,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Building.
-     * 
+     * Specifies the building name or building number that the room is in.
      */
     @SerializedName(value = "building", alternate = {"Building"})
     @Expose
@@ -56,7 +56,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Capacity.
-     * 
+     * Specifies the capacity of the room.
      */
     @SerializedName(value = "capacity", alternate = {"Capacity"})
     @Expose
@@ -65,7 +65,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Display Device Name.
-     * 
+     * Specifies the name of the display device in the room.
      */
     @SerializedName(value = "displayDeviceName", alternate = {"DisplayDeviceName"})
     @Expose
@@ -74,7 +74,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Email Address.
-     * 
+     * Email address of the room.
      */
     @SerializedName(value = "emailAddress", alternate = {"EmailAddress"})
     @Expose
@@ -83,7 +83,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Floor Label.
-     * 
+     * Specifies a descriptive label for the floor, for example, P.
      */
     @SerializedName(value = "floorLabel", alternate = {"FloorLabel"})
     @Expose
@@ -92,7 +92,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Floor Number.
-     * 
+     * Specifies the floor number that the room is on.
      */
     @SerializedName(value = "floorNumber", alternate = {"FloorNumber"})
     @Expose
@@ -101,7 +101,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Is Wheel Chair Accessible.
-     * 
+     * Specifies whether the room is wheelchair accessible.
      */
     @SerializedName(value = "isWheelChairAccessible", alternate = {"IsWheelChairAccessible"})
     @Expose
@@ -110,7 +110,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Label.
-     * 
+     * Specifies a descriptive label for the room, for example, a number or name.
      */
     @SerializedName(value = "label", alternate = {"Label"})
     @Expose
@@ -119,7 +119,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Nickname.
-     * 
+     * Specifies a nickname for the room, for example, 'conf room'.
      */
     @SerializedName(value = "nickname", alternate = {"Nickname"})
     @Expose
@@ -128,7 +128,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * Specifies additional features of the room, for example, details like the type of view or furniture type.
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -137,7 +137,7 @@ public class Room extends Place implements IJsonBackedObject {
 
     /**
      * The Video Device Name.
-     * 
+     * Specifies the name of the video device in the room.
      */
     @SerializedName(value = "videoDeviceName", alternate = {"VideoDeviceName"})
     @Expose

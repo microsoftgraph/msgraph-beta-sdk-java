@@ -29,7 +29,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements IJ
 
     /**
      * The Statuses.
-     * 
+     * The collection of deployment status for each instance of a management action. Optional.
      */
     @SerializedName(value = "statuses", alternate = {"Statuses"})
     @Expose
@@ -38,7 +38,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements IJ
 
     /**
      * The Tenant Group Id.
-     * 
+     * The identifier for the tenant group that is associated with the management action. Required. Read-only.
      */
     @SerializedName(value = "tenantGroupId", alternate = {"TenantGroupId"})
     @Expose
@@ -47,7 +47,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements IJ
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

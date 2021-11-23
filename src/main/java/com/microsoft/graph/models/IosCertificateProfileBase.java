@@ -30,7 +30,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
 
     /**
      * The Certificate Validity Period Scale.
-     * Scale for the Certificate Validity Period.
+     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
      */
     @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose
@@ -57,7 +57,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
 
     /**
      * The Subject Alternative Name Type.
-     * Certificate Subject Alternative Name type.
+     * Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      */
     @SerializedName(value = "subjectAlternativeNameType", alternate = {"SubjectAlternativeNameType"})
     @Expose
@@ -66,7 +66,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
 
     /**
      * The Subject Name Format.
-     * Certificate Subject Name Format.
+     * Certificate Subject Name Format. Possible values are: commonName, commonNameAsEmail, custom, commonNameIncludingEmail, commonNameAsIMEI, commonNameAsSerialNumber.
      */
     @SerializedName(value = "subjectNameFormat", alternate = {"SubjectNameFormat"})
     @Expose

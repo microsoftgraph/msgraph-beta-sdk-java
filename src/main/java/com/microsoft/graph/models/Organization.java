@@ -41,7 +41,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Plans.
-     * 
+     * The collection of service plans associated with the tenant. Not nullable.
      */
     @SerializedName(value = "assignedPlans", alternate = {"AssignedPlans"})
     @Expose
@@ -50,7 +50,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Business Phones.
-     * 
+     * Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
      */
     @SerializedName(value = "businessPhones", alternate = {"BusinessPhones"})
     @Expose
@@ -59,7 +59,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The City.
-     * 
+     * City name of the address for the organization.
      */
     @SerializedName(value = "city", alternate = {"City"})
     @Expose
@@ -68,7 +68,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country.
-     * 
+     * Country/region name of the address for the organization.
      */
     @SerializedName(value = "country", alternate = {"Country"})
     @Expose
@@ -77,7 +77,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Country Letter Code.
-     * 
+     * Country or region abbreviation for the organization in ISO 3166-2 format.
      */
     @SerializedName(value = "countryLetterCode", alternate = {"CountryLetterCode"})
     @Expose
@@ -86,7 +86,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Directory Size Quota.
-     * 
+     * The directory size quota information of an organization.
      */
     @SerializedName(value = "directorySizeQuota", alternate = {"DirectorySizeQuota"})
     @Expose
@@ -104,7 +104,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the tenant.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -113,7 +113,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Multiple Data Locations For Services Enabled.
-     * 
+     * true if organization is Multi-Geo enabled; false if organization is not Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
      */
     @SerializedName(value = "isMultipleDataLocationsForServicesEnabled", alternate = {"IsMultipleDataLocationsForServicesEnabled"})
     @Expose
@@ -122,7 +122,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Marketing Notification Emails.
-     * 
+     * Not nullable.
      */
     @SerializedName(value = "marketingNotificationEmails", alternate = {"MarketingNotificationEmails"})
     @Expose
@@ -131,7 +131,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Last Sync Date Time.
-     * 
+     * The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "onPremisesLastSyncDateTime", alternate = {"OnPremisesLastSyncDateTime"})
     @Expose
@@ -140,7 +140,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Sync Enabled.
-     * 
+     * true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
      */
     @SerializedName(value = "onPremisesSyncEnabled", alternate = {"OnPremisesSyncEnabled"})
     @Expose
@@ -149,7 +149,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Postal Code.
-     * 
+     * Postal code of the address for the organization.
      */
     @SerializedName(value = "postalCode", alternate = {"PostalCode"})
     @Expose
@@ -158,7 +158,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Preferred Language.
-     * 
+     * The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.
      */
     @SerializedName(value = "preferredLanguage", alternate = {"PreferredLanguage"})
     @Expose
@@ -167,7 +167,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Privacy Profile.
-     * 
+     * The privacy profile of an organization.
      */
     @SerializedName(value = "privacyProfile", alternate = {"PrivacyProfile"})
     @Expose
@@ -176,7 +176,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Provisioned Plans.
-     * 
+     * Not nullable.
      */
     @SerializedName(value = "provisionedPlans", alternate = {"ProvisionedPlans"})
     @Expose
@@ -203,7 +203,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * State name of the address for the organization.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -212,7 +212,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Street.
-     * 
+     * Street name of the address for organization.
      */
     @SerializedName(value = "street", alternate = {"Street"})
     @Expose
@@ -221,7 +221,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Technical Notification Mails.
-     * 
+     * Not nullable.
      */
     @SerializedName(value = "technicalNotificationMails", alternate = {"TechnicalNotificationMails"})
     @Expose
@@ -230,7 +230,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Verified Domains.
-     * 
+     * The collection of domains associated with this tenant. Not nullable.
      */
     @SerializedName(value = "verifiedDomains", alternate = {"VerifiedDomains"})
     @Expose
@@ -248,7 +248,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Mobile Device Management Authority.
-     * Mobile device management authority.
+     * Mobile device management authority. Possible values are: unknown, intune, sccm, office365.
      */
     @SerializedName(value = "mobileDeviceManagementAuthority", alternate = {"MobileDeviceManagementAuthority"})
     @Expose
@@ -266,14 +266,14 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Certificate Based Auth Configuration.
-     * 
+     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      */
 	@Nullable
     public CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
 
     /**
      * The Extensions.
-     * 
+     * The collection of open extensions defined for the organization. Read-only. Nullable.
      */
     @SerializedName(value = "extensions", alternate = {"Extensions"})
     @Expose
@@ -282,7 +282,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * 
+     * Retrieve the properties and relationships of organizationSettings object. Nullable.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose

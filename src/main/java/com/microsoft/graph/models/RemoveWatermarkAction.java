@@ -28,7 +28,7 @@ public class RemoveWatermarkAction extends InformationProtectionAction implement
 
     /**
      * The Ui Element Names.
-     * 
+     * The name of the UI element of footer to be removed.
      */
     @SerializedName(value = "uiElementNames", alternate = {"UiElementNames"})
     @Expose

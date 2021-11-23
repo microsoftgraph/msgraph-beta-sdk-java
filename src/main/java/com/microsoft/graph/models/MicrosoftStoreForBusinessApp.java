@@ -32,7 +32,7 @@ public class MicrosoftStoreForBusinessApp extends MobileApp implements IJsonBack
 
     /**
      * The License Type.
-     * The app license type
+     * The app license type. Possible values are: offline, online.
      */
     @SerializedName(value = "licenseType", alternate = {"LicenseType"})
     @Expose

@@ -55,7 +55,7 @@ public class DeviceInstallState extends Entity implements IJsonBackedObject {
 
     /**
      * The Install State.
-     * The install state of the eBook.
+     * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed, unknown.
      */
     @SerializedName(value = "installState", alternate = {"InstallState"})
     @Expose

@@ -27,7 +27,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Compliance Policy Id.
-     * 
+     * Identifier for the device compliance policy. Optional. Read-only.
      */
     @SerializedName(value = "compliancePolicyId", alternate = {"CompliancePolicyId"})
     @Expose
@@ -36,7 +36,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Compliance Policy Name.
-     * 
+     * Name of the device compliance policy. Optional. Read-only.
      */
     @SerializedName(value = "compliancePolicyName", alternate = {"CompliancePolicyName"})
     @Expose
@@ -45,7 +45,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Compliance Policy Platform.
-     * 
+     * Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
      */
     @SerializedName(value = "compliancePolicyPlatform", alternate = {"CompliancePolicyPlatform"})
     @Expose
@@ -54,7 +54,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Compliance Policy Type.
-     * 
+     * The type of compliance policy. Optional. Read-only.
      */
     @SerializedName(value = "compliancePolicyType", alternate = {"CompliancePolicyType"})
     @Expose
@@ -63,7 +63,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -72,7 +72,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Number Of Compliant Devices.
-     * 
+     * The number of devices that are in a compliant status. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCompliantDevices", alternate = {"NumberOfCompliantDevices"})
     @Expose
@@ -81,7 +81,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Number Of Error Devices.
-     * 
+     * The number of devices that are in an error status. Optional. Read-only.
      */
     @SerializedName(value = "numberOfErrorDevices", alternate = {"NumberOfErrorDevices"})
     @Expose
@@ -90,7 +90,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Number Of Non Compliant Devices.
-     * 
+     * The number of device that are in a non-compliant status. Optional. Read-only.
      */
     @SerializedName(value = "numberOfNonCompliantDevices", alternate = {"NumberOfNonCompliantDevices"})
     @Expose
@@ -99,7 +99,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Policy Modified Date Time.
-     * 
+     * The date and time the device policy was last modified. Optional. Read-only.
      */
     @SerializedName(value = "policyModifiedDateTime", alternate = {"PolicyModifiedDateTime"})
     @Expose
@@ -108,7 +108,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -117,7 +117,7 @@ public class AggregatedPolicyCompliance extends Entity implements IJsonBackedObj
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

@@ -114,7 +114,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
     /**
      * The Compliant App List Type.
-     * List that is in the CompliantAppsList.
+     * List that is in the CompliantAppsList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
      */
     @SerializedName(value = "compliantAppListType", alternate = {"CompliantAppListType"})
     @Expose
@@ -438,7 +438,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
     /**
      * The Password Required Type.
-     * Type of password that is required.
+     * Type of password that is required. Possible values are: deviceDefault, alphanumeric, numeric.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -519,7 +519,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
 
     /**
      * The Update Delay Policy.
-     * Determines whether to delay OS and/or app updates for macOS.
+     * Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
      */
     @SerializedName(value = "updateDelayPolicy", alternate = {"UpdateDelayPolicy"})
     @Expose

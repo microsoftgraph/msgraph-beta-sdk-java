@@ -33,7 +33,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the onPremisesAgentGroup.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -42,7 +42,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default.
-     * 
+     * Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -51,7 +51,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Publishing Type.
-     * 
+     * Possible values are: applicationProxy, exchangeOnline, authentication, provisioning, adAdministration.
      */
     @SerializedName(value = "publishingType", alternate = {"PublishingType"})
     @Expose
@@ -60,7 +60,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Agents.
-     * 
+     * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      */
     @SerializedName(value = "agents", alternate = {"Agents"})
     @Expose
@@ -69,7 +69,7 @@ public class OnPremisesAgentGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Published Resources.
-     * 
+     * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      */
     @SerializedName(value = "publishedResources", alternate = {"PublishedResources"})
     @Expose

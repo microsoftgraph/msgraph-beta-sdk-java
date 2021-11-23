@@ -27,7 +27,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
 
     /**
      * The Password.
-     * 
+     * The password. It is not returned in the responses.
      */
     @SerializedName(value = "password", alternate = {"Password"})
     @Expose
@@ -36,7 +36,7 @@ public class BasicAuthentication extends ApiAuthenticationConfigurationBase impl
 
     /**
      * The Username.
-     * 
+     * The username.
      */
     @SerializedName(value = "username", alternate = {"Username"})
     @Expose

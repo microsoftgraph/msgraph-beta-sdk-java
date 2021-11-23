@@ -41,7 +41,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Conference Id.
-     * 
+     * The ID of the conference.
      */
     @SerializedName(value = "conferenceId", alternate = {"ConferenceId"})
     @Expose
@@ -50,7 +50,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Join Url.
-     * 
+     * The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
      */
     @SerializedName(value = "joinUrl", alternate = {"JoinUrl"})
     @Expose
@@ -59,7 +59,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Phones.
-     * 
+     * All of the phone numbers associated with this conference.
      */
     @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
@@ -68,7 +68,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Quick Dial.
-     * 
+     * The pre-formatted quickdial for this call.
      */
     @SerializedName(value = "quickDial", alternate = {"QuickDial"})
     @Expose
@@ -77,7 +77,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Toll Free Numbers.
-     * 
+     * The toll free numbers that can be used to join the conference.
      */
     @SerializedName(value = "tollFreeNumbers", alternate = {"TollFreeNumbers"})
     @Expose
@@ -86,7 +86,7 @@ public class OnlineMeetingInfo implements IJsonBackedObject {
 
     /**
      * The Toll Number.
-     * 
+     * The toll number that can be used to join the conference.
      */
     @SerializedName(value = "tollNumber", alternate = {"TollNumber"})
     @Expose

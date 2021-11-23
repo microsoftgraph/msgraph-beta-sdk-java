@@ -27,7 +27,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
 
     /**
      * The Certificate Data.
-     * 
+     * The certificate data, which is a long string of text from the certificate. Can be null.
      */
     @SerializedName(value = "certificateData", alternate = {"CertificateData"})
     @Expose
@@ -36,7 +36,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
 
     /**
      * The Developer Id.
-     * 
+     * The Apple developer identifier. Required.
      */
     @SerializedName(value = "developerId", alternate = {"DeveloperId"})
     @Expose
@@ -45,7 +45,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
 
     /**
      * The Key Id.
-     * 
+     * The Apple key identifier. Required.
      */
     @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose
@@ -54,7 +54,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
 
     /**
      * The Service Id.
-     * 
+     * The Apple service identifier. Required.
      */
     @SerializedName(value = "serviceId", alternate = {"ServiceId"})
     @Expose

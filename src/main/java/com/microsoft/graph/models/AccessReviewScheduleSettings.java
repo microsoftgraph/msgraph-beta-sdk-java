@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessReviewApplyAction;
+import com.microsoft.graph.models.AccessReviewRecommendationInsightSetting;
 import com.microsoft.graph.models.PatternedRecurrence;
 
 
@@ -42,7 +43,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Apply Actions.
-     * 
+     * Optional field. Describes the  actions to take once a review is complete. There are two types that are currently supported: removeAccessApplyAction (default) and disableAndDeleteUserApplyAction. Field only needs to be specified in the case of disableAndDeleteUserApplyAction.
      */
     @SerializedName(value = "applyActions", alternate = {"ApplyActions"})
     @Expose
@@ -51,7 +52,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Auto Apply Decisions Enabled.
-     * 
+     * Indicates whether decisions are automatically applied. When set to false, an admin must apply the decisions manually once the reviewer completes the access review. When set to true, decisions are applied automatically after the access review instance duration ends, whether or not the reviewers have responded. Default value is false.
      */
     @SerializedName(value = "autoApplyDecisionsEnabled", alternate = {"AutoApplyDecisionsEnabled"})
     @Expose
@@ -60,7 +61,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision.
-     * 
+     * Decision chosen if defaultDecisionEnabled is true. Can be one of Approve, Deny, or Recommendation.
      */
     @SerializedName(value = "defaultDecision", alternate = {"DefaultDecision"})
     @Expose
@@ -69,7 +70,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Default Decision Enabled.
-     * 
+     * Indicates whether the default decision is enabled or disabled when reviewers do not respond. Default value is false.
      */
     @SerializedName(value = "defaultDecisionEnabled", alternate = {"DefaultDecisionEnabled"})
     @Expose
@@ -78,7 +79,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Instance Duration In Days.
-     * 
+     * Duration of each recurrence of review (accessReviewInstance) in number of days.
      */
     @SerializedName(value = "instanceDurationInDays", alternate = {"InstanceDurationInDays"})
     @Expose
@@ -87,7 +88,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Justification Required On Approval.
-     * 
+     * Indicates whether reviewers are required to provide justification with their decision. Default value is false.
      */
     @SerializedName(value = "justificationRequiredOnApproval", alternate = {"JustificationRequiredOnApproval"})
     @Expose
@@ -96,7 +97,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Mail Notifications Enabled.
-     * 
+     * Indicates whether emails are enabled or disabled. Default value is false.
      */
     @SerializedName(value = "mailNotificationsEnabled", alternate = {"MailNotificationsEnabled"})
     @Expose
@@ -104,8 +105,17 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
     public Boolean mailNotificationsEnabled;
 
     /**
-     * The Recommendation Look Back Duration.
+     * The Recommendation Insight Settings.
      * 
+     */
+    @SerializedName(value = "recommendationInsightSettings", alternate = {"RecommendationInsightSettings"})
+    @Expose
+	@Nullable
+    public java.util.List<AccessReviewRecommendationInsightSetting> recommendationInsightSettings;
+
+    /**
+     * The Recommendation Look Back Duration.
+     * Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
      */
     @SerializedName(value = "recommendationLookBackDuration", alternate = {"RecommendationLookBackDuration"})
     @Expose
@@ -114,7 +124,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recommendations Enabled.
-     * 
+     * Indicates whether decision recommendations are enabled or disabled.
      */
     @SerializedName(value = "recommendationsEnabled", alternate = {"RecommendationsEnabled"})
     @Expose
@@ -123,7 +133,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * 
+     * Detailed settings for recurrence using the standard Outlook recurrence object. Only weekly and absoluteMonthly on recurrencePattern are supported. Use the property startDate on recurrenceRange to determine the day the review starts.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
@@ -132,7 +142,7 @@ public class AccessReviewScheduleSettings implements IJsonBackedObject {
 
     /**
      * The Reminder Notifications Enabled.
-     * 
+     * Indicates whether reminders are enabled or disabled. Default value is false.
      */
     @SerializedName(value = "reminderNotificationsEnabled", alternate = {"ReminderNotificationsEnabled"})
     @Expose

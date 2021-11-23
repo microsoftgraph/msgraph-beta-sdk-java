@@ -29,7 +29,7 @@ public class CommsOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Context.
-     * 
+     * Unique Client Context string. Max limit is 256 chars.
      */
     @SerializedName(value = "clientContext", alternate = {"ClientContext"})
     @Expose
@@ -38,7 +38,7 @@ public class CommsOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Result Info.
-     * 
+     * The result information. Read-only.
      */
     @SerializedName(value = "resultInfo", alternate = {"ResultInfo"})
     @Expose
@@ -47,7 +47,7 @@ public class CommsOperation extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Possible values are: notStarted, running, completed, failed. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -8,6 +8,10 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Directory;
+import com.microsoft.graph.requests.RecommendationResourceCollectionRequestBuilder;
+import com.microsoft.graph.requests.RecommendationResourceRequestBuilder;
+import com.microsoft.graph.requests.RecommendationCollectionRequestBuilder;
+import com.microsoft.graph.requests.RecommendationRequestBuilder;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionRequestBuilder;
 import com.microsoft.graph.requests.AdministrativeUnitRequestBuilder;
 import com.microsoft.graph.requests.AttributeSetCollectionRequestBuilder;
@@ -21,6 +25,10 @@ import com.microsoft.graph.requests.GroupRequestBuilder;
 import com.microsoft.graph.requests.ApplicationRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionRequestBuilder;
 import com.microsoft.graph.requests.IdentityProviderBaseRequestBuilder;
+import com.microsoft.graph.requests.InboundSharedUserProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.InboundSharedUserProfileRequestBuilder;
+import com.microsoft.graph.requests.OutboundSharedUserProfileCollectionRequestBuilder;
+import com.microsoft.graph.requests.OutboundSharedUserProfileRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionRequestBuilder;
 import com.microsoft.graph.requests.SharedEmailDomainRequestBuilder;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequestBuilder;
@@ -73,6 +81,46 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     }
 
 
+    /**
+     *  Gets a request builder for the RecommendationResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RecommendationResourceCollectionRequestBuilder impactedResources() {
+        return new RecommendationResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("impactedResources"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the RecommendationResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RecommendationResourceRequestBuilder impactedResources(@Nonnull final String id) {
+        return new RecommendationResourceRequestBuilder(getRequestUrlWithAdditionalSegment("impactedResources") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Recommendation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public RecommendationCollectionRequestBuilder recommendations() {
+        return new RecommendationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recommendations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Recommendation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public RecommendationRequestBuilder recommendations(@Nonnull final String id) {
+        return new RecommendationRequestBuilder(getRequestUrlWithAdditionalSegment("recommendations") + "/" + id, getClient(), null);
+    }
     /**
      *  Gets a request builder for the AdministrativeUnit collection
      *
@@ -232,6 +280,46 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
     @Nonnull
     public IdentityProviderBaseRequestBuilder federationConfigurations(@Nonnull final String id) {
         return new IdentityProviderBaseRequestBuilder(getRequestUrlWithAdditionalSegment("federationConfigurations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the InboundSharedUserProfile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public InboundSharedUserProfileCollectionRequestBuilder inboundSharedUserProfiles() {
+        return new InboundSharedUserProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("inboundSharedUserProfiles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the InboundSharedUserProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public InboundSharedUserProfileRequestBuilder inboundSharedUserProfiles(@Nonnull final String id) {
+        return new InboundSharedUserProfileRequestBuilder(getRequestUrlWithAdditionalSegment("inboundSharedUserProfiles") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the OutboundSharedUserProfile collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public OutboundSharedUserProfileCollectionRequestBuilder outboundSharedUserProfiles() {
+        return new OutboundSharedUserProfileCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("outboundSharedUserProfiles"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the OutboundSharedUserProfile item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public OutboundSharedUserProfileRequestBuilder outboundSharedUserProfiles(@Nonnull final String id) {
+        return new OutboundSharedUserProfileRequestBuilder(getRequestUrlWithAdditionalSegment("outboundSharedUserProfiles") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the SharedEmailDomain collection

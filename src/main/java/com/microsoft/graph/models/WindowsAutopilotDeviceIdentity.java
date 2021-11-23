@@ -67,7 +67,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
     /**
      * The Deployment Profile Assignment Detailed Status.
-     * Profile assignment detailed status of the Windows autopilot device.
+     * Profile assignment detailed status of the Windows autopilot device. Possible values are: none, hardwareRequirementsNotMet, surfaceHubProfileNotSupported, holoLensProfileNotSupported, windowsPcProfileNotSupported, surfaceHub2SProfileNotSupported, unknownFutureValue.
      */
     @SerializedName(value = "deploymentProfileAssignmentDetailedStatus", alternate = {"DeploymentProfileAssignmentDetailedStatus"})
     @Expose
@@ -76,7 +76,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
     /**
      * The Deployment Profile Assignment Status.
-     * Profile assignment status of the Windows autopilot device.
+     * Profile assignment status of the Windows autopilot device. Possible values are: unknown, assignedInSync, assignedOutOfSync, assignedUnkownSyncState, notAssigned, pending, failed.
      */
     @SerializedName(value = "deploymentProfileAssignmentStatus", alternate = {"DeploymentProfileAssignmentStatus"})
     @Expose
@@ -94,7 +94,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements IJsonBacke
 
     /**
      * The Enrollment State.
-     * Intune enrollment state of the Windows autopilot device.
+     * Intune enrollment state of the Windows autopilot device. Possible values are: unknown, enrolled, pendingReset, failed, notContacted.
      */
     @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose

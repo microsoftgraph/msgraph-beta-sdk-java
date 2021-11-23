@@ -44,7 +44,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Application Enforced Restrictions.
-     * 
+     * Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
      */
     @SerializedName(value = "applicationEnforcedRestrictions", alternate = {"ApplicationEnforcedRestrictions"})
     @Expose
@@ -53,7 +53,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Cloud App Security.
-     * 
+     * Session control to apply cloud app security.
      */
     @SerializedName(value = "cloudAppSecurity", alternate = {"CloudAppSecurity"})
     @Expose
@@ -62,7 +62,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Continuous Access Evaluation.
-     * 
+     * Session control for continuous access evaluation settings.
      */
     @SerializedName(value = "continuousAccessEvaluation", alternate = {"ContinuousAccessEvaluation"})
     @Expose
@@ -71,7 +71,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Disable Resilience Defaults.
-     * 
+     * Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
      */
     @SerializedName(value = "disableResilienceDefaults", alternate = {"DisableResilienceDefaults"})
     @Expose
@@ -80,7 +80,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Persistent Browser.
-     * 
+     * Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      */
     @SerializedName(value = "persistentBrowser", alternate = {"PersistentBrowser"})
     @Expose
@@ -89,7 +89,7 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
 
     /**
      * The Sign In Frequency.
-     * 
+     * Session control to enforce signin frequency.
      */
     @SerializedName(value = "signInFrequency", alternate = {"SignInFrequency"})
     @Expose

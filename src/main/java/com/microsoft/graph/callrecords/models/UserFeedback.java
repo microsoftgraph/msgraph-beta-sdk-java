@@ -41,7 +41,7 @@ public class UserFeedback implements IJsonBackedObject {
 
     /**
      * The Rating.
-     * 
+     * The rating provided by the user of this endpoint about the quality of this Session. Possible values are: notRated, bad, poor, fair, good, excellent, unknownFutureValue.
      */
     @SerializedName(value = "rating", alternate = {"Rating"})
     @Expose
@@ -50,7 +50,7 @@ public class UserFeedback implements IJsonBackedObject {
 
     /**
      * The Text.
-     * 
+     * The feedback text provided by the user of this endpoint for the session.
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose
@@ -59,7 +59,7 @@ public class UserFeedback implements IJsonBackedObject {
 
     /**
      * The Tokens.
-     * 
+     * The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user.
      */
     @SerializedName(value = "tokens", alternate = {"Tokens"})
     @Expose

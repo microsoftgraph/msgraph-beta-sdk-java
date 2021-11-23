@@ -27,7 +27,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
 
     /**
      * The Version.
-     * 
+     * The version of the feature update. Read-only.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

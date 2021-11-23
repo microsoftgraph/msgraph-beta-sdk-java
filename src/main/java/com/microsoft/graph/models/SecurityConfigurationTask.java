@@ -34,7 +34,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
 
     /**
      * The Applicable Platform.
-     * The applicable platform.
+     * The applicable platform. Possible values are: unknown, macOS, windows10AndLater, windows10AndWindowsServer.
      */
     @SerializedName(value = "applicablePlatform", alternate = {"ApplicablePlatform"})
     @Expose
@@ -43,7 +43,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
 
     /**
      * The Endpoint Security Policy.
-     * The endpoint security policy type.
+     * The endpoint security policy type. Possible values are: unknown, antivirus, diskEncryption, firewall, endpointDetectionAndResponse, attackSurfaceReduction, accountProtection.
      */
     @SerializedName(value = "endpointSecurityPolicy", alternate = {"EndpointSecurityPolicy"})
     @Expose
@@ -52,7 +52,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
 
     /**
      * The Endpoint Security Policy Profile.
-     * The endpoint security policy profile.
+     * The endpoint security policy profile. Possible values are: unknown, antivirus, windowsSecurity, bitLocker, fileVault, firewall, firewallRules, endpointDetectionAndResponse, deviceControl, appAndBrowserIsolation, exploitProtection, webProtection, applicationControl, attackSurfaceReductionRules, accountProtection.
      */
     @SerializedName(value = "endpointSecurityPolicyProfile", alternate = {"EndpointSecurityPolicyProfile"})
     @Expose

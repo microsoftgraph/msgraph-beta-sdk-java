@@ -38,7 +38,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
 
     /**
      * The Detection Type.
-     * The registry data detection type
+     * The registry data detection type. Possible values are: notConfigured, exists, doesNotExist, string, integer, version.
      */
     @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose
@@ -65,7 +65,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
 
     /**
      * The Operator.
-     * The operator for registry data detection
+     * The operator for registry data detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

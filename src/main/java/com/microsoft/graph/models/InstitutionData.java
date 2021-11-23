@@ -40,7 +40,7 @@ public class InstitutionData implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Short description of the institution the user studied at.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +49,7 @@ public class InstitutionData implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the institution the user studied at.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class InstitutionData implements IJsonBackedObject {
 
     /**
      * The Location.
-     * 
+     * Address or location of the institute.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -67,7 +67,7 @@ public class InstitutionData implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Link to the institution or department homepage.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

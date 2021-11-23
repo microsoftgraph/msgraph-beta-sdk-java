@@ -39,7 +39,7 @@ public class WorkbookIcon implements IJsonBackedObject {
 
     /**
      * The Index.
-     * 
+     * Represents the index of the icon in the given set.
      */
     @SerializedName(value = "index", alternate = {"Index"})
     @Expose
@@ -48,7 +48,7 @@ public class WorkbookIcon implements IJsonBackedObject {
 
     /**
      * The Set.
-     * 
+     * Represents the set that the icon is part of. The possible values are: Invalid, ThreeArrows, ThreeArrowsGray, ThreeFlags, ThreeTrafficLights1, ThreeTrafficLights2, ThreeSigns, ThreeSymbols, ThreeSymbols2, FourArrows, FourArrowsGray, FourRedToBlack, FourRating, FourTrafficLights, FiveArrows, FiveArrowsGray, FiveRating, FiveQuarters, ThreeStars, ThreeTriangles, FiveBoxes.
      */
     @SerializedName(value = "set", alternate = {"Set"})
     @Expose

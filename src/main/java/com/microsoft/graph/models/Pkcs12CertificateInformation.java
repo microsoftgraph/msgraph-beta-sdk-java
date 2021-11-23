@@ -39,7 +39,7 @@ public class Pkcs12CertificateInformation implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * 
+     * Represents whether the certificate is the active certificate to be used for calling the API connector. The active certificate is the most recently uploaded certificate which is not yet expired but whose notBefore time is in the past.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -48,7 +48,7 @@ public class Pkcs12CertificateInformation implements IJsonBackedObject {
 
     /**
      * The Not After.
-     * 
+     * The certificate's expiry. This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      */
     @SerializedName(value = "notAfter", alternate = {"NotAfter"})
     @Expose
@@ -57,7 +57,7 @@ public class Pkcs12CertificateInformation implements IJsonBackedObject {
 
     /**
      * The Not Before.
-     * 
+     * The certificate's issue time (not before). This value is a NumericDate as defined in RFC 7519 (A JSON numeric value representing the number of seconds from 1970-01-01T00:00:00Z UTC until the specified UTC date/time, ignoring leap seconds.)
      */
     @SerializedName(value = "notBefore", alternate = {"NotBefore"})
     @Expose
@@ -66,7 +66,7 @@ public class Pkcs12CertificateInformation implements IJsonBackedObject {
 
     /**
      * The Thumbprint.
-     * 
+     * The certificate thumbprint.
      */
     @SerializedName(value = "thumbprint", alternate = {"Thumbprint"})
     @Expose

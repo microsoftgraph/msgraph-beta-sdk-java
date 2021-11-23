@@ -56,7 +56,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Api.
-     * 
+     * Specifies settings for an application that implements a web API.
      */
     @SerializedName(value = "api", alternate = {"Api"})
     @Expose
@@ -65,7 +65,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * 
+     * The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -74,7 +74,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Roles.
-     * 
+     * The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      */
     @SerializedName(value = "appRoles", alternate = {"AppRoles"})
     @Expose
@@ -83,7 +83,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -92,7 +92,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Default Redirect Uri.
-     * 
+     * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
      */
     @SerializedName(value = "defaultRedirectUri", alternate = {"DefaultRedirectUri"})
     @Expose
@@ -101,7 +101,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * An optional description of the application. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -110,7 +110,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Disabled By Microsoft Status.
-     * 
+     * Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
      */
     @SerializedName(value = "disabledByMicrosoftStatus", alternate = {"DisabledByMicrosoftStatus"})
     @Expose
@@ -119,7 +119,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -128,7 +128,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Group Membership Claims.
-     * 
+     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
      */
     @SerializedName(value = "groupMembershipClaims", alternate = {"GroupMembershipClaims"})
     @Expose
@@ -137,7 +137,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Identifier Uris.
-     * 
+     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://&amp;lt;application-client-id&amp;gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      */
     @SerializedName(value = "identifierUris", alternate = {"IdentifierUris"})
     @Expose
@@ -146,7 +146,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Info.
-     * 
+     * Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      */
     @SerializedName(value = "info", alternate = {"Info"})
     @Expose
@@ -155,7 +155,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Device Only Auth Supported.
-     * 
+     * Specifies whether this application supports device authentication without a user. The default is false.
      */
     @SerializedName(value = "isDeviceOnlyAuthSupported", alternate = {"IsDeviceOnlyAuthSupported"})
     @Expose
@@ -164,7 +164,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Fallback Public Client.
-     * 
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
      */
     @SerializedName(value = "isFallbackPublicClient", alternate = {"IsFallbackPublicClient"})
     @Expose
@@ -173,7 +173,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Key Credentials.
-     * 
+     * The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
      */
     @SerializedName(value = "keyCredentials", alternate = {"KeyCredentials"})
     @Expose
@@ -182,7 +182,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * 
+     * Notes relevant for the management of the application.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -191,7 +191,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Optional Claims.
-     * 
+     * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
      */
     @SerializedName(value = "optionalClaims", alternate = {"OptionalClaims"})
     @Expose
@@ -200,7 +200,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Parental Control Settings.
-     * 
+     * Specifies parental control settings for an application.
      */
     @SerializedName(value = "parentalControlSettings", alternate = {"ParentalControlSettings"})
     @Expose
@@ -209,7 +209,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Password Credentials.
-     * 
+     * The collection of password credentials associated with the application. Not nullable.
      */
     @SerializedName(value = "passwordCredentials", alternate = {"PasswordCredentials"})
     @Expose
@@ -218,7 +218,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Public Client.
-     * 
+     * Specifies settings for installed clients such as desktop or mobile devices.
      */
     @SerializedName(value = "publicClient", alternate = {"PublicClient"})
     @Expose
@@ -227,7 +227,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Publisher Domain.
-     * 
+     * The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
      */
     @SerializedName(value = "publisherDomain", alternate = {"PublisherDomain"})
     @Expose
@@ -236,7 +236,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Required Resource Access.
-     * 
+     * Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).
      */
     @SerializedName(value = "requiredResourceAccess", alternate = {"RequiredResourceAccess"})
     @Expose
@@ -245,7 +245,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Audience.
-     * 
+     * Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).
      */
     @SerializedName(value = "signInAudience", alternate = {"SignInAudience"})
     @Expose
@@ -254,7 +254,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Spa.
-     * 
+     * Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
      */
     @SerializedName(value = "spa", alternate = {"Spa"})
     @Expose
@@ -263,7 +263,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Tags.
-     * 
+     * Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
      */
     @SerializedName(value = "tags", alternate = {"Tags"})
     @Expose
@@ -272,7 +272,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Token Encryption Key Id.
-     * 
+     * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      */
     @SerializedName(value = "tokenEncryptionKeyId", alternate = {"TokenEncryptionKeyId"})
     @Expose
@@ -281,7 +281,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Unique Name.
-     * 
+     * The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
      */
     @SerializedName(value = "uniqueName", alternate = {"UniqueName"})
     @Expose
@@ -290,7 +290,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Verified Publisher.
-     * 
+     * Specifies the verified publisher of the application.
      */
     @SerializedName(value = "verifiedPublisher", alternate = {"VerifiedPublisher"})
     @Expose
@@ -299,7 +299,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Web.
-     * 
+     * Specifies settings for a web application.
      */
     @SerializedName(value = "web", alternate = {"Web"})
     @Expose
@@ -308,7 +308,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The On Premises Publishing.
-     * 
+     * Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
      */
     @SerializedName(value = "onPremisesPublishing", alternate = {"OnPremisesPublishing"})
     @Expose
@@ -317,14 +317,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The App Management Policies.
-     * 
+     * The appManagementPolicy applied to this application.
      */
 	@Nullable
     public AppManagementPolicyCollectionPage appManagementPolicies;
 
     /**
      * The Created On Behalf Of.
-     * 
+     * Read-only.
      */
     @SerializedName(value = "createdOnBehalfOf", alternate = {"CreatedOnBehalfOf"})
     @Expose
@@ -333,7 +333,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Properties.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "extensionProperties", alternate = {"ExtensionProperties"})
     @Expose
@@ -342,7 +342,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Federated Identity Credentials.
-     * 
+     * Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).
      */
     @SerializedName(value = "federatedIdentityCredentials", alternate = {"FederatedIdentityCredentials"})
     @Expose
@@ -358,7 +358,7 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owners.
-     * 
+     * Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
     public DirectoryObjectCollectionPage owners;
@@ -372,14 +372,14 @@ public class Application extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Token Lifetime Policies.
-     * 
+     * The tokenLifetimePolicies assigned to this application. Supports $expand.
      */
 	@Nullable
     public TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
 
     /**
      * The Connector Group.
-     * 
+     * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
      */
     @SerializedName(value = "connectorGroup", alternate = {"ConnectorGroup"})
     @Expose

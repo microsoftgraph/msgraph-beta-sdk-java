@@ -28,7 +28,7 @@ public class MailSearchFolder extends MailFolder implements IJsonBackedObject {
 
     /**
      * The Filter Query.
-     * 
+     * The OData query to filter the messages.
      */
     @SerializedName(value = "filterQuery", alternate = {"FilterQuery"})
     @Expose
@@ -37,7 +37,7 @@ public class MailSearchFolder extends MailFolder implements IJsonBackedObject {
 
     /**
      * The Include Nested Folders.
-     * 
+     * Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
      */
     @SerializedName(value = "includeNestedFolders", alternate = {"IncludeNestedFolders"})
     @Expose
@@ -46,7 +46,7 @@ public class MailSearchFolder extends MailFolder implements IJsonBackedObject {
 
     /**
      * The Is Supported.
-     * 
+     * Indicates whether a search folder is editable using REST APIs.
      */
     @SerializedName(value = "isSupported", alternate = {"IsSupported"})
     @Expose
@@ -55,7 +55,7 @@ public class MailSearchFolder extends MailFolder implements IJsonBackedObject {
 
     /**
      * The Source Folder Ids.
-     * 
+     * The mailbox folders that should be mined.
      */
     @SerializedName(value = "sourceFolderIds", alternate = {"SourceFolderIds"})
     @Expose

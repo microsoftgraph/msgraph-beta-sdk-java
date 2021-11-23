@@ -39,7 +39,7 @@ public class Hashes implements IJsonBackedObject {
 
     /**
      * The Crc32Hash.
-     * 
+     * The CRC32 value of the file in little endian (if available). Read-only.
      */
     @SerializedName(value = "crc32Hash", alternate = {"Crc32Hash"})
     @Expose
@@ -48,7 +48,7 @@ public class Hashes implements IJsonBackedObject {
 
     /**
      * The Quick Xor Hash.
-     * 
+     * A proprietary hash of the file that can be used to determine if the contents of the file have changed (if available). Read-only.
      */
     @SerializedName(value = "quickXorHash", alternate = {"QuickXorHash"})
     @Expose
@@ -57,7 +57,7 @@ public class Hashes implements IJsonBackedObject {
 
     /**
      * The Sha1Hash.
-     * 
+     * SHA1 hash for the contents of the file (if available). Read-only.
      */
     @SerializedName(value = "sha1Hash", alternate = {"Sha1Hash"})
     @Expose
@@ -66,7 +66,7 @@ public class Hashes implements IJsonBackedObject {
 
     /**
      * The Sha256Hash.
-     * 
+     * SHA256 hash for the contents of the file (if available). Read-only.
      */
     @SerializedName(value = "sha256Hash", alternate = {"Sha256Hash"})
     @Expose

@@ -29,7 +29,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Enhanced Biometrics State.
-     * Controls the ability to use the anti-spoofing features for facial recognition on devices which support it. If set to disabled, anti-spoofing features are not allowed. If set to Not Configured, the user can choose whether they want to use anti-spoofing.
+     * Controls the ability to use the anti-spoofing features for facial recognition on devices which support it. If set to disabled, anti-spoofing features are not allowed. If set to Not Configured, the user can choose whether they want to use anti-spoofing. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "enhancedBiometricsState", alternate = {"EnhancedBiometricsState"})
     @Expose
@@ -47,7 +47,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Lowercase Characters Usage.
-     * Controls the ability to use lowercase letters in the Windows Hello for Business PIN.  Allowed permits the use of lowercase letter(s), whereas Required ensures they are present. If set to Not Allowed, lowercase letters will not be permitted.
+     * Controls the ability to use lowercase letters in the Windows Hello for Business PIN.  Allowed permits the use of lowercase letter(s), whereas Required ensures they are present. If set to Not Allowed, lowercase letters will not be permitted. Possible values are: allowed, required, disallowed.
      */
     @SerializedName(value = "pinLowercaseCharactersUsage", alternate = {"PinLowercaseCharactersUsage"})
     @Expose
@@ -83,7 +83,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Special Characters Usage.
-     * Controls the ability to use special characters in the Windows Hello for Business PIN.  Allowed permits the use of special character(s), whereas Required ensures they are present. If set to Not Allowed, special character(s) will not be permitted.
+     * Controls the ability to use special characters in the Windows Hello for Business PIN.  Allowed permits the use of special character(s), whereas Required ensures they are present. If set to Not Allowed, special character(s) will not be permitted. Possible values are: allowed, required, disallowed.
      */
     @SerializedName(value = "pinSpecialCharactersUsage", alternate = {"PinSpecialCharactersUsage"})
     @Expose
@@ -92,7 +92,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Pin Uppercase Characters Usage.
-     * Controls the ability to use uppercase letters in the Windows Hello for Business PIN.  Allowed permits the use of uppercase letter(s), whereas Required ensures they are present. If set to Not Allowed, uppercase letters will not be permitted.
+     * Controls the ability to use uppercase letters in the Windows Hello for Business PIN.  Allowed permits the use of uppercase letter(s), whereas Required ensures they are present. If set to Not Allowed, uppercase letters will not be permitted. Possible values are: allowed, required, disallowed.
      */
     @SerializedName(value = "pinUppercaseCharactersUsage", alternate = {"PinUppercaseCharactersUsage"})
     @Expose
@@ -119,7 +119,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The Security Key For Sign In.
-     * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet.
+     * Security key for Sign In provides the capacity for remotely turning ON/OFF Windows Hello Sercurity Keyl Not configured will honor configurations done on the clinet. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "securityKeyForSignIn", alternate = {"SecurityKeyForSignIn"})
     @Expose
@@ -128,7 +128,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
 
     /**
      * The State.
-     * Controls whether to allow the device to be configured for Windows Hello for Business. If set to disabled, the user cannot provision Windows Hello for Business except on Azure Active Directory joined mobile phones if otherwise required. If set to Not Configured, Intune will not override client defaults.
+     * Controls whether to allow the device to be configured for Windows Hello for Business. If set to disabled, the user cannot provision Windows Hello for Business except on Azure Active Directory joined mobile phones if otherwise required. If set to Not Configured, Intune will not override client defaults. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

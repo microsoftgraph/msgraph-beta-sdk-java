@@ -29,7 +29,7 @@ public class ParticipantEndpoint extends Endpoint implements IJsonBackedObject {
 
     /**
      * The Feedback.
-     * 
+     * The feedback provided by the user of this endpoint about the quality of the session.
      */
     @SerializedName(value = "feedback", alternate = {"Feedback"})
     @Expose
@@ -38,7 +38,7 @@ public class ParticipantEndpoint extends Endpoint implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * 
+     * Identity associated with the endpoint.
      */
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose

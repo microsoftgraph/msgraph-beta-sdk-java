@@ -31,7 +31,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Body.
-     * 
+     * Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object does not return @mentions and attachments.
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -40,7 +40,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date time object representing the time at which message was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Event Detail.
-     * 
+     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
      */
     @SerializedName(value = "eventDetail", alternate = {"EventDetail"})
     @Expose
@@ -58,7 +58,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The From.
-     * 
+     * Information about the sender of the message.
      */
     @SerializedName(value = "from", alternate = {"From"})
     @Expose
@@ -67,7 +67,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Deleted.
-     * 
+     * If set to true, the original message has been deleted.
      */
     @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
@@ -76,7 +76,7 @@ public class ChatMessageInfo extends Entity implements IJsonBackedObject {
 
     /**
      * The Message Type.
-     * 
+     * The type of chat message. The possible values are: message, unknownFutureValue, systemEventMessage.
      */
     @SerializedName(value = "messageType", alternate = {"MessageType"})
     @Expose

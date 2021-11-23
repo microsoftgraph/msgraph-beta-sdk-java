@@ -27,7 +27,7 @@ public class ProgramResource extends Identity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Type of the resource, indicating whether it is a group or an app.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

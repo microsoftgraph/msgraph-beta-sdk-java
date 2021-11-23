@@ -29,7 +29,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
 
     /**
      * The Allows Multiple Selection.
-     * 
+     * Indicates whether requestor can select multiple choices as their answer.
      */
     @SerializedName(value = "allowsMultipleSelection", alternate = {"AllowsMultipleSelection"})
     @Expose
@@ -38,7 +38,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
 
     /**
      * The Choices.
-     * 
+     * List of answer choices.
      */
     @SerializedName(value = "choices", alternate = {"Choices"})
     @Expose

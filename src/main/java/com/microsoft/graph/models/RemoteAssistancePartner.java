@@ -55,7 +55,7 @@ public class RemoteAssistancePartner extends Entity implements IJsonBackedObject
 
     /**
      * The Onboarding Status.
-     * A friendly description of the current TeamViewer connector status
+     * A friendly description of the current TeamViewer connector status. Possible values are: notOnboarded, onboarding, onboarded.
      */
     @SerializedName(value = "onboardingStatus", alternate = {"OnboardingStatus"})
     @Expose

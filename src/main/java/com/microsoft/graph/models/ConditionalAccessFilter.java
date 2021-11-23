@@ -40,7 +40,7 @@ public class ConditionalAccessFilter implements IJsonBackedObject {
 
     /**
      * The Mode.
-     * 
+     * Mode to use for the filter. Possible values are include or exclude.
      */
     @SerializedName(value = "mode", alternate = {"Mode"})
     @Expose
@@ -49,7 +49,7 @@ public class ConditionalAccessFilter implements IJsonBackedObject {
 
     /**
      * The Rule.
-     * 
+     * Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
      */
     @SerializedName(value = "rule", alternate = {"Rule"})
     @Expose

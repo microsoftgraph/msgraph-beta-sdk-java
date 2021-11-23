@@ -41,7 +41,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Additional Details.
-     * 
+     * Additional details about the health check or the recommended action.
      */
     @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose
@@ -50,7 +50,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Display Name.
-     * 
+     * The display name for this health check item.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The End Date Time.
-     * 
+     * The end time of the health check item. Read-only.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -68,7 +68,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Error Type.
-     * 
+     * The type of error that occurred during this health check.
      */
     @SerializedName(value = "errorType", alternate = {"ErrorType"})
     @Expose
@@ -77,7 +77,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Recommended Action.
-     * 
+     * The recommended action to fix the corresponding error.
      */
     @SerializedName(value = "recommendedAction", alternate = {"RecommendedAction"})
     @Expose
@@ -86,7 +86,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Start Date Time.
-     * 
+     * The start time of the health check item. Read-only.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements IJsonBackedObject
 
     /**
      * The Status.
-     * 
+     * The status of the health check item. Possible values are: pending, running, passed, failed, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

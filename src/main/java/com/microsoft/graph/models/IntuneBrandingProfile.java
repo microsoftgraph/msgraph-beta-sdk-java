@@ -133,7 +133,7 @@ public class IntuneBrandingProfile extends Entity implements IJsonBackedObject {
 
     /**
      * The Enrollment Availability.
-     * Customized device enrollment flow displayed to the end user 
+     * Customized device enrollment flow displayed to the end user . Possible values are: availableWithPrompts, availableWithoutPrompts, unavailable.
      */
     @SerializedName(value = "enrollmentAvailability", alternate = {"EnrollmentAvailability"})
     @Expose

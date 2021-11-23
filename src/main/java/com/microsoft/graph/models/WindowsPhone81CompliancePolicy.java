@@ -109,7 +109,7 @@ public class WindowsPhone81CompliancePolicy extends DeviceCompliancePolicy imple
 
     /**
      * The Password Required Type.
-     * The required password type.
+     * The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose

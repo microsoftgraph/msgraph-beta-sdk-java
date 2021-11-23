@@ -31,7 +31,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The Display Name.
-     * 
+     * The display name of the identityUserFlowAttribute within a user flow.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -40,7 +40,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The Is Optional.
-     * 
+     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
      */
     @SerializedName(value = "isOptional", alternate = {"IsOptional"})
     @Expose
@@ -49,7 +49,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The Requires Verification.
-     * 
+     * Determines whether the identityUserFlowAttribute requires verification. This is only used for verifying the user's phone number or email address.
      */
     @SerializedName(value = "requiresVerification", alternate = {"RequiresVerification"})
     @Expose
@@ -58,7 +58,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The User Attribute Values.
-     * 
+     * The input options for the user flow attribute. Only applicable when the userInputType is radioSingleSelect, dropdownSingleSelect, or checkboxMultiSelect.
      */
     @SerializedName(value = "userAttributeValues", alternate = {"UserAttributeValues"})
     @Expose
@@ -67,7 +67,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The User Input Type.
-     * 
+     * The input type of the user flow attribute. Possible values are: textBox, dateTimeDropdown, radioSingleSelect, dropdownSingleSelect, emailBox, checkboxMultiSelect.
      */
     @SerializedName(value = "userInputType", alternate = {"UserInputType"})
     @Expose
@@ -76,7 +76,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The User Attribute.
-     * 
+     * The user attribute that you want to add to your user flow.
      */
     @SerializedName(value = "userAttribute", alternate = {"UserAttribute"})
     @Expose

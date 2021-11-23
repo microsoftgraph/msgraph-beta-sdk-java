@@ -47,6 +47,33 @@ public class ManagementActionApplyParameterSet {
 	@Nullable
     public String managementTemplateId;
 
+    /**
+     * The include All Users.
+     * 
+     */
+    @SerializedName(value = "includeAllUsers", alternate = {"IncludeAllUsers"})
+    @Expose
+	@Nullable
+    public Boolean includeAllUsers;
+
+    /**
+     * The include Groups.
+     * 
+     */
+    @SerializedName(value = "includeGroups", alternate = {"IncludeGroups"})
+    @Expose
+	@Nullable
+    public java.util.List<String> includeGroups;
+
+    /**
+     * The exclude Groups.
+     * 
+     */
+    @SerializedName(value = "excludeGroups", alternate = {"ExcludeGroups"})
+    @Expose
+	@Nullable
+    public java.util.List<String> excludeGroups;
+
 
     /**
      * Instiaciates a new ManagementActionApplyParameterSet
@@ -60,6 +87,9 @@ public class ManagementActionApplyParameterSet {
         this.tenantId = builder.tenantId;
         this.tenantGroupId = builder.tenantGroupId;
         this.managementTemplateId = builder.managementTemplateId;
+        this.includeAllUsers = builder.includeAllUsers;
+        this.includeGroups = builder.includeGroups;
+        this.excludeGroups = builder.excludeGroups;
     }
     /**
      * Gets a new builder for the body
@@ -119,6 +149,51 @@ public class ManagementActionApplyParameterSet {
             return this;
         }
         /**
+         * The includeAllUsers parameter value
+         */
+        @Nullable
+        protected Boolean includeAllUsers;
+        /**
+         * Sets the IncludeAllUsers
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagementActionApplyParameterSetBuilder withIncludeAllUsers(@Nullable final Boolean val) {
+            this.includeAllUsers = val;
+            return this;
+        }
+        /**
+         * The includeGroups parameter value
+         */
+        @Nullable
+        protected java.util.List<String> includeGroups;
+        /**
+         * Sets the IncludeGroups
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagementActionApplyParameterSetBuilder withIncludeGroups(@Nullable final java.util.List<String> val) {
+            this.includeGroups = val;
+            return this;
+        }
+        /**
+         * The excludeGroups parameter value
+         */
+        @Nullable
+        protected java.util.List<String> excludeGroups;
+        /**
+         * Sets the ExcludeGroups
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagementActionApplyParameterSetBuilder withExcludeGroups(@Nullable final java.util.List<String> val) {
+            this.excludeGroups = val;
+            return this;
+        }
+        /**
          * Instanciates a new ManagementActionApplyParameterSetBuilder
          */
         @Nullable
@@ -147,6 +222,15 @@ public class ManagementActionApplyParameterSet {
         }
         if(this.managementTemplateId != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("managementTemplateId", managementTemplateId));
+        }
+        if(this.includeAllUsers != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("includeAllUsers", includeAllUsers));
+        }
+        if(this.includeGroups != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("includeGroups", includeGroups));
+        }
+        if(this.excludeGroups != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("excludeGroups", excludeGroups));
         }
         return result;
     }

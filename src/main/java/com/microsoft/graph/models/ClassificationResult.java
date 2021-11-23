@@ -39,7 +39,7 @@ public class ClassificationResult implements IJsonBackedObject {
 
     /**
      * The Confidence Level.
-     * 
+     * The confidence level, 0 to 100, of the result.
      */
     @SerializedName(value = "confidenceLevel", alternate = {"ConfidenceLevel"})
     @Expose
@@ -48,7 +48,7 @@ public class ClassificationResult implements IJsonBackedObject {
 
     /**
      * The Count.
-     * 
+     * The number of instances of the specific information type in the input.
      */
     @SerializedName(value = "count", alternate = {"Count"})
     @Expose
@@ -57,7 +57,7 @@ public class ClassificationResult implements IJsonBackedObject {
 
     /**
      * The Sensitive Type Id.
-     * 
+     * The GUID of the discovered sensitive information type.
      */
     @SerializedName(value = "sensitiveTypeId", alternate = {"SensitiveTypeId"})
     @Expose

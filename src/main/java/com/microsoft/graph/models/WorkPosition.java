@@ -30,7 +30,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * Categories that the user has associated with this position.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -39,7 +39,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Colleagues.
-     * 
+     * Colleagues that are associated with this position.
      */
     @SerializedName(value = "colleagues", alternate = {"Colleagues"})
     @Expose
@@ -48,7 +48,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Detail.
-     * 
+     * Contains detailed information about the position.
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -57,7 +57,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Is Current.
-     * 
+     * Denotes whether or not the position is current.
      */
     @SerializedName(value = "isCurrent", alternate = {"IsCurrent"})
     @Expose
@@ -66,7 +66,7 @@ public class WorkPosition extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Manager.
-     * 
+     * Contains detail of the user's manager in this position.
      */
     @SerializedName(value = "manager", alternate = {"Manager"})
     @Expose

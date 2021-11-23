@@ -101,7 +101,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Miracast Channel.
-     * The channel.
+     * The channel. Possible values are: userDefined, one, two, three, four, five, six, seven, eight, nine, ten, eleven, thirtySix, forty, fortyFour, fortyEight, oneHundredFortyNine, oneHundredFiftyThree, oneHundredFiftySeven, oneHundredSixtyOne, oneHundredSixtyFive.
      */
     @SerializedName(value = "miracastChannel", alternate = {"MiracastChannel"})
     @Expose
@@ -119,7 +119,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Settings Block My Meetings And Files.
-     * Specifies whether to disable the "My meetings and files" feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
+     * Specifies whether to disable the 'My meetings and files' feature in the Start menu, which shows the signed-in user's meetings and files from Office 365.
      */
     @SerializedName(value = "settingsBlockMyMeetingsAndFiles", alternate = {"SettingsBlockMyMeetingsAndFiles"})
     @Expose
@@ -200,7 +200,7 @@ public class Windows10TeamGeneralConfiguration extends DeviceConfiguration imple
 
     /**
      * The Welcome Screen Meeting Information.
-     * The welcome screen meeting information shown.
+     * The welcome screen meeting information shown. Possible values are: userDefined, showOrganizerAndTimeOnly, showOrganizerAndTimeAndSubject.
      */
     @SerializedName(value = "welcomeScreenMeetingInformation", alternate = {"WelcomeScreenMeetingInformation"})
     @Expose

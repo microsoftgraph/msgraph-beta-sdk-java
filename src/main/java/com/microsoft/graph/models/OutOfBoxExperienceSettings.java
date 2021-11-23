@@ -41,7 +41,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
 
     /**
      * The Device Usage Type.
-     * AAD join authentication type
+     * AAD join authentication type. Possible values are: singleUser, shared.
      */
     @SerializedName(value = "deviceUsageType", alternate = {"DeviceUsageType"})
     @Expose
@@ -86,7 +86,7 @@ public class OutOfBoxExperienceSettings implements IJsonBackedObject {
 
     /**
      * The User Type.
-     * Type of user
+     * Type of user. Possible values are: administrator, standard.
      */
     @SerializedName(value = "userType", alternate = {"UserType"})
     @Expose

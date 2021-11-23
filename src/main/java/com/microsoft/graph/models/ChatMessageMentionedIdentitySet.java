@@ -29,7 +29,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements IJso
 
     /**
      * The Conversation.
-     * 
+     * If present, represents a conversation (for example, team or channel) @mentioned in a message.
      */
     @SerializedName(value = "conversation", alternate = {"Conversation"})
     @Expose
@@ -38,7 +38,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements IJso
 
     /**
      * The Tag.
-     * 
+     * If present, represents a tag @mentioned in a team message.
      */
     @SerializedName(value = "tag", alternate = {"Tag"})
     @Expose

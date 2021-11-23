@@ -40,7 +40,7 @@ public class Quota implements IJsonBackedObject {
 
     /**
      * The Deleted.
-     * 
+     * Total space consumed by files in the recycle bin, in bytes. Read-only.
      */
     @SerializedName(value = "deleted", alternate = {"Deleted"})
     @Expose
@@ -49,7 +49,7 @@ public class Quota implements IJsonBackedObject {
 
     /**
      * The Remaining.
-     * 
+     * Total space remaining before reaching the quota limit, in bytes. Read-only.
      */
     @SerializedName(value = "remaining", alternate = {"Remaining"})
     @Expose
@@ -58,7 +58,7 @@ public class Quota implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Enumeration value that indicates the state of the storage space. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -67,7 +67,7 @@ public class Quota implements IJsonBackedObject {
 
     /**
      * The Storage Plan Information.
-     * 
+     * Information about the drive's storage quota plans. Only in Personal OneDrive.
      */
     @SerializedName(value = "storagePlanInformation", alternate = {"StoragePlanInformation"})
     @Expose
@@ -76,7 +76,7 @@ public class Quota implements IJsonBackedObject {
 
     /**
      * The Total.
-     * 
+     * Total allowed storage space, in bytes. Read-only.
      */
     @SerializedName(value = "total", alternate = {"Total"})
     @Expose
@@ -85,7 +85,7 @@ public class Quota implements IJsonBackedObject {
 
     /**
      * The Used.
-     * 
+     * Total space used, in bytes. Read-only.
      */
     @SerializedName(value = "used", alternate = {"Used"})
     @Expose

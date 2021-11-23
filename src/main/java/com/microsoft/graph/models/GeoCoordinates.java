@@ -39,7 +39,7 @@ public class GeoCoordinates implements IJsonBackedObject {
 
     /**
      * The Altitude.
-     * 
+     * Optional. The altitude (height), in feet,  above sea level for the item. Read-only.
      */
     @SerializedName(value = "altitude", alternate = {"Altitude"})
     @Expose
@@ -48,7 +48,7 @@ public class GeoCoordinates implements IJsonBackedObject {
 
     /**
      * The Latitude.
-     * 
+     * Optional. The latitude, in decimal, for the item. Read-only.
      */
     @SerializedName(value = "latitude", alternate = {"Latitude"})
     @Expose
@@ -57,7 +57,7 @@ public class GeoCoordinates implements IJsonBackedObject {
 
     /**
      * The Longitude.
-     * 
+     * Optional. The longitude, in decimal, for the item. Read-only.
      */
     @SerializedName(value = "longitude", alternate = {"Longitude"})
     @Expose

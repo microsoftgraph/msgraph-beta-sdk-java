@@ -38,7 +38,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
 
     /**
      * The Detection Type.
-     * The file system detection type
+     * The file system detection type. Possible values are: notConfigured, exists, modifiedDate, createdDate, version, sizeInMB, doesNotExist.
      */
     @SerializedName(value = "detectionType", alternate = {"DetectionType"})
     @Expose
@@ -65,7 +65,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
 
     /**
      * The Operator.
-     * The operator for file or folder detection
+     * The operator for file or folder detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

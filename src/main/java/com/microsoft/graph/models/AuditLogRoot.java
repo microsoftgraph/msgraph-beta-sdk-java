@@ -13,6 +13,7 @@ import com.microsoft.graph.models.DirectoryAudit;
 import com.microsoft.graph.models.ProvisioningObjectSummary;
 import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.graph.models.SignIn;
+import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.DirectoryAuditCollectionPage;
 import com.microsoft.graph.requests.ProvisioningObjectSummaryCollectionPage;
 import com.microsoft.graph.requests.RestrictedSignInCollectionPage;
@@ -30,25 +31,12 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Audit Log Root.
  */
-public class AuditLogRoot implements IJsonBackedObject {
+public class AuditLogRoot extends Entity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Directory Audits.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "directoryAudits", alternate = {"DirectoryAudits"})
     @Expose
@@ -84,7 +72,7 @@ public class AuditLogRoot implements IJsonBackedObject {
 
     /**
      * The Sign Ins.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "signIns", alternate = {"SignIns"})
     @Expose

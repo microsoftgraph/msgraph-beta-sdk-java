@@ -58,7 +58,7 @@ public class MobileAppSupportedDeviceType implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Device type
+     * Device type. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

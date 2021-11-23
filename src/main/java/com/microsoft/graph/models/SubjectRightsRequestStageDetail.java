@@ -42,7 +42,7 @@ public class SubjectRightsRequestStageDetail implements IJsonBackedObject {
 
     /**
      * The Error.
-     * 
+     * Describes the error, if any, for the current stage.
      */
     @SerializedName(value = "error", alternate = {"Error"})
     @Expose
@@ -51,7 +51,7 @@ public class SubjectRightsRequestStageDetail implements IJsonBackedObject {
 
     /**
      * The Stage.
-     * 
+     * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
      */
     @SerializedName(value = "stage", alternate = {"Stage"})
     @Expose
@@ -60,7 +60,7 @@ public class SubjectRightsRequestStageDetail implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Status of the current stage. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

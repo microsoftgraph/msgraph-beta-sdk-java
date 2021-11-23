@@ -74,7 +74,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Attack Simulation.
-     * 
+     * Provides tenants capability to launch a simulated and realistic phishing attack and learn from it.
      */
     @SerializedName(value = "attackSimulation", alternate = {"AttackSimulation"})
     @Expose
@@ -83,7 +83,7 @@ public class Security extends Entity implements IJsonBackedObject {
 
     /**
      * The Alerts.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "alerts", alternate = {"Alerts"})
     @Expose

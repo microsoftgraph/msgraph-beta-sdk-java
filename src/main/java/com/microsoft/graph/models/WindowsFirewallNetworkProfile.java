@@ -76,7 +76,7 @@ public class WindowsFirewallNetworkProfile implements IJsonBackedObject {
 
     /**
      * The Firewall Enabled.
-     * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile.
+     * Configures the host device to allow or block the firewall and advanced security enforcement for the network profile. Possible values are: notConfigured, blocked, allowed.
      */
     @SerializedName(value = "firewallEnabled", alternate = {"FirewallEnabled"})
     @Expose

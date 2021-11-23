@@ -39,7 +39,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Album.
-     * 
+     * The title of the album for this audio file.
      */
     @SerializedName(value = "album", alternate = {"Album"})
     @Expose
@@ -48,7 +48,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Album Artist.
-     * 
+     * The artist named on the album for the audio file.
      */
     @SerializedName(value = "albumArtist", alternate = {"AlbumArtist"})
     @Expose
@@ -57,7 +57,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Artist.
-     * 
+     * The performing artist for the audio file.
      */
     @SerializedName(value = "artist", alternate = {"Artist"})
     @Expose
@@ -66,7 +66,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Bitrate.
-     * 
+     * Bitrate expressed in kbps.
      */
     @SerializedName(value = "bitrate", alternate = {"Bitrate"})
     @Expose
@@ -75,7 +75,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Composers.
-     * 
+     * The name of the composer of the audio file.
      */
     @SerializedName(value = "composers", alternate = {"Composers"})
     @Expose
@@ -84,7 +84,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Copyright.
-     * 
+     * Copyright information for the audio file.
      */
     @SerializedName(value = "copyright", alternate = {"Copyright"})
     @Expose
@@ -93,7 +93,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Disc.
-     * 
+     * The number of the disc this audio file came from.
      */
     @SerializedName(value = "disc", alternate = {"Disc"})
     @Expose
@@ -102,7 +102,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Disc Count.
-     * 
+     * The total number of discs in this album.
      */
     @SerializedName(value = "discCount", alternate = {"DiscCount"})
     @Expose
@@ -111,7 +111,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Duration.
-     * 
+     * Duration of the audio file, expressed in milliseconds
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -120,7 +120,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Genre.
-     * 
+     * The genre of this audio file.
      */
     @SerializedName(value = "genre", alternate = {"Genre"})
     @Expose
@@ -129,7 +129,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Has Drm.
-     * 
+     * Indicates if the file is protected with digital rights management.
      */
     @SerializedName(value = "hasDrm", alternate = {"HasDrm"})
     @Expose
@@ -138,7 +138,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Is Variable Bitrate.
-     * 
+     * Indicates if the file is encoded with a variable bitrate.
      */
     @SerializedName(value = "isVariableBitrate", alternate = {"IsVariableBitrate"})
     @Expose
@@ -147,7 +147,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * The title of the audio file.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -156,7 +156,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Track.
-     * 
+     * The number of the track on the original disc for this audio file.
      */
     @SerializedName(value = "track", alternate = {"Track"})
     @Expose
@@ -165,7 +165,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Track Count.
-     * 
+     * The total number of tracks on the original disc for this audio file.
      */
     @SerializedName(value = "trackCount", alternate = {"TrackCount"})
     @Expose
@@ -174,7 +174,7 @@ public class Audio implements IJsonBackedObject {
 
     /**
      * The Year.
-     * 
+     * The year the audio file was recorded.
      */
     @SerializedName(value = "year", alternate = {"Year"})
     @Expose

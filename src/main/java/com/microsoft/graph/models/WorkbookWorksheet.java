@@ -37,7 +37,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The display name of the worksheet.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -46,7 +46,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Position.
-     * 
+     * The zero-based position of the worksheet within the workbook.
      */
     @SerializedName(value = "position", alternate = {"Position"})
     @Expose
@@ -55,7 +55,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * 
+     * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -64,7 +64,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Charts.
-     * 
+     * Returns collection of charts that are part of the worksheet. Read-only.
      */
     @SerializedName(value = "charts", alternate = {"Charts"})
     @Expose
@@ -73,7 +73,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Names.
-     * 
+     * Returns collection of names that are associated with the worksheet. Read-only.
      */
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
@@ -82,7 +82,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Pivot Tables.
-     * 
+     * Collection of PivotTables that are part of the worksheet.
      */
     @SerializedName(value = "pivotTables", alternate = {"PivotTables"})
     @Expose
@@ -91,7 +91,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Protection.
-     * 
+     * Returns sheet protection object for a worksheet. Read-only.
      */
     @SerializedName(value = "protection", alternate = {"Protection"})
     @Expose
@@ -100,7 +100,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Tables.
-     * 
+     * Collection of tables that are part of the worksheet. Read-only.
      */
     @SerializedName(value = "tables", alternate = {"Tables"})
     @Expose

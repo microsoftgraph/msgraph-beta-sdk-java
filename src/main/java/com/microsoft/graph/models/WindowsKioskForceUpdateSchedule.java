@@ -50,7 +50,7 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
 
     /**
      * The Dayof Week.
-     * Day of week.
+     * Day of week. Possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
      */
     @SerializedName(value = "dayofWeek", alternate = {"DayofWeek"})
     @Expose
@@ -59,7 +59,7 @@ public class WindowsKioskForceUpdateSchedule implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * Recurrence schedule.
+     * Recurrence schedule. Possible values are: none, daily, weekly, monthly.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

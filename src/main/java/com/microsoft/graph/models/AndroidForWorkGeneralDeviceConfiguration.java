@@ -102,7 +102,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
 
     /**
      * The Password Required Type.
-     * Type of password that is required.
+     * Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -237,7 +237,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
 
     /**
      * The Work Profile Data Sharing Type.
-     * Type of data sharing that is allowed.
+     * Type of data sharing that is allowed. Possible values are: deviceDefault, preventAny, allowPersonalToWork, noRestrictions.
      */
     @SerializedName(value = "workProfileDataSharingType", alternate = {"WorkProfileDataSharingType"})
     @Expose
@@ -246,7 +246,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
 
     /**
      * The Work Profile Default App Permission Policy.
-     * Type of password that is required.
+     * Type of password that is required. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
      */
     @SerializedName(value = "workProfileDefaultAppPermissionPolicy", alternate = {"WorkProfileDefaultAppPermissionPolicy"})
     @Expose
@@ -381,7 +381,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
 
     /**
      * The Work Profile Password Required Type.
-     * Type of work profile password that is required.
+     * Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric, numericComplex, atLeastAlphabetic, atLeastAlphanumeric, alphanumericWithSymbols.
      */
     @SerializedName(value = "workProfilePasswordRequiredType", alternate = {"WorkProfilePasswordRequiredType"})
     @Expose

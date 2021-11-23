@@ -46,7 +46,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Audit Events.
-     * 
+     * Cloud PC audit event.
      */
     @SerializedName(value = "auditEvents", alternate = {"AuditEvents"})
     @Expose
@@ -55,7 +55,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Cloud PCs.
-     * 
+     * Cloud managed virtual desktops.
      */
     @SerializedName(value = "cloudPCs", alternate = {"CloudPCs"})
     @Expose
@@ -64,7 +64,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Images.
-     * 
+     * The image resource on Cloud PC.
      */
     @SerializedName(value = "deviceImages", alternate = {"DeviceImages"})
     @Expose
@@ -73,7 +73,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Gallery Images.
-     * 
+     * The gallery image resource on Cloud PC.
      */
     @SerializedName(value = "galleryImages", alternate = {"GalleryImages"})
     @Expose
@@ -82,7 +82,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Connections.
-     * 
+     * A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
      */
     @SerializedName(value = "onPremisesConnections", alternate = {"OnPremisesConnections"})
     @Expose
@@ -91,7 +91,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Provisioning Policies.
-     * 
+     * Cloud PC provisioning policy.
      */
     @SerializedName(value = "provisioningPolicies", alternate = {"ProvisioningPolicies"})
     @Expose
@@ -100,7 +100,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plans.
-     * 
+     * Cloud PC service plans.
      */
     @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
     @Expose
@@ -109,7 +109,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Regions.
-     * 
+     * Cloud PC supported regions.
      */
     @SerializedName(value = "supportedRegions", alternate = {"SupportedRegions"})
     @Expose
@@ -118,7 +118,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The User Settings.
-     * 
+     * Cloud PC user settings.
      */
     @SerializedName(value = "userSettings", alternate = {"UserSettings"})
     @Expose

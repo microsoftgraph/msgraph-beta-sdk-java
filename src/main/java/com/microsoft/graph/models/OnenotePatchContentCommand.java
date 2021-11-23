@@ -41,7 +41,7 @@ public class OnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * The Action.
-     * 
+     * The action to perform on the target element. The possible values are: replace, append, delete, insert, or prepend.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -50,7 +50,7 @@ public class OnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * The Content.
-     * 
+     * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
      */
     @SerializedName(value = "content", alternate = {"Content"})
     @Expose
@@ -59,7 +59,7 @@ public class OnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * The Position.
-     * 
+     * The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      */
     @SerializedName(value = "position", alternate = {"Position"})
     @Expose
@@ -68,7 +68,7 @@ public class OnenotePatchContentCommand implements IJsonBackedObject {
 
     /**
      * The Target.
-     * 
+     * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the body or title keyword.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

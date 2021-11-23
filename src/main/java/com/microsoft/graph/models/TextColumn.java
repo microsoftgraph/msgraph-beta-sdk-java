@@ -39,7 +39,7 @@ public class TextColumn implements IJsonBackedObject {
 
     /**
      * The Allow Multiple Lines.
-     * 
+     * Whether to allow multiple lines of text.
      */
     @SerializedName(value = "allowMultipleLines", alternate = {"AllowMultipleLines"})
     @Expose
@@ -48,7 +48,7 @@ public class TextColumn implements IJsonBackedObject {
 
     /**
      * The Append Changes To Existing Text.
-     * 
+     * Whether updates to this column should replace existing text, or append to it.
      */
     @SerializedName(value = "appendChangesToExistingText", alternate = {"AppendChangesToExistingText"})
     @Expose
@@ -57,7 +57,7 @@ public class TextColumn implements IJsonBackedObject {
 
     /**
      * The Lines For Editing.
-     * 
+     * The size of the text box.
      */
     @SerializedName(value = "linesForEditing", alternate = {"LinesForEditing"})
     @Expose
@@ -66,7 +66,7 @@ public class TextColumn implements IJsonBackedObject {
 
     /**
      * The Max Length.
-     * 
+     * The maximum number of characters for the value.
      */
     @SerializedName(value = "maxLength", alternate = {"MaxLength"})
     @Expose
@@ -75,7 +75,7 @@ public class TextColumn implements IJsonBackedObject {
 
     /**
      * The Text Type.
-     * 
+     * The type of text being stored. Must be one of plain or richText
      */
     @SerializedName(value = "textType", alternate = {"TextType"})
     @Expose

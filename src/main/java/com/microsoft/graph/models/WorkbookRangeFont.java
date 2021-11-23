@@ -27,7 +27,7 @@ public class WorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Bold.
-     * 
+     * Represents the bold status of font.
      */
     @SerializedName(value = "bold", alternate = {"Bold"})
     @Expose
@@ -36,7 +36,7 @@ public class WorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Color.
-     * 
+     * HTML color code representation of the text color. E.g. #FF0000 represents Red.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose
@@ -45,7 +45,7 @@ public class WorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Italic.
-     * 
+     * Represents the italic status of the font.
      */
     @SerializedName(value = "italic", alternate = {"Italic"})
     @Expose
@@ -54,7 +54,7 @@ public class WorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Font name (e.g. 'Calibri')
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -63,7 +63,7 @@ public class WorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Size.
-     * 
+     * Font size.
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose
@@ -72,7 +72,7 @@ public class WorkbookRangeFont extends Entity implements IJsonBackedObject {
 
     /**
      * The Underline.
-     * 
+     * Type of underline applied to the font. The possible values are: None, Single, Double, SingleAccountant, DoubleAccountant.
      */
     @SerializedName(value = "underline", alternate = {"Underline"})
     @Expose

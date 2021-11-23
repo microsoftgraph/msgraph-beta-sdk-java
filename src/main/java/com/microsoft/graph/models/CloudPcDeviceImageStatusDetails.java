@@ -28,6 +28,14 @@ public enum CloudPcDeviceImageStatusDetails
     */
     SOURCE_IMAGE_INVALID,
     /**
+    * source Image Not Generalized
+    */
+    SOURCE_IMAGE_NOT_GENERALIZED,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For CloudPcDeviceImageStatusDetails values that were not expected from the service
     */
     UNEXPECTED_VALUE

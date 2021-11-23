@@ -42,7 +42,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Aliases.
-     * 
+     * A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^. Optional.
      */
     @SerializedName(value = "aliases", alternate = {"Aliases"})
     @Expose
@@ -51,7 +51,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Is Queryable.
-     * 
+     * Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
      */
     @SerializedName(value = "isQueryable", alternate = {"IsQueryable"})
     @Expose
@@ -60,7 +60,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Is Refinable.
-     * 
+     * Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
      */
     @SerializedName(value = "isRefinable", alternate = {"IsRefinable"})
     @Expose
@@ -69,7 +69,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Is Retrievable.
-     * 
+     * Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
      */
     @SerializedName(value = "isRetrievable", alternate = {"IsRetrievable"})
     @Expose
@@ -78,7 +78,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Is Searchable.
-     * 
+     * Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
      */
     @SerializedName(value = "isSearchable", alternate = {"IsSearchable"})
     @Expose
@@ -87,7 +87,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Labels.
-     * 
+     * Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.
      */
     @SerializedName(value = "labels", alternate = {"Labels"})
     @Expose
@@ -96,7 +96,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^.  Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -105,7 +105,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

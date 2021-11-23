@@ -48,7 +48,7 @@ public class ItemActivityTimeSet implements IJsonBackedObject {
 
     /**
      * The Observed Date Time.
-     * 
+     * When the activity was observed to take place.
      */
     @SerializedName(value = "observedDateTime", alternate = {"ObservedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class ItemActivityTimeSet implements IJsonBackedObject {
 
     /**
      * The Recorded Date Time.
-     * 
+     * When the observation was recorded on the service.
      */
     @SerializedName(value = "recordedDateTime", alternate = {"RecordedDateTime"})
     @Expose

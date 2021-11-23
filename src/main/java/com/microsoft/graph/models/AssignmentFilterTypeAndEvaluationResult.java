@@ -41,7 +41,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements IJsonBackedObjec
 
     /**
      * The Assignment Filter Type.
-     * Represents the filter type.
+     * Represents the filter type. Possible values are: none, include, exclude.
      */
     @SerializedName(value = "assignmentFilterType", alternate = {"AssignmentFilterType"})
     @Expose
@@ -50,7 +50,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements IJsonBackedObjec
 
     /**
      * The Evaluation Result.
-     * Represents the evalaution result of the filter.
+     * Represents the evalaution result of the filter. Possible values are: unknown, match, notMatch, inconclusive, failure, notEvaluated.
      */
     @SerializedName(value = "evaluationResult", alternate = {"EvaluationResult"})
     @Expose

@@ -58,7 +58,7 @@ public class SecurityBaselineContributingPolicy implements IJsonBackedObject {
 
     /**
      * The Source Type.
-     * Authoring source of the policy
+     * Authoring source of the policy. Possible values are: deviceConfiguration, deviceIntent.
      */
     @SerializedName(value = "sourceType", alternate = {"SourceType"})
     @Expose

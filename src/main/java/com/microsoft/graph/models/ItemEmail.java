@@ -28,7 +28,7 @@ public class ItemEmail extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Address.
-     * 
+     * The email address itself.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -37,7 +37,7 @@ public class ItemEmail extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name or label a user has associated with a particular email address.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class ItemEmail extends ItemFacet implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of email address. Possible values are: unknown, work, personal, main, other.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

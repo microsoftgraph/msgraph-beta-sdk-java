@@ -75,7 +75,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Addresses.
-     * 
+     * Represents details of addresses associated with the user.
      */
     @SerializedName(value = "addresses", alternate = {"Addresses"})
     @Expose
@@ -84,7 +84,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Anniversaries.
-     * 
+     * Represents the details of meaningful dates associated with a person.
      */
     @SerializedName(value = "anniversaries", alternate = {"Anniversaries"})
     @Expose
@@ -93,7 +93,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Awards.
-     * 
+     * Represents the details of awards or honors associated with a person.
      */
     @SerializedName(value = "awards", alternate = {"Awards"})
     @Expose
@@ -102,7 +102,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Certifications.
-     * 
+     * Represents the details of certifications associated with a person.
      */
     @SerializedName(value = "certifications", alternate = {"Certifications"})
     @Expose
@@ -111,7 +111,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Educational Activities.
-     * 
+     * Represents data that a user has supplied related to undergraduate, graduate, postgraduate or other educational activities.
      */
     @SerializedName(value = "educationalActivities", alternate = {"EducationalActivities"})
     @Expose
@@ -120,7 +120,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Emails.
-     * 
+     * Represents detailed information about email addresses associated with the user.
      */
     @SerializedName(value = "emails", alternate = {"Emails"})
     @Expose
@@ -129,7 +129,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Interests.
-     * 
+     * Provides detailed information about interests the user has associated with themselves in various services.
      */
     @SerializedName(value = "interests", alternate = {"Interests"})
     @Expose
@@ -138,7 +138,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Languages.
-     * 
+     * Represents detailed information about languages that a user has added to their profile.
      */
     @SerializedName(value = "languages", alternate = {"Languages"})
     @Expose
@@ -147,7 +147,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Names.
-     * 
+     * Represents the names a user has added to their profile.
      */
     @SerializedName(value = "names", alternate = {"Names"})
     @Expose
@@ -156,7 +156,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * 
+     * Represents notes that a user has added to their profile.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -165,7 +165,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Patents.
-     * 
+     * Represents patents that a user has added to their profile.
      */
     @SerializedName(value = "patents", alternate = {"Patents"})
     @Expose
@@ -174,7 +174,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Phones.
-     * 
+     * Represents detailed information about phone numbers associated with a user in various services.
      */
     @SerializedName(value = "phones", alternate = {"Phones"})
     @Expose
@@ -183,7 +183,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Positions.
-     * 
+     * Represents detailed information about work positions associated with a user's profile.
      */
     @SerializedName(value = "positions", alternate = {"Positions"})
     @Expose
@@ -192,7 +192,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Projects.
-     * 
+     * Represents detailed information about projects associated with a user.
      */
     @SerializedName(value = "projects", alternate = {"Projects"})
     @Expose
@@ -201,7 +201,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Publications.
-     * 
+     * Represents details of any publications a user has added to their profile.
      */
     @SerializedName(value = "publications", alternate = {"Publications"})
     @Expose
@@ -210,7 +210,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Skills.
-     * 
+     * Represents detailed information about skills associated with a user in various services.
      */
     @SerializedName(value = "skills", alternate = {"Skills"})
     @Expose
@@ -219,7 +219,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Accounts.
-     * 
+     * Represents web accounts the user has indicated they use or has added to their user profile.
      */
     @SerializedName(value = "webAccounts", alternate = {"WebAccounts"})
     @Expose
@@ -228,7 +228,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The Websites.
-     * 
+     * Represents detailed information about websites associated with a user in various services.
      */
     @SerializedName(value = "websites", alternate = {"Websites"})
     @Expose

@@ -31,7 +31,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Categories.
-     * 
+     * Contains categories a user has associated with the project (for example, digital transformation, oil rig).
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -40,7 +40,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Client.
-     * 
+     * Contains detailed information about the client the project was for.
      */
     @SerializedName(value = "client", alternate = {"Client"})
     @Expose
@@ -49,7 +49,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Collaboration Tags.
-     * 
+     * Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
      */
     @SerializedName(value = "collaborationTags", alternate = {"CollaborationTags"})
     @Expose
@@ -58,7 +58,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Colleagues.
-     * 
+     * Lists people that also worked on the project.
      */
     @SerializedName(value = "colleagues", alternate = {"Colleagues"})
     @Expose
@@ -67,7 +67,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Detail.
-     * 
+     * Contains detail about the user's role on the project.
      */
     @SerializedName(value = "detail", alternate = {"Detail"})
     @Expose
@@ -76,7 +76,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Display Name.
-     * 
+     * Contains a friendly name for the project.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -85,7 +85,7 @@ public class ProjectParticipation extends ItemFacet implements IJsonBackedObject
 
     /**
      * The Sponsors.
-     * 
+     * The Person or people who sponsored the project.
      */
     @SerializedName(value = "sponsors", alternate = {"Sponsors"})
     @Expose

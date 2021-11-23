@@ -27,7 +27,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
 
     /**
      * The User Display Name.
-     * 
+     * The name of user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
 
     /**
      * The User Id.
-     * 
+     * The identifier of user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -45,7 +45,7 @@ public class AccessReviewInstanceDecisionItemUserTarget extends AccessReviewInst
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

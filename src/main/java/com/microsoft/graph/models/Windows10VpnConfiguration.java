@@ -48,7 +48,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
 
     /**
      * The Authentication Method.
-     * Authentication method.
+     * Authentication method. Possible values are: certificate, usernameAndPassword, customEapXml, derivedCredential.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose
@@ -57,7 +57,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
 
     /**
      * The Connection Type.
-     * Connection type.
+     * Connection type. Possible values are: pulseSecure, f5EdgeClient, dellSonicWallMobileConnect, checkPointCapsuleVpn, automatic, ikEv2, l2tp, pptp, citrix, paloAltoGlobalProtect, ciscoAnyConnect, unknownFutureValue, microsoftTunnel.
      */
     @SerializedName(value = "connectionType", alternate = {"ConnectionType"})
     @Expose
@@ -66,7 +66,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
 
     /**
      * The Cryptography Suite.
-     * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above 
+     * Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
      */
     @SerializedName(value = "cryptographySuite", alternate = {"CryptographySuite"})
     @Expose
@@ -174,7 +174,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
 
     /**
      * The Profile Target.
-     * Profile target type.
+     * Profile target type. Possible values are: user, device, autoPilotDevice.
      */
     @SerializedName(value = "profileTarget", alternate = {"ProfileTarget"})
     @Expose

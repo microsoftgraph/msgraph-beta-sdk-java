@@ -27,7 +27,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
 
     /**
      * The After Hours.
-     * 
+     * Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "afterHours", alternate = {"AfterHours"})
     @Expose
@@ -36,7 +36,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
 
     /**
      * The Conflicting.
-     * 
+     * Time spent in conflicting meetings (meetings that overlap with other meetings that the person accepted and where the person’s status is set to Busy). The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "conflicting", alternate = {"Conflicting"})
     @Expose
@@ -45,7 +45,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
 
     /**
      * The Long.
-     * 
+     * Time spent in long meetings (more than an hour in duration). The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "long", alternate = {"Long"})
     @Expose
@@ -54,7 +54,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
 
     /**
      * The Multitasking.
-     * 
+     * Time spent in meetings where the person was multitasking (read/sent more than a minimum number of emails and/or sent more than a minimum number of messages in Teams or in Skype for Business). The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "multitasking", alternate = {"Multitasking"})
     @Expose
@@ -63,7 +63,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
 
     /**
      * The Organized.
-     * 
+     * Time spent in meetings organized by the user. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "organized", alternate = {"Organized"})
     @Expose
@@ -72,7 +72,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements IJs
 
     /**
      * The Recurring.
-     * 
+     * Time spent on recurring meetings. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "recurring", alternate = {"Recurring"})
     @Expose

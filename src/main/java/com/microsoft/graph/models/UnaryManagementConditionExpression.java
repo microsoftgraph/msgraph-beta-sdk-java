@@ -37,7 +37,7 @@ public class UnaryManagementConditionExpression extends ManagementConditionExpre
 
     /**
      * The Operator.
-     * The operator used in the evaluation of the unary operation.
+     * The operator used in the evaluation of the unary operation. Possible values are: not.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

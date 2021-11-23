@@ -29,7 +29,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Auth Methods.
-     * 
+     * Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
      */
     @SerializedName(value = "authMethods", alternate = {"AuthMethods"})
     @Expose
@@ -38,7 +38,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Is Capable.
-     * 
+     * Indicates whether the user is ready to perform self-service password reset or MFA.
      */
     @SerializedName(value = "isCapable", alternate = {"IsCapable"})
     @Expose
@@ -47,7 +47,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Is Enabled.
-     * 
+     * Indicates whether the user enabled to perform self-service password reset.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -56,7 +56,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Is Mfa Registered.
-     * 
+     * Indicates whether the user is registered for MFA.
      */
     @SerializedName(value = "isMfaRegistered", alternate = {"IsMfaRegistered"})
     @Expose
@@ -65,7 +65,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The Is Registered.
-     * 
+     * Indicates whether the user has registered any authentication methods for self-service password reset.
      */
     @SerializedName(value = "isRegistered", alternate = {"IsRegistered"})
     @Expose
@@ -74,7 +74,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The User Display Name.
-     * 
+     * Provides the user name of the corresponding user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -83,7 +83,7 @@ public class CredentialUserRegistrationDetails extends Entity implements IJsonBa
 
     /**
      * The User Principal Name.
-     * 
+     * Provides the user principal name of the corresponding user.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

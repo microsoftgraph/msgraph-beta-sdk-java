@@ -41,7 +41,7 @@ public class LocationConstraint implements IJsonBackedObject {
 
     /**
      * The Is Required.
-     * 
+     * The client requests the service to include in the response a meeting location for the meeting. If this is true and all the resources are busy, findMeetingTimes will not return any meeting time suggestions. If this is false and all the resources are busy, findMeetingTimes would still look for meeting times without locations.
      */
     @SerializedName(value = "isRequired", alternate = {"IsRequired"})
     @Expose
@@ -50,7 +50,7 @@ public class LocationConstraint implements IJsonBackedObject {
 
     /**
      * The Locations.
-     * 
+     * Constraint information for one or more locations that the client requests for the meeting.
      */
     @SerializedName(value = "locations", alternate = {"Locations"})
     @Expose
@@ -59,7 +59,7 @@ public class LocationConstraint implements IJsonBackedObject {
 
     /**
      * The Suggest Location.
-     * 
+     * The client requests the service to suggest one or more meeting locations.
      */
     @SerializedName(value = "suggestLocation", alternate = {"SuggestLocation"})
     @Expose

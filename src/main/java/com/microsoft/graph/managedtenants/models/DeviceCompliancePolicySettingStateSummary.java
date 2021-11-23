@@ -27,7 +27,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Conflict Device Count.
-     * 
+     * The number of devices in a conflict state. Optional. Read-only.
      */
     @SerializedName(value = "conflictDeviceCount", alternate = {"ConflictDeviceCount"})
     @Expose
@@ -36,7 +36,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Error Device Count.
-     * 
+     * The number of devices in an error state. Optional. Read-only.
      */
     @SerializedName(value = "errorDeviceCount", alternate = {"ErrorDeviceCount"})
     @Expose
@@ -45,7 +45,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Failed Device Count.
-     * 
+     * The number of devices in a failed state. Optional. Read-only.
      */
     @SerializedName(value = "failedDeviceCount", alternate = {"FailedDeviceCount"})
     @Expose
@@ -54,7 +54,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Intune Account Id.
-     * 
+     * The identifer for the Microsoft Intune account. Required. Read-only.
      */
     @SerializedName(value = "intuneAccountId", alternate = {"IntuneAccountId"})
     @Expose
@@ -63,7 +63,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Intune Setting Id.
-     * 
+     * The identifier for the Intune setting. Optional. Read-only.
      */
     @SerializedName(value = "intuneSettingId", alternate = {"IntuneSettingId"})
     @Expose
@@ -72,7 +72,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -81,7 +81,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Not Applicable Device Count.
-     * 
+     * The number of devices in a not applicable state. Optional. Read-only.
      */
     @SerializedName(value = "notApplicableDeviceCount", alternate = {"NotApplicableDeviceCount"})
     @Expose
@@ -90,7 +90,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Pending Device Count.
-     * 
+     * The number of devices in a pending state. Optional. Read-only.
      */
     @SerializedName(value = "pendingDeviceCount", alternate = {"PendingDeviceCount"})
     @Expose
@@ -99,7 +99,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Policy Type.
-     * 
+     * The type for the device compliance policy. Optional. Read-only.
      */
     @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose
@@ -108,7 +108,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Setting Name.
-     * 
+     * The name for the setting within the device compliance policy. Optional. Read-only.
      */
     @SerializedName(value = "settingName", alternate = {"SettingName"})
     @Expose
@@ -117,7 +117,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Succeeded Device Count.
-     * 
+     * The number of devices in a succeeded state. Optional. Read-only.
      */
     @SerializedName(value = "succeededDeviceCount", alternate = {"SucceededDeviceCount"})
     @Expose
@@ -126,7 +126,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -135,7 +135,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

@@ -33,7 +33,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * 
+     * A format of yyyy-MM-ddTHH:mm:ssZ of DateTimeOffset indicates the expiration time of the permission. DateTime.MinValue indicates there is no expiration set for this permission. Optional.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -42,7 +42,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To.
-     * 
+     * For user type permissions, the details of the users &amp; applications for this permission. Read-only.
      * @deprecated The grantedTo property is deprecated. Please refer to grantedToV2
      */
     @Deprecated
@@ -53,7 +53,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Granted To Identities.
-     * 
+     * For link type permissions, the details of the users to whom permission was granted. Read-only.
      * @deprecated The grantedToIdentities property is deprecated. Please refer to grantedToIdentitiesV2
      */
     @Deprecated
@@ -82,7 +82,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Has Password.
-     * 
+     * This indicates whether password is set for this permission, it's only showing in response. Optional and Read-only and for OneDrive Personal only.
      */
     @SerializedName(value = "hasPassword", alternate = {"HasPassword"})
     @Expose
@@ -91,7 +91,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Inherited From.
-     * 
+     * Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
      */
     @SerializedName(value = "inheritedFrom", alternate = {"InheritedFrom"})
     @Expose
@@ -100,7 +100,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Invitation.
-     * 
+     * Details of any associated sharing invitation for this permission. Read-only.
      */
     @SerializedName(value = "invitation", alternate = {"Invitation"})
     @Expose
@@ -109,7 +109,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Link.
-     * 
+     * Provides the link details of the current permission, if it is a link type permissions. Read-only.
      */
     @SerializedName(value = "link", alternate = {"Link"})
     @Expose
@@ -118,7 +118,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Roles.
-     * 
+     * The type of permission, e.g. read. See below for the full list of roles. Read-only.
      */
     @SerializedName(value = "roles", alternate = {"Roles"})
     @Expose
@@ -127,7 +127,7 @@ public class Permission extends Entity implements IJsonBackedObject {
 
     /**
      * The Share Id.
-     * 
+     * A unique token that can be used to access this shared item via the **shares** API. Read-only.
      */
     @SerializedName(value = "shareId", alternate = {"ShareId"})
     @Expose

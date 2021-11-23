@@ -43,7 +43,7 @@ public class UserRegistrationFeatureSummary implements IJsonBackedObject {
 
     /**
      * The Total User Count.
-     * 
+     * Total number of users accounts, excluding those that are blocked
      */
     @SerializedName(value = "totalUserCount", alternate = {"TotalUserCount"})
     @Expose
@@ -52,7 +52,7 @@ public class UserRegistrationFeatureSummary implements IJsonBackedObject {
 
     /**
      * The User Registration Feature Counts.
-     * 
+     * Number of users registered or capable for Multi-Factor Authentication, Self-Service Password Reset and Passwordless Authentication.
      */
     @SerializedName(value = "userRegistrationFeatureCounts", alternate = {"UserRegistrationFeatureCounts"})
     @Expose
@@ -61,7 +61,7 @@ public class UserRegistrationFeatureSummary implements IJsonBackedObject {
 
     /**
      * The User Roles.
-     * 
+     * User role type. Possible values are: all, privilegedAdmin, admin, user.
      */
     @SerializedName(value = "userRoles", alternate = {"UserRoles"})
     @Expose
@@ -70,7 +70,7 @@ public class UserRegistrationFeatureSummary implements IJsonBackedObject {
 
     /**
      * The User Types.
-     * 
+     * User type. Possible values are: all, member, guest.
      */
     @SerializedName(value = "userTypes", alternate = {"UserTypes"})
     @Expose

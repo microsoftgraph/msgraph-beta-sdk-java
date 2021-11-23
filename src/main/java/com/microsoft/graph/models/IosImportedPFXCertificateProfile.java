@@ -31,7 +31,7 @@ public class IosImportedPFXCertificateProfile extends IosCertificateProfile impl
 
     /**
      * The Intended Purpose.
-     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc.
+     * Intended Purpose of the Certificate Profile - which could be Unassigned, SmimeEncryption, SmimeSigning etc. Possible values are: unassigned, smimeEncryption, smimeSigning, vpn, wifi.
      */
     @SerializedName(value = "intendedPurpose", alternate = {"IntendedPurpose"})
     @Expose

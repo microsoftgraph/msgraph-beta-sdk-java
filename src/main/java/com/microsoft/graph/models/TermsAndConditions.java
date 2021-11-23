@@ -70,7 +70,7 @@ public class TermsAndConditions extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Administrator-supplied name for the T&amp;C policy. 
+     * Administrator-supplied name for the T&amp;C policy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

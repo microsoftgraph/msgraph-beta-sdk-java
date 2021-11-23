@@ -42,7 +42,7 @@ public class SubjectRightsRequestHistory implements IJsonBackedObject {
 
     /**
      * The Changed By.
-     * 
+     * Identity of the user who changed the  subject rights request.
      */
     @SerializedName(value = "changedBy", alternate = {"ChangedBy"})
     @Expose
@@ -51,7 +51,7 @@ public class SubjectRightsRequestHistory implements IJsonBackedObject {
 
     /**
      * The Event Date Time.
-     * 
+     * Data and time when the entity was changed.
      */
     @SerializedName(value = "eventDateTime", alternate = {"EventDateTime"})
     @Expose
@@ -60,7 +60,7 @@ public class SubjectRightsRequestHistory implements IJsonBackedObject {
 
     /**
      * The Stage.
-     * 
+     * The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
      */
     @SerializedName(value = "stage", alternate = {"Stage"})
     @Expose
@@ -69,7 +69,7 @@ public class SubjectRightsRequestHistory implements IJsonBackedObject {
 
     /**
      * The Stage Status.
-     * 
+     * The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
      */
     @SerializedName(value = "stageStatus", alternate = {"StageStatus"})
     @Expose
@@ -78,7 +78,7 @@ public class SubjectRightsRequestHistory implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Type of history.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

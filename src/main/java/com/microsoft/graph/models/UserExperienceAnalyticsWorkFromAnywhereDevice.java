@@ -128,7 +128,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Health Status.
-     * The user experience work from anywhere per device health status
+     * The user experience work from anywhere per device health status. Possible values are: unknown, insufficientData, needsAttention, meetingGoals.
      */
     @SerializedName(value = "healthStatus", alternate = {"HealthStatus"})
     @Expose
@@ -308,7 +308,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
 
     /**
      * The Upgrade Eligibility.
-     * The user experience work from anywhere windows upgrade eligibility status of device.
+     * The user experience work from anywhere windows upgrade eligibility status of device. Possible values are: upgraded, unknown, notCapable, capable.
      */
     @SerializedName(value = "upgradeEligibility", alternate = {"UpgradeEligibility"})
     @Expose

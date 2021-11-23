@@ -40,7 +40,7 @@ public class KerberosSignOnSettings implements IJsonBackedObject {
 
     /**
      * The Kerberos Service Principal Name.
-     * 
+     * The Internal Application SPN of the application server. This SPN needs to be in the list of services to which the connector can present delegated credentials.
      */
     @SerializedName(value = "kerberosServicePrincipalName", alternate = {"KerberosServicePrincipalName"})
     @Expose
@@ -49,7 +49,7 @@ public class KerberosSignOnSettings implements IJsonBackedObject {
 
     /**
      * The Kerberos Sign On Mapping Attribute Type.
-     * 
+     * The Delegated Login Identity for the connector to use on behalf of your users. For more information, see Working with different on-premises and cloud identities . Possible values are: userPrincipalName, onPremisesUserPrincipalName, userPrincipalUsername, onPremisesUserPrincipalUsername, onPremisesSAMAccountName.
      */
     @SerializedName(value = "kerberosSignOnMappingAttributeType", alternate = {"KerberosSignOnMappingAttributeType"})
     @Expose

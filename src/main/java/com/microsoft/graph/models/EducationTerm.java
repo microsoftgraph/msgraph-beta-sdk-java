@@ -39,7 +39,7 @@ public class EducationTerm implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the term.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class EducationTerm implements IJsonBackedObject {
 
     /**
      * The End Date.
-     * 
+     * End of the term.
      */
     @SerializedName(value = "endDate", alternate = {"EndDate"})
     @Expose
@@ -57,7 +57,7 @@ public class EducationTerm implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * ID of term in the syncing system.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -66,7 +66,7 @@ public class EducationTerm implements IJsonBackedObject {
 
     /**
      * The Start Date.
-     * 
+     * Start of the term.
      */
     @SerializedName(value = "startDate", alternate = {"StartDate"})
     @Expose

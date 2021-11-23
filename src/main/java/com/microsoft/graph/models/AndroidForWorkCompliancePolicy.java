@@ -39,7 +39,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
 
     /**
      * The Device Threat Protection Required Security Level.
-     * Require Mobile Threat Protection minimum risk level to report noncompliance.
+     * Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
      */
     @SerializedName(value = "deviceThreatProtectionRequiredSecurityLevel", alternate = {"DeviceThreatProtectionRequiredSecurityLevel"})
     @Expose
@@ -120,7 +120,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
 
     /**
      * The Password Required Type.
-     * Type of characters in password
+     * Type of characters in password. Possible values are: deviceDefault, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, numeric, numericComplex, any.
      */
     @SerializedName(value = "passwordRequiredType", alternate = {"PasswordRequiredType"})
     @Expose
@@ -174,7 +174,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
 
     /**
      * The Security Required Android Safety Net Evaluation Type.
-     * Require a specific SafetyNet evaluation type for compliance.
+     * Require a specific SafetyNet evaluation type for compliance. Possible values are: basic, hardwareBacked.
      */
     @SerializedName(value = "securityRequiredAndroidSafetyNetEvaluationType", alternate = {"SecurityRequiredAndroidSafetyNetEvaluationType"})
     @Expose

@@ -28,7 +28,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -37,7 +37,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Team Display Name.
-     * 
+     * The updated name of the team.
      */
     @SerializedName(value = "teamDisplayName", alternate = {"TeamDisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class TeamRenamedEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Team Id.
-     * 
+     * Unique identifier of the team.
      */
     @SerializedName(value = "teamId", alternate = {"TeamId"})
     @Expose

@@ -40,7 +40,7 @@ public class AuthenticationSourceFilter implements IJsonBackedObject {
 
     /**
      * The Include Applications.
-     * 
+     * Applications to include for evaluation of the authenticationListener. These applications trigger the associated action when used as the client application in the authentication flow. The application identifer is the application's client id.
      */
     @SerializedName(value = "includeApplications", alternate = {"IncludeApplications"})
     @Expose

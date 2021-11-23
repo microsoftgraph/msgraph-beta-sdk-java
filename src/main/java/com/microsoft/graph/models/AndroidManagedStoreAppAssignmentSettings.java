@@ -38,7 +38,7 @@ public class AndroidManagedStoreAppAssignmentSettings extends MobileAppAssignmen
 
     /**
      * The Auto Update Mode.
-     * The prioritization of automatic updates for this app assignment.
+     * The prioritization of automatic updates for this app assignment. Possible values are: default, postponed, priority, unknownFutureValue.
      */
     @SerializedName(value = "autoUpdateMode", alternate = {"AutoUpdateMode"})
     @Expose
