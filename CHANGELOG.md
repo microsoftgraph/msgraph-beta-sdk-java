@@ -11,6 +11,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.34.0] - 2021-11-30
+
+### Added
+
+### Changed
+
+- Generated beta models and request builders using Typewriter using latest Metadata update. 
+- Fix disambiguation for managementTemplate and managementTemplateCollection which had prevented us from releasing using latest metadata updates. 
+
 ## [0.33.0] - 2021-11-19
 
 ### Added
