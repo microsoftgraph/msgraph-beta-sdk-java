@@ -28,7 +28,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
 
     /**
      * The Principal Scopes.
-     * 
+     * Defines the scopes of the principals whose access to resources are reviewed in the access review.
      */
     @SerializedName(value = "principalScopes", alternate = {"PrincipalScopes"})
     @Expose
@@ -37,7 +37,7 @@ public class PrincipalResourceMembershipsScope extends AccessReviewScope impleme
 
     /**
      * The Resource Scopes.
-     * 
+     * Defines the scopes of the resources for which access is reviewed.
      */
     @SerializedName(value = "resourceScopes", alternate = {"ResourceScopes"})
     @Expose

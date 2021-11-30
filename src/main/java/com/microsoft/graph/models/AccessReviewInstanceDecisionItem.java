@@ -8,11 +8,14 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.UserIdentity;
 import com.microsoft.graph.models.Identity;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemResource;
 import com.microsoft.graph.models.AccessReviewInstanceDecisionItemTarget;
+import com.microsoft.graph.models.GovernanceInsight;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.GovernanceInsightCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -31,7 +34,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Access Review Id.
-     * 
+     * The identifier of the accessReviewInstance parent. Supports $select. Read-only.
      */
     @SerializedName(value = "accessReviewId", alternate = {"AccessReviewId"})
     @Expose
@@ -40,7 +43,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Applied By.
-     * 
+     * The identifier of the user who applied the decision. Read-only.
      */
     @SerializedName(value = "appliedBy", alternate = {"AppliedBy"})
     @Expose
@@ -49,7 +52,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Applied Date Time.
-     * 
+     * The timestamp when the approval decision was applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
      */
     @SerializedName(value = "appliedDateTime", alternate = {"AppliedDateTime"})
     @Expose
@@ -58,7 +61,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Apply Result.
-     * 
+     * The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
      */
     @SerializedName(value = "applyResult", alternate = {"ApplyResult"})
     @Expose
@@ -67,7 +70,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Decision.
-     * 
+     * Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
      */
     @SerializedName(value = "decision", alternate = {"Decision"})
     @Expose
@@ -76,7 +79,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Justification.
-     * 
+     * Justification left by the reviewer when they made the decision.
      */
     @SerializedName(value = "justification", alternate = {"Justification"})
     @Expose
@@ -85,7 +88,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Principal.
-     * 
+     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
      */
     @SerializedName(value = "principal", alternate = {"Principal"})
     @Expose
@@ -94,7 +97,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Principal Link.
-     * 
+     * A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
      */
     @SerializedName(value = "principalLink", alternate = {"PrincipalLink"})
     @Expose
@@ -103,7 +106,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Recommendation.
-     * 
+     * A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
      */
     @SerializedName(value = "recommendation", alternate = {"Recommendation"})
     @Expose
@@ -112,7 +115,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Resource.
-     * 
+     * Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
@@ -121,7 +124,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Resource Link.
-     * 
+     * A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
      */
     @SerializedName(value = "resourceLink", alternate = {"ResourceLink"})
     @Expose
@@ -130,7 +133,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Reviewed By.
-     * 
+     * The identifier of the reviewer. Supports $select. Read-only.
      */
     @SerializedName(value = "reviewedBy", alternate = {"ReviewedBy"})
     @Expose
@@ -139,7 +142,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Reviewed Date Time.
-     * 
+     * The timestamp when the review decision occurred. Supports $select. Read-only.
      */
     @SerializedName(value = "reviewedDateTime", alternate = {"ReviewedDateTime"})
     @Expose
@@ -148,12 +151,21 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
 
     /**
      * The Target.
-     * 
+     * The target of this specific decision. Decision targets can be of different types – each one with its own specific properties. See accessReviewInstanceDecisionItemTarget. Read-only.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose
 	@Nullable
     public AccessReviewInstanceDecisionItemTarget target;
+
+    /**
+     * The Insights.
+     * 
+     */
+    @SerializedName(value = "insights", alternate = {"Insights"})
+    @Expose
+	@Nullable
+    public GovernanceInsightCollectionPage insights;
 
 
     /**
@@ -164,5 +176,9 @@ public class AccessReviewInstanceDecisionItem extends Entity implements IJsonBac
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("insights")) {
+            insights = serializer.deserializeObject(json.get("insights"), GovernanceInsightCollectionPage.class);
+        }
     }
 }

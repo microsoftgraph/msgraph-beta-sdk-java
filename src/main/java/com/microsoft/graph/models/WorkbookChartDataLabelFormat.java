@@ -29,7 +29,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements IJsonBackedO
 
     /**
      * The Fill.
-     * 
+     * Represents the fill format of the current chart data label. Read-only.
      */
     @SerializedName(value = "fill", alternate = {"Fill"})
     @Expose
@@ -38,7 +38,7 @@ public class WorkbookChartDataLabelFormat extends Entity implements IJsonBackedO
 
     /**
      * The Font.
-     * 
+     * Represents the font attributes (font name, font size, color, etc.) for a chart data label. Read-only.
      */
     @SerializedName(value = "font", alternate = {"Font"})
     @Expose

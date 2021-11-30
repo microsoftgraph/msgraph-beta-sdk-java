@@ -34,7 +34,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
-     * 
+     * The version of the task folder.
      */
     @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose
@@ -43,7 +43,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default Folder.
-     * 
+     * True if the folder is the default task folder.
      */
     @SerializedName(value = "isDefaultFolder", alternate = {"IsDefaultFolder"})
     @Expose
@@ -52,7 +52,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of the task folder.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -61,7 +61,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Group Key.
-     * 
+     * The unique GUID identifier for the task folder's parent group.
      */
     @SerializedName(value = "parentGroupKey", alternate = {"ParentGroupKey"})
     @Expose
@@ -70,7 +70,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Multi Value Extended Properties.
-     * 
+     * The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
@@ -79,7 +79,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Single Value Extended Properties.
-     * 
+     * The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose
@@ -88,7 +88,7 @@ public class OutlookTaskFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * 
+     * The tasks in this task folder. Read-only. Nullable.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

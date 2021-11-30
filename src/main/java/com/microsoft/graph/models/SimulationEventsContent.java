@@ -41,7 +41,7 @@ public class SimulationEventsContent implements IJsonBackedObject {
 
     /**
      * The Compromised Rate.
-     * 
+     * Actual percentage of users who fell for the simulated attack in an attack simulation and training campaign.
      */
     @SerializedName(value = "compromisedRate", alternate = {"CompromisedRate"})
     @Expose
@@ -50,7 +50,7 @@ public class SimulationEventsContent implements IJsonBackedObject {
 
     /**
      * The Events.
-     * 
+     * List of simulation events in an attack simulation and training campaign.
      */
     @SerializedName(value = "events", alternate = {"Events"})
     @Expose

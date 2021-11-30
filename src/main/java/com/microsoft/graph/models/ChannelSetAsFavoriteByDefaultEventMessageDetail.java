@@ -28,7 +28,7 @@ public class ChannelSetAsFavoriteByDefaultEventMessageDetail extends EventMessag
 
     /**
      * The Channel Id.
-     * 
+     * Unique identifier of the channel.
      */
     @SerializedName(value = "channelId", alternate = {"ChannelId"})
     @Expose
@@ -37,7 +37,7 @@ public class ChannelSetAsFavoriteByDefaultEventMessageDetail extends EventMessag
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

@@ -62,7 +62,7 @@ public class WindowsAutopilotDeploymentProfile extends Entity implements IJsonBa
 
     /**
      * The Device Type.
-     * The AutoPilot device type that this profile is applicable to.
+     * The AutoPilot device type that this profile is applicable to. Possible values are: windowsPc, surfaceHub2.
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose

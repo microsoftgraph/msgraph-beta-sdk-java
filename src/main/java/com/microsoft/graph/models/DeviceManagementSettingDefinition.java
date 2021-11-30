@@ -121,7 +121,7 @@ public class DeviceManagementSettingDefinition extends Entity implements IJsonBa
 
     /**
      * The Value Type.
-     * The data type of the value
+     * The data type of the value. Possible values are: integer, boolean, string, complex, collection, abstractComplex.
      */
     @SerializedName(value = "valueType", alternate = {"ValueType"})
     @Expose

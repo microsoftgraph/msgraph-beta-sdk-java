@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ItemInsightsSettings;
+import com.microsoft.graph.models.InsightsSettings;
 import com.microsoft.graph.models.ProfileCardProperty;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ProfileCardPropertyCollectionPage;
@@ -31,16 +31,25 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Item Insights.
-     * 
+     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. Get itemInsightsSettings through this navigation property.
      */
     @SerializedName(value = "itemInsights", alternate = {"ItemInsights"})
     @Expose
 	@Nullable
-    public ItemInsightsSettings itemInsights;
+    public InsightsSettings itemInsights;
+
+    /**
+     * The People Insights.
+     * 
+     */
+    @SerializedName(value = "peopleInsights", alternate = {"PeopleInsights"})
+    @Expose
+	@Nullable
+    public InsightsSettings peopleInsights;
 
     /**
      * The Profile Card Properties.
-     * 
+     * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
      */
     @SerializedName(value = "profileCardProperties", alternate = {"ProfileCardProperties"})
     @Expose

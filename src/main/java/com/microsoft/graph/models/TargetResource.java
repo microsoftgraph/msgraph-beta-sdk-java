@@ -42,7 +42,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Indicates the visible name defined for the resource. Typically specified when the resource is created.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -51,7 +51,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Group Type.
-     * 
+     * When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
      */
     @SerializedName(value = "groupType", alternate = {"GroupType"})
     @Expose
@@ -60,7 +60,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Indicates the unique ID of the resource.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -69,7 +69,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Modified Properties.
-     * 
+     * Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
      */
     @SerializedName(value = "modifiedProperties", alternate = {"ModifiedProperties"})
     @Expose
@@ -78,7 +78,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -87,7 +87,7 @@ public class TargetResource implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * When type is set to User, this includes the user name that initiated the action; null for other types.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

@@ -39,7 +39,7 @@ public class TenantContactInformation implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * The email address for the contact. Optional
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -48,7 +48,7 @@ public class TenantContactInformation implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name for the contact. Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -57,7 +57,7 @@ public class TenantContactInformation implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * 
+     * The notes associated with the contact. Optional
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -66,7 +66,7 @@ public class TenantContactInformation implements IJsonBackedObject {
 
     /**
      * The Phone.
-     * 
+     * The phone number for the contact. Optional.
      */
     @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose
@@ -75,7 +75,7 @@ public class TenantContactInformation implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * The title for the contact. Required.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

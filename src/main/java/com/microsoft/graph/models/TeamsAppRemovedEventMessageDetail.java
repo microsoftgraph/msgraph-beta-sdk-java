@@ -28,7 +28,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -37,7 +37,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
 
     /**
      * The Teams App Display Name.
-     * 
+     * Display name of the teamsApp.
      */
     @SerializedName(value = "teamsAppDisplayName", alternate = {"TeamsAppDisplayName"})
     @Expose
@@ -46,7 +46,7 @@ public class TeamsAppRemovedEventMessageDetail extends EventMessageDetail implem
 
     /**
      * The Teams App Id.
-     * 
+     * Unique identifier of the teamsApp.
      */
     @SerializedName(value = "teamsAppId", alternate = {"TeamsAppId"})
     @Expose

@@ -28,7 +28,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Assignment Type.
-     * 
+     * Type of the assignment. It can either be Assigned or Activated.
      */
     @SerializedName(value = "assignmentType", alternate = {"AssignmentType"})
     @Expose
@@ -37,7 +37,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The End Date Time.
-     * 
+     * Time that the roleAssignmentInstance will expire
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -46,7 +46,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Member Type.
-     * 
+     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Role Assignment Origin Id.
-     * 
+     * ID of the roleAssignment in the directory
      */
     @SerializedName(value = "roleAssignmentOriginId", alternate = {"RoleAssignmentOriginId"})
     @Expose
@@ -64,7 +64,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Role Assignment Schedule Id.
-     * 
+     * ID of the parent roleAssignmentSchedule for this instance
      */
     @SerializedName(value = "roleAssignmentScheduleId", alternate = {"RoleAssignmentScheduleId"})
     @Expose
@@ -73,7 +73,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Start Date Time.
-     * 
+     * Time that the roleAssignmentInstance will start
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -82,7 +82,7 @@ public class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleIn
 
     /**
      * The Activated Using.
-     * 
+     * If the roleAssignmentScheduleInstance is activated by a roleEligibilityScheduleRequest, this is the link to the related schedule instance.
      */
     @SerializedName(value = "activatedUsing", alternate = {"ActivatedUsing"})
     @Expose

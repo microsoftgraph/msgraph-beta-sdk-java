@@ -27,7 +27,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements IJson
 
     /**
      * The After Hours.
-     * 
+     * Total hours spent on email outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "afterHours", alternate = {"AfterHours"})
     @Expose
@@ -36,7 +36,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements IJson
 
     /**
      * The Read Email.
-     * 
+     * Total hours spent reading email. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "readEmail", alternate = {"ReadEmail"})
     @Expose
@@ -45,7 +45,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements IJson
 
     /**
      * The Sent Email.
-     * 
+     * Total hours spent writing and sending email. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "sentEmail", alternate = {"SentEmail"})
     @Expose

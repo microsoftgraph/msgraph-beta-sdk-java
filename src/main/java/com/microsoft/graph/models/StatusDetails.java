@@ -30,7 +30,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Additional Details.
-     * 
+     * Additional details in case of error.
      */
     @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose
@@ -39,7 +39,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Error Category.
-     * 
+     * Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
      */
     @SerializedName(value = "errorCategory", alternate = {"ErrorCategory"})
     @Expose
@@ -48,7 +48,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Error Code.
-     * 
+     * Unique error code if any occurred. Learn more
      */
     @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
@@ -57,7 +57,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Reason.
-     * 
+     * Summarizes the status and describes why the status happened.
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose
@@ -66,7 +66,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Recommended Action.
-     * 
+     * Provides the resolution for the corresponding error.
      */
     @SerializedName(value = "recommendedAction", alternate = {"RecommendedAction"})
     @Expose

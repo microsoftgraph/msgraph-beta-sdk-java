@@ -45,7 +45,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Body Contains.
-     * 
+     * Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "bodyContains", alternate = {"BodyContains"})
     @Expose
@@ -54,7 +54,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Body Or Subject Contains.
-     * 
+     * Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "bodyOrSubjectContains", alternate = {"BodyOrSubjectContains"})
     @Expose
@@ -63,7 +63,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply.
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -72,7 +72,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The From Addresses.
-     * 
+     * Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "fromAddresses", alternate = {"FromAddresses"})
     @Expose
@@ -81,7 +81,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Has Attachments.
-     * 
+     * Indicates whether an incoming message must have attachments in order for the condition or exception to apply.
      */
     @SerializedName(value = "hasAttachments", alternate = {"HasAttachments"})
     @Expose
@@ -90,7 +90,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Header Contains.
-     * 
+     * Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "headerContains", alternate = {"HeaderContains"})
     @Expose
@@ -99,7 +99,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * 
+     * The importance that is stamped on an incoming message in order for the condition or exception to apply: low, normal, high.
      */
     @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
@@ -108,7 +108,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Approval Request.
-     * 
+     * Indicates whether an incoming message must be an approval request in order for the condition or exception to apply.
      */
     @SerializedName(value = "isApprovalRequest", alternate = {"IsApprovalRequest"})
     @Expose
@@ -117,7 +117,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Automatic Forward.
-     * 
+     * Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply.
      */
     @SerializedName(value = "isAutomaticForward", alternate = {"IsAutomaticForward"})
     @Expose
@@ -126,7 +126,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Automatic Reply.
-     * 
+     * Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply.
      */
     @SerializedName(value = "isAutomaticReply", alternate = {"IsAutomaticReply"})
     @Expose
@@ -135,7 +135,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Encrypted.
-     * 
+     * Indicates whether an incoming message must be encrypted in order for the condition or exception to apply.
      */
     @SerializedName(value = "isEncrypted", alternate = {"IsEncrypted"})
     @Expose
@@ -144,7 +144,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Meeting Request.
-     * 
+     * Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply.
      */
     @SerializedName(value = "isMeetingRequest", alternate = {"IsMeetingRequest"})
     @Expose
@@ -153,7 +153,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Meeting Response.
-     * 
+     * Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply.
      */
     @SerializedName(value = "isMeetingResponse", alternate = {"IsMeetingResponse"})
     @Expose
@@ -162,7 +162,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Non Delivery Report.
-     * 
+     * Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply.
      */
     @SerializedName(value = "isNonDeliveryReport", alternate = {"IsNonDeliveryReport"})
     @Expose
@@ -171,7 +171,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Permission Controlled.
-     * 
+     * Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply.
      */
     @SerializedName(value = "isPermissionControlled", alternate = {"IsPermissionControlled"})
     @Expose
@@ -180,7 +180,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Read Receipt.
-     * 
+     * Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply.
      */
     @SerializedName(value = "isReadReceipt", alternate = {"IsReadReceipt"})
     @Expose
@@ -189,7 +189,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Signed.
-     * 
+     * Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply.
      */
     @SerializedName(value = "isSigned", alternate = {"IsSigned"})
     @Expose
@@ -198,7 +198,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Is Voicemail.
-     * 
+     * Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply.
      */
     @SerializedName(value = "isVoicemail", alternate = {"IsVoicemail"})
     @Expose
@@ -207,7 +207,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Message Action Flag.
-     * 
+     * Represents the flag-for-action value that appears on an incoming message in order for the condition or exception to apply. The possible values are: any, call, doNotForward, followUp, fyi, forward, noResponseNecessary, read, reply, replyToAll, review.
      */
     @SerializedName(value = "messageActionFlag", alternate = {"MessageActionFlag"})
     @Expose
@@ -216,7 +216,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Not Sent To Me.
-     * 
+     * Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "notSentToMe", alternate = {"NotSentToMe"})
     @Expose
@@ -225,7 +225,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Recipient Contains.
-     * 
+     * Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "recipientContains", alternate = {"RecipientContains"})
     @Expose
@@ -234,7 +234,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sender Contains.
-     * 
+     * Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "senderContains", alternate = {"SenderContains"})
     @Expose
@@ -243,7 +243,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sensitivity.
-     * 
+     * Represents the sensitivity level that must be stamped on an incoming message in order for the condition or exception to apply. The possible values are: normal, personal, private, confidential.
      */
     @SerializedName(value = "sensitivity", alternate = {"Sensitivity"})
     @Expose
@@ -252,7 +252,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sent Cc Me.
-     * 
+     * Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "sentCcMe", alternate = {"SentCcMe"})
     @Expose
@@ -261,7 +261,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sent Only To Me.
-     * 
+     * Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "sentOnlyToMe", alternate = {"SentOnlyToMe"})
     @Expose
@@ -270,7 +270,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sent To Addresses.
-     * 
+     * Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply.
      */
     @SerializedName(value = "sentToAddresses", alternate = {"SentToAddresses"})
     @Expose
@@ -279,7 +279,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sent To Me.
-     * 
+     * Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "sentToMe", alternate = {"SentToMe"})
     @Expose
@@ -288,7 +288,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Sent To Or Cc Me.
-     * 
+     * Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "sentToOrCcMe", alternate = {"SentToOrCcMe"})
     @Expose
@@ -297,7 +297,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Subject Contains.
-     * 
+     * Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply.
      */
     @SerializedName(value = "subjectContains", alternate = {"SubjectContains"})
     @Expose
@@ -306,7 +306,7 @@ public class MessageRulePredicates implements IJsonBackedObject {
 
     /**
      * The Within Size Range.
-     * 
+     * Represents the minimum and maximum sizes (in kilobytes) that an incoming message must fall in between in order for the condition or exception to apply.
      */
     @SerializedName(value = "withinSizeRange", alternate = {"WithinSizeRange"})
     @Expose

@@ -30,7 +30,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Applies To.
-     * 
+     * For example, 'User' or 'Company'.
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
@@ -39,7 +39,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Capability Status.
-     * 
+     * Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.
      */
     @SerializedName(value = "capabilityStatus", alternate = {"CapabilityStatus"})
     @Expose
@@ -48,7 +48,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Consumed Units.
-     * 
+     * The number of licenses that have been assigned.
      */
     @SerializedName(value = "consumedUnits", alternate = {"ConsumedUnits"})
     @Expose
@@ -57,7 +57,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Prepaid Units.
-     * 
+     * Information about the number and status of prepaid licenses.
      */
     @SerializedName(value = "prepaidUnits", alternate = {"PrepaidUnits"})
     @Expose
@@ -66,7 +66,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Plans.
-     * 
+     * Information about the service plans that are available with the SKU. Not nullable
      */
     @SerializedName(value = "servicePlans", alternate = {"ServicePlans"})
     @Expose
@@ -75,7 +75,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Id.
-     * 
+     * The unique identifier (GUID) for the service SKU.
      */
     @SerializedName(value = "skuId", alternate = {"SkuId"})
     @Expose
@@ -84,7 +84,7 @@ public class SubscribedSku extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Part Number.
-     * 
+     * The SKU part number; for example: 'AAD_PREMIUM' or 'RMSBASIC'. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.
      */
     @SerializedName(value = "skuPartNumber", alternate = {"SkuPartNumber"})
     @Expose

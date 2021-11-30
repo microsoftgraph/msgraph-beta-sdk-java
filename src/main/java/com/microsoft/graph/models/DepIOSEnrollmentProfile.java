@@ -129,7 +129,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
 
     /**
      * The ITunes Pairing Mode.
-     * Indicates the iTunes pairing mode
+     * Indicates the iTunes pairing mode. Possible values are: disallow, allow, requiresCertificate.
      */
     @SerializedName(value = "iTunesPairingMode", alternate = {"ITunesPairingMode"})
     @Expose

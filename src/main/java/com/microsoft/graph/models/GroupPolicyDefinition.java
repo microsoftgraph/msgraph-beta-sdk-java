@@ -44,7 +44,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Class Type.
-     * Identifies the type of groups the policy can be applied to.
+     * Identifies the type of groups the policy can be applied to. Possible values are: user, machine.
      */
     @SerializedName(value = "classType", alternate = {"ClassType"})
     @Expose
@@ -116,7 +116,7 @@ public class GroupPolicyDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Policy Type.
-     * Specifies the type of group policy.
+     * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
      */
     @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose

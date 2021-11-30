@@ -42,7 +42,7 @@ public class ShiftAvailability implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * 
+     * Specifies the pattern for recurrence
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose
@@ -51,7 +51,7 @@ public class ShiftAvailability implements IJsonBackedObject {
 
     /**
      * The Time Slots.
-     * 
+     * The time slot(s) preferred by the user.
      */
     @SerializedName(value = "timeSlots", alternate = {"TimeSlots"})
     @Expose
@@ -60,7 +60,7 @@ public class ShiftAvailability implements IJsonBackedObject {
 
     /**
      * The Time Zone.
-     * 
+     * Specifies the time zone for the indicated time.
      */
     @SerializedName(value = "timeZone", alternate = {"TimeZone"})
     @Expose

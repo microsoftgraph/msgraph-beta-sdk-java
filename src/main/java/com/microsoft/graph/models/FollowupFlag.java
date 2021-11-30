@@ -41,7 +41,7 @@ public class FollowupFlag implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * The date and time that the follow-up was finished.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class FollowupFlag implements IJsonBackedObject {
 
     /**
      * The Due Date Time.
-     * 
+     * The date and time that the follow up is to be finished. Note: To set the due date, you must also specify the startDateTime; otherwise, you will get a 400 Bad Request response.
      */
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class FollowupFlag implements IJsonBackedObject {
 
     /**
      * The Flag Status.
-     * 
+     * The status for follow-up for an item. Possible values are notFlagged, complete, and flagged.
      */
     @SerializedName(value = "flagStatus", alternate = {"FlagStatus"})
     @Expose
@@ -68,7 +68,7 @@ public class FollowupFlag implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The date and time that the follow-up is to begin.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose

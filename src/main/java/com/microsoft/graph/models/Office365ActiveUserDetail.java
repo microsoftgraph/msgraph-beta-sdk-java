@@ -28,7 +28,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Assigned Products.
-     * 
+     * All the products assigned for the user.
      */
     @SerializedName(value = "assignedProducts", alternate = {"AssignedProducts"})
     @Expose
@@ -37,7 +37,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Deleted Date.
-     * 
+     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
      */
     @SerializedName(value = "deletedDate", alternate = {"DeletedDate"})
     @Expose
@@ -46,7 +46,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * 
+     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -55,7 +55,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Exchange Last Activity Date.
-     * 
+     * The date when user last read or sent email.
      */
     @SerializedName(value = "exchangeLastActivityDate", alternate = {"ExchangeLastActivityDate"})
     @Expose
@@ -64,7 +64,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Exchange License Assign Date.
-     * 
+     * The last date when the user was assigned an Exchange license.
      */
     @SerializedName(value = "exchangeLicenseAssignDate", alternate = {"ExchangeLicenseAssignDate"})
     @Expose
@@ -73,7 +73,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Has Exchange License.
-     * 
+     * Whether the user has been assigned an Exchange license.
      */
     @SerializedName(value = "hasExchangeLicense", alternate = {"HasExchangeLicense"})
     @Expose
@@ -82,7 +82,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Has One Drive License.
-     * 
+     * Whether the user has been assigned a OneDrive license.
      */
     @SerializedName(value = "hasOneDriveLicense", alternate = {"HasOneDriveLicense"})
     @Expose
@@ -91,7 +91,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Has Share Point License.
-     * 
+     * Whether the user has been assigned a SharePoint license.
      */
     @SerializedName(value = "hasSharePointLicense", alternate = {"HasSharePointLicense"})
     @Expose
@@ -100,7 +100,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Has Skype For Business License.
-     * 
+     * Whether the user has been assigned a Skype For Business license.
      */
     @SerializedName(value = "hasSkypeForBusinessLicense", alternate = {"HasSkypeForBusinessLicense"})
     @Expose
@@ -109,7 +109,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Has Teams License.
-     * 
+     * Whether the user has been assigned a Teams license.
      */
     @SerializedName(value = "hasTeamsLicense", alternate = {"HasTeamsLicense"})
     @Expose
@@ -118,7 +118,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Has Yammer License.
-     * 
+     * Whether the user has been assigned a Yammer license.
      */
     @SerializedName(value = "hasYammerLicense", alternate = {"HasYammerLicense"})
     @Expose
@@ -127,7 +127,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Is Deleted.
-     * 
+     * Whether this user has been deleted or soft deleted.
      */
     @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
@@ -136,7 +136,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The One Drive Last Activity Date.
-     * 
+     * The date when user last viewed or edited files, shared files internally or externally, or synced files.
      */
     @SerializedName(value = "oneDriveLastActivityDate", alternate = {"OneDriveLastActivityDate"})
     @Expose
@@ -145,7 +145,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The One Drive License Assign Date.
-     * 
+     * The last date when the user was assigned a OneDrive license.
      */
     @SerializedName(value = "oneDriveLicenseAssignDate", alternate = {"OneDriveLicenseAssignDate"})
     @Expose
@@ -154,7 +154,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -163,7 +163,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Share Point Last Activity Date.
-     * 
+     * The date when user last viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages.
      */
     @SerializedName(value = "sharePointLastActivityDate", alternate = {"SharePointLastActivityDate"})
     @Expose
@@ -172,7 +172,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Share Point License Assign Date.
-     * 
+     * The last date when the user was assigned a SharePoint license.
      */
     @SerializedName(value = "sharePointLicenseAssignDate", alternate = {"SharePointLicenseAssignDate"})
     @Expose
@@ -181,7 +181,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Skype For Business Last Activity Date.
-     * 
+     * The date when user last organized or participated in conferences, or joined peer-to-peer sessions.
      */
     @SerializedName(value = "skypeForBusinessLastActivityDate", alternate = {"SkypeForBusinessLastActivityDate"})
     @Expose
@@ -190,7 +190,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Skype For Business License Assign Date.
-     * 
+     * The last date when the user was assigned a Skype For Business license.
      */
     @SerializedName(value = "skypeForBusinessLicenseAssignDate", alternate = {"SkypeForBusinessLicenseAssignDate"})
     @Expose
@@ -199,7 +199,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Teams Last Activity Date.
-     * 
+     * The date when user last posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls.
      */
     @SerializedName(value = "teamsLastActivityDate", alternate = {"TeamsLastActivityDate"})
     @Expose
@@ -208,7 +208,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Teams License Assign Date.
-     * 
+     * The last date when the user was assigned a Teams license.
      */
     @SerializedName(value = "teamsLicenseAssignDate", alternate = {"TeamsLicenseAssignDate"})
     @Expose
@@ -217,7 +217,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -226,7 +226,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Yammer Last Activity Date.
-     * 
+     * The date when user last posted, read, or liked message.
      */
     @SerializedName(value = "yammerLastActivityDate", alternate = {"YammerLastActivityDate"})
     @Expose
@@ -235,7 +235,7 @@ public class Office365ActiveUserDetail extends Entity implements IJsonBackedObje
 
     /**
      * The Yammer License Assign Date.
-     * 
+     * The last date when the user was assigned a Yammer license.
      */
     @SerializedName(value = "yammerLicenseAssignDate", alternate = {"YammerLicenseAssignDate"})
     @Expose

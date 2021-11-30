@@ -29,7 +29,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
 
     /**
      * The Allow Device Health Monitoring.
-     * Enables device health monitoring on the device
+     * Enables device health monitoring on the device. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "allowDeviceHealthMonitoring", alternate = {"AllowDeviceHealthMonitoring"})
     @Expose
@@ -47,7 +47,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
 
     /**
      * The Config Device Health Monitoring Scope.
-     * Specifies set of events collected from the device where health monitoring is enabled
+     * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
      */
     @SerializedName(value = "configDeviceHealthMonitoringScope", alternate = {"ConfigDeviceHealthMonitoringScope"})
     @Expose

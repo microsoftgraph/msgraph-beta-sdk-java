@@ -30,7 +30,7 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
 
     /**
      * The Intent.
-     * The admin intent to apply or remove the profile. This property is read-only.
+     * The admin intent to apply or remove the profile. This property is read-only. Possible values are: apply, remove.
      */
     @SerializedName(value = "intent", alternate = {"Intent"})
     @Expose
@@ -39,7 +39,7 @@ public class DeviceConfigurationAssignment extends Entity implements IJsonBacked
 
     /**
      * The Source.
-     * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only.
+     * The assignment source for the device configuration, direct or parcel/policySet. This property is read-only. Possible values are: direct, policySets.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

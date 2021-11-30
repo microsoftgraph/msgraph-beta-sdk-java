@@ -43,7 +43,7 @@ public class LabelingOptions implements IJsonBackedObject {
 
     /**
      * The Assignment Method.
-     * 
+     * Possible values are: standard, privileged, auto.
      */
     @SerializedName(value = "assignmentMethod", alternate = {"AssignmentMethod"})
     @Expose
@@ -52,7 +52,7 @@ public class LabelingOptions implements IJsonBackedObject {
 
     /**
      * The Downgrade Justification.
-     * 
+     * The downgrade justification object that indicates if downgrade was justified and, if so, the reason.
      */
     @SerializedName(value = "downgradeJustification", alternate = {"DowngradeJustification"})
     @Expose
@@ -61,7 +61,7 @@ public class LabelingOptions implements IJsonBackedObject {
 
     /**
      * The Extended Properties.
-     * 
+     * Extended properties will be parsed and returned in the standard MIP labeled metadata format as part of the label information.
      */
     @SerializedName(value = "extendedProperties", alternate = {"ExtendedProperties"})
     @Expose
@@ -70,7 +70,7 @@ public class LabelingOptions implements IJsonBackedObject {
 
     /**
      * The Label Id.
-     * 
+     * The GUID of the label that should be applied to the information.
      */
     @SerializedName(value = "labelId", alternate = {"LabelId"})
     @Expose

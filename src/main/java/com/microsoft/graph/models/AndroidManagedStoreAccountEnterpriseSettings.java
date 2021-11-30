@@ -41,7 +41,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
 
     /**
      * The Bind Status.
-     * Bind status of the tenant with the Google EMM API
+     * Bind status of the tenant with the Google EMM API. Possible values are: notBound, bound, boundAndValidated, unbinding.
      */
     @SerializedName(value = "bindStatus", alternate = {"BindStatus"})
     @Expose
@@ -68,7 +68,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
 
     /**
      * The Enrollment Target.
-     * Indicates which users can enroll devices in Android Enterprise device management
+     * Indicates which users can enroll devices in Android Enterprise device management. Possible values are: none, all, targeted, targetedAsEnrollmentRestrictions.
      */
     @SerializedName(value = "enrollmentTarget", alternate = {"EnrollmentTarget"})
     @Expose
@@ -86,7 +86,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
 
     /**
      * The Last App Sync Status.
-     * Last application sync result
+     * Last application sync result. Possible values are: success, credentialsNotValid, androidForWorkApiError, managementServiceError, unknownError, none.
      */
     @SerializedName(value = "lastAppSyncStatus", alternate = {"LastAppSyncStatus"})
     @Expose

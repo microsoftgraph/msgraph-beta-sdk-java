@@ -39,7 +39,7 @@ public class RubricQualitySelectedColumnModel implements IJsonBackedObject {
 
     /**
      * The Column Id.
-     * 
+     * ID of the selected level for this quality.
      */
     @SerializedName(value = "columnId", alternate = {"ColumnId"})
     @Expose
@@ -48,7 +48,7 @@ public class RubricQualitySelectedColumnModel implements IJsonBackedObject {
 
     /**
      * The Quality Id.
-     * 
+     * ID of the associated quality.
      */
     @SerializedName(value = "qualityId", alternate = {"QualityId"})
     @Expose

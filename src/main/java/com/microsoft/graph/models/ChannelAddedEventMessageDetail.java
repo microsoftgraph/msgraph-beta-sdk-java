@@ -28,7 +28,7 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
 
     /**
      * The Channel Display Name.
-     * 
+     * Display name of the channel.
      */
     @SerializedName(value = "channelDisplayName", alternate = {"ChannelDisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
 
     /**
      * The Channel Id.
-     * 
+     * Unique identifier of the channel.
      */
     @SerializedName(value = "channelId", alternate = {"ChannelId"})
     @Expose
@@ -46,7 +46,7 @@ public class ChannelAddedEventMessageDetail extends EventMessageDetail implement
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

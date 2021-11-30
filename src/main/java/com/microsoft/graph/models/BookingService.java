@@ -41,7 +41,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Default Duration.
-     * 
+     * The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S.
      */
     @SerializedName(value = "defaultDuration", alternate = {"DefaultDuration"})
     @Expose
@@ -50,7 +50,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Default Location.
-     * 
+     * The default physical location for the service.
      */
     @SerializedName(value = "defaultLocation", alternate = {"DefaultLocation"})
     @Expose
@@ -59,7 +59,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Default Price.
-     * 
+     * The default monetary price for the service.
      */
     @SerializedName(value = "defaultPrice", alternate = {"DefaultPrice"})
     @Expose
@@ -68,7 +68,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Default Price Type.
-     * 
+     * The default way the service is charged. Possible values are: undefined, fixedPrice, startingAt, hourly, free, priceVaries, callUs, notSet.
      */
     @SerializedName(value = "defaultPriceType", alternate = {"DefaultPriceType"})
     @Expose
@@ -86,7 +86,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Description.
-     * 
+     * A text description for the service.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -95,7 +95,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Is Hidden From Customers.
-     * 
+     * True means this service is not available to customers for booking.
      */
     @SerializedName(value = "isHiddenFromCustomers", alternate = {"IsHiddenFromCustomers"})
     @Expose
@@ -104,7 +104,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Is Location Online.
-     * 
+     * True indicates that the appointments for the service will be held online. Default value is false.
      */
     @SerializedName(value = "isLocationOnline", alternate = {"IsLocationOnline"})
     @Expose
@@ -113,7 +113,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Notes.
-     * 
+     * Additional information about this service.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -122,7 +122,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Post Buffer.
-     * 
+     * The time to buffer after an appointment for this service ends, and before the next customer appointment can be booked.
      */
     @SerializedName(value = "postBuffer", alternate = {"PostBuffer"})
     @Expose
@@ -131,7 +131,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Pre Buffer.
-     * 
+     * The time to buffer before an appointment for this service can start.
      */
     @SerializedName(value = "preBuffer", alternate = {"PreBuffer"})
     @Expose
@@ -140,7 +140,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Scheduling Policy.
-     * 
+     * The set of policies that determine how appointments for this type of service should be created and managed.
      */
     @SerializedName(value = "schedulingPolicy", alternate = {"SchedulingPolicy"})
     @Expose
@@ -149,7 +149,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Sms Notifications Enabled.
-     * 
+     * True indicates SMS notifications can be sent to the customers for the appointment of the service. Default value is false.
      */
     @SerializedName(value = "smsNotificationsEnabled", alternate = {"SmsNotificationsEnabled"})
     @Expose
@@ -158,7 +158,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Staff Member Ids.
-     * 
+     * Represents those staff members who provide this service.
      */
     @SerializedName(value = "staffMemberIds", alternate = {"StaffMemberIds"})
     @Expose
@@ -167,7 +167,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Web Url.
-     * The URL of the booking service.
+     * The URL a customer uses to access the service.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

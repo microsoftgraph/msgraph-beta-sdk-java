@@ -37,7 +37,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements IJso
 
     /**
      * The Supersedence Type.
-     * The supersedence relationship type between the parent and child apps.
+     * The supersedence relationship type between the parent and child apps. Possible values are: update, replace.
      */
     @SerializedName(value = "supersedenceType", alternate = {"SupersedenceType"})
     @Expose

@@ -41,7 +41,7 @@ public class MediaContentRatingNewZealand implements IJsonBackedObject {
 
     /**
      * The Movie Rating.
-     * Movies rating selected for New Zealand
+     * Movies rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, mature, agesAbove13, agesAbove15, agesAbove16, agesAbove18, restricted, agesAbove16Restricted.
      */
     @SerializedName(value = "movieRating", alternate = {"MovieRating"})
     @Expose
@@ -50,7 +50,7 @@ public class MediaContentRatingNewZealand implements IJsonBackedObject {
 
     /**
      * The Tv Rating.
-     * TV rating selected for New Zealand
+     * TV rating selected for New Zealand. Possible values are: allAllowed, allBlocked, general, parentalGuidance, adults.
      */
     @SerializedName(value = "tvRating", alternate = {"TvRating"})
     @Expose

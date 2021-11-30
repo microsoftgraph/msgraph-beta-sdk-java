@@ -27,7 +27,7 @@ public class WorkbookChartLineFormat extends Entity implements IJsonBackedObject
 
     /**
      * The Color.
-     * 
+     * HTML color code representing the color of lines in the chart.
      */
     @SerializedName(value = "color", alternate = {"Color"})
     @Expose

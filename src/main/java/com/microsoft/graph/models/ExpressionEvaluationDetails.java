@@ -42,7 +42,7 @@ public class ExpressionEvaluationDetails implements IJsonBackedObject {
 
     /**
      * The Expression.
-     * 
+     * Represents expression which has been evaluated.
      */
     @SerializedName(value = "expression", alternate = {"Expression"})
     @Expose
@@ -51,7 +51,7 @@ public class ExpressionEvaluationDetails implements IJsonBackedObject {
 
     /**
      * The Expression Evaluation Details.
-     * 
+     * Represents the details of the evaluation of the expression.
      */
     @SerializedName(value = "expressionEvaluationDetails", alternate = {"ExpressionEvaluationDetails"})
     @Expose
@@ -60,7 +60,7 @@ public class ExpressionEvaluationDetails implements IJsonBackedObject {
 
     /**
      * The Expression Result.
-     * 
+     * Represents the value of the result of the current expression.
      */
     @SerializedName(value = "expressionResult", alternate = {"ExpressionResult"})
     @Expose
@@ -69,7 +69,7 @@ public class ExpressionEvaluationDetails implements IJsonBackedObject {
 
     /**
      * The Property To Evaluate.
-     * 
+     * Defines the name of the property and the value of that property.
      */
     @SerializedName(value = "propertyToEvaluate", alternate = {"PropertyToEvaluate"})
     @Expose

@@ -39,7 +39,7 @@ public class ControlScore implements IJsonBackedObject {
 
     /**
      * The Control Category.
-     * 
+     * Control action category (Identity, Data, Device, Apps, Infrastructure).
      */
     @SerializedName(value = "controlCategory", alternate = {"ControlCategory"})
     @Expose
@@ -48,7 +48,7 @@ public class ControlScore implements IJsonBackedObject {
 
     /**
      * The Control Name.
-     * 
+     * Control unique name.
      */
     @SerializedName(value = "controlName", alternate = {"ControlName"})
     @Expose
@@ -57,7 +57,7 @@ public class ControlScore implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the control.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -66,7 +66,7 @@ public class ControlScore implements IJsonBackedObject {
 
     /**
      * The Score.
-     * 
+     * Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
      */
     @SerializedName(value = "score", alternate = {"Score"})
     @Expose

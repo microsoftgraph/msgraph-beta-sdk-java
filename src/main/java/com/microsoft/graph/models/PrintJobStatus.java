@@ -51,7 +51,7 @@ public class PrintJobStatus implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * A human-readable description of the print job's current processing state. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -60,7 +60,7 @@ public class PrintJobStatus implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * Additional details for print job state. Valid values are described in the following table. Read-only.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -69,7 +69,7 @@ public class PrintJobStatus implements IJsonBackedObject {
 
     /**
      * The Is Acquired By Printer.
-     * 
+     * True if the job was acknowledged by a printer; false otherwise. Read-only.
      */
     @SerializedName(value = "isAcquiredByPrinter", alternate = {"IsAcquiredByPrinter"})
     @Expose
@@ -96,7 +96,7 @@ public class PrintJobStatus implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The print job's current processing state. Valid values are described in the following table. Read-only.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

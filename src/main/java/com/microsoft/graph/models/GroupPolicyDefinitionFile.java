@@ -67,7 +67,7 @@ public class GroupPolicyDefinitionFile extends Entity implements IJsonBackedObje
 
     /**
      * The Policy Type.
-     * Specifies the type of group policy.
+     * Specifies the type of group policy. Possible values are: admxBacked, admxIngested.
      */
     @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose

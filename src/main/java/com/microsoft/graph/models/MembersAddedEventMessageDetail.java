@@ -30,7 +30,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -39,7 +39,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
 
     /**
      * The Members.
-     * 
+     * List of members added.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose
@@ -48,7 +48,7 @@ public class MembersAddedEventMessageDetail extends EventMessageDetail implement
 
     /**
      * The Visible History Start Date Time.
-     * 
+     * The timestamp denoting how far back a conversation's history is shared with the conversation members.
      */
     @SerializedName(value = "visibleHistoryStartDateTime", alternate = {"VisibleHistoryStartDateTime"})
     @Expose

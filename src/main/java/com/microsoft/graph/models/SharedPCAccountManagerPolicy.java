@@ -40,7 +40,7 @@ public class SharedPCAccountManagerPolicy implements IJsonBackedObject {
 
     /**
      * The Account Deletion Policy.
-     * Configures when accounts are deleted.
+     * Configures when accounts are deleted. Possible values are: immediate, diskSpaceThreshold, diskSpaceThresholdOrInactiveThreshold.
      */
     @SerializedName(value = "accountDeletionPolicy", alternate = {"AccountDeletionPolicy"})
     @Expose

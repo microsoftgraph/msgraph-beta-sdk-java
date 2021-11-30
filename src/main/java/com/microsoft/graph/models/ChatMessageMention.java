@@ -40,7 +40,7 @@ public class ChatMessageMention implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding &amp;lt;at id='{index}'&amp;gt; tag in the message body.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -49,7 +49,7 @@ public class ChatMessageMention implements IJsonBackedObject {
 
     /**
      * The Mentioned.
-     * 
+     * The entity (user, application, team, or channel) that was @mentioned.
      */
     @SerializedName(value = "mentioned", alternate = {"Mentioned"})
     @Expose
@@ -58,7 +58,7 @@ public class ChatMessageMention implements IJsonBackedObject {
 
     /**
      * The Mention Text.
-     * 
+     * String used to represent the mention. For example, a user's display name, a team name.
      */
     @SerializedName(value = "mentionText", alternate = {"MentionText"})
     @Expose

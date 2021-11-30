@@ -36,7 +36,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Active Checklist Item Count.
-     * 
+     * Number of checklist items with value set to false, representing incomplete items.
      */
     @SerializedName(value = "activeChecklistItemCount", alternate = {"ActiveChecklistItemCount"})
     @Expose
@@ -45,7 +45,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Applied Categories.
-     * 
+     * The categories to which the task has been applied. See applied Categories for possible values.
      */
     @SerializedName(value = "appliedCategories", alternate = {"AppliedCategories"})
     @Expose
@@ -54,7 +54,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Assignee Priority.
-     * 
+     * Hint used to order items of this type in a list view. The format is defined as outlined here.
      */
     @SerializedName(value = "assigneePriority", alternate = {"AssigneePriority"})
     @Expose
@@ -63,7 +63,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * 
+     * The set of assignees the task is assigned to.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
@@ -72,7 +72,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Bucket Id.
-     * 
+     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
      */
     @SerializedName(value = "bucketId", alternate = {"BucketId"})
     @Expose
@@ -81,7 +81,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Checklist Item Count.
-     * 
+     * Number of checklist items that are present on the task.
      */
     @SerializedName(value = "checklistItemCount", alternate = {"ChecklistItemCount"})
     @Expose
@@ -90,7 +90,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Completed By.
-     * 
+     * Identity of the user that completed the task.
      */
     @SerializedName(value = "completedBy", alternate = {"CompletedBy"})
     @Expose
@@ -99,7 +99,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -108,7 +108,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Conversation Thread Id.
-     * 
+     * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
      */
     @SerializedName(value = "conversationThreadId", alternate = {"ConversationThreadId"})
     @Expose
@@ -117,7 +117,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity of the user that created the task.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -126,7 +126,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -135,7 +135,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Creation Source.
-     * 
+     * Contains information about the origin of the task.
      */
     @SerializedName(value = "creationSource", alternate = {"CreationSource"})
     @Expose
@@ -144,7 +144,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Due Date Time.
-     * 
+     * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
@@ -153,7 +153,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Has Description.
-     * 
+     * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
      */
     @SerializedName(value = "hasDescription", alternate = {"HasDescription"})
     @Expose
@@ -162,7 +162,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Order Hint.
-     * 
+     * Hint used to order items of this type in a list view. The format is defined as outlined here.
      */
     @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose
@@ -171,7 +171,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Percent Complete.
-     * 
+     * Percentage of task completion. When set to 100, the task is considered completed.
      */
     @SerializedName(value = "percentComplete", alternate = {"PercentComplete"})
     @Expose
@@ -180,7 +180,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Plan Id.
-     * 
+     * Plan ID to which the task belongs.
      */
     @SerializedName(value = "planId", alternate = {"PlanId"})
     @Expose
@@ -189,7 +189,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Preview Type.
-     * 
+     * This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      */
     @SerializedName(value = "previewType", alternate = {"PreviewType"})
     @Expose
@@ -198,7 +198,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * 
+     * Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -207,7 +207,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Reference Count.
-     * 
+     * Number of external references that exist on the task.
      */
     @SerializedName(value = "referenceCount", alternate = {"ReferenceCount"})
     @Expose
@@ -216,7 +216,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -225,7 +225,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * Title of the task.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -234,7 +234,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Assigned To Task Board Format.
-     * 
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
      */
     @SerializedName(value = "assignedToTaskBoardFormat", alternate = {"AssignedToTaskBoardFormat"})
     @Expose
@@ -243,7 +243,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Bucket Task Board Format.
-     * 
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      */
     @SerializedName(value = "bucketTaskBoardFormat", alternate = {"BucketTaskBoardFormat"})
     @Expose
@@ -252,7 +252,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Details.
-     * 
+     * Read-only. Nullable. Additional details about the task.
      */
     @SerializedName(value = "details", alternate = {"Details"})
     @Expose
@@ -261,7 +261,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Progress Task Board Format.
-     * 
+     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      */
     @SerializedName(value = "progressTaskBoardFormat", alternate = {"ProgressTaskBoardFormat"})
     @Expose

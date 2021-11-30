@@ -31,7 +31,7 @@ public class MobileAppAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Intent.
-     * The install intent defined by the admin.
+     * The install intent defined by the admin. Possible values are: available, required, uninstall, availableWithoutEnrollment.
      */
     @SerializedName(value = "intent", alternate = {"Intent"})
     @Expose
@@ -49,7 +49,7 @@ public class MobileAppAssignment extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * The resource type which is the source for the assignment.
+     * The resource type which is the source for the assignment. Possible values are: direct, policySets.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose

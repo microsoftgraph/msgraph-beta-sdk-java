@@ -29,7 +29,7 @@ public class TrustFrameworkKeySet extends Entity implements IJsonBackedObject {
 
     /**
      * The Keys.
-     * 
+     * A collection of the keys.
      */
     @SerializedName(value = "keys", alternate = {"Keys"})
     @Expose

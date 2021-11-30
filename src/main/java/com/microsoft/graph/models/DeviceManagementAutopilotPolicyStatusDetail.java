@@ -29,7 +29,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
 
     /**
      * The Compliance Status.
-     * The policy compliance status.
+     * The policy compliance status. Possible values are: unknown, compliant, installed, notCompliant, notInstalled, error.
      */
     @SerializedName(value = "complianceStatus", alternate = {"ComplianceStatus"})
     @Expose
@@ -65,7 +65,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
 
     /**
      * The Policy Type.
-     * The type of policy.
+     * The type of policy. Possible values are: unknown, application, appModel, configurationPolicy.
      */
     @SerializedName(value = "policyType", alternate = {"PolicyType"})
     @Expose

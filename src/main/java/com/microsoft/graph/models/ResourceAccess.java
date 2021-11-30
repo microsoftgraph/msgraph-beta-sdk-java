@@ -39,7 +39,7 @@ public class ResourceAccess implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The unique identifier for one of the oauth2PermissionScopes or appRole instances that the resource application exposes.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -48,7 +48,7 @@ public class ResourceAccess implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * Specifies whether the id property references an oauth2PermissionScopes or an appRole. The possible values are: Scope (for OAuth 2.0 permission scopes) or Role (for app roles).
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

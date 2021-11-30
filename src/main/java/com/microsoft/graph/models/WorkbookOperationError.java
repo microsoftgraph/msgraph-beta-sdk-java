@@ -40,7 +40,7 @@ public class WorkbookOperationError implements IJsonBackedObject {
 
     /**
      * The Code.
-     * 
+     * The error code.
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -58,7 +58,7 @@ public class WorkbookOperationError implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * The error message.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose

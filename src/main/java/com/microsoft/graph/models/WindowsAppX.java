@@ -29,7 +29,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Applicable Architectures.
-     * The Windows architecture(s) for which this app can run on.
+     * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
      */
     @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose

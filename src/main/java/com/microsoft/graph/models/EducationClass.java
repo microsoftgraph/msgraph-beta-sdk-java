@@ -43,7 +43,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Class Code.
-     * 
+     * Class code used by the school to identify the class.
      */
     @SerializedName(value = "classCode", alternate = {"ClassCode"})
     @Expose
@@ -52,7 +52,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Course.
-     * 
+     * Course information for the class.
      */
     @SerializedName(value = "course", alternate = {"Course"})
     @Expose
@@ -61,7 +61,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Entity who created the class
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -70,7 +70,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the class.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -79,7 +79,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the class.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -88,7 +88,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * ID of the class from the syncing system.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -97,7 +97,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Name.
-     * 
+     * Name of the class in the syncing system.
      */
     @SerializedName(value = "externalName", alternate = {"ExternalName"})
     @Expose
@@ -106,7 +106,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source.
-     * 
+     * How this class was created. Possible values are: sis, manual.
      */
     @SerializedName(value = "externalSource", alternate = {"ExternalSource"})
     @Expose
@@ -115,7 +115,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source Detail.
-     * 
+     * The name of the external source this resources was generated from.
      */
     @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
     @Expose
@@ -124,7 +124,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Grade.
-     * 
+     * Grade level of the class.
      */
     @SerializedName(value = "grade", alternate = {"Grade"})
     @Expose
@@ -133,7 +133,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Mail Nickname.
-     * 
+     * Mail name for sending email to all members, if this is enabled.
      */
     @SerializedName(value = "mailNickname", alternate = {"MailNickname"})
     @Expose
@@ -142,7 +142,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Term.
-     * 
+     * Term for this class.
      */
     @SerializedName(value = "term", alternate = {"Term"})
     @Expose
@@ -169,7 +169,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * 
+     * All assignments associated with this class. Nullable.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
@@ -187,7 +187,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Group.
-     * 
+     * The underlying Microsoft 365 group object.
      */
     @SerializedName(value = "group", alternate = {"Group"})
     @Expose
@@ -196,21 +196,21 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * 
+     * All users in the class. Nullable.
      */
 	@Nullable
     public EducationUserCollectionPage members;
 
     /**
      * The Schools.
-     * 
+     * All schools that this class is associated with. Nullable.
      */
 	@Nullable
     public EducationSchoolCollectionPage schools;
 
     /**
      * The Teachers.
-     * 
+     * All teachers in the class. Nullable.
      */
 	@Nullable
     public EducationUserCollectionPage teachers;

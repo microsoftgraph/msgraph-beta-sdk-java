@@ -28,7 +28,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The App Display Name.
-     * 
+     * Display name of the application object on which this extension property is defined. Read-only.
      */
     @SerializedName(value = "appDisplayName", alternate = {"AppDisplayName"})
     @Expose
@@ -37,7 +37,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Data Type.
-     * 
+     * Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
      */
     @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose
@@ -46,7 +46,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Is Synced From On Premises.
-     * 
+     * Indicates if this extension property was sycned from onpremises directory using Azure AD Connect. Read-only.
      */
     @SerializedName(value = "isSyncedFromOnPremises", alternate = {"IsSyncedFromOnPremises"})
     @Expose
@@ -55,7 +55,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Name.
-     * 
+     * Name of the extension property. Not nullable.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -64,7 +64,7 @@ public class ExtensionProperty extends DirectoryObject implements IJsonBackedObj
 
     /**
      * The Target Objects.
-     * 
+     * Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
      */
     @SerializedName(value = "targetObjects", alternate = {"TargetObjects"})
     @Expose

@@ -42,7 +42,7 @@ public class SimulationReport implements IJsonBackedObject {
 
     /**
      * The Overview.
-     * 
+     * Overview of an attack simulation and training campaign.
      */
     @SerializedName(value = "overview", alternate = {"Overview"})
     @Expose
@@ -51,7 +51,7 @@ public class SimulationReport implements IJsonBackedObject {
 
     /**
      * The Simulation Users.
-     * 
+     * Represents users of a tenant and their online actions in an attack simulation and training campaign.
      */
     @SerializedName(value = "simulationUsers", alternate = {"SimulationUsers"})
     @Expose

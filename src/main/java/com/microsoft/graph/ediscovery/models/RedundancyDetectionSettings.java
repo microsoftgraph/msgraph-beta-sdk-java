@@ -39,7 +39,7 @@ public class RedundancyDetectionSettings implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * 
+     * Indicates whether email threading and near duplicate detection are enabled.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose
@@ -48,7 +48,7 @@ public class RedundancyDetectionSettings implements IJsonBackedObject {
 
     /**
      * The Max Words.
-     * 
+     * See Minimum/maximum number of words to learn more.
      */
     @SerializedName(value = "maxWords", alternate = {"MaxWords"})
     @Expose
@@ -57,7 +57,7 @@ public class RedundancyDetectionSettings implements IJsonBackedObject {
 
     /**
      * The Min Words.
-     * 
+     * See Minimum/maximum number of words to learn more.
      */
     @SerializedName(value = "minWords", alternate = {"MinWords"})
     @Expose
@@ -66,7 +66,7 @@ public class RedundancyDetectionSettings implements IJsonBackedObject {
 
     /**
      * The Similarity Threshold.
-     * 
+     * See Document and email similarity threshold to learn more.
      */
     @SerializedName(value = "similarityThreshold", alternate = {"SimilarityThreshold"})
     @Expose

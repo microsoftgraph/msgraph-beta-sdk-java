@@ -28,7 +28,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Application.
-     * 
+     * The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
      */
     @SerializedName(value = "application", alternate = {"Application"})
     @Expose
@@ -37,7 +37,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Client Reference.
-     * 
+     * A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
      */
     @SerializedName(value = "clientReference", alternate = {"ClientReference"})
     @Expose
@@ -46,7 +46,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The email information of the user who made the mention.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -55,7 +55,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time that the mention is created on the client.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Deep Link.
-     * 
+     * A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
      */
     @SerializedName(value = "deepLink", alternate = {"DeepLink"})
     @Expose
@@ -73,7 +73,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Mentioned.
-     * 
+     * The email information of the mentioned person. Required.
      */
     @SerializedName(value = "mentioned", alternate = {"Mentioned"})
     @Expose
@@ -82,7 +82,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Mention Text.
-     * 
+     * Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
      */
     @SerializedName(value = "mentionText", alternate = {"MentionText"})
     @Expose
@@ -91,7 +91,7 @@ public class Mention extends Entity implements IJsonBackedObject {
 
     /**
      * The Server Created Date Time.
-     * 
+     * The date and time that the mention is created on the server. Optional. Not used and defaulted as null for message.
      */
     @SerializedName(value = "serverCreatedDateTime", alternate = {"ServerCreatedDateTime"})
     @Expose

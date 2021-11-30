@@ -40,7 +40,7 @@ public class AndroidPermissionAction implements IJsonBackedObject {
 
     /**
      * The Action.
-     * Type of Android permission action.
+     * Type of Android permission action. Possible values are: prompt, autoGrant, autoDeny.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose

@@ -40,7 +40,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Child Folder Count.
-     * 
+     * The number of immediate child mailFolders in the current mailFolder.
      */
     @SerializedName(value = "childFolderCount", alternate = {"ChildFolderCount"})
     @Expose
@@ -49,7 +49,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The mailFolder's display name.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +58,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Hidden.
-     * 
+     * Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
      */
     @SerializedName(value = "isHidden", alternate = {"IsHidden"})
     @Expose
@@ -67,7 +67,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Parent Folder Id.
-     * 
+     * The unique identifier for the mailFolder's parent mailFolder.
      */
     @SerializedName(value = "parentFolderId", alternate = {"ParentFolderId"})
     @Expose
@@ -76,7 +76,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Total Item Count.
-     * 
+     * The number of items in the mailFolder.
      */
     @SerializedName(value = "totalItemCount", alternate = {"TotalItemCount"})
     @Expose
@@ -85,7 +85,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Unread Item Count.
-     * 
+     * The number of items in the mailFolder marked as unread.
      */
     @SerializedName(value = "unreadItemCount", alternate = {"UnreadItemCount"})
     @Expose
@@ -94,7 +94,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Well Known Name.
-     * 
+     * The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null.
      */
     @SerializedName(value = "wellKnownName", alternate = {"WellKnownName"})
     @Expose
@@ -103,7 +103,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Child Folders.
-     * 
+     * The collection of child folders in the mailFolder.
      */
     @SerializedName(value = "childFolders", alternate = {"ChildFolders"})
     @Expose
@@ -112,7 +112,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Message Rules.
-     * 
+     * The collection of rules that apply to the user's Inbox folder.
      */
     @SerializedName(value = "messageRules", alternate = {"MessageRules"})
     @Expose
@@ -121,7 +121,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Messages.
-     * 
+     * The collection of messages in the mailFolder.
      */
     @SerializedName(value = "messages", alternate = {"Messages"})
     @Expose
@@ -130,7 +130,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Multi Value Extended Properties.
-     * 
+     * The collection of multi-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
     @SerializedName(value = "multiValueExtendedProperties", alternate = {"MultiValueExtendedProperties"})
     @Expose
@@ -139,7 +139,7 @@ public class MailFolder extends Entity implements IJsonBackedObject {
 
     /**
      * The Single Value Extended Properties.
-     * 
+     * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
      */
     @SerializedName(value = "singleValueExtendedProperties", alternate = {"SingleValueExtendedProperties"})
     @Expose

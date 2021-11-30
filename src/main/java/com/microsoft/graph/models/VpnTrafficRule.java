@@ -53,7 +53,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
 
     /**
      * The App Type.
-     * App type, if this traffic rule is triggered by an app.
+     * App type, if this traffic rule is triggered by an app. Possible values are: none, desktop, universal.
      */
     @SerializedName(value = "appType", alternate = {"AppType"})
     @Expose
@@ -125,7 +125,7 @@ public class VpnTrafficRule implements IJsonBackedObject {
 
     /**
      * The Routing Policy Type.
-     * When app triggered, indicates whether to enable split tunneling along this route.
+     * When app triggered, indicates whether to enable split tunneling along this route. Possible values are: none, splitTunnel, forceTunnel.
      */
     @SerializedName(value = "routingPolicyType", alternate = {"RoutingPolicyType"})
     @Expose

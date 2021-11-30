@@ -40,7 +40,7 @@ public class CommsNotification implements IJsonBackedObject {
 
     /**
      * The Change Type.
-     * 
+     * Possible values are: created, updated, deleted.
      */
     @SerializedName(value = "changeType", alternate = {"ChangeType"})
     @Expose
@@ -49,7 +49,7 @@ public class CommsNotification implements IJsonBackedObject {
 
     /**
      * The Resource Url.
-     * 
+     * URI of the resource that was changed.
      */
     @SerializedName(value = "resourceUrl", alternate = {"ResourceUrl"})
     @Expose

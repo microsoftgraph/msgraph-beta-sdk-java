@@ -40,7 +40,7 @@ public class LobbyBypassSettings implements IJsonBackedObject {
 
     /**
      * The Is Dial In Bypass Enabled.
-     * 
+     * Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
      */
     @SerializedName(value = "isDialInBypassEnabled", alternate = {"IsDialInBypassEnabled"})
     @Expose
@@ -49,7 +49,7 @@ public class LobbyBypassSettings implements IJsonBackedObject {
 
     /**
      * The Scope.
-     * 
+     * Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose

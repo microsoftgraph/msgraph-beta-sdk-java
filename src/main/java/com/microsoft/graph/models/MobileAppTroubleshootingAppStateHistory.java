@@ -29,7 +29,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
 
     /**
      * The Action Type.
-     * Action type for Intune Application.
+     * Action type for Intune Application. Possible values are: unknown, installCommandSent, installed, uninstalled, userRequestedInstall.
      */
     @SerializedName(value = "actionType", alternate = {"ActionType"})
     @Expose
@@ -47,7 +47,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
 
     /**
      * The Run State.
-     * Status of the item.
+     * Status of the item. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
      */
     @SerializedName(value = "runState", alternate = {"RunState"})
     @Expose

@@ -41,7 +41,7 @@ public class RubricLevel implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of this rubric level.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -50,7 +50,7 @@ public class RubricLevel implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of this rubric level.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -59,7 +59,7 @@ public class RubricLevel implements IJsonBackedObject {
 
     /**
      * The Grading.
-     * 
+     * Null if this is a no-points rubric; educationAssignmentPointsGradeType if it is a points rubric.
      */
     @SerializedName(value = "grading", alternate = {"Grading"})
     @Expose
@@ -68,7 +68,7 @@ public class RubricLevel implements IJsonBackedObject {
 
     /**
      * The Level Id.
-     * 
+     * The ID of this resource.
      */
     @SerializedName(value = "levelId", alternate = {"LevelId"})
     @Expose

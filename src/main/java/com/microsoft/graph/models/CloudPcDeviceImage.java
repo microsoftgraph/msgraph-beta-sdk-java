@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcDeviceImageOsStatus;
 import com.microsoft.graph.models.CloudPcDeviceImageStatus;
 import com.microsoft.graph.models.CloudPcDeviceImageStatusDetails;
 import com.microsoft.graph.models.Entity;
@@ -29,7 +30,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The image's display name.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -37,8 +38,17 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Last Modified Date Time.
+     * The Expiration Date.
      * 
+     */
+    @SerializedName(value = "expirationDate", alternate = {"ExpirationDate"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.core.DateOnly expirationDate;
+
+    /**
+     * The Last Modified Date Time.
+     * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -47,7 +57,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Operating System.
-     * 
+     * The image's operating system. For example: Windows 10 Enterprise.
      */
     @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
@@ -56,7 +66,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Os Build Number.
-     * 
+     * The image's OS build version. For example: 1909.
      */
     @SerializedName(value = "osBuildNumber", alternate = {"OsBuildNumber"})
     @Expose
@@ -64,8 +74,17 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
     public String osBuildNumber;
 
     /**
-     * The Source Image Resource Id.
+     * The Os Status.
      * 
+     */
+    @SerializedName(value = "osStatus", alternate = {"OsStatus"})
+    @Expose
+	@Nullable
+    public CloudPcDeviceImageOsStatus osStatus;
+
+    /**
+     * The Source Image Resource Id.
+     * The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
      */
     @SerializedName(value = "sourceImageResourceId", alternate = {"SourceImageResourceId"})
     @Expose
@@ -74,7 +93,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the image on Cloud PC. Possible values are: pending, ready, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -83,7 +102,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status Details.
-     * 
+     * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, and sourceImageInvalid.
      */
     @SerializedName(value = "statusDetails", alternate = {"StatusDetails"})
     @Expose
@@ -92,7 +111,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * 
+     * The image version. For example: 0.0.1, 1.5.13.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

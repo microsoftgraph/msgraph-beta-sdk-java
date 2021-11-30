@@ -113,7 +113,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Sync Status.
-     * Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: `none`, `inProgress`, `completed`, `failed`.
+     * Current sync status of the last application sync which was triggered using the Apple Volume Purchase Program Token. Possible values are: none, inProgress, completed, failed. Possible values are: none, inProgress, completed, failed.
      */
     @SerializedName(value = "lastSyncStatus", alternate = {"LastSyncStatus"})
     @Expose
@@ -149,7 +149,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Current state of the Apple Volume Purchase Program Token. Possible values are: `unknown`, `valid`, `expired`, `invalid`, `assignedToExternalMDM`.
+     * Current state of the Apple Volume Purchase Program Token. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM. Possible values are: unknown, valid, expired, invalid, assignedToExternalMDM.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -176,7 +176,7 @@ public class VppToken extends Entity implements IJsonBackedObject {
 
     /**
      * The Vpp Token Account Type.
-     * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: `business`, `education`.
+     * The type of volume purchase program which the given Apple Volume Purchase Program Token is associated with. Possible values are: business, education. Possible values are: business, education.
      */
     @SerializedName(value = "vppTokenAccountType", alternate = {"VppTokenAccountType"})
     @Expose

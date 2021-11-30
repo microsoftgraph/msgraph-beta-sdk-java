@@ -49,7 +49,7 @@ public class ManagedDeviceSummarizedAppState implements IJsonBackedObject {
 
     /**
      * The Summarized App State.
-     * runState for the object
+     * runState for the object. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
      */
     @SerializedName(value = "summarizedAppState", alternate = {"SummarizedAppState"})
     @Expose

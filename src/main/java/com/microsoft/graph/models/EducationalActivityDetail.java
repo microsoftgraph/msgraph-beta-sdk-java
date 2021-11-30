@@ -40,7 +40,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Abbreviation.
-     * 
+     * Shortened name of the degree or program (example: PhD, MBA)
      */
     @SerializedName(value = "abbreviation", alternate = {"Abbreviation"})
     @Expose
@@ -49,7 +49,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Activities.
-     * 
+     * Extracurricular activities undertaken alongside the program.
      */
     @SerializedName(value = "activities", alternate = {"Activities"})
     @Expose
@@ -58,7 +58,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Awards.
-     * 
+     * Any awards or honors associated with the program.
      */
     @SerializedName(value = "awards", alternate = {"Awards"})
     @Expose
@@ -67,7 +67,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Short description of the program provided by the user.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -76,7 +76,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Long-form name of the program that the user has provided.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -85,7 +85,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Fields Of Study.
-     * 
+     * Majors and minors associated with the program. (if applicable)
      */
     @SerializedName(value = "fieldsOfStudy", alternate = {"FieldsOfStudy"})
     @Expose
@@ -94,7 +94,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Grade.
-     * 
+     * The final grade, class, GPA or score.
      */
     @SerializedName(value = "grade", alternate = {"Grade"})
     @Expose
@@ -103,7 +103,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * 
+     * Additional notes the user has provided.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -112,7 +112,7 @@ public class EducationalActivityDetail implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Link to the degree or program page.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

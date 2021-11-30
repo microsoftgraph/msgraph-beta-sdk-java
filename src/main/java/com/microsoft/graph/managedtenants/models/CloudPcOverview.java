@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -21,25 +22,12 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Cloud Pc Overview.
  */
-public class CloudPcOverview implements IJsonBackedObject {
+public class CloudPcOverview extends Entity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -48,7 +36,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Connection Status Failed.
-     * 
+     * The number of cloud PC connections that have a status of failed. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcConnectionStatusFailed", alternate = {"NumberOfCloudPcConnectionStatusFailed"})
     @Expose
@@ -57,7 +45,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Connection Status Passed.
-     * 
+     * The number of cloud PC connections that have a status of passed. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcConnectionStatusPassed", alternate = {"NumberOfCloudPcConnectionStatusPassed"})
     @Expose
@@ -66,7 +54,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Connection Status Pending.
-     * 
+     * The number of cloud PC connections that have a status of pending. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcConnectionStatusPending", alternate = {"NumberOfCloudPcConnectionStatusPending"})
     @Expose
@@ -75,7 +63,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Connection Status Running.
-     * 
+     * The number of cloud PC connections that have a status of running. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcConnectionStatusRunning", alternate = {"NumberOfCloudPcConnectionStatusRunning"})
     @Expose
@@ -84,7 +72,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Connection Status Unkown Future Value.
-     * 
+     * The number of cloud PC connections that have a status of unknownFutureValue. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcConnectionStatusUnkownFutureValue", alternate = {"NumberOfCloudPcConnectionStatusUnkownFutureValue"})
     @Expose
@@ -93,7 +81,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status Deprovisioning.
-     * 
+     * The number of cloud PCs that have a status of deprovisioning. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusDeprovisioning", alternate = {"NumberOfCloudPcStatusDeprovisioning"})
     @Expose
@@ -102,7 +90,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status Failed.
-     * 
+     * The number of cloud PCs that have a status of failed. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusFailed", alternate = {"NumberOfCloudPcStatusFailed"})
     @Expose
@@ -111,7 +99,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status In Grace Period.
-     * 
+     * The number of cloud PCs that have a status of inGracePeriod. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusInGracePeriod", alternate = {"NumberOfCloudPcStatusInGracePeriod"})
     @Expose
@@ -120,7 +108,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status Not Provisioned.
-     * 
+     * The number of cloud PCs that have a status of notProvisioned. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusNotProvisioned", alternate = {"NumberOfCloudPcStatusNotProvisioned"})
     @Expose
@@ -129,7 +117,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status Provisioned.
-     * 
+     * The number of cloud PCs that have a status of provisioned. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusProvisioned", alternate = {"NumberOfCloudPcStatusProvisioned"})
     @Expose
@@ -138,7 +126,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status Provisioning.
-     * 
+     * The number of cloud PCs that have a status of provisioning. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusProvisioning", alternate = {"NumberOfCloudPcStatusProvisioning"})
     @Expose
@@ -147,7 +135,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status Unknown.
-     * 
+     * The number of cloud PCs that have a status of unknown. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusUnknown", alternate = {"NumberOfCloudPcStatusUnknown"})
     @Expose
@@ -156,7 +144,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Number Of Cloud Pc Status Upgrading.
-     * 
+     * The number of cloud PCs that have a status of upgrading. Optional. Read-only.
      */
     @SerializedName(value = "numberOfCloudPcStatusUpgrading", alternate = {"NumberOfCloudPcStatusUpgrading"})
     @Expose
@@ -165,7 +153,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -183,7 +171,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Total Cloud Pc Connection Status.
-     * 
+     * The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "totalCloudPcConnectionStatus", alternate = {"TotalCloudPcConnectionStatus"})
     @Expose
@@ -192,7 +180,7 @@ public class CloudPcOverview implements IJsonBackedObject {
 
     /**
      * The Total Cloud Pc Status.
-     * 
+     * The total number of cloud PC statues for the given managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "totalCloudPcStatus", alternate = {"TotalCloudPcStatus"})
     @Expose

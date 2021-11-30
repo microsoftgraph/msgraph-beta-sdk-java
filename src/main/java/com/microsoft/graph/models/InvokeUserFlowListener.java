@@ -28,7 +28,7 @@ public class InvokeUserFlowListener extends AuthenticationListener implements IJ
 
     /**
      * The User Flow.
-     * 
+     * The user flow that is invoked when this action executes.
      */
     @SerializedName(value = "userFlow", alternate = {"UserFlow"})
     @Expose

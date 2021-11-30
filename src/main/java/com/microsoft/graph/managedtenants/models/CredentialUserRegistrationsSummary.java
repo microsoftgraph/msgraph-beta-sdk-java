@@ -27,7 +27,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Mfa And Sspr Capable User Count.
-     * 
+     * The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only.
      */
     @SerializedName(value = "mfaAndSsprCapableUserCount", alternate = {"MfaAndSsprCapableUserCount"})
     @Expose
@@ -45,7 +45,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Mfa Conditional Access Policy State.
-     * 
+     * The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only.
      */
     @SerializedName(value = "mfaConditionalAccessPolicyState", alternate = {"MfaConditionalAccessPolicyState"})
     @Expose
@@ -54,7 +54,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Mfa Registered User Count.
-     * 
+     * The number of users registered for multi-factor authentication. Optional. Read-only.
      */
     @SerializedName(value = "mfaRegisteredUserCount", alternate = {"MfaRegisteredUserCount"})
     @Expose
@@ -63,7 +63,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Security Defaults Enabled.
-     * 
+     * A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only.
      */
     @SerializedName(value = "securityDefaultsEnabled", alternate = {"SecurityDefaultsEnabled"})
     @Expose
@@ -72,7 +72,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Sspr Enabled User Count.
-     * 
+     * The number of users enabled for self service password reset. Optional. Read-only.
      */
     @SerializedName(value = "ssprEnabledUserCount", alternate = {"SsprEnabledUserCount"})
     @Expose
@@ -81,7 +81,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Sspr Registered User Count.
-     * 
+     * The number of users registered for self service password reset. Optional. Read-only.
      */
     @SerializedName(value = "ssprRegisteredUserCount", alternate = {"SsprRegisteredUserCount"})
     @Expose
@@ -90,7 +90,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -99,7 +99,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -108,7 +108,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Total User Count.
-     * 
+     * The total number of users in the given managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "totalUserCount", alternate = {"TotalUserCount"})
     @Expose

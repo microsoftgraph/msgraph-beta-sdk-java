@@ -30,7 +30,7 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Simulations.
-     * 
+     * Represent attack simulation and training campaign of a tenant.
      */
     @SerializedName(value = "simulations", alternate = {"Simulations"})
     @Expose

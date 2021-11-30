@@ -42,7 +42,7 @@ public class DeploymentSettings implements IJsonBackedObject {
 
     /**
      * The Monitoring.
-     * 
+     * Settings governing conditions to monitor and automated actions to take.
      */
     @SerializedName(value = "monitoring", alternate = {"Monitoring"})
     @Expose
@@ -51,7 +51,7 @@ public class DeploymentSettings implements IJsonBackedObject {
 
     /**
      * The Rollout.
-     * 
+     * Settings governing how the content is rolled out.
      */
     @SerializedName(value = "rollout", alternate = {"Rollout"})
     @Expose
@@ -60,7 +60,7 @@ public class DeploymentSettings implements IJsonBackedObject {
 
     /**
      * The Safeguard.
-     * 
+     * Settings governing safeguard holds on offering content.
      */
     @SerializedName(value = "safeguard", alternate = {"Safeguard"})
     @Expose

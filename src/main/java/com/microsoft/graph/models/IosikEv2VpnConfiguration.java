@@ -69,7 +69,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
 
     /**
      * The Client Authentication Type.
-     * Type of Client Authentication the VPN client will use.
+     * Type of Client Authentication the VPN client will use. Possible values are: userAuthentication, deviceAuthentication.
      */
     @SerializedName(value = "clientAuthenticationType", alternate = {"ClientAuthenticationType"})
     @Expose
@@ -78,7 +78,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
 
     /**
      * The Dead Peer Detection Rate.
-     * Determine how often to check if a peer connection is still active. 
+     * Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
      */
     @SerializedName(value = "deadPeerDetectionRate", alternate = {"DeadPeerDetectionRate"})
     @Expose
@@ -150,7 +150,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
 
     /**
      * The Local Identifier.
-     * Method of identifying the client that is trying to connect via VPN. 
+     * Method of identifying the client that is trying to connect via VPN. . Possible values are: deviceFQDN, empty, clientCertificateSubjectName.
      */
     @SerializedName(value = "localIdentifier", alternate = {"LocalIdentifier"})
     @Expose
@@ -204,7 +204,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements IJs
 
     /**
      * The Server Certificate Type.
-     * The type of certificate the VPN server will present to the VPN client for authentication.
+     * The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
      */
     @SerializedName(value = "serverCertificateType", alternate = {"ServerCertificateType"})
     @Expose

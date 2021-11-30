@@ -39,7 +39,7 @@ public class MfaDetail implements IJsonBackedObject {
 
     /**
      * The Auth Detail.
-     * 
+     * Indicates the MFA auth detail for the corresponding Sign-in activity when the MFA Required is 'Yes'.
      */
     @SerializedName(value = "authDetail", alternate = {"AuthDetail"})
     @Expose
@@ -48,7 +48,7 @@ public class MfaDetail implements IJsonBackedObject {
 
     /**
      * The Auth Method.
-     * 
+     * Indicates the MFA Auth methods (SMS, Phone, Authenticator App are some of the value) for the corresponding sign-in activity when the MFA Required field is 'Yes'.
      */
     @SerializedName(value = "authMethod", alternate = {"AuthMethod"})
     @Expose

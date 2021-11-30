@@ -134,7 +134,7 @@ public class DepOnboardingSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Type.
-     * Gets or sets the Dep Token Type.
+     * Gets or sets the Dep Token Type. Possible values are: none, dep, appleSchoolManager.
      */
     @SerializedName(value = "tokenType", alternate = {"TokenType"})
     @Expose

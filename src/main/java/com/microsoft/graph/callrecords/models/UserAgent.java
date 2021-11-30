@@ -39,7 +39,7 @@ public class UserAgent implements IJsonBackedObject {
 
     /**
      * The Application Version.
-     * 
+     * Identifies the version of application software used by this endpoint.
      */
     @SerializedName(value = "applicationVersion", alternate = {"ApplicationVersion"})
     @Expose
@@ -48,7 +48,7 @@ public class UserAgent implements IJsonBackedObject {
 
     /**
      * The Header Value.
-     * 
+     * User-agent header value reported by this endpoint.
      */
     @SerializedName(value = "headerValue", alternate = {"HeaderValue"})
     @Expose

@@ -30,7 +30,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Azure Blob Container.
-     * 
+     * The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
      */
     @SerializedName(value = "azureBlobContainer", alternate = {"AzureBlobContainer"})
     @Expose
@@ -39,7 +39,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Azure Blob Token.
-     * 
+     * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
      */
     @SerializedName(value = "azureBlobToken", alternate = {"AzureBlobToken"})
     @Expose
@@ -48,7 +48,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Description.
-     * 
+     * The description provided for the export.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -57,7 +57,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Export Options.
-     * 
+     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      */
     @SerializedName(value = "exportOptions", alternate = {"ExportOptions"})
     @Expose
@@ -66,7 +66,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Export Structure.
-     * 
+     * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
      */
     @SerializedName(value = "exportStructure", alternate = {"ExportStructure"})
     @Expose
@@ -84,7 +84,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Output Name.
-     * 
+     * The name provided for the export.
      */
     @SerializedName(value = "outputName", alternate = {"OutputName"})
     @Expose
@@ -93,7 +93,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Review Set.
-     * 
+     * The review set the content is being exported from.
      */
     @SerializedName(value = "reviewSet", alternate = {"ReviewSet"})
     @Expose

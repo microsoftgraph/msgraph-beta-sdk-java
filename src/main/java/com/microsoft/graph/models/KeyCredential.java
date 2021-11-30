@@ -39,7 +39,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Custom Key Identifier.
-     * 
+     * Custom key identifier
      */
     @SerializedName(value = "customKeyIdentifier", alternate = {"CustomKeyIdentifier"})
     @Expose
@@ -48,7 +48,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Friendly name for the key. Optional.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The date and time at which the credential expires.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * The certificate's raw data in byte array converted to Base64 string; for example, [System.Convert]::ToBase64String($Cert.GetRawCertData()).
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -75,7 +75,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Key Id.
-     * 
+     * The unique identifier (GUID) for the key.
      */
     @SerializedName(value = "keyId", alternate = {"KeyId"})
     @Expose
@@ -84,7 +84,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -93,7 +93,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of key credential; for example, Symmetric.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -102,7 +102,7 @@ public class KeyCredential implements IJsonBackedObject {
 
     /**
      * The Usage.
-     * 
+     * A string that describes the purpose for which the key can be used; for example, Verify.
      */
     @SerializedName(value = "usage", alternate = {"Usage"})
     @Expose

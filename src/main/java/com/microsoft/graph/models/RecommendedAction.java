@@ -39,7 +39,7 @@ public class RecommendedAction implements IJsonBackedObject {
 
     /**
      * The Action Web Url.
-     * 
+     * Web URL to the recommended action.
      */
     @SerializedName(value = "actionWebUrl", alternate = {"ActionWebUrl"})
     @Expose
@@ -48,7 +48,7 @@ public class RecommendedAction implements IJsonBackedObject {
 
     /**
      * The Potential Score Impact.
-     * 
+     * Potential improvement in security score of the tenant from the recommended action.
      */
     @SerializedName(value = "potentialScoreImpact", alternate = {"PotentialScoreImpact"})
     @Expose
@@ -57,7 +57,7 @@ public class RecommendedAction implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * Title of the recommended action.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

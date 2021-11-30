@@ -37,7 +37,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
 
     /**
      * The Creation Date Time.
-     * 
+     * The timestamp when this method was registered to the user.
      * @deprecated The creationDateTime property is deprecated and will stop returning data on December 31, 2020. Please use the createdDateTime property.
      */
     @Deprecated
@@ -48,7 +48,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
 
     /**
      * The Display Name.
-     * 
+     * The display name of the mobile device as given by the user.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

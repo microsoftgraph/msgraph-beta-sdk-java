@@ -29,7 +29,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Boot From Built In Network Adapters.
-     * Defines whether a user is allowed to boot from built-in network adapters.
+     * Defines whether a user is allowed to boot from built-in network adapters. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "bootFromBuiltInNetworkAdapters", alternate = {"BootFromBuiltInNetworkAdapters"})
     @Expose
@@ -38,7 +38,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Boot From External Media.
-     * Defines whether a user is allowed to boot from external media.
+     * Defines whether a user is allowed to boot from external media. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "bootFromExternalMedia", alternate = {"BootFromExternalMedia"})
     @Expose
@@ -47,7 +47,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Cameras.
-     * Defines whether built-in cameras are enabled.
+     * Defines whether built-in cameras are enabled. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "cameras", alternate = {"Cameras"})
     @Expose
@@ -56,7 +56,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Change Uefi Settings Permission.
-     * Defines the permission level granted to users to change UEFI settings.
+     * Defines the permission level granted to users to change UEFI settings. Possible values are: notConfiguredOnly, none.
      */
     @SerializedName(value = "changeUefiSettingsPermission", alternate = {"ChangeUefiSettingsPermission"})
     @Expose
@@ -65,7 +65,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Microphones And Speakers.
-     * Defines whether built-in microphones or speakers are enabled.
+     * Defines whether built-in microphones or speakers are enabled. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "microphonesAndSpeakers", alternate = {"MicrophonesAndSpeakers"})
     @Expose
@@ -74,7 +74,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Radios.
-     * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled.
+     * Defines whether built-in radios e.g. WIFI, NFC, Bluetooth, are enabled. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "radios", alternate = {"Radios"})
     @Expose
@@ -83,7 +83,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Simultaneous Multi Threading.
-     * Defines whether a user is allowed to enable Simultaneous MultiThreading.
+     * Defines whether a user is allowed to enable Simultaneous MultiThreading. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "simultaneousMultiThreading", alternate = {"SimultaneousMultiThreading"})
     @Expose
@@ -92,7 +92,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Virtualization Of Cpu And IO.
-     * Defines whether CPU and IO virtualization is enabled.
+     * Defines whether CPU and IO virtualization is enabled. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "virtualizationOfCpuAndIO", alternate = {"VirtualizationOfCpuAndIO"})
     @Expose
@@ -101,7 +101,7 @@ public class Windows10DeviceFirmwareConfigurationInterface extends DeviceConfigu
 
     /**
      * The Windows Platform Binary Table.
-     * Defines whether a user is allowed to enable Windows Platform Binary Table.
+     * Defines whether a user is allowed to enable Windows Platform Binary Table. Possible values are: notConfigured, enabled, disabled.
      */
     @SerializedName(value = "windowsPlatformBinaryTable", alternate = {"WindowsPlatformBinaryTable"})
     @Expose

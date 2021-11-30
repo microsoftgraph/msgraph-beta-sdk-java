@@ -39,7 +39,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
 
     /**
      * The Duration.
-     * 
+     * The duration of a role assignment. It is in format of a TimeSpan.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose
@@ -48,7 +48,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The end time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Note: if the value is null, it indicates a permanent assignment.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class GovernanceSchedule implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The role assignment schedule type. Only Once is supported for now.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

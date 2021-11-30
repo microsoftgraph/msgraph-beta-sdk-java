@@ -31,7 +31,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Connection Info.
-     * 
+     * Connection information of an environment used to connect to a resource.
      */
     @SerializedName(value = "connectionInfo", alternate = {"ConnectionInfo"})
     @Expose
@@ -40,7 +40,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Created By.
-     * 
+     * The display name of the user that created this object.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -49,7 +49,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time that this object was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Description.
-     * 
+     * The description of this accessPackageResourceEnvironment object.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -67,7 +67,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Display Name.
-     * 
+     * The display name of this object.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -76,7 +76,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Is Default Environment.
-     * 
+     * Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
      */
     @SerializedName(value = "isDefaultEnvironment", alternate = {"IsDefaultEnvironment"})
     @Expose
@@ -85,7 +85,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Modified By.
-     * 
+     * The display name of the entity that last modified this object.
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -94,7 +94,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Modified Date Time.
-     * 
+     * The date and time that this object was last modified. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -103,7 +103,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Origin Id.
-     * 
+     * The unique identifier of this environment in the origin system.
      */
     @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
@@ -112,7 +112,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Origin System.
-     * 
+     * The type of the resource in the origin system such as SharePointOnline. Supports $filter.
      */
     @SerializedName(value = "originSystem", alternate = {"OriginSystem"})
     @Expose
@@ -121,7 +121,7 @@ public class AccessPackageResourceEnvironment extends Entity implements IJsonBac
 
     /**
      * The Access Package Resources.
-     * 
+     * Read-only. Required.
      */
 	@Nullable
     public AccessPackageResourceCollectionPage accessPackageResources;

@@ -30,7 +30,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
 
     /**
      * The Authentication Method.
-     * Authentication method.
+     * Authentication method. Possible values are: certificate, usernameAndPassword, sharedSecret, derivedCredential, azureAD.
      */
     @SerializedName(value = "authenticationMethod", alternate = {"AuthenticationMethod"})
     @Expose

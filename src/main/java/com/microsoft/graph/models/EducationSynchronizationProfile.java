@@ -35,7 +35,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Data Provider.
-     * 
+     * The data provider used for the profile.
      */
     @SerializedName(value = "dataProvider", alternate = {"DataProvider"})
     @Expose
@@ -44,7 +44,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Display Name.
-     * 
+     * Name of the configuration profile for syncing identities.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -53,7 +53,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Expiration Date.
-     * 
+     * The date the profile should be considered expired and cease syncing. When null. the profile will never expire. (optional)
      */
     @SerializedName(value = "expirationDate", alternate = {"ExpirationDate"})
     @Expose
@@ -62,7 +62,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Handle Special Character Constraint.
-     * 
+     * Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
      */
     @SerializedName(value = "handleSpecialCharacterConstraint", alternate = {"HandleSpecialCharacterConstraint"})
     @Expose
@@ -71,7 +71,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Identity Synchronization Configuration.
-     * 
+     * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] AAD Users.
      */
     @SerializedName(value = "identitySynchronizationConfiguration", alternate = {"IdentitySynchronizationConfiguration"})
     @Expose
@@ -80,7 +80,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Licenses To Assign.
-     * 
+     * License setup configuration.
      */
     @SerializedName(value = "licensesToAssign", alternate = {"LicensesToAssign"})
     @Expose
@@ -89,7 +89,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The State.
-     * 
+     * The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -98,7 +98,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Errors.
-     * 
+     * All errors associated with this synchronization profile.
      */
     @SerializedName(value = "errors", alternate = {"Errors"})
     @Expose
@@ -107,7 +107,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Profile Status.
-     * 
+     * The synchronization status.
      */
     @SerializedName(value = "profileStatus", alternate = {"ProfileStatus"})
     @Expose

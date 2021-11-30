@@ -90,7 +90,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements IJsonB
 
     /**
      * The Payload File Name.
-     * Payload file name (*.mobileprovision | *.xml).
+     * Payload file name (.mobileprovision
      */
     @SerializedName(value = "payloadFileName", alternate = {"PayloadFileName"})
     @Expose
