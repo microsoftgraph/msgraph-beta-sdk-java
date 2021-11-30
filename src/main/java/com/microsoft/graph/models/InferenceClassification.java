@@ -30,7 +30,7 @@ public class InferenceClassification extends Entity implements IJsonBackedObject
 
     /**
      * The Overrides.
-     * 
+     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
      */
     @SerializedName(value = "overrides", alternate = {"Overrides"})
     @Expose

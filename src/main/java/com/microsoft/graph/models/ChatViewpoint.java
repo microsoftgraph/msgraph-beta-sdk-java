@@ -39,7 +39,7 @@ public class ChatViewpoint implements IJsonBackedObject {
 
     /**
      * The Is Hidden.
-     * 
+     * Indicates whether the chat is hidden for the current user.
      */
     @SerializedName(value = "isHidden", alternate = {"IsHidden"})
     @Expose
@@ -48,7 +48,7 @@ public class ChatViewpoint implements IJsonBackedObject {
 
     /**
      * The Last Message Read Date Time.
-     * 
+     * Represents the dateTime up until which the current user has read chatMessages in a specific chat.
      */
     @SerializedName(value = "lastMessageReadDateTime", alternate = {"LastMessageReadDateTime"})
     @Expose

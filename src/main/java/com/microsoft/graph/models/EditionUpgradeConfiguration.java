@@ -39,7 +39,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
 
     /**
      * The License Type.
-     * Edition Upgrade License Type.
+     * Edition Upgrade License Type. Possible values are: productKey, licenseFile.
      */
     @SerializedName(value = "licenseType", alternate = {"LicenseType"})
     @Expose
@@ -57,7 +57,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
 
     /**
      * The Target Edition.
-     * Edition Upgrade Target Edition.
+     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education, windows10EducationN, windows10MobileEnterprise, windows10HolographicEnterprise, windows10Professional, windows10ProfessionalN, windows10ProfessionalEducation, windows10ProfessionalEducationN, windows10ProfessionalWorkstation, windows10ProfessionalWorkstationN.
      */
     @SerializedName(value = "targetEdition", alternate = {"TargetEdition"})
     @Expose
@@ -66,7 +66,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
 
     /**
      * The Windows SMode.
-     * S mode configuration.
+     * S mode configuration. Possible values are: noRestriction, block, unlock.
      */
     @SerializedName(value = "windowsSMode", alternate = {"WindowsSMode"})
     @Expose

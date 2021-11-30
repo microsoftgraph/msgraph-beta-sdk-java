@@ -28,7 +28,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements IJs
 
     /**
      * The Deployment Channel.
-     * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel.
+     * Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel. Possible values are: deviceChannel, userChannel.
      */
     @SerializedName(value = "deploymentChannel", alternate = {"DeploymentChannel"})
     @Expose
@@ -46,7 +46,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements IJs
 
     /**
      * The Payload File Name.
-     * Payload file name (*.mobileconfig | *.xml).
+     * Payload file name (.mobileconfig
      */
     @SerializedName(value = "payloadFileName", alternate = {"PayloadFileName"})
     @Expose

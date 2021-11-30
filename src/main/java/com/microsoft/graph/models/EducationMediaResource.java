@@ -27,7 +27,7 @@ public class EducationMediaResource extends EducationResource implements IJsonBa
 
     /**
      * The File Url.
-     * 
+     * Location of the file on shared point folder. Required
      */
     @SerializedName(value = "fileUrl", alternate = {"FileUrl"})
     @Expose

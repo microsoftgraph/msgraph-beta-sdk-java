@@ -40,7 +40,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Exclude Applications.
-     * 
+     * The list of application IDs explicitly excluded from the policy.
      */
     @SerializedName(value = "excludeApplications", alternate = {"ExcludeApplications"})
     @Expose
@@ -49,7 +49,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Include Applications.
-     * 
+     * The list of application IDs the policy applies to, unless explicitly excluded (in excludeApplications). Can also be set to All.
      */
     @SerializedName(value = "includeApplications", alternate = {"IncludeApplications"})
     @Expose
@@ -58,7 +58,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Include Authentication Context Class References.
-     * 
+     * Authentication context class references include. Supported values are c1 through c25.
      */
     @SerializedName(value = "includeAuthenticationContextClassReferences", alternate = {"IncludeAuthenticationContextClassReferences"})
     @Expose
@@ -67,7 +67,7 @@ public class ConditionalAccessApplications implements IJsonBackedObject {
 
     /**
      * The Include User Actions.
-     * 
+     * User actions to include. Supported values are urn:user:registersecurityinfo and urn:user:registerdevice
      */
     @SerializedName(value = "includeUserActions", alternate = {"IncludeUserActions"})
     @Expose

@@ -40,7 +40,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
 
     /**
      * The Day Occurrence.
-     * 
+     * Represents the nth occurrence of the day of week that the transition from daylight saving time to standard time occurs.
      */
     @SerializedName(value = "dayOccurrence", alternate = {"DayOccurrence"})
     @Expose
@@ -49,7 +49,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
 
     /**
      * The Day Of Week.
-     * 
+     * Represents the day of the week when the transition from daylight saving time to standard time.
      */
     @SerializedName(value = "dayOfWeek", alternate = {"DayOfWeek"})
     @Expose
@@ -58,7 +58,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
 
     /**
      * The Month.
-     * 
+     * Represents the month of the year when the transition from daylight saving time to standard time occurs.
      */
     @SerializedName(value = "month", alternate = {"Month"})
     @Expose
@@ -67,7 +67,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
 
     /**
      * The Time.
-     * 
+     * Represents the time of day when the transition from daylight saving time to standard time occurs.
      */
     @SerializedName(value = "time", alternate = {"Time"})
     @Expose
@@ -76,7 +76,7 @@ public class StandardTimeZoneOffset implements IJsonBackedObject {
 
     /**
      * The Year.
-     * 
+     * Represents how frequently in terms of years the change from daylight saving time to standard time occurs. For example, a value of 0 means every year.
      */
     @SerializedName(value = "year", alternate = {"Year"})
     @Expose

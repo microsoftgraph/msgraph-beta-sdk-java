@@ -39,7 +39,7 @@ public class MetadataEntry implements IJsonBackedObject {
 
     /**
      * The Key.
-     * 
+     * Name of the metadata property.
      */
     @SerializedName(value = "key", alternate = {"Key"})
     @Expose
@@ -48,7 +48,7 @@ public class MetadataEntry implements IJsonBackedObject {
 
     /**
      * The Value.
-     * 
+     * Value of the metadata property.
      */
     @SerializedName(value = "value", alternate = {"Value"})
     @Expose

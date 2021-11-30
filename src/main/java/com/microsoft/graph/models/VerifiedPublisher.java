@@ -39,7 +39,7 @@ public class VerifiedPublisher implements IJsonBackedObject {
 
     /**
      * The Added Date Time.
-     * 
+     * The timestamp when the verified publisher was first added or most recently updated.
      */
     @SerializedName(value = "addedDateTime", alternate = {"AddedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class VerifiedPublisher implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The verified publisher name from the app publisher's Partner Center account.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class VerifiedPublisher implements IJsonBackedObject {
 
     /**
      * The Verified Publisher Id.
-     * 
+     * The ID of the verified publisher from the app publisher's Partner Center account.
      */
     @SerializedName(value = "verifiedPublisherId", alternate = {"VerifiedPublisherId"})
     @Expose

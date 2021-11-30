@@ -27,7 +27,7 @@ public class DriveItemVersion extends BaseItemVersion implements IJsonBackedObje
 
     /**
      * The Size.
-     * 
+     * Indicates the size of the content stream for this version of the item.
      */
     @SerializedName(value = "size", alternate = {"Size"})
     @Expose

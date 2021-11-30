@@ -57,7 +57,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
 
     /**
      * The Operation Type.
-     * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection.
+     * The script output comparison operation type. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, string, dateTime, integer, float, version, boolean.
      */
     @SerializedName(value = "operationType", alternate = {"OperationType"})
     @Expose
@@ -66,7 +66,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
 
     /**
      * The Operator.
-     * The script output operator. Use NotConfigured (the default value) if the rule is used for detection.
+     * The script output operator. Use NotConfigured (the default value) if the rule is used for detection. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose
@@ -84,7 +84,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
 
     /**
      * The Run As Account.
-     * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context.
+     * The execution context of the script. Do not specify this value if the rule is used for detection. Script detection rules will run in the same context as the associated app install context. Possible values are: system, user.
      */
     @SerializedName(value = "runAsAccount", alternate = {"RunAsAccount"})
     @Expose

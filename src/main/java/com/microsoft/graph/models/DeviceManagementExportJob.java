@@ -49,7 +49,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Format.
-     * Format of the exported report
+     * Format of the exported report. Possible values are: csv, pdf.
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
@@ -58,7 +58,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Localization Type.
-     * Configures how the requested export job is localized
+     * Configures how the requested export job is localized. Possible values are: localizedValuesAsAdditionalColumn, replaceLocalizableValues.
      */
     @SerializedName(value = "localizationType", alternate = {"LocalizationType"})
     @Expose
@@ -103,7 +103,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Status.
-     * Status of the export job
+     * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

@@ -27,7 +27,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Exchange.
-     * 
+     * The number of active users in Exchange. Any user who can read and send email is considered an active user.
      */
     @SerializedName(value = "exchange", alternate = {"Exchange"})
     @Expose
@@ -36,7 +36,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Office365.
-     * 
+     * The number of active users in Microsoft 365. This number includes all the active users in Exchange, OneDrive, SharePoint, Skype For Business, Yammer, and Microsoft Teams. You can find the definition of active user for each product in the respective property description.
      */
     @SerializedName(value = "office365", alternate = {"Office365"})
     @Expose
@@ -45,7 +45,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The One Drive.
-     * 
+     * The number of active users in OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
      */
     @SerializedName(value = "oneDrive", alternate = {"OneDrive"})
     @Expose
@@ -54,7 +54,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Report Date.
-     * 
+     * The date on which a number of users were active.
      */
     @SerializedName(value = "reportDate", alternate = {"ReportDate"})
     @Expose
@@ -63,7 +63,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Report Period.
-     * 
+     * The number of days the report covers.
      */
     @SerializedName(value = "reportPeriod", alternate = {"ReportPeriod"})
     @Expose
@@ -72,7 +72,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Report Refresh Date.
-     * 
+     * The latest date of the content.
      */
     @SerializedName(value = "reportRefreshDate", alternate = {"ReportRefreshDate"})
     @Expose
@@ -81,7 +81,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Share Point.
-     * 
+     * The number of active users in SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
      */
     @SerializedName(value = "sharePoint", alternate = {"SharePoint"})
     @Expose
@@ -90,7 +90,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Skype For Business.
-     * 
+     * The number of active users in Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
      */
     @SerializedName(value = "skypeForBusiness", alternate = {"SkypeForBusiness"})
     @Expose
@@ -99,7 +99,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Teams.
-     * 
+     * The number of active users in Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
      */
     @SerializedName(value = "teams", alternate = {"Teams"})
     @Expose
@@ -108,7 +108,7 @@ public class Office365ActiveUserCounts extends Entity implements IJsonBackedObje
 
     /**
      * The Yammer.
-     * 
+     * The number of active users in Yammer. Any user who can post, read, or like messages is considered an active user.
      */
     @SerializedName(value = "yammer", alternate = {"Yammer"})
     @Expose

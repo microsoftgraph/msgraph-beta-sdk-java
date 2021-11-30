@@ -39,7 +39,7 @@ public class ManagementActionInfo implements IJsonBackedObject {
 
     /**
      * The Management Action Id.
-     * 
+     * The identifier for the management action. Required. Read-only.
      */
     @SerializedName(value = "managementActionId", alternate = {"ManagementActionId"})
     @Expose
@@ -48,12 +48,21 @@ public class ManagementActionInfo implements IJsonBackedObject {
 
     /**
      * The Management Template Id.
-     * 
+     * The identifier for the management template. Required. Read-only.
      */
     @SerializedName(value = "managementTemplateId", alternate = {"ManagementTemplateId"})
     @Expose
 	@Nullable
     public String managementTemplateId;
+
+    /**
+     * The Management Template Version.
+     * 
+     */
+    @SerializedName(value = "managementTemplateVersion", alternate = {"ManagementTemplateVersion"})
+    @Expose
+	@Nullable
+    public Integer managementTemplateVersion;
 
 
     /**

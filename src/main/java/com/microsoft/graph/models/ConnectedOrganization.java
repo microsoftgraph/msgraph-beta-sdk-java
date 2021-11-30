@@ -32,7 +32,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * UPN of the user who created this resource. Read-only.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -41,7 +41,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -50,7 +50,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description of the connected organization.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -59,7 +59,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name of the connected organization.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -77,7 +77,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Modified By.
-     * 
+     * UPN of the user who last modified this resource. Read-only.
      */
     @SerializedName(value = "modifiedBy", alternate = {"ModifiedBy"})
     @Expose
@@ -86,7 +86,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Modified Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "modifiedDateTime", alternate = {"ModifiedDateTime"})
     @Expose
@@ -95,7 +95,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -104,7 +104,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The External Sponsors.
-     * 
+     * Nullable.
      */
     @SerializedName(value = "externalSponsors", alternate = {"ExternalSponsors"})
     @Expose
@@ -113,7 +113,7 @@ public class ConnectedOrganization extends Entity implements IJsonBackedObject {
 
     /**
      * The Internal Sponsors.
-     * 
+     * Nullable.
      */
     @SerializedName(value = "internalSponsors", alternate = {"InternalSponsors"})
     @Expose

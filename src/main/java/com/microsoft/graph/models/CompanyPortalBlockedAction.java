@@ -42,7 +42,7 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
 
     /**
      * The Action.
-     * Device Action
+     * Device Action. Possible values are: unknown, remove, reset.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -51,7 +51,7 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
 
     /**
      * The Owner Type.
-     * Device ownership type
+     * Device ownership type. Possible values are: unknown, company, personal.
      */
     @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
@@ -60,7 +60,7 @@ public class CompanyPortalBlockedAction implements IJsonBackedObject {
 
     /**
      * The Platform.
-     * Device OS/Platform
+     * Device OS/Platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose

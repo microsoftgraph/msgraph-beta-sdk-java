@@ -30,7 +30,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose
@@ -39,7 +39,7 @@ public class MembersLeftEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The Members.
-     * 
+     * List of members who left the chat.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

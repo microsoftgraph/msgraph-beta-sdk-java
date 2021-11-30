@@ -39,7 +39,7 @@ public class ValidationResult implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * The string containing the reason for why the rule passed or not. Read-only. Not nullable.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -48,7 +48,7 @@ public class ValidationResult implements IJsonBackedObject {
 
     /**
      * The Rule Name.
-     * 
+     * The string containing the name of the password validation rule that the action was validated against. Read-only. Not nullable.
      */
     @SerializedName(value = "ruleName", alternate = {"RuleName"})
     @Expose
@@ -57,7 +57,7 @@ public class ValidationResult implements IJsonBackedObject {
 
     /**
      * The Validation Passed.
-     * 
+     * Whether the password passed or failed the validation rule. Read-only. Not nullable.
      */
     @SerializedName(value = "validationPassed", alternate = {"ValidationPassed"})
     @Expose

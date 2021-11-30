@@ -27,7 +27,7 @@ public class WorkbookApplication extends Entity implements IJsonBackedObject {
 
     /**
      * The Calculation Mode.
-     * 
+     * Returns the calculation mode used in the workbook. Possible values are: Automatic, AutomaticExceptTables, Manual.
      */
     @SerializedName(value = "calculationMode", alternate = {"CalculationMode"})
     @Expose

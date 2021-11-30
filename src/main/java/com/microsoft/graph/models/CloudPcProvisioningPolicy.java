@@ -33,7 +33,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Description.
-     * 
+     * The provisioning policy description.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -42,7 +42,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * 
+     * The display name for the provisioning policy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -51,7 +51,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Domain Join Configuration.
-     * 
+     * Specifies how Cloud PCs will join Azure Active Directory.
      */
     @SerializedName(value = "domainJoinConfiguration", alternate = {"DomainJoinConfiguration"})
     @Expose
@@ -60,7 +60,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Image Display Name.
-     * 
+     * The display name for the OS image you’re provisioning.
      */
     @SerializedName(value = "imageDisplayName", alternate = {"ImageDisplayName"})
     @Expose
@@ -69,7 +69,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Image Id.
-     * 
+     * The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
      */
     @SerializedName(value = "imageId", alternate = {"ImageId"})
     @Expose
@@ -78,7 +78,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Image Type.
-     * 
+     * The type of OS image (custom or gallery) you want to provision on Cloud PCs. Possible values are: gallery, custom.
      */
     @SerializedName(value = "imageType", alternate = {"ImageType"})
     @Expose
@@ -96,7 +96,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The On Premises Connection Id.
-     * 
+     * The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
      */
     @SerializedName(value = "onPremisesConnectionId", alternate = {"OnPremisesConnectionId"})
     @Expose
@@ -105,7 +105,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Assignments.
-     * 
+     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

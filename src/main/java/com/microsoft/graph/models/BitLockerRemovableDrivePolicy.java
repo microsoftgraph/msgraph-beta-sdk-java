@@ -49,7 +49,7 @@ public class BitLockerRemovableDrivePolicy implements IJsonBackedObject {
 
     /**
      * The Encryption Method.
-     * Select the encryption method for removable  drives.
+     * Select the encryption method for removable  drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      */
     @SerializedName(value = "encryptionMethod", alternate = {"EncryptionMethod"})
     @Expose

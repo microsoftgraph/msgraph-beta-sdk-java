@@ -39,7 +39,7 @@ public class EducationSynchronizationConnectionSettings implements IJsonBackedOb
 
     /**
      * The Client Id.
-     * 
+     * Client ID used to connect to the provider.
      */
     @SerializedName(value = "clientId", alternate = {"ClientId"})
     @Expose
@@ -48,7 +48,7 @@ public class EducationSynchronizationConnectionSettings implements IJsonBackedOb
 
     /**
      * The Client Secret.
-     * 
+     * Client secret to authenticate the connection to the provider.
      */
     @SerializedName(value = "clientSecret", alternate = {"ClientSecret"})
     @Expose

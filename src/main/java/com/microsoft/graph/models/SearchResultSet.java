@@ -42,7 +42,7 @@ public class SearchResultSet implements IJsonBackedObject {
 
     /**
      * The Hits Containers.
-     * 
+     * A collection of search results.
      */
     @SerializedName(value = "hitsContainers", alternate = {"HitsContainers"})
     @Expose
@@ -51,7 +51,7 @@ public class SearchResultSet implements IJsonBackedObject {
 
     /**
      * The Result Templates.
-     * 
+     * A dictionary of resultTemplateIds and associated values, which include the name and JSON schema of the result templates.
      */
     @SerializedName(value = "resultTemplates", alternate = {"ResultTemplates"})
     @Expose
@@ -60,7 +60,7 @@ public class SearchResultSet implements IJsonBackedObject {
 
     /**
      * The Search Terms.
-     * 
+     * Contains the search terms sent in the initial search query.
      */
     @SerializedName(value = "searchTerms", alternate = {"SearchTerms"})
     @Expose

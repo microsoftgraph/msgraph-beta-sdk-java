@@ -12,7 +12,11 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.ManagementCategory;
 import com.microsoft.graph.managedtenants.models.TemplateParameter;
 import com.microsoft.graph.managedtenants.models.WorkloadAction;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateCollectionObject;
+import com.microsoft.graph.managedtenants.models.ManagementTemplateStep;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -31,7 +35,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -40,7 +44,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description for the management template. Optional. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -49,7 +53,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the management template. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -58,7 +62,7 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
     /**
      * The Parameters.
-     * 
+     * The collection of parameters used by the management template. Optional. Read-only.
      */
     @SerializedName(value = "parameters", alternate = {"Parameters"})
     @Expose
@@ -66,13 +70,36 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
     public java.util.List<TemplateParameter> parameters;
 
     /**
-     * The Workload Actions.
+     * The Version.
      * 
+     */
+    @SerializedName(value = "version", alternate = {"Version"})
+    @Expose
+	@Nullable
+    public Integer version;
+
+    /**
+     * The Workload Actions.
+     * The collection of workload actions associated with the management template. Optional. Read-only.
      */
     @SerializedName(value = "workloadActions", alternate = {"WorkloadActions"})
     @Expose
 	@Nullable
     public java.util.List<WorkloadAction> workloadActions;
+
+    /**
+     * The Management Template Collections.
+     * 
+     */
+	@Nullable
+    public ManagementTemplateCollectionObjectCollectionPage managementTemplateCollections;
+
+    /**
+     * The Management Template Steps.
+     * 
+     */
+	@Nullable
+    public ManagementTemplateStepCollectionPage managementTemplateSteps;
 
 
     /**
@@ -83,5 +110,13 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("managementTemplateCollections")) {
+            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), ManagementTemplateCollectionObjectCollectionPage.class);
+        }
+
+        if (json.has("managementTemplateSteps")) {
+            managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), ManagementTemplateStepCollectionPage.class);
+        }
     }
 }

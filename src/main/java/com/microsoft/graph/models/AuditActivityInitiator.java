@@ -41,7 +41,7 @@ public class AuditActivityInitiator implements IJsonBackedObject {
 
     /**
      * The App.
-     * 
+     * If the resource initiating the activity is an app, this property indicates all the app related information like appId, Name, servicePrincipalId, Name.
      */
     @SerializedName(value = "app", alternate = {"App"})
     @Expose
@@ -50,7 +50,7 @@ public class AuditActivityInitiator implements IJsonBackedObject {
 
     /**
      * The User.
-     * 
+     * If the resource initiating the activity is a user, this property Indicates all the user related information like userId, Name, UserPrinicpalName.
      */
     @SerializedName(value = "user", alternate = {"User"})
     @Expose

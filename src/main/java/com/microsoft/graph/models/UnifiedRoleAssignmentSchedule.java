@@ -29,7 +29,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Assignment Type.
-     * 
+     * Type of the assignment. It can either be Assigned or Activated.
      */
     @SerializedName(value = "assignmentType", alternate = {"AssignmentType"})
     @Expose
@@ -38,7 +38,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Member Type.
-     * 
+     * Membership type of the assignment. It can either be Inherited, Direct, or Group.
      */
     @SerializedName(value = "memberType", alternate = {"MemberType"})
     @Expose
@@ -47,7 +47,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Schedule Info.
-     * 
+     * The schedule object of the role assignment request.
      */
     @SerializedName(value = "scheduleInfo", alternate = {"ScheduleInfo"})
     @Expose
@@ -56,7 +56,7 @@ public class UnifiedRoleAssignmentSchedule extends UnifiedRoleScheduleBase imple
 
     /**
      * The Activated Using.
-     * 
+     * If the roleAssignmentSchedule is activated by a roleEligibilitySchedule, this is the link to that schedule.
      */
     @SerializedName(value = "activatedUsing", alternate = {"ActivatedUsing"})
     @Expose

@@ -34,7 +34,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The Is Default.
-     * 
+     * Indicates whether this is the user's default notebook. Read-only.
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -43,7 +43,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The Is Shared.
-     * 
+     * Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
      */
     @SerializedName(value = "isShared", alternate = {"IsShared"})
     @Expose
@@ -52,7 +52,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The Links.
-     * 
+     * Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
      */
     @SerializedName(value = "links", alternate = {"Links"})
     @Expose
@@ -61,7 +61,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The Section Groups Url.
-     * 
+     * The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
      */
     @SerializedName(value = "sectionGroupsUrl", alternate = {"SectionGroupsUrl"})
     @Expose
@@ -70,7 +70,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The Sections Url.
-     * 
+     * The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
      */
     @SerializedName(value = "sectionsUrl", alternate = {"SectionsUrl"})
     @Expose
@@ -79,7 +79,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The User Role.
-     * 
+     * Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
      */
     @SerializedName(value = "userRole", alternate = {"UserRole"})
     @Expose
@@ -88,7 +88,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The Section Groups.
-     * 
+     * The section groups in the notebook. Read-only. Nullable.
      */
     @SerializedName(value = "sectionGroups", alternate = {"SectionGroups"})
     @Expose
@@ -97,7 +97,7 @@ public class Notebook extends OnenoteEntityHierarchyModel implements IJsonBacked
 
     /**
      * The Sections.
-     * 
+     * The sections in the notebook. Read-only. Nullable.
      */
     @SerializedName(value = "sections", alternate = {"Sections"})
     @Expose

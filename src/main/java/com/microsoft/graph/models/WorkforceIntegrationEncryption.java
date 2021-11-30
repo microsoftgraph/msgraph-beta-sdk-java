@@ -40,7 +40,7 @@ public class WorkforceIntegrationEncryption implements IJsonBackedObject {
 
     /**
      * The Protocol.
-     * 
+     * Possible values are: sharedSecret, unknownFutureValue.
      */
     @SerializedName(value = "protocol", alternate = {"Protocol"})
     @Expose
@@ -49,7 +49,7 @@ public class WorkforceIntegrationEncryption implements IJsonBackedObject {
 
     /**
      * The Secret.
-     * 
+     * Encryption shared secret.
      */
     @SerializedName(value = "secret", alternate = {"Secret"})
     @Expose

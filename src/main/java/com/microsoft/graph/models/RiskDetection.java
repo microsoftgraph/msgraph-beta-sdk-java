@@ -35,7 +35,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * 
+     * Indicates the activity type the detected risk is linked to. . Possible values are: signin, user, unknownFutureValue.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -44,7 +44,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * 
+     * Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -53,7 +53,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Additional Info.
-     * 
+     * Additional information associated with the risk detection in JSON format.
      */
     @SerializedName(value = "additionalInfo", alternate = {"AdditionalInfo"})
     @Expose
@@ -62,7 +62,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * 
+     * Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      */
     @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
@@ -71,7 +71,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Detected Date Time.
-     * 
+     * Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "detectedDateTime", alternate = {"DetectedDateTime"})
     @Expose
@@ -80,7 +80,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Detection Timing Type.
-     * 
+     * Timing of the detected risk (real-time/offline). Possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      */
     @SerializedName(value = "detectionTimingType", alternate = {"DetectionTimingType"})
     @Expose
@@ -89,7 +89,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * Provides the IP address of the client from where the risk occurred.
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -98,7 +98,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Updated Date Time.
-     * 
+     * Date and time that the risk detection was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is look like this: 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "lastUpdatedDateTime", alternate = {"LastUpdatedDateTime"})
     @Expose
@@ -107,7 +107,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Location.
-     * 
+     * Location of the sign-in.
      */
     @SerializedName(value = "location", alternate = {"Location"})
     @Expose
@@ -116,7 +116,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Request Id.
-     * 
+     * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      */
     @SerializedName(value = "requestId", alternate = {"RequestId"})
     @Expose
@@ -125,7 +125,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * 
+     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -134,7 +134,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Event Type.
-     * 
+     * The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, and unknownFutureValue. If the risk detection is a premium detection, will show generic
      */
     @SerializedName(value = "riskEventType", alternate = {"RiskEventType"})
     @Expose
@@ -143,7 +143,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level.
-     * 
+     * Level of the detected risk. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      */
     @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose
@@ -152,7 +152,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk State.
-     * 
+     * The state of a detected risky user or sign-in. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      */
     @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
@@ -161,7 +161,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Type.
-     * 
+     * List of risk event types.Note: This property is deprecated. Use riskEventType instead.
      */
     @SerializedName(value = "riskType", alternate = {"RiskType"})
     @Expose
@@ -170,7 +170,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * 
+     * Source of the risk detection. For example, activeDirectory.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -179,7 +179,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The Token Issuer Type.
-     * 
+     * Indicates the type of token issuer for the detected sign-in risk. Possible values are: AzureAD, ADFederationServices, UnknownFutureValue.
      */
     @SerializedName(value = "tokenIssuerType", alternate = {"TokenIssuerType"})
     @Expose
@@ -188,7 +188,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * The user principal name (UPN) of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -197,7 +197,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * Unique ID of the user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -206,7 +206,7 @@ public class RiskDetection extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (UPN) of the user.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

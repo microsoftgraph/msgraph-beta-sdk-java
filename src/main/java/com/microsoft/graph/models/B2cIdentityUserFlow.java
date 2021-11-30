@@ -37,7 +37,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Api Connector Configuration.
-     * 
+     * Configuration for enabling an API connector for use as part of the user flow. You can only obtain the value of this object using Get userFlowApiConnectorConfiguration.
      */
     @SerializedName(value = "apiConnectorConfiguration", alternate = {"ApiConnectorConfiguration"})
     @Expose
@@ -46,7 +46,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Default Language Tag.
-     * 
+     * Indicates the default language of the b2cIdentityUserFlow that is used when no ui_locale tag is specified in the request. This field is RFC 5646 compliant.
      */
     @SerializedName(value = "defaultLanguageTag", alternate = {"DefaultLanguageTag"})
     @Expose
@@ -55,7 +55,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Is Language Customization Enabled.
-     * 
+     * The property that determines whether language customization is enabled within the B2C user flow. Language customization is not enabled by default for B2C user flows.
      */
     @SerializedName(value = "isLanguageCustomizationEnabled", alternate = {"IsLanguageCustomizationEnabled"})
     @Expose
@@ -73,7 +73,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The Languages.
-     * 
+     * The languages supported for customization within the user flow. Language customization is not enabled by default in B2C user flows.
      */
     @SerializedName(value = "languages", alternate = {"Languages"})
     @Expose
@@ -82,7 +82,7 @@ public class B2cIdentityUserFlow extends IdentityUserFlow implements IJsonBacked
 
     /**
      * The User Attribute Assignments.
-     * 
+     * The user attribute assignments included in the user flow.
      */
     @SerializedName(value = "userAttributeAssignments", alternate = {"UserAttributeAssignments"})
     @Expose

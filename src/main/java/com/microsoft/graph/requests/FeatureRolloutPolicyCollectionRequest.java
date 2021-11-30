@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Directory;
+import com.microsoft.graph.models.PolicyRoot;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -25,9 +25,7 @@ import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionRequest;
 
 /**
  * The class for the Feature Rollout Policy Collection Request.
- * @deprecated Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
  */
-@Deprecated
 public class FeatureRolloutPolicyCollectionRequest extends BaseEntityCollectionRequest<FeatureRolloutPolicy, FeatureRolloutPolicyCollectionResponse, FeatureRolloutPolicyCollectionPage> {
 
     /**

@@ -28,7 +28,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
 
     /**
      * The Call Id.
-     * 
+     * Unique identifier of the call.
      */
     @SerializedName(value = "callId", alternate = {"CallId"})
     @Expose
@@ -37,7 +37,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
 
     /**
      * The Call Transcript ICal Uid.
-     * 
+     * Unique identifier for a call transcript.
      */
     @SerializedName(value = "callTranscriptICalUid", alternate = {"CallTranscriptICalUid"})
     @Expose
@@ -46,7 +46,7 @@ public class CallTranscriptEventMessageDetail extends EventMessageDetail impleme
 
     /**
      * The Meeting Organizer.
-     * 
+     * The organizer of the meeting.
      */
     @SerializedName(value = "meetingOrganizer", alternate = {"MeetingOrganizer"})
     @Expose

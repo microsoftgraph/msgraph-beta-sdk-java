@@ -42,7 +42,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Attachments.
-     * 
+     * References to attached objects like files, tabs, meetings etc.
      */
     @SerializedName(value = "attachments", alternate = {"Attachments"})
     @Expose
@@ -51,7 +51,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Body.
-     * 
+     * Plaintext/HTML representation of the content of the chat message. Representation is specified by the contentType inside the body. The content is always in HTML if the chat message contains a chatMessageMention.
      */
     @SerializedName(value = "body", alternate = {"Body"})
     @Expose
@@ -60,7 +60,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Channel Identity.
-     * 
+     * If the message was sent in a channel, represents identity of the channel.
      */
     @SerializedName(value = "channelIdentity", alternate = {"ChannelIdentity"})
     @Expose
@@ -69,7 +69,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Id.
-     * 
+     * If the message was sent in a chat, represents the identity of the chat.
      */
     @SerializedName(value = "chatId", alternate = {"ChatId"})
     @Expose
@@ -78,7 +78,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Timestamp of when the chat message was created.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -87,7 +87,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Date Time.
-     * 
+     * Read only. Timestamp at which the chat message was deleted, or null if not deleted.
      */
     @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose
@@ -96,7 +96,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Etag.
-     * 
+     * Read-only. Version number of the chat message.
      */
     @SerializedName(value = "etag", alternate = {"Etag"})
     @Expose
@@ -105,7 +105,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Event Detail.
-     * 
+     * Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
      */
     @SerializedName(value = "eventDetail", alternate = {"EventDetail"})
     @Expose
@@ -114,7 +114,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The From.
-     * 
+     * Details of the sender of the chat message. Can only be set during migration.
      */
     @SerializedName(value = "from", alternate = {"From"})
     @Expose
@@ -123,7 +123,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Importance.
-     * 
+     * The importance of the chat message. The possible values are: normal, high, urgent.
      */
     @SerializedName(value = "importance", alternate = {"Importance"})
     @Expose
@@ -132,7 +132,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Edited Date Time.
-     * 
+     * Read only. Timestamp when edits to the chat message were made. Triggers an 'Edited' flag in the Teams UI. If no edits are made the value is null.
      */
     @SerializedName(value = "lastEditedDateTime", alternate = {"LastEditedDateTime"})
     @Expose
@@ -141,7 +141,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Read only. Timestamp when the chat message is created (initial setting) or modified, including when a reaction is added or removed.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -150,7 +150,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Locale.
-     * 
+     * Locale of the chat message set by the client. Always set to en-us.
      */
     @SerializedName(value = "locale", alternate = {"Locale"})
     @Expose
@@ -159,7 +159,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Mentions.
-     * 
+     * List of entities mentioned in the chat message. Supported entities are: user, bot, team, and channel.
      */
     @SerializedName(value = "mentions", alternate = {"Mentions"})
     @Expose
@@ -168,7 +168,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Message Type.
-     * 
+     * The type of chat message. The possible values are: message, chatEvent, typing, unknownFutureValue, systemEventMessage. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: systemEventMessage.
      */
     @SerializedName(value = "messageType", alternate = {"MessageType"})
     @Expose
@@ -177,7 +177,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Policy Violation.
-     * 
+     * Defines the properties of a policy violation set by a data loss prevention (DLP) application.
      */
     @SerializedName(value = "policyViolation", alternate = {"PolicyViolation"})
     @Expose
@@ -186,7 +186,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reactions.
-     * 
+     * Reactions for this chat message (for example, Like).
      */
     @SerializedName(value = "reactions", alternate = {"Reactions"})
     @Expose
@@ -195,7 +195,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Reply To Id.
-     * 
+     * Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
      */
     @SerializedName(value = "replyToId", alternate = {"ReplyToId"})
     @Expose
@@ -204,7 +204,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The subject of the chat message, in plaintext.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -213,7 +213,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Summary.
-     * 
+     * Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
      */
     @SerializedName(value = "summary", alternate = {"Summary"})
     @Expose
@@ -222,7 +222,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * Read-only. Link to the message in Microsoft Teams.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose
@@ -231,7 +231,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Hosted Contents.
-     * 
+     * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
      */
     @SerializedName(value = "hostedContents", alternate = {"HostedContents"})
     @Expose
@@ -240,7 +240,7 @@ public class ChatMessage extends Entity implements IJsonBackedObject {
 
     /**
      * The Replies.
-     * 
+     * Replies for a specified message.
      */
     @SerializedName(value = "replies", alternate = {"Replies"})
     @Expose

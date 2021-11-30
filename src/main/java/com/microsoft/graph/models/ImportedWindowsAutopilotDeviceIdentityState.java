@@ -58,7 +58,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements IJsonBackedO
 
     /**
      * The Device Import Status.
-     * Device status reported by Device Directory Service(DDS).
+     * Device status reported by Device Directory Service(DDS). Possible values are: unknown, pending, partial, complete, error.
      */
     @SerializedName(value = "deviceImportStatus", alternate = {"DeviceImportStatus"})
     @Expose

@@ -30,7 +30,7 @@ public class AuthenticationEventsPolicy extends Entity implements IJsonBackedObj
 
     /**
      * The On Signup Start.
-     * 
+     * A list of applicable actions to be taken on sign-up.
      */
     @SerializedName(value = "onSignupStart", alternate = {"OnSignupStart"})
     @Expose

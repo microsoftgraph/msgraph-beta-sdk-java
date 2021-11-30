@@ -30,7 +30,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Control Id.
-     * 
+     * The controlId of the control, in particular the identifier of an access review. Required on create.
      */
     @SerializedName(value = "controlId", alternate = {"ControlId"})
     @Expose
@@ -39,7 +39,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Control Type Id.
-     * 
+     * The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
      */
     @SerializedName(value = "controlTypeId", alternate = {"ControlTypeId"})
     @Expose
@@ -48,7 +48,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The creation date and time of the program control.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the control.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -66,7 +66,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * 
+     * The user who created the program control.
      */
     @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
@@ -75,7 +75,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Program Id.
-     * 
+     * The programId of the program this control is a part of. Required on create.
      */
     @SerializedName(value = "programId", alternate = {"ProgramId"})
     @Expose
@@ -84,7 +84,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource.
-     * 
+     * The resource, a group or an app, targeted by this program control's access review.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose
@@ -93,7 +93,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The life cycle status of the control.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -102,7 +102,7 @@ public class ProgramControl extends Entity implements IJsonBackedObject {
 
     /**
      * The Program.
-     * 
+     * The program this control is part of.
      */
     @SerializedName(value = "program", alternate = {"Program"})
     @Expose

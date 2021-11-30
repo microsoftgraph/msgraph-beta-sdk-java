@@ -28,7 +28,7 @@ public class ScopedRoleMembership extends Entity implements IJsonBackedObject {
 
     /**
      * The Administrative Unit Id.
-     * 
+     * Unique identifier for the administrative unit that the directory role is scoped to
      */
     @SerializedName(value = "administrativeUnitId", alternate = {"AdministrativeUnitId"})
     @Expose
@@ -37,7 +37,7 @@ public class ScopedRoleMembership extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Id.
-     * 
+     * Unique identifier for the directory role that the member is in.
      */
     @SerializedName(value = "roleId", alternate = {"RoleId"})
     @Expose
@@ -46,7 +46,7 @@ public class ScopedRoleMembership extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Member Info.
-     * 
+     * Role member identity information. Represents the user that is a member of this scoped-role.
      */
     @SerializedName(value = "roleMemberInfo", alternate = {"RoleMemberInfo"})
     @Expose

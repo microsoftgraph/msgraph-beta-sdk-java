@@ -9,19 +9,27 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.RecommendationResource;
+import com.microsoft.graph.models.Recommendation;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.AttributeSet;
 import com.microsoft.graph.models.CustomSecurityAttributeDefinition;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.models.IdentityProviderBase;
+import com.microsoft.graph.models.InboundSharedUserProfile;
+import com.microsoft.graph.models.OutboundSharedUserProfile;
 import com.microsoft.graph.models.SharedEmailDomain;
 import com.microsoft.graph.models.FeatureRolloutPolicy;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.RecommendationResourceCollectionPage;
+import com.microsoft.graph.requests.RecommendationCollectionPage;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.AttributeSetCollectionPage;
 import com.microsoft.graph.requests.CustomSecurityAttributeDefinitionCollectionPage;
 import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
 import com.microsoft.graph.requests.IdentityProviderBaseCollectionPage;
+import com.microsoft.graph.requests.InboundSharedUserProfileCollectionPage;
+import com.microsoft.graph.requests.OutboundSharedUserProfileCollectionPage;
 import com.microsoft.graph.requests.SharedEmailDomainCollectionPage;
 import com.microsoft.graph.requests.FeatureRolloutPolicyCollectionPage;
 
@@ -41,8 +49,26 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
     /**
-     * The Administrative Units.
+     * The Impacted Resources.
      * 
+     */
+    @SerializedName(value = "impactedResources", alternate = {"ImpactedResources"})
+    @Expose
+	@Nullable
+    public RecommendationResourceCollectionPage impactedResources;
+
+    /**
+     * The Recommendations.
+     * 
+     */
+    @SerializedName(value = "recommendations", alternate = {"Recommendations"})
+    @Expose
+	@Nullable
+    public RecommendationCollectionPage recommendations;
+
+    /**
+     * The Administrative Units.
+     * Conceptual container for user and group directory objects.
      */
     @SerializedName(value = "administrativeUnits", alternate = {"AdministrativeUnits"})
     @Expose
@@ -51,7 +77,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Attribute Sets.
-     * 
+     * Group of related custom security attribute definitions.
      */
     @SerializedName(value = "attributeSets", alternate = {"AttributeSets"})
     @Expose
@@ -60,7 +86,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Custom Security Attribute Definitions.
-     * 
+     * Schema of a custom security attributes (key-value pairs).
      */
     @SerializedName(value = "customSecurityAttributeDefinitions", alternate = {"CustomSecurityAttributeDefinitions"})
     @Expose
@@ -69,7 +95,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Items.
-     * 
+     * Recently deleted items. Read-only. Nullable.
      */
     @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
     @Expose
@@ -78,12 +104,30 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Federation Configurations.
-     * 
+     * Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      */
     @SerializedName(value = "federationConfigurations", alternate = {"FederationConfigurations"})
     @Expose
 	@Nullable
     public IdentityProviderBaseCollectionPage federationConfigurations;
+
+    /**
+     * The Inbound Shared User Profiles.
+     * 
+     */
+    @SerializedName(value = "inboundSharedUserProfiles", alternate = {"InboundSharedUserProfiles"})
+    @Expose
+	@Nullable
+    public InboundSharedUserProfileCollectionPage inboundSharedUserProfiles;
+
+    /**
+     * The Outbound Shared User Profiles.
+     * 
+     */
+    @SerializedName(value = "outboundSharedUserProfiles", alternate = {"OutboundSharedUserProfiles"})
+    @Expose
+	@Nullable
+    public OutboundSharedUserProfileCollectionPage outboundSharedUserProfiles;
 
     /**
      * The Shared Email Domains.
@@ -96,7 +140,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Feature Rollout Policies.
-     * 
+     * Nullable.
      * @deprecated Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
      */
     @Deprecated
@@ -114,6 +158,14 @@ public class Directory extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("impactedResources")) {
+            impactedResources = serializer.deserializeObject(json.get("impactedResources"), RecommendationResourceCollectionPage.class);
+        }
+
+        if (json.has("recommendations")) {
+            recommendations = serializer.deserializeObject(json.get("recommendations"), RecommendationCollectionPage.class);
+        }
 
         if (json.has("administrativeUnits")) {
             administrativeUnits = serializer.deserializeObject(json.get("administrativeUnits"), AdministrativeUnitCollectionPage.class);
@@ -133,6 +185,14 @@ public class Directory extends Entity implements IJsonBackedObject {
 
         if (json.has("federationConfigurations")) {
             federationConfigurations = serializer.deserializeObject(json.get("federationConfigurations"), IdentityProviderBaseCollectionPage.class);
+        }
+
+        if (json.has("inboundSharedUserProfiles")) {
+            inboundSharedUserProfiles = serializer.deserializeObject(json.get("inboundSharedUserProfiles"), InboundSharedUserProfileCollectionPage.class);
+        }
+
+        if (json.has("outboundSharedUserProfiles")) {
+            outboundSharedUserProfiles = serializer.deserializeObject(json.get("outboundSharedUserProfiles"), OutboundSharedUserProfileCollectionPage.class);
         }
 
         if (json.has("sharedEmailDomains")) {

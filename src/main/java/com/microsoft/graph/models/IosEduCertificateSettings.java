@@ -58,7 +58,7 @@ public class IosEduCertificateSettings implements IJsonBackedObject {
 
     /**
      * The Certificate Validity Period Scale.
-     * Scale for the Certificate Validity Period.
+     * Scale for the Certificate Validity Period. Possible values are: days, months, years.
      */
     @SerializedName(value = "certificateValidityPeriodScale", alternate = {"CertificateValidityPeriodScale"})
     @Expose

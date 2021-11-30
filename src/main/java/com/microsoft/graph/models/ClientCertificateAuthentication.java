@@ -29,7 +29,7 @@ public class ClientCertificateAuthentication extends ApiAuthenticationConfigurat
 
     /**
      * The Certificate List.
-     * 
+     * The list of certificates uploaded for this API connector.
      */
     @SerializedName(value = "certificateList", alternate = {"CertificateList"})
     @Expose

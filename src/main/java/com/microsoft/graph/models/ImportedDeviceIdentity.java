@@ -48,7 +48,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
 
     /**
      * The Enrollment State.
-     * The state of the device in Intune
+     * The state of the device in Intune. Possible values are: unknown, enrolled, pendingReset, failed, notContacted, blocked.
      */
     @SerializedName(value = "enrollmentState", alternate = {"EnrollmentState"})
     @Expose
@@ -66,7 +66,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
 
     /**
      * The Imported Device Identity Type.
-     * Type of Imported Device Identity
+     * Type of Imported Device Identity. Possible values are: unknown, imei, serialNumber.
      */
     @SerializedName(value = "importedDeviceIdentityType", alternate = {"ImportedDeviceIdentityType"})
     @Expose
@@ -93,7 +93,7 @@ public class ImportedDeviceIdentity extends Entity implements IJsonBackedObject 
 
     /**
      * The Platform.
-     * The platform of the Device.
+     * The platform of the Device. Possible values are: unknown, ios, android, windows, windowsMobile, macOS.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose

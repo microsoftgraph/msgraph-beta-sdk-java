@@ -33,7 +33,7 @@ public class WindowsDriverUpdateProfile extends Entity implements IJsonBackedObj
 
     /**
      * The Approval Type.
-     * Driver update profile approval type. For example, manual or automatic approval.
+     * Driver update profile approval type. For example, manual or automatic approval. Possible values are: manual, automatic.
      */
     @SerializedName(value = "approvalType", alternate = {"ApprovalType"})
     @Expose

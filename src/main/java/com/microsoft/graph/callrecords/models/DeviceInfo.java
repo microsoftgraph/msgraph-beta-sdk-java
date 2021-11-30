@@ -39,7 +39,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Capture Device Driver.
-     * 
+     * Name of the capture device driver used by the media endpoint.
      */
     @SerializedName(value = "captureDeviceDriver", alternate = {"CaptureDeviceDriver"})
     @Expose
@@ -48,7 +48,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Capture Device Name.
-     * 
+     * Name of the capture device used by the media endpoint.
      */
     @SerializedName(value = "captureDeviceName", alternate = {"CaptureDeviceName"})
     @Expose
@@ -57,7 +57,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Capture Not Functioning Event Ratio.
-     * 
+     * Fraction of the call that the media endpoint detected the capture device was not working properly.
      */
     @SerializedName(value = "captureNotFunctioningEventRatio", alternate = {"CaptureNotFunctioningEventRatio"})
     @Expose
@@ -66,7 +66,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Cpu Insufficent Event Ratio.
-     * 
+     * Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
      */
     @SerializedName(value = "cpuInsufficentEventRatio", alternate = {"CpuInsufficentEventRatio"})
     @Expose
@@ -75,7 +75,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Device Clipping Event Ratio.
-     * 
+     * Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
      */
     @SerializedName(value = "deviceClippingEventRatio", alternate = {"DeviceClippingEventRatio"})
     @Expose
@@ -84,7 +84,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Device Glitch Event Ratio.
-     * 
+     * Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
      */
     @SerializedName(value = "deviceGlitchEventRatio", alternate = {"DeviceGlitchEventRatio"})
     @Expose
@@ -93,7 +93,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Howling Event Count.
-     * 
+     * Number of times during the call that the media endpoint detected howling or screeching audio.
      */
     @SerializedName(value = "howlingEventCount", alternate = {"HowlingEventCount"})
     @Expose
@@ -102,7 +102,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Initial Signal Level Root Mean Square.
-     * 
+     * The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
      */
     @SerializedName(value = "initialSignalLevelRootMeanSquare", alternate = {"InitialSignalLevelRootMeanSquare"})
     @Expose
@@ -111,7 +111,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Low Speech Level Event Ratio.
-     * 
+     * Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
      */
     @SerializedName(value = "lowSpeechLevelEventRatio", alternate = {"LowSpeechLevelEventRatio"})
     @Expose
@@ -120,7 +120,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Low Speech To Noise Event Ratio.
-     * 
+     * Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
      */
     @SerializedName(value = "lowSpeechToNoiseEventRatio", alternate = {"LowSpeechToNoiseEventRatio"})
     @Expose
@@ -129,7 +129,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Mic Glitch Rate.
-     * 
+     * Glitches per 5 minute interval for the media endpoint's microphone.
      */
     @SerializedName(value = "micGlitchRate", alternate = {"MicGlitchRate"})
     @Expose
@@ -138,7 +138,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Received Noise Level.
-     * 
+     * Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
      */
     @SerializedName(value = "receivedNoiseLevel", alternate = {"ReceivedNoiseLevel"})
     @Expose
@@ -147,7 +147,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Received Signal Level.
-     * 
+     * Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
      */
     @SerializedName(value = "receivedSignalLevel", alternate = {"ReceivedSignalLevel"})
     @Expose
@@ -156,7 +156,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Render Device Driver.
-     * 
+     * Name of the render device driver used by the media endpoint.
      */
     @SerializedName(value = "renderDeviceDriver", alternate = {"RenderDeviceDriver"})
     @Expose
@@ -165,7 +165,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Render Device Name.
-     * 
+     * Name of the render device used by the media endpoint.
      */
     @SerializedName(value = "renderDeviceName", alternate = {"RenderDeviceName"})
     @Expose
@@ -174,7 +174,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Render Mute Event Ratio.
-     * 
+     * Fraction of the call that media endpoint detected device render is muted.
      */
     @SerializedName(value = "renderMuteEventRatio", alternate = {"RenderMuteEventRatio"})
     @Expose
@@ -183,7 +183,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Render Not Functioning Event Ratio.
-     * 
+     * Fraction of the call that the media endpoint detected the render device was not working properly.
      */
     @SerializedName(value = "renderNotFunctioningEventRatio", alternate = {"RenderNotFunctioningEventRatio"})
     @Expose
@@ -192,7 +192,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Render Zero Volume Event Ratio.
-     * 
+     * Fraction of the call that media endpoint detected device render volume is set to 0.
      */
     @SerializedName(value = "renderZeroVolumeEventRatio", alternate = {"RenderZeroVolumeEventRatio"})
     @Expose
@@ -201,7 +201,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Sent Noise Level.
-     * 
+     * Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
      */
     @SerializedName(value = "sentNoiseLevel", alternate = {"SentNoiseLevel"})
     @Expose
@@ -210,7 +210,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Sent Signal Level.
-     * 
+     * Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.
      */
     @SerializedName(value = "sentSignalLevel", alternate = {"SentSignalLevel"})
     @Expose
@@ -219,7 +219,7 @@ public class DeviceInfo implements IJsonBackedObject {
 
     /**
      * The Speaker Glitch Rate.
-     * 
+     * Glitches per 5 minute internal for the media endpoint's loudspeaker.
      */
     @SerializedName(value = "speakerGlitchRate", alternate = {"SpeakerGlitchRate"})
     @Expose

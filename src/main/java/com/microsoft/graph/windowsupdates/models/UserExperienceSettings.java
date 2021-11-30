@@ -39,7 +39,7 @@ public class UserExperienceSettings implements IJsonBackedObject {
 
     /**
      * The Days Until Forced Reboot.
-     * 
+     * Specifies the number of days after an update is installed, during which the user of the device can control when the device restarts.
      */
     @SerializedName(value = "daysUntilForcedReboot", alternate = {"DaysUntilForcedReboot"})
     @Expose

@@ -28,7 +28,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
 
     /**
      * The Channel Description.
-     * 
+     * The updated description of the channel.
      */
     @SerializedName(value = "channelDescription", alternate = {"ChannelDescription"})
     @Expose
@@ -37,7 +37,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
 
     /**
      * The Channel Id.
-     * 
+     * Unique identifier of the channel.
      */
     @SerializedName(value = "channelId", alternate = {"ChannelId"})
     @Expose
@@ -46,7 +46,7 @@ public class ChannelDescriptionUpdatedEventMessageDetail extends EventMessageDet
 
     /**
      * The Initiator.
-     * 
+     * Initiator of the event.
      */
     @SerializedName(value = "initiator", alternate = {"Initiator"})
     @Expose

@@ -114,7 +114,7 @@ public class ManagedDeviceMobileAppConfigurationSettingState implements IJsonBac
 
     /**
      * The State.
-     * The compliance state of the setting
+     * The compliance state of the setting. Possible values are: unknown, notApplicable, compliant, remediated, nonCompliant, error, conflict, notAssigned.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

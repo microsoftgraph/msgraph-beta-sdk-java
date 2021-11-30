@@ -71,7 +71,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Certificate Issuance State.
-     * Issuance State
+     * Issuance State. Possible values are: unknown, challengeIssued, challengeIssueFailed, requestCreationFailed, requestSubmitFailed, challengeValidationSucceeded, challengeValidationFailed, issueFailed, issuePending, issued, responseProcessingFailed, responsePending, enrollmentSucceeded, enrollmentNotNeeded, revoked, removedFromCollection, renewVerified, installFailed, installed, deleteFailed, deleted, renewalRequested, requested.
      */
     @SerializedName(value = "certificateIssuanceState", alternate = {"CertificateIssuanceState"})
     @Expose
@@ -98,7 +98,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Certificate Key Storage Provider.
-     * Key Storage Provider
+     * Key Storage Provider. Possible values are: useTpmKspOtherwiseUseSoftwareKsp, useTpmKspOtherwiseFail, usePassportForWorkKspOtherwiseFail, useSoftwareKsp.
      */
     @SerializedName(value = "certificateKeyStorageProvider", alternate = {"CertificateKeyStorageProvider"})
     @Expose
@@ -107,7 +107,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Certificate Key Usage.
-     * Key usage
+     * Key usage. Possible values are: keyEncipherment, digitalSignature.
      */
     @SerializedName(value = "certificateKeyUsage", alternate = {"CertificateKeyUsage"})
     @Expose
@@ -134,7 +134,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Certificate Revoke Status.
-     * Revoke status
+     * Revoke status. Possible values are: none, pending, issued, failed, revoked.
      */
     @SerializedName(value = "certificateRevokeStatus", alternate = {"CertificateRevokeStatus"})
     @Expose
@@ -152,7 +152,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Certificate Subject Alternative Name Format.
-     * Subject alternative name format
+     * Subject alternative name format. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      */
     @SerializedName(value = "certificateSubjectAlternativeNameFormat", alternate = {"CertificateSubjectAlternativeNameFormat"})
     @Expose
@@ -170,7 +170,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Certificate Subject Name Format.
-     * Subject name format
+     * Subject name format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
      */
     @SerializedName(value = "certificateSubjectNameFormat", alternate = {"CertificateSubjectNameFormat"})
     @Expose
@@ -206,7 +206,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Certificate Validity Period Units.
-     * Validity period units
+     * Validity period units. Possible values are: days, months, years.
      */
     @SerializedName(value = "certificateValidityPeriodUnits", alternate = {"CertificateValidityPeriodUnits"})
     @Expose
@@ -224,7 +224,7 @@ public class ManagedDeviceCertificateState extends Entity implements IJsonBacked
 
     /**
      * The Device Platform.
-     * Device platform
+     * Device platform. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
      */
     @SerializedName(value = "devicePlatform", alternate = {"DevicePlatform"})
     @Expose

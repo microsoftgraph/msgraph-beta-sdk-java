@@ -27,7 +27,7 @@ public class ChatActivityStatistics extends ActivityStatistics implements IJsonB
 
     /**
      * The After Hours.
-     * 
+     * Time spent on chats outside of working hours, which is based on the user's Microsoft Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      */
     @SerializedName(value = "afterHours", alternate = {"AfterHours"})
     @Expose

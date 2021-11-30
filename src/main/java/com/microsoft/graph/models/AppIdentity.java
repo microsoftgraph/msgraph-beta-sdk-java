@@ -39,7 +39,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * 
+     * Refers to the Unique GUID representing Application Id in the Azure Active Directory.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -48,7 +48,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Refers to the Application Name displayed in the Azure Portal.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The Service Principal Id.
-     * 
+     * Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
      */
     @SerializedName(value = "servicePrincipalId", alternate = {"ServicePrincipalId"})
     @Expose
@@ -66,7 +66,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The Service Principal Name.
-     * 
+     * Refers to the Service Principal Name is the Application name in the tenant.
      */
     @SerializedName(value = "servicePrincipalName", alternate = {"ServicePrincipalName"})
     @Expose

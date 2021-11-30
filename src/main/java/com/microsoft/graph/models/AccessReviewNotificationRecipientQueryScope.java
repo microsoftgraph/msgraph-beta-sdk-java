@@ -27,7 +27,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
 
     /**
      * The Query.
-     * 
+     * Represents the query for who the recipients are. For example, /groups/{group id}/members for group members and /users/{user id} for a specific user.
      */
     @SerializedName(value = "query", alternate = {"Query"})
     @Expose
@@ -36,7 +36,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
 
     /**
      * The Query Root.
-     * 
+     * In the scenario where reviewers need to be specified dynamically, indicates the relative source of the query. This property is only required if a relative query (that is, ./manager) is specified.
      */
     @SerializedName(value = "queryRoot", alternate = {"QueryRoot"})
     @Expose
@@ -45,7 +45,7 @@ public class AccessReviewNotificationRecipientQueryScope extends AccessReviewNot
 
     /**
      * The Query Type.
-     * 
+     * Indicates the type of query. Allowed value is MicrosoftGraph.
      */
     @SerializedName(value = "queryType", alternate = {"QueryType"})
     @Expose

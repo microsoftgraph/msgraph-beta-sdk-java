@@ -28,7 +28,7 @@ public class OutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Categories.
-     * 
+     * The categories associated with the item
      */
     @SerializedName(value = "categories", alternate = {"Categories"})
     @Expose
@@ -37,7 +37,7 @@ public class OutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Change Key.
-     * 
+     * Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
      */
     @SerializedName(value = "changeKey", alternate = {"ChangeKey"})
     @Expose
@@ -46,7 +46,7 @@ public class OutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -55,7 +55,7 @@ public class OutlookItem extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

@@ -39,7 +39,7 @@ public class BucketAggregationRange implements IJsonBackedObject {
 
     /**
      * The From.
-     * 
+     * Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
      */
     @SerializedName(value = "from", alternate = {"From"})
     @Expose
@@ -48,7 +48,7 @@ public class BucketAggregationRange implements IJsonBackedObject {
 
     /**
      * The To.
-     * 
+     * Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
      */
     @SerializedName(value = "to", alternate = {"To"})
     @Expose

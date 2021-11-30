@@ -33,7 +33,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Deleted.
-     * 
+     * Indicates whether the user is deleted. Possible values are: true, false.
      */
     @SerializedName(value = "isDeleted", alternate = {"IsDeleted"})
     @Expose
@@ -42,7 +42,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Processing.
-     * 
+     * Indicates whether a user's risky state is being processed by the backend.
      */
     @SerializedName(value = "isProcessing", alternate = {"IsProcessing"})
     @Expose
@@ -51,7 +51,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Detail.
-     * 
+     * Details of the detected risk. Possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -60,7 +60,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Last Updated Date Time.
-     * 
+     * The date and time that the risky user was last updated.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "riskLastUpdatedDateTime", alternate = {"RiskLastUpdatedDateTime"})
     @Expose
@@ -69,7 +69,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk Level.
-     * 
+     * Level of the detected risky user. Possible values are: low, medium, high, hidden, none, unknownFutureValue.
      */
     @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose
@@ -78,7 +78,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Risk State.
-     * 
+     * State of the user's risk. Possible values are: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
      */
     @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
@@ -87,7 +87,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * Risky user display name.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -96,7 +96,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * Risky user principal name.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -105,7 +105,7 @@ public class RiskyUser extends Entity implements IJsonBackedObject {
 
     /**
      * The History.
-     * 
+     * The activity related to user risk level change
      */
     @SerializedName(value = "history", alternate = {"History"})
     @Expose

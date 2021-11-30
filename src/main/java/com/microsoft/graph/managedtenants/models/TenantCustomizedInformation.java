@@ -29,7 +29,7 @@ public class TenantCustomizedInformation extends Entity implements IJsonBackedOb
 
     /**
      * The Contacts.
-     * 
+     * The collection of contacts for the managed tenant. Optional.
      */
     @SerializedName(value = "contacts", alternate = {"Contacts"})
     @Expose
@@ -38,7 +38,7 @@ public class TenantCustomizedInformation extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * 
+     * The display name for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -47,7 +47,7 @@ public class TenantCustomizedInformation extends Entity implements IJsonBackedOb
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -56,7 +56,7 @@ public class TenantCustomizedInformation extends Entity implements IJsonBackedOb
 
     /**
      * The Website.
-     * 
+     * The website for the managed tenant. Required.
      */
     @SerializedName(value = "website", alternate = {"Website"})
     @Expose

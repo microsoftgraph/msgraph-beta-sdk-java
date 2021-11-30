@@ -39,7 +39,7 @@ public class SamlSingleSignOnSettings implements IJsonBackedObject {
 
     /**
      * The Relay State.
-     * 
+     * The relative URI the service provider would redirect to after completion of the single sign-on flow.
      */
     @SerializedName(value = "relayState", alternate = {"RelayState"})
     @Expose

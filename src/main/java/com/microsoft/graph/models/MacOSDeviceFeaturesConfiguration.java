@@ -57,7 +57,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Associated Domains.
-     * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of "service:domain" where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+     * DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      */
     @SerializedName(value = "associatedDomains", alternate = {"AssociatedDomains"})
     @Expose
@@ -129,7 +129,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Console Access Disabled.
-     * Whether the Other user will disregard use of the `&amp;gt;console&amp;gt; special user name.
+     * Whether the Other user will disregard use of the console special user name.
      */
     @SerializedName(value = "consoleAccessDisabled", alternate = {"ConsoleAccessDisabled"})
     @Expose
@@ -156,7 +156,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Content Caching Client Policy.
-     * Determines the method in which content caching servers will listen for clients.
+     * Determines the method in which content caching servers will listen for clients. Possible values are: notConfigured, clientsInLocalNetwork, clientsWithSamePublicIpAddress, clientsInCustomLocalNetworks, clientsInCustomLocalNetworksWithFallback.
      */
     @SerializedName(value = "contentCachingClientPolicy", alternate = {"ContentCachingClientPolicy"})
     @Expose
@@ -219,7 +219,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Content Caching Max Size Bytes.
-     * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space. 
+     * The maximum number of bytes of disk space that will be used for the content cache. A value of 0 (default) indicates unlimited disk space.
      */
     @SerializedName(value = "contentCachingMaxSizeBytes", alternate = {"ContentCachingMaxSizeBytes"})
     @Expose
@@ -237,7 +237,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Content Caching Parent Selection Policy.
-     * Determines the method in which content caching servers will select parents if multiple are present.
+     * Determines the method in which content caching servers will select parents if multiple are present. Possible values are: notConfigured, roundRobin, firstAvailable, urlPathHash, random, stickyAvailable.
      */
     @SerializedName(value = "contentCachingParentSelectionPolicy", alternate = {"ContentCachingParentSelectionPolicy"})
     @Expose
@@ -264,7 +264,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Content Caching Peer Policy.
-     * Determines the method in which content caches peer with other caches.
+     * Determines the method in which content caches peer with other caches. Possible values are: notConfigured, peersInLocalNetwork, peersWithSamePublicIpAddress, peersInCustomLocalNetworks.
      */
     @SerializedName(value = "contentCachingPeerPolicy", alternate = {"ContentCachingPeerPolicy"})
     @Expose
@@ -300,7 +300,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
 
     /**
      * The Content Caching Type.
-     * Determines what type of content is allowed to be cached by Apple's content caching service.
+     * Determines what type of content is allowed to be cached by Apple's content caching service. Possible values are: notConfigured, userContentOnly, sharedContentOnly.
      */
     @SerializedName(value = "contentCachingType", alternate = {"ContentCachingType"})
     @Expose

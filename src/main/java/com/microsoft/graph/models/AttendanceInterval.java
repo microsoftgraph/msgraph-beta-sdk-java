@@ -39,7 +39,7 @@ public class AttendanceInterval implements IJsonBackedObject {
 
     /**
      * The Duration In Seconds.
-     * 
+     * Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.
      */
     @SerializedName(value = "durationInSeconds", alternate = {"DurationInSeconds"})
     @Expose
@@ -48,7 +48,7 @@ public class AttendanceInterval implements IJsonBackedObject {
 
     /**
      * The Join Date Time.
-     * 
+     * Time attendee joined in UTC.
      */
     @SerializedName(value = "joinDateTime", alternate = {"JoinDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class AttendanceInterval implements IJsonBackedObject {
 
     /**
      * The Leave Date Time.
-     * 
+     * Time attendee left in UTC.
      */
     @SerializedName(value = "leaveDateTime", alternate = {"LeaveDateTime"})
     @Expose

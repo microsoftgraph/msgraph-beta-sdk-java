@@ -33,7 +33,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * 
+     * Friendly name of the activity. Optional.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -42,7 +42,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * 
+     * The date time in UTC when the activity was performed. Read-only.
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -51,7 +51,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Operation Type.
-     * 
+     * The HTTP operation type of the activity. Possible values include create, delete, patch and other. Read-only.
      */
     @SerializedName(value = "activityOperationType", alternate = {"ActivityOperationType"})
     @Expose
@@ -60,7 +60,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Result.
-     * 
+     * The result of the activity. Read-only.
      */
     @SerializedName(value = "activityResult", alternate = {"ActivityResult"})
     @Expose
@@ -69,7 +69,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Type.
-     * 
+     * The type of activity that was performed. Read-only.
      */
     @SerializedName(value = "activityType", alternate = {"ActivityType"})
     @Expose
@@ -78,7 +78,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Actor.
-     * 
+     * Azure AD user and application associated with the audit event. Read-only.
      */
     @SerializedName(value = "actor", alternate = {"Actor"})
     @Expose
@@ -87,7 +87,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * Audit category. Read-only.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -96,7 +96,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Component Name.
-     * 
+     * Component name. Read-only.
      */
     @SerializedName(value = "componentName", alternate = {"ComponentName"})
     @Expose
@@ -105,7 +105,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * 
+     * The client request identifier, used to correlate activity within the system. Read-only.
      */
     @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
@@ -114,7 +114,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Event display name. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -123,7 +123,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources.
-     * 
+     * List of cloudPcAuditResource objects. Read-only.
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose

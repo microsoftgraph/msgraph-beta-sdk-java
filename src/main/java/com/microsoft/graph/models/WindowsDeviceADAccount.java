@@ -27,7 +27,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements IJso
 
     /**
      * The Domain Name.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
@@ -36,7 +36,7 @@ public class WindowsDeviceADAccount extends WindowsDeviceAccount implements IJso
 
     /**
      * The User Name.
-     * 
+     * Not yet documented
      */
     @SerializedName(value = "userName", alternate = {"UserName"})
     @Expose

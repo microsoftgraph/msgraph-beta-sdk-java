@@ -70,7 +70,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
 
     /**
      * The Install State.
-     * The install state of the app.
+     * The install state of the app. Possible values are: installed, failed, notInstalled, uninstallFailed, pendingInstall, unknown, notApplicable.
      */
     @SerializedName(value = "installState", alternate = {"InstallState"})
     @Expose
@@ -79,7 +79,7 @@ public class MobileAppIntentAndStateDetail implements IJsonBackedObject {
 
     /**
      * The Mobile App Intent.
-     * Mobile App Intent.
+     * Mobile App Intent. Possible values are: available, notAvailable, requiredInstall, requiredUninstall, requiredAndAvailableInstall, availableInstallWithoutEnrollment, exclude.
      */
     @SerializedName(value = "mobileAppIntent", alternate = {"MobileAppIntent"})
     @Expose

@@ -39,7 +39,7 @@ public class HyperlinkOrPictureColumn implements IJsonBackedObject {
 
     /**
      * The Is Picture.
-     * 
+     * Specifies whether the display format used for URL columns is an image or a hyperlink.
      */
     @SerializedName(value = "isPicture", alternate = {"IsPicture"})
     @Expose

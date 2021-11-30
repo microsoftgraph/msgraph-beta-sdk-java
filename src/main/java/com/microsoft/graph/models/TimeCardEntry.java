@@ -42,7 +42,7 @@ public class TimeCardEntry implements IJsonBackedObject {
 
     /**
      * The Breaks.
-     * 
+     * The list of breaks associated with the timeCard.
      */
     @SerializedName(value = "breaks", alternate = {"Breaks"})
     @Expose
@@ -51,7 +51,7 @@ public class TimeCardEntry implements IJsonBackedObject {
 
     /**
      * The Clock In Event.
-     * 
+     * The clock-in event of the timeCard.
      */
     @SerializedName(value = "clockInEvent", alternate = {"ClockInEvent"})
     @Expose
@@ -60,7 +60,7 @@ public class TimeCardEntry implements IJsonBackedObject {
 
     /**
      * The Clock Out Event.
-     * 
+     * The clock-out event of the timeCard.
      */
     @SerializedName(value = "clockOutEvent", alternate = {"ClockOutEvent"})
     @Expose

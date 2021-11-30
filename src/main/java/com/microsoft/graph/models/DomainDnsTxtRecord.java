@@ -27,7 +27,7 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements IJsonBackedOb
 
     /**
      * The Text.
-     * 
+     * Value used when configuring the text property at the DNS host.
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose

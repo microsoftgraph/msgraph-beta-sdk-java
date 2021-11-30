@@ -27,7 +27,7 @@ public class UserIdentity extends Identity implements IJsonBackedObject {
 
     /**
      * The Ip Address.
-     * 
+     * Indicates the client IP address used by user performing the activity (audit log only).
      */
     @SerializedName(value = "ipAddress", alternate = {"IpAddress"})
     @Expose
@@ -36,7 +36,7 @@ public class UserIdentity extends Identity implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The userPrincipalName attribute of the user.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

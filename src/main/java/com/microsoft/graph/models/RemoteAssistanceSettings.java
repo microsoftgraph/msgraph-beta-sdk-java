@@ -28,7 +28,7 @@ public class RemoteAssistanceSettings extends Entity implements IJsonBackedObjec
 
     /**
      * The Allow Sessions To Unenrolled Devices.
-     *  Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
+     * Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
      */
     @SerializedName(value = "allowSessionsToUnenrolledDevices", alternate = {"AllowSessionsToUnenrolledDevices"})
     @Expose
@@ -37,7 +37,7 @@ public class RemoteAssistanceSettings extends Entity implements IJsonBackedObjec
 
     /**
      * The Remote Assistance State.
-     * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default.
+     * The current state of remote assistance for the account. Possible values are: notConfigured, disabled, enabled. This setting is configurable by the admin. Remote assistance settings that have not yet been configured by the admin have a notConfigured state. Returned by default. Possible values are: notConfigured, disabled, enabled.
      */
     @SerializedName(value = "remoteAssistanceState", alternate = {"RemoteAssistanceState"})
     @Expose

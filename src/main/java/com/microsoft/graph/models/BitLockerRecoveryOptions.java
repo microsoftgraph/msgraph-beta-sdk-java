@@ -77,7 +77,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
 
     /**
      * The Recovery Information To Store.
-     * Configure what pieces of BitLocker recovery information are stored to AD DS.
+     * Configure what pieces of BitLocker recovery information are stored to AD DS. Possible values are: passwordAndKey, passwordOnly.
      */
     @SerializedName(value = "recoveryInformationToStore", alternate = {"RecoveryInformationToStore"})
     @Expose
@@ -86,7 +86,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
 
     /**
      * The Recovery Key Usage.
-     * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk.
+     * Indicates whether users are allowed or required to generate a 256-bit recovery key for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
      */
     @SerializedName(value = "recoveryKeyUsage", alternate = {"RecoveryKeyUsage"})
     @Expose
@@ -95,7 +95,7 @@ public class BitLockerRecoveryOptions implements IJsonBackedObject {
 
     /**
      * The Recovery Password Usage.
-     * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk.
+     * Indicates whether users are allowed or required to generate a 48-digit recovery password for fixed or system disk. Possible values are: blocked, required, allowed, notConfigured.
      */
     @SerializedName(value = "recoveryPasswordUsage", alternate = {"RecoveryPasswordUsage"})
     @Expose

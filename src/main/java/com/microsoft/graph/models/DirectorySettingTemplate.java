@@ -29,7 +29,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements IJsonBa
 
     /**
      * The Description.
-     * 
+     * Description of the template. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -38,7 +38,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements IJsonBa
 
     /**
      * The Display Name.
-     * 
+     * Display name of the template. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -47,7 +47,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements IJsonBa
 
     /**
      * The Values.
-     * 
+     * Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose

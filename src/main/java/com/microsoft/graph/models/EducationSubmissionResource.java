@@ -28,7 +28,7 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
 
     /**
      * The Assignment Resource Url.
-     * 
+     * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
      */
     @SerializedName(value = "assignmentResourceUrl", alternate = {"AssignmentResourceUrl"})
     @Expose
@@ -37,7 +37,7 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
 
     /**
      * The Resource.
-     * 
+     * Resource object.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose

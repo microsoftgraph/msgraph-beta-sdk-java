@@ -29,7 +29,7 @@ public class DeviceManagementComplianceActionItem extends Entity implements IJso
 
     /**
      * The Action Type.
-     * What action to take
+     * What action to take. Possible values are: noAction, notification, block, retire, wipe, removeResourceAccessProfiles, pushNotification, remoteLock.
      */
     @SerializedName(value = "actionType", alternate = {"ActionType"})
     @Expose

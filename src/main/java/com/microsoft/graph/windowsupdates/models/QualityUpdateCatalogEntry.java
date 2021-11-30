@@ -28,7 +28,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
 
     /**
      * The Is Expeditable.
-     * 
+     * Indicates whether the content can be deployed as an expedited quality update. Read-only.
      */
     @SerializedName(value = "isExpeditable", alternate = {"IsExpeditable"})
     @Expose
@@ -37,7 +37,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
 
     /**
      * The Quality Update Classification.
-     * 
+     * The classification on the quality update. Possible values are: all, security, nonSecurity, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "qualityUpdateClassification", alternate = {"QualityUpdateClassification"})
     @Expose

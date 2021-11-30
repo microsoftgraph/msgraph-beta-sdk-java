@@ -28,7 +28,7 @@ public class AzureADDeviceRegistrationError extends UpdatableAssetError implemen
 
     /**
      * The Reason.
-     * 
+     * The reason why the registration encountered an error. Possible values are: invalidGlobalDeviceId, invalidAzureADDeviceId, missingTrustType, invalidAzureADJoin, unknownFutureValue.
      */
     @SerializedName(value = "reason", alternate = {"Reason"})
     @Expose

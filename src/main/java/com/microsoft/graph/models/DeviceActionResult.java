@@ -49,7 +49,7 @@ public class DeviceActionResult implements IJsonBackedObject {
 
     /**
      * The Action State.
-     * State of the action
+     * State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
      */
     @SerializedName(value = "actionState", alternate = {"ActionState"})
     @Expose

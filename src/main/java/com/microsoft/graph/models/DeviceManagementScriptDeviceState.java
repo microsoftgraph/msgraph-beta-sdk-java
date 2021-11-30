@@ -65,7 +65,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements IJsonBa
 
     /**
      * The Run State.
-     * State of latest run of the device management script.
+     * State of latest run of the device management script. Possible values are: unknown, success, fail, scriptError, pending, notApplicable.
      */
     @SerializedName(value = "runState", alternate = {"RunState"})
     @Expose

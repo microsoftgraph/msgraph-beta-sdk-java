@@ -42,7 +42,7 @@ public class ManagementActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Management Action Id.
-     * 
+     * The identifier for the management action. Required. Read-only.
      */
     @SerializedName(value = "managementActionId", alternate = {"ManagementActionId"})
     @Expose
@@ -51,7 +51,7 @@ public class ManagementActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Management Template Id.
-     * 
+     * The management template identifier that was used to generate the management action. Required. Read-only.
      */
     @SerializedName(value = "managementTemplateId", alternate = {"ManagementTemplateId"})
     @Expose
@@ -59,8 +59,17 @@ public class ManagementActionDeploymentStatus implements IJsonBackedObject {
     public String managementTemplateId;
 
     /**
-     * The Status.
+     * The Management Template Version.
      * 
+     */
+    @SerializedName(value = "managementTemplateVersion", alternate = {"ManagementTemplateVersion"})
+    @Expose
+	@Nullable
+    public Integer managementTemplateVersion;
+
+    /**
+     * The Status.
+     * The status of the management action. Possible values are: toAddress, completed, error, timeOut, inProgress, planned, resolvedBy3rdParty, resolvedThroughAlternateMitigation, riskAccepted, unknownFutureValue. Required.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -69,7 +78,7 @@ public class ManagementActionDeploymentStatus implements IJsonBackedObject {
 
     /**
      * The Workload Action Deployment Statuses.
-     * 
+     * The collection of workload action deployment statues for the given management action. Optional.
      */
     @SerializedName(value = "workloadActionDeploymentStatuses", alternate = {"WorkloadActionDeploymentStatuses"})
     @Expose

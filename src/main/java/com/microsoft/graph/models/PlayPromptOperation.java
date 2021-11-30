@@ -28,7 +28,7 @@ public class PlayPromptOperation extends CommsOperation implements IJsonBackedOb
 
     /**
      * The Completion Reason.
-     * 
+     * Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
      */
     @SerializedName(value = "completionReason", alternate = {"CompletionReason"})
     @Expose

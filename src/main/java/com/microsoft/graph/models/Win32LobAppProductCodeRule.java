@@ -46,7 +46,7 @@ public class Win32LobAppProductCodeRule extends Win32LobAppRule implements IJson
 
     /**
      * The Product Version Operator.
-     * The product version comparison operator.
+     * The product version comparison operator. Possible values are: notConfigured, equal, notEqual, greaterThan, greaterThanOrEqual, lessThan, lessThanOrEqual.
      */
     @SerializedName(value = "productVersionOperator", alternate = {"ProductVersionOperator"})
     @Expose

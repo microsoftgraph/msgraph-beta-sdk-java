@@ -43,7 +43,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
 
     /**
      * The Data Type.
-     * Data type specified in the rule.
+     * Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
      */
     @SerializedName(value = "dataType", alternate = {"DataType"})
     @Expose
@@ -52,7 +52,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
 
     /**
      * The Device Compliance Script Rule Data Type.
-     * Data type specified in the rule.
+     * Data type specified in the rule. Possible values are: none, boolean, int64, double, string, dateTime, version, base64, xml, booleanArray, int64Array, doubleArray, stringArray, dateTimeArray, versionArray.
      */
     @SerializedName(value = "deviceComplianceScriptRuleDataType", alternate = {"DeviceComplianceScriptRuleDataType"})
     @Expose
@@ -61,7 +61,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
 
     /**
      * The Device Compliance Script Rul Operator.
-     * Operator specified in the rule.
+     * Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
      */
     @SerializedName(value = "deviceComplianceScriptRulOperator", alternate = {"DeviceComplianceScriptRulOperator"})
     @Expose
@@ -79,7 +79,7 @@ public class DeviceComplianceScriptRule implements IJsonBackedObject {
 
     /**
      * The Operator.
-     * Operator specified in the rule.
+     * Operator specified in the rule. Possible values are: none, and, or, isEquals, notEquals, greaterThan, lessThan, between, notBetween, greaterEquals, lessEquals, dayTimeBetween, beginsWith, notBeginsWith, endsWith, notEndsWith, contains, notContains, allOf, oneOf, noneOf, setEquals, orderedSetEquals, subsetOf, excludesAll.
      */
     @SerializedName(value = "operator", alternate = {"Operator"})
     @Expose

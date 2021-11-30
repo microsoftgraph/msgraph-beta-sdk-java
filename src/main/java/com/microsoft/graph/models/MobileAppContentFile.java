@@ -118,7 +118,7 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
 
     /**
      * The Upload State.
-     * The state of the current upload request.
+     * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
      */
     @SerializedName(value = "uploadState", alternate = {"UploadState"})
     @Expose

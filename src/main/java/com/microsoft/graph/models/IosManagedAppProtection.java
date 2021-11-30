@@ -43,7 +43,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
     /**
      * The App Action If Ios Device Model Not Allowed.
-     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed.
+     * Defines a managed app behavior, either block or wipe, if the specified device model is not allowed. Possible values are: block, wipe, warn.
      */
     @SerializedName(value = "appActionIfIosDeviceModelNotAllowed", alternate = {"AppActionIfIosDeviceModelNotAllowed"})
     @Expose
@@ -52,7 +52,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
 
     /**
      * The App Data Encryption Type.
-     * Type of encryption which should be used for data in a managed app.
+     * Type of encryption which should be used for data in a managed app. Possible values are: useDeviceSettings, afterDeviceRestart, whenDeviceLockedExceptOpenFiles, whenDeviceLocked.
      */
     @SerializedName(value = "appDataEncryptionType", alternate = {"AppDataEncryptionType"})
     @Expose

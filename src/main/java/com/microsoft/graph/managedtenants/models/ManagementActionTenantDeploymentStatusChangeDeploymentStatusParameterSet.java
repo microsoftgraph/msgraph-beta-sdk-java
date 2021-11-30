@@ -57,6 +57,15 @@ public class ManagementActionTenantDeploymentStatusChangeDeploymentStatusParamet
     public String managementTemplateId;
 
     /**
+     * The management Template Version.
+     * 
+     */
+    @SerializedName(value = "managementTemplateVersion", alternate = {"ManagementTemplateVersion"})
+    @Expose
+	@Nullable
+    public Integer managementTemplateVersion;
+
+    /**
      * The status.
      * 
      */
@@ -79,6 +88,7 @@ public class ManagementActionTenantDeploymentStatusChangeDeploymentStatusParamet
         this.tenantId = builder.tenantId;
         this.managementActionId = builder.managementActionId;
         this.managementTemplateId = builder.managementTemplateId;
+        this.managementTemplateVersion = builder.managementTemplateVersion;
         this.status = builder.status;
     }
     /**
@@ -154,6 +164,21 @@ public class ManagementActionTenantDeploymentStatusChangeDeploymentStatusParamet
             return this;
         }
         /**
+         * The managementTemplateVersion parameter value
+         */
+        @Nullable
+        protected Integer managementTemplateVersion;
+        /**
+         * Sets the ManagementTemplateVersion
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public ManagementActionTenantDeploymentStatusChangeDeploymentStatusParameterSetBuilder withManagementTemplateVersion(@Nullable final Integer val) {
+            this.managementTemplateVersion = val;
+            return this;
+        }
+        /**
          * The status parameter value
          */
         @Nullable
@@ -200,6 +225,9 @@ public class ManagementActionTenantDeploymentStatusChangeDeploymentStatusParamet
         }
         if(this.managementTemplateId != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("managementTemplateId", managementTemplateId));
+        }
+        if(this.managementTemplateVersion != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("managementTemplateVersion", managementTemplateVersion));
         }
         if(this.status != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("status", status));

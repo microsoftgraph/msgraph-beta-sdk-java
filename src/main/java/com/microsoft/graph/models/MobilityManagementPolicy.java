@@ -31,7 +31,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Applies To.
-     * 
+     * Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
      */
     @SerializedName(value = "appliesTo", alternate = {"AppliesTo"})
     @Expose
@@ -40,7 +40,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Compliance Url.
-     * 
+     * Compliance URL of the mobility management application.
      */
     @SerializedName(value = "complianceUrl", alternate = {"ComplianceUrl"})
     @Expose
@@ -49,7 +49,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Description.
-     * 
+     * Description of the mobility management application.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Discovery Url.
-     * 
+     * Discovery URL of the mobility management application.
      */
     @SerializedName(value = "discoveryUrl", alternate = {"DiscoveryUrl"})
     @Expose
@@ -67,7 +67,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Display Name.
-     * 
+     * Display name of the mobility management application.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -76,7 +76,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Is Valid.
-     * 
+     * Whether policy is valid. Invalid policies may not be updated and should be deleted.
      */
     @SerializedName(value = "isValid", alternate = {"IsValid"})
     @Expose
@@ -85,7 +85,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Terms Of Use Url.
-     * 
+     * Terms of Use URL of the mobility management application.
      */
     @SerializedName(value = "termsOfUseUrl", alternate = {"TermsOfUseUrl"})
     @Expose
@@ -94,7 +94,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Included Groups.
-     * 
+     * Azure AD groups under the scope of the mobility management application if appliesTo is selected
      */
 	@Nullable
     public GroupCollectionPage includedGroups;

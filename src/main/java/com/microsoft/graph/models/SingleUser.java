@@ -27,7 +27,7 @@ public class SingleUser extends UserSet implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The name of the user in Azure AD. Read only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -36,7 +36,7 @@ public class SingleUser extends UserSet implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The ID of the user in Azure AD.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

@@ -31,7 +31,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Description.
-     * 
+     * Description for the policy.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -40,7 +40,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * 
+     * Display name for the policy.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Is Organization Default.
-     * 
+     * This can only be set to true for a single tenant wide policy which will apply to all scopes and roles. Set the scopeId to '/' and scopeType to Directory.
      */
     @SerializedName(value = "isOrganizationDefault", alternate = {"IsOrganizationDefault"})
     @Expose
@@ -58,7 +58,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Last Modified By.
-     * 
+     * The identity who last modified the role setting.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -67,7 +67,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The time when the role setting was last modified.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -76,7 +76,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Scope Id.
-     * 
+     * The id of the scope where the policy is created. E.g. '/', groupId, etc.
      */
     @SerializedName(value = "scopeId", alternate = {"ScopeId"})
     @Expose
@@ -85,7 +85,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Scope Type.
-     * 
+     * The type of the scope where the policy is created. One of Directory, DirectoryRole, Group.
      */
     @SerializedName(value = "scopeType", alternate = {"ScopeType"})
     @Expose
@@ -94,7 +94,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Effective Rules.
-     * 
+     * The list of effective rules like approval rule, expiration rule, etc. evaluated based on inherited referenced rules. E.g. If there is a tenant wide policy to enforce enabling approval rule, the effective rule will be to enable approval even if the polcy has a rule to disable approval.
      */
     @SerializedName(value = "effectiveRules", alternate = {"EffectiveRules"})
     @Expose
@@ -103,7 +103,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Rules.
-     * 
+     * The collection of rules like approval rule, expiration rule, etc.
      */
     @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose

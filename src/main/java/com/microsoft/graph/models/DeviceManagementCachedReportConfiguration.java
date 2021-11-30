@@ -92,7 +92,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
 
     /**
      * The Status.
-     * Status of the cached report
+     * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

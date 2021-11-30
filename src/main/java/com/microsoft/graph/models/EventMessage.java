@@ -33,7 +33,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The end time of the requested meeting.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -114,7 +114,7 @@ public class EventMessage extends Message implements IJsonBackedObject {
 
     /**
      * The Event.
-     * 
+     * The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      */
     @SerializedName(value = "event", alternate = {"Event"})
     @Expose

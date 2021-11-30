@@ -40,7 +40,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Assigned To.
-     * 
+     * Identity that the request is assigned to.
      */
     @SerializedName(value = "assignedTo", alternate = {"AssignedTo"})
     @Expose
@@ -49,7 +49,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Closed Date Time.
-     * 
+     * The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "closedDateTime", alternate = {"ClosedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * Identity information for the entity that created the request.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -67,7 +67,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -76,7 +76,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Data Subject.
-     * 
+     * Information about the data subject.
      */
     @SerializedName(value = "dataSubject", alternate = {"DataSubject"})
     @Expose
@@ -85,7 +85,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Data Subject Type.
-     * 
+     * The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      */
     @SerializedName(value = "dataSubjectType", alternate = {"DataSubjectType"})
     @Expose
@@ -94,7 +94,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description for the request.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -103,7 +103,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the request.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -112,7 +112,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The History.
-     * 
+     * Collection of history change events.
      */
     @SerializedName(value = "history", alternate = {"History"})
     @Expose
@@ -121,7 +121,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Insight.
-     * 
+     * Insight about the request.
      */
     @SerializedName(value = "insight", alternate = {"Insight"})
     @Expose
@@ -130,7 +130,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Internal Due Date Time.
-     * 
+     * The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "internalDueDateTime", alternate = {"InternalDueDateTime"})
     @Expose
@@ -139,7 +139,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Identity information for the entity that last modified the request.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -148,7 +148,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -157,7 +157,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Regulations.
-     * 
+     * List of regulations that this request will fulfill.
      */
     @SerializedName(value = "regulations", alternate = {"Regulations"})
     @Expose
@@ -166,7 +166,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Stages.
-     * 
+     * Information about the different stages for the request.
      */
     @SerializedName(value = "stages", alternate = {"Stages"})
     @Expose
@@ -175,7 +175,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * The status of the request.. Possible values are: active, closed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -184,7 +184,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Type.
-     * 
+     * The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -193,7 +193,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * 
+     * List of notes associcated with the request.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -202,7 +202,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Team.
-     * 
+     * Information about the Microsoft Teams team that was created for the request.
      */
     @SerializedName(value = "team", alternate = {"Team"})
     @Expose

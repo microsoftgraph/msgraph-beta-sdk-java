@@ -35,7 +35,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Type.
-     * 
+     * Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. This property is read-only and is not nullable.
      */
     @SerializedName(value = "authenticationType", alternate = {"AuthenticationType"})
     @Expose
@@ -44,7 +44,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Availability Status.
-     * 
+     * This property is always null except when the verify action is used. When the verify action is used, a domain entity is returned in the response. The availabilityStatus property of the domain entity in the response is either AvailableImmediately or EmailVerifiedDomainTakeoverScheduled.
      */
     @SerializedName(value = "availabilityStatus", alternate = {"AvailabilityStatus"})
     @Expose
@@ -53,7 +53,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Admin Managed.
-     * 
+     * The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable
      */
     @SerializedName(value = "isAdminManaged", alternate = {"IsAdminManaged"})
     @Expose
@@ -62,7 +62,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Default.
-     * 
+     * true if this is the default domain that is used for user creation. There is only one default domain per company. Not nullable
      */
     @SerializedName(value = "isDefault", alternate = {"IsDefault"})
     @Expose
@@ -71,7 +71,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Initial.
-     * 
+     * true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
      */
     @SerializedName(value = "isInitial", alternate = {"IsInitial"})
     @Expose
@@ -80,7 +80,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Root.
-     * 
+     * true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable
      */
     @SerializedName(value = "isRoot", alternate = {"IsRoot"})
     @Expose
@@ -89,7 +89,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Verified.
-     * 
+     * true if the domain has completed domain ownership verification. Not nullable
      */
     @SerializedName(value = "isVerified", alternate = {"IsVerified"})
     @Expose
@@ -98,7 +98,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Password Notification Window In Days.
-     * 
+     * Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.
      */
     @SerializedName(value = "passwordNotificationWindowInDays", alternate = {"PasswordNotificationWindowInDays"})
     @Expose
@@ -107,7 +107,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Password Validity Period In Days.
-     * 
+     * Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.
      */
     @SerializedName(value = "passwordValidityPeriodInDays", alternate = {"PasswordValidityPeriodInDays"})
     @Expose
@@ -116,7 +116,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * 
+     * Status of asynchronous operations scheduled for the domain.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -125,7 +125,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Supported Services.
-     * 
+     * The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable
      */
     @SerializedName(value = "supportedServices", alternate = {"SupportedServices"})
     @Expose
@@ -134,14 +134,14 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Domain Name References.
-     * 
+     * Read-only, Nullable
      */
 	@Nullable
     public DirectoryObjectCollectionPage domainNameReferences;
 
     /**
      * The Service Configuration Records.
-     * 
+     * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable
      */
     @SerializedName(value = "serviceConfigurationRecords", alternate = {"ServiceConfigurationRecords"})
     @Expose
@@ -159,7 +159,7 @@ public class Domain extends Entity implements IJsonBackedObject {
 
     /**
      * The Verification Dns Records.
-     * 
+     * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable
      */
     @SerializedName(value = "verificationDnsRecords", alternate = {"VerificationDnsRecords"})
     @Expose

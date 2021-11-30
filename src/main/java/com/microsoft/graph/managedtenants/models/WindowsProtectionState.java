@@ -27,7 +27,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Anti Malware Version.
-     * 
+     * The anti-malware version for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "antiMalwareVersion", alternate = {"AntiMalwareVersion"})
     @Expose
@@ -36,7 +36,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Attention Required.
-     * 
+     * A flag indicating whether attention is required for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "attentionRequired", alternate = {"AttentionRequired"})
     @Expose
@@ -45,7 +45,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Device Deleted.
-     * 
+     * A flag indicating whether the managed device has been deleted. Optional. Read-only.
      */
     @SerializedName(value = "deviceDeleted", alternate = {"DeviceDeleted"})
     @Expose
@@ -54,7 +54,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Device Property Refresh Date Time.
-     * 
+     * The date and time the device property has been refreshed. Optional. Read-only.
      */
     @SerializedName(value = "devicePropertyRefreshDateTime", alternate = {"DevicePropertyRefreshDateTime"})
     @Expose
@@ -63,7 +63,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Engine Version.
-     * 
+     * The anti-virus engine version for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "engineVersion", alternate = {"EngineVersion"})
     @Expose
@@ -72,7 +72,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Full Scan Overdue.
-     * 
+     * A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "fullScanOverdue", alternate = {"FullScanOverdue"})
     @Expose
@@ -81,7 +81,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Full Scan Required.
-     * 
+     * A flag indicating whether full scan is overdue for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "fullScanRequired", alternate = {"FullScanRequired"})
     @Expose
@@ -90,7 +90,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Full Scan Date Time.
-     * 
+     * The date and time a full scan was completed. Optional. Read-only.
      */
     @SerializedName(value = "lastFullScanDateTime", alternate = {"LastFullScanDateTime"})
     @Expose
@@ -99,7 +99,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Full Scan Signature Version.
-     * 
+     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
      */
     @SerializedName(value = "lastFullScanSignatureVersion", alternate = {"LastFullScanSignatureVersion"})
     @Expose
@@ -108,7 +108,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Quick Scan Date Time.
-     * 
+     * The date and time a quick scan was completed. Optional. Read-only.
      */
     @SerializedName(value = "lastQuickScanDateTime", alternate = {"LastQuickScanDateTime"})
     @Expose
@@ -117,7 +117,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Quick Scan Signature Version.
-     * 
+     * The version anti-malware version used to perform the last full scan. Optional. Read-only.
      */
     @SerializedName(value = "lastQuickScanSignatureVersion", alternate = {"LastQuickScanSignatureVersion"})
     @Expose
@@ -126,7 +126,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Refreshed Date Time.
-     * 
+     * Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      */
     @SerializedName(value = "lastRefreshedDateTime", alternate = {"LastRefreshedDateTime"})
     @Expose
@@ -135,7 +135,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Last Reported Date Time.
-     * 
+     * The date and time the protection state was last reported for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "lastReportedDateTime", alternate = {"LastReportedDateTime"})
     @Expose
@@ -144,7 +144,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Malware Protection Enabled.
-     * 
+     * A flag indicating whether malware protection is enabled for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "malwareProtectionEnabled", alternate = {"MalwareProtectionEnabled"})
     @Expose
@@ -153,7 +153,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Managed Device Health State.
-     * 
+     * The health state for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "managedDeviceHealthState", alternate = {"ManagedDeviceHealthState"})
     @Expose
@@ -162,7 +162,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Managed Device Id.
-     * 
+     * The unique identifier for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -171,7 +171,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Managed Device Name.
-     * 
+     * The display name for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "managedDeviceName", alternate = {"ManagedDeviceName"})
     @Expose
@@ -180,7 +180,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Network Inspection System Enabled.
-     * 
+     * A flag indicating whether the network inspection system is enabled. Optional. Read-only.
      */
     @SerializedName(value = "networkInspectionSystemEnabled", alternate = {"NetworkInspectionSystemEnabled"})
     @Expose
@@ -189,7 +189,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Quick Scan Overdue.
-     * 
+     * A flag indicating weather a quick scan is overdue. Optional. Read-only.
      */
     @SerializedName(value = "quickScanOverdue", alternate = {"QuickScanOverdue"})
     @Expose
@@ -198,7 +198,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Real Time Protection Enabled.
-     * 
+     * A flag indicating whether real time protection is enabled. Optional. Read-only.
      */
     @SerializedName(value = "realTimeProtectionEnabled", alternate = {"RealTimeProtectionEnabled"})
     @Expose
@@ -207,7 +207,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Reboot Required.
-     * 
+     * A flag indicating whether a reboot is required. Optional. Read-only.
      */
     @SerializedName(value = "rebootRequired", alternate = {"RebootRequired"})
     @Expose
@@ -216,7 +216,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Signature Update Overdue.
-     * 
+     * A flag indicating whether an signature update is overdue. Optional. Read-only.
      */
     @SerializedName(value = "signatureUpdateOverdue", alternate = {"SignatureUpdateOverdue"})
     @Expose
@@ -225,7 +225,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Signature Version.
-     * 
+     * The signature version for the managed device. Optional. Read-only.
      */
     @SerializedName(value = "signatureVersion", alternate = {"SignatureVersion"})
     @Expose
@@ -234,7 +234,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Tenant Display Name.
-     * 
+     * The display name for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantDisplayName", alternate = {"TenantDisplayName"})
     @Expose
@@ -243,7 +243,7 @@ public class WindowsProtectionState extends Entity implements IJsonBackedObject 
 
     /**
      * The Tenant Id.
-     * 
+     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

@@ -29,7 +29,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By User Id.
-     * 
+     * The identifier for the account that created the tenant tag. Required. Read-only.
      */
     @SerializedName(value = "createdByUserId", alternate = {"CreatedByUserId"})
     @Expose
@@ -38,7 +38,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when the tenant tag was created. Required. Read-only.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Deleted Date Time.
-     * 
+     * The date and time when the tenant tag was deleted. Required. Read-only.
      */
     @SerializedName(value = "deletedDateTime", alternate = {"DeletedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * The description for the tenant tag. Optional. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -65,7 +65,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The display name for the tenant tag. Required. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -74,7 +74,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Action By User Id.
-     * 
+     * The identifier for the account that lasted on the tenant tag. Optional. Read-only.
      */
     @SerializedName(value = "lastActionByUserId", alternate = {"LastActionByUserId"})
     @Expose
@@ -83,7 +83,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Action Date Time.
-     * 
+     * The date and time the last action was performed against the tenant tag. Optional. Read-only.
      */
     @SerializedName(value = "lastActionDateTime", alternate = {"LastActionDateTime"})
     @Expose
@@ -92,7 +92,7 @@ public class TenantTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenants.
-     * 
+     * The collection of managed tenants associated with the tenant tag. Optional.
      */
     @SerializedName(value = "tenants", alternate = {"Tenants"})
     @Expose

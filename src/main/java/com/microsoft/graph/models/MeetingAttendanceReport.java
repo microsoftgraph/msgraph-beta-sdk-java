@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AttendanceRecord;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AttendanceRecordCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -28,22 +29,40 @@ public class MeetingAttendanceReport extends Entity implements IJsonBackedObject
 
 
     /**
-     * The Attendance Records.
-     * 
+     * The Meeting End Date Time.
+     * UTC time when the meeting ended. Read-only.
      */
-    @SerializedName(value = "attendanceRecords", alternate = {"AttendanceRecords"})
+    @SerializedName(value = "meetingEndDateTime", alternate = {"MeetingEndDateTime"})
     @Expose
 	@Nullable
-    public java.util.List<AttendanceRecord> attendanceRecords;
+    public java.time.OffsetDateTime meetingEndDateTime;
+
+    /**
+     * The Meeting Start Date Time.
+     * UTC time when the meeting started. Read-only.
+     */
+    @SerializedName(value = "meetingStartDateTime", alternate = {"MeetingStartDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime meetingStartDateTime;
 
     /**
      * The Total Participant Count.
-     * 
+     * Total number of participants. Read-only.
      */
     @SerializedName(value = "totalParticipantCount", alternate = {"TotalParticipantCount"})
     @Expose
 	@Nullable
     public Integer totalParticipantCount;
+
+    /**
+     * The Attendance Records.
+     * List of attendance records of an attendance report. Read-only.
+     */
+    @SerializedName(value = "attendanceRecords", alternate = {"AttendanceRecords"})
+    @Expose
+	@Nullable
+    public AttendanceRecordCollectionPage attendanceRecords;
 
 
     /**
@@ -54,5 +73,9 @@ public class MeetingAttendanceReport extends Entity implements IJsonBackedObject
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("attendanceRecords")) {
+            attendanceRecords = serializer.deserializeObject(json.get("attendanceRecords"), AttendanceRecordCollectionPage.class);
+        }
     }
 }

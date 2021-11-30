@@ -41,7 +41,7 @@ public class MediaContentRatingGermany implements IJsonBackedObject {
 
     /**
      * The Movie Rating.
-     * Movies rating selected for Germany
+     * Movies rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
      */
     @SerializedName(value = "movieRating", alternate = {"MovieRating"})
     @Expose
@@ -50,7 +50,7 @@ public class MediaContentRatingGermany implements IJsonBackedObject {
 
     /**
      * The Tv Rating.
-     * TV rating selected for Germany
+     * TV rating selected for Germany. Possible values are: allAllowed, allBlocked, general, agesAbove6, agesAbove12, agesAbove16, adults.
      */
     @SerializedName(value = "tvRating", alternate = {"TvRating"})
     @Expose

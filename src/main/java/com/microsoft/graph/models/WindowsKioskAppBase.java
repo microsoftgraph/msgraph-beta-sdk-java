@@ -41,7 +41,7 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
 
     /**
      * The App Type.
-     * The app type
+     * The app type. Possible values are: unknown, store, desktop, aumId.
      */
     @SerializedName(value = "appType", alternate = {"AppType"})
     @Expose
@@ -68,7 +68,7 @@ public class WindowsKioskAppBase implements IJsonBackedObject {
 
     /**
      * The Start Layout Tile Size.
-     * The app tile size for the start layout
+     * The app tile size for the start layout. Possible values are: hidden, small, medium, wide, large.
      */
     @SerializedName(value = "startLayoutTileSize", alternate = {"StartLayoutTileSize"})
     @Expose

@@ -64,7 +64,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
 
     /**
      * The Configuration Account.
-     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain&#92;user), an AAD account (username@tenant.com) or a local account (username).
+     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
      */
     @SerializedName(value = "configurationAccount", alternate = {"ConfigurationAccount"})
     @Expose
@@ -73,7 +73,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
 
     /**
      * The Configuration Account Type.
-     * The account type used to by ConfigurationAccount.
+     * The account type used to by ConfigurationAccount. Possible values are: azureADAccount, domainAccount, localAccount, localGuestAccount.
      */
     @SerializedName(value = "configurationAccountType", alternate = {"ConfigurationAccountType"})
     @Expose

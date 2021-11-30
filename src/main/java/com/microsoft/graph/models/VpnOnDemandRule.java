@@ -42,7 +42,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
 
     /**
      * The Action.
-     * Action.
+     * Action. Possible values are: connect, evaluateConnection, ignore, disconnect.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -60,7 +60,7 @@ public class VpnOnDemandRule implements IJsonBackedObject {
 
     /**
      * The Domain Action.
-     * Domain Action (Only applicable when Action is evaluate connection).
+     * Domain Action (Only applicable when Action is evaluate connection). Possible values are: connectIfNeeded, neverConnect.
      */
     @SerializedName(value = "domainAction", alternate = {"DomainAction"})
     @Expose

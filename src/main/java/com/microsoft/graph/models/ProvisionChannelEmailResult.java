@@ -39,7 +39,7 @@ public class ProvisionChannelEmailResult implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * Represents the provisioned email address.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose

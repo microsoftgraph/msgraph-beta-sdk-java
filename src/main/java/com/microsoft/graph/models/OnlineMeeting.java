@@ -22,6 +22,7 @@ import com.microsoft.graph.models.MeetingParticipants;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.MeetingRegistration;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.MeetingAttendanceReportCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -49,7 +50,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Attendee To Enable Camera.
-     * 
+     * Indicates whether attendees can turn on their camera.
      */
     @SerializedName(value = "allowAttendeeToEnableCamera", alternate = {"AllowAttendeeToEnableCamera"})
     @Expose
@@ -58,7 +59,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Attendee To Enable Mic.
-     * 
+     * Indicates whether attendees can turn on their microphone.
      */
     @SerializedName(value = "allowAttendeeToEnableMic", alternate = {"AllowAttendeeToEnableMic"})
     @Expose
@@ -67,7 +68,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allowed Presenters.
-     * 
+     * Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
      */
     @SerializedName(value = "allowedPresenters", alternate = {"AllowedPresenters"})
     @Expose
@@ -76,7 +77,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Meeting Chat.
-     * 
+     * Specifies the mode of meeting chat.
      */
     @SerializedName(value = "allowMeetingChat", alternate = {"AllowMeetingChat"})
     @Expose
@@ -85,7 +86,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Allow Teamwork Reactions.
-     * 
+     * Indicates whether Teams reactions are enabled for the meeting.
      */
     @SerializedName(value = "allowTeamworkReactions", alternate = {"AllowTeamworkReactions"})
     @Expose
@@ -94,7 +95,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Audio Conferencing.
-     * 
+     * The phone access (dial-in) information for an online meeting. Read-only.
      */
     @SerializedName(value = "audioConferencing", alternate = {"AudioConferencing"})
     @Expose
@@ -103,7 +104,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Broadcast Settings.
-     * 
+     * Settings related to a live event.
      */
     @SerializedName(value = "broadcastSettings", alternate = {"BroadcastSettings"})
     @Expose
@@ -130,7 +131,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Chat Info.
-     * 
+     * The chat information associated with this online meeting.
      */
     @SerializedName(value = "chatInfo", alternate = {"ChatInfo"})
     @Expose
@@ -139,7 +140,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Creation Date Time.
-     * 
+     * The meeting creation time in UTC. Read-only.
      */
     @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
     @Expose
@@ -148,7 +149,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The meeting end time in UTC.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -175,7 +176,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The External Id.
-     * 
+     * The external ID. A custom ID. Optional.
      */
     @SerializedName(value = "externalId", alternate = {"ExternalId"})
     @Expose
@@ -184,7 +185,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Broadcast.
-     * 
+     * Indicates if this is a Teams live event.
      */
     @SerializedName(value = "isBroadcast", alternate = {"IsBroadcast"})
     @Expose
@@ -202,7 +203,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Entry Exit Announced.
-     * 
+     * Indicates whether to announce when callers join or leave.
      */
     @SerializedName(value = "isEntryExitAnnounced", alternate = {"IsEntryExitAnnounced"})
     @Expose
@@ -211,7 +212,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Information.
-     * 
+     * The join information in the language and locale variant specified in the Accept-Language request HTTP header. Read-only.
      */
     @SerializedName(value = "joinInformation", alternate = {"JoinInformation"})
     @Expose
@@ -229,7 +230,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Lobby Bypass Settings.
-     * 
+     * Specifies which participants can bypass the meeting   lobby.
      */
     @SerializedName(value = "lobbyBypassSettings", alternate = {"LobbyBypassSettings"})
     @Expose
@@ -238,7 +239,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * 
+     * The participants associated with the online meeting.  This includes the organizer and the attendees.
      */
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
@@ -247,7 +248,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Record Automatically.
-     * 
+     * Indicates whether to record the meeting automatically.
      */
     @SerializedName(value = "recordAutomatically", alternate = {"RecordAutomatically"})
     @Expose
@@ -256,7 +257,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The meeting start time in UTC.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -265,7 +266,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The subject of the online meeting.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -274,12 +275,21 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Video Teleconference Id.
-     * 
+     * The video teleconferencing ID. Read-only.
      */
     @SerializedName(value = "videoTeleconferenceId", alternate = {"VideoTeleconferenceId"})
     @Expose
 	@Nullable
     public String videoTeleconferenceId;
+
+    /**
+     * The Attendance Reports.
+     * The attendance reports of an online meeting. Read-only.
+     */
+    @SerializedName(value = "attendanceReports", alternate = {"AttendanceReports"})
+    @Expose
+	@Nullable
+    public MeetingAttendanceReportCollectionPage attendanceReports;
 
     /**
      * The Meeting Attendance Report.
@@ -292,7 +302,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Registration.
-     * 
+     * The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
      */
     @SerializedName(value = "registration", alternate = {"Registration"})
     @Expose
@@ -308,5 +318,9 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("attendanceReports")) {
+            attendanceReports = serializer.deserializeObject(json.get("attendanceReports"), MeetingAttendanceReportCollectionPage.class);
+        }
     }
 }

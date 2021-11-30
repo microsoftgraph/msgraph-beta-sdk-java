@@ -39,7 +39,7 @@ public class DeviceHealth implements IJsonBackedObject {
 
     /**
      * The Last Connection Time.
-     * 
+     * The last time the device was connected.
      */
     @SerializedName(value = "lastConnectionTime", alternate = {"LastConnectionTime"})
     @Expose

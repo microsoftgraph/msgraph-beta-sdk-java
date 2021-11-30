@@ -39,7 +39,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
 
     /**
      * The Approval State.
-     * 
+     * Possible values are: pending, approved, denied, aborted, canceled.
      */
     @SerializedName(value = "approvalState", alternate = {"ApprovalState"})
     @Expose
@@ -66,7 +66,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
 
     /**
      * The End Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose
@@ -93,7 +93,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
 
     /**
      * The Start Date Time.
-     * 
+     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -111,7 +111,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
 
     /**
      * The Request.
-     * 
+     * Read-only. The role assignment request for this approval object
      */
     @SerializedName(value = "request", alternate = {"Request"})
     @Expose
@@ -120,7 +120,7 @@ public class PrivilegedApproval extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Info.
-     * 
+     * Read-only. Nullable.
      */
     @SerializedName(value = "roleInfo", alternate = {"RoleInfo"})
     @Expose
